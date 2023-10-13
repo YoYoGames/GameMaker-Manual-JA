@@ -2,62 +2,62 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Code Snippets</title>
-    <meta name="generator" content="Adobe RoboHelp 2020"/>
-    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-    <script src="../../assets/scripts/main_script.js" type="module"></script>
-    <meta name="rh-authors" content="Mark Alexander"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>コードスニペット</title>
+    <meta name="generator" content="Adobe RoboHelp 2020" />
+    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+    <script src="../../assets/scripts/main_script.js"></script>
+    <meta name="rh-authors" content="Mark Alexander" />
     <meta name="topic-comment" content="Page detailing how to create your own code snippets
-"/>
-    <meta name="rh-index-keywords" content="Code Editor - Snippets"/>
-    <meta name="search-keywords" content="snippet,snippets,code snippets"/>
+" />
+    <meta name="rh-index-keywords" content="Code Editor - Snippets" />
+    <meta name="search-keywords" content="snippet,snippets,code snippets" />
   </head>
   <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1>Code Snippets</h1>
-    <p>A very handy tool you have at your disposal when editing your code is the use of <strong>Code Snippets</strong>. When using the script editor, you can press <span class="inline">F4</span> to open the code snippet pop-up, which permits you to select one of the commonly used code methods from a list:</p>
-    <p><img alt="Code Snippets Window" class="center" src="../../assets/Images/Asset_Editors/CodeSnippets_IDE.png"/>From this window you can select with the mouse the snippet to use, or you can press the associated hotkey listed on the right. This will add the snippet to your code for editing.</p>
-    <p>You can also define your own code snippets if you want to. Before doing this, you&#39;ll need to create a file called &quot;<span class="inline">snippets.txt</span>&quot; in one of the following directories:</p>
+    <h1>コードスニペット</h1>
+    <p>コード編集の際に非常に便利なのが、<strong>コードスニペットの</strong>利用です。<span class="notranslate">script</span> エディタを使用しているときに、 <span class="inline">F4</span> を押すと、コードスニペットのポップアップが表示され、よく使われるコードメソッドを一覧から選択することができます。</p>
+    <p><img>このウィンドウから、使用するスニペットをマウスで選択するか、右側に表示されている関連するホットキーを押すことができます。この操作により、スニペットがコードに追加され、編集できるようになります。</p>
+    <p>また、必要であれば、独自のコードスニペットを定義することもできます。これを行う前に、以下のディレクトリのいずれかに &quot;<span class="inline">snippets.txt</span>&quot; というファイルを作成する必要があります。</p>
     <ul class="colour">
-      <li>Windows: <span class="inline">%ProgramData%\GameMaker\User\</span></li>
-      <li>macOS: <span class="inline">/Users/Shared/GameMaker/User/</span></li>
+      <li>Windowsです。 <span class="inline">%ProgramData%\GameMaker\User\</span></li>
+      <li>macOSです。 <span class="inline">/Users/Shared/GameMaker/User/</span></li>
     </ul>
-    <p>This folder is <em>not </em>modified during any update to <span data-keyref="GameMaker Name">GameMaker</span>, so your edited file will remain intact (but any edits to the base snippets file in the install directory will be reverted).</p>
-    <p>Once the file is created in the User directory, you can edit it with any text editor following these rules:</p>
+    <p>このフォルダは<span data-keyref="GameMaker Name">GameMakerの</span>アップデート中も変更さ<em>れないので </em>、編集したファイルはそのまま残ります（ただし、インストールディレクトリのベーススニペットファイルの編集は元に戻されます）。</p>
+    <p>Userディレクトリにファイルが作成されたら、以下のルールに従って、任意のテキストエディタで編集することができます。</p>
     <ul class="colour">
-      <li>Each snippet has to be on a separate line (there should be no blank lines)</li>
-      <li>Each snippet must start with the hotkey to be used followed by &quot;<span class="inline">-</span>&quot; and then the name of the snippet (which is what is shown in the menu) followed by a colon &quot;<span class="inline">:</span>&quot;, eg:</li>
+      <li>各スニペットは独立した行である必要があります（空白行は不可）。</li>
+      <li>各スニペットは、使用するホットキーの後に &quot;<span class="inline">-</span>&quot; を続け、スニペット名（メニューに表示されるもの）の後にコロン &quot;<span class="inline">:</span>&quot; を続ける必要があります、例．</li>
     </ul>
-    <p class="code" style="margin-left: 100px">I - Instance Create:</p>
-    <p style="margin-left: 60px">After the colon you add the snippet of code</p>
-    <p class="code" style="margin-left: 100px">I - Instance Create:instance_create_layer(x, y, |layer|, object);</p>
-    <p>The code that you add must also follow a specific format where:</p>
+    <p class="code" style="margin-left: 100px">I - インスタンス作成。</p>
+    <p style="margin-left: 60px">コロンの後に、コードのスニペットを追加します。</p>
+    <p class="code" style="margin-left: 100px">I - Instance Create:instance_create_layer(x, y, |layer|,<span class="notranslate">object</span>);</p>
+    <p>また、追加するコードは、特定の書式に従わなければなりません。</p>
     <ul class="colour">
-      <li>All code is on a single line</li>
-      <li>You use &quot;<span class="inline">$</span>&quot; for a newline
+      <li>すべてのコードは1行に</li>
+      <li>改行には &quot;<span class="inline">$</span>&quot; を使用します。
         <ul>
-          <li><span class="note">NOTE</span> When creating multiple newlines, there needs to be a space between each &quot;<span class="inline">$</span>&quot; sign. For example, you would write <span class="inline2">$ $ $</span> to add three newlines.</li>
+          <li><span class="note">注</span>：複数の改行を行う場合、各「<span class="inline">$</span> 」記号の間にスペースを入れる必要があります。例えば、3つの改行を追加する場合は、<span class="inline2">$ $</span>と記述します。</li>
         </ul>
       </li>
-      <li>You put the text that needs to be highlighted between &quot;<span class="inline">|</span>&quot; symbols. The Code Editor will automatically select this text for editing when the snippet is added.</li>
+      <li><span class="inline">|</span>&quot; 記号の間にハイライトしたいテキストを入れます。スニペットが追加されると、コードエディターが自動的にこのテキストを選択して編集します。</li>
     </ul>
-    <p>See the examples that are already in the base snippets file to see how it is set up following the rules above. You can find the base file in the <span data-keyref="GameMaker Name">GameMaker</span> install directory:</p>
+    <p>上記のルールに従ってどのように設定されるかは、すでにベースとなるスニペットファイルに入っているサンプルをご覧ください。ベースとなるファイルは、<span data-keyref="GameMaker Name">GameMakerの</span>インストールディレクトリにあります。</p>
     <ul class="colour">
-      <li>Windows: <span class="inline"><span data-keyref="GameMaker Name">GameMaker</span>\TextEditor\snippets.txt</span></li>
-      <li>macOS: <span class="inline">/Applications/<span data-keyref="GameMaker Name">GameMaker</span>.app/Contents/MonoBundle/TextEditor/snippets.txt</span></li>
+      <li>Windowsの場合。 <span class="inline"><span data-keyref="GameMaker Name">GameMaker</span>\୧⃛(๑⃙⃘◡̈๑⃙⃘)</li>
+      <li>macOS: <span class="inline">/Applications/<span data-keyref="GameMaker Name">GameMaker</span>.app/Contents/MonoBundle/TextEditor/snippets.txt</li>
     </ul>
-    <p><img alt="Code Snippets Example" class="center" src="../../assets/Images/Asset_Editors/CodeSnippets_Example.png"/></p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
+    <p><img alt="Code Snippets Window" class="center" src="../../assets/Images/Asset_Editors/CodeSnippets_IDE.png"/></p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
     <div class="footer">
       <div class="buttons">
         <div class="clear">
-          <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
-          <div style="float:right">Next: <a href="Editing_Code.htm">Editing Code</a></div>
+          <div style="float:left">戻る<a href="../Scripts.htm"> <span class="notranslate">Script</span> 編集部</a></div>
+          <div style="float:right">次へ<a href="Editing_Code.htm">コードの編集</a></div>
         </div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+      <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
     </div>
     <!-- KEYWORDS
 Snippets

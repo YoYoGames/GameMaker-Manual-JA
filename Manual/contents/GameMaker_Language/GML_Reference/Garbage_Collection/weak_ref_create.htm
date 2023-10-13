@@ -6,7 +6,7 @@
   <title>weak_ref_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for weak_ref_create" />
   <meta name="rh-index-keywords" content="weak_ref_create" />
@@ -14,47 +14,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">weak_ref_create</span></h1>
-  <p>With this function you can create a <a class="glossterm" data-glossterm="weak reference" href="#">weak reference</a> to a <a href="../../GML_Overview/Structs.htm">struct</a> which can then be used to check if the struct is still &quot;alive&quot; (referenced) or not in the game. You supply the reference to the struct you want to track, and the function will return another struct which is a weak reference to that struct.</p>
-  <h3>Usage Notes</h3>
-  <ul class="Disc">
-    <li>You can check whether a reference is &quot;strong&quot; or &quot;weak&quot; by using the function <span class="inline3_func"><a data-xref="{title}" href="../Variable_Functions/instanceof.htm">instanceof</a></span>, as a strong reference will return either &quot;<span class="inline">struct</span>&quot; or the name of the constructor function that created the struct, or &quot;<span class="inline">weakref</span>&quot; if it&#39;s a weak reference.</li>
-    <li>The weak reference struct will have a variable &quot;<span class="inline">ref</span>&quot; which can be accessed to get the strong reference to the struct in question, unless it has been garbage collected, in which case it will return <span class="inline2">undefined</span>.</li>
-  </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">weak_ref_create</span>(struct_to_track);</p>
+  <h1>weak_ref_create</h1>
+  <p>この関数で、<span class="notranslate">struct</span> への<a class="glossterm" data-glossterm="弱参照" href="#">弱い</a>参照を作成し、<span class="notranslate">struct</span> がゲーム内でまだ「生きている」（参照されている）かどうかをチェックするために使用することができます。追跡したい<span class="notranslate">struct</span> への参照を指定すると、この関数はその<span class="notranslate">struct</span> への弱い参照である別の<span class="notranslate">struct</span> を返します。強い参照は &quot;<span class="inline">struct</span>&quot; または<span class="notranslate">struct</span> を生成したコンストラクタ関数の名前を返し、弱い参照は &quot;<span class="inline">weakref</span>&quot; を返しますので、関数 <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span> を使って参照が「強い」か「弱い」かをチェックすることができます。また、弱い参照である<span class="notranslate">struct</span> は変数 &quot;<span class="inline">ref</span>&quot; を持ち、これにアクセスすることで当該<span class="notranslate">struct</span> への強い参照を得ることができます。ただし、ガベージコレクションされている場合は <span class="inline">undefined</span> を返すことに注意してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">weak_ref_create(struct_to_track);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>struct_to_track</td>
-        <td><span data-keyref="Type_Struct"><a href="../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span> or <span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Method</a></span></td>
-        <td>The struct or method that you want to create a weak reference for</td>
+        <td><span class="notranslate">struct_to_track</span></td>
+        <td><span data-keyref="Type_Struct"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">構造</a></span></td>
+        <td><span class="notranslate">The struct that you want to create a weak reference for</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Struct_WeakRef"><a href="../../../../GameMaker_Language/GML_Reference/Garbage_Collection/weak_ref_create.htm" target="_blank">Struct Weak Reference</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">inventory_ref = <span data-field="title" data-format="default">weak_ref_create</span>(inventory);</p>
-  <p>The above code creates a weak reference to a struct and stores it in an instance variable for later use.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Struct_WeakRef"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Garbage_Collection/weak_ref_create.htm">Struct Weak Reference</a></span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">inventory_ref = weak_ref_create(inventory);</p>
+  <p>上記のコードでは、<span class="notranslate">struct</span> への弱い参照を作成し、後で使用するためにインスタンス変数に保存しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Garbage_Collection.htm">Garbage Collection</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="weak_ref_alive.htm">weak_ref_alive</a></div>
+        <div style="float:left">戻る<a href="Garbage_Collection.htm">ガベージコレクション</a></div>
+        <div style="float:right">次のページ <a href="weak_ref_alive.htm"><span class="notranslate">weak_ref_alive</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 weak_ref_create

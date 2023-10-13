@@ -6,7 +6,7 @@
   <title>gc_collect</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gc_collect" />
   <meta name="rh-index-keywords" content="gc_collect" />
@@ -15,31 +15,31 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gc_collect</h1>
-  <p>With this function you can trigger the garbage collector, forcing it to run at the end of the current frame (step). It is worth noting that the garbage collector does <em>not </em>need to be active for this to work. Calling this function after disabling the garbage collector (using the function <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span>) will enable the garbage collector for one frame in which all objects that have been flagged for collection will be removed from memory before the garbage collector is disabled again.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数により、ガベージコレクタをトリガーし、現在のフレーム（ステップ）の終了時に強制的に実行させることができます。注目すべきは、ガベージコレクタがアクティブで<em>なくても </em>動作することです。ガベージコレクタを無効にした後にこの関数を呼び出すと（関数 <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> を使用）、1 フレームだけガベージコレクタが有効になり、ガベージコレクタが再び無効になる前に、収集フラグが立てられたすべての<span class="notranslate">objects</span> がメモリから削除されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gc_collect();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (global.debug == true &amp;&amp; keyboard_check_pressed(vk_f1))<br />
     {<br />
         gc_collect();<br />
     }</p>
-  <p>The above code checks a global variable and a key being pressed and if those are <span class="inline">true</span> then garbage collection is triggered for the end of the frame (step).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、グローバル変数と押されたキーをチェックし、それらが <span class="inline">true</span> であれば、フレーム（ステップ）の終わりに向けてガベージコレクションが発動されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Garbage_Collection.htm">Garbage Collection</a></div>
-        <div style="float:right">Next: <a href="gc_target_frame_time.htm">gc_target_frame_time</a></div>
+        <div style="float:left">戻る<a href="Garbage_Collection.htm">ガベージコレクション</a></div>
+        <div style="float:right">Next:<a href="gc_target_frame_time.htm">gc_target_frame_time</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gc_collect

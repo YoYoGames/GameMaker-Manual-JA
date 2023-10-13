@@ -6,7 +6,7 @@
   <title>uwp_suspend</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for uwp_suspend" />
   <meta name="rh-index-keywords" content="uwp_suspend" />
@@ -14,33 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uwp_suspend<span class="misspell-word"> <span data-conref="../../../assets/snippets/Tag_obsolete.hts"> </span></span></h1>
-  <p>This function indicates to the system that the app has finished saving data following detection of a suspension request. Calling this function is a requirement for Xbox One submission, and it should always be used in conjunction with the function <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>, as shown in the example below.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>uwp_suspend</h1>
+  <p>この関数は、アプリが停止要求の検出後、データの保存を終了したことをシステムに通知します。この関数を呼び出すことは、Xbox Oneサブミッションの必須条件であり、常に関数 <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>以下の例のように</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">uwp_suspend();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if uwp_is_suspending()<br />
     {<br />
         scr_Save_Game_Data();<br />
         uwp_suspend();<br />
     }</p>
-  <p>The above code checks to see if the app is going into suspension and if it is it calls a script to save the game data before suspending the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、アプリがサスペンドに入るかどうかを確認し、サスペンドに入る場合は<span class="notranslate">script</span> を呼び出してゲームデータを保存してからゲームをサスペンドしています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="uwp_is_suspending.htm">uwp_is_suspending</a></div>
+        <div style="float:left">戻る<a href="UWP_And_XBox_Live.htm">UWPとXBox Live</a></div>
+        <div style="float:right">次のページ <a href="uwp_is_suspending.htm"><span class="notranslate">uwp_is_suspending</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_suspend

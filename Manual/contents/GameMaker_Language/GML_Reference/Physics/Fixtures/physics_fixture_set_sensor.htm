@@ -6,7 +6,7 @@
   <title>physics_fixture_set_sensor</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_fixture_set_sensor" />
   <meta name="rh-index-keywords" content="physics_fixture_set_sensor" />
@@ -15,48 +15,48 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_fixture_set_sensor</h1>
-  <p>Some times you will want your game to detect and recognise when two instances with fixtures collide, but not have any physical reaction to the collision. This can be done by converting the fixture into a sensor, which basically means that they will generate a collision event but with no physical response so that you can use these instances as &quot;triggers&quot; for other events to happen in the game room. Any fixture can be flagged as a sensor, and it makes no difference if the instance it is bound to is static or in movement.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> A sensor fixture will fire off the collision event when the collision <b>first occurs only</b>, meaning you don&#39;t get a stream of collision events as the two bodies continue to overlap (which is what would traditionally occur). If they stop overlapping and overlap subsequently there will be another collision event triggered.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>時には、フィクスチャを持つ2つのインスタンスが衝突したときに、ゲーム側でそれを検知・認識したいことがあります。これは、基本的に衝突イベントを発生させますが、物理的な反応はないので、これらのインスタンスをゲーム内で起こる他のイベントの &quot;トリガー &quot;として使用することができます<span class="notranslate">room</span>.どんな固定具でもセンサーとしてフラグを立てることができ、それがバインドされているインスタンスが静止しているか動いているかは関係ありません。</p>
+  <p class="note"><b>NOTE</b>: センサーフィクスチャーは<b>最初に</b>衝突が起こった<b>ときだけ</b>衝突イベントを発生させます。つまり、2つのボディが重なり続けても衝突イベントのストリームは発生しません（これは伝統的に起こることです）。つまり、2つのボディが重なり続けてもコリジョンイベントは発生しません。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">physics_fixture_set_sensor(fixture, state)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>fixture</td>
-        <td><span data-keyref="Type_ID_PhyFixture"><a href="../../../../../GameMaker_Language/GML_Reference/Physics/Fixtures/physics_fixture_create.htm" target="_blank">Physics Fixture ID</a></span></td>
-        <td>the index of the fixture</td>
+        <td><span class="notranslate">fixture</span></td>
+        <td><span data-keyref="Type_ID_PhyFixture">物理フィクスチャID</span></td>
+        <td><span class="notranslate">the index of the fixture</span></td>
       </tr>
       <tr>
-        <td>state</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>whether a fixture is a sensor (true) or not (false)</td>
+        <td><span class="notranslate">state</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">whether a fixture is a sensor (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">physics_fixture_set_sensor(fix_Cloud, 1);</p>
-  <p>The code above will turn the sensor state of the fixture indexed in &quot;fix_Cloud&quot; to true.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、&quot;fix_Cloud &quot;でインデックスされたフィクスチャのセンサーの状態をtrueにするものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
-        <div style="float:right">Next: <a href="physics_fixture_set_kinematic.htm">physics_fixture_set_kinematic</a></div>
+        <div style="float:left">戻る<a href="Fixtures.htm">什器備品</a></div>
+        <div style="float:right">次のページ <a href="physics_fixture_set_kinematic.htm"><span class="notranslate">physics_fixture_set_kinematic</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_sensor

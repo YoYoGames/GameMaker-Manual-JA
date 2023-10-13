@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If Instance Exists</title>
+  <title>インスタンスが存在する場合</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the If Instance Exists action" />
   <meta name="rh-index-keywords" content="GML Visual Action - If Instance Exists" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Instance Exists Icon" class="icon" height="31" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png" width="31" /> If Instance Exists</h1>
-  <p>This action can be used to check if an instance of a specific object exists in the game room, or if a specific instance itself exists. You give the object from the asset explorer, and if any instance exists in the room then the action will return <span class="inline">true</span>    otherwise it will return <span class="inline">false</span>. Note that you can use a variable here with the unique ID for specific instance (for example as returned by the action <a href="Create_Object_Instance.htm">Create Object Instance</a>) or even the instance ID
-    value as returned by the room editor when you added the instance.</p>
-  <p>If you flag the &quot;Not&quot; argument, then the action will check to see if <i>no</i> instance exists and if none are found it will return <span class="inline">true</span> and if even one exists it will return <span class="inline">false</span>.</p>
-  <p>Note that to add actions into the &quot;if&quot; block, they should be dropped to the side of the action, as shown in the image below:</p>
+  <h1><img> インスタンスが存在する場合</h1>
+  <p>このアクションは、特定の<span class="notranslate">object</span> のインスタンスがゲーム内に存在するかどうか<span class="notranslate">room</span> 、または特定のインスタンス自体が存在するかどうかを確認するために使用することができます。<span class="notranslate">object</span> エクスプローラーから<span class="notranslate">asset</span> を渡し、<span class="notranslate">room</span> にインスタンスが存在すれば、このアクションは <span class="inline">true</span> を返し、そうでなければ <span class="inline">false</span> を返します。ここで、特定のインスタンスのユニークな ID (たとえば、<a href="Create_Object_Instance.htm">Create<span class="notranslate">Object</span> Instance</a> というアクションで返されるもの) を変数として使うこともできますし、インスタンス ID を使うこともできます。
+    の値は、インスタンスを追加したときに<span class="notranslate">room</span> エディタから返されたものです。</p>
+  <p>引数 &quot;Not &quot;を<span class="notranslate">flag</span> にすると、アクションはインスタンスが存在<i>しないか</i>どうかをチェックし、1つも存在しない場合は <span class="inline">true</span> を、1つでも存在する場合は <span class="inline">false</span> を返します。</p>
+  <p>なお、「if」ブロックにアクションを追加するには、下の画像のように、アクションの横にドロップする必要があります。</p>
+  <p><img alt="If Instance Exists Icon" class="icon" height="31" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png" width="31" /></p>
+  <p>これらのアクションは、&quot;if &quot;の評価値が <span class="inline">true</span> である場合に実行され、他の場所にドロップされたアクションは、&quot;if &quot;ブロックの後に実行されます。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
   <p><img alt="Instance Exists drop example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists_Drop.png" /></p>
-  <p>These actions will now be run if the &quot;if&quot; evaluates to <span class="inline">true</span>, while any actions dropped elsewhere will be performed after the &quot;if&quot; block.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Instance Exists Action" class="center" height="124" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists.png" width="260" /></p>
-  <h4>Arguments:</h4>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Object</td>
-        <td>The name of the object to check for an instance of (or an instance ID).</td>
+        <td><span class="notranslate">Object</span></td>
+        <td>インスタンスを確認する<span class="notranslate">object</span> の名前 (またはインスタンス ID)。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Instance Exists Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Exists.png" />The above action block code checks for a collision and returns the unique ID value of the instance
-    that is being collided with. This value is stored in a temporary variable and then checked to see if the value corresponds to an instance that is currently within the room (if no collision is found then the variable will hold the keyword &quot;<span class="inline">noone</span>&quot;),
-    and if it does, then a variable is set in the instance being collided with.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックコードは、衝突をチェックし、インスタンスのユニークなID値
+    と衝突している。この値は一時変数に格納され、その値が現在<span class="notranslate">room</span> 内にあるインスタンスに対応するかどうかチェックされます（衝突が見つからなかった場合、この変数にはキーワード &quot;<span class="inline">noone</span>&quot; が保持されます）。
+    という変数が設定され、それが衝突している場合は、衝突しているインスタンスに変数が設定される。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Call_Parent_Event.htm">Call Parent Event</a></div>
+        <div style="float:left">戻る：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
+        <div style="float:right">次へ<a href="Call_Parent_Event.htm">親イベントを呼び出す</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Instance Exists

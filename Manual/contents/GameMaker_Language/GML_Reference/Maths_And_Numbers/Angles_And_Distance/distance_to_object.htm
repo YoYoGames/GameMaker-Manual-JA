@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>distance_to_object</title>
+  <title>オブジェクトまでの距離</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for distance_to_object" />
   <meta name="rh-index-keywords" content="distance_to_object" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>distance_to_object</h1>
-  <p>This function calculates the distance from the edge of the bounding box of the calling instance to the nearest edge of the nearest instance of the object specified. The object can be an object index or a specific instance ID as well as the <a href="../../../GML_Overview/Instance_Keywords.htm"><i>keyword</i></a> <b>other</b>, and the distance is returned in pixels. Note that if either of the objects have no sprite or no mask defined, the results will be incorrect.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h1>オブジェクトまでの距離</h1>
+  <p>この関数は、呼び出したインスタンスのバウンディングボックスのエッジから、指定された<span class="notranslate">object</span> の最も近いインスタンスのエッジまでの距離を計算するものである。<span class="notranslate">object</span> には、<span class="notranslate">object</span> のインデックス、または特定のインスタンス ID を指定することができる。 <a href="../../../GML_Overview/Instance_Keywords.htm"><i>キーワード</i></a><b>で</b>あり、その距離はピクセル単位で返される。<span class="notranslate">objects</span> のいずれかに<span class="notranslate">sprite</span> がない場合、あるいはマスクが定義されていない場合、結果は正しくないことに注意。</p>
+  <p> </p>
+  <h4><b>構文です。</b></h4>
   <p class="code">distance_to_object(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span> or <span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The object to check for.</td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The object to check for.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (distance_to_object(obj_Player) &lt; range)<br />
     {<br />
         canshoot = true;<br />
     }</p>
-  <p>The above code will check for the distance to the player object and if it is less than the value stored in the variable &quot;range&quot; the variable &quot;canshoot&quot; is set to true.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、プレイヤーまでの距離<span class="notranslate">object</span> をチェックし、それが変数「range」に格納されている値より小さい場合、変数「canshoot」がtrueに設定されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="distance_to_point.htm">distance_to_point</a></div>
+        <div style="float:left">戻る<a href="Angles_And_Distance.htm">角度と距離</a></div>
+        <div style="float:right">次のページ <a href="distance_to_point.htm"><span class="notranslate">distance_to_point</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 distance_to_object

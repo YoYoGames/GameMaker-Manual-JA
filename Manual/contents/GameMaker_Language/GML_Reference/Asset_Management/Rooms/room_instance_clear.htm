@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_instance_clear</title>
+  <title>ルームインスタンスクリア</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function room_instance_clear" />
   <meta name="rh-index-keywords" content="room_instance_clear" />
@@ -15,43 +15,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_instance_clear</h1>
-  <p>This function will clear a room of all instances (no destroy events shall be called for the instances that are being removed). Note that calling this function on a room asset created in the Asset Browser <strong>will permanently clear the room of instances</strong>,
-    and even calling <span class="inline">game_restart()</span> will not return the room to it&#39;s original state (only ending the game and opening it again will start with the room in its original state again).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ルームインスタンスクリア</h1>
+  <p>この関数は、<span class="notranslate">room</span> のすべてのインスタンスを消去します（消去されるインスタンスに対して、destroy イベントは呼び出されないものとします）。<span class="notranslate">room</span> Browser で作成された<span class="notranslate">asset</span> <span class="notranslate">Asset</span> でこの関数を呼び出すと、<strong> <span class="notranslate">room</span> </strong> のインスタンスが永久にクリアされることに注意してください。
+    また、 <span class="inline">game_restart()</span> を呼び出しても、<span class="notranslate">room</span> は元の状態に戻りません（ゲームを終了して再び開くと、<span class="notranslate">room</span> が再び元の状態で開始されるだけです）。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">room_instance_clear(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Room"></span></td>
-        <td>The index of the room to clear all instances in.</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Room"></span></td>
+        <td><span class="notranslate">The index of the room to clear all instances in.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">global.rm = room_add();<br/> room_assign(rm_Base, global.rm);<br/> room_instance_clear(global.rm);
   </p>
-  <p>The above code will add a new room to the game and then copy the contents of the room indexed as &quot;rm_Base&quot; into it. It will then clear all instances from this new room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、ゲームに新しい<span class="notranslate">room</span> を追加し、&quot;rm_Base&quot; というインデックスが付けられた<span class="notranslate">room</span> の内容をそこにコピーします。そして、この新しい<span class="notranslate">room</span> からすべてのインスタンスをクリアします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="room_set_height.htm">room_set_height</a></div>
+        <div style="float:left">戻る<a href="Rooms.htm">部屋</a></div>
+        <div style="float:right">次のページ <a href="room_set_height.htm"><span class="notranslate">room_set_height</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_instance_clear

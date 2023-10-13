@@ -6,7 +6,7 @@
   <title>uwp_was_terminated</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for uwp_was_terminated" />
   <meta name="rh-index-keywords" content="uwp_was_terminated" />
@@ -14,33 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uwp_was_terminated<span class="misspell-word"> <span data-conref="../../../assets/snippets/Tag_obsolete.hts"> </span></span></h1>
-  <p>With this function you can find out if the game was previously shut down by the system (i.e. it&#39;s not the first run of the game). If it has been then the function will return <span class="inline">true</span>, otherwise it will return <span class="inline">false</span>. An example of use would be to check it and see if the game was previously terminated by the system, and then (if it returns <span class="inline">true</span>) to load the previous stage that the player was at in the game. If targeting the XBox One then the required behavior of games if this is detected will be different between the different versions of the certification docs, so it&#39;s worth checking the latest version to see what the game <i>should</i> do.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>uwp_was_terminated</h1>
+  <p>この関数で、ゲームがシステムによって以前にシャットダウンされたかどうかを調べることができます（つまり、ゲームの初回実行時ではない）。もしそうであれば、この関数は <span class="inline">true</span> を返し、そうでなければ、 <span class="inline">false</span> を返します。例えば、ゲームがシステムによって終了されたかどうかを確認し、（ <span class="inline">true</span> を返した場合）プレイヤーがゲーム中にいた前のステージをロードするような使い方があります。<span class="notranslate">XBox One</span> をターゲットとする場合、これが検出された場合のゲームの要求動作は、認証ドキュメントの異なるバージョン間で異なるので、ゲームがどう<i>すべきかを</i>確認するために、最新バージョンをチェックする価値があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">uwp_was_terminated();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Bool"></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if xboxlivewas_terminated()<br />
     {<br />
         buffer_load(&quot;Player_Save.sav&quot;);<br />
         global.GameLoaded = true;<br />
     }</p>
-  <p>The above code checks to see if the app has previously been terminated by the system, and if so, it loads a buffer and sets a global variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、アプリが以前にシステムによって終了されたかどうかを確認し、終了された場合は<span class="notranslate">buffer</span> をロードし、グローバル変数を設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="uwp_was_closed_by_user.htm">uwp_was_closed_by_user</a></div>
+        <div style="float:left">戻る<a href="UWP_And_XBox_Live.htm">UWPとXBox Live</a></div>
+        <div style="float:right">次のページ <a href="uwp_was_closed_by_user.htm"><span class="notranslate">uwp_was_closed_by_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_was_terminated

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_get_type</title>
+  <title>バッファゲットタイプ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_get_type" />
   <meta name="rh-index-keywords" content="buffer_get_type" />
@@ -15,69 +15,69 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_get_type</h1>
-  <p>With this function you retrieve the type of buffer that is being referenced by a buffer ID value. The return value will be one of the following constants:</p>
+  <h1>バッファゲットタイプ</h1>
+  <p>この関数は、<span class="notranslate">buffer</span> の ID 値から参照されている<span class="notranslate">buffer</span> の種類を取得するものです。戻り値は以下の定数のいずれかである。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">buffer_fixed</span></td>
-        <td>A buffer of fixed size.</td>
+        <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
+        <td>サイズが固定されている<span class="notranslate">buffer</span> 。</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_grow</span></td>
-        <td>A buffer that will &quot;grow&quot; dynamically as data is added</td>
+        <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
+        <td>データが追加されると動的に「成長」する<span class="notranslate">buffer</span> </td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_wrap</span></td>
-        <td>A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
+        <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
+        <td><span class="notranslate">buffer</span> ここでデータは「ラップ」されます。追加されるデータが<span class="notranslate">buffer</span> サイズの限界に達すると、上書きは<span class="notranslate">buffer</span> の先頭に戻され、その時点からさらに書き込みが続けられる。</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_fast</span></td>
-        <td>Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <span class="inline">buffer_u8</span> <a href="buffer_read.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
+        <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
+        <td>特殊な &quot;stripped&quot;<span class="notranslate">buffer</span> で、読み書きが非常に高速になります。 <span class="inline">buffer_u8</span> <a href="buffer_read.htm">データ型でのみ</a>使用可能で、1 バイトアライメントで<i>なければ</i>ならない。</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_vbuffer</span></td>
-        <td>A vertex buffer</td>
+        <td><span class="notranslate"><span class="inline">buffer_vbuffer</span></td>
+        <td>A<span class="notranslate">vertex</span> バッファ</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">buffer_get_type(buffer);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The index of the buffer to check.</td>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Constant_Buffer_Type">Buffer Type Constant</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">type = buffer_get_type(buff);</p>
-  <p>The above code will get the type of buffer from the value indexed in the variable &quot;buff&quot; and store it in a variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、変数「buff」にインデックスされている値から、<span class="notranslate">buffer</span> の型を取得し、変数に格納します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_get_alignment.htm">buffer_get_alignment</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_get_alignment.htm"><span class="notranslate">buffer_get_alignment</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_get_type

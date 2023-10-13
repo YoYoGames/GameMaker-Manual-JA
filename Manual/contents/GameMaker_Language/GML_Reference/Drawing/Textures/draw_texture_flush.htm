@@ -6,7 +6,7 @@
   <title>draw_texture_flush</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ​draw_texture_flush" />
   <meta name="rh-index-keywords" content="draw_texture_flush" />
@@ -16,31 +16,31 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_texture_flush</h1>
-  <p>With this function you can remove all textures from video memory, and they will then be reloaded on first use. This is the only effective way to manage video memory when you have multiple texture pages for a game, and you should flush the texture memory
-    between levels on your game and organise the graphics using the texture group feature to ensure that the minimum number of textures are used.</p>
-  <p>It is worth noting that <i>by default</i> on all targets, texture pages will only be loaded as they are required and you can use the various prefetch and flush functions for sprites (found <a href="../../Asset_Management/Sprites/Sprite_Manipulation/Sprite_Manipulation.htm">here</a>)
-    to manage things as well as this function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この機能により、ビデオメモリからすべての<span class="notranslate">textures</span> を削除することができ、その後、初回使用時に再読み込みされます。これは、ゲームに複数の<span class="notranslate">texture</span> ページがある場合に、ビデオ メモリを管理する唯一の効果的な方法です。また、<span class="notranslate">texture</span> メモリをフラッシュする必要があります。
+    ゲームのレベル間で、<span class="notranslate">texture</span> グループ機能を使ってグラフィックを整理し、最小数の<span class="notranslate">textures</span> が使用されるようにします。</p>
+  <p><span class="notranslate">texture</span> すべてのターゲットにおいて、<i>デフォルトでは</i> <span class="notranslate">sprites</span> ページは必要なときだけロードされることに留意する必要があります。
+    を使用して、この関数と同様に管理することができます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">draw_texture_flush();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">draw_texture_flush();</p>
-  <p>The above code flushes the video memory of texture data, and would probably be placed in the create event of the first instance of an object placed in the room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、<span class="notranslate">texture</span> のデータをビデオメモリにフラッシュするもので、おそらく<span class="notranslate">object</span> に配置された<span class="notranslate">room</span> の最初のインスタンスの create イベント内に配置されるでしょう。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Textures.htm">Textures</a></div>
-        <div style="float:right">Next: <a href="texture_prefetch.htm">texture_prefetch</a></div>
+        <div style="float:left">背面<a href="Textures.htm">テクスチャー</a></div>
+        <div style="float:right">次のページ <a href="texture_prefetch.htm"><span class="notranslate">texture_prefetch</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_texture_flush

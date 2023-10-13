@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>matrix_multiply</title>
+  <title>マトリックスマルチプライ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for matrix_multiply" />
   <meta name="rh-index-keywords" content="matrix_multiply" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_multiply</h1>
-  <p>With this function you can multiply two matrix arrays together to create a new transform matrix. The function will return the new matrix index which should be stored in a variable for future use.</p>
-  <p class="note"><b>NOTE</b>: You can&#39;t use a matrix constant as an argument with this function, so if you wish to multiply the (for example) view matrix with a custom matrix that you have built, you must first call <span style="font-size:1px;"><a href="matrix_get.htm"><span class="inline">matrix_get()</span></a></span> and assign the view matrix values to an array variable, then multiply it by your custom matrix, and then set the chosen matrix (view, projection or world).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>マトリックスマルチプライ</h1>
+  <p>この関数を使用すると，2 つの行列配列を掛け合わせて新しい変換行列を作成することができます．この関数は，新しい行列のインデックスを返します．このインデックスは，将来使用するために変数に保存しておく必要があります．</p>
+  <p class="note"><b>注意</b>：この関数では、行列定数を引数として使用することはできません。したがって、（たとえば）ビュー行列と、自分で作成したカスタム行列を掛け合わせたい場合は、最初に <span style="font-size:1px;"><a href="matrix_get.htm"><span class="inline">matrix_get()</span></a></span>を作成し、ビュー行列の値を配列変数に代入し、それをカスタム行列で乗算してから、選択された行列（ビュー、投影、ワールド）を設定します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">matrix_multiply(matrix1, matrix2);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>matrix1</td><td><span data-keyref="Type_Array_Matrix"></span></td>
-        <td>The first matrix index to use.</td>
+        <td><span class="notranslate">matrix1</span></td><td><span data-keyref="Type_Array_Matrix"></span></td>
+        <td><span class="notranslate">The first matrix index to use.</span></td>
      </tr>
       <tr>
-        <td>matrix2</td><td><span data-keyref="Type_Array_Matrix"></span></td>
-        <td>The second matrix index to use.</td>
+        <td><span class="notranslate">matrix2</span></td><td><span data-keyref="Type_Array_Matrix"></span></td>
+        <td><span class="notranslate">The second matrix index to use.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var v_matrix = matrix_get(matrix_view);<br />
     var new_matrix = matrix_multiply(v_matrix, my_matrix);<br />
     matrix_set(matrix_view, new_matrix);</p>
-  <p>The above code will get the current view matrix, then multiply that with a custom matrix and then use the resulting matrix index to set the view matrix again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、現在のビュー行列を取得し、それにカスタム行列を乗算し、結果の行列インデックスを使用して再びビュー行列を設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
-        <div style="float:right">Next: <a href="matrix_build_identity.htm">matrix_build_identity</a></div>
+        <div style="float:left">戻る<a href="Matrix_Functions.htm">マトリクス機能</a></div>
+        <div style="float:right">次のページ <a href="matrix_build_identity.htm"><span class="notranslate">matrix_build_identity</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_multiply

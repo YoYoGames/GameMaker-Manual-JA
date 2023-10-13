@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>video_set_volume</title>
+  <title>ビデオ音量設定</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
@@ -15,45 +15,45 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1>video_set_volume</h1>
-  <p>This function changes the audio volume of the video that is currently loaded. It takes a value between <span class="inline2">0</span> and <span class="inline2">1</span>, where <span class="inline2">0</span> is silent and <span class="inline2">1</span> is the maximum volume.</p>
-  <p>Ensure that this is only called after a <span class="inline"><a href="video_open.htm">video_open()</a></span> call but before a <span class="inline"><a href="video_close.htm">video_close()</a></span> call, otherwise it will not do anything (as there will not be a video loaded).</p>
-  <p>On some platforms, this function will only work after the video has been loaded completely, so use <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> to find out when the video is ready and then change the volume.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ビデオ音量設定</h1>
+  <p>この関数は、現在読み込まれているビデオの音声の音量を変更する。<span class="inline2">0</span>から<span class="inline2">1</span> の間の値をとり、<span class="inline2">0</span>は無音、<span class="inline2">1</span>は最大音量となる。</p>
+  <p>このメソッドは、 <span class="inline"><a href="video_open.htm">video_open()</a></span> 呼び出しの後、 <span class="inline"><a href="video_close.htm">video_close()</a></span> 呼び出しの前にのみ呼び出されることを確認してください。そうでない場合は、何も行いません（ビデオが読み込まれないため）。</p>
+  <p>プラットフォームによっては、この機能はビデオが完全に読み込まれた後にしか動作しないため、<a data-xref="{text}" href="Videos.htm#h">非同期コールバックで</a>ビデオの準備ができたことを確認してから、音量を変更するようにしてください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">video_set_volume(value);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>Volume value between 0 and 1</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span class="notranslate">Volume value between 0 and 1</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">my_video = video_open(&quot;splash.mp4&quot;);<br />
     video_set_volume(0.5);</p>
-  <p>The code above loads <span class="inline2">splash.mp4</span> from the Included Files of the game, and changes its volume to <span class="inline2">0.5</span> (50% of its maximum volume).</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、ゲームのIncluded Filesから<span class="inline2">splash.mp</span>4をロードし、その音量を<span class="inline2">0.5</span>（最大音量の50%）に変更します。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="video_pause.htm">video_pause</a></div>
+        <div>戻る<a data-xref="{title}" href="Videos.htm">動画再生</a></div>
+        <div>次ページ：<a data-xref="{title}" href="video_pause.htm">ビデオ_ポーズ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 video_set_volume

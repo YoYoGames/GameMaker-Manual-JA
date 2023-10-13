@@ -6,7 +6,7 @@
   <title>draw_vertex_texture</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for draw_vertex_texture" />
   <meta name="rh-index-keywords" content="draw_vertex_texture" />
@@ -16,47 +16,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_vertex_texture</h1>
-  <p>This function defines the position of a textured vertex for a primitive. The final look of the primitive will depend on the primitive type chosen to draw (See <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a> for more information), the order with which you add the vertexes to it and the position of the start point you set for the texture. To end and draw the primitive you must call <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
-  <p>You can also choose to draw only <i>part</i> of the texture over the surface of the primitive by setting the appropriate xtex/ytex position to sample to (these coordinates are also known as the <b>UV</b> points). This point is defined by a value between 0 and 1 with the top left corner of the image to use being the (0,0) point and the bottom right corner being the (1,1) point. In this way you can texture a primitive with only a part of the source image asset.</p>
-  <p>When drawing a textured primitive, the texture will be blended with the colour set by <a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span>. This means that to draw the texture with no blending this should be set to <span class="inline">c_white</span>, as shown in the example below.</a></p>
-  <p class="note"><a html="../colour And Blending/draw_set_colour.html"><b><span class="note">NOTE</span></b> For a texture to repeat it must be a power of two in size, ie: 32x32, 128x128, etc...</a></p>
-  <p> </p>
-  <h4><a html="../colour And Blending/draw_set_colour.html">Syntax:</a></h4>
+  <p>この関数は、プリミティブのテクスチャ（<span class="notranslate">vertex</span> ）の位置を定義する。プリミティブの最終的な外観は、描画に選択されたプリミティブの種類によって異なります ( <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a><span class="notranslate">texture</span>を呼び出す必要があります。プリミティブを終了して描画するためには <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
+  <p>また、サンプリングする適切な xtex/ytex 位置（これらの座標は<b>UV</b>ポイントとも呼ばれます）を設定することで、プリミティブの表面上に<span class="notranslate">texture</span> の<i>一部だけを</i>描画することも可能です。この点は0と1の間の値で定義され、使用するイメージの左上隅が(0,0)点、右下隅が(1,1)点となります。このようにして、元画像の一部だけを使ったプリミティブを<span class="notranslate">texture</span> にすることができます<span class="notranslate">asset</span> 。</p>
+  <p>テクスチャ付きプリミティブを描画する場合、<span class="notranslate">texture</span> は<a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span> で設定された色とブレンドされます。</a> <a html="../colour And Blending/draw_set_colour.html">つまり、ブレンドなしで<span class="notranslate">texture</span> を描画するには、以下の例に示すように、これを <span class="inline">c_white</span> に設定</a>する必要があります。</p>
+  <p class="note"><a html="../colour And Blending/draw_set_colour.html"><b><span class="note">注意事項</span></b><span class="notranslate">texture</span> を繰り返すには、32x32、128x128 など、2のべき乗のサイズである必要があります。</a></p>
+  <p> </p>
+  <h4><a html="../colour And Blending/draw_set_colour.html">構文です。</a></h4>
   <p class="code"><a html="../colour And Blending/draw_set_colour.html">draw_vertex_texture(x, y, xtex, ytex)</a></p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate of the vertex.</td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The x coordinate of the vertex.</span></td>
       </tr>
       <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate of the vertex.</td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The y coordinate of the vertex.</span></td>
       </tr>
       <tr>
-        <td>xtex</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The width of the texture sample to use.</td>
+        <td><span class="notranslate">xtex</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The width of the texture sample to use.</span></td>
       </tr>
       <tr>
-        <td>ytex</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The height of the texture sample to use.</td>
+        <td><span class="notranslate">ytex</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The height of the texture sample to use.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4><a html="../colour And Blending/draw_set_colour.html">Returns:</a></h4>
+  <p> </p>
+  <h4><a html="../colour And Blending/draw_set_colour.html">リターンです。</a></h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4><a html="../colour And Blending/draw_set_colour.html">Example:</a></h4>
+  <p> </p>
+  <h4><a html="../colour And Blending/draw_set_colour.html">例</a></h4>
   <p class="code"><a html="../colour And Blending/draw_set_colour.html">draw_set_colour(c_white);<br />
       var tex = sprite_get_texture(spr_Background, 0);<br />
       draw_primitive_begin_texture(pr_trianglestrip, tex);<br />
@@ -65,18 +65,18 @@
       draw_vertex_texture(0, 480, 0, 1);<br />
       draw_vertex_texture(640, 480, 1, 1);<br />
       draw_primitive_end();</a></p>
-  <p><a html="../colour And Blending/draw_set_colour.html">The above code will draw a 4 vertex triangle strip (making a rectangle) textured with the texture held in the &quot;tex&quot; variable, and the whole texture will be used to cover the completed primitive.</a></p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p><a html="../colour And Blending/draw_set_colour.html">上記のコードでは、変数 &quot;tex&quot; に保持された<span class="notranslate">vertex</span> でテクスチャを貼った 4<span class="notranslate">texture</span> の三角形の帯（長方形を作る）を描き、その<span class="notranslate">texture</span> 全体で完成したプリミティブを覆うことになります。</a></p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="draw_vertex_texture_colour.htm">draw_vertex_texture_colour</a></div>
+        <div style="float:left">戻る<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></div>
+        <div style="float:right">次のページ <a href="draw_vertex_texture_colour.htm"><span class="notranslate">draw_vertex_texture_colour</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_vertex_texture

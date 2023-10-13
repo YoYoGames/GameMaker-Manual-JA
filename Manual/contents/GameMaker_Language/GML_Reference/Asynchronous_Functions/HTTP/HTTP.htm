@@ -6,7 +6,7 @@
   <title>HTTP</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for all the HTTP functions" />
   <meta name="rh-index-keywords" content="" />
@@ -15,31 +15,39 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>HTTP</h1>
-  <p>This section lists all the different Asynchronous HTTP functions available in <span data-keyref="GameMaker Name">GameMaker</span>. These functions will generate an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">Asynchronous HTTP Event</a> in all instances that have it:</p>
+  <p>ここでは、<span data-keyref="GameMaker Name">GameMakerで</span>利用できる様々な非同期HTTP関数の一覧を示します。これらの関数は、その関数を持つすべてのインスタンスで<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">非同期HTTPイベントを</a>発生させます。</p>
   <ul class="colour">
-    <li><a href="http_request.htm">http_request</a></li>
-    <li><a href="http_get.htm">http_get</a></li>
-    <li><a href="http_get_file.htm">http_get_file</a></li>
-    <li><a href="http_post_string.htm">http_post_string</a></li>
+    <li><a href="http_request.htm"><span class="notranslate">http_request</span></a></li>
+    <li><a href="http_get.htm"><span class="notranslate">http_get</span></a></li>
+    <li><a href="http_get_file.htm"><span class="notranslate">http_get_file</span></a></li>
+    <li><a href="http_post_string.htm"><span class="notranslate">http_post_string</span></a></li>
   </ul>
-  <h2 id="h">Cross Domain Issues</h2>
-  <p>Please note that the above <span class="inline">http_*</span> functions may not function as expected due to <strong>cross domain security</strong> issues. This means that requests to your server or attempts to load resources from across domains are blocked and may appear to return blank results or 404 errors.</p>
-  <p>For image load or HTTP requests where determining or setting their cross-origin type is important, the following functions exist:</p>
+  <p> </p>
+  <p>なお、上記 <span class="inline">http_*</span> の機能は、<strong>クロスドメインセキュリティの</strong>問題により、期待通りに機能しない場合があります。これは、あなたの<span class="notranslate">server</span> へのリクエストや、ドメインをまたがるリソースのロードの試みがブロックされ、空白の結果や404エラーが返されるように見える場合があることを意味します。これを回避する方法の1つは、特定のドメインがあなたの<span class="notranslate">server</span> にアクセスすることを許可する<span class="notranslate">server</span> サイドの PHP を用意することです（これは、あなたのリソースを保護し、PHP 許可リストに含まれていない<span class="notranslate">servers</span> をブロックする方法でもあります）。</p>
+  <p>以下に、このために使用できるPHPコードの例を示します。</p>
+  <p class="code">$http_origin = $_SERVER[&#39;HTTP_ORIGIN&#39;];<br />
+    if ($http_origin == &quot;http://127.0.0.1:51268&quot;)<br />
+    {<br />
+        header(&quot;Access-Control-Allow-Origin: *&quot;);<br />
+    }</p>
+  <p>クロスオリジンタイプの決定や設定が重要な画像読み込みリクエストには、以下のような関数があります。</p>
   <ul class="colour">
-    <li><a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></li>
-    <li><a href="http_set_request_crossorigin.htm">http_set_request_crossorigin</a></li>
+    <li><a href="http_get_request_crossorigin.htm"><span class="notranslate">http_get_request_crossorigin</span></a></li>
+    <li><a href="http_set_request_crossorigin.htm"><span class="notranslate">http_set_request_crossorigin</span></a></li>
   </ul>
-  <p>In most cases these functions should not need to be used, but if the game is stored on a secured server - where certain assets may require basic authentication to be accessed and are generating security errors when loading - setting the cross-origin type for image requests to <span class="inline2">&quot;use-credentials&quot;</span> may be necessary (as opposed to the default <span class="inline2">&quot;anonymous&quot;</span> setting).</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p>ほとんどの場合、これらの関数を使用する必要はありませんが、ゲームが安全な<span class="notranslate">server</span> に保存されている場合（特定の<span class="notranslate">assets</span> にアクセスするには基本認証が必要で、ロード時にセキュリティエラーが発生する場合）、画像リクエストのクロスオリジン型を &quot;use-credentials&quot; に設定する必要があります（デフォルトの &quot;anonymous&quot; 設定とは対照的です）。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asynchronous_Functions.htm">Asynchronous Functions</a></div>
-        <div style="float:right">Next: <a href="../Dialog/Dialog.htm">Dialog</a></div>
+        <div style="float:left">戻る<a href="../Asynchronous_Functions.htm">非同期関数</a></div>
+        <div style="float:right">次へ<a href="../Dialog/Dialog.htm">ダイアログ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 HTTP Functions

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>keyboard_set_map</title>
+  <title>キーボードセットマップ</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for keyboard_set_map" />
   <meta name="rh-index-keywords" content="keyboard_set_map" />
@@ -14,52 +14,52 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>keyboard_set_map</h1>
-  <p>Sometimes when making a game you may wish one key to do the same as another. For example many people use the keys WASD for movement, but then many people <i>also</i> use the arrow keys! So, what to do? Well, you <i>could</i> code the movement system
-    twice, but that is a bit complicated and thankfully redundant as this function permits you to &quot;map&quot; one key to another and so any input from either key will be interpreted as the same. To do this you choose a key that you want to map (key2
-    - this will be the key that you write the code for) and a key that you want it to be mapped <i>to</i> (key1). After that, keypresses to either key will be interpreted by <span data-keyref="GameMaker Name">GameMaker</span> as coming from key2. You can also use this function to design
-    a system where the user can define their own keys for playing by simply mapping the user input key to the key that you have coded into the game.</p>
-  <p>The function takes a keycode value as returned by the function <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the <span class="inline">vk_*</span> constants listed on the main <a href="Keyboard_Input.htm">Keyboard Input</a>    page.</p>
-  <p class="note"><strong>IMPORTANT!</strong> The key you are mapping to (key1) will no longer be usable as it&#39;s actual key symbol once you use this function. For example, if you map the up-arrow to &quot;W&quot; then you will no longer be able to detect the press
-    of the &quot;W&quot; key as a &quot;W&quot;, it will always be considered as the up-arrow. To undo this, either map the key to itself - so both key1 and key2 would be <span class="inline">ord(&quot;W&quot;)</span> - or use the function <span class="inline"><a href="keyboard_unset_map.htm">keyboard_unset_map()</a></span>.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h1>キーボードセットマップ</h1>
+  <p>ゲームを作るとき、あるキーと別のキーを同じように使いたいと思うことがあります。例えば、多くの人はWASDキーで移動しますが、多くの人は矢印<i>キーも</i>使用します。では、どうすればいいのでしょう？移動系をコード化すれば<i>いい</i>のですが
+    この機能は、あるキーを別のキーに「マッピング」することで、どちらのキーからの入力も同じように解釈することができるからです。この機能を使うには、マッピングしたいキーを選びます（key2
+    - このキーがコードを書くキーになります）、マッピングさ<i>せたい</i>キー（key1）を指定します。その後、どちらかのキーを押すと、<span data-keyref="GameMaker Name">GameMakerは</span>key2からのキー入力として解釈します。また、この機能を使って、以下のようなデザインも可能です。
+    ユーザー入力キーをゲームにコード化したキーにマッピングするだけで、ユーザーが自分のキーを定義してプレイできるようなシステムです。</p>
+  <p>この関数は、キーコードの値として、関数 <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>(A-Zの<i>大文字</i>、0-9の数字のみ）、または<a href="Keyboard_Input.htm">キーボード入力の</a>メインページに記載されている <span class="inline">vk_*</span> 定数のいずれかを使用します。</p>
+  <p class="note"><strong>重要!こ</strong>の機能を使用すると、マッピングしているキー（key1）は実際のキーとして使用できなくなります。例えば、上矢印を &quot;W &quot;にマッピングした場合、&quot;W &quot;を押したことを検出することができなくなります。
+    W &quot;キーは &quot;W &quot;として認識され、常に上矢印として認識されます。これを元に戻すには、キーをそれ自体にマップするか（つまり、key1 と key2 の両方が <span class="inline">ord(&quot;W&quot;)</span> になる）、関数 <span class="inline"><a href="keyboard_unset_map.htm">keyboard_unset_map()</a></span> を使用します。</p>
+  <p> </p>
+  <h4><b>構文です。</b></h4>
   <p class="code">keyboard_set_map(key1, key2);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>key1</td><td><span data-keyref="Type_Constant_VK"></span></td>
-        <td>This is the key that key1 is to be mapped to</td>
+        <td><span class="notranslate">key1</span></td><td><span data-keyref="Type_Constant_VK"></span></td>
+        <td><span class="notranslate">This is the key that key1 is to be mapped to</span></td>
      </tr>
       <tr>
-        <td>key2</td><td><span data-keyref="Type_Constant_VK"></span></td>
-        <td>This is the key that is to be mapped</td>
+        <td><span class="notranslate">key2</span></td><td><span data-keyref="Type_Constant_VK"></span></td>
+        <td><span class="notranslate">This is the key that is to be mapped</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4><b>Returns:</b></h4>
+  <p> </p>
+  <h4><b>リターンです。</b></h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
+  <p> </p>
+  <h4><b>例</b></h4>
   <p class="code">keyboard_set_map(ord(&quot;A&quot;), vk_left);</p>
-  <p>The above example code will map the &quot;A&quot; key to the left arrow key. This means that the player can use either the &quot;A&quot; <i>or</i> the left arrow key, and that all code written for the left arrow will also respond to the &quot;A&quot;
-    key being used instead.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコード例では、「A」キーが左矢印キーに対応付けられます。つまり、プレイヤーは「A」<i>キーと</i>左矢印キーのどちらを使ってもよく、左矢印キー用に書かれたすべてのコードも「A」キーに反応することになります。
+    が使用されています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Keyboard_Input.htm">Keyboard Input</a></div>
-        <div style="float:right">Next: <a href="keyboard_get_map.htm">keyboard_get_map</a></div>
+        <div style="float:left">戻る<a href="Keyboard_Input.htm">キーボード入力</a></div>
+        <div style="float:right">次のページ <a href="keyboard_get_map.htm"><span class="notranslate">keyboard_get_map</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_set_map

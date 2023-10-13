@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Arrays</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>アレイ（配列</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining Arrays" />
   <meta name="rh-index-keywords" content="Arrays" />
@@ -14,53 +14,51 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Arrays</h1>
-  <p>Arrays can be extremely useful and are an essential part of making games. It is essentially a type of variable that can hold multiple values as a &quot;list&quot; -- consider the following code:</p>
+  <h1>アレイ（配列</h1>
+  <p>配列は非常に便利なもので、ゲームを作る上では欠かせないものです。本来は複数の値を「リスト」として保持できる変数の一種です -- 次のコードを考えてみてください。</p>
   <p class="code">numbers = [ 0, 1, 2, 3, 4, 5 ];<br />
     <br />
     fruits = [ &quot;Apples&quot;, &quot;Oranges&quot;, &quot;Mangoes&quot; ];
   </p>
-  <p>Using the <span class="inline2">[item, item, item]</span> syntax we are creating an array that is stored in a variable. The items stored in an array can later be accessed through that variable using an integer number, starting at <span class="inline">0</span>, which is placed inside <span class="inline2">[]</span> brackets:</p>
+  <p><span class="inline2">item, item, item] の</span>構文で、変数に格納される配列を作成しています。配列に格納された項目は、後でその変数を通して <span class="inline">0</span> から始まる整数値でアクセスすることができます。この整数値は<span class="inline2">[]</span>ブラケットで囲まれています。</p>
   <p class="code">first_fruit = fruits[ 0 ];<br />
     second_fruit = fruits[ 1 ];<br />
     // ...and so on.</p>
-  <p><label for="aone">A basic array is classed as having 1 <strong>dimension</strong>, but you can have arrays with more than one dimension too. The sections below explain both types of arrays:</label></p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">1-Dimensional Arrays</a></p>
+  <p><label for="aone">基本的な配列は1<strong>次元</strong>ですが、2次元以上の配列も可能です。以下の章では、この2種類の配列について説明します。</label></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">1次元配列</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Before going any further let&#39;s clarify what an array actually is and how it&#39;s structured. An array is simply a <a href="Data_Types.htm">data type</a> that is assigned to a variable, and it can contain not just one value, but multiple values. The image below shows a schematic for a basic array:</p>
+    <p class="dropspot">その前に、配列とは何か、どのような構造になっているかを明らかにしておきましょう。配列とは、変数に代入される<a href="Data_Types.htm">データ型の</a>ことで、1つの値だけでなく、複数の値を格納することができます。下の図は、基本的な配列の模式図です。</p>
     <p class="dropspot"><img class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/1DArrayExample.png" /></p>
-    <p class="dropspot">This is called a <strong>1D</strong> (one-dimensional) array, and as you can see the array is stored in the variable &quot;<span class="inline">a</span>&quot; and contains multiple values. To access the array you would do something like the following:</p>
+    <p class="dropspot">これは<strong>1D</strong>（1次元）配列と呼ばれ、ご覧のように変数&quot;<span class="inline">a</span>&quot;に格納され、複数の値が格納されています。この配列にアクセスするには、次のような操作を行います。</p>
     <p class="code">var _val = a[0];<br />
       show_debug_message(_val);</p>
-    <p class="dropspot">The above code gets the value from position 0 of the array &quot;<span class="inline">a</span>&quot; then outputs it to the console, which - based on the contents of the array shown in the image above - would output 125. If you did the following:</p>
+    <p class="dropspot">上記のコードでは、配列 &quot;<span class="inline">a</span>&quot; の位置 0 から値を取得し、コンソールに出力しています。上の画像に示されている配列の内容からすると、125 と出力されることになります。もし、次のようにしたら</p>
     <p class="code">var _val = a[3];<br />
       show_debug_message(_val);</p>
-    <p class="dropspot">The output would show &quot;Hi!&quot;.</p>
-    <p class="dropspot">As you can see, you give the array a variable name and then a value in square brackets <span class="inline">[]</span>, where the value is the position in the array to get the data from. So essentially, an array is a container with a number of slots to store values, and each position in the container has a specific number to identify it, which is what we put in the <span class="inline">[]</span>. It&#39;s worth noting that the contents of an array <b>always start at 0</b> and can <i>never be negative</i><em>!</em></p>
-    <h3 class="dropspot">       Creating Arrays</h3>
-    <p class="dropspot">We&#39;ve shown how to check an array for data, but how do we create the array to start with? First it has to be <i>initialized</i> before we can use it or <span data-keyref="GameMaker Name">GameMaker</span> will give us an error. Initializing an array just means that we give each slot of the array an initial value in preparation for it to be used elsewhere in the project code. This is important to remember as it means that you have to do a certain amount of planning before using arrays, but it is easy enough to initialize one using a repeat loop like this:</p>
-    <p class="code">var i = 9;<br />
-      <br />
+    <p class="dropspot">出力には、「Hi!</p>
+    <p class="dropspot">ご覧のように、配列に変数名を与え、さらに角括弧内に値を与えています。 <span class="inline">[]</span> 、値は配列の中でデータを取得する位置です。つまり、配列とは値を格納するスロットをいくつも持つ容器であり、容器内の各位置にはそれを識別するための特定の番号があり、それを <span class="inline">[]</span> に記述しています。配列の内容は<b>常に 0 から始まり</b>、<i>決して負には</i>ならないことに注意してください<em>!</em></p>
+    <h3 class="dropspot">       配列の作成</h3>
+    <p class="dropspot">配列のデータをチェックする方法は紹介しましたが、そもそも配列はどのように作成するのでしょうか。まず、配列を使う前に<i>初期</i>化しないと<span data-keyref="GameMaker Name">GameMakerは</span>エラーになります。配列の初期化とは、配列の各スロットに初期値を与えて、プロジェクトコードの他の場所で使用するための準備をすることです。このことは、配列を使う前にある程度の計画を立てる必要があることを意味し、重要なことです。しかし、このように<span class="notranslate">loop</span> を繰り返すことで、配列を初期化することはとても簡単です。</p>
+    <p class="code">var i = 9;<br /><br />
       repeat(10)<br />
       {<br />
           array[i] = 0;<br />
           i -= 1;<br />
-      }
-    </p>
-    <p class="dropspot">This simple code will initialize a ten-slot array (from 0 to 9) to hold 0, ie: each slot in the array contains the value 0. You will notice that the array has been initialised <i>backwards</i>, with the last value being defined first. This is not strictly necessary but is the optimal way to do it as it will reserve a space in memory that is the exact size of the array, whereas if you initialize an array from 0 <em>upwards</em>, the memory has to be re-allocated for every additional value added (so for a ten-slot array, initialising it in a loop would change the memory allocation ten times). The speed difference is negligible for smaller arrays, but larger ones should be optimised as much as possible in this way.</p>
-    <p class="note"><b>NOTE</b>: The HTML5 export is the exception to the above rule, and when targeting that you should initialise arrays in consecutive order from 0 upwards.</p>
-    <p class="dropspot">You can also use the GML function <a href="../GML_Reference/Variable_Functions/array_create.htm"><span class="inline">array_create()</span></a> to initialize an array with a fixed size, and you can even create &quot;empty&quot; arrays with <em>no</em> values, for example:</p>
+      }</p>
+    <p class="dropspot">この単純なコードは、0から9までの10スロットの配列を0に初期化します。配列は<i>逆に</i>初期化され、最後の値が最初に定義されていることにお気づきでしょう。0 から<em>順に</em>初期化すると、値を追加するたびにメモリを再割り当てしなければなりません（つまり、10 スロットの配列を<span class="notranslate">loop</span> で初期化すると、メモリ割り当てが 10 回変更されることになります）。小さな配列であれば速度の差は無視できますが、大きな配列ではこの方法で可能な限り最適化することが望まれます。</p>
+    <p class="note"><b>注</b>：HTML5へのエクスポートは上記のルールの例外であり、ターゲットとする場合は、0から上の連続した順序で配列を初期化する必要があります。</p>
+    <p class="dropspot">また、<span class="notranslate">GML</span> 関数 <a href="../GML_Reference/Variable_Functions/array_create.htm"><span class="inline">array_create()</span></a>を使えば、固定サイズの配列を初期化することができますし、例えば、値を<em>持たない</em>「空の」配列を作ることもできます。</p>
     <p class="code">my_array = [];</p>
-    <p class="dropspot">This tells GameMaker that the variable &quot;<span class="inline">my_array</span>&quot; is an array, and you can then <a href="../GML_Reference/Variable_Functions/array_push.htm">add values</a> to it at any time in the future. However, if you try to access a value in an empty array then you will get an error.</p>
-    <p class="dropspot">If you already know which items you want to put into the array, you can add comma-separated values between the brackets when declaring the array:</p>
+    <p class="dropspot">これにより、<span class="notranslate">GameMaker</span> は、変数 &quot;<span class="inline">my_array</span>&quot; が配列であることを伝え、今後いつでも<a href="../GML_Reference/Variable_Functions/array_push.htm">値を</a>追加することができます。ただし、空の配列にある値にアクセスしようとすると、エラーが発生します。<br></p>
+    <p class="dropspot">どの項目を配列に入れるかが既に決まっている場合は、配列を宣言する際に大括弧の間にカンマで区切った値を追加することができます。</p>
     <p class="code">my_array = [&quot;Steve&quot;, 36, &quot;ST-3V3 - Steve Street&quot;];</p>
-    <h3 class="dropspot">       Array Bounds</h3>
-    <p class="dropspot">You should always take care to only access valid array positions, as trying to access a value outside of an array will also give an error. For example, this will cause the project to crash when run:</p>
+    <h3 class="dropspot">       配列の境界</h3>
+    <p class="dropspot">配列の外側の値にアクセスしようとするとエラーになるので、常に有効な配列の位置にのみアクセスするように注意する必要があります。例えば、これを実行すると、プロジェクトはクラッシュします。</p>
     <p class="code">my_array = array_create(5, 0);<br />
       var _val = my_array[6];</p>
-    <p class="dropspot">The array was only initialised with 5 positions, but we&#39;ve tried to get position 7 - since arrays are numbered from 0, <span class="inline">array[6]</span> is position 7 - therefore the game generates an error and crashes.</p>
-    <h3 class="dropspot">       Using Arrays</h3>
-    <p class="dropspot">Now how do we use an array practically? Exactly the same as we would use a normal variable, as shown in the following examples:</p>
+    <p class="dropspot">配列は5つの位置で初期化されただけですが、位置7を取得しようとしました。配列は0から番号が振られるので、 <span class="inline">array[6]</span> は位置7です。したがって、ゲームはエラーを発生しクラッシュします。</p>
+    <h3 class="dropspot">       配列の使用</h3>
+    <p class="dropspot">さて、配列は実際どのように使うのでしょうか？次の例に示すように、通常の変数の使い方と全く同じです。</p>
     <p class="code">// Add two array values together<br />
       total = array[0] + array[5];<br />
       <br />
@@ -73,7 +71,7 @@
       // Draw an array value<br />
       draw_text(32, 32, array[3]);
     </p>
-    <p class="dropspot">Since arrays are numbered sequentially, this means you can loop through them to perform extra actions too, just like we did to initialize it:</p>
+    <p class="dropspot">配列には連番が振られているので、初期化したときと同じように、<span class="notranslate">loop</span> 、余計な動作も行えるということです。</p>
     <p class="code">var total = 0;<br />
       <br />
       for (var i = 0; i &lt; 10; ++i)<br />
@@ -84,11 +82,10 @@
       <br />
       draw_text(32, 32 + (i * 32), total);
     </p>
-    <p class="dropspot">The above code will add up all the values in our array, draw each one of them and then draw the total value at the end.</p>
-    <h3 class="dropspot">       Deleting Arrays</h3>
-    <p class="dropspot">The last thing to mention about arrays is that you can delete an array simply by &quot;re-assigning&quot; the variable that defines it to a single value. This will free up the memory associated with all the positions and values for that array. For example:</p>
-    <p class="code">// Create an array<br />
-      for (var i = 9; i &gt; -1; --i)<br />
+    <p class="dropspot">上記のコードは、配列にあるすべての値を合計し、それぞれを描画して、最後に合計値を描画します。</p>
+    <h3 class="dropspot">       アレイの削除</h3>
+    <p class="dropspot">配列について最後に述べておくと、配列を定義している変数に1つの値を「再代入」するだけで、配列を削除することができます。これにより、その配列のすべての位置と値に関連するメモリが解放されます。例えば</p>
+    <p class="code">// Create an array<br />for (var i = 9; i &gt; -1; --i)<br />
       {<br />
           a[i] = i;<br />
       }<br />
@@ -96,14 +93,14 @@
       // Delete the array<br />
       a = -1;
     </p>
-    <p class="dropspot">If the array has multiple dimensions (see below), they will all be cleaned up too, and note that when you create arrays in instances, these do not need to be cleaned up when the instance is removed from the game, as they will be removed automatically by the <a class="glossterm" data-glossterm="garbage collector" href="#">garbage collector</a> on Destroy or Room End. However, if any of the array positions hold references to <em>dynamic</em> assets, such as particle systems, buffers, or data structures, then these <em>will</em> need to be destroyed before the array is deleted, the instance is destroyed or the room ends.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">Room</span> インスタンスに配列を作成した場合、インスタンスがゲームから削除されたときに、これらの配列はクリーンアップされる必要はありません。ただし、配列の位置がパーティクルシステム、<span class="notranslate">buffers</span> 、データ構造などの<em>動的</em>アセットへの参照を保持している場合は、配列の削除、インスタンスの破棄、または<span class="notranslate">room</span> の終了前に<em>、</em>これらを破棄する必要があります。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Multi-Dimensional Arrays</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">多次元配列</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><span style="text-align: justify;">We now know what a 1-dimensional array is, but in <span data-keyref="GameMaker Name">GameMaker</span> you can have arrays with multiple dimensions, which are essentially structured as an array inside an array inside an array... For example, the following is a <strong>2D</strong> (two-dimensional) array:</span></p>
+    <p class="dropspot"><span style="text-align: justify;">1次元の配列がどういうものかはわかりましたが、<span data-keyref="GameMaker Name">GameMakerでは</span>多次元の配列が可能で、基本的には配列の中に配列がある...という構造になっています。例えば、以下は<strong>2D</strong>（2次元）配列です。</span></p>
     <p class="code">array[0][0] = 5;</p>
-    <p class="dropspot">This is essentially telling GameMaker that the array is actually comprised of various 1D arrays. Here&#39;s an extended example:</p>
+    <p class="dropspot">これは、本質的に、配列が実際には様々な1次元配列で構成されていることを<span class="notranslate">GameMaker</span> に伝えているのです。以下はその拡張例です。</p>
     <p class="code">array<strong>[0]</strong>[0] = 0;<br />
       array<strong>[0]</strong>[1] = 1;<br />
       array<strong>[0]</strong>[2] = 2;<br />
@@ -112,12 +109,9 @@
       array<strong>[1]</strong>[1] = 4;<br />
       <strong></strong>array<strong>[1]</strong>[2] = 5;
     </p>
-    <p class="dropspot">In the above code, <span class="inline">array[0]</span> holds another array, and so does <span class="inline">array[1]</span>.</p>
-    <p class="dropspot">Alternatively, to access 2D arrays you can also use the following syntax: </p>
-    <p class="code">array[0, 0] = 5;</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> The above syntax only works for 2D arrays.</p>
-    <p class="dropspot">A multi-dimension array needs to be initialised before use, the same as a single 1D array, and can hold real numbers, strings, and any other <a href="Data_Types.htm">data type</a>, just like any variable, making them ideal candidates for any game that needs to store large amounts of data in an easily accessible way (remember, you can loop through an array easily).</p>
-    <p class="dropspot">You can also initialize a multi-dimensional array within one statement by nesting 1-dimensional arrays:</p>
+    <p class="dropspot">上記のコードでは， <span class="inline">array[0]</span> が別の配列を保持しており，<span class="inline">array[1]</span> も同様です．</p>
+    <p class="dropspot">多次元配列は、1次元の配列と同じように使用前に初期化する必要があり、実数、<span class="notranslate">strings</span> 、その他の<a href="Data_Types.htm">データ型を</a>変数と同じように保持できます。大量のデータを簡単にアクセスできる方法で保存する必要があるゲームにとって、理想的な候補です（忘れずに、配列を通して簡単に<span class="notranslate">loop</span> できるのです）。</p>
+    <p class="dropspot">また、1次元配列を入れ子にすることで、1つの文の中で多次元配列を初期化することができます。</p>
     <p class="code">two_dimensional_array = <br />
       [<br />
           [&quot;Apple&quot;, 10, 2],<br />
@@ -125,11 +119,11 @@
           [&quot;Mango&quot;, 15, 4],<br />
           // ...and so on.<br />
       ]</p>
-    <p class="dropspot">Multi-dimension arrays are also not limited to <em>just </em>two dimensions, and you can have 3, 4 or more dimensions to an array as required in your code, just by adding <span class="inline">[n]</span> further arguments, eg:</p>
+    <p class="dropspot">また、多次元配列は2<em>次元に </em>限らず、 <span class="inline">[n]</span> のような引数を追加するだけで、コードの必要に応じて3次元、4次元、それ以上の次元の配列を持つことができます。</p>
     <p class="code">array[0][0][0] = 1;     // A three dimensional array<br />
       array[0][0][0][0] = 1;  // A four dimensional array<br />
       // etc...</p>
-    <p class="dropspot">It should be noted too that the length of each dimension in an array can be different, so you can have the initial array dimension with a length of 3, but the second dimension entry can be a different length for each slot in the first dimension; for example:</p>
+    <p class="dropspot">配列の各次元の長さを変えることができるので、配列の最初の次元の長さは3ですが、2番目の次元のエントリーは、最初の次元の各スロットに対して異なる長さにすることができます。</p>
     <p class="code">array[2][2] = &quot;3&quot;;<br />
       array[2][1] = &quot;2&quot;;<br />
       array[2][0] = &quot;1&quot;;<br />
@@ -142,10 +136,10 @@
       array[0][1] = 2;<br />
       array[0][0] = 1;
     </p>
-    <p class="dropspot">In the above code, <span class="inline">array[0]</span> has 2 slots, <span class="inline">array[1]</span> has 4 slots and <span class="inline">array[2]</span> has 3 slots.</p>
-    <h3 class="dropspot">       Extended Example</h3>
-    <p class="dropspot">Here is one final example of how this may be used in an actual game: Say you want to spawn four different enemies at four different points in your game depending on a random value. Well, we can use an array with 2 dimensions to do this and save writing out a load of code.</p>
-    <p class="dropspot">First we should initialize the array we are going to use in the Create event of our &quot;controller&quot; object (note the use of comments to remind you what each array entry does):</p>
+    <p class="dropspot">上記のコードでは、 <span class="inline">array[0]</span> が 2 スロット、 <span class="inline">array[1]</span> が 4 スロット、 <span class="inline">array[2]</span> が 3 スロットになります。</p>
+    <h3 class="dropspot">       拡張例</h3>
+    <p class="dropspot">最後に、実際のゲームでの使い方の例を一つご紹介します。例えば、ゲーム中の4つの地点で、ランダムな値によって4種類の敵を出現させたいとします。この場合、2次元の配列を使用することで、コードを書く手間を省くことができます。</p>
+    <p class="dropspot">まず、&quot;controller&quot;<span class="notranslate">object</span> の Create イベントで使用する配列を初期化します (各配列のエントリが何を行うかを示すコメントを使用していることに注意しましょう)。</p>
     <p class="code">enemy[3][2] = 448;       //y position<br />
       enemy[3][1] = 32;        //x position<br />
       enemy[3][0] = obj_Slime; //Object<br />
@@ -158,55 +152,54 @@
       enemy[0][2] = 32;<br />
       enemy[0][1] = 32;<br />
       enemy[0][0] = obj_Ogre;</p>
-    <p class="dropspot">We now have the objects to spawn instances of and their corresponding x and y spawn coordinates within the room all stored in our array. This can now be used as follows in another event of the controller object (an alarm for example, or a key press event):</p>
+    <p class="dropspot">これで、インスタンスを生成する<span class="notranslate">objects</span> と、それに対応する<span class="notranslate">room</span> 内の x および y スポーン座標が、すべて配列に格納されました。これは、コントローラ<span class="notranslate">object</span> の別のイベント（たとえば、アラームやキー押下イベント）で、次のように使用することができます。</p>
     <p class="code">//get a random number from 0 to 3, inclusive<br />
       var i = irandom(3);<br />
       <br />
       //Use the array to create the object<br />
       instance_create_layer(enemy[i][1], enemy[i][2], &quot;Enemy_Layer&quot;, enemy[i][0]);
     </p>
-    <p class="dropspot">That short code will now spawn a random enemy in the game room, and it uses far less code than an &quot;<span class="inline">if / then / else</span>&quot; structure or even a &quot;<span class="inline">switch</span>&quot;, and as the array is initialized all together in the create event it is MUCH easier to edit and change any of those values as they are not <a class="glossterm" data-glossterm="hard-coded" href="#">hard-coded</a> into the rest of the project code.</p>
+    <p class="dropspot">この短いコードで、ゲーム内のランダムな敵を生成します。<span class="notranslate">room</span> 、これは &quot;<span class="inline">if / then / else</span>&quot; 構造体や &quot;<span class="inline">switch</span>&quot; よりもはるかに少ないコードで、配列はすべて create イベントで初期化されるので、プロジェクトの残りのコードに<a class="glossterm" data-glossterm="ハードコード化" href="#">ハードコードされて</a>いないこれらの値を編集して変更することが非常に簡単になります。</p>
   </div>
-  <p> </p>
-  <p>Also see: <a data-xref="{title}" href="../GML_Reference/Variable_Functions/Array_Functions.htm">Array Functions</a><a data-xref="{text}" href="../GML_Reference/Variable_Functions/Variable_Functions.htm#h"> </a></p>
-  <h2>Arrays as Function Arguments</h2>
-  <p>You can pass arrays into <a href="Script_Functions.htm">script functions</a> and <a href="Method_Variables.htm">method variables</a> as arguments, and modify those arrays anywhere inside the function. Doing so will modify the original arrays as well.</p>
-  <p>For example, this function simply changes the first three elements of the array passed into it:</p>
+  <p> </p>
+  <h2>関数の引数としての配列</h2>
+  <p><a href="Script_Functions.htm">スクリプト関数や</a> <a href="Method_Variables.htm">メソッド変数に</a>引数として配列を渡し、関数内の任意の場所でそれらの配列を変更することができます。この場合、元の配列も同様に変更されます。</p>
+  <p>例えば、この関数は、渡された配列の最初の3つの要素を変更するだけです。</p>
   <p class="code">modify_array = function (array)<br />
     {<br />
         array[0] = 2;<br />
         array[1] = 4;<br />
         array[2] = 6;<br />
     }</p>
-  <p>You can now create an array and pass it into this function, which will modify the array:</p>
+  <p>これで配列を作成し、この関数に渡すと、配列が修正されます。</p>
   <p class="code">my_array = [100, 4, 214];<br />
     <br />
     modify_array(my_array);<br />
     <br />
     show_debug_message(my_array); // Prints [2, 4, 6];
   </p>
-  <p>In previous GameMaker versions, this was not the case, as modifying an array inside a function would create a copy instead. This <em>deprecated</em> behaviour can still be enabled if desired: read the &quot;<strong>Copy on Write</strong>&quot; section below for more information.</p>
-  <h2 id="h">Copy on Write</h2>
-  <p>The Copy on Write behaviour is deprecated, and is only used when &quot;<strong>Enable Copy on Write behaviour for Arrays</strong>&quot; is enabled in the <a href="../../Settings/Game_Options.htm">General Game Options</a>. This section describes the behaviour of arrays when this option is enabled.</p>
-  <p>As described in the previous section, arrays can be passed into functions as arguments. To do this, you simply have to specify the array variable (no need for each of the individual positions, nor the <span class="inline">[]</span> brackets) and the entire array will be <b>passed by reference</b> into the function:</p>
+  <p>以前のバージョン（<span class="notranslate">GameMaker</span> ）では、関数内で配列を変更すると、代わりにコピーが作成されたため、このようなことはありませんでした。この<em>非推奨の</em>動作は、必要ならまだ有効にすることができます。 詳細は、以下の &quot;<strong>書き込み時のコピー</strong>&quot; のセクションを参照ください。</p>
+  <h2 id="h">コピーオンライト</h2>
+  <p>Copy on Writeの動作は非推奨で、<a href="../../Settings/Game_Options.htm">General Game Optionsの</a>「<strong>Enable Copy on Write behaviour for Arrays</strong>」が有効なときのみ使用されます。このセクションでは、このオプションが有効になっているときの配列の動作について説明します。</p>
+  <p>前節で説明したように、配列は引数として関数に渡すことができる。そのためには、単に配列変数を指定すればよく（個々の位置や、 <span class="inline">[]</span> の括弧は不要）、配列全体が関数に<b>参照渡し</b>されます。</p>
   <p class="code">my_array = [1, 2, 4, 8, 16];<br />
     <br />
     do_something(my_array);
   </p>
-  <p>However, when <strong>Copy on Write</strong> is enabled, changing any of the array&#39;s values inside the function creates a temporary copy with your modifications. The original array is not modified. This behaviour is called Copy on Write.</p>
-  <p>To actually modify the original array that was passed into the function, you must either return it back, or use the <span class="inline">@</span> accessor.</p>
-  <p>For example, the function called above, <span class="inline2">do_something()</span>, may do something simple like this:</p>
+  <p>しかし、<strong>Copy on Write</strong>が有効な場合、関数内で配列の値を変更すると、変更内容を含む一時的なコピーが作成されます。元の配列は変更されません。この挙動をCopy on Writeと呼びます。</p>
+  <p>関数に渡された元の配列を実際に変更するには、それを返すか、 <span class="inline">@</span> アクセスキーを使用する必要があります。</p>
+  <p>例えば、上で呼ばれた<span class="inline2">do_something()</span>という関数は、次のような簡単なことをすることがあります。</p>
   <p class="code">do_something = function(array)<br />
     {<br />
         array[1] = 200;<br />
     }</p>
-  <p>Now you would expect <span class="inline2">my_array</span> to hold the values <span class="inline2">1, 200, 4</span>, etc., which would normally be correct -- but when <strong>Copy on Write</strong> is enabled, the original array remains unaffected.</p>
-  <p>To work around this, you can make the function <strong>return</strong> the modified array copy, and then apply it back to the original variable:</p>
+  <p>このとき、<span class="inline2">my_arrayには</span> <span class="inline2">1, 200, 4などの</span>値が格納されるはずで、通常は正しいのですが、<strong>Copy on Writeを</strong>有効にすると、元の配列は影響を受けないままです。</p>
+  <p>これを回避するには、関数が変更した配列のコピーを<strong>返し</strong>、それを元の変数に適用すればよいのです。</p>
   <p class="code">my_array = [1, 2, 4, 8, 16];<br />
     <br />
     my_array = do_something(my_array);
   </p>
-  <p>The function itself would return the modified array back:</p>
+  <p>この関数自体は、変更された配列を返すことになります。</p>
   <p class="code">do_something = function(array)<br />
     {<br />
         array[1] = 200;<br />
@@ -214,29 +207,29 @@
         return array;<br />
     }
   </p>
-  <p class="note"><span class="note">NOTE</span><b> </b>The above code is not necessary if you are not changing any of the array&#39;s values, but rather referencing them. Referencing an array will not copy it and will be faster to parse.</p>
-  <p>The second solution is to use the <span class="inline">@</span> accessor to change the array values directly, which saves the CPU overhead of having to make a temporary copy. This means that you do not need to return the array from the function and can edit it directly:</p>
+  <p class="note"><span class="note">注意</span><b> </b>配列の値を変更するのではなく、参照するのであれば、上記のコードは必要ありません。配列を参照することで、配列はコピーされず、パースも高速になります。</p>
+  <p>2つ目の解決策は、<span class="inline">@</span> アクセサを使用して配列の値を直接変更することです。これにより、一時的なコピーを作成しなければならないという CPU オーバーヘッドを節約することができます。つまり、関数から配列を返す必要がなく、直接編集することができるのです。</p>
   <p class="code">do_something = function(array)<br />
     {<br />
         array[@ 1] = 200;<br />
     }</p>
-  <p>Using this accessor bypasses the Copy on Write behaviour and directly modifies the referenced array. This can be used to selectively disable Copy on Write for specific statements while keeping the option enabled.</p>
-  <p>Again, all of this is not necessary if <strong>Copy on Write</strong> is <strong>disabled</strong> (which is the default and recommended option).</p>
-  <p>Find out more information on accessors and how they work, along with an example for arrays, from the following page:</p>
+  <p>このアクセサを使用すると、Copy on Write の動作をバイパスして、 参照されている配列を直接変更することができます。これは、オプションを有効にしたまま、特定のステートメントに対して選択的にCopy on Writeを無効にするために使用することができます。</p>
+  <p>繰り返しますが、<strong>コピーオンライトが</strong> <strong>無効になって</strong>いる場合（デフォルトおよび推奨オプション）、これらのすべては必要ありません。</p>
+  <p>アクセッサの詳細とその動作、配列の例については、次のページを参照してください。</p>
   <ul class="colour">
-    <li><a href="Accessors.htm">Accessors</a></li>
+    <li><a href="Accessors.htm">アクセサー</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Structs.htm">Structs &amp; Constructors</a></div>
+        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="Structs.htm">構造体とコンストラクタ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Arrays

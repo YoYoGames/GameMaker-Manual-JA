@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Asset Browser</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>アセットブラウザー</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="GameMaker Asset Browser Overview" />
   <meta name="rh-index-keywords" content="Asset Browser" />
@@ -14,316 +14,303 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Asset Browser</span></h1>
-  <p>The core of your game will be created from assets added to the <strong>Asset Browser</strong> located by default on the right of the <a class="glossterm" data-glossterm="IDE" href="#">IDE</a>. This is where you can add everything that your game requires to run, including a game room, <a class="glossterm" data-glossterm="sprites" href="#">sprites</a>, objects, paths and a number of other things. A basic game in <span data-keyref="GameMaker Name">GameMaker</span> will require a room to run in (new projects will always be created with a room asset already created), and usually at least one object and a sprite, although you&#39;ll likely use a lot more!</p>
+  <h1><span class="notranslate">Asset</span> ブラウザー</h1>
+  <p>ゲームのコアは、<a class="glossterm" data-glossterm="アイディーイー" href="#">IDEの</a>右側にデフォルトで配置されている<strong>アセットブラウザに</strong>追加された<span class="notranslate">assets</span> から作成されます。ここには、ゲームの実行に必要なもの、ゲーム<span class="notranslate">room</span> 、<a class="glossterm" data-glossterm="スプライト" href="#">スプライト</a>、<span class="notranslate">objects</span> 、<span class="notranslate">paths</span> 、その他多くのものを追加することができます。<span data-keyref="GameMaker Name">GameMaker</span>の基本的なゲームでは、実行するために<span class="notranslate">room</span> が必要で（新しいプロジェクトは常に<span class="notranslate">room</span> <span class="notranslate">asset</span> が作成されます）、通常、少なくとも<span class="notranslate">object</span> と<span class="notranslate">sprite</span> が必要ですが、もっとたくさん使うことになるでしょう。</p>
   <p><img alt="The Asset Browser Components" class="center" src="../assets/Images/Introduction/QS_AssetBrowser.png" /></p>
-  <p><span data-field="title" data-format="default">The Asset Browser</span> is where you&#39;ll create and organise the assets for your game as well as modify certain other aspects like platform specific settings and configurations. Below you can find explanations of each of the different sections.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#">Search Bar</a></p>
+  <p><span class="notranslate">Asset</span> Browser では、ゲームの<span class="notranslate">assets</span> を作成、整理したり、プラットフォーム固有の設定や構成など、その他の部分を変更します。以下、各セクションの説明です。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#">検索バー</a></p>
   <div class="droptext" data-targetname="drop_down">
-    <p class="dropspot">The Search Bar is where you can type in some text and use it to filter what is shown in the main asset list below. For example typing &quot;room&quot; will show you all the assets that contain &quot;room&quot; in their name. To reset the asset list back to its default view, simply delete any text from the search bar.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">検索バーは、テキストを入力して、下のメイン<span class="notranslate">asset</span> リストに表示されるものをフィルタリングするために使用します。例えば、「room」と入力すると、名前に「room」が含まれる<span class="notranslate">assets</span> がすべて表示されます。<span class="notranslate">asset</span> のリストをデフォルトの表示に戻すには、検索バーのテキストを削除してください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#">Add Asset</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#">アセット追加</a></p>
   <div class="droptext" data-targetname="drop_down1">
-    <p class="dropspot">With the Add Asset button you can choose to add a new asset to the asset list. Clicking this will open the following window:</p>
-    <p class="dropspot"><img alt="Create Asset Window" class="center" height="415" src="../assets/Images/Introduction/QS_AssetBrowser_AddAsset.png" width="614" /></p>
-    <p class="dropspot">You can choose which of the two views above to use by clicking either the <img alt="List Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_List.png" width="20" /> list icon or <img alt="Grid Icon" class="icon" src="../assets/Images/Icons/Icon_Grid.png" /> grid icon, and you can also click the <img alt="Import Icon" class="icon" src="../assets/Images/Icons/Icon_Import.png" /> Import icon to import an already existing asset from another project. If you don&#39;t want to import anything, then simply select the asset you want to create and click the Create button at the bottom. Note that you are not limited to adding only a single asset here, as you can set the number to create at the bottom of the window, and then click Create and that number of the chosen asset will be added to the asset browser for you. All assets created in this way will be added to the bottom of the asset list, outside of any folders, and also will be opened in the current workspace ready for editing.</p>
-    <p class="dropspot">The assets that you can add here are listed further down in this section of the manual.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Add<span class="notranslate">Asset</span> ボタンを使って、<span class="notranslate">asset</span> のリストに新しい<span class="notranslate">asset</span> を追加することを選択できます。これをクリックすると、次のようなウィンドウが表示されます。</p>
+    <p class="dropspot"><img alt="Create Asset Window" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_AddAsset.png" /></p>
+    <p class="dropspot"><img> リストアイコンまたは<img> グリッドアイコンのどちらかをクリックすることで、上の 2 つのビューのどちらを使用するかを選択できます。また、<img> インポートアイコンをクリックすると、他のプロジェクトから既に存在する<span class="notranslate">asset</span> をインポートすることができます。インポートしない場合は、作成したい<span class="notranslate">asset</span> を選択し、下部にある「作成」ボタンをクリックするだけです。なお、ここで追加する<span class="notranslate">asset</span> は 1 つに限定されません。ウィンドウの下部で作成する数を設定し、「作成」をクリックすると、選択した数の<span class="notranslate">asset</span> が<span class="notranslate">asset</span> ブラウザに追加されます。このようにして作成されたすべての<span class="notranslate">assets</span> は、フォルダの外にある<span class="notranslate">asset</span> リストの最下部に追加され、編集可能な状態で現在の<span class="notranslate">workspace</span> に表示されます。</p>
+    <p class="dropspot">ここで追加できる<span class="notranslate">assets</span> は、このマニュアルのさらに下に記載されています。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">Filter</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">フィルター</a></p>
   <div class="droptext" data-targetname="drop_down2">
-    <p class="dropspot">Clicking the Asset Filter button will open the following window:</p>
-    <p class="dropspot"><img alt="Asset Browser Filter Options" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_AssetFilter.png" />Here you can choose how to filter and display the assets listed in the asset browser. You can order them from A - Z or from Z - A as well as choose to order the groups first and then the assets within the groups, or order everything altogether. If you select the <strong>Custom Order</strong> filter, then you can select one or more assets and drag them up or down the asset browser tree and position them as you require (note that the &quot;Groups First&quot; option will be disabled).</p>
-    <p class="dropspot">You can also select one or more asset type to filter and only the assets that are in the project of those types will be shown in the asset list. Selecting &quot;Any Type&quot; will reset the filter. You can also filter using any tags that you have assigned (tags are discussed further down in this section of the manual). Note that if you have selected any filter other than &quot;Any Type&quot; then the filter button will change colour to give a visual indication that filtering is active.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">Asset</span> Filter ボタンをクリックすると、以下のウィンドウが表示されます。</p>
+    <p class="dropspot"><img>ここでは、<span class="notranslate">assets</span> ブラウザにリストされた<span class="notranslate">asset</span> をどのようにフィルタリングして表示するかを選択できます。A - Z または Z - A の順に並べたり、グループを先に並べ、その後にグループ内の<span class="notranslate">assets</span> を並べたり、すべてを並べたりすることができます。<strong>Custom Order</strong>フィルターを選択した場合、1 つまたは複数の<span class="notranslate">assets</span> を選択し、<span class="notranslate">asset</span> ブラウザーのツリーを上下にドラッグして、必要に応じて配置できます（「Groups First」オプションは無効になることに注意してください）。</p>
+    <p class="dropspot">また、1つ以上の<span class="notranslate">asset</span> タイプを選択してフィルタリングすると、そのタイプのプロジェクトに含まれる<span class="notranslate">assets</span> のみが<span class="notranslate">asset</span> リストに表示されます。Any Type &quot;を選択すると、フィルタリングがリセットされます。また、割り当てたタグを使用してフィルタリングすることもできます（タグについては、このセクションでさらに詳しく説明します）。Any Type」以外のフィルターを選択した場合、フィルターボタンの色が変わり、フィルターが有効であることを視覚的に示すことに注意してください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">Extras</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">エクストラ</a></p>
   <div class="droptext" data-targetname="drop_down3">
-    <p class="dropspot">The extras menu permits you to open the following windows (each of which is discussed separately on the linked pages):</p>
+    <p class="dropspot">エクストラメニューでは、以下のウィンドウを開くことができます（各ウィンドウについては、リンク先のページで個別に説明します）。</p>
     <ul class="colour">
-      <li class="dropspot"><a data-xref="{title}" href="../Settings/The_Room_Manager.htm">The Room Manager</a></li>
-      <li class="dropspot"><a href="../Settings/Configurations.htm">Config Editor</a></li>
-      <li class="dropspot"><a data-xref="{title}" href="../Settings/Game_Options.htm">Game Options</a></li>
-      <li class="dropspot"><a data-xref="{title}" href="../Settings/Included_Files.htm">Included Files</a></li>
+      <li class="dropspot"><a href="../Settings/The_Room_Manager.htm">ルームマネージャー</a></li>
+      <li class="dropspot"><a href="../Settings/Configurations.htm">コンフィグエディタ</a></li>
+      <li class="dropspot"><a href="../Settings/Game_Options.htm">ゲームオプション</a></li>
+      <li class="dropspot"><a href="../Settings/Included_Files.htm">同梱のファイル</a></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#">Quick Access</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#">クイックアクセス</a></p>
   <div class="droptext" data-targetname="drop_down4">
-    <p class="dropspot">This section of the asset browser is used to give you various methods to quickly access important or frequently used assets, and is split into the following sections:</p>
+    <p class="dropspot"><span class="notranslate">asset</span> ブラウザーのこのセクションは、重要または頻繁に使用する<span class="notranslate">assets</span> に素早くアクセスするためのさまざまな方法を提供するために使用され、次のセクションに分かれています。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Recent</strong>: Here you can find a list of the most recently used assets. By default a maximum of 10 assets will be listed here, but you can change this from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">Asset Browser Preferences</a>.</li>
-      <li class="dropspot"><strong>Favourites</strong>: Once you have added some assets to the asset list, you may have some that you access frequently at any given time and so to make things easier you can flag these assets as &quot;favourites&quot;, which will add them to this list and let you quickly find them. To flag an asset as a <em>favourite</em> use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on it and select Favourite from the pop-up menu. Note that you can use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> again to <em>unfavourite </em>any asset, and if you use the button on the main Favourites folder, you can select <em>Clear All</em> to remove everything.</li>
-      <li class="dropspot"><strong>Room Order</strong>: From here you can change the order that your rooms will run in. All projects require at least one room to run and the room at the top of the list is the &quot;home&quot; room and will be the first room entered when the game initially starts (it is flagged with a &quot;home&quot; icon <img alt="The Home Room Icon" class="icon" src="../assets/Images/Icons/Icon_AssetHome.png" />). To quickly change room order, simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag the room up or down the list and then release the mouse button to place it at the new position. If you click the &quot;home&quot; icon, then you will open the <strong>Room Manager</strong> and if you use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on a room you can create a <strong>child </strong>room. For more information on room order and child rooms please see the page on <a data-xref="{title}" href="../Settings/The_Room_Manager.htm">The Room Manager</a>.</li>
-      <li class="dropspot"><strong>Saved Filters</strong>: When using the filtering options, you may want to save the selection you&#39;ve made for future reference. To do that, set up the filter as explained further up this page, and then click the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on this option and select <em>Save Filter</em>. The filter will be saved to this list and you can rename it if required. To use the filter, simply double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on it or use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu option <em>Apply Filter</em>. You can also <em>Delete </em>and <em>Rename </em>saved filters from the RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu.</li>
-      <li class="dropspot"><strong>Tags</strong>: All assets in the Asset Browser can be assigned user-defined <strong>Tags</strong>. These will then be listed here and you can use them to filter the assets shown in the asset list and you can double-click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> any tag (or use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> option <em>Filter By Tag</em>) to apply that tag to the asset list filter. Any applied tags are shown at the bottom of the asset browser in the <strong>Information </strong>section. For more information on tags, see further down in this page.</li>
-      <li class="dropspot"><strong>Game Options</strong>: Here you can quickly access the various different <strong>Game Options</strong> for your project. These control various different aspects of the project related to setting up and compiling for the different target platforms (what Game Options are available will depend on what licence type you have). You can find more information on each of the options listed from the section on the <a href="../Settings/Game_Options.htm">Game Options</a>.</li>
+      <li class="dropspot"><strong>最近の</strong>ものここには、最近使用された<span class="notranslate">assets</span> のリストが表示されます。デフォルトでは、最大 10 個の<span class="notranslate">assets</span> がここに表示されますが、<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">アセットブラウザの環境設定</a>から変更することができます。</li>
+      <li class="dropspot"><strong>お気に入り</strong> <span class="notranslate">assets</span> を<span class="notranslate">asset</span> リストに追加した後、いつでも頻繁にアクセスするものがあるかと思いますので、<span class="notranslate">flag</span> これらの<span class="notranslate">assets</span> を「お気に入り」として、このリストに追加し、すぐに見つけることができるようにすることができます。<span class="notranslate">flag</span> <span class="notranslate">asset</span> を<em>お気に入りとして</em>登録するには、その上でマウスの右ボタン<img> を押し、ポップアップメニューから「お気に入り」を選択します。<span class="notranslate">asset</span> の<em>お気に入りを解除 </em>するには、もう一度マウスの右ボタン（<img> ）を使用します。また、メインの「お気に入り」フォルダ上でボタンを使用すると、「<em>すべて消去</em>」を選択してすべてを削除することができます。</li>
+      <li class="dropspot"><strong>ルームオーダー</strong>。ここから、<span class="notranslate">rooms</span> の実行順序を変更することができます。すべてのプロジェクトは、少なくとも1つの<span class="notranslate">room</span> を実行する必要があり、リストの一番上にある<span class="notranslate">room</span> は、「ホーム」<span class="notranslate">room</span> で、ゲームが最初に開始されたときに最初に入力される<span class="notranslate">room</span> となります（「ホーム」アイコン<img> でフラグが立っています）。<span class="notranslate">room</span> の順番を素早く変更するには、<img> をクリックして<span class="notranslate">room</span> をリストの上下にドラッグし、マウスボタンを離すだけで新しい位置に配置されます。ホーム」アイコンをクリックすると、<strong>ルームマネージャーが</strong>表示され、マウスの右ボタン<img> を使って<span class="notranslate">room</span> に移動すると、<strong>子ルームを </strong>作成することができます。<span class="notranslate">room</span> 順番と子<span class="notranslate">rooms</span> の詳細については、<a href="../Settings/The_Room_Manager.htm">ルームマネージャの</a>ページを参照してください。</li>
+      <li class="dropspot"><strong>保存されたフィルター</strong>フィルタリングオプションを使用する際、今後の参考のために選択したものを保存しておきたい場合があります。そのためには、このページで説明したようにフィルタを設定し、このオプション上でマウスの右ボタン（<img> ）をクリックし、［<em>フィルタの保存</em>］を選択します。フィルタはこのリストに保存され、必要に応じて名前を変更することができます。このフィルターを使用するには、<img> をダブルクリックするか、マウスの右ボタン<img> メニューから [<em>フィルターの適用</em>] を選択するだけです。また、RMB<img> メニューから、保存されたフィルタの<em>削除と </em> <em>名前の </em>変更ができます。</li>
+      <li class="dropspot"><strong>タグ</strong> <span class="notranslate">assets</span> ブラウザのすべての<span class="notranslate">Asset</span> には、ユーザー定義の<strong>タグを</strong>割り当てることができます。タグはここに表示され、<span class="notranslate">assets</span> のリストに表示される<span class="notranslate">asset</span> をフィルタリングするために使用できます。また、<img> 任意のタグをダブルクリックする（またはマウスの右ボタンで<img> <em>オプションを</em>使用する）ことにより、そのタグを<span class="notranslate">asset</span> リストフィルターに適用することができます。適用されたタグは、<span class="notranslate">asset</span> ブラウザの下部にある「<strong>情報」 </strong>セクションに表示されます。タグの詳細については、このページの下のほうを参照してください。</li>
+      <li class="dropspot"><strong>ゲームオプション</strong>。ここでは、プロジェクトの様々な<strong>ゲームオプションに</strong>素早くアクセスすることができます。これらのオプションは、ターゲットプラットフォームの設定やコンパイルに関連するプロジェクトの様々な側面をコントロールします（どのゲームオプションが利用できるかは、お持ちのライセンスタイプによって異なります）。各オプションの詳細については、ゲーム<a href="../Settings/Game_Options.htm">オプションの</a>セクションを参照してください。</li>
     </ul>
     <div class="droptext" data-targetname="drop_down8">
-      <p class="dropspot"> </p>
+      <p class="dropspot"> </p>
     </div>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down11" href="#">Asset List</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down11" href="#">アセットリスト</a></p>
   <div class="droptext" data-targetname="drop_down11">
-    <p class="dropspot">This section of the asset browser lists all the different assets that you are using in your game. By default - when you create a new project - this will be populated with numerous folder groups labelled with the different kinds of assets that can be added, but these can be renamed or even removed and you don&#39;t have to store assets of the same kind in each group. For example, you may find it more useful to create a group of assets for each level of your game rather than for each kind of asset, so you can create folder groups called &quot;Level 1&quot;, &quot;Level 2&quot;, etc. and store all the different assets for each level in the same folder. How you organise things really is up to you!</p>
-    <p class="dropspot"><img alt="Asset Browser Example" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_CustomList.png" /> To add a new asset to the list you can use the <strong>Add Asset</strong> button at the top of the Asset Browser, or you can open the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu anywhere in the asset list and then select the asset type to create:</p>
-    <p class="dropspot"><img alt="Create Asset RMB Menu" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_CreateAsset.png" /> Once the asset has been created it will be opened in the workspace and you can rename it to something that is appropriate to your game, but note that asset names can only be alpha-numeric, cannot start with a number, and can only use the underscore &quot;_&quot; as an additional character. You can also use the RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu to create new folder groups to contain assets using the <strong>Create Group</strong> option, and these can be named anything you wish. If you want to rename any asset or folder group, then you can do a slow double-click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on them or use the RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu option <strong>Rename</strong>.</p>
-    <p class="dropspot">An important feature of the Asset Browser is the ability to <a id="colour_assets"></a>colour assets so they are more immediately recognisable within the list. You can do this by clicking the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on the asset or folder to bring up the RMB menu and then selecting a colour from the colour strip at the bottom. If you do this on a group, then this will also colour any asset contained within the group:</p>
-    <p class="dropspot"><img alt="Colour Asset Groups" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_ColourGroup.gif" />Place the mouse over the arrows on the left or right side to show more colours. You can also right-click <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on any of the colour swatches to generate a custom colour to use.</p>
-    <p class="dropspot">Individual assets can also be coloured independently of the group colour by using the palette at the bottom of the RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu (although this can be disabled from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">Asset Browser Preferences</a>) and note that you can use <img alt="Shift Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> or <img alt="CTRL Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> along with the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to select multiple assets and assign the colour to all of them at once:</p>
-    <p class="dropspot"><img alt="Colour Assets" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_ColourAsset.gif" /></p>
-    <p class="dropspot">How you colour things is up to you - it can be by asset type, by use, or by any other criteria!</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> You can select folders and assets then click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag them to move them out of - or into - any other folder group in the asset list. You can also delete any or all of the folder groups if they are not required, keeping the asset list tidy and only showing the required elements for the project.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">asset</span> ブラウザのこのセクションには、ゲーム内で使用するさまざまな<span class="notranslate">assets</span> がすべて表示されます。<span class="notranslate">assets</span> デフォルトでは、新しいプロジェクトを作成すると、追加可能なさまざまな種類の<span class="notranslate">assets</span> をラベル付けした多数のフォルダグループが作成されます。例えば、<span class="notranslate">assets</span> の種類ごとではなく、ゲームのレベルごとに<span class="notranslate">asset</span> のグループを作る方が便利だと思うかもしれません。そのため、「Level 1」、「Level 2」、などというフォルダグループを作り、各レベルの異なる<span class="notranslate">assets</span> をすべて同じフォルダに保存することができます。どのように整理するかは、本当にあなた次第です。</p>
+    <p class="dropspot"><img> 新しい をリストに追加するには、 ブラウザの上部にある<span class="notranslate">asset</span> <span class="notranslate">Asset</span> <strong>Add Asset</strong>ボタンを使用するか、 リスト内の任意の場所でマウスの右ボタン メニューを開き、作成するリソースを選択することができ ます。<span class="notranslate">asset</span> <img> </p>
+    <p class="dropspot"><img> <span class="notranslate">asset</span> が作成されると、 で開かれるので、ゲームに適した名前に変更できます。ただし、 の名前は英数字のみで、数字で始めることはできず、アンダースコア「_」を追加文字としてのみ使用できることに注意してください。また、右ボタンメニューの「<span class="notranslate">workspace</span> <span class="notranslate">asset</span> <strong>グループ作成</strong>」オプションを使って、 を含む新しいフォルダグループを作成することができます。これらのフォルダグループには、好きな名前を付けることができます。 またはフォルダグループの名前を変更したい場合は、それらをゆっくりダブルクリック（ ）するか、RMB メニューのオプション「<span class="notranslate">assets</span> <span class="notranslate">asset</span> <img> <img> <em>名前の変更</em>」を使用することができます。</p>
+    <p class="dropspot"><span class="notranslate">asset</span> ブラウザの重要な機能として、リスト内ですぐに認識できるように<span class="notranslate">assets</span> に色を付けることができます。この機能を使用するには、左側の<span class="notranslate">asset</span> リスト ノード上でマウスの右ボタン（<img> ）をクリックし、ポップアップ表示されるカラー ピッカー パレットから色を選択します。この操作をフォルダに対して行うと、そのフォルダに含まれるすべての<span class="notranslate">asset</span> にも色が付きます。</p>
+    <p class="dropspot"><img>このようにノードからカラーピッカーパレットを開くと、任意の色見本を右クリック（<img> ）して、使用するカスタムカラーを生成することができることに注意してください。</p>
+    <p class="dropspot"><span class="notranslate">assets</span> ノートの RMB<img> を使用するか、RMB<img> メニューの下部にあるパレットを使用すれば、個々の<span class="notranslate">asset</span> にグループカラーとは別に色を付けることもできます（ただし、これは<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">アセットブラウザの環境</a>設定で無効にできます）。なお、<img> または<img> /<img> と左マウスボタン<img> で複数の<span class="notranslate">assets</span> を選択して、それらのすべてに一度に色を割り当てることが可能です。</p>
+    <p class="dropspot"><img alt="List Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_List.png" width="20" /></p>
+    <p class="dropspot"><span class="notranslate">asset</span> タイプ別、用途別など、どのように色をつけるかはあなた次第です。</p>
+    <p class="dropspot"><span class="notranslate">asset</span> リストで最後に注意すべきことは、フォルダと<span class="notranslate">assets</span> を選択し、<img> をクリックしてドラッグすると、<span class="notranslate">asset</span> リストの他のフォルダグループから移動したり、他のフォルダグループに移動したりできます。また、フォルダグループが必要ない場合は、任意またはすべて削除して、アセット リストを整頓し、プロジェクトに必要な要素のみを表示させることができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down6" href="#">Information</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down6" href="#">インフォメーション</a></p>
   <div class="droptext" data-targetname="drop_down6">
-    <p class="dropspot">The information bar at the bottom of the Asset Browser shows you how many assets are in the asset list in total, as well as the number of assets that are currently selected. This section will also show any tags that have been used to filter the asset list (see below for more information on tags), and you can click on them to remove the tag filter if required.</p>
-    <p class="dropspot"><img alt="Tag Information" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_InfoTags.png" /></p>
+    <p class="dropspot"><span class="notranslate">Asset</span> ブラウザの下部にある情報バーには、<span class="notranslate">assets</span> リスト内の<span class="notranslate">asset</span> の合計数、および現在選択されている<span class="notranslate">assets</span> の数が表示されます。このセクションには、<span class="notranslate">asset</span> リストのフィルタリングに使用されたタグも表示されます（タグの詳細については以下を参照してください）。必要に応じて、タグをクリックしてタグ フィルタを解除することができます。</p>
+    <p class="dropspot"><img alt="Grid Icon" class="icon" src="../assets/Images/Icons/Icon_Grid.png" /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down7" href="#">Zoom Controls</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down7" href="#">ズームコントロール</a></p>
   <div class="droptext" data-targetname="drop_down7">
-    <p class="dropspot">The Zoom Controls can be used to make the contents of the asset browser larger or smaller, with a minimum of 50% to a maximum of 250% of the current DPI of the <span data-keyref="GameMaker Name">GameMaker</span> IDE. If you wish to reset this to the default 100%, then simply double-click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the percentage value to the left of the slider. Note that there are a couple of preferences available to deal with how this works in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">Asset Browser Preferences</a>.</p>
+    <p class="dropspot">Zoom Controls を使って、<span class="notranslate">asset</span> ブラウザの内容を、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> の現在の DPI の最小 50%から最大 250%まで拡大・縮小することができます。これをデフォルトの100％に戻したい場合は、スライダーの左側にあるパーセント値<img> をダブルクリックするだけです。<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">アセットブラウザの環境</a>設定に、この動作に対応するための設定がいくつかあります。</p>
   </div>
-  <p> </p>
-  <p> </p>
-  <h1>Tags</h1>
-  <p>As mentioned in various of the sections above, the asset browser gives you the ability to add tags to individual assets as well as to group folders. Tags are a very powerful tool, not only for organising and filtering the assets listed in the asset browser, but also when programming your game in general, as you can use assigned tags in code.</p>
-  <p>To create a tag you need to use the RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu on an asset and then select the <em>Edit Tags</em> option. This will bring up the <strong>Tag Editor</strong> where you can type in the tag you want to use, and then either press <img alt="Enter" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" title="Enter" width="55" /> or type a comma to apply it:</p>
-  <p><img alt="The Tag Editor" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_EditTags.gif" />You can assign multiple tags to a single item, and you can also use <img alt="Shift Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> or <img alt="CTRL Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> along with the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to select multiple assets and assign a tag to all of them at once. Once added, all tags will be visible under the Quick Access menu and also in the Filter options (as explained in the sections above), and so can be used to quickly filter the asset list and show only those items with the chosen tag or tags.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Assigning a tag to a folder group will <strong>not </strong>automatically assign it to the assets inside it.</p>
-  <p>It is important to note that assets that are created while tags are part of the active filter <strong>will be given those tags automatically</strong>. This means that if you are viewing all assets under the &quot;Level 1&quot; tag - for example - all new assets created with this filter active will also have the &quot;Level 1&quot; tag added to them upon creation.</p>
-  <p>Finally, tags can also be used in your project code to identify any asset and then act on it, making it a very powerful tool as you can code behaviours based on a tag or group of tags. For example, imagine you have a project with a &quot;<span class="inline">Die On Touch</span>&quot; tag. When programming the project, you can check this tag and code functionality that is appropriate, then later the artists and level designers can create new assets of any type and tag them with the &quot;<span class="inline">Die On Touch</span>&quot; tag then use the asset when designing a level. Any code that has been programmed to use this tag will automatically include these new assets.</p>
-  <p>For more information on using tags in the project code, please see the section on <a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/Assets_And_Tags.htm">Assets And Tags</a>.</p>
-  <p> </p>
-  <p> </p>
-  <h1>RMB Menu</h1>
-  <p>When working with the Asset Browser, you can use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on any asset or folder to open a menu of options:</p>
-  <p><img alt="Asset Browser RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu.png" />The exact options available to you will depend on the context that has been clicked, and below we show the contents when the menu is opened on an asset or folder group in the Asset List (other contexts will show some of these but not all):</p>
+  <p> </p>
+  <p> </p>
+  <h1>タグ</h1>
+  <p>上記のさまざまなセクションで述べたように、<span class="notranslate">asset</span> ブラウザーでは、個々の<span class="notranslate">assets</span> とグループフォルダーにタグを追加することができます。タグは非常に強力なツールで、<span class="notranslate">assets</span> ブラウザにリストされた<span class="notranslate">asset</span> を整理してフィルタリングするだけでなく、コード内で割り当てられたタグを使用できるため、一般的にゲームをプログラミングする際にも使用できます。</p>
+  <p>タグを作成するには、<span class="notranslate">asset</span> で RMB<img> メニューを使用し、「<em>タグの編集</em>」オプションを選択する必要があります。これにより、<strong>タグエディタが</strong>表示され、使用したいタグを入力し、<img> を押すか、カンマを入力して適用することができます。</p>
+  <p><img>また、<img> または<img> /<img> とマウスの左ボタン<img> を使って、複数の<span class="notranslate">assets</span> を選択し、一度にすべてのアイテムにタグを割り当てることができます。一度追加されたタグは、クイックアクセスメニューとフィルターオプション（上記のセクションで説明）に表示されるので、<span class="notranslate">asset</span> リストをすばやくフィルターし、選択したタグを持つ項目のみを表示するのに使用することができます。</p>
+  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> フォルダグループにタグを割り当てても、その中の に自動的にタグが割り当てられるわけ<span class="notranslate">assets</span> <strong>では </strong>ありません。</p>
+  <p>タグがアクティブなフィルタの一部である間に作成された<span class="notranslate">assets</span> には、<strong>自動的にそのタグが</strong>付与されることに注意することが重要です。つまり、たとえば、すべての<span class="notranslate">assets</span> を「Level 1」タグで表示している場合、このフィルターを有効にして作成された新しい<span class="notranslate">assets</span> には、作成時に「Level 1」タグが追加されることになります。</p>
+  <p>最後に、タグをプロジェクトコードに使用して、任意の<span class="notranslate">asset</span> を識別し、それに基づいて動作させることもできます。タグやタグのグループに基づいて動作をコーディングできるため、非常に強力なツールになります。たとえば、「<span class="inline">Die On Touch</span> 」タグを持つプロジェクトがあるとします。その後、アーティストやレベルデザイナーは、任意のタイプの新しい<span class="notranslate">assets</span> を作成し、&quot;<span class="inline">Die On Touch</span>&quot; タグを付けて、レベルをデザインするときに<span class="notranslate">asset</span> を使用することができます。このタグを使用するようにプログラムされたコードは、自動的にこれらの新しい<span class="notranslate">assets</span> を含むことになります。</p>
+  <p>プロジェクトコードでのタグの使用については、「<a href="../GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/Assets_And_Tags.htm">資産とタグ</a>」のセクションを参照してください。</p>
+  <p> </p>
+  <p> </p>
+  <h1>RMBメニュー</h1>
+  <p><span class="notranslate">Asset</span> Browser で作業する場合、任意のリソースやフォルダー上でマウスの右ボタン<img> を押すと、オプションのメニューが表示されます。</p>
+  <p><img>利用できるオプションは、クリックされたコンテキストによって異なります。以下では、<span class="notranslate">asset</span> または<span class="notranslate">Asset</span> リストのフォルダグループでメニューを開いたときの内容を示します（他のコンテキストでは、これらの一部が表示されますが、すべてではありません）。</p>
   <ul class="colour">
-    <li><strong>Create </strong>- Create a new asset. On selecting this you will be presented with a list of the available asset types that can be created for you to select one. Note that if you open this menu on a specific asset, there will be an additional option to create an asset of the same type listed just below so you don&#39;t have to look for the asset type in the list.</li>
-    <li><strong>Edit (All) </strong>- Open the asset properties editor for the selected asset(s) or folder group (note that you can double click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on a single asset too to open it for it editing).</li>
-    <li><strong>Edit Tags</strong> - This will open the Tag editor where you can add or remove tags to the selected asset(s) or folder group(s).</li>
-    <li><strong>Rename </strong>- Rename the asset or the folder group.</li>
-    <li><strong>Duplicate </strong>- Create a duplicate of the asset or assets that have been selected.</li>
-    <li><strong>Favourite </strong>- Flag an asset or assets as being a favourite, adding it to the Quick Access section at the top of the Asset browser.</li>
-    <li><strong>Add Existing</strong> - Add existing assets from a different <span data-keyref="GameMaker Name">GameMaker</span> project folder. Please note that assets created using a version anterior to 2.3.0 will require conversion as the project file format changed with the 2.3.0 update. This means it may be preferable to import the entire project and converting everything then saving it to a new location if the assets are imported frequently into other projects.</li>
-    <li><strong>Add Existing From My Library</strong> - Add assets to the asset list from an item in your Marketplace library. Please note that Marketplace assets created using a version anterior to 2.3.0 will require conversion as the project file format changed with the 2.3.0 update.</li>
-    <li><strong>Delete </strong>- Delete the selected asset(s) from the project. This cannot be undone!</li>
-    <li><strong>Create Group</strong> - Add a new folder group to the asset list.</li>
-    <li><strong>Expand Children</strong> - Expand the currently selected folder group along with any sub-folders it may contain.</li>
-    <li><strong>Expand All</strong> - Expand all the folder groups in the asset list.</li>
-    <li><strong>Contract All</strong> - Contract all the folder groups in the asset list.</li>
-    <li><strong>Open In New Asset Browser</strong> - This option is only available for folder groups, and it will open the group in a new Asset browser window containing only the contents of the parent group the option was selected for.</li>
-    <li><strong>Open in Explorer</strong> - This will open the file explorer on the location of the file that has been stored for the asset in your project folder.</li>
-    <li><strong>Colour Swatches</strong> - Here you can select a new colour for the asset to use. If used on a folder group, all assets within the folder will get the chosen colour, and if used on one or more assets, this will override any colour set in for the folder group (unless you have overridden this option in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">Asset Browser Preferences</a>).</li>
+    <li><strong>作成 - </strong> 新しい<span class="notranslate">asset</span> を作成します。これを選択すると、作成可能な<span class="notranslate">asset</span> タイプのリストが表示され、選択することができます。特定の<span class="notranslate">asset</span> でこのメニューを開くと、すぐ下に同じタイプのリソースを作成するオプションが追加されるので、リストで<span class="notranslate">asset</span> タイプを探す必要がないことに注意してください。</li>
+    <li><strong>編集 (すべて)] -</strong> <img> <strong> </strong> 選択したアセットまたはフォルダグループのリソースプロパティエディタを開きます (<span class="notranslate">asset</span> をダブルクリックしても、編集用に開くことができます。)。</li>
+    <li><strong>タグの編集</strong>- タグエディタを開き、選択したアセットやフォルダグループにタグを追加・削除することができます。</li>
+    <li><strong>Rename - </strong> <span class="notranslate">asset</span> またはフォルダグループの名前を変更します。</li>
+    <li><strong>Duplicate - </strong> 選択されている<span class="notranslate">asset</span> または<span class="notranslate">assets</span> の複製を作成します。</li>
+    <li><strong>Favourite - </strong> <span class="notranslate">asset</span> または<span class="notranslate">assets</span> をお気に入りとしてフラグを立て、<span class="notranslate">Asset</span> ブラウザの上部にあるクイックアクセスセクションに追加することができます。</li>
+    <li><strong>Add Existing</strong>- 別の<span data-keyref="GameMaker Name">GameMaker</span>プロジェクトフォルダから、既存の<span class="notranslate">assets</span> を追加します。2.3.0より前のバージョンで作成された<span class="notranslate">assets</span> は、2.3.0のアップデートでプロジェクトファイルのフォーマットが変わったため、変換が必要であることに注意してください。つまり、<span class="notranslate">assets</span> を他のプロジェクトに頻繁にインポートする場合は、プロジェクト全体をインポートし、すべてを変換してから新しい場所に保存した方が良い場合があります。</li>
+    <li><strong>Add Existing From My Library</strong>-<span class="notranslate">assets</span> を<span class="notranslate">asset</span> ライブラリ内のアイテムから<span class="notranslate">Marketplace</span> リストに追加します。2.3.0 以前のバージョンで作成された<span class="notranslate">Marketplace</span> <span class="notranslate">assets</span> は、2.3.0 のアップデートでプロジェクトファイルのフォーマットが変更されたため、変換が必要であることに注意してください。</li>
+    <li><strong>削除 - </strong> 選択したアセットをプロジェクトより削除します。元に戻すことはできません。</li>
+    <li><strong>Create Group</strong>-<span class="notranslate">asset</span> リストに新しいフォルダーグループを追加します。</li>
+    <li><strong>Expand Children</strong>- 現在選択されているフォルダグループと、それに含まれる可能性のあるサブフォルダを展開します。</li>
+    <li><strong>Expand All</strong>-<span class="notranslate">asset</span> リスト内のすべてのフォルダーグループを展開します。</li>
+    <li><strong>すべて契約</strong>-<span class="notranslate">asset</span> リスト内のすべてのフォルダーグループを契約します。</li>
+    <li><strong>新しい<span class="notranslate">Asset</span> ブラウザで</strong>開く - このオプションはフォルダグループにのみ有効で、このオプションを選択した親グループのコンテンツのみを含む新しい<span class="notranslate">Asset</span> ブラウザウィンドウでグループを開きます。</li>
+    <li><strong>エクスプローラで開く</strong>-プロジェクトフォルダ内のリソース用に保存されているファイルの場所にファイルエクスプローラを開きます。</li>
+    <li><strong>色見本</strong>- ここで、<span class="notranslate">asset</span> が使用する新しい色を選択することができます。フォルダグループで使用すると、フォルダ内のすべての<span class="notranslate">assets</span> に選択した色が適用されます。1 つ以上の<span class="notranslate">assets</span> で使用すると、フォルダグループで設定した色が上書きされます（<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Asset_Browser_Preferences.htm">アセットブラウザの環境</a>設定でこのオプションを上書きしている場合を除く）。</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <h1>Asset Types</h1>
-  <p>Now you know how the Asset Browser works, you should get to know the different types of asset that you can add to it. Below we give an overview of each of the different asset types available for you to use in your projects:</p>
-  <p> </p>
-  <p style="margin-left: 48px"><img alt="Animation Curve Icon" class="icon" src="../assets/Images/Icons/Icon_Curves.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down17" href="#">Animation Curves</a></p>
+  <p> </p>
+  <p> </p>
+  <h1>資産の種類</h1>
+  <p><span class="notranslate">Asset</span> Browser がどのように動作するかわかったところで、それに追加できるさまざまなタイプの<span class="notranslate">asset</span> について知っておく必要があります。以下では、あなたのプロジェクトで使用できるさまざまな<span class="notranslate">asset</span> タイプの概要を説明します。</p>
+  <p> </p>
+  <p style="margin-left: 48px"><img alt="Import Icon" class="icon" src="../assets/Images/Icons/Icon_Import.png" />  <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down17" href="#">アニメーション・カーブ</a>
+    <undefined data-targetname="drop_down8"></undefined>
+  </p>
   <div class="droptext" data-targetname="drop_down17">
-    <p class="dropspot">An animation curve is a resource that contains one or more curves that represent how a value changes over time, and can use <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a> or <a class="glossterm" data-glossterm="catmull-rom interpolation" href="#">catmull-rom interpolation</a> to go between values in the curve. The values you set can be between -1 and 1 on the vertical axis and the duration along the horizontal axis is always normalised form 0 to 1, making it easy to target different time ranges using multipliers in your game code. Animation curves are comprised of &quot;channels&quot; and each channel can have its own curve settings, which permits you to - for example - describe a spacial position with two channels for the x/y position, or a colour gradient with 4 channels to represent a colour format. Animation curve assets can be used when working with sequences and can also be accessed using code, making them a powerful tool when creating your games.</p>
-    <p class="dropspot">You can find out more about adding animation curves from the section on <a href="../The_Asset_Editors/Animation_Curves.htm">Animation Curves</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">animation curve</span> は、ある値が時間とともにどのように変化するかを表す1つ以上の曲線を含むリソースで、曲線内の値の間を<a class="glossterm" data-glossterm="せんけいほかん" href="#">直線補間</a>または<a class="glossterm" data-glossterm="カトマルロム補間" href="#">猫算補間を</a>使用することができます。縦軸に-1から1までの値を設定でき、横軸の継続時間は常に0から1まで正規化されているので、ゲームコード内で乗数を使用して異なる時間範囲をターゲットにすることが簡単にできます。 <span class="notranslate">Animation curves</span> は「チャンネル」で構成され、各チャンネルは独自のカーブ設定を持つことができます。これにより、例えば、x/y位置の2チャンネルで空間位置を記述したり、4チャンネルで色形式を表現するカラーグラデーションを記述することができます。<span class="notranslate">Animation curve</span> <span class="notranslate">assets</span> は<span class="notranslate">sequences</span> で作業する際に使用でき、コードを使ってアクセスすることもできるので、ゲーム作成時の強力なツールになります。</p>
+    <p class="dropspot"><span class="notranslate">animation curves</span> の追加については、「<a href="../The_Asset_Editors/Animation_Curves.htm">アニメーション・カーブ</a>」のセクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Extensions Icon" class="icon" height="29" src="../assets/Images/Icons/Icon_Extensions.png" width="28" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down9" href="#">Extensions</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down9" href="#">エクステンション</a></p>
   <div class="droptext" data-targetname="drop_down9">
     <div class="droptext" data-targetname="drop_down9">
-      <p class="dropspot">Extensions are additional files and code that you can add to extend the <span data-keyref="GameMaker Name">GameMaker</span> functionality as well as add assets to your game from the <a href="The_Marketplace.htm">Marketplace</a>. The format for an extension will vary depending on the final target platform, although in general they are written in C++, C# or JavaScript.</p>
+      <p class="dropspot">拡張機能とは、<span data-keyref="GameMaker Name">GameMakerの</span>機能を拡張するために追加するファイルやコードのことで、<a href="The_Marketplace.htm">マーケットプレイスから</a> <span class="notranslate">assets</span> を追加することができる。<span class="notranslate">extension</span> のフォーマットは最終的なターゲットプラットフォームによって異なりますが、一般的には C++、C#、JavaScript で記述されます。</p>
     </div>
-    <p class="dropspot">You can find out more about adding extensions from the section on the <a href="../The_Asset_Editors/Extensions.htm">Extension Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">extensions</span> の追加については、<a href="../The_Asset_Editors/Extensions.htm">Extension Editor</a> のセクションから確認することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Fonts Icon" class="icon" src="../assets/Images/Icons/Icon_Font.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down12" href="#">Fonts</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down12" href="#">フォント</a></p>
   <div class="droptext" data-targetname="drop_down12">
-    <p class="dropspot">When you want to draw text in your game this text will be drawn in a standard Arial 12 points font by default, but to make more interesting or unique looking texts you will probably want to use different fonts. This is where the <strong>Font Editor</strong> is used. Here you can select a font that you have on your computer and import it into <span data-keyref="GameMaker Name">GameMaker</span> for use in your game, setting various attributes like size and weight or style. Once imported and added as a resource, you can then set it for drawing using the appropriate code or actions.</p>
-    <div class="dropspotnote"><span data-conref="../assets/snippets/Tag_note.hts"> </span> If you are adding fonts to your game, make sure you have the licence necessary to re-distribute it, unless it is public domain or copyright free.</div>
-    <p class="dropspot">The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for fonts contains the following option (as well as those listed further up this page):</p>
+    <p class="dropspot">ゲーム内でテキストを描く場合、デフォルトでは標準的なArial 12 points<span class="notranslate">font</span> で描かれますが、より面白い、あるいはユニークな見た目のテキストを作るには、おそらく異なる<span class="notranslate">fonts</span> を使用したいと思うことでしょう。そこで、<strong>フォントエディタを</strong>使用します。ここで、あなたのコンピュータにある<span class="notranslate">font</span> を選択し、サイズやウェイト、スタイルなどの様々な属性を設定しながら、<span data-keyref="GameMaker Name">ゲーム</span>内で使用するために<span data-keyref="GameMaker Name">GameMaker</span>にインポートすることができます。インポートしてリソースとして追加したら、あとは適切なコードやアクションを使って、描画用に設定することができます。</p>
+    <div class="dropspotnote"><strong>注意</strong>:<span class="notranslate">fonts</span> をゲームに追加する場合、パブリックドメインや著作権フリーのものを除き、再配布に必要なライセンスを持っていることを確認してください。</div>
+    <p class="dropspot">RMB<img> のメニュー（<span class="notranslate">fonts</span> ）には、以下のオプションがあります（このページの上部に記載されているものも含まれます）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Assign Texture Group</strong> - When you select this option, you will be presented with a list of the available texture groups, and you can then choose one to add the font to or create a new one, if required. If multiple fonts are selected in the Asset Browser - or you have selected a group folder of fonts - then all of them will be added to the chosen texture group. See <a href="../Settings/Texture_Groups.htm">here</a> for more information on texture groups.</li>
-      <li class="dropspot"><strong>Regenerate Font</strong> - With this option you can force <span data-keyref="GameMaker Name">GameMaker</span> to regenerate the font cache. This is usually only required should the font become corrupted or have changed on the system.</li>
+      <li class="dropspot"><strong>Assign<span class="notranslate">Texture</span> Group</strong>- このオプションを選択すると、利用可能な<span class="notranslate">texture</span> グループのリストが表示され、必要に応じて<span class="notranslate">font</span> を追加するグループを選択するか、新しいグループを作成することができます。<span class="notranslate">fonts</span> ブラウザで複数の<span class="notranslate">Asset</span> が選択されている場合、または<span class="notranslate">fonts</span> のグループフォルダを選択した場合、それらのすべてが選択した<span class="notranslate">texture</span> グループに追加されます。<span class="notranslate">texture</span> グループの詳細については、<a href="../Settings/Texture_Groups.htm">こちらを</a>ご覧ください。</li>
+      <li class="dropspot"><strong>Regenerate Font</strong>- このオプションを使うと、<span data-keyref="GameMaker Name">GameMaker</span>に<span class="notranslate">font</span> <span class="notranslate">cache</span> を再生成させることができます。 これは通常、<span class="notranslate">font</span> が破損していたり、システム上で変更があった場合にのみ必要な機能です。</li>
     </ul>
-    <p class="dropspot"><img alt="Fonts RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Fonts.png" />You can find out more about adding fonts from the section on <a data-xref="{title}" href="../The_Asset_Editors/Fonts.htm">The Font Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img> <span class="notranslate">fonts</span> の追加については、「<a href="../The_Asset_Editors/Fonts.htm">フォントエディタ</a>」のセクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Notes Icon" class="icon" src="../assets/Images/Icons/Icon_Notes.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down13" href="#">Notes</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down13" href="#">備考</a></p>
   <div class="droptext" data-targetname="drop_down13">
-    <p class="dropspot">Notes are simply code editor windows which permit you to write anything. They are designed as a place to keep code snippets, game information, to-do lists, team communications, etc...</p>
-    <p class="dropspot">You can find out more about adding notes from the section on the <a href="../The_Asset_Editors/Notes.htm">Notes Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ノートは、何でも書き込めるコードエディタです。コードの断片、ゲーム情報、ToDoリスト、チームコミュニケーションなどを保存する場所として設計されています。</p>
+    <p class="dropspot">ノートの追加については、「<a href="../The_Asset_Editors/Notes.htm">ノートエディタ</a>」のセクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Objects Icon" class="icon" height="29" src="../assets/Images/Icons/Icon_Object.png" width="28" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down14" href="#">Objects</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down14" href="#">対象物</a></p>
   <div class="droptext" data-targetname="drop_down14">
-    <p class="dropspot">Objects are a special resource that we use to control aspects of a game and to do specific things. Most of the time they have <a class="glossterm" data-glossterm="sprites" href="#">sprites</a> associated with them so that you see them in the game room, but sometimes they are used as a &quot;behind the scenes&quot; controller to do things related to the user or for timing, etc. They can be given behaviours and they can react to certain events as well as to each other, and most of the things you see in a game are based on objects and their interactions. Note that we say &quot;based on&quot; because you don&#39;t actually place objects directly into the game room, but rather you place <strong>instances </strong>of these objects, which are basically copies (or clones if you prefer) of the object resource. This is a very important thing to remember as instances and objects are not the same thing and each have their own set of functions that can affect them.</p>
-    <p class="dropspot">All objects have a set of properties which you can specify in the object editor, like the sprite, whether it uses <a class="glossterm" data-glossterm="physics" href="#">physics</a> or not, or whether it is a &quot;child&quot; object of another one. They also have a series of built-in variables that can then be used in actions, scripts and code. These built-in variables are used to define the position of the instance when placed in the game room, the animation speed, the direction of movement and a whole host of other things. To control how the object behaves over time, each game frame is split into a series of events, so you can add code or actions into a specific event and it will only run when the event is triggered, and events can be triggered by things like mouse button presses or collisions with other instances.</p>
-    <p class="dropspot">Objects are in a very real sense the building blocks of your game, and together with rooms will form the core of any project that you create.</p>
-    <p class="dropspot">The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for objects contains the following option (as well as those listed further up this page):</p>
+    <p class="dropspot">オブジェクトは、ゲームのアスペクトを制御したり、特定のことを行うために使用する特別なリソースです。ほとんどの場合、オブジェクトには<a class="glossterm" data-glossterm="スプライト" href="#">スプライトが</a>あり、ゲーム内でそれらを見ることができます。<span class="notranslate">room</span> 、時には、ユーザーに関連することを行うための「舞台裏」のコントローラとして使用されたり、タイミングなどのために使用されたりします。ゲーム内で見ることのできるほとんどのものは、<span class="notranslate">objects</span> とそのインタラクションに基づいています。ここで「基づく」と言ったのは、実際に<span class="notranslate">objects</span> をゲーム<span class="notranslate">room</span> に直接配置するのではなく、これらの<span class="notranslate">objects</span> の<strong>インスタンスを </strong>配置するからで、基本的には<span class="notranslate">object</span> リソースのコピー（お望みならクローン）であることに注意しましょう。インスタンスと<span class="notranslate">objects</span> は同じものではなく、それぞれに影響を与えることができる機能があるからです。</p>
+    <p class="dropspot">すべての<span class="notranslate">objects</span> は、<span class="notranslate">object</span> エディタで指定できる一連のプロパティを持っています。例えば、<span class="notranslate">sprite</span> 、<a class="glossterm" data-glossterm="物理学" href="#">物理を</a>使うかどうか、他のものの「子」<span class="notranslate">object</span> かどうか、などです。また、アクション、<span class="notranslate">scripts</span> 、コードで使用できる一連の組み込み変数を持っています。これらの組み込み変数は、ゲーム内に配置されたときのインスタンスの位置<span class="notranslate">room</span> 、アニメーションの速度、移動の方向、および他の多くのものを定義するために使用されます。<span class="notranslate">object</span> このため、特定のイベントにコードやアクションを追加すると、そのイベントがトリガーされたときにのみ実行されます。イベントは、マウスボタンの押下や他のインスタンスとの衝突などによってトリガーすることができます。</p>
+    <p class="dropspot">オブジェクトは、本当の意味でゲームの構成要素であり、<span class="notranslate">rooms</span> と共に、作成するプロジェクトの中核を形成します。</p>
+    <p class="dropspot">RMB<img> のメニュー（<span class="notranslate">objects</span> ）には、以下のオプションがあります（このページの上部に記載されているものも含まれます）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Open All Event Scripts</strong> - Selecting this option will open all the assigned events for the object in a new workspace as script tabs.</li>
+      <li class="dropspot"><strong>すべてのイベントスクリプトを開く</strong>- このオプションを選択すると、<span class="notranslate">object</span> に割り当てられたすべてのイベントが新しい<span class="notranslate">workspace</span> で<span class="notranslate">script</span> タブとして開かれます。</li>
     </ul>
-    <p class="dropspot"><img alt="Objects RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Objects.png" />You can find out more about adding objects from the section on <a data-xref="{title}" href="../The_Asset_Editors/Objects.htm">The Object Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img> <span class="notranslate">objects</span> の追加については、「<a href="../The_Asset_Editors/Objects.htm">オブジェクトエディタ</a>」の項を参照してください。</p>
+    <p class="dropspot"> </p>
     <p><strong></strong></p>
   </div>
-  <p style="margin-left: 48px"><img alt="Paths Icon" class="icon" src="../assets/Images/Icons/Icon_Path.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down18" href="#">Paths</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down18" href="#">パス</a></p>
   <div class="droptext" data-targetname="drop_down18">
-    <p class="dropspot">At some point while creating your games you may need an instance of one of your objects to follow a path through a level. Now, this can be done by simply creating an array of positions within the room and then having the instance move between them, but that can be a chore to set up and is difficult to change, test and adapt for different things. That is when you&#39;d want to create a path resource.</p>
-    <p class="dropspot">The basic idea of the path resource is rather simple - you define a path by drawing it in the path editor, then you can place an action (or code) in an event of an object to tell the object to follow that particular path in the game room. You can set the speed to follow the path and a number of other actions relating to the position and orientation of the path within the room too.</p>
-    <p class="dropspot">You can find out more about adding paths from the section on <a data-xref="{title}" href="../The_Asset_Editors/Paths.htm">The Path Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ゲーム作成中に、<span class="notranslate">objects</span> のインスタンスが、<span class="notranslate">path</span> を追ってレベルを移動する必要が生じることがあります。この場合、<span class="notranslate">room</span> 内に位置の配列を作成し、インスタンスがその間を移動することで実現できますが、セットアップが面倒で、変更、テスト、さまざまなものに適応させることが困難です。そんなとき、<span class="notranslate">path</span> リソースを作成するとよいでしょう。</p>
+    <p class="dropspot"><span class="notranslate">path</span> リソースの基本的な考え方は、かなりシンプルです。<span class="notranslate">path</span> エディタで描画して<span class="notranslate">path</span> を定義し、<span class="notranslate">object</span> のイベントにアクション（またはコード）を配置して、ゲーム内の<span class="notranslate">object</span> にその特定の<span class="notranslate">path</span> を追従するよう指示します。<span class="notranslate">room</span>.<span class="notranslate">path</span> に従う速度を設定したり、<span class="notranslate">path</span> 内の<span class="notranslate">room</span> の位置や向きに関連する他の多くのアクションを設定することができます。</p>
+    <p class="dropspot"><span class="notranslate">paths</span> の追加については、<a href="../The_Asset_Editors/Paths.htm">Path Editor</a> のセクションから確認することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Rooms Icon" class="icon" height="29" src="../assets/Images/Icons/Icon_Room.png" width="28" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down19" href="#">Rooms</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down19" href="#">客室数</a></p>
   <div class="droptext" data-targetname="drop_down19">
-    <p class="dropspot">All games that you make in <span data-keyref="GameMaker Name">GameMaker</span> need at least one room to run (but can have many, many more) , and a room is basically a space where you place instances of the objects that make up your game and where the action of the game will take place. However the Room Editor is one of the most powerful of resources available to you, since it permits you to not only add instances of objects, but to set up the &quot;view&quot; into the game room, add the backgrounds and tiles that are drawn to create the game world, create extra special effects that are independent of the object/instance system, and as well as run code independently of an object. Rooms can also be set to <strong>inherit </strong>properties from other rooms, meaning that you can create a single room with a load of tiles, for example, and then make another room that inherits these tiles, so that you don&#39;t have to re-create them again.</p>
-    <p class="dropspot">The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for rooms contains the following option (as well as those listed further up this page):</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>作るすべてのゲームは、実行するために少なくとも1つの<span class="notranslate">room</span> （ただし、もっとたくさん持つことができます）。<span class="notranslate">room</span> は基本的に、ゲームを構成する<span class="notranslate">objects</span> のインスタンスを置くスペースで、ゲームのアクションが起こる場所です。<span class="notranslate">Room</span> <span class="notranslate">objects</span> のインスタンスを追加するだけでなく、ゲームへの「ビュー」を設定する<span class="notranslate">room</span> 、ゲームの世界を作るために描画される背景と<span class="notranslate">tiles</span> を追加し、オブジェクト/インスタンスシステムから独立した特別な効果を作成し、さらに<span class="notranslate">object</span> から独立してコードを実行できるため、エディタは最も強力なリソースの 1 つになります。 <span class="notranslate">Rooms</span> <span class="notranslate">rooms</span> は、他の<span class="notranslate">room</span> のプロパティを<strong>継承 </strong>するように設定することもできます。つまり、たとえば、<span class="notranslate">tiles</span> をロードした 1 つの<span class="notranslate">room</span> を作成し、これらの<span class="notranslate">inherits</span> をロードした別の<span class="notranslate">tiles</span> を作成すれば、再度作成する必要がありません。</p>
+    <p class="dropspot">RMB<img> のメニュー（<span class="notranslate">rooms</span> ）には、以下のオプションがあります（このページの上部に記載されているものも含まれます）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Create Child Room</strong> - This will create a new room as a child of the room selected. Child rooms are new room assets that inherit the properties, layers and layer contents from the parent room, and will be shown linked to the parent room in <a data-xref="{title}" href="../Settings/The_Room_Manager.htm">The Room Manager</a>.</li>
+      <li class="dropspot"><strong>子ルームを作成</strong>- 選択された<span class="notranslate">room</span> の子として新しい<span class="notranslate">room</span> が作成されます。<span class="notranslate">rooms</span> 子<span class="notranslate">room</span> は新しい<span class="notranslate">assets</span> <span class="notranslate">inherit</span> で、親<span class="notranslate">room</span> のプロパティ、レイヤー、レイヤーの内容を継承し、<a href="../Settings/The_Room_Manager.htm">ルーム マネージャーで</a>親<span class="notranslate">room</span> にリンクして表示されます。</li>
     </ul>
-    <p class="dropspot"><img alt="Rooms RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Rooms.png" />You can find out more about adding rooms from the section on <a data-xref="{title}" href="../The_Asset_Editors/Rooms.htm">The Room Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img> <span class="notranslate">rooms</span> の追加については、<a href="../The_Asset_Editors/Rooms.htm">Room Editor</a> のセクションから確認することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Scripts Icon" class="icon" src="../assets/Images/Icons/Icon_Script.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down20" href="#">Scripts</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down20" href="#">スクリプト</a></p>
   <div class="droptext" data-targetname="drop_down20">
-    <p class="dropspot">A script asset is simply a container for one or more functions you have written. For example, say you want to have all your enemy objects create a number of different instances when they die - like some gold, an explosion and some blood as well as play a sound. Now you could add all the required code into each object that requires it, but in general you&#39;d be better off creating a single function in script resource and then calling that. This means that you only have to add one line of code into the objects to call this new scripted function, and if you wish to change something you only need to change it once in the script and all the objects will automatically run the new code, rather than have to go through every object and change the same thing in multiple places.</p>
-    <p class="dropspot">The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for scripts contains the following option (as well as those listed further up this page):</p>
+    <p class="dropspot"><span class="notranslate">script</span> リソースは、あなたが書いた1つまたは複数の関数のためのコンテナに過ぎません。たとえば、すべての敵<span class="notranslate">objects</span> が死ぬと、金塊、爆発、血、音など、さまざまなインスタンスが生成されるようにしたいとします。必要なコードを<span class="notranslate">object</span> に追加することもできますが、一般的には<span class="notranslate">script</span> リソースに関数を1つ作成し、それを呼び出す方がよいでしょう。つまり、この新しいスクリプト関数を呼び出すために、<span class="notranslate">objects</span> に 1 行のコードを追加するだけでよく、何かを変更したい場合は<span class="notranslate">script</span> で 1 回変更するだけで、すべての<span class="notranslate">objects</span> で自動的に新しいコードが実行されます。すべての<span class="notranslate">object</span> を調べて、同じものを複数の場所で変更する必要はありません。</p>
+    <p class="dropspot">RMB<img> のメニュー（<span class="notranslate">scripts</span> ）には、以下のオプションがあります（このページの上部に記載されているものも含まれます）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Convert to GML Visual / GML</strong> - This will convert the selected script to GML Visual or GML. If the script is GML, then it will be placed within an <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Common/Execute_Code.htm">Execute Code</a> action, while GML Visual will be translated directly into GML code (as shown in the section <a href="../Drag_And_Drop/Drag_And_Drop_Overview/Changing_DnD_To_Code.htm">Changing GML Visual To Code</a>).</li>
+      <li class="dropspot"><strong>Convert to<span class="notranslate">GML</span> Visual / GML</strong>- 選択した<span class="notranslate">script</span> を<span class="notranslate">GML</span> Visual または<span class="notranslate">GML</span> に変換します。<span class="notranslate">script</span> が<span class="notranslate">GML</span> ならば<a href="../Drag_And_Drop/Drag_And_Drop_Reference/Common/Execute_Code.htm">Execute Code</a>アクション内に配置され、<span class="notranslate">GML</span> Visual は<span class="notranslate">GML</span> コードに直接変換されます (「<a href="../Drag_And_Drop/Drag_And_Drop_Overview/Changing_DnD_To_Code.htm">Changing<span class="notranslate">GML</span> Visual To Code</a>」のセクションで示したとおりです)。</li>
     </ul>
-    <p class="dropspot"><img alt="Scripts RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Scripts.png" />You can find out more about adding scripts from the section on <a data-xref="{title}" href="../The_Asset_Editors/Scripts.htm">The Script Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img> <span class="notranslate">scripts</span> の追加については、「<a href="../The_Asset_Editors/Scripts.htm">スクリプトエディタ</a>」のセクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Sequences Icon" class="icon" height="29" src="../assets/Images/Icons/Icon_Sequences.png" width="28" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down21" href="#">Sequences</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down21" href="#">シーケンス</a></p>
   <div class="droptext" data-targetname="drop_down21">
-    <p class="dropspot">A sequence asset is essentially a collection of other assets that perform a dynamic animation over time. They can contain sprites, instances, sounds and other things, and each of these can be set to move or change colour, or start/stop over time within the sequence itself by assigning the assets to specific <strong>tracks </strong>within the sequence. These tracks can then have different attributes applied to them which can be static or change over time. All editing of a sequence takes place in the <strong>Sequence Editor</strong> which is comprised of:</p>
+    <p class="dropspot"><span class="notranslate">sequence</span> <span class="notranslate">asset</span> は、基本的に、時間の経過とともにダイナミックなアニメーションを実行する他のリソースのコレクションです。<span class="notranslate">sprites</span> 、インスタンス、サウンド、その他のものを含むことができ、<span class="notranslate">sequence</span> を<span class="notranslate">assets</span> 内の特定の<strong>トラックに </strong>割り当てることで、<span class="notranslate">sequence</span> 自身が時間と共に動いたり、色が変わったり、開始/停止するように設定できます。 これらのトラックには異なる属性を適用でき、静的であったり時間と共に変化したりすることが可能です。<span class="notranslate">sequence</span> の編集はすべて<strong>シーケンスエディターで</strong>行われます。</p>
     <ul class="dropspotlist">
-      <li class="dropspot">the <strong>Canvas </strong>- where you place the assets that make up the sequence </li>
-      <li class="dropspot">the <strong>Track Panel</strong> - where you place assets to create asset tracks, as well as create parameter tracks to manipulate the assets over time</li>
-      <li class="dropspot">the <strong>Dope Sheet</strong> - which is where you add/remove/edit the keyframes of each track and control how they behave over time.</li>
+      <li class="dropspot">the<strong>Canvas - </strong> シーケンスを構成する<span class="notranslate">assets</span> を配置する場所です。 </li>
+      <li class="dropspot"><strong>トラックパネル</strong>-<span class="notranslate">assets</span> を配置して<span class="notranslate">asset</span> のトラックを作成したり、<span class="notranslate">assets</span> を時間軸で操作するためのパラメータトラックを作成します。</li>
+      <li class="dropspot"><strong>Dope Sheet</strong>- 各トラックの<span class="notranslate">keyframes</span> を追加/削除/編集し、時間の経過とともにどのように振る舞うかをコントロールすることができます。</li>
     </ul>
-    <p class="dropspot">Note that you can have sequences within sequences to create complex animations and effect, and sequences can also be accessed and changed through code to give you as much control as possible over how they will be displayed and used in your game.</p>
-    <p class="dropspot">You can find out more about adding sequences from the section on <a data-xref="{title}" href="../The_Asset_Editors/Sequences.htm">The Sequence Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">なお、複雑なアニメーションやエフェクトを作成するために、<span class="notranslate">sequences</span> 内に<span class="notranslate">sequences</span> を持つことができます。また、<span class="notranslate">sequences</span> はコードでアクセスし変更することができるので、ゲームでの表示や使用方法をできるだけコントロールすることができます。</p>
+    <p class="dropspot"><span class="notranslate">sequences</span> の追加については、<strong> </strong><a href="../The_Asset_Editors/Sequences.htm"></a> Sequences Editor のセクションから確認することができます。 </p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Shaders Icon" class="icon" src="../assets/Images/Icons/Icon_Shader.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down22" href="#">Shaders</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down22" href="#">シェーダー</a></p>
   <div class="droptext" data-targetname="drop_down22">
-    <p class="dropspot">Shaders are a very powerful tool that can be used to manipulate the graphics that your game renders to the screen, permitting incredibly fast effects that can range from, for example, adding a subtle colour hue to a sprite, right up to full screen distortion effects. Basically it&#39;s a two-part program that runs directly on the graphics card itself, making it very fast since the GPU is doing all the work and freeing up CPU cycles for your game code. The full shader is comprised of a vertex shader program, and a fragment shader program (also known as a pixel shader). Both of these tiny programs work together in order to manipulate what the graphics card renders to the screen. This then permits you to manipulate in realtime the position, colour, and alpha values that are actually rendered into the display buffer.</p>
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> supports the following shader languages:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">シェーダーは、ゲームが画面にレンダリングするグラフィックを操作するために使用できる非常に強力なツールで、例えば、<span class="notranslate">sprite</span> に微妙な色合いを追加することから、全画面歪み効果に至るまで、非常に高速な効果を可能にします。基本的に、これはグラフィックカード自体で直接実行される2つの部分からなるプログラムで、GPUがすべての作業を行うため非常に速く、ゲームコードにCPUサイクルを解放します。完全な<span class="notranslate">shader</span> は、<span class="notranslate">vertex</span> <span class="notranslate">shader</span> プログラムとフラグメント<span class="notranslate">shader</span> プログラム（ピクセル<span class="notranslate">shader</span> とも呼ばれる）で構成されています。これらの小さなプログラムは、グラフィックスカードが画面にレンダリングするものを操作するために一緒に動作します。これにより、実際にディスプレイにレンダリングされる位置、色、アルファ値をリアルタイムで操作することができます。<span class="notranslate">buffer</span>.</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span>は以下の<span class="notranslate">shader</span> 言語をサポートしています。</p>
+    <table>
       <tbody>
         <tr>
-          <th>Shader Language</th>
-          <th>Target Platform</th>
+          <th>シェーダー言語</th>
+          <th>対象プラットフォーム</th>
         </tr>
         <tr>
-          <td>GLSL ES </td>
-          <td>All target platforms</td>
+          <td>GLSL ES </td>
+          <td>すべてのターゲットプラットフォーム</td>
         </tr>
         <tr>
-          <td>GLSL</td>
-          <td>Mac and Ubuntu (Linux)</td>
+          <td>超大規模集積回路（GLSL</td>
+          <td>マックと<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>)</td>
         </tr>
         <tr>
           <td>HLSL11</td>
-          <td>Windows, XboxOne</td>
+          <td>Windows、UWP、XboxOne</td>
         </tr>
         <tr>
-          <td>PSSL</td>
-          <td>Playstation 4</td>
+          <td>ピーエスエスエル</td>
+          <td>プレイステーション 4</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">   <br />
-      The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for shaders contains the following option (as well as those listed further up this page):</p>
+    <p class="dropspot">   <br>
+      RMB<img> のメニュー（<span class="notranslate">shaders</span> ）には、以下のオプションがあります（このページの上部に記載されているものも含まれます）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Shader Type</strong> - Here you can set the type of shader language that is being used for the shader resource.</li>
+      <li class="dropspot"><strong>Shader Type</strong>- ここで、<span class="notranslate">shader</span> リソースに使用されている<span class="notranslate">shader</span> 言語の種類を設定することができます。</li>
     </ul>
-    <p class="dropspot"><img alt="Shaders RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Shaders.png" /></p>
-    <p class="dropspot">You can find out more about adding shaders from the section on <a data-xref="{title}" href="../The_Asset_Editors/Shaders.htm">The Shader Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img alt="Asset Browser Filter Options" class="center" src="../assets/Images/Introduction/QS_AssetBrowser_AssetFilter.png" /></p>
+    <p class="dropspot"><span class="notranslate">shaders</span> の追加については、「<a href="../The_Asset_Editors/Shaders.htm">シェーダーエディタ</a>」のセクションから確認することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Sounds Icon" class="icon" src="../assets/Images/Icons/Icon_Sound.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down23" href="#">Sounds</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down23" href="#">サウンド</a></p>
   <div class="droptext" data-targetname="drop_down23">
-    <p class="dropspot"><strong></strong>Sound is an important part of any game, both for adding depth to the gameplay and giving feedback in the form of sound effects, and for adding atmosphere in the form of music. <span data-keyref="GameMaker Name">GameMaker</span> accepts <span class="inline">WAV</span>, <span class="inline">MP3 </span>and <span class="inline">OGG</span> format files.</p>
-    <p class="dropspot">In general, <span class="inline">WAV</span> files are used for any short sound effects as even though they are generally larger files they will play instantaneously due to the fact that they do not need any type of decoding for playing. <span class="inline">MP3</span> and <span class="inline">OGG</span> files should be used for background music or any effect that plays over a longer period of time or that has a rather large file size. These files are much smaller than a WAV file and but do have a <a class="glossterm" data-glossterm="CPU overhead" href="#">CPU overhead</a> associated with them as they have to be decoded before being played.</p>
-    <p class="dropspot">The RMB  <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for sounds contains the following options (as well as those listed further up this page):</p>
+    <p class="dropspot"><strong></strong>サウンドは、ゲームプレイに深みを与え、効果音という形でフィードバックを与えるため、また音楽という形で雰囲気を出すために、どんなゲームでも重要な部分です。<span data-keyref="GameMaker Name">GameMakerは</span>、 <span class="inline">WAV</span> 、 <span class="inline">MP3 </span>、 <span class="inline">OGG</span> 形式のファイルを受け入れることができます。</p>
+    <p class="dropspot">一般的に、 <span class="inline">WAV</span> ファイルは短い効果音に使用されます。一般的に大きなファイルであっても、再生にデコードを必要としないため、瞬時に再生されます。 <span class="inline">MP3</span> と <span class="inline">OGG</span> ファイルは、BGMや長い期間再生する効果、またはファイルサイズが大きい場合に使用されます。これらのファイルはWAVファイルよりはるかに小さいですが、再生前にデコードする必要があるため、<a class="glossterm" data-glossterm="CPUオーバーヘッド" href="#">CPUのオーバーヘッドが</a>発生します。</p>
+    <p class="dropspot">RMB<img> サウンドのメニューには、以下のオプションがあります（このページのさらに上に記載されているオプションもあります）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Assign Audio Group</strong> - When you select this option, you will be presented with a list of the available audio groups, and you can then choose one to add the sound to or create a new one, if required. If multiple sounds are selected in the Asset Browser - or you have selected a group folder of sounds - then all the sounds will be added to the chosen audio group. See <a data-xref="{title}" href="../Settings/Audio_Groups.htm">Audio Groups</a> for more information on audio groups.</li>
-      <li class="dropspot"><strong>Open In Sound Mixer</strong> - This will open all the selected sounds in the <a data-xref="{title}" href="../IDE_Tools/Sound_Mixer.htm">Sound Mixer</a>.</li>
-      <li class="dropspot"><strong>Open in External Edit<strong>or</strong></strong> - This opens the last selected sound in the external editor for <strong>Sound files</strong>, as defined under <a data-xref="{text}" href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Paths.htm#external_editors">External Editors</a>.</li>
+      <li class="dropspot"><strong>サウンドミキサーで開く</strong>- 選択されたすべてのサウンドを<a href="../IDE_Tools/Sound_Mixer.htm">サウンドミキサーで</a>開きます。</li>
+      <li class="dropspot"><strong>オーディオグループを割り当てる</strong>- このオプションを選択すると、利用可能なオーディオグループのリストが表示され、サウンドを追加するグループを選択するか、必要に応じて新しいグループを作成することができます。<span class="notranslate">Asset</span> Browserで複数のサウンドを選択した場合、またはサウンドのグループフォルダを選択した場合、すべてのサウンドが選択したオーディオグループに追加されます。オーディオグループの詳細については、<a href="../Settings/Audio_Groups.htm">こちらを</a>ご覧ください。</li>
     </ul>
-    <p class="dropspot"><img alt="Sounds RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Sounds.png" /></p>
-    <p class="dropspot">You can find out more about adding sounds from the section on <a data-xref="{title}" href="../The_Asset_Editors/Sounds.htm">The Sound Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
+    <p class="dropspot">サウンドの追加については、「<a href="../The_Asset_Editors/Sounds.htm">サウンドエディター</a>」の項をご覧ください。</p>
+    <p class="dropspot"> </p>
     <p><strong></strong></p>
   </div>
-  <p style="margin-left: 48px"><img alt="Sprites Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down24" href="#">Sprites</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down24" href="#">スプライト</a></p>
   <div class="droptext" data-targetname="drop_down24">
-    <p class="dropspot">Sprites are generally the visual representations of objects within the games you create. As such, a sprite is an image drawn using the <span data-keyref="GameMaker Name">GameMaker</span> <strong>Image Editor</strong>, or made with any external drawing program and imported into <span data-keyref="GameMaker Name">GameMaker</span>. The image used doesn&#39;t have to be of a single static thing either... it can be a &quot;strip&quot; image too, i.e.: multiple images in a a single file which can then be used to make a single animated sprite. For example, the following 10 images form a sprite for a character who is waving his arms while skydiving: <br />
-      <img alt="Sprite Strip Example" class="center" src="../assets/Images/Introduction/QS_SpriteStrip.png" style="cursor: nwse-resize;" /> And the actual finished animation would look like this when placed in a game:
+    <p class="dropspot">スプライトは一般的に、作成するゲーム内で<span class="notranslate">objects</span> を視覚的に表現するものです。そのため、<span class="notranslate">sprite</span> は<span data-keyref="GameMaker Name">GameMaker</span> <strong>Image Editor</strong> で描かれた画像、または外部の描画プログラムで作成され、<span data-keyref="GameMaker Name">GameMaker</span> にインポートされた画像です。つまり、複数の画像を1つのファイルに保存し、それを使って1つのアニメーショ ン<span class="notranslate">sprite</span> を作成することができます。例えば、次の 10 個の画像は、スカイダイビング中に腕を振るキャラクターの<span class="notranslate">sprite</span> を構成します。<br>
+      <img>そして、実際に完成したアニメーションは、ゲーム内に配置すると、このようになります。
     </p>
-    <p class="dropspot"><img alt="Animated Sprite" class="center" height="80" src="../assets/Images/Introduction/QS_SpriteAnim.gif" width="80" /> A sprite like this is usually a <span class="inline">PNG</span> format file, but <span data-keyref="GameMaker Name">GameMaker</span> will also accept vector sprites in <span class="inline">SWF</span> format, and <strong>Spine </strong>sprites in <span class="inline">JSON</span> format (with their accompanying texture <span class="inline">atlas</span> file).</p>
-    <p class="dropspot">The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for sprites contains the following options (as well as those listed further up this page):</p>
+    <p class="dropspot"><img> このような は通常 フォーマットのファイルですが、<span class="notranslate">sprite</span> <span class="inline">PNG</span> <span data-keyref="GameMaker Name">GameMaker</span>はベクター を フォーマットで、<span class="notranslate">sprites</span> <span class="inline">SWF</span> <strong>スパイン・スプライトを </strong> <span class="inline">JSON</span> フォーマット（それに付随する ファイル）で受け入れることもできます。<span class="notranslate">texture</span> <span class="inline">atlas</span> </p>
+    <p class="dropspot"><img> RMB<span class="notranslate">sprites</span> のメニューには、以下のオプションがあります（このページのさらに上に記載されているオプションもあります）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Assign Texture Group</strong> - When you select this option, you will be presented with a list of the available texture groups, and you can then choose one to add the sprite to or create a new one, if required. If multiple sprites are selected in the Asset Browser - or you have selected a group folder of sprites - then all the sprites will be added to the chosen texture group. See <a data-xref="{title}" href="../Settings/Texture_Groups.htm">Texture Groups</a> for more information.</li>
-      <li class="dropspot"><strong>Create Sprite From Image(s)</strong> - Selecting this option will open a file explorer where you can select one or more images from which to create a sprite. If you select multiple images, then the sprite will be created with multiple frames, one for each image selected.</li>
-      <li class="dropspot"><strong>Open In Image Editor</strong> - This will open the sprite in <a data-xref="{title}" href="../The_Asset_Editors/Image_Editor.htm">The Image Editor</a> for editing, without opening <a data-xref="{title}" href="../The_Asset_Editors/Sprites.htm">The Sprite Editor</a> first.</li>
-      <li class="dropspot"><strong>Open in External Editor</strong> - This opens the last selected sprite in one of the <a data-xref="{text}" href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Paths.htm#external_editors">External Editors</a> for sprites, depending on the type of sprite:  
-        <ul>
-          <li class="dropspot">Bitmap sprites are opened in the <strong>Bitmap files</strong> editor.</li>
-          <li class="dropspot"><a data-xref="{text}" href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm#h1">Skeletal Animation Sprites (Spine)</a> are opened in the <strong>Spine files</strong> editor.</li>
-          <li class="dropspot"><a data-xref="{text}" href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm#h">Vector Sprites (SWF)</a> are opened in the <strong>SWF files</strong> editor.</li>
-        </ul>
-      </li>
+      <li class="dropspot"><strong>Assign<span class="notranslate">Texture</span> Group</strong>- このオプションを選択すると、利用可能な<span class="notranslate">texture</span> グループのリストが表示され、必要に応じて<span class="notranslate">sprite</span> に追加するグループを選択するか、新しいグループを作成することができます。<span class="notranslate">sprites</span> ブラウザで複数の<span class="notranslate">Asset</span> が選択されている場合、または<span class="notranslate">sprites</span> のグループフォルダを選択した場合、すべての<span class="notranslate">sprites</span> が選択された<span class="notranslate">texture</span> グループに追加されます。<span class="notranslate">texture</span> グループの詳細については、<a href="../Settings/Texture_Groups.htm">こちらを</a>参照してください。</li>
+      <li class="dropspot"><strong>画像から<span class="notranslate">Sprite</span> を作成</strong>する - このオプションを選択すると、ファイルエクスプローラが開き、そこから<span class="notranslate">sprite</span> を作成するための画像を 1 つ以上選択できます。複数の画像を選択すると、選択した画像ごとに複数のフレームで<span class="notranslate">sprite</span> が作成されます。</li>
+      <li class="dropspot"><strong>イメージエディタで開く</strong>- 最初に<span class="notranslate">sprite</span> Editor を開かずに、編集用にイメージエディタで<span class="notranslate">Sprite</span> を開きます。</li>
     </ul>
-    <p class="dropspot"><img alt="Sprites RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Sprites.png" /></p>
-    <p class="dropspot">You can find out more about adding sprites from the section on <a data-xref="{title}" href="../The_Asset_Editors/Sprites.htm">The Sprite Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
+    <p class="dropspot"><span class="notranslate">sprites</span> の追加については、<a href="../The_Asset_Editors/Sprites.htm">スプライトエディタの</a>セクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Tileset Icon" class="icon" src="../assets/Images/Icons/Icon_Tileset.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down25" href="#">Tilesets</a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down25" href="#">タイルセット</a></p>
   <div class="droptext" data-targetname="drop_down25">
-    <p class="dropspot">Tile sets are taken from the sprite resources, but are classified as a separate resource since <span data-keyref="GameMaker Name">GameMaker</span> will handle them differently when creating your game. Basically a tile set is a single image that <span data-keyref="GameMaker Name">GameMaker</span> will break into separate sections based on the values you give for the various settings. You can then use these in the room editor (or procedurally through code) to generate a tile map in your room. They are great for designing any static items in your room, like terrain, walls, backdrops, etc. as they don&#39;t have the same overhead that objects have.</p>
-    <p class="dropspot"><img alt="Example Tileset" class="center" src="../assets/Images/Introduction/QS_Tileset.png" /> Above is an example sprite that would be used as a tile set to create walls. As you can see, it can be &quot;split&quot; into 64x64pixel chunks, which would then be placed into the room editor.</p>
-    <div class="dropspotnote"><span class="note">NOTE</span> Tiles are always square, so if you need anything other than that, you should be using an instance with a sprite or an asset layer in the room editor.</div>
-    <p class="dropspot">The RMB <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu for tilesets contains the following option (as well as those listed further down this page):</p>
+    <p class="dropspot">タイルセットは<span class="notranslate">sprite</span> のリソースから取られていますが、<span data-keyref="GameMaker Name">GameMaker</span>がゲーム作成時に異なる方法で扱うため、別のリソースとして分類されています。基本的に<span class="notranslate">tile set</span> は1つの画像で、<span data-keyref="GameMaker Name">GameMaker</span>が様々な設定値に基づいて分割してくれます。これを<span class="notranslate">room</span> エディタで（あるいはコードでプロシージャルに）使って、<span class="notranslate">tile</span> マップを<span class="notranslate">room</span> に生成することができます。<span class="notranslate">room</span> のようなオーバーヘッドがないため、地形、壁、背景など、<span class="notranslate">objects</span> の静的なアイテムのデザインに最適です。</p>
+    <p class="dropspot"><img> 上の図は、壁を作成するために として使用される の例です。見てわかるように、これは64x64ピクセルのチャンクに「分割」でき、それを エディタに配置することができます。<span class="notranslate">sprite</span> <span class="notranslate">tile set</span> <span class="notranslate">room</span> </p>
+    <div class="dropspotnote"><span class="note">注</span> <span class="notranslate">Tiles</span> は常に正方形です。それ以外のものが必要な場合は、<span class="notranslate">sprite</span> または<span class="notranslate">asset</span> のレイヤーを持つインスタンスを<span class="notranslate">room</span> エディタで使用する必要があります。</div>
+    <p class="dropspot">RMB<img> のメニュー（<span class="notranslate">tilesets</span> ）には、以下のオプションがあります（このページの下に記載されているものも含まれます）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Assign Texture Group</strong> - When you select this option, you will be presented with a list of the available texture groups, and you can then choose one to add the tileset to or create a new one, if required. If multiple tilesets are selected in the Asset Browser - or you have selected a group folder of tilesets - then all of them will be added to the chosen texture group. See <a href="../Settings/Texture_Groups.htm">here</a> for more information on texture groups.</li>
+      <li class="dropspot"><strong>Assign<span class="notranslate">Texture</span> Group</strong>- このオプションを選択すると、利用可能な<span class="notranslate">texture</span> グループのリストが表示され、タイルセットを追加するグループを選択するか、必要に応じて新しいグループを作成することができ ます。<span class="notranslate">tilesets</span> ブラウザで複数の<span class="notranslate">Asset</span> が選択されている場合、または<span class="notranslate">tilesets</span> のグループフォルダを選択した場合、それらすべてが選択された<span class="notranslate">texture</span> グループに追加されます。<span class="notranslate">texture</span> グループの詳細については、<a href="../Settings/Texture_Groups.htm">こちらを</a>参照してください。</li>
     </ul>
-    <p class="dropspot"><img alt="Tilesets RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBMenu_Tilesets.png" /></p>
-    <p class="dropspot">You can find out more about adding tilesets from the section on <a data-xref="{title}" href="../The_Asset_Editors/Tile_Sets.htm">The Tile Set Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img alt="The Home Room Icon" class="icon" src="../assets/Images/Icons/Icon_AssetHome.png" /></p>
+    <p class="dropspot"><span class="notranslate">tilesets</span> の追加については、「<a href="../The_Asset_Editors/Tile_Sets.htm">タイルセット・エディタ</a>」のセクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Timeline Icon" class="icon" src="../assets/Images/Icons/Icon_Timeline.png" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down26" href="#">Timelines </a></p>
+  <p style="margin-left: 48px"><img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down26" href="#">タイムライン</a></p>
   <div class="droptext" data-targetname="drop_down26">
-    <p class="dropspot">In most games you will want certain things to happen at certain moments in time. Now, you can try to achieve this by using the <em>Alarm Events</em> in an instance, but when things get too complicated this won&#39;t work anymore, especially as you are limited to only twelve alarms. That&#39;s why we have the timeline asset. In a timeline you specify which actions must happen at any specific moment in game time, and you can use all the actions that are available for an object in its different events as well as code. Once you create a time line you can then assign it to an object, and the instance of that object will then execute the actions and code at the indicated moments of time when placed or created within a room.</p>
-    <p class="dropspot">You can find out more about adding timelines from the section on <a data-xref="{title}" href="../The_Asset_Editors/Timelines.htm">The Timeline Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">多くのゲームでは、ある瞬間にあることが起こるようにしたいものです。インスタンスの<em>アラームイベントを</em>利用することで、これを実現することができますが、物事が複雑になると、これ以上うまくいかなくなります。そのため、<span class="notranslate">timeline</span> リソースが用意されています。<span class="notranslate">timeline</span> では、ゲーム時間内の特定の瞬間に起こるべきアクションを指定します。<span class="notranslate">object</span> で利用可能なすべてのアクションを、コードだけでなくその異なるイベントでも利用することができます。時間軸を作成したら、それを<span class="notranslate">object</span> に割り当てます。その<span class="notranslate">object</span> のインスタンスは、<span class="notranslate">room</span> 内に配置または作成されると、指定された時間の瞬間にアクションとコードを実行します。</p>
+    <p class="dropspot"><span class="notranslate">timelines</span> の追加については、<a href="../The_Asset_Editors/Timelines.htm">Timeline Editor</a> のセクションから確認することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p style="margin-left: 48px"><img alt="Timeline Icon" class="icon" height="29" src="../assets/Images/Icons/Icon_ParticleSystem.png" width="28" /> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down27" href="#">Particle Systems </a></p>
-  <div class="droptext" data-targetname="drop_down27">
-    <p class="dropspot">Particle systems allow for graphical effects using particles. A particle <em>system</em> consists of one or more particle <em>emitters</em> that create particles of a certain <em>type</em> in a given region of the particle system. The end result is several particles that move around in all kinds of directions, with variations in colour, alpha and many other configurable properties.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Scripting_Reference/GML/Reference/Drawing/particles_oldtonew.gif" /></p>
-    <p class="dropspot">You can find out more about creating and adding particle system from the section on <a data-xref="{title}" href="../The_Asset_Editors/Particle_Systems.htm">The Particle System Editor</a>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><br style="margin-left: 48px" />
-    If you want a more in-depth guide as to how to use the different editors listed above then please refer to the following section of the manual:</p>
+  <p><br style="margin-left: 48px">
+    上記の各エディターの使い方をより詳しく知りたい場合は、マニュアルの次のセクションを参照してください。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="../The_Asset_Editors/The_Asset_Editors.htm">The Asset Editors</a></li>
+    <li><a href="../The_Asset_Editors/The_Asset_Editors.htm">編集部</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To <span data-keyref="GameMaker Name">GameMaker</span></a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Compiling.htm">Compiling</a></div>
+        <div style="float:left">戻る：<a href="Introduction_To_GameMaker_Studio_2.htm"> <span data-keyref="GameMaker Name">GameMaker</span></a>入門</div>
+        <div style="float:right">次へ<a href="Compiling.htm">コンパイル</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Assets

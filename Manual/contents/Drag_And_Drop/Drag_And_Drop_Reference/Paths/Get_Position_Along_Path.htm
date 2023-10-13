@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Position Along Path</title>
+  <title>経路上の位置の取得</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Position Along Path action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get Position Along Path" />
@@ -14,40 +14,40 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Position Along Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Get_Position_Along_Path.png" width="32" /> Get Position Along Path</h1>
-  <p>This action will get the position of an instance along a path. The returned value is normalised from 0 - 1, so if you get a result of, for example, 0.5, the instance exactly in the middle of the path. Note that you must have called the <a href="Start_Following_Path.htm">Start Following Path</a>    action to assign a path to the instance for this action to return a value other than 0. The returned value will be stored in the target variable you give, or you can flag the variable as a temporary local variable to create it and assign the value.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><span><img alt="Get Position Along Path Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/a_Paths_Get_Position_Along_Path.png"/></span></p>
-  <p> </p>
-  <h4>Arguments:</h4>
+  <h1><img> 経路上の位置の取得</h1>
+  <p>このアクションは<span class="notranslate">path</span> に沿ったインスタンスの位置を取得します。 返される値は 0 - 1 で正規化されるので、例えば 0.5 という結果が出た場合、インスタンスは<span class="notranslate">path</span> のちょうど真ん中にあることになります。 このアクションが 0 以外の値を返すには、<a href="Start_Following_Path.htm">Start Following Path</a>アクションを呼んでインスタンスに<span class="notranslate">path</span> を割り当てている必要がありますので注意してください。 返される値は与えられたターゲット変数に格納されますが、<span class="notranslate">flag</span> でその変数を一時ローカル変数にして値を割り当てることが可能です。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><span><img alt="Get Position Along Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Get_Position_Along_Path.png" width="32" /></span></p>
+  <p> </p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned path position</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>返された<span class="notranslate">path</span> の位置を保持するターゲット変数</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Position Along Path Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/e_Paths_Get_Position_Along_Path.png" />The above action block code gets the current position on the assigned path
-    for the instance and if it is less than 0.5 it is set to 0.5.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、割り当てられたパス上の現在の位置を取得します。
+    を設定し、それが0.5より小さければ0.5を設定する。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Actions.htm">Path Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Path_Follow_Speed.htm">Set Path Follow Speed</a></div>
+        <div style="float:left">戻る<a href="Path_Actions.htm">パスアクション</a></div>
+        <div style="float:right">次へ<a href="Set_Path_Follow_Speed.htm">パスフォロースピードを設定する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Position Along Path

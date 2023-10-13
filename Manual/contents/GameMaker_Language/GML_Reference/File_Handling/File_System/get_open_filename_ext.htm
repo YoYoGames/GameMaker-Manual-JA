@@ -6,7 +6,7 @@
   <title>get_open_filename_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for get_open_filename_ext" />
   <meta name="rh-index-keywords" content="get_open_filename_ext" />
@@ -16,59 +16,59 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>get_open_filename_ext</h1>
-  <p>This function opens a dialogue and asks the player for a filename to open with the given filter. The filter has the form &quot;<i>name1|mask1|name2|mask2|...</i>&quot;, where the mask may contain the different options with a semicolon between them and you can also use a &quot;*&quot; to mean any string. For example: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, would ask the user to select the name of a bitmap file from the system, but only those that have the two specified extensions (<span class="inline">bmp</span> and <span class="inline">png</span>). this function does <b>not</b> open the file itself! It only returns a string with the full name and path of the file. If the user presses &quot;<b>Cancel</b>&quot; an empty string &quot;&quot; is returned. You may also add in a directory to start the search from, and a caption to be shown at the top of the window instead of the default one.</p>
-  <p>An important thing to note when using this function is that it grants you certain permissions for that file, for the duration of your game. So, once you get the file path from the user, you can access it again and again without having to ask. However, since this function is for reading a file, the permissions granted are <i>only for reading</i> and saving will not be permitted by the OS. Should you need to read and write to the file, you can get permission using the function <a href="get_save_filename.htm"><span class="inline">get_save_filename()</span></a>.</p>
-  <p class="note"><b>NOTE</b>: This function is only valid on the Windows and macOS targets.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、ダイアログを開き、与えられたフィルタで開くファイル名をプレイヤーに尋ねます。フィルタは &quot;<i>name1|mask1|name2|mask2|</i>... &quot; という形式で、マスクはセミコロンで区切られた異なるオプションを含むことができ、また &quot;*&quot; を使って任意の<span class="notranslate">string</span> を意味することができます。例えば、&quot;<i>bitmaps|*.bmp;*.wmf</i>&quot; は、システムからビットマップファイルの名前を選択するようにユーザに要求しますが、指定した2つの<span class="notranslate">extensions</span> (<span class="inline">bmp</span> と <span class="inline">png</span>) を持つものだけです。この関数は、ファイル自体を開くわけでは<b>ありません</b>!ファイルのフルネームと<span class="notranslate">string</span> を含む<span class="notranslate">path</span> を返すだけです。ユーザーが「<b>キャンセル</b>」を押した場合は、空の<span class="notranslate">string</span> &quot;&quot; が返されます。また、検索を開始するディレクトリや、ウィンドウの上部に表示するキャプションを、デフォルトのキャプションの代わりに追加することができます。</p>
+  <p>この機能を使うときの注意点は、ゲームの間、そのファイルに対して一定の権限を付与することです。そのため、一度ユーザーからファイル<span class="notranslate">path</span> を取得すれば、何度でも問い合わせることなくアクセスすることができます。ただし、この機能はファイルを読むためのものなので、付与される権限は<i>あくまで読むための</i>ものであり、保存はOSが許可してくれるわけではありません。万が一、ファイルの読み書きが必要な場合は、以下の関数で許可を得ることができます。 <a href="get_save_filename.htm"><span class="inline">get_save_filename()</span></a>.</p>
+  <p class="note"><b>注</b>：この機能は、<span class="notranslate">Windows</span> および<span class="notranslate">macOS</span> のターゲットでのみ有効です。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">get_open_filename_ext(filter, fname, directory, caption);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>filter</td><td><span data-keyref="Type_String"></span></td>
-        <td>The file type filter and/or name.</td>
+        <td><span class="notranslate">filter</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The file type filter and/or name.</span></td>
      </tr>
       <tr>
-        <td>fname</td><td><span data-keyref="Type_String"></span></td>
-        <td>The suggested filename to use.</td>
+        <td><span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The suggested filename to use.</span></td>
      </tr>
       <tr>
-        <td>directory</td><td><span data-keyref="Type_String"></span></td>
-        <td>The directory to start the search from.</td>
+        <td><span class="notranslate">directory</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The directory to start the search from.</span></td>
      </tr>
       <tr>
-        <td>caption</td><td><span data-keyref="Type_String"></span></td>
-        <td>The caption for the window.</td>
+        <td><span class="notranslate">caption</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The caption for the window.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var file;<br />
     file = get_open_filename_ext(&quot;text file|*.txt&quot;, &quot;&quot;, working_directory, &quot;Open a saved level&quot;);<br />
     if file != &quot;&quot;<br />
     {<br />
         file_text_open_read(file);<br />
     }</p>
-  <p>The above code will ask the user to select a text file for opening from the <span class="inline">working_directory</span> and then check the returned file name and path, and if it exists will open the file for reading.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、 <span class="inline">working_directory</span> から開くテキストファイルを選択するようユーザーに求め、返されたファイル名と<span class="notranslate">path</span> をチェックし、存在すればそのファイルを読み込むために開くというものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="get_save_filename.htm">get_save_filename</a></div>
+        <div style="float:left">戻る<a href="File_System.htm">ファイルシステム</a></div>
+        <div style="float:right">次のページ <a href="get_save_filename.htm"><span class="notranslate">get_save_filename</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 get_open_filename_ext

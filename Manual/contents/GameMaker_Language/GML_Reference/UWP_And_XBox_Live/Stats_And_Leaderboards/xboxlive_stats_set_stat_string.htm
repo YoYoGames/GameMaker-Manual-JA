@@ -6,7 +6,7 @@
   <title>xboxlive_stats_set_stat_string</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_set_stat_string" />
   <meta name="rh-index-keywords" content="xboxlive_stats_set_stat_string" />
@@ -15,54 +15,54 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_set_stat_string</h1>
-  <p>This function can be used to set a stat to a string for the given user ID. You supply the user ID as returned by (for example) the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, then the stat string to set (<b>if the stat string does not already exist then a new stat will be created and set to the given value</b>) and then the string to set the stat to. Note that the stat name must be alphanumeric only, with no symbols or spaces, but the string value you are setting can have spaces and special characters.</p>
-  <p>When setting the stat string, any previous string will be overridden, therefore it is up to you to determine if the stat string should be updated or not by comparing to the current stat string with the new one before setting it.</p>
-  <p>The function will will return -1 if there was an error or the user ID is invalid, or any other value if the function was successfully called.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、指定されたユーザー ID の stat を<span class="notranslate">string</span> に設定するために使用することができます。によって返されるユーザ ID を指定します。 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>そして、設定する stat<span class="notranslate">string</span> <b>(stat<span class="notranslate">string</span> がまだ存在しない場合、新しい stat が作成され、指定された値に設定</b>されます)、さらに stat を設定する<span class="notranslate">string</span> を指定します。stat名は英数字のみで、記号やスペースは使用できませんが、設定する<span class="notranslate">string</span> の値にはスペースや特殊文字が使用できることに注意してください。</p>
+  <p>stat<span class="notranslate">string</span> を設定する場合、以前の<span class="notranslate">string</span> はすべて上書きされます。したがって、stat<span class="notranslate">string</span> を更新すべきかどうかは、設定する前に現在のstat<span class="notranslate">string</span> と新しいものを比較することで判断してください。</p>
+  <p>この関数は、エラーが発生した場合やユーザーIDが無効な場合は-1、関数が正常に呼び出された場合はその他の値を返します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">xboxlive_stats_set_stat_string(user_id, stat, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span></td>
-        <td>The user ID pointer to set the stat for</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">XboxユーザーID</span></td>
+        <td><span class="notranslate">The user ID pointer to set the stat for</span></td>
       </tr>
       <tr>
-        <td>stat</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The statistic to set (a string)</td>
+        <td><span class="notranslate">stat</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The statistic to set (a string)</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The value to set the stat to (a string)</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The value to set the stat to (a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">xboxlive_stats_set_stat_string(p_user_id, &quot;LevelName&quot;, global.LevelName);</p>
-  <p>The above code sets the stat &quot;LevelName&quot; to the string stored in the given global variable. </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、stat &quot;LevelName &quot;を与えられたグローバル変数に格納されている<span class="notranslate">string</span> に設定します。 </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_delete_stat.htm">xboxlive_stats_delete_stat</a></div>
+        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次のページ <a href="xboxlive_stats_delete_stat.htm"><span class="notranslate">xboxlive_stats_delete_stat</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_set_stat_string

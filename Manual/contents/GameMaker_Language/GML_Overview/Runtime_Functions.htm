@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Runtime Functions</title>
+  <title>ランタイムファンクション</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the use of runtime functions" />
   <meta name="rh-index-keywords" content="Runtime Functions" />
@@ -14,18 +14,18 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Runtime Functions</h1>
-  <p>The general definition of a function is something like this:</p>
-  <p><i>A function has an input and an output, and the output is related to the input.</i></p>
-  <p>In <span data-keyref="GameMaker Name">GameMaker</span> this translates into two different things, but they both work the same way:</p>
+  <h1>ランタイムファンクション</h1>
+  <p>関数の一般的な定義は次のようなものです。</p>
+  <p><i>関数は入力と出力を持ち、出力は入力と関連している。</i></p>
+  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、これは2つの異なるものに変換されますが、どちらも同じように機能します。</p>
   <ul class="colour">
-    <li><b>Runtime Functions</b> - A <i>runtime</i> function is one that is supplied as part of the <b>GameMaker Language</b> (GML). These are built in to the language and can be used to make things happen in your games and there are a great number of GML runtime functions available to you, all of which are explained in the <a href="../GML_Reference/GML_Reference.htm">Language Reference</a> section of the manual.</li>
-    <li><b>Script Functions And Methods </b>- <a href="Script_Functions.htm"><em>Script </em><em>functions</em></a> and <a href="Method_Variables.htm"><em>M</em><i>ethod Variables</i></a> are functions that you have created yourself using the basic building blocks of the <b>GameMaker Language</b> (GML), and these can include runtime functions as part of their code.</li>
+    <li><b>ランタイム関数</b>-<i>ランタイム</i>関数とは、<b>GameMaker言語</b>(<span class="notranslate">GML</span>)の一部として提供されているものです。ランタイム関数は、GameMaker 言語に組み込まれており、ゲームの中で何かを実現するために使用することができます。<span class="notranslate">GML</span> <span class="notranslate">runtime</span> 関数は非常にたくさんあり、マニュアルの<a href="../GML_Reference/GML_Reference.htm">言語リファレンス</a>セクションで説明されています。</li>
+    <li><b>スクリプト関数とメソッド </b><a href="Script_Functions.htm"><em>スクリプト </em><em>機能</em></a>と <a href="Method_Variables.htm"><em>M</em><i>メソッド変数</i></a>は、<b>GameMaker 言語の</b>基本構成要素 (<span class="notranslate">GML</span>) を使って自分で作った関数です。これらは、コードの一部として<span class="notranslate">runtime</span> の関数を含むことができます。</li>
   </ul>
-  <p>In both of the above cases a function has the form of a function <i>name</i>, followed by the <i>input <a class="glossterm" data-glossterm="argument" href="#">argument</a><span class="glossextra">s</span></i> between brackets <span class="inline">()</span> and separated by commas (if the function has no input arguments then just brackets are used). This page concentrates on the <strong>runtime functions</strong> (ie: the ones that are built-in to GameMaker to form the GameMaker Language), but the general rules shown below follow for all function types.</p>
-  <p>Here is an outline of the structure of a function:</p>
+  <p>上記のいずれの場合も、関数は関数<i>名と</i>、それに続く<i>入力<span class="glossextra">引数を</span></i>カンマで区切った大括弧 <span class="inline">()</span> で囲んだ形式をとります（関数に入力引数がない場合は、大括弧だけを使用します）。このページでは、<strong>ランタイム関数</strong>（つまり、<span class="notranslate">GameMaker</span> に組み込まれて<span class="notranslate">GameMaker Language</span> を形成する関数）に焦点を当てていますが、以下に示す一般的なルールは、すべてのタイプの関数に適用されます。</p>
+  <p>ここでは、関数の構造の概略を説明します。</p>
   <p class="code">&lt;function&gt;(&lt;arg0&gt;, &lt;arg1&gt; ,... &lt;argN&gt;);</p>
-  <p>Some functions can return values and can be used in <a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span>, while others simply execute commands, as illustrated in the following two runtime function examples:</p>
+  <p>関数には、値を返して<span class="glossextra">式の</span>中で使えるものもあれば、次の2つの<span class="notranslate">runtime</span> 関数の例で示すように、単にコマンドを実行するものもあります。</p>
   <p class="code">// Destroy the calling instance<br />
     // This requires no arguments and returns nothing<br />
     instance_destroy();<br />
@@ -34,10 +34,10 @@
     // This takes four arguments and returns a real value<br />
     dist = point_distance(x, y, mouse_x, mouse_y);
   </p>
-  <p class="note"><span class="note">NOTE</span> Anywhere the manual has &quot;N/A&quot; as a return value for a function, it means that the function is not meant to return any value as part of its operation. If you try to check for a return value from these functions then you will get the value <span class="inline">undefined</span>. </p>
-  <p>Sometimes the return value of a function may be a value that you want to use in an <a class="glossterm" data-glossterm="assignment" href="#">assignment</a>, but you should note that it is impossible to use any function <em>directly</em> as the left-hand side of an assignment. For example, the following code to set the speed on an instance would give you an error:</p>
+  <p class="note"><span class="note">注意</span>このマニュアルでは、関数の戻り値として &quot;N/A &quot;がある場合、その関数は操作の一部として値を返すことを意図していないことを意味します。これらの関数の戻り値を確認しようとすると、 <span class="inline">undefined</span> という値が返されます。 </p>
+  <p>関数の戻り値が<a class="glossterm" data-glossterm="割当て" href="#">代入に</a>使いたい値である場合もありますが、どんな関数も代入の左辺として<em>直接</em>使うことはできないので注意が必要です。例えば、インスタンスに速度を設定する次のようなコードはエラーになります。</p>
   <p class="code">instance_nearest(x, y, obj).speed = 0;</p>
-  <p>The return value for the expression in that code example is an integer number (the unique ID value for the nearest instance) and so it must be enclosed in brackets to be used in this way and properly address the instance required (see <a href="Addressing_Variables_In_Other_Instances.htm">Addressing Variables In Other Instances</a> for more information). The above code would be correctly written as:</p>
+  <p>このコード例の式の戻り値は整数値（最も近いインスタンスのユニークなID値）なので、このように使用して必要なインスタンスのアドレスを適切に指定するには、括弧で囲む必要があります（詳細は「<a href="Addressing_Variables_In_Other_Instances.htm">他のインスタンスにおける変数のアドレス指定</a>」を参照してください）。上記のコードは、正しく次のように記述されます。</p>
   <p class="code">(instance_nearest(x, y, obj)).speed = 0;<br />
     <br />
     //or more correctly still<br />
@@ -55,17 +55,17 @@
         }<br />
     }
   </p>
-  <p>The <a href="../GML_Reference/GML_Reference.htm">Language Reference</a> section of the manual lists all of the runtime functions available to you and gives examples of how they can be used as well as other important information about what they may return or any events that they may trigger, etc... For more information on user defined script functions and methods, see the section on <a href="Script_Functions.htm">Script Functions</a> and the section on <a href="Method_Variables.htm">Method Variables</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p>マニュアルの<a href="../GML_Reference/GML_Reference.htm">言語リファレンスには</a>、<span class="notranslate">runtime</span> 関数の一覧とその使用例、および関数の戻り値やトリガーとなるイベントなどに関する重要な情報が記載されています。ユーザー定義の<span class="notranslate">script</span> 関数とメソッドの詳細については、「<a href="Script_Functions.htm">スクリプト関数</a>」と「<a href="Method_Variables.htm">メソッド変数</a>」のセクションを参照してください。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Variables_And_Variable_Scope.htm">Variables And Variable Scope</a></div>
+        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="Variables_And_Variable_Scope.htm">変数と変数スコープ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Runtime Functions

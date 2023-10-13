@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>irandom</title>
+  <title>出鱈目</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for irandom" />
   <meta name="rh-index-keywords" content="irandom" />
@@ -14,47 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">irandom</span></h1>
-  <p>This function returns a random value as an integer (whole number). So, for example, to get a random number from 0 to 9 you can use <span class="inline">irandom(9)</span> and it will return a number from 0 to 9 <i>inclusive</i>.</p>
-  <p>Floats can also be used but the upper value after the point will be excluded, so <span class="inline">irandom(9.7)</span> will return a value from 0 to 9 only. The function has an upper bound of $7fffffffffffffffLL, so care should be taken if using very large numbers.</p>
-  <div data-conref="../../../../assets/snippets/Note_randomise.hts"> </div>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">irandom</span>(n);</p>
+  <h1>出鱈目</h1>
+  <p>この非常に便利な関数は、整数（全数）のみを返します。したがって、たとえば 0 から 9 までの乱数を得るには、 <span class="inline">irandom(9)</span> を使えば、0 から 9<i>までの</i>数値を返します。浮動小数点も使えますが、ポイントより上の値は除外されるので、 <span class="inline">irandom(9.7)</span> は 0 から 9 までの値だけを返すことに注意してください。この関数の上限は$7fffffffffffffffLLなので、非常に大きな数値を使用する場合は注意が必要です。</p>
+  <p class="note"><b><span class="note">注意</span></b>これは、<span data-keyref="GameMaker Name">GameMakerが</span>毎回同じ初期ランダムシードを生成し、<span class="notranslate">debugging</span> のコードをより簡単に作成するためである。この挙動を避けるには <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span>をゲーム開始時に指定します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">irandom(n);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The upper range from which the random number will be selected.</td>
-      </tr>
+        <td><span class="notranslate">n</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The upper range from which the random number will be selected.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (<span data-field="title" data-format="default">irandom</span>(9) == 1)<br />
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Real"></span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">if (irandom(9) == 1)<br />
     {<br />
         score += 100;<br />
     }</p>
-  <p>This will produce a one in ten (since 0 is included) chance of adding 100 to the score.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>この場合、10分の1（0を含むので）の確率で100が加算されることになる。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Number_Functions.htm">Number Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="irandom_range.htm">irandom_range</a></div>
+        <div style="float:left">戻る<a href="Number_Functions.htm">ナンバーファンクション</a></div>
+        <div style="float:right">次のページ <a href="irandom_range.htm"><span class="notranslate">irandom_range</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 irandom

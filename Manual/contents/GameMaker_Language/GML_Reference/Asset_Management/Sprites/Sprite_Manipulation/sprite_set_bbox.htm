@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_set_bbox</title>
+  <title>スプライトセットボックス</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_set_bbox" />
   <meta name="rh-index-keywords" content="sprite_set_bbox" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_bbox</h1>
-  <p>This function can be used to set the bounding box values for a sprite. You supply the sprite index to use and then the left, top, right and bottom values for the bounding box positions. The positions are <i>absolute</i> values, where the (0, 0) position corresponds to the top left corner of the sprite, regardless of the offset for the sprite, any &quot;empty&quot; pixels the sprite may have, or where it is being drawn in the room.</p>
-  <p class="note"><span class="note">NOTE</span> This function affects the sprite <b>asset </b>so that all further instances with this sprite will have the same bounding box.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>スプライトセットボックス</h1>
+  <p>この関数は、<span class="notranslate">sprite</span> のバウンディングボックスの値を設定するのに使用します。 使用する<span class="notranslate">sprite</span> インデックスと、バウンディングボックスの位置の左、上、右、下の値を指定します。位置は<i>絶対</i>値で、(0, 0) の位置は、<span class="notranslate">sprite</span> のオフセット、<span class="notranslate">sprite</span> の「空の」ピクセル、<span class="notranslate">sprite</span> のどこに描かれているかにかかわらず、<span class="notranslate">room</span> の左上隅に相当する。</p>
+  <p class="note"><span class="note">注</span>：この関数は<span class="notranslate">sprite</span> <b>アセットに </b>影響し、この<span class="notranslate">sprite</span> を持つ以降のインスタンスはすべて同じバウンディング ボックスを持つようになります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">sprite_set_bbox(ind, left, top, right, bottom);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to set the bounding box on.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to set the bounding box on.</span></td>
      </tr>
       <tr>
-        <td>left</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The left side of the bounding box</td>
+        <td><span class="notranslate">left</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The left side of the bounding box</span></td>
      </tr>
       <tr>
-        <td>top</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The top of the bounding box.</td>
+        <td><span class="notranslate">top</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The top of the bounding box.</span></td>
      </tr>
       <tr>
-        <td>right</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The right side of the bounding box</td>
+        <td><span class="notranslate">right</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The right side of the bounding box</span></td>
      </tr>
       <tr>
-        <td>bottom</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The bottom of the bounding box.</td>
+        <td><span class="notranslate">bottom</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The bottom of the bounding box.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>リターンズ</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if sprite_get_bbox_mode(sprite_index) == 2<br />
     {<br />
         left = irandom(sprite_width / 2);<br />
@@ -61,18 +61,18 @@
         bottom = irandom((sprite_height / 2) + irandom(sprite_height / 2));<br />
         sprite_set_bbox(sprite_index, left, top, right, bottom);<br />
     }</p>
-  <p>The above code will check the bounding box mode of the sprite assigned to the <span class="inline">sprite_index</span>, and if it is set to <span class="inline">manual</span> then it will have its bounding box changed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、 <span class="inline">sprite_index</span> に割り当てられた<span class="notranslate">sprite</span> のバウンディングボックスモードをチェックし、それが <span class="inline">manual</span> に設定されていれば、そのバウンディングボックスが変更されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_speed.htm">sprite_set_speed</a></div>
+        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次のページ <a href="sprite_set_speed.htm"><span class="notranslate">sprite_set_speed</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_bbox

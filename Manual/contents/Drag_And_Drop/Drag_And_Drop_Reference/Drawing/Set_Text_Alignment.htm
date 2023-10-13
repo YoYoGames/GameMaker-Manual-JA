@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Text Alignment</title>
+  <title>テキストアライメントを設定する</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Text Alignment action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Text Alignment" />
@@ -14,75 +14,75 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Text_Alignment.png" /> Set Text Alignment</h1>
-  <p>This action will set the font alignment for all subsequent draw text actions. You can set the horizontal alignment to be the left, center or right, and the vertical alignment to be top, middle or bottom and the text will be aligned relative to the x/y
-    position of the draw action, as shown in the images below:</p>
+  <h1><img> テキストアライメントを設定する</h1>
+  <p>このアクションは、その後のすべてのDraw Textアクションの<span class="notranslate">font</span> アライメントを設定します。水平方向の配置を左、中央、右に、垂直方向の配置を上、中、下に設定することができ、テキストはx/y
+    の位置は、下の画像のように、描画アクションの位置です。</p>
   <table>
     <tbody>
       <tr>
+        <td><img alt="Set Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Text_Alignment.png" /></td>
+        <td>テキストが左側に水平に配置される</td>
+      </tr>
+      <tr>
         <td><img alt="Align Left" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_left.png" width="404" /></td>
-        <td>Text is horizontally aligned to the left</td>
+        <td>テキストは水平に中央に配置されます。</td>
       </tr>
       <tr>
         <td><img alt="Align Center" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_center.png" width="404" /></td>
-        <td>Text is horizontally aligned to the center</td>
+        <td>テキストが右側に水平に配置される</td>
       </tr>
       <tr>
-        <td><img alt="Align Right" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_right.png" width="404" /></td>
-        <td>Text is horizontally aligned to the right</td>
+        <td style="text-align: center"><img alt="Align Right" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_right.png" width="404" /></td>
+        <td>テキストは上部に縦書きで配置されます</td>
       </tr>
       <tr>
         <td style="text-align: center"><img align="" alt="Align Top" height="106" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_top.png" width="106" /></td>
-        <td>Text is vertically aligned to the top</td>
+        <td>テキストが中央に縦に並ぶ</td>
       </tr>
       <tr>
         <td style="text-align: center"><img alt="Align Middle" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_middle.png" /></td>
-        <td>Text is vertically aligned to the middle</td>
-      </tr>
-      <tr>
-        <td style="text-align: center"><img alt="Align Bottom" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_bottom.png" /></td>
-        <td>Text is vertically aligned to the bottom</td>
+        <td>テキストが下に縦に並ぶ</td>
       </tr>
     </tbody>
   </table>
-  <p>Note that this will set the alignment to use for <i>all</i> subsequent draw text calls, and so can be called, for example, once at the beginning of the game - in any event, not just the Draw Event - and all draw text actions will use the set alignment.
-    However if you require multiple draw text actions to align in different ways, then you will need to call this action before every draw text action you wish to align differently.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Text Alignment Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Set_Text_Alignment.png" /></p>
-  <h4>Arguments:</h4>
+  <p>これは、その後の<i>すべての</i>ドローテキストの呼び出しに使用するアライメントを設定するので、例えば、ゲームの開始時に一度だけ呼び出すことができます - Drawイベントだけでなく、任意のイベント - すべてのドローテキストアクションは、設定されたアライメントを使用します。
+    ただし、複数のドローテキストアクションを異なる方法で配置する必要がある場合は、異なる配置にしたいドローテキストアクションの前にこのアクションを呼び出す必要があります。</p>
+  <p> </p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Align Bottom" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_bottom.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>H.Align</td>
-        <td>The horizontal alignment value (Left, Center, Right)</td>
+        <td><span class="notranslate">H.Align</span></td>
+        <td>水平方向のアライメント値（左、中央、右）</td>
       </tr>
       <tr>
-        <td>V.Align</td>
-        <td>The vertical alignment value (Top, Middle, Bottom)</td>
+        <td><span class="notranslate">V.Align</span></td>
+        <td>垂直方向のアライメント値（Top, Middle, Bottom)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Text Alignment Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Value.png" />The above action block code sets the font, the draw colour, and the alignment for some text
-    that is drawn.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックは、<span class="notranslate">font</span> 、描画色、アライメントを設定するものです。
+    が描画されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Text_Alignment.htm">Get Text Alignment</a></div>
+        <div style="float:left">戻る<a href="Drawing_Actions.htm">描画アクション</a></div>
+        <div style="float:right">次へ<a href="Get_Text_Alignment.htm">テキストアライメントを取得する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Text Alignment

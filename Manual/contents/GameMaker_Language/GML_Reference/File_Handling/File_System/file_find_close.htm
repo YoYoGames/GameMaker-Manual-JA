@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_find_close</title>
+  <title>ファイル検索クローズ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for file_find_close" />
   <meta name="rh-index-keywords" content="file_find_close" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_find_close</h1>
-  <p>This function must be called after handling files opened using <a href="file_find_first.htm"><span class="inline">file_find_first()</span></a> and <a href="file_find_next.htm"><span class="inline">file_find_next()</span></a> functions to free memory. The file find functions open handles into the file directory and these take up a minimal amount of memory, which (over time) adds up. Therefore you should always call this function after you have found the files you require to &quot;close&quot; these handles.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ファイル検索クローズ</h1>
+  <p>を使用して開いたファイルを処理した後に、この関数を呼び出す必要があります。 <a href="file_find_first.htm"><span class="inline">file_find_first()</span></a>と <a href="file_find_next.htm"><span class="inline">file_find_next()</span></a>関数でメモリを解放します。ファイル検索関数は、ファイルディレクトリにハンドルを開き、最小限のメモリを使用しますが、（時間が経つと）その量は増えていきます。したがって、この関数は、必要なファイルが見つかった後に必ず呼び出して、これらのハンドルを「クローズ」する必要があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">file_find_close();</p>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>リターンズ</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if directory_exists(&quot;\User Content&quot;)<br />
     {<br />
         fileA = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
@@ -31,8 +31,8 @@
         fileC = file_find_next();<br />
         file_find_close();<br />
     }</p>
-  <p>This code checks if the specified directory exists and if it does, goes there and returns the first &quot;read only&quot; <span class="inline">.doc</span> file found. It then looks for two more files and closes the file finder.</p>
-  <p>You can look for any number of files using a <a href="../../../GML_Overview/Language_Features/while.htm">while</a> loop:</p>
+  <p>このコードは、指定されたディレクトリが存在するかどうかをチェックし、存在する場合はそこに行き、最初に見つかった「読み取り専用」 <span class="inline">.doc</span> ファイルを返します。その後、さらに2つのファイルを探し、ファイルファインダーを閉じます。</p>
+  <p>を使用すると、任意の数のファイルを検索することができます。 <a href="../../../GML_Overview/Language_Features/while.htm"><span class="notranslate">while</span></a>をループさせる。</p>
   <p class="code">var files = [];<br />
     var file_name = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
     <br />
@@ -45,18 +45,18 @@
     <br />
     file_find_close();
   </p>
-  <p>The above code creates an empty array to store all the file names that were found, and starts looking for read only <span class="inline">.doc</span> files. If that file name is not an empty string, it pushes it into the <span class="inline">files</span> array, and then attempts to find the next file. The loop will keep repeating until an empty string is found (meaning there are no more matching files), which is when it ends the loop and closes the file finder at the end.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、見つかったすべてのファイル名を格納する空の配列を作成し、読み取り専用のファイル（ <span class="inline">.doc</span> ）の検索を開始します。そのファイル名が空の<span class="notranslate">string</span> でない場合、それを <span class="inline">files</span> 配列にプッシュし、次のファイルを探そうとします。<span class="notranslate">loop</span> は、空の<span class="notranslate">string</span> が見つかる（一致するファイルがもうないことを意味する） まで繰り返され、その時点で<span class="notranslate">loop</span> が終了し、最後にファイルファインダーが閉じられる。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="file_attributes.htm">file_attributes</a></div>
+        <div style="float:left">戻る<a href="File_System.htm">ファイルシステム</a></div>
+        <div style="float:right">次のページ <a href="file_attributes.htm"><span class="notranslate">file_attributes</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_find_close

@@ -6,7 +6,7 @@
   <title>vertex_format_add_custom</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for vertex_format_add_custom" />
   <meta name="rh-index-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample" />
@@ -15,7 +15,7 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>vertex_format_add_custom</h1>
-  <p>This function permits you to use a custom data type for specific vertex format attributes as part of the new vertex format being created. The available values to use are defined by the data type constant that you choose, listed below:</p>
+  <p>この機能により、新規に作成される<span class="notranslate">vertex</span> フォーマットの一部として、特定の<span class="notranslate">vertex</span> フォーマット属性にカスタムデータ型を使用することができます。使用可能な値は、以下に示すデータ型定数によって定義されます。</p>
   <table>
     <colgroup>
       <col />
@@ -23,40 +23,40 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Data Type Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">頂点データ型定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float1</span></td>
-        <td>A single floating point value</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float1</span></td>
+        <td>単一の浮動小数点値</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float2</span></td>
-        <td>Two floating point values</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float2</span></td>
+        <td>2つの浮動小数点値</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float3</span></td>
-        <td>Three floating point values</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float3</span></td>
+        <td>3つの浮動小数点値</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float4</span></td>
-        <td>Four floating point values</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float4</span></td>
+        <td>4つの浮動小数点値</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_colour</span></td>
-        <td>Four component values (r, g, b, a)</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_colour</span></td>
+        <td>4成分値（r、g、b、a）</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_ubyte4</span></td>
-        <td>Four component unsigned byte values (from 0 to 255)</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_ubyte4</span></td>
+        <td>4 成分符号なしバイト値（0～255）。</td>
       </tr>
     </tbody>
   </table>
-  <p><br />
-    The use that these constants will be put too also needs to be defined so that the values can be &quot;bound&quot; properly within the shader being created. This is necessary due to the fact that DX and OpenGL have different requirements so if you don&#39;t bind them properly, they won&#39;t come through right in the shader. The available usage constants that you can choose are listed below and those you use will depend on the specifics of the shader being created:</p>
+  <p><br>
+    これらの定数の用途も定義して、作成される<span class="notranslate">shader</span> 内で値を適切に「バインド」できるようにする必要があります。これは、DX と OpenGL は異なる要件を持つため、適切にバインドしないと、<span class="notranslate">shader</span> で正しく表示されないという事実から必要です。選択できる使用定数を以下に示しますが、使用する定数は、作成する<span class="notranslate">shader</span> の仕様に依存します。</p>
   <table>
     <colgroup>
       <col />
@@ -64,66 +64,66 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Usage Type Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">頂点使用率型定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_position</span></td>
-        <td>position values (x, y, z)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_position</span></td>
+        <td>位置値</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_colour</span></td>
-        <td>colour values (r, g, b, a)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_colour</span></td>
+        <td>しきか</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_normal</span></td>
-        <td>vertex normal values (nx, ny, nz)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_normal</span></td>
+        <td>頂点の法線値（nx, ny, nz）</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_textcoord</span></td>
-        <td>UV coordinates (u, v)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_textcoord</span></td>
+        <td>UV座標（u,v）</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_blendweight</span></td>
-        <td>the blendweight of the input matrix (for skeletal animation, for example)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_blendweight</span></td>
+        <td>入力行列のブレンドウェイト（スケルトンアニメーションの場合など）．</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_blendindices</span></td>
-        <td>the indices of the matrices to use (for skeletal animation, for example)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_blendindices</span></td>
+        <td>使用する行列のインデックス（スケルトンアニメーションの場合など）。</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_depth</span></td>
-        <td>vertex depth buffer value</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_depth</span></td>
+        <td>vertex depth<span class="notranslate">buffer</span> value</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_tangent</span></td>
-        <td>tangent values</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_tangent</span></td>
+        <td>正接値</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_binormal</span></td>
-        <td>binormal values</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_binormal</span></td>
+        <td>はんかくじゅう</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_fog</span></td>
-        <td>fog values</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_fog</span></td>
+        <td>きけんりょう</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_sample</span></td>
-        <td>sampler index</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_sample</span></td>
+        <td>サンプラーインデックス</td>
       </tr>
     </tbody>
   </table>
-  <p><br />
-    There are some important things to note when using custom formats like these:</p>
+  <p><br>
+    このようなカスタムフォーマットを使用する場合、いくつかの注意点があります。</p>
   <ul class="colour">
-    <li>The <span class="inline">vertex_format_add_custom()</span> function only supports <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> and <span class="inline">vertex_usage_textcoord</span> when using GLSL shaders. These will map to the shader attributes <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> respectively (anything that is not one of these three attributes - eg: texture coordinates - can be mapped to any attribute you define).</li>
-    <li>In general you should use <span class="inline">vertex_usage_textcoord</span> for all extra parameters where possible, as types like <span class="inline">vertex_usage_blendweight</span> and <span class="inline">vertex_usage_tangent</span> are close to deprecated in most shader languages, and probably won&#39;t convert properly. Instead use <span class="inline">vec</span>, <span class="inline">vec2</span>, <span class="inline">vec3</span> or <span class="inline">vec4</span> types <span class="inline">vertex_usage_textcoord</span> and everything should work fine.</li>
-    <li>GLSL ES does <i>not</i> support integer attributes, so passing in <span class="inline">ivec4</span>&#39;s does not work (this type is usually used when passing in <span class="inline">vertex_usage_blendindices</span>). What you need to do is pass in texture coordinates and then in the shader, convert them to <span class="inline">ivec4</span> like this:</li>
+    <li> <span class="inline">vertex_format_add_custom()</span> 関数は、GLSL<span class="notranslate">shaders</span> を使用する場合、 <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span>, <span class="inline">vertex_usage_textcoord</span> のみをサポートしています。これらはそれぞれ<span class="notranslate">shader</span> の属性 <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> にマップされます（これらの 3 つの属性のいずれかではないもの、たとえば<span class="notranslate">texture</span> の座標は、定義した任意の属性にマップすることが可能です）。</li>
+    <li>一般に、可能な限りすべての追加パラメータには <span class="inline">vertex_usage_textcoord</span> を使用すべきです。 <span class="inline">vertex_usage_blendweight</span> や <span class="inline">vertex_usage_tangent</span> のような型はほとんどの<span class="notranslate">shader</span> 言語で非推奨に近く、おそらく適切に変換されないでしょうから。代わりに <span class="inline">vec</span>, <span class="inline">vec2</span>, <span class="inline">vec3</span> または <span class="inline">vec4</span> 型 <span class="inline">vertex_usage_textcoord</span> を使用すれば、すべてうまくいくはずです。</li>
+    <li>GLSL ES<i>は</i>整数属性をサポートしていないので、 <span class="inline">ivec4</span>'を渡してもうまくいきません（このタイプは通常 <span class="inline">vertex_usage_blendindices</span> を渡すときに使用されます）。必要なのは、<span class="notranslate">texture</span> の座標を渡して、<span class="notranslate">shader</span> で、次のように <span class="inline">ivec4</span> に変換することです。</li>
   </ul>
-  <p> </p>
+  <p> </p>
   <p class="code">attribute vec3 in_Position;<br />
     attribute vec4 in_BlendIndices;<br />
     attribute vec4 in_BlendWeights;<br />
@@ -140,52 +140,52 @@
     }
   </p>
   <ul class="colour">
-    <li>Blend weights are usually stored in an array and then accessed using blend indices, but you can see here that instead of defining <span class="inline">in_BlendIndices</span> as an <span class="inline">ivec4</span> attribute, it&#39;s a <span class="inline">vec4</span>, then cast to an <span class="inline">ivec4</span> in the code. This is then used to index the array created using the <span class="inline">gm_Matrix</span> (you can only access an array using an <span class="inline">INT</span> value - not a float).</li>
+    <li>ブレンドウェイトは通常、配列に格納され、ブレンドインデックスを使ってアクセスしますが、ここでは、 <span class="inline">in_BlendIndices</span> を <span class="inline">ivec4</span> 属性として定義するのではなく、 <span class="inline">vec4</span> とし、コード内で <span class="inline">ivec4</span> にキャストしていることが分かります。これは、 <span class="inline">gm_Matrix</span> を使って作成された配列のインデックスに使用されます（配列へのアクセスは、 <span class="inline">INT</span> の値のみで可能です。float は使用できません）。</li>
     <br />
-    <li> </li>
+     
   </ul>
-  <h4>Syntax:</h4>
+  <h4>構文です。</h4>
   <p class="code">vertex_format_add_custom(type, usage);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Data Type Constant</a></span></td>
-        <td>The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">頂点データ型定数</a></span></td>
+        <td><span class="notranslate">The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</span></td>
       </tr>
       <tr>
-        <td>usage</td>
-        <td><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Usage Type Constant</a></span></td>
-        <td>The use that the data will get(see the <b><i>usage constants</i></b> listed above).</td>
+        <td><span class="notranslate">usage</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">頂点使用率型定数</a></span></td>
+        <td><span class="notranslate">The use that the data will get(see the <b><i>usage constants</i></b> listed above).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">vertex_format_begin();<br />
-    vertex_format_add_texcoord();<br />
+    vertex_format_add_textcoord();<br />
     vertex_format_add_custom(vertex_type_float3, vertex_usage_position);<br />
     my_format = vertex_format_end();</p>
-  <p>The above code will create a new vertex format with just texture and 3 custom floating point values for position. It is then stores the format id in the variable &quot;my_format&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、<span class="notranslate">vertex</span> と 3 つのカスタム浮動小数点値（position）だけで新しい<span class="notranslate">texture</span> フォーマットを作成しています。そして、そのフォーマットIDを変数 &quot;my_format &quot;に格納する。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_format_end.htm">vertex_format_end</a></div>
+        <div style="float:left">戻る<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></div>
+        <div style="float:right">次のページ <a href="vertex_format_end.htm"><span class="notranslate">vertex_format_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_format_add_custom

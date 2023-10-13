@@ -7,7 +7,7 @@
   <title>rollback_use_manual_start</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for 
@@ -18,17 +18,17 @@ rollback_use_manual_start" />
 </head>
 <body>
   <h1>rollback_use_manual_start</h1>
-  <p>By default, a multiplayer game automatically starts when all players have joined.</p>
-  <p>Calling this function disables that auto-start behaviour, so the game waits for you to <a href="rollback_start_game.htm">start it manually</a>.</p>
-  <p>If used, this function must run before the <a href="rollback_join_game.htm">join</a>/<a href="rollback_create_game.htm">create</a> function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>デフォルトでは、マルチプレイヤーゲームは、すべてのプレーヤーが参加した時点で自動的に開始されます。</p>
+  <p>この関数を呼び出すと、自動起動の動作が無効になり、ゲームは<a href="rollback_start_game.htm">手動で起動</a>するのを待ちます。</p>
+  <p>使用する場合、この関数は<a href="rollback_join_game.htm">join/create</a>関数の前に実行する必要があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">rollback_use_manual_start();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">rollback_use_manual_start();<br />
     <br />
     if (!rollback_join_game())<br />
@@ -36,17 +36,17 @@ rollback_use_manual_start" />
         rollback_create_game(2);<br />
     }
   </p>
-  <p>The above code enables manual start, and then joins or creates a new multiplayer game.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードで手動起動を有効にし、マルチプレイヤーゲームに参加または新規作成します。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_chat.htm">rollback_chat</a></div>
+        <div>戻る<a data-xref="{title}" href="Rollback_Functions.htm">ロールバック機能</a></div>
+        <div>次ページ：<a data-xref="{title}" href="rollback_chat.htm">ロールバック_チャット</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_use_manual_start

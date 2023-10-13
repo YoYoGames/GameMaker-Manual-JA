@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>font_replace_sprite</title>
+  <title>フォント置き換えスプライト</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function font_replace_sprite" />
   <meta name="rh-index-keywords" content="font_replace_sprite" />
@@ -14,66 +14,66 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_replace_sprite</h1>
-  <p>With this function you can use a &quot;sprite strip&quot; to replace a previously created sprite font asset, where each sub-image would be an individual symbol or letter. The index is the UTF8 map number for the first character to use and the ranges to use are the same as you would for a normal font, starting with &quot;!&quot; but remember that you should only include what you need and that you should be using the <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> function to get the correct UTF8 value for the starting letter.</p>
-  <p>You can also set the spacing for the font to be proportional (<span class="inline">true</span>) or not (<span class="inline">false</span>), where a proportional font is spaced based on the actual width of the letters (so the letter &quot;i&quot; takes less room than the letter &quot;w&quot;, for example) while a non-proportional font will be spaced based on the sub-image width, like a monospaced font. Finally, you can define the space to leave between each letter when writing, and this can be any integer value, with 0 being no space (the letters will &quot;touch&quot; if proportional). </p>
-  <p>If the function fails, then it will fail silently without replacing the given sprite font.</p>
-  <p>It is also worth noting that there cannot be any <i>spaces</i> in the character map, so that if you, for example, use &#39;.&#39; and &#39;0&#39; but not &#39;/&#39;, you need to either include &#39;/&#39; anyway or leave a blank sub-image between the two used characters. The image below shows a typical sprite font layout:</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>フォント置き換えスプライト</h1>
+  <p>この関数を使うと、以前に作成した<span class="notranslate">sprite</span> <span class="notranslate">font</span> <span class="notranslate">asset</span> を「スプライトストリップ」で置き換えることができます。それぞれのサブイメージは個々のシンボルや文字になります。インデックスには、使用する最初の文字のUTF8マップ番号を指定します。使用する範囲は、通常の<span class="notranslate">font</span> 、&quot;!&quot;で始まるものと同じですが、必要なものだけを含めるべきで、そのためには <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>関数を使って、開始文字に対応する正しい UTF8 値を取得します。</p>
+  <p>また、<span class="notranslate">font</span> の間隔をプロポーショナル (<span class="inline">true</span>) にするかしないか (<span class="inline">false</span>) に設定できます。プロポーショナル<span class="notranslate">font</span> は実際の文字の幅に基づいて間隔が決められ (従って、例えば「i」の文字は「w」の文字よりも<span class="notranslate">room</span> が小さくなります)、非プロポーショナル<span class="notranslate">font</span> は等幅<span class="notranslate">font</span> のようにサブイメージ幅に基づいて間隔が決められま す。最後に、書くときに各文字の間に空けるスペースを定義できます。これは任意の整数値で、0はスペースなし（プロポーショナルなら文字が「接触」する）です。 </p>
+  <p>この関数が失敗した場合，与えられた<span class="notranslate">sprite</span> <span class="notranslate">font</span> を置き換えることなく，静かに失敗します．</p>
+  <p>例えば、'.'と'0'を使って'/'を使わない場合、'/'を含めるか、使用する2文字の間に<i>空白の</i>サブイメージを残す必要があります。下の画像は、典型的な<span class="notranslate">sprite</span> <span class="notranslate">font</span> のレイアウトです。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">font_replace_sprite(ind, spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Font"><a href="../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span></td>
-        <td>The index of the font that shall be replaced (ie all references to this resource past this function will refer to the new font, not the original).</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Font">フォントアセット</span></td>
+        <td><span class="notranslate">The index of the font that shall be replaced (ie all references to this resource past this function will refer to the new font, not the original).</span></td>
       </tr>
       <tr>
-        <td>spr</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The sprite to add a font based on.</td>
+        <td><span class="notranslate">spr</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">スプライトアセット</span></td>
+        <td><span class="notranslate">The sprite to add a font based on.</span></td>
       </tr>
       <tr>
-        <td>first</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The index of the first available character.</td>
+        <td><span class="notranslate">first</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The index of the first available character.</span></td>
       </tr>
       <tr>
-        <td>prop</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether white space around each letter should be removed (if false, the created font will be monospaced, otherwise it&#39;ll be like most regular fonts).</td>
+        <td><span class="notranslate">prop</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether white space around each letter should be removed (if false, the created font will be monospaced, otherwise it&#39;ll be like most regular fonts).</span></td>
       </tr>
       <tr>
-        <td>sep</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The space between each letter, 0 meaning the right of one letter just touches the left of the next one.</td>
+        <td><span class="notranslate">sep</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The space between each letter, 0 meaning the right of one letter just touches the left of the next one.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">font_replace_sprite(global.Font, working_directory + &quot;Sprites\spr_Font.png&quot;, ord(&quot;!&quot;), true, 2);</p>
-  <p>The above code will replace the font asset indexed in the global variable &quot;Font&quot; with a new font asset from an external image file.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、グローバル変数「Font」にインデックスされている<span class="notranslate">font</span> <span class="notranslate">asset</span> を、外部の画像ファイルから新しい<span class="notranslate">font</span> <span class="notranslate">asset</span> に置き換えるものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a href="font_replace_sprite_ext.htm">font_replace_sprite_ext</a></div>
+        <div style="float:left">戻る<a href="Fonts.htm">フォント</a></div>
+        <div style="float:right">次のページ <a href="font_replace_sprite_ext.htm"><span class="notranslate">font_replace_sprite_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_replace_sprite

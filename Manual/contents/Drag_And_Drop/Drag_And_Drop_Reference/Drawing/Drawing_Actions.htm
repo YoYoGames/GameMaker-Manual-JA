@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Drawing Actions</title>
+  <title>ドローイングアクション</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section detailing all the Drawing actions" />
   <meta name="rh-index-keywords" content="GML Visual Overview - Drawing Actions Library" />
@@ -14,150 +14,150 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Drawing Action Library</h1>
-  <p><img alt="Drawing Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Lib_Drawing.png" />The <b>Drawing</b> action library is where you can find the actions required to draw sprites, text or
-    shapes as well as set certain draw properties. Most of these actions are <strong>only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a></strong> of an object, and may not work if used outside
-    of the Draw Event. The exceptions to this are the <i>Set</i> actions, which can be added to any event and will affect all drawing for all instances afterwards.</p>
-  <p>It is important to note that if you add any actions into the main <b>Draw Event</b> of an object, then it will <i>not</i> draw the sprite that has been assigned to the instance unless you explicitly tell <span data-keyref="GameMaker Name">GameMaker</span> to draw it, using an action
-    like <a href="Draw_Self.htm">Draw Self</a>. Basically, <span data-keyref="GameMaker Name">GameMaker</span> will default draw any sprite assigned to an instance, only if there is <em>nothing </em>else in the Draw Event.</p>
-  <p>The Draw actions available are as follows:</p>
+  <h1>描画アクションライブラリ</h1>
+  <p><img><b>描画</b>アクションライブラリには、<span class="notranslate">sprites</span> 、テキスト、または描画に必要なアクションが含まれています。
+    図形、および特定の描画プロパティを設定します。これらのアクションのほとんどは、<span class="notranslate">object</span> の<strong>さまざまな<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">描画イベント</a></strong>でのみ使用され、外部で使用すると動作しない場合があります。
+    を描画します。例外は<i>Set</i>アクションで、これはどのイベントにも追加でき、その後のすべてのインスタンスの描画に影響します。</p>
+  <p><span class="notranslate">object</span> のメイン<b>Draw Event</b>に何らかのアクションを追加した場合、<span data-keyref="GameMaker Name">GameMaker</span>に明示的に描画を指示しない限り、インスタンスに割り当てられた<span class="notranslate">sprite</span> は描画さ<i>れない</i>ことに注意する必要があります。
+    のように、<a href="Draw_Self.htm">自己を描く</a>。基本的に、<span data-keyref="GameMaker Name">GameMaker</span>はインスタンスに割り当てられた<span class="notranslate">sprite</span> を、Draw Event に<em>何も </em>ない場合のみ、デフォルトで描画します。</p>
+  <p>Drawアクションは以下の通りです。</p>
   <table class="dnd" style="text-align: left;margin-left:">
     <tbody>
       <tr style="height: 1px;">
-        <td class="icons" style="margin-left: 16px;"><img alt="Draw Self Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Self.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Self.htm">Draw Self</a></td>
+        <td class="icons" style="margin-left: 16px;"><img alt="Drawing Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Lib_Drawing.png" /></td>
+        <td class="dnd" style=""><a href="Draw_Self.htm">ドローセルフ</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Self Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Self.png" /></td>
+        <td class="dnd" style=""><a href="Draw_Value.htm">ドローバリュー</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Value.htm">Draw Value</a></td>
+        <td class="dnd" style=""><a href="Draw_Transformed_Value.htm">変換後の値を描画する</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Transformed_Value.htm">Draw Transformed Value</a></td>
+        <td class="dnd" style=""><a href="Draw_Sprite.htm">スプライトの描画</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Sprite.htm">Draw Sprite</a></td>
+        <td class="dnd" style=""><a href="Draw_Sprite_Transformed.htm">Draw<span class="notranslate">Sprite</span> Transformed</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Sprite_Transformed.htm">Draw Sprite Transformed</a></td>
+        <td class="dnd" style=""><a href="Draw_Stacked_Sprites.htm">スタックド・スプライトの描画</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Stacked_Sprites.htm">Draw Stacked Sprites</a></td>
+        <td class="dnd" style=""><a href="Draw_Rectangle.htm">矩形の描画</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Rectangle Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Rectangle.htm">Draw Rectangle</a></td>
+        <td class="dnd" style=""><a href="Draw_Gradient_Rectangle.htm">グラデーション矩形の描画</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Gradient Rectangle Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle_Gradient.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Gradient_Rectangle.htm">Draw Gradient Rectangle</a></td>
+        <td class="dnd" style=""><a href="Draw_Ellipse.htm">楕円の描画</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Ellipse Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Ellipse.htm">Draw Ellipse</a></td>
+        <td class="dnd" style=""><a href="Draw_Gradient_Ellipse.htm">グラデーション楕円の描画</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Gradient Ellipse Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse_Gradient.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Gradient_Ellipse.htm">Draw Gradient Ellipse</a></td>
+        <td class="dnd" style=""><a href="Draw_Line.htm">ドローライン</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Line Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Line.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Line.htm">Draw Line</a></td>
+        <td class="dnd" style=""><a href="Draw_Healthbar.htm">ドローヘルスバー</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Healthbar Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Healthbar.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Healthbar.htm">Draw Healthbar</a></td>
+        <td class="dnd" style=""><a href="Draw_Instance_Score.htm">ドローインスタンススコア</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Score Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Score.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Instance_Score.htm">Draw Instance Score</a></td>
+        <td class="dnd" style=""><a href="Draw_Instance_Health.htm">ドローインスタンスの健康状態</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Draw_Instance_Health.htm">Draw Instance Health</a></td>
+        <td class="dnd" style=""><a href="Draw_Instance_Lives.htm">ドローインスタンスライブ</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Draw Instance Lives Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Lives.png" /></td>
-        <td class="dnd" style=""><a href="Draw_Instance_Lives.htm">Draw Instance Lives</a></td>
+        <td class="dnd" style=""><a href="Set_Draw_Colour.htm">描画色を設定する</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Draw Colour Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Draw_Colour.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Set_Draw_Colour.htm">Set Draw Colour</a></td>
+        <td class="dnd" style=""><a href="Get_Draw_Colour.htm">描画色取得</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Colour Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Colour.png" /></td>
-        <td class="dnd" style=""><a href="Get_Draw_Colour.htm">Get Draw Colour</a></td>
+        <td class="dnd" style=""><a href="Set_Draw_Alpha.htm">ドローアルファの設定</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Draw Alpha Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Draw_Alpha.png" /></td>
-        <td class="dnd" style=""><a href="Set_Draw_Alpha.htm">Set Draw Alpha</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Alpha Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Alpha.png" width="32" /></td>
         <td class="dnd" style=""><a href="Get_Draw_Alpha.htm">Get Draw Alpha</a></td>
       </tr>
       <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Draw Alpha Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Draw_Alpha.png" width="32" /></td>
+        <td class="dnd" style=""><a href="Set_Font.htm">フォントを設定する</a></td>
+      </tr>
+      <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Font Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Font.png" /></td>
-        <td class="dnd" style=""><a href="Set_Font.htm">Set Font</a></td>
+        <td class="dnd" style=""><a href="Get_Draw_Font.htm">ドローフォント取得</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Font Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Font.png" /></td>
-        <td class="dnd" style=""><a href="Get_Draw_Font.htm">Get Draw Font</a></td>
+        <td class="dnd" style=""><a href="Set_Text_Alignment.htm">テキストアライメントを設定する</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Text Alignment Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Set_Text_Alignment.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Set_Text_Alignment.htm">Set Text Alignment</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Text_Alignment.png" /></td>
-        <td class="dnd" style=""><a href="Get_Text_Alignment.htm">Get Text Alignment</a></td>
+        <td class="dnd" style=""><a href="Get_Text_Alignment.htm">テキストアライメントを取得する</a></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
-        <div style="float:right">Next: <a href="../Tiles/Tile_Actions.htm">Tile Actions</a></div>
+        <div style="float:left">戻る：<a href="../DnD_Reference.htm">インデックス</a></div>
+        <div style="float:right">次へ<a href="../Tiles/Tile_Actions.htm">タイルアクション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Drawing Actions

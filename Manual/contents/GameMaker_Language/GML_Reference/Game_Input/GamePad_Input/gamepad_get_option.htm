@@ -6,7 +6,7 @@
   <title>gamepad_get_option</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_get_option" />
   <meta name="rh-index-keywords" content="gamepad_get_option" />
@@ -16,53 +16,53 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_get_option</h1>
-  <p>This function can be used to retrieve the given option value. You supply the gamepad &quot;slot&quot; to check, as well as the option string and the function will return the associated value. The available option string will depend on the platform that the project is being run on, as listed below:</p>
+  <p>この関数は、与えられたオプションの値を取得するために使用することができます。チェックするゲームパッドの「スロット」とオプション（<span class="notranslate">string</span> ）を指定すると、関数は関連する値を返します。利用可能なオプション<span class="notranslate">string</span> は、プロジェクトが実行されているプラットフォームによって、以下のように異なります。</p>
   <table>
     <tbody>
       <tr>
-        <th>Option</th>
-        <th>Platform</th>
-        <th>Description</th>
-        <th>Returns</th>
+        <th>オプション</th>
+        <th>プラットフォーム</th>
+        <th>商品説明</th>
+        <th>リターンズ</th>
       </tr>
       <tr>
-        <td>&quot;allow_rotation&quot;</td>
-        <td>tvOS</td>
-        <td>Returns whether the Siri Remote will be rotation locked (ie: can only be used vertically) or not. When unlocked, rotating the control will change the input, such that a rotation of 90º to the left will make the &quot;right&quot; side of the touch pad return &quot;up&quot;, etc... such that all input will be relative to the orientation of the device</td>
-        <td>Boolean</td>
+        <td>&quot;allow_rotation &quot;です。</td>
+        <td>ティーブイオーエス</td>
+        <td>Siri Remoteを回転ロック（垂直方向にのみ使用可能）するかどうかを返します。ロックされていない場合、コントロールを回転させると入力が変化し、左に90°回転させるとタッチパッドの「右」側が「上」に戻るなど、すべての入力がデバイスの向きに応じて変化します。</td>
+        <td>ブーリアン</td>
       </tr>
       <tr>
-        <td>&quot;dpad_absolute&quot;</td>
-        <td>tvOS</td>
-        <td>Returns whether the Siri Remote touchpad accepts absolute input, or relative input. In absolute mode, the center of the touch pad is considered the (0,0) position - ie: where the analog stick is at rest or where the center of the dpad would be - and movement around this position will generate input. When set to relative, then the (0,0) position will be considered as being wherever the initial touch on the pad is made and all input will be generated from that position, not the center of the pad.</td>
-        <td>Boolean</td>
+        <td>&quot;dpad_absolute &quot;です。</td>
+        <td>ティーブイオーエス</td>
+        <td>Siri Remoteのタッチパッドが絶対入力、または相対入力のどちらを受け付けるかを返します。絶対入力モードでは、タッチパッドの中心を(0,0)位置とみなし、アナログスティックの静止位置またはdpadの中心を中心に移動すると入力が生成されます。相対モードに設定すると、(0,0)位置はパッドに最初に触れた場所と見なされ、すべての入力はパッドの中心ではなく、その位置から生成されます。</td>
+        <td>ブーリアン</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gamepad_get_option(device, option_name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad device &quot;slot&quot; to check.</td>
+        <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td>
      </tr>
       <tr>
-        <td>option_name</td><td><span data-keyref="Type_String"></span></td>
-        <td>The name of the option to get the value from (a string, see the table above)</td>
+        <td><span class="notranslate">option_name</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the option to get the value from (a string, see the table above)</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span>, <span data-keyref="Type_Real">Real</span>, <span data-keyref="Type_String">String</span>, or <span data-keyref="Type_Void">N/A</span> (depends on platform and option)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">for(var i = 0; i &lt; 12; ++i;)<br />
     {<br />
         if gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == &quot;tvOS Siri Remote&quot;<br />
@@ -73,18 +73,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code loops through all the gamepad slots and checks for the &quot;Siri Remote&quot; on the tvOS platform. If one is detected, it then sets the remote to allow input rotation.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコード<span class="notranslate">loops</span> は、すべてのゲームパッド・スロットに目を通し、<span class="notranslate">tvOS</span> プラットフォームに「Siri Remote」があるかどうかをチェックします。検出された場合、入力回転を許可するようにリモートを設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_set_button_threshold.htm"> gamepad_set_button_threshold </a></div>
+        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:right">次ページ：<a href="gamepad_set_button_threshold.htm"> ゲームパッド_設定_ボタン_しきい値 </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_option

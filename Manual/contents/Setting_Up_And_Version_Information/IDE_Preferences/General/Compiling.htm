@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Compiling Preferences</title>
+  <title>コンパイル</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="The Compiling Preferences from the General Preferences section" />
   <meta name="rh-index-keywords" content="Prefs - General - Compiling" />
@@ -14,30 +14,31 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Compiling Preferences</span></h1>
+  <h1>コンパイルの環境設定</h1>
   <p><img alt="Compiling Preferences" class="center" src="../../../assets/Images/Setup_And_Version/Preferences/General_Compiling_Prefs.png" /></p>
-  <p>The <span data-field="title" data-format="default">Compiling Preferences</span> deal with certain options related to the output when compiling your game for testing or creating a package, as well as certain areas of the compiling process. The options are:</p>
+  <p>Compiling環境設定は、テストやパッケージ作成のためにゲームをコンパイルする際の出力に関連するオプションや、コンパイルプロセスの特定の領域を扱います。オプションは以下の通りです。</p>
   <ul class="colour">
-    <li><strong>Automatically open syntax error window on detection</strong>: Enable or disable syntax error notification when compiling. This is off by default.</li>
-    <li><strong>Show the compile window during compilation</strong>: By default the compile window will be shown when you compile your projects, even if the compile dock is closed (it will open for the compile). Unchecking this will switch this behaviour off and the compile window will only be visible if open.</li>
-    <li><strong>Show compiler commands in compile output</strong>: This is checked by default and forces the compiler to show all relevant commands in the compile window. Unchecking this will make the output smaller and have less information.</li>
-    <li><strong>Show verbose compiler output</strong>: Checking this will force the compiler to show extra commands related to the compilation process. In general this is only required when debugging and may be requested by support should you have an issue. It is off by default (and this is the recommended setting).</li>
-    <li><strong>Show package in explorer on build completion</strong>: Checking this will make <span data-keyref="GameMaker Name">GameMaker</span> open the OS explorer window at the location where the final executable package has been created. It is on by default.</li>
-    <li><strong>Clear output window on compile start</strong>: By default the compiler window will clear all previous messages from the compiler output window at the start of each build, however unchecking this will maintain previous compiler logs. This is on by default and is the recommended configuration since large compiler logs can slow down compile times.</li>
-    <li><strong>Automatically Stop Running before packaging:</strong> By default, if your game is already running and you try to create an executable, you will be shown an error message and will need to <img class="icon" src="../../../assets/Images/Icons/Icon_StopGame.png" /> stop the game manually before creating an executable. You can enable this option to always skip this error message and automatically stop the game if it&#39;s running when &quot;Create Executable&quot; is selected. This is off by default.</li>
-    <li><strong>Automatically Stop Running before cleaning</strong>: When this preference is enabled the IDE <em>won&#39;t</em> show a warning message when you clean the project with a game already running. The preference is off by default.</li>
-    <li><strong>Maximum parallel compile jobs</strong>: This value sets the maximum number of CPU cores to dedicate to compiling a project. The default value is 8 and in general you shouldn&#39;t have to change this, but if you are on a laptop or a lower end machine you may want to lower this value. The default is set to 8.</li>
+    <li><strong>検出時に自動的にシンタックスエラーのウィンドウを</strong>開くようにしました。コンパイル時のシンタックスエラーの通知を有効または無効にします。デフォルトではオフになっています。</li>
+    <li>コンパイル<strong>中にコンパイルウィンドウを表示</strong>する。デフォルトでは、コンパイルドックが閉じていても、プロジェクトをコンパイルするときにコンパイルウィンドウが表示されます（コンパイルのために開きます）。このチェックを外すと、<span class="notranslate">switch</span> この動作がオフになり、コンパイルウィンドウは開いている場合のみ表示されます。</li>
+    <li>コンパイル<strong>出力にコンパイラーコマンドを</strong>表示する。これはデフォルトでチェックされており、コンパイラが関連するすべてのコマンドをコンパイル・ウィンドウに表示するように強制します。このチェックを外すと、出力は小さくなり、情報も少なくなります。</li>
+    <li><strong>冗長なコンパイラ出力を</strong>表示します。これをチェックすると、コンパイラがコンパイルプロセスに関連する余分なコマンドを表示するように強制されます。一般に、この機能は<span class="notranslate">debugging</span> のときのみ必要で、問題が発生したときにサポートに要求されることがあります。デフォルトではオフになっています（この設定を推奨します）。</li>
+    <li><strong>ドライブパスにサブを</strong>使用する。これをチェックすると、<span data-keyref="GameMaker Name">GameMaker</span>は完全なファイル<span class="notranslate">paths</span> の代用として、仮想ドライブを作成し、必要なくなれば削除します。この仮想ドライブは、ファイル<span class="notranslate">paths</span> が OS にとって長すぎるという潜在的な問題を回避します (特に<span class="notranslate">Android</span> 用にコンパイルする場合や<span class="notranslate">extensions</span> を使用する場合) ので、これを有効にすることが推奨されます。しかし、<span data-keyref="GameMaker Name">GameMakerが</span>このような仮想ドライブを作成することに問題がある場合、このオプションを無効にすることができます。デフォルトでは、このオプションは有効になっています。</li>
+    <li><strong>ビルド完了時にエクスプローラーにパッケージを</strong>表示する。これをチェックすると、最終的な実行形式パッケージが作成された場所で、<span data-keyref="GameMaker Name">GameMakerが</span>OSのエクスプローラーウィンドウを開くようになる。デフォルトではオンになっています。</li>
+    <li><strong>コンパイル開始時に出力ウィンドウをクリア</strong>する。デフォルトでは、各ビルドの開始時にコンパイラ出力ウィンドウから以前のメッセージをすべてクリアしますが、このチェックを外すと以前のコンパイラログが維持されます。これはデフォルトでオンになっており、大きなコンパイラーログがコンパイル時間を遅くする可能性があるため、推奨される設定です。</li>
+    <li><strong>パッケージング前に自動的に実行を停止する。</strong>デフォルトでは、ゲームがすでに実行されていて、実行ファイルを作成しようとすると、エラーメッセージが表示され、実行ファイルを作成する前に、<img> ゲームを手動で停止する必要があります。このオプションを有効にすると、このエラーメッセージを常にスキップし、&quot;Create Executable &quot;を選択したときにゲームが実行中であれば自動的に停止させることができます。デフォルトではオフになっています。</li>
+    <li><strong>並列コンパイルジョブの最大</strong>数。この値は、プロジェクトのコンパイルに充てるCPUコアの最大数を設定します。デフォルト値は8で、一般的にはこれを変更する必要はありませんが、ラップトップやローエンドマシンを使用している場合は、この値を下げるとよいでしょう。デフォルトは 8 に設定されています。</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../General_Preferences.htm">General Preferences</a></div>
-        <div style="float:right">Next: <a href="Confirm_Dialogs.htm">Confirm Dialog Preferences</a></div>
+        <div style="float:left">戻る<a href="../General_Preferences.htm">一般的な環境設定</a></div>
+        <div style="float:right">次へ<a href="Confirm_Dialogs.htm">ダイアログの環境設定を確認する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - General, Compiling

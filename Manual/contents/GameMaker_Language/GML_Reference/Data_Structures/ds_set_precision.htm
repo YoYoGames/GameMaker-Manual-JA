@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_set_precision</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ds_set_precision" />
   <meta name="rh-index-keywords" content="ds_set_precision" />
@@ -15,10 +15,10 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ds_set_precision</h1>
-  <p>When comparing values, for example when searching in a map or sorting a list, <span data-keyref="GameMaker Name">GameMaker</span> must decide when two values are equal. For strings and integer values this is clear but for real numbers, due to floating point round-off errors, seemingly equal numbers can easily become unequal. For example, it&#39;s possible that <b>(5 / 3) * 3</b> will <i>not</i> be equal to 5! To help avoid this, a precision value is used on all real number functions, and when the <i>difference between two numbers is smaller</i> than this precision they are considered equal. The default a precision of 0.0000001 is used for all data structure functions unless changed by this function.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This precision is used in all data structures but not in other comparisons in GML!</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>マップの検索やリストのソートなど、値を比較するとき、<span data-keyref="GameMaker Name">GameMakerは</span>2つの値が等しいかどうかを判断しなければなりません。<span class="notranslate">strings</span> や整数の場合は明確ですが、実数の場合は浮動小数点の丸め誤差があるため、一見等しく見える数値も簡単に不等間隔になります。例えば、<b>(5 / 3) * 3</b>は 5 と<i>等しくないという</i>ことがあり得ます。これを避けるために、すべての実数関数で精度値が使用され、<i>2つの数値の差が</i>この精度より小さいとき、それらは等しいとみなされます。この関数で変更しない限り、全てのデータ構造関数には0.0000001の精度がデフォルトで使用されます。</p>
+  <p class="note"><b>注</b>：この精度はすべてのデータ構造で使用されるが，<span class="notranslate">GML</span> の他の比較では使用されない !</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">ds_set_precision(prec);</p>
   <table>
     <colgroup>
@@ -28,35 +28,35 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The precision value (default 0.0000001)</td>
+        <td><span class="notranslate">prec</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The precision value (default 0.0000001)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">ds_set_precision(0.0001);</p>
-  <p>The above code will change the default precision setting for all data structure functions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、すべてのデータ構造関数のデフォルトの精度設定を変更します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="ds_exists.htm">ds_exists</a></div>
+        <div style="float:left">戻る<a href="Data_Structures.htm">データ構造</a></div>
+        <div style="float:right">次： ds_exists</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_set_precision

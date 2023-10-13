@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_depth</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>レイヤーの深さ</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_depth" />
   <meta name="rh-index-keywords" content="layer_depth" />
@@ -14,53 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
-  <p>This function can be used to change the <b>depth</b> of the given layer, changing the order in which its contents will be rendered to the screen. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and then give the new depth to set it to (an integer value from <span data-keyref="Const_Depth_Min">-16000</span> to <span data-keyref="Const_Depth_Max">16000</span>). The layer depth is defined as being higher when &quot;further away&quot; from the camera and lower when &quot;closer&quot; to the camera, so if you have three layers with depths -100, 0, 100, the layers will draw in the order 100, 0, -100, so that the &quot;top&quot; layer (i.e., the closest to the camera view and so drawn over everything else) will be the layer with the -100 depth.</p>
-  <p>The following image shows a schematic of how depth works for layers:</p>
-  <p><img alt="Layer depth example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/Layer_Depths.png" />Note that you can check the depth of a layer at any time using the function <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. Also note that the minimum and maximum layer depths are <span data-keyref="Const_Depth_Min">-16000</span> to <span data-keyref="Const_Depth_Max">16000</span>, and anything outside of those depths <b>will not be rendered</b>. If you require a depth outside of that range then you will need to use the function <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
-  <p>Keep in mind that modifying the depth of a layer may change which <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filters &amp; Effects</a> are applied on it, as changing the depth to be lower than an FX layer&#39;s depth will no longer apply its effect on the layer.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
+  <h1>レイヤーの深さ</h1>
+  <p>この関数は、与えられたレイヤーの<b>深さを</b>変更し、その内容が画面にレンダリングされる順序を変更するために使用できます。レイヤー ID を指定します (レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> - これはパフォーマンスに影響します) を指定し、設定する新しい深さ (-16000 から 16000 までの整数値) を指定します。レイヤーの深さは、カメラから「遠い」ほど高く、「近い」ほど低くなるように定義されます。したがって、深さ -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100 の順序で描かれ、「トップ」レイヤー（つまり、カメラビューに最も近く、他のすべての上に描かれます）は、深さが -100 のレイヤーになります。</p>
+  <p>次の画像は、レイヤーの深さがどのように機能するかを示す概略図です。</p>
+  <p><img>なお、レイヤーの深さは、いつでも関数 <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>.また、レイヤーの最小および最大の深さは-16000から16000であり、これらの深さ以外のものは<b>レンダリングさ</b>れないことに注意してください。この範囲外の深さが必要な場合は、関数 <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
+  <p>レイヤーの深さを変更すると、適用される<a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">フィルタやエフェクトが</a>変わることがあります。FXレイヤーの深さより低く変更すると、そのレイヤーにエフェクトが適用されなくなります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">layer_depth(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_ID_Layer"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span></td>
-        <td>The unique ID value of the layer to set the depth of (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to set the depth of (or the layer name as a string)</span></td>
       </tr>
       <tr>
-        <td>depth</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The new depth for the layer</td>
+        <td><span class="notranslate">depth</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The new depth for the layer</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if layer_get_depth(layer) != -100<br />
     {<br />
         layer_depth(layer, -100);<br />
     }</p>
-  <p>The above code gets the depth of the layer that the instance running the code is on, and if it is not -100 then the depth is set to -100.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、コードを実行しているインスタンスが乗っているレイヤーの深さを取得し、それが-100でなければ深さを-100に設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_force_draw_depth.htm">layer_force_draw_depth</a></div>
+        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ <a href="layer_force_draw_depth.htm"><span class="notranslate">layer_force_draw_depth</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_depth

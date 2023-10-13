@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>File Handling</title>
+  <title>ファイル操作</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the File Handling functions" />
   <meta name="rh-index-keywords" content="" />
@@ -14,66 +14,66 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>File Handling</h1>
-  <p>At some point while creating your game it will be necessary to store information externally and be able to retrieve this information. For example, you may wish to store login details, or hi-scores, or maybe the progression of the player through your levels. Whatever the reason, you will need to know how to use the different file functions that are available to you when working with <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p>It is very important to realise that <span data-keyref="GameMaker Name">GameMaker</span> is <b>Sandboxed </b>by default, meaning that there are a number of limits and minor complications when using the file system functions that are available, and it is worth noting too that the file system will work slightly differently depending on the platform you are targeting. For more information this, please see the following section:</p>
+  <h1>ファイル操作</h1>
+  <p>ゲームを作っていると、ある時点で情報を外部に保存し、その情報を取り出せるようにすることが必要になります。例えば、ログイン情報、ハイスコア、プレイヤーのレベル経過などを保存したい場合があります。どのような理由であれ、<span data-keyref="GameMaker Name">GameMakerで</span>作業する際に利用できる様々なファイル機能の使い方を知っておく必要があります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerは</span>デフォルトで<b>Sandbox化されて </b>いるため、ファイルシステム機能を使用する際に多くの制限や小さな複雑さがあることを理解しておくことは非常に重要で、対象とするプラットフォームによってファイルシステムの動作が若干異なることも知っておくとよいでしょう。この点については、次のセクションを参照してください。</p>
   <ul class="colour">
-    <li><a href="../../../Additional_Information/The_File_System.htm">The File System</a></li>
+    <li><a href="../../../Additional_Information/The_File_System.htm">ファイルシステム</a></li>
   </ul>
-  <p>You can turn off sandboxing on the desktop targets (Windows, macOS and Ubuntu (Linux)) from the Game Options for the chosen platform, meaning that you can then save and load from anywhere, within the limits of the OS permissions.</p>
-  <p>If you have been granted permission by Steam to use their dedicated API with your game, you will find that there is also a new set of file functions available to you. These are explained in the <a href="../Steam/Steam.htm">Steam API</a> section of this manual.</p>
-  <p>Finally, you should also note that there are some distinct differences between certain target platforms which would be taken into account when using the file functions. These are:<b></b></p>
+  <p>デスクトップターゲット（<span class="notranslate">Windows</span>,<span class="notranslate">macOS</span>,<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) ）は、選択したプラットフォームのゲームオプションからサンドボックスをオフにすることができます。つまり、OSのパーミッションの範囲内で、どこからでもセーブとロードが可能になります。</p>
+  <p><span class="notranslate">Steam</span> からゲーム専用APIの使用許可を得ている場合、新たにファイル関数のセットも利用できることがわかります。これらについては、本マニュアルの「<a href="../Steam/Steam.htm">Steam API</a>」のセクションで説明しています。</p>
+  <p>最後に、ファイル機能を使用する際に考慮すべきターゲット・プラットフォーム間の明確な違いがあることにも留意してください。これらは以下の通りです。<b></b></p>
   <ul class="colour">
-    <li><b>iOS</b>: On iOS, if you are loading an included file from a folder, ie: with a path something like &quot;<span class="inline">Backgrounds/background1.png</span>&quot;, you do NOT need to include the folder as part of the path and simply supplying the file name is sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.<b></b></li>
-    <li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubuntu, filenames and paths are case sensitive on these platforms, and so to prevent any potential issues, <span data-keyref="GameMaker Name">GameMaker</span> will automatically make all names/paths use lower case by default.<b></b></li>
-    <li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local storage</b> will work as explained within the different function pages, however if you are loading a file from a server, you <b>must only use the function <a href="../Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a></b> as loading synchronously has been deprecated on most browsers and will eventually be obsoleted. Also note that you cannot create or destroy directories in the browser local storage.</li>
+    <li><b>iOS</b>です。<span class="notranslate">iOS</span> で、フォルダからインクルードファイルを読み込む場合、例えば<span class="notranslate">path</span> で &quot;<span class="inline">Backgrounds/background1.png</span>&quot; のような場合、<span class="notranslate">path</span> の一部としてフォルダを含める必要はなく、単にファイル名を与えるだけで十分です。他のすべてのプラットフォームでは、ファイルへの<span class="notranslate">path</span> の一部として、フォルダーを指定する必要があります。<b></b></li>
+    <li><b>macOSおよび<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>)</b>:<span class="notranslate">macOS</span> と<span class="notranslate">Ubuntu</span> 、これらのプラットフォームではファイル名と<span class="notranslate">paths</span> は大文字と小文字を区別するため、潜在的な問題を防ぐために、<span data-keyref="GameMaker Name">GameMaker</span>は自動的にすべての名前/パスをデフォルトで小文字を使用するようにします。<b></b></li>
+    <li><b>HTML5</b>です。HTML5では、<b>ローカルストレージへの</b>保存と読み込みは、それぞれの機能ページで説明されているように動作します。しかし、ファイルを<span class="notranslate">server</span> から読み込む場合は、同期読み込みはほとんどのブラウザで非推奨となっており、いずれ廃止になるため、<b> <a href="../Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a></b>の機能のみを使用する必要があります。また、ブラウザのローカルストレージにディレクトリを作成したり、破棄したりすることはできません。</li>
   </ul>
-  <p>Information on the different file functions can be found in the following pages:</p>
+  <p>各ファイルの機能については、以下のページでご紹介しています。</p>
   <ul class="colour">
-    <li><a href="File_System/File_System.htm">File System</a></li>
-    <li><a href="Ini_Files/Ini_Files.htm">Ini Files</a></li>
-    <li><a href="Text_Files/Text_Files.htm">Text Files</a></li>
-    <li><a href="Binary_Files/Binary_Files.htm">Binary Files</a></li>
-    <li><a href="File_Directories/File_Directories.htm">File Directories</a></li>
+    <li><a href="File_System/File_System.htm">ファイルシステム</a></li>
+    <li><a href="Ini_Files/Ini_Files.htm">Iniファイル</a></li>
+    <li><a href="Text_Files/Text_Files.htm">テキストファイル</a></li>
+    <li><a href="Binary_Files/Binary_Files.htm">バイナリファイル</a></li>
+    <li><a href="File_Directories/File_Directories.htm">ファイル・ディレクトリー</a></li>
   </ul>
-  <p> </p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> also includes a number of functions for <a class="glossterm" data-glossterm="encoding" href="#">encoding</a> and <a class="glossterm" data-glossterm="hashing" href="#">hashing</a> files and data, which you can find here:</p>
+  <p> </p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span>、ファイルやデータを<a class="glossterm" data-glossterm="符号化" href="#">エンコード</a>したり<a class="glossterm" data-glossterm="ハッシュ化" href="#">ハッシュ化</a>するための関数も多数用意されており、こちらで紹介されています。</p>
   <ul class="colour">
-    <li><a href="Encoding_And_Hashing/Encoding_And_Hashing.htm">Encoding And Hashing</a></li>
+    <li><a href="Encoding_And_Hashing/Encoding_And_Hashing.htm">エンコードとハッシュ化</a></li>
   </ul>
-  <p> </p>
-  <p>Also note that there are some basic file functions for saving games available from the following pages (be aware that these functions are designed for beginners to get a basic save system up and running as quickly as possible, but for more complex projects, you should create your own save system using the functions listed in the sections above):</p>
+  <p> </p>
+  <p>また、ゲームをセーブするための基本的なファイル関数が以下のページから利用できることに注意してください（これらの関数は、初心者ができるだけ早く基本的なセーブシステムを起動できるように設計されていますが、より複雑なプロジェクトでは、上記のセクションに記載されている関数を使って独自のセーブシステムを作成する必要があることを知っておいてください）。</p>
   <ul class="colour">
-    <li><a href="../General_Game_Control/game_load.htm">game_load</a></li>
-    <li><a href="../General_Game_Control/game_load_buffer.htm">game_load_buffer</a></li>
-    <li><a href="../General_Game_Control/game_save.htm">game_save</a></li>
-    <li><a href="../General_Game_Control/game_save_buffer.htm">game_save_buffer</a></li>
+    <li><a href="../General_Game_Control/game_load.htm"><span class="notranslate">game_load</span></a></li>
+    <li><a href="../General_Game_Control/game_load_buffer.htm"><span class="notranslate">game_load_buffer</span></a></li>
+    <li><a href="../General_Game_Control/game_save.htm"><span class="notranslate">game_save</span></a></li>
+    <li><a href="../General_Game_Control/game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a></li>
   </ul>
-  <p> </p>
-  <p>Finally you can find more advanced <a href="../Buffers/Buffers.htm">buffer</a> functions that can be used for loading and saving data on the following pages:</p>
+  <p> </p>
+  <p>最後に、データのロードとセーブに使用できる、より高度な<a href="../Buffers/Buffers.htm">バッファ</a>機能を次のページで紹介します。</p>
   <ul class="colour">
-    <li><a href="../Buffers/buffer_save.htm">buffer_save</a></li>
-    <li><a href="../Buffers/buffer_save_ext.htm">buffer_save_ext</a></li>
-    <li><a href="../Buffers/buffer_save_async.htm">buffer_save_async</a></li>
-    <li><a href="../Buffers/buffer_load.htm">buffer_load</a></li>
-    <li><a href="../Buffers/buffer_load_ext.htm">buffer_load_ext</a></li>
-    <li><a href="../Buffers/buffer_load_async.htm">buffer_load_async</a></li>
-    <li><a href="../Buffers/buffer_load_partial.htm">buffer_load_partial</a></li>
-    <li><a href="../Buffers/buffer_async_group_begin.htm">buffer_async_group_begin</a></li>
-    <li><a href="../Buffers/buffer_async_group_option.htm">buffer_async_group_option</a></li>
-    <li><a href="../Buffers/buffer_async_group_end.htm">buffer_async_group_end</a></li>
+    <li><a href="../Buffers/buffer_save.htm"><span class="notranslate">buffer_save</span></a></li>
+    <li><a href="../Buffers/buffer_save_ext.htm"><span class="notranslate">buffer_save_ext</span></a></li>
+    <li><a href="../Buffers/buffer_save_async.htm"><span class="notranslate">buffer_save_async</span></a></li>
+    <li><a href="../Buffers/buffer_load.htm"><span class="notranslate">buffer_load</span></a></li>
+    <li><a href="../Buffers/buffer_load_ext.htm"><span class="notranslate">buffer_load_ext</span></a></li>
+    <li><a href="../Buffers/buffer_load_async.htm"><span class="notranslate">buffer_load_async</span></a></li>
+    <li><a href="../Buffers/buffer_load_partial.htm"><span class="notranslate">buffer_load_partial</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Buffers/Buffers.htm">Buffers</a></div>
+        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次へ<a href="../Buffers/Buffers.htm">バッファ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 File Handling

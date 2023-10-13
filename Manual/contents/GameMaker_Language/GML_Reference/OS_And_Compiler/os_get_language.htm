@@ -6,7 +6,7 @@
   <title>os_get_language</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for os_get_language" />
   <meta name="rh-index-keywords" content="os_get_language" />
@@ -16,86 +16,86 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>os_get_language</h1>
-  <p>This function returns a string with the two letter Language Code for the OS that is running the game, as set by the <a href="http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a> standard. If the information is not available, it will hold simply an empty string &quot;&quot;, or &quot;en&quot; for &quot;English&quot; language. Note that some languages also have a relevant Regional Code too, so to distinguish between different regions of the same country use the function <a href="os_get_region.htm"><span class="inline">os_get_region()</span></a>.</p>
-  <p>The following table shows example of some of the main two letter language codes as defined by ISO 639:</p>
+  <p>この関数は、ゲームを実行している OS の<a href="http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a>規格で定められた 2 文字の Language Code を<span class="notranslate">string</span> に返します。情報がない場合は、単に空の<span class="notranslate">string</span> &quot;&quot;、または &quot;英語&quot; 言語を表す &quot;en&quot; が格納されます。言語によっては、地域コードもあるため、同じ国の異なる地域を区別するには、関数 <a href="os_get_region.htm"><span class="inline">os_get_region()</span></a>.</p>
+  <p>次の表は、ISO 639で定義されている主な2文字言語コードの例を示しています。</p>
   <table>
     <tbody>
       <tr>
-        <th>Language</th>
-        <th>Code</th>
+        <th>言語</th>
+        <th>コード</th>
       </tr>
       <tr>
-        <td>Arabic</td>
-        <td>ar</td>
+        <td>アラビア語</td>
+        <td>アール</td>
       </tr>
       <tr>
-        <td>Chinese</td>
+        <td>唐</td>
         <td>zh</td>
       </tr>
       <tr>
-        <td>Danish</td>
-        <td>da</td>
+        <td>デンマーク語</td>
+        <td>ダ</td>
       </tr>
       <tr>
-        <td>English</td>
-        <td>en</td>
+        <td>イングリッシュ</td>
+        <td>エン</td>
       </tr>
       <tr>
-        <td>French</td>
-        <td>fr</td>
+        <td>フレンチ</td>
+        <td>フラン</td>
       </tr>
       <tr>
-        <td>German</td>
-        <td>de</td>
+        <td>ジャーマン</td>
+        <td>デ</td>
       </tr>
       <tr>
-        <td>Greek</td>
-        <td>el</td>
+        <td>グリーク</td>
+        <td>エル</td>
       </tr>
       <tr>
-        <td>Italian</td>
-        <td>it</td>
+        <td>イタリアン</td>
+        <td>それ</td>
       </tr>
       <tr>
-        <td>Japanese</td>
-        <td>ja</td>
+        <td>やまと</td>
+        <td>ジャ</td>
       </tr>
       <tr>
-        <td>Norwegian</td>
-        <td>no</td>
+        <td>ノルウェー語</td>
+        <td>ノー</td>
       </tr>
       <tr>
-        <td>Polish</td>
-        <td>pl</td>
+        <td>ポーランド語</td>
+        <td>プラ</td>
       </tr>
       <tr>
-        <td>Portuguese</td>
+        <td>ポルトガル語</td>
         <td>pt</td>
       </tr>
       <tr>
-        <td>Russian</td>
-        <td>ru</td>
+        <td>ロシア語</td>
+        <td>ル</td>
       </tr>
       <tr>
-        <td>Spanish</td>
-        <td>es</td>
+        <td>スパニッシュ</td>
+        <td>ズ</td>
       </tr>
       <tr>
-        <td>Swedish</td>
-        <td>sv</td>
+        <td>スウェーデン語</td>
+        <td>ヴァイキング</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p class="note"><b>NOTE</b>: This is not the location country code that is returned, but the language code of the OS.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <p class="note"><b>注</b>：返されるのは所在地の国コードではなく、OSの言語コードです。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">os_get_language()</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">switch (os_get_language())<br />
     {<br />
         case &quot;es&quot;: ini_open(&quot;spanish.ini&quot;); break;<br />
@@ -103,18 +103,18 @@
         case &quot;it&quot;: ini_open(&quot;italian.ini&quot;); break;<br />
         default: ini_open(&quot;english.ini&quot;); break;<br />
     }</p>
-  <p>The above code checks the OS language and opens a different <span class="inline">*.ini</span> file depending on the returned value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、OSの言語をチェックし、返された値に応じて異なる <span class="inline">*.ini</span> ファイルを開いています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_get_region.htm">os_get_region</a></div>
+        <div style="float:left">戻る<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
+        <div style="float:right">次のページ <a href="os_get_region.htm"><span class="notranslate">os_get_region</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 os_get_language

@@ -6,7 +6,7 @@
   <title>timeline_get_name</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function timeline_get_name" />
   <meta name="rh-index-keywords" content="timeline_get_name" />
@@ -16,42 +16,42 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>timeline_get_name</h1>
-  <p>This function can be used to get the name of a time line as a string. if the time line has been created dynamically using the <a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> function, the name returned will have the
-    format &quot;__newtimeline<i>N</i>&quot; where &quot;<i>N</i>&quot; is the number of the time line (starting from 0). Please note that this is <i>only</i> a string and cannot be used to reference the timeline directly - for
-    that you would need the <i>timeline index</i>. You can, however, use this string to get the <i>timeline index</i> using the returned string along with the function <a href="../Assets_And_Tags/asset_get_index.htm"><span class="inline">asset_get_index()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は，時間軸の名前を<span class="notranslate">string</span> として取得するために用いることができる。 <a href="timeline_add.htm"><span class="inline">timeline_add()</span></a>関数を使用すると、返される名前は次のようになります。
+    ここで、&quot;<i>N</i>&quot;は時間軸の番号(0から始まる)です。これは<i>あくまで</i> <span class="notranslate">string</span> であり、<span class="notranslate">timeline</span> を直接参照することはできないことに注意してください。
+    そのためには、<i>タイムラインインデックスが</i>必要です。<span class="notranslate">string</span> しかし、この<span class="notranslate">string</span> を使って、<i>タイムラインインデックスを</i>取得することは可能です。 <a href="../Assets_And_Tags/asset_get_index.htm"><span class="inline">asset_get_index()</span></a>.</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">timeline_get_name(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Timeline"></span></td>
-        <td>The index of the time line to check the name of.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Timeline"></span></td>
+        <td><span class="notranslate">The index of the time line to check the name of.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _str = timeline_get_name(timeline_index);<br/> show_debug_message(&quot;Current timeline = &quot; + _str);</p>
-  <p>The above code get the name of the currently assigned timeline and output it to the console.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、現在割り当てられている<span class="notranslate">timeline</span> の名前を取得し、コンソールに出力しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Timelines.htm">Timelines</a></div>
-        <div style="float:right">Next: <a href="timeline_add.htm">timeline_add</a></div>
+        <div style="float:left">戻る<a href="Timelines.htm">タイムライン</a></div>
+        <div style="float:right">次のページ <a href="timeline_add.htm"><span class="notranslate">timeline_add</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 timeline_get_name

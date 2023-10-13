@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Show Virtual Keyboard</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>仮想キーボードを表示する</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Show Virtual Keyboard action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Show Virtual Keyboard" />
@@ -14,153 +14,157 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" /> Show Virtual Keyboard</h1>
-  <p>This action can be used to show the virtual keyboard on the device running the game. When you call this action you will be asked to provide one of the following constants for each of the first three arguments:</p>
+  <h1><img> 仮想キーボードを表示する</h1>
+  <p>このアクションは、ゲームを実行しているデバイスに仮想キーボードを表示するために使用することができます。このアクションを呼び出すと、最初の3つの引数にそれぞれ以下の定数のいずれかを指定するよう求められます。</p>
   <ul class="colour">
-    <li><b>Keyboard type</b>: This constant is used to set which key-set will be available on the virtual keyboard. The available keyboard types are:
+    <li><b>キーボードタイプ</b>。この定数は、仮想キーボードで利用可能なキーセットを設定するために使用されます。利用可能なキーボードタイプは以下の通りです。
       <table>
         <tbody>
           <tr>
-            <th>Keyboard Type</th>
-            <th>Description</th>
+            <th>キーボードタイプ</th>
+            <th>説明</th>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_default</span></td>
-            <td>The default keyboard type for the current system.</td>
+            <td>現在のシステムのデフォルトのキーボードの種類です。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_ascii</span></td>
-            <td>An ASCII-only keyboard.</td>
+            <td>ASCIIのみのキーボード。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_url</span></td>
-            <td>A normal keyboard optimized for URL entry. Usually features a &quot;.com&quot; or other domain keys, as well as &quot;/&quot; and &quot;.&quot; keys.</td>
+            <td>URL入力用に最適化された通常のキーボードです。通常、「.com」などのドメインキーや「/」、「.」キーがあります。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_email</span></td>
-            <td>A normal keyboard optimized for e-mail entry. Usually features &quot;@&quot; and &quot;.&quot; characters.</td>
+            <td>電子メールの入力に最適化された通常のキーボード。通常、&quot;@&quot;や&quot;。&quot;キーを備えています。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_numbers</span></td>
-            <td>A numbers-only keyboard, usually displayed as a number pad.</td>
+            <td>数字のみのキーボードで、通常はテンキーとして表示されます。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_phone</span></td>
-            <td>A phone pad keyboard. Usually numbers-only with the &quot;*&quot; and &quot;#&quot; keys.</td>
+            <td>電話帳キーボード。通常、「*」と「#」キーを備えた数字のみのキーボードです。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_phone_name</span></td>
-            <td>A keyboard optimized for entering both a phone number and a name. Usually similar to an ASCII keyboard, but with a limited special characters selection.</td>
+            <td>電話番号と名前の両方を入力するのに最適なキーボード。通常、ASCIIキーボードに似ていますが、選択できる特殊文字が限定されています。</td>
           </tr>
         </tbody>
       </table>
     </li>
-    <li><b>Return type</b>: This constant is used to set what is shown on the return/action key of the virtual keyboard. The available return types are:
+    <li><b>リターンタイプ</b>。この定数は、仮想キーボードのリターンキー／アクションキーに表示される内容を設定するために使用されます。利用可能なリターンタイプは以下の通りです。
       <table>
         <tbody>
           <tr>
-            <th>Return Type</th>
-            <th>Description</th>
+            <th>リターンタイプ</th>
+            <th>説明</th>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_default</span></td>
-            <td>The default return key title for the current system.</td>
+            <td>現在のシステムのデフォルトのリターンキータイトルです。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_go</span></td>
-            <td>Sets the return key title to &quot;Go&quot;.</td>
+            <td>リターンキーのタイトルを &quot;Go &quot;に設定する。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_google</span></td>
-            <td>Sets the return key title to &quot;Google&quot;, or to a generic search icon in some cases.</td>
+            <td>リターンキーに &quot;Google&quot;、または一般的な検索アイコンを設定することもある。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_join</span></td>
-            <td>Sets the return key title to &quot;Go&quot;.</td>
+            <td>リターンキーに &quot;Go &quot;を設定する。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_next</span></td>
-            <td>Sets the return key title to &quot;Next&quot;.</td>
+            <td>リターンキーに &quot;Next &quot;を設定します。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_route</span></td>
-            <td>Sets the return key title to &quot;Route&quot;.</td>
+            <td>リターンキーのタイトルを「Route」に設定します。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_search</span></td>
-            <td>Sets the return key title to &quot;Search&quot;, or to a generic search icon in some cases.</td>
+            <td>リターンキーに「検索」を設定します。場合によっては一般的な検索アイコンを設定します。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_send</span></td>
-            <td>Sets the return key title to &quot;Send&quot;.</td>
+            <td>リターンキーのタイトルを「送信」に設定します。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_yahoo</span></td>
-            <td>Sets the return key title to &quot;Yahoo&quot;, or to a generic search icon in some cases.</td>
+            <td>リターンキーのタイトルを「Yahoo」に設定します。また、汎用検索アイコンを設定する場合もあります。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_done</span></td>
-            <td>Sets the return key title to &quot;Done&quot;.</td>
+            <td>リターンキーに「完了」を設定します。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_continue</span></td>
-            <td>Sets the return key title to &quot;Continue&quot;.</td>
+            <td>リターンキーに「Continue」を設定します。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_emergency</span></td>
-            <td>Sets the return key title to &quot;Emergency Call&quot;.</td>
+            <td>リターンキーに「緊急連絡」を設定します。</td>
           </tr>
         </tbody>
       </table>
     </li>
-    <li><b>Autocapitalization type</b>: This constant is used to determine how the words typed via the virtual keyboard should be autocapitalized. The available autocapitalization types are:
+    <li>自動大文字<b>入力のタイプ</b>。この定数は、仮想キーボードで入力された単語がどのように自動大文字入力されるかを決定するために使用されます。利用可能な自動大文字入力のタイプは以下の通りです。
       <table>
         <tbody>
           <tr>
-            <th>Autocapitalization Type</th>
-            <th>Description</th>
+            <th>オートキャピタリゼーションタイプ</th>
+            <th>説明</th>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_none</span></td>
-            <td>Autocapitalization is disabled.</td>
+            <td>自動大文字入力は無効です。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_words</span></td>
-            <td>Words will be auto-capitalized.</td>
+            <td>単語は自動大文字入力されます。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_sentences</span></td>
-            <td>Sentences will be auto-capitalized.</td>
+            <td>文は自動大文字入力されます。</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_characters</span></td>
-            <td>All characters will be capitalized.</td>
+            <td>すべての文字が大文字になります。</td>
           </tr>
         </tbody>
       </table>
     </li>
   </ul>
-  <p>The last argument is to enable/disable predictive text, and this would be set to <span class="inline">true</span> to permit it, and <span class="inline">false</span> otherwise, but note that just because it is permitted doesn&#39;t mean that it will be used as that will depend on the preferences of the user on the device. When in predictive text mode, the virtual keyboard will not generate normal <span data-keyref="GameMaker Name">GameMaker</span> key-press events. Instead, it will only update the <i>last</i> character pressed and keyboard string variables. This is due to the inability to detect whether a change in the internal text field used for detecting key presses came from an actual virtual keyboard key, or a text suggestion. In these cases you would want to read the <span class="inline">keyboard_string</span> input as opposed to reading any kind of raw key input.</p>
-  <p>It is important to note too that the user will get different keyboards with different capabilities depending on the platform OS, with the following caveats for use per target:</p>
+  <p>最後の引数は、予測入力の有効・無効を設定するもので、許可する場合は <span class="inline">true</span> に、許可しない場合は <span class="inline">false</span> に設定します。
+    を使用します。予測入力モードでは、仮想キーボードは通常の<span data-keyref="GameMaker Name">GameMakerの</span>キー押下イベントを発生させません。その代わり、<i>最後に</i>押された文字とキーボード<span class="notranslate">string</span> の変数のみが更新されます。これは、以下の理由によるものです。
+    キー押下を検出するために使用される内部テキストフィールドの変化が、実際の仮想キーボードキーによるものか、テキストサジェストによるものかを検出できないためです。このような場合、 <span class="inline">keyboard_string</span> の入力を読みたいと思うでしょう。
+    を読み取ることができます。</p>
+  <p>プラットフォームOSによって、ユーザーが手にするキーボードは異なる機能を持つことになり、ターゲットごとに使用する場合は以下のような注意点があることも知っておく必要があります。</p>
   <ul class="colour">
-    <li><b>Android / Amazon Fire</b>: On Android, the keyboard type <span class="inline">kbv_type_phone_name</span> is not supported and will display an ASCII keyboard instead, and the return key type can only be <span class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span class="inline">kbv_returnkey_next</span>, <span class="inline">kbv_returnkey_send</span> or <span class="inline">kbv_returnkey_done</span>. If other return key types are used on that platform, the system will default to the replacement return keys listed below:
+    <li><b>UWP</b>: UWPの実装では、 <span class="inline">return_key_type</span>, <span class="inline">autocapitalization_type</span>, <span class="inline">predictive_text_enabled</span> をサポートしていません。これらのパラメータを関数に渡しても、エラーにはなりません。
+      キーボードに影響を与えます。</li>
+    <li><b>Android / Amazon Fireの</b>場合。<span class="notranslate">Android</span> では、キーボードタイプ <span class="inline">kbv_type_phone_name</span> はサポートされておらず、代わりに ASCII キーボードが表示されます。また、リターンキータイプは <span class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span class="inline">kbv_returnkey_next</span> のみとなります。
+      <span class="inline">kbv_returnkey_send</span> または <span class="inline">kbv_returnkey_done</span> 。そのプラットフォームで他のリターンキーが使用されている場合、システムは以下の代替リターンキーにデフォルトで対応します。
       <table>
         <tbody>
           <tr>
-            <th>Unavailable return key</th>
-            <th>Replacement key</th>
+            <th>使用できないリターンキー</th>
+            <th>交換用キー</th>
           </tr>
           <tr>
-            <td><span class="inline">kbv_returnkey_google</span><br />
-              <span class="inline">kbv_returnkey_yahoo</span>
-            </td>
+            <td><span class="inline">kbv_returnkey_google</span><br>
+              <span class="inline">kbv_returnkey_yahoo</span></td>
             <td><span class="inline">kbv_returnkey_search</span></td>
           </tr>
           <tr>
-            <td><span class="inline">kbv_returnkey_join</span><br />
-              <span class="inline">kbv_returnkey_route</span><br />
-              <span class="inline">kbv_returnkey_emergency</span>
-            </td>
+            <td><span class="inline">kbv_returnkey_join</span><br>
+              <span class="inline">kbv_returnkey_route</span><br>
+              <span class="inline">kbv_returnkey_emergency</span></td>
             <td><span class="inline">kbv_returnkey_go</span></td>
           </tr>
           <tr>
@@ -170,65 +174,68 @@
         </tbody>
       </table>
     </li>
-    <li><b>AndroidTV / FireTV</b>: Custom return key types are <i>not</i> supported on ASCII keyboards - the default return key will always be displayed.</li>
-    <li><b>tvOS</b>: Predictive text and auto-capitalization are not supported on tvOS, and the height of the keyboard returned by system events and the function <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><span class="inline">keyboard_virtual_height()</span></a> will default to the screen height due to it spanning the entire screen and due to keyboard rect dimension functions being disabled on tvOS. Also note that physical (Bluetooth) keyboard events will not be broadcast unless the virtual keyboard has been opened.</li>
+    <br />
+    <li><b>AndroidTV / FireTVの</b>場合。ASCIIキーボードでは、カスタムリターンキータイプはサポートされて<i>いません</i>- デフォルトのリターンキーが常に表示されます。</li>
+    <li><b>tvOS</b>: Predictive text and auto-capitalization is not supported on<span class="notranslate">tvOS</span>, and the height of the keyboard returned by system events and function <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><span class="inline">keyboard_virtual_height()</span></a>      は、画面全体に広がるため、また、<span class="notranslate">tvOS</span> でキーボード長方形機能が無効になっているため、画面の高さがデフォルトとなります。また、物理キーボード（Bluetooth）のイベントは、仮想キーボードを使用しない限り、ブロードキャストされないことに注意してください。
+      が開かれました。</li>
   </ul>
-  <p>Calling this function will generate a <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Asynchronous Event</a>, in which the <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span> <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> will be populated with the following key/value pairs:</p>
+  <p>この関数を呼び出すと、<a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">システム非同期イベントが</a>発生し、 <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span> <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS マップに</a>以下のキー/バリューペアが入力されます。</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - this will be &quot;<b>virtual keyboard status</b>&quot; when triggered by virtual keyboard actions.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li>&quot;<b>event_type</b>&quot; - 仮想キーボード操作によってトリガーされた場合、これは &quot;<b>仮想キーボードの状態</b>&quot; になります。</li>
+    <li>&quot;<b>screen_height</b>&quot; - 仮想キーボードの高さ (ピクセル単位)です。キーボードが見えない場合は、0 になります。</li>
+    <li>&quot;<b>keyboard_status</b>&quot; - キーボードの現在のステータスで、以下の文字列のうちの1つとして返されます。
       <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
-        <li>&quot;visible&quot;</li>
+        <li>&quot;隠蔽&quot;</li>
+        <li>&quot;非表示&quot;</li>
+        <li>&quot;表示&quot;</li>
+        <li>&quot;可視&quot;</li>
       </ul>
     </li>
   </ul>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Show Virtual Keyboard Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" /></p>
+  <h4>論拠となる。</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>keyboard_type</td>
-        <td>Determines the key-set available on the virtual keyboard.</td>
+        <td><span class="notranslate">keyboard_type</span></td>
+        <td>仮想キーボードで使用できるキーセットを決定します。</td>
       </tr>
       <tr>
-        <td>return_key_type</td>
-        <td>Determines what is shown on the return/action key of the virtual keyboard.</td>
+        <td><span class="notranslate">return_key_type</span></td>
+        <td>仮想キーボードのリターンキー/アクションキーに表示される内容を決定します。</td>
       </tr>
       <tr>
-        <td>autocapitalization_type</td>
-        <td>Determines how/if the words typed via the virtual keyboard will be autocapitalized.</td>
+        <td><span class="notranslate">autocapitalization_type</span></td>
+        <td>バーチャルキーボードで入力された単語を自動大文字にするかどうかを設定します。</td>
       </tr>
       <tr>
-        <td>predictive_text_enabled</td>
-        <td>Set to <span class="inline">true</span>/<span class="inline">false</span> to enable/disable predictive text input.</td>
+        <td><span class="notranslate">predictive_text_enabled</span></td>
+        <td> <span class="inline">true</span>/<span class="inline">false</span> に設定すると、予測入力の有効／無効が切り替わります。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Show Virtual Keyboard Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" />The above action block code checks for a mouse down action, and if one is detected, then a check is performed to see if the OS virtual keyboard is showing. If it isn&#39;t then it is set to show - using a numeric keypad type - and if is already showing then it is hidden.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、マウスダウン操作をチェックし、マウスダウン操作があった場合
+    OSの仮想キーボードが表示されているかどうかをチェックします。表示されていない場合は、表示するように設定し（テンキータイプ）、すでに表示されている場合は非表示にします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mouse_And_Keyboard_Actions.htm">Mouse And Keyboard Actions</a></div>
-        <div style="float:right">Next: <a href="Hide_Virtual_Keyboard.htm">Hide Virtual Keyboard</a></div>
+        <div style="float:left">戻る<a href="Mouse_And_Keyboard_Actions.htm">マウスとキーボードの操作</a></div>
+        <div style="float:right">次へ<a href="Hide_Virtual_Keyboard.htm">仮想キーボードの非表示</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Show Virtual Keyboard

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ini_open</title>
+  <title>イニシャルオープン</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ini_open" />
   <meta name="rh-index-keywords" content="ini_open" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ini_open</h1>
-  <p>This opens an ini_file for reading and/writing. If the ini_file does not exist at the location you are checking, <span data-keyref="GameMaker Name">GameMaker</span> may create one, but only if you write data to it. If you have only read information from the ini file, then the
-    default values for the read function will be returned, but the ini file will <i>not</i> actually be created.</p>
-  <p>Please note that you can only have <b>one</b> ini file open at any one time and remember to use <a href="ini_close.htm"><span class="inline">ini_close()</span></a> once you&#39;re finished reading/writing from the .ini file as the information is not actually stored to
-    disk until then (it is also stored in memory until the file is closed).</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the <a href="../../../../Additional_Information/The_File_System.htm">File System</a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>イニシャルオープン</h1>
+  <p>ini_fileを読み書きのためにオープンします。チェックした場所にini_fileが存在しない場合、<span data-keyref="GameMaker Name">GameMakerは</span>ini_fileを作成するかもしれませんが、それはあなたがデータを書き込む場合のみです。iniファイルから情報を読み取るだけであれば、以下のようになります。
+    read関数のデフォルト値は返されるが、iniファイルは実際には作成さ<i>れない</i>。</p>
+  <p>一度に開くことができるのは<b>1つの</b>iniファイルのみであることに注意してください。 <a href="ini_close.htm"><span class="inline">ini_close()</span></a>.iniファイルからの読み書きが終了しても、その情報は実際には保存されないので
+    ディスクに保存されます（ファイルを閉じるまでメモリにも保存されます）。</p>
+  <p class="note"><b></b><b>警告!こ</b>の機能は<span data-keyref="GameMaker Name">GameMakerが</span>サンドボックス化されているため、期待通りに動作しない可能性があります!詳しくは「<a href="../../../../Additional_Information/The_File_System.htm">ファイルシステム</a>」の項をご覧ください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">ini_open(name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>name</td><td><span data-keyref="Type_String"></span></td>
-        <td>The filename for the .ini file.</td>
+        <td><span class="notranslate">name</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The filename for the .ini file.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">ini_open(&quot;Settings/savedata.ini&quot;);<br/> score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0);<br/> ini_close();
   </p>
-  <p>This will open &#39;savedata.ini&#39; and read the score value under the section &quot;save1&quot; with the key &quot;score&quot; in it, then close the .ini again. Should there be no value under &quot;save1&quot;, &quot;score&quot; or there is no &quot;savedata.ini&quot;
-    file present, score will be set to 0 (the default value). Note that the ini file has been placed in the sub-directory &quot;Settings&quot;, which is the folder that holds the ini file in the Asset Browser included files.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これは、「savedata.ini」を開き、「save1」というセクションの「score」というキーがある部分のスコア値を読み込み、再度.iniを閉じます。save1&quot;、&quot;score &quot;の下に値がない場合、または &quot;savedata.ini &quot;が存在しない場合は、&quot;savedata.ini &quot;を閉じます。
+    ファイルが存在する場合、scoreは0（デフォルト値）に設定されます。なお、このiniファイルは、<span class="notranslate">Asset</span> Browserの付属ファイルの中で、サブディレクトリ &quot;Settings &quot;に配置されています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Ini_Files.htm">Ini Files</a></div>
-        <div style="float:right">Next: <a href="ini_close.htm">ini_close</a></div>
+        <div style="float:left">戻る：<a href="Ini_Files.htm">Iniファイル</a></div>
+        <div style="float:right">次のページ <a href="ini_close.htm"><span class="notranslate">ini_close</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ini_open

@@ -2,55 +2,55 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Open Ini File</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Open Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Open Ini File"/>
-  <meta name="search-keywords" content="Open Ini File"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Iniファイルを開く</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Open Ini File action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Open Ini File" />
+  <meta name="search-keywords" content="Open Ini File" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/> Open Ini File</h1>
-  <p>With this action you can open an Ini file for reading and/or writing. If the Ini file does not exist at the location you are checking, <span data-keyref="GameMaker Name">GameMaker</span> may create one, but <i>only</i> if you write data to it. If you have only read information from
-    the Ini file, then the default values for the read function will be returned, but the Ini file will not actually be created.</p>
-  <p>Please note that you can only have <i>one Ini file open at any one time</i> and remember to use <a href="Close_Ini_File.htm">Close Ini File</a> once you&#39;re finished reading/writing from the Ini file as the information is not actually stored to disk
-    until then (it is stored in memory until the file is closed).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Open Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Open_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
+  <h1><img> Iniファイルを開く</h1>
+  <p>Iniファイルを読み書きのために開くことができます。Iniファイルが存在しない場合、<span data-keyref="GameMaker Name">GameMakerは</span>Iniファイルを作成することができますが、それはデータを書き込む<i>場合のみ</i>です。読み込むだけなら
+    Iniファイルの作成は行われず、read関数のデフォルト値が返されます。</p>
+  <p>また、<i>Ini</i>ファイルからの読み書きが終了したら、<a href="Close_Ini_File.htm">Close Ini File</a>を使用することを忘れないでください。
+    それまではメモリに保存されています。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Filename</td>
-        <td>The name - as a string and with the <span class="inline">.ini</span> extension - of the file to open</td>
+        <td><span class="notranslate">Filename</span></td>
+        <td>開くファイルの名前（<span class="notranslate">string</span> と <span class="inline">.ini</span> <span class="notranslate">extension</span> ）。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Open Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Open_Ini_File.png"/>The above action block code will open an ini file for use, then get the value associated with
-    the &quot;name&quot; key under the &quot;player&quot; header. If the name returned matches the default name value (ie: the file, section or key does <i>not</i> exist) then the file has a global variable written to it before being closed (and writing
-    the new data to disk).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、使用するiniファイルを開き、それに関連する値を取得します。
+    player」ヘッダーの「name」キー。返された名前がデフォルトの名前値と一致する場合（つまり、ファイル、セクション、キーが存在<i>しない</i>場合）、そのファイルはグローバル変数に書き込まれて閉じられます（そして
+    新しいデータをディスクに保存します。）</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Close_Ini_File.htm">Close Ini File</a></div>
+        <div style="float:left">戻る<a href="File_Actions.htm">ファイル操作</a></div>
+        <div style="float:right">次へ<a href="Close_Ini_File.htm">Iniファイルを閉じる</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Open Ini File

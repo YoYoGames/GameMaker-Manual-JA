@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_arrow</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>draw_arrow（ドローアロー</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function draw_arrow" />
   <meta name="rh-index-keywords" content="draw_arrow" />
@@ -15,65 +15,61 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_arrow</h1>
-  <p>This function will draw an arrow from point (x1,y1) to point (x2,y2). The stem of the arrow is drawn along these points with the actual arrow head being drawn at the end, where the size of the arrowhead is defined by the argument &quot;size&quot; and is calculated as being part of the stem so that the end point is always aligned with the position defined by x2,y2. The width of the arrow head is calculated automatically in proportion to the length.</p>
-  <div data-conref="../../../../assets/snippets/Note_Shape_Shader_Attributes_Are_Different.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>draw_arrow（ドローアロー</h1>
+  <p>この関数は、点 (x1,y1) から点 (x2,y2) まで矢印を描画する。矢印の幹はこれらの点に沿って描かれ、実際の矢じりは最後に描かれる。矢じりの大きさは引数 &quot;size&quot; で定義され
+    は、終点が x2,y2 で定義される位置に常に一致するように、茎の一部として計算される。矢印の頭の幅は、長さに比例して自動的に計算される。</p>
+  <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span class="notranslate">texture</span>, 色.しかし、この関数を使う場合、<span class="notranslate">vertex</span> と色のデータだけが渡されます。
+    <span class="notranslate">shader</span> は何も描画しない（あるいは、描画はするが正しく表示されない）かもしれません。このように図形を描画する必要がある場合は、<span class="notranslate">shader</span> をこの点を考慮してカスタマイズする必要があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">draw_arrow(x1, y1, x2, y2, size);</p>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the start of the line.</td>
-      </tr>
+        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the start of the line.</span></td>
+     </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the start of the line.</td>
-      </tr>
+        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the start of the line.</span></td>
+     </tr>
       <tr>
-        <td>x2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the end of the line (where the arrowhead ends).</td>
-      </tr>
+        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the end of the line (where the arrowhead ends).</span></td>
+     </tr>
       <tr>
-        <td>y2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the end of the line (where the arrowhead ends).</td>
-      </tr>
+        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the end of the line (where the arrowhead ends).</span></td>
+     </tr>
       <tr>
-        <td>size</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The length of the arrow in pixels.</td>
-      </tr>
+        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The length of the arrow in pixels.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">draw_arrow(x, y, mouse_x, mouse_y, 10);</p>
-  <p>The above code will draw an arrow from the position of the instance to the position of the mouse, with the arrow head being 10 pixels long.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、インスタンスの位置からマウスの位置まで、矢印の頭の長さが10ピクセルの矢印を描きます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_circle.htm">draw_circle</a></div>
+        <div style="float:left">戻る：<a href="Basic_Forms.htm">基本フォーム</a></div>
+        <div style="float:right">次のページ <a href="draw_circle.htm"><span class="notranslate">draw_circle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_arrow

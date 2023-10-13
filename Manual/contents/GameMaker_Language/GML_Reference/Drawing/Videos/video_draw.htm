@@ -16,40 +16,40 @@
 </head>
 <body>
   <h1>video_draw</h1>
-  <p>This function draws the current frame of the <a href="video_open.htm">opened video</a> to a surface (or two surfaces). It returns the surface(s) as part of its return array, which can be <a href="../Surfaces/draw_surface.htm">drawn manually</a>.</p>
-  <p>The function also returns data regarding the status of the video, which is expanded upon below.</p>
-  <p>Ensure that this is only called after a <span class="inline"><a href="video_open.htm">video_open()</a></span> call but before a <span class="inline"><a href="video_close.htm">video_close()</a></span> call, otherwise it will not do anything (as there will not be a video loaded).</p>
-  <h2>Return Data</h2>
-  <p>The function will return an array, the first element (<span class="inline2">[0]</span>) of which will be a real value. This value tells the status of the video, and will be:</p>
+  <p>この関数は<a href="video_open.htm">、開いているビデオの</a>現在のフレームを表面（または2つの表面）に描画します。この関数は，そのサーフェス（複数可）を戻り値の配列として返し，<a href="../Surfaces/draw_surface.htm">手動で描画</a>することができます．</p>
+  <p>また、この関数は映像の状態に関するデータを返すが、これについては後述する。</p>
+  <p>このメソッドは、 <span class="inline"><a href="video_open.htm">video_open()</a></span> 呼び出しの後、 <span class="inline"><a href="video_close.htm">video_close()</a></span> 呼び出しの前にのみ呼び出されることを確認してください。そうでない場合は、何も行いません（ビデオが読み込まれないため）。</p>
+  <h2>リターンデータ</h2>
+  <p>この関数は配列を返し、その最初の要素(<span class="inline2">[0]</span>)は実数値となります。この値はビデオの状態を表し、次のようになります。</p>
   <ul class="colour">
-    <li><strong>0</strong>, if the video is playing without any issues</li>
-    <li><strong>-1</strong>, if there was an error</li>
-    <li>On some platforms, <strong>-2</strong>, if the video finished playing (at which point it can be removed from memory with a <span class="inline"><a href="video_close.htm">video_close()</a></span> call)
+    <li><strong>0</strong>: ビデオが問題なく再生されている場合</li>
+    <li><strong>-1</strong>, エラーがあった場合</li>
+    <li>一部のプラットフォームでは、<strong>-2</strong>、動画の再生が終了した場合（この時点で、<span class="inline"><a href="video_close.htm">video_close()</a></span> 呼び出しでメモリから削除することができます）。
       <ul>
-        <li>It&#39;s recommended to use the <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> instead to know when a video ends</li>
+        <li>動画の終了を知るには、代わりに<a data-xref="{text}" href="Videos.htm#h">非同期コールバックを</a>使用することをお勧めします。</li>
       </ul>
     </li>
   </ul>
-  <p>When this status value is <strong>0</strong>, the array will contain more data, which will depend on the format of the video. You can know the video format by calling <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>.</p>
-  <h2>RGBA Videos</h2>
-  <p><span>For RGBA videos, the position <span class="inline2">[1]</span> will contain the surface where the video frame was drawn. You can get this surface and <a href="../Surfaces/draw_surface.htm">draw it</a> manually.</span></p>
-  <h2>YUV Videos</h2>
-  <p><span>Some platforms (especially consoles) use the YUV colour format for videos, which makes use of two surfaces. In that case the array will have positions <span class="inline2">[1]</span> and <span class="inline2">[2]</span> with two surfaces:</span></p>
+  <p>このステータス値が<strong>0</strong> のとき、配列にはさらにデータが格納され、そのデータはビデオのフォーマットに依存する。ビデオのフォーマットは，<span class="inline"><a href="video_get_format.htm">video_get_format()</a></span> を呼び出すことによって知ることができます．</p>
+  <h2>RGBAビデオ</h2>
+  <p><span>RGBAビデオの場合、位置<span class="inline2">[1]</span>にはビデオフレームが描画された面が格納されます。このサーフェイスを取得し、手動で<a href="../Surfaces/draw_surface.htm">描画</a>することができます。</span></p>
+  <h2>YUV動画</h2>
+  <p><span>一部のプラットフォーム（特にコンソール）では、ビデオにYUVカラーフォーマットを使用しており、2つのサーフェイスを使用します。この場合、配列の位置は<span class="inline2">[1]</span>と<span class="inline2">[2]</span>になり、2 つの面が使用されます。</span></p>
   <ul class="colour">
-    <li><span><span class="inline2">[1]</span> is the main video surface in black and white</span></li>
-    <li><span><span class="inline2">[2]</span> is the chroma surface that contains all the colour data</span></li>
+    <li><span>[<span class="inline2">1]</span>はモノクロのメイン映像面</span></li>
+    <li><span>[<span class="inline2">2]</span>は、すべての色データを含むクロマ面</span></li>
   </ul>
-  <p>Both these surfaces are then combined using a YUV shader before being used to texture a custom quad, which will draw the video to the screen.</p>
-  <p>Read <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a> for steps on drawing these two surfaces using a shader.</p>
-  <p>For the specific implementation details for a particular console, please refer to its documentation on the <a href="https://help.yoyogames.com/hc/en-us/">YoYo Games Helpdesk</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>これらの表面は、YUV<span class="notranslate">shader</span> を使って結合された後、<span class="notranslate">texture</span> カスタムクアッドに使用され、スクリーンに映像が描画されます。</p>
+  <p><span class="notranslate">shader</span> を使ってこの2つの面を描く手順については、「<a data-xref="{title}" href="YUV_Videos.htm">YUV動画</a>」をお読みください。</p>
+  <p>各ゲーム機の具体的な実装内容については、<a href="https://help.yoyogames.com/hc/en-us/">YoYo Gamesヘルプデスクに</a>あるそのゲーム機のドキュメントを参照してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">video_draw();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _data = video_draw();<br />
     var _status = _data[0];<br />
     <br />
@@ -60,18 +60,18 @@
         draw_surface(_surface, x, y);<br />
     }
   </p>
-  <p>The above code calls <span class="inline">video_draw()</span>, and checks if the returned status is 0, meaning the video is playing. In that case it gets the surface ID and draws it at the instance&#39;s position. This will only work for RGBA videos.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、 <span class="inline">video_draw()</span> を呼び出し、返されたステータスが 0 かどうか、つまりビデオが再生されているかどうかをチェックします。この場合、サーフェス ID を取得し、インスタンスの位置に描画します。これは、RGBAビデオに対してのみ機能します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a></div>
+        <div>戻る<a data-xref="{title}" href="Videos.htm">動画再生</a></div>
+        <div>次へ<a data-xref="{title}" href="YUV_Videos.htm">YUV動画</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 video_draw

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_create</title>
+  <title>バッファークリエイト</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_create" />
   <meta name="rh-index-keywords" content="buffer_create,buffer_fixed,buffer_grow,buffer_wrap,buffer_fast,buffer_vbuffer" />
@@ -15,8 +15,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">buffer_create</span></h1>
-  <p>You use this function to allocate a portion of memory as a buffer in your game, with the function returning the unique <i>buffer id</i> that should be stored in a variable and used for all further function calls to the buffer. The buffer can then be used to store different types of data (specified when you write to the buffer using the <span class="inline3_func"><a data-xref="{title}" href="buffer_write.htm">buffer_write</a></span> function, with the following constants being used to define the buffer type:</p>
+  <h1>バッファークリエイト</h1>
+  <p>この関数は、ゲーム内でメモリの一部を<span class="notranslate">buffer</span> として割り当てるために使用します。この関数は、変数に格納されるべき固有の<i>バッファ ID を</i>返し、その後の<span class="notranslate">buffer</span> へのすべての関数呼び出しに使用します。その後<span class="notranslate">buffer</span> は、異なるタイプのデータ (<span class="notranslate">buffer</span> に書き込むときに指定します) の格納に使用できます。 <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>関数で、<span class="notranslate">buffer</span> のタイプを定義するために以下の定数が使用されます。</p>
   <table>
     <colgroup>
       <col />
@@ -24,86 +24,91 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Buffer_Type"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer Type Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Buffer_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">バッファ型定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">buffer_fixed</span></td>
-        <td>A buffer of fixed size.</td>
+        <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
+        <td>サイズが固定されている<span class="notranslate">buffer</span> 。</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_grow</span></td>
-        <td>A buffer that will &quot;grow&quot; dynamically as data is added</td>
+        <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
+        <td>データが追加されると動的に「成長」する<span class="notranslate">buffer</span> </td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_wrap</span></td>
-        <td>A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
+        <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
+        <td><span class="notranslate">buffer</span> ここでデータは「ラップ」されます。追加されるデータが<span class="notranslate">buffer</span> サイズの限界に達すると、上書きは<span class="notranslate">buffer</span> の先頭に戻され、その時点からさらに書き込みが続けられる。</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_fast</span></td>
-        <td>Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <span class="inline">buffer_u8</span> <a href="buffer_read.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
+        <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
+        <td>特殊な &quot;stripped&quot;<span class="notranslate">buffer</span> で、読み書きが非常に高速になります。 <span class="inline">buffer_u8</span> <a href="buffer_read.htm">データ型でのみ</a>使用可能で、1 バイトアライメントで<i>なければ</i>ならない。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_vbuffer</span></td>
+        <td>このタイプの<span class="notranslate">buffer</span> は、<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> としてのみ使用されます。</td>
       </tr>
     </tbody>
   </table>
-  <p>Apart from the buffer type, you will also have to set the <i>byte alignment</i> for the buffer. This value will vary depending on the data that you wish to store in the buffer, and in most cases a value of 1 is perfectly fine. However, be aware that for some operations a specific alignment is <i>essential</i>, and an incorrect alignment may cause errors (for further details on alignment see <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Buffers</a>). The following is a general guide to show which values are most appropriate for each data type (when in doubt, use an alignment of 1):</p>
+  <p><span class="notranslate">buffer</span> のタイプとは別に、<span class="notranslate">buffer</span> の<i>バイトアライメントを</i>設定する必要があります。この値は<span class="notranslate">buffer</span> に格納するデータによって異なりますが、ほとんどの場合、1 の値で完全に問題ありません。しかし、一部の操作では特定のアライメントが<i>必須</i>であり、誤ったアライメントを設定するとエラーが発生する可能性があることに注意してください（アライメントの詳細については、<a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">バッファを</a>参照してください）。以下は、各データ型に最も適した値を示す一般的なガイドである（疑わしい場合は、1のアライメントを使用する）。</p>
   <ul class="colour">
-    <li>Strings should be aligned to 1 byte.</li>
-    <li>Signed or unsigned 8bit integers can be aligned to any value, but note that for a fast buffer (see <span class="inline3_func"><a data-xref="{title}" href="buffer_write.htm">buffer_write</a></span>) it <i>must</i> be aligned to 1.</li>
-    <li>Signed or unsigned 16bit integers should be aligned to 2 bytes.</li>
-    <li>Signed or unsigned 32bit integers should be aligned to 4 bytes.</li>
-    <li>Floats of up to 16bits should be aligned to 2 bytes.</li>
-    <li>Floats of up to 32bits should be aligned to 4 bytes.</li>
-    <li>Floats of up to 64bits should be aligned to 8 bytes.</li>
+    <li>文字列は1バイトにアラインしてください。</li>
+    <li>符号付きまたは符号なしの8ビット整数は、どのような値にもアライメントできますが、高速な<span class="notranslate">buffer</span> ( <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>にアライメントさ<i>れなければ</i>ならない。</li>
+    <li>符号付きまたは符号なしの16ビット整数は，2バイトにアラインすること。</li>
+    <li>符号付きまたは符号なし32ビット整数は4バイトにアライメントすること</li>
+    <li>16ビットまでのフロートは、2バイトにアライメントする必要があります。<i>(現在サポートされていません!)</i></li>
+    <li>32ビットまでのフロートは4バイトにアライメントしてください。</li>
+    <li>64ビットまでのフロートは8バイトにアライメントしてください。</li>
   </ul>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Byte alignment can be very important as the wrong choice may adversely affect performance.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <span class="inline3_func"><a data-xref="{title}" href="buffer_delete.htm">buffer_delete</a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">buffer_create</span>(size, type, alignment)</p>
+  <p class="note"><b>注</b>：バイトアライメントは非常に重要であり、誤った選択をすると性能に悪影響を及ぼす可能性があります。</p>
+  <p class="note"><b>注</b>：このように動的に作成されたリソースは、メモリリークを防ぐために、不要になったらメモリから削除することが重要です。作成した<span class="notranslate">buffer</span> が終了したら、再度、以下を使用してリソースを解放してください。 <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>.</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">buffer_create(size, type, alignment)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>size</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The size (in bytes) of the buffer.</td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The size (in bytes) of the buffer.</span></td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Buffer_Type"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer Type Constant</a></span></td>
-        <td>The type of buffer to create (see the constants list above).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Buffer_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">バッファ型定数</a></span></td>
+        <td><span class="notranslate">The type of buffer to create (see the constants list above).</span></td>
       </tr>
       <tr>
-        <td>alignment</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The byte alignment for the buffer</td>
+        <td><span class="notranslate">alignment</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The byte alignment for the buffer</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Buffer"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">player_buffer = <span data-field="title" data-format="default">buffer_create</span>(16384, buffer_fixed, 2);</p>
-  <p>The above code allocates 16384 bytes of memory to a buffer and returns the index of that buffer, which is stored in the variable <span class="inline2">player_buffer</span>, for future use. The buffer is aligned to a two byte boundary.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">Buffer ID</a></span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">player_buffer = buffer_create(16384, buffer_fixed, 2);</p>
+  <p>上記のコードでは、16384バイトのメモリを<span class="notranslate">buffer</span> に割り当て、そのインデックスを<span class="notranslate">buffer</span> 、変数 &quot;player_buffer&quot; に格納し、今後使用するために返しています。<span class="notranslate">buffer</span> は2バイト境界にアラインされています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="buffer_create_from_vertex_buffer.htm">buffer_create_from_vertex_buffer</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_create_from_vertex_buffer.htm"><span class="notranslate">buffer_create_from_vertex_buffer</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_create

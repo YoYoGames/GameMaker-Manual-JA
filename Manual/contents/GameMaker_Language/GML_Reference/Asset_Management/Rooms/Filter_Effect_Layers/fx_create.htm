@@ -6,7 +6,7 @@
   <title>fx_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the function fx_create" />
   <meta name="rh-index-keywords" content="fx_create" />
@@ -15,56 +15,56 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>fx_create</h1>
-  <p>This function is used to create a new FX Struct for a given effect type, which can then be <a href="layer_set_fx.htm">applied to a layer</a>.</p>
-  <p>The names of the Filters/Effects that you can pass into this function are listed on this page: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">All Filter/Effect Types</a>.</p>
-  <h2>Usage</h2>
-  <p>You can read the parameters for the created effect by calling <a href="fx_get_parameter.htm"><span class="inline">fx_get_parameter</span></a>/<a href="fx_get_parameters.htm"><span class="inline">s</span></a> on the returned struct, and assign new values to them by calling <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter</a></span>/<span class="inline"><a href="fx_set_parameters.htm">s</a></span>.</p>
-  <p>Note that the struct returned by this function will contain no visible members and can only be modified through one of the <a href="Filter_Effect_Functions.htm">Filter/Effect Functions</a>.</p>
-  <h2>Function Failures</h2>
-  <p>The function will return -1 if the struct failed to create for any reason; this may happen if the specified FX name was wrong or the FX was not loaded into the game package.</p>
-  <p>To ensure that this function works properly, make sure the FX you need is loaded into your game package, as explained on the <a data-xref="{title}" href="Filter_Effect_Functions.htm">Filter and Effect Functions</a> page:</p>
+  <p>この機能は、指定されたエフェクトタイプに対応する新しいFX<span class="notranslate">Struct</span> を作成し、<a href="layer_set_fx.htm">レイヤーに適用</a>するために使用します。</p>
+  <p>この関数に渡すことができるフィルター／エフェクトの名称は、このページに記載されています。<a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">すべてのフィルター/エフェクトの</a>種類。</p>
+  <h2>使用方法</h2>
+  <p>作成したエフェクトのパラメータを読み込むには、以下のようにします。 <a href="fx_get_parameter.htm"><span class="inline">fx_get_parameter</span></a>/<a href="fx_get_parameters.htm"><span class="inline">s</span></a><span class="notranslate">struct</span>を返し、 <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter</a></span>/<span class="inline"><a href="fx_set_parameters.htm">s</a></span> を呼び出して新しい値を割り当てることができます。</p>
+  <p>この関数が返す<span class="notranslate">struct</span> には可視のメンバーは含まれず、<a href="Filter_Effect_Functions.htm">Filter/Effect Functions の</a>いずれかを通してのみ変更できることに注意してください。</p>
+  <h2>機能障害</h2>
+  <p>何らかの理由で<span class="notranslate">struct</span> の作成に失敗した場合、この関数は -1 を返します。これは、指定された FX の名前が間違っていたり、FX がゲームパッケージにロードされていなかったりした場合に起こります。</p>
+  <p>この機能が正しく動作するように、<a data-xref="{title}" href="Filter_Effect_Functions.htm">フィルタとエフェクト機能の</a>ページで説明されているように、必要なFXがゲームパッケージにロードされていることを確認してください。</p>
   <div class="snippet_quote">
     <div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"> </div>
   </div>
-  <p>If these conditions are not fulfilled, i.e. you are not passing in a string literal <em>and</em> the filter/effect is not present in any rooms, then the function will not be able to load that filter/effect and will return -1.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>これらの条件が満たされない場合、つまり、<span class="notranslate">string</span> リテラルを渡しておらず<em>、</em>フィルタ/効果が<span class="notranslate">rooms</span> のいずれにも存在しない場合、この関数はそのフィルタ/効果を読み込むことができず、-1 を返します。</p>
+  <p> </p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">fx_create(filter_or_effect_name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>filter_or_effect_name</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>The name of the filter/effect to create (get them from <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">All Filter/Effect Types</a>).</td>
+        <td><span class="notranslate">filter_or_effect_name</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">The name of the filter/effect to create (get them from <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">All Filter/Effect Types</a>).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Struct_FX"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">FX Struct</a></span> or -1 (on failure)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _fx_tint = fx_create(&quot;_filter_tintfilter&quot;);<br />
     fx_set_parameter(_fx_tint, &quot;g_TintCol&quot;, [1, 0, 0, 1]);<br />
     layer_set_fx(&quot;EffectLayer&quot;, _fx_tint);</p>
-  <p>The above code creates a new FX struct from the <span class="inline2">&quot;_filter_tintfilter&quot;</span> effect, which is the &quot;Colour Tint&quot; filter found in the Room Editor. It assigns a value to its <span class="inline2">&quot;g_TintCol&quot;</span> parameter which is the colour of the tint, and as it&#39;s a <span class="inline">vec4</span> internally, it takes an array containing four values (corresponding to its red, green, blue and alpha values). The FX struct for the tint is then applied to an FX layer.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、<span class="inline2">&quot;_filter_tintfilter&quot;</span>エフェクトから新しい FX<span class="notranslate">struct</span> を作成します。これは<span class="notranslate">Room</span> Editor にある &quot;Colour Tint&quot; フィルタです。これは、色合いの色である<span class="inline2">&quot;g_TintCol&quot;</span>パラメータに値を割り当て、内部的には <span class="inline">vec4</span> であるため、4つの値（赤、緑、青、アルファ値に対応する）を含む配列を取ります。次に、色合いのためのFX<span class="notranslate">struct</span> 、FXレイヤーに適用されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Filter_Effect_Functions.htm">Filter and Effect Functions</a></div>
-        <div style="float:right">Next: <a href="fx_get_parameter.htm">fx_get_parameter</a></div>
+        <div style="float:left">戻る<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
+        <div style="float:right">次ページ:<a href="fx_get_parameter.htm">fx_get_parameter</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fx_create

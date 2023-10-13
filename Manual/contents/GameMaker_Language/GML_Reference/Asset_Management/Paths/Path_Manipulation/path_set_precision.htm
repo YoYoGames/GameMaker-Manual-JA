@@ -6,7 +6,7 @@
   <title>path_set_precision</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_set_precision" />
   <meta name="rh-index-keywords" content="path_set_precision" />
@@ -15,47 +15,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>path_set_precision</h1>
-  <p>With this function you can change the &quot;smoothness&quot; of a path. This value must be between 1 and 8, with a low value creating straighter edges with sharper curves between points, while a higher value will round the points and make the path a lot more &quot;curvy&quot;. Note that this function will have no visible effect if the path has not been set to smooth in the path editor or using the function <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>This function changes the actual path asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
+  <p>この関数では、<span class="notranslate">path</span> の「滑らかさ」を変更することができます。この値は 1 から 8 の間でなければなりません。低い値では、ポイント間の曲線がより鮮明でまっすぐなエッジになり、高い値ではポイントが丸まって<span class="notranslate">path</span> がより「曲面的」になります。この関数は、<span class="notranslate">path</span> が<span class="notranslate">path</span> エディタでスムースに設定されていない場合、または関数 <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>.<strong>この関数は実際の<span class="notranslate">path</span> アセットを変更</strong>するため、この関数を使用した瞬間からゲーム終了まで、ゲーム内のすべてのインスタンスで<span class="notranslate">path</span> がどのように使用されるかに永久に影響を及ぼします。これが必要でない場合は、 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すのを忘れないでください）。</p>
   <p><img alt="Path Precision differences example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/setprecision.png" /></p>
-  <h4>Syntax:</h4>
+  <h4>構文です。</h4>
   <p class="code">path_set_precision(index, prec);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to change.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path">パスアセット</span></td>
+        <td><span class="notranslate">The index of the path to change.</span></td>
       </tr>
       <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The precision of the path. Must be an integer between 1 and 8.</td>
+        <td><span class="notranslate">prec</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The precision of the path. Must be an integer between 1 and 8.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">path_set_precision(pth_Patrol, 2);</p>
-  <p>This will set the precision of the given path to 2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これは、与えられたパスの精度を2に設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_shift.htm">path_shift</a></div>
+        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ <a href="path_shift.htm"><span class="notranslate">path_shift</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_set_precision

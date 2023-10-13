@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tag_get_assets</title>
+  <title>タグ_get_assets</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function tag_get_assets" />
   <meta name="rh-index-keywords" content="tag_get_assets" />
@@ -15,31 +15,30 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tag_get_assets</h1>
-  <p>This function retrieves the names of all assets that have been assigned the given tag or tags.</p>
-  <p>You supply either a single tag string or an <a href="../../../GML_Overview/Arrays.htm">array</a>, where each item in the array is a tag string. The function will return an array where each entry is the name (as a string) of the asset with the given tag. If you need the unique index for the asset, then you can use the function <a href="asset_get_index.htm"><span class="inline">asset_get_index()</span></a> along with the returned name. If there are no assets with the given tag(s), or if there is an error (eg: the given tags do not exist), then an empty array will be returned.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>タグ_get_assets</h1>
+  <p>この関数は、与えられたタグが割り当てられているすべての<span class="notranslate">assets</span> の名前を取得することができます。指定するのは単一のタグ<span class="notranslate">string</span> か<a href="../../../GML_Overview/Arrays.htm">配列で</a>、配列の各項目はタグ<span class="notranslate">string</span> です。この関数は配列を返し、各エントリには、指定したタグを持つ<span class="notranslate">string</span> の名前 (<span class="notranslate">asset</span>) が入ります。もし<span class="notranslate">asset</span> の一意なインデックスが必要なら、この関数を使うことができます。 <a href="asset_get_index.htm"><span class="inline">asset_get_index()</span></a>と共に返される。指定したタグを持つ<span class="notranslate">assets</span> が存在しない場合、あるいはエラー (例: 指定したタグが存在しない) の場合は、空の配列が返されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">tag_get_assets(tags);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>tags</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of Strings</td>
-        <td>A single asset tag string or an array with various asset tags.</td>
+        <td><span class="notranslate">tags</span></td>
+        <td><span data-keyref="Type_String">文字列</span>または文字列の<span data-keyref="Type_Array">配列</span></td>
+        <td><span class="notranslate">A single asset tag string or an array with various asset tags.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Array">Array</span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">backgrounds = ds_list_create();<br />
     var _assets = tag_get_assets(&quot;background&quot;);<br />
     for (var i = 0; i&lt; array_length(_assets); ++i;)<br />
@@ -49,17 +48,18 @@
             ds_list_add(backgrounds, asset_get_index(_assets[i]));<br />
         }<br />
     }</p>
-  <p>The above code creates a list, then retrieves the names of all the assets with the tag &quot;background&quot;. It loops through the array of names returned, checking to see if any of them are sprite assets, and if they are then the unique index value for the asset is added to the list for future use.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、リストを作成し、「background」というタグを持つすべての<span class="notranslate">assets</span> の名前を取得しています。<span class="notranslate">loops</span> 返された名前の配列に目を通して、どれかが<span class="notranslate">sprite</span> <span class="notranslate">assets</span> であるかどうかを調べ、もしそうなら、<span class="notranslate">asset</span> の一意なインデックス値を今後使用するためにリストに追加します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="asset_get_tags.htm">asset_get_tags</a></div>
+        <div style="float:left">戻る<a href="Assets_And_Tags.htm">資産とタグ</a></div>
+        <div style="float:right">次のページ <a href="asset_get_tags.htm"><span class="notranslate">asset_get_tags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tag_get_assets

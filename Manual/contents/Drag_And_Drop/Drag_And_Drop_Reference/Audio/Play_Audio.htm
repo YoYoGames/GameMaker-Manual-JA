@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Play Audio</title>
+  <title>オーディオを再生する</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Play Audio action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Play Audio" />
@@ -14,63 +14,63 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /> <span data-field="title" data-format="default">Play Audio</span></h1>
-  <p>This action will set the given sound playing. You select the sound from the Asset Explorer and then set whether you would like the sound to be looped or not (a looped sound will play again and again between its loop start and end points until stopped) by setting the &quot;Loop&quot; flag.</p>
-  <p>Additionally you can set the gain, the offset (the track position to start playing from) and the pitch to play the sound with.</p>
-  <p>The final value for gain and pitch for the sound being played is the product of the values for gain and pitch set for the sound asset. The offset value is the value provided in the &quot;Offset&quot; field <strong>or</strong> the offset value of the sound <strong>asset</strong> being played when the field is left empty (see Example 2).</p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Play Audio Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/a_Audio_Play_Audio.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> <span data-field="title" data-format="default">オーディオを再生する</span></h1>
+  <p>このアクションは、指定されたサウンドを再生するように設定します。<span class="notranslate">Asset</span> Explorerからサウンドを選択し、サウンドをループさせるかどうかを &quot;Loop&quot;<span class="notranslate">flag</span> で設定します（ループしたサウンドは停止するまで何度でも再生されます）。</p>
+  <p>さらに、ゲイン、オフセット（再生を開始するトラックの位置）、再生するピッチを設定することができます。</p>
+  <p>再生されるサウンドのゲインとピッチの最終的な値は、サウンドに設定されたゲインとピッチの値の積になります<span class="notranslate">asset</span>.オフセット値は、&quot;Offset &quot;フィールドに入力された値<strong>、または</strong>フィールドを空にした場合は再生中の<strong>サウンドアセットの</strong>オフセット値です（例2参照）。</p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Sound</td>
-        <td>The sound asset to play</td>
+        <td><span class="notranslate">Sound</span></td>
+        <td>サウンド<span class="notranslate">asset</span> 再生する</td>
       </tr>
       <tr>
-        <td>Loop</td>
-        <td>Whether to loop the sound or not (off by default)</td>
+        <td><span class="notranslate">Loop</span></td>
+        <td><span class="notranslate">loop</span> を鳴らすかどうか（デフォルトはオフ）</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the return value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>戻り値を格納するターゲット変数</td>
       </tr>
       <tr>
-        <td>Gain</td>
-        <td>Value for the gain multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
+        <td><span class="notranslate">Gain</span></td>
+        <td>ゲインマルチプライヤーの値（デフォルトは1）。ここで設定されたゲインマルチプライヤーは、サウンドアセットのゲインマルチプライヤーと掛け合わされる</td>
       </tr>
       <tr>
-        <td>Offset</td>
-        <td>The time (in seconds) to set the start point to (default 0). Values beyond the end of the sound are clamped to its length.<br />
-          The sound asset&#39;s offset (track position) is used when this field if left blank.</td>
+        <td><span class="notranslate">Offset</span></td>
+        <td>開始点を設定する時間（秒単位）（デフォルト0）。与えられた音の長さより長い値は無視されます。<br>
+          このフィールドを空白にすると、サウンドアセットのオフセット（トラック位置）が使用されます。</td>
       </tr>
       <tr>
-        <td>Pitch</td>
-        <td>The pitch multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
+        <td><span class="notranslate">Pitch</span></td>
+        <td>ピッチマルチプライヤー（初期値1）。ここで設定されたゲインマルチプライヤーは、サウンドアセットのゲインマルチプライヤーと掛け合わされる</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example 1:</h4>
-  <p><img alt="Play Audio Example" class="center" height="1087" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio.png" width="698" />The above action block code checks for a mouse button press and if one is detected it then checks a global variable to see if it is not <span class="inline">true</span>. If it is not <span class="inline">true</span>, then a sound is played (and looped) and the global variable set to <span class="inline">true</span>, otherwise the sound is stopped and the global variable is set to <span class="inline">false</span>.<br />
-    The sound is played with default settings: a gain and pitch multiplier of 1 and an offset of 0 (the default offset of the sound asset).</p>
-  <h4>Example 2:</h4>
-  <p><img align="" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio_2.png" />The above action block code first sets the track position of sound asset &quot;snd_MusicBoss&quot; to 20 seconds. It then checks if the instance variable &quot;skip_intro&quot; is set to <span class="inline">true</span>. If it is, it starts playing &quot;snd_MusicBoss&quot; at 20 seconds, the value for track position set earlier (this is because the &quot;Offset&quot; field is left blank so the <strong>asset</strong> offset is used). The first 20 seconds of the audio are skipped.<br />
-    If the instance variable &quot;skip_intro&quot; is set to <span class="inline">false</span>, it also starts playing &quot;snd_MusicBoss&quot; but, because the &quot;Offset&quot; has been set to 0, the sound will start playing from the start. The track position of 20 seconds as defined earlier for the sound <strong>asset</strong> is ignored.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例1．</h4>
+  <p><img>上記のアクションブロックのコードは、マウスボタンが押されたかどうかをチェックし、押されたことが検出されると、グローバル変数が <span class="inline">true</span> でないかをチェックします。 <span class="inline">true</span> でない場合は、サウンドが再生（ループ）され、グローバル変数が <span class="inline">true</span> に設定されます。そうでない場合は、サウンドが停止され、グローバル変数が <span class="inline">false</span> に設定されます。<br>
+    サウンドはデフォルト設定で再生されます。ゲインおよびピッチ乗算器は1、オフセットは0です（サウンドのデフォルトオフセット<span class="notranslate">asset</span> ）。</p>
+  <h4>例2．</h4>
+  <p><img>上記のアクションブロックでは、まず、サウンド<span class="notranslate">asset</span> &quot;snd_MusicBoss &quot;のトラックポジションを20秒に設定します。次に、インスタンス変数 &quot;skip_intro&quot; に <span class="inline">true</span> が設定されているかどうかをチェックします。もし設定されていれば、先に設定したトラック位置の値である20秒から &quot;snd_MusicBoss&quot; の再生を始めます（これは &quot;Offset&quot; フィールドが空のままなので、<strong>アセットオフセットを</strong>使用しているためです）。最初の20秒の音声はスキップされます。<br>
+    インスタンス変数 &quot;skip_intro &quot;を <span class="inline">false</span> に設定すると、&quot;snd_MusicBoss &quot;の再生も始まりますが、&quot;Offset &quot;が0に設定されているため、最初から再生が始まります。<strong>サウンドアセットに</strong>先ほど定義したトラック位置の20秒は無視されます。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Actions.htm">Audio Actions</a></div>
-        <div style="float:right">Next: <a href="Stop_Audio.htm">Stop Audio</a></div>
+        <div style="float:left">戻る<a href="Audio_Actions.htm">オーディオアクション</a></div>
+        <div style="float:right">次へ<a href="Stop_Audio.htm">オーディオの停止</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Play Audio

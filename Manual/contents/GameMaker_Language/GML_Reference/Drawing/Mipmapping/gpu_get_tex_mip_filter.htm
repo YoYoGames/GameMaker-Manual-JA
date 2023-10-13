@@ -6,7 +6,7 @@
   <title>gpu_get_tex_mip_filter</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_get_tex_mip_filter" />
   <meta name="rh-index-keywords" content="gpu_get_tex_mip_filter,tf_point,tf_linear,tf_anisotropic" />
@@ -16,12 +16,12 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_get_tex_mip_filter</h1>
-  <p>With this function you can get the current mip filter mode. The mode value returned by the function will be one of the constants listed below.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数を使うと、現在のミップフィルタのモードを取得することができます。この関数が返すモード値は，以下に示す定数のうちの1つです。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gpu_get_tex_mip_filter();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Constant_Mipmapping_Filter"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Mipmapping/gpu_set_tex_mip_filter.htm">Mipmapping Filter Constant</a></span> (listed below):</p>
   <table>
     <colgroup>
@@ -30,28 +30,28 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Mipmapping_Filter"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Mipmapping/gpu_set_tex_mip_filter.htm">Mipmapping Filter Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Mipmapping_Filter"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Mipmapping/gpu_set_tex_mip_filter.htm">ミップマッピングフィルタ定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">tf_point</span></td>
-        <td>This means that blending between mipmap levels is disabled, which can cause visible texture transitions, but gives the best performance.</td>
+        <td><span class="notranslate"><span class="inline">tf_point</span></td>
+        <td>これはミップマップレベル間のブレンドが無効であることを意味し、目に見える<span class="notranslate">texture</span> の遷移が発生することがありますが、最高のパフォーマンスを得ることができます。</td>
       </tr>
       <tr>
-        <td><span class="inline">tf_linear</span></td>
-        <td>This means that blending between mipmap levels is enabled (this is also known as <i>trilinear filtering</i>), which smooths the texture transitions, but it will give a minor hit to performance.</td>
+        <td><span class="notranslate"><span class="inline">tf_linear</span></td>
+        <td>これはミップマップレベル間のブレンドが有効であることを意味し（これは<i>トリリニアフィルタリングとしても</i>知られています）、<span class="notranslate">texture</span> の遷移を滑らかにしますが、性能に若干の打撃を与えます。</td>
       </tr>
       <tr>
-        <td><span class="inline">tf_anisotropic</span></td>
-        <td>This means that anisotropic filtering is enabled, which greatly improves texture transition quality and can reduce the blurring visible with other filtering modes, but it has the highest hit on performance.</td>
+        <td><span class="notranslate"><span class="inline">tf_anisotropic</span></td>
+        <td>これは、異方性フィルタリングが有効であることを意味し、<span class="notranslate">texture</span> の遷移品質を大幅に向上させ、他のフィルタリングモードで見えるぼやけを減らすことができますが、パフォーマンスへの打撃は最も大きいです。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if keyboard_check(vk_enter)<br />
     {<br />
         switch(gpu_get_tex_mip_filter())<br />
@@ -61,18 +61,18 @@
             case tf_anisotropic: gpu_set_tex_mip_filter(tf_point); break;<br />
         }<br />
     }</p>
-  <p>The above code checks the keyboard and if the specified key is pressed it will then get the current mip filter and toggle the value to the next one, cycling through the different modes.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードはキーボードをチェックし、指定されたキーが押された場合、現在のミップフィルタを取得し、値を次のものに切り替え、異なるモードを循環させるものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mipmapping.htm">Mipmapping</a></div>
-        <div style="float:right">Next: <a href="gpu_get_tex_mip_filter_ext.htm">gpu_get_tex_mip_filter_ext</a></div>
+        <div style="float:left">戻る<a href="Mipmapping.htm">ミップマッピング</a></div>
+        <div style="float:right">次のページ <a href="gpu_get_tex_mip_filter_ext.htm"><span class="notranslate">gpu_get_tex_mip_filter_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_tex_mip_filter

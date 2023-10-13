@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>フォント置換</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function font_replace" />
+  <meta name="rh-index-keywords" content="font_replace" />
+  <meta name="search-keywords" content="" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>フォント置換</h1>
+  <p>この関数は、ゲーム内の<span class="notranslate">font</span> を、実行中のシステムにインストールされている<span class="notranslate">fonts</span> から置き換えるために使用することができます。置き換えられる<span class="notranslate">font</span> は、<span class="notranslate">font</span> ブラウザの<span class="notranslate">Asset</span> であっては<em>ならない</em>ことに注意してください。また、<span class="notranslate">font</span> は、関数 <a href="font_add.htm"><span class="inline">font_add()</span></a>.</p>
+  <p>この方法で<span class="notranslate">font</span> を置き換える場合、<span class="notranslate">font</span> のサイズ（ポイント数）、<span class="notranslate">font</span> を<b>太字に</b>するか<i>斜体に</i>するか、また、含める文字の範囲を定義することができます。もしこの関数が失敗したら、黙って失敗し、与えられた<span class="notranslate">font</span> は置換されません。</p>
+  <p>HTML5 ターゲットモジュールでは、この関数は<b> <i>Web フォントの</i></b>置き換えにのみ使用でき、WebGL が有効で<b>ない</b>場合にのみ動作します。WebGL が有効な場合は、一般的な<span class="notranslate">font</span> リソース（つまり <a href="../../Drawing/Text/draw_set_font.htm"><span class="inline">draw_set_font()</span></a>とともに、<span class="notranslate">font</span> ブラウザから<span class="notranslate">Asset</span> ) またはビットマップ<span class="notranslate">fonts</span> ( <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a>).</p>
+  <p class="note"><span class="optional">重要</span>HTML5をターゲットとする場合、斜体や太字は、<span class="notranslate">font</span> <span class="notranslate">asset</span> または Web<span class="notranslate">font</span> 自体にこれらの文字が含まれている場合にのみサポートされます。これらは、ベースとなる<span class="notranslate">font</span> から合成されることはありません。</p>
+  <p>以下の表は、すべてのブラウザで標準的に使用されているもので、問題なく使用できるはずの<span class="notranslate">fonts</span> 。これ以外の<span class="notranslate">font</span> は、ゲームを実行しているコンピュータやデバイスに存在する場合としない場合がありますので、この機能の使用は、これらの標準フォントに限定してください。</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Windows<span class="notranslate">Font</span> 名前</th>
+        <th>Mac<span class="notranslate">Font</span> 名前</th>
+        <th>フォントファミリー</th>
+      </tr>
+      <tr>
+        <td>アリアル</td>
+        <td>Arial / Helvetica</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>アリアル・ブラック</td>
+        <td>Arial Black / ガジェット</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>コミックサンスMS</td>
+        <td>コミックサンスMS</td>
+        <td>草書体</td>
+      </tr>
+      <tr>
+        <td>クーリエ・ニュー</td>
+        <td>クーリエ・ニュー</td>
+        <td>モノスペース</td>
+      </tr>
+      <tr>
+        <td>グルジア</td>
+        <td>グルジア</td>
+        <td>セリフ</td>
+      </tr>
+      <tr>
+        <td>インパクト</td>
+        <td>インパクト／チャコール</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>ルシダコンソール</td>
+        <td>モナコ</td>
+        <td>モノスペース</td>
+      </tr>
+      <tr>
+        <td>ルシダサンス ユニコード</td>
+        <td>ルシダグランデ</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>パラティーノ・リノタイプ／ブック・アンティクワ</td>
+        <td>パラティーノ</td>
+        <td>セリフ</td>
+      </tr>
+      <tr>
+        <td>タホマ</td>
+        <td>ジュネーブ</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>タイムズ・ニュー・ローマン</td>
+        <td>Times New Roman / Times</td>
+        <td>セリフ</td>
+      </tr>
+      <tr>
+        <td>トレブーシェMS</td>
+        <td>トレブーシェMS</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>バーダナ</td>
+        <td>ヴェルダナ／ジュネーブ</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>グルジア</td>
+        <td>グルジア</td>
+        <td>セリフ</td>
+      </tr>
+      <tr>
+        <td>シンボルマーク</td>
+        <td>シンボルマーク</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>ウェブページ</td>
+        <td>ウェブページ</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>ウイングディング</td>
+        <td>Zapf Dingbats</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>エムエスサンセリフ</td>
+        <td>ジュネーブ</td>
+        <td>サンセリフ</td>
+      </tr>
+      <tr>
+        <td>MSセリフ</td>
+        <td>ニューヨーク</td>
+        <td>サンセリフ</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>その他の（Web 以外の）ターゲットでは、この関数を使用して、ファイルから<span class="notranslate">font</span> を置き換えることができます。ファイルは<span data-keyref="GameMaker Name">GameMaker</span> の<a href="../../../../Settings/Included_Files.htm">Included Files</a>機能を使用して<b>ゲームバンドルに含まれて</b>いる必要があり、 <span class="inline">*.ttf</span> または<span class="inline">*.otf</span> 形式の<span class="notranslate">font</span> ファイルである必要があり、アジアやアラビア語などの非標準の<span class="notranslate">fonts</span> を追加するのに便利です。</p>
+  <p class="note"><span class="tip">TIP</span><b> </b>このような<span class="notranslate">font</span> ファイルをゲームに同梱する場合は、ゲームと一緒に配布するための<b>適切なライセンスが</b>付与されていることを確認してください。</p>
+  <p>この方法でファイルから<span class="notranslate">font</span> を読み込む場合、<span class="notranslate">font</span> の<i>サイズは</i> <b>ピクセル</b>単位で、<i>最初と</i> <i>最後の</i>値は無視されます。つまり、<span class="notranslate">font</span> のすべてのグリフが追加されます。この方法で追加された<span class="notranslate">Fonts</span> は、それ自身の<span class="notranslate">texture</span> ページに割り当てられるので、この機能を使うときは注意が必要です。描画時に<span class="notranslate">texture</span> を交換する数が増加することになり ます。また、グリフが<span class="notranslate">fonts</span> のために定義された bounding box の外側に描画される部分を持つことがあるため、描画時に<span class="notranslate">font</span> が若干大きく見えることがあることも知っておくとよいでしょう。 特定の<span class="notranslate">font</span> に対して1フレームで描画できるグリフは約 200 という制限があることも知っておくとよいでしょう。</p>
+  <p class="note"><b><span class="note">注意事項</span> </b><span data-keyref="GameMaker Name">GameMakerに</span> <span class="notranslate">font</span> を読み込んだら、忘れずに再度削除する必要があります。 <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>さもないと、メモリリークを起こし、ゲームが遅くなり、最終的にはクラッシュしてしまいます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">font_replace(ind, name, size, bold, italic, first, last);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Font">フォントアセット</span></td>
+        <td><span class="notranslate">The index of the (previously added) font to be replaced.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The name of the font to be used (eg &#39;Arial&#39;), or the file path if the font is an included <span class="inline"></span>*.<span class="inline">ttf</span> または <span class="inline">*.otf</span> ファイル。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The size of the font - points for Web Fonts, pixels for file fonts.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">bold</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether the font is bold (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">italics</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether the font is italic (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">first</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The first character to include (if you&#39;re unsure, go for 32).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">last</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The last character to include (if you&#39;re unsure, go for 128).</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">font_replace(myfont, &quot;Arial&quot;, 24, true, true, 32, 128);</p>
+  <p>これは、変数 &quot;myfont&quot; でインデックス化された<span class="notranslate">font</span> を、サイズが24ptで &quot;Arial&quot; を使い、太字と斜体の新しい<span class="notranslate">font</span> で置き換えるものである。<span class="notranslate">font</span> の範囲には、大文字と小文字、数字、すべての一般的な句読点が含まれます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">戻る<a href="Fonts.htm">フォント</a></div>
+        <div style="float:right">次のページ <a href="font_replace_sprite.htm"><span class="notranslate">font_replace_sprite</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+font_replace_sprite
+-->
+  <!-- TAGS
+font_replace_sprite
+-->
+</body>
+</html>

@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_path</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function draw_path" />
   <meta name="rh-index-keywords" content="draw_path" />
@@ -16,61 +16,56 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_path</h1>
-  <p>With this function you can get <span data-keyref="GameMaker Name">GameMaker</span> to draw a path to the screen. The path will be drawn as a simple line, and can be either relative to the calling instance or at the absolute position it was created at in the path editor or through code. This function is extremely useful when debugging dynamic paths (for example, those created for instances with the <a href="../../Movement_And_Collisions/Motion_Planning/mp_grid_path.htm"><span class="inline">mp_grid_path()</span></a> function).</p>
-  <div data-conref="../../../../assets/snippets/Note_Shape_Shader_Attributes_Are_Different.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数を使うと、<span data-keyref="GameMaker Name">GameMakerに</span> <span class="notranslate">path</span> を画面に描画させることができる。<span class="notranslate">path</span> は単純な線として描かれ、呼び出したインスタンスからの相対位置か、<span class="notranslate">path</span> エディタやコードで作成した絶対位置のどちらかを指定できます。この機能は<span class="notranslate">debugging</span> ダイナミックな<span class="notranslate">paths</span> (例えば、インスタンスに対して <a href="../../Movement_And_Collisions/Motion_Planning/mp_grid_path.htm"><span class="inline">mp_grid_path()</span></a>関数)を使用します。</p>
+  <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span class="notranslate">texture</span>, 色.しかし、この関数を使用する場合、<span class="notranslate">vertex</span> とカラーデータのみが渡されるため、<span class="notranslate">shader</span> は何も描画しない（または、何か描画するが正しく描画しない）可能性があります。このように図形を描画する必要がある場合は、<span class="notranslate">shader</span> をこの点を考慮してカスタマイズする必要があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">draw_path(path, x, y, absolute);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>path</td>
-        <td><span data-keyref="Type_Asset_Path"><a href="The_Asset_Editors/Paths.htm" target="_blank">Path Asset</a></span></td>
-        <td>The path to draw</td>
-      </tr>
+        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">The path to draw</span></td>
+     </tr>
       <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of where the path is drawn</td>
-      </tr>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of where the path is drawn</span></td>
+     </tr>
       <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of where the path is drawn</td>
-      </tr>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of where the path is drawn</span></td>
+     </tr>
       <tr>
-        <td>absolute</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the path is drawn at the absolute position (<span class="inline">true</span>) or the relative position (<span class="inline">false</span>)</td>
-      </tr>
+        <td><span class="notranslate">absolute</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Whether the path is drawn at the absolute position (<span class="inline">true</span>) または相対位置 (<span class="inline">false</span>)</td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if mp_grid_path(grid, path, x, y, obj_Player.x, obj_Player.y, 1)<br />
     {<br />
         draw_path(path, x, y, false);<br />
     }</p>
-  <p>The above code will use the <span class="inline">mp_grid_path</span> function to generate a path and store it in the variable &quot;path&quot;. If the path is successfully created, it is then drawn on the screen at a position relative to the instance running the code.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、 <span class="inline">mp_grid_path</span> 関数を使用して<span class="notranslate">path</span> を生成し、変数 &quot;path&quot; に格納します。<span class="notranslate">path</span> が正常に生成されると、コードを実行しているインスタンスからの相対位置で画面上に描画されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_arrow.htm">draw_arrow</a></div>
+        <div style="float:left">戻る：<a href="Basic_Forms.htm">基本フォーム</a></div>
+        <div style="float:right">次のページ <a href="draw_arrow.htm"><span class="notranslate">draw_arrow</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_path

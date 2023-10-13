@@ -6,7 +6,7 @@
   <title>path_get_point_y</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_get_point_y" />
   <meta name="rh-index-keywords" content="path_get_point_y" />
@@ -16,34 +16,34 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>path_get_point_y</h1>
-  <p>This function will return the y position (in room coordinates) of the point that you input for the path that you index. If the point is outside of the range of the path (ie: a path has 8 points and you ask for the y position of point 10) then a value of 0 will be returned.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、インデックスを指定した<span class="notranslate">room</span> について、入力された点の y 位置 (<span class="notranslate">path</span> 座標) を返します。もしその点が<span class="notranslate">path</span> の範囲外であった場合 (たとえば<span class="notranslate">path</span> が 8 点で、10 点の y 位置を求める場合)、値 0 が返されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">path_get_point_y(index, n);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to check.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path">パスアセット</span></td>
+        <td><span class="notranslate">The index of the path to check.</span></td>
       </tr>
       <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The point number to check.</td>
+        <td><span class="notranslate">n</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The point number to check.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (path_position == 1)<br />
     {<br />
         var _num = path_get_number(pth_Patrol);<br />
@@ -52,18 +52,18 @@
         y = path_get_point_y(pth_Patrol, _pos);<br />
         path_position = (1 / _num) * _pos;<br />
     }</p>
-  <p>The above code will check to see if an instance is at the end of a path. If it is it will then choose a random point on the path and move the instance to that point.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、インスタンスが<span class="notranslate">path</span> の末尾にあるかどうかをチェックします。 もし末尾にある場合は、<span class="notranslate">path</span> 上のランダムなポイントを選び、そのポイントにインスタンスを移動させます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Paths.htm">Paths</a></div>
-        <div style="float:right">Next: <a href="path_get_precision.htm">path_get_precision</a></div>
+        <div style="float:left">戻る<a href="Paths.htm">パス</a></div>
+        <div style="float:right">次のページ <a href="path_get_precision.htm"><span class="notranslate">path_get_precision</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_get_point_y

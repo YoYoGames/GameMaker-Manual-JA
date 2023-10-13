@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>keyboard_get_map</title>
+  <title>キーボードゲットマップ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for keyboard_get_map" />
   <meta name="rh-index-keywords" content="keyboard_get_map" />
@@ -15,44 +15,44 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>keyboard_get_map</h1>
-  <p>Sometimes you may wish to get the ascii code for a mapped key (to see if it is already mapped, for example) which is what this function returns. The function will take a keycode value as returned by the function <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the <span class="inline">vk_*</span> constants listed on the main <a href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h1>キーボードゲットマップ</h1>
+  <p>マップされたキーのアスキーコードを取得したい場合があります（例えば、既にマップされているかどうかを確認するため）。この関数は，関数 <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>(A-Z の<i>大文字と</i>0-9 の数字のみ)、またはメイン<a href="Keyboard_Input.htm">キーボード入力</a>ページにある <span class="inline">vk_*</span> の定数のいずれかを使用します。</p>
+  <p> </p>
+  <h4><b>構文です。</b></h4>
   <p class="code">keyboard_get_map(key);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>key</td><td><span data-keyref="Type_Constant_VK"></span></td>
-        <td>This is the key that you wish to get the mapped value from</td>
+        <td><span class="notranslate">key</span></td><td><span data-keyref="Type_Constant_VK"></span></td>
+        <td><span class="notranslate">This is the key that you wish to get the mapped value from</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4><b>Returns:</b></h4>
+  <p> </p>
+  <h4><b>リターンです。</b></h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
+  <p> </p>
+  <h4><b>例</b></h4>
   <p class="code">if keyboard_get_map(ord(&quot;A&quot;)) = ord(&quot;A&quot;)<br />
     {<br />
         keyboard_set_map(ord(&quot;A&quot;), keyboard_lastkey);<br />
     }</p>
-  <p>The above example code will first check and see if &quot;A&quot; has been mapped to another key, and if it hasn&#39;t it will map it to the last key that the user has pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコード例では、まず「A」が他のキーにマッピングされているかどうかを確認し、マッピングされていない場合は、ユーザーが最後に押したキーにマッピングします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Keyboard_Input.htm">Keyboard Input</a></div>
-        <div style="float:right">Next: <a href="keyboard_unset_map.htm">keyboard_unset_map</a></div>
+        <div style="float:left">戻る<a href="Keyboard_Input.htm">キーボード入力</a></div>
+        <div style="float:right">次のページ <a href="keyboard_unset_map.htm"><span class="notranslate">keyboard_unset_map</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_get_map

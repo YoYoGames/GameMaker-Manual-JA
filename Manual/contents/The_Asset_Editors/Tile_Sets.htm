@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Tile Set Editor</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>タイルセット</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the tile set editor works" />
   <meta name="rh-index-keywords" content="Tile Set Editor" />
@@ -14,77 +14,77 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Tile Set Editor</span></h1>
-  <p><img alt="Tile Set Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets.png" />A <strong>tile set</strong> is a graphic resource for drawing levels and other static components of your game. A tile set is comprised of a single image that is then split into different &quot;cells&quot; (tiles), and each tile can then be placed into the room editor to create a complete image. Below you can see two example sprites that can be used as tile sets:</p>
-  <p><img alt="Tile Set Example" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Example.png" style="margin-top: -10px; margin-bottom: -20px;" /></p>
-  <p style="text-align:center;padding-top:0.5em;padding-right:1em;padding-bottom:1.5em;padding-left:1em"><span style="font-size:14px;font-style:italic">Images by <a href="http://www.lostgarden.com/2006/07/more-free-game-graphics.html">Lost Garden</a></span></p>
-  <p>These are the most common ways that people create tile sets - either all jammed up together or with little spaces separating them out, and <span data-keyref="GameMaker Name">GameMaker</span> can handle both types. Essentially all tile sets must be comprised of images that fit within a clearly defined grid, with each cell of the grid being the <em>exact same size</em> (note that while the images shown above are all made up of square tiles, a tile set can be made from rectangular tiles too).</p>
-  <p>When creating your tile sets, keep in mind that <strong>the top left grid cell must <em>always </em>be empty</strong> as this is the tile that <span data-keyref="GameMaker Name">GameMaker</span> will use for &quot;empty&quot; tiles in a room and for erasing existing tiles (and even if you have pixels in that part of the image they will be ignored).</p>
-  <p>When you first create a tile set resource the Tile Set Editor window will open with the following options:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Name</a></p>
+  <h1><span class="notranslate">Tile Set</span> 編集部</h1>
+  <p><img><strong>タイル</strong>セットは、ゲームのレベルやその他の静的コンポーネントを描画するためのグラフィックリソースです。<span class="notranslate">tile set</span> は1つのイメージで構成され、それが異なる「セル」(<span class="notranslate">tiles</span>)に分割され、各<span class="notranslate">tile</span> を<span class="notranslate">room</span> エディタに配置することで完全なイメージを作成することができます。以下は、タイルセットとして使用できる2つの例です（<span class="notranslate">sprites</span> ）。</p>
+  <p><img alt="Tile Set Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets.png" /></p>
+  <p style="text-align:center;padding-top:0.5em;padding-right:1em;padding-bottom:1.5em;padding-left:1em"><span style="font-size:14px;font-style:italic">画像：<a href="http://www.lostgarden.com/2006/07/more-free-game-graphics.html">ロストガーデン</a></span></p>
+  <p>これらは、<span class="notranslate">tile sets</span> を作成する際に最も一般的な方法です。すべて の画像を詰め込んで作成することも、少しスペースを空けて作成することもできますが、<span data-keyref="GameMaker Name">GameMaker</span>はどちらのタイプも扱うことができます。基本的に、すべての<span class="notranslate">tile sets</span> は、明確に定義されたグリッド内に収まる画像で構成され、グリッドの各セルは<em>まったく同じサイズ</em>でなければなりません（上記の画像はすべて正方形の<span class="notranslate">tiles</span> で構成されていますが、<span class="notranslate">tile set</span> は長方形の<span class="notranslate">tiles</span> からも作ることができることに注意してください）。</p>
+  <p><span class="notranslate">tile sets</span> <span class="notranslate">tile</span> を作成するときは、<strong>左上のグリッドセルは<em>常に </em></strong>空でなければならないことに注意してください。これは<span data-keyref="GameMaker Name">GameMaker</span>が 内の「空」 と既存の を消去するために使用するものです（その部分にピクセルがあったとしても、無視されます）。<span class="notranslate">tiles</span> <span class="notranslate">room</span> <span class="notranslate">tiles</span> </p>
+  <p><span class="notranslate">tile set</span> リソースを初めて作成すると、<span class="notranslate">Tile Set</span> Editor ウィンドウが開き、以下のオプションが表示されます。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">名称</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give a name to your tile set. Names can only be alpha-numeric and may only use the underbar &quot;_&quot; symbol, and they cannot start with a number.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ここで、あなたの<span class="notranslate">tile set</span> に名前を付けることができます。名前は英数字のみで、アンダーバー&quot;_&quot;記号のみ使用でき、数字で始めることはできません。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Sprite</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">スプライト</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Here you can select the <a href="../Quick_Start_Guide/Creating_Sprites.htm">sprite</a> asset from which to create our tile set. Clicking on the main button will open the Asset Explorer where you can choose the sprite you wish to use for the tile set:</p>
-    <p class="dropspot"><img alt="The Asset Explorer Window" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_AssetExplorer.png" />You can also click on the <strong>New Sprite</strong> button <img alt="New Sprite Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_NewSprite.png" width="24" /> button to create a new sprite asset (which will open the <a href="Sprites.htm">Sprite Editor</a> for the new asset within the workspace for editing), or you can edit the currently selected sprite using the <strong>Edit Sprite</strong> button <img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png" />, or even choose to edit the sprite image itself in the <a href="Image_Editor.htm">Image Editor</a> by pressing the <img alt="Edit Image Icon" class="icon" src="../assets/Images/Icons/Icon_EditImage.png" /> button.</p>
-    <p class="dropspot">By default when you open a tile set the <strong>Tile Set Properties</strong> window will also be shown (see below), but if you close it then you can click the button here to reopen it again.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ここで<span class="notranslate">asset</span> を作成する<a href="../Quick_Start_Guide/Creating_Sprites.htm">スプライト</a> <span class="notranslate">tile set</span> を選択することができます。メインボタンをクリックすると、<span class="notranslate">Asset</span> エクスプローラが開き、タイルセットに使用する<span class="notranslate">sprite</span> を選択することができます。</p>
+    <p class="dropspot"><img>また、<strong>New Sprite</strong>ボタン<img> ボタンをクリックして、新しい<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を作成したり（編集用の<span class="notranslate">asset</span> の中に新しい<span class="notranslate">workspace</span> の<a href="Sprites.htm">スプライトエディタを</a>開きます）、<strong>Edit Sprite</strong>ボタン<img> を使って現在選択中の<span class="notranslate">sprite</span> を編集したり、<img> ボタンを押して<a href="Image_Editor.htm">イメージエディタで</a> <span class="notranslate">sprite</span> 画像自体を編集することを選択することも可能です。</p>
+    <p class="dropspot">デフォルトでは、<span class="notranslate">tile set</span> を開くと、「<strong>タイルセットのプロパティ</strong>」ウィンドウも表示されます（下図）が、それを閉じてしまった場合は、ここのボタンをクリックして再び開くことができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Properties</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">物件紹介</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><strong></strong>The <strong>Tile Set Properties</strong> window is for designating the base tile size (default is 16px square), the offset amount and the separation between tiles (these last two options are for use with sprites like the one shown in the example image further up this page where there are gaps between the individual parts of the tiles). You can also set the <strong>Output Border</strong> values for the tile set image, which controls how the image will be stored on disk and add extra pixels around each tile as required.</p>
-    <p class="dropspot">Due to how tiles are rendered they need to be prepared beforehand with a border around each one to &quot;smear&quot; the edges. The image shown below illustrates how tiles are generally mapped by the device graphic drivers, with the red line around the tile showing where the U,V coordinates are mapped to (The letters &quot;U&quot; and &quot;V&quot; are used to describe the 2D texture mesh because &quot;X&quot;, &quot;Y&quot; and &quot;Z&quot; are already used to describe room and object spatial coordinates):</p>
-    <p class="dropspot"><img alt="Single Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Single.png" style="margin-top: -20px; margin-bottom: -10px;" />As you can see it picks the center of the <a class="glossterm" data-glossterm="texel" href="#">texel</a> to map directly when drawing the image in the room. Now at a scale of 1:1, this is all well and good, but what will happen when we scale this tile down? The issue with scaling down is that when you shrink the image, the UVs also scale down and try to fit into a more compressed space, but this obviously can&#39;t happen, so the graphics driver picks which texels to draw based on the available pixel centers.</p>
-    <p class="dropspot">So, if we are &quot;just&quot; moving into a new screen pixel then, because the graphics drivers use the center of the pixel to decide what to draw with, it&#39;ll pick a texel surrounding the tile, not a texel on the tile itself.</p>
-    <p class="dropspot"><img alt="Texel Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Texel.png" style="margin-top: -20px; margin-bottom: -20px;" /></p>
-    <p class="dropspot">Shown above is a tile being draw scaled down into 6 screen pixels, and this shows that when you overlap a little into the next screen pixel, the graphics driver has to make a choice to either drop that texel, or it try and fill it with what it thinks is a valid texel. Let&#39;s just say that in this case it decides to draw the overlapped texel into the screen pixel, and, since it&#39;s now clearly outside our tile it gets this pixel from either the next tile, or the little bits of space you provided around the tiles, which means that when it shrinks you&#39;ll get cracks between tiles &quot;glitches&quot; in how they are drawn and this is where a lot of confusion arises... Each graphics driver and device actually does this in its own way, meaning that the results can be unpredictable and look terrible... but if you&#39;re careful and plan ahead you can work around it.</p>
-    <p class="dropspot">With high end games if you draw from a single texture (not on a texture page or texture atlas), you have the option of using a texture mode called <strong>clamp </strong>and what this does is repeats the last row of texels infinitely off into the distance, allowing you to scale without problems as it forces the hardware to get the last row of pixels no matter what. This is what the <strong>Output Border </strong>settings here do for you:</p>
-    <p class="dropspot"><img alt="Smear Tile" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Smear.png" style="margin-top: -10px;margin-bottom: 1px" />Shown above is a &quot;fixed&quot; tile sprite and you can see it now has a repeated section around each tile meaning that when the hardware overruns, it will always pick the last texel from the tile rather than one of the spaces or the tile after that. So, when creating a tile set, keep in mind that if you are going to be zooming the game view in or out or are going to be rendering the tiles scaled, you may need to have a higher Output Border width or height than the default value of 2.</p>
-    <p class="dropspot">Next, you can chose the <strong>texture group</strong> that you wish the tileset resource to belong to. Basically, a texture group (previously defined in the <a href="../Settings/Texture_Groups.htm">Texture Group Manager</a>) is something that you can set up so that all the image assets that you need for specific rooms or levels of your game can be stored together. So, for example, you can have all your level 1 images in one texture group, all your level 2 images in another etc... and <span data-keyref="GameMaker Name">GameMaker</span> will try to place all those grouped assets on the same <a class="glossterm" data-glossterm="texture page" href="#">texture page</a> to reduce texture page swapping while your game is running on the chosen target platform.</p>
-    <div class="dropspotnote"><strong>NOTE</strong>: This may not always be necessary and the performance increase from this method will depend on whether the target device is CPU bound or GPU bound.</div>
-    <p class="dropspot">The final option in the tile set properties is <strong>Disable Source Sprite Export</strong>. This is disabled by default, and if enabled, it flags the source sprite asset to be omitted when the texture page for your project is being generated. This works under the assumption that a sprite used as a tile set will not be getting used for anything else, and so only needs to be exported once.</p>
-    <p class="dropspot">If you are using the base sprite asset for anything other than tiles, or you are checking for collisions on a tile layer using this tile set, then you would want to keep this disabled so that the base sprite <em>and </em>the tile set are both added into the texture page on compile.</p>
+    <p class="dropspot"><strong></strong><strong>タイルセットのプロパティ</strong>] ウィンドウでは、ベースとなる<span class="notranslate">tile</span> のサイズ（デフォルトは 16px の正方形）、オフセット量、および<span class="notranslate">tiles</span> 間の間隔を指定します（最後の 2 つのオプションは、このページのさらに上の画像例で示された<span class="notranslate">sprites</span> のように、<span class="notranslate">tiles</span> の個々のパーツ間に隙間がある場合に使用されます）。また、<span class="notranslate">tile set</span> 画像の「<strong>出力境界</strong>」の値を設定することで、画像がディスクに保存される方法を制御し、必要に応じて各<span class="notranslate">tile</span> の周囲に余分なピクセルを追加することができます。</p>
+    <p class="dropspot"><span class="notranslate">tiles</span> のレンダリング方法のため、エッジを「汚す」ために、それぞれの周囲にボーダーを付けて事前に準備する必要があります。下図は、<span class="notranslate">tiles</span> がデバイスグラフィックドライバによってどのようにマッピングされるかを示しています。<span class="notranslate">tile</span> の周囲の赤い線は U,V 座標がマッピングされる場所を示しています（2D<span class="notranslate">texture</span> のメッシュを表現するために &quot;U&quot; と &quot;V&quot; という文字が使われています。<span class="notranslate">room</span> と<span class="notranslate">object</span> 空間座標を表現するのに &quot;X&quot;, &quot;Y&quot; および &quot;Z&quot; はすでに使われているからです）。</p>
+    <p class="dropspot"><img> <span class="notranslate">room</span> に画像を描画するときに、直接マッピングする<a class="glossterm" data-glossterm="テクセル" href="#">テクセルの</a>中心を選んでいるのがわかります。 さて、1:1 のスケールでは、これはすべて順調ですが、この を縮小するとどうなるのでしょう？縮小するときの問題は、画像を縮小すると、UVも縮小して、より圧縮された空間に収まろうとすることです。しかし、これは明らかに起こりえないので、グラフィックスドライバは利用可能なピクセル中心に基づいて、どのテクセルを描くかを選択します。<span class="notranslate">tile</span> </p>
+    <p class="dropspot">つまり、新しい画面ピクセルに移動するだけなら、グラフィックスドライバはピクセルの中心を使用して描画対象を決定するので、<span class="notranslate">tile</span> を囲むテキサルを選ぶことになり、<span class="notranslate">tile</span> 自体のテキサルを選ぶことにはならないのです。</p>
+    <p class="dropspot"><img alt="Tile Set Example" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Example.png" style="margin-top: -10px; margin-bottom: -20px;" /></p>
+    <p class="dropspot">上の図は、<span class="notranslate">tile</span> を 6 スクリーンピクセルに縮小して描画しています。これは、次のスクリーンピクセルに少し重なると、グラフィックドライバはそのテキスルを削除するか、有効なテキス ルで埋めようとするかを選択しなければならないことを示しています。この場合、オーバーラップしたテクセルをスクリーンピクセルに描画することに決めたとしましょう。現在、それは明らかに<span class="notranslate">tile</span> の外側なので、次の<span class="notranslate">tile</span> 、または<span class="notranslate">tiles</span> の周りに提供したわずかなスペースからこのピクセルを取得します。つまり、縮小すると、<span class="notranslate">tiles</span> 間の亀裂や描画方法のグリッチが生じ、これが多くの混乱を引き起こすことになります...。このような場合、「liquids.com」は、「liquids.com」内の「liquids.com」内の「liquids.com」と「liquids.com」内の「liquids.com」の間にある「liquids.com」をクリックします。</p>
+    <p class="dropspot">ハイエンドゲームでは、単一の<span class="notranslate">texture</span> (<span class="notranslate">texture</span> ページや<span class="notranslate">texture</span> アトラスではありません) から描画する場合、<strong>クランプと </strong>呼ばれる<span class="notranslate">texture</span> モードを使用するオプションがあります。これは、最後の行のテクスルを無限に遠方に繰り返し、何があってもハードウェアに最後の行のピクセルが得られるよう強制するので、問題なくスケーリングできます。これは、<strong>出力ボーダーの </strong>設定で行うことができます。</p>
+    <p class="dropspot"><img> <span class="notranslate">tile</span> <span class="notranslate">sprite</span> <span class="notranslate">tile</span> つまり、ハードウェアがオーバーランしたときに、スペースや<span class="notranslate">tile</span> の 1 つではなく、常に<span class="notranslate">tile</span> の最後のテクセルを選択するようになりました。したがって、<span class="notranslate">tile set</span> を作成するときは、ゲーム ビューを拡大または縮小する場合、または<span class="notranslate">tiles</span> を拡大縮小してレンダリングする場合、デフォルト値の 2 よりも高い Output Border width または height が必要な場合があることに留意してください。</p>
+    <p class="dropspot">次に、タイルセットリソースを所属させたい<strong>テクスチャ</strong>グループを選択します。基本的に、<span class="notranslate">texture</span> グループ（<a href="../Settings/Texture_Groups.htm">Texture Group Manager</a> で定義済み）は、特定の<span class="notranslate">assets</span> またはゲームのレベルに必要なすべてのイメージ<span class="notranslate">rooms</span> を一緒に保存できるように設定するものです。<span class="notranslate">texture</span> <span data-keyref="GameMaker Name">GameMaker は</span>、これらのグループ化されたアセットをすべて同じ<a class="glossterm" data-glossterm="テクスチャページ" href="#">テクスチャ</a>ページに配置し、選択した ターゲットプラットフォームでゲームを実行中に<span class="notranslate">texture</span> ページスワップを削減しようとします。</p>
+    <div class="dropspotnote"><strong>注</strong>：この方法は必ずしも必要ではないかもしれませんし、この方法による性能向上は、ターゲットデバイスがCPUバウンドかGPUバウンドかによって異なります。</div>
+    <p class="dropspot"><span class="notranslate">tile set</span> プロパティの最後のオプションは、「<strong>Disable Source<span class="notranslate">Sprite</span> Export」（ソースのエクスポートを無効に</strong>する）です。<span class="notranslate">flags</span> これはデフォルトでチェックされており、プロジェクトの<span class="notranslate">sprite</span> ページが生成されるときに、ソース<span class="notranslate">asset</span> <span class="notranslate">texture</span> が省略されるようにします。これは、<span class="notranslate">sprite</span> が<span class="notranslate">tile set</span> として使用されている場合、他の用途には使用されないので、一度だけエクスポートする必要があるという前提で動作します。しかし、ベースとなる<span class="notranslate">sprite</span> リソースを<span class="notranslate">tiles</span> 以外に使用している場合は、このチェックを外して、コンパイル時にベースとなる<span class="notranslate">sprite</span> <em>と </em> <span class="notranslate">tile set</span> の両方が<span class="notranslate">texture</span> ページに追加されるようにしたいものです。</p>
     <p class="dropspot"><strong></strong></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Editors</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">編集部</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Each of the buttons in the <strong>Editors </strong>section will open a different editor for specific tile set functionality. You can create tile set <em>brushes </em>based on multiple tiles together, <em>animated tiles</em>, using different tiles as individual frames, and you can also create <em>auto tiles</em> that will &quot;join&quot; together based on the tiles that surround them. Each of these editors is explained in detail in the sections linked at the end of this page.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><strong>エディタ] </strong>セクションの各ボタンは、特定の<span class="notranslate">tile set</span> 機能のための異なるエディタを開きま す。複数の<span class="notranslate">tile set</span> を合わせたものをベースにした<span class="notranslate">tiles</span> <em>ブラシ </em>、異なる<span class="notranslate">tiles</span> を個別のフレームとして使用した<em>アニメーションタイルを</em>作成できます。また、周囲にある<span class="notranslate">tiles</span> をベースに「結合」する<em>オートタイルを</em>作成することも可能です。これらの各エディタについては、このページの最後にあるリンク先のセクションで詳しく説明されています。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Preview Toolbox</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">プレビューツールボックス</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">These are the tools you can use to preview the sprite selected for the tile set. These buttons control the current preview zoom level and you can use them to zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /> button will reset the preview to be 1:1 with the tile set sprite being edited. You can also click the <strong>Window Fit</strong> button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png" /> to make the entire tile set fit within the current preview window (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the canvas to be 1:1 with the tile set sprite.</p>
-    <p class="dropspot">Another feature is that you can switch the grid view on or off by clicking the <img alt="Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png" /> button, as well as set the colour for the grid to be used (clicking the <img alt="Preview Options Button" class="icon" src="../assets/Images/Icons/Icon_CanvasOptions.png" /> button). When the grid is active it will show a coloured outline for each of the tiles in the grid, respecting the settings for separation, etc...</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">これらは、<span class="notranslate">sprite</span> で選択した<span class="notranslate">tile set</span> をプレビューするために使用できるツールです。これらのボタンは現在のプレビューのズームレベルを制御し、ズームインまたはズームアウトに使用できます。<img> ボタンをクリックすると、プレビューが編集中の<span class="notranslate">tile set</span> <span class="notranslate">sprite</span> と 1:1 になるようにリセットされます。また、「<strong>ウィンドウに合わせる</strong>」ボタン<img> をクリックすると、<span class="notranslate">tile set</span> 全体で現在のプレビューウィンドウに収まるようにできます（収まるように適宜ズームイン/アウトします）。<img> /<img> とマウスホイール<img> を使ってもズームイン・ズームアウトできます。また、<img> /<img> +<img> を押すと、キャンバスと<span class="notranslate">tile set</span> <span class="notranslate">sprite</span> が 1:1 になるように設定されます。</p>
+    <p class="dropspot"><span class="notranslate">switch</span> もう一つの特徴は、<img> ボタンをクリックすることで、グリッド表示のオン・オフができ、また、使用するグリッドの色も設定できます（<img> ボタンをクリックします）。グリッドが有効な場合、グリッド内の<span class="notranslate">tiles</span> それぞれに色のついたアウトラインが表示され、分離などの設定も反映されます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Preview</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">プレビュー</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">This section is the tile set Preview window. To navigate around the preview, you can use the same basic controls as for general Workspaces, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> and drag to pan the preview (or alternatively use the <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> combination), and you can scroll horizontally with the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> or zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> key and the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />. You can also use the different buttons in the <strong>Preview Toolbox</strong> to change the zoom and enable/disable the grid cell overlay.</p>
+    <p class="dropspot">このセクションは、<span class="notranslate">tile set</span> プレビューウィンドウです。プレビューを移動するには、一般的な<span class="notranslate">Workspaces</span> と同じ基本的な操作が可能です。マウスの中ボタン<img> とドラッグでプレビューをパンし（あるいは<img> +<img> の組み合わせを使用）、マウスホイール<img> で水平方向にスクロールし、<img> /<img> キーとマウスホイール<img> でズームインとアウトを行うことができます。また、<strong>プレビューツールボックスの</strong>さまざまなボタンを使って、ズームの変更やグリッドセルオーバーレイの有効・無効を切り替えることができます。</p>
   </div>
-  <p> </p>
-  <p>As mentioned in the section on <strong>Editors</strong> above, there are are further tools available to edit tile sets and generate special <em>brushes </em>(combinations of tiles that can be painted into a room), <em>animated </em>tiles, and <em>auto tile</em> tiles (which are special tiles that will connect up automatically when placed in a room). Each of these editors is explained in depth from the following pages:</p>
+  <p> </p>
+  <p>上記の<strong>エディタの</strong>セクションで述べたように、<span class="notranslate">tile sets</span> を編集し、特別な<em>ブラシ </em>(<span class="notranslate">tiles</span> の組み合わせで<span class="notranslate">room</span> にペイントできる)、<em>アニメーション </em>タイル、<em>自動タイル</em>タイル (<span class="notranslate">tiles</span> に配置すると自動的に接続される特別な<span class="notranslate">room</span> ) を生成するツールがさらに用意されています。これらの各エディタについては、次のページで詳しく説明します。</p>
   <ul class="colour">
-    <li><a href="Tile_Set_Editors/Brush_Builder.htm">The Brush Builder</a></li>
-    <li><a href="Tile_Set_Editors/Animated_Tiles.htm">Animated Tiles</a></li>
-    <li><a href="Tile_Set_Editors/Auto_Tiles.htm">Auto Tiles</a></li>
+    <li><a href="Tile_Set_Editors/Brush_Builder.htm">ブラシビルダー</a></li>
+    <li><a href="Tile_Set_Editors/Animated_Tiles.htm">アニメーテッドタイル</a></li>
+    <li><a href="Tile_Set_Editors/Auto_Tiles.htm">オートタイル</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Timelines.htm">The Timeline Editor</a></div>
+        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
+        <div style="float:right">次へ<a href="Timelines.htm">タイムライン</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-The Tile Set Editor
+The <span class="notranslate">Tile Set</span> Editor
 Tiles
 Tile Sets
 -->

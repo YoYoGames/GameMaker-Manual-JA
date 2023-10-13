@@ -6,7 +6,7 @@
   <title>layer_has_instance</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_has_instance" />
   <meta name="rh-index-keywords" content="layer_has_instance" />
@@ -16,50 +16,50 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_has_instance</h1>
-  <p>This function can be used to check if a given instance is currently assigned to the given layer. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and the instance ID of the instance to check for. You can also give an <span class="inline">object_index</span> (ie: the name of the object in the Asset Browser) and the function will check if any instances of that object are on the given layer. The function will return <span class="inline">true</span> if the instance is on the layer and <span class="inline">false</span> if it is not.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、与えられたインスタンスが現在与えられたレイヤーに割り当てられているかどうかをチェックするために使用することができます。レイヤー ID (これは、レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> として - これはパフォーマンスに影響します) と、チェックするインスタンスのインスタンス ID を指定します。また、 <span class="inline">object_index</span> (例:<span class="notranslate">object</span> Browser の<span class="notranslate">Asset</span> の名前) を指定すると、その<span class="notranslate">object</span> のインスタンスが指定したレイヤー上にあるかどうかをチェックします。この関数は、そのインスタンスがレイヤー上にある場合は <span class="inline">true</span> を、ない場合は <span class="inline">false</span> を返します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">layer_has_instance(layer_id, instance_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String">String</span> or <span data-keyref="Type_ID_Layer">Layer ID</span></td>
-        <td>The unique ID value of the layer to target (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td>
       </tr>
       <tr>
-        <td>instance_id</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The unique instance ID or the object index of the instance to check for</td>
+        <td><span class="notranslate">instance_id</span></td>
+        <td><span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The unique instance ID or the object index of the instance to check for</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if !layer_has_instance(global.Bullet_Layer, obj_Bullet_Parent)<br />
     {<br />
         layer_destroy(global.Bullet_Layer);<br />
     }</p>
-  <p>The above code will check to see if the given layer contains any instances of the object &quot;obj_Bullet_Parent&quot; and if not it will destroy the layer.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、与えられたレイヤーに<span class="notranslate">object</span> &quot;obj_Bullet_Parent&quot; のインスタンスが含まれているかどうかをチェックし、含まれていない場合はレイヤーを破壊します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_instance_get_instance.htm">layer_instance_get_instance</a></div>
+        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ <a href="layer_instance_get_instance.htm"><span class="notranslate">layer_instance_get_instance</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_has_instance

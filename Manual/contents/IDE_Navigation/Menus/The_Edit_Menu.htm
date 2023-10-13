@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Edit Menu</title>
+  <title>編集メニュー</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section on the Edit Menu" />
   <meta name="rh-index-keywords" content="Menu - Edit" />
@@ -14,51 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Edit Menu</h1>
+  <h1>編集メニュー</h1>
   <p><img alt="The Edit Menu" class="center" src="../../assets/Images/IDE_Input/Edit_Menu.png" /></p>
-  <p>The edit menu is where you can use the general edition tools of the <span data-keyref="GameMaker Name">GameMaker</span> interface. The available options are:</p>
+  <p><span class="notranslate">edit menu</span> では、<span data-keyref="GameMaker Name">GameMaker</span>インターフェイスの一般的なエディションツールを使用することができます。利用できるオプションは以下の通り。</p>
   <ul class="colour">
-    <li><strong>Undo </strong>- Undo an action.</li>
-    <li><strong>Redo </strong>- Redo a previous action.</li>
-    <li><strong>Search and replace </strong>- This will open a search window which permits you to search through your entire code (including room creation code, scripts, and events) for a given input - see below for further information.</li>
+    <li><strong>Undo - </strong> 操作を元に戻す。</li>
+    <li><strong>Redo - </strong> 前のアクションをやり直す。</li>
+    <li><strong>検索と置換 - </strong> 指定した入力に対して、コード全体（<span class="notranslate">room</span> 作成コード、<span class="notranslate">scripts</span> 、イベントを含む）を検索することができる検索ウィンドウが表示されます。</li>
   </ul>
-  <p>When you select Search &amp; Replace from the Edit menu, it will open the following window:</p>
-  <p><img alt="Search In Assets Window" class="center" src="../../assets/Images/IDE_Input/Search_Menu.png" />You can use this to search through all the scripted assets in your game, including room code, event code, scripts and shaders. When searching, you
-    can type in a new search term in the box at the top, or you can click the arrow icon to the right to open a list of previously searched for terms. You also have the option to give a replacement term that will be used to replace the initial search
-    term, and this too has an option to use a previously used replace string from the arrow button on the right.</p>
-  <p>Searches can be general or you can refine them using the options below the search term inputs:</p>
+  <p><span class="notranslate">Edit menu</span> から「検索と置換」を選択すると、次のようなウィンドウが表示されます。</p>
+  <p><img>これを使って、ゲーム内のすべてのスクリプト<span class="notranslate">assets</span> を検索することができます。<span class="notranslate">room</span> コード、イベントコード、<span class="notranslate">scripts</span> 、<span class="notranslate">shaders</span> を含みます。検索するとき
+    上部のボックスに新しい検索語を入力するか、右側の矢印アイコンをクリックすると、以前に検索した語のリストが表示されます。また、最初の検索語を置き換えるための置換語を指定することもできます。
+    この場合も、右側の矢印ボタンから、以前に使用した置き換え<span class="notranslate">string</span> を使用するオプションがあります。</p>
+  <p>検索は一般的なものから、検索語入力の下にあるオプションを使って絞り込むことができます。</p>
   <ul class="colour">
-    <li>You can choose to make the search <strong>case sensitive</strong>, in which case it will only include words that exactly match the search string case, ie: searching for &quot;My_Var&quot; without this option and you will get results with &quot;my_var&quot;,
-      &quot;mY_VAR&quot;, or &quot;My_Var&quot;, but with this option checked only &quot;My_Var&quot; will be included in the search results.</li>
-    <li>You can choose to only include search results that include the <strong>whole word only</strong>, in which case any results that include the search term but aren&#39;t an exact match will be ignored, ie: a search for &quot;game&quot; without this checked
-      will show up things like the function &quot;game_end()&quot; or variables like &quot;game_state&quot;, while checking this and doing the search will only show results that are &quot;game&quot; itself.</li>
-    <li>You can choose to have the search <strong>ignore comments</strong>. When this is checked, any comments in your code that contain the search term will simply be ignored and not shown in the output results.</li>
-    <li>You can apply a <strong>filter </strong>on the search results based on the different asset types in the asset browser. By default this is set to &quot;Everything&quot;, but clicking on this will open the following menu where you can check or uncheck
-      assets to be included in the search:</li>
+    <li><strong>大文字と</strong>小文字を区別して検索することもできます。この場合、検索対象の単語は<span class="notranslate">string</span> の大文字と小文字に完全に一致するものだけが含まれます。たとえば、このオプションを指定せずに &quot;My_Var&quot; と検索すると &quot;my_var&quot; と表示された結果が得られます。
+      「mY_VAR&quot;、&quot;My_Var &quot;のいずれかですが、このオプションをオンにすると、&quot;My_Var &quot;だけが検索結果に含まれるようになります。</li>
+    <li>この場合、検索<strong>語を</strong>含むが完全一致しない検索結果は無視されます。
+      をチェックすると、関数 &quot;game_end()&quot; や変数 &quot;game_state&quot; のようなものが表示されますが、これをチェックして検索すると &quot;game&quot; そのものの結果のみが表示されます。</li>
+    <li><strong>コメントを無視した</strong>検索を行うかどうかを選択することができます。これをチェックすると、検索語を含むコード内のコメントは単に無視され、出力結果には表示されません。</li>
+    <li><span class="notranslate">asset</span> ブラウザーのさまざまな<span class="notranslate">asset</span> の種類に基づいて、検索結果に<strong>フィルタを </strong>適用することができます。デフォルトでは「すべて」に設定されていますが、これをクリックすると以下のメニューが表示され、チェックを入れたり外したりすることができます。
+      <span class="notranslate">assets</span> を検索対象にします。</li>
   </ul>
-  <p><img alt="Search Filter Options" class="center" src="../../assets/Images/IDE_Input/Search_Menu_Filter.png" />Once you have given a search (and optionally a replace) term and set up the search options, you can use the different buttons at the bottom
-    to choose how to perform the search and any actions to take. These buttons are:</p>
+  <p><img>検索語（オプションで置換語）を指定し、検索オプションを設定したら、下部にあるさまざまなボタンを使って
+    を選択し、検索方法と実行するアクションを選択します。これらのボタンは、次のとおりです。</p>
   <ul class="colour">
-    <li><strong>Find All</strong>: Find all the search terms and show them in the output window.</li>
-    <li><strong>Find Previous</strong>: Find the previous instance of the search term. This will open the asset containing the reference in the workspace (if it&#39;s not already open) and pan to it.</li>
-    <li><strong>Find Next</strong>: Find the next instance of the search term. This will open the asset containing the reference in the workspace (if it&#39;s not already open) and pan to it.</li>
-    <li><strong>Replace All</strong>: This will perform a search for the given term with the options set and also replace it in the assets with the new replace term you have specified.</li>
-    <li><strong>Replace</strong>: This will replace the currently selected term in the current editor where it&#39;s highlighted with the selected replace term.</li>
-    <li><strong>Stop Search</strong>: Stop the current search if one is in progress.</li>
+    <li><strong>すべて検索</strong>すべての検索語を検索し、出力ウィンドウに表示します。</li>
+    <li><strong>前検索</strong>：検索語の前のインスタンスを検索します。これにより、<span class="notranslate">asset</span> の参照を含む<span class="notranslate">workspace</span> が開かれ (まだ開かれていない場合)、その参照にパンすることができます。</li>
+    <li><strong>次を探す</strong>検索語の次のインスタンスを検索します。これにより、<span class="notranslate">asset</span> の参照を含む<span class="notranslate">workspace</span> が開かれ (まだ開かれていない場合)、その参照にパンすることになります。</li>
+    <li><strong>全置換</strong>：このオプションを設定すると、指定した用語を検索し、さらに、<span class="notranslate">assets</span> 、指定した新しい置換用語に置き換えます。</li>
+    <li><strong>置換</strong>します。現在のエディタで現在選択されている用語がハイライトされている箇所を、選択した置き換え用語で置き換えます。</li>
+    <li><strong>検索を停止</strong>する。検索が進行中の場合は、検索を停止します。</li>
   </ul>
-  <p>Pressing the <strong>Escape </strong>key while this window is open will clear the selected field, however if that field is already empty, then it will close the window.</p>
-  <p>All results from using the Search &amp; Replace window will be shown in the <a href="../../Introduction/The_Output_Window.htm">Search Output Window</a> at the bottom of the IDE. Each result can be <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"
-    /> double-clicked to open the asset with the term in the current workspace and pan to it, ready for editing.</p>
-  <p> </p>
-  <p> </p>
+  <p>このウィンドウが開いているときに<strong>Escape </strong>キーを押すと、選択したフィールドがクリアされますが、そのフィールドがすでに空の場合は、ウィンドウが閉じられます。</p>
+  <p>検索と置換」ウィンドウを使用したすべての結果は、<span class="notranslate">IDE</span> の下部にある<a href="../../Introduction/The_Output_Window.htm">「検索出力ウィンドウ</a>」に表示されます。それぞれの結果は、<img> ダブルクリックすると、現在の<span class="notranslate">asset</span> にその用語を含む<span class="notranslate">workspace</span> を開き、そこに移動して編集できるようになります。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Menus.htm">Menus</a></div>
-        <div style="float:right">Next: <a href="The_Build_Menu.htm">The Build Menu</a></div>
+        <div style="float:left">戻る<a href="../Menus.htm">メニュー</a></div>
+        <div style="float:right">次へ<a href="The_Build_Menu.htm">ビルドメニュー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Edit Menu

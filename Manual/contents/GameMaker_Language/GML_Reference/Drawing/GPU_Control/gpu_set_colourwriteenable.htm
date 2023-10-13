@@ -6,7 +6,7 @@
   <title>gpu_set_colorwriteenable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_colourwriteenable" />
   <meta name="rh-index-keywords" content="gpu_set_colorwriteenable,gpu_set_colourwriteenable" />
@@ -15,66 +15,65 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_colourwriteenable</h1>
-  <p>With this function you can switch on or off the colour channels and the alpha channel for all further drawing. For example, you can use this function to create alpha-channel only surfaces (switch off the RGB writing before using the surface), or to create special effects while drawing to the screen.</p>
-  <p>The default value for each of the components is <span class="inline">true</span>, and can be supplied as either four unique arguments or as a 4 element 1D array with the following elements in it which will be either <span class="inline">true</span> (enabled) or <span class="inline">false</span> (disabled):</p>
+  <p>この機能で、<span class="notranslate">switch</span> 、以降のすべての描画のためのカラーチャネルとアルファチャネルをオンまたはオフにすることができます。例えば、この関数を使ってアルファチャンネルのみのサーフェイスを作成したり（<span class="notranslate">switch</span> サーフェイスを使用する前に RGB の書き込みをオフにする）、スクリーンに描画する際に特殊効果を作成したりすることが可能です。各構成要素のデフォルト値は <span class="inline">true</span> で、4 つのユニークな引数として、または <span class="inline">true</span> (有効) または <span class="inline">false</span> (無効) のいずれかになる次の要素を含む 4 つの要素の 1 次元配列として提供することができます。</p>
   <ul class="colour">
-    <li>[0] = Red channel enabled/disabled</li>
-    <li>[1] = Green channel enabled/disabled</li>
-    <li>[2] = Blue channel enabled/disabled</li>
-    <li>[3] = Alpha channel enabled/disabled</li>
+    <li>[0] = 赤チャンネル有効/無効</li>
+    <li>[1] = グリーンチャンネル有効/無効</li>
+    <li>[2] = 青チャンネルの有効化/無効化</li>
+    <li>[3] = アルファチャンネル有効/無効</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code">gpu_set_colorwriteenable(red_or_array, [green, blue, alpha]);</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">gpu_set_colorwriteenable(red, green, blue, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>red_or_array</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Enable/disable the red channel, or an array containing all four values</td>
+        <td><span class="notranslate">red</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Enable/disable the red channel</span></td>
       </tr>
       <tr>
-        <td>green</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"> </span> Enable/disable the green channel</td>
+        <td><span class="notranslate">green</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Enable/disable the green channel</span></td>
       </tr>
       <tr>
-        <td>blue</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"> </span> Enable/disable the blue channel</td>
+        <td><span class="notranslate">blue</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Enable/disable the blue channel</span></td>
       </tr>
       <tr>
-        <td>alpha</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"> </span> Enable/disable the alpha channel</td>
+        <td><span class="notranslate">alpha</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Enable/disable the alpha channel</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var cw = gpu_get_colorwriteenable();<br />
     cw[3] = false;<br />
     gpu_set_colorwriteenable(cw);</p>
-  <p>The above code gets the current colour write values and then sets the alpha component to <span class="inline">false</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、現在の色の書き込み値を取得し、アルファ成分を <span class="inline">false</span> に設定しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_alphatestenable.htm">gpu_set_alphatestenable</a></div>
+        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ <a href="gpu_set_alphatestenable.htm"><span class="notranslate">gpu_set_alphatestenable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_colourwriteenable

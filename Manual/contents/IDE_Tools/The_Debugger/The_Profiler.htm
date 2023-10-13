@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Profiler</title>
+  <title>プロファイラー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers the profiler in the debugger" />
   <meta name="rh-index-keywords" content="Debugger - Profiling" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Profiler</h1>
-  <p>The Debugger permits you to step through your code and find any issues with the code base, but sometimes you need to check for subtler details in order to properly optimise your games. The <strong>Profile </strong>option helps to do just that by giving you a performance overview, showing the time it takes to call functions, scripts, and even how long it took a specific event to complete.</p>
-  <p><img alt="Debug Profile Window" class="center" src="../../assets/Images/IDE Tools/Debug_Profile.png" />Apart from the main window showing all the different events, scripts and functions being called, you also have the following options for using the Profiler:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Enable / Disable</a></p>
+  <h1>プロファイラー</h1>
+  <p><span class="notranslate">Debugger</span> を使えば、コードを順を追って見ていき、コードベースの問題を発見することができます。しかし、ゲームを適切に最適化するためには、より細かいところまでチェックする必要がある場合もあります。<strong>プロファイル </strong>オプションを使用すると、パフォーマンスの概要が表示され、関数の呼び出しにかかる時間、<span class="notranslate">scripts</span> 、さらに特定のイベントが完了するまでにかかった時間が表示されるので、まさにこれを行うことができます。</p>
+  <p><img>メインウィンドウに表示されるさまざまなイベント、<span class="notranslate">scripts</span> 、呼び出される関数とは別に、Profilerを使用するための次のオプションがあります。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">イネーブル／ディスエーブル</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This is the button to enable or disable the Profiler. When enabled, the profiler will start and you will start to see events, scripts and functions be listed in the main window along with different data values for each of them. How this data is displayed
-      will depend on the <strong>Time Display</strong> and the <strong>View Mode</strong> (both explained in more depth below).</p>
+    <p class="dropspot">プロファイラの有効・無効を切り替えるボタンです。有効にするとプロファイラが起動し、イベント、<span class="notranslate">scripts</span> 、関数がそれぞれ異なるデータ値とともにメインウィンドウに表示されるようになります。このデータがどのように表示されるか
+      は、<strong>時間表示と</strong> <strong>表示モード</strong>によって異なります（どちらも以下で詳しく説明します）。</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Time Display</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">時刻表示</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This checkbox permits you to switch between the <strong>average </strong>time and the <strong>absolute </strong>time for the profiler. When it is not checked, the values shown in the main window will be the <em>total </em>number of calls made to the
-      function, script or event and the <em>total </em>time taken (times are in <strong>microseconds</strong>) over the course of the profile. However if you enable this then these columns show the <em>average </em>time taken per step for each function,
-      script or event, and the <em>average </em>number of times that it was called.</p>
+    <p class="dropspot">このチェックボックスで、プロファイラの<strong>平均 </strong>時間と<strong>絶対 </strong>時間の間を<span class="notranslate">switch</span> 。このチェックボックスをオフにすると、メイン・ウィンドウに表示される値は、そのプロファイラに対して行われた呼び出しの<em>合計 </em>回数になります。
+      関数、<span class="notranslate">script</span> またはイベント、およびプロファイルの過程でかかった<em>合計 </em>時間（時間の単位は<strong>マイクロ</strong>秒）です。ただし、この機能を有効にすると、これらの列には各関数の1ステップにかかった<em>平均 </em>時間が表示されます。
+      <span class="notranslate">script</span> またはイベントが呼び出された<em>平均 </em>回数。</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">View Mode</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">ビューモード</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">This menu lets you choose the view mode, which can be either <strong>Top Down</strong> or <strong>Bottom Up</strong>.</p>
-    <p class="dropspot">Selecting the <strong>Top Down</strong> view mode will show the profile from the top down (more or less the same as the callstack hierarchy) so it will show the event, then the script and then any functions used. Note that you can double click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the entries to have it open in the <strong>Source </strong>debug window if you
-      have one. If you see a <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" /> icon beside a name then there are further script or function calls within that
-      section, and clicking the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" /> will expand the tree to show them.</p>
-    <p class="dropspot">Selecting the <strong>Bottom Up</strong> view mode will show things from the bottom up so you can see all the functions and script calls individually. When using this view mode, clicking on the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" width="12" height="12" /> will expand the function or script to show what actually called it.</p>
+    <p class="dropspot"><strong>トップダウン</strong>または<strong>ボトムアップの</strong>表示モードを選択するメニューです。</p>
+    <p class="dropspot"><strong>トップダウン</strong>表示モードを選択すると、プロファイルを上から下へ表示します（コールスタック階層とほぼ同じ）。したがって、イベント、<span class="notranslate">script</span> 、そして使用される関数が表示されます。<img> をダブルクリックして、<strong>ソースデバッグウィンドウで </strong>開くことができます。
+      があります。名前の横に<img> のアイコンがある場合は、その中にさらに<span class="notranslate">script</span> または関数の呼び出しがあります。
+     <img> をクリックすると、ツリーが展開され、それらが表示されます。</p>
+    <p class="dropspot"><strong>ボトムアップ</strong>表示モードを選択すると、下から上に表示されるので、すべての関数と<span class="notranslate">script</span> の呼び出しを個別に確認することができます。この表示モードでは、<img> をクリックすると、その関数または<span class="notranslate">script</span> が展開され、実際に呼び出されたものが表示されます。</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">View Target</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">表示対象</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The <strong>View Target</strong> permits you to choose between viewing the project GML (event and code data), the background engine processes or both. If you choose &quot;GML&quot;, then you will get the events, functions and scripts being called
-      each step while the &quot;Engine&quot; view will only show the engine calls required by the project, enabling you to see any bottlenecks in the way that your project is handling things. If you select &quot;Both&quot;, then both sets of data will
-      be displayed, but note that when combined with the &quot;Bottom Up&quot; view, the different script and function calls will be nested within the engine calls and you will need to click the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" width="12" height="12" /> to expand these out to see them.</p>
+    <p class="dropspot"><strong>View Targetでは</strong>、プロジェクト<span class="notranslate">GML</span> （イベントとコードデータ）、バックグラウンドエンジンプロセス、またはその両方を表示するかどうかを選択することができます。GML &quot;を選択した場合、呼び出されるイベント、関数、<span class="notranslate">scripts</span> が表示されます。
+      一方、「Engine」ビューでは、プロジェクトが必要とするエンジンコールのみが表示され、プロジェクトの処理方法におけるボトルネックを確認することができます。両方 &quot;を選択すると、両方のデータセットが表示されます。
+      しかし、&quot;Bottom Up&quot; ビューと組み合わせた場合、異なる<span class="notranslate">script</span> と関数呼び出しがエンジン呼び出しの中にネストされ、それらを見るには<img> をクリックして展開する必要があることに注意してください。</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><br />
-    The profile data is shown in four columns, and clicking on any of them will sort the data according to the column criteria.</p>
-  <p><img alt="Profile Display" class="center" src="../../assets/Images/IDE Tools/Profiler_Display.gif" /></p>
+  <p><br>
+    プロフィールデータは4つのカラムで表示され、どれかをクリックするとカラムの条件に従ってデータを並べ替えることができます。</p>
+  <p><img alt="Debug Profile Window" class="center" src="../../assets/Images/IDE Tools/Debug_Profile.png" /></p>
   <ul class="colour">
-    <li><strong>Name</strong>: This is the name of the event, script or function being called, and may have a <img alt="Expand Debug Icon" height="12" src="../../assets/Images/Icons/Debug_Expand.png" width="12" /> beside it to denote further calls to it or from it (depending on the <strong>View Mode</strong> you have selected). You can double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the names to have it open the code block or script within the Source window. Clicking the top of this column will sort the names in alphabetical order.</li>
-    <li><strong>Time</strong>: This will show either the <em>total </em>time that a function (or script or event) has taken while profiling, or the <em>average </em>time that it has taken each step to be called (depending on the <strong>Time Display</strong> option selected) and it is displayed in microseconds.</li>
-    <li><strong>Calls</strong>: Here you can see either the <em>total </em>number of calls to the given event, function or script, or the <em>average </em>number of calls to it in a single step (again, depending on the <strong>Time Display</strong> option selected).</li>
-    <li><strong>Step%</strong>: The value shown here is the overall percentage of a single step that the call has taken.</li>
+    <li><strong>名前</strong>。呼び出されるイベント、<span class="notranslate">script</span> 、または関数の名前です。その横に<img> 、そのイベントまたは関数からのさらなる呼び出しを示す場合があります（選択した<strong>ビューモードに</strong>依存します）。これらの名前をダブルクリック（<img> ）すると、そのコードブロックまたは<span class="notranslate">script</span> がソースウィンドウに表示されます。この列の一番上をクリックすると、名前がアルファベット順に並びます。</li>
+    <li><strong>Time</strong>: プロファイリング中に関数（または<span class="notranslate">script</span> やイベント）がかかった<em>合計 </em>時間か、各ステップが呼び出されるまでにかかった<em>平均 </em>時間（選択した<strong>Time Display</strong>オプションによる）が表示され、マイクロ秒単位で表示されます。</li>
+    <li><strong>コール</strong>数。ここでは、指定されたイベント、関数、<span class="notranslate">script</span> に対する呼び出しの<em>合計 </em>数、または 1 つのステップにおける呼び出しの<em>平均 </em>数のいずれかを確認できます（ここでも、選択した「<strong>時間表示」</strong>オプションに依存します）。</li>
+    <li><strong>ステップ％</strong>。ここに表示される値は、通話が行った1つのステップの全体的なパーセンテージです。</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Debugger.htm">The Debugger</a></div>
-        <div style="float:right">Next: <a href="Watches.htm">Watches</a></div>
+        <div style="float:left">戻る<a href="../The_Debugger.htm">デバッガ</a></div>
+        <div style="float:right">次へ<a href="Watches.htm">時計</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Profiler

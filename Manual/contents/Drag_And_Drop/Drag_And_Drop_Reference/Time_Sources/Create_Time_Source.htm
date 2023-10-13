@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Create Time Source</title>
+  <title>タイムソースの作成</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
   <meta name="template" content="../../../assets/masterpages/Manual_Action_Page.htt" />
@@ -14,83 +14,83 @@
   <meta name="search-keywords" content="Create Time Source" />
 </head>
 <body>
-  <h1><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Time_Sources/Action_Icons/Create_Time_Source.png" /> Create Time Source</h1>
-  <p>This action creates a new <span data-keyref="Type_Resource_TimeSource">Time Source</span>, and stores it in the <span class="inline2">Target</span> variable. Read <a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Sources.htm">Time Sources</a> for an overview.</p>
-  <p>This is based on the <a href="../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm"><span class="inline">time_source_create()</span></a> function. Read its page for detailed information on the arguments.</p>
-  <p>You need to use <a data-xref="{title}" href="Start_Time_Source.htm">Start Time Source</a> to activate a <span data-keyref="Type_Resource_TimeSource">Time Source</span> after it&#39;s created.</p>
-  <p>You must destroy a <span data-keyref="Type_Resource_TimeSource">Time Source</span> using <a data-xref="{title}" href="Destroy_Time_Source.htm">Destroy Time Source</a> when you no longer need it.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Time_Sources/Action_Syntax/Create_Time_Source.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> タイムソースの作成</h1>
+  <p>このアクションは、新しい<span data-keyref="Type_Resource_TimeSource">Time Sourceを</span>作成し、<span class="inline2">Target</span>変数に格納します。概要については、「<a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Sources.htm">Time Sources</a>」を参照してください。</p>
+  <p>に基づいています。 <a href="../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm"><span class="inline">time_source_create()</span></a>関数に基づいています。引数の詳細については、そのページをお読みください。</p>
+  <p><span data-keyref="Type_Resource_TimeSource">タイムソ</span>ースの作成後に<span data-keyref="Type_Resource_TimeSource">タイムソ</span>ースを有効にするには、<a data-xref="{title}" href="Start_Time_Source.htm">Start Time Sourceを</a>使用する必要があります。</p>
+  <p><span data-keyref="Type_Resource_TimeSource">タイムソースが</span>不要になった場合は、「タイム<a data-xref="{title}" href="Destroy_Time_Source.htm">ソースの破棄</a>」を使って<span data-keyref="Type_Resource_TimeSource">タイムソ</span>ースを破棄する必要があります。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Time_Sources/Action_Icons/Create_Time_Source.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The variable where the new <span data-keyref="Type_Resource_TimeSource">Time Source</span> will be stored</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>新しい<span data-keyref="Type_Resource_TimeSource">タイムソースが</span>格納される変数</td>
       </tr>
       <tr>
-        <td>Parent</td>
-        <td>The parent <span data-keyref="Type_Resource_TimeSource">Time Source</span>: either a <a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Built_In_Time_Sources.htm">built-in Time Source</a> or a custom one</td>
+        <td><span class="notranslate">Parent</span></td>
+        <td>親となる<span data-keyref="Type_Resource_TimeSource">タイムソース</span>：<a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Built_In_Time_Sources.htm">ビルトインのタイムソース</a>またはカスタムの<a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Built_In_Time_Sources.htm">タイム</a>ソース</td>
       </tr>
       <tr>
-        <td>Period</td>
-        <td>The period length of the <span data-keyref="Type_Resource_TimeSource">Time Source</span>, how long it takes to expire</td>
+        <td><span class="notranslate">Period</span></td>
+        <td><span data-keyref="Type_Resource_TimeSource">タイムソースの</span>期間長、有効期限までの時間</td>
       </tr>
       <tr>
-        <td>Units</td>
-        <td>The <a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm">units</a> that the period is expressed in (seconds or frames)</td>
+        <td><span class="notranslate">Units</span></td>
+        <td>周期を表す<a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm">単位</a>（秒またはフレーム）</td>
       </tr>
       <tr>
-        <td>Callback</td>
-        <td>The <a href="../../../GameMaker_Language/GML_Overview/Method_Variables.htm">method</a> or <a href="../../../GameMaker_Language/GML_Overview/Script_Functions.htm">script function</a> to call when the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expires</td>
+        <td><span class="notranslate">Callback</span></td>
+        <td>を指定します。 <a href="../../../GameMaker_Language/GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a>または<span data-keyref="Type_Resource_TimeSource">タイムソースの</span>有効期限が切れたときに呼び出す<a href="../../../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト関数</a></td>
       </tr>
       <tr>
-        <td>Arguments</td>
-        <td><span class="optional">OPTIONAL</span> An <a href="../../../GameMaker_Language/GML_Overview/Arrays.htm">array</a> containing the arguments to pass into the callback function</td>
+        <td><span class="notranslate">Arguments</span></td>
+        <td><span class="optional">OPTIONAL</span>コールバック関数に渡す引数を含む<a href="../../../GameMaker_Language/GML_Overview/Arrays.htm">配列</a>。</td>
       </tr>
       <tr>
-        <td>Repetitions</td>
-        <td><span class="optional">OPTIONAL</span> How many times the <span data-keyref="Type_Resource_TimeSource">Time Source</span> should run in total, or -1 for indefinite repetition</td>
+        <td><span class="notranslate">Repetitions</span></td>
+        <td><span class="optional">OPTIONAL</span> <span data-keyref="Type_Resource_TimeSource">タイムソースを</span>合計で何回実行するか。</td>
       </tr>
       <tr>
-        <td>Expiry Type</td>
-        <td><span class="optional">OPTIONAL</span> The <a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Expiry_Types.htm">expiry type</a> for the <span data-keyref="Type_Resource_TimeSource">Time Source</span></td>
+        <td><span class="notranslate">Expiry Type</span></td>
+        <td><span class="optional">OPTIONAL</span> <span data-keyref="Type_Resource_TimeSource">タイムソ</span>ースの<a href="../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Expiry_Types.htm">有効期限タイプ</a></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Time_Sources/Examples/Eg_Create_TS.png" />This code block does the following:</p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>このコードブロックは、次のような処理を行います。</p>
   <ul class="colour">
-    <li>It creates a new function, with the &quot;Temp&quot; option enabled. This creates a local method variable.
+    <li>Temp」オプションを有効にして、新しい関数を作成します。これは、ローカル・メソッド変数を作成します。
       <ul>
-        <li> This method takes one argument, <span class="inline2">msg</span>, which it prints to the Output Log.</li>
+        <li>このメソッドは引数を1つ取り、<span class="inline2">msgを</span>出力ログに表示します。</li>
       </ul>
     </li>
-    <li>It then creates a new <span data-keyref="Type_Resource_TimeSource">Time Source</span> with a 1-second period length.
+    <li>そして、1秒の周期を持つ新しい<span data-keyref="Type_Resource_TimeSource">Time Sourceを</span>作成する。
       <ul>
-        <li>It specifies the <span class="inline2">callback_method</span> variable as the &quot;Callback&quot;, and an array with one argument for the function.</li>
-        <li>This <span data-keyref="Type_Resource_TimeSource">Time Source</span> is set to repeat indefinitely, as -1 is specified in &quot;Repetitions&quot;.</li>
+        <li>コールバックには変数<span class="inline2">callback_methodを</span>、関数には引数1個の配列を指定している。</li>
+        <li>この<span data-keyref="Type_Resource_TimeSource">Time Sourceは</span>、Repetitionsに-1が指定されているように、無限に繰り返すように設定されている。</li>
       </ul>
     </li>
-    <li>The <span data-keyref="Type_Resource_TimeSource">Time Source</span> is then started.</li>
+    <li>その後、<span data-keyref="Type_Resource_TimeSource">タイムソースを</span>起動します。</li>
   </ul>
-  <p>This <span data-keyref="Type_Resource_TimeSource">Time Source</span> will execute its callback every second, printing <span class="inline2">&quot;A second has passed!&quot;</span> to the Output Log.</p>
-  <p> </p>
-  <p> </p>
+  <p>この<span data-keyref="Type_Resource_TimeSource">タイムソースは</span>、1秒ごとにコールバックを実行し、<span class="inline2">「A second has passed！」と</span>出力ログに出力する。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources_(GML_Visual).htm">Time Source Actions</a></div>
-        <div>Next: <a data-xref="{title}" href="Destroy_Time_Source.htm">Destroy Time Source</a></div>
+        <div>戻る<a data-xref="{title}" href="Time_Sources_(GML_Visual).htm">タイムソースアクション</a></div>
+        <div>次へ<a data-xref="{title}" href="Destroy_Time_Source.htm">タイムソースを破壊する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Time Source

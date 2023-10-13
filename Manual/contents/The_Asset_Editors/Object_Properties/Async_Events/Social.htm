@@ -3,51 +3,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Social</title>
+  <title>社会</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Social async event." />
   <meta name="rh-index-keywords" content="Objects - Async Social Event" />
-  <meta name="search-keywords" content="Social,ev_async_social" />
+  <meta name="search-keywords" content="Social,ev_social" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Social</span></h1>
-  <p><img alt="Social Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Social.png" />This event can only be triggered by the <a class="glossterm" data-glossterm="callback" href="#">callback</a><span class="glossextra">s</span> from various specific <strong>Social Functions</strong> and <strong>Xbox Live Functions</strong> and will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>, containing different key/value pairs depending on the callback from the function that has triggered the event.</p>
-  <p>This event may also be triggered by <a href="../../../GameMaker_Language/GML_Reference/Drawing/Videos/Videos.htm">Video Playback</a>.</p>
-  <p>The DS map will contain a number of keys, the most important of which is the <span class="inline2">&quot;id&quot;</span> key. This will return a constant which can then be checked in code to determine which of the many callbacks the event has received. Once you have parsed this key and compared the value returned with the available constants, you can then continue to extract the rest of the information from the map.</p>
-  <p>The function pages on <a>Achievements and Leaderboards</a> in the Reference section detail the functions and callbacks as well as the constants used to trigger this event, but there are also certain circumstances in which it will be triggered without a function call from the game that is running:</p>
+  <h1>社会</h1>
+  <p><img>このイベントは、特定の<strong>ソーシャルファンクションと</strong> <strong>UWP Xbox Liveファンクションからの</strong> <a class="glossterm" data-glossterm="コールバック" href="#">コールバックによってのみ</a>発生させることができ、<a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Mapを</a>変数 <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>は、イベントをトリガーした関数のコールバックに応じて異なるキー/値のペアを含んでいます。</p>
+  <p>このイベントは、<a href="../../../GameMaker_Language/GML_Reference/Drawing/Videos/Videos.htm">ビデオ再生によっても</a>発生することがあります。</p>
+  <p>DS マップにはいくつかのキーが含まれるが、最も重要なのは &quot;<span class="inline">id</span>&quot; キーである。これは定数を返すもので、これをコードでチェックすることで、 イベントが受け取ったコールバックのうちどれを受け取ったかを判断することができる。このキーをパースし、返された値を利用可能な定数と比較した後、マップから残りの情報を抽出することができます。</p>
+  <p>参考文献の<a>Achievements and Leaderboardsの</a>関数ページには、このイベントのトリガーに使われる関数やコールバック、定数が詳しく書かれていますが、実行中のゲームからの関数呼び出しがなくてもトリガーされる状況も存在します。</p>
   <ul class="dropspotlist">
-    <li class="dropspot">when your game is launched from the OS dashboard</li>
-    <li class="dropspot">when you complete a challenge</li>
-    <li class="dropspot">when another player completes a challenge</li>
-    <li class="dropspot">when the game is started from the OS dashboard by selecting a challenge</li>
+    <li class="dropspot">OSのダッシュボードからゲームを起動したとき</li>
+    <li class="dropspot">チャレンジをクリアすると</li>
+    <li class="dropspot">をクリアすると</li>
+    <li class="dropspot">OSのダッシュボードからチャレンジを選択してゲームを開始した場合</li>
   </ul>
-  <p>Any of the above callbacks will trigger the Social Event and an <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> map will be generated with the following details (note that there is a different &quot;<span class="inline">id</span>&quot; key value to define each of the different reasons that the event was called, but all other contents of the map are the same):</p>
+  <p>上記のコールバックのいずれかがソーシャルイベントをトリガーし、以下の詳細を持つ <span class="inline">async_load</span> マップが生成されます（イベントが呼び出された異なる理由のそれぞれを定義するために、異なる &quot;<span class="inline">id</span>&quot; キー値がありますが、マップの他のすべてのコンテンツは同じであることに注意してください）。</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">id</span>&quot; - The value of this key will depend on the type of callback triggering the event (mostly used by extensions).</li>
-    <li class="dropspot">&quot;<span class="inline">playerid</span>&quot; - The player id for the challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">issuerid</span>&quot; - The id of the person that issued the challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">state</span>&quot; - The state of the challenge, which will have a value of 0 - 3 (as a string) for invalid, pending, completed or declined.</li>
-    <li class="dropspot">&quot;<span class="inline">message</span>&quot; - The text message for challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">issueddate</span>&quot; - The issue date for challenge</li>
-    <li class="dropspot">&quot;<span class="inline">completeddate</span>&quot; - The completion date for challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">type</span>&quot; - The type of challenge given.</li>
-    <li class="dropspot">&quot;<span class="inline">identifier</span>&quot; - The identifying string for the challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">score</span>&quot; - The score tied in with the challenge.</li>
+    <li class="dropspot">&quot;<span class="inline">id</span>&quot; - このキーの値は、イベントをトリガーするコールバックのタイプに依存します(主に<span class="notranslate">extensions</span> で使用されます)。</li>
+    <li class="dropspot">&quot;<span class="inline">playerid</span>&quot; - 挑戦のためのプレイヤーIDです。</li>
+    <li class="dropspot">&quot;<span class="inline">issuerid</span>&quot; - チャレンジを発行した人のID。</li>
+    <li class="dropspot">&quot;<span class="inline">state</span>&quot; - 課題の状態。無効、保留、完了、辞退を表す0～3（<span class="notranslate">string</span> ）の値が設定される。</li>
+    <li class="dropspot">&quot;<span class="inline">message</span>&quot; - 挑戦のためのテキストメッセージ。</li>
+    <li class="dropspot">&quot;<span class="inline">issueddate</span>&quot; - チャレンジの発行日</li>
+    <li class="dropspot">&quot;<span class="inline">completeddate</span>&quot; - チャレンジの完了日。</li>
+    <li class="dropspot">&quot;<span class="inline">type</span>&quot; - 与えられた課題の種類。</li>
+    <li class="dropspot">&quot;<span class="inline">identifier</span>&quot; - 課題の識別用<span class="notranslate">string</span> 。</li>
+    <li class="dropspot">&quot;<span class="inline">score</span>&quot; - 課題と結びついたスコア。</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p>UWPターゲットやXBox Liveの機能と連携した本イベントの情報は、以下のページをご覧ください。</p>
+  <ul class="colour">
+    <li><a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/Match_Making.htm">UWPとXBox Live - マッチメイキング</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Steam.htm">Steam</a></div>
+        <div style="float:left">戻る<a href="../Async_Events.htm">非同期イベント</a></div>
+        <div style="float:right">次へ<a href="Steam.htm">スチーム</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Social Event

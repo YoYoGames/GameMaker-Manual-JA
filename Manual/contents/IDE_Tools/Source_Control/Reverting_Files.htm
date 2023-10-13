@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Reverting Files</title>
+  <title>ファイルを元に戻す</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers Source Control reverting files" />
   <meta name="rh-index-keywords" content="Source Control - Reverting Files" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Reverting Files</h1>
-  <p>In the previous sections you&#39;ve seen how to <a href="Repository_Options.htm">create a repository</a> and <a href="Standard_Workflow.htm">commit things to it</a>, but what happens if you make a mistake and want to &quot;roll back&quot; to a previous commit? Let&#39;s make a deliberate error and see how we can deal with it then...</p>
-  <p>First of all create a new resource - in this example we&#39;ll make a Script resource - and initially you&#39;ll see no status icon since as far as source control is concerned it doesn&#39;t exist exist yet. In the script resource add a simple line of code, like:</p>
+  <h1>ファイルを元に戻す</h1>
+  <p>これまでのセクションで、<a href="Repository_Options.htm">リポジトリを作成</a>し、<a href="Standard_Workflow.htm">そこにコミット</a>する方法を見てきました。しかし、間違いを犯し、以前のコミットに「ロールバック」したい場合はどうしたらいいのでしょうか？意図的なミスを犯し、それにどう対処するかを見ていきましょう...</p>
+  <p>まず、新しいリソースを作成します。この例では、<span class="notranslate">Script</span> リソースを作成します。最初は、<span class="notranslate">source control</span> に関する限り、まだ存在しないので、ステータスアイコンが表示されないでしょう。<span class="notranslate">script</span> リソースの中に、次のような簡単なコードを追加してください。</p>
   <p class="code">show_debug_message(&quot;Hello World&quot;);</p>
-  <p>If you now close the code editor, the script will save and the modified file icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /> will appear beside it in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a>. Now, open up the <strong>Commit </strong>window and you&#39;ll see there are four staged changes, as new resources automatically get added:</p>
-  <p><img alt="Source Control Staged Changes" class="center" src="../../assets/Images/IDE Tools/SCM_StagedChanges.png" />The changes staged will be:</p>
+  <p>ここでコードエディターを閉じると、<span class="notranslate">script</span> が保存され、<a href="../../Introduction/The_Asset_Browser.htm">アセットブラウザーの</a>横に変更されたファイルのアイコン<img> が表示されます。さて、<strong>コミット </strong>ウィンドウを開くと、新しいリソースが自動的に追加され、4段階の変更があることがわかります。</p>
+  <p><img>ステージングされた変化は、次のとおりです。</p>
   <ul class="colour">
-    <li>the <span class="inline">.yyp</span> project file</li>
-    <li>a view file</li>
-    <li>the GML script itself</li>
-    <li>the <span class="inline">.yy</span> file referencing it</li>
+    <li> <span class="inline">.yyp</span> プロジェクトファイル</li>
+    <li>ビューファイル</li>
+    <li>The<span class="notranslate">GML</span> <span class="notranslate">script</span> itself</li>
+    <li>それを参照する <span class="inline">.yy</span> ファイル</li>
   </ul>
-  <p>You should type in a commit message and then click the <strong>Commit </strong>button, just as we explained previously. Now, we go back to our script and change the line of code to (for example):</p>
+  <p>前回説明したように、コミットメッセージを入力し、<strong>コミット </strong>ボタンをクリックする必要があります。さて、<span class="notranslate">script</span> に戻り、コードの行を (例) に変更します。</p>
   <p class="code">show_debug_message(&quot;Hello World, how are you?&quot;);</p>
-  <p>When we close the code editor, again a red icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /> will be shown beside the script, but we&#39;ve realised that we made a mistake with our code and we want to roll back to a previous version to fix it (obviously, you could just open the script and fix it easily, since the example is so simple, but in large projects that&#39;s not normally a feasible approach). What we need to do is <strong>revert </strong>our changes.</p>
-  <p>To revert a change we first need to open up the commit window again, so we go to <strong>Source Control</strong> &gt; <strong>Commit Changes</strong> once more. Our changed file will again be staged ready for committing, but this isn&#39;t what we want so we click the button <strong>Unstage All</strong> to take it out of the staging area.</p>
-  <p>If we now right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> on the file we changed we&#39;ll get a context menu with an option to <strong>Revert Path</strong>:</p>
-  <p><img alt="Source Control Revert Path" class="center" src="../../assets/Images/IDE Tools/SCM_RevertPath.png" />When you select this option, you will revert the files back to the previous state that they were in.</p>
-  <p class="note"><strong>IMPORTANT!</strong> When you revert you will get a message asking you to reload or save the current project due to the file checker detecting changes on disk:<br />
-    <img alt="Source Control Warning" class="center" src="../../assets/Images/IDE Tools/SCM_Warning.png" />You must hit Reload and not save, as saving will save what is memory rather than reloading the reverted files.
+  <p>コードエディタを閉じると、再び赤いアイコン<img> が<span class="notranslate">script</span> の横に表示されますが、コードに間違いがあることに気づいたので、以前のバージョンにロールバックして修正したいと思います（この例はとてもシンプルなので、<span class="notranslate">script</span> を開いて簡単に修正することもできますが、大きなプロジェクトでは通常実現不可能な方法です）。そのために必要なことは、変更点を<strong>元に戻す </strong>ことです。</p>
+  <p>変更を戻すには、まずコミットウィンドウをもう一度開く必要があるので、<strong>ソースコントロール</strong>&gt;<strong>変更のコミット</strong>をもう一度開きます。変更したファイルが再びステージングされ、コミットできる状態になりますが、これは私たちが望むものではありませんので、ボタン<strong>Unstage All</strong>をクリックしてステージングエリアから削除します。</p>
+  <p>ここで、右クリック <strong><img></strong>をクリックすると、コンテキストメニューが表示され、「<strong>パスを元に戻す</strong>」オプションが表示されます。</p>
+  <p><img>このオプションを選択すると、ファイルは以前の状態に戻されます。</p>
+  <p class="note"><strong>重要!フ</strong>ァイルチェッカーがディスク上の変更を検出したため、復帰の際に現在のプロジェクトを再読み込みするか保存するかを尋ねるメッセージが表示されます。<br>
+    <img>保存は、戻されたファイルを再読み込みするのではなく、メモリにあるものを保存するので、保存ではなく、再読み込みを押す必要があります。
   </p>
-  <p>That&#39;s all great for when you edit something and want to change back without having already performed a commit, but what about when you have committed one or more changes and want to roll back to a <em>previous </em>commit? Well, let&#39;s edit our script again to say:</p>
+  <p>しかし、1つ以上の変更をコミットした後で、<em>以前の </em>コミットにロールバックしたい場合はどうでしょうか？では、もう一度<span class="notranslate">script</span> を編集して次のようにしましょう。</p>
   <p class="code">show_debug_message(&quot;This is a bad idea&quot;);</p>
-  <p>Now we commit it as before to get it under source control. So, this was a bad idea and we want to roll back, which means to start with we need to open the <strong>Source Control</strong> &gt; <strong>View History</strong> window. Here we will see a list of all previous commits now in this window, starting with the initial commit, the commit for the script, and then the commit for the script that we have edited as a &quot;bad idea&quot;:</p>
-  <p><img alt="Source Control Bad Idea History" class="center" src="../../assets/Images/IDE Tools/SCM_BadIdea.png" />We now have two choices. We can revert an entire revision - which will revert all files that were changed to those of the chosen commit - or we can choose to revert a path - which will simply revert a single file. Let&#39;s do the first option to start with:</p>
+  <p>ここで、前回と同じようにコミットして、<span class="notranslate">source control</span> の下に配置します。そこで、これは悪い考えだったので、ロールバックしたいと思います。つまり、まず最初に<strong>ソースコントロール</strong>&gt;<strong>履歴の表示</strong>ウィンドウを開く必要があります。このウィンドウには、最初のコミットから始まり、<span class="notranslate">script</span> のコミット、そして「悪い考え」として編集した<span class="notranslate">script</span> のコミットまで、過去のすべてのコミットが表示されます。</p>
+  <p><img>これで2つの選択肢ができました。リビジョン全体をリバートする - 変更されたすべてのファイルを選択したコミットのものにリバートする - あるいは<span class="notranslate">path</span> をリバートする - 単純に1つのファイルをリバートする。まずは最初の選択肢を実行してみましょう。</p>
   <ul class="colour">
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> our second commit in the <strong>Commit History</strong> pane (the &quot;Hello World&quot; commit).</li>
-    <li>Select <strong>Revert To This Revision</strong> and then choose <strong>ReLoad</strong> on the warning message.</li>
+    <li>右クリック <strong><img></strong>のコミット<strong>履歴</strong>ペインにある 2 番目のコミット (「Hello World」コミット) です。</li>
+    <li><strong>このリビジョンに</strong>戻す]を選択し、警告メッセージの[<strong>再読み込み</strong>]を選択します。</li>
   </ul>
-  <p>You should see that the script now has a red status icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" />, and if we open it up, we&#39;ll have the following:</p>
-  <p><img alt="Source Control Revert To Revision" class="center" src="../../assets/Images/IDE Tools/SCM_RevertToRevision.png" />We can then do a commit on the project and we&#39;ll be back to where we were once again. However we can also undo that action for the file and get our &quot;bad idea&quot; commit back by doing the following:</p>
+  <p><span class="notranslate">script</span> に赤いステータスアイコン<img> が表示されるようになったので、それを開くと次のようになります。</p>
+  <p><img>その後、そのプロジェクトにコミットすれば、また元の状態に戻ります。しかし、次のようにすれば、この操作を取り消し、「悪い考え」のコミットを取り戻すこともできます。</p>
   <ul class="colour">
-    <li>Open the <strong>Commit Changes</strong> window.</li>
-    <li>Unstage the script with the &quot;Hello World&quot; code in it.</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> and <strong>Revert Path</strong>.</li>
+    <li><strong>変更のコミット</strong>] ウィンドウを開きます。</li>
+    <li>Hello World」のコードが入った<span class="notranslate">script</span> をアンステージします。</li>
+    <li>右クリック <strong><img></strong>をクリックし、<strong>パスを元に</strong>戻します。</li>
   </ul>
-  <p>Now we are back to having the erroneous file in the project again! Well, we can take this opportunity to revert only that file path instead of reverting everything to a previous revision. For that we need to do the following:</p>
+  <p>これでまた、プロジェクト内に誤ったファイルがある状態に戻りましたね。この機会に、すべてを以前のリビジョンに戻すのではなく、そのファイル（<span class="notranslate">path</span> ）だけを元に戻すことができます。そのためには、次のようにします。</p>
   <ul class="colour">
-    <li>Open the <strong>View History</strong> window.</li>
-    <li>Click on the second commit (the &quot;Hello World&quot; commit).</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> on our script GML in the Files pane and select <strong>Revert Path</strong>.</li>
+    <li><strong>履歴の表示</strong>]ウィンドウを開きます。</li>
+    <li>2番目のコミット（&quot;Hello World &quot;のコミット）をクリックします。</li>
+    <li>右クリック <strong><img></strong><span class="notranslate">script</span> <span class="notranslate">GML</span> をクリックし、[<strong>パスの復帰</strong>]を選択します。</li>
   </ul>
-  <p>We should be back to having our &quot;Hello World&quot; code and we can then do a fresh commit to update the source control again with the corrected file.</p>
-  <p> </p>
-  <p> </p>
+  <p>Hello World&quot; のコードに戻り、新しいコミットをして修正したファイルで<span class="notranslate">source control</span> を再び更新することができるはずです。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Cloning_A_Repository.htm">Cloning A Repository</a> </div>
+        <div style="float:left">戻る<a href="../Source_Control.htm">ソースコントロール</a></div>
+        <div style="float:right">次へ<a href="Cloning_A_Repository.htm">リポジトリのクローン</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Reverting Files

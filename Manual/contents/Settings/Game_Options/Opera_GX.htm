@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>オペラGX</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="Page that details the Opera GX Game Options" />
+  <meta name="rh-index-keywords" content="Game Options - Opera GX" />
+  <meta name="search-keywords" content="Opera GX Game Options" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>オペラGXのゲームオプション</h1>
+  <p>Opera GXゲームオプションでは、ゲームのプロパティを変更することができます。以下のセクションが用意されています。</p>
+  <h2>一般</h2>
+  <p><img>このウィンドウには、あなたのOpera GXのサインイン状況が表示されます。<img> Refreshのアイコンをクリックすると、Operaアカウントでログインできます。</p>
+  <p>その後、以下の選択肢があります。</p>
+  <ul class="colour">
+    <li><b>ゲームを選択</b>します。このリストから、更新する既存のゲームを選択するか、新しいゲームをアップロードすることを選択できます。</li>
+    <li><strong>ゲーム名</strong>。GX.games上でのあなたのゲーム名（タイトル）です。<br>
+      <br>
+     <span class="important">重要</span>GX.gamesへのアップロードを成功させるためには、ゲーム名に使用できる文字だけを使用することが重要です（デフォルトでは、<span class="notranslate">GameMaker</span> プロジェクトの名前に設定されているので、有効なプロジェクト名を選択するか、ゲーム名を後で手動で変更するようにしてください）。<br>
+      <br>
+      禁止されている文字を含むタイトルのゲームをアップロードすると、このエラーが表示されます。 <span><span class="inline2">データが正しくない。出力を確認する</span></span><br>
+      <br>
+      許可されている文字は次のとおりです。 
+      <ul>
+        <li>a-z, A-Z (åのようなローカルスキーマのサポートあり)</li>
+        <li>0-9</li>
+        <li>空白文字</li>
+        <li>: - !? ., ' &amp; ( )</li>
+      </ul>
+    </li>
+    <li><strong>バージョン</strong>最後にアップロードされたゲームのバージョンです。このフィールドは、ゲームがGX.gamesにアップロードされる前にのみ変更することができます。</li>
+    <li><strong>次のバージョン</strong>GX.gamesに次回アップロードする際に使用されるバージョン番号です。GX.gamesにアップロードされた後でのみ変更可能です。アップロードのたびに手動で変更する必要はありません。<span class="notranslate">GameMaker</span> が自動的にバージョン番号の最後の桁を増加させます。</li>
+    <li><b>GX.gamesに登録</b>する。このボタンをクリックすると、GX.gamesに新規登録されます。<strong>ゲーム選択</strong>」が「<strong>新規ゲーム</strong>」に設定されている場合のみ有効です。</li>
+    <li><strong>グループを選択</strong>します。新しいゲームをアップロードする前に、そのゲームが所属するスタジオを選択することができます。</li>
+    <li><strong>OperaでEdit Gameを</strong>実行します。GX.games DevCloudを開き、ゲームの「ゲーム詳細」ページを表示します。これは、あなたがログインしていて、ゲームがアップロードされているときのみクリック可能です。</li>
+    <li><strong>内部共有URL</strong>。GX.games DevCloudで有効化されている場合のみ、ゲームのプライベートバージョンを開きます。</li>
+    <li><strong>公開共有URL</strong>。GX.games DevCloudで有効化されている場合のみ、ゲームの公開バージョンを開きます。<br>
+      <br>
+      これらのURLはどちらも他の人と共有することができ、ゲームをプレイすることができます。
+    </li>
+  </ul>
+  <h2>グラフィック</h2>
+  <p><img>ここでは、ゲームの表示方法に関する以下の内容を変更することができます。</p>
+  <ul class="colour">
+    <li><strong>カーソルを表示</strong>するゲーム開始時にマウスカーソルを表示するかどうかを制御します。マウス入力を必要としないゲームや、<a href="../../GameMaker_Language/GML_Reference/General_Game_Control/cursor_sprite.htm">カスタムマウススプライトを</a>使用するゲームに便利です。</li>
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん">線形補間を</a>オンにし、基本的にピクセルを「平滑化」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためにはオンのままにしておく方が良いでしょう。これはデフォルトでオンになっています。</li>
+    <li><strong>スケーリング</strong>。ブラウザの<strong>アスペクト比を維持 </strong>するために、描画キャンバスを自動的にスケーリングするように設定することも、<strong>フルスケールで</strong>実行するように設定することもできます。フルスケールのオプションは、ブラウザでゲームをフルスクリーン表示するのではなく、ゲームの最初の<span class="notranslate">room</span> で定義されたキャンバスサイズに合わせて描画を引き伸ばします。これは、デフォルトでアスペクト比を維持するように設定されています。</li>
+  </ul>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。 <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成し、ウィンドウを開いてその見え方を確認できるようにするものです。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なることを防ぎたい場合に非常に便利です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次へ<a href="Windows.htm">ウィンドウズ</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Opera GX Game Options
+GXC
+-->
+  <!-- TAGS
+operagx_options
+-->
+</body>
+</html>

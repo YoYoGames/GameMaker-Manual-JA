@@ -6,7 +6,7 @@
   <title>sprite_get_bbox_right</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_get_bbox_right" />
   <meta name="rh-index-keywords" content="sprite_get_bbox_right" />
@@ -16,41 +16,41 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_get_bbox_right</h1>
-  <p>This function returns the relative position of the right of the sprite bounding box. This value is given as a relative value based on the upper left corner of the base sprite asset being (0,0). it is the same value as can be found in the sprite editor
-    for the <a href="../../../../../The_Asset_Editors/Sprites.htm">collision mask properties</a>. The image below shows how it is calculated:</p>
+  <p>この関数は、<span class="notranslate">sprite</span> のバウンディングボックスの右側の相対位置を返します。この値は、ベースとなる<span class="notranslate">sprite</span> <span class="notranslate">asset</span> の左上隅を (0,0) とした相対値として与えられます。この値は、<span class="notranslate">sprite</span> エディタで見られるものと同じです。
+    を<a href="../../../../../The_Asset_Editors/Sprites.htm">コリジョンマスクのプロパティに</a>設定します。下の画像は、その計算方法を示しています。</p>
   <p><img alt="BBox Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_bbox.png" /></p>
-  <h4>Syntax:</h4>
+  <h4>構文です。</h4>
   <p class="code">sprite_get_bbox_right(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to check.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>リターンズ</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var ww, hh;<br/> ww = sprite_get_bbox_left(sprite_index) - sprite_get_bbox_right(sprite_index);<br/> hh = sprite_get_bbox_bottom(sprite_index) - sprite_get_bbox_top(sprite_index);</p>
-  <p>The above code calculates the width and height of the collision mask based on the relative bounding box side positions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、バウンディングボックスの相対的な辺の位置に基づいてコリジョンマスクの幅と高さを計算しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Information.htm">Sprite Information</a></div>
-        <div style="float:right">Next: <a href="sprite_get_bbox_top.htm">sprite_get_bbox_top</a></div>
+        <div style="float:left">戻る<a href="Sprite_Information.htm">スプライト情報</a></div>
+        <div style="float:right">次のページ <a href="sprite_get_bbox_top.htm"><span class="notranslate">sprite_get_bbox_top</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_bbox_right

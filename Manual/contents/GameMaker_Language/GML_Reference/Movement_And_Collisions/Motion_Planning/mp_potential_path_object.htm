@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>mp_potential_path_object</title>
+  <title>mp_potential_path_object。</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function mp_potential_path_object" />
   <meta name="rh-index-keywords" content="mp_potential_path_object" />
@@ -15,67 +15,67 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_potential_path_object</h1>
-  <p>This function computes a path for the instance from its current position <i>and orientation</i> to the position specified by the xgoal, ygoal arguments. It uses the indicated step size while trying to avoid collision with instances of the object specified
-    by the &quot;obj&quot; argument. Like in the function <a href="mp_potential_step.htm"><span class="inline">mp_potential_step()</span></a> it uses potential field steps to accomplish this and the manner in which it does this can be modified through the function <a href="mp_potential_settings.htm"><span class="inline">mp_potential_settings()</span></a>.
-    The indicated path must already exist and it will be overwritten by the new path. The function will return whether a path was found (true) or not (false).</p>
-  <p>To avoid the function continuing to compute forever you need to provide a factor of larger than 1 - the function will stop and report failure if it cannot find a path shorter than this factor times the distance between start and goal. A factor of 4
-    is normally good enough but if you expect long detours you might make it longer. If it fails a path is still created that runs in the approximate direction of the goal but it will not reach it.</p>
-  <p class="note"><b>NOTE</b>: This function does not move the instance. It sets a path only, and you must use the <a href="../../Asset_Management/Paths/Paths.htm">Path</a> functions for movement.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>mp_potential_path_object。</h1>
+  <p>この関数は、インスタンスの現在の<i>位置と方向から</i>、引数 xgoal, ygoal で指定された位置までの<span class="notranslate">path</span> を計算する。指定された<span class="notranslate">object</span> のインスタンスとの衝突を避けながら、指定されたステップサイズを使用する。
+    引数 &quot;obj &quot;で指定する。関数と同様に <a href="mp_potential_step.htm"><span class="inline">mp_potential_step()</span></a>は，このためにポテンシャルフィールドのステップを使用し，その方法は，関数 <a href="mp_potential_settings.htm"><span class="inline">mp_potential_settings()</span></a>.
+    指定された<span class="notranslate">path</span> はすでに存在している必要があり、それは新しい<span class="notranslate">path</span> によって上書きされます。この関数は，<span class="notranslate">path</span> が見つかったか（true），見つからなかったか（false）を返します．</p>
+  <p><span class="notranslate">path</span> この関数が永遠に計算を続けることを避けるためには、1より大きな係数を指定する必要があります。この係数の倍数より短いスタートとゴールの間の距離が見つからない場合、この関数は停止し、失敗を報告します。4の係数
+    通常はこれで十分ですが、長い回り道が予想される場合は、もっと長くしてもよいでしょう。もし失敗しても<span class="notranslate">path</span> は作成され、ゴールのおおよその方向に走りますが、ゴールにはたどり着けません。</p>
+  <p class="note"><b>注</b>：この関数はインスタンスを移動させません。これは<span class="notranslate">path</span> を設定するだけで、移動には<a href="../../Asset_Management/Paths/Paths.htm">Path</a>関数を使用する必要があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">mp_potential_path_object(path, xgoal, ygoal, stepsize, factor, obj)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>path</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>index of the path that is to be used by the function</td>
+        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">index of the path that is to be used by the function</span></td>
      </tr>
       <tr>
-        <td>xgoal</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The target x position.</td>
+        <td><span class="notranslate">xgoal</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The target x position.</span></td>
      </tr>
       <tr>
-        <td>ygoal</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The target y position.</td>
+        <td><span class="notranslate">ygoal</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The target y position.</span></td>
      </tr>
       <tr>
-        <td>stepsize</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The speed the instance moves in pixels per step.</td>
+        <td><span class="notranslate">stepsize</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The speed the instance moves in pixels per step.</span></td>
      </tr>
       <tr>
-        <td>factor</td><td><span data-keyref="Type_Real"></span></td>
-        <td>This number is used to prevent an infinite loop. It should be larger than 1. See the function description for more information.</td>
+        <td><span class="notranslate">factor</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">This number is used to prevent an infinite loop. It should be larger than 1. See the function description for more information.</span></td>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The object that is to block the path. Can be an object index, an instance id or the special keyword ,<b>all</b></td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The object that is to block the path. Can be an object index, an instance id or the special keyword ,<b>all</b></span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">path = path_add();<br/> mp_potential_path_object(path, obj_Player.x, obj_Player.y, 3, 4, obj_Wall);<br/> path_start(path, 3, 0, 0);</p>
-  <p>The above code creates a new path resource and stores its index in the variable &quot;path&quot;. It then generates a path using <span class="inline">mp_potential_path</span> between the object with this code and the object &quot;obj_Player&quot;, checking for collisions
-    with the object &quot;obj_Wall&quot;. Finally it starts the object along that path, even if the function has failed to return a complete route to the &quot;obj_Player&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、新しい<span class="notranslate">path</span> リソースを作成し、そのインデックスを変数 &quot;path&quot; に格納しています。そして、このコードによる<span class="notranslate">path</span> と<span class="notranslate">object</span> &quot;obj_Player&quot; の間に <span class="inline">mp_potential_path</span> を使って<span class="notranslate">object</span> を生成し、衝突がないかをチェックします。
+    を<span class="notranslate">object</span> &quot;obj_Wall &quot;と比較する。最後に、この関数が &quot;obj_Player&quot; への完全な経路を返さなかった場合でも、その<span class="notranslate">object</span> に沿って<span class="notranslate">path</span> を開始します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
-        <div style="float:right">Next: <a href="mp_grid_create.htm">mp_grid_create</a></div>
+        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ <a href="mp_grid_create.htm"><span class="notranslate">mp_grid_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_potential_path_object

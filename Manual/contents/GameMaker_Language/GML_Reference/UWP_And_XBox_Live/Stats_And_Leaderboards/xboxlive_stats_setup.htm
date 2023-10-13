@@ -6,7 +6,7 @@
   <title>xboxlive_stats_setup</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_setup" />
   <meta name="rh-index-keywords" content="xboxlive_stats_setup" />
@@ -15,54 +15,54 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_setup</h1>
-  <p>This function needs to be called before you can use any of the other Xbox Live stat functions, and simply initialises the required libraries on the system. The &quot;user_id&quot; argument is the raw user ID as returned by the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, while the &quot;service_config&quot; and &quot;title_id&quot; is the unique ID for your game on the Xbox Live Dev Center.</p>
-  <p>This function is only for use with Event-Based (2013) stats.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、他のXbox Live統計関数を使用する前に呼び出す必要があり、単にシステム上の必要なライブラリを初期化するだけです。引数 &quot;user_id&quot; は、この関数が返す生のユーザー ID です。 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>service_config&quot; と &quot;title_id&quot; は、Xbox Live Dev Center に登録されているゲームのユニークな ID を指定します。</p>
+  <p>この機能は、Event-Based（2013）統計でのみ使用されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">xboxlive_stats_setup(user_id, service_config_id, title_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span></td>
-        <td>The ID pointer of the user to check.</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">XboxユーザーID</span></td>
+        <td><span class="notranslate">The ID pointer of the user to check.</span></td>
       </tr>
       <tr>
-        <td>service_config_id</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>This is the config_id string for the game.</td>
+        <td><span class="notranslate">service_config_id</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">This is the config_id string for the game.</span></td>
       </tr>
       <tr>
-        <td>title_id</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The unique ID for your game on the Xbox Dev Center.</td>
+        <td><span class="notranslate">title_id</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The unique ID for your game on the Xbox Dev Center.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var user = xboxlive_get_user(0);<br />
     xboxlive_stats_setup(user, &quot;4d61a1aa-61ac-4541-badd-31f91244fea6&quot;, $1244FEA6);</p>
-  <p>The above code initialises the stats system for the given user ID.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、指定されたユーザーIDの統計システムを初期化します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_add_user.htm">xboxlive_stats_add_user</a></div>
+        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次のページ <a href="xboxlive_stats_add_user.htm"><span class="notranslate">xboxlive_stats_add_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_setup

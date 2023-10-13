@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Time Sources</title>
+  <title>タイムソース</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
   <meta name="template" content="../../../assets/masterpages/Manual_Page.htt" />
@@ -14,86 +14,85 @@
   <meta name="search-keywords" content="Time Sources" />
 </head>
 <body>
-  <h1><span data-field="title" data-format="default">Time Sources</span></h1>
-  <p>A &quot;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&quot; is a custom timer you create. It runs for a given period of time, and at the end, it expires.</p>
-  <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> (TS) has the ability to call a custom method (&quot;callback&quot;) on expiring.</p>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Time_Sources/time_sources_flow.png" />It&#39;s also able to repeat a certain of amount of times, or forever. Each repetition of a <span data-keyref="Type_Resource_TimeSource">Time Source</span> is known as a &quot;rep&quot;.</p>
-  <h2>How to Use Time Sources?</h2>
-  <p>Create and start a <span data-keyref="Type_Resource_TimeSource">Time Source</span> that calls a custom method:</p>
+  <h1>タイムソース</h1>
+  <p><span data-keyref="Type_Resource_TimeSource">タイムソース</span>」とは、あなたが作成したカスタムタイマーのことです。指定された時間だけ動作し、終了時には期限切れとなります。</p>
+  <p><span data-keyref="Type_Resource_TimeSource">タイムソース</span>（TS）には、有効期限切れ時にカスタムメソッド（「コールバック」）を呼び出す機能があります。</p>
+  <p><img>また、一定の回数だけ、あるいは永遠に繰り返すことができます。<span data-keyref="Type_Resource_TimeSource">タイムソースの</span>各繰り返しは「レップ」と呼ばれる。</p>
+  <h2>タイムソースをどう使うか？</h2>
+  <p>カスタムメソッドを呼び出す<span data-keyref="Type_Resource_TimeSource">タイムソースを</span>作成し、起動します。</p>
   <ul class="colour">
-    <li>Call <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">Create Time Source</a> to create a <span data-keyref="Type_Resource_TimeSource">Time Source</span>
+    <li>呼び出し <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a><span data-keyref="Type_Resource_TimeSource">/ タイム</span>ソースを作成するには、<a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">タイムソースの作成</a>
       <ul>
-        <li>Specify whether this inherits from the Global <span data-keyref="Type_Resource_TimeSource">Time Source</span>, the Game <span data-keyref="Type_Resource_TimeSource">Time Source</span> or a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span></li>
-        <li>Specify the period of time it runs for, and the units used (seconds or frames)</li>
-        <li>Specify a custom method or script function, with an argument array to pass into that method</li>
-        <li>Optionally, specify the number of times it should repeat
+        <li><span data-keyref="Type_Resource_TimeSource">グローバルタイムソース</span>、<span data-keyref="Type_Resource_TimeSource">ゲームタイムソース</span>、または<span data-keyref="Type_Resource_TimeSource">カスタムタイムソースの</span>いずれから<span class="notranslate">inherits</span> を指定します。</li>
+        <li>実行する期間と、使用する単位（秒またはフレーム）を指定する。</li>
+        <li>カスタムメソッドまたは<span class="notranslate">script</span> 関数を指定し、そのメソッドに渡す引数配列も指定します。</li>
+        <li>オプションで、繰り返し実行する回数を指定します。
           <ul>
-            <li>By default it runs only once</li>
+            <li>デフォルトでは、1回だけ実行されます。</li>
           </ul>
         </li>
       </ul>
     </li>
-    <li>Call <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Source</a> to start that <span data-keyref="Type_Resource_TimeSource">Time Source</span> immediately, or call it later when you need it to start</li>
+    <li>呼び出し <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a>/<a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Sourceは</a>、その<span data-keyref="Type_Resource_TimeSource">タイムソースを</span>すぐに開始するか、または後で開始する必要があるときに呼び出します。</li>
   </ul>
-  <p>Doing this will cause the <span data-keyref="Type_Resource_TimeSource">Time Source</span> to run, and after the specified period, it will expire and call your specified method.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> Even though <span data-field="title" data-format="default">Time Sources</span> can expire at any moment, <span data-keyref="GameMaker Name">GameMaker</span> will only &quot;know&quot; about this when the <span data-field="title" data-format="default">Time Sources</span> are updated/&quot;ticked&quot;, which happens between the Begin Step and Step event for all <span data-field="title" data-format="default">Time Sources</span>. At this moment the callback functions will also be executed for those <span data-field="title" data-format="default">Time Sources</span> that have expired or are about to expire (depending on their <a href="Time_Source_Expiry_Types.htm">expiry type</a>). See <a data-xref="{title}" href="../../../The_Asset_Editors/Object_Properties/Event_Order.htm">Event Order</a> for more details.</p>
-  <h2>Built-In Time Sources</h2>
-  <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> can inherit from either of the two built-in <span data-keyref="Type_Resource_TimeSource">Time Source</span>s, or from a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
-  <p>See: <a data-xref="{title}" href="Built_In_Time_Sources.htm">Built-In Time Sources</a></p>
-  <h2 id="h">Simple Timers</h2>
-  <p>While setting up a time source doesn&#39;t take many lines of code, it can be convenient to quickly set up and manage a timer using a single function.</p>
-  <p>The following two functions provide a simpler, shorthand way of creating a <span data-keyref="Type_Resource_TimeSource">Time Source</span> and stopping it: </p>
+  <p>こうすることで、<span data-keyref="Type_Resource_TimeSource">タイムソースが</span>実行され、指定した期間後に期限切れとなり、指定したメソッドが呼び出されます。</p>
+  <h2>内蔵のタイムソース</h2>
+  <p><span data-keyref="Type_Resource_TimeSource">タイムソースは</span>、2つの組み込み<span data-keyref="Type_Resource_TimeSource">タイムソースの</span>どちらか、または<span data-keyref="Type_Resource_TimeSource">カスタムタイムソースから</span> <span class="notranslate">inherit</span> することができます。</p>
+  <p>ご覧ください。<a data-xref="{title}" href="Built_In_Time_Sources.htm">内蔵のタイムソース</a></p>
+  <h2 id="h">シンプルタイマー</h2>
+  <p>タイムソースの設定には多くのコード行は必要ありませんが、一つの関数を使って素早くタイマーを設定し、管理することは便利です。</p>
+  <p>次の2つの関数は、<span data-keyref="Type_Resource_TimeSource">タイムソースの</span>作成と停止をより簡単に行うための略記法です。 </p>
   <ul class="Disc">
-    <li><a data-xref="{title}" href="call_later.htm">call_later</a></li>
+    <li><a data-xref="{title}" href="call_later.htm">コールレイター</a></li>
     <li><a data-xref="{title}" href="call_cancel.htm">call_cancel</a></li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> You cannot use the <span data-keyref="Type_Resource_TimeSource">Time Source</span> functions with the <span data-keyref="Type_Resource_TimeSource">Time Source</span> IDs used by these functions. See <a href="call_later.htm">call_later</a> for more information.</p>
-  <h2>Function List</h2>
-  <p>The following functions are used to create and modify <span data-keyref="Type_Resource_TimeSource">Time Source</span>s:</p>
+  <p class="note"><span class="note">注</span>：<span data-keyref="Type_Resource_TimeSource">タイムソース</span>関数は、これらの関数で使用される<span data-keyref="Type_Resource_TimeSource">タイムソース</span>IDでは使用できません。詳細は<a href="call_later.htm">call_laterを</a>参照してください。</p>
+  <h2>機能一覧</h2>
+  <p><span data-keyref="Type_Resource_TimeSource">タイムソースの</span>作成と変更には、次の機能を使用します。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="time_source_create.htm">time_source_create</a></li>
-    <li><a data-xref="{title}" href="time_source_destroy.htm">time_source_destroy</a></li>
-    <li><a data-xref="{title}" href="time_source_start.htm">time_source_start</a></li>
-    <li><a data-xref="{title}" href="time_source_stop.htm">time_source_stop</a></li>
-    <li><a data-xref="{title}" href="time_source_pause.htm">time_source_pause</a></li>
-    <li><a data-xref="{title}" href="time_source_resume.htm">time_source_resume</a></li>
-    <li><a data-xref="{title}" href="time_source_reconfigure.htm">time_source_reconfigure</a></li>
-    <li><a data-xref="{title}" href="time_source_reset.htm">time_source_reset</a></li>
+    <li><a data-xref="{title}" href="time_source_create.htm">タイムソースクリエイト</a></li>
+    <li><a data-xref="{title}" href="time_source_destroy.htm">タイムソースデストロイ</a></li>
+    <li><a data-xref="{title}" href="time_source_start.htm">タイムソース開始</a></li>
+    <li><a data-xref="{title}" href="time_source_stop.htm">タイムソースストップ</a></li>
+    <li><a data-xref="{title}" href="time_source_pause.htm">タイムソースポーズ</a></li>
+    <li><a data-xref="{title}" href="time_source_resume.htm">タイムソースレジューム</a></li>
+    <li><a data-xref="{title}" href="time_source_reconfigure.htm">タイムソース再コンフィギュレーション</a></li>
+    <li><a data-xref="{title}" href="time_source_reset.htm">タイムソースリセット</a></li>
     <li><a data-xref="{title}" href="time_source_get_children.htm">time_source_get_children</a></li>
-    <li><a data-xref="{title}" href="time_source_get_parent.htm">time_source_get_parent</a></li>
-    <li><a data-xref="{title}" href="time_source_get_period.htm">time_source_get_period</a></li>
+    <li><a data-xref="{title}" href="time_source_get_parent.htm">時刻指定ソースゲットペアレント</a></li>
+    <li><a data-xref="{title}" href="time_source_get_period.htm">タイムソース取得期間</a></li>
     <li><a data-xref="{title}" href="time_source_get_reps_completed.htm">time_source_get_reps_completed</a></li>
-    <li><a data-xref="{title}" href="time_source_get_reps_remaining.htm">time_source_get_reps_remaining</a></li>
-    <li><a data-xref="{title}" href="time_source_get_state.htm">time_source_get_state</a></li>
-    <li><a data-xref="{title}" href="time_source_get_time_remaining.htm">time_source_get_time_remaining</a></li>
-    <li><a data-xref="{title}" href="time_source_get_units.htm">time_source_get_units</a></li>
-    <li><a data-xref="{title}" href="time_source_exists.htm">time_source_exists</a></li>
+    <li><a data-xref="{title}" href="time_source_get_reps_remaining.htm">タイムソース取得の残り時間</a></li>
+    <li><a data-xref="{title}" href="time_source_get_state.htm">タイムソース取得状態</a></li>
+    <li><a data-xref="{title}" href="time_source_get_time_remaining.htm">時刻を取得する</a></li>
+    <li><a data-xref="{title}" href="time_source_get_units.htm">時間単位</a></li>
+    <li><a data-xref="{title}" href="time_source_exists.htm">タイムソースが存在する</a></li>
   </ul>
-  <p>Each <span class="inline2">get_*</span> function will return <span class="inline2">undefined</span> if the specified <span data-keyref="Type_Resource_TimeSource">Time Source</span> doesn&#39;t exist.</p>
-  <p>The following helper functions are provided for converting time periods:</p>
+  <p>各<span class="inline2">get_*</span>関数は、指定された<span data-keyref="Type_Resource_TimeSource">タイムソースが</span>存在しない場合、<span class="inline2">未定義を</span>返します。</p>
+  <p>時間軸の変換には、以下のヘルパー関数が用意されています。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="time_seconds_to_bpm.htm">time_seconds_to_bpm</a></li>
-    <li><a data-xref="{title}" href="time_bpm_to_seconds.htm">time_bpm_to_seconds</a></li>
+    <li><a data-xref="{title}" href="time_seconds_to_bpm.htm">時間秒単位で表示します。</a></li>
+    <li><a data-xref="{title}" href="time_bpm_to_seconds.htm">秒単位で表示する</a></li>
   </ul>
-  <p> </p>
-  <p>Also see: <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Time_Sources_(GML_Visual).htm">GML Visual - Time Sources</a></p>
-  <h2>Constants</h2>
-  <p>The following constants are used with <span data-keyref="Type_Resource_TimeSource">Time Source</span> functions:</p>
+  <p> </p>
+  <p>こちらもご覧ください。<a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Time_Sources_(GML_Visual).htm">GMLビジュアル - 時刻情報源</a></p>
+  <h2>定数</h2>
+  <p>以下の定数は、<span data-keyref="Type_Resource_TimeSource">タイムソース</span>機能で使用されます。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="Built_In_Time_Sources.htm">Built-In Time Sources</a></li>
-    <li><a data-xref="{title}" href="Time_Source_Units.htm">Time Source Units</a></li>
-    <li><a data-xref="{title}" href="Time_Source_Expiry_Types.htm">Time Source Expiry Types</a></li>
-    <li><a data-xref="{title}" href="Time_Source_States.htm">Time Source States</a></li>
+    <li><a data-xref="{title}" href="Built_In_Time_Sources.htm">内蔵のタイムソース</a></li>
+    <li><a data-xref="{title}" href="Time_Source_Units.htm">タイムソース単位</a></li>
+    <li><a data-xref="{title}" href="Time_Source_Expiry_Types.htm">タイムソースの有効期限タイプ</a></li>
+    <li><a data-xref="{title}" href="Time_Source_States.htm">タイムソースステート</a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="../GML_Reference.htm">GML Code Reference</a></div>
-        <div>Next: <a data-xref="{title}" href="../Physics/Physics.htm">Physics</a></div>
+        <div>戻る<a data-xref="{title}" href="../GML_Reference.htm">GMLコードリファレンス</a></div>
+        <div>次へ<a data-xref="{title}" href="../Physics/Physics.htm">物理学</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
 </body>
 </html>

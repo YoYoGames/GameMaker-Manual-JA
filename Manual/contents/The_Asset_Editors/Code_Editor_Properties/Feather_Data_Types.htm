@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Feather Data Types</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>フェザーのデータ型</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page listing all Feather data types along with their JSDoc usages" />
   <meta name="rh-index-keywords" content="Code Editor - JSDoc Comments,JSDoc" />
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Feather Data Types</h1>
-  <p><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a> uses data types to provide smart syntax-checking when writing code, ensuring you don&#39;t use the wrong data type for a variable or function parameter.</p>
-  <p>It also allows you to specify the data types for the parameters and return values of your own <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a>, using <a href="JSDoc_Script_Comments.htm">JSDoc comments</a>.</p>
-  <p>The <span class="inline">@param</span> and <span class="inline">@return</span> JSDoc tags allow you specify any one of the following types:</p>
-  <p class="note"><span class="note">NOTE</span> JSDoc types are case-insensitive, meaning <span class="inline2">Id.DsList</span> and <span class="inline2">id.dslist</span> are the same.</p>
+  <h1>フェザーのデータ型</h1>
+  <p><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>はデータ型を利用して、コードを書く際に構文チェックを行い、変数や関数のパラメータに間違ったデータ型が使われていないことを確認します。</p>
+  <p>また、自作の<a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト関数の</a>パラメータや戻り値のデータ型を、<a href="JSDoc_Script_Comments.htm">JSDocのコメントを使って</a>指定することも可能です。</p>
+  <p> <span class="inline">@param</span> および <span class="inline">@return</span> JSDoc タグでは、以下のいずれかのタイプを指定することができます。</p>
+  <p class="note"><span class="note">注</span>JSDoc の型は大文字と小文字を区別しない。つまり、<span class="inline2">Id.DsList</span>と<span class="inline2">id.dslist</span>は同じである。</p>
   <table>
     <colgroup>
       <col />
@@ -27,110 +27,110 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Base Types</th>
-        <th>Specifier Examples<em>*</em></th>
-        <th>Description</th>
+        <th>ベースタイプ</th>
+        <th>指定例※1</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><strong>Real</strong></td>
+        <td><strong>リアル</strong></td>
         <td><em>N/A</em></td>
-        <td>A real number</td>
+        <td>実数</td>
       </tr>
       <tr>
-        <td><strong>Bool</strong></td>
+        <td><strong>ブール</strong></td>
         <td><em>N/A</em></td>
-        <td>A boolean</td>
+        <td>ブーリアン</td>
       </tr>
       <tr>
-        <td><strong>String</strong></td>
+        <td><strong>文字列</strong></td>
         <td><em>N/A</em></td>
-        <td>A string</td>
+        <td>文字列</td>
       </tr>
       <tr>
-        <td><strong>Array</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Array"><a href="GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span><br />
+        <td><strong>アレイ</strong></td>
+        <td><em>デフォルト</em><span data-keyref="Type_Array"><a href="../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">アレイ</a></span><br>
           ...</td>
-        <td>An array, may include specifiers</td>
+        <td>配列。指定子を含むことができます。</td>
       </tr>
       <tr>
-        <td><strong>Pointer</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Pointer"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Pointer</a></span><br />
+        <td><strong>ポインタ</strong></td>
+        <td><em>デフォルト</em><span data-keyref="Type_Pointer"><a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">ポインタ</a></span><br>
           ...</td>
-        <td>A pointer, may include specifiers</td>
+        <td>ポインタで、指定子を含むことができます。</td>
       </tr>
       <tr>
-        <td><strong>Function</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Function"><a href="GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">Function</a></span><br />
+        <td><strong>機能</strong></td>
+        <td><em>デフォルト</em><span data-keyref="Type_Function"><a href="../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">機能</a></span><br>
           ...</td>
-        <td>A function, may include specifiers</td>
+        <td>関数で、指定子を含むことができます。</td>
       </tr>
       <tr>
-        <td><strong>Struct</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Struct"><a href="GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span><br />
+        <td><strong>構造</strong></td>
+        <td><em>デフォルト</em><span data-keyref="Type_Struct"><a href="../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">構造</a></span><br>
           ...</td>
-        <td>A struct, may include specifiers</td>
+        <td><span class="notranslate">struct</span> 、スペシファイアを含むことができる。</td>
       </tr>
       <tr>
-        <td><strong>Id</strong></td>
-        <td>.Instance - <span data-keyref="Type_ID_Instance"><a href="GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span><br />
-          .DsList - <span data-keyref="Type_ID_DS_List"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm" target="_blank">DS List ID</a></span><br />
-          .DsMap - <span data-keyref="Type_ID_DS_Map"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span><br />
-          .DsGrid - <span data-keyref="Type_ID_DS_Grid"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm" target="_blank">DS Grid ID</a></span><br />
-          .DsStack - <span data-keyref="Type_ID_DS_Stack"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Stacks/ds_stack_create.htm" target="_blank">DS Stack ID</a></span><br />
-          .DsPriority - <span data-keyref="Type_ID_DS_Priority"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Priority_Queues/ds_priority_create.htm" target="_blank">DS Priority ID</a></span><br />
-          .DsQueue - <span data-keyref="Type_ID_DS_Queue"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Queues/ds_queue_create.htm" target="_blank">DS Queue ID</a></span><em><br />
+        <td><strong>アイド</strong></td>
+        <td>.インスタンス <span data-keyref="Type_ID_Instance"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">インスタンスID</a></span><br>
+          .DsList <span data-keyref="Type_ID_DS_List"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm" target="_blank">DSリストID</a></span><br>
+          .DsMap - <span data-keyref="Type_ID_DS_Map"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DSマップID</a></span><br>
+          .DsGrid（グリッド <span data-keyref="Type_ID_DS_Grid"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm" target="_blank">DS グリッドID</a></span><br>
+          .Dsスタック <span data-keyref="Type_ID_DS_Stack"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Stacks/ds_stack_create.htm" target="_blank">DS スタックID</a></span><br>
+          .DsPriority（優先順位 <span data-keyref="Type_ID_DS_Priority"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Priority_Queues/ds_priority_create.htm" target="_blank">DS 優先度 ID</a></span><br>
+          .DsQueue <span data-keyref="Type_ID_DS_Queue"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Queues/ds_queue_create.htm" target="_blank">DS<span class="notranslate">Queue</span> ID</a></span><em><br>
             ...</em></td>
-        <td>An ID, requires specifiers</td>
+        <td>IDは、指定子を必要とします。</td>
       </tr>
       <tr>
-        <td><strong>Asset</strong></td>
-        <td>.GMAnimCurve - <span data-keyref="Type_Asset_Animation_Curve"><a href="The_Asset_Editors/Animation_Curves.htm" target="_blank">Animation Curve Asset</a></span><br />
-          .GMObject - <span data-keyref="Type_Asset_Object"><a href="The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span><br />
-          .GMAudioGroup - <span data-keyref="Type_ID_Audio_Group"><a href="GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm" target="_blank">Audio Group ID</a></span><br />
-          .GMFont - <span data-keyref="Type_Asset_Font"><a href="The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span><br />
-          .GMPath - <span data-keyref="Type_Asset_Path"><a href="The_Asset_Editors/Paths.htm" target="_blank">Path Asset</a></span><br />
-          .GMScript - <span data-keyref="Type_Asset_Script"><a href="The_Asset_Editors/Scripts.htm" target="_blank">Script Asset</a></span><br />
-          .GMShader - <span data-keyref="Type_Asset_Shader"><a href="The_Asset_Editors/Shaders.htm" target="_blank">Shader Asset</a></span><br />
-          .GMSound - <span data-keyref="Type_Asset_Sound"><a href="The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span><br />
-          .GMTimeline - <span data-keyref="Type_Asset_Timeline"><a href="The_Asset_Editors/Timelines.htm" target="_blank">Timeline Asset</a></span><br />
-          .GMRoom - <span data-keyref="Type_Asset_Room"><a href="The_Asset_Editors/Rooms.htm" target="_blank">Room Asset</a></span> <br />
-          .GMSequence - <span data-keyref="Type_Asset_Sequence"><a href="The_Asset_Editors/Sequences.htm" target="_blank">Sequence Asset</a></span><br />
-          .GMSprite - <span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span><br />
-          .GMTileSet - <span data-keyref="Type_Asset_Tile_Set"><a href="The_Asset_Editors/Tile_Sets.htm" target="_blank">Tile Set Asset</a></span><em><br />
+        <td><strong>資産</strong></td>
+        <td>.GMAnimCurve - （ガンマカーブ <span data-keyref="Type_Asset_Animation_Curve"><a href="../../../The_Asset_Editors/Animation_Curves.htm" target="_blank">アニメーションカーブアセット</a></span><br>
+          .GMObject <span data-keyref="Type_Asset_Object"><a href="../../../The_Asset_Editors/Objects.htm" target="_blank">オブジェクトアセット</a></span><br>
+          .GMAudioGroup（オーディオグループ <span data-keyref="Type_ID_Audio_Group"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm" target="_blank">オーディオグループID</a></span><br>
+          .GMFont(フォント) <span data-keyref="Type_Asset_Font"><a href="../../../The_Asset_Editors/Fonts.htm" target="_blank">フォントアセット</a></span><br>
+          .GMPath <span data-keyref="Type_Asset_Path"><a href="../../../The_Asset_Editors/Paths.htm" target="_blank">パスアセット</a></span><br>
+          .GMScript <span data-keyref="Type_Asset_Script"><a href="../../../The_Asset_Editors/Scripts.htm" target="_blank">スクリプトアセット</a></span><br>
+          .GMShaderー <span data-keyref="Type_Asset_Shader"><a href="../../../The_Asset_Editors/Shaders.htm" target="_blank">シェーダーアセット</a></span><br>
+          .GMSound（サウンド <span data-keyref="Type_Asset_Sound"><a href="../../../The_Asset_Editors/Sounds.htm" target="_blank">サウンドアセット</a></span><br>
+          .GMTimeline（タイムライン <span data-keyref="Type_Asset_Timeline"><a href="../../../The_Asset_Editors/Timelines.htm" target="_blank">タイムラインアセット</a></span><br>
+          .GMRoom <span data-keyref="Type_Asset_Room"><a href="../../../The_Asset_Editors/Rooms.htm" target="_blank">ルームアセット</a></span><br>
+          .GMSequence(シーケンス) <span data-keyref="Type_Asset_Sequence"><a href="../../../The_Asset_Editors/Sequences.htm" target="_blank">シーケンスアセット</a></span><br>
+          .GMSprite（スプライト <span data-keyref="Type_Asset_Sprite"><a href="../../../The_Asset_Editors/Sprites.htm" target="_blank">スプライトアセット</a></span><br>
+          .GMTileSet - <span data-keyref="Type_Asset_Tile_Set"><a href="../../../The_Asset_Editors/Tile_Sets.htm" target="_blank">タイルセットアセット</a></span><em><br>
             ...</em></td>
-        <td>An asset, requires specifiers</td>
+        <td><span class="notranslate">asset</span>, 指定子が必要です。</td>
       </tr>
       <tr>
-        <td><strong>Constant</strong></td>
-        <td>.Colour - <span data-keyref="Type_Constant_Colour"><a href="GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span><br />
-          .HAlign - <span data-keyref="Type_Constant_Draw_HAlign"><a href="GameMaker_Language/GML_Reference/Drawing/Text/draw_set_halign.htm" target="_blank">Horizontal Alignment Constant</a></span><br />
-          .VAlign - <span data-keyref="Type_Constant_Draw_VAlign"><a href="GameMaker_Language/GML_Reference/Drawing/Text/draw_set_valign.htm" target="_blank">Vertical Alignment Constant</a></span><br />
-          .Cursor - <span data-keyref="Type_Constant_Cursor"><a href="GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_get_cursor.htm" target="_blank">Cursor Constant</a></span><br />
-          .EventType - <span data-keyref="Type_Constant_Event_Type"><a href="GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Type Constant</a></span><br />
-          .EventNumber - <span data-keyref="Type_Constant_Event_Number"><a href="GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Number Constant</a></span><br />
-          .PrimitiveType - <span data-keyref="Type_Constant_Draw_Primitive_Type"><a href="GameMaker_Language/GML_Reference/Drawing/Primitives/draw_primitive_begin.htm" target="_blank">Primitive Type Constant</a></span><br />
+        <td><strong>定数</strong></td>
+        <td>.カラー <span data-keyref="Type_Constant_Colour"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">カラー</a></span><br>
+          .HAlign <span data-keyref="Type_Constant_Draw_HAlign"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Text/draw_set_halign.htm" target="_blank">ホリゾンタルアライメント定数</a></span><br>
+          .VAlign(ヴァリン) <span data-keyref="Type_Constant_Draw_VAlign"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Text/draw_set_valign.htm" target="_blank">垂直アライメント定数</a></span><br>
+          .カーソル <span data-keyref="Type_Constant_Cursor"><a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_get_cursor.htm" target="_blank">カーソル定数</a></span><br>
+          .イベントタイプ <span data-keyref="Type_Constant_Event_Type"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">イベントタイプ 定数</a></span><br>
+          .イベント番号 <span data-keyref="Type_Constant_Event_Number"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">イベント番号定数</a></span><br>
+          .PrimitiveType（プリミティブタイプ <span data-keyref="Type_Constant_Draw_Primitive_Type"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Primitives/draw_primitive_begin.htm" target="_blank">プリミティブタイプの定数</a></span><br>
           ...</td>
-        <td>A constant, requires specifiers</td>
+        <td>定数で、指定子が必要</td>
       </tr>
       <tr>
-        <td><strong>Any</strong></td>
+        <td><strong>任意の</strong></td>
         <td><em>N/A</em></td>
-        <td>Any data type</td>
+        <td>任意のデータ型</td>
       </tr>
     </tbody>
   </table>
-  <p class="note"><span class="note">NOTE</span> <em>*</em> The <strong>Specifier Examples</strong> column lists some example specifiers, but not all of them. For example, there may be more possible types under the <span class="inline2">Id</span>, <span class="inline2">Asset</span>, and <span class="inline2">Constant</span> groups, which are not listed here.</p>
-  <p>You may see an <span class="inline2">Any<strong>*</strong></span> type in the IDE when using Feather, which indicates that the type of the identifier (which may be a variable, parameter, return value, etc.) can&#39;t be discerned by Feather at the moment. When more code is added for that identifier, it may be able to assume a specific type.</p>
-  <h3>Specifiers</h3>
-  <p>A specifier is added after the base data type using a dot <span class="inline2">.</span>, to specify the exact type of data in that group.</p>
-  <p>Types such as <span class="inline2">Id.DsList</span>, <span class="inline2">Asset.GMObject</span>, and <span class="inline2">Constant.Color</span> use specifiers.</p>
-  <h3>Collection Types</h3>
-  <p>Types such as <span class="inline2">Array</span> and <span class="inline2">Id.DsList</span>, which are data structures that contain multiple values, are able to specify a single data type for all of their contents.</p>
-  <p>This is done using Collection Types, which are appended to the type using angle brackets <span class="inline2">&lt;&gt;</span>.</p>
-  <p>For example, an array containing strings would be <span class="inline2">Array&lt;String&gt;</span>, and a DS List, containing an Array, containing Reals, would be <span class="inline2">Id.DsList&lt;Array&lt;Real&gt;&gt;</span>.</p>
-  <h2>Type Validation</h2>
-  <p>The table below shows what happens if you pass a value of a certain type (rows) into a parameter requiring a data type (column).</p>
-  <p>For example, specifying <span class="inline2">undefined</span> (first row) for a parameter requiring a string (second column) results in an error.</p>
+  <p class="note"><span class="note">注</span> <em>*</em> <strong>指定子の例</strong>列には、いくつかの指定子の例が記載されていますが、すべてではありません。例えば、<span class="inline2">Id</span>、<span class="inline2">Asset</span>、<span class="inline2">Constantの</span>グループには、ここに記載されていない、より多くの可能な型があるかもしれません。</p>
+  <p>Feather を使っていると<span class="notranslate">IDE</span> に<span class="inline2">Any*</span>型が表示されることがありますが、これは識別子 (変数、パラメータ、戻り値など) の型が現時点では Feather で判別できないことを表しています。その識別子に対してさらにコードが追加されると、特定の型を仮定できるようになるかもしれません。</p>
+  <h3>スペシャリスト</h3>
+  <p>基本データ型の後にドット<span class="inline2">.</span>Specifierを付加することで、そのグループのデータ型を正確に指定することができます。を使って、そのグループ内のデータの正確な型を指定します。</p>
+  <p><span class="inline2">Id.DsList</span>、<span class="inline2">Asset.GMObject</span>、<span class="inline2">Constant.Colorなどの</span>型は、指定子を使用します。</p>
+  <h3>コレクションの種類</h3>
+  <p>複数の値を含むデータ構造である<span class="inline2">Arrayや</span> <span class="inline2">Id.DsListなどの</span>型は、その内容すべてに対して単一のデータ型を指定することができる。</p>
+  <p>これは、コレクションタイプを使用して行われ、タイプには角括弧<span class="inline2">&lt;&gt;</span> が付加されます。</p>
+  <p>例えば、<span class="notranslate">strings</span> を含む配列は<span class="inline2">Array&lt;String&gt;</span> で、Real を含む Array を含む DS List は<span class="inline2">Id.DsList&lt;Array&lt;Real&gt;&gt;</span> となる。</p>
+  <h2>タイプバリデーション</h2>
+  <p>下の表は、あるデータ型（列）を必要とするパラメータに、あるデータ型（行）の値を渡すとどうなるかを示しています。</p>
+  <p>例えば、<span class="notranslate">string</span> （2列目）を必要とするパラメータに<span class="inline2">undefined</span>（1列目）を指定するとエラーとなる。</p>
   <table>
     <colgroup>
       <col style="width: 124px;" />
@@ -145,125 +145,125 @@
     </colgroup>
     <tbody>
       <tr>
-        <th> </th>
-        <th>Undefined</th>
-        <th>String</th>
-        <th>Real</th>
-        <th>Bool</th>
-        <th>Array</th>
-        <th>Pointer</th>
-        <th>Function</th>
-        <th>Struct</th>
+        <th> </th>
+        <th>未定義</th>
+        <th>文字列</th>
+        <th>リアル</th>
+        <th>ブール</th>
+        <th>アレイ</th>
+        <th>ポインタ</th>
+        <th>機能</th>
+        <th>構造</th>
       </tr>
       <tr>
-        <th>Undefined</th>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>未定義</th>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
       </tr>
       <tr>
-        <th>String</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #605B32">Warning</td>
+        <th>文字列</th>
+        <td style="background-color: #452F2F">エラー</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td>許可</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #605B32">警告</td>
+        <td style="background-color: #605B32">警告</td>
       </tr>
       <tr>
-        <th>Real</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>リアル</th>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #605B32">警告</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td>許可</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
       </tr>
       <tr>
-        <th>Bool</th>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #605B32">Warning</td>
+        <th>ブール</th>
+        <td style="background-color: #605B32">警告</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td>許可</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #605B32">警告</td>
+        <td style="background-color: #605B32">警告</td>
+        <td style="background-color: #605B32">警告</td>
       </tr>
       <tr>
-        <th>Array</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>アレイ</th>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
       </tr>
       <tr>
-        <th>Pointer</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>ポインタ</th>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
       </tr>
       <tr>
-        <th>Function</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>機能</th>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">エラー</td>
       </tr>
       <tr>
-        <th>Struct</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
+        <th>構造</th>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td style="background-color: #452F2F">エラー</td>
+        <td><span class="notranslate">Allowed</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="seealso" data-type="seealso" style="">
-    <p class="seealso-caption" data-close-text="" data-expanded="true" data-open-text="See Also" data-type="seealso-caption" style="">See Also (placeholder)</p>
+    <p class="seealso-caption" data-close-text="" data-expanded="true" data-open-text="See Also" data-type="seealso-caption" style="">参照（プレースホルダー）</p>
     <ol class="seealso-list" data-keywords="" data-type="seealso-list" style="">
-      <li><a class="seealso-list-item" href="#">Topic List</a></li>
+      <li><a class="seealso-list-item" href="#">トピック一覧</a></li>
     </ol>
   </div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
-        <div style="float:right">Next: <a href="Feather_Directives.htm">Feather Directives</a></div>
+        <div style="float:left">戻る<a href="../Scripts.htm"> <span class="notranslate">Script</span> 編集部</a></div>
+        <div style="float:right">次へ<a href="Code_Snippets.htm">コードスニペット</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-JSDoc Script Comments
+JSDoc <span class="notranslate">Script</span> Comments
 -->
   <!-- TAGS
 jsdoc_comments

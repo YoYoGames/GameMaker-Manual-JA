@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>texture_get_uvs</title>
+  <title>テクスチャ・ゲット・ユーブス</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ​texture_get_uvs" />
   <meta name="rh-index-keywords" content="texture_get_uvs" />
@@ -15,59 +15,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>texture_get_uvs</h1>
-  <p>This function returns a 1D <a href="../../../GML_Overview/Arrays.htm">array</a> with 4 elements representing the UV coordinates for the given texture pointer, filling in the array with the following values:</p>
+  <h1>テクスチャ・ゲット・ユーブス</h1>
+  <p>この関数は、与えられた<span class="notranslate">texture</span> ポインタの UV 座標を表す 4 つの要素を持つ 1 次元<a href="../../../GML_Overview/Arrays.htm">配列を</a>返し、配列に以下の値を記入します。</p>
   <ul class="colour">
-    <li>[0] = left</li>
-    <li>[1] = top</li>
-    <li>[2] = right</li>
-    <li>[3] = bottom</li>
-    <li>[4] = amount of pixels the asset compiler has trimmed from the sprites left side (sprite assets only)</li>
-    <li>[5] = amount of pixels the asset compiler has trimmed from the sprites top side (sprite assets only)</li>
-    <li>[6] = normalised percentage of pixel data from the original sprites width that has been saved to the texture page (sprite assets only)</li>
-    <li>[7] = normalised percentage of pixel data from the original sprites height that has been saved to the texture page (sprite assets only)</li>
+    <li>[0] = 左</li>
+    <li>[1] = トップ</li>
+    <li>[2] = 右</li>
+    <li>[3] = 下</li>
+    <li>[4] =<span class="notranslate">asset</span> コンパイラが<span class="notranslate">sprites</span> の左側から切り捨てたピクセル数 (<span class="notranslate">sprite</span> <span class="notranslate">assets</span> のみ)</li>
+    <li>[5] =<span class="notranslate">asset</span> コンパイラが<span class="notranslate">sprites</span> 上面から切り捨てたピクセル数 (<span class="notranslate">sprite</span> <span class="notranslate">assets</span> のみ)</li>
+    <li>[6] =<span class="notranslate">sprites</span> ページに保存された元の<span class="notranslate">texture</span> 幅のピクセルデータの正規化されたパーセンテージ (<span class="notranslate">sprite</span> <span class="notranslate">assets</span> のみ )</li>
+    <li>[7] =<span class="notranslate">sprites</span> ページに保存された元の<span class="notranslate">texture</span> の高さからのピクセルデータの正規化されたパーセンテージ (<span class="notranslate">sprite</span> <span class="notranslate">assets</span> のみ)</li>
   </ul>
-  <p>This value can then be used in other draw functions, particularly in general 3D and some of the 2D primitive functions, as well as the Shader functions. If you need the UVS for a sprite then you can use the <span class="inline"><a href="../../Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm">sprite_get_uvs()</a></span> and for a font, <a href="../../Asset_Management/Fonts/font_get_uvs.htm"><span class="inline">font_get_uvs()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この値は、その後、他の描画関数、特に一般的な3D関数や一部の2Dプリミティブ関数、<span class="notranslate">Shader</span> 関数で使用することができます。もし、<span class="notranslate">sprite</span> の UVS が必要なら、 <span class="inline"><a href="../../Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm">sprite_get_uvs()</a></span> を、<span class="notranslate">font</span> の場合は , <a href="../../Asset_Management/Fonts/font_get_uvs.htm"><span class="inline">font_get_uvs()</span></a>.</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">texture_get_uvs(texid)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>texid</td>
-        <td><span data-keyref="Type_Pointer_Texture"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm" target="_blank">Texture</a></span></td>
-        <td>The texture pointer to get the UVS for</td>
+        <td><span class="notranslate">texid</span></td>
+        <td><span data-keyref="Type_Pointer_Texture"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm" target="_blank">テクスチャー</a></span></td>
+        <td><span class="notranslate">The texture pointer to get the UVS for</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> (4 - 8 elements)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _tex = surface_get_texture(surf_back);<br />
     var _uvs = texture_get_uvs(tex);<br />
     var <span class="misspell-word">_uvs</span>_left = _uvs[0];<br />
     var <span class="misspell-word">_uvs</span>_top = _uvs[1];<br />
     var <span class="misspell-word">_uvs</span>_right = _uvs[2];<br />
     var <span class="misspell-word">_uvs</span>_bottom = _uvs[3];</p>
-  <p>The above code first retrieves the texture for the surface stored in <span class="inline2">surf_back</span>, and then gets the UV coordinates for that texture. It then retrieves the left, top, right and bottom UV coordinates from the returned array and stores them in local variables.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、まず<span class="inline2">surf_back</span> に格納されているサーフェイスの<span class="notranslate">texture</span> を取得し、その<span class="notranslate">texture</span> の UV 座標を取得する。そして、返された配列から左、上、右、下のUV座標を取得し、ローカル変数に格納します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Textures.htm">Textures</a></div>
-        <div style="float:right">Next: <a href="texture_set_stage.htm">texture_set_stage</a></div>
+        <div style="float:left">戻る<a href="Textures.htm">テクスチャー</a></div>
+        <div style="float:right">次のページ <a href="texture_set_stage.htm"><span class="notranslate">texture_set_stage</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 texture_get_uvs

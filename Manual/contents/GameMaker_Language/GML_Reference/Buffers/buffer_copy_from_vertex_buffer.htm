@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_copy_from_vertex_buffer</title>
+  <title>バッファコピーバーテックスバッファ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_copy_from_vertex_buffer" />
   <meta name="rh-index-keywords" content="buffer_copy_from_vertex_buffer" />
@@ -14,63 +14,63 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_copy_from_vertex_buffer</h1>
-  <p>This function can be used to copy some (or all) of the vertex data stored in one vertex buffer into a previously created regular buffer. When copying from a vertex buffer into a regular buffer with this function, both buffers must have previously been created (using the <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a> and <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a> functions, for example). You can specify the range of vertex data that you wish to copy into the buffer, where the start vertex can be anywhere between 0 and the number of vertices -1, and you can give the number of vertices from that point on to copy. You can use the function <a href="../Drawing/Primitives/vertex_get_number.htm"><span class="inline">vertex_get_number()</span></a> on the vertex buffer to get the total number of vertices stored. Finally you give the buffer index to copy the vertex data into, as well as a data offset to define the position to copy the vertex data to in the destination buffer.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>バッファコピーバーテックスバッファ</h1>
+  <p>この関数は、ある<span class="notranslate">vertex</span> <span class="notranslate">vertex</span> に保存されている<span class="notranslate">buffer</span> データの一部（または全部）を、以前に作成した通常の<span class="notranslate">buffer</span> にコピーするために使用することができます。この関数で<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> から通常の<span class="notranslate">buffer</span> にコピーする場合，両方の<span class="notranslate">buffers</span> が以前に作成されている必要があります (この関数では <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>と <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a>関数など)。<span class="notranslate">vertex</span> にコピーしたい<span class="notranslate">buffer</span> データの範囲を指定します。開始点<span class="notranslate">vertex</span> は 0 から頂点の数 -1 までの任意の値で、そこからコピーする頂点の数を指定することができ ます。このとき、関数 <a href="../Drawing/Primitives/vertex_get_number.htm"><span class="inline">vertex_get_number()</span></a>を<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> 、格納されている頂点の総数を取得する。最後に、<span class="notranslate">buffer</span> のデータをコピーする<span class="notranslate">vertex</span> のインデックスと、<span class="notranslate">vertex</span> のデータをコピーする先の<span class="notranslate">buffer</span> の位置を定義するデータオフセットを指定します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">buffer_copy_from_vertex_buffer(vertex_buffer, start_vertex, num_vertices, dest_buffer, dest_offset);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>vertex_buffer</td>
-        <td><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></td>
-        <td>The index of the vertex buffer to copy <i>from</i>.</td>
+        <td><span class="notranslate">vertex_buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer_Vertex">バーテックス<span class="notranslate">Buffer</span> ID</span></td>
+        <td><span class="notranslate">The index of the vertex buffer to copy <i>from</i>.</span></td>
       </tr>
       <tr>
-        <td>start_vertex</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The starting vertex.</td>
+        <td><span class="notranslate">start_vertex</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The starting vertex.</span></td>
       </tr>
       <tr>
-        <td>num_vertices</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The total number of vertices to use.</td>
+        <td><span class="notranslate">num_vertices</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The total number of vertices to use.</span></td>
       </tr>
       <tr>
-        <td>dest_buffer</td>
-        <td><span data-keyref="Type_ID_Buffer">Buffer ID</span></td>
-        <td>The index of the buffer to copy <i>to</i>.</td>
+        <td><span class="notranslate">dest_buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer">バッファID</span></td>
+        <td><span class="notranslate">The index of the buffer to copy <i>to</i>.</span></td>
       </tr>
       <tr>
-        <td>dest_offset</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The offset position to copy the data to (in bytes).</td>
+        <td><span class="notranslate">dest_offset</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The offset position to copy the data to (in bytes).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var v_num = vertex_get_number(model_buff); buffer_copy_from_vertex_buffer(model_buffer, 0, v_num - 1, player_buffer, 0);</p>
-  <p>The above code will copy the vertex data stored in the vertex buffer indexed in the variable &quot;model_buffer&quot;, and then paste it into the buffer indexed in the variable &quot;player_buffer&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、変数 &quot;model_buffer &quot;でインデックスされた<span class="notranslate">vertex</span> <span class="notranslate">vertex</span> に格納されている<span class="notranslate">buffer</span> のデータをコピーし、変数 &quot;player_buffer &quot;でインデックスされた<span class="notranslate">buffer</span> に貼り付けます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_get_type.htm">buffer_get_type</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_get_type.htm"><span class="notranslate">buffer_get_type</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_copy_from_vertex_buffer

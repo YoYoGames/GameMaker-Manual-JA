@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Save Game</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>セーブゲーム</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Save Game action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Save Game" />
@@ -14,40 +14,41 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Save Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Save_Game.png" /> <span data-field="title" data-format="default">Save Game</span> <span data-conref="../../../assets/snippets/Tag_deprecated.hts"> </span></h1>
-  <p>This action will do a basic save of the game to a given file.</p>
-  <p>You give a filename (as a string and including the extension) and the action will perform a limited save out of the current game state. It&#39;s important to understand that the action is designed to take a &quot;snapshot&quot; of the current game state and is for use more as a checkpoint system than a universal save system, since it does <i>not</i> save any of the dynamic resources (like <a href="../Data_Structures/Data_Structure_Actions.htm">Data Structures</a> or <a href="../Particles/Particle_Actions.htm">Particles</a>). As such the action should be used very carefully so as not to get errors or memory leaks.</p>
-  <div data-conref="../../../assets/snippets/Note_Load_Save_Game_Legacy.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Save Game Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/a_Game_Save_Game.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <h1><img> セーブゲーム</h1>
+  <p>このアクションは、与えられたファイルへのゲームの基本的な保存を行います。ファイル名（<span class="notranslate">string</span> と<span class="notranslate">extension</span> を含む）を指定すると、現在のゲーム状態から限定的にセーブを実行するアクションです。重要なのは、このアクションが
+    現在のゲーム状態の「スナップショット」を取るように設計されており、動的リソース（<a href="../Data_Structures/Data_Structure_Actions.htm">データ</a>構造や<a href="../Particles/Particle_Actions.htm">パーティクルなど</a>）を保存<i>しない</i>ため、ユニバーサルセーブシステムというよりもチェックポイントシステムとして使用するためのものです。そのため、このアクションはエラーやメモリリークを起こさないよう、非常に慎重に使用する必要があります。ゲームデータを保存するためのより包括的なアプローチについては、<a href="../Files/File_Actions.htm">ファイルアクションを</a>参照してください。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Save Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Save_Game.png" /></p>
+  <h4>論拠となる。</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Filename</td>
-        <td>The name - as a string and with the extension - to give the file being saved (if the file already exists, it will be overwritten)</td>
+        <td><span class="notranslate">Filename</span></td>
+        <td>保存するファイルの名前 -<span class="notranslate">string</span> および<span class="notranslate">extension</span> - (ファイルがすでに存在する場合は上書きされます)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Save Game Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/e_Game_Save_Game.png" />The above action block code will check for a collision with another instance and if one is found it checks an instance variable. If the variable returns <span class="inline">true</span> then the game is saved and the variable set to <span class="inline">false</span>.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、他のインスタンスとの衝突をチェックし、もし衝突が見つかったら
+    インスタンス変数もし変数が <span class="inline">true</span> を返したら、ゲームが保存され、変数が <span class="inline">false</span> に設定されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Actions.htm">Game Actions</a></div>
-        <div style="float:right">Next: <a href="Load_Game.htm">Load Game</a></div>
+        <div style="float:left">戻る<a href="Game_Actions.htm">ゲームアクション</a></div>
+        <div style="float:right">次へ<a href="Load_Game.htm">ゲームのロード</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Save Game

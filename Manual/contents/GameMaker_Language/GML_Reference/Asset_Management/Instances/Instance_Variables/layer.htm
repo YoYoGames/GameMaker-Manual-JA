@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer</title>
+  <title>層</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the variable layer" />
   <meta name="rh-index-keywords" content="layer" />
@@ -14,30 +14,30 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer</h1>
-  <p>This <b>built-in variable</b> is created for every instance in a room and contains the layer ID value of the layer that the instance is assigned to. This value can then be used in other functions like <a href="../../Rooms/General_Layer_Functions/layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a> or it can be changed to move the instance to another layer, but note that if the layer being assigned does not exist in the current room, then you will get an error that will force your game to close. When assigning a layer, you must supply the unique <b>layer ID</b> as returned by the function <a href="../../Rooms/General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a> (when using named room layers), or as returned by the function <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> (when you create your own layers at run time).</p>
-  <p class="note"><span class="important">IMPORTANT</span> If you have created the instance using the <span style="font-size:1px;"><a href="../instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span> function, or have manually changed the <span style="font-size:1px;"><a href="depth.htm"><span class="inline">depth</span></a></span> variable, the layer assigned to the instance becomes a &quot;managed&quot; layer, which is one that <span data-keyref="GameMaker Name">GameMaker</span> controls and manages automatically. In these cases the <span class="inline">layer</span> variable will return -1.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>層</h1>
+  <p>この<b>組み込み変数は</b>、<span class="notranslate">room</span> のインスタンスごとに作成され、そのインスタンスが割り当てられているレイヤーのレイヤー ID 値を含んでいます。この値は、次のような他の関数で使用することができます。 <a href="../../Rooms/General_Layer_Functions/layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>を変更し、インスタンスを別のレイヤーに移動させることができます。ただし、割り当てられるレイヤーが現在の<span class="notranslate">room</span> に存在しない場合、エラーが発生し、ゲームが強制終了されることに注意してください。レイヤーを割り当てる際には、関数「ColorNavigator」が返す一意の<b>レイヤーIDを</b>指定する必要があります。 <a href="../../Rooms/General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>(名前付き<span class="notranslate">room</span> レイヤーを使用している場合)、または関数 <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>(ランタイムに独自のレイヤーを作成した場合)。</p>
+  <p class="note"><span class="important">重要</span>事項 <span style="font-size:1px;"><a href="../instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>関数を使用するか、手動で <span style="font-size:1px;"><a href="depth.htm"><span class="inline">depth</span></a></span>という変数がある場合、インスタンスに割り当てられたレイヤーは、<span data-keyref="GameMaker Name">GameMakerが</span>自動的に制御・管理する「マネージド」レイヤーとなる。この場合、 <span class="inline">layer</span> 変数は -1 を返します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">layer;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_Layer">Layer ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">layer = layer_create(-1000);</p>
-  <p>The above code will create a new layer with a depth of -1000 and then set the instance <span class="inline">layer</span> variable to the returned layer ID, moving the instance from the layer it is currently on to the new layer being created.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、深さ -1000 の新しいレイヤーを作成し、インスタンス <span class="inline">layer</span> 変数を返されたレイヤー ID に設定し、インスタンスを現在いるレイヤーから新しく作成されるレイヤーに移動させます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="alarm.htm">alarm</a></div>
+        <div style="float:left">Back:<a href="Instance_Variables.htm">インスタンス変数</a></div>
+        <div style="float:right">次のページ <a href="alarm.htm"><span class="notranslate">alarm</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer

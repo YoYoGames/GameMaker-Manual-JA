@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Start Following Path</title>
+  <title>スタートフォローパス</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Start Following Path action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Start Following Path" />
@@ -14,66 +14,66 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Start Following Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Start_Following_Path.png" width="32" /> Start Following Path</h1>
-  <p>This action will start an instance following along a path that has been created in the Asset Browser. You would then use this action to tell your instance which path to follow, what speed to follow the path (measured in pixels per game frame), how to
-    behave when it reaches the end of the path, and whether to follow the absolute or relative path position. When setting the speed you can use negative values to signify that the instance should follow the path in reverse and it&#39;s worth noting that
-    the speed you set here can be modified by the speed modifier set in the path editor for each path point, so if you set the path speed to 2 and in the path one of the points has a speed modifier of 200%, then the actual speed at that point will be
-    4 pixels per game frame.</p>
-  <p>Once you&#39;ve set the initial path speed you can set how the instance should behave when it reaches the end of the path from the following options (note that when an instance reaches the end of a path this will also trigger an <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other - Path Ended Event</a>):</p>
+  <h1><img> スタートフォローパス</h1>
+  <p>このアクションは、<span class="notranslate">path</span> ブラウザで作成された<span class="notranslate">Asset</span> に沿って、インスタンスが追従を開始します。このアクションを使用して、どの<span class="notranslate">path</span> を追いかけるか、<span class="notranslate">path</span> を追いかける速度（ゲームフレームあたりのピクセル数で測定）、 どのように追いかけるかをインスタンスに指示することができます。
+    は、<span class="notranslate">path</span> の末尾に到達したときの動作、および<span class="notranslate">path</span> の絶対位置と相対位置のどちらに従うかについて説明します。速度を設定するとき、インスタンスが<span class="notranslate">path</span> を逆にたどることを示すために負の値を使用することができ、以下の点に注意する必要があります。
+   <span class="notranslate">path</span> ここで設定したスピードは、<span class="notranslate">path</span> エディタで各ポイントに設定したスピードモディファイアによって変更されます。したがって、<span class="notranslate">path</span> スピードを2に設定し、<span class="notranslate">path</span> でポイントの1つに200%のスピードモディファイアを設定すると、そのポイントでの実際のスピードは次のようになります。
+    1ゲームフレームあたり4ピクセル。</p>
+  <p><span class="notranslate">path</span> の初期速度を設定したら、インスタンスが<span class="notranslate">path</span> の終わりに到達したときの動作を次のオプションから設定できます（インスタンスが<span class="notranslate">path</span> の終わりに到達すると、<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other -<span class="notranslate">Path</span> Ended Event</a> もトリガーされることに注意してください）。</p>
   <ul class="colour">
-    <li><b>Stop</b>: End the path, stopping the instance on the last path point.</li>
-    <li><b>Restart</b>: Continue the path from the start, jumping to the start position again if the path is not marked as closed in the Path Editor.</li>
-    <li><b>Loop</b>: Continue from the current position to run the path again.</li>
-    <li><b>Reverse</b>: Go backwards along the path again (achieved by reversing the path follow speed), and when it reaches the start of the path, it will reverse again, etc...</li>
+    <li><b>Stop</b>:<span class="notranslate">path</span> を終了し、最後の<span class="notranslate">path</span> ポイントでインスタンスを停止します。</li>
+    <li><b>再スタート</b> <span class="notranslate">path</span> が<span class="notranslate">path</span> Editor で閉じたとマークされていない場合、<span class="notranslate">Path</span> を最初から続行し、再び開始位置にジャンプします。</li>
+    <li><b>ループする</b>。現在の位置から続けて、<span class="notranslate">path</span> を再度実行します。</li>
+    <li><b>リバース</b> <span class="notranslate">path</span> に沿って再び逆進し (<span class="notranslate">path</span> のフォロー速度を逆にすることで実現)、<span class="notranslate">path</span> の始点に到達すると、再び逆進する、などなど。</li>
   </ul>
-  <p>Finally, you can flag the path as being <i>Absolute </i>or not. By default the instance will start following the path from its current position (the relative position), but if you flag the <em>Absolute</em> checkbox then it will start following the
-    path exactly as you designed and placed it in the Path Editor (the absolute position). The image below illustrates this:</p>
-  <p><img alt="Path Relative Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/path_relative_image.png" />As you can see in the image above, the two instances are following the <i>same</i> path started
-    with this action, but one of the instances is following the <i>absolute</i> path while the other is following the <i>relative</i> path. It should be noted that when <em>Absolute </em>is flagged the instance will &quot;jump&quot; to the start of the
-    path no matter where in the room it is placed.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Path Start Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/a_Paths_Start_Following_Path.png" /></p>
-  <h4>Arguments:</h4>
+  <p>最後に、<span class="notranslate">flag</span> <span class="notranslate">path</span> 、<i>Absolute（絶対）か </i>どうかを選択できます。デフォルトでは、インスタンスは現在の位置（相対位置）から<span class="notranslate">path</span> を追い始めますが、<span class="notranslate">flag</span> の Absolute チェックボックスをオンにすると、インスタンスは現在の位置から を追い始めます。
+    <span class="notranslate">path</span> <span class="notranslate">Path</span> Editorでデザインして配置したのと全く同じ位置（絶対位置）です。下の画像はこれを示しています。</p>
+  <p><img>上の画像でわかるように、2つのインスタンスは<i>同じ</i> <span class="notranslate">path</span> で開始されたものを辿っています。
+    しかし、一方のインスタンスは<i>絶対的な</i> <span class="notranslate">path</span> を追い、もう一方のインスタンスは<i>相対的な</i> <span class="notranslate">path</span> を追いかけています。絶対<em>パスが </em>指定されている場合、インスタンスは絶対パスの開始点に「ジャンプ」します。
+    <span class="notranslate">path</span> は、<span class="notranslate">room</span> のどこに配置されていても同じです。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Start Following Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Start_Following_Path.png" width="32" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Path</td>
-        <td>The path asset to start following</td>
+        <td><span class="notranslate">Path</span></td>
+        <td><span class="notranslate">path</span> <span class="notranslate">asset</span> 、フォローを開始します。</td>
       </tr>
       <tr>
-        <td>Speed</td>
-        <td>The speed (in pixels per game frame) to follow the path</td>
+        <td><span class="notranslate">Speed</span></td>
+        <td>パスをたどる速度（ゲームフレームあたりのピクセル数</td>
       </tr>
       <tr>
-        <td>On End</td>
-        <td>The response to reaching the end of the path</td>
+        <td><span class="notranslate">On End</span></td>
+        <td>道の終わりに到達した時の対応</td>
       </tr>
       <tr>
-        <td>Absolute</td>
-        <td>Whether to start at absolute or relative position</td>
+        <td><span class="notranslate">Absolute</span></td>
+        <td>絶対位置で開始するか、相対位置で開始するか</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Path Start Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/e_Paths_Start_Following_Path.png" />The above action block will make the calling instance follow a path (starting at its absolute
-    position and continuing at end) when a key is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックは、呼び出したインスタンスを<span class="notranslate">path</span> (絶対座標から開始) に従わせます。
+    キーが押されたとき、その位置で終了する。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Actions.htm">Path Actions</a></div>
-        <div style="float:right">Next: <a href="Stop_Following_Path.htm">Stop Following Path</a></div>
+        <div style="float:left">戻る<a href="Path_Actions.htm">パスアクション</a></div>
+        <div style="float:right">次へ<a href="Stop_Following_Path.htm">道を踏み外さない</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Start Following Path

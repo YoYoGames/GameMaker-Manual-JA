@@ -6,7 +6,7 @@
   <title>gml_pragma</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gml_pragma" />
   <meta name="rh-index-keywords" content="gml_pragma" />
@@ -15,64 +15,64 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gml_pragma</h1>
-  <p>The <span class="inline">gml_pragma</span> function affects how the given target compiles your code and should be called with the different commands to further optimise the final compilation of your project. These commands are effectively <i>pre-processed</i> before the game is compiled and so the function can be placed anywhere in your project and it will still be processed before the game is fully compiled. The available commands are as follows:</p>
+  <p> <span class="inline">gml_pragma</span> 関数は、与えられたターゲットがあなたのコードをコンパイルする方法に影響を与え、あなたのプロジェクトの最終的なコンパイルをさらに最適化するために、異なるコマンドで呼び出す必要があります。これらのコマンドは、ゲームがコンパイルされる前に効果的に<i>プリプロセスさ</i>れるため、関数をプロジェクトのどこに配置しても、ゲームが完全にコンパイルされる前に処理されることになります。利用可能なコマンドは次のとおりです。</p>
   <ul class="colour">
-    <li>&quot;<b>forceinline</b>&quot; - When the function is called with the &quot;forceinline&quot; pragma in a <b>script function</b>, the YYC will compile the project with the function inline, rather than referenced. This will give a further processing boost, but care must be taken when using it as it will also inflate the final executable file size, especially if the in-lined code is large and/or used in multiple different places, as well as greatly increase the compile time. Note that this pragma is <b>only valid when building using the YYC</b>.</li>
-    <li>&quot;<b>global</b>&quot;, &quot;<b>[gml code]</b>&quot; - The &quot;global&quot; pragma permits you to call some GML code formatted as a string, at a <b>global</b> scope, at compile time, before the first room of the game executes. For example:
-      <p class="code">gml_pragma(&quot;global&quot;, &quot;Init()&quot;);</p>
-      This will call the script function &quot;Init&quot; before the first room of the game is run. Note that the GML supplied as the second argument <b>must be a compile time constant</b>, and also note that you cannot use this pragma to create instances or perform any operations that require a room (or anything in a room) to function.
+    <li>&quot;<b>forceinline</b>&quot; -<b>スクリプト</b>関数内で &quot;forceinline&quot; プラグマを使って関数を呼び出すと、YYCはその関数を参照するのではなく、インラインでプロジェクトをコンパイルするようになります。これは処理をさらに向上させますが、最終的な実行ファイルのサイズが大きくなり、特にインライン化されたコードが大きい場合や複数の異なる場所で使用される場合、コンパイル時間が大幅に増加するため、使用する際には注意が必要です。このプラグマは<b>YYCを使用してビルド</b>する場合のみ有効であることに注意してください。</li>
+    <li>&quot;<b>global</b>&quot;, &quot;<b>[gml code]</b>&quot; - &quot;global&quot; プラグマは、コンパイル時に、ゲームの最初の<span class="notranslate">GML</span> が実行される前に、<b>グローバル</b>スコープで<span class="notranslate">string</span> としてフォーマットされたいくつかの<span class="notranslate">room</span> コードを呼び出すことを許可しています。たとえば、次のようになります。
+     <p class="code">gml_pragma(&quot;global&quot;, &quot;Init()&quot;);</p>
+      これは、ゲームの最初の<span class="notranslate">script</span> が実行される前に、<span class="notranslate">room</span> 関数 &quot;Init&quot; を呼び出すことになります。第2引数の<span class="notranslate">GML</span> は<b>コンパイル時の定数でなければ</b>ならないことに注意してください。また、このプラグマを使ってインスタンスを作成したり、<span class="notranslate">room</span> （または<span class="notranslate">room</span> の中の何か）を機能させる必要がある操作を実行することはできません。
     </li>
-    <li>&quot;<b>PNGCrush</b>&quot; - The &quot;PNGCrush&quot; pragma will use the <a href="https://pmt.sourceforge.io/pngcrush/" target="_blank">PNGCrush</a> program on each texture created. Note that this can add significantly to the time that it takes to compile the game, so you don&#39;t want it on all the time, although it can make significant savings on final file size. This option only applies to Texture Groups that use the PNG format (see <a data-xref="{text}" href="../../../Settings/Texture_Groups.htm#h">Group Settings</a>).</li>
-    <li>&quot;<b>Texgroup.Scale</b>&quot;, &quot;<b>[TextureGroupName]</b>&quot;, &quot;<b>[Scale Divisor]</b>&quot; - The &quot;Texgroup.Scale&quot; will scale the given texture group on compile. You need to give an additional two arguments here: the &quot;[TexGroupName]&quot;, which is the name (a string) of the texture group to scale, and the &quot;[Scale Divisor]&quot; (also a string), which is the divisor you wish to use for the scaling, i.e:
-      <p class="code">gml_pragma(&quot;Texgroup.Scale&quot;, &quot;level1&quot;, &quot;2&quot;);</p>
-      This will half all the textures in the &quot;level1&quot; texture group.
+    <li>&quot;<b>PNGCrush</b>&quot; - &quot;PNGCrush&quot; プラグマは、<span class="notranslate">texture</span> を作成するたびに<a href="https://pmt.sourceforge.io/pngcrush/" target="_blank">PNGCrush</a>プログラムを使用します。これはゲームのコンパイルにかかる時間を大幅に増加させるので、常にオンにしておく必要はありませんが、最終的なファイルサイズを大幅に削減することができますので、注意してください。このオプションは、PNG形式を使用する<span class="notranslate">Texture</span> Groupsにのみ適用されます（<a data-xref="{text}" href="../../../Settings/Texture_Groups.htm#h">Group Settingsを</a>参照）。</li>
+    <li>&quot;<b>Texgroup.Scale</b>&quot;, &quot;<b>[TextureGroupName]</b>&quot;, &quot;<b>[Scale Divisor]</b>&quot; - &quot;Texgroup.Scale&quot; は、与えられた<span class="notranslate">texture</span> グループをコンパイル時にスケーリングします。スケーリングする<span class="notranslate">string</span> グループの名前（<span class="notranslate">texture</span> ）である &quot;[TexGroupName]&quot; と、スケーリングに使用する除数である &quot;[Scale Divisor]&quot; （これも<span class="notranslate">string</span> ）、つまり、2つの引数を追加で指定する必要があります。
+     <p class="code">gml_pragma(&quot;Texgroup.Scale&quot;, &quot;level1&quot;, &quot;2&quot;);</p>
+      この場合、&quot;level1&quot;<span class="notranslate">textures</span> グループ内のすべての<span class="notranslate">texture</span> が半分になります。
     </li>
-    <li>&quot;<b>UnityBuild</b>&quot;, &quot;<b>[enable/disable]</b>&quot; - If you call the function with this pragma and set the enable/disable argument to <span class="inline">true</span> then on compile it will collapse all the .cpp files in the project into a single file which it then uses to build everything, for example:
-      <p class="code">gml_pragma(&quot;UnityBuild&quot;, &quot;true&quot;);</p>
-      The benefit of doing a unity build is that builds are faster but the down side is that it does a <i>full</i> build each time so even if you change a single part of the code it will build everything again without using any cached files. This has been added specifically for the Xbox One export using the YYC although it can be called for other builds (<b>YYC only</b>). For more information on unity builds, please see <a href="http://buffered.io/posts/the-magic-of-unity-builds/" target="_blank">here</a>.
+    <li>&quot;<b>UnityBuild</b>&quot;, &quot;<b>[enable/disable]</b>&quot; - このプラグマで関数を呼び出し、enable/disable 引数を <span class="inline">true</span> に設定すると、コンパイル時にプロジェクト内のすべての .cpp ファイルを 1 つのファイルにまとめ、それを使用してすべてのビルドを行います（例：）。
+     <p class="code">gml_pragma(&quot;UnityBuild&quot;, &quot;true&quot;);</p>
+      統一ビルドの利点はビルドが速くなることですが、欠点は毎回<i>フルビルドを</i>行うので、コードの一部分を変更しても、キャッシュされたファイルを使用せずにすべてを再度ビルドしてしまうことです。これはYYCを使用したXbox Oneエクスポート専用に追加されましたが、他のビルドにも呼び出すことができます<b>（YYCのみ</b>）。unity buildsの詳細については、<a href="http://buffered.io/posts/the-magic-of-unity-builds/" target="_blank">こちらを</a>ご覧ください。
     </li>
   </ul>
-  <p class="note"><b>NOTE</b>: The first argument to the <span class="inline">gml_pragma</span> function <b>must be a compile time string constant</b> and not a variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>注</b>： <span class="inline">gml_pragma</span> 関数の最初の引数は、変数ではなく、<b>コンパイル時<span class="notranslate">string</span> の定数でなければ</b>なりません。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gml_pragma(command, [optional...]);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>command</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A string with one of the commands listed above.</td>
+        <td><span class="notranslate">command</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">A string with one of the commands listed above.</span></td>
       </tr>
       <tr>
-        <td>[optional]</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>Some of the available commands require an optional argument or arguments. These are explained above for each command.</td>
+        <td><span class="notranslate">[optional]</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">Some of the available commands require an optional argument or arguments. These are explained above for each command.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">gml_pragma(&quot;forceinline&quot;);</p>
-  <p>The above example code will force the script function where it is used to be in-lined on compile.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のサンプルコードでは、コンパイル時に<span class="notranslate">script</span> 関数が使用されている箇所は強制的にインライン化されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="parameter_count.htm">parameter_count</a></div>
+        <div style="float:left">戻る<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
+        <div style="float:right">次のページ <a href="parameter_count.htm"><span class="notranslate">parameter_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gml_pragma

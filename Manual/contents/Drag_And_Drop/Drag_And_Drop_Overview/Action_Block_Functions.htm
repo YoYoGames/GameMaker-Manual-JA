@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Action Block Script Functions</title>
+  <title>アクションブロックスクリプト機能</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Article explaining how to make action block script functions" />
   <meta name="rh-index-keywords" content="GML Visual Overview - Action Block Script Functions" />
@@ -14,34 +14,34 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Action Block Script Functions</h1>
-  <p>One of the most important assets in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a> is the <a href="../../The_Asset_Editors/Scripts.htm">Script</a> asset. Scripts are special assets in that they are essentially &quot;containers&quot; for user defined functions and are not themselves actually called by you directly in your games. All scripts are <strong>global</strong> in scope and will be run automatically by GameMaker when your game starts, so you can use them to define global variables and functions that you want to use throughout your game.</p>
-  <p>Each GML Visual script can have one or more user-defined functions added to it, and these functions are created using the action <a href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>:</p>
-  <p><img alt="Declare A New Function Syntax" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Function.png" />The functions you define here will be global in scope and act much like any built-in GML Visual action, i.e.: they can take different values - or none at all - called <a class="glossterm" data-glossterm="argument" href="#">argument</a><span class="glossextra">s</span> (or parameters), and then perform a task, returning a value or returning nothing as required. You would then call the function in your games using the <a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">Function Call</a> <img alt="Function Call Icon" class="icon" height="24" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Execute_Function.png" width="24" /> action, which looks like this:</p>
-  <p><img alt="Function Call Syntax" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Common_Execute_Function.png" />To create a GML Visual script, you simply use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> anywhere in the Asset Browser and select <strong>Create </strong>then <strong>Script</strong>. This will create a new GML Visual script and open the editor window:</p>
-  <p><img alt="D&amp;D Script editor" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Scripts.png" />You can name the script by right clicking <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on it in the Asset Browser and selecting <strong>Rename </strong>(or by using a slow double left click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" />), but note that the script name must conform to the general rules for assets, so they must start with a letter and only contain letters, numbers or the &quot;_&quot; under-bar symbol. Your script will also be pre-populated with a <strong>Declare A New Function</strong> action, ready for you to fill it out, and you can add more function declarations as required (a single script can hold multiple functions, which is useful for grouping functions with similar or connected usage together).</p>
-  <p>As mentioned above, you can pass a number of arguments to a function, and it will use these to perform the task you have written it for. To understand this better, take - for example - any of the built-in actions and think about how it works... you place it in an event and supply a number of values and it will make your instance do something. User-defined functions are exactly the same, with the only difference being that <em>you </em>write them.</p>
-  <p>When defining a new function, you give it a name and also define the name of any arguments it takes, if it takes any (functions can take no arguments or multiple arguments depending on what you require). If you give argument names, then these will be used in the actions that the function calls as <strong>local variables </strong>holding the function input values.</p>
-  <p>It is also good practice to add in a comment for the action that explains what it does, following the <a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JS Doc rules</a>. For example, consider this function <span class="inline">set_vec()</span>:</p>
-  <p><img alt="D&amp;D Function Example With Comments" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_FunctionExample.png" />To call the script above you would simply use the <strong>Call Function</strong> action, like this:</p>
-  <p><img alt="Call A Function From A Script" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Declare_Function_2.png" />Not only can you pass arguments into a function, but you can also ask a function to return a value (using the <a href="../Drag_And_Drop_Reference/Common/Return.htm">Return</a> <img alt="Return Action Icon" class="icon" height="24" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/i_Return.png" width="24" /> action), so you can use them to (for example) build calculating methods or give back an instance ID after a complex collision detection or any number of things. Please note, however, that using return <strong>ends the function</strong>, and so no actions placed after it has been used will be executed, and this means that a certain amount of thought has to go into how your functions are structured.</p>
-  <p>Below is a GML Visual function that returns a value:</p>
-  <p><img alt="D&amp;D Script Return Example" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Script_Example_Return.png" /></p>
-  <p>The function above simply checks all the instances in a room to see what their <span class="inline">object_index</span> is and if one of them is the player object the function will return <span class="inline">true</span> (ending the function call) or <span class="inline">false</span>. You would call this function like this:</p>
-  <p><img alt="Call D&amp;D Script With Return Value" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Script_Call_Return.png" />So, we call the function and have it create a temporary (local) variable to store the returned value (which in this case is either <span class="inline">true</span> or <span class="inline">false</span>), and then this variable is checked and an action taken.</p>
-  <p>You can also make arguments optional and define a default value, so in case they are not provided in a function call the default value will be used instead. See the action&#39;s <a data-xref="{text}" href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm#h">Extended Example 2</a> for more information.</p>
-  <p>When making functions for your GML Visual scripts you can use all the same actions as you would when adding actions into an object event, and you can even call functions from within functions, and in this way create more &quot;modular&quot; action code. Building scripts with functions in this way can save you a lot of time creating the same action sequences and can also help make your action sequences easier to read and easier to debug.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <h1>アクションブロックスクリプト機能</h1>
+  <p><span class="notranslate">assets</span> <a href="../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>最も重要なものの1つが<a href="../../The_Asset_Editors/Scripts.htm">スクリプト</a> <span class="notranslate">asset</span> です。<span class="notranslate">Scripts</span> は特殊で、基本的にユーザー定義関数の「コンテナ」であり、それ自体は実際にゲーム内で直接呼び出されることはありません<span class="notranslate">assets</span> 。<span class="notranslate">scripts</span> はすべて<strong>グローバルな</strong>スコープで、ゲーム開始時に<span class="notranslate">GameMaker</span> によって自動的に実行されます。したがって、これらを使用して、ゲーム全体で使用したいグローバル変数や関数を定義することができます。</p>
+  <p>各<span class="notranslate">GML</span> Visual<span class="notranslate">script</span> には、1つ以上のユーザー定義関数を追加することができます。これらの関数は、<a href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a> というアクションを使用して作成されます。</p>
+  <p><img>ここで定義した関数は、グローバルなスコープで、組み込みの<span class="notranslate">GML</span> Visual アクションと同様に動作します。つまり、<span class="glossextra">引数</span>（またはパラメータ）と呼ばれる異なる値（または全くない値）を取り、タスクを実行し、必要に応じて値を返すか何も返しません。そして、<a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">関数呼び出し</a> <img> アクションを使用して、ゲーム内で関数を呼び出します。</p>
+  <p><img> <span class="notranslate">GML</span> Visual を作成するには、 ブラウザの任意の場所でマウスの右ボタン を使い、<span class="notranslate">script</span> <span class="notranslate">Asset</span> <img> <strong>Create </strong>→<strong>Script</strong> を選択するだけです。これにより、新しい Visual が作成され、エディタ・ウィンドウが開きます。<span class="notranslate">GML</span> <span class="notranslate">script</span> </p>
+  <p><img> <span class="notranslate">script</span> の名前は、 ブラウザで を右クリックし、<span class="notranslate">Asset</span> <img> <strong>Rename </strong> を選択（またはゆっくり左ダブルクリック ）します。ただし、 の名前は の一般規則に従わなければならないので、文字から始まり、文字、数字またはアンダーバー記号 「_」のみを含まなければならないことに注意してください。また、 には、<img> <span class="notranslate">script</span> <span class="notranslate">assets</span> <span class="notranslate">script</span> <strong>Declare A New Function</strong>アクションがあらかじめ入力されており、必要事項を記入することができます。必要に応じて、さらに関数宣言を追加することができます（1つの に複数の関数を格納することができるので、類似した、または関連した用途の関数をグループ化する際に便利です）。<span class="notranslate">script</span> </p>
+  <p>前述したように、関数にはいくつかの引数を渡すことができ、関数はそれらを使ってあなたが書いたタスクを実行します。このことをよりよく理解するために、たとえば組み込みのアクションを例にとり、それがどのように動作するかを考えてみましょう。ユーザー定義関数もこれと全く同じで、唯一の違いは、<em>あなたが </em>書くということです。</p>
+  <p>新しい関数を定義する際には、関数名を付けると同時に、引数を取る場合にはその名前も定義します（関数は、要求に応じて、引数を取らないことも、複数の引数を取ることもできます）。引数名を指定した場合、その引数は関数が呼び出すアクションの中で、関数の入力値を保持する<strong>ローカル </strong>変数として使用されます。</p>
+  <p>また、<a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JS Docのルール</a>に従って、そのアクションが何をするものかを説明するコメントを追加するのも良い方法です。例えば、この関数 <span class="inline">set_vec()</span> を考えてみましょう。</p>
+  <p><img>上記の<span class="notranslate">script</span> を呼び出すには、以下のように<strong>Call Function</strong>アクションを使用するだけです。</p>
+  <p><img>関数に引数を渡すだけでなく、関数に値を返してもらうこともできます（<a href="../Drag_And_Drop_Reference/Common/Return.htm">Return</a> <img> アクションを使用）ので、例えば計算方法を構築したり、複雑な衝突判定後にインスタンスIDを返したり、様々なことに使用することができます。ただし、returnを使うと<strong>関数が終了して</strong>しまうので、returnを使った後のアクションは一切実行されませんので、関数の構成にはそれなりの工夫が必要です。</p>
+  <p>以下は、値を返す<span class="notranslate">GML</span> Visual 関数です。</p>
+  <p><img alt="Declare A New Function Syntax" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Function.png" /></p>
+  <p>上記の関数は、単に<span class="notranslate">room</span> のすべてのインスタンスをチェックして、その <span class="inline">object_index</span> が何であるかを確認し、そのうちの 1 つがプレーヤー<span class="notranslate">object</span> であれば、この関数は <span class="inline">true</span> （関数呼び出しの終了）または <span class="inline">false</span> を返します。この関数を次のように呼び出します。</p>
+  <p><img>そこで、関数を呼び出して、戻り値（この場合、 <span class="inline">true</span> または <span class="inline">false</span> ）を格納する一時的な（ローカル）変数を作成させ、この変数をチェックしてアクションを実行させるのです。</p>
+  <p>また、引数をオプションにしてデフォルト値を定義すると、関数呼び出しの際に引数が提供されない場合に、代わりにデフォルト値が使用されるようになります。詳細は、アクションの<a data-xref="{text}" href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm#h">拡張例 2</a>を参照ください。</p>
+  <p><span class="notranslate">GML</span> Visual<span class="notranslate">scripts</span> の関数を作成する場合、<span class="notranslate">object</span> イベントにアクションを追加するときと同じアクションをすべて使用できます。また、関数の中から関数を呼び出すこともでき、このようにしてより「モジュラー」なアクションコードを作成できます。このように関数を使って<span class="notranslate">scripts</span> を構築すると、同じアクション<span class="notranslate">sequences</span> を作成する時間を大幅に短縮でき、また、アクション<span class="notranslate">sequences</span> を読みやすく、デバッグしやすくすることができます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Changing_DnD_To_Code.htm">Changing GML Visual To Code</a></div>
+        <div style="float:left">戻る：<a href="../../Content.htm">インデックス</a></div>
+        <div style="float:right">次へ<a href="Changing_DnD_To_Code.htm"> <span class="notranslate">GML</span> </a>ビジュアルをコードに変更</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Scripts

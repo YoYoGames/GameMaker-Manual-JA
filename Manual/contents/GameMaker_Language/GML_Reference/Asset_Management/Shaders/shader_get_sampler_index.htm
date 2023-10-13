@@ -6,7 +6,7 @@
   <title>shader_get_sampler_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function shader_get_sampler_index" />
   <meta name="rh-index-keywords" content="shader_get_sampler_index" />
@@ -16,52 +16,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>shader_get_sampler_index</h1>
-  <p>Since you cannot change the value of a shader sampler within the shader itself, you have to set it before calling the shader using one of the available <strong>uniform set</strong> functions. However, to be able to do <i>that</i> you must first call this function to get the &quot;handle&quot; of the shader sampler that you will want to set.</p>
-  <p class="note"><span class="note">NOTE</span> Although a shader is made up of two discreet programs (vertex and fragment) this function will not differentiate between the two and will return the handle of the shader sample from either of them.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p><span class="notranslate">shader</span> 自体の中で<span class="notranslate">shader</span> サンプラーの値を変更することはできないので、利用可能な<strong>ユニフォームセット</strong>関数のいずれかを使用して、<span class="notranslate">shader</span> を呼び出す前に設定する必要があります。しかし、<i>これを</i>行うには、まずこの関数を呼び出して、設定したい<span class="notranslate">shader</span> サンプラーの「ハンドル」を取得する必要があります。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">shader</span> は2つの独立したプログラム（<span class="notranslate">vertex</span> と fragment ）から構成されていますが、この関数はその2つを区別せず、どちらか一方のサンプル<span class="notranslate">shader</span> のハンドルを返します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">shader_get_sampler_index(shader, uniform);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>shader</td>
-        <td><span data-keyref="Type_Asset_Shader"><a data-rhwidget="HyperlinkPopover" href="../../../../../The_Asset_Editors/Shaders.htm">Shader Asset</a></span></td>
-        <td>The index of the shader to use.</td>
+        <td><span class="notranslate">shader</span></td>
+        <td><span data-keyref="Type_Asset_Shader"><a data-rhwidget="HyperlinkPopover" href="../../../../../The_Asset_Editors/Shaders.htm">シェーダーアセット</a></span></td>
+        <td><span class="notranslate">The index of the shader to use.</span></td>
       </tr>
       <tr>
-        <td>uniform</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">String</a></span></td>
-        <td>The shader sampler to get the handle of (a string).</td>
+        <td><span class="notranslate">uniform</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">文字列</a></span></td>
+        <td><span class="notranslate">The shader sampler to get the handle of (a string).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Handle_Shader_Sampler"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_get_sampler_index.htm">Shader Sampler Handle</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">glassshader_bgsampler = shader_get_sampler_index(GlassShader, &quot;s_BackgroundSampler&quot;)<br />
     spr = sprite_get_texture(sprite_index, 0);<br />
     shader_set(GlassShader);<br />
     texture_set_stage(glassshader_bgsampler, spr);<br />
     shader_reset();</p>
-  <p>The above code will get the <i>handle</i> for the sampler within the shader indexed as &quot;GlassShader&quot; and then set that shader constant to the given sprite texture.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、&quot;GlassShader &quot;というインデックスを持つ<span class="notranslate">shader</span> 内のサンプラーの<i>ハンドルを</i>取得し、その<span class="notranslate">shader</span> 定数を与えられた<span class="notranslate">sprite</span> <span class="notranslate">texture</span> に設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Shaders.htm">Shaders</a></div>
-        <div style="float:right">Next: <a href="shader_set.htm">shader_set</a></div>
+        <div style="float:left">戻る<a href="Shaders.htm">シェーダー</a></div>
+        <div style="float:right">次のページ <a href="shader_set.htm"><span class="notranslate">shader_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 shader_get_sampler_index

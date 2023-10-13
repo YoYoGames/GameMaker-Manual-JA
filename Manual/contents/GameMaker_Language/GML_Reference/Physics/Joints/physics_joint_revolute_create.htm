@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_joint_revolute_create</title>
+  <title>物理ジョイントの作成</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_revolute_create" />
   <meta name="rh-index-keywords" content="physics_joint_revolute_create" />
@@ -15,83 +15,83 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_revolute_create</h1>
-  <p>A revolute joint forces two bodies to share a common anchor point (often called a hinge point) and the joint has a single degree of freedom - the relative rotation of the two bodies around this point. To specify a revolute you need to provide two instances and a single anchor point in the room, as you can see in the image provided:</p>
-  <p><img alt="Revolute joint anchor points illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/revolute_joint_image_1.png" />If you look at the image, you can see that the two instances have been created to over-lap and at the point where they are touching, we have defined a revolute joint. Now, this joint can be limited in its freedom of rotation thanks to the &quot;ang_min_limit&quot; and &quot;ang_max_limit&quot; values. How does this work? Well, let&#39;s look at another image:</p>
-  <p><img alt="Revolute joint angle limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/revolute_joint_image_2.png" />As you can see, angles in the physics world are <i>not</i> the same as the standard <span data-keyref="GameMaker Name">GameMaker</span> angles where right is 0 degrees and then it goes anti-clockwise so that up is 90, left is 180, and down is 270. No, when dealing with the revolute joint, the 0 degrees axis runs from the joint position to the origin of the second instance defined by the function and the angles are then calculated in a clockwise direction. If you switch on angle limiting, the limits are defined as being relative to this 0 degree axis and the limit range <i>should include zero</i>, otherwise the joint will lurch when the room begins. Finally, you can define the joint as having a motor or not. This means that when uninfluenced by a collision the joint will move in a direction, which is defined by the motor speed with a positive number being clockwise and a negative number being anti-clockwise. The &quot;max_motor_torque&quot; argument is for limiting the speed of the rotation so that you don&#39;t get a perpetually accelerating motor and to limit the influence that a collision may have on the rotation. In this way you can use a joint motor to simulate joint friction by setting joint speed to zero and maximum torque to some small, but significant value. The motor will try to prevent the joint from rotating, but will yield to a significant load.</p>
-  <p>As with all the joints, if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>物理ジョイントの作成</h1>
+  <p>レボリュートジョイントは、2つのボディに共通のアンカーポイント（ヒンジポイントと呼ばれることもあります）を共有させ、ジョイントは1つの自由度（このポイント周りの2つのボディの相対回転）を持っています。レボリュートを指定するには、<span class="notranslate">room</span> に 2 つのインスタンスと 1 つのアンカー ポイントを指定する必要があります（提供された画像に表示されています）。</p>
+  <p><img>画像を見ると、2つのインスタンスが重なるように作成されており、接触している箇所では、リボルートジョイントを定義していることがわかります。このジョイントは、&quot;ang_min_limit&quot; と &quot;ang_max_limit&quot; の値により、回転の自由度を制限することができます。これはどのように機能するのでしょうか？では、別の画像を見てみましょう。</p>
+  <p><img>ご覧のように、物理の世界での角度は、<span data-keyref="GameMaker Name">GameMakerの</span>標準的な角度とは<i>異なり</i>、右を0度として、反時計回りに、上が90、左が180、下が270となるようになります。そうではなく、レボリュートジョイントを扱う場合、0度軸はジョイント位置から関数で定義された2番目のインスタンスの原点まで走り、その後時計回りに角度が計算されます。角度の制限を<span class="notranslate">switch</span> した場合、制限はこの 0 度軸を基準に定義され、制限<i>範囲には 0 を含める必要が</i>あります。そうしないと、<span class="notranslate">room</span> を開始したときにジョイントがぐらつくことになります。最後に、ジョイントにモーターがあるかないかを定義できます。これは、衝突の影響がない場合、ジョイントはモーターの速度で定義された方向に動くことを意味し、正の数は時計回り、負の数は反時計回りとなります。max_motor_torque&quot; 引数は回転速度を制限するためのもので、モーターが永久に加速しないように、また衝突が回転に与える影響を制限するためのものです。この方法では、関節速度をゼロに設定し、最大トルクをある小さな、しかし重要な値に設定することで、関節摩擦をシミュレートするために関節モーターを使用することができます。モーターは関節が回転するのを防ごうとしますが、大きな負荷がかかると降伏します。</p>
+  <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">physics_joint_revolute_create(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
+        <td><span class="notranslate">inst1</span></td>
+        <td><span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The first instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
+        <td><span class="notranslate">inst2</span></td>
+        <td><span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The second instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>w_anchor_x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">w_anchor_x</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The x coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor_y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">w_anchor_y</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The y coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>ang_min_limit</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The lower permitted limit for the joint angle</td>
+        <td><span class="notranslate">ang_min_limit</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The lower permitted limit for the joint angle</span></td>
       </tr>
       <tr>
-        <td>ang_max_limit</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The upper permitted limit for the joint angle</td>
+        <td><span class="notranslate">ang_max_limit</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The upper permitted limit for the joint angle</span></td>
       </tr>
       <tr>
-        <td>ang_limit</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the to limit the angle of the joint (true) or not (false)</td>
+        <td><span class="notranslate">ang_limit</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether the to limit the angle of the joint (true) or not (false)</span></td>
       </tr>
       <tr>
-        <td>max_motor_torque</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</td>
+        <td><span class="notranslate">max_motor_torque</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</span></td>
       </tr>
       <tr>
-        <td>motor_speed</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This is the speed at which the motor should rotate</td>
+        <td><span class="notranslate">motor_speed</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">This is the speed at which the motor should rotate</span></td>
       </tr>
       <tr>
-        <td>motor</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the motor should be active (true) or not (false)</td>
+        <td><span class="notranslate">motor</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether the motor should be active (true) or not (false)</span></td>
       </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
+        <td><span class="notranslate">col</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var mainFixture, o_id;<br />
     mainFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br />
@@ -100,18 +100,18 @@
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_revolute_create(id, o_id, x+25, y, -90, 90, 1, 0, 0, 0, 0);<br />
     physics_fixture_delete(mainFixture);</p>
-  <p>The above code creates and defines a new fixture and then creates an instance of &quot;obj_Door&quot;, binding the created fixture to the two new objects. They are then joined by a revolute joint with no motor and the angles limited to a +/- 90 degree swing. Finally the fixture is deleted as it is no longer needed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、新しいフィクスチャを作成して定義し、「obj_Door」のインスタンスを作成して、作成したフィクスチャを2つの新しい<span class="notranslate">objects</span> にバインドしています。そして、モーターを使わず、角度を +/- 90 度に制限したリボルートジョイントで結合しています。最後に、フィクスチャは不要になったので削除されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_prismatic_create.htm">physics_joint_prismatic_create</a></div>
+        <div style="float:left">背中<a href="Joints.htm">関節</a></div>
+        <div style="float:right">次のページ <a href="physics_joint_prismatic_create.htm"><span class="notranslate">physics_joint_prismatic_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_revolute_create

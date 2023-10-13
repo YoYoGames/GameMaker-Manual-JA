@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_add</title>
+  <title>スプライトアド</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_add" />
   <meta name="rh-index-keywords" content="sprite_add" />
@@ -14,79 +14,79 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">sprite_add</span></h1>
-  <p>With this function you can add an image as a sprite, loading it from an external source where the image file to be loaded should <b>always</b> be in either <span class="inline">*.png</span>, <span class="inline">*.gif</span>, <span class="inline">*.jpg/jpeg</span> or <span class="inline">*.json</span> format (<span class="inline">*.json</span> files are used for loading <a href="../Skeletal_Animation/Skeletal_Animation.htm">skeleton animation sprites</a> made with Spine). The function returns the new sprite index which must then be used in all further code that relates to the sprite. If you use this function with HTML5 or are getting an image from a URL, this function will also generate an <a data-xref="{title}" href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a> asynchronous event.</p>
-  <p>All images that are to be turned into animated sprites - except for <span class="inline">*.gif</span> (see below) - should have a <a href="../../../../../The_Asset_Editors/Sprite_Properties/Sprite_Strips.htm">strip</a> format (see the image below) and it will be split into the number of sub-images specified following the rule <b>sprite width = strip width / sub images</b>.</p>
+  <h1>スプライトアド</h1>
+  <p>この関数では、画像を<span class="notranslate">sprite</span> として追加し、外部ソースから読み込みます。読み込む画像ファイルは、<b>常に</b> <span class="inline">*.png</span> 、 <span class="inline">*.gif</span> 、 <span class="inline">*.jpg/jpeg</span> 、 <span class="inline">*.json</span> のいずれかの形式でなければなりません（<span class="inline">*json</span> ファイルは、<span class="notranslate">Spine</span> で作成した<a href="../Skeletal_Animation/Skeletal_Animation.htm">スケルトンアニメーションスプライトの</a>読み込みに使用されます）。この関数は，新しい<span class="notranslate">sprite</span> のインデックスを返します．このインデックスは，今後<span class="notranslate">sprite</span> に関連するすべてのコードで使用されなければなりません． この関数を HTML5 で使用する場合，あるいは URL から画像を取得する場合，この関数は<b>Image Loaded</b>非同期イベントも発生させます．詳しくは<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">こちらのページを</a>ご覧ください。</p>
+  <p><span class="notranslate">sprites</span> アニメーション化される画像は、 <span class="inline">*.gif</span> （下記参照）を除き、すべて「帯」の形式でなければならず、<b>スプライト幅＝帯幅／サブ画像という</b>規則に従って、指定された数のサブ画像に分割されます。</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
-  <p>As you can see in the above image, the sprite has been placed on a dark purple background, and this can be removed by setting the &quot;removeback&quot; argument to <span class="inline2">true</span>. This works by checking the <i>bottom left</i> pixel of the sprite for the colour there and then uses that as the colour to be removed. For example, in the above image, if we had the bottom left pixel colour as green, all the green parts of the sprite would have been removed and the rest of the purple background ignored.</p>
-  <p>When &quot;removeback&quot; is enabled, the alpha channel of the source image is ignored, meaning all pixels other than the &quot;background colour&quot; ones become fully opaque.</p>
-  <p>If you choose the &quot;removeback&quot; option, you may also want <span data-keyref="GameMaker Name">GameMaker</span> to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <span class="inline2">true</span>. All this does is create a semi-transparent border around the edges of the sprite after it has had its background removed.</p>
-  <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the (0,0) top left corner of one sprite sub-image. So, for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
-  <p>If you are adding a <span class="inline">*.gif</span> format image, then you only need to specify the filename and image number (which should be 1 for the first frame) and can leave all the other arguments as 0, noting that <b>only the first image of the GIF will be loaded</b>. For <span class="inline">*.json</span> sprites, the image number should be 1, and the &quot;removeback&quot; and &quot;smooth&quot; settings will be ignored.</p>
-  <p>By default all new sprites have their bounding boxes calculated automatically (the exact bounding box will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function <span class="inline3_func"><a data-xref="{title}" href="sprite_collision_mask.htm">sprite_collision_mask</a></span>.</p>
-  <p>It should be noted that the memory used when adding a sprite in this way will be larger than you may expect. This is because <span data-keyref="GameMaker Name">GameMaker</span> will store the sprite as a texture page <i>and</i> it will also be stored in GPU memory, so the total memory will be larger than would be expected for an image file of the same sprite.</p>
-  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span></b> When you load a sprite into <span data-keyref="GameMaker Name">GameMaker</span> you must remember to remove it again (with <span class="inline3_func"><a data-xref="{title}" href="sprite_delete.htm">sprite_delete</a></span>) when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span></b> On <b>iOS</b>, if you are loading an included file from a folder, i.e. with a path something like <span class="inline2">&quot;Backgrounds/background1.png&quot;</span>, you do NOT need to include the folder as part of the path and simply supplying the file name is sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.</p>
-  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span></b> On <b>HTML5</b>, if you are loading a sprite from a secure server you may need to set the cross-origin type and use a relative path instead of an absolute path. See <span class="inline3_func"><a data-xref="{title}" href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm">http_set_request_crossorigin</a></span> for more details.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">sprite_add</span>(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p>上の画像でわかるように、<span class="notranslate">sprite</span> は濃い紫色の背景に配置されています。これを取り除くには、引数 &quot;removeback&quot; を <span class="inline">true</span> に設定します。これは<span class="notranslate">sprite</span> の<i>左下の</i>ピクセルにある色をチェックし、それを取り除く色として使用することで動作します。たとえば、上の画像では、左下のピクセルの色を緑にすると、<span class="notranslate">sprite</span> のすべての緑の部分が削除され、残りの紫色の背景は無視されることになります。</p>
+  <p>removeback」を選択した場合、<span data-keyref="GameMaker Name">GameMakerの</span>「smooth」引数に <span class="inline">true</span> を指定し、<span class="notranslate">sprite</span> のエッジを滑らかにすることもできます。これは、背景を取り除いた後の<span class="notranslate">sprite</span> の端に、半透明の縁取りを作るだけです。</p>
+  <p>最後に、<span class="notranslate">sprite</span> の x と y の<i>原点を</i>指定することもできます。これは、<span class="notranslate">sprite</span> を使用するインスタンスに「固定」される点で、常に<span class="notranslate">sprite</span> のサブイメージの左上隅 0,0 からの相対値として計算されます。したがって、たとえば、これらの値を (16,16) に設定した 32 x 32 ピクセルの<span class="notranslate">sprite</span> は、その原点を中央に持つことになる。</p>
+  <p> <span class="inline">*.gif</span> 形式の画像を追加する場合、ファイル名と画像番号（最初のフレームは1であるべき）を指定するだけで、他の引数はすべて0のままでよく、<b>GIFの最初の画像だけが読み込ま</b>れることに注意する必要があります。 <span class="inline">*.json</span> <span class="notranslate">sprites</span> の場合、画像番号は 1 であるべきで、&quot;removeback&quot; と &quot;smooth&quot; の設定は無視されます。</p>
+  <p>デフォルトでは、すべての新しい<span class="notranslate">sprites</span> のバウンディングボックスは自動的に計算されます（正確なバウンディングボックスは<span class="notranslate">sprite</span> のサイズと透明度に依存します）が、これをカスタマイズしたい場合は、関数 <a href="sprite_collision_mask.htm"><span class="inline">sprite_collision_mask()</span></a>.</p>
+  <p>この方法で<span class="notranslate">sprite</span> を追加する場合、使用するメモリが予想以上に大きくなることに注意する必要があります。これは、<span data-keyref="GameMaker Name">GameMaker</span>が<span class="notranslate">sprite</span> を<span class="notranslate">texture</span> のページとして保存<i>し、</i>さらに GPU メモリにも保存するため、同じ<span class="notranslate">sprite</span> の画像ファイルよりも総メモリ量が大きくなるためです。</p>
+  <p class="note"><b>注意</b>：<span class="notranslate">sprite</span> を<span data-keyref="GameMaker Name">GameMaker</span>に読み込んだら、忘れずに再度削除する必要があります( <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a>さもないと、メモリーリークが起こり、ゲームのスピードが落ち、最終的にはクラッシュしてしまいます。</p>
+  <p class="note"><b>注</b>：<b>iOSでは</b>、インクルードファイルをフォルダから読み込む場合、つまり、<span class="notranslate">path</span> のような &quot;<span style="font-size:1px;"><span class="inline">Backgrounds/background1.png</span></span><span class="notranslate">path</span> 「ファイル名を指定するだけで十分です。他のすべてのプラットフォームでは、フォルダを<span class="notranslate">path</span> の一部としてファイルに含める必要があります。</p>
+  <p class="note"><b>注</b>：<b>HTML5では</b>、安全な<span class="notranslate">sprite</span> から<span class="notranslate">server</span> を読み込む場合、cross-origin type を設定し、絶対的な<span class="notranslate">path</span> の代わりに相対的な<span class="notranslate">path</span> を使用する必要がある場合があります。参照 <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="inline">http_set_request_crossorigin()</span></a></span>をご覧ください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name (a string file path) of the file to add.</td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The name (a string file path) of the file to add.</span></td>
       </tr>
       <tr>
-        <td>imgnum</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Use to indicate the number of sub-images (1 for a single image or for a <span class="inline">*.gif</span>).</td>
+        <td><span class="notranslate">imgnum</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">Use to indicate the number of sub-images (1 for a single image or for a <span class="inline">*.gif</span>).</td>
       </tr>
       <tr>
-        <td>removeback</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</td>
+        <td><span class="notranslate">removeback</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</span></td>
       </tr>
       <tr>
-        <td>smooth</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Indicates whether to smooth the edges if transparent.</td>
+        <td><span class="notranslate">smooth</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Indicates whether to smooth the edges if transparent.</span></td>
       </tr>
       <tr>
-        <td>xorig</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Indicate the x position of the origin in the sprite.</td>
+        <td><span class="notranslate">xorig</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">Indicate the x position of the origin in the sprite.</span></td>
       </tr>
       <tr>
-        <td>yorig</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Indicate the y position of the origin in the sprite.</td>
+        <td><span class="notranslate">yorig</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">Indicate the y position of the origin in the sprite.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Asset_Sprite"><a href="../../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">spr = <span data-field="title" data-format="default">sprite_add</span>(&quot;player_5.png&quot;, 16, true, true, 0, 0);</p>
-  <p>The above code loads a sprite into the game and stores its index in the variable <span class="inline2">spr</span>.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0);</p>
+  <p>上記のコードでは、<span class="notranslate">sprite</span> をゲームにロードし、そのインデックスを変数 &quot;spr&quot; に格納しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="sprite_add_ext.htm">sprite_add_ext</a></div>
+        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次のページ <a href="sprite_replace.htm"><span class="notranslate">sprite_replace</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_add

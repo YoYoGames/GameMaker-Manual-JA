@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_load_partial</title>
+  <title>バッファロードパーティカル</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_load_partial" />
   <meta name="rh-index-keywords" content="buffer_load_partial" />
@@ -14,62 +14,62 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_load_partial</h1>
-  <p><span>This function will load some of the buffer data that was previously saved using the </span><a href="buffer_save.htm"><span class="inline">buffer_save()</span></a><span> functions into an existing buffer. You give the id of the previously created buffer to load into, then the saved buffer file to load, and then the offset from the start of the buffer (in bytes) that you wish to load the data from. The following arguments are for setting the length of the buffer data (in bytes) from the initial offset point that you wish to load and the offset point to load the data to in the buffer (again, in bytes).</span></p>
-  <p>Please read the <span class="inline"><a href="buffer_load.htm">buffer_load()</a></span> page for platform-specific notes.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>バッファロードパーティカル</h1>
+  <p><span>この関数は、以前、<span class="notranslate">buffer</span> を使って保存したデータの一部を読み込みます。 </span><a href="buffer_save.htm"><span class="inline">buffer_save()</span></a><span>関数を既存の<span class="notranslate">buffer</span> に追加します。ロードする前に作成した<span class="notranslate">buffer</span> の ID、ロードするために保存した<span class="notranslate">buffer</span> ファイル、そしてデータをロードする<span class="notranslate">buffer</span> の開始点からのオフセット (バイト単位) を指定します。次の引数は、ロードしたい最初のオフセット点から<span class="notranslate">buffer</span> のデータの長さ（バイト単位）と、<span class="notranslate">buffer</span> のデータをロードするオフセット点（これもバイト単位）を設定するためのものである。</span></p>
+  <p>プラットフォーム別の注意事項については、 <span class="inline"><a href="buffer_load.htm">buffer_load()</a></span> のページをお読みください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">buffer_load_partial(buffer, filename, offset, src_len, dest_offset);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The index of the buffer to load into (destination).</td>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to load into (destination).</span></td>
      </tr>
       <tr>
-        <td>filename</td><td><span data-keyref="Type_String"></span></td>
-        <td>The name of the file to load from (source).</td>
+        <td><span class="notranslate">filename</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the file to load from (source).</span></td>
      </tr>
       <tr>
-        <td>offset</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The offset within the destination buffer to load to (in bytes).</td>
+        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The offset within the destination buffer to load to (in bytes).</span></td>
      </tr>
       <tr>
-        <td>src_len</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The length of the part of the source buffer to load (in bytes).</td>
+        <td><span class="notranslate">src_len</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The length of the part of the source buffer to load (in bytes).</span></td>
      </tr>
       <tr>
-        <td>dest_offset</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The offset where to start putting the partial data in the destination buffer (in bytes).</td>
+        <td><span class="notranslate">dest_offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The offset where to start putting the partial data in the destination buffer (in bytes).</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">buff = buffer_create(256, buffer_grow, 1);<br />
     var _file = &quot;save.dat&quot;;<br />
     var _so = 6;<br />
     var _sl = 5;<br />
     var _do= 0;<br />
     buffer_load_partial(buff, _file, _so, _sl, _do);</p>
-  <p>The above code will create a new &quot;grow&quot; buffer and then load in a part of the data saved in the file &quot;save.dat&quot; to it.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、新たに &quot;grow&quot;<span class="notranslate">buffer</span> を作成し、そこにファイル &quot;save.dat&quot; に保存されているデータの一部を読み込ませることになります。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_compress.htm">buffer_compress</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_compress.htm"><span class="notranslate">buffer_compress</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_load_partial

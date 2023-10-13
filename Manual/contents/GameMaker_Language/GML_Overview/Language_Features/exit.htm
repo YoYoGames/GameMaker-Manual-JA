@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>exit</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>出口</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the exit function" />
   <meta name="rh-index-keywords" content="exit" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>exit</h1>
-  <p>The <span class="inline">exit</span> statement has the following syntax:</p>
+  <h1>出口</h1>
+  <p> <span class="inline">exit</span> 文は次のような構文です。</p>
   <p class="code">exit;</p>
-  <p><span class="inline">exit</span> simply ends the execution of the current <a href="../Script_Functions.htm">script function</a>, <a href="../Method_Variables.htm">method</a>, or <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">event</a>. Note there is a slight difference in use here depending on the scope:</p>
+  <p><span class="inline">exit</span> は、単に現在の<a href="../Script_Functions.htm">スクリプト関数の</a>実行を終了させるだけです。 <a href="../Method_Variables.htm"><span class="notranslate">method</span></a>または <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a>.ここでは、スコープによって若干の使い分けがあることに注意してください。</p>
   <ul class="colour">
-    <li>If you use <span class="inline">exit</span> in a script function or method it will simply exit the function and return to the code that called the function.</li>
-    <li>If you use <span class="inline">exit</span> in a code block within an object&#39;s event, it will exit <i>the entire event</i> even if there are various separate code blocks after <span class="inline">exit</span> has been called.</li>
-    <li>If you use <span class="inline">exit</span> in a parent event and call that event using <a href="../../GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> in a child object, only the parent event will exit and the child&#39;s event (which called <span class="inline">event_inherited()</span>) will continue.</li>
+    <li><span class="notranslate">script</span> 関数やメソッドの中で <span class="inline">exit</span> を使用すると、単に関数を終了して、関数を呼び出したコードに戻ります。</li>
+    <li>オブジェクトのイベント内のコードブロックで <span class="inline">exit</span> を使用すると、 <span class="inline">exit</span> が呼ばれた後に様々な別のコードブロックがあったとしても、<i>イベント全体を</i>終了させることができます。</li>
+    <li>親イベントで <span class="inline">exit</span> を使用し、そのイベントを <a href="../../GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a>を子イベント<span class="notranslate">object</span> で呼び出すと、親イベントだけが終了し、子イベント ( <span class="inline">event_inherited()</span> を呼び出したもの) は継続されます。</li>
   </ul>
-  <p>When used in an event, <span class="inline">exit</span> is typically used to avoid an instance running any further code when a specific condition has been met (or not). The code below outlines an example of how it could be used, in this case within a Collision Event, although it can be used in any event.</p>
+  <p>イベント内で使用する場合、 <span class="inline">exit</span> は通常、特定の条件が満たされた（または満たされなかった）ときに、インスタンスがそれ以上のコードを実行しないようにするために使用されます。以下のコードは、どのようなイベントでも使用できますが、この場合は衝突イベントでの使用例を示しています。</p>
   <p class="code">if (!visible)<br />
     {<br />
         exit;<br />
@@ -33,19 +33,19 @@
     other.coins -= 4;<br />
     coins += 4;
   </p>
-  <p>The above code checks if the current instance is not visible, in that case it exits the code block, otherwise it goes ahead and runs the rest of the code.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It does not end the execution of the game. For that you need to use the function <span style="font-size:1px;"><a href="../../GML_Reference/General_Game_Control/game_end.htm"><span class="inline">game_end()</span></a></span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、現在のインスタンスが表示されていないかどうかをチェックし、その場合はコードブロックを終了し、それ以外の場合は先に進んで残りのコードを実行しています。</p>
+  <p class="note"><b>注意</b>：ゲームの実行を終了させるものではありません。そのためには関数 <span style="font-size:1px;"><a href="../../GML_Reference/General_Game_Control/game_end.htm"><span class="inline">game_end()</span></a></span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="with.htm">with</a></div>
+        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:right">次のページ <a href="with.htm"><span class="notranslate">with</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 exit

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Micro Web Server</title>
+  <title>マイクロウェブサーバー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers the micro web server." />
   <meta name="rh-index-keywords" content="Micro Web Server" />
@@ -14,27 +14,27 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Micro Web Server</h1>
-  <p>This small tool&#39;s primary function is to connect to and serve files to some of the available target platforms for <span data-keyref="GameMaker Name">GameMaker</span> (like the HTML5 target). It also serves files for the <span data-keyref="GameMaker Name">GameMaker</span> manual when used offline.</p>
-  <p>When you run a game on a target that requires the Micro Web Server, you will see a new window open as the game is served to the chosen device:</p>
+  <h1>マイクロウェブサーバー</h1>
+  <p>この小さなツールの主な機能は、<span data-keyref="GameMaker Name">GameMakerで</span>利用可能ないくつかのターゲットプラットフォーム（HTML5ターゲットなど）に接続し、ファイルを提供することである。また、オフラインで使用する場合は、<span data-keyref="GameMaker Name">GameMakerの</span>マニュアル用のファイルも提供する。</p>
+  <p>Micro Web<span class="notranslate">Server</span> を必要とするターゲットでゲームを実行すると、選択したデバイスにゲームが提供される際に、新しいウィンドウが開くのがわかります。</p>
   <p><img alt="Micro Web Server Window" class="center" src="../assets/Images/IDE Tools/Micro_Web_Server.png" /></p>
-  <p class="note"><span class="note">NOTE</span> The first time you run a game on a target that requires the Micro Web Server, you may get a firewall alert. You should permit the web server to communicate through the firewall if this happens.</p>
-  <p>When the Micro Web Server is running, you can access your game from any local device (and even remotely, if port forwarding is properly set up). Simply access your computer&#39;s local IP address through the port shown in this window, and you will be able to play your game from another device, like a mobile phone, or another computer.</p>
-  <p>For example, let&#39;s say your computer&#39;s local IP address is <span class="inline2">192.168.0.110</span> (<a href="https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108">read this</a> to know how to find it), and the port shown in the Micro Web Server window is <span class="inline2">51264</span>. After running the game on your computer, you would connect to <span class="inline2">192.168.0.110:51264</span> from a browser on your mobile, and play your game.</p>
-  <p>The Web Server will show a certain amount of debug information related to the files that have been served, and has a button to clear this at the bottom. Beside the &quot;Clear&quot; button is the path to the root JS file for the project, while underneath that you have the <strong>Network Speed</strong> option. This is set to &quot;No Limit&quot; by default, but clicking it will open up a list of different network options:</p>
-  <p><img alt="Micro Web Server Window Bandwidths" class="center" src="../assets/Images/IDE Tools/Micro_Web_Server_Bandwidths.png" />Changing this setting will also change the package <strong>Size </strong>option to the right. You can also edit this manually, in which case the Network Speed will be set to &quot;Custom&quot;. Setting it to anything other than the maximum value will effectively throttle the network transfer speed and permit you to test games in a low bandwidth environment.</p>
-  <p>You can also see the list of <strong>Allowed IPs</strong> along with the <strong>Port </strong>number being used, but these cannot be edited in the Micro Web Server. They should be set instead in the <a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">Device Manager</a> settings for the given device target, or the <a data-xref="{text}" href="../Setting_Up_And_Version_Information/Platform_Preferences/HTML5.htm#h">HTML5 Preferences</a> when using the &quot;Default&quot; device.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p class="note"><span class="note">注</span>Micro Web<span class="notranslate">Server</span> を必要とするターゲットで初めてゲームを実行すると、ファイアウォールの警告が表示されることがあります。このような場合は、Web<span class="notranslate">server</span> がファイアウォールを介して通信することを許可する必要があります。</p>
+  <p>Micro Web<span class="notranslate">Server</span> を実行すると、ローカルのどのデバイスからでも（ポートフォワーディングが適切に設定されていればリモートでも）ゲームにアクセスすることができます。このウィンドウに表示されているポートを介してコンピュータのローカルIPアドレスにアクセスするだけで、携帯電話などの他のデバイスや他のコンピュータからゲームをプレイすることができるようになります。</p>
+  <p>例えば、あなたのコンピュータのローカルIPアドレスが<span class="inline2">192.168.0.110</span><a href="https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108">（</a>見つけ方は<a href="https://lifehacker.com/how-to-find-your-local-and-external-ip-address-5833108">これを読んで</a>ください）、Micro Web<span class="notranslate">Server</span> ウィンドウに表示されているポートが<span class="inline2">51264</span>だとします。コンピュータでゲームを実行した後、携帯電話のブラウザから<span class="inline2">192.168.0.110:51264に</span>接続し、ゲームをプレイすることになります。</p>
+  <p>Web<span class="notranslate">Server</span> 、配信されたファイルに関連する一定のデバッグ情報が表示され、下部にこれをクリアするボタンがあります。クリア &quot;ボタンの横には、プロジェクトのルートJSファイルへの<span class="notranslate">path</span> 。その下には、<strong>&quot;ネットワーク速度</strong>&quot;のオプションがあります。これはデフォルトで「No Limit」に設定されていますが、クリックするとさまざまなネットワークオプションのリストが表示されます。</p>
+  <p><img>この設定を変更すると、パッケージ<strong>サイズの </strong>オプションも右側に変更されます。また、手動で編集することも可能で、その場合は「ネットワーク速度」が「カスタム」に設定されます。最大値以外に設定すると、ネットワーク転送速度が効果的に調整され、低帯域幅環境でのゲーム テストが可能になります。</p>
+  <p>また、使用されている<strong>ポート </strong>番号と一緒に<strong>許可IPの</strong>リストも見ることができますが、これらはMicro Web<span class="notranslate">Server</span> で編集することはできません。これらは、指定されたデバイスターゲットの<a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">デバイスマネージャの</a>設定、または「デフォルト」デバイスを使用する場合は<a data-xref="{text}" href="../Setting_Up_And_Version_Information/Platform_Preferences/HTML5.htm#h">HTML5 Preferencesで</a>設定する必要があります。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_IDE_Tools.htm">Additional IDE Tools</a></div>
-        <div style="float:right">Next: <a href="The_Inspector.htm">The Inspector Window</a></div>
+        <div style="float:left">戻る<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span> </a>その他のツール</div>
+        <div style="float:right">次へ<a href="The_Inspector.htm">インスペクターウィンドウ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Micro Web Server

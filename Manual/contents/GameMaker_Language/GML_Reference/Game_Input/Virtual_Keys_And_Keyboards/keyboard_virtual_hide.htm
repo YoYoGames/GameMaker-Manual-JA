@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>keyboard_virtual_hide</title>
+  <title>キーボード_virtual_hide</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for keyboard_virtual_hide" />
   <meta name="rh-index-keywords" content="keyboard_virtual_hide" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>keyboard_virtual_hide</h1>
-  <p>This function can be used to hide the virtual keyboard on the device running the game. Calling this function will generate a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>, in which the <span class="inline">async_load</span> DS map will be populated with the following key/value pairs:</p>
+  <h1>キーボード_virtual_hide</h1>
+  <p>この関数は、ゲームを実行しているデバイスの仮想キーボードを隠すために使用することができます。この関数を呼び出すと、<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">システム非同期イベントが</a>発生し、 <span class="inline">async_load</span> DS マップに以下のキー/値ペアが入力されます。</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - this will be &quot;<b>virtual keyboard status</b>&quot; when triggered by virtual keyboard functions.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li>&quot;<b>event_type</b>&quot; - 仮想キーボード機能によってトリガーされた場合、&quot;<b>virtual keyboard status</b>&quot; となります。</li>
+    <li>&quot;<b>screen_height</b>&quot; - 仮想キーボードの高さ (ピクセル単位)です。キーボードが見えない場合は、0 になります。</li>
+    <li>&quot;<b>keyboard_status</b>&quot; - キーボードの現在のステータスで、以下の文字列のうちの1つとして返されます。
       <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
-        <li>&quot;visible&quot;</li>
+        <li>&quot;隠蔽&quot;</li>
+        <li>&quot;非表示&quot;</li>
+        <li>&quot;表示&quot;</li>
+        <li>&quot;可視&quot;</li>
       </ul>
     </li>
   </ul>
-  <p> </p>
-  <h4>Syntax</h4>
+  <p> </p>
+  <h4>シンタックス</h4>
   <p class="code">keyboard_virtual_hide();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if input == true<br />
     {<br />
         input = false;<br />
         keyboard_virtual_hide();<br />
     }</p>
-  <p>The above code will hide the OS virtual keyboard if the given variable is not set to <span class="inline">false</span>.</p>
+  <p>上記のコードは、与えられた変数が <span class="inline">false</span> に設定されていない場合、OS の仮想キーボードを隠します。</p>
   <p><b></b></p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Virtual_Keys_And_Keyboards.htm">Virtual Keys And Keyboards</a></div>
-        <div style="float:right">Next: <a href="keyboard_virtual_status.htm">keyboard_virtual_status</a></div>
+        <div style="float:left">戻る<a href="Virtual_Keys_And_Keyboards.htm">仮想キーとキーボード</a></div>
+        <div style="float:right">次のページ <a href="keyboard_virtual_status.htm"><span class="notranslate">keyboard_virtual_status</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_virtual_hide

@@ -6,7 +6,7 @@
   <title>object_get_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_get_sprite" />
   <meta name="rh-index-keywords" content="object_get_sprite" />
@@ -16,44 +16,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>object_get_sprite</h1>
-  <p>This function will tell you whether the object you are checking has a sprite or not, and if it does then it will return the index of that sprite, or -1 if it does not. Please note that this is not an instance function! You can have an object with no sprite while an instance of that same object can have one and vice-versa, or they can even have different sprites. You can set an individual instances sprite using the <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> instance variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、チェックしている<span class="notranslate">object</span> が<span class="notranslate">sprite</span> を持つかどうかを調べ、持つ場合はその<span class="notranslate">sprite</span> のインデックスを返し、持たない場合は -1 を返します。これはインスタンス関数ではないことに注意してください!<span class="notranslate">object</span> を持たない<span class="notranslate">sprite</span> があっても、同じ<span class="notranslate">object</span> のインスタンスには があり、その逆もあり得ます。また、異なる<span class="notranslate">sprites</span> を持つことさえあり得ます。個々のインスタンスに<span class="notranslate">sprite</span> を設定するには <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>インスタンス変数です。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">object_get_sprite(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The index of the object to check</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _spr = object_get_sprite(object_index);<br />
     if (sprite_index != _spr)<br />
     {<br />
         sprite_index = _spr;<br />
     }</p>
-  <p>The above example will check the <span class="inline">sprite_index</span> of the instance against the sprite of the <span class="inline">object_index</span> of the instance. If they are not the same, then it will assign the same sprite as that of the object index to the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記の例では、インスタンスの <span class="inline">sprite_index</span> を、インスタンスの <span class="inline">object_index</span> の<span class="notranslate">sprite</span> と照合します。もしそれらが同じでなければ、<span class="notranslate">sprite</span> インデックスのものと同じ<span class="notranslate">object</span> をインスタンスに割り当てます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_visible.htm">object_get_visible</a></div>
+        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ <a href="object_get_visible.htm"><span class="notranslate">object_get_visible</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_sprite

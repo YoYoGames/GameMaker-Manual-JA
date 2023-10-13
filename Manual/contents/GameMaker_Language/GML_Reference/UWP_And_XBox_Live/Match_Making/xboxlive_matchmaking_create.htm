@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>xboxlive_matchmaking_create</title>
+  <title>xboxlive_matchmaking_create（マッチメイキング・クリエイト</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_matchmaking_create" />
   <meta name="rh-index-keywords" content="xboxlive_matchmaking_create,xboxlive_match_visibility_open,xboxlive_match_visibility_private,xboxlive_match_visibility_usetemplate" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_matchmaking_create</h1>
-  <p>This function will create a multi-player session using the Session Template, matchmaking hopper and Secure Device Association template, which you should have created beforehand in the XDP dashboard. The user ID you can retrieve for a particular game pad by calling the <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><span class="inline">xboxlive_user_for_pad()</span></a> function and visibility will be one of the following constants:</p>
+  <h1>xboxlive_matchmaking_create（マッチメイキング・クリエイト</h1>
+  <p>この関数は、XDPダッシュボードであらかじめ作成しておいたSession Template、matchmaking hopper、Secure Device Associationテンプレートを使って、マルチプレイヤー・セッションを作成するものです。を呼び出すことで、特定のゲーム・パッドについて取得できるユーザーIDを取得します。 <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><span class="inline">xboxlive_user_for_pad()</span></a>関数と可視性は、以下の定数のいずれかになります。</p>
   <table>
     <colgroup>
       <col />
@@ -23,95 +23,95 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Xbox_Visibility"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/xboxlive_matchmaking_create.htm">Xbox Match Visibility Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Xbox_Visibility"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/xboxlive_matchmaking_create.htm">Xbox Match Visibility定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_match_visibility_open</span></td>
-        <td>specifies that the session can be joined by the others.</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_match_visibility_open</span></td>
+        <td>は、そのセッションに他の人が参加できることを指定します。</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_match_visibility_private</span></td>
-        <td>specifies that the session is not visible to users who are not session members.</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_match_visibility_private</span></td>
+        <td>は、セッションのメンバーでないユーザーには見えないようにすることを指定します。</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_match_visibility_usetemplate</span></td>
-        <td>specifies that the value used in the session template should be used (this should normally be used as you can&#39;t override a template&#39;s value if one has been set in XDP).</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_match_visibility_usetemplate</span></td>
+        <td>は、セッションテンプレートで使用されている値を使用することを指定します（XDPでテンプレートの値が設定されている場合、上書きすることができないので、通常はこれを使用すべきです）。</td>
       </tr>
     </tbody>
   </table>
-  <p>The function returns a unique Request ID value, which can then be used to identify the correct Social Asynchronous Event for this function. This event will be triggered when the session has been created and will contain a DS Map in the variable <span class="inline">async_load</span> with the following key/value pairs:</p>
+  <p>この関数は一意のリクエストID値を返し、それを使ってこの関数の正しいソーシャル非同期イベントを特定することができる。このイベントはセッションが作成されたときにトリガーされ、変数 <span class="inline">async_load</span> に以下のキーと値のペアを持つ DS Map が格納されます。</p>
   <ul class="colour">
-    <li>&quot;requestid&quot; – contains the request ID as returned by the calling function</li>
-    <li>&quot;status&quot; – contains the string &quot;session_created&quot; to inform you of what type of event has been triggered.</li>
-    <li>&quot;sessionid&quot; – contains the session ID, or -1 in case of failure</li>
-    <li>&quot;error&quot; – contains 0 on success, or -1 in case of failure</li>
-    <li>&quot;correlationid&quot; - the session handle for correlation with the function <span class="inline"><a href="xboxlive_matchmaking_join_session.htm">xboxlive_matchmaking_join_session()</a></span></li>
+    <li>「requestid&quot; - 呼び出し関数によって返されたリクエストIDを含む。</li>
+    <li>&quot;status&quot; -<span class="notranslate">string</span> &quot;session_created &quot;を含み、どのような種類のイベントが発生したかを知らせます。</li>
+    <li>「sessionid&quot; - セッションIDが格納され、失敗した場合は-1が格納されます。</li>
+    <li>「error&quot; - 成功した場合は0，失敗した場合は-1が格納されます．</li>
+    <li>&quot;correlationid&quot; - この関数との相関をとるためのセッションハンドルです。 <span class="inline"><a href="xboxlive_matchmaking_join_session.htm">xboxlive_matchmaking_join_session()</a></span></li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">xboxlive_matchmaking_create(user_id, visibility, template, hopper, sdatemplate, [matchattributes]);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Xbox User ID</a></span></td>
-        <td>The user ID pointer to use</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">XboxユーザーID</a></span></td>
+        <td><span class="notranslate">The user ID pointer to use</span></td>
       </tr>
       <tr>
-        <td>visibility</td>
-        <td><span data-keyref="Type_Constant_Xbox_Visibility"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/xboxlive_matchmaking_create.htm">Xbox Match Visibility Constant</a></span></td>
-        <td>One of the constants listed above</td>
+        <td><span class="notranslate">visibility</span></td>
+        <td><span data-keyref="Type_Constant_Xbox_Visibility"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/xboxlive_matchmaking_create.htm">Xbox Match Visibility定数</a></span></td>
+        <td><span class="notranslate">One of the constants listed above</span></td>
       </tr>
       <tr>
-        <td>template</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">String</a></span></td>
-        <td>The name of the session template</td>
+        <td><span class="notranslate">template</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">文字列</a></span></td>
+        <td><span class="notranslate">The name of the session template</span></td>
       </tr>
       <tr>
-        <td>hopper</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">String</a></span></td>
-        <td>The name of the matchmaking hopper</td>
+        <td><span class="notranslate">hopper</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">文字列</a></span></td>
+        <td><span class="notranslate">The name of the matchmaking hopper</span></td>
       </tr>
       <tr>
-        <td>sdatemplate</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">String</a></span></td>
-        <td>The name of the secure device association template</td>
+        <td><span class="notranslate">sdatemplate</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">文字列</a></span></td>
+        <td><span class="notranslate">The name of the secure device association template</span></td>
       </tr>
       <tr>
-        <td>matchattributes</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The match attributes</td>
+        <td><span class="notranslate">matchattributes</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> マッチの属性</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Async Request ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var userID = xboxlive_user_for_pad(global.PadIndex);<br />
     result = xboxlive_matchmaking_create(userID, xboxlive_match_visibility_usetemplate, &quot;MatchTicketSession&quot;, &quot;MatchTicketHopper&quot;, &quot;PeerServerTraffic&quot;);</p>
-  <p>The above will retrieve the user ID for the user on the given gamepad and then initialise a matchmaking session for them.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記は、与えられたゲームパッド上のユーザーのユーザーIDを取得し、そのユーザーのためのマッチメイキングセッションを初期化します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Match_Making.htm">Match Making</a></div>
-        <div style="float:right">Next: <a href="xboxlive_matchmaking_find.htm">xboxlive_matchmaking_find</a></div>
+        <div style="float:left">戻る<a href="Match_Making.htm">マッチメイキング</a></div>
+        <div style="float:right">次のページ <a href="xboxlive_matchmaking_find.htm"><span class="notranslate">xboxlive_matchmaking_find</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_matchmaking_create

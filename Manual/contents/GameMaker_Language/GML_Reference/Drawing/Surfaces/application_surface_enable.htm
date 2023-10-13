@@ -6,7 +6,7 @@
   <title>application_surface_enable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for application_surface_enable" />
   <meta name="rh-index-keywords" content="application_surface_enable" />
@@ -15,32 +15,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>application_surface_enable</h1>
-  <p>With this function you can enable or disable the application surface. By default the application surface is enabled and all drawing for the Draw events will be done to that and the surface drawn to the screen. However on some older devices and specific chipsets this may result in poorer performance. In those cases you can switch off drawing to the application surface and all Draw event drawing will then be done directly to the screen buffer.</p>
-  <p>You can use this function to enable or disable the application surface at any time in your game, but you should note that it requires at least one frame (step) for the changes to take effect. Switching it off <i><b>will switch off all aspect ratio correction</b></i>, as set in the <i>Game Options</i> for the target platform. This means that you should have some method in place that scales the game to the required device, window or screen dimensions. If you switch it back on again, then the <i>Game Options</i> will take effect again the next step.</p>
-  <p>It is recommended that you use this function carefully as it will impact on how everything is drawn to the screen. In general you would want to have it as an option in a menu of your game, or call it only once at the start of your game and write your code around whether you have it enabled or disabled.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> Disabling the application surface will disable all <a data-xref="{title}" href="../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filters and Effects</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この機能により、アプリケーションサーフェスの有効・無効を設定することができます。デフォルトでは、アプリケーションサーフェスは有効になっており、Drawイベントのすべての描画はそのサーフェスに行われ、サーフェスはスクリーンに描画されます。しかし、一部の古いデバイスや特定のチップセットでは、パフォーマンスが低下することがあります。そのような場合は、<span class="notranslate">switch</span> アプリケーションサーフェスへの描画をオフにすると、すべてのDrawイベントの描画は、直接スクリーンに行われます<span class="notranslate">buffer</span>.</p>
+  <p>この機能を使って、ゲーム中の任意のタイミングでアプリケーションサーフェスの有効・無効を切り替えることができますが、変更が反映されるまでに少なくとも1フレーム（ステップ）必要なことに注意が必要です。オフにする <i><b>は<span class="notranslate">switch</span> 全てのアスペクト比補正をオフにします</b></i>は、ターゲットプラットフォームの<i>ゲームオプションで</i>設定されているとおりです。つまり、必要なデバイス、ウィンドウ、または画面の寸法にゲームをスケーリングする何らかの方法を用意しておく必要があります。<span class="notranslate">switch</span> 再度オンにすると、次のステップで<i>Game Options</i>が再び有効になります。</p>
+  <p>この機能は、画面への描画方法に影響を与えるため、慎重に使用することをお勧めします。一般的には、ゲームのメニューにオプションとして組み込むか、ゲームの開始時に一度だけ呼び出し、有効か無効かに応じてコードを記述するのがよいでしょう。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">application_surface_enable(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>enable</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) the application surface.</td>
-      </tr>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Set to enable (<span class="inline">true</span>) またはアプリケーションサーフェスを無効にする (<span class="inline">false</span>) ことができます。</td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if keyboard_check_pressed(vk_space)<br />
     {<br />
         if application_surface_is_enabled()<br />
@@ -52,18 +49,18 @@
             application_surface_enable(true);<br />
         }<br />
     }</p>
-  <p>The above code check for a key press and the toggle the application surface on or off depending on its state (like in an options menu).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、キーが押されたことを確認し、その状態に応じてアプリケーションサーフェスのオン/オフを切り替えます（オプションメニューのようなものです）。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></div>
+        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ <a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 application_surface_enable

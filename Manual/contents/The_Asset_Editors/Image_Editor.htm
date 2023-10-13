@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Image Editor</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>画像編集ソフト</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the image editor works" />
   <meta name="rh-index-keywords" content="Image Editor" />
@@ -14,267 +14,262 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Image Editor</span></h1>
-  <p><img alt="The Image Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Images.png" style="cursor: nesw-resize;" />The I<strong>mage Editor </strong>is where you can create your own <a class="glossterm" data-glossterm="sprites" href="#">sprites</a> or edit those you have imported or created previously. If you have used any other image tools then this should be familiar to you but there are a few things to note when using the <span data-keyref="GameMaker Name">GameMaker</span> Image Editor which may not be immediately apparent:</p>
+  <h1>画像編集ソフト</h1>
+  <p><img><strong>イメージエディターでは </strong>、オリジナルの<a class="glossterm" data-glossterm="スプライト" href="#">スプライトを</a>作成したり、インポートしたスプライトを編集したりすることができます。他の画像ツールを使ったことがある人なら、すぐにわかると思いますが、<span data-keyref="GameMaker Name">GameMaker</span>Image Editorを使う際には、いくつか注意する点があります。</p>
   <ul class="colour">
-    <li>When you create multiple frames, you can draw to them as they animate! So, if you press the play button<img alt="Play Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ImagePlay.png" width="46" /> on the <strong>Frame Control</strong> bar, and then select a brush and start to draw in the editor window, you&#39;ll see that the frames will animate in the editor and what you draw will be added to the corresponding frame in that moment. You can experiment with different frame rates until you get something you like, but once you&#39;ve got the hang of how this works you&#39;ll be creating dynamic sprites and effects in no time.</li>
-    <li>You can pull the Image Editor tab off of the main workspace window into its own window. This can be handy when using multiple monitors, for example.</li>
-    <li>When you use the <em>Copy </em>functions to, for example, copy a selection of an image, then the selection copied gets added to your <strong>brush list</strong>. This means that you can select a part of an image and then use it in the rest of the paint tools to draw lines, polygons or just paint freely. The brush can be scaled and blended with a colour too. Note that the <em>Paste </em>functionality is not intended for use internally within the editor as anything you copy is added to the brush list and so can be selected for &quot;pasting&quot; that way. Instead paste is simply for you to capture something from an external program and paste it into the Image Editor.</li>
-    <li>You can have multiple layers for each sprite thanks to the handy <strong>layer editor</strong>. These layers can ordered and even placed in folders to make creating more complex images easier.</li>
-    <li>You can quickly change between sub-images (frames) in the editor by using the &quot;<span class="inline">1</span>&quot; and &quot;<span class="inline">2</span>&quot; keys on the keyboard.</li>
+    <li>複数のフレームを作成すると、そのフレームに描画しながらアニメーションさせることができます!つまり、<strong>フレームコントロールバーの</strong>再生ボタン<img> を押してから、ブラシを選択してエディタウィンドウで描画を開始すると、フレームがエディタ内でアニメーションし、あなたが描いたものがその瞬間に対応するフレームに追加されるのがわかるでしょう。気に入ったものができるまで、さまざまなフレームレートを試してみることができます。この仕組みのコツをつかめば、ダイナミックな<span class="notranslate">sprites</span> やエフェクトをすぐに作成できるようになるでしょう。</li>
+    <li>メインウィンドウ（<span class="notranslate">workspace</span> ）からイメージエディタタタブ を独立したウィンドウに移動することができます。これは、マルチモニタを使用している場合などに便利です。</li>
+    <li><em>コピー </em>機能を使って画像の選択範囲をコピーすると、コピーされた選択範囲は<strong>ブラシ</strong>リストに追加されます。つまり、画像の一部を選択し、それを他のペイントツールで使って、線や多角形を描いたり、自由にペイントしたりできるのです。ブラシは拡大縮小したり、色とブレンドすることもできます。<em>貼り付け </em>機能は、エディタ内部で使用するためのものではありません。コピーしたものはすべてブラシリストに追加され、「貼り付け」用に選択できるようになるからです。貼り付けは、外部プログラムから何かをキャプチャして、イメージ エディタに貼り付けるために使用します。</li>
+    <li>便利な<strong>レイヤーエディタにより</strong>、各<span class="notranslate">sprite</span> に複数のレイヤーを設定することができます。これらのレイヤーは順番に並べたり、フォルダーに入れたりできるので、より複雑な画像を簡単に作成することができます。</li>
+    <li>キーボードの&quot;<span class="inline">1</span>&quot; と&quot;<span class="inline">2</span>&quot; キーで、エディター内のサブ画像（フレーム）を素早く切り替えることができます。</li>
   </ul>
-  <p>Those are just some of the more advanced features that the image editor offers. To find out the full feature range, please read the items below detailing the functions of every part of the editor:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Frame View</a></p>
+  <p>これらは、イメージエディタが提供する、より高度な機能の一部に過ぎません。全ての機能を知りたい方は、以下の項目でエディタの各機能の詳細をご覧ください。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">フレームビュー</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This part of the window shows the frames in the order that they will be animated in. You can click the <img alt="Add Frame Icon" class="icon" src="../assets/Images/Icons/Icon_AddArgument.png" /> button to the left to add further frames - or use the <strong>Image Menu</strong> - and you can also click and drag any of the frames to change their position along the timeline. In the top left of the Frame View you can switch on <strong>Onion Skinning</strong> <img alt="Onion Skin Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_OnionSkin.png" width="46" />, which means that in a single frame of any sprite animation, you can choose to see any of the preceding or succeeding frames as a semi-transparent layer under the image frame you are currently editing. The great thing about this is that each frame is drawn slightly lighter than the last so you can see how the animation has been progressing from frame to frame while drawing the next one.</p>
-    <p class="dropspot">Enabling this will show some extra controls over the frames which you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag to set the number of preceding frames to show as well as the number of following frames.</p>
-    <p class="dropspot"><img alt="Image Editor Onion Skin" class="center" src="../assets/Images/Asset_Editors/Editor_OnionSkin.png" />You can set certain properties for onion-skinning from the <strong>View</strong> conext menu, which is explained further down this page.</p>
-    <p class="dropspot">Beneath the Onion Skin button, you have the <strong>Loop Control</strong> button <img alt="Loop Control Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ImageLoop.png" width="46" /> used to set whether the sprite loops (goes back to frame 1 when the last frame is reached) or ping-pongs (goes backwards through the frames when the last frame is reached). The Play button <img alt="Play Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ImagePlay.png" width="46" /> at the bottom is for starting/stopping the preview of the animation.</p>
-    <p class="dropspot">You can click on any frame to select it for editing, and a selected frame will have a Delete button <img alt="Delete Frame Icon" class="icon" src="../assets/Images/Icons/Icon_RemoveFrame.png" /> at the top corner which you can click to remove the frame from the sprite. You can also click <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on multiple frames to select them together, in which case clicking the Delete button will delete all the selected frames. Finally, you can use the standard keyboard shortcuts for <em>Cut</em>, <em>Copy </em>and <em>Paste </em>to edit selected frames: <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">X</span>&quot;, <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">C</span>&quot;, and <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">V</span>&quot;.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">この部分には、アニメートされる順番にフレームが表示されます。<img> <span class="notranslate">timeline</span>フレームビューの左上には、<span class="notranslate">switch</span> <strong>オニオンスキニング</strong> <img> があります。これは、任意の<span class="notranslate">sprite</span> アニメーションの 1 つのフレームにおいて、現在編集中のイメージフレームの下に半透明のレイヤーとして、前後のフレームを表示することを選択できること を意味します。この素晴らしい点は、各フレームが前のフレームよりわずかに明るく描かれるため、次のフレームを描きながら、フレーム間でアニメーションがどのように進行しているかを見ることができることです。</p>
+    <p class="dropspot"><img> をクリックしてドラッグすることで、表示する前のフレーム数と後のフレーム数を設定することができます。</p>
+    <p class="dropspot"><img>このページで説明する<strong>View</strong>conextメニューから、オニオンスキンの特定のプロパティを設定することができます。</p>
+    <p class="dropspot">Onion Skin ボタンの下にある<strong>Loop Control</strong>ボタン<img> は、<span class="notranslate">sprite</span> <span class="notranslate">loops</span> （最後のフレームに到達するとフレーム 1 に戻る）かピンポン（最後のフレームに到達するとフレームを逆行する）かを設定するために使用されます。下部の再生ボタン<img> は、アニメーションのプレビューを開始/停止するためのものです。</p>
+    <p class="dropspot">選択されたフレームには、上部に Delete ボタン（<img> ）があり、これをクリックすると、そのフレームが<span class="notranslate">sprite</span> から削除されます。また、複数のフレームをクリックすると、<img> /<img> +<img> が一緒に選択され、その場合は Delete ボタンをクリックすると選択したフレームが全て削除されます。最後に、標準的なキーボードショートカットの<em>カット</em>、<em>コピー </em>、<em>ペーストを使って </em>、選択したフレームを編集することができます。 <img> /<img> + &quot;<span class="inline">X</span>&quot;,<img> /<img> + &quot;<span class="inline">C</span>&quot;, and<img> /<img> + &quot;<span class="inline">V</span>&quot;.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Frame Information</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">フレーム情報</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This bar contains the <strong>Frame Information</strong>. Here you can set the speed at which the animation frames should be played back using the input box on the left. The frame speed can either be based on &quot;<em>Frames per second</em>&quot;, or &quot;<em>Frames per game frame</em>&quot;. The total number of frames available are shown to the right along with the current frame that has been selected, and you can collapse this bar (hide it) by clicking on the <img alt="Collapse Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Collapse.png" width="20" /> icon to the left. You can set this to always start open or always start closed from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Image_Editor_Preferences.htm">Image Editor Preferences</a>.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> The value used here for the animation speed will also set the way the sprite is animated when used in a game, either as a sprite asset on a layer or as a sprite assigned to an instance, although you can modify this at runtime using the appropriate <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprites.htm">functions</a> and <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">variables</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">このバーには「<strong>フレーム情報</strong>」が表示されます。ここでは、左側の入力ボックスでアニメーションのフレームを再生する速度を設定することができます。フレームスピードは、「<em>Frames per second</em>」または「<em>Frames per game frame</em>」のいずれかを選択できます。利用可能なフレームの総数は、選択されている現在のフレームとともに右側に表示されます。このバーは、左側の<img> アイコンをクリックすることで折りたたむ（隠す）ことができます。<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Image_Editor_Preferences.htm">イメージエディターの環境</a>設定から、常に開いた状態で起動するか、常に閉じた状態で起動するかを設定できます。</p>
+    <p class="dropspot">ここでアニメーションの速度に使用した値は、ゲーム内でレイヤー上の<span class="notranslate">sprite</span> <span class="notranslate">sprite</span> として、またはインスタンスに割り当てられた<span class="notranslate">asset</span> として、<span class="notranslate">sprite</span> が使用される際のアニメーションの方法も設定することに注意してください。ただし、適切な<a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprites.htm">関数と</a> <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">変数を使って</a> <span class="notranslate">runtime</span> で変更することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Canvas Controls</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">キャンバスコントロール</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The canvas controls deal with various aspects of how the main draw canvas and its contents are displayed. The options are:</p>
+    <p class="dropspot">キャンバスコントロールは、メインの描画キャンバスとそのコンテンツの表示方法に関する様々な側面を扱います。オプションは以下の通りです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot">Toggle Canvas Grid <img alt="Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png" />: This will toggle on/off the canvas grid. This is a grid that <span data-keyref="GameMaker Name">GameMaker</span> draws over the main canvas to divide it into sections, and by default is set to 1px in size. However if you click the Grid Menu icon <img alt="Grid Options Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /> you will open the grid options:<br />
-        <img alt="Image Editor Grid Options" class="center" src="../assets/Images/Asset_Editors/Editor_Images_GridOptions.png" />These options permit you to set the grid colour and alpha, as well as the cell values for the grid along the X and Y axis. You also have an option to enable or disable grid snapping here (disabled by default).
+      <li class="dropspot">Toggle Canvas Grid<img>: キャンバスグリッドのON/OFFを切り替えます。これは<span data-keyref="GameMaker Name">GameMakerが</span>メインキャンバスを分割するために描くグリッドで、デフォルトでは1pxのサイズに設定されています。しかし、Grid Menu アイコン<img> をクリックすると、グリッドオプションが表示されます。<br>
+        <img>これらのオプションでは、グリッドの色とアルファ、および X 軸と Y 軸に沿ったグリッドのセル値を設定できます。また、グリッドのスナップの有効・無効を設定することもできます（デフォルトでは無効）。
       </li>
-      <li class="dropspot">Canvas Zoom Controls <img alt="Canvas Zoom Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasZoom.png" width="120" />: These buttons control the current canvas zoom level. You can zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /> button will reset the canvas to be 1:1 with the image being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png" /> to make the entire image canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the room canvas to be 1:1 with the image.</li>
-      <li class="dropspot">Split Canvas <img alt="Split Canvas Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasSplit.png" width="88" />: Clicking this will cycle between splitting the canvas horizontally, vertically keeping it a single a single canvas. When in split canvas view, each canvas will have its own set of Canvas controls so you can zoom one in and the other out, for example, and you can edit either canvas with the changes being reflected in the other canvas. To change the canvas view toggle, you can click the Split Options <img alt="Grid Options Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /> button and select the one you wish to use or simply click the Split Canvas button until it cycles to the one you want.</li>
+      <li class="dropspot">Canvas Zoom Controls<img>: これらのボタンは現在のキャンバスのズームレベルを制御します。ズームイン、ズームアウトが可能で、<img> ボタンをクリックすると、キャンバスが編集中の画像と1:1になるようにリセットされます。また、Window Fit ボタン<img> をクリックすると、画像キャンバス全体が現在のエディタ<span class="notranslate">workspace</span> に収まるようになります（収まるように適宜ズームイン／アウトされます）。<img> /<img> とマウスホイール<img> を使ってもズームイン、ズームアウトできます。<img> /<img> +<img> を押すと、<span class="notranslate">room</span> キャンバスが画像と 1:1 になるように設定されます。</li>
+      <li class="dropspot">キャンバスの分割<img>:これをクリックすると、キャンバスを水平方向に分割するか、垂直方向に分割して1つのキャンバスとするかを切り替えます。キャンバスの分割表示では、それぞれのキャンバスにキャンバスコントロールがあり、例えば一方を拡大し、もう一方を縮小することができ、どちらかのキャンバスを編集すれば、その変更がもう一方のキャンバスに反映されます。キャンバス表示の切り替えを変更するには、「分割オプション」<img> ボタンをクリックして、使用したい方を選択するか、「キャンバスを分割」ボタンをクリックして、使用したい方に切り替えるだけでよいのです。</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Draw Canvas</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">ドローキャンバス</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">This is the main editing window for your images. Here you can apply any of the tools on the right to paint on the currently selected layer. You can paint with either the left <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> or the right <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> mouse button (and assign a colour to each from the colour picker) and use any of the brushes defined from the top right of the editor. You can also use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> to zoom in or out, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the canvas to be 1:1 with the image (or you can use the Canvas Controls as explained above). Note too that you can pan around the canvas using the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> or <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">画像の主な編集ウィンドウです。ここでは、右側のツールのいずれかを使用して、現在選択されているレイヤーにペイントを行うことができます。マウスの左ボタン（<img> ）または右ボタン（<img> ）でペイントし、カラーピッカーでそれぞれの色を指定します。また、エディタの右上にあるブラシを使用することもできます。また、<img> /<img> とマウスホイール<img> を使って、ズームインまたはズームアウトできます。<img> /<img> +<img> を押すと、キャンバスが画像と 1:1 になります（または、上記のキャンバスコントロールを使うこともできます）。また、マウスの中ボタン<img> または<img> +<img> を使って、キャンバスの周りをパンすることができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Canvas Values</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">キャンバスバリュー</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">This small bar at the bottom shows the different values for the mouse position and width and height of the selection tools in the editor.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">下部にあるこの小さなバーは、エディタ内のマウスの位置と選択ツールの幅と高さの異なる値を示しています。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Brushes</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">ブラシ</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">Here you can select the <strong>brush </strong>to paint with. By default you have a selection of different sized square and round brushes to use, but you can easily create your own brush by painting on the image layer, and then selecting the part you wish to use for the new brush and using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">C</span>&quot; to copy it. The copied section will then be added to your brushes and you can paint with it as you would any other brush, and this includes using the different paint tools available like drawing a line.</p>
-    <p class="dropspot">If you want to remove a brush from the list, simply click on it and press the <img alt="Delete Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Delete.png" width="55" /> key and it will be removed.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> The default blending colour for the new brush will be white, but if you change the colour with the colour picker and paint using the brush, it will be <em>blended </em>with this new colour.</p>
-    <p class="dropspot">You can also paste externally from your clipboard (<img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">V</span>&quot;) to create a new brush, which can be changed in the <a data-xref="{title}" href="../Setting_Up_And_Version_Information/IDE_Preferences/Image_Editor_Preferences.htm">Image Editor Preferences</a>.</p>
-    <p class="dropspot">To create a new brush from the selection regardless of the setting of <strong>Image Selection Copy/Paste,</strong> use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> + &quot;B&quot;. This shortcut will also work if you have the preference set to <em>Paste as Layer</em>.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Brushes are not retained between sessions, closing your project will remove any brushes that you have created.</p>
+    <p class="dropspot">ここでは、ペイントに使用する<strong>ブラシを </strong>選択することができます。デフォルトでは、さまざまなサイズの四角や丸のブラシが用意されていますが、画像レイヤー上でペイントし、新しいブラシに使用したい部分を選択して<img> /<img> + &quot;<span class="inline">C</span>&quot; でコピーすれば、簡単に独自のブラシを作成できます。コピーされた部分はブラシに追加され、他のブラシと同じようにペイントすることができ、これには線を引くなどのさまざまなペイントツールを使用できます。</p>
+    <p class="dropspot">なお、新しいブラシのデフォルトのブレンドカラーは白ですが、カラーピッカーで色を変更し、そのブラシを使ってペイントすると、この新しい色で<em>ブレンド </em>されることになります。リストからブラシを削除したい場合は、そのブラシをクリックし、<img> キーを押すだけで、削除されます。</p>
+    <p class="note"><b>注</b>：ブラシはセッション間で保持されません。プロジェクトを終了すると、作成したブラシはすべて削除されます。</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Colour Picker</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">カラーピッカー</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The top of this section has a number or predefined colour <a class="glossterm" data-glossterm="swatches" href="#">swatches</a> that you can choose from, and they can be assigned to the left <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and right <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> mouse buttons respectively by clicking on them with either button (you can also swap the colours between each button by clicking the arrow icon in beside the swatches). The colours selected will be shown below as swatches beside the image of the mouse, and you can then click these to open the <strong>Colour Picker</strong> window:</p>
-    <p class="dropspot"><img alt="Image Editor Colour Picker" class="center" src="../assets/Images/Asset_Editors/Editor_ColourPicker.png" />From this window you can define the colour using any of the available sliders and gadgets, or you can input values directly for the <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> values or <a class="glossterm" data-glossterm="HSV" href="#">HSV</a> values.</p>
-    <p class="dropspot">If you hold CTRL/CMD and click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the default colour swatches, it will bring up the colour picker tool and allow you to edit the default palette for the sprite. Clicking &quot;OK&quot; in the colour picker in this case will set the palette to the new colour and save it along with the sprite asset being edited.</p>
-    <p class="dropspot">These colour palettes can then be swapped and applied to different sprites using the colour palette <strong>Options </strong>menu:</p>
-    <p class="dropspot"><img alt="Image Editor Colour Picker Options" class="center" src="../assets/Images/Asset_Editors/Editor_ColourPicker_Options.png" /></p>
-    <p class="dropspot">The single line of colours below the palette shows your colour history, with your most recently selected colour being on the very left. This section is <em>not</em> copied when using the &quot;Import colours&quot; or &quot;Copy colours&quot; option, as that only applies to the main palette above.</p>
-    <p class="dropspot">So, you can create a custom colour palette in a sprite image and then use that to set the palette for any other sprite in the Asset Browser, or you can open a sprite image and import the colour palette from any other sprite in the Asset Browser. This sprite palette feature is covered in more detail in the following tech blog:</p>
+    <p class="dropspot">このセクションの上部には、選択可能ないくつかの定義済み色<a class="glossterm" data-glossterm="毒牙" href="#">見本が</a>あり、どちらかのボタンでクリックすることで、マウスの左<img> と右<img> にそれぞれ割り当てられます（色見本の横にある矢印アイコンをクリックすると、各ボタン間で色を入れ替えることもできます）。選択された色は、下のマウスの画像の横に色見本として表示され、これをクリックすると<strong>カラーピッカーウィンドウが</strong>開きます。</p>
+    <p class="dropspot"><img>このウィンドウでは、利用可能なスライダーやガジェットを使って色を定義したり、<a class="glossterm" data-glossterm="アールジービー" href="#">ARGB</a>値や<a class="glossterm" data-glossterm="エイチエスブイ" href="#">HSV</a>値の値を直接入力したりすることができます。</p>
+    <p class="dropspot">CTRL/CMD を押しながら<img> をクリックすると、カラーピッカーツールが表示され、<span class="notranslate">sprite</span> のデフォルトパレットを編集できます。この場合、カラーピッカーで「OK」をクリックすると、パレットに新しい色が設定され、編集中の<span class="notranslate">sprite</span> <span class="notranslate">asset</span> と共に保存されます。</p>
+    <p class="dropspot">これらのカラーパレットは、<strong>カラーパレットオプションメニューを </strong>使用して、異なる<span class="notranslate">sprites</span> にスワップして適用することができます。</p>
+    <p class="dropspot"><img alt="The Image Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Images.png" /></p>
+    <p class="dropspot">パレットの下にある一行の色は、色の履歴を示し、最も最近選択した色は一番左にあります。このセクションは、「色のインポート」または「色のコピー」オプションを使用しても、上のメインパレットにのみ適用されるため、コピーさ<em>れません</em>。</p>
+    <p class="dropspot">そのため、<span class="notranslate">sprite</span> 画像でカスタムカラーパレットを作成し、それを使って<span class="notranslate">sprite</span> ブラウザ内の他の<span class="notranslate">Asset</span> のパレットを設定したり、<span class="notranslate">sprite</span> 画像を開いて<span class="notranslate">sprite</span> ブラウザ内の他の<span class="notranslate">Asset</span> からカラーパレットをインポートしたりすることが可能です。この<span class="notranslate">sprite</span> パレット機能については、以下の技術ブログで詳しく解説しています。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="https://www.yoyogames.com/blog/538/gms2-features-you-might-not-know-about"><span data-keyref="GameMaker Name">GameMaker</span> Features You Might Not Know About </a></li>
+      <li class="dropspot"><a href="https://www.yoyogames.com/blog/538/gms2-features-you-might-not-know-about">意外と知らない<span data-keyref="GameMaker Name">GameMakerの</span>機能 </a></li>
     </ul>
-    <p> </p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Tools</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">ツール</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">Below we list the tools that are available by default with <span data-keyref="GameMaker Name">GameMaker</span> - note that all tools can be used with the left <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and right <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> mouse button, and most of them have keyboard shortcuts associated with them (the important ones are listed here along with the tool, but for a full list please see the page on <a href="../IDE_Navigation/Keyboard_Shortcuts.htm">Shortcuts</a>). Most tools will also have extra options that will be visible at the top of the image editor as shown below:</p>
-    <p class="dropspot"><img alt="Image Editor Top Bar" class="center" height="31" src="../assets/Images/Asset_Editors/Editor_Image_TopBar.gif" width="690" /></p>
+    <p class="dropspot">以下に、<span data-keyref="GameMaker Name">GameMaker</span>でデフォルトで利用できるツールの一覧を示します。すべてのツールは、マウスの左<img> と右<img> のボタンで使用でき、そのほとんどにキーボードショートカットがあります（重要なものはツールとともにここに記載されていますが、全リストについては<a href="../IDE_Navigation/Keyboard_Shortcuts.htm">ショートカットの</a>ページを参照してください）。ほとんどのツールには、下図のように画像エディタの上部に表示される追加オプションもあります。</p>
+    <p class="dropspot"><img alt="Play Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ImagePlay.png" width="46" /></p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Pencil Icon" src="../assets/Images/Icons/Icon_Image_Pencil.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Pencil</strong></td>
-          <td class="text">This is the pencil tool. It uses the selected brush to paint in the selected colour for the mouse button, and you can set the size from the top bar of the image editor as well as enable/disable smoothing (interpolation). Note that you can also resize and scale any brush by holding down <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot;<span class="inline">Z</span>&quot; then clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging the mouse to change the proportions of the brush, or alternatively select one of the predefined brushes from the top right.</td>
+          <td class="icons"><img alt="Add Frame Icon" class="icon" src="../assets/Images/Icons/Icon_AddArgument.png" /></td>
+          <td class="icons"><strong>ペンシル</strong></td>
+          <td class="text">これは鉛筆ツールです。これは、選択されたブラシを使って、マウスボタンに選択された色で描きます。画像エディタのトップバーからサイズを設定したり、スムージング（補間）の有効/無効を設定したりできます。また、<img> + &quot;<span class="inline">Z</span>&quot; を押しながら、<img> をクリックし、マウスをドラッグしてブラシの比率を変更したり、右上の定義済みブラシを選択することで、任意のブラシのサイズやスケールを変更することができますのでご注意ください。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Eraser Icon" src="../assets/Images/Icons/Icon_Image_Eraser.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Eraser</strong></td>
-          <td class="text">This is the eraser tool. It uses the selected brush to erase an area on click from either mouse button. Selecting this will also add extra tools to the top bar of the editor to permit you to scale the brush or enable/disable smoothing (<a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a>).</td>
+          <td class="icons"><img alt="Onion Skin Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_OnionSkin.png" width="46" /></td>
+          <td class="icons"><strong>イレーザー</strong></td>
+          <td class="text">消しゴムツールです。選択したブラシを使って、マウスのどちらかのボタンをクリックすると、その部分を消すことができます。これを選択すると、エディタのトップバーに、ブラシの拡大縮小やスムージング<a class="glossterm" data-glossterm="せんけいほかん" href="#">（線形補間</a>）の有効・無効を設定するためのツールが追加されます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Paint Fill Icon" src="../assets/Images/Icons/Icon_Image_Paint.png" style="margin-left: 16px" /></td>
-          <td class="icons"><strong>Paint / Fill</strong></td>
-          <td class="text">This is the paint bucket (or fill) tool. This will fill in an area of the image based on the chosen alpha tolerance setting, which you can change using the slider shown in the top bar of the editor.</td>
+          <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+          <td class="icons"><strong>塗装・塗りつぶし</strong></td>
+          <td class="text">これは、ペイントバケツ（または塗りつぶし）ツールです。これは、エディタのトップバーに表示されるスライダを使って変更できる選択されたアルファ許容度設定に基づいて、画像の領域を塗りつぶします。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Colour Remove Icon" src="../assets/Images/Icons/Icon_Image_ColourRemove.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Colour Remove</strong></td>
-          <td class="text">This is the colour remove tool. When you select it, you can then click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> or <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on any pixel in the image and all pixels that are of the same colour will be removed (they are technically replaced with the colour black at an alpha of 0). The top bar has a tolerance slider where you can set the pixel colour tolerance - the lower this value the more exact a colour has to match the one that was clicked, while a higher value will expand this to include those colours that are similar to the one clicked. If you have previously made a selection using any of the selection tools, then only clicking on pixels within the selection will have an effect, and only the pixels within the selection will be removed.</td>
+          <td class="icons"><img alt="Image Editor Onion Skin" class="center" src="../assets/Images/Asset_Editors/Editor_OnionSkin.png" /></td>
+          <td class="icons"><strong>カラーリムーブ</strong></td>
+          <td class="text">これは色の除去ツールです。これを選択すると、画像内の任意のピクセルで<img> または<img> をクリックすると、同じ色のすべてのピクセルが削除されます (技術的には、アルファ値 0 の黒に置き換えられます)。この値が低いほど、クリックした色と正確に一致しなければならず、値が高いほど、クリックした色に類似した色も含まれるようになります。選択ツールで選択した場合は、選択範囲内のピクセルのみをクリックすると、選択範囲内のピクセルだけが削除されます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Colour Replace Icon" height="48" src="../assets/Images/Icons/Icon_Image_ColourReplace.png" style="margin-left: 16px;" width="48" /></td>
-          <td class="icons"><strong>Colour Replace</strong></td>
-          <td class="text">This is the colour replace tool. When you select it, you can then click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> or <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on any pixel in the image and all pixels that are of the same colour will be replaced by the colour assigned to the mouse button used. The top bar has a tolerance slider where you can set the pixel colour tolerance - the lower this value the more exact a colour has to match the one that was clicked, while a higher value will expand this to include those colours that are similar to the one clicked. If you have previously made a selection using any of the selection tools, then only clicking on pixels within the selection will have an effect, and only the pixels within the selection will be affected by the colour change.</td>
+          <td class="icons"><img alt="Loop Control Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ImageLoop.png" width="46" /></td>
+          <td class="icons"><strong>カラーリプレイス</strong></td>
+          <td class="text">これは色の置き換えツールです。これを選択すると、画像内の任意のピクセルで<img> または<img> をクリックすると、同じ色のすべてのピクセルが、使用したマウスボタンに割り当てられた色に置き換えられます。上のバーには許容範囲スライダーがあり、ピクセルの色の許容範囲を設定できます。この値が低いほど、クリックした色と正確に一致しなければならず、値が高いほど、クリックした色と類似した色も含まれるように拡大します。選択ツールで選択した場合は、選択範囲内のピクセルのみをクリックすると、色の変更は選択範囲内のピクセルにのみ適用されます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Line Icon" src="../assets/Images/Icons/Icon_Image_Line.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Line</strong></td>
-          <td class="text">This tool will draw a line between two points. Click once with either button to create the first point and then click again elsewhere to create another point and join them. The line will be drawn using the selected brush to create the outline, and you can edit some of the brush properties using the top bar of the editor (size, <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a>, etc...).</td>
+          <td class="icons"><img alt="Play Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ImagePlay.png" width="46" /></td>
+          <td class="icons"><strong>ライン</strong></td>
+          <td class="text">このツールは、2点間に線を描きます。どちらかのボタンで一度クリックして最初の点を作成し、別の場所でもう一度クリックすると別の点が作成され、それらが結合されます。線は、選択したブラシを使って輪郭を描きます。エディタのトップバーを使ってブラシのプロパティの一部を編集できます（サイズ、<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間など</a>...)。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Rectangle Icon" src="../assets/Images/Icons/Icon_Image_Rectangle.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Rectangle</strong></td>
-          <td class="text">This tool will draw either a filled or an outlined rectangle. If you click in the top left of the icon, it will be outlined, while clicking the bottom right will be filled and if you require both then you can select that option from the top bar of the image editor (or use <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to select one then the other on the toolbox icon), as well as set the size and smoothing of the brush being used. The rectangle will then be drawn using the selected brush. Note that while drawing you can hold down <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> and click to draw from the centre of the mouse position.</td>
+          <td class="icons"><img alt="Delete Frame Icon" class="icon" src="../assets/Images/Icons/Icon_RemoveFrame.png" /></td>
+          <td class="icons"><strong>長方形</strong></td>
+          <td class="text">このツールは、塗りつぶしまたはアウトライン化された長方形を描画します。アイコンの左上をクリックするとアウトライン化され、右下をクリックすると塗りつぶされます。両方が必要な場合は、イメージエディタのトップバーからそのオプションを選択し（または<img> +<img> でツールボックスアイコンのどちらかを選択し、もう一方を選択します）、使用するブラシのサイズとスムージングを設定することも可能です。選択したブラシで矩形が描かれます。なお、描画中に<img> を押しながらクリックすると、マウス位置の中心から描画されます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Ellipse Icon" src="../assets/Images/Icons/Icon_Image_Ellipse.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Ellipse</strong></td>
-          <td class="text">This tool will draw either a filled or an outlined ellipse. If you click in the top left of the icon, it will be outlined, while clicking the bottom right will be filled and if you require both then you can select that option from the top bar of the image editor (or use <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to select one then the other on the toolbox icon), as well as set the size and smoothing of the brush being used. The ellipse will be drawn using the selected brush to create the outline. Note that while drawing you can hold down <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> and click to draw from the centre of the mouse position.</td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+          <td class="icons"><strong>楕円</strong></td>
+          <td class="text">このツールは、塗りつぶされた楕円と輪郭のある楕円のどちらかを描きます。アイコンの左上をクリックすると輪郭が描かれ、右下をクリックすると塗りつぶされます。両方が必要な場合は、イメージエディタのトップバーからそのオプションを選択し（または<img> +<img> を使ってツールボックスアイコン上で一方を選択し、他方を選択します）、使用するブラシのサイズとスムージングを設定することが可能です。楕円は、選択したブラシを使って輪郭を描きます。描画中に<img> を押しながらクリックすると、マウス位置の中心から描画されることに注意してください。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Polygon Icon" src="../assets/Images/Icons/Icon_Image_Polygon.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Polygon</strong></td>
-          <td class="text">This tool will draw either a filled or an outlined polygon. If you click in the top left of the icon, it will be outlined, while clicking the bottom right will be filled and if you require both then you can select that option from the top bar of the image editor (or use <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to select one then the other on the toolbox icon), as well as set the size and smoothing of the brush being used. You click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> or <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> to add points to the polygon using the selected brush and when you are happy with the results you should select a different tool to commit the changes and generate the image. The polygon will be drawn using the selected brush. You can press <img alt="Escape Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Escape.png" width="55" /> at any time to cancel the polygon definition.</td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+          <td class="icons"><strong>ポリゴン</strong></td>
+          <td class="text">このツールは、塗りつぶしまたはアウトライン化されたポリゴンを描きます。アイコンの左上をクリックするとアウトライン化され、右下をクリックするとフィルドになります。両方が必要な場合は、イメージエディタのトップバーからそのオプションを選択し（または<img> +<img> でツールボックスアイコン上で一方を選択し、他方を選択します）、使用するブラシのサイズとスムージングを設定できます。<img> または<img> をクリックして、選択したブラシを使用してポリゴンにポイントを追加します。結果に満足したら、別のツールを選択して変更をコミットし、画像を生成する必要があります。ポリゴンは、選択したブラシを使って描かれます。ポリゴンの定義をキャンセルするには、いつでも<img> を押すことができます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Spline Icon" src="../assets/Images/Icons/Icon_Image_Spline.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Spline</strong></td>
-          <td class="text">This is the spline tool. It uses the selected brush to create a <a class="glossterm" data-glossterm="spline" href="#">spline</a>. You click and hold either mouse button to set a point and then drag the mouse to generate the spline, releasing the mouse and repeating to add further points and curves. The spline will be drawn using the selected brush, which can be edited using the top bar of the editor to set size and smoothing. The top bar also has a setting for <strong>Iterations </strong>which will define how smooth the resulting spline is (lower values will be rougher, higher smoother, and the default value is 10).</td>
+          <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+          <td class="icons"><strong>スプライン</strong></td>
+          <td class="text">スプラインツールです。選択されたブラシを利用して<a class="glossterm" data-glossterm="スプライン" href="#">スプラインを</a>描きます。マウスのどちらかのボタンをクリックしたままポイントを設定し、マウスをドラッグしてスプラインを生成し、マウスを放してポイントやカーブを追加することを繰り返します。スプラインは選択されたブラシで描かれ、エディタのトップバーでサイズやスムージングを設定することができます。トップバーには「<strong>Iterations </strong>」の設定もあり、出来上がったスプラインの滑らかさを定義します（低い値はより荒く、高い値はより滑らかになります。）</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Text Icon" src="../assets/Images/Icons/Icon_Image_Text.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Text</strong></td>
-          <td class="text"><br />
-            This is the text input tool. It creates a new text layer where you can type anything you need. You can set the font to use as well as the formatting from the top bar of the image editor.</td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+          <td class="icons"><strong>テキスト</strong></td>
+          <td class="text"><br>
+            テキスト入力ツールです。新しいテキストレイヤーを作成し、そこに必要なものを入力することができます。イメージエディターのトップバーから、使用する<span class="notranslate">font</span> と書式を設定できます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Dropper Icon" src="../assets/Images/Icons/Icon_Image_Dropper.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Eye Dropper</strong></td>
-          <td class="text">The eye-dropper tool permits you to sample a colour from the image currently being edited.</td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+          <td class="icons"><strong>点眼器</strong></td>
+          <td class="text">スポイトツールは、現在編集中の画像から色を抽出するツールです。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Select Rectangle Icon" src="../assets/Images/Icons/Icon_Image_SelectRectangle.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Rectangle Selection</strong></td>
-          <td class="text">With this tool you can generate a rectangular selection. You can cancel a selection from the Image menu or pressing <img alt="Escape Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Escape.png" width="55" />.</td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+          <td class="icons"><strong>矩形選択</strong></td>
+          <td class="text">このツールを使って、矩形の選択範囲を生成することができます。選択範囲を解除するには、イメージメニューか、<img> を押してください。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Paint Selection Icon" src="../assets/Images/Icons/Icon_Image_PaintSelection.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Paint Selection</strong></td>
-          <td class="text">With this tool you can &quot;paint&quot; a selected area using any of the brushes, including custom brushes. All the same keyboard shortcuts apply as for the Pencil tool. You can cancel a selection from the Image menu or pressing <img alt="Escape Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Escape.png" width="55" /></td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+          <td class="icons"><strong>塗料選定</strong></td>
+          <td class="text">このツールでは、カスタムブラシを含むすべてのブラシを使用して、選択した領域を「ペイント」することができます。キーボードショートカットは、鉛筆ツールと同じです。選択範囲を解除するには、イメージメニューから、または<img></td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Magic Wand Icon" src="../assets/Images/Icons/Icon_Image_MagicWand.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Magic Wand</strong></td>
-          <td class="text">The magic wand selection tool will select areas of the same colour based on the tolerance value set from the top bar of the editor. If you tick &quot;Colour only&quot; then alpha value will not be taken into consideration. You can cancel a selection from the Image menu or pressing <img alt="Escape Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Escape.png" width="55" />.</td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+          <td class="icons"><strong>マジックワンド</strong></td>
+          <td class="text">マジックワンド選択ツールは、エディタのトップバーから設定された許容値に基づいて、同じ色の領域を選択します。色のみ&quot; にチェックを入れると、アルファ値は考慮されません。選択をキャンセルするには、[イメージ] メニューから選択するか、<img> を押します。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Rotate Icon" src="../assets/Images/Icons/Icon_Image_Rotate.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Rotate</strong></td>
-          <td class="text">This is the rotate tool. If you have an area selected using one of the Selection tools, then clicking this will permit you to rotate the selected area by an arbitrary amount from 0° to 360°. If you do not have an area of the image selected then this will permit you to rotate the current brush. To rotate, simply hold down the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag left or right or set the value directly in the top bar. To accept the changes you can press either <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> or select another tool. Note that accepting the change will not change the source material, but rather create a new Brush resource for you to use with the selected image or a brush rotated by the amount you set. Also note that the keyboard shortcut &quot;<span class="inline">Z</span>&quot; can be used to rotate any selection or brush by 90° and that this option does not create a new brush and will only affect how the current brush is drawn.</td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+          <td class="icons"><strong>回転</strong></td>
+          <td class="text">回転ツールです。選択ツールで領域を選んでいるときはこれをクリックするとその領域を 0° から 360° の範囲で任意に回転させられます。画像に選択範囲がないときは、このツールで現在のブラシを回転させます。回転させるには、マウスの左ボタン<img> を押しながら左右にドラッグするか、トップバーで直接値を設定します。変更を受け入れるには、<img> を押すか、他のツールを選択します。変更を受け入れると、ソース素材は変更されず、選択した画像または設定した量だけ回転したブラシで使用するための新しいブラシリソースが作成されることに注意してください。また、キーボードショートカット &quot;<span class="inline">Z</span>&quot; は、選択範囲やブラシを90°回転させるのに使用します。このオプションは新しいブラシを作成せず、現在のブラシの描画方法にのみ影響することに注意してください。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Mirror Icon" src="../assets/Images/Icons/Icon_Image_Mirror.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Mirror</strong></td>
-          <td class="text">This is the mirror tool. Selecting this will mirror the current brush along the vertical axis. This option does not create a new brush and will only affect how the current brush is drawn.</td>
+          <td class="icons"><img alt="Collapse Icon" class="icon" src="../assets/Images/Icons/Icon_Collapse.png" /></td>
+          <td class="icons"><strong>ミラー</strong></td>
+          <td class="text">これはミラーツールです。これを選ぶと現在のブラシが縦軸にそって鏡像化されます。このオプションは新しいブラシを作成せず、現在のブラシの描画にのみ影響を及ぼします。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Flip Icon" src="../assets/Images/Icons/Icon_Image_Flip.png" style="margin-left: 16px;" /></td>
-          <td class="icons"><strong>Flip</strong></td>
-          <td class="text">This is the flip tool. Selecting this will mirror the current brush along the horizontal axis. This option does not create a new brush and will only affect how the current brush is drawn.</td>
+          <td class="icons"><img alt="Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png" /></td>
+          <td class="icons"><strong>フリップ</strong></td>
+          <td class="text">これは反転ツールです。これを選ぶと現在のブラシを水平軸にそって反転させます。このオプションは新しいブラシを作成せず、現在のブラシの描画方法にのみ影響します。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Pan Icon" src="../assets/Images/Icons/Icon_Image_Pan.png" style="margin-left: 16px" /></td>
-          <td class="icons"><strong>Pan</strong></td>
-          <td class="text">This is the pan tool. When you select this, you can then click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag the mouse to pan the layer contents around within the layer. Note that any pixels outside of the draw canvas will not be visible and the image will be cropped to the draw canvas size when you change tool again. Note too that if you have made a selection then the selected pixels will be moved rather than the contents of the layer.</td>
+          <td class="icons"><img alt="Grid Options Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /></td>
+          <td class="icons"><strong>パン</strong></td>
+          <td class="text">これはパンツールです。これを選ぶと、<img> をクリックしてマウスをドラッグすると、レイヤーの中身をレイヤー内でパンできます。ただし描画区画の外側にある画素は見えませんので、 ツールを変更すると描画区画の大きさに合わせて画像が切り取られます。選択範囲がある場合はレイヤーの内容よりも選択範囲の画素が移動することにも注意してください。</td>
         </tr>
       </tbody>
     </table>
-    <p> </p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Layer Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">レイヤーエディタ</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">You can create <strong>layers </strong>in the image editor for different parts of your image, and these layers can be manipulated and drawn to using the various brushes and tools. To create a new layer, simply click the <img alt="Add Layer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Image_Add.png" width="24" /> icon, and to remove it again the <img alt="Remove Layer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Image_Remove.png" width="24" /> icon. Layers can also be ordered by clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on a layer and then dragging the layer up or down to the position you require, and you can further organise the layers by creating folders using the <img alt="Add Layer Folder Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Image_Folder.png" width="24" /> button and then dragging layers into them.</p>
-    <p class="dropspot">If you double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on a layer (or use <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> and select <strong>Edit Layer Properties</strong>) you&#39;ll get access to the Layer Properties window:</p>
-    <p class="dropspot"><img alt="Image Editor Layer Properties" class="center" src="../assets/Images/Asset_Editors/Editor_LayerProperties.png" />Here you can name the layer as well as set the blend mode (the way that it should be &quot;mixed&quot; with the layers beneath), choosing from <em>normal</em>, <em>additive</em>, <em>subtractive </em>or <em>multiply </em>blends. Finally you can set the opacity (transparency) of the layer with a slider, but note that this is cumulative with the actual alpha value of individual pixels - for example, if you have pixels that are 50% opaque and set the layer opacity to 50%, the final pixels will be drawn at 25% opacity.</p>
-    <p class="dropspot">You can also paste from your clipboard (<img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">V</span>&quot;) to create a new layer, which can be enabled/disabled in the <a data-xref="{title}" href="../Setting_Up_And_Version_Information/IDE_Preferences/Image_Editor_Preferences.htm">Image Editor Preferences</a> (see &quot;<strong>Image Selection Copy/Paste</strong>&quot;).</p>
+    <p class="dropspot">イメージエディタでは、画像のさまざまな部分に<strong>レイヤーを </strong>作成でき、これらのレイヤーは、さまざまなブラシやツールを使って操作したり、描画したりすることができます。新しいレイヤーを作成するには、<img> アイコンをクリックするだけです。また、削除するには、<img> アイコンを再度クリックします。また、<img> をクリックしてレイヤーを上下にドラッグすると、レイヤーを並べることができます。さらに、<img> ボタンを使ってフォルダを作成し、その中にレイヤーをドラッグすると、レイヤーを整理することができます。レイヤーの<img> をダブルクリック（または<img> を使用し、<strong>レイヤーのプロパティを編集を</strong>選択）すると、レイヤーのプロパティウィンドウにアクセスすることができます。</p>
+    <p class="dropspot"><img>ここでは、レイヤーの名前、ブレンドモード（下のレイヤーと「混合」する方法）を設定し、<em>通常</em>、<em>加算</em>、<em>減算 </em>、<em>乗算の </em>中から選択することができます。最後に、スライダーでレイヤーの不透明度（透過度）を設定できますが、これは個々のピクセルの実際のアルファ値と累積されることに注意してください。例えば、50%の不透明度を持つピクセルがあり、レイヤーの不透明度を50%に設定すると、最後のピクセルは25%の不透明度で描かれます。</p>
   </div>
-  <p> </p>
-  <p>Apart from those tools within the image editor itself, there are also a number of extra tools available to you from the Menu Bar at the top of the IDE:</p>
-  <p><img alt="Image Editor Menus" class="center" src="../assets/Images/Asset_Editors/Editor_Image_Menus.png" style="margin-top: -20px; margin-bottom: 1px;" />These menus are explained in the sections below:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Image</a></p>
+  <p> </p>
+  <p>イメージエディター内のツールとは別に、IDE上部のメニューバーから利用できる追加ツールも多数用意されています。</p>
+  <p><img>これらのメニューについては、以下の項目で説明します。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">画像</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><img alt="Image Editor Image Menu" class="center" src="../assets/Images/Asset_Editors/Editor_MenuImages.png" />The Image menu has the following options (some of which may or may not be available depending on the currrent editor focus):</p>
+    <p class="dropspot"><img>画像] メニューには、次のオプションがあります（現在のエディタのフォーカスにより、利用できるものとできないものがあります）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Cut Frame</strong> / <strong>Selection </strong>- Cut the frame or selection from the image, depending on Editor focus. If cutting a selection, this will add it to the brushes.</li>
-      <li class="dropspot"><strong>Copy Frame</strong> / <strong>Selection </strong>- Copy the frame or the selection from the image, depending on Editor focus. If copying a selection, this will add it to the brushes.</li>
-      <li class="dropspot"><strong>Paste Frame</strong> / <strong>Selection </strong>- Paste the frame from the clipboard, or paste the selection from the clipboard to the image, depending on the current focus of the IDE. When pasting into an image, you should note that this option is designed only for use with clipboard data from external programs. When you cut or copy to the clipboard from an image in the Image Editor, this is added to the brushes in the top right of the editor, and you should select a brush to draw with the cut/copied selection rather than try to paste it into the image. Also note that a number of programs will have issues pasting transparencies from the clipboard into <span data-keyref="GameMaker Name">GameMaker</span> image editor due to the format used by the clipboard.</li>
-      <li class="dropspot"><strong>Select All </strong>- Select the full image.</li>
-      <li class="dropspot"><strong>Cancel Selection</strong> - Clear any selection from the image.</li>
-      <li class="dropspot"><strong>Invert Selection</strong> - Invert the current selection.</li>
-      <li class="dropspot"><strong>Add Frame</strong> - Add a new frame to the sprite.</li>
-      <li class="dropspot"><strong>Insert Frame</strong> - Insert a new frame after the one currently showing.</li>
-      <li class="dropspot"><strong>Delete Selected Fames</strong> - Remove the selected frame from the sprite (you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and/or <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to select multiple frames).</li>
-      <li class="dropspot"><strong>Import Image(s)</strong> - Load an image to be used as a frame from disk. Note that you can load multiple frames at once by selecting multiple individual files to import in the explorer window. Once you have selected your file or files you will be shown the following Import window:<br />
-        <img alt="Image Editor Import Window" class="center" src="../assets/Images/Asset_Editors/Editor_Image_Import.png" />Here you can choose how the imported image should be added to the current sprite, permitting you to resize the entire draw canvas, crop or pad it, and also set the &quot;anchor&quot; position for placing the new image(s).
+      <li class="dropspot"><strong>フレーム</strong>／<strong>選択範囲を </strong><strong>カット</strong> <strong>- </strong> エディタのフォーカスによって、イメージからフレームまたは選択範囲をカットします。選択範囲をカットする場合、これはブラシに追加されます。</li>
+      <li class="dropspot"><strong>フレーム</strong>／<strong>選択範囲を </strong><strong>コピー</strong> <strong>- </strong> エディタのフォーカスによって、イメージからフレームまたは選択範囲をコピーします。選択範囲をコピーする場合、これはブラシにそれを追加します。</li>
+      <li class="dropspot"><strong>フレーム</strong>/<strong>選択範囲の </strong><strong>貼り付け</strong> <strong>- </strong> フレームはクリップボードから、選択範囲はクリップボードから画像に貼り付けます。これは<span class="notranslate">IDE</span> の現在のフォーカスによります。画像に貼り付ける場合、このオプションは外部プログラムからのクリップボードデータにのみ使用するように設計されていることに留意してください。イメージエディターで画像からクリップボードにカットしたりコピーしたりすると、 エディターの右上にあるブラシにこれが追加されるので、 画像に貼り付けようとするのではなく、 カット/コピーした選択範囲でブラシを選択して描画する必要があるのです。また、クリップボードで使用されるフォーマットのため、多くのプログラムでクリップボードからの透過画像を<span data-keyref="GameMaker Name">GameMakerの</span>イメージエディタにペーストする際に問題が発生することに注意してください。</li>
+      <li class="dropspot"><strong>すべて選択 - </strong> 画像全体を選択します。</li>
+      <li class="dropspot"><strong>選択範囲を解除</strong>する - 画像から選択範囲を解除します。</li>
+      <li class="dropspot"><strong>選択範囲の反転</strong>- 現在の選択範囲を反転させます。</li>
+      <li class="dropspot"><strong>Add Frame</strong>-<span class="notranslate">sprite</span> に新しいフレームを追加します。</li>
+      <li class="dropspot"><strong>フレーム挿入</strong>- 現在表示されているフレームの後に新しいフレームを挿入します。</li>
+      <li class="dropspot"><strong>Delete Selected Fames</strong>- 選択したフレームを<span class="notranslate">sprite</span> から削除します（複数のフレームを選択するには<img> /<img> +<img> and/or<img> +<img> を使用します）。</li>
+      <li class="dropspot"><strong>画像の読み込み</strong>- フレームとして使用する画像をディスクから読み込みます。エクスプローラウィンドウでインポートするファイルを個別に選択することで、一度に複数のフレームをロードすることができることに注意してください。ファイルを選択すると、次のようなインポートウィンドウが表示されます。<br>
+        <img>ここでは、インポートした画像を現在の<span class="notranslate">sprite</span> にどのように追加するかを選択でき、描画キャンバス全体のサイズ変更、クロップ、パディング、また新しい画像を配置する「アンカー」位置の設定が可能です。
       </li>
-      <li class="dropspot"><strong>Convert to Frames</strong> - This option will convert a single image into a number of separate frames. You must first have created a single frame with all the parts of the animation in it (or imported a single strip image) like the one shown below:<br />
-        <img alt="Image Editor Animation Strip" class="center" src="../assets/Images/Asset_Editors/Editor_Image_Strip.png" />Since this is a single image and we want to convert it into individual frames, we can use this option which will then open the following window:<br />
-        <img alt="Image Editor Convert to Animation Frames" class="center" src="../assets/Images/Asset_Editors/Editor_Image_ConvertStrip.png" />Here you can set how the single image should be split to create the frames, setting the number of frames, the width and height of the frames and any including any offset values.
+      <li class="dropspot"><strong>フレームに変換</strong>- このオプションは、単一のイメージをいくつかの個別のフレームに変換します。まず、下図のようなアニメーションのすべてのパーツを含む単一のフレームを作成（または単一のストリップ画像をインポート）する必要があります。<br>
+        <img>これは単一の画像であり、個々のフレームに変換したいので、このオプションを使用することができ、次のウィンドウが表示されます。<br>
+        <img>ここでは、フレーム数、フレームの幅と高さ、およびオフセット値を設定して、フレームを作成するために単一の画像を分割する方法を設定することができます。
       </li>
-      <li class="dropspot"><strong>Import Strip Image</strong> - This option will open a file explorer and prompt you to look for a single strip image file to be used to create frames from. Once selected an image the Import strip window will open, exactly the same as for the <strong>Convert To Frames</strong> option shown above.</li>
-      <li class="dropspot"><strong id="export_to_png">Export to PNG</strong> - Selecting this option will export the sprite as a single <span class="inline">PNG</span> image. If the sprite has more than a single image, then a &quot;strip&quot; sprite will be created with all the images, one after another, and the save file name will automatically be appended with &quot;<span class="inline">_stripX</span>&quot;, where &quot;<span class="inline">X</span>&quot; is the number of frames exported. For example, a five frame sprite will be exported as &quot;<span class="inline">sprite_name_strip5.png</span>&quot;.</li>
-      <li class="dropspot"><strong>Resize All Frames</strong> - When you select this option it will open the following window where you can set the way that you want to resize all the animation frames that comprise the sprite:<br />
-        <img alt="Image Editor Resize Frames" class="center" height="409" src="../assets/Images/Asset_Editors/Editor_Image_ResizeFrames.png" width="590" />You can choose to either <strong>Scale </strong>the image, or to <strong>Resize</strong> the canvas. If you choose to scale the image then you simply select the new width and/or height for each frame, whether to scale using the same aspect ratio, and also whether to scale in pixels or percent. Note that when scaling you can enable <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a> on or off, where having it on will cause the pixels to blur or &quot;smear&quot; as the image is scaled (in general, for hi resolution art you want this <em>on</em>, but for pixel art you want this <em>off</em>).<br />
-        <br />
-        The option to resize the canvas will not alter the pixels within the image but instead increase or decrease the size of the canvas that the images are being drawn on. You can set where the &quot;anchor&quot; for the resize should be using the arrow icons, then set the new size (in pixels or as a percentage) as well as set whether to maintain the aspect ratio of the original frames. Note that making the frame smaller than the original sprite images will crop the pixels.
+      <li class="dropspot">ストリップ<strong>画像のインポート</strong>- このオプションは、ファイルエクスプローラを開き、フレームを作成するために使用する単一のストリップ画像ファイルを探すように要求します。画像を選択すると、インポートストリップウィンドウが開きますが、これは上記の<strong>フレームに変換</strong>オプションと全く同じです。</li>
+      <li class="dropspot"><strong>Export to PNG</strong>- このオプションを選択すると、<span class="notranslate">sprite</span> が1つの <span class="inline">PNG</span> イメージとしてエクスポートされます。<span class="notranslate">sprite</span> に複数の画像がある場合、すべての画像を順番に並べた「帯」<span class="notranslate">sprite</span> が作成され、保存ファイル名には自動的に &quot;<span class="inline">_stripX</span>&quot; が追加されます。&quot;<span class="inline">X</span>&quot; はエクスポートされるフレームの数です。例えば、5フレーム<span class="notranslate">sprite</span> は、&quot;<span class="inline">sprite_name_strip5.png</span>&quot;としてエクスポートされます。</li>
+      <li class="dropspot"><strong>Resize All Frames</strong>- このオプションを選択すると、次のウィンドウが開き、スプライトを構成するすべてのアニメーションフレームのサイズを変更する方法を設定することができます。<br>
+        <img>イメージを<strong>拡大縮小 </strong>するか、キャンバスを<strong>リサイズ</strong>するか、どちらかを選ぶことができます。画像の拡大縮小を選択した場合、各フレームの新しい幅や高さ、同じアスペクト比を使用するかどうか、またピクセル単位かパーセント単位かを選択するだけです。スケーリングするとき、<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>オンまたはオフにすることができます。オンにすると、画像をスケーリングするときにピクセルがぼやけたり、「スミア」が発生します（一般に、高解像度アートでは<em>オンに</em>、ピクセルアートでは<em>オフに</em>することをお勧めします）。<br>
+        <br>
+        キャンバスのサイズを変更するオプションは、画像内のピクセルを変更するのではなく、画像が描かれているキャンバスのサイズを大きくしたり小さくしたりします。矢印のアイコンを使ってサイズ変更の「アンカー」を設定し、新しいサイズ（ピクセルまたはパーセント）を設定し、さらに元のフレームのアスペクト比を維持するかどうかを設定できます。フレームを元の<span class="notranslate">sprite</span> の画像より小さくすると、ピクセルが切り取られることに注意してください。
       </li>
-      <li class="dropspot"><strong>Crop All Frames To Selection</strong> - This option will only be available when you have an area of the image selected in the main draw canvas. When you then choose this option, the image being edited (and all other frames in the animation) will be cropped to the boundaries of the selection.</li>
-      <li class="dropspot" id="auto_trim_all_frames"><strong>Auto Trim All Frames</strong> - This option permits you to trim all the zero-alpha pixels from around the edges of a sprite. This will take into consideration all image frames within the sprite, so each side will crop to the edge of whichever frame has the furthest non-zero alpha pixel.<br />
-        <img alt="Image Editor Trim Frames" class="center" src="../assets/Images/Asset_Editors/Editor_Image_Trim.png" />
+      <li class="dropspot"><strong>Crop All Frames To Selection</strong>- このオプションは、メインの描画キャンバスで画像の領域を選択しているときのみ利用可能です。このオプションを選択すると、編集中の画像（およびアニメーションの他のすべてのフレーム）は、選択範囲の境界線にクロップされます。</li>
+      <li class="dropspot"><strong>Auto Trim All Frames</strong>- このオプションは、<span class="notranslate">sprite</span> のエッジからすべてのゼロアルファピクセルをトリミングします。これは<span class="notranslate">sprite</span> 内のすべてのイメージフレームを考慮するので、各サイドは、最も遠い非ゼロアルファピクセルがあるフレームのエッジにクロップされます。<br>
+        <img>
       </li>
-      <li class="dropspot"><strong>Reverse Frames</strong> - Selecting this will simply reverse the frame order for the sprite.</li>
-      <li class="dropspot"><strong>Mirror </strong>- This option permits you to mirror either the current frame all all the frames that comprise the sprite along the vertical axis.</li>
-      <li class="dropspot"><strong>Flip </strong>- This option permits you to flip either the current frame all all the frames that comprise the sprite along the horizontal axis.</li>
-      <li class="dropspot"><strong>Rotate all Frames (clockwise 90°)</strong> - This option will rotate all the frames of the animation 90° clockwise.</li>
-      <li class="dropspot"><strong>Rotate all Frames (anti-clockwise 90°)</strong> - This option will rotate all the frames of the animation 90° anti-clockwise.</li>
+      <li class="dropspot"><strong>Reverse Frames</strong>- これを選択すると、<span class="notranslate">sprite</span> のフレーム順が単純に逆になります。</li>
+      <li class="dropspot"><strong>Mirror - </strong> このオプションは、<span class="notranslate">sprite</span> を構成するすべてのフレームを垂直軸に沿ってミラーリングすることを可能にします。</li>
+      <li class="dropspot"><strong>Flip - </strong> このオプションは、<span class="notranslate">sprite</span> を構成するすべてのフレームを水平軸に沿って反転させることができます。</li>
+      <li class="dropspot"><strong>すべてのフレームを回転（時計回り90°）</strong>- このオプションは、アニメーションのすべてのフレームを時計回りに90°回転させます。</li>
+      <li class="dropspot"><strong>すべてのフレームを回転（反時計回りに90°）</strong>- このオプションは、アニメーションのすべてのフレームを反時計回りに90°回転させます。</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">View</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">表示</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><img alt="Image Editor Views Menu" class="center" src="../assets/Images/Asset_Editors/Editor_MenuView.png" />The View menu has the following options:</p>
+    <p class="dropspot"><img>表示］メニューには、次のオプションがあります。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>1:1</strong> - Scale the image to be 1:1 with the resolution (ie: actual size) and center it in the image edit window.</li>
-      <li class="dropspot"><strong>Fit Screen</strong> - Scale the image to fill the image edit window.</li>
-      <li class="dropspot"><strong>Show grid</strong> - Toggle the pixel grid. This is the same as the grid button found in the Canvas Controls (explained further up this page).</li>
-      <li class="dropspot"><strong>Onion Skin Settings</strong> - Change the onion skin settings. This will open the following window where you can set the frames shown by the onion skin button, as well as the opacity and colour of the skinned frames.<br />
-        <img alt="Image Editor Onion Skin Properties" class="center" src="../assets/Images/Asset_Editors/Editor_Image_OnionSkinProperties.png" />
+      <li class="dropspot"><strong>1:1</strong>- 画像を解像度と1:1になるようにスケーリングし（つまり実寸）、画像編集ウィンドウの中央に配置します。</li>
+      <li class="dropspot"><strong>画面に合わせる</strong>- 画像を画像編集ウィンドウいっぱいに拡大縮小します。</li>
+      <li class="dropspot"><strong>グリッドを表示</strong>- ピクセルグリッドをトグルします。これはキャンバスコントロールにあるグリッドボタンと同じです（このページでさらに詳しく説明します）。</li>
+      <li class="dropspot"><strong>オニオンスキン設定</strong>- オニオンスキンの設定を変更します。以下のウィンドウが表示され、オニオンスキンボタンで表示されるフレームや、スキンされたフレームの不透明度や色などを設定することができます。<br>
+        <img>
       </li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Effects</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">効果</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot"><img alt="Image Editor Effects Menu" class="center" src="../assets/Images/Asset_Editors/Editor_MenuEffects.png" />The Effects menu is where you can add your own custom effects plugins, and has the following effects by default:</p>
+    <p class="dropspot"><img>エフェクトメニューは、独自のエフェクトプラグインを追加するためのもので、デフォルトで以下のエフェクトが用意されています。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Blur </strong>- Apply a blur effect to the image. You can set the intensity as well as the type of blur to use (box or gaussian) and set whether to only blur along the horizontal or vertical axis, or along both. You can then choose to apply this to only the current layer, visible layers or all layers.<br />
-        <img alt="Image Editor Blur Effect" class="center" src="../assets/Images/Asset_Editors/Editor_EffectBlur.png" />
+      <li class="dropspot"><strong>ブラー - </strong> イメージにブラー効果を適用します。強度の設定、使用するぼかしの種類（ボックスまたはガウス）、水平軸または垂直軸に沿ったぼかしのみか、または両方に沿ったぼかしを設定することができます。また、現在のレイヤーのみ、表示されているレイヤー、またはすべてのレイヤーに適用するように選択することができます。<br>
+        <img>
       </li>
-      <li class="dropspot"><strong>Greyscale </strong>- Desaturate the image by a determined amount. You can choose to apply this to only the current layer, visible layers or all layers.<br />
-        <img alt="Image Editor Greyscale Effect" class="center" src="../assets/Images/Asset_Editors/Editor_EffectGrayscale.png" />
+      <li class="dropspot"><strong>グレースケール - </strong> 指定された量だけイメージを脱色します。この処理は、現在のレイヤーのみ、表示されているレイヤー、またはすべてのレイヤーに適用することができます。<br>
+        <img>
       </li>
     </ul>
   </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Animation_Curves.htm">The Animation Curve Editor</a></div>
+        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
+        <div style="float:right">次へ<a href="Animation_Curves.htm">アニメーション・カーブ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Image Editor

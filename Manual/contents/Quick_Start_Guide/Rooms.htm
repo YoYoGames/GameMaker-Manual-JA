@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Rooms</title>
+  <title>客室数</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Overview of the room editor." />
   <meta name="rh-index-keywords" content="Quick Start - Rooms" />
@@ -15,70 +14,87 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Rooms</h1>
-  <p>All games that you make in <span data-keyref="GameMaker Name">GameMaker</span> need at least one room to run (but can have many, many more) , and a room is just a space where you place instances of the objects that make up your game as well as tiles and any other graphical resources. When you first create a room in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> you will be presented with a new <a href="../The_Asset_Editors/Rooms.htm"><strong>Room Editor</strong></a> workspace with which to edit its properties, something like this:</p>
-  <p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png" style="cursor: nwse-resize;" /></p>
-  <p>By default the room tools will be placed on the left, with two main sections:</p>
+  <h1>客室数</h1>
+  <p><span data-keyref="GameMaker Name">GameMakerで</span>作るすべてのゲームは、実行するために少なくとも1つの<span class="notranslate">room</span> （ただし、もっとたくさん持つことができます）。<span class="notranslate">room</span> は、ゲームを構成する<span class="notranslate">objects</span> のインスタンスと、<span class="notranslate">tiles</span> やその他のグラフィックリソースを置くスペースに過ぎないのです。
+   <a href="../Introduction/The_Asset_Browser.htm">アセットブラウザで</a> <span class="notranslate">room</span> を初めて作成すると、新規の <a href="../The_Asset_Editors/Rooms.htm"><strong>ルームエディタ</strong></a><span class="notranslate">workspace</span> で、そのプロパティを編集することができます。
+    のようなものです。</p>
+  <p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png"/></p>
+  <p>デフォルトでは、<span class="notranslate">room</span> ツールが左側に配置され、3 つの主要なセクションがあります。</p>
   <ul class="colour">
-    <li><strong>Layer Editor</strong>: Everything in a room is placed on <em>layers</em>, and there are different layer types that you can choose from (more on this later). Layers are ordered by <em>depth </em>and this depth is what defines the order in which the layer contents will be rendered to the screen when the game runs. Depth ordering is from highest to lowest, so that the lower the depth the nearer the &quot;camera&quot; and the higher the depth the further away. For example, a layer with a depth of -300 will render over a layer with a depth of -100, and a layer with a depth of 1000 will render under everything with a depth less than this. Note that by default, <span data-keyref="GameMaker Name">GameMaker</span> will order layer depths for you according to the position in the Layer Editor, and you can drag around layers using the mouse to re-order them and <span data-keyref="GameMaker Name">GameMaker</span> will re-order the depths to match.</li>
-    <li><a href="../IDE_Tools/The_Inspector.htm"><strong>Inspector</strong></a>: When you open a room its properties such as room size and camera view ports are shown here. You can set them here as well.<br />
-      When you click a layer in the Layer Editor its properties, that depend on the layer type, are shown and can be changed here. This window permits you to change those properties and edit how the layer will be <a class="glossterm" data-glossterm="rendered" href="#">rendered</a>.</li>
+    <li><strong>レイヤーエディター</strong>。<span class="notranslate">room</span> のすべては<em>レイヤー</em>上に配置され、選択できるさまざまなレイヤーの種類があります（これについては後で説明します）。レイヤーは<em>深さによって </em>並べられ、この深さがレイヤーの順番を決めます。
+      レイヤーの内容は、ゲーム実行時に画面にレンダリングされます。深度の順序は最高から最低までで、深度が低いほど「カメラ」に近く、深度が高いほど遠くなります。例えば、レイヤーの深度が
+      深度-300のレイヤーは深度-100のレイヤーの上にレンダリングされ、深度1000のレイヤーはこれより小さい深度のすべてのものの下にレンダリングされます。デフォルトでは、<span data-keyref="GameMaker Name">GameMakerは</span>レイヤーの深さを位置によって並べ替えます。
+      のレイヤーエディターで、マウスを使ってレイヤーをドラッグして並べ替えると、<span data-keyref="GameMaker Name">GameMakerが</span>それに合わせて深さを並べ替えます。</li>
+    <li><strong>レイヤープロパティ</strong>。<span class="notranslate">room</span> に追加した各レイヤーには独自のプロパティがあり、それらのプロパティはレイヤーの種類によって変化します。このウィンドウでは、これらのプロパティを変更し、レイヤーの表示方法を編集することができます。
+     <a class="glossterm" data-glossterm="レンダリング" href="#">レンダリング</a>されます。</li>
+    <li><strong>ルームプロパティ</strong>：<span class="notranslate">Rooms</span> にも様々なプロパティがあり、ここで設定することができます。<span class="notranslate">room</span> のサイズ、アクティブにするカメラビューポート、その他いくつかの項目をここで設定することができます。</li>
   </ul>
-  <p>We&#39;ve mentioned that there are different layer types, so let&#39;s just go over what they are and how they can be used when building your games:</p>
+  <p>レイヤーには様々な種類があることを説明しましたが、その種類とゲーム制作時の使い方を説明します。</p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png" /></td>
-        <td class="icons"><strong>Background Layer</strong></td>
-        <td class="text">The background layer is a layer that can be filled with a <em>single </em>colour or a <em>single </em>image. It can be moved and positioned within the room, and you can have multiple background layers. Generally this is used, as the name suggests, to generate a constant background for all the other layers in the room. By Default a new room will always contain a background layer, but you can remove it if you don&#39;t need it.</td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png"/></td>
+        <td class="icons"><strong>背景レイヤー</strong></td>
+        <td class="text">背景レイヤーは、<em>単色 </em>または<em>単一の </em>画像で塗りつぶすことができるレイヤーです。これは、<span class="notranslate">room</span> 内で移動および配置することができ、複数の背景レイヤーを持つことができます。一般的にこれは、その名が示すように、使用されます。
+          <span class="notranslate">room</span> の他のすべてのレイヤーのために一定の背景を生成します。デフォルトでは、新しい<span class="notranslate">room</span> は常に背景レイヤーを含みますが、必要ない場合は削除することができます。</td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png" /></td>
-        <td class="icons"><strong>Instance Layer</strong></td>
-        <td class="text">The instance layer is where you place all the instances of the objects that you require for the game. To add an instance to a layer, simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the object in the asset browser and then drag it into the room editor workspace. When you release the mouse button, an instance of that object will have been added to the room. By Default a new room will always contain an instance layer, but you can remove it if you don&#39;t need it.</td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png"/></td>
+        <td class="icons"><strong>インスタンス層</strong></td>
+        <td class="text">インスタンスレイヤーは、ゲームに必要な<span class="notranslate">objects</span> のインスタンスをすべて配置する場所です。インスタンスをレイヤーに追加するには、<img> をクリックするだけで、<span class="notranslate">object</span> が表示されます。
+          <span class="notranslate">asset</span> ブラウザを起動し、<span class="notranslate">room</span> エディタ<span class="notranslate">workspace</span> にドラッグします。マウスボタンを離すと、その<span class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span> に追加されます。 デフォルトでは、新しい<span class="notranslate">room</span> は常にインスタンスレイヤーを含みますが、それを削除することもできます。
+          が必要です。</td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png" /></td>
-        <td class="icons"><strong>Tile Map Layer</strong></td>
-        <td class="text"><span>After having created a <a class="glossterm" data-glossterm="tile sets" href="#">tile set</a>, you need to add the tiles to your room, which is done by creating a <a class="glossterm" data-glossterm="tile map" href="#">tile map</a> layer. A tile map layer is a layer that permits you to add tiles from any of the tile set assets that you have created and will be set up automatically to use a grid the size of the tile set cells. You can only add a single tile to each grid cell, so if you require multiple tiles to occupy the same space, then you should be using multiple tile map layers.</span></td>
+        <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/></td>
+        <td class="icons"><strong>タイル地図レイヤー</strong></td>
+        <td class="text"><span><a class="glossterm" data-glossterm="かわらばん" href="#">タイルセットを</a>作成した後、<span class="notranslate">tiles</span> を<span class="notranslate">room</span> に追加する必要があります。これは、<a class="glossterm" data-glossterm="タイルマップ" href="#">タイルマップレイヤーを</a>作成することによって行われます。<span class="notranslate">tile</span> マップレイヤーは、作成した<span class="notranslate">tiles</span> <span class="notranslate">tile set</span> から<span class="notranslate">assets</span> を追加できるレイヤーで、<span class="notranslate">tile set</span> のセルサイズのグリッドを使用するように自動的にセットアップされます。各グリッドセルには1つの<span class="notranslate">tile</span> しか追加できないので、同じスペースを占有するために複数の<span class="notranslate">tiles</span> が必要な場合は、複数の<span class="notranslate">tile</span> マップレイヤーを使用する必要があります。</span></td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png" /></td>
-        <td class="icons"><strong>Path Layer</strong></td>
-        <td class="text"><span>The path layer is the only one that does not actually get rendered when you run your game. This layer is more of a &quot;convenience&quot; layer for helping you to create or edit <strong>Path </strong>assets, since it permits you to add or edit paths within the actual room space.</span></td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png"/></td>
+        <td class="icons"><strong>パスレイヤ</strong></td>
+        <td class="text"><span><span class="notranslate">path</span> レイヤーは、ゲーム実行時に実際にレンダリングされない唯一のレイヤーです。このレイヤーは、実際の<span class="notranslate">paths</span> スペース内で<span class="notranslate">room</span> を追加または編集できるため、<strong>Path </strong>アセットの作成または編集を支援する「便利」なレイヤーです。</span></td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Asset.png" /></td>
-        <td class="icons"><strong>Asset Layer</strong></td>
-        <td class="text">Sometimes you want a nice graphical effect but don&#39;t want the overhead of using an instance or don&#39;t need it to do anything other than draw itself. You could use a tile map, but given that tile maps are restricted to using a grid and only a single image per grid cell, they can be a bit restrictive. This is when you would use the asset layer. The asset layer simply takes a sprite resource and draws it using the parameters that you set when you add it into the room. Sprites and sequences can be added to this layer the same way that instances of objects are added to the instance layer, ie: you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the sprite in the asset browser and then drag it into the room editor workspace.</td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png"/></td>
+        <td class="icons"><strong>アセットレイヤー</strong></td>
+        <td class="text">素敵なグラフィック効果が欲しいけれども、インスタンスを使用するオーバーヘッドが必要でない場合や、インスタンスが自分自身を描く以外のことをする必要がない場合があります。<span class="notranslate">tile</span> マップを使うこともできますが、<span class="notranslate">tile</span> マップの使用はグリッドに限定され
+          は、1つのグリッドセルにつき1枚の画像であるため、少々制約があります。そんなときは、<span class="notranslate">asset</span> レイヤーを使ってください。<span class="notranslate">asset</span> <span class="notranslate">sprite</span> レイヤーは、単に<span class="notranslate">room</span> リソースを取り込んで、<span class="notranslate">Sprites</span> に追加したときに設定したパラメータを使用して描画します。
+          <span class="notranslate">sequences</span> は、<span class="notranslate">objects</span> のインスタンスをインスタンス層に追加するのと同じ方法で、このレイヤーに追加できます。つまり、<span class="notranslate">sprite</span> ブラウザで<span class="notranslate">asset</span> の<img> をクリックし、次に
+          <span class="notranslate">room</span> エディタ<span class="notranslate">workspace</span> にドラッグしてください。</td>
       </tr>
     </tbody>
   </table>
   <p>
     <!--</div>-->
   </p>
-  <p>We won&#39;t go into much more details about the room editor here (for that we have <a href="../The_Asset_Editors/Rooms.htm">this section</a> of the manual), but we will briefly explain how to add instances to an Instance Layer, as you&#39;ll need to know that for the next section of the Quick Start Guide.</p>
-  <p>To add an instance to the room editor, you must first select an Instance Layer from the Layer Editor on the left (or create one if none exist). You can then go to the Asset Browser and simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag an object that you want from there and drop it into the room at the position you want, which will add a single instance of that object to your game:</p>
-  <p><img alt="Adding Instances To A room Animation" class="center" src="../assets/Images/QS_Guide/QS_AddingInstances.gif" /></p>
-  <p>If you want to place multiple instances in the room, then you can select an object from the resource tree and then press and hold <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> to preview the resource, and if you additionally click the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> you can then &quot;paint&quot; it into the room layer.</p>
-  <p><img alt="Painting Instances In A Room Animation" class="center" src="../assets/Images/QS_Guide/QS_PaintingInstances.gif" /></p>
-  <p>Note that assets are given a position when they are added into the room editor based on their X and Y axis positions relative to the room <strong>origin</strong>. The room origin is the (0, 0) position, which in <span data-keyref="GameMaker Name">GameMaker</span> is the top left corner, and to the right is +X and down is +Y, e.g.:</p>
-  <p><img alt="Room Editor Axis Alignment" class="center" src="../assets/Images/QS_Guide/QS_RoomEditorAxis.png" />In the above example the instance is placed in the middle of the room at position (X:512, Y:384). It&#39;s also possible to go outside of the room bounds and have positions that are greater than the room axis lengths, or even less than than the room origin - in which case the X/Y coordinates will be negative values.</p>
-  <p>For more detailed information on the Room Editor, you can see the following section of the manual:</p>
+  <p>ここでは、<span class="notranslate">room</span> エディタについてあまり詳しく説明しませんが（そのために、マニュアルの<a href="../The_Asset_Editors/Rooms.htm">このセクションが</a>あります）、インスタンスレイヤにインスタンスを追加する方法について簡単に説明します。
+    クイックスタートガイドの次のセクションのために知っておいてください。</p>
+  <p><span class="notranslate">room</span> エディタにインスタンスを追加するには、まず左側のレイヤーエディタからインスタンスレイヤーを選択する必要があります（存在しない場合は作成する必要があります）。その後、<span class="notranslate">Asset</span> Browserで、<img> をクリックし、そこから好きな<span class="notranslate">object</span> をドラッグして、好きな位置の<span class="notranslate">room</span> にドロップするだけで、その<span class="notranslate">object</span> のインスタンスが1つ、ゲームに追加されます。</p>
+  <p><img src="../assets/Images/Icons/Icon_Layer_Asset.png"/></p>
+  <p><span class="notranslate">room</span> に複数のインスタンスを配置したい場合は、リソースツリーから<span class="notranslate">object</span> を選択し、<img> を長押しすると、リソースをプレビューすることができます。
+    さらにマウスの左ボタン<img> をクリックすると、<span class="notranslate">room</span> のレイヤーに「ペイント」することができます。</p>
+  <p><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/></p>
+  <p><span class="notranslate">assets</span> は<span class="notranslate">room</span> エディタに追加される際、<span class="notranslate">room</span> の<strong>原点を</strong>基準とした X 軸と Y 軸の位置に基づいて位置が決められることに注意してください。<span class="notranslate">room</span> 原点は (0, 0) の位置で、<span data-keyref="GameMaker Name">GameMaker</span>では左上隅になります。
+    で、右に行くほど+X、下に行くほど+Yとなります、例．</p>
+  <p><img>上記の例では、インスタンスは<span class="notranslate">room</span> の中央の位置 (X:512, Y:384) に配置されています。の外に出ることも可能である。
+    <span class="notranslate">room</span> の境界を超え、<span class="notranslate">room</span> の軸の長さよりも大きい位置、あるいは<span class="notranslate">room</span> の原点よりも小さい位置を持つことになります。この場合、X/Y 座標は負の値になります。</p>
+  <p><span class="notranslate">Room</span> Editor の詳細については、マニュアルの次のセクションを参照してください。</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Rooms.htm">Editors: The Room Editor</a></li>
+    <li><a href="../The_Asset_Editors/Rooms.htm">編集部<span class="notranslate">Room</span> 編集部</a></li>
   </ul>
-  <p>That wraps it up for the Room Editor in this Quick Start Guide, and you should now know enough to actually get started creating sprites and objects and designing rooms for them. The next sections of this guide are going to cover some of the programming fundamentals to help you on your way, starting with actually <strong>Drawing </strong>things to the screen.</p>
-  <p> </p>
-  <p> </p>
+  <p>このクイックスタートガイドでは、<span class="notranslate">Room</span> エディターについて説明します。これで、実際に<span class="notranslate">sprites</span> と<span class="notranslate">objects</span> を作成し、それらのために<span class="notranslate">rooms</span> を設計するのに十分な知識が得られたはずです。このガイドの次のセクションでは、プログラミングの一部をカバーするつもりです。
+    の基本を学び、実際に画面に<strong>描画 </strong>するところから始めてください。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Drawing.htm">Drawing</a></div>
+        <div style="float:left">戻る：<a href="../Content.htm">インデックス</a></div>
+        <div style="float:right">次へ<a href="Drawing.htm">図面</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Rooms
@@ -87,5 +103,5 @@ Quick Start: Rooms
   <!-- TAGS
 qs_rooms
 -->
-</body>
-</html>
+
+</body></html>

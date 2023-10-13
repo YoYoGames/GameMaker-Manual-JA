@@ -6,7 +6,7 @@
   <title>xboxlive_get_file_error</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_get_file_error" />
   <meta name="rh-index-keywords" content="xboxlive_get_file_error,xboxlive_fileerror_outoflocalstorage,xboxlive_fileerror_quotaexceeded,xboxlive_fileerror_noerror" />
@@ -15,13 +15,13 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_get_file_error</h1>
-  <p>This function will return a constant (shown below) to help debug why a file function failed so that you can take appropriate action in your game code. When one of the file functions fails you can call the function to find out exactly what the error was.</p>
-  <p class="note"><b>NOTE</b>: When using the asynchronous <a href="../../Buffers/buffer_save_async.htm">save</a>/<a href="../../Buffers/buffer_load_async.htm">load</a> functions, the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> map will have an extra key, &quot;<b>error</b>&quot; which will also contain one of the constants (shown below).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は定数（下図）を返すので、ファイル関数が失敗した理由をデバッグし、ゲームコードで適切な対処をするのに役立ちます。ファイル関数のいずれかが失敗したとき、この関数を呼び出してエラーの内容を正確に知ることができます。</p>
+  <p class="note"><b>注</b>：非同期<a href="../../Buffers/buffer_save_async.htm">保存・読み込み</a>機能を使用する場合 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>マップには追加のキー &quot;<b>error</b>&quot; があり、これにも定数のひとつが含まれます (下図参照)。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">xboxlive_get_file_error();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Constant_Xbox_FileError"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Saving_Data/xboxlive_get_file_error.htm">Xbox File Error Constant</a></span></p>
   <table>
     <colgroup>
@@ -30,46 +30,46 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Xbox_FileError"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Saving_Data/xboxlive_get_file_error.htm">Xbox File Error Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Xbox_FileError"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Saving_Data/xboxlive_get_file_error.htm">Xboxファイルエラー定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_fileerror_outoflocalstorage</span></td>
-        <td>If this occurs while saving this means that all available save game space has been used up, and the user has declined the offer (presented by the OS) of freeing up space. The game should confirm with the user that they intend to continue playing without saving. If they still want to be able to save, the game should retry the save operation.</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_fileerror_outoflocalstorage</span></td>
+        <td>セーブ中にこの現象が発生した場合、利用可能なセーブゲーム容量をすべて使い切ってしまい、OSが提示した容量開放の申し出をユーザーが拒否したことを意味します。セーブせずにプレイを続けるかどうか、ユーザーに確認する必要があります。それでもセーブを希望する場合は、セーブ操作を再試行する。</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_fileerror_quotaexceeded</span></td>
-        <td>If this occurs the game should notify the user that they can&#39;t save any more data until they free up some space, and then present them with a way of doing this.</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_fileerror_quotaexceeded</span></td>
+        <td>この場合、空き容量がなくなるまでこれ以上データを保存できないことをユーザーに通知し、その方法を提示する必要があります。</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_fileerror_noerror</span></td>
-        <td>The file save or load function was carried out without issues.</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_fileerror_noerror</span></td>
+        <td>ファイルの保存や読み込み機能は問題なく実行できました。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">buffer_save(buff, &quot;SaveGame.bin&quot;);<br />
     if (xboxlive_get_file_error() != xboxlive_fileerror_noerror)<br />
     {<br />
         show_debug_message(&quot;Save failed. Error code = &quot; + string(xboxlive_get_file_error()));<br />
     }</p>
-  <p>The above code checks to see if there was an error with saving and if so the error code is printed out to the console.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、保存時にエラーが発生したかどうかを確認し、エラーが発生した場合はエラーコードをコンソールに出力しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Saving_Data.htm">Saving Data</a></div>
-        <div style="float:right">Next: <a href="xboxlive_set_savedata_user.htm">xboxlive_set_savedata_user</a></div>
+        <div style="float:left">戻る<a href="Saving_Data.htm">データの保存</a></div>
+        <div style="float:right">次のページ <a href="xboxlive_set_savedata_user.htm"><span class="notranslate">xboxlive_set_savedata_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_get_savedata_user

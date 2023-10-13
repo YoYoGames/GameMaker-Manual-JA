@@ -6,7 +6,7 @@
   <title>os_get_info</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for os_get_info" />
   <meta name="rh-index-keywords" content="os_get_info" />
@@ -15,176 +15,181 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">os_get_info</span></h1>
-  <p>This function returns a <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> with detailed information about the OS that the game is running on. The exact information returned will depend on the OS and the device, so it is recommended that you test this function on all platforms that you wish to target and output the returned values using a function like <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span>. Note that the DS map is not automatically cleared from memory and you should use the <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a> function when you no longer need it.</p>
-  <p>Below you can find some details on the extra data that will be made available to the DS map specific to the following platforms, and it should be noted that on all platforms <em>except</em> HTML5 the map will have the key &quot;<span><span class="inline">is64bit</span>&quot; which will either be <span class="inline">true</span> or <span class="inline">false</span> depending on whether the runner is running in 64-bit mode or not.</span></p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Windows</a></p>
+  <h1>os_get_info</h1>
+  <p>この関数は、ゲームが動作しているOSの詳細情報を <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a>を、ゲームが動作している OS の詳細情報とともに返します。返される正確な情報はOSやデバイスによって異なるので、対象となるすべてのプラットフォームでこの関数をテストし、 <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span> のような関数を使用して返された値を出力することをお勧めします。DSマップは自動的にメモリからクリアされないことに注意してください。 <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a>関数を使用する必要があります。</p>
+  <p>HTML5<em>以外の</em>すべてのプラットフォームでは、マップは &quot;<span><span class="inline">is64bit</span></span>&quot; というキーを持ち<span>、ランナーが 64 ビットモードで動作しているかどうかによって、 <span class="inline">true</span> または <span class="inline">false</span> </span>となることに注意してください。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Windows / UWP</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">On Windows, you will get some extra data from DX11 with the following keys available in the DS map (useful for extensions):</p>
+    <p class="dropspot"><span class="notranslate">Windows</span> Desktop と<span class="notranslate">Windows UWP</span> では、DX11 の追加データとして、DS マップに以下のキーが用意されています（<span class="notranslate">extensions</span> で便利です）。</p>
     <ul class="dropspotlist">
-      <li><span class="inline">udid</span>: An identifier that is unique to the machine</li>
-      <li><strong><span class="inline">video_d3d11_device</span></strong>: pointer to the DX11 device</li>
-      <li><strong><span class="inline">video_d3d11_context</span></strong>: pointer to the DX11 context</li>
-      <li><span class="inline">video_d3d11_swapchain</span>: pointer to the DX11 swapchain</li>
-      <li><strong><span class="inline">video_adapter_vendorid</span></strong>: string with the adapter&#39;s vendor id</li>
-      <li><strong><span class="inline">video_adapter_deviceid</span></strong>: string with the adapter&#39;s device id</li>
-      <li><strong><span class="inline">video_adapter_subsysid</span></strong>: string with the adapter&#39;s sub system id</li>
-      <li><strong><span class="inline">video_adapter_revision</span></strong>: string with the adapter&#39;s revision number</li>
-      <li><span class="inline">video_adapter_description</span>: string with the video adapter&#39;s description</li>
-      <li><strong><span class="inline">video_adapter_dedicatedvideomemory</span></strong>: string with the size of the video memory</li>
-      <li><strong><span class="inline">video_adapter_dedicatedsystemmemory</span></strong>: string with the size of the system memory (used by DX11 adapter)</li>
-      <li><span class="inline">video_adapter_sharedsystemmemory</span>: string with the size of the shared system memory</li>
+      <li><span class="inline">udid</span>:機械に固有の識別子</li>
+      <li><strong><span class="inline">video_d3d11_device</span></strong>: DX11 デバイスへのポインタ</li>
+      <li><strong><span class="inline">video_d3d11_context</span></strong>: DX11 コンテキストへのポインタ</li>
+      <li><span class="inline">video_d3d11_spawnchain</span>: DX11 スワップチェーンへのポインター</li>
+      <li><strong><span class="inline">video_adapter_vendorid</span></strong>:<span class="notranslate">string</span> アダプタのベンダ ID を含む。</li>
+      <li><strong><span class="inline">video_adapter_deviceid</span></strong>:<span class="notranslate">string</span> アダプタのデバイス ID を含む</li>
+      <li><strong><span class="inline">video_adapter_subsysid</span></strong>:<span class="notranslate">string</span> アダプタのサブシステム ID を持つ。</li>
+      <li><strong><span class="inline">video_adapter_revision</span></strong>:<span class="notranslate">string</span> アダプタのリビジョン番号付き</li>
+      <li><span class="inline">video_adapter_description</span>:<span class="notranslate">string</span> ビデオアダプタの記述あり</li>
+      <li><strong><span class="inline">video_adapter_dedicatedvideomemory</span></strong>:<span class="notranslate">string</span> ビデオメモリサイズで</li>
+      <li><strong><span class="inline">video_adapter_dedicatedsystemmemory</span></strong>:<span class="notranslate">string</span> システムメモリのサイズで（DX11 アダプタで使用）</li>
+      <li><span class="inline">video_adapter_sharedsystemmemory</span>:<span class="notranslate">string</span> 共有システムメモリサイズで</li>
     </ul>
-    <p> </p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">macOS</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">マクロス</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The function returns some limited OpenGL information on macOS:</p>
+    <p class="dropspot">この関数は、macOS上でいくつかの限定されたOpenGL情報を返します。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">udid</span>: An identifier that is unique to the machine</li>
-      <li class="dropspot"><span class="inline">gl_vendor_string</span>: <span class="inline">GL_VENDOR</span> from OpenGL, example - <em>&quot;Intel Inc.&quot;</em></li>
-      <li class="dropspot"><span class="inline">gl_version_string</span>: <span class="inline">GL_VERSION </span>from OpenGL, example - <em>&quot;2.1 INTEL-16.2.16&quot;</em></li>
-      <li class="dropspot"><span class="inline">gl_renderer_string</span>: <span class="inline">GL_RENDERER </span>from OpenGL, example - <em>&quot;Intel(R) Iris(TM) Graphics 6100&quot;</em></li>
+      <li class="dropspot"><span class="inline">udid</span>:機械に固有の識別子</li>
+      <li class="dropspot"><span class="inline">gl_vendor_string</span>: <span class="inline">GL_VENDOR</span> from OpenGL, example -<em>&quot;Intel Inc.&quot;.</em></li>
+      <li class="dropspot"><span class="inline">gl_version_string</span>: <span class="inline">GL_VERSION </span>from OpenGL, 例 -<em>&quot;2.1 INTEL-16.2.16&quot;</em>.</li>
+      <li class="dropspot"><span class="inline">gl_renderer_string</span>: <span class="inline">GL_RENDERER </span>OpenGLより、例 -<em>&quot;Intel(R) Iris(TM) Graphics 6100&quot;</em></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Ubuntu</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">ウブントゥ</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">This contains the same information as on macOS.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">これには、<span class="notranslate">macOS</span> と同じ情報が含まれています。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Android</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">アンドロイド</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">On the <b>Android</b> platform you will get some extra data from various different APIs with the following keys available in the DS map:</p>
+    <p class="dropspot"><b>Android</b>プラットフォームでは、DSマップで利用可能な以下のキーで、様々な異なるAPIからいくつかの追加データを取得します。</p>
     <ul class="dropspotlist">
-      <li><span class="inline">android_tv</span>: this will return <span class="inline">true</span> if the device is detected as being an Android TV device, or <span class="inline">false</span> otherwise</li>
-      <li><span class="inline">GL_VERSION</span>: the version of OpenGL as reported by the driver</li>
-      <li><span class="inline">GL_VENDOR</span>: the vendor of OpenGL as reported by the driver</li>
-      <li><span class="inline">GL_RENDERER</span>: the renderer of OpenGL as reported by the driver</li>
-      <li><span class="inline">GL_EXTENSIONS</span>: the extensions of OpenGL that are available as reported by the driver</li>
-      <li><span class="inline">GL_SHADING_LANGUAGE_VERSION</span>: the version of the GLSL that is supported by this OpenGL driver</li>
-      <li><span class="inline">GL_MAX_TEXTURE_SIZE</span>: the maximum texture size supported by this OpenGL driver</li>
-      <li><span class="inline">SDK_INT</span>: value of <strong>android.os.Build.VERSION.SDK_INT</strong><em> (see note below)</em></li>
-      <li><span class="inline">RELEASE</span>: value of <strong>android.os.Build.VERSION.RELEASE</strong></li>
-      <li><span class="inline">MODEL</span>: value of <strong>android.os.Build.MODEL</strong></li>
-      <li><span class="inline">DEVICE</span>: value of <strong>android.os.Build.DEVICE</strong></li>
-      <li><span class="inline">MANUFACTURER</span>: value of <strong>android.os.Build.MANUFACTURER</strong></li>
-      <li><span class="inline">CPU_ABI</span>: value of <strong>android.os.Build.CPU_ABI</strong></li>
-      <li><span class="inline">CPU_ABI2</span>: value of <strong>android.os.Build.CPU_ABI2</strong></li>
-      <li><span class="inline">BOOTLOADER</span>: value of <strong>android.os.Build.BOOTLOADER</strong></li>
-      <li><span class="inline">BOARD</span>: value of <strong>android.os.Build.BOARD</strong></li>
-      <li><span class="inline">VERSION</span>: value of <strong>os.version</strong> from the Android <span class="inline">System.getProperty</span> method.</li>
-      <li><span class="inline">REGION</span>: values of <strong>user.region</strong> from the Android <span class="inline">System.getProperty</span> method</li>
-      <li><span class="inline">VERSION_NAME</span>: value of this package&#39;s versionName - see <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">here</a> for more information.</li>
-      <li><span class="inline">PHYSICAL_KEYBOARD</span>: if we think a physical keyboard is available then the string <span class="inline">&quot;TRUE&quot;</span> otherwise <span class="inline">&quot;FALSE&quot;</span></li>
+      <li><span class="inline">android_tv</span> <span class="notranslate">Android</span> TV 機器として検出された場合は を、そうでない場合は を返します。 <span class="inline">true</span> <span class="inline">false</span> </li>
+      <li><span class="inline">GL_VERSION</span>: ドライバから報告されたOpenGLのバージョン</li>
+      <li><span class="inline">GL_VENDOR</span>: ドライバから報告されたOpenGLのベンダー</li>
+      <li><span class="inline">GL_RENDERER</span>: ドライバから報告されたOpenGLのレンダラー</li>
+      <li><span class="inline">GL_EXTENSIONS</span>: ドライバから報告された、利用可能な OpenGL の<span class="notranslate">extensions</span> </li>
+      <li><span class="inline">GL_SHADING_LANGUAGE_VERSION</span>: このOpenGLドライバがサポートするGLSLのバージョン</li>
+      <li><span class="inline">GL_MAX_TEXTURE_SIZE</span>: このOpenGLドライバがサポートする最大の<span class="notranslate">texture</span> サイズ。</li>
+      <li><span class="inline">SDK_INT</span>:<strong>android.os.Build.VERSION.SDK_INT</strong>の値<em> （以下の注を参照</em>）。</li>
+      <li><span class="inline">RELEASE</span>:<strong>android.os.Build.VERSION.RELEASE</strong>の値です。</li>
+      <li><span class="inline">MODEL</span>:<strong>android.os.Build.MODEL</strong>の値です。</li>
+      <li><span class="inline">DEVICE</span>:<strong>android.os.Build.DEVICE</strong>の値です。</li>
+      <li><span class="inline">MANUFACTURER</span>:<strong>android.os.Build.MANUFACTURER</strong>の値です。</li>
+      <li><span class="inline">CPU_ABI</span>:<strong>android.os.Build.CPU_ABI</strong>の値です。</li>
+      <li><span class="inline">CPU_ABI2</span>:<strong>android.os.Build.CPU_ABI2</strong>の値です。</li>
+      <li><span class="inline">BOOTLOADER</span>:<strong>android.os.Build.BOOTLOADER</strong>の値です。</li>
+      <li><span class="inline">BOARD</span>:<strong>android.os.Build.BOARD</strong>の値です。</li>
+      <li><span class="inline">VERSION</span>:<span class="notranslate">Android</span> <span class="inline">System.getProperty</span> メソッドから<strong>os.version</strong>の値を取得します。</li>
+      <li><span class="inline">REGION</span>:<span class="notranslate">Android</span> <span class="inline">System.getProperty</span> メソッドから<strong>user.region</strong>の値を取得します。</li>
+      <li><span class="inline">VERSION_NAME</span>: このパッケージの versionName の値 - 詳しくは<a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">こちらを</a>ご覧ください。</li>
+      <li><span class="inline">PHYSICAL_KEYBOARD</span>: 物理キーボードが使えると思えば、そうでなければ<span class="notranslate">string</span> <span class="inline">&quot;TRUE&quot;</span> <span class="inline">&quot;FALSE&quot;</span></li>
     </ul>
-    <p class="note"><span class="dropspotnote"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> For information on any <strong>android.os.Build</strong> variables, see the <a href="https://developer.android.com/reference/android/os/Build" title="Android Developer documentation">Android Developer documentation</a>.</span></p>
-    <p> </p>
+    <p class="note"><span class="dropspotnote"><strong>注</strong>：<strong>android.os.Build</strong>変数に関する情報は、<a href="https://developer.android.com/reference/android/os/Build" title="Android Developer documentation">Android Developerのドキュメントを</a>参照してください。</span></p>
+    <p> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">iOS &amp; tvOS</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Here are the keys returned on iOS and tvOS (for detailed information, please refer to the Apple Developer documentation):</p>
+    <p class="dropspot">以下は、<span class="notranslate">iOS</span> と<span class="notranslate">tvOS</span> で返されるキーです（詳細については、Apple Developerのドキュメントを参照してください）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">name</span>: string as reported by <span class="inline">[[UIDevice currentDevice] name]</span></li>
-      <li class="dropspot"><span class="inline">systemName</span>: string as reported by <span class="inline">[[UIDevice currentDevice] systemName]</span></li>
-      <li class="dropspot"><span class="inline">systemVersion</span>: string as reported by <span class="inline">[[UIDevice currentDevice] systemVersion]</span></li>
-      <li class="dropspot"><span class="inline">model</span>: string as reported by <span class="inline">[[UIDevice currentDevice] model]</span></li>
-      <li class="dropspot"><span class="inline">localisedModel</span>: string as reported by <span class="inline">[[UIDevice currentDevice] localizedModel]</span></li>
-      <li class="dropspot"><span class="inline">uiIdiom</span>: string as reported by <span class="inline">[[UIDevice currentDevice] userInterfaceIdiom]</span></li>
-      <li class="dropspot"><span class="inline">platform</span>: <span class="inline">hw.machine</span> string gathered from <span class="inline">sysctlbyname</span></li>
-      <li class="dropspot"><span class="inline">hwModel</span>: <span class="inline">hw.model</span> string gathered from <span class="inline">sysctlbyname</span></li>
-      <li class="dropspot"><span><span class="inline">freeDiskSpace</span>: The free disk space</span></li>
-      <li class="dropspot"><span><span class="inline">totalDiskSpace</span>: The total disk space</span></li>
-      <li class="dropspot"><span><span class="inline">cpuFrequency</span>: The CPU&#39;s frequency</span></li>
-      <li class="dropspot"><span><span class="inline">busFrequency</span>: The bus frequency</span></li>
-      <li class="dropspot"><span><span class="inline">cpuCount</span>: The CPU count</span></li>
-      <li class="dropspot"><span><span class="inline">totalMemory</span>: The total memory of the device</span></li>
-      <li class="dropspot"><span><span class="inline">userMemory</span>: The user memory</span></li>
-      <li class="dropspot"><span><span class="inline">maxSocketBufferSize</span>: The max socket buffer size</span></li>
-      <li class="dropspot">Additional keys containing OpenGL graphics info
-        <br />
-      </li>
+      <li class="dropspot"><span class="inline">name</span>:<span class="notranslate">string</span> 、報告されています。 <span class="inline">[[UIDevice currentDevice] name]</span></li>
+      <li class="dropspot"><span class="inline">systemName</span>:<span class="notranslate">string</span> 、報告されています。 <span class="inline">[[UIDevice currentDevice] systemName]</span></li>
+      <li class="dropspot"><span class="inline">systemVersion</span>によって報告された文字列です。 <span class="inline">[[UIDevice currentDevice] systemVersion]</span></li>
+      <li class="dropspot"><span class="inline">model</span>によって報告された文字列です。 <span class="inline">[[UIDevice currentDevice] model]</span></li>
+      <li class="dropspot"><span class="inline">localisedModel</span>によって報告された文字列です。 <span class="inline">[[UIDevice currentDevice] localizedModel]</span></li>
+      <li class="dropspot"><span class="inline">uiIdiom</span>によって報告された文字列です。 <span class="inline">[[UIDevice currentDevice] userInterfaceIdiom]</span></li>
+      <li class="dropspot"><span class="inline">platform</span>:<span class="inline">hw.machine</span> <span class="notranslate">string</span> から集められました。 <span class="inline">sysctlbyname</span></li>
+      <li class="dropspot"><span class="inline">hwModel</span>:<span class="inline">hw.model</span> <span class="notranslate">string</span> から集められました。 <span class="inline">sysctlbyname</span></li>
+      <li class="dropspot"><span><span class="inline">freeDiskSpace</span>:ディスクの空き容量</span></li>
+      <li class="dropspot"><span><span class="inline">totalDiskSpace</span>:ディスクの総容量</span></li>
+      <li class="dropspot"><span><span class="inline">cpuFrequency</span>:CPUの周波数</span></li>
+      <li class="dropspot"><span><span class="inline">busFrequency</span>:バス周波数</span></li>
+      <li class="dropspot"><span><span class="inline">cpuCount</span>:CPUの数</span></li>
+      <li class="dropspot"><span><span class="inline">totalMemory</span>:デバイスの総メモリ量</span></li>
+      <li class="dropspot"><span><span class="inline">userMemory</span>:ユーザーメモリー</span></li>
+      <li class="dropspot"><span><span class="inline">maxSocketBufferSize</span>:最大ソケットサイズ<span class="notranslate">buffer</span> </span></li>
+      <li class="dropspot">OpenGLグラフィックス情報を含む追加キー<br>
+         </li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">GX.games</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">オペラGX</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">The following extra keys will be included in the DS Map for GX.games:</p>
+    <p class="dropspot">オペラGXのDSマップには、以下の追加キーが収録されます。</p>
     <ul class="colour">
-      <li class="dropspot"><span class="inline">mobile</span>: This will be <strong>1.0</strong> if the game is running on a mobile browser, and <strong>0.0</strong> if it&#39;s not.</li>
+      <li class="dropspot"><span class="inline">mobile</span>:モバイルブラウザ上でゲームが動作している場合は<strong>1.0</strong>、そうでない場合は<strong>0.0</strong>となります。</li>
     </ul>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">HTML5</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">Returns <span class="inline">-1</span>.</p>
+    <p class="dropspot"> <span class="inline">-1</span> を返します。</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Nintendo Switch</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ニンテンドースイッチ</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">Returns <span class="inline">-1</span>.</p>
+    <p class="dropspot"> <span class="inline">-1</span> を返します。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">PlayStation 4</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot"><em>Please refer to the PS4 documentation for information on the functions referenced here.</em></p>
-    <p class="dropspot">The function returns the following keys on a PlayStation 4 console:</p>
+    <p class="dropspot"><em>ここで言及されている機能については、PS4のドキュメントを参照してください。</em></p>
+    <p class="dropspot">この機能は、PlayStation 4本体で以下のキーを返すものです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: A floating point value as returned by <span class="inline">sceSystemServiceGetDisplaySafeAreaInfo()</span>.</li>
-      <li class="dropspot"><span class="inline">is_neo_mode</span>: This will be <span class="inline">1</span> if the game is running on a Neo (PS4 Pro) and <span class="inline">0</span> if it&#39;s running on a regular PS4.</li>
-      <li class="dropspot"><span class="inline">enter_button_assign</span>: An integer value as returned by <span class="inline">sceSystemServiceParamGetInt(SCE_SYSTEM_SERVICE_PARAM_ID_ENTER_BUTTON_ASSIGN, &amp;enterassign)</span>; a value of <span class="inline">0</span> means the Circle button is used as &quot;assign&quot; and <span class="inline">1</span> means the X button is used instead.</li>
+      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: <span class="inline">sceSystemServiceGetDisplaySafeAreaInfo()</span> が返す浮動小数点値．</li>
+      <li class="dropspot"><span class="inline">is_neo_mode</span>:Neo(PS4 Pro)で動作している場合は <span class="inline">1</span> 、通常のPS4で動作している場合は <span class="inline">0</span> となります。</li>
+      <li class="dropspot"><span class="inline">enter_button_assign</span>: <span class="inline">sceSystemServiceParamGetInt(SCE_SYSTEM_SERVICE_PARAM_ID_ENTER_BUTTON_ASSIGN, &amp;enterassign)</span> が返す整数値 ; 値が <span class="inline">0</span> の場合、Circle ボタンが &quot;assign&quot; として使用され、 <span class="inline">1</span> の場合、代わりに X ボタンが使用されることを意味します。</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">PlayStation 5</a>      </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">プレイステーション 5</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">The function returns the following keys on a PlayStation 5 console:</p>
+    <p class="dropspot">この機能は、PlayStation 5本体で以下のキーを返すものです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: Same as PS4 (see above).</li>
-      <li class="dropspot"><span class="inline">display_resolution</span>: &quot;HD&quot;, &quot;4K&quot;  or &quot;unknown&quot;</li>
-      <li class="dropspot"><span class="inline">display_dynamic_range</span>: &quot;HDR&quot;, &quot;SDR&quot; or &quot;unknown&quot;</li>
-      <li class="dropspot"><span class="inline">display_refresh_rate</span>: &quot;120Hz&quot;, &quot;60Hz&quot; or &quot;Unknown&quot;</li>
+      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>:PS4と同じ（上記参照）。</li>
+      <li class="dropspot"><span class="inline">display_resolution</span>: &quot;HD&quot;、&quot;4K &quot;または &quot;不明&quot;。</li>
+      <li class="dropspot"><span class="inline">display_dynamic_range</span>: &quot;HDR&quot;、&quot;SDR &quot;または &quot;不明&quot;</li>
+      <li class="dropspot"><span class="inline">display_refresh_rate</span>: &quot;120Hz&quot;、&quot;60Hz &quot;または &quot;不明&quot;</li>
     </ul>
-    <p class="dropspot"><br /></p>
-    <ul class="dropspotlist">
-    </ul>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="">Xbox One &amp; Series X/S</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="">Xbox One</a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p class="dropspot">Xbox Oneで返される情報は、ほとんど<span class="notranslate">Windows</span> と同じですが、 <span class="inline">video_adapter_*</span> と <span class="inline">udid</span> のキーは<span class="inline">0</span> です ( <span class="inline">video_adapter_description</span> は空です<span class="notranslate">string</span> <span class="inline2">&quot;&quot;</span> を除く)。また、 <span class="inline">video_d3d11_swapchain</span> のキーもありません。</p>
+    <p class="dropspot">また、本プラットフォームでは、以下の情報を返します。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><span class="inline">is_xbox_one_x</span>:ゲームがXbox One Xで動作している場合は <span class="inline">1</span> 、ベースのXbox Oneで動作している場合は <span class="inline">0</span> になります。</li>
+    </ul>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="">XboxシリーズX/S</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The info returned on Xbox One and Xbox Series X/S is mostly the same as Windows, however the <span class="inline">video_adapter_*</span> and <span class="inline">udid</span> keys are <span class="inline">0</span> (except for <span class="inline">video_adapter_description</span> which is an empty string <span class="inline2">&quot;&quot;</span>). It also does not have the <span class="inline">video_d3d11_swapchain</span> key and the <span class="inline">video_d3d11_*</span> keys have been replaced by <span class="inline">video_d3d12_*</span>.</p>
-    <p class="dropspot">Here are some keys that this platform returns in addition to the ones listed under Windows: </p>
+    <p class="dropspot">XboxシリーズX/Sコンソールで返される情報は、Xbox Oneとほぼ同じですが、 <span class="inline">video_d3d11_*</span> キーが<span class="inline">video_d3d12_*</span> に置き換えられています。</p>
+    <p class="dropspot">ここでは、Xbox Oneに記載されているものに加え、このプラットフォームが返すキーをいくつか紹介します。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">video_d3d12_cmdqueue</span>: Points to the DX12 command queue</li>
-      <li class="dropspot"><span class="inline">video_d3d12_cmdlist</span>: Points to the DX12 command list</li>
-      <li class="dropspot"><span class="inline">video_d3d12_currentrt</span>: Points to the current DX12 render target</li>
-      <li class="dropspot"><span class="inline">device_type</span>: Contains a constant value that represents the device type. These constants map directly to values returned by the <span class="inline2">XSystemGetDeviceType()</span> function.<br />
-        This will be one of the following constants: <span class="inline2">device_gdk_unknown</span>, <span class="inline2">device_gdk_xboxone</span>, <span class="inline2">device_gdk_xboxones</span>, <span class="inline2">device_gdk_xboxonex</span>, <span class="inline2">device_gdk_xboxonexdevkit</span>, <span class="inline2">device_gdk_xboxseriess</span>, <span class="inline2">device_gdk_xboxseriesx</span>, <span class="inline2">device_gdk_xboxseriesdevkit</span>.</li>
+      <li class="dropspot"><span class="inline">video_d3d12_cmdqueue</span>:DX12コマンドキューを指す</li>
+      <li class="dropspot"><span class="inline">video_d3d12_cmdlist</span>:DX12コマンドリストをポイントする</li>
+      <li class="dropspot"><span class="inline">video_d3d12_currentrt</span>:現在の DX12 レンダリングターゲットを指す。</li>
     </ul>
   </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">os_get_info</span>()</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">os_get_info()</p>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_DS_Map"><a href="../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (os_type == os_android)<br />
     {<br />
-        var _info = <span data-field="title" data-format="default">os_get_info</span>();<br />
+        var _info = os_get_info();<br />
         <br />
         if (_info[? &quot;android_tv&quot;])<br />
         {<br />
             global.android_tv = true;<br />
         }<br />
     }</p>
-  <p>The above code checks if the current OS is Android, gets the OS info and reads the returned map to check if the game is running on an Android TV; in that case it sets the custom variable <span class="inline">global.android_tv</span> to <span class="inline">true</span>.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、現在のOSが<span class="notranslate">Android</span> であるかどうかをチェックし、OS情報を取得し、返されたマップを読んで、ゲームが<span class="notranslate">Android</span> のテレビで動作しているかどうかをチェックします。その場合、カスタム変数 <span class="inline">global.android_tv</span> に <span class="inline">true</span> をセットします。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_powersave_enable.htm">os_powersave_enable</a></div>
+        <div style="float:left">戻る<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
+        <div style="float:right">次のページ <a href="os_powersave_enable.htm"><span class="notranslate">os_powersave_enable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 os_get_info

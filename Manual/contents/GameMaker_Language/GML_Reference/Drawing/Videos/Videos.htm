@@ -3,11 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2022" />
-  <title>Video Playback</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>動画再生</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Overview of video drawing functions" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Page.htt" />
@@ -16,68 +16,68 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1 id="h1">Video Playback</h1>
-  <h2>How to play videos?</h2>
-  <p>Follow these steps to load videos at runtime and play them:</p>
+  <h1 id="h1">動画再生</h1>
+  <h2>動画を再生するには？</h2>
+  <p>以下の手順で、<span class="notranslate">runtime</span> 、ビデオを読み込んで再生することができます。</p>
   <ul class="colour">
-    <li>Add a video file to the <a data-xref="{text}" href="../../../../Settings/Included_Files.htm#h">Included Files</a> (<span class="inline2">/<span data-keyref="Const_IncludedFiles_FolderName">datafiles</span></span> directory) of your project.</li>
-    <li>Load the video using <span class="inline"><a href="video_open.htm">video_open()</a></span>.
+    <li>プロジェクトの<a data-xref="{text}" href="../../../../Settings/Included_Files.htm#h">Included Files</a><span class="inline2">（/datafiles</span>ディレクトリ）にビデオファイルを追加します。</li>
+    <li> <span class="inline"><a href="video_open.htm">video_open()</a></span> を使ってビデオを読み込む。
       <ul>
-        <li>Alternatively, load a video from a URL.</li>
+        <li>また、URLから動画を読み込む方法もあります。</li>
       </ul>
     </li>
-    <li>Draw it in a Draw event using <span class="inline"><a href="video_draw.htm">video_draw()</a></span>.
+    <li> <span class="inline"><a href="video_draw.htm">video_draw()</a></span> を使って、Draw イベントで描画します。
       <ul>
-        <li>This functions draws the video to an internal surface, which it returns as part of its return array.</li>
-        <li>You must draw that surface manually using <span class="inline"><a href="../Surfaces/draw_surface.htm">draw_surface()</a></span> for the video to appear.
+        <li>この関数は、ビデオを内部表面に描画し、それを戻り値の配列の一部として返します。</li>
+        <li>動画を表示するためには、 <span class="inline"><a href="../Surfaces/draw_surface.htm">draw_surface()</a></span> を使って手動で表面を描画する必要があります。
           <ul>
-            <li>Drawing <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a> will require extra steps.</li>
+            <li><a data-xref="{title}" href="YUV_Videos.htm">YUVビデオを</a>描画する場合は、余分な手順が必要です。</li>
           </ul>
         </li>
       </ul>
     </li>
-    <li>When the video is finished, remove it from memory by calling <span class="inline"><a href="video_close.htm">video_close()</a></span>.
+    <li>動画が終了したら、 <span class="inline"><a href="video_close.htm">video_close()</a></span> を呼び出してメモリから削除します。
       <ul>
-        <li>Use the <a href="#h">Async Callbacks</a> to run code when the video ends.</li>
+        <li><a href="#h">非同期コールバックは</a>、ビデオの終了時にコードを実行するために使用します。</li>
       </ul>
     </li>
   </ul>
-  <h2>Video Codecs &amp; Licensing</h2>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> does not ship with any codecs, and makes use of the codecs present on the platform that the game is running on. This means your videos must be encoded in a format that can be decoded on your intended target platform(s).</p>
-  <p>Making use of certain formats may require you to pay licensing fees depending on the related codec&#39;s licence and your game&#39;s revenue, and in such a case, the developer will be legally liable for any fees that is to be paid to the codec owners. Codecs are also licensed differently on each platform and so care must be taken for games that are distributed on multiple platforms.</p>
-  <p>Note that video formats (such as <span class="inline2">.mp4</span>, <span class="inline2">.avi</span>, <span class="inline2">.mkv</span>, etc.) are simply containers that wrap <strong>video</strong> and <strong>audio</strong> streams, both of which may be encoded separately and may require separate licences.</p>
-  <p>For distribution on console platforms, check with your account representative to find out what formats you are allowed to use without having to pay extra licencing fees.</p>
-  <h2>Formats</h2>
-  <p>The video formats that you are able to load and play in your game will depend on your target platform, and the codecs that are supported on that platform.</p>
-  <h2 id="func_ref">Functions</h2>
-  <p>You can load, play and manipulate video files at runtime using the following functions:</p>
+  <h2>ビデオコーデックとライセンス</h2>
+  <p><span data-keyref="GameMaker Name">GameMakerは</span>コーデックを同梱しておらず、ゲームが動作するプラットフォームに存在するコーデックを利用します。つまり、動画はターゲットとなるプラットフォームでデコード可能なフォーマットでエンコードする必要があります。</p>
+  <p>特定のフォーマットを使用する場合、関連するコーデックのライセンスとゲームの収益に応じてライセンス料を支払う必要があり、その場合、開発者はコーデック所有者に支払うべき手数料について法的な責任を負うことになります。また、コーデックのライセンスはプラットフォームごとに異なるため、複数のプラットフォームで配信されるゲームでは注意が必要です。</p>
+  <p>ビデオフォーマット（<span class="inline2">.mp4</span>、<span class="inline2">.avi</span>、<span class="inline2">.mkvなど</span>）は、<strong>ビデオと</strong> <strong>オーディオの</strong>ストリームをラップする単なるコンテナであり、これらは両方とも別々にエンコードされ、別のライセンスが必要な場合があることに注意してください。</p>
+  <p>コンソールプラットフォームで配信する場合、追加ライセンス料を支払うことなく使用できるフォーマットについては、アカウント担当者に確認してください。</p>
+  <h2>フォーマット</h2>
+  <p>ゲームに読み込んで再生できるビデオフォーマットは、ターゲットプラットフォームと、そのプラットフォームでサポートされているコーデックに依存します。</p>
+  <h2>機能</h2>
+  <p>以下の機能を使って、<span class="notranslate">runtime</span> 、ビデオファイルの読み込み、再生、操作を行うことができます。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="video_open.htm">video_open</a></li>
+    <li><a data-xref="{title}" href="video_open.htm">ビデオオープン</a></li>
     <li><a data-xref="{title}" href="video_close.htm">video_close</a></li>
     <li><a data-xref="{title}" href="video_draw.htm">video_draw</a></li>
-    <li><a data-xref="{title}" href="video_set_volume.htm">video_set_volume</a></li>
-    <li><a href="video_pause.htm">video_pause</a></li>
-    <li><a href="video_resume.htm">video_resume</a></li>
-    <li><a href="video_enable_loop.htm">video_enable_loop</a></li>
+    <li><a data-xref="{title}" href="video_set_volume.htm">ビデオ音量設定</a></li>
+    <li><a href="video_pause.htm">ビデオポーズ</a></li>
+    <li><a href="video_resume.htm">ビデオレジュメ</a></li>
+    <li><a href="video_enable_loop.htm">ビデオループを有効にする</a></li>
     <li><a href="video_seek_to.htm">video_seek_to</a></li>
   </ul>
-  <p> </p>
-  <p>The following functions are used to get information about the currently loaded video:</p>
+  <p> </p>
+  <p>現在読み込まれているビデオに関する情報を取得するために、以下の関数を使用します。</p>
   <ul class="colour">
-    <li><a href="video_is_looping.htm">video_is_looping</a></li>
+    <li><a href="video_is_looping.htm">ビデオ・イズ・ルーピング</a></li>
     <li><a href="video_get_volume.htm">video_get_volume</a></li>
     <li><a href="video_get_duration.htm">video_get_duration </a></li>
     <li><a href="video_get_position.htm">video_get_position</a></li>
     <li><a href="video_get_status.htm">video_get_status</a></li>
     <li><a href="video_get_format.htm">video_get_format </a></li>
   </ul>
-  <h2 id="h">Async Callbacks</h2>
-  <p>The <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Async Social</a> event is triggered at the stages given below, with the <span class="inline2">&quot;type&quot;</span> key in its <span class="inline2">async_load</span> map set to the given value:</p>
+  <h2 id="h">非同期コールバック</h2>
+  <p><a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Async Social</a>イベントは、その<span class="inline2">async_load</span>マップの<span class="inline2">「type」</span>キーに指定された値が設定され、以下に示すステージでトリガーされます。</p>
   <ul class="colour">
-    <li><span class="inline2">&quot;video_start&quot;</span>: When the video starts playing, which is when its <a href="video_get_status.htm">status</a> changes from <span class="inline2">video_status_preparing</span> to <span class="inline2">video_status_playing</span>.</li>
-    <li><span class="inline2">&quot;video_end&quot;</span>: When the video ends. This does not trigger when the video is <a href="video_enable_loop.htm">set to loop</a>.</li>
+    <li><span class="inline2">&quot;video_start&quot;</span>: 動画の再生が開始され、その<a href="video_get_status.htm">状態が</a> <span class="inline2">video_status_preparing</span>から<span class="inline2">video_status_playing</span> に変化した時である。</li>
+    <li><span class="inline2">&quot;video_end&quot;</span>: 動画が終了したとき。動画が<a href="video_enable_loop.htm">ループするように設定されて</a>いる場合は、発動しない。</li>
   </ul>
-  <p>Here is an example of an Async Social event listening to video callbacks:</p>
+  <p>以下は、非同期ソーシャルイベントが動画コールバックをリッスンする例です。</p>
   <p class="code">var _type = async_load[? &quot;type&quot;];<br />
     <br />
     if (_type == &quot;video_start&quot;)<br />
@@ -90,18 +90,18 @@
         video_close();<br />
     }
   </p>
-  <p>The above code reads the type from the <span class="inline2">async_load</span> map. When the video starts, it sets a variable in an object to <span class="inline2">true</span>, so it can display the video.</p>
-  <p>When the video ends, it sets that same variable to <span class="inline2">false</span>, and then calls <span class="inline"><a href="video_close.htm">video_close()</a></span> to remove the video from memory.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、<span class="inline2">async_load</span>マップから型を読み取っています。動画が開始されると、<span class="notranslate">object</span> の変数を<span class="inline2">true</span> に設定し、動画を表示できるようにしています。</p>
+  <p>ビデオが終了すると、同じ変数を<span class="inline2">falseに</span>設定し、 <span class="inline"><a href="video_close.htm">video_close()</a></span> を呼び出し、ビデオをメモリから削除します。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="../Drawing.htm">Drawing</a></div>
-        <div>Next: <a data-xref="{title}" href="../Colour_And_Alpha/Colour_And_Alpha.htm">Colour And Alpha</a></div>
+        <div>戻る<a data-xref="{title}" href="../Drawing.htm">ドローイング</a></div>
+        <div>次へ<a data-xref="{title}" href="../Colour_And_Alpha/Colour_And_Alpha.htm">色とアルファ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 	Videos

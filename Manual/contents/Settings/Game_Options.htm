@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Game Options</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>ゲームオプション</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how to setup the different Game options" />
   <meta name="rh-index-keywords" content="Game Options" />
@@ -14,56 +14,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Game Options</span></h1>
-  <p>The Game Options are split into two sections, Main Options and the Platform Settings. The main options start with the <strong>General</strong> options, which is where you can set certain things that will affect the game regardless of the platform that it is being designed to run on.</p>
-  <p><img alt="General Game Options" class="center" src="../assets/Images/Settings/Game_Options/General_Options.png" />The window has the following sections:</p>
+  <h1>ゲームオプション</h1>
+  <p>ゲームオプションは、メインオプションとプラットフォーム設定の2つのセクションに分かれています。メインオプションは、<strong>一般</strong>オプションから始まり、ここでは、実行するように設計されているプラットフォームに関係なく、ゲームに影響を与える特定のものを設定することができます。</p>
+  <p><img>このウィンドウには、次のセクションがあります。</p>
   <ul class="colour">
-    <li><strong>Default scripting language</strong>: Choose whether Objects events and Scripts in the current project should use <span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span>, or whether it should always ask on creating a new script.</li>
-    <li><strong>Game Frames Per Second</strong>: This value sets the limit on the number of frames per-second that <span data-keyref="GameMaker Name">GameMaker</span> should try to maintain your games when running. This value represents the number of times that the game loop will run in one second (a single game loop is considered a single &quot;frame&quot;) and is set to a default value of 60, although 30 is often used too. There are many arguments about which room speed is the ideal, but the actual answer depends on what type of game you are making, the size of the room, the number of instances and how intensive the code is. For example, if you have a large room and a room speed of 30, the game may appear &quot;choppy&quot; as the larger the area you are looking at, the easier it is for the eye to perceive low room speeds, but if the game is intensive then setting the room speed to 120 may cause the game to &quot;lag&quot; as the fps drops due to the amount of processing being done. So take care with this value and try to always adjust it to what your game needs.</li>
-    <li><strong>Default Draw Colour</strong>: The default colour for drawing text or forums (and other things) when no colour has been set using code.</li>
-    <li><strong>Default Draw Colour Outside the room region</strong>: The default colour that will be used to clear the background of any area outside of the game room.</li>
-    <li><strong>Generate Project Images</strong>: Clicking this will open the Project Image Generator tool.</li>
-    <li><strong>Project Start Date</strong>: The date that the project was initiated.</li>
-    <li><strong>Project Use Time</strong>: The length of time that has passed since you initiated the project.</li>
-    <li><strong>Project GUID</strong>: This is the unique identifier that is created for each project within <span data-keyref="GameMaker Name">GameMaker</span>. If you wish to change this you can click the Create New GUID button to generate a new one.</li>
-    <li><strong>Generate mipmaps for separate texture pages</strong>: This option will have <span data-keyref="GameMaker Name">GameMaker</span> create mipmaps for those sprites that have flagged the Separate Texture Page option in the Texture settings of the Sprite Editor. Enabling mipmapping means that the original texture page for the sprite is to be scaled and filtered into multiple resolutions within the texture file. This is normally off, but if you are using views to zoom in or out on large areas of the game room, or you are working with a 3D game, then you may want to enable this and then use the Mipmapping Functions to adjust how the game deals with the different mipmap levels. Note that if you are not flagging sprites as using individual texture pages, you can still enable mipmapping on a per-texture group basis from the Texture Group Manager. This option is off by default.</li>
-    <li><strong>Enable Source Control</strong>: If you wish the project to be under SCM (Source Control Management) then you need to check this. It is off by default (see here for more information on source control).</li>
-    <li><strong>Author</strong>: The name of the game author (or publisher or studio).</li>
-    <li><strong>Project Last Changed</strong>: This section simply shows the date/time stamp for the last time that the project was changed (this is not editable).</li>
-    <li><strong>Accept Spine Licence</strong>: Here you can check the box to be shown the Spine Runtime Licence and accept it. This will permit you to use Spine sprites in your game (this licence will also be shown the first time you try to add a Spine sprite to your project and haven&#39;t checked the licence here beforehand).</li>
-    <li><strong>Collision Compatibility Mode</strong>: This tells GameMaker to use the legacy collision system used before the 2022 versions (which used integer values instead of floats). Read <a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collision_Compatibility_Mode.htm">Collision Compatibility Mode</a> for more information. This is disabled by default and it is recommended to keep it disabled for new projects.</li>
-    <li><strong>Enable Copy on Write Behaviour for Arrays</strong>: This enables the deprecated <strong>Copy on Write</strong> array behaviour for the currently opened project. Read <a data-xref="{text}" href="../GameMaker_Language/GML_Overview/Arrays.htm#h">Copy on Write</a> for more information. This is disabled by default and it is recommended to keep it disabled for new projects.</li>
+    <li><strong>デフォルトのスクリプト言語</strong>。現在のプロジェクトの<span class="notranslate">Objects</span> イベントと<span class="notranslate">Scripts</span> で<span data-keyref="GML_Code">GML Code</span>と<span data-keyref="GML_Visual">GML Visual</span> のどちらを使うか、あるいは新しい<span class="notranslate">script</span> の作成時に常に尋ねるかどうかを選択します。</li>
+    <li><strong>Game Frames Per Second</strong>: この値は、<span data-keyref="GameMaker Name">GameMaker</span>がゲーム実行時に維持しようとする、1 秒あたりのフレーム数の制限を設定します。この値は、ゲーム<span class="notranslate">loop</span> が 1 秒間に実行される回数を表し（1 つのゲーム<span class="notranslate">loop</span> は 1 つの「フレーム」とみなされます）、デフォルトでは 60 に設定されていますが、30 もよく使用されます。どの<span class="notranslate">room</span> の速度が理想的かについては多くの議論がありますが、実際の答えは、作っているゲームの種類、<span class="notranslate">room</span> のサイズ、インスタンスの数、コードの集中度によって異なります。たとえば、大きな<span class="notranslate">room</span> と<span class="notranslate">room</span> の速度が 30 の場合、見ている領域が大きければ大きいほど、低い<span class="notranslate">room</span> 速度を知覚しやすくなるため、ゲームが「ぎこちなく」見えることがあります。一方、ゲームに集中する場合、<span class="notranslate">room</span> 速度を 120 に設定すると、処理量が多いために fps が低下してゲームが「遅延」することがあります。したがって、この値には注意を払い、常にゲームの必要性に応じて調整するようにしてください。</li>
+    <li><strong>デフォルトの描画色</strong>：コードで色が設定されていない場合に、テキストやフォーラム（およびその他のもの）を描画するためのデフォルトの色です。</li>
+    <li><strong>Default Draw Colour<span class="notranslate">room</span> 領域の</strong>外側の色。ゲーム<span class="notranslate">room</span> の領域外の背景をクリアするために使用されるデフォルトの色です。</li>
+    <li><strong>プロジェクト画像を生成する</strong>。これをクリックすると、プロジェクト画像生成ツールが表示されます。</li>
+    <li><strong>プロジェクト開始日</strong>。プロジェクトが開始された日付。</li>
+    <li><strong>プロジェクト使用時間</strong>：プロジェクトを開始してから経過した時間です。</li>
+    <li><strong>プロジェクトGUID</strong>：<span data-keyref="GameMaker Name">GameMaker</span>内で各プロジェクトに作成される一意の識別子です。変更したい場合は、Create New GUIDボタンをクリックして新しいGUIDを生成することができます。</li>
+    <li><strong>Generate mipmaps for separate<span class="notranslate">texture</span> 別々のページにミップマップを</strong>作成する。このオプションは、<span class="notranslate">sprites</span> Editorの<span class="notranslate">Texture</span> 設定でSeperate<span class="notranslate">Texture</span> Pageオプションにフラグを立てた<span class="notranslate">Sprite</span> に対して、<span data-keyref="GameMaker Name">GameMakerが</span>ミップマップを作成するものです。ミップマップを有効にすると、<span class="notranslate">texture</span> のオリジナル<span class="notranslate">sprite</span> ページが、<span class="notranslate">texture</span> ファイル内で複数の解像度にスケーリング・フィルタリングされることになります。これは通常オフになっていますが、ビューを使ってゲーム<span class="notranslate">room</span> の広い範囲を拡大・縮小している場合や、3Dゲームを扱っている場合は、これを有効にして、Mipmapping Functions を使ってゲームが異なるミップマップレベルをどう扱うかを調整するとよいでしょう。<span class="notranslate">sprites</span> で個別の<span class="notranslate">texture</span> ページを使用するフラグを立てない場合でも、<span class="notranslate">Texture</span> Group Manager からテクスチャグループ単位でミップマップを有効にすることができ ます。このオプションはデフォルトではオフになっています。</li>
+    <li><strong>ソース管理を有効に</strong>する。プロジェクトをSCM(<span class="notranslate">Source Control</span> Management)下に置きたい場合は、この項目にチェックを入れる必要があります。デフォルトではオフになっています（<span class="notranslate">source control</span> の詳細についてはこちらをご覧ください）。</li>
+    <li><strong>作者</strong>。ゲーム作者（または出版社、スタジオ）の名前です。</li>
+    <li><strong>プロジェクトの最終変更</strong>日：このセクションには、プロジェクトが最後に変更された日付/タイムスタンプが表示されます（これは編集できません）。</li>
+    <li><strong> <span class="notranslate">Spine</span> </strong> ライセンスを承認する。ここにチェックを入れると、<span class="notranslate">Spine</span> <span class="notranslate">Runtime</span> のライセンスが表示され、承諾することができます。これで、<span class="notranslate">Spine</span> <span class="notranslate">sprites</span> をゲーム内で使用することができます（このライセンスは、<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> をプロジェクトに追加しようとして、事前にここでライセンスを確認しなかった場合にも表示されます）。</li>
+    <li><strong>コリジョン互換モード(Collision Compatibility Mode</strong>)。2022年バージョン以前のレガシーコリジョンシステム（floatではなくinteger値を使用）を使用するよう、<span class="notranslate">GameMaker</span> 。詳しくは<a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collision_Compatibility_Mode.htm">Collision Compatibility Mode</a>をご覧ください。これはデフォルトでは無効になっており、新しいプロジェクトでは無効にしておくことが推奨されます。</li>
+    <li><strong>Copy on Write Behaviour for Arrays（書き込み時コピー動作</strong>）を有効にする。現在開いているプロジェクトで、非推奨の<strong>Copy on Write</strong>配列動作を有効にします。詳しくは、<a data-xref="{text}" href="../GameMaker_Language/GML_Overview/Arrays.htm#h">Copy on Writeを</a>ご覧ください。これはデフォルトでは無効になっており、新しいプロジェクトでは無効にしておくことが推奨されます。</li>
   </ul>
-  <p>The Main Options section also contains a menu for <a href="Game_Options/Template_Info.htm">Template Info</a>.</p>
-  <p>The <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> will also have other Game Options available to you depending on the target platforms that are available for the <a href="../Setting_Up_And_Version_Information/GMS2_Version_Information.htm">licence</a> that you have and not all of them may be available or visible.</p>
-  <h2>Platform Settings</h2>
-  <p>The following platform specific game options exist:</p>
+  <p>メインオプションセクションには、「<a href="Game_Options/Template_Info.htm">テンプレート情報</a>」のメニューもあります。</p>
+  <p><a href="../Introduction/The_Asset_Browser.htm">アセットブラウザには</a>、お持ちの<a href="../Setting_Up_And_Version_Information/GMS2_Version_Information.htm">ライセンスで</a>利用可能なターゲットプラットフォームに応じて、他のゲームオプションも用意されており、それらのすべてが利用可能または表示されるとは限りません。</p>
+  <h2>プラットフォーム設定</h2>
+  <p>以下のプラットフォーム別のゲームオプションが存在します。</p>
   <ul class="colour">
-    <li><a href="Game_Options/GX_Games.htm">GX.games</a></li>
-    <li><a href="Game_Options/Windows.htm">Windows</a></li>
-    <li><a href="Game_Options/macOS.htm">macOS</a></li>
-    <li><a href="Game_Options/Ubuntu.htm">Ubuntu</a></li>
+    <li><a href="Game_Options/Opera_GX.htm">オペラGX</a></li>
+    <li><a href="Game_Options/Windows.htm">ウィンドウズ</a></li>
+    <li><a href="Game_Options/macOS.htm">マクロス</a></li>
+    <li><a href="Game_Options/Ubuntu.htm">ウブントゥ</a></li>
+    <li><a href="Game_Options/Windows_UWP.htm">Windows UWP</a></li>
     <li><a href="Game_Options/HTML5.htm">HTML5</a></li>
-    <li><a href="Game_Options/Android.htm">Android</a></li>
+    <li><a href="Game_Options/Android.htm">アンドロイド</a></li>
     <li><a href="Game_Options/iOS.htm">iOS</a></li>
-    <li><a href="Game_Options/tvOS.htm">tvOS</a></li>
+    <li><a href="Game_Options/tvOS.htm">ティーブイオーエス</a></li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> The various <strong>Console Game Options</strong> are not listed here due to the various legal restrictions maintained by the different companies. If you have a Console Licence, then you can get this information form the <a href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo Games Helpdesk</a>, but you must first contact YoYo Games with your console ID email and request permission to view the different sections.</p>
-  <p>Some <span data-keyref="GameMaker Name">GameMaker</span> projects may also show Game options for the <strong>Amazon Fire</strong> target. These are legacy, read-only options as <span data-keyref="GameMaker Name">GameMaker</span> now supports the Fire platform directly using the <strong>Android</strong> game options. If your project still shows Amazon Fire, you can find out information about the options from the following page:</p>
+  <p class="note"><span class="note">注</span>：様々な<strong>コンソールゲームオプションは</strong>、異なる会社によって維持される様々な法的制限のためにここに記載されていません。コンソールライセンスをお持ちの場合は、<a href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo Gamesヘルプデスクから</a>情報を得ることができますが、まずコンソールIDの電子メールを<span class="notranslate">YoYo Games</span> に連絡し、さまざまなセクションを表示する許可を要求する必要があります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>プロジェクトによっては、<strong>Amazon Fire</strong>ターゲットのゲームオプションが表示される場合があります。<span data-keyref="GameMaker Name">GameMakerは</span>現在、<strong>Androidの</strong>ゲームオプションを使用してFireプラットフォームを直接サポートしているため、これらはレガシーで読み取り専用のオプションです。もし、プロジェクトにまだ<span class="notranslate">Amazon Fire</span> が表示されている場合は、以下のページでオプションに関する情報を確認できます。</p>
   <ul class="colour">
-    <li><a href="Game_Options/Amazon_Fire.htm">Amazon Fire (Legacy)</a></li>
+    <li><a href="Game_Options/Amazon_Fire.htm">Amazon Fire（レガシー）</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a href="Configurations.htm">Configurations</a></div>
+        <div style="float:left">戻る<a href="Game_Settings.htm">ゲーム設定</a></div>
+        <div style="float:right">次へ<a href="Configurations.htm">コンフィギュレーション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Game Settings

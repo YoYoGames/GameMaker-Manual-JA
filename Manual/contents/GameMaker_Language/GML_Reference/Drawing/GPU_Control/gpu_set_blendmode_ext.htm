@@ -6,7 +6,7 @@
   <title>gpu_set_blendmode_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_blendmode_ext" />
   <meta name="rh-index-keywords" content="gpu_set_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
@@ -15,61 +15,61 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_blendmode_ext</h1>
-  <p>When <span data-keyref="GameMaker Name">GameMaker</span> goes to draw a pixel there is a source colour (the colour of the pixel we&#39;re going to draw) and a destination colour (the colour that&#39;s already in the pixel we&#39;re drawing to), so when determining the new colour of the pixel, the source and destination colours are calculated according to the chosen blend mode. Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiply each component of the source colour by some factor and by multiplying each component of destination colour by some other factor and then adding the results together component by component.</p>
-  <p>This function permits you to set the different component parts that should be factored together to create a custom blend mode. The source and destination both have a red, green, blue and alpha component, and in the following chart the source&#39;s RGBA are considered (Rs, Gs, Bs, As) while the destination&#39;s are (Rd, Gd, Bd, Ad). The eleven constants that are available for use can be either source or destination (or both) when used in this function.</p>
+  <p><span data-keyref="GameMaker Name">GameMakerが</span>ピクセルを描画しようとするとき、ソースカラー（描画しようとするピクセルの色）とデスティネーションカラー（描画先のピクセルにすでにある色）があり、ピクセルの新しい色を決定するとき、選択したブレンドモードに従って、ソースカラーとデスティネーションカラーが計算されます。色の各要素は0から1の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に他の係数を掛け、その結果を要素ごとに加算することによって計算されます。</p>
+  <p>この機能により、カスタムブレンドモードを作成するために考慮すべきさまざまな構成要素を設定することができます。ソースとデスティネーションはともに赤、緑、青、アルファの各成分を持ち、下図ではソースのRGBAを（Rs、Gs、Bs、As）、デスティネーションのそれを（Rd、Gd、Bd、Ad）と見なします。使用可能な11個の定数は、この関数で使用する場合、ソースとデスティネーションのどちらか（または両方）にすることができます。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Blend factor (Red, Green, Blue, Alpha)</th>
+        <th>定数</th>
+        <th>ブレンド係数（赤、緑、青、アルファ）</th>
       </tr>
       <tr>
-        <td>bm_zero</td>
+        <td><span class="notranslate">bm_zero</span></td>
         <td>(0, 0, 0, 0)</td>
       </tr>
       <tr>
-        <td>bm_one</td>
+        <td><span class="notranslate">bm_one</span></td>
         <td>(1, 1, 1, 1)</td>
       </tr>
       <tr>
-        <td>bm_src_colour</td>
+        <td><span class="notranslate">bm_src_colour</span></td>
         <td>(Rs, Gs, Bs, As)</td>
       </tr>
       <tr>
-        <td>bm_inv_src_colour</td>
-        <td>(1-Rs, 1-Gs, 1-Bs, 1-As)</td>
+        <td><span class="notranslate">bm_inv_src_colour</span></td>
+        <td>(1-Rs、1-Gs、1-Bs、1-As)</td>
       </tr>
       <tr>
-        <td>bm_src_alpha</td>
-        <td>(As, As, As, As)</td>
+        <td><span class="notranslate">bm_src_alpha</span></td>
+        <td>(アス、アス、アス、アス)</td>
       </tr>
       <tr>
-        <td>bm_inv_src_alpha</td>
-        <td>(1-As, 1-As, 1-As, 1-As)</td>
+        <td><span class="notranslate">bm_inv_src_alpha</span></td>
+        <td>（1-As、1-As、1-As、1-As）</td>
       </tr>
       <tr>
-        <td>bm_dest_alpha</td>
-        <td>(Ad, Ad, Ad, Ad)</td>
+        <td><span class="notranslate">bm_dest_alpha</span></td>
+        <td>（アド、アド、アド、アド）</td>
       </tr>
       <tr>
-        <td>bm_inv_dest_alpha</td>
-        <td>(1-Ad, 1-Ad, 1-Ad, 1-Ad)</td>
+        <td><span class="notranslate">bm_inv_dest_alpha</span></td>
+        <td>(1-Ad, 1-Ad, 1-Ad, 1-Ad, 1-Ad)</td>
       </tr>
       <tr>
-        <td>bm_dest_colour</td>
+        <td><span class="notranslate">bm_dest_colour</span></td>
         <td>(Rd, Gd, Bd, Ad)</td>
       </tr>
       <tr>
-        <td>bm_inv_dest_colour</td>
+        <td><span class="notranslate">bm_inv_dest_colour</span></td>
         <td>(1-Rd, 1-Gd, 1-Bd, 1-Ad)</td>
       </tr>
       <tr>
-        <td>bm_src_alpha_sat</td>
-        <td>(f, f, f, 1) where f = min(As, 1-Ad)</td>
+        <td><span class="notranslate">bm_src_alpha_sat</span></td>
+        <td>(f, f, f, 1) ここで、f = min(As, 1-Ad)</td>
       </tr>
     </tbody>
   </table>
-  <p class="note"><b>IMPORTANT!</b> HTML5 without WebGL enabled will <b>not</b> be able to display the following modes correctly:</p>
+  <p class="note"><b>重要!W</b>ebGLを有効にしていないHTML5では、以下のモードが正しく表示さ<b>れません</b>。</p>
   <ul class="colour" style="padding-left: 120px">
     <li><span class="inline">bm_src_colour</span></li>
     <li><span class="inline">bm_inv_src_colour</span></li>
@@ -77,58 +77,58 @@
     <li><span class="inline">bm_inv_dest_colour</span></li>
     <li><span class="inline">bm_src_alpha_sat</span></li>
   </ul>
-  <p> </p>
-  <p>Note that you can either supply two individual arguments to this function or you can supply an array of arguments (as returned by the function <a href="gpu_get_blendmode_ext.htm"><span class="inline">gpu_get_blendmode_ext()</span></a> for example). If supplying an array it should have the following two elements:</p>
+  <p> </p>
+  <p>この関数には、2 つの個別の引数を指定することも、引数の配列を指定することもできます (これは、関数 <a href="gpu_get_blendmode_ext.htm"><span class="inline">gpu_get_blendmode_ext()</span></a>のように）。配列で指定する場合は、次の2つの要素を持つ必要があります。</p>
   <ul class="colour">
-    <li>[0] = Source blend mode (default is <span class="inline">bm_src_alpha</span>)</li>
-    <li>[1] = Destination blend mode (default is <span class="inline">bm_inv_src_alpha</span>)</li>
+    <li>[0] = ソースブレンドモード (デフォルトは <span class="inline">bm_src_alpha</span>)</li>
+    <li>[1] = デスティネーションブレンドモード (デフォルトは <span class="inline">bm_inv_src_alpha</span>)</li>
   </ul>
-  <p>To help you get the most from blend modes and to help understand how they work and how they affect the final image being drawn to the screen, we recommend that you read the following guide:</p>
+  <p>ブレンドモードを最大限に活用し、その仕組みと画面に描画される最終画像への影響を理解するために、以下のガイドをお読みになることをお勧めします。</p>
   <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
+    <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Blendmodesの使い方ガイド</a></li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gpu_set_blendmode(src, dest);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>src</td>
-        <td><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor">Blend Mode Factor Constant</span></td>
-        <td>Source blend mode factor (see constants above).</td>
+        <td><span class="notranslate">src</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor">ブレンドモードファクター定数</span></td>
+        <td><span class="notranslate">Source blend mode factor (see constants above).</span></td>
       </tr>
       <tr>
-        <td>dest</td>
-        <td><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor">Blend Mode Factor Constant</span></td>
-        <td>Destination blend mode factor (see constants above)</td>
+        <td><span class="notranslate">dest</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor">ブレンドモードファクター定数</span></td>
+        <td><span class="notranslate">Destination blend mode factor (see constants above)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">gpu_set_blendmode_ext(bm_src_alpha, bm_one);<br />
     draw_circle_colour(100, 100, 50, c_white, c_black, 0);<br />
     gpu_set_blendmode(bm_normal);</p>
-  <p>This will turn the black into transparency, creating a &#39;glow&#39; effect from the white being strong on the outside and gradually weakening further from the circle centre. The blend mode is reset after the circle is drawn to ensure additive blending is not also applied to everything else after it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これにより、黒が透明になり、白が外側で強く、円の中心から徐々に弱くなる「グロー」効果が生まれます。ブレンドモードは、円が描かれた後にリセットされ、それ以降のすべてのものに加法的ブレンドが適用されないようにします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_blendmode_ext_sepalpha.htm">gpu_set_blendmode_ext_sepalpha</a></div>
+        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ <a href="gpu_set_blendmode_ext_sepalpha.htm"><span class="notranslate">gpu_set_blendmode_ext_sepalpha</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode_ext

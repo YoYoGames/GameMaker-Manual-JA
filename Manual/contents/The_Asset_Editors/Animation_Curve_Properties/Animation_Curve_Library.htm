@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Animation Curve Library</title>
+  <title>アニメーションカーブライブラリ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
   <meta name="topic-comment" content="Page explaining the Animation Curve Library" />
   <meta name="rh-index-keywords" content="Animation Curve Editor" />
@@ -14,59 +13,60 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Animation Curve Library</span></h1>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" style="cursor: nesw-resize;" />The <strong>Animation Curve Library</strong> window allows you to change the Curve Type for the Animation Curve, and apply a preset to the selected channel. It can be opened by <img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> left-clicking on the <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" width="13" /> button in the <a href="../Animation_Curves.htm">Animation Curve Editor</a> or <a href="../Sequence_Properties/Using_Animation_Curves.htm">Sequence Dope Sheet</a>, or by <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> right-clicking anywhere in the Channel Editor.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Curve Type</a></p>
+  <h1>アニメーションカーブライブラリ</h1>
+  <p><img><strong>Animation Curve Library</strong>ウィンドウでは、アニメーションカーブのカーブタイプを変更したり、アニメーショ ンカーブを適用したりすることができます。
+    を選択したチャンネルにプリセットします。<img> <a href="../Animation_Curves.htm">アニメーションカーブエディタ</a>または<a href="../Sequence_Properties/Using_Animation_Curves.htm">シーケンスドープシートの</a> <img> ボタンを左クリックするか、<img> を右クリックすると開くことができます。
+    チャンネルエディタ内の任意の場所</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">カーブタイプ</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The <strong>Curve Type</strong> controls how a channel flows from point to point, which can be set to one of the following options:</p>
+    <p class="dropspot"><strong>カーブタイプは</strong>、チャンネルがポイントからポイントへどのように流れるかを制御するもので、次のオプションのいずれかに設定できます。</p>
     <ul class="colour">
-      <li class="dropspot"><strong>Linear</strong>: This wll create a linear progression between points on the channel</li>
-      <li class="dropspot"><strong>Smooth</strong>: This will use <a class="glossterm" data-glossterm="catmull-rom interpolation" href="../Animation_Curves.htm#">catmull-rom interpolation</a> to create a smooth progression between points on the channel</li>
-      <li class="dropspot"><strong>Bezier</strong>: This will use Bezier curve mathematics to create a smooth progression between points on the channel, where you can control how the curve looks by manipulating &quot;handles&quot; on the points</li>
+      <li class="dropspot"><strong>リニア</strong>です。チャンネル上のポイント間の直線的な進行を作成します。</li>
+      <li class="dropspot"><strong>Smooth</strong>:これは、チャンネル上のポイント間のスムーズな進行を作成するために、<a class="glossterm" data-glossterm="カトマルロム補間" href="../Animation_Curves.htm#">Catmull-rom補間を</a>使用します。</li>
+      <li class="dropspot"><strong>ベジェ</strong>：ベジェ曲線を用いて、チャンネル上のポイント間のスムーズな進行を作成します。ポイントの「ハンドル」を操作することで、曲線の見え方をコントロールできます</li>
     </ul>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Types.png" style="cursor: nwse-resize;" />Note that changing the Curve Type will apply that type to <em>all</em> channels in the Animation Curve.</p>
+    <p class="dropspot"><img>カーブタイプを変更すると、そのタイプがアニメーションカーブの<em>全チャンネルに</em>適用されることに注意してください。</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Curve Presets</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">カーブプリセット</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">A<strong> C</strong><strong>urve Preset</strong> changes the shape of your curve. <img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> Left-clicking on a preset in the Presets menu will apply that preset to your
-      selected channel, and clicking on <strong>Reset </strong>will revert the channel to how it was before the Animation Curve Library window was opened.</p>
-    <p class="dropspot"><span class="dropspotnote"><strong>NOTE</strong>: Presets can only be applied if the Curve Type is set to <strong>Bezier</strong>.</span></p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Preset0.gif" />By default, a preset is applied to the whole channel. You can select a section of your channel by dragging with the <img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> left mouse button in the <strong>Channel Editor</strong>, and then open the Animation Curve Library window through the <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" width="13" /> button or by <img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> right-clicking, which will apply any presets to the selected section only.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Preset1_Selection.gif" />Note that your curve channel (or selection within that channel) needs to have a slope for a preset to have any effect, as any applied
-      interpolation is based on the vertical difference between the starting and ending points. A flat curve has no such difference between the two points, so you will not see any results after applying a preset to such a curve.</p>
-    <p class="dropspot">There are two <strong>Apply Modes</strong> that you can choose from, which affects how a preset is applied to your channel (or to your selection within that channel):</p>
+    <p class="dropspot"><strong>カーブプリセットは</strong>、カーブの形状を変更するものです。 <img> プリセットメニューでプリセットを左クリックすると、そのプリセットが適用されます。
+     <strong>リセット </strong>］をクリックすると、［アニメーション・カーブ・ライブラリ］ウィンドウを開く前の状態に戻ります。</p>
+    <p class="dropspot"><span class="dropspotnote"><strong>注</strong>：プリセットは、カーブタイプが<strong>ベジェに</strong>設定されている場合のみ適用可能です。</span></p>
+    <p class="dropspot"><img>デフォルトでは、プリセットはチャンネル全体に適用されます。<strong>チャンネルエディタで</strong> <img> 左マウスボタンでドラッグしてチャンネルのセクションを選択し、<img> ボタンまたは<img> 右クリックでアニメーションカーブライブラリウィンドウを開くと、選択したセクションにのみ任意のプリセットを適用することができます。</p>
+    <p class="dropspot"><img>カーブチャンネル（またはチャンネル内の選択項目）に勾配がないとプリセットが有効にならないことに注意してください。
+      補間は、始点と終点の垂直方向の差に基づいて行われます。平坦なカーブには、このような2点間の差がないため、このようなカーブにプリセットを適用しても結果は得られません。</p>
+    <p class="dropspot">プリセットをチャンネル（またはチャンネル内の選択範囲）に適用する方法に影響を与える、2つの<strong>適用モードが</strong>あります。</p>
     <p class="dropspot"><br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Apply_Modes.png" style="cursor: nwse-resize;" />
-    </p>
+      <img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" style="cursor: nesw-resize;"/></p>
     <ul class="colour">
-      <li class="dropspot"><strong>Overwrite:</strong> This is the default when the window is opened through the <img class="icon" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" /> button in the Animation Curve Editor or the Sequence Dope Sheet. It overwrites
-        any points between the beginning and ending points of your channel or selection.</li>
-      <li class="dropspot"><strong>Between:</strong> This is the default when the window is opened by <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> right-clicking anywhere in the Channel Editor. It applies the preset between each pair of selected points,
-        and adds any new points that are needed without removing any existing points.</li>
+      <li class="dropspot"><strong>上書きする</strong>アニメーション カーブ エディタ（Animation Curve Editor）の<img> ボタン、または<span class="notranslate">Sequence</span> <span class="notranslate">Dope Sheet</span> を使ってウィンドウを開いたときのデフォルトです。
+        チャンネルまたは選択範囲の始点と終点の間の任意の点。</li>
+      <li class="dropspot"><strong>間です。</strong> <img> チャンネルエディタ内の任意の場所を右クリックしてウィンドウを開いたときのデフォルトです。選択されたポイントの各ペア間にプリセットが適用されます。
+        また、既存のポイントを削除することなく、必要な新しいポイントを追加します。</li>
     </ul>
-    <p class="dropspot">The following visual shows the <img class="icon" src="../../assets/Images/Icons/Curve_Expo.png" /> <strong>Expo </strong>curve preset applied to a channel using the <strong>Between </strong>and <strong>Overwrite </strong>apply modes:</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Apply_Modes_Difference.png" /></p>
-    <p class="dropspot">As you can see in the above visual, <strong>Between </strong>applies the curve preset to each pair of points, and inserts any new points that are needed. <strong>Overwrite</strong> removes any points between the starting and ending points and then
-      applies the preset.</p>
-    <p class="dropspot">There are also three <strong>Easing Modes </strong>that you can choose from, which controls how a curve accelerates or decelerates. The default easing mode is <strong>Ease Out</strong>.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Easings.png" /></p>
+    <p class="dropspot">次のビジュアルは、<strong>Between </strong>と<strong>Overwrite の </strong>適用モードを使用して、チャンネルに適用される<img> <strong>Expo </strong>カーブプリセットを示しています。</p>
+    <p class="dropspot"><img class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/></p>
+    <p class="dropspot">上のビジュアルにあるように、<strong>Between </strong>はカーブプリセットを各ポイントのペアに適用し、必要な新しいポイントを挿入します。<strong>Overwriteは</strong>、始点と終点の間のポイントを削除し、その後
+      プリセットを適用します。</p>
+    <p class="dropspot">また、曲線の加速・減速を制御する<strong>イージングモードを </strong>3種類から選択することができます。デフォルトのイージングモードは「<strong>イーズアウト</strong>」です。</p>
+    <p class="dropspot"><img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" width="13"/></p>
     <ul class="colour">
-      <li class="dropspot"><strong>Ease In:</strong> The curve starts with faster acceleration, and then decelerates</li>
-      <li class="dropspot"><strong>Ease Out</strong>: The curve starts with slower acceleration, and then accelerates over time</li>
-      <li class="dropspot"><strong>Ease In-Out:</strong> The curve starts with slower acceleration, accelerates over time and then decelerates</li>
+      <li class="dropspot"><strong>イージーイン</strong>加速度から始まり、減速していくカーブ</li>
+      <li class="dropspot"><strong>イージングアウト</strong>加速度が緩やかな状態から始まり、時間の経過とともに加速していくカーブ</li>
+      <li class="dropspot"><strong>イーズ・イン・アウト</strong>緩やかな加速から始まり、時間と共に加速し、その後減速するカーブ</li>
     </ul>
-    <p class="dropspot">The following visual shows the <b>Quart </b>curve preset in all three easing modes:</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library_Easings_Quart.png" /></p>
+    <p class="dropspot">次のビジュアルは、3つのイージングモードすべてにおける<b>Quart </b>カーブプリセットを示しています。</p>
+    <p class="dropspot"><img class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/></p>
   </div>
-  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Animation_Curves.htm">The Animation Curve Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Extensions.htm">The Extension Editor</a></div>
+        <div style="float:left">戻る<a href="../Animation_Curves.htm">アニメーション・カーブ</a></div>
+        <div style="float:right">次へ<a href="../Extensions.htm">拡張機能</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Animation Curve Library
@@ -77,5 +77,5 @@ Curve Presets
   <!-- TAGS
 animation_curve_library
 -->
-</body>
-</html>
+
+</body></html>

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Keyframe Struct</title>
+  <title>キーフレームストラクチャー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining The Keyframe Struct" />
   <meta name="rh-index-keywords" content="Sequence Keyframe Struct" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Keyframe Struct</h1>
-  <p>Each track (as defined on the page covering <a href="The_Track_Struct.htm">track structs</a>) will have one or more keyframe <a href="../../../../GML_Overview/Structs.htm">structs</a> assigned to it (which you can get from the <span class="inline">keyframes</span> property of the track struct), and each one will have the following properties:</p>
+  <h1>キーフレームストラクチャー</h1>
+  <p>各トラック（<a href="The_Track_Struct.htm">トラック構造体についての</a>ページで定義されています）には、1つ以上の<span class="notranslate">keyframe</span> <a href="../../../../GML_Overview/Structs.htm">構造</a>体が割り当てられ（トラック<span class="notranslate">struct</span> の <span class="inline">keyframes</span> プロパティから取得できます）、それぞれ以下のプロパティを持つことになります。</p>
   <table>
     <colgroup>
       <col />
@@ -24,46 +24,46 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Struct.htm">Sequence Keyframe Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Struct.htm">Sequence<span class="notranslate">Keyframe</span> Struct</a></span></th>
       </tr>
       <tr>
-        <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>バリアブル</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
         <td><span class="inline">frame</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The position (in frames) along the timeline for the keyframe. Default value is 0.</td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span class="notranslate">timeline</span> の<span class="notranslate">keyframe</span> に沿った位置（フレーム単位）。 デフォルト値は 0。</td>
       </tr>
       <tr>
         <td><span class="inline">length</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The length of the keyframe. Default value is 1, and when set to larger values then the track property that the keyframe refers to will be maintained at the initial value for the duration of the length given. Note that the <span class="inline">stretch</span> property will override this if set to <span class="inline">true</span>.</td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span class="notranslate">keyframe</span> の長さ。デフォルト値は 1 で、それ以上の値を設定すると、<span class="notranslate">keyframe</span> が参照する track プロパティは、与えられた長さの間、初期値のまま維持されます。なお、 <span class="inline">stretch</span> プロパティは、 <span class="inline">true</span> に設定すると、これをオーバーライドします。</td>
       </tr>
       <tr>
         <td><span class="inline">stretch</span></td>
-        <td><span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
-        <td>If this property is set to <span class="inline">true</span> then the keyframe stretches to either the next keyframe for the track or to the end of the track if it&#39;s the last keyframe. You can get or set this value, and the default value is <span class="inline">false</span>.</td>
+        <td><span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">ブーリアン</a></span></td>
+        <td>このプロパティを <span class="inline">true</span> に設定すると、<span class="notranslate">keyframe</span> はトラックの次の<span class="notranslate">keyframe</span> のいずれか、または最後の<span class="notranslate">keyframe</span> の場合はトラックの終端まで伸びる。この値は取得または設定することができ、デフォルト値は <span class="inline">false</span> です。</td>
       </tr>
       <tr>
         <td><span class="inline">channels</span></td>
-        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Sequence Keyframe Data Struct</a></span>s</td>
-        <td>This property allows access to the list of <a href="The_Keyframe_Data_Struct.htm">keyframe data structs</a> for the channels of the track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of keyframe data structs is returned, and when setting this property an array of keyframe data structs should be specified.</td>
+        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">配列</a></span>の <span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Sequence<span class="notranslate">Keyframe</span> データ構造</a></span>s</td>
+        <td>このプロパティは、トラックのチャンネルの<a href="The_Keyframe_Data_Struct.htm">キーフレームデータ構造体の</a>リストにアクセスすることができる。このプロパティを取得する場合、<span class="notranslate">keyframe</span> データ<span class="notranslate">structs</span> の<a href="../../../../GML_Overview/Arrays.htm">配列が</a>返され、このプロパティを設定する場合、<span class="notranslate">keyframe</span> データ<span class="notranslate">structs</span> の配列が指定されるべきである。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Keyframe_Data_Struct.htm">The Keyframe Data Struct</a></div>
+        <div style="float:left">戻る<a href="../Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次へ<a href="The_Keyframe_Data_Struct.htm">キーフレームデータ構造</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Keyframe Struct

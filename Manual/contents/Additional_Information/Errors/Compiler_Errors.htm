@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Compiler Errors</title>
+  <title>コンパイラーエラー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the various compiler errors" />
   <meta name="rh-index-keywords" content="Compile Errors" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Compile Errors</h1>
-  <p>The second type of error that can be reported for your game is the <strong>compiler error</strong>. A compiler error happens when your game encounters some type of error that the syntax checker may not have been able to detect - it&#39;s very easy to forget to declare a variable or mistakenly type a string as a real, for example - or when an error is related to how you have set up the compile tools from the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a> for the target platform. These errors will be caught by <span data-keyref="GameMaker Name">GameMaker</span> as the game is being compiled and this information will also be shown in the <a href="../../Introduction/The_Output_Window.htm">Compiler Error Output</a>, as shown below:</p>
+  <h1>コンパイルエラー</h1>
+  <p>ゲームに報告されるエラーの2つ目のタイプは、コンパ<strong>イラエラー</strong>です。コンパイラエラーは、シンタックスチェッカーが検出できないようなエラーが発生したときに起こります。例えば、変数の宣言を忘れたり、<span class="notranslate">string</span> を real と間違えて入力したりすることはよくあります。また、ターゲットプラットフォーム用に<a href="../../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a>から設定したコンパイルツールに関連するエラーが発生した場合にも起こります。これらのエラーは、ゲームがコンパイルされる際に<span data-keyref="GameMaker Name">GameMaker</span>によって検出され、以下のように<a href="../../Introduction/The_Output_Window.htm">Compiler Error Output</a> にその情報が表示されます。</p>
   <p><img alt="Compile Errors" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Compile_Output.png" /></p>
-  <p class="note"><span class="note">NOTE</span> These errors don&#39;t usually pop up a window and will simply show &quot;<span class="inline" style="font-size: 14px">Build Failed</span>&quot; in the compiler output. If a window pops up it&#39;s usually a Runner Error, which is explained <a href="Runner_Errors.htm">here</a>.</p>
-  <p>The compiler error messages will all follow the same format:</p>
+  <p class="note"><span class="note">注</span>これらのエラーは通常、ウィンドウをポップアップせず、コンパイラの出力に「<span class="inline" style="font-size: 14px">Build Failed</span>」と表示されるだけです。もし、ウィンドウが表示される場合は、通常ランナーエラーです<a href="Runner_Errors.htm">。</a></p>
+  <p>コンパイラのエラーメッセージは、すべて同じフォーマットで表示されます。</p>
   <p class="code">[object] - [event] - [Line Number]: [error string]</p>
-  <p>If the error is found in a script then it will simply be:</p>
+  <p>もし、<span class="notranslate">script</span> でエラーが見つかった場合は、単純にそうなります。</p>
   <p class="code">[script] - [Line Number]: [error string]</p>
-  <p>You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the compiler error entries to open the given asset at the position flagged as giving the error, and then you can use the information contained within the message to pinpoint exactly where in the object or script the error has occurred. However, sometimes these errors can seem a bit cryptic, so below you can find a complete list of all errors and a brief explanation of what they mean:</p>
-  <p> </p>
+  <p><img> そして、コンパイラーエラーエントリーのどれかをダブルクリックすると、エラーが発生したとフラグが立った位置の<span class="notranslate">asset</span> が表示され、メッセージに含まれる情報を使って<span class="notranslate">object</span> または<span class="notranslate">script</span> のどこでエラーが発生したかを正確に特定できます。しかし、これらのエラーは少し不可解に見えることがあるので、以下にすべてのエラーの完全なリストとその意味の簡単な説明を掲載します。</p>
+  <p> </p>
   <table>
     <colgroup>
       <col />
@@ -31,459 +31,459 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Error</th>
-        <th>Description</th>
+        <th>エラー</th>
+        <th>商品説明</th>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Miscellaneous</strong></p>
+          <p><strong>その他</strong></p>
         </td>
       </tr>
       <tr>
-        <td>No program to compile</td>
-        <td>A previous compile error has caused the compiler parse tree to not be created and thus the compiler has no program data to compile</td>
+        <td>コンパイルするプログラムがない</td>
+        <td>以前のコンパイルエラーにより、コンパイラのパースツリーが作成されていないため、コンパイラにコンパイルするプログラムデータがない</td>
       </tr>
       <tr>
-        <td>Fatal Error while compiling <i>[name]</i> - bailing details below</td>
-        <td>This message simply means that some error has been discovered but the compiler cannot place what or where (if this happens consistently you may wish to contact <a href="https://accounts.yoyogames.com/contact-us" target="_blank">support</a> and supply the details that the compiler output window shows)</td>
+        <td>Fatal Error while compiling<i>[name]</i>- bailing details below.</td>
+        <td>このメッセージは、単に何らかのエラーが発見されたが、コンパイラが何を、どこで、どうしたのか特定できないことを意味します（このような現象が何度も起こる場合は、<a href="https://accounts.yoyogames.com/contact-us" target="_blank">サポートに</a>連絡して、コンパイラの出力ウィンドウが示す詳細を提供するとよいでしょう）。</td>
       </tr>
       <tr>
-        <td>Recursive macro expansion is not supported</td>
-        <td>You have used recursive macros that refer to each other and constantly expand</td>
+        <td>再帰的なマクロ展開には対応していません</td>
+        <td>互いに参照し合い、常に展開する再帰的なマクロを使用した場合</td>
       </tr>
       <tr>
-        <td>Unable to find TextureGroup <span class="inline">[group]</span></td>
-        <td>This error is usually only found from trying to run a malformed project file (if this happens consistently you may wish to contact <a href="https://accounts.yoyogames.com/contact-us" target="_blank">support</a> and supply the details that the compiler output window shows)</td>
+        <td>TextureGroupが見つからない <span class="inline">[group]</span></td>
+        <td>このエラーは通常、不正なプロジェクトファイルを実行しようとした場合にのみ発生します（このような現象が頻繁に発生する場合は、<a href="https://accounts.yoyogames.com/contact-us" target="_blank">サポートに</a>連絡して、コンパイラの出力ウィンドウに表示される詳細を提供するとよいでしょう）。</td>
       </tr>
       <tr>
-        <td>Wrong to convert <span class="inline">[value]</span> to number</td>
-        <td>You have tried to convert the given value, for example a string, into a number</td>
+        <td> <span class="inline">[value]</span> を数値に変換するのが間違っている</td>
+        <td>与えられた値、例えば<span class="notranslate">string</span> を数値に変換しようとした。</td>
       </tr>
       <tr>
-        <td>Division by 0</td>
-        <td>You have tried to divide a value by 0</td>
+        <td>0で除算</td>
+        <td>値を 0 で割ろうとした</td>
       </tr>
       <tr>
-        <td>Invalid object id <span class="inline">[object ID]</span> used</td>
-        <td>You have tried to access an object using an ID value that is incorrect</td>
+        <td>無効な<span class="notranslate">object</span> id <span class="inline">[object ID]</span> が使用されています。</td>
+        <td>不正な ID 値を使用して<span class="notranslate">object</span> にアクセスしようとしました。</td>
       </tr>
       <tr>
-        <td>Unclosed comment (<span class="inline">/*</span>) at end of script</td>
-        <td>You have created a script comment using<br />
-          <span class="inline">/* [comment] */</span><br />
-          but have not supplied the closing comment tag
+        <td>スクリプトの末尾の閉じないコメント(<span class="inline">/*</span>)</td>
+        <td>を使って、<span class="notranslate">script</span> コメントを作成しました。<br>
+          <span class="inline">/* [comment] */</span><br>
+          を作成しましたが、コメント終了タグを指定していません。
         </td>
       </tr>
       <tr>
-        <td>Invalid token</td>
-        <td>You have an invalid character in your game code, which can happen with foreign language characters or Unicode</td>
+        <td>無効なトークン</td>
+        <td>ゲームコードに無効な文字が含まれています。これは、外国語の文字やユニコードで発生する可能性があります。</td>
       </tr>
       <tr>
-        <td>Number <span class="inline">[num]</span> in incorrect format</td>
-        <td>The given number - shown in the error - is not the correct format for the function or operation being performed, for example you supply an integer when a pointer is required</td>
+        <td>番号 <span class="inline">[num]</span> 不正確なフォーマット</td>
+        <td>例えば、ポインタが必要なときに整数を指定した場合などです。</td>
       </tr>
       <tr>
-        <td>Unexpected EOF encountered</td>
-        <td>You have reached the end of file unexpectedly while using the File Functions</td>
+        <td>予期しないEOFが発生した</td>
+        <td>ファイル機能使用中に予期せずファイルの末尾に到達した場合</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Strings</strong></p>
+          <p><strong>ストリングス</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Unable to Not a string</td>
-        <td>You have tried to use &quot;<span class="inline">!</span>&quot; (not) on a string</td>
+        <td>文字列のNot化ができない</td>
+        <td>文字列に対して &quot;<span class="inline">!</span>&quot; (not) を使用しようとしました。</td>
       </tr>
       <tr>
-        <td>Unable to Negate a string</td>
-        <td>You have tried to negate a string, for example<br />
+        <td>文字列のネガができない</td>
+        <td>あなたは<span class="notranslate">string</span> を否定しようとしました。<br>
           <span class="inline">string = -string</span>
         </td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Scripts, </strong><strong>Functions </strong><strong>and Arguments</strong></p>
+          <p><strong>スクリプトです。 </strong><strong>関数 </strong><strong>と引数</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Wrong number of arguments for function <span class="inline">[function]</span></td>
-        <td>You have supplied too many or too few arguments for the given function</td>
+        <td>関数の引数の数が間違っている <span class="inline">[function]</span></td>
+        <td>与えられた関数の引数が多すぎるか、少なすぎます。</td>
       </tr>
       <tr>
-        <td>Failed to parse action_execute_script() - incorrect number of arguments received</td>
-        <td>The GML Visual action Execute Script has too many or too few arguments for the given script being called</td>
+        <td>action_execute_script() のパースに失敗しました - 受け取った引数の数が正しくありません。</td>
+        <td><span class="notranslate">GML</span> Visual アクションの実行<span class="notranslate">Script</span> は、呼び出される指定された<span class="notranslate">script</span> に対して引数が多すぎるか、少なすぎる。</td>
       </tr>
       <tr>
-        <td>Unknown function <span class="inline">[function]</span> check to see if script is empty</td>
-        <td>A script or function has been called that the compiler does not recognise (this error is usually thrown by empty script asset references since the compiler will strip out these assets on compile)</td>
+        <td>不明な関数 <span class="inline">[function]</span> <span class="notranslate">script</span> が空かどうかのチェック</td>
+        <td>コンパイラが認識できない<span class="notranslate">script</span> または関数が呼び出された (このエラーは通常、空の<span class="notranslate">script</span> <span class="notranslate">asset</span> 参照で発生します。コンパイラはコンパイル時にこれらの<span class="notranslate">assets</span> を削除します)。</td>
       </tr>
       <tr>
-        <td>Function <span class="inline">[function]</span> expects <span class="inline">n</span> arguments, <span class="inline">a</span> provided</td>
-        <td><span>A function has been given the wrong number of arguments (<span class="inline">n</span>) when a certain number were expected (<span class="inline">a</span>)</span></td>
+        <td>関数 <span class="inline">[function]</span> は <span class="inline">n</span> の引数を期待し、 <span class="inline">a</span> は提供される。</td>
+        <td><span><span class="inline">n</span>ある関数が、ある数の引数を想定していたのに、間違った数の引数を与えてしまった (<span class="inline">a</span>)</span></td>
       </tr>
       <tr>
-        <td>Assignment of an empty value (function does not return anything?)</td>
-        <td>You have tried to assign a return value from a function when that function returns nothing</td>
+        <td>空値の代入（関数が何も返さない？）</td>
+        <td>関数が何も返さないのに、関数から戻り値を代入しようとした。</td>
       </tr>
       <tr>
-        <td>Unable to find function <span class="inline">[function]</span>    </td>
-        <td>You have called an unknown function</td>
+        <td>関数が見つからない <span class="inline">[function]</span> </td>
+        <td>未知の関数を呼び出した</td>
       </tr>
       <tr>
-        <td>Calling a function that needs an instance and no instance is available</td>
-        <td><span>The function or script being called is for acting on an instance, but at the time of running no instances exist</span></td>
+        <td>インスタンスを必要とする関数を呼び出しても、インスタンスが利用できない</td>
+        <td><span>呼び出された関数または<span class="notranslate">script</span> はインスタンスに作用するものであるが、実行時にはインスタンスは存在しない。</span></td>
       </tr>
       <tr>
-        <td>Calling a function that needs an other and no other is available</td>
-        <td>You have used the keyword <span class="inline">other</span> outside of the Collision Event or outside of a <span class="inline">with</span> statement</td>
+        <td>他の関数が必要で、他の関数が利用できない関数の呼び出し</td>
+        <td>コリジョンイベントの外、または <span class="inline">with</span> の文の外で、キーワード <span class="inline">other</span> を使っていますね。</td>
       </tr>
       <tr>
-        <td>Argument naming error, <span class="inline">n</span> arguments but no reference found to<span class="inline"> a</span></td>
-        <td>You have given a number of arguments to a script, but fail to reference one of them in the script, for example, your script takes three arguments but you only use arguments <span class="inline">n </span>and <span class="inline">a</span></td>
+        <td>Argument naming error, <span class="inline">n</span> arguments but no reference found to the<span class="inline"> a</span></td>
+        <td><span class="notranslate">script</span> にいくつかの引数を与えたが、そのうちの1つを<span class="notranslate">script</span> で参照していない。例えば、<span class="notranslate">script</span> は3つの引数を取るが、引数 <span class="inline">n </span>と しか使っていない。 <span class="inline">a</span></td>
       </tr>
       <tr>
-        <td>Cannot compare arguments</td>
-        <td>You have tried to compare two different argument types, like a string and a real number</td>
+        <td>引数の比較ができない</td>
+        <td><span class="notranslate">string</span> と実数のように、2つの異なる引数の型を比較しようとしました。</td>
       </tr>
       <tr>
-        <td>Unknown function or script <span class="inline">[functions/script]</span> </td>
-        <td>The compiler does not recognise the function or script being called</td>
+        <td>不明な機能または<span class="notranslate">script</span> <span class="inline">[functions/script]</span> </td>
+        <td>コンパイラは呼び出された関数または<span class="notranslate">script</span> を認識しない。</td>
       </tr>
       <tr>
-        <td>Cannot use resource name <span class="inline">[resource] </span>as it is not being exported</td>
-        <td>You have tried to access a resource that has not been flagged as part of the project for the platform being compiled to</td>
+        <td>リソース名 <span class="inline">[resource] </span>はエクスポートされていないため使用できません。</td>
+        <td>コンパイル先のプラットフォームのプロジェクトの一部としてフラグが立っていないリソースにアクセスしようとしました。</td>
       </tr>
       <tr>
-        <td>Cannot use function/script name for a variable, using <span class="inline">[functions/script]</span></td>
-        <td>You have tried to use either a function name or a script name as a variable, for example:<br />
+        <td>を使用して、変数に関数/スクリプト名を使用することはできません。 <span class="inline">[functions/script]</span></td>
+        <td>例えば関数名か<span class="notranslate">script</span> 名のどちらかを変数として使おうとしたことがありますね。<br>
           <span class="inline">string = &quot;Hello World&quot;</span>
         </td>
       </tr>
       <tr>
-        <td>Cannot use an argument outside a script </td>
-        <td>The built in argument variables can only be used inside a script but you have tried to use them elsewhere</td>
+        <td>スクリプトの外部で引数を使用できない </td>
+        <td>内蔵の引数変数は<span class="notranslate">script</span> の中でしか使えないのに、他の場所で使おうとしています。</td>
       </tr>
       <tr>
-        <td>No references to <span class="inline">argument[num]</span> but references <span class="inline">argument[num]</span></td>
-        <td>You are using a reference to an argument that does not exist but that could map to another argument</td>
+        <td> <span class="inline">argument[num]</span> への言及はないが、参考文献 <span class="inline">argument[num]</span></td>
+        <td>存在しない引数への参照を使用しているが、他の引数にマッピングされる可能性がある。</td>
       </tr>
       <tr>
-        <td>Incorrect number of arguments for accessor</td>
-        <td>You have supplied the wrong number of arguments when using an accessor</td>
+        <td>アクセッサの引数の数が間違っている</td>
+        <td>アクセサを使用する際に、間違った数の引数を指定しました。</td>
       </tr>
       <tr>
-        <td>Wrong type of arguments for (one of the below):<br />
-          /, div, mod, +, -, &amp;&amp;, ||, &amp;, |, ^, &lt;&lt;, &gt;&gt;</td>
-        <td>You have supplied the wrong type of argument for the expression being evaluated</td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Variables</b></p>
-        </td>
-      </tr>
-      <tr>
-        <td>Using uninitialized variable <i>[var]</i></td>
-        <td>You have tried to use the named variable before it has been initialised</td>
-      </tr>
-      <tr>
-        <td>Variable <i>[var]</i> is read-only</td>
-        <td>You have tried to change the named variable when it cannot be changed</td>
-      </tr>
-      <tr>
-        <td>Unable to find variable named <i>[var]</i></td>
-        <td>The named variable cannot be found in the current compile</td>
-      </tr>
-      <tr>
-        <td>Malformed variable reference</td>
-        <td>You have tried to reference a variable in the wrong way</td>
-      </tr>
-      <tr>
-        <td>Trying to set a read only variable <i>[var]</i></td>
-        <td>You have tried to set a variable that is read only</td>
-      </tr>
-      <tr>
-        <td>Cannot re-declare a built in variable</td>
-        <td>You have tried to declare a local variable using the same name as one of the built in variables</td>
-      </tr>
-      <tr>
-        <td>Cannot use resource name for a variable</td>
-        <td>You have use the same name as a resource from the resource tree as a local variable</td>
-      </tr>
-      <tr>
-        <td><i>[Variable]</i> is read-only</td>
-        <td>You have tried to use a variable that has been flagged as read only</td>
+        <td>の引数の種類が違う（以下のいずれか）。<br>
+          /, div, mod, +, -, &amp;&amp;, ||, &amp;, |, ^, &lt;&lt;, &gt;&gt;.</td>
+        <td>評価される式の引数の型が間違っています。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Constants</b></p>
+          <p><b>変数</b></p>
         </td>
       </tr>
       <tr>
-        <td>Cannot set a constant [constant] to a value</td>
-        <td>You have tried to set a constant to a different value</td>
+        <td>初期化されていない変数<i>[var]</i>を使用しています。</td>
+        <td>名前付き変数が初期化される前に使用しようとしました。</td>
       </tr>
       <tr>
-        <td>Constant is invalid here</td>
-        <td>You have tried to use a constant somewhere that is not valid for the code being run</td>
+        <td>変数<i>[var]</i>はリードオンリー</td>
+        <td>変更できないのに、名前付き変数を変更しようとした場合</td>
       </tr>
       <tr>
-        <td>Cannot assign to [var] - it&#39;s a constant</td>
-        <td>You have tried to assign a new value to the named constant</td>
+        <td>変数名<i>[var]</i>を見つけることができません。</td>
+        <td>指定された変数が現在のコンパイルで見つかりません。</td>
+      </tr>
+      <tr>
+        <td>不正な変数参照</td>
+        <td>変数の参照方法を間違えています。</td>
+      </tr>
+      <tr>
+        <td>読み取り専用変数<i>[var</i>]を設定しようとしています。</td>
+        <td>読み取り専用の変数を設定しようとしました。</td>
+      </tr>
+      <tr>
+        <td>組み込み変数の再宣言ができない</td>
+        <td>内蔵変数と同じ名前のローカル変数を宣言しようとしました。</td>
+      </tr>
+      <tr>
+        <td>変数にリソース名を使用できない</td>
+        <td>リソースツリーからリソースと同じ名前をローカル変数として使用することができます。</td>
+      </tr>
+      <tr>
+        <td><i>[変数]</i>は読み取り専用</td>
+        <td>読み取り専用に設定された変数を使用しようとしました。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Arrays</b></p>
+          <p><b>定数</b></p>
         </td>
       </tr>
       <tr>
-        <td>Array index should not be negative</td>
-        <td>You have tried to access, create, or set an array value using a negative array index</td>
+        <td>定数[constant]に値を設定することができない</td>
+        <td>定数を別の値に設定しようとしました。</td>
+      </tr>
+      <tr>
+        <td>定数はここでは無効です</td>
+        <td>実行中のコードで有効でない定数をどこかで使おうとしています。</td>
+      </tr>
+      <tr>
+        <td>var] に代入できない - それは定数です。</td>
+        <td>名前付き定数に新しい値を代入しようとしました。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Malformed...</b></p>
+          <p><b>アレイ（配列</b></p>
         </td>
       </tr>
       <tr>
-        <td>Malformed Conditional operator</td>
-        <td>You have used an erroneous conditional (ternary) operator or if statement, and not the format:<br />
+        <td>配列のインデックスが負の値であってはならない</td>
+        <td>負の配列インデックスを使用して配列値にアクセス、作成、または設定しようとしました。</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <p><b>不正な...</b></p>
+        </td>
+      </tr>
+      <tr>
+        <td>不正なConditional演算子</td>
+        <td>誤った条件（三項）演算子、または<span class="notranslate">if statement</span> 、書式を使用しています。<br>
           <span class="inline">[condition] ? [expression1] : [expression2];</span>
         </td>
       </tr>
       <tr>
-        <td>If requires a then statement</td>
-        <td>You have written an if statement and expression to evaluate, but not given any then part to run</td>
+        <td>If は then 文を必要とする</td>
+        <td><span class="notranslate">if statement</span> と評価する式を書きましたが、次に実行する部分は与えていません。</td>
       </tr>
       <tr>
-        <td>malformed assignment statement</td>
-        <td>In the code you are using an assignment operator wrong</td>
+        <td>ふかんぜんだいにゅうぶん</td>
+        <td>このコードでは、代入演算子を間違って使用しています。</td>
       </tr>
       <tr>
-        <td>Malformed<br />
-          if / repeat / while / do / for / with / switch / break / continue / exit<br />
-          statement</td>
-        <td>The structure of the given statement is incorrect.</td>
+        <td>奇形<br>
+          if / repeat / while / do / for / with /<span class="notranslate">switch</span> / break / continue / exit<br>
+          ステートメント</td>
+        <td>与えられた文の構成は間違っている。</td>
       </tr>
       <tr>
-        <td>Malformed post inc or dec statement</td>
-        <td>You have tried to use <span class="inline">[var]++</span> or <span class="inline">[var]--</span> in an illegal way</td>
+        <td>不正な post inc または dec 文</td>
+        <td> <span class="inline">[var]++</span> または <span class="inline">[var]--</span> を違法な方法で使用しようとしたことがある方</td>
       </tr>
       <tr>
-        <td>Malformed pre inc or dec statement</td>
-        <td>You have tried to use <span class="inline">++[var]</span> or <span class="inline">--[var]</span> in an illegal way</td>
+        <td>不正なpre incまたはdec文</td>
+        <td> <span class="inline">++[var]</span> または <span class="inline">--[var]</span> を違法な方法で使用しようとしたことがある方</td>
       </tr>
       <tr>
-        <td>Malformed global gml_pragma</td>
-        <td>You have created a wrong global string when using <span class="inline">gml_pragma</span></td>
+        <td>グローバルな gml_pragma の不具合</td>
+        <td>を使用する際に、間違ったグローバル<span class="notranslate">string</span> を作成しています。 <span class="inline">gml_pragma</span></td>
       </tr>
       <tr>
-        <td>Malformed PNGCrush gml_pragma</td>
-        <td>You have created a wrong string command for PNGCrush when using <span class="inline">gml_pragma</span></td>
+        <td>不正な PNGCrush gml_pragma</td>
+        <td>PNGCrushを使用する際に、誤った<span class="notranslate">string</span> コマンドを作成しています。 <span class="inline">gml_pragma</span></td>
       </tr>
       <tr>
-        <td>Malformed Texgroup.Scale gml_pragma</td>
-        <td>You have create a wrong global string when using <span class="inline">gml_pragma</span></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Switch / Case</b></p>
-        </td>
-      </tr>
-      <tr>
-        <td>Default cannot be used multiple times in a switch</td>
-        <td>In your switch statement you have defined default: more than once</td>
-      </tr>
-      <tr>
-        <td>Clause expression type mismatch (clause expressions should all be the same type)</td>
-        <td>In your switch you are checking for two different constant case types, for example a string in one case and an integer in another</td>
-      </tr>
-      <tr>
-        <td>Case argument should be a constant</td>
-        <td>You have tried to use a value that does not evaluate to a constant within one of your switch cases</td>
-      </tr>
-      <tr>
-        <td>Statement in a switch MUST appear after case or default</td>
-        <td>You have added a statement to a switch outside of either a <span class="inline">case:</span> or <span class="inline">default:</span> call</td>
-      </tr>
-      <tr>
-        <td>Duplicate case statement found / original here</td>
-        <td>You have used the same case constant in two different places within a switch (note that the &quot;original here&quot; comment will be on another line and can be clicked to show the original case)</td>
+        <td>Texgroup.Scale の gml_pragma が不正。</td>
+        <td>を使用する場合、間違ったグローバル<span class="notranslate">string</span> を作成しています。 <span class="inline">gml_pragma</span></td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Expressions</b></p>
+          <p><b>スイッチ／ケース</b></p>
         </td>
       </tr>
       <tr>
-        <td>No return value from expression (does expression have a return value?)</td>
-        <td>You have tried to assign a return value from an expression to a variable when the expression returns nothing</td>
+        <td>デフォルトはスイッチ内で複数回使用することはできません</td>
+        <td><span class="notranslate">switch</span> ステートメントで、default: more than once を定義しています。</td>
       </tr>
       <tr>
-        <td>Expecting expression after the &#39;.&#39;</td>
-        <td>You have used the point &quot;<span class="inline">.</span>&quot; notation erroneously and not added an expression afterwords correctly</td>
+        <td>句式タイプの不一致（句式はすべて同じタイプであるべきです。）</td>
+        <td>あなたの<span class="notranslate">switch</span> では、2つの異なる定数ケースタイプをチェックしています。例えば、あるケースでは<span class="notranslate">string</span> を、別のケースでは整数をチェックします。</td>
       </tr>
       <tr>
-        <td>Unexpected symbol [symbol] in expression</td>
-        <td>The expression uses a symbol that is not part of the accepted expression symbol set - the symbol in question will be shown</td>
+        <td>ケース引数は定数であるべき</td>
+        <td><span class="notranslate">switch</span> のいずれかのケースで，定数と評価されない値を使おうとしています。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">switch</span> のステートメントは、case または default の後に表示されなければならない（MUST）。</td>
+        <td> <span class="inline">case:</span> または <span class="inline">default:</span> のどちらかの呼び出しの外側で、<span class="notranslate">switch</span> にステートメントを追加しています。</td>
+      </tr>
+      <tr>
+        <td>重複する事例を発見／オリジナルはこちら</td>
+        <td><span class="notranslate">switch</span> 内の2か所で同じ case 定数を使用しています (「元のここ」というコメントが別の行に表示され、クリックすると元の case が表示されることに注意してください)。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Unknown Operators</b></p>
+          <p><b>エクスプレッション</b></p>
         </td>
       </tr>
       <tr>
-        <td>Unknown Pre operator</td>
-        <td>You have tried to use a symbol as a pre-operator when that symbol is not permitted, for example <span class="inline">**[var]</span> or <span class="inline">&gt;&gt;[var]</span> - only <span class="inline">++</span> and <span class="inline">--</span> are acceptable</td>
+        <td>式から戻り値がない（式に戻り値があるか？）</td>
+        <td>式が何も返さないのに、式の戻り値を変数に代入しようとしました。</td>
       </tr>
       <tr>
-        <td>Unknown Post operator</td>
-        <td>You have tried to use a symbol as a post-operator when that symbol is not permitted, for example <span class="inline">[var]**</span> or <span class="inline">[var]&gt;&gt;</span> - only <span class="inline">++</span> and <span class="inline">--</span> are acceptable</td>
+        <td>'の後に表現を期待する。</td>
+        <td>ポイント &quot;<span class="inline">.</span>&quot; 表記を誤って使用し、後ろに式を正しく追加していません。</td>
       </tr>
       <tr>
-        <td>Unknown pragma [gml_pragma string]</td>
-        <td>You have used a pragma string that is unknown to the compiler</td>
-      </tr>
-      <tr>
-        <td>Unknown unary operator</td>
-        <td>You have tried to use an unknown symbol as a unary operator</td>
-      </tr>
-      <tr>
-        <td>Unknown binary operator</td>
-        <td>You have tried to use an unknown symbol as a binary operator</td>
-      </tr>
-      <tr>
-        <td>Unknown operator [operator]</td>
-        <td>You have tried to use an unknown symbol as an operator (the symbol will be shown in the error)</td>
+        <td>式中の予期せぬシンボル[symbol]がある</td>
+        <td>この式では、許可された式のシンボルセットに含まれていないシンボルを使用しています - 問題のシンボルは表示されます。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Break / Continue</b></p>
+          <p><b>未知のオペレーター</b></p>
         </td>
       </tr>
       <tr>
-        <td>Break used without context</td>
-        <td>You have not used break within a switch or a loop or any other permitted structure</td>
+        <td>不明 プリオペレーター</td>
+        <td>例えば、 <span class="inline">**[var]</span> や <span class="inline">&gt;&gt;[var]</span> のように、使用できない記号をプリ・オペレーターとして使用しようとした場合、 <span class="inline">++</span> と <span class="inline">--</span> だけが許容されます。</td>
       </tr>
       <tr>
-        <td>Continue used without context</td>
-        <td>You have not used continue within the correct context</td>
+        <td>不明 ポストオペレーター</td>
+        <td>例えば、 <span class="inline">[var]**</span> や <span class="inline">[var]&gt;&gt;</span> のように、使用できない記号をポストオペレータとして使用しようとした場合、 <span class="inline">++</span> と <span class="inline">--</span> のみが許容されます。</td>
       </tr>
       <tr>
-        <td>continue statement is not allowed at this point</td>
-        <td>You have used continue within a apart of your code where it is not permitted</td>
+        <td>不明なプラグマ [gml_pragma string]。</td>
+        <td>コンパイラが知らないプラグマ（<span class="notranslate">string</span> ）を使用しています。</td>
+      </tr>
+      <tr>
+        <td>不明な単項演算子</td>
+        <td>未知の記号を単項演算子として使用しようとしました。</td>
+      </tr>
+      <tr>
+        <td>未知の二項演算子</td>
+        <td>未知の記号を二項演算子として使用しようとしました。</td>
+      </tr>
+      <tr>
+        <td>Unknown operator [オペレーター]。</td>
+        <td>未知の記号を演算子として使用しようとしました（記号はエラーに表示されます）。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Enums</b></p>
+          <p><b>ブレーク／コンティニュー</b></p>
         </td>
       </tr>
       <tr>
-        <td>enum num is invalid</td>
-        <td>The enum number is invalid for the enum</td>
+        <td>文脈を無視して使用されるブレーク</td>
+        <td><span class="notranslate">switch</span> または<span class="notranslate">loop</span> またはその他の許可された構造内で break を使用していないこと。</td>
       </tr>
       <tr>
-        <td>malformed enum</td>
-        <td>You have not created the enum correctly</td>
+        <td>文脈を無視して使用し続ける</td>
+        <td>正しい文脈でcontinueを使用していません。</td>
       </tr>
       <tr>
-        <td>enum [enum] has already been defined</td>
-        <td>You have tried to define an enum using the same name as another previously defined</td>
-      </tr>
-      <tr>
-        <td>malformed enum entry</td>
-        <td>The enum has an invalid entry</td>
-      </tr>
-      <tr>
-        <td>enum expression must be an integer constant</td>
-        <td>The enum entry does not evaluate as an integer constant</td>
-      </tr>
-      <tr>
-        <td>enum reference [key] does not exist in [enum]</td>
-        <td>You have tried to reference an enum entry using a key that has not previously been defined for that enum</td>
+        <td>この時点ではcontinue文は不可</td>
+        <td>コードの一部でcontinueが許可されていない箇所でcontinueを使用している。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Expected Symbols / Values</strong></p>
+          <p><b>エンムス</b></p>
         </td>
       </tr>
       <tr>
-        <td>Symbol ( expected<br />
-          Symbol ) expected<br />
-          Symbol , or ) expected<br />
-          Symbol { expected<br />
-          Symbol } expected<br />
-          Symbol , or } expected<br />
-          Symbol : expected<br />
-          Symbol ; expected<br />
-          Symbol [ expected<br />
-          symbol ] expected<br />
-          Symbol , or ] expected</td>
-        <td>You have not used a required symbol when writing your code</td>
+        <td>enum numは無効です。</td>
+        <td>enum番号がenumに対して無効である。</td>
       </tr>
       <tr>
-        <td>Expected id or string</td>
-        <td>You have used a value that is not either a layer ID or a layer name - as a string - in one of the Layer functions</td>
+        <td>不正な列挙</td>
+        <td>enumが正しく作成されていません</td>
       </tr>
       <tr>
-        <td>keyword Until expected</td>
-        <td>You have created a do... until loop but neglected to supply an until expression</td>
+        <td>enum [enum]はすでに定義されています。</td>
+        <td>以前に定義された別の列挙型と同じ名前を使用して、列挙型を定義しようとしました。</td>
       </tr>
       <tr>
-        <td>Function name expected</td>
-        <td>You have used something other than a function name in your code where a function should go</td>
+        <td>変形された列挙項目</td>
+        <td>enumに無効なエントリがある</td>
       </tr>
       <tr>
-        <td>variable name expected</td>
-        <td>You have supplied a name that is not a variable name where one is expected</td>
+        <td>enum 式は整数定数でなければなりません。</td>
+        <td>enumの項目が整数定数として評価されない</td>
       </tr>
       <tr>
-        <td>Assignment operator expected</td>
-        <td>You have created an assignment which expects an operator but none has been supplied</td>
+        <td>enum reference [key] が [enum] に存在しない。</td>
+        <td>その列挙型に定義されていないキーを使用して、列挙型項目を参照しようとしました。</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Android Exclusive</b></p>
+          <p><strong>期待される記号・値</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Android ARM ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the ARM toolchain is incorrect and does not exist.</td>
+        <td>記号（予定<br>
+          シンボル） 予想<br>
+          記号 , または ) 予想<br>
+          記号 { 予想<br>
+          記号 } 予想<br>
+          記号 , または } 予想<br>
+          記号 : 期待される<br>
+          記号;期待される<br>
+          シンボル [ 予想<br>
+          シンボル ]予想<br>
+          シンボル , または ]予想される</td>
+        <td>コードを書くときに、必要なシンボルが使われていません。</td>
       </tr>
       <tr>
-        <td>Android MIPS ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the MIPS toolchain is incorrect and does not exist.</td>
+        <td>期待されるIDまたは文字列</td>
+        <td>レイヤーIDでもレイヤー名でもない値（<span class="notranslate">string</span> ）をレイヤー関数の一つで使用した場合。</td>
       </tr>
       <tr>
-        <td>Android x86 ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the x86 toolchain is incorrect and does not exist.</td>
+        <td>キーワード 予想されるまで</td>
+        <td>do... until<span class="notranslate">loop</span> を作成しましたが、until 式を指定するのを忘れていました。</td>
       </tr>
       <tr>
-        <td>Android NDK directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the Android NDK is incorrect and does not exist.</td>
+        <td>期待される機能名</td>
+        <td>コード内で関数が入るべきところに関数名以外のものを使っている。</td>
+      </tr>
+      <tr>
+        <td>期待される変数名</td>
+        <td>変数名が必要な場面で、変数名でない名前が指定されました。</td>
+      </tr>
+      <tr>
+        <td>アサインメント演算子期待値</td>
+        <td>演算子を必要とする代入を作成したが、演算子が指定されていない場合</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <p><b>Android専用</b></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Android<span class="notranslate">ARM</span> ToolChain ディレクトリ [dir] が存在しない。</td>
+        <td><span class="notranslate">Android</span> Preferences で指定された<span class="notranslate">ARM</span> toolchain のリンクは正しくなく、存在しません。</td>
+      </tr>
+      <tr>
+        <td>Android MIPS ToolChain ディレクトリ [dir] が存在しない。</td>
+        <td><span class="notranslate">Android</span> Preferences にある MIPS toolchain のリンクは不正確で、存在しません。</td>
+      </tr>
+      <tr>
+        <td>Android x86 ToolChain ディレクトリ [dir] が存在しない。</td>
+        <td><span class="notranslate">Android</span> Preferences に記載されている x86 toolchain のリンクは正しくなく、存在しません。</td>
+      </tr>
+      <tr>
+        <td>Android NDK ディレクトリ [dir] が存在しない。</td>
+        <td><span class="notranslate">Android</span> Preferences に記載されている<span class="notranslate">Android</span> NDK へのリンクは正しくなく、存在しません。</td>
       </tr>
       <tr>
         <td colspan="2">
-          <p><strong>Windows Exclusive</strong></p>
+          <p><strong>Windows専用</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Configuration Problem : Windows Visual Studio Path needs to be set to point to Visual Studio (.bat) batch file.</td>
-        <td>The link given in the Windows Preferences for the Visual Studio (.bat) batch file is incorrect and does not exist.</td>
+        <td>設定上の問題 :<span class="notranslate">Windows</span> <span class="notranslate">Visual Studio</span> <span class="notranslate">Path</span> が<span class="notranslate">Visual Studio</span> (.bat) バッチファイルを指すように設定する必要があります。</td>
+        <td><span class="notranslate">Windows</span> Preferences にある<span class="notranslate">Visual Studio</span> (.bat) バッチファイルのリンクが正しくなく、存在しない。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Error_Reporting.htm">Error Reporting</a></div>
-        <div style="float:right">Next: <a href="Runner_Errors.htm">Runner Errors</a></div>
+        <div style="float:left">戻る<a href="../Error_Reporting.htm">エラー報告</a></div>
+        <div style="float:right">次へ<a href="Runner_Errors.htm">ランナーエラー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Compiler Errors

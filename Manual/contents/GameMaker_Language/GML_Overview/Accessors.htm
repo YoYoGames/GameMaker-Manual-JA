@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Accessors</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>アクセサー</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different Accessors" />
   <meta name="rh-index-keywords" content="Accessors" />
@@ -14,47 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Accessors</span></h1>
-  <p>The GameMaker Language (GML) also permits you to access certain <a href="../GML_Reference/Data_Structures/Data_Structures.htm">Data Structures</a> and <a href="Arrays.htm">Arrays</a> through the use of logical expressions called <b>accessors</b>. This is structured in a similar way as when you are normally working with an array, only we use an <em>identifier symbol</em> before the first argument to tell <span data-keyref="GameMaker Name">GameMaker</span> that you are working on a (previously created) data structure or the array literal.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DS Lists [| ]</a></p>
+  <h1>アクセサー</h1>
+  <p><span class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>) では、<b>アクセッサと</b>呼ばれる論理式を使って、特定の<a href="../GML_Reference/Data_Structures/Data_Structures.htm">データ</a>構造や<a href="Arrays.htm">配列に</a>アクセスすることもできます。これは通常の配列を扱うときと同じような構造になっていますが、最初の引数の前に<em>識別子記号を</em>使い、<span data-keyref="GameMaker Name">GameMakerに</span>（以前に作成した）データ構造または配列リテラルを扱っていることを知らせます。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DSリスト [| ]です。</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The syntax for <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS lists</a> is:</p>
+    <p class="dropspot"><a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DSリストの</a>構文は以下の通りです。</p>
     <p class="code">list_index[| index]</p>
-    <p class="dropspot">So when you have used <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm">ds_list_create</a></span> to create your list, you would use the list index (that you have stored in a variable) to reference it, with the <span class="inline2">index</span> value being the position in the list to set or add. For example, the following code creates a list and then adds 10 entries, setting each entry to random number from 0 to 9:</p>
+    <p class="dropspot">そこで、<span class="inline">ds_list_create()</span> を使ってリストを作成した場合、（変数に格納した）リストのインデックスを使って参照することになります。「インデックス」の値は、リスト内で設定または追加する位置を表します。例えば、次のコードは、リストを作成し、10個のエントリーを追加し、各エントリーに0から9までの乱数を設定します。</p>
     <p class="code">ds = ds_list_create();<br />
       var index = 0;<br />
       repeat(10)<br />
       {<br />
           ds[| index++] = irandom(9);<br />
       }</p>
-    <p class="dropspot">Note that if you are using an expression to add a reference to an index that already has a value, the previous value will be replaced rather than have a further index added to the list. To add further entries you would need to know the DS list size and add them to the end. It is also worth noting that you can set a list index that is <i>greater</i> than the size of the list being referenced, and this will set that value, expanding the list at the same time and initialising all the positions in the list up to the given index to 0.</p>
-    <p class="dropspot">Once you have created your list structure and filled it with data, to get values from the list you would have something like:</p>
+    <p class="dropspot">すでに値を持つインデックスに式を使用して参照を追加する場合、リストにさらにインデックスを追加するのではなく、前の値が置き換えられることに注意してください。さらにエントリーを追加するには、ds_listのサイズを知っていて、最後に追加する必要があります。また、参照されているリストのサイズよりも<i>大きな</i>リストインデックスを設定することができ、これはその値を設定すると同時にリストを拡張し、与えられたインデックスまでのリスト内のすべての位置を0として初期化することは注目に値します。</p>
+    <p class="dropspot">リスト構造を作り、そこにデータを入れたら、リストから値を取り出すには次のようにします。</p>
     <p class="code">value = ds[| 5];</p>
-    <p class="dropspot">The above will get the value from position 5 (the sixth index, since lists start at 0) and store it in a variable. If you supply a position that is outside of the list size then the value <span class="inline2">undefined</span> will be returned, which you can check for using the function <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Variable_Functions/is_undefined.htm#h">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">上記はポジション5（リストは0から始まるので、6番目のインデックス）から値を取得し、変数に格納します。もし、リストのサイズ以外の位置を指定した場合は、 <span class="inline">undefined</span> という値が返されますが、これは関数 <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">DS Maps [? ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">DS Maps [?］</a></p>
   <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">The accessor for <a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Maps</a> is <span class="inline2"><a id="?"></a>?</span> and the syntax is: </p>
+    <p class="dropspot"><a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DSマップの</a>構文は以下の通りです。</p>
     <p class="code">map_index[? key]</p>
-    <div data-conref="../../assets/snippets/Note_Tip_Map_Key_Can_Be_Any.hts"> </div>
-    <p class="dropspot">After creating your map with <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm#h">ds_map_create</a></span>, you would use the map index that you have stored in a variable to reference it, with the <span class="inline2">key</span> value being the map key to set or get. For example, the following code creates a map and then adds a few entries to it using this syntax: </p>
+    <p class="dropspot"><span class="inline">ds_map_create()</span> でマップを作成した後、変数に格納したマップインデックスを使用して参照する。&quot;key&quot; の値は、設定または取得するマップキーである。たとえば、次のコードはマップを作成し、この構文を使っていくつかの項目を追加しています。</p>
     <p class="code">ds = ds_map_create();<br />
       ds[? &quot;Name&quot;] = &quot;Hamish&quot;;<br />
       ds[? &quot;Company&quot;] = &quot;MacSeweeny Games&quot;;<br />
       ds[? &quot;Game&quot;] = &quot;Catch The Haggis&quot;;</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If the map already contains the same key value as you are trying to add, it will not create a duplicate key with the new value, but rather the previous value will be replaced.</p>
-    <p class="dropspot">Once you have created your map structure and filled it with data, to get values from a specific map key you would have something like this:</p>
+    <p class="dropspot">なお、追加しようとするキーと同じ値がすでにマップに含まれている場合は、新しい値で重複したキーは作成されず、以前の値が置き換えられることになります。</p>
+    <p class="dropspot">マップ構造を作成し、データを入れたら、特定のマップキーから値を取得するために、次のようなコードを作成します。</p>
     <p class="code">value = ds[? &quot;Name&quot;];</p>
-    <p class="dropspot">The above will get the value from the key <span class="inline2">&quot;Name&quot;</span> and store it in a variable, but be aware that if the given key does not exist in the DS map, then the value returned will be <span class="inline2">undefined</span>. This can be checked for using the function <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Variable_Functions/is_undefined.htm#h">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">上記は、キー &quot;Name&quot; から値を取得して変数に格納しますが、与えられたキーがDSマップに存在しない場合、返される値は <span class="inline">undefined</span> となることに注意してください。これは、以下の関数で確認できる。 <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DS Grids [# ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DSグリッド[# ]について</a></p>
   <div class="droptext" data-targetname="drop-down14">
-    <p class="dropspot">The syntax for <a data-xref="{text}" href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm#h">DS Grids</a> is:</p>
+    <p class="dropspot"><a href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm">DSグリッドの</a>構文は以下の通りです。</p>
     <p class="code">grid_index[# xpos, ypos]</p>
-    <p class="dropspot">After creating your grid with the <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm">ds_grid_create</a></span> function, you would use the grid index that you have stored in a variable to reference it, with the <span class="inline2">xpos</span> and <span class="inline2">ypos</span> being the position within the grid to get or set a value. For example, the following code creates a grid, clears it to 0, then and then adds a few entries to it:</p>
+    <p class="dropspot"><span class="inline">ds_grid_create()</span> 関数でグリッドを作成したら、変数に格納したグリッドのインデックスを使って、「xpos」「ypos」をグリッド内の位置にして、値を取得したり設定したりすることになります。たとえば、次のコードは、グリッドを作成し、0にクリアしてから、いくつかの項目を追加しています。</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
       var gw = ds_grid_width(ds) - 1;<br />
@@ -68,21 +67,21 @@
               ds[# xx, yy] = 1;<br />
           }<br />
       }</p>
-    <p class="dropspot">Once you have created your grid structure and filled it with data, to get values from a specific grid position you would have something like:</p>
+    <p class="dropspot">グリッド構造を作り、データを入れたら、特定のグリッドの位置から値を取得するために、次のような操作を行います。</p>
     <p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p>
-    <p class="dropspot">The above will get the value from the given DS grid based on the mouse position (divided by the &quot;cell&quot; width in the room to get the correct location). If you supply a position that is outside of the grid boundaries then the value <span class="inline2">undefined</span> will be returned, which you can check for using the function <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">上記は、与えられたds_gridからマウス位置を元に値を取得します（正しい位置を得るために<span class="notranslate">room</span> の「セル」幅で割ります）。もしグリッドの境界の外側の位置を指定した場合は、 <span class="inline">undefined</span> という値が返されます。これは関数 <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">Arrays [@ ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">配列[@]の場合</a></p>
   <div class="droptext" data-targetname="drop-down15">
-    <p class="dropspot">This accessor is only used when the <a href="../../Settings/Game_Options.htm">Copy on Write option</a> is enabled.</p>
-    <p class="dropspot">Arrays also have their own accessors which works in a similar way as those listed above for data structures. However array accessors have an interesting property and that is to permit you to modify an array from a <a href="Script_Functions.htm">script function</a> or <a href="Method_Variables.htm">method</a> without having to copy it. When you pass an array into a function, it is <strong>passed by reference</strong>, meaning that the array itself isn&#39;t being given into the script but rather it is simply being referenced to get the data. Normally if you then need to change the array, it would be <em>copied </em>to the script and then you would need to pass back (return) the copied array for the original array to be updated. This can have costly processing overheads, and so you can use the accessor instead, as that will change the original array <em>directly </em>without the need for it to be copied. You can see how this works in the examples below.</p>
-    <p class="dropspot">The syntax for arrays, using the <span class="inline2">@</span> accessor, is:</p>
+    <p class="dropspot">このアクセサは、<a href="../../Settings/Game_Options.htm">Copy on Write オプションが</a>有効な場合にのみ使用されます。</p>
+    <p class="dropspot">配列にも独自のアクセサがあり、上記のデータ構造のアクセサと同様の働きをします。しかし、配列のアクセサには興味深い性質があり、<a href="Script_Functions.htm">スクリプト関数</a>や <a href="Method_Variables.htm"><span class="notranslate">method</span></a>をコピーする必要はありません。つまり、配列自体は<span class="notranslate">script</span> に<strong>渡さ</strong>れるのではなく、単にデータを取得するために参照されるだけなのです。通常、配列を変更する必要がある場合は、その配列を<span class="notranslate">script</span> に<em>コピー </em>し、コピーした配列を元の配列に戻す（return）必要があります。これは処理のオーバーヘッドが大きくなるため、代わりにアクセサを使用します。アクセサを使用すると、元の配列をコピーすることなく<em>直接 </em>変更することができます。以下の例で、その動作を確認することができます。</p>
+    <p class="dropspot">配列の構文は、 <span class="inline">@</span> のアクセサーを使用します。</p>
     <p class="code">array[@ i]</p>
-    <p class="dropspot">After you have created your array in an instance, you can then pass it to a script by reference and use the accessor <span class="inline">@</span> to change it directly. For example you would create the array and call the funtion like this:</p>
+    <p class="dropspot">配列をインスタンスで作成した後、それを参照で<span class="notranslate">script</span> に渡し、アクセサ<span class="inline">@</span> を使って直接変更することができます。たとえば、次のように配列を作成して、ファンクションを呼び出すことができます。</p>
     <p class="code">array[99] = 0;<br />
       array_populate(array);</p>
-    <p class="dropspot">The function itself would have something like this:</p>
+    <p class="dropspot">関数そのものは、こんな感じでしょうか。</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
           var a = _array; var i = 0; repeat(25)<br />
@@ -95,28 +94,26 @@
               a[@ i] = 100;<br />
           }<br />
       }</p>
-    <p class="dropspot">All this function is doing is selecting 25 random positions in the array and setting the value of the chosen array position to 100.</p>
-    <p class="dropspot">Of course, the <span class="inline">@</span> accessor is not required when <strong>Copy on Write</strong> is disabled.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> You cannot use the array accessor <span class="inline">@</span>  when working with the <span class="inline">argument[n]</span> array in script functions.</p>
-    <p class="dropspot"> </p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">この関数が行っていることは、配列の25の位置をランダムに選び、選ばれた配列の位置の値を100に設定することだけです。</p>
+    <p class="dropspot">もちろん、<strong>Copy on Write</strong>が無効の場合は、 <span class="inline">@</span> のアクセ サは必要ありません。</p>
+    <p class="note"><span class="note">注</span>：スクリプト関数で<span class="inline">argument[n]</span> 配列を扱う場合、配列アクセッサ <span class="inline">@</span> は使用できません。</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">Structs [$ ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">構造体 [$ ]です。</a></p>
   <div class="droptext" data-targetname="drop-down16">
-    <p class="dropspot"><span>The struct accessor uses the <span class="inline2"><a id="$"></a>$</span> sign as the identifier symbol. This makes the accessor syntax for <a href="Structs.htm">structs</a>: </span></p>
+    <p class="dropspot"><span><a href="Structs.htm">構造体の</a>構文は次のとおりです。</span></p>
     <p class="code">struct[$ &quot;name&quot;]</p>
-    <p class="dropspot">This accessor is essentially a wrapper for the functions <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> and <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, and you would use it much like the accessor for a DS map. For example, if you have created a struct and want to retrieve a value from a variable called &quot;my_health&quot; then you&#39;d do:</span></p>
+    <p class="dropspot">このアクセサは基本的に関数<span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> と<a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a></span>のラッパーで<span>あり、DSマップのアクセサと同じように使用</span>します。<span>例えば、<span class="notranslate">struct</span> を作成し、&quot;my_health&quot; という変数から値を取得したい場合、次のようにします。</span></p>
     <p class="code">var _hp = struct[$ &quot;my_health&quot;];</p>
-    <p class="dropspot">As you can see, you don&#39;t supply the variable itself, but rather a <em>string</em> with the variable&#39;s name.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If the struct does not have a variable with the given name, then the accessor will return <span class="inline2">undefined</span> as the value.</p>
-    <div data-conref="../../assets/snippets/Note_tip_use_nullish_with_accessors.hts"> </div>
-    <p class="dropspot">To set a variable in a struct then you would do the following</p>
+    <p class="dropspot">見ての通り、変数そのものを供給するのではなく、変数と一緒に<em>文字列を</em>供給するのです。もし<span class="notranslate">struct</span> に指定された名前の変数がなければ、アクセサは値として <span class="inline">undefined</span> を返すことに注意してください。</p>
+    <p class="dropspot"><span class="notranslate">struct</span> で変数を設定するには、次のようにします。</p>
     <p class="code">struct[$ &quot;my_score&quot;] = 100;</p>
-    <p class="dropspot">As with getting a value, you supply the name of the variable to set as a string, and it will be set to the value given. If the variable name used doesn&#39;t exist in the struct, then it will be created and set to the given value.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">値の取得と同様に、設定する変数名を<span class="notranslate">string</span> として与えると、その変数に与えられた値が設定される。使用した変数名が<span class="notranslate">struct</span> に存在しない場合、その変数が作成され、指定された値に設定されます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>An important feature of accessors is the fact that they can be <i>chained</i> together. This means that if you have several nested data structures and/or arrays, there is no longer the need to use a variety of functions to get access to a value that is deep within the nested structure. For example, say you have an array, and each item in the array is a DS list, like this:</p>
+  <p> </p>
+  <p>アクセッサの重要な特徴として、アクセッサは<i>連結して</i>使用できることが挙げられます。つまり、いくつかのデータ構造や配列が入れ子になっている場合、入れ子構造の奥にある値にアクセスするために、様々な関数を使う必要がなくなります。例えば、配列があり、その配列の各項目が以下のようなDSリストであるとする。</p>
   <p class="code">array = array_create(3);<br />
     for (var i = 0; i &lt; 3; ++i;)<br />
     {<br />
@@ -137,12 +134,12 @@
         }<br />
     }
   </p>
-  <p>In the above code we&#39;ve created a 3 item array and assigned a DS list to each of them, and then we&#39;ve populated the different lists with the instance IDs of various objects in the game. Now, to access an ID in one of the lists we can do the following:</p>
+  <p>上記のコードでは、3つのアイテムの配列を作成し、それぞれにDSリストを割り当てました。そして、異なるリストに、ゲーム内のさまざまな<span class="notranslate">objects</span> のインスタンスIDを入力しました。さて、リストの1つのIDにアクセスするには、次のようにします。</p>
   <p class="code">var _list = array[0];<br />
     var _id = ds_list_find_value(_list, 0);</p>
-  <p>However, you can do the same thing using chained accessors in a much cleaner way that uses less code:</p>
+  <p>しかし、連鎖したアクセサを使うことで、より少ないコードで、よりクリーンな方法で同じことができます。</p>
   <p class="code">var _id = array[0][| 0];</p>
-  <p>You can chain multiple accessors together in this way and they can be of multiple types to get access to the information stored in each part of the nested structure. Here are some more examples:</p>
+  <p>このように複数のアクセッサを連鎖させることができ、それらは入れ子構造の各部分に格納された情報へのアクセスを得るために複数の型を持つことができます。以下に、さらにいくつかの例を示します。</p>
   <p class="code">// Access a grid that has been added to a list that is part of a map:<br />
     var _a = data[? &quot;lists&quot;][| 0][# 0, 0];<br />
     <br />
@@ -152,32 +149,33 @@
     // Access a map nested in a grid nested in a list nested in an array:<br />
     data[0][| 10][# 3, 4][? &quot;key&quot;] = &quot;hello world&quot;;
   </p>
-  <p>Using chained accessors for things not only means you can write more compact code, it will also permit you to use iteration (for example, using a <a href="Language_Features/for.htm"><span class="inline">for</span></a> loop) and other techniques to access your data in a cleaner and more intuitive manner.</p>
-  <p>It is worth noting that when using accessors in this way, you should always use the <span class="inline2">@</span> accessor for arrays, as otherwise you will be adding extra overhead to any actions being performed. As mentioned above, by default arrays are passed by reference into functions and then use the &quot;copy on write&quot; behaviour when modified. However, if the array is part of a chain, then the previous item in the chain will be updated with the copied array and the &quot;original&quot; will be deleted. For example, doing something like this:</p>
+  <p>連鎖したアクセサを使うことで、よりコンパクトなコードが書けるだけでなく、イテレーション(例) <a href="Language_Features/for.htm"><span class="inline">for</span></a>ループ）などを用いて、よりすっきりと直感的にデータにアクセスすることができます。</p>
+  <p>このようにアクセサを使用する場合、配列には常に <span class="inline">@</span> アクセサを使用する必要があります。そうしないと、実行中のアクションに余分なオーバーヘッドを追加することになるからです。上述したように、デフォルトでは配列は関数に参照渡しされ、変更時には「コピーオンライト」動作が使用されます。しかし、配列がチェーンの一部である場合は、チェーンの前の項目がコピーされた配列で更新され、「元の」配列は削除されます。例えば、次のようなことをします。</p>
   <p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][0] = 200;
   </p>
-  <p>achieves the same results as doing this:</p>
+  <p>は、これを行うのと同じ結果を得ることができます。</p>
   <p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][@ 0] = 200;
   </p>
-  <p>However, the second example is better as it works without the unnecessary overhead of copying the entire array first.</p>
-  <p> </p>
-  <p> </p>
+  <p>しかし、2番目の例の方が、最初に配列全体をコピーする不要なオーバーヘッドを伴わずに動作するため、より優れています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Language_Features.htm">Language Features</a></div>
+        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="Language_Features.htm">言語機能</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 div

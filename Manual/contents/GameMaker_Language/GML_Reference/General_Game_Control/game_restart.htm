@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_restart</title>
+  <title>ゲーム再開</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function game_restart" />
   <meta name="rh-index-keywords" content="game_restart" />
@@ -14,39 +14,39 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">game_restart</span></h1>
-  <p>With this function you can restart the game. This is essentially the same as running the game for the first time and so the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game Start Event</a> will be triggered, <i>as well as</i> the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>.</p>
+  <h1>ゲーム再開</h1>
+  <p>この機能を使うと、ゲームを再開することができます。これは基本的にゲームを初めて起動するのと同じで、<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game Start</a> <i>Eventと</i> <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>がトリガーされます。</p>
   <div data-conref="../../../assets/snippets/changing_room_stops_instance_creation.hts"> </div>
-  <p>It should be noted that certain things will <b>not</b> be reset when this function is called:</p>
+  <p>この関数が呼ばれたとき、特定のものがリセットさ<b>れない</b>ことに注意する必要があります。</p>
   <ul class="colour">
-    <li>Global variables will not be re-initialised unless explicitly coded as such - for example, the built-in global variable <span class="inline">score</span> will not start at zero after a game restart if it has been modified in the game already.</li>
-    <li>The GPU state will not be changed (so if you have set the draw colour or alpha, for example, it will remain at the changed value).</li>
-    <li>The game speed will remain at whatever you set it in your game code (if you changed it this change will be perpetuated).</li>
-    <li>Any asset from the Asset Browser that has been changed at run time within the game - for example if you change the origin for a sprite resource or shift the position of a path resource - will <i>not</i> be reset.</li>
-    <li>Dynamic resources like buffers, surfaces, data-structures or imported sprites will also not be cleaned up or removed (although you may lose references to them, so take care when using this function to either use global references for the dynamic resource, or to clean them up before the function is called).</li>
+    <li>グローバル変数は、そのように明示的にコーディングされない限り、再初期化されません。例えば、組み込みのグローバル変数 <span class="inline">score</span> は、ゲーム内ですでに変更されている場合、ゲーム再起動後にゼロから始まることはありません。</li>
+    <li>GPUの状態は変更されません（したがって、たとえば描画色やアルファを設定した場合、変更された値のままです）。</li>
+    <li>ゲームスピードは、ゲームコードで設定したとおりになります（変更した場合、この変更は永続的に適用されます）。</li>
+    <li><span class="notranslate">asset</span> Browser の<span class="notranslate">Asset</span> は、ゲーム内で実行時に変更された場合（たとえば、<span class="notranslate">sprite</span> リソースの原点を変更したり、<span class="notranslate">path</span> リソースの位置を移動した場合）、リセットされることは<i>ありません</i>。</li>
+    <li><span class="notranslate">buffers</span> 、サーフェス、データ構造、インポートされた<span class="notranslate">sprites</span> などの動的リソースもクリーンアップまたは削除されません（ただし、それらへの参照は失われる可能性があるので、この関数を使うときは、動的リソースにグローバル参照を使用するか、この関数が呼ばれる前にそれらをクリーンアップしておくように注意してください）。</li>
     <br />
-    <br />
-     
+     
   </ul>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">game_restart</span>();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <h4>構文です。</h4>
+  <p class="code">game_restart();</p>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) <span data-field="title" data-format="default">game_restart</span>();</p>
-  <p>This would restart the game when the player presses the &quot;R&quot; key.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) game_restart();</p>
+  <p>これにより、プレイヤーが &quot;R &quot;キーを押したときにゲームが再開されるようになります。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Game_Control.htm">General Game Control</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="game_change.htm">game_change</a></div>
+        <div style="float:left">戻る<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
+        <div style="float:right">次のページ <a href="game_load.htm"><span class="notranslate">game_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_restart

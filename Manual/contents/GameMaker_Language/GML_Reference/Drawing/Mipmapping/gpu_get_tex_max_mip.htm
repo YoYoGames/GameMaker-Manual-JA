@@ -6,7 +6,7 @@
   <title>gpu_get_tex_max_mip</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_get_tex_max_mip" />
   <meta name="rh-index-keywords" content="gpu_get_tex_max_mip" />
@@ -16,31 +16,31 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_get_tex_max_mip</h1>
-  <p>With this function you can get the currently set maximum mipmap level which is to be used, where a value of 0 is the highest resolution, 1 is to use the first mipmap, 2 is the second etc... Note that this can be quite useful for avoiding bleeding artifacts when rendering textures, for example, setting the texture page border to 8px and then setting the max mipmap level to 3 will ensure you don&#39;t get any bleeding problems at greater render distances.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数では、現在設定されている最大ミップマップレベルを取得できます。値 0 は最高解像度、1 は最初のミップマップ、2 は 2 番目のミップマップを使用します。<span class="notranslate">textures</span>例えば、<span class="notranslate">texture</span> のページボーダーを 8px に設定し、最大ミップマップレベルを 3 に設定すると、レンダリング距離が長くてもにじみの問題が発生しないことが確認されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gpu_get_tex_max_mip();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Real"></span> (default: 16)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if gpu_get_tex_max_mip() != 4<br />
     {<br />
         gpu_set_tex_max_mip(4);<br />
     }</p>
-  <p>The above code will check the current maximum mipmap level and if it is not 4 it is set to 4.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、現在の最大ミップマップレベルをチェックし、それが4でなければ4に設定されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mipmapping.htm">Mipmapping</a></div>
-        <div style="float:right">Next: <a href="gpu_get_tex_max_mip_ext.htm">gpu_get_tex_max_mip_ext</a></div>
+        <div style="float:left">戻る<a href="Mipmapping.htm">ミップマッピング</a></div>
+        <div style="float:right">次のページ <a href="gpu_get_tex_max_mip_ext.htm"><span class="notranslate">gpu_get_tex_max_mip_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_tex_max_mip

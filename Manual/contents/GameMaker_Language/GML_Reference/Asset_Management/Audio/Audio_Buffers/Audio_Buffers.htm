@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Audio Buffers</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>オーディオバッファ</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Buffers" />
   <meta name="rh-index-keywords" content="" />
@@ -14,47 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Audio Buffers</h1>
-  <p>You can use <b>audio buffers</b> to load, save and manipulate audio files within your games. These buffers are created beforehand using the appropriate <a href="../../../Buffers/Buffers.htm">buffer functions</a> and then you can use the following functions to create a sound to use in your project:</p>
+  <h1>オーディオバッファ</h1>
+  <p><b>オーディオバッファを</b>使用して、ゲーム内でオーディオファイルをロード、保存、操作することができます。これらの<span class="notranslate">buffers</span> は、適切な<a href="../../../Buffers/Buffers.htm">バッファ関数を</a>使用して事前に作成され、以下の関数を使用してプロジェクトで使用するサウンドを作成することができます。</p>
   <ul class="colour">
-    <li><a href="audio_create_buffer_sound.htm">audio_create_buffer_sound</a></li>
-    <li><a href="audio_free_buffer_sound.htm">audio_free_buffer_sound</a></li>
+    <li><a href="audio_create_buffer_sound.htm"><span class="notranslate">audio_create_buffer_sound</span></a></li>
+    <li><a href="audio_free_buffer_sound.htm"><span class="notranslate">audio_free_buffer_sound</span></a></li>
   </ul>
-  <p> </p>
-  <p>Note that once you have created a sound from an audio buffer, you are <i>not</i> creating a new sound in memory, but rather pointing to the position within the buffer where the sound is stored. You should not change this buffer after a sound has been associated with it otherwise you will get unexpected results, and you cannot delete the buffer while a sound is associated with it. Instead, free the sound (or sounds) first then delete the buffer.</p>
-  <p>Once you have created your new audio resource from a buffer, you can use its index value in any of the regular audio functions to play it, change its gain or pitch, pause it, etc. Note that the buffer used to load the audio <b>can only support PCM sounds</b>, so formats like OGG will not be supported.</p>
-  <h2>Audio Buffer Queues</h2>
-  <p>Another feature of buffered audio is that you can use a buffer to create a queue of audio which can then be streamed to the device running your project. An audio queue takes a regular buffer which you have previously filled with audio data, and enables you to &quot;point&quot; to parts of it and tell <span data-keyref="GameMaker Name">GameMaker</span> to stream the audio in a given order from that buffer. The available functions for audio queues are:</p>
+  <p> </p>
+  <p>オーディオ<span class="notranslate">buffer</span> からサウンドを作成した場合、メモリ内に新しいサウンドを作成する<i>のではなく</i>、サウンドが格納されている<span class="notranslate">buffer</span> 内の位置を指していることに注意してください。サウンドが関連付けられた後にこの<span class="notranslate">buffer</span> を変更すると、予期せぬ結果を招くことがあります。また、サウンドが関連付けられている間は、<span class="notranslate">buffer</span> を削除することはできません。その代わりに、まずサウンド（または複数のサウンド）を解放してから、<span class="notranslate">buffer</span> を削除します。<span class="notranslate">buffer</span> から新しいオーディオリソースを作成したら、そのインデックス値を使って、通常のオーディオ関数で再生、ゲインやピッチの変更、一時停止などを行うことができます。オーディオの読み込みに使用される<span class="notranslate">buffer</span> は、<b>PCM サウンドのみをサポートする</b>ため、OGG のようなフォーマットはサポートされないことに注意してください。</p>
+  <p>バッファードオーディオのもう一つの特徴は、<span class="notranslate">buffer</span> を使ってオーディオの<span class="notranslate">queue</span> を作成し、プロジェクトを実行しているデバイスにストリーミングすることができることです。オーディオ<span class="notranslate">queue</span> は、あらかじめオーディオデータを入れておいた通常の<span class="notranslate">buffer</span> 、その一部を「ポイント」して、その<span class="notranslate">buffer</span> から指定された順番でオーディオをストリーミングするよう<span data-keyref="GameMaker Name">GameMakerに</span>指示することができるものです。オーディオ<span class="notranslate">queues</span> で利用可能な関数は以下の通りです。</p>
   <ul class="colour">
-    <li><a href="audio_create_play_queue.htm">audio_create_play_queue</a></li>
-    <li><a href="audio_free_play_queue.htm">audio_free_play_queue</a></li>
-    <li><a href="audio_queue_sound.htm">audio_queue_sound</a></li>
+    <li><a href="audio_create_play_queue.htm"><span class="notranslate">audio_create_play_queue</span></a></li>
+    <li><a href="audio_free_play_queue.htm"><span class="notranslate">audio_free_play_queue</span></a></li>
+    <li><a href="audio_queue_sound.htm"><span class="notranslate">audio_queue_sound</span></a></li>
   </ul>
-  <p>Once a queue has been created, you can then use the returned queue index just as you would the sound index for any normal sound to play it, pause it, restart it, or change it&#39;s gain and pitch. The only thing you cannot do is get the track length or set the track position, but other than that, an audio queue can be used just like any other sound. You should also note that some of the audio queue functions will also trigger an <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Event</a>.</p>
-  <h2>Recording</h2>
-  <p>Audio buffers will also permit you to record sound from any of the available sources (like microphones or the OS), which can then be queued and streamed using the above functions (for example). Recording audio will trigger an <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">Audio Recording Asynchronous Event</a> which will contain specific information about what is being recorded.<br />
-    <br />
-    For recording audio, the following functions are available:
+  <p> </p>
+  <p><span class="notranslate">queue</span> が作成されると、通常のサウンドのサウンドインデックスと同様に、返された<span class="notranslate">queue</span> のインデックスを使用して、再生、一時停止、再起動、ゲインやピッチを変更することができます。唯一できないことは、トラックの長さを取得したり、トラックの位置を設定することですが、それ以外は、オーディオ<span class="notranslate">queue</span> 、他のサウンドと同じように使用することができます。また、オーディオ<span class="notranslate">queue</span> の機能の中には、<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Eventを</a>トリガーするものがあることにも注意が必要です。</p>
+  <p>Audio<span class="notranslate">buffers</span> 、マイクやOSなどの音源を録音し、上記の機能を使ってキューイングやストリーミングを行うことも可能です（例）。オーディオを録音すると、録音される内容に関する特定の情報を含む<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">オーディオ録音非同期</a>イベントがトリガーされます。<br>
+    <br>
+    音声の録音には、以下の機能があります。
   </p>
   <ul class="colour">
-    <li><a href="audio_start_recording.htm">audio_start_recording</a></li>
-    <li><a href="audio_stop_recording.htm">audio_stop_recording</a></li>
-    <li><a href="audio_get_recorder_count.htm">audio_get_recorder_count</a></li>
-    <li><a href="audio_get_recorder_info.htm">audio_get_recorder_info</a></li>
+    <li><a href="audio_start_recording.htm"><span class="notranslate">audio_start_recording</span></a></li>
+    <li><a href="audio_stop_recording.htm"><span class="notranslate">audio_stop_recording</span></a></li>
+    <li><a href="audio_get_recorder_count.htm"><span class="notranslate">audio_get_recorder_count</span></a></li>
+    <li><a href="audio_get_recorder_info.htm"><span class="notranslate">audio_get_recorder_info</span></a></li>
   </ul>
-  <p> </p>
-  <p class="note"><b><span class="note">NOTE</span> </b>Most platforms <b>except HTML5</b> support recording audio in some form, but that does not mean that all devices will permit it, even if the platform does, so you should always check that the <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span> function returns a value greater than 0 to verify that recording devices are available before using the rest of the recording functions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p class="note"><b><span class="note">注意事項</span> </b><b>HTML5を除く</b>ほとんどのプラットフォームは何らかの形で音声の録音をサポートしていますが、プラットフォームが許可していても、すべてのデバイスが許可しているわけではありません。 <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span>関数は 0 より大きな値を返し、 残りの録音関数を使用する前に録音デバイスが利用可能であることを確認します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Audio_Synchronisation/Audio_Synchronisation.htm">Audio Synchronisation</a></div>
+        <div style="float:left">戻る<a href="../Audio.htm">オーディオ</a></div>
+        <div style="float:right">次へ<a href="../Audio_Synchronisation/Audio_Synchronisation.htm">オーディオの同期</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Buffers

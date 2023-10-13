@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Sprite Transformed</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>スプライトを変形して描画</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Sprite Transformed action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Sprite Transformed" />
@@ -14,72 +14,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /> Draw Sprite Transformed</h1>
-  <p>This function will draw the given sprite similar to the action <a href="Draw_Sprite.htm">Draw Sprite</a> but with additional options to change the scale, blending, rotation and frame of the sprite being drawn. Changing these values does <i>not</i> modify the resource in any way (only how it is drawn), and you can use any of the available <a href="../Instance/Set_Instance_Variable.htm">sprite property variables</a> instead of direct values for all the arguments in the function. The image below illustrates how different values affect the drawing of the sprite:</p>
+  <h1><img> Draw Transformed<span class="notranslate">Sprite</span> </h1>
+  <p>この関数は、<a href="Draw_Sprite.htm">Draw Sprite</a>と同様に<span class="notranslate">sprite</span> を描画しますが、描画する<span class="notranslate">sprite</span> のスケール、ブレンディング、回転、フレームを変更するオプションを追加します。これらの値を<i>変更しても</i>
+    また、関数内のすべての引数に直接値を指定する代わりに、利用可能な任意の<a href="../Instance/Set_Instance_Variable.htm">スプライトプロパティ変数を</a>使用することができます。下図は
+    値の違いによるスプライトの描画への影響</p>
+  <p><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /></p>
+  <p class="note"><b><span class="note">注意事項</span> </b>カラー ブレンディングは、WebGL が有効な場合にのみ HTML5 ターゲットに推奨されます。ただし、WebGL が有効でない場合でも、ブレンディング カラーを設定すれば、通常どおり<span class="notranslate">sprite</span> をブレンドします。ただし、この方法によるすべてのブレンディングは、複製を作成します。
+    <span class="notranslate">sprite</span> これは<span class="notranslate">cache</span> に保存され、必要なときに使用されます。これは最適とは程遠く、複数の色変更を使用する場合は、WebGL を有効にしない限り、ゲームのパフォーマンスが低下します。
+    <span class="notranslate">font</span> <span class="notranslate">cache</span> のサイズを制限する必要がある場合は、関数 <span class="inline"><span style="font-size:14px;"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm">sprite_set_cache_size()</a>.</span></p>
+  <p class="note"><b>注意</b>：このアクションは、各種<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">描画</a>イベントでのみ使用され、他の場所で使用しても何も描画されません。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
   <p><img alt="Transformed Sprite Examples" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/spr_ext.png" /></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Colour blending is only recommended for the HTML5 target when WebGL is enabled, although you can still set the blending colour if it is not enabled and it will blend the sprite as normal. However all blending in this way creates a duplicate sprite which is then stored in the cache and used when required. This is far from optimal and if you use multiple colour changes it will slow down your games performance unless you activate WebGL. if you do not wish to use WebGL, then you can set the font cache size to try and limit this should it be necessary using the function <span class="inline"><span style="font-size:14px;"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm">sprite_set_cache_size()</a>.</span></span></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Sprite Transformed Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Sprite_Transformed.png" /></p>
-  <h4>Arguments:</h4>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>描画する<span class="notranslate">sprite</span> </td>
       </tr>
       <tr>
-        <td>Frame</td>
-        <td>The sprite frame to draw (use the built in variable <span class="inline">image_index</span> for the current frame)</td>
+        <td><span class="notranslate">Frame</span></td>
+        <td>描画する<span class="notranslate">sprite</span> フレーム（現在のフレームは内蔵変数 <span class="inline">image_index</span> を使用します。）</td>
       </tr>
       <tr>
-        <td>X</td>
-        <td>The x position to draw at within the room</td>
+        <td><span class="notranslate">X</span></td>
+        <td>部屋内の描画位置（x</td>
       </tr>
       <tr>
-        <td>Y</td>
-        <td>The y position to draw at within the room</td>
+        <td><span class="notranslate">Y</span></td>
+        <td>部屋内の描画位置（Y</td>
       </tr>
       <tr>
-        <td>Scale X</td>
-        <td>The scale factor for the X axis (use the built in variable <span class="inline">image_xscale</span> for the current X scale)</td>
+        <td><span class="notranslate">Scale X</span></td>
+        <td>X軸のスケールファクター（現在のXスケールには内蔵の変数 <span class="inline">image_xscale</span> を使用します。）</td>
       </tr>
       <tr>
-        <td>Scale Y</td>
-        <td>The scale factor for the Y axis (use the built in variable <span class="inline">image_yscale</span> for the current Y scale)</td>
+        <td><span class="notranslate">Scale Y</span></td>
+        <td>Y軸のスケールファクター（現在のYスケールには内蔵の変数 <span class="inline">image_yscale</span> を使用します。）</td>
       </tr>
       <tr>
-        <td>Rotation</td>
-        <td>The draw angle for the sprite (from 0 to 360, rotating anticlockwise where 0 is to the right - use the built in variable <span class="inline">image_angle</span> for the current rotation)</td>
+        <td><span class="notranslate">Rotation</span></td>
+        <td><span class="notranslate">sprite</span> の描画角度 (0 から 360 まで。反時計回りに回転し、0 は右回り。現在の回転には組み込みの変数 <span class="inline">image_angle</span> を使用)</td>
       </tr>
       <tr>
-        <td>Colour</td>
-        <td>The colour to blend with the sprite (default is white, and you can use the built in variable <span class="inline">image_blend</span> for the current colour)</td>
+        <td><span class="notranslate">Colour</span></td>
+        <td><span class="notranslate">sprite</span> とブレンドする色 (デフォルトは白。内蔵の変数 <span class="inline">image_blend</span> を使って現在の色を指定することも可能)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Sprite Transformed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Sprite_Transformed.png" />The above action block code checks a variable and if it is set to <span class="inline">true</span> then the sprite is drawn with random scaling along the x and y axis and blended with the colour red, otherwise the sprite is drawn using the default transforms.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、変数をチェックし、それが <span class="inline">true</span> に設定されていれば、<span class="notranslate">sprite</span> を x 軸と y 軸に沿ってランダムにスケーリングし、赤の色でブレンドして描画します。それ以外の場合は、<span class="notranslate">sprite</span> をデフォルトのトランスフォームで描画します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Stacked_Sprites.htm">Draw Stacked Sprites</a></div>
+        <div style="float:left">戻る<a href="Drawing_Actions.htm">描画アクション</a></div>
+        <div style="float:right">次へ<a href="Draw_Stacked_Sprites.htm">スタックド・スプライトの描画</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Draw Sprite Transformed
+Action - Draw <span class="notranslate">Sprite</span> Transformed
 -->
   <!-- TAGS
 action_draw_sprite_transformed

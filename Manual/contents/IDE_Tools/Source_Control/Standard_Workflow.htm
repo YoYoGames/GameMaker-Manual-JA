@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Standard Workflow</title>
+  <title>標準的なワークフロー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers Source Control standard workflow
 " />
@@ -15,40 +15,40 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Standard Workflow</h1>
-  <p>As you work on your project, you will naturally create sprites, edit scripts, delete timelines, and whatever else is required as your project develops over time. These are all actions which you may want to keep track of and get back should something go wrong. This is the main reason to use Source Control - so that any accidents can be reverted - and we will quickly take you through the basic workflow from start so you understand how this works.</p>
-  <p>Starting from the beginning, create a new GML project and then activate source control through the <a href="../../Settings/Game_Options.htm">main options</a>. This gives us access to the Source Control menu on the top, so we&#39;ll immediately go and select <strong>Create Project Repository</strong>. If you look at the room resources, you can see that the default room has gained a red exclamation <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" />, meaning that it has been <strong>modified </strong>from it&#39;s last state. If we had other resources in the project, you&#39;d see that they all have the same icon as shown in the image below:</p>
-  <p><img alt="Source Control Modified Assets" class="center" src="../../assets/Images/IDE Tools/SCM_ModifiedState.png" />We now have the option of either committing the blank project as it is, or getting it to a base state. For now, we&#39;ll do our first commit so click <strong>Source Control</strong> &gt; <strong>Commit Changes</strong>. We&#39;ll now get a new window opened which is split into three areas:</p>
-  <p><img alt="Source Control Commit Window" class="center" src="../../assets/Images/IDE Tools/SCM_CommitWindow.png" /></p>
+  <h1>標準的なワークフロー</h1>
+  <p>プロジェクトに取り組んでいるうちに、自然に<span class="notranslate">sprites</span> を作成したり、<span class="notranslate">scripts</span> を編集したり、<span class="notranslate">timelines</span> を削除したり、プロジェクトが時間とともに発展するのに必要なことは何でもするようになります。これらはすべて、何か問題が発生したときに追跡し、元に戻したいと思うような行動です。これが、<span class="notranslate">Source Control</span> を使用する主な理由です。事故があっても元に戻せるように、基本的なワークフローを最初から手早く説明し、この仕組みを理解していただきます。</p>
+  <p>最初から、新しい<span class="notranslate">GML</span> プロジェクトを作成し、<a href="../../Settings/Game_Options.htm">メインオプションから</a> <span class="notranslate">source control</span> を有効にします。これで上部の<span class="notranslate">Source Control</span> メニューにアクセスできるようになりましたので、早速「<strong>プロジェクトリポジトリを作成</strong>」を選択します。<span class="notranslate">room</span> のリソースを見てみると、デフォルトの<span class="notranslate">room</span> に赤いエクスクラメーション<img> がついています。もし、プロジェクトに他のリソースがあれば、下の画像のようにすべて同じアイコンになっているのがわかると思います。</p>
+  <p><img>ここで、空白のプロジェクトをそのままコミットするか、ベースとなる状態にするか、どちらかを選択することになります。とりあえず、最初のコミットを行うので、<strong>Source Control</strong>&gt;<strong>Commit Changes</strong> をクリックします。すると、3つのエリアに分かれた新しいウィンドウが表示されます。</p>
+  <p><img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /></p>
   <ul class="colour">
-    <li><strong>Staged Changes</strong>: This represent the changes which will be committed to source. This will likely be blank, but it may show a Main Options change, which is fine.</li>
-    <li><strong>Unstaged Changes</strong>: This shows the files that have changed, but that we haven&#39;t told Git that we want to commit them - they&#39;re &quot;pending&quot; changes.</li>
-    <li><strong>Commit Message</strong>: This is a note that we can add to explain what the changes are.</li>
+    <li><strong>段階的な変更</strong>。これは、ソースにコミットされる変更を表します。これはおそらく空白ですが、メインオプションの変更が表示されるかもしれませんので、それでも構いません。</li>
+    <li><strong>未段階の変更</strong>。<span class="notranslate">Git</span> にコミットすることを伝えていない、「保留」になっている変更点が表示されます。</li>
+    <li><strong>コミットメッセージ</strong>。これは、変更が何であるかを説明するために追加できるメモです。</li>
   </ul>
-  <p>For now, click the <strong>Stage All</strong> button, as we want to commit all the changes, and type something like &quot;First Commit!&quot; into the Commit Message and click <strong>Commit</strong>. All our resources should now have a green tick<img alt="SCM Committed Icon" class="icon" src="../../assets/Images/Icons/SCM_Committed.png" /> , meaning there&#39;s no modifications found.</p>
-  <p>It is worth noting that as you work within this window, the various <strong>Staged </strong>and <strong>Unstaged </strong>messages will be prefixed by a symbol. The symbol being used will vary depending on the operation and file, with the following being used:</p>
+  <p>とりあえず、すべての変更をコミットしたいので、<strong>Stage All</strong>ボタンをクリックし、Commit Message に &quot;First Commit!&quot; などと入力し、<strong>Commit を</strong>クリックします。これで、すべてのリソースに緑のチェックマーク（<img> ）がつきました。これは、変更が見つからなかったことを意味します。</p>
+  <p>このウィンドウで作業する際、様々な<strong>Stagedと </strong> <strong>Unstagedの </strong>メッセージの前に記号が表示されることに注意してください。使用される記号は操作やファイルによって異なり、次のようなものが使用されます。</p>
   <ul class="colour">
-    <li><span class="inline">[...]</span> - Staged Change (was previously [A])</li>
-    <li><span class="inline">[+]</span> - Newly Added</li>
-    <li><span class="inline">[-&gt;]</span> - Renamed/Moved</li>
-    <li><span class="inline">[-]</span> - Removed</li>
-    <li><span class="inline">[M]</span> - Unstaged Changes</li>
-    <li><span class="inline">[?]</span> - Untracked File</li>
-    <li><span class="inline">[!]</span> - Missing File</li>
+    <li><span class="inline">[...]</span> - ステージチェンジ（従来は[A]）。</li>
+    <li><span class="inline">[+]</span> - 新たに追加されたもの</li>
+    <li><span class="inline">[-&gt;]</span> - 名称変更・移動</li>
+    <li><span class="inline">[-]</span> - 削除</li>
+    <li><span class="inline">[M]</span> - アンステージド・チェンジ</li>
+    <li><span class="inline">[?]</span> - 未トラック化ファイル</li>
+    <li><span class="inline">[!]</span> - 欠落ファイル</li>
   </ul>
-  <p>Our work process can now begin, and we can start to build our project and save and commit changes, just as we&#39;ve done in the paragraphs above.</p>
-  <p>After working for a while, you may want to check and see what you&#39;ve committed at any given time, and so for that you&#39;ll want to open the <strong>Commit History</strong>. To open the history window you simply go to <strong>Source Control</strong> &gt; <strong>View History</strong> which opens another window with three panes:</p>
-  <p><img alt="Source Control History Window" class="center" src="../../assets/Images/IDE Tools/SCM_HistoryWindow.png" />The top pane describes the commits, the middle pane describes the comment given to the selected commit, and the bottom pane describes the files that have been modified in this commit. Note that if you have set up a <a href="External_Merge_Diff_Tools.htm">Diff Tool</a>, then double-clicking on any file in this window will open the diff tool and you&#39;ll be able to see the changes between the files.</p>
-  <p> </p>
-  <p> </p>
+  <p>これで私たちの作業プロセスは開始できます。上の段落で行ったのと同じように、プロジェクトを構築し、変更を保存してコミットすることができるのです。</p>
+  <p>しばらく作業をしていると、その時々にコミットした内容を確認したくなることがあります。そのような場合には、<strong>コミット履歴を</strong>開くとよいでしょう。履歴ウィンドウを開くには、<strong>Source Control</strong>&gt;<strong>View History</strong>と進むと、3つのペインからなる別のウィンドウが表示されます。</p>
+  <p><img>上のペインにはコミット、中央のペインには選択したコミットに付けられたコメント、下のペインにはこのコミットで変更されたファイルが表示されます。<a href="External_Merge_Diff_Tools.htm">Diff Tool</a> を設定している場合は、このウィンドウ内の任意のファイルをダブルクリックすると diff ツールが起動し、ファイル間の変更点を見ることができることに注意してください。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Reverting_Files.htm">Reverting Files</a> </div>
+        <div style="float:left">戻る<a href="../Source_Control.htm">ソースコントロール</a></div>
+        <div style="float:right">次へ<a href="Reverting_Files.htm">ファイルを元に戻す</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Workflow

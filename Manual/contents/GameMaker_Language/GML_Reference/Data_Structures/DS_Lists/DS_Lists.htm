@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>DS Lists</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>DSリスト</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for DS Lists" />
   <meta name="rh-index-keywords" content="" />
@@ -14,53 +14,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>DS Lists</h1>
-  <p>A DS list is a data-structure that stores information sequentially as it is added (much like an <a href="../../../GML_Overview/Arrays.htm">array</a>). DS lists are very flexible data structures that permit you to add values at the end or insert them somewhere in the middle of the list, as well as giving you the ability to shuffle the order (to randomise the values) or sort them in an ascending or descending order.</p>
-  <p class="note"><strong><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span></strong> It is recommended to use <a href="../../../GML_Overview/Arrays.htm">arrays</a> over DS lists as they have similar features, are easier to use and are garbage collected automatically.</p>
-  <p>When accessing DS list data structures, you should always try to use <b>integer values</b> for the list position, and all non-integer indices will be floored by <span data-keyref="GameMaker Name">GameMaker</span> if you do not. If that is not what you require, then you will need to do the rounding yourself previously before passing the index that you wish to check.</p>
-  <div data-conref="../../../../assets/snippets/Note_DS_Destroy_When_No_Longer_Needed.hts"> </div>
-  <p>Apart from the specific functions listed below you can all use an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a> (called an <i>accessor</i>) to add or modify the contents of your DS list. This accessor looks similar to a 1D array with the following syntax:</p>
+  <h1>DSリスト</h1>
+  <p>DSリストは、情報を追加しながら順次格納していくデータ構造である（<a href="../../../GML_Overview/Arrays.htm">配列と</a>よく似ている）。DSリストは非常に柔軟なデータ構造であり、リストの末尾に値を追加したり、途中に値を挿入したり、順序をシャッフルしたり（値をランダムにする）、昇順や降順に並べ替えたりすることが可能です。</p>
+  <p class="note"><strong>注</strong>：DSリストよりも<a href="../../../GML_Overview/Arrays.htm">配列を</a>使用することをお勧めします。同様の機能を持ち、使いやすく、自動的にガベージコレクションが行われるからです。</p>
+  <p>DSリストデータ構造にアクセスする場合、リストの位置には常に<b>整数値を</b>使うようにしなければならない。そうしないと、非整数のインデックスはすべて<span data-keyref="GameMaker Name">GameMakerによって</span>フロアリングされることになる。もし、そうでない場合は、チェックしたいインデックスを渡す前に、丸め処理を自分で行う必要がある。</p>
+  <p class="note"><b>注</b>：すべての動的リソースと同様に、データ構造はメモリを消費します。したがって、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>必ず</b>破棄してください。</p>
+  <p>以下に示す特定の関数とは別に、DS リストの内容を追加したり変更したりするために、<a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">式</a>（<i>アクセッサと</i>呼ばれる）を使用することができます。このアクセサは 1 次元配列に似ており、以下のような構文になっています。</p>
   <p class="code">list_index[| index]</p>
-  <p>You can find more information, plus examples, from from the GML Overview page on <a href="../../../GML_Overview/Accessors.htm">Accessors</a>.</p>
-  <p>The following functions exist that deal with DS lists:</p>
+  <p><a href="../../../GML_Overview/Accessors.htm">Accessors</a> の<span class="notranslate">GML</span> Overview ページに詳細な情報とサンプルが掲載されています。</p>
+  <p>DSリストを扱う機能として、以下のものがある。</p>
   <ul class="colour">
-    <li><a href="ds_list_create.htm">ds_list_create</a></li>
-    <li><a href="ds_list_destroy.htm">ds_list_destroy</a></li>
-    <li><a href="ds_list_clear.htm">ds_list_clear</a></li>
-    <li><a href="ds_list_empty.htm">ds_list_empty</a></li>
-    <li><a href="ds_list_size.htm">ds_list_size</a></li>
-    <li><a href="ds_list_add.htm">ds_list_add</a></li>
-    <li><a href="ds_list_set.htm">ds_list_set</a></li>
-    <li><a href="ds_list_delete.htm">ds_list_delete</a></li>
-    <li><a href="ds_list_find_index.htm">ds_list_find_index</a></li>
-    <li><a href="ds_list_find_value.htm">ds_list_find_value</a></li>
-    <li><a href="ds_list_insert.htm">ds_list_insert</a></li>
-    <li><a href="ds_list_replace.htm">ds_list_replace</a></li>
-    <li><a href="ds_list_shuffle.htm">ds_list_shuffle</a></li>
-    <li><a href="ds_list_sort.htm">ds_list_sort</a></li>
-    <li><a href="ds_list_copy.htm">ds_list_copy</a></li>
-    <li><a href="ds_list_read.htm">ds_list_read</a></li>
-    <li><a href="ds_list_write.htm">ds_list_write</a></li>
+    <li><a href="ds_list_create.htm"><span class="notranslate">ds_list_create</span></a></li>
+    <li><a href="ds_list_destroy.htm"><span class="notranslate">ds_list_destroy</span></a></li>
+    <li><a href="ds_list_clear.htm"><span class="notranslate">ds_list_clear</span></a></li>
+    <li><a href="ds_list_empty.htm"><span class="notranslate">ds_list_empty</span></a></li>
+    <li><a href="ds_list_size.htm"><span class="notranslate">ds_list_size</span></a></li>
+    <li><a href="ds_list_add.htm"><span class="notranslate">ds_list_add</span></a></li>
+    <li><a href="ds_list_set.htm"><span class="notranslate">ds_list_set</span></a></li>
+    <li><a href="ds_list_delete.htm"><span class="notranslate">ds_list_delete</span></a></li>
+    <li><a href="ds_list_find_index.htm"><span class="notranslate">ds_list_find_index</span></a></li>
+    <li><a href="ds_list_find_value.htm"><span class="notranslate">ds_list_find_value</span></a></li>
+    <li><a href="ds_list_insert.htm"><span class="notranslate">ds_list_insert</span></a></li>
+    <li><a href="ds_list_replace.htm"><span class="notranslate">ds_list_replace</span></a></li>
+    <li><a href="ds_list_shuffle.htm"><span class="notranslate">ds_list_shuffle</span></a></li>
+    <li><a href="ds_list_sort.htm"><span class="notranslate">ds_list_sort</span></a></li>
+    <li><a href="ds_list_copy.htm"><span class="notranslate">ds_list_copy</span></a></li>
+    <li><a href="ds_list_read.htm"><span class="notranslate">ds_list_read</span></a></li>
+    <li><a href="ds_list_write.htm"><span class="notranslate">ds_list_write</span></a></li>
   </ul>
-  <p> </p>
-  <p>Ds lists can be used hold <a href="../DS_Maps/DS_Maps.htm">DS maps</a> and other DS lists too, and so we have some special functions that are used to &quot;flag&quot; or &quot;mark&quot; positions within the list as holding these data structures. In general this is not required, but it has the advantage of automatically garbage collecting (destroying) the marked data structures when the parent list is destroyed, and it&#39;s also required when used in conjunction with the <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> function so that the list and it&#39;s data is properly encoded. The functions for this are:</p>
+  <p> </p>
+  <p>DS リストは、<a href="../DS_Maps/DS_Maps.htm">DS マップや</a>他の DS リストを保持するために使われることもあり、 そのため、これらのデータ構造を保持するリスト内の位置を「フラグ」または 「マーク」するために使われるいくつかの特殊関数があります。一般に、これは必須ではありませんが、親リストが破壊されたときに マークされたデータ構造を自動的にガベージコレクションする (破壊する) という利点がありますし、また <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>関数は、リストとそのデータが適切にエンコードされるようにします。そのための関数が</p>
   <ul class="colour">
-    <li><a href="ds_list_mark_as_list.htm">ds_list_mark_as_list</a></li>
-    <li><a href="ds_list_mark_as_map.htm">ds_list_mark_as_map</a></li>
-    <li><a href="ds_list_is_list.htm">ds_list_is_list</a></li>
-    <li><a href="ds_list_is_map.htm">ds_list_is_map</a></li>
+    <li><a href="ds_list_mark_as_list.htm"><span class="notranslate">ds_list_mark_as_list</span></a></li>
+    <li><a href="ds_list_mark_as_map.htm"><span class="notranslate">ds_list_mark_as_map</span></a></li>
+    <li><a href="ds_list_is_list.htm"><span class="notranslate">ds_list_is_list</span></a></li>
+    <li><a href="ds_list_is_map.htm"><span class="notranslate">ds_list_is_map</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a href="../DS_Maps/DS_Maps.htm">DS Maps</a></div>
+        <div style="float:left">戻る<a href="../Data_Structures.htm">データ構造</a></div>
+        <div style="float:right">次へ<a href="../DS_Maps/DS_Maps.htm">DSマップ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 DS Lists
