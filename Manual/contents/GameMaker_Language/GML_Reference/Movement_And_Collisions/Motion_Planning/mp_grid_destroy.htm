@@ -6,7 +6,7 @@
   <title>mp_grid_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function mp_grid_destroy" />
   <meta name="rh-index-keywords" content="mp_grid_destroy" />
@@ -15,47 +15,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>mp_grid_destroy</h1>
-  <p>You can use this function to destroy the indicated mp_grid (as defined by the function <a href="mp_grid_create.htm"><span class="inline">mp_grid_create()</span></a>) and free up the memory allocated it. It is <i>essential</i> that you call this whenever the MP grid is finished with or you could potentially get a memory leak, meaning that your game will slow down over time and eventually crash.</p>
-  <p class="note"><b>NOTE</b>: Using <span class="inline">mp_grid_*</span> functions on a grid after it has been destroyed will result in an error.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、指示された mp_grid を破棄するために使用します(関数 <a href="mp_grid_create.htm"><span class="inline">mp_grid_create()</span></a>に割り当てられたメモリを解放します。MPグリッドが終了するたびにこれを呼び出すことが<i>重要</i>です。さもないと、メモリリークが発生する可能性があり、時間とともにゲームの動作が遅くなり、最終的にはクラッシュすることになります。</p>
+  <p class="note"><b>注</b>：グリッドが破壊された後に <span class="inline">mp_grid_*</span> 関数を使用すると、エラーになります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">mp_grid_destroy(id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>id</td>
+        <td><span class="notranslate">id</span></td>
         <td><span data-keyref="Type_ID_MP_Grid">MP Grid ID</span></td>
-        <td>Index of the mp_grid that is to be destroyed</td>
+        <td><span class="notranslate">Index of the mp_grid that is to be destroyed</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if timer = 0<br />
     {<br />
         mp_grid_destroy(grid);<br />
         room_goto(rm_Menu);<br />
     }</p>
-  <p>The above code will destroy the mp_grid indexed in the variable &quot;grid&quot; if the variable &quot;timer&quot; is equal to 0, and then goto another room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、変数 &quot;timer&quot; が 0 の場合、変数 &quot;grid&quot; でインデックスされた mp_grid を破壊し、別の<span class="notranslate">room</span> に移動します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
-        <div style="float:right">Next: <a href="mp_grid_path.htm">mp_grid_path</a></div>
+        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ <a href="mp_grid_path.htm"><span class="notranslate">mp_grid_path</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_grid_destroy

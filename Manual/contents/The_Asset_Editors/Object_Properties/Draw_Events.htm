@@ -1,78 +1,110 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Events</title>
+  <title>抽選イベント</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the draw event." />
   <meta name="rh-index-keywords" content="Objects - Draw Events" />
   <meta name="search-keywords" content="draw event,draw begin,draw end,pre-draw,post draw,draw GUI,draw order" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Draw Events</h1>
-  <p><img alt="The Draw Event" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Draw.png" />The Draw event category is the one that has all the events that governs what you see on the screen when you run your game. It is split into various separate events to better handle the different drawing requirements for your game, and the image below illustrates the order in which each event is performed:</p>
-  <p><img alt="Object Editor Draw Diagram" class="center" src="../../assets/Images/Asset_Editors/Editor_Events_DrawOrder.png" />The normal Draw event falls into three sub-types: The <strong>Draw Begin</strong>, the standard <strong>Draw</strong> and the <strong>Draw End</strong> events. In general, you will only need to use the standard Draw event and you should be aware that all instances in a room will have this event triggered each step of the game, so this event will always be called as long as the instance has the <strong>visible </strong>flag set to true. It is important to understand that even if you have defined nothing for this sub-event in the object properties (ie: no code nor actions), <em>if the object has a sprite assigned it will still have a draw event which will be triggered</em>. This is because <span data-keyref="GameMaker Name">GameMaker</span> has two ways to draw things in the Draw event:</p>
+  <h1>抽選会イベント</h1>
+  <p><img>描画イベントカテゴリは、ゲームを実行したときに画面に表示されるものを支配するすべてのイベントを持つものです。このイベントは、様々な
+    下図は、各イベントが実行される順番を示したものです。</p>
+  <p><img>通常のDrawイベントは3つのサブタイプに分類される。<strong>Draw Begin</strong>、標準の<strong>Draw</strong>、そして
+   <strong>Draw End</strong>イベント。一般的には、標準的なDrawイベントのみを使用する必要があります。また、<span class="notranslate">room</span> のすべてのインスタンスは、ゲームの各ステップでこのイベントがトリガーされるため、このイベントが常に呼び出されることに注意してください。
+    インスタンスの<strong>visible </strong>フラグがtrueに設定されている場合。<span class="notranslate">object</span> のプロパティでこのサブイベントを何も定義していなくても（つまり、コードもアクションもない）、<em> <span class="notranslate">object</span> に<span class="notranslate">sprite</span> が割り当てられていれば、描画イベントがトリガーさ</em>れることを理解することが重要です。
+    これは、<span data-keyref="GameMaker Name">GameMakerが</span>Drawイベントで描画する方法を2つ持っているからです。</p>
   <ul class="colour">
-    <li>The <strong>default draw</strong>, which is when you define the sprite in the object properties and place no actions or code in the normal Draw event, and in this case <span data-keyref="GameMaker Name">GameMaker</span> will draw the assigned sprite automatically. Note that any transforms you perform in other events to change the image scale, index, blending etc... will be reflected too as long as the draw event is empty.</li>
-    <li>The <strong>custom draw</strong>, which is when you place code or actions in the draw event. This is telling <span data-keyref="GameMaker Name">GameMaker</span> &quot;<em>I want to control what you draw for instances of this object</em>&quot; and it completely overrides the default drawing. This means that, for example, you can have an object with a sprite assigned, then set the draw event to draw text and the text will be drawn on-screen, but the sprite will <em>not </em>be drawn as you have not told <span data-keyref="GameMaker Name">GameMaker</span> to draw it along with the text.</li>
+    <li><strong>デフォルトの描画</strong>。これは、<span class="notranslate">sprite</span> のプロパティで<span class="notranslate">object</span> を定義し、通常の Draw イベントには何もアクションやコードを配置しない場合であり、この場合<span data-keyref="GameMaker Name">GameMaker</span>は割り当てられた<span class="notranslate">sprite</span> を自動的に描画する。この場合、GameMakerは自動的に指定された を描画します。
+      他のイベントで画像のスケール、インデックス、ブレンディングなどを変更した場合も、drawイベントが空である限り、反映されます。</li>
+    <li><strong>カスタム描画は</strong>、描画イベント内にコードやアクションを配置する場合です。これは<span data-keyref="GameMaker Name">GameMakerに</span>「<em>このオブジェクトのインスタンスに対する描画を制御</em>したい」と伝えるもので、デフォルトの描画を完全にオーバーライドする。
+      を描画します。つまり、例えば、<span class="notranslate">object</span> に<span class="notranslate">sprite</span> を割り当て、 draw イベントを text の描画に設定すると、テキストは画面に描画されるが、<span class="notranslate">sprite</span> は<span data-keyref="GameMaker Name">GameMaker</span>に指示していないため、描画さ<em>れないという </em>ことだ。
+      をテキストと一緒に描画します。</li>
   </ul>
-  <p>The rest of the draw events are explained in the sections listed below:</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Draw Begin And Draw End</a></p>
+  <p>それ以外の抽選イベントについては、以下の項目で説明します。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">描画開始と描画終了</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Apart from the main Draw event, you also have a <strong> Draw Begin</strong> and a <strong>Draw End</strong> event too. These act exactly the same as a standard Draw event (ie: they will draw whatever you put in them every step of the game and for all viewports), but they do not &quot;default draw&quot; anything if they have not been explicitly added to an object, and they will always run before/after the standard Draw event. So, when the game is running you will <em>always</em> have the Draw Begin event for all instances, then the Draw event for all instances, then finally the Draw End event for all instances.</p>
-    <p class="dropspot">In this way, you can draw things or set draw properties in the Draw Begin step in one instance and be sure that all instances with a standard Draw event or Draw End event will use these properties or draw over what the first instance has drawn. Basically its a sure fire way to guarantee that certain things are drawn at certain times, much like the <strong>Begin Step</strong> and <strong>End Step </strong>events do.</p>
-    <p class="dropspot">There are a few things to note when drawing things in <span data-keyref="GameMaker Name">GameMaker</span>, whether it&#39;s a sprite you are drawing or a shader, or a 3D buffer:</p>
+    <p class="dropspot">メインのDrawイベントとは別に、<strong> Draw Beginと</strong> <strong>Draw Endという</strong>イベントもあります。これらは標準的なDrawイベントと全く同じように動作します（つまり、ゲームのすべてのステップで、あなたが入れたものが描画されます）。
+      しかし、これらは、<span class="notranslate">object</span> に明示的に追加されていない場合は、「デフォルトで描画」されません。そのため、ゲームの実行中は<em>常に</em>
+      すべてのインスタンスの Draw Begin イベント、次にすべてのインスタンスの Draw イベント、最後にすべてのインスタンスの Draw End イベント。</p>
+    <p class="dropspot">この方法で、1つのインスタンスのDraw Beginステップで物を描いたり、描画プロパティを設定することができ、標準のDrawイベントやDraw Endイベントを持つすべてのインスタンスがこれらのプロパティを使用したり、最初のインスタンスが描いたものの上に描画することを確実にすることができるのです。基本的には
+      これは、<strong>Begin Step</strong>と<strong>End Step </strong>イベントと同じように、特定のものが特定の時間に描画されることを保証する確実な方法です。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>物を描くとき、それが<span class="notranslate">sprite</span> であれ、<span class="notranslate">shader</span> 、3Dバッファであれ、注意しなければならないことがいくつかあります。</p>
     <ul class="colour">
-      <li class="dropspot">The draw event is a very intensive event, in that it&#39;s one of the events that takes up most time and resources... to that end it is never a good idea to do anything in the draw event other than drawing. So save your large code or complex actions for the Step event or Alarms or whatever other event fits, but leave the draw event clear for the drawing as that&#39;s what it does best.</li>
-      <li class="dropspot">If your object has had the visible parameter set to <em>off </em>(so that the instances of the object are not drawn) then <strong>all draw events are skipped </strong>(except for the <strong>Resize </strong>event). This means that making an instance invisible will stop all code placed in any of these events from running, so don&#39;t put essential code in the draw events if they are not going to be visible.</li>
-      <li class="dropspot">What you draw has nothing to do with the collision engine you choose (traditional or physics) as that is defined by the object properties and the sprite (or mask) that the object has been given.</li>
+      <li class="dropspot">draw イベントは、最も時間とリソースを消費するイベントのひとつという意味で、非常に集中的なイベントです。そのため、draw イベントで描画以外のことを行うのは決して良いアイデアではありません。ですから、大きなコードや複雑なアクションは
+        StepイベントやAlarmsなど、他のイベントは適当ですが、Drawイベントは描画のために空けておくとよいでしょう。</li>
+      <li class="dropspot"><span class="notranslate">object</span> の visible パラメータが<em>off </em> に設定されている場合（<span class="notranslate">object</span> のインスタンスが描画されないように）、<strong>すべての描画イベントがスキップ </strong>されます（<strong>Resize </strong>イベントを除く）。つまり、インスタンス
+        invisible にすると、これらのイベントに配置されたすべてのコードが実行されなくなるので、visible にしないのであれば、draw イベントには重要なコードを配置しないでください。</li>
+      <li class="dropspot">描画する内容は、選択した衝突エンジン（従来型または物理）とは関係なく、<span class="notranslate">object</span> のプロパティと、<span class="notranslate">sprite</span> に与えられた<span class="notranslate">object</span> （またはマスク）によって定義されるからです。</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p id="p"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Draw GUI</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">ドローGUI</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The Draw GUI event type falls under the Draw Event category and is specifically designed for drawing <a class="glossterm" data-glossterm="GUI" href="#">GUI</a> elements that are not affected by the view camera scale or rotation. This means that you can have an instance draw all the elements for your <a class="glossterm" data-glossterm="HUD" href="#">HUD</a> or user interface without having to base all the positioning of the elements on the instance position within the room or the position of the current camera view.</p>
-    <p class="dropspot">When drawing in these event it is important that you understand that the draw coordinates do not change even when camera views are active and (0,0) is <em>always </em>the top left hand corner of either the application surface or the display (see the note at the bottom of this section), and the default width and height are 1:1 with the application surface. Depth ordering is still maintained between different instances on different layers (so an instance on a higher layer will be drawn under one at a lower layer) and also within the events themselves, as the <strong>Draw GUI Begin</strong> event will draw for all instances first, then the standard <strong>Draw GUI</strong> will draw for all instances over that, and finally the <strong>Draw Gui End </strong>event is triggered.</p>
-    <p class="dropspot">In this way, you can draw things or set draw properties in the Draw GUI Begin in one instance and be sure that all instances with a standard Draw GUI or Draw GUI End event will use these properties or draw over what the first instance has drawn. Basically it&#39;s a sure fire way to guarantee that certain things are drawn at certain times, much like the <strong>Begin Step</strong> and <strong>End Step</strong> events do.</p>
-    <p class="dropspot">These events can also be used in conjunction with the normal Draw events (which will be affected by the camera view position, scale and rotation as normal). If you have no Draw Event but you do have a Draw GUI Event, then <span data-keyref="GameMaker Name">GameMaker</span> will still default draw the sprite for the instance (if it has one) as normal.</p>
-    <p class="dropspot">With relation to the other draw events, the Draw GUI events will always draw over anything drawn in the normal draw events. So, if you have an instance on a lower layer with a Draw GUI event, it will draw over the instance that is on a higher layer with a regular draw event. If both instances have a Draw GUI event, then the layer order will be respected.</p>
-    <p class="note"><strong>NOTE</strong>: This event will, by default, draw 1:1 with the application surface size, which is normally the size of the room or the view port. This means that when you have <strong>Aspect Ratio Correction</strong> on in the Game Options the GUI is not going to be drawn over the black bars that &quot;letterbox&quot; the game. This behavior can be switched off using the <a href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_maximise.htm"><span style="font-size:14px;"> <span class="inline" style="font-size: 14px">display_set_gui_maximise()</span></span></a> function, and you can also lock the GUI event to a specific size which will then be scaled to fit the display or application surface dimensions automatically by using the function <a href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_size.htm"><span class="inline" style="font-size: 14px">display_set_gui_size()</span></a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">GUI描画イベントタイプは、描画イベントカテゴリに属し、特にビューカメラのスケールや回転に影響されない<a class="glossterm" data-glossterm="GUI" href="#">GUI</a>要素を描画するために設計されています。つまり
+     <span class="notranslate">room</span> インスタンスに<a class="glossterm" data-glossterm="ヒューディ" href="#">HUDや</a>ユーザーインターフェイスのすべての要素を描画させることができます。
+      を、現在のカメラビューの</p>
+    <p class="dropspot">これらのイベントで描画する場合、カメラビューがアクティブな場合でも描画座標は変化せず、(0,0)は<em>常に </em>アプリケーションサーフェスまたはディスプレイの左上隅であることを理解することが重要です（[...]を参照）。
+      また、デフォルトの幅と高さは、アプリケーションサーフェスと1:1です。深さの順序は、異なるレイヤー上の異なるインスタンス間で維持されます（したがって、高いレイヤー上のインスタンスは、アプリケーションサーフェスの下に描画されます）。
+     <strong>ドローGUI Begin</strong>イベントが最初にすべてのインスタンスに対して描画し、次に標準の<strong>ドローGUIが</strong>それ以上のすべてのインスタンスに対して描画し、最後に<strong>ドローGUI End </strong>イベントが発生します。
+      が発生します。</p>
+    <p class="dropspot">この方法では、1つのインスタンスの Draw GUI Begin で描画したり、描画プロパティを設定したりすることができ、標準の Draw GUI または Draw GUI End イベントを持つすべてのインスタンスがこれらのプロパティを使用するか、最初のインスタンスが描画したものの上に描画することを確実にします。基本的に
+      これは、<strong>Begin Step</strong>と<strong>End Step</strong>イベントと同じように、特定のものが特定の時間に描画されることを保証する確実な方法です。</p>
+    <p class="dropspot">これらのイベントは、通常のDrawイベント（カメラビューの位置、スケール、回転の影響を通常通り受ける）と組み合わせて使用することもできます。もし、Drawイベントがなく、Draw GUIイベントがある場合、<span data-keyref="GameMaker Name">GameMakerは</span>引き続き
+      インスタンスに<span class="notranslate">sprite</span> がある場合、通常通りデフォルトで描画します。</p>
+    <p class="dropspot">他の描画イベントとの関係では、Draw GUIイベントは、通常の描画イベントで描画されたものの上に常に描画されます。つまり、下のレイヤーにあるインスタンスがDraw GUIイベントで描画されると、上のレイヤーにあるインスタンスの上に描画されます。
+      を通常のドローイベントで使用します。両方のインスタンスがDraw GUIイベントを持つ場合、レイヤーの順序が尊重されます。</p>
+    <p class="note"><strong>注</strong>：このイベントは、デフォルトで、アプリケーションサーフェスサイズ（通常は<span class="notranslate">room</span> またはビューポートのサイズ）と 1:1 で描画されます。つまり、ゲームオプションで<strong>アスペクト比補正を</strong>オンにしている場合、このイベントは、アプリケーションの表面サイズと1対1で描画します。
+      GUIがゲームのレターボックスである黒いバーの上に描画されることはありません。この動作をオフにするには <a href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_maximise.htm"><span style="font-size:14px;"> <span class="inline" style="font-size: 14px">display_set_gui_maximise()</span></span></a>という関数があります。
+      また、GUIイベントを特定のサイズに固定し、ディスプレイやアプリケーションのサイズに合わせて自動的に拡大縮小することもできます。 <a href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_size.htm"><span class="inline" style="font-size: 14px">ディスプレイサイズ()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Pre And Post Draw</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">抽選前と抽選後</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The Pre Draw and Post Draw events are part of the Draw Event category. However, unlike the other Draw events these draw <em>directly </em>to the <a class="glossterm" data-glossterm="display buffer" href="#">display buffer</a>, which will be the size of the combined screen space for all viewports currently visible, <em>or </em>the window size if only using one viewport or none at all. The image below illustrates this:</p>
-    <p class="dropspot"><img alt="Object Editor Post Draw" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_PostDraw.png" />So, if you are using the Pre or Post draw events, you are drawing to the full screen render target (display buffer) which will have the same size as the window to which all viewports are made to fit. If you have no viewports active, this is instead set to the size of the window itself.</p>
-    <p class="dropspot">The Pre Draw event is triggered before any other draw event, and in it you can set values, set draw properties and even draw things without worrying about the viewports or the size of the GUI layer (the GUI layer size may be the same as the screen buffer, but it may not be since you can set the GUI resolution in code).</p>
-    <p class="dropspot">It is worth noting that this event happens <em>before </em>the display buffer is cleared for regular drawing meaning that if you do not switch off view clearing in the room editor then nothing that is drawn in the Pre Draw event will be seen, as the first viewport draw will clear it. If you want to be able to see through the viewports themselves, or you are not using viewports at all, then you should also have set the background colour to have an alpha of 0 in the <strong><a href="../Rooms.htm">Room Editor</a></strong>.</p>
-    <p class="note"><strong>NOTE</strong>: If you switch off these options, you may notice unwanted artefacts being drawn on the screen when the game is tested (like &quot;trails&quot; from instances). This is because you are drawing directly over the previous frame of the display buffer without it being cleared. However you can use <span class="inline" style="font-size: 14px"><a href="../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/draw_clear_alpha.htm">draw_clear_alpha()</a> </span>to do this yourself.</p>
-    <p class="dropspot">The Post Draw event is triggered <em>after </em>all the standard draw events, but <em>before </em>the Draw GUI events. Like the Pre Draw event, it is based on the size of the display buffer, and is placed before the Draw GUI events to enable you to perform post-processing effects and other things on a full screen basis simply and easily without interfering with any <a class="glossterm" data-glossterm="HUD" href="#">HUD</a>/ <a class="glossterm" data-glossterm="GUI" href="#">GUI</a> elements that you may have in your game.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Pre Draw と Post Draw イベントは、Draw Event のカテゴリに属します。ただし、他の Draw イベントとは異なり、これらは<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> <em>直接 </em>描画されます。
+      現在表示されているすべてのビューポートの合計画面サイズ、<em>または </em>1つのビューポートのみを使用するか、まったく使用しない場合はウィンドウサイズ。以下の画像は、これを示しています。</p>
+    <p class="dropspot"><img>したがって、Pre または Post draw イベントを使用する場合、フルスクリーンレンダリングターゲット (display<span class="notranslate">buffer</span>) に描画することになる。
+      すべてのビューポートがフィットするように作られるウィンドウと同じサイズ。ビューポートがアクティブでない場合、これはウィンドウ自体のサイズに設定されます。</p>
+    <p class="dropspot">Pre Drawイベントは他のどのDrawイベントよりも前に起動され、その中でビューポートやGUIレイヤーのサイズを気にすることなく、値の設定、描画プロパティの設定、さらには描画を行うことができます（GUIレイヤーサイズはスクリーンと同じかもしれません）。
+     <span class="notranslate">buffer</span> しかし、GUIの解像度をコードで設定することができるので、そうでない場合もあります)。</p>
+    <p class="dropspot"><span class="notranslate">buffer</span> このイベントは、通常の描画のためにディスプレイ<span class="notranslate">switch</span> がクリアされる<em>前に </em>発生することに注意してください。つまり、<span class="notranslate">room</span> エディタでビュークリアをオフにしない場合は、Pre Draw イベントで描画されたものは何も表示されません。
+      最初のビューポート描画でクリアされます。ビューポートを透かして見たい場合、あるいはビューポートを使わない場合は <strong><a href="../Rooms.htm">ルームエディタ</a></strong>.</p>
+    <p class="note"><strong>注意</strong>：<span class="notranslate">switch</span> これらのオプションをオフにすると、ゲームのテスト時に画面に不要なアーティファクトが描かれることがあります（インスタンスからの「軌跡」のようなもの）。これは、前のフレームの上に直接描画しているためです。
+      をクリアすることなく、ディスプレイの<span class="notranslate">buffer</span> 。しかし <span class="inline" style="font-size: 14px"><a href="../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/draw_clear_alpha.htm">draw_clear_alpha()</a> </span>を使用すると、これを行うことができます。
+      を自分で作成します。</p>
+    <p class="dropspot">ポストドローイベントは標準的なドローイベントのすべて<em>後 </em>、ドローGUIイベントの<em>前に </em>トリガーされます。Pre Draw イベントと同様に、ディスプレイのサイズ（<span class="notranslate">buffer</span> ）に基づいており、Draw GUI イベントの前に配置されることで、次のことが可能になります。
+     <a class="glossterm" data-glossterm="ヒューディ" href="#">HUD/</a> <a class="glossterm" data-glossterm="GUI" href="#">GUI</a>要素に干渉することなく、シンプルかつ簡単にフルスクリーンベースでポストプロセッシングエフェクトなどを実行することができます。
+      を使用することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Window Resize</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">ウィンドウのリサイズ</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">This event type falls under the Draw Event category, and although it doesn&#39;t actually draw anything, it does react to changes in the display buffer - specifically, it is designed for reacting to the change in the UWP display buffer size when the game window is &quot;snapped&quot;.</p>
-    <p class="dropspot">On the UWP target platform it is important that you catch any resizing of the display buffer from the &quot;snapping&quot; of the game window (when the user drags the window to the side of the display, for example). This event will do just that and is triggered every time the window is changed, permitting you to add custom code here that will resize the view or re-position <a class="glossterm" data-glossterm="HUD" href="#">HUD</a> elements as necessary. This function is provided as a convenient way to avoid having step event code that checks for these things all the time.</p>
-    <p class="note"><strong>NOTE</strong>: You cannot draw in this event! It is triggered by resizing the window and is only for catching this change... any drawing that should be done still must be in one of the other draw events.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">このイベントタイプは Draw Event カテゴリに属し、実際には何も描画しませんが、ディスプレイ<span class="notranslate">buffer</span> の変更に反応します。特に、UWP ディスプレイ<span class="notranslate">buffer</span> のサイズが変更されたときに反応するように設計されています。
+      ゲーム・ウィンドウが &quot;スナップ &quot;される。</p>
+    <p class="dropspot">UWPターゲットプラットフォームでは、ゲームウィンドウの「スナップ」（ユーザーがウィンドウをディスプレイの横にドラッグしたときなど）によるディスプレイのサイズ変更（<span class="notranslate">buffer</span> ）をキャッチすることが重要です。このイベントは、まさにこれを行うもので
+      はウィンドウが変更されるたびにトリガされるので、必要に応じてビューのサイズを変更したり、<a class="glossterm" data-glossterm="ヒューディ" href="#">HUD</a>要素の位置を変更したりするカスタムコードをここに追加することができます。この関数は、便利な機能として提供されています。
+      を常にチェックするようなステップイベントコードを持つ必要がないようにする方法です。</p>
+    <p class="note"><strong>注意</strong>: このイベントで描画することはできません!このイベントはウィンドウのサイズを変更したときに起動され、この変更をキャッチするためだけのものです...描画を行う場合は、他の draw イベントのいずれかを使用する必要があります。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Object_Events.htm">Object Events</a></div>
-        <div style="float:right">Next: <a href="Async_Events.htm">Async Events</a></div>
+        <div style="float:left">戻る<a href="Object_Events.htm">オブジェクトのイベント</a></div>
+        <div style="float:right">次へ<a href="Async_Events.htm">非同期イベント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Draw Events
@@ -90,5 +122,5 @@ Window Resize Event
   <!-- TAGS
 draw_events
 -->
-</body>
-</html>
+
+</body></html>

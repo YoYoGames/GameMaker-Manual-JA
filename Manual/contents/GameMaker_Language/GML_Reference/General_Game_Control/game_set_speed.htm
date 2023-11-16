@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_set_speed</title>
+  <title>ゲームスピードの設定</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function game_set_speed" />
   <meta name="rh-index-keywords" content="game_set_speed,gamespeed_fps,gamespeed_microseconds" />
@@ -14,55 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_set_speed</h1>
-  <p>This function can be used to set the game speed. You can set this in one of two ways - as either game frames per second (FPS) or as microseconds per game frame (MPF) - using one of the following two constants:</p>
+  <h1>ゲームスピードの設定</h1>
+  <p>この機能により、ゲームスピードを設定することができます。ゲームフレーム/秒（FPS）、ゲームフレーム/マイクロ秒（MPF）の2つの方法があり、次の2つの定数のいずれかを使用して設定します。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">gamespeed_fps</span></td>
-        <td>Sets the game speed using frames per second.</td>
+        <td><span class="notranslate"><span class="inline">gamespeed_fps</span></td>
+        <td>ゲームスピードをフレーム/秒単位で設定します。</td>
       </tr>
       <tr>
-        <td><span class="inline">gamespeed_microseconds</span></td>
-        <td>Sets the game speed using microseconds per frame.</td>
+        <td><span class="notranslate"><span class="inline">gamespeed_microseconds</span></td>
+        <td>ゲームスピードを1フレームあたりマイクロ秒単位で設定します。</td>
       </tr>
     </tbody>
   </table>
-  <p>So, for example, a game speed of 30 frames per second would be 33333 microseconds per game game frame, which would then be expressed by this function as either:</p>
+  <p>つまり、例えばゲームスピードが30フレーム/秒の場合、1ゲームゲームフレームあたり33333マイクロ秒となり、この関数で表現すると、次のどちらかになります。</p>
   <p class="code">game_set_speed(30, gamespeed_fps);</p>
-  <p>or:</p>
+  <p>または</p>
   <p class="code">game_set_speed(33333, gamespeed_microseconds);</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">game_set_speed(speed, type);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>speed</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The new game speed (as either FPS or MPF).</td>
+        <td><span class="notranslate">speed</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The new game speed (as either FPS or MPF).</span></td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_GameSpeed">Game Speed Constant</span></td>
-        <td>The type of method used to set the game speed (see the constants above).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_GameSpeed">ゲームスピード一定</span></td>
+        <td><span class="notranslate">The type of method used to set the game speed (see the constants above).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if os_browser == browser_not_a_browser<br />
     {<br />
         game_set_speed(60, gamespeed_fps);<br />
@@ -71,18 +71,18 @@
     {<br />
         game_set_speed(30, gamespeed_fps);<br />
     }</p>
-  <p>The above code checks to see if the game is running in a browser and sets the game speed accordingly as an FPS value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、ゲームがブラウザで実行されているかどうかを確認し、それに応じてゲーム速度をFPS値として設定しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Game_Control.htm">General Game Control</a></div>
-        <div style="float:right">Next: <a href="highscore_add.htm">highscore_add</a></div>
+        <div style="float:left">戻る<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
+        <div style="float:right">次のページ <a href="highscore_add.htm"><span class="notranslate">highscore_add</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_set_speed

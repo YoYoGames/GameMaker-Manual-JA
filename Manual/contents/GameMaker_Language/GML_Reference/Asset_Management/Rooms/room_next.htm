@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_next</title>
+  <title>ルームネクスト</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function room_next" />
   <meta name="rh-index-keywords" content="room_next" />
@@ -14,43 +14,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_next</h1>
-  <p>With this function you can retrieve the index of the room <i>after</i> the room input into the function. For example you can use the variable <a href="room.htm"><span class="inline">room</span></a> to get the index of the current room and then use this function to find the room that follows it, as listed in the <a href="../../../../Settings/The_Room_Manager.htm">Room Manager</a>. If there is no room after the one you input then -1 is returned. Note that this function will not recognise or take into consideration rooms that have been added dynamically using <span class="inline"><a href="room_add.htm">room_add()</a></span> or <span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ルームネクスト</h1>
+  <p>この関数を使うと、関数に入力された<span class="notranslate">room</span> の<i>次の</i> <span class="notranslate">room</span> のインデックスを取得することができます。例えば、変数 <a href="room.htm"><span class="inline">room</span></a>を使用して現在の<span class="notranslate">room</span> のインデックスを取得し、この関数を使用して、<a href="../../../../Settings/The_Room_Manager.htm">ルームマネージャに</a>リストされている、その後に続く<span class="notranslate">room</span> を探します。入力されたものの後に<span class="notranslate">room</span> がない場合、-1 が返されます。この関数は、<span class="inline"><a href="room_add.htm">room_add()</a></span> または<span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span> を使用して動的に追加された<span class="notranslate">rooms</span> を認識または考慮しないことに注意してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">room_next(numb);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>numb</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The index of the room to get the next one after.</td>
+        <td><span class="notranslate">numb</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The index of the room to get the next one after.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if room_next(room) != -1<br />
     {<br />
         room_goto_next();<br />
     }</p>
-  <p>The above code will check to see if the next room exists and if so, it will go to it.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、次の<span class="notranslate">room</span> が存在するかどうかを確認し、存在する場合はそこに移動します。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="room_previous.htm">room_previous</a></div>
+        <div style="float:left">戻る<a href="Rooms.htm">部屋</a></div>
+        <div style="float:right">次のページ <a href="room_previous.htm"><span class="notranslate">room_previous</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_next

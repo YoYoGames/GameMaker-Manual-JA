@@ -6,7 +6,7 @@
   <title>gpu_set_tex_mip_bias</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_tex_mip_bias" />
   <meta name="rh-index-keywords" content="gpu_set_tex_mip_bias" />
@@ -15,43 +15,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_tex_mip_bias</h1>
-  <p>With this function you can set the mipmap bias value, where a value of 0 equals no bias, 1 equals the first mipmap, 2 equals the second mipmap etc... This controls the rate at which the mip map is swapped and will generally make rendered textures blurrier the higher the value and the greater the &quot;distance&quot; being viewed. Note that this function can take negative values too, in which case rendered textures will be sharper over a greater distance the lower the value.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数では、ミップマップバイアス値を設定できます。0はバイアスなし、1は1番目のミップマップ、2は2番目のミップマップ...と等しくなります。これはミップマップが交換される速度を制御し、一般に、値が高く、表示される「距離」が大きいほど、レンダー<span class="notranslate">textures</span> をよりぼやけさせます。この関数は負の値も取れることに注意してください。その場合、レンダリングされた<span class="notranslate">textures</span> は、値が低いほど、より遠くまで鮮明になります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gpu_set_tex_mip_bias(bias);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>bias</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The mipmap bias value to use (default: 0)</td>
+        <td><span class="notranslate">bias</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The mipmap bias value to use (default: 0)</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if gpu_get_tex_mip_bias() != 0<br />
     {<br />
         gpu_set_tex_mip_bias(0);<br />
     }</p>
-  <p>The above code will check the current mipmap bias and if it is not 0 it is set to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、現在のミップマップバイアスをチェックし、それが0でなければ0に設定されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mipmapping.htm">Mipmapping</a></div>
-        <div style="float:right">Next: <a href="gpu_set_tex_mip_bias_ext.htm">gpu_set_tex_mip_bias_ext</a></div>
+        <div style="float:left">戻る<a href="Mipmapping.htm">ミップマッピング</a></div>
+        <div style="float:right">次のページ <a href="gpu_set_tex_mip_bias_ext.htm"><span class="notranslate">gpu_set_tex_mip_bias_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_tex_mip_bias

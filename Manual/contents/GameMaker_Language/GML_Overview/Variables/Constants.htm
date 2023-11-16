@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Constants</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>定数</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the different GML constants" />
   <meta name="rh-index-keywords" content="Constants,macro,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
@@ -14,26 +14,26 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Constants</span></h1>
-  <p>A constant is a type of variable that is set once at the start of the game and then never changes. In fact, constant values <em>cannot be changed after they have been declared</em>. This makes them ideal for holding values that are used throughout the game to identify special data.</p>
-  <p>In the GameMaker Language there are two types of user-defined constants: <strong>macros</strong> and <strong>enums</strong>, both of which are explained below. Also note that any value that is always the same is classed as a constant, regardless of the <a href="../Data_Types.htm">data type</a>, for example, a string or the number 3.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> The GameMaker Language also has a number of built-in constant values that are used to identify specific things. These are outlined on the appropriate pages for the runtime functions that require them in the <a href="../../GML_Reference/GML_Reference.htm">GML Reference</a> section.</p>
-  <h2 id="h">Macros</h2>
-  <p>While not exactly variables, macros are similar to them in how they are used, i.e.: they are named values that you can use throughout your code to replace <a class="glossterm" data-glossterm="hard-coded" href="#">hard-coded</a> values. Basically, a macro is a named variable that holds an expression. You can define your own macros using the <a href="../Script_Functions.htm">Script Editor</a> and then use them in your code and actions as if they were regular variables, with the one difference being that they <i>can&#39;t be changed in the game</i>.</p>
-  <p>The syntax structure for a macro is as follows:</p>
+  <h1>定数</h1>
+  <p>定数とは、ゲーム開始時に一度だけ設定され、その後は決して変化しない変数の一種です。実際、定数値は<em>宣言された後</em>、変更することができません。このため、ゲーム中に特殊なデータを識別するための値を保持するのに適しています。</p>
+  <p><span class="notranslate">GameMaker Language</span> では、ユーザー定義定数には<strong>マクロと</strong> <strong>列挙型の</strong>2種類があり、それぞれについて以下に説明します。また、<a href="../Data_Types.htm">データ型に</a>関係なく常に同じ値を持つものは定数に分類されることに注意してください。例えば、<span class="notranslate">string</span> や数字の 3 のようなものです。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span> には、特定のものを識別するために使用する組み込みの定数値も多数あります。これらの定数値については、<a href="../../GML_Reference/GML_Reference.htm">GML Referenceの</a>中で、それらを必要とする<span class="notranslate">runtime</span> 関数の適切なページで概説しています。</p>
+  <h2>マクロ</h2>
+  <p>マクロは正確には変数ではありませんが、使い方が似ています。つまり、<a class="glossterm" data-glossterm="ハードコード化" href="#">ハードコードされた</a>値を置き換えるために、コード全体で使用できる名前付きの値なのです。基本的に、マクロは式を保持する名前付き変数です。マクロは<a href="../Script_Functions.htm">スクリプトエディターで</a>定義し、通常の変数と同じようにコードやアクションで使用することができますが、ひとつだけ違うのは、<i>ゲーム内で</i>変更できないことです。</p>
+  <p>マクロのシンタックス構造は以下の通りである。</p>
   <p class="code">#macro <i>&lt;variable&gt;</i> <i>&lt;expression&gt;</i></p>
-  <p>For example, say you define the following macro &quot;<span class="inline">total_weapons</span>&quot;:</p>
+  <p>例えば、次のようなマクロ &quot;<span class="inline">total_weapons</span>&quot; を定義したとします。</p>
   <p class="code">#macro total_weapons 10</p>
-  <p class="note_heading">Macro syntax...</p>
-  <p class="note">The syntax shown above must be used correctly to define macros. You cannot use an equal sign (like in variables) or put a semicolon at the end (like in a regular statement). Doing so will cause your macro definition to become invalid.<br />
-    <br />
-    For example, this is not the correct way to define a macro:<br />
-    <br />
-    <span class="inline2">#macro total_weapons = 10;</span><br />
-    <br />
-    Removing the equal sign and colon will make it a valid macro definition.
+  <p class="note_heading">マクロ構文...</p>
+  <p class="note">マクロを定義するには、上に示した構文を正しく使用する必要があります。等号を使ったり（変数のように）、セミコロンを最後に置いたり（通常の文のように）することはできません。マクロの定義が無効になってしまいます。<br>
+    <br>
+    例えば、このようなマクロの定義方法は正しくありません。<br>
+    <br>
+   <span class="inline2">#macro total_weapons = 10;</span><br>
+    <br>
+    等号とコロンを削除すると、有効なマクロ定義になります。
   </p>
-  <p>You could then use this in your code like this:</p>
+  <p>そして、これをコード内で次のように使うことができます。</p>
   <p class="code">pos++;<br />
     <br />
     if (pos &gt;= total_weapons)<br />
@@ -41,27 +41,25 @@
         pos = 0;<br />
     }
   </p>
-  <p>Note that you would not be able to change the constant&#39;s value, so code like this will cause the game to crash:</p>
+  <p>定数の値を変更することができないので、このようなコードを書くとゲームがクラッシュしてしまうことに注意してください。</p>
   <p class="code">total_weapons = 11;</p>
-  <p>You can define a macro anywhere in your code or in a script and it will be <i>pre-compiled</i> and included in your game as if it was there from the start, but we recommend that you create a dedicated script asset and define all your macros in there. It will be easier to organise and debug later!</p>
-  <p>If you need the value of a macro to change at run-time then you should probably make it a <a href="Global_Variables.htm">global variable</a>, since these can be changed from code during a game, unless you set the macro to be a<span> <a href="../Runtime_Functions.htm">runtime</a></span> <a href="../Runtime_Functions.htm">function</a>. By setting the macro to a function it means that this function will be called every time you use the macro. For example:</p>
+  <p>マクロはコードやスクリプトのどこにでも定義でき、最初からあったかのように<i>プリコンパイル</i>されてゲームに含まれます。しかし、専用の<span class="notranslate">script</span> <span class="notranslate">asset</span> を作成し、そこにすべてのマクロを定義することをお勧めします。後で整理したり、デバッグしたりするのが楽になります。</p>
+  <p>マクロの値を実行時に変更する必要がある場合は、マクロを<a href="Global_Variables.htm">グローバル変数に</a>したほうがよいでしょう。<span> <a href="../Runtime_Functions.htm">ランタイム </a></span><a href="../Runtime_Functions.htm"><span class="notranslate">function</span></a>.関数に設定することで、マクロを使用するたびにこの関数が呼び出されることを意味します。例えば</p>
   <p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p>
-  <p>You would then call this macro something like this:</p>
+  <p>そして、このマクロを次のように呼び出すことになる。</p>
   <p class="code">image_blend = col;</p>
-  <p>Using this code will make the image blend a different colour every time the macro is used. It is worth noting that you can also split macros over multiple lines using the <span class="inline"><span class="inline">\</span></span> character to show where the line breaks are. An example would be something like:</p>
+  <p>このコードを使用すると、マクロを使用するたびに画像が異なる色にブレンドされます。なお、マクロを複数行に分割する場合は、 <span class="inline"><span class="inline">\</span> 文字を使って改行位置を示すことができます。例としては、次のようなものです。</p>
   <p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br />
     string(player_name) + \<br />
     &quot;, how are you today?&quot;);</p>
-  <p>This is purely cosmetic, in that splitting a macro like this will have no effect over the result of the final macro when used, and is simply to provide support for multi-line text on macros that have longer lines of code.</p>
-  <p>One very important feature of macros is that they can be defined for use with specific <a data-xref="{title}" href="../../../Settings/Configurations.htm">Configurations</a> (configs), meaning you can have the same macro name but give it different values based on the currently selected config. For example, say you have a configuration for Android Ads and another for iOS Ads, then you could define a single macro to hold the required app ID value:</p>
-  <p class="code">#macro ad_id &quot;&quot;<br />
+  <p>これは、マクロを分割しても最終的なマクロの結果に影響を与えないようにするためで、単にコード行数の多いマクロで複数行のテキストをサポートするためのものです。</p>
+  <p>つまり、同じマクロ名でも、現在選択されているコンフィグによって、異なる値を与えることができます。例えば、<span class="notranslate">Android</span> Ads と<span class="notranslate">iOS</span> Ads のコンフィギュレーションがある場合、必要なアプリ ID 値を保持するために 1 つのマクロを定義することができます。</p>
+  <p class="code">#macro ad_id &quot;&quot;;<br />
     #macro Android:ad_id &quot;com.yoyogames.googlegame&quot;<br />
     #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p>
-  <p>Configurations do not necessarily have to be named after a platform. You might e.g. also have a specific configuration for a demo version of your game: </p>
-  <p class="code">#macro <span>DemoVersion:ad_id &quot;&quot;</span></p>
-  <p>As you can see, you give the config name first then a colon <span class="inline">:</span> and then the macro name and value. Note that you cannot have any white-space between the colon <span class="inline">:</span> and either the config name nor the macro name otherwise you will get an error.</p>
-  <h2 id="enumhead">Enums</h2>
-  <p>An enum is an &quot;enumerator&quot;; it essentially permits you to create your own limited data type with a list of constant values. They have the following structure:</p>
+  <p>ご覧のように、まず設定名を与え、次にコロン（ <span class="inline">:</span> ）を置き、次にマクロ名と値を与えています。なお、コロン <span class="inline">:</span> と設定名やマクロ名の間には空白を入れてはいけません。そうしないとエラーになります。</p>
+  <h2 id="enumhead">エンムス</h2>
+  <p>enumは「列挙子」であり、基本的に定数値のリストを持つ独自の限定的なデータ型を作ることができ、それらは次のような構造を持っています。</p>
   <p class="code">enum <i>&lt;variable&gt;</i><br />
     {<br />
     <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
@@ -69,7 +67,7 @@
         // etc...<br />
     }
   </p>
-  <p>In the following example, we create an enum for the colours of the rainbow and assign it various constants and default values:</p>
+  <p>次の例では、虹の色の列挙型を作成し、さまざまな定数とデフォルト値を割り当てています。</p>
   <p class="code">enum rainbowcolours<br />
     {<br />
         red,<br />
@@ -80,8 +78,8 @@
         indigo,<br />
         violet<br />
     }</p>
-  <p>The enum entries can only be <b>integer numbers</b> or <b><a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> with previous enums that evaluate to an integer number</b>, and by default are numbered from 0 upwards, so our example given above would default to <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc...</p>
-  <p>You can also assign values to the enum variables at the time of creation:</p>
+  <p>enumの項目は<b>整数値か</b>、<b>以前のenumで整数値</b>として<b>評価される<span class="glossextra">式のみ</span></b>で、デフォルトでは0から順に番号が付けられます。したがって、上記の例では、 <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc.がデフォルトで使用されます。</p>
+  <p>また、作成時にenum変数に値を代入することも可能である。</p>
   <p class="code">enum enum_test<br />
     {<br />
         val = 10;<br />
@@ -98,71 +96,72 @@
         violet = 35 * enum_test.val<br />
     }
   </p>
-  <p>Notice in the above example we use another enum to create an expression for &quot;violet&quot;. This only works if the enum being referenced was created <i>before</i> the enum that is using it in an expression, but it will not work for variables or functions, since the enum value must be able to be evaluated as a constant when the project is <a class="glossterm" data-glossterm="Compiling" href="#">Compiling</a>. Also note that all enum values evaluate to <b>integer</b> values, and when you create your own you should be aware that <i>only integer values are permitted</i> for enums to work. This value can be any integer number that a floating point double precision number can represent, including negative values.</p>
-  <p>To later access the value within a given enum type, you can use the point <span class="inline">&quot;.&quot;</span> method, like this:</p>
+  <p>上の例では、別の列挙型を使用して &quot;violet &quot;を表す式を作成していることに注意してください。これは、参照する enum が式で使用する enum より<i>も前に</i>作成されている場合にのみ機能します。ただし、変数や関数に対しては機能しません。また、enumの値はすべて<b>整数</b>値で評価されることに注意してください。自分で作成する場合は、enumが動作するために<i>整数値のみが許可さ</i>れることに注意する必要があります。この値は浮動小数点倍精度の数値が表現できる任意の整数値で、負の値も含まれます。</p>
+  <p>与えられたenum型内の値に後からアクセスするには、次のようにポイント <span class="inline">&quot;.&quot;</span> 。</p>
   <p class="code">variable = &lt;enum_name&gt;.&lt;<em>enum_variable</em>&gt;;</p>
-  <p>As an example, let&#39;s use the &quot;<span class="inline">rainbowcolours</span>&quot; enum that we created in the code above:</p>
+  <p>例として、上記のコードで作成した &quot;<span class="inline">rainbowcolours</span>&quot; 列挙型を使用してみましょう。</p>
   <p class="code">colour_value = rainbowcolours.green * rainbowcolours.red;</p>
-  <p>The <span class="inline">colour_value</span> variable would now hold the value 100 (20 * 5).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> You <em>cannot </em>modify the values for any enum constant after it has been created, much the same as you can&#39;t modify macros after they have been created.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Enum values are stored as int64s, so running <span class="inline2"><a data-xref="{title}" href="../../GML_Reference/Variable_Functions/is_real.htm">is_real</a></span> on them will return <span class="inline2">false</span>.</p>
-  <h2>Built-In Constants</h2>
-  <p>The following table shows a list of the built-in constants that can be returned by some functions and operations in your projects:</p>
+  <p> <span class="inline">colour_value</span> 変数には、100 (20 * 5) という値が格納されることになる。</p>
+  <p>enum定数を作成した後にその値を変更することは<em>できない </em>ことに注意してください。</p>
+  <p class="note"><strong>注</strong>：Enum 値は<span class="notranslate">int64s</span> として保存されるため、それらに対して <span class="inline"><a href="../../GML_Reference/Variable_Functions/is_real.htm">is_real()</a></span> を実行すると、 <span class="inline">false</span> が返されます。</p>
+  <p> </p>
+  <h2>内蔵定数</h2>
+  <p>次の表は、プロジェクト内のいくつかの関数や操作で返される組み込み定数の一覧です。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">pointer_null</span></td>
-        <td>This constant indicates that the pointer is not pointing to anything meaningful (the same as<span> </span><span class="inline">NULL</span><span> </span>in C++ or <span class="inline">null</span> in C#).<br />
-          This value is <a class="glossterm" data-glossterm="falsy" href="../Data_Types.htm#">falsy</a>.</td>
+        <td><span class="notranslate"><span class="inline">pointer_null</span></td>
+        <td>この定数は、ポインタが意味のあるものを指していないことを示します（C++の<span> </span><span class="inline">NULL</span> <span> </span> や C#の <span class="inline">null</span> と同じです）。<br>
+          この値は<a class="glossterm" data-glossterm="まがまがしい" href="../Data_Types.htm#">falsy</a>である。</td>
       </tr>
       <tr>
-        <td><span class="inline">pointer_invalid</span></td>
-        <td>This constant simply means that the value is not a valid pointer</td>
+        <td><span class="notranslate"><span class="inline">pointer_invalid</span></td>
+        <td>この定数は、単に値が有効なポインタでないことを意味する</td>
       </tr>
       <tr>
-        <td><span class="inline">undefined</span></td>
-        <td>This constant is returned when a function has to return <em>something</em> but has no appropriate or &quot;correct&quot; value to return.<br />
-          This value is <a class="glossterm" data-glossterm="falsy" href="../Data_Types.htm#">falsy</a>.</td>
+        <td><span class="notranslate"><span class="inline">undefined</span></td>
+        <td>この定数は、関数が<em>何かを</em>返さなければならないが、返すべき適切な、あるいは「正しい」値がない場合に返されます。<br>
+          この値は<a class="glossterm" data-glossterm="まがまがしい" href="../Data_Types.htm#">falsy</a>である。</td>
       </tr>
       <tr>
-        <td><span class="inline">NaN</span></td>
-        <td><span>This constant that can be returned when the compiler cannot evaluate the results of an operation as a number - for example, 0 / 0 cannot be defined as a real number, and is therefore represented by </span><span class="inline">NaN</span></td>
+        <td><span class="notranslate"><span class="inline">NaN</span></td>
+        <td><span>この定数は、コンパイラが演算結果を数値として評価できない場合に返すことができるもので、例えば、0 / 0 は実数として定義できないので、次のように表される。 </span><span class="inline">NaN</span></td>
       </tr>
       <tr>
-        <td><span class="inline">infinity</span></td>
+        <td><span class="notranslate"><span class="inline">infinity</span></td>
         <td><span class="inline"><span data-highlight-container="true"><span data-highlight="true">
-                <font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">This constant </span></font>
-              </span></span></span><span>refers to a number that is considered infinite, such as the result you would get when dividing any floating point value by zero, e.g. 1.0/0.</span></td>
+                <font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">This constant </span>
+              <span>は無限大とみなされる数で、例えば浮動小数点値をゼロで割ると1.0/0となるような数を指します。</span></td>
       </tr>
       <tr>
-        <td><span class="inline">true</span></td>
-        <td>This constant represents the value 1, which is what <span data-keyref="GameMaker Name">GameMaker</span> will evaluate as a boolean &quot;true&quot; (note that any value equal to or greater than 1 will evaluate as <span class="inline">true</span>).</td>
+        <td><span class="notranslate"><span class="inline">true</span></td>
+        <td>この定数は値1を表し、<span data-keyref="GameMaker Name">GameMakerは</span>これをブール値「真」として評価する（なお、1以上の値は <span class="inline">true</span> として評価される）。</td>
       </tr>
       <tr>
-        <td><span class="inline">false</span></td>
-        <td>This constant represents the value 0, which is what <span data-keyref="GameMaker Name">GameMaker</span> will evaluate as a boolean &quot;false&quot; (note that any value less than or equal to 0 will evaluate as <span class="inline">false</span>).</td>
+        <td><span class="notranslate"><span class="inline">false</span></td>
+        <td>この定数は値0を表し、<span data-keyref="GameMaker Name">GameMakerは</span>これをブール値「false」として評価する（0以下の値は <span class="inline">false</span>)ことに注意。</td>
       </tr>
       <tr>
-        <td><span class="inline">pi</span></td>
-        <td>This constant represents the value of pi: 3.141592653589793280..., although the exact value will depend on various factors like the OS or the platform being targeted.</td>
+        <td><span class="notranslate"><span class="inline">pi</span></td>
+        <td>この定数は円周率の値を表しており、3.141592653589793280など。ただし、正確な値は対象となるOSやプラットフォームなどさまざまな要素に依存する。</td>
       </tr>
     </tbody>
   </table>
-  <p>See <a data-xref="{text}" href="../../../Additional_Information/Type_Tables.htm#h">Equality Table</a> for information on equality comparisons for a few of the constants listed above.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のいくつかの定数の等価比較については、「<a data-xref="{text}" href="../../../Additional_Information/Type_Tables.htm#h">等価表</a>」を参照してください。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Variables_And_Variable_Scope.htm">Variables And Variable Scope</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Local_Variables.htm">Local Variables</a></div>
+        <div style="float:left">戻る<a href="../Variables_And_Variable_Scope.htm">変数と変数のスコープ</a></div>
+        <div style="float:right">次へ<a href="Local_Variables.htm">ローカル変数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 constants

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Making A Game Using GameMaker</title>
+  <title>GameMakerを使ったゲーム制作</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Introduction to making games and the Quick Start Guide" />
   <meta name="rh-index-keywords" content="Quick Start" />
@@ -15,30 +15,30 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Quick Start Guide</h1>
-  <p>Welcome to the <strong>Quick Start Guide</strong>! This section of the manual is designed to familiarise you with the most important aspects of <span data-keyref="GameMaker Name">GameMaker</span> and will show you the basics to get you making games as quick as possible. The guide covers essential IDE functionality and also provides a brief introduction to programming, so you can make the most of the product as quick as possible, whether you use <span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span>.</p>
-  <p>To illustrate the <span data-keyref="GameMaker Name">GameMaker</span> workflow and get you straight into making something, we&#39;ve prepared the this guide to take you from the very basics of what is <span data-keyref="GameMaker Name">GameMaker</span> and what is a program, through creating general assets and up to how to code basic things like movement and score.</p>
-  <p>Making games with <span data-keyref="GameMaker Name">GameMaker</span> is, conceptually, a fairly simple and straightforward affair, following these general steps:</p>
+  <h1>クイックスタートガイド</h1>
+  <p><strong>クイックスタートガイドへ</strong>ようこそこのセクションでは、<span data-keyref="GameMaker Name">GameMakerの</span>最も重要な側面に慣れ親しみ、できるだけ早くゲームを作れるようにするための基本的なことを紹介します。このガイドでは、<span data-keyref="GML_Code">GML Code</span>と<span data-keyref="GML_Visual">GML Visual</span> のどちらをお使いの場合でも、できるだけ早く製品を最大限に活用できるよう、<span class="notranslate">IDE</span> の必須機能に加えて、プログラミングの簡単な紹介も行っています。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>ワークフローを説明し、すぐに制作に取り掛かれるように、<span data-keyref="GameMaker Name">GameMakerとは</span>何か、プログラムとは何かという基本的なことから、一般的な<span class="notranslate">assets</span> 、動きやスコアなどの基本的なコーディング方法まで、このガイドブックで紹介しています。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerを</span>使ったゲーム作りは、概念的には以下のような一般的な手順で、かなりシンプルでわかりやすいものとなっています。</p>
   <ul class="colour">
-    <li>Create <strong>image </strong>assets (<a class="glossterm" data-glossterm="sprites" href="#">sprites</a>, <a class="glossterm" data-glossterm="tile sets" href="#">tile sets</a>, <a class="glossterm" data-glossterm="font" href="#">font</a><span class="glossextra">s</span>) and add them to the Asset Browser.</li>
-    <li>Create <strong>object </strong>assets to represent the things you want to use in your game and assign them the required image assets.</li>
-    <li>Program these objects to do things in response to specific <strong>events</strong>.</li>
-    <li>Add <strong>instances </strong>of these objects into a <strong>room </strong>where they will perform their programs.</li>
+    <li><strong>画像 </strong>アセット<a class="glossterm" data-glossterm="スプライト" href="#">（スプライト</a>、<a class="glossterm" data-glossterm="かわらばん" href="#">タイルセット</a>、<a class="glossterm" data-glossterm="フォント" href="#">フォント</a>）を作成し、<span class="notranslate">Asset</span> Browserに追加します。</li>
+    <li>ゲーム内で使いたいものを表す<strong>オブジェクトアセットを </strong>作成し、必要な画像<span class="notranslate">assets</span> を割り当てます。</li>
+    <li>これらの<span class="notranslate">objects</span> 、特定の<strong>イベントに</strong>応答して何かを行うようにプログラムします。</li>
+    <li>これらの<strong>インスタンス </strong>（<span class="notranslate">objects</span> ）を、プログラムを実行する<strong>部屋に </strong>追加します。</li>
   </ul>
-  <p>We&#39;ll go into the specifics of each of the above listed items in the following pages, but that&#39;s the general flow of actions required to make a game. The important thing to note here is that your main &quot;building blocks&quot; for the game will always be sprites, objects and rooms, although there are a number of subsidiary assets that can also be used to add extra functionality or behaviours to these items (like <strong> <a class="glossterm" data-glossterm="shaders" href="#">shaders</a></strong>, or <strong> <a class="glossterm" data-glossterm="timelines" href="#">timelines</a></strong>).</p>
-  <p>Now, before we go on to explain each of these things in more detail, we&#39;ll quickly outline how <span data-keyref="GameMaker Name">GameMaker</span> will turn the above building blocks into your game. Basically, everything happens in what is called the <strong>Game Loop</strong>, which has a speed measured in <strong> Frames Per Second</strong>, and one &quot;frame&quot; is called a <strong>Step </strong>in GameMaker. The default frames per second (or <strong>FPS</strong>) is 60, meaning that for every second that passes <span data-keyref="GameMaker Name">GameMaker</span> will run the game loop 60 times, and each step (loop/frame) a number of events will occur and the game will progress.</p>
-  <p>To help understand this, let&#39;s imagine you have a character that you want to move around the game room. You would create a <em>sprite </em>for that character, then create an <em>object </em>and assign it the sprite, and in the object you&#39;d add an <em>event </em>called the <strong>Step Event</strong>. In this event you would tell it to move right by 2 pixels. You would then place an <strong>instance </strong>of that object into the game room, and when you run the game, the instance will start moving right by 2 pixels every step (the Step Event runs once every game step), so that in 1 second the instance has moved 120 pixels to the right.</p>
-  <p>In the above example, we talk about telling the object to move to the right, but how do we do that? Well, that&#39;s done using a <strong>program </strong>which we write using either <a data-xref="{title}" href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visual</a> or <a data-xref="{title}" href="../GameMaker_Language/GameMaker_Language_Index.htm">GML Code</a>. Which one you use is up to you and the way you want to work, but by using them you are <em>programming </em>your game. The next section deals with this in more detail.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記で挙げた各項目の具体的な説明は次のページで行いますが、ゲームを作るために必要な動作の大まかな流れはこのようになっています。ここで重要なのは、ゲームの主な「構成要素」は常に<span class="notranslate">sprites</span> 、<span class="notranslate">objects</span> 、<span class="notranslate">rooms</span> であるということです。ただし、これらのアイテムに追加機能や動作を追加するために使用できる補助的な<span class="notranslate">assets</span> も数多くあります（例えば、以下のようなものです）。 <strong> <a class="glossterm" data-glossterm="シェーダー" href="#">シェーダー</a></strong>または <strong> <a class="glossterm" data-glossterm="タイムライン" href="#">タイムライン</a></strong>).</p>
+  <p>さて、それぞれの内容を詳しく説明する前に、上記の構成要素を<span data-keyref="GameMaker Name">GameMakerが</span>どのようにゲームにしていくのか、その概要を簡単に説明します。基本的に、すべては<strong>ゲームループと</strong>呼ばれる部分で行われ、その速度は<strong> Frames Per Secondで</strong>計測され、1つの「フレーム」は<span class="notranslate">GameMaker</span> で<strong>Stepと </strong>呼ばれます。デフォルトのFrame Per Second（<strong>FPS</strong>）は60です。つまり、1秒経過するごとに<span data-keyref="GameMaker Name">GameMakerは</span>ゲーム（<span class="notranslate">loop</span> ）を60回実行し、それぞれのステップ（ループ/フレーム）でいくつかのイベントが発生し、ゲームが進行していくことになります。</p>
+  <p>これを理解するために、ゲーム内で移動させたいキャラクターがあるとします。<span class="notranslate">room</span> 。そのキャラクターの<em>スプライトを </em>作成し、<em>オブジェクトを </em>作成して<span class="notranslate">sprite</span> に割り当て、<span class="notranslate">object</span> に<strong>ステップイベントと</strong>呼ばれる<em>イベントを </em>追加することになります。このイベントで、2ピクセル分右に移動するように指示します。そして、その<strong>インスタンス </strong> <span class="notranslate">object</span> をゲーム<span class="notranslate">room</span> に配置し、ゲームを実行すると、インスタンスは1ステップごとに2ピクセルずつ右に移動し始め、（ステップイベントはゲームステップごとに1回実行されます）1秒後には120ピクセル右に移動していることになります。</p>
+  <p>上記の例では、<span class="notranslate">object</span> に右へ移動するように指示することを話していますが、どのようにそれを行うのでしょうか。それは、<a data-xref="{title}" href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visualか</a> <a data-xref="{title}" href="../GameMaker_Language/GameMaker_Language_Index.htm">GML Codeの</a>どちらかを使って書いた<strong>プログラムによって </strong>行われます。どちらを使うかはあなた次第ですが、それらを使うことでゲームを<em>プログラミングして </em>いることになります。詳しくは次のセクションで説明します。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back:  <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="What_Is_Programming_.htm">What Is Programming?</a></div>
+        <div style="float:left">戻る：<a href="../Content.htm">インデックス</a></div>
+        <div style="float:right">次へ<a href="What_Is_Programming_.htm">プログラミングとは？</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Quick Start Guide

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>gamepad_is_connected</title>
+  <title>ゲームパッドが接続されているかどうか</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_is_connected" />
   <meta name="rh-index-keywords" content="gamepad_is_connected" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_is_connected</h1>
-  <p>This function will return whether a gamepad is connected to the given &quot;slot&quot; (returns <span class="inline">true</span>) or not (returns <span class="inline">false</span>). You would normally use this function in conjunction with the <a href="gamepad_get_device_count.htm"><span class="inline">gamepad_get_device_count()</span></a> function to get the correct number of available game pads and/or gamepad &quot;slots&quot;. Note that there may be a slight delay between the user connecting the gamepad and <span data-keyref="GameMaker Name">GameMaker</span> detecting it as being connected (this is especially the case when dealing with bluetooth connected controllers).</p>
-  <p class="note"><strong>NOTE</strong>: On some platfroms - especially consoles - this function may return false immediately after a gamepad has been connected/selected and may need to be checked in an alarm a few frames (steps) later for it to correctly detect the gamepad.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ゲームパッドが接続されているかどうか</h1>
+  <p>この関数は、与えられた「スロット」にゲームパッドが接続されているか（ <span class="inline">true</span> を返す）、されていないか（ <span class="inline">false</span> を返す）を返します。通常、この関数は <a href="gamepad_get_device_count.htm"><span class="inline">gamepad_get_device_count()</span></a>関数で、利用可能なゲームパッドやゲームパッドのスロット数を正しく取得することができます。ユーザーがゲームパッドを接続してから<span data-keyref="GameMaker Name">GameMakerが</span>接続を検出するまで、若干の遅れがあることに注意してください（特にBluetooth接続のコントローラを扱う場合に顕著です）。</p>
+  <p class="note"><strong>注意</strong>：一部のプラットフォーム（特にコンソール）では、ゲームパッドが接続／選択された直後にこの関数が false を返すことがあり、ゲームパッドを正しく検出するために数フレーム（ステップ）後にアラームで確認する必要がある場合があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">gamepad_is_connected(numb);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad &quot;slot&quot; to check.</td>
+        <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Which gamepad &quot;slot&quot; to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
     for (var i = 0; i &lt; gp_num; i++;)<br />
     {<br />
         if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
     }</p>
-  <p>The above code loops through the available game pads (or gamepad slots) and then checks each one for a connected gamepad. the returned value is then used to set a global array to <span class="inline">true</span> or <span class="inline">false</span> for use in future checks.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、<span class="notranslate">loops</span> 利用可能なゲームパッド（またはゲームパッドスロット）を通して、それぞれゲームパッドが接続されているかどうかをチェックします。返された値は、今後のチェックで使用するために、グローバル配列に <span class="inline">true</span> または <span class="inline">false</span> を設定するために使用されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_get_guid.htm"> gamepad_get_guid </a></div>
+        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:right">次ページ:<a href="gamepad_get_guid.htm"> Gamepad_get_guid </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_is_connected

@@ -6,7 +6,7 @@
   <title>draw_sprite_stretched_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for draw_sprite_stretched_ext" />
   <meta name="rh-index-keywords" content="draw_sprite_stretched_ext" />
@@ -16,61 +16,61 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_sprite_stretched_ext</h1>
-  <p>This function does exactly the same as the <a href="draw_sprite_stretched.htm"><span class="inline">draw_sprite_stretched()</span></a> function with the added ability to set the colour blending and alpha value for the sprite when it is drawn (similar to the function <a href="draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>).</p>
-  <p class="note"><span class="note">NOTE</span> When drawing with this function, the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a> and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a> (or origins) are ignored and the sprite is drawn with the top-left corner at the specified x/y position in the room.</p>
-  <p class="note"><span class="note">NOTE</span> Colour blending is only recommended for the HTML5 target when WebGL is enabled, although you can still set the blending colour if it is not enabled and it will blend the sprite as normal. However all blending in this way creates a duplicate sprite which is then stored in the cache and used when required. This is far from optimal and if you use multiple colour changes it will slow down your games performance unless you activate WebGL. if you do not wish to use WebGL, then you can set the font cache size to try and limit this should it be necessary using the function <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><span class="inline">sprite_set_cache_sizee()</span></a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は <a href="draw_sprite_stretched.htm"><span class="inline">draw_sprite_stretched()</span></a>関数に、描画時に<span class="notranslate">sprite</span> のカラーブレンドとアルファ値を設定する機能が追加されました (関数 <a href="draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>).</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">sprite</span> <span class="note"></span>この機能で描画する場合、<span class="notranslate">sprite</span> の<a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x オフセットと</a> <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y オフセット</a>（または原点）は無視され、<span class="notranslate">room</span> で指定した x/y 位置に左上隅が来るように描画されます。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">sprite</span> <span class="note"></span>：カラーブレンディングは、WebGL が有効な場合にのみ HTML5 ターゲットで推奨されます。ただし、この方法でブレンドすると、<span class="notranslate">sprite</span> の複製が作成され、<span class="notranslate">cache</span> に保存され、必要なときに使用されます。これは最適とは程遠く、複数の色の変更を使用すると、WebGL を有効にしない限り、ゲームのパフォーマンスが低下します。WebGL を使用したくない場合は、<span class="notranslate">font</span> <span class="notranslate">cache</span> のサイズを設定して、必要な場合に制限をかけることができます。 <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><span class="inline">sprite_set_cache_sizee()</span></a></span>.</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">draw_sprite_stretched_ext(sprite, subimg, x, y, w, h, colour, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>        <th>Description</th>
+        <th>論証</th><th>タイプ</th>        <th>商品説明</th>
      </tr>
       <tr>
-        <td>sprite</td><td><span data-keyref="Type_Asset_Sprite"></span></td>        <td>The index of the sprite to draw.</td>
+        <td><span class="notranslate">sprite</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>        <td><span class="notranslate">The index of the sprite to draw.</span></td>
      </tr>
       <tr>
-        <td>subimg</td><td><span data-keyref="Type_Real"></span></td>        <td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
+        <td><span class="notranslate">subimg</span></td><td><span data-keyref="Type_Real"></span></td>        <td><span class="notranslate">The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</span></td>
      </tr>
       <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>        <td>The x coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>        <td><span class="notranslate">The x coordinate of where to draw the sprite.</span></td>
      </tr>
       <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>        <td>The y coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>        <td><span class="notranslate">The y coordinate of where to draw the sprite.</span></td>
      </tr>
       <tr>
-        <td>w</td><td><span data-keyref="Type_Real"></span></td>        <td>The width of the area the stretched sprite will occupy.</td>
+        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>        <td><span class="notranslate">The width of the area the stretched sprite will occupy.</span></td>
      </tr>
       <tr>
-        <td>h</td><td><span data-keyref="Type_Real"></span></td>        <td>The height of the area the stretched sprite will occupy.</td>
+        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>        <td><span class="notranslate">The height of the area the stretched sprite will occupy.</span></td>
      </tr>
       <tr>
-        <td>colour</td><td><span data-keyref="Type_Constant_Colour"></span></td>        <td>The colour with which to blend the sprite. c_white is to display it normally.</td>
+        <td><span class="notranslate">colour</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>        <td><span class="notranslate">The colour with which to blend the sprite. c_white is to display it normally.</span></td>
      </tr>
       <tr>
-        <td>alpha</td><td><span data-keyref="Type_Real"></span></td>        <td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td>
+        <td><span class="notranslate">alpha</span></td><td><span data-keyref="Type_Real"></span></td>        <td><span class="notranslate">The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">draw_sprite_stretched_ext(sprite_index, image_index, x, y, sprite_width, sprite_height / 2, c_white, 0.5);</p>
-  <p>This will draw the instances assigned sprite and its sub-image with the left corner at the instance x /y position. Its width is set to the same as the sprite, and the height is the sprite height divided by two. It will also be blended normally but have a partially transparent alpha value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これは、割り当てられたインスタンス<span class="notranslate">sprite</span> とそのサブ画像を、左隅がインスタンスの x /y 位置になるように描画します。その幅は<span class="notranslate">sprite</span> と同じに設定され、高さは<span class="notranslate">sprite</span> の高さを 2 で割ったものになります。また、通常通りブレンドされますが、部分的に透明なアルファ値を持ちます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
-        <div style="float:right">Next: <a href="draw_sprite_pos.htm">draw_sprite_pos</a></div>
+        <div style="float:left">戻る<a href="Sprites_And_Tiles.htm">スプライトとタイル</a></div>
+        <div style="float:right">次のページ <a href="draw_sprite_pos.htm"><span class="notranslate">draw_sprite_pos</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_stretched_ext

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_change</title>
+  <title>インスタンスチェンジ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function instance_change" />
   <meta name="rh-index-keywords" content="instance_change" />
@@ -15,54 +15,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_change</h1>
-  <p>You can use this function to change one instance of an object into another instance of a different object, and while doing so decide whether to perform the initial instances Destroy and Clean Up Events and the new instances Create Event. In this way, you can have (for example) a bomb change into an explosion - in which case the &quot;perf&quot; argument would probably be true as you would want the bomb to perform its Destroy Event and Clean Up Event, as well as the explosion to perform its Create Event - or you could have your player character change into a different one - in which case the &quot;perf&quot; argument would probably be false as you do not want the instances to perform their Create and Destroy/Clean Up events.</p>
-  <p>It is worth noting that changing the instance means that you should perform no further actions with that instance until the next step, in particular trying to access variables etc... as that will cause an error. Basically, you change the instance but it is not actually available until the end of the current step, so to access any of the variables it contains directly (for example, calling <span class="inline">obj_Changed.x</span>) will not work.</p>
-  <p class="note"><b>WARNING!</b> When changing a physics enabled instance, the physical properties <b>will not be carried over</b> to the new instance being changed into. Therefore you should have code in place to &quot;transfer&quot; the physics state of the current instance over to the new instance, or have defined the new instances physical properties in its Create Event, or in the object editor. For this reason it is recommended that you not use this function with physics enabled instances, but rather use a combination of <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> and <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span>.</span></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>インスタンスチェンジ</h1>
+  <p>この関数を使用して、あるインスタンス<span class="notranslate">object</span> を別のインスタンス<span class="notranslate">object</span> に変更し、その際に最初のインスタンスの Destroy と Clean Up Event と新しいインスタンスの Create Event を実行するかどうかを決定することができる。この場合、爆弾の Destroy イベントと Clean Up イベント、および爆発の Create イベントを実行させたいので、「perf」引数はおそらく true になります。</p>
+  <p>インスタンスを変更するということは、そのインスタンスに対して次のステップまで何もしないこと、特に変数にアクセスしようとするとエラーが発生することを意味します。基本的に、インスタンスを変更しても、現在のステップが終了するまで実際には使用できないので、そのインスタンスが含む変数に直接アクセスすることはできません（たとえば、 <span class="inline">obj_Changed.x</span> を呼び出すなど）。</p>
+  <p class="note"><b>警告!物</b>理演算が有効なインスタンスを変更した場合、その物理特性は変更先のインスタンスに<b>引き継が</b>れません。そのため、現在のインスタンスの物理状態を新しいインスタンスに「転送」するコードを用意するか、新しいインスタンスの物理プロパティをその作成イベントまたは<span class="notranslate">object</span> エディタで定義しておく必要があります。このため、物理演算が可能なインスタンスにはこの関数を使用せず、むしろ <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span>および<span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">instance_change(obj, perf);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span></td>
-        <td>The new object the calling object will change into.</td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクト・アセット</span></td>
+        <td><span class="notranslate">The new object the calling object will change into.</span></td>
       </tr>
       <tr>
-        <td>perf</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether to perform that new object&#39;s Create and Destroy events (true) or not (false).</td>
+        <td><span class="notranslate">perf</span></td>
+        <td><span data-keyref="Type_Bool">ブーリアン</span></td>
+        <td><span class="notranslate">Whether to perform that new object&#39;s Create and Destroy events (true) or not (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if keyboard_check(vk_enter)<br />
     {<br />
         instance_change(obj_Player_Swimming, false);<br />
         exit;<br />
     }</p>
-  <p>The above code will change the calling instance into an instance of &quot;obj_Player_Swimming&quot; without performing the original instances destroy event nor the new instances create event when the user presses the &quot;Enter&quot; key, exiting the code block when done.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、ユーザーが &quot;Enter &quot;キーを押したときに、元のインスタンスのdestroyイベントや新しいインスタンスのcreateイベントを実行せずに、呼び出し元のインスタンスを &quot;obj_Player_Swimming &quot;のインスタンスに変更し、完了したらコードブロックを終了させるものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
-        <div style="float:right">Next: <a href="instance_copy.htm">instance_copy</a></div>
+        <div style="float:left">戻る：<a href="Instances.htm">インスタンス</a></div>
+        <div style="float:right">次のページ <a href="instance_copy.htm"><span class="notranslate">instance_copy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_change

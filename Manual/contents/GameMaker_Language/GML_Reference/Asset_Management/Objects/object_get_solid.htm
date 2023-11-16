@@ -6,7 +6,7 @@
   <title>object_get_solid</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_get_solid" />
   <meta name="rh-index-keywords" content="object_get_solid" />
@@ -16,43 +16,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>object_get_solid</h1>
-  <p>This function will tell you whether the object you are checking has been flagged as &quot;solid&quot; or not. A solid object generates a special collision event when using the traditional collision system (ie: the physics world is off). Please note that this is not an instance function! So, you can have a solid object and a normal instance of the same object and vice-versa. You can set an individual instances solid flag using the <a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a> instance variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、チェックしている<span class="notranslate">object</span> が &quot;solid &quot;のフラグを立てているかどうかを教えてくれます。solid<span class="notranslate">object</span> は、従来のコリジョンシステムを使用した場合（つまり、物理ワールドがオフの場合）、特別なコリジョンイベントを発生させます。これはインスタンス関数ではないことに注意してください!<span class="notranslate">object</span> つまり、同じ<span class="notranslate">object</span> のソリッドインスタンスとノーマルインスタンスを持つことができますし、その逆もしかりです。個々のインスタンスのソリッド<span class="notranslate">flag</span> を設定するには <a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a>インスタンス変数</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">object_get_solid(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The index of the object to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (!solid) &amp;&amp; (object_get_solid(object_index))<br />
     {<br />
         solid = true;<br />
     }</p>
-  <p>The above code will check the instance running it to see if it is solid or not as well as check the object index of the instance to see if it is flagged as solid or not. If the instance is <i>not</i> solid yet the object index is flagged as solid, it will set &quot;solid&quot; to true for that instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、実行しているインスタンスが固体であるかどうかをチェックし、さらにインスタンスの<span class="notranslate">object</span> インデックスをチェックして、固体としてフラグが立っているかどうかを確認します。インスタンスが固体で<i>ないにも</i>かかわらず、<span class="notranslate">object</span> インデックスが固体と判定された場合、そのインスタンスの &quot;solid&quot; を true に設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_sprite.htm">object_get_sprite</a></div>
+        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ <a href="object_get_sprite.htm"><span class="notranslate">object_get_sprite</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_solid

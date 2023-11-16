@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Sprite Editor</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>スプライト</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the sprite editor works" />
   <meta name="rh-index-keywords" content="Sprite Editor" />
@@ -14,172 +14,226 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h"><span data-field="title" data-format="default">The Sprite Editor</span></h1>
-  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sprites.png" /><span data-field="title" data-format="default">The Sprite Editor</span> is where you set the general properties for <a class="glossterm" data-glossterm="sprites" href="#">sprites</a> that you make. You can open this window by creating a new sprite (right-click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on <a data-xref="{title}" href="../Introduction/The_Asset_Browser.htm">The Asset Browser</a> and select <strong>Create Sprite</strong>), by double-clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on an existing sprite or by right-clicking <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> an existing sprite and selecting <strong>Properties</strong>.</p>
-  <p>The parts that make up the Sprite Editor are as follows:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Sprite Name</a></p>
+  <h1><span class="notranslate">Sprite</span> 編集部</h1>
+  <p><img><strong>スプライトエディターは</strong>、作成した<a class="glossterm" data-glossterm="スプライト" href="#">スプライトの</a>一般的なプロパティを設定するところです。<span class="notranslate">sprite</span> <img> このウィンドウは、新規に<span class="notranslate">sprite</span> を作成する（<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザで</a> <img> を右クリックし、「スプライトを作成」を選択）か、既存の<img> をダブルクリックするか、既存の<span class="notranslate">sprite</span> を右クリックし、「<strong>プロパティ</strong>」を選択することで開くことができます。</p>
+  <p><span class="notranslate">Sprite</span> Editorを構成するパーツは以下の通りです。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">スプライト名</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">Here you can name the sprite. The sprite name is what will be used throughout your game project to identify the sprite as a resource and can only be alpha-numeric and may only use the underbar &quot;_&quot; symbol. While you can use numbers in the sprites name, the name cannot start with a number as that would make it an invalid resource name when using GML or GML Visual.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">sprite</span> <span class="notranslate">sprite</span> の名前は、ゲームプロジェクト全体で をリソースとして識別するために使用されるもので、英数字とアンダーバー「_」記号のみを使用できます。名前に数字を使うこともできます。
+        または Visual を使用する場合、無効なリソース名となるため、名前を数字で開始することはできません。<span class="notranslate">sprite</span> <span class="notranslate">sprites</span> <span class="notranslate">GML</span> <span class="notranslate">GML</span> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Image Properties</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">イメージプロパティ</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">In this section you can set the image size by clicking the <strong>Sprite Size</strong> button <img alt="Sprite Size Icon" class="icon" src="../assets/Images/Icons/Icon_SpriteSize.png" />. This will open the following window:</p>
-    <p class="dropspot"><img alt="Sprite Editor Resize Properties" class="center" src="../assets/Images/Asset_Editors/Editor_Sprites_ResizeProperties.png" />Here you can see a preview of the sprite before and after applying the chosen transforms, and the section below is for setting the new sprite properties and is split into two parts:</p>
+    <p class="dropspot">このセクションでは、<strong>スプライトサイズボタン</strong> <img> をクリックして、画像サイズを設定することができます。すると、以下のようなウィンドウが表示されます。</p>
+    <p class="dropspot"><img>ここでは、選択した変換を適用する前と後の<span class="notranslate">sprite</span> のプレビューを見ることができます。以下のセクションは
+      は、新しい<span class="notranslate">sprite</span> のプロパティを設定するためのもので、2つのパートに分かれています。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Scale Image</strong>: With this option you can resize the sprite draw canvas and any images contained on the sprite will be stretched and scaled to fit the new size. You can choose to scale and maintain the aspect ratio of the base image, and you can also choose whether to scale in Pixels or in Percentage. Depending on the type of image you are working with you may also want to enable linear interpolation or not (in general, linear interpolation will &quot;smooth&quot; pixels over an area and so is best left off for pixel art).</li>
-      <li class="dropspot"><strong>Resize Canvas</strong>: This option will resize the draw canvas to the new size without scaling the contents. You can set the &quot;anchor&quot; point for the resize using the directional arrows then set the size value. There is an option to maintain aspect ratio when resizing the canvas and at the bottom you can choose to set the resize values in either pixels or as a percentage.</li>
+      <li class="dropspot"><strong>画像の拡大縮小</strong>。このオプションで、<span class="notranslate">sprite</span> ドローキャンバスのサイズを変更することができ、<span class="notranslate">sprite</span> に含まれるすべての画像は新しいサイズに合わせて引き伸ばされ、拡大縮小されます。ベース画像のアスペクト比を維持したまま拡大縮小することも可能です。
+        また、ピクセル単位かパーセンテージ単位かを選択することもできます。作業する画像の種類によっては、線形補間を有効にするかどうかも選択できます（一般に、線形補間はピクセルを「平滑化」します）。
+        ピクセルアートの場合は、オフにしたほうがよいでしょう。）</li>
+      <li class="dropspot"><strong>キャンバスをリサイズ</strong>する。このオプションは、描画内容を拡大縮小することなく、新しいサイズにリサイズします。方向矢印でリサイズの「アンカー」ポイントを設定し、サイズ値を設定します。オプション
+        また、リサイズ値をピクセルまたはパーセントで設定することができます。</li>
     </ul>
-    <p class="dropspot">When you are happy with the new size, you can click <em>Apply </em>to apply the changes and close the Resize properties window. Note that when applying a change in scale or size to a sprite, you can choose to have the change applied to the origin of the sprite too, by checking the <strong>Apply to Origin </strong>checkbox beside the <em>Apply </em>button. When checked - if the origin is not one of the default settings and is not locked in the sprite - then its position will be scaled to match the change to the size of the sprite. When un-checked, no scaling will be applied to the origin. If the origin is not a custom value or is locked, then it will be grayed out and unavailable. You can set this option for all sprites from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sprite_Editor_Preferences.htm">Sprite Editor Preferences</a>.</p>
-    <div class="dropspotnote"><span class="note">NOTE</span> This option is only available for <a class="glossterm" data-glossterm="bitmap" href="#">bitmap</a> sprites and will be greyed out for SWF or skeleton animation sprites.</div>
-    <p class="dropspot">In this section you can also either open the <a href="Image_Editor.htm">Image Editor</a> to draw your sprite, or you can click on the &quot;<em>Import</em>&quot; button to import a previously created sprite. Sprites can be imported from most common bitmap formats ( <span class="inline">PNG</span>, <span class="inline">JPG</span>, <span class="inline">GIF</span>, etc...) but <span data-keyref="GameMaker Name">GameMaker</span> also supports vector sprites (<span class="inline">SWF</span>), SVGs (which are converted to bitmaps) and skeletal animation sprites (<span class="inline">Spine</span>). For more information on these formats, please see the section on <a href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Non-Bitmap Sprites</a>. Note that when importing bitmap sprites you can select multiple image files in the file explorer and each one will be added to the same sprite as separate sub-images (frames).</p>
-    <p class="dropspot">You can also import GIFs and <a data-xref="{title}" href="Sprite_Properties/Sprite_Strips.htm">Strip Images</a> for animation.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">新しいサイズでよければ、「<em>適用 </em>」をクリックして変更を適用し、「リサイズプロパティ」ウィンドウを閉じます。スケールやサイズの変更を<span class="notranslate">sprite</span> に適用する場合、その変更を原点に適用するよう選択することができます。
+      の<span class="notranslate">sprite</span> 、「<em>適用」 </em>ボタンの横にある「<strong>原点に適用 </strong>」チェックボックスをオンにします。チェックすると、原点がデフォルト設定でなく、<span class="notranslate">sprite</span> でロックされていない場合、その位置が拡大縮小されます。
+     <span class="notranslate">sprite</span> チェックを外すと、原点にスケーリングは適用されません。原点がカスタム値でない場合、またはロックされている場合は、グレーアウトして利用できなくなります。このオプションは、すべての<span class="notranslate">sprites</span> に対して、[Custom] メニューから設定できます。
+     <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sprite_Editor_Preferences.htm">スプライトエディタの環境</a>設定
+    </p>
+    <div class="dropspotnote"><span class="note">注</span>このオプションは<a class="glossterm" data-glossterm="ビットマップ" href="#">ビットマップ</a> <span class="notranslate">sprites</span> に対してのみ有効で、SWF またはスケルトンアニメーション<span class="notranslate">sprites</span> に対してはグレーアウトされた状態で表示されます。</div>
+    <p class="dropspot"><span class="notranslate">sprite</span> このセクションでは、<a href="Image_Editor.htm">イメージエディタを開いて</a> <span class="notranslate">sprite</span> を描くこともできますし、「<em>インポート</em>」ボタンを クリックして、以前に作成した<span class="notranslate">Sprites</span> をインポートすることもできます。
+      ビットマップ形式 ( <span class="inline">PNG</span>, <span class="inline">JPG</span>, <span class="inline">GIF</span>, etc...) ですが、<span data-keyref="GameMaker Name">GameMaker</span>はベクター<span class="notranslate">sprites</span> (<span class="inline">SWF</span>) とスケルトンアニメーション<span class="notranslate">sprites</span> ( ) もサポートしています。
+     <span class="inline">Spine</span>).これらのフォーマットの詳細については、「<a href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm">非ビットマップ・スプライト</a>」のセクションを参照してください。ビットマップ<span class="notranslate">sprites</span> をインポートする場合、以下のように選択することができます。
+      ファイルエクスプローラで複数の画像ファイルを選択すると、それぞれの画像は別々のサブ画像（フレーム）として同じ<span class="notranslate">sprite</span> に追加されます。
+    </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Texture Settings</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">テクスチャーの設定</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><img class="center" src="../assets/Images/Settings/Texture_Page_Options.png" />This section of the sprite properties window deals with how <span data-keyref="GameMaker Name">GameMaker</span> stores the images that make up your sprite on <a class="glossterm" data-glossterm="texture page" href="#">texture page</a><span class="glossextra">s</span> for use with devices and browsers. For desktop platforms this may not be too important, but when you start to develop for mobile or web the proper management of your image assets (textures) becomes very important as poorly managed textures can have detrimental effect on your game, causing performance issues.</p>
-    <p class="dropspot">The <strong>Tile Horizontally</strong> and <strong>Tile Vertically</strong> check boxes are, by default, not normally checked as most times you do not want to tile sprites. However, in certain circumstances you may wish them to tile, meaning that you should check these options, especially if you are going to be scaling the view or room as scaling can introduce artefacts into the graphics of a game if the texture page is not generated properly.</p>
-    <p class="dropspot">If your sprite is going to be used as a texture map in a 3D game, then you should check the <strong>Separate Texture Page</strong> box and the sprite will be given a texture page all of its own (note that each sub-image will also get its own texture page, so if your sprite has 10 images you will generate 10 texture pages). This will increase the texture memory needs of your game and so great care must be taken when using this option. Also note that in general if your sprite is using this option for 3D, then the textures should be a power of 2 (ie: 128x128, 256x256, 512x512 etc...). For more information read <a data-xref="{title}" href="../Settings/Texture_Information/Texture_Pages.htm">Texture Pages</a>.</p>
-    <p class="dropspot">If you mark your sprite as needing a separate texture page, you can set whether that texture page is <a href="../Settings/Texture_Information/Dynamic_Textures.htm">dynamic</a> or not.</p>
-    <p class="dropspot">The next option is to enable <strong>Pre-Multiplied Alpha</strong> for the sprite images. When enabled, this will pre-multiply the alpha of all sub-images of the sprite. This is normally only necessary drawing sprites to surfaces, or for some specific special effects. For normal sprite use you should not see any noticeable difference between the normal sprite and the pre-multiplied one.</p>
-    <p class="dropspot">We also have an<strong> Edge Filtering</strong> option. This option is specifically for when you have <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a> enabled for your game and you are seeing &quot;halos&quot; of colour around your sprites. This is caused by the hardware interpolating from multiple source <a class="glossterm" data-glossterm="texel" href="#">texel</a><span class="glossextra">s</span> on the texture page all at once, and can be particularly obvious when you scale games up in resolution. Enabling this will filter the edge pixels to take on the colour of the nearest full alpha sprite pixel and so blend the interpolated pixels without the halo that was present previously.</p>
-    <p class="dropspot">Finally, you can chose the <strong>texture group</strong> that you wish the sprite resource to belong to. Basically, a texture group (previously defined in the <a href="../Settings/Texture_Groups.htm">Texture Group Manager</a>) is something that you can set up so that all the image resources that you need for specific rooms or levels of your game can be stored together. So, for example, you can have all your level 1 images in one texture group, all your level 2 images in another etc... and <span data-keyref="GameMaker Name">GameMaker</span> will try to place all those grouped resources on the same texture page to reduce texture page swapping while your game is running on the chosen target platform.</p>
-    <div class="dropspotnote"><span data-conref="../assets/snippets/Tag_note.hts"> </span> This may not always be necessary and the performance increase from this method will depend on whether the target device is CPU bound or GPU bound.</div>
-    <p class="dropspot">You can find out more about texture pages <a href="../Settings/Texture_Information/Texture_Pages.htm">here</a>.</p>
+    <p class="dropspot"><span class="notranslate">sprite</span> プロパティウィンドウのこのセクションは、<span data-keyref="GameMaker Name">GameMaker</span>が<span class="notranslate">sprite</span> を構成する画像を、<a class="glossterm" data-glossterm="テクスチャページ" href="#">テクスチャ</a><span class="glossextra">ページで</span>使用するために保存する方法を扱います。
+      デバイスやブラウザで使用することができます。デスクトッププラットフォームではあまり重要ではないかもしれませんが、モバイルや Web 用の開発を始めると、画像<span class="notranslate">assets</span> (<span class="notranslate">textures</span>) の適切な管理が非常に重要になり、<span class="notranslate">textures</span> の管理が不十分だと、有害な影響を与える可能性があります。
+      は、ゲームに影響を与え、パフォーマンスの問題を引き起こします。</p>
+    <p class="dropspot"><strong>Tile Horizontally</strong> <span class="notranslate">tile</span><strong></strong>と<strong>Tile Vertically</strong>のチェックボックスは、通常はデフォルトでチェックされておらず、<span class="notranslate">sprites</span> <span class="notranslate">tile</span> したくない場合がほとんどです。
+      <span class="notranslate">room</span> <span class="notranslate">texture</span> ページが適切に生成されないと、スケーリングによってゲームのグラフィックに不具合が生じる可能性があるからです。</p>
+    <p class="dropspot"><span class="notranslate">sprite</span> を 3D ゲームで<span class="notranslate">texture</span> のマップとして使用する場合は、<strong>Separate<span class="notranslate">Texture</span> Page</strong>ボックスをチェックすると、<span class="notranslate">sprite</span> に<span class="notranslate">texture</span> のページが与えられます（サブイメージもそれぞれ独自のテクスチャを取得することに注意してください）。
+      ページが生成されるため、<span class="notranslate">sprite</span> に 10 個の画像がある場合、10 個の<span class="notranslate">texture</span> ページが生成されます）。このため、<span class="notranslate">texture</span> のメモリ使用量が増えるので、このオプションを使用するときは、十分な注意が必要です。また、一般に、<span class="notranslate">sprite</span> がこのオプションを使用する場合、次のことに注意し てください。
+      3Dの場合、<span class="notranslate">textures</span> は2のべき乗であるべきです（例：128x128、256x256、512x512など）。</p>
+    <p class="dropspot">次のオプションは、<span class="notranslate">sprite</span> 画像の「<strong>Pre-Multiplied Alpha</strong>」を有効にすることです。このオプションを有効にすると、<span class="notranslate">sprite</span> のすべてのサブイメージのアルファが事前に乗算されます。 これは通常、<span class="notranslate">sprites</span> をサーフェスに描画したり、いくつかの特定の
+      特殊効果。通常の<span class="notranslate">sprite</span> の使用では、通常の<span class="notranslate">sprite</span> と乗算前のものとの間に顕著な差は見られないはずです。</p>
+    <p class="dropspot">また、「<strong> エッジフィルター</strong>」のオプションも用意されています。このオプションは、特にゲームで<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>有効にしている場合に、「ハロー」が見える場合に使用します。
+      <span class="notranslate">sprites</span> の周りの色の。これは、ハードウェアが<span class="notranslate">texture</span> ページ上の複数の<a class="glossterm" data-glossterm="テクセル" href="#">ソーステクセ ルから</a>一度に補間することによって発生します。
+      ゲームの解像度を上げると顕著になります。この機能を有効にすると、エッジピクセルが最も近いフルアルファ<span class="notranslate">sprite</span> ピクセルの色になるようフィルタリングされ、補間されたピクセルが以前のようなハローなしでブレンドされます。</p>
+    <p class="dropspot">最後に、<span class="notranslate">sprite</span> リソースを所属させたい<strong>テクスチャ</strong>グループを選択します。基本的に、<span class="notranslate">texture</span> グループ（<a href="../Settings/Texture_Groups.htm">テクスチャグループマネージャで</a>定義済み）とは、以下のようなものです。
+      を設定することで、ゲームの特定の<span class="notranslate">rooms</span> またはレベルに必要なすべての画像リソースをまとめて保存することができます。例えば、レベル1の画像を1つの<span class="notranslate">texture</span> グループに、レベル2の画像を別のグループに...といった具合です。
+     <span data-keyref="GameMaker Name">GameMakerは</span>、これらのグループ化されたリソースをすべて同じ<span class="notranslate">texture</span> ページに配置しようとするので、選択したターゲットプラットフォームでゲームを実行している間の<span class="notranslate">texture</span> ページのスワッピングを減らすことができます。</p>
+    <div class="dropspotnote"><strong>注</strong>：この方法は必ずしも必要ではないかもしれませんし、この方法による性能向上は、ターゲットデバイスがCPUバウンドかGPUバウンドかによって異なります。</div>
+    <p class="dropspot"><span class="notranslate">texture</span> ページについては、<a href="../Settings/Texture_Information/Texture_Pages.htm">こちらで</a>ご確認ください。</p>
+    <p class="dropspot">テクスチャグループは<a class="glossterm" data-glossterm="ビットマップ" href="../Settings/Texture_Groups.htm#">ビットマップ</a>画像にのみ関連し、非ビットマップ<span class="notranslate">sprites</span> は<span class="notranslate">texture</span> グループに割り当てられず、上記のオプションのいくつかは使用できません。
+      を使用します。非ビットマップ<span class="notranslate">sprites</span> の中には、すでに独自の<span class="notranslate">texture</span> ページを持つもの（スケルトンアニメーション<span class="notranslate">sprites</span> ）もあれば、<span class="glossextra">ベクターで</span>構成されているため<span class="notranslate">textures</span> を必要としないもの（SWF<span class="notranslate">sprites</span> ）もあります。詳しくは、次のセクションをご覧ください。</p>
     <ul class="dropspotlist">
+      <li><a href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm">非ビットマップスプライト</a></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Collision Mask</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">コリジョンマスク</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">All sprites have a <strong>collision mask</strong> which corresponds to the area of the sprite that will be used to detect collisions when the sprite is assigned to an instance. You can first set the <strong>Mode </strong>for the collision mask, which can be one of the following:</p>
+    <p class="dropspot">すべての<span class="notranslate">sprites</span> には、<span class="notranslate">sprite</span> の領域に対応する<strong>コリジョンマスクが</strong>あり、<span class="notranslate">sprite</span> がインスタンスに割り当てられたときに、コリジョンを検出するために使用されます。まず、コリジョンマスクの<strong>Modeを </strong>設定します。
+      は、以下のいずれかとすることができる。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Automatic</strong>: <span data-keyref="GameMaker Name">GameMaker</span> will calculate the collision mask automatically based on the sprite alpha values (this will depend on the Tolerance setting explained below).</li>
-      <li class="dropspot"><strong>Full Image</strong>: The mask will be calculated with it&#39;s bounds being the same as the left, right, top and bottom bounds of the sprite.</li>
-      <li class="dropspot"><strong>Manual</strong>: Selecting this means that you wish to set the bounds of the collision mask using the input values for left, right, top and bottom.</li>
+      <li class="dropspot"><strong>自動</strong>です。<span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">sprite</span> のアルファ値に基づいてコリジョンマスクを自動的に計算します（これは以下で説明する Tolerance の設定に依存します）。</li>
+      <li class="dropspot"><strong>フル画像</strong>です。マスクは、その境界が<span class="notranslate">sprite</span> の左、右、上、下の境界と同じになるように計算されます。</li>
+      <li class="dropspot"><strong>手動</strong>です。コリジョンマスクの境界を、左、右、上、下の入力値で設定することを意味します。</li>
     </ul>
-    <p class="dropspot">Apart from the collision mask Mode, there are also various <strong>types </strong>of collision mask which you can choose from the drop down menu:</p>
+    <p class="dropspot">コリジョンマスクモードとは別に、様々な<strong>種類の </strong>コリジョンマスクがあり、ドロップダウンメニューから選択することができます。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Rectangle</strong>: A simple rectangular collision mask. This is the fastest to resolve when used in your project.</li>
-      <li class="dropspot"><strong>Rotated Rectangle</strong>: This is a simple rectangular collision mask which will rotate along with the <span class="inline">image_angle</span> value of the instance with the sprite assigned. This is slower to resolve than the regular rectangular collision mask, but faster than a precise collision mask.</li>
-      <li class="dropspot"><strong>Ellipse</strong>: Creates an elliptical collision mask. This is slower to resolve than the rectangular mask.</li>
-      <li class="dropspot"><strong>Diamond</strong>: Creates a &quot;diamond&quot; collision mask. This is slower to resolve and generates more CPU overhead than both the rectangular and ellipitical masks.</li>
-      <li class="dropspot"><strong>Precise</strong>: This creates a precise collision mask based on the outline of the sprite. If the sprite has multiple sub-images, then this will be a <em>composite </em>of the edges of <em>all </em>the sub-images placed over each other. Note that the precise mask will be clipped to the <a class="glossterm" data-glossterm="bounding box" href="#">bounding box</a> if the Mode is set to Manual and you change the default values. This is very slow and generates a lot of CPU overhead.</li>
-      <li class="dropspot"><strong>Precise (per frame)</strong>: This creates a precise collision mask on a per-frame basis (ie: the mask will change to conform to the outline of each different frame). Note that the precise mask will be clipped to the <a class="glossterm" data-glossterm="bounding box" href="#">bounding box</a> if the Mode is set to Manual and you change the default values. This is by far the slowest type of collision mask to resolve and should be avoided except in very, very specific and infrequent cases.</li>
-      <li class="dropspot"><strong>Spine Collision Mesh</strong>: Apart from Rectangle, this is the only selectable option for Spine sprites. It enables more precise collision checking against the mesh in the sprite.</li>
+      <li class="dropspot"><strong>矩形</strong>。単純な矩形のコリジョンマスクです。プロジェクトで使用する場合、これが最も早く解決します。</li>
+      <li class="dropspot"><strong>Rotated Rectangle（回転した矩形</strong>）。これは単純な長方形のコリジョンマスクで、<span class="notranslate">sprite</span> を割り当てたインスタンスの <span class="inline">image_angle</span> 値に伴って回転します。これは、通常の長方形よりも解決に時間がかかります。
+        コリジョンマスクより高速ですが、精密なコリジョンマスクより高速です。</li>
+      <li class="dropspot"><strong>Ellipse（楕円</strong>）。楕円形のコリジョンマスクを作成します。これは、矩形マスクよりも解決に時間がかかります。</li>
+      <li class="dropspot"><strong>ダイヤモンド</strong>菱形」のコリジョンマスクを作成します。これは、矩形と楕円の両方のマスクよりも解決に時間がかかり、より多くの CPU オーバーヘッドを発生させます。</li>
+      <li class="dropspot"><strong>Precise（精密</strong>）。<span class="notranslate">sprite</span> <span class="notranslate">sprite</span> に複数のサブイメージがある場合、<em>すべての </em>サブイメージのエッジを重ね合わせた<em>合成 </em>マスクになります。
+        モードがマニュアルに設定されている場合にデフォルト値を変更すると、精密なマスクは<a class="glossterm" data-glossterm="バウンディングボックス" href="#">バウンディングボックスに</a>クリッピングされることに注意してください。これは非常に遅く、多くのCPUオーバーヘッドを発生させます。</li>
+      <li class="dropspot"><strong>Precise (per frame)</strong>です。フレーム単位で正確なコリジョンマスクを作成します（つまり、マスクは各フレームのアウトラインに適合するように変更されます）。ModeがManualに設定され、デフォルト値を変更した場合、精密なマスクは<a class="glossterm" data-glossterm="バウンディングボックス" href="#">バウンディングボックスに</a>クリップされることに注意してください。これはコリジョンマスクの中で最も解決に時間がかかるタイプで、非常に特殊でまれな場合を除き、避けるべきでしょう。
+        の場合です。
+      </li>
     </ul>
-    <p class="dropspot">The following image illustrates the different mask options:</p>
-    <p class="dropspot"><img alt="Collisions" class="center" src="../assets/Images/Asset_Editors/bbox_image.png" />The collision checking options are very important ones for your game, as they will directly influence how your objects interact and how your game runs, with the wrong settings even having a negative impact on the over all performance. Why is that? Well, whenever two instances meet, and both instances have a valid mask, a collision event is generated by checking the overlap of the bounding box <em>and </em>the mask, which can either be precise or not, and adapted to the image index or not. Below is an image to illustrate this:</p>
-    <p class="dropspot"><img alt="Different collisions and how they are resolved" class="center" src="../assets/Images/Asset_Editors/basic_collisions_image.png" /></p>
-    <p class="dropspot">Beneath the collision mask setting, you have the <strong>alpha tolerance </strong>slider, which indicates the tolerance for creating the mask with respect to the transparency of the sprites pixels - with a higher tolerance pixels that are partially transparent are left outside the mask, while with a lower tolerance the mask will take into account those pixels. This influences both the bounding box (when not set to manual) and the mask for precise collision checking.</p>
-    <p class="dropspot">Finally you can set the <strong>Bounding Box</strong> limits for the mask. The bounding box is the name given to the rectangular area that the sprite mask fits in. Only pixels inside this bounding box are used for the mask and will be involved in collision checking, and by default this is automatically computed, taking the alpha tolerance into account. If you have &quot;precise (per frame)&quot; checked then this will be separate for each sub-image too. When setting it yourself, you can input the values in the boxes for left, right top and bottom, or you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> in the sprite preview window and drag to &quot;draw&quot; it over the sprite. Note that when &quot;drawing&quot; the bounding box, the mask is automatically generated to fit within the end values, and the bounding box can &quot;clip&quot; the mask.</p>
-    <p class="dropspot">It is worth noting that if you go to the Preview window, you can adjust the collision mask using the &quot;handles&quot; found in each corner. Clicking and dragging these will adjust the collision mask just the same as inputing values for the bounding box would.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">次の画像は、さまざまなマスクのオプションを示しています。</p>
+    <p class="dropspot"><img>衝突チェックのオプションは、ゲームにとって非常に重要なもので、<span class="notranslate">objects</span> の相互作用やゲームの動作に直接影響します。
+      誤った設定は、全体のパフォーマンスに悪い影響を与えることさえあります。それはなぜか？2 つのインスタンスが出会い、両方のインスタンスが有効なマスクを持っている場合、バウンディング<em>ボックスと </em>マスクの重なりをチェックすることで衝突イベントが生成されます。
+      マスクは、正確かどうか、画像インデックスに適合しているかどうかに関係なく使用できます。以下は、これを説明するための画像です。</p>
+    <p class="dropspot"><img alt="The Sprite Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sprites.png" /></p>
+    <p class="dropspot">コリジョンマスクの設定の下には、<strong>アルファ許容度 </strong>スライダがあり、<span class="notranslate">sprites</span> ピクセルの透明度に対するマスクの作成許容度を示します。
+      透明なピクセルはマスクの外に置かれ、低い許容値ではそのピクセルを考慮したマスクが作成されます。これは、バウンディングボックス（手動に設定されていない場合）と、正確な衝突チェックのためのマスクの両方に影響します。</p>
+    <p class="dropspot">最後に、マスクの<strong>バウンディングボックスの</strong>制限を設定することができます。バウンディングボックスは、<span class="notranslate">sprite</span> マスクが収まる矩形領域に付けられた名前です。このバウンディングボックス内のピクセルだけがマスクに使用され、マスクに関与します。
+      デフォルトでは、アルファ許容誤差を考慮した上で自動的に計算されます。precise (per frame)」にチェックが入っている場合、これは各サブ画像でも別々に行われます。自分で設定する場合は、次のようにします。
+      左、右の上、下のボックスに値を入力するか、<span class="notranslate">sprite</span> プレビューウィンドウで<img> をクリックし、ドラッグしてその上に「描画」することができます。
+     <span class="notranslate">sprite</span> バウンディングボックスを「描く」場合、マスクは終了値の範囲に収まるように自動的に生成され、バウンディングボックスはマスクを「クリップ」することができることに注意してください。</p>
+    <p class="dropspot">なお、プレビューウィンドウでは、各コーナーにある「ハンドル」を使ってコリジョンマスクを調整することができます。これをクリック＆ドラッグすると、バウンディングマスクの値を入力するのと同じようにコリジョンマスクを調整できます。
+      ボックスのようなものです。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#">Nine Slice</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#">ナインスライス</a></p>
   <div class="droptext" data-targetname="drop-down21">
-    <p class="dropspot"><strong><span data-keyref="Nine Slicing">Nine Slicing</span></strong> (also known as 9-slicing) is a technique used to scale rectangular images for preserving details, making them retain their original form after scaling. See the page on <a href="Sprite_Properties/Nine_Slices.htm">Nine Slice</a> for more information.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Nine_Slice_0_Preview.png" style="cursor: nesw-resize;" />The <strong>Nine Slice</strong> section of the Sprite Editor allows you to enable <span data-keyref="Nine Slicing">Nine Slicing</span> on a sprite, and preview it in action inside the <strong>Nine Slice Preview</strong> window on the right.</p>
-    <p class="dropspot">The <strong>Nine Slice Preview</strong> window allows you to resize the image and shows how the final image will look, after it is scaled using the Nine Slice technique. This preview sprite can also be rotated.</p>
-    <p class="dropspot">The <strong>Nine Slice</strong> section has the following options:</p>
+    <p class="dropspot"><strong><span data-keyref="Nine Slicing">ナインスライシング</span></strong>(9-slicingとも呼ばれる)は、細部を保持するために矩形の画像を拡大縮小する際に用いられる手法で、拡大縮小後も元の形状を保持させることができます。詳しくは、<a href="Sprite_Properties/Nine_Slices.htm">ナインスライスの</a>ページをご覧ください。</p>
+    <p class="dropspot"><img> <span class="notranslate">Sprite</span> Editor の<strong>Nine Slice</strong>セクションでは、 で<span class="notranslate">sprite</span><span data-keyref="Nine Slicing">Nine Slicing を</span>有効にし、右側の<strong>Nine Slice Preview</strong>ウィンドウでその動作をプレビューすることができます。</p>
+    <p class="dropspot"><strong>ナインスライスプレビューウィンドウでは</strong>、画像のサイズを変更することができ、ナインスライステクニックで拡大縮小した後の最終的な画像の見え方を確認することができます。このプレビュー<span class="notranslate">sprite</span> は、回転させることもできます。</p>
+    <p class="dropspot"><strong>Nine Slice</strong>セクションには、以下のオプションがあります。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Activate Nine Slice:</strong> This option controls whether Nine Slice scaling is used when the sprite is scaled. When enabled, Nine Slice scaling will be used for the sprite (and any object instances using that sprite) placed in a Sequence or a Room Layer, and scaled sprites drawn using <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a> and other similar functions.<br />
-        <br />
-        <span class="expandtext"><span style="font-size:17px;"><strong>NOTE</strong>: Nine Slicing will not work with functions that draw only a part of the sprite or distort it, such as <span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a></span> or <span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a>.</span></span></span>
+      <li class="dropspot"><strong>ナインスライスを有効にする</strong>このオプションは、<span class="notranslate">sprite</span> がスケーリングされるときに Nine Sliceスケーリングを使用するかどうかを制御します。有効にすると、<span class="notranslate">sprite</span> または<span class="notranslate">object</span> レイヤーに配置された<span class="notranslate">sprite</span> （およびその<span class="notranslate">Sequence</span> を使用した<span class="notranslate">Room</span> インスタンス）、および<a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a>やその他の類似の関数で描画されたスケールされた<span class="notranslate">sprites</span> に Nine Slice スケーリンが使用されます。<br>
+        <br>
+        <span class="expandtext"><span style="font-size:17px;"><strong>注</strong>：ナインスライシングは、<span class="notranslate">sprite</span> の一部だけを描画したり、<span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a></span> のように歪ませる機能では機能しません。<span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a>.</span></span></span>
       </li>
-      <li class="dropspot"><strong>Guides:</strong> This section displays the offset of each guide on its axis, and can be used to change those offsets. These guides can also be moved inside the <strong>Sprite Preview</strong> window by simply dragging them with the mouse.<br />
-        <br />
-        <span class="dropspotnote"><strong><span class="note">NOTE</span></strong> Any guides on the same axis cannot cross each other, and dragging one over the other will result in the second guide being pushed.</span><br />
-        <br />
-        <img class="center" height="348" src="../assets/Images/Asset_Editors/Nine_Slice_GIF_Guides.gif" width="612" /><br />
-        The offset of each guide is relative to its corresponding edge. For example, the left guide is offset from the left edge, the right edge is offset from the right edge, and so on.<br />
-        <br />
-        The color and alpha of each guide can be changed by clicking on the colored button next to the guide’s position.<br />
-        <img class="center" src="../assets/Images/Asset_Editors/Nine_Slice_4_Color.png" />
+      <li class="dropspot"><strong>ガイドです。</strong>このセクションでは、各ガイドの軸のオフセットが表示され、そのオフセットを変更するために使用します。これらのガイドは、<strong>スプライトプレビューウィンドウ</strong>内でマウスでドラッグするだけで移動することもできます。<br>
+        <br>
+       <span class="dropspotnote"><strong><span class="note">注</span></strong></span>：同じ軸上のガイドは、互いに交差することはできません。一方を他方の上にドラッグすると、2番目のガイドが押されます。<br>
+        <br>
+        <img><br>
+        各ガイドのオフセットは、対応するエッジからの相対的なものです。例えば、左のガイドは左のエッジから、右のガイドは右のエッジから、といった具合にオフセットされます。<br>
+        <br>
+        各ガイドの色とアルファ値は、ガイドの位置の横にある色のついたボタンをクリックすることで変更することができます。<br>
+        <img>
       </li>
-      <li class="dropspot"><strong>Highlight</strong>: This option affects how a selected slice appears in the Sprite Preview window. <strong>&quot;Inverted&quot;</strong> highlights the sprite with an overlay except for the selected slice, and <strong>&quot;Overlay&quot;</strong> highlights only the selected slice with an overlay.<br />
-        <img src="../assets/Images/Asset_Editors/Nine_Slice_5_Highlight.png" /><br />
-        The color and alpha of the overlay can be changed by clicking on the colored button next to the drop-down menu.
+      <li class="dropspot"><strong>ハイライト</strong>このオプションは<span class="notranslate">Sprite</span> プレビューウィンドウでの選択スライスの表示方法に影響します。<strong>&quot;Inverted&quot; は</strong>選択スライス以外の<span class="notranslate">sprite</span> をオーバーレイでハイライトし、<strong>&quot;Overlay&quot; は</strong>選択スライスのみをオーバーレイでハイライトします。<br>
+        <img><br>
+        オーバーレイの色とアルファ値は、ドロップダウンメニューの横にある色のついたボタンをクリックすることで変更することができます。
       </li>
-      <li class="dropspot"><strong>Selected Slice:</strong> This option can be used to select a slice, choosing one from the edge slices (left, top, right, bottom) and the centre one. A slice can also be selected by <img class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> left clicking on it in the <strong>Sprite Preview</strong> window, and clicking on it again will de-select it.</li>
-      <li class="dropspot"><strong>Tile Mode: </strong>This option is used in conjunction with the <strong>Selected Slice</strong> option, to control how the slice appears when the sprite is scaled. You can apply one of the following Tile Modes to each slice:<br />
-        <img class="center" src="../assets/Images/Asset_Editors/Nine_Slice_3_TileModes.png" />
+      <li class="dropspot"><strong>選択されたスライス</strong>このオプションはスライスを選択するのに使用します。端のスライス（左、上、右、下）と中心のスライスから1つを選択します。また、<strong>スプライトプレビューウィンドウで</strong>スライスを<img> 左クリックすることでも選択できます。もう一度クリックすると、選択が解除されます。</li>
+      <li class="dropspot"><strong>タイルモード。 </strong>このオプションは［<strong>選択されたスライス</strong>］オプションと一緒に使用され、<span class="notranslate">sprite</span> が拡大縮小されたときにスライスがどのように表示されるかを制御するために使用されます。各スライスには、以下の<span class="notranslate">Tile</span> モードのいずれかを適用できます。<br>
+        <img>
         <ul>
-          <li class="dropspot"><strong>Stretch</strong><strong>:</strong> The slice will be stretched to fill the gap between its connected corners.</li>
-          <li class="dropspot"><strong>Repeat</strong><strong>:</strong> The slice will be repeated or tiled to preserve detail.</li>
-          <li class="dropspot"><strong>Mirror</strong><strong>:</strong> The slice will be repeated by mirroring.</li>
-          <li class="dropspot"><strong>Blank Repeat</strong><strong>:</strong> The slice will only appear once, resulting in a blank area after it.</li>
-          <li class="dropspot"><strong>Hide</strong><strong>:</strong> The slice will not appear at all.</li>
+          <li class="dropspot"><strong>伸縮する</strong><strong>。</strong>スライスは、接続された角の間のギャップを埋めるように引き伸ばされます。</li>
+          <li class="dropspot"><strong>繰り返し</strong><strong>：</strong>スライスは繰り返されるか、またはタイル状にされて、細部が保存されます。</li>
+          <li class="dropspot"><strong>ミラー</strong>スライスはミラーリングによって繰り返されます。</li>
+          <li class="dropspot"><strong>空白リピート</strong><strong>：</strong>スライスは一度だけ表示され、その後に空白領域ができます。</li>
+          <li class="dropspot"><strong>隠す</strong>スライスは全く表示されません。</li>
         </ul>
       </li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#">Broadcast Messages</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#">ブロードキャストメッセージ</a></p>
   <div class="droptext" data-targetname="drop-down19">
-    <p class="dropspot">This button will add a <strong>broadcast message</strong> to the sprite timeline, opening a dialog where you can add the message to be broadcast. The message will be added wherever the <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> is in the frame view and consists of a simple string that can be picked up in the <a href="Sequence_Properties/Broadcast_Messages.htm">Broadcast Message Event</a> when it is triggered and then acted on.</p>
-    <p class="dropspot"><img alt="Add broadcast messages to a sprite" class="center" src="../assets/Images/Asset_Editors/Sprite_Broadcast_Message.gif" />Once added, the message will be shown in the Frame View, and you can click the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on it to open a menu where you can delete the message or edit it. For more information on Broadcast Messages please see <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">このボタンを押すと、<span class="notranslate">sprite</span> <span class="notranslate">timeline</span> に<strong>ブロードキャスト</strong>メッセージが追加され、ブロードキャストするメッセージを追加するダイアログが表示されます。メッセージは、フレームビューの<a class="glossterm" data-glossterm="プレイヘッド" href="#">再生ヘッドが</a>ある場所に追加され、シンプルな<span class="notranslate">string</span> で構成されます。このメッセージは、<a href="Sequence_Properties/Broadcast_Messages.htm">Broadcast Message Event</a>がトリガーされたときにピックアップされ、その後動作します。</p>
+    <p class="dropspot"><img>追加されたメッセージはフレームビューに表示され、その上でマウスの右ボタン（<img> ）をクリックするとメニューが表示され、メッセージの削除や編集を行うことができます。ブロードキャストメッセージの詳細については、<a href="Sequence_Properties/Broadcast_Messages.htm">こちらを</a>参照してください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">Frame Speed</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">フレームスピード</a></p>
   <div class="droptext" data-targetname="drop-down12">
-    <p class="dropspot">In this section you can set the <strong>speed </strong>at which the animation frames should be played back from the input box on the left. The frame speed setting can either be based on &quot;<strong>Frames per second</strong>&quot;, or &quot;<strong>Frames per game frame</strong>&quot;, where a setting of 30 &quot;Frames per second&quot; will show 30 frames of the animation in one second, while a setting of 30 &quot;Frames per game frame&quot; will try to show all 30 frames in a single game step, so &quot;Frames per game frame&quot; values are usually set to 1 or lower (eg: a frames per game frame speed of 0.5 will show a new frame every two game steps).</p>
-    <p class="dropspot">It&#39;s important to note that the Frame Speed settings will not only affect the playback of the animation in the preview window, but <strong>will also govern how the sprite is animated in your games</strong>. The speed you set here will show the sprite preview as it will run in the game with an image speed multiplier of 1, but this can be set in code using the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_speed.htm"><span class="inline">image_speed</span></a> variable meaning the sprite can run faster or slower depending on what is programmed. So, for example, if you set the sprite to use 10 &quot;frames per second&quot; and then set the <span class="inline">image_speed</span> to 0.5, the game will draw the sprite at half speed - 5 frames per second. Conversely, if we set the <span class="inline">image_speed</span> for the same sprite to 2, in the game it will be drawn animated twice as fast - 20 frames per second. Note that the frame speed can also be set in the <a href="Image_Editor.htm">Image Editor</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">このセクションでは、左側の入力ボックスから、アニメーションのフレームを再生する<strong>速度を </strong>設定することができます。フレームスピードは、「<strong>Frames per second</strong>」または「<strong>Frames per game</strong> frame」のいずれかを選択することができます。
+      ここで、&quot;Frames per second &quot;を30に設定すると、1秒間に30フレームのアニメーションを表示しますが、&quot;Frames per game frame &quot;を30に設定すると、30フレームすべてを1ゲームステップで表示しようとするので、&quot;Frames per game frame&quot;
+      の値は通常1以下に設定されます（例：frames per game frame speedを0.5に設定すると、2ゲームステップごとに新しいフレームが表示されます）。</p>
+    <p class="dropspot">フレームスピードの設定は、プレビューウィンドウでのアニメーションの再生に影響を与えるだけでなく、<strong>ゲーム内で<span class="notranslate">sprite</span> がどのようにアニメーションされるかも支配</strong>することになるので、注意が必要です。ここで設定した速度は
+      <span class="notranslate">sprite</span> プレビューは、イメージ速度の倍率を1としてゲーム内で実行されますが、これはコード内で <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_speed.htm"><span class="inline">image_speed</span></a>変数
+      つまり、<span class="notranslate">sprite</span> は、プログラム内容によって速くも遅くも動作することができます。例えば、<span class="notranslate">sprite</span> を 10 &quot;フレーム/秒&quot; に設定し、 <span class="inline">image_speed</span> を 0.5 に設定すると、ゲームではスプライトが描画されます。
+      を半分の速度、つまり1秒間に5フレームで表示します。逆に、同じ<span class="notranslate">sprite</span> の <span class="inline">image_speed</span> を 2 に設定すると、ゲームでは 2 倍の速度、つまり 20 フレーム/秒でアニメーションが描画されます。なお、フレームスピードは
+     <a href="Image_Editor.htm">イメージエディターで</a></p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">Sprite Origin</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">スプライトの起源</a></p>
   <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">The top bar of the sprite editor contains the <strong>sprite origin</strong> properties. This is the point on the sprite that corresponds to its position within the room, ie: when you create an instance at a particular x/y position, the origin of the sprite is placed there.</p>
-    <p class="dropspot">By default the origin is the <em>top left </em>corner of the sprite but it is often more convenient to use the <em>middle centre</em> or you may wish to have some other position used (like for a platform game character you might want <em>bottom centre</em>), so you can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the origin drop-down menu and select one of the default values. You can also set the origin manually by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> in the sprite preview image which will move the origin marker cross to the point you clicked, or by inputting different values for x and y in the corresponding boxes. Note that you can even set an origin outside the area of sprite by using negative numbers (for left and up) or positive numbers larger than the sprite width and height (for right and down), which can be very useful when dealing with objects that need to draw composite sprites.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">sprite</span> エディタの一番上のバーには、<strong>スプライトの原点</strong>プロパティがあります。これは、<span class="notranslate">sprite</span> 内の位置に対応する<span class="notranslate">room</span> 上の点で、つまり、特定の x/y 位置にインスタンスを作成すると、その原点が表示されます。
+      <span class="notranslate">sprite</span> 、そこに配置されます。</p>
+    <p class="dropspot">デフォルトでは、原点は<span class="notranslate">sprite</span> の<em>左上 </em>隅ですが、<em>中央を</em>使用した方が便利な場合もありますし、他の位置を使用したい場合もあります（プラットフォームゲームのキャラクターの場合、<em>中央下部を</em>使用するとよいでしょう）。
+      そこで、原点ドロップダウンメニューの<img> をクリックし、デフォルト値のいずれかを選択することができます。<span class="notranslate">sprite</span> プレビュー画像で<img> をクリックすると、原点マーカーがクリックした位置に移動します。なお、<span class="notranslate">sprite</span> の範囲外の原点を設定するには、負の値を使用します。
+      この数値は、<span class="notranslate">sprite</span> の幅と高さより大きい正の数値（右と下の場合）です。これは、<span class="notranslate">objects</span> を合成して描画する必要がある<span class="notranslate">sprites</span> を扱うときに非常に便利です。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">Zoom Controls</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">ズームコントロール</a></p>
   <div class="droptext" data-targetname="drop-down14">
-    <p class="dropspot">To the top right of the Preview window you have the <strong>zoom controls</strong>. These buttons control the current preview sprite zoom level. You can zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /> button will reset the preview to be 1:1 with the sprite being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png" /> to make the entire sprite preview fit within the current editor window (this will zoom in/out as appropriate to make it fit). Note that you can zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the preview to be 1:1 with the actua sprite size.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">プレビューウィンドウの右上には、<strong>ズームコントロールが</strong>あります。これらのボタンは、現在のプレビュー<span class="notranslate">sprite</span> のズームレベルを制御します。ズームイン、ズームアウトが可能で、<img> ボタンをクリックすると、プレビューが編集中の<span class="notranslate">sprite</span> と1対1にリセットされます。また、「ウィンドウに合わせる」ボタン<img> をクリックすると、<span class="notranslate">sprite</span> プレビュー全体がウィンドウに収まるようになります。
+      を表示します（表示に合わせて適宜ズームイン/アウトします）。<img> /<img> とマウスホイール<img> を使ってズームイン・ズームアウトすることができ、<img> /<img> +<img> を押すと、プレビューが設定されます。
+      をクリックすると、実際のサイズ（<span class="notranslate">sprite</span> ）と1:1になります。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">Preview</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">プレビュー</a></p>
   <div class="droptext" data-targetname="drop-down16">
-    <p class="dropspot">The sprite <strong>preview </strong>window shows the sprite as it will look in the game, and can be zoomed in or out by using the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and panned around using the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> and draggging, or alternatively use the combination <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and dragging. You can use the Frame controls (explained below) to change how the preview image is displayed too.</p>
-    <p class="dropspot">This window will also show a &quot;cross&quot; that marks the <strong>origin</strong> of the sprite (see the Sprite Origin section above for more details), and it can also show the <strong>collision mask</strong> if that option is being edited (see the Collision Mask section, above).</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">sprite</span> <strong>プレビュー </strong>ウィンドウには、ゲーム内で表示される<span class="notranslate">sprite</span> が表示され、マウスホイール<img> を使って拡大・縮小したり、パンを使って移動することができます。
+      マウスの中ボタン<img> とドラッグ、または<img> +<img> とドラッグの組み合わせを使用します。フレームコントロール（以下で説明）を使用して、プレビュー画像の表示方法を変更することもできます。</p>
+    <p class="dropspot">このウィンドウには、<span class="notranslate">sprite</span> の<strong>原点を</strong>示す「十字」が表示されます（詳しくは、上記の「<span class="notranslate">Sprite</span> 原点」の項を参照）。また、<strong>コリジョンマスクを</strong>編集している場合は、そのオプションも表示されます（詳しくは、以下の項を参照）。
+      コリジョンマスクの項を参照）。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down17" href="#">Playback Controls</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down17" href="#">再生コントロール</a></p>
   <div class="droptext" data-targetname="drop-down17">
-    <p class="dropspot">The <strong>Playback controls</strong> are for playing back in the preview window the animation of the frames, with the play button <img alt="Sprite Play Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_Play.png" /> starting/stopping the animation and the Loop button <img alt="Sprite Loop Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_Loop.png" /> used to set whether the sprite loops <img alt="Sprite Loop On Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_LoopOn.png" /> (goes back to frame 1 when the last frame is reached) or ping-pongs <img alt="Sprite Pingpong Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_PingPong.png" /> (goes backwards through the frames when the last frame is reached).</p>
-    <p class="dropspot">Note that the loop/ping-pong option <strong>will not affect how the sprite is displayed in the game</strong>, so setting these options in the sprite will not change the way it is shown when the game is compiled and run. This is also true for loop-points that can be set in the <strong>Frame View </strong>(see below for more information) - these are purely visible in the sprite editor and designed to help you test out your animations, but will have no effect on how the sprite animation is displayed in your games.</p>
-    <p class="dropspot">An additional part of the Frame Controls is the <strong>current frame</strong> display and input a bit further over on the left. The box shows the total number of frames of the sprite animation as well as the current frame being shown. You can change the current frame at any time by clicking on the input box and typing in the frame number you want to view.</p>
-    <div class="dropspotnote"><strong>IMPORTANT!</strong> Frames are shown numbered from 1 to <em>maxframe number</em>, however in your game code, frames will be numbered from 0 to <em>maxframe number - 1</em>.</div>
+    <p class="dropspot"><strong>再生コントロールは</strong>、プレビューウィンドウでフレームのアニメーションを再生するためのもので、再生ボタン<img> で開始/停止ができます。
+      アニメーションと、<span class="notranslate">Loop</span> ボタン<img> は、<span class="notranslate">sprite</span> <span class="notranslate">loops</span> <img> (最後のフレームに到達するとフレーム 1 に戻る) かピンポン<img> (最後のフレームに到達するとフレームを逆行する) かを設定するために使用されます。</p>
+    <p class="dropspot">loop/ping-pong オプションは、<strong>ゲームでの<span class="notranslate">sprite</span> の表示方法には影響しないので</strong>、<span class="notranslate">sprite</span> でこれらのオプションを設定しても、ゲームがコンパイルされて実行されたときの表示方法は変わらないことに注意 してください。これはループポイントにも当てはまります。
+      これらは純粋に<span class="notranslate">sprite</span> エディタで見ることができ、アニメーションをテストするのに役立ちますが、<span class="notranslate">sprite</span> アニメーションがどのように表示されるかに影響を与えません。
+      をゲーム内で使用することができます。</p>
+    <p class="dropspot">フレームコントロールの追加機能として、左側にある<strong>カレントフレームの</strong>表示と入力があります。このボックスには、<span class="notranslate">sprite</span> アニメーションの総フレーム数と、現在表示されているフレームが表示されます。あなたは
+      をクリックし、表示したいフレーム番号を入力することで、いつでも現在のフレームを表示することができます。</p>
+    <div class="dropspotnote"><strong>重要!フ</strong>レームは1から<em>maxframe numberまで</em>表示されていますが、ゲームコード内では0から<em>maxframe number - 1までの</em>フレームが表示されます。</div>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#">Frames</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#">フレーム</a></p>
   <div class="droptext" data-targetname="drop-down18">
-    <p class="dropspot">This part of the sprite editor shows each of the different <strong>frames </strong>that make up a single sprite set along a sequence timeline. You can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any frame and drag it left or right to change the order in which they will be animated, and you can also double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any frame to launch the <a href="Image_Editor.htm">Image Editor</a> and edit them. You can cut, copy and paste frames using the standard keyboard shortcuts or by using the right-mouse button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu options, and you can also select multiple frames to operate on using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" />.</p>
-    <p class="dropspot">The right mouse button menu has the following options:</p>
-    <p class="dropspot"><img alt="RMB Frame View Menu" class="center" src="../assets/Images/Asset_Editors/Sprite_RMB_Frame_menu.png" /></p>
+    <p class="dropspot"><span class="notranslate">sprite</span> <img> エディターのこの部分には、1つの を構成するさまざまな<span class="notranslate">sprite</span> <strong>フレームが </strong> <span class="notranslate">sequence</span> <span class="notranslate">timeline</span> に沿って表示されています。任意のフレームをクリックし、左右にドラッグしてアニメーションの順序を変更できます。また、任意のフレームをダブルクリックすると が起動します。
+     <img> <a href="Image_Editor.htm">イメージエディターで</a>編集することができます。フレームのカット、コピー、ペーストは、標準のキーボードショートカットまたは右マウスボタン のメニューオプションで行えます。また、 / + を使って複数のフレームを選択して操作することも可能です。<img> <img> <img> <img></p>
+    <p class="dropspot">マウスの右ボタンメニューには、次の項目があります。</p>
+    <p class="dropspot"><img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Add Frame</strong> - Add a new frame to the animation at the end.</li>
-      <li class="dropspot"><strong>Insert Frame</strong> - Insert a new frame in the animation after the currently selected frame.</li>
-      <li class="dropspot"><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste </strong>- Cut, copy and paste one or more frames.</li>
-      <li class="dropspot"><strong>Delete Selected Frames</strong> - Delete the currently selected frame or frames.</li>
+      <li class="dropspot"><strong>フレームを追加</strong>する - アニメーションの最後に新しいフレームを追加します。</li>
+      <li class="dropspot"><strong>フレームを挿入</strong>- 現在選択されているフレームの後に、アニメーションに新しいフレームを挿入します。</li>
+      <li class="dropspot"><strong>カット／ </strong> <strong>コピー／ </strong> <strong>ペースト - </strong> 1つまたは複数のフレームをカット、コピー、ペーストします。</li>
+      <li class="dropspot"><strong>Delete Selected Frames</strong>- 現在選択されているフレームを削除します。</li>
     </ul>
-    <p class="dropspot">Apart from the option given above to stretch a frame, you can also position the mouse on the edge of a frame and then when the cursor changes to a double arrow, simply click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag to resize the frame so it takes more time:</p>
-    <p class="dropspot"><img alt="Stretch a frame using the mouse" class="center" src="../assets/Images/Asset_Editors/Sprite_Stretch_Frame.gif" />A stretched frame will take more time to be shown, just as if you&#39;d duplicated the same frame multiple times. </p>
-    <p class="dropspot">Finallly, you can also zoom in on the frame timeline using the &quot;handles&quot; on either side of the frame view as shown in the image below:</p>
-    <p class="dropspot"><img alt="Sprite frame view zoom controls" class="center" src="../assets/Images/Asset_Editors/Sprite_Loop_Markers.gif" /></p>
+    <p class="dropspot">フレームを引き伸ばすために上で与えられたオプションとは別に、フレームの端にマウスを置き、カーソルが二重矢印に変わったら、単に<img> をクリックしてドラッグすると、フレームのサイズを変更できるので、より時間がかかるようになります。</p>
+    <p class="dropspot"><img>引き伸ばされたフレームは、同じフレームを複数回複製したのと同じように、表示されるまでに時間がかかるようになります。 </p>
+    <p class="dropspot">最後に、下図のようにフレームビューの左右にある「ハンドル」を使って、フレームを拡大することもできます（<span class="notranslate">timeline</span> ）。</p>
+    <p class="dropspot"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /><br /></p>
   </div>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Tile_Sets.htm">The Tile Set Editor</a></div>
+        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
+        <div style="float:right">次へ<a href="Tile_Sets.htm">タイルセット</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-The Sprite Editor
+The <span class="notranslate">Sprite</span> Editor
 Origin
 Mask
 Collision Mask

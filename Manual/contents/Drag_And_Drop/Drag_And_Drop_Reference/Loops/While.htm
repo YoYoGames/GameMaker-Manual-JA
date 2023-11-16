@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>While</title>
+  <title>一方</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the While action" />
   <meta name="rh-index-keywords" content="GML Visual Action - While" />
@@ -14,54 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /> While</h1>
-  <p>The <b>While</b> action is used to perform loops that only terminate when a specific condition returns <span class="inline">true</span>. For example, you can use a variable and set it to <span class="inline">false</span> then run the While loop and have it checking this variable, then at
-    some time in the loop you set the variable to <span class="inline">true</span> and the loop will terminate. Note that no matter where you set the condition within the while loop, <i>all</i> actions within the loop will be run to the end before the rest of the script
-    or event continues, changing the condition does not instantly break out of the loop.</p>
-  <p>When you add a While action into your code, you need to supply the variable to check, what kind of check to perform (less than, greater than, equals, etc...), and the value to check the variable against (you can also flag <i>not</i> to have the While
-    loop check to see if the condition is <i>not</i> true). You then add the actions to be performed within the While loop, much as you would add an action to an &quot;if&quot;, ie: dropping it to the side of the action rather than under it:</p>
-  <p><img alt="While drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/While_Drop.png" />All actions added to the side will be included in the While and will be performed before the event or script
-    continues with the actions added under (as shown in the example below). Note that you can end any loop prematurely if you call the <a href="Break.htm">Break</a> action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="While Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_While.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> 一方</h1>
+  <p><b>While</b>アクションは、特定の条件が返ってきたときにのみ終了する<span class="notranslate">loops</span> を実行するために使用します。 <span class="inline">true</span> 。例えば、ある変数を使って <span class="inline">false</span> に設定し、While<span class="notranslate">loop</span> を実行し、この変数をチェックさせることができます。
+    <span class="notranslate">loop</span> のある時点で変数を <span class="inline">true</span> に設定すると、<span class="notranslate">loop</span> が終了します。while<span class="notranslate">loop</span> 内のどこで条件を設定しても、<span class="notranslate">loop</span> 内の<i>すべての</i>アクションは、スクリプトの残りの部分が実行される前に最後まで実行されることに注意してください。
+    やイベントを継続する場合、条件を変更しても<span class="notranslate">loop</span> から即座に抜け出せるわけではありません。</p>
+  <p>コードにWhileアクションを追加する場合、チェックする変数、実行するチェックの種類（以下、以上、等しい、など）、変数をチェックする値を指定する必要があります（<span class="notranslate">flag</span> Whileアクションを実行さ<i>せない</i>ことも可能です）。
+    <span class="notranslate">loop</span> をチェックし、条件が真で<i>ない</i>ことを確認します)。そして、While<span class="notranslate">loop</span> の中に実行するアクションを追加します。これは、「if」にアクションを追加するのと同じで、つまり、アクションの下ではなく、横にドロップします。</p>
+  <p><img>サイドに追加されたすべてのアクションはWhileに含まれ、イベントやスクリプトが実行される前に実行されます。
+    は、その下に追加されたアクションを継続します（下の例のように）。なお、<a href="Break.htm">Break</a>アクションを呼び出すと、<span class="notranslate">loop</span> を早期に終了させることができます。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The variable to use in the check</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>チェックに使用する変数</td>
       </tr>
       <tr>
-        <td>Is</td>
-        <td>The type of evaluation to perform (less than, greater than, equal to, greater than or equal to and less than or equal to)</td>
+        <td><span class="notranslate">Is</span></td>
+        <td>実行する評価の種類(未満、以上、等、以上、以下)</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to check the variable against</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>変数と照合するための値</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="While Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_While.png" />The above action block code creates a temporary local variable and sets it to <span class="inline">false</span>. This variable is
-    then checked in the While loop action and while it returns false the loop will run. In the loop we get two temporary local variables for a random x/y position in the room then we check that position for a collision. If no collision is found, the initial
-    variable is set to <span class="inline">true</span>, ending the loop. After the loop has ended an new instance is created at the random position that we discovered to have no collisions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードでは、一時的なローカル変数を作成し、それを <span class="inline">false</span> に設定しています。
+    を実行し、While<span class="notranslate">loop</span> アクションでチェックし、false を返す間に<span class="notranslate">loop</span> が実行されます。<span class="notranslate">loop</span> では、<span class="notranslate">room</span> のランダムな x/y 位置に対して2つの一時的なローカル変数を取得し、その位置が衝突していないかどうかをチェックします。もし衝突が見つからなければ、初期値
+    <span class="inline">true</span> <span class="notranslate">loop</span> <span class="notranslate">loop</span> が終了すると、衝突がないことを確認したランダムな位置に新しいインスタンスが作成されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Loop_Actions.htm">Loop Actions</a></div>
-        <div style="float:right">Next: <a href="For.htm">For</a></div>
+        <div style="float:left">戻る<a href="Loop_Actions.htm">ループアクション</a></div>
+        <div style="float:right">次へ<a href="For.htm">について</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - While

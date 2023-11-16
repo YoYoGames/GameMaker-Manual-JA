@@ -6,7 +6,7 @@
   <title>script_exists</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function script_exists" />
   <meta name="rh-index-keywords" content="script_exists" />
@@ -16,29 +16,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>script_exists</h1>
-  <p>This function will return <span class="inline">true</span> or <span class="inline">false</span> depending on whether the script or <a href="../../../GML_Overview/Script_Functions.htm">script function</a> with the given index exists. Note, that this is <i>not</i> a string, but rather the asset name which holds the unique index for each script (as it would appear in the IDE) or the named script function, as defined within the script asset (note that this will not work for <a href="../../../GML_Overview/Method_Variables.htm">method variables</a>). For more information on scripts, see <a href="../../../../The_Asset_Editors/Scripts.htm">The Script Editor</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、与えられたインデックスを持つ<span class="notranslate">script</span> または<a href="../../../GML_Overview/Script_Functions.htm">スクリプト関数が</a>存在するかどうかに応じて、 <span class="inline">true</span> または <span class="inline">false</span> を返します。これは<span class="notranslate">string</span><i>ではなく</i>、<span class="notranslate">asset</span> (<span class="notranslate">script</span> で表示されるような) または<span class="notranslate">IDE</span> <span class="notranslate">script</span> で定義されているような<span class="notranslate">script</span> 関数の一意のインデックスを保持する<span class="notranslate">asset</span> 名であることに注意してください (<a href="../../../GML_Overview/Method_Variables.htm">メソッド変数では</a>機能しないことに注意してください)。<span class="notranslate">scripts</span> の詳細については、「<a href="../../../../The_Asset_Editors/Scripts.htm"> <span class="notranslate">Script</span> </a> エディタ」を参照してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">script_exists(scr);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>scr</td>
-        <td><span data-keyref="Type_Asset_Script">Script Asset</span></td>
-        <td>The script index that you want to check.</td>
+        <td><span class="notranslate">scr</span></td>
+        <td><span data-keyref="Type_Asset_Script">スクリプトアセット</span></td>
+        <td><span class="notranslate">The script index that you want to check.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">script[0] = -1;<br />
     script[1] = AI_Left;<br />
     script[2] = AI_Right;<br />
@@ -47,18 +47,18 @@
     {<br />
         script_execute(script[script_num]);<br />
     }</p>
-  <p>The above example adds two script functions and a value into an array, then proceeds to get a random number and use that to choose a script function to run, unless the -1 is chosen in which case nothing will happen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記の例では、2つの<span class="notranslate">script</span> 関数と値を配列に追加し、乱数を取得して、それを使って実行する<span class="notranslate">script</span> 関数を選択します。ただし、-1 を選択した場合は、何も起こりません。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Scripts.htm">Scripts</a></div>
-        <div style="float:right">Next: <a href="script_get_name.htm">script_get_name</a></div>
+        <div style="float:left">戻る<a href="Scripts.htm">スクリプト</a></div>
+        <div style="float:right">次のページ <a href="script_get_name.htm"><span class="notranslate">script_get_name</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 script_exists

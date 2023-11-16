@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sequence_create</title>
+  <title>シーケンス作成</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining function sequence_create" />
   <meta name="rh-index-keywords" content="sequence_create" />
@@ -15,31 +15,31 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sequence_create</h1>
-  <p>With this function you can create a new sequence object which you can then add tracks to. The function returns a <a href="../../../GML_Overview/Structs.htm">struct</a> which you can then access to setup the new sequence you have created. The contents of this struct are detailed on <a href="Sequence_Structs/The_Sequence_Object_Struct.htm">this page</a>. The sequence object struct can then be used to create instances of the sequence on a room layer using the function <a href="../Rooms/Sequence_Layers/layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>. Note that when creating sequence objects in this way you should remove them again by calling the function <a href="sequence_destroy.htm"><span class="inline">sequence_destroy()</span></a> when they are no longer required, otherwise you will have a memory leak which can slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>シーケンス作成</h1>
+  <p>この関数で、新しい<span class="notranslate">sequence</span> <span class="notranslate">object</span> を作成し、それにトラックを追加することができます。この関数は<a href="../../../GML_Overview/Structs.htm">構造</a>体を返し、この構造体にアクセスして、作成した新しい<span class="notranslate">sequence</span> をセットアップすることができます。この<span class="notranslate">struct</span> の内容については、<a href="Sequence_Structs/The_Sequence_Object_Struct.htm">このページで</a>詳しく説明しています。<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> を使って、<span class="notranslate">sequence</span> のレイヤーに<span class="notranslate">room</span> のインスタンスを作成することができます。 <a href="../Rooms/Sequence_Layers/layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>.この方法で<span class="notranslate">sequence</span> <span class="notranslate">objects</span> を作成する場合、関数 <a href="sequence_destroy.htm"><span class="inline">sequence_destroy()</span></a>さもないと、メモリーリークが発生してゲームの動作が遅くなり、最終的にはクラッシュする可能性があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">sequence_create();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Struct_Sequence_Object">Sequence Object Struct</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">myseq = sequence_create();<br />
     myseq.length = 120;<br />
     myseq.loopmode = seqplay_pingpong;</p>
-  <p>The above code creates a new sequence object struct and sets its playback length and loop mode.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、新規に<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> を作成し、その再生長さと<span class="notranslate">loop</span> モードを設定しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_destroy.htm">sequence_destroy</a></div>
+        <div style="float:left">戻る<a href="Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次のページ <a href="sequence_destroy.htm"><span class="notranslate">sequence_destroy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_create

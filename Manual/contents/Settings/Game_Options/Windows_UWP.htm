@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Windows UWP</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that details the Windows UWP Game Options" />
+  <meta name="rh-index-keywords" content="Game Options - UWP" />
+  <meta name="search-keywords" content="UWP Game Options,Windows UWP Game Options" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Windows UWPゲームオプション</h1>
+  <p>このセクションでは、UWP（Universal<span class="notranslate">Windows</span> Platform）ゲームプロジェクトのコンパイル方法を制御するさまざまなオプションの概要を説明します。各セクションは以下の通りです。</p>
+  <p> </p>
+  <h2>一般</h2>
+  <p><img>UWPオプションの一般セクションは、<strong>製品</strong>情報を設定する場所です。</p>
+  <ul class="colour">
+    <li><strong>Display Name（表示名</strong>）。ユーザーに表示されるアプリのフレンドリーな名前を指定します（この<span class="notranslate">string</span> はローカライズ可能です）。</li>
+    <li><strong>パッケージ名</strong>。作成したパッケージの名前です。ゲーム用に作成したDeveloper keyに使用した名前と一致させる必要があります（以下のパッケージに関するセクションを参照ください）。</li>
+    <li><strong>パッケージの表示名</strong>。これはパッケージの「短い名前」で、表示名と同じであることが理想的です。</li>
+    <li><strong>パブリッシャー表示名</strong>。ゲームパブリッシャーとして関連付ける会社名または個人名です。</li>
+    <li><strong>バージョン</strong>。ゲームのバージョン番号です。</li>
+  </ul>
+  <p>設定後、最高のユーザーエクスペリエンスのために、ゲームを実行するさまざまな<strong>方向を </strong>選択することができます。選択可能なオプションは以下の通りです。</p>
+  <ul class="colour">
+    <li>風景</li>
+    <li>ポートレート</li>
+    <li>風景を切り取ったような</li>
+    <li>ポートレート・フリップ</li>
+  </ul>
+  <p>デフォルトではすべて選択されていますので、不要なものは選択を解除してください。</p>
+  <p>Orientationオプションを設定したら、次のオプションからUWPアプリに必要な様々な<strong>Permissionを </strong>指定することができます。</p>
+  <ul class="Disc">
+    <li style="margin-top: 10px"><strong>Enable Internet Permission</strong>:<span class="notranslate">Flags</span> このゲームはインターネットにアクセスできるとしています。デフォルトではオフになっています。</li>
+    <li><strong style="margin-top: 10px">Enable Microphone Permission</strong>:<span class="notranslate">Flags</span> このゲームは、デバイスのマイクにアクセスできるとしています。デフォルトではオフになっています。</li>
+    <li><strong>Enable IAP Sandbox</strong>:<span class="notranslate">Flags</span> In App Purchases（アプリ内課金）がサンドボックス化されたゲームとして使用されます。デフォルトではオフになっています。</li>
+  </ul>
+  <p> </p>
+  <h2>デバイス・ファミリー</h2>
+  <p><img>ここでは、実行ファイルを作成する際に、<span class="notranslate">Windows UWP</span> のエクスポートで対象とする<strong>デバイスファミリーを</strong>選択できます。デフォルトでは、「Support Universal device family」オプションがチェックされており、アプリがすべてのデバイスとファミリーをターゲットにすることを意味します。特定のデバイスファミリーにのみ対応するようにアプリを制限するには、「Universal」オプションの<em>チェックを </em>外し、該当するデバイスファミリーにチェックを入れる必要があります。この場合、ユニバーサルデバイスファミリーをチェックしたまま、異なるプラットフォームのバージョンをサポートしたい他のデバイスファミリーをチェックし、そのファミリーのバージョンの詳細を適切なテキストボックスに入力します。このロジックがどのように動作するかについては、次のMicrosoftサポートページを参照してください。</p>
+  <ul class="colour">
+    <li><a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily#examples ">対象デバイスのファミリ。例</a></li>
+  </ul>
+  <p>一般的に、ターゲットと最小プラットフォームのバージョンは触らず、デフォルト値のままにしておきます。しかし、ビルドに問題がある場合、特にデフォルトで設定されている<span class="notranslate">Windows</span> SDK をインストールできない場合、これらをインストールしたものに変更する必要があります。設定する値がわからない場合は、<span class="notranslate">Visual Studio</span> で新しい UWP プロジェクトを作成し、値がどのように設定されるかを確認します。</p>
+  <p>デバイスファミリーの詳細については、以下のマイクロソフト社のドキュメントを参照してください。</p>
+  <ul class="colour">
+    <li><a href="https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview">デバイス・ファミリーの概要</a></li>
+  </ul>
+  <p> </p>
+  <h2>グラフィック</h2>
+  <p><img>グラフィックスオプションは、ターゲットとなるUWPデバイスのグラフィックスカードをゲームがどのように使用するかを決定するために設定するものです。以下のオプションが含まれており、変更することができます。</p>
+  <ul class="colour">
+    <li><strong>ピクセル間の色を補間する</strong>。基本的にピクセルを「滑らかに」する<a class="glossterm" data-glossterm="せんけいほかん">線形補間を</a>オンにします。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。</li>
+    <li><strong>カーソルを表示</strong>するこのオプションを有効にすると、デフォルトのOSカーソルがゲームに表示されます。このオプションを無効にすると、マウスがゲームウィンドウ上にあるとき、ゲームプロジェクトの一部としてカーソルを作成しない限り、カーソルは表示されません（これはデフォルトでオンになっています）。</li>
+    <li><strong>フルスクリーンで起動</strong>する。チェックすると、フルスクリーンで起動し、チェックしないとウィンドウで起動します。デフォルトではオフになっています。</li>
+    <li><strong>Allow Fullscreen Switching</strong> <span class="notranslate">switch</span> <strong></strong>: これにチェックを入れると、ユーザは<span class="notranslate">Ubuntu</span> OS の標準ショートカットを使って、フルスクリーンからウィンドウズへ、そして再びウィンドウズへ戻ることができます。デフォルトではオフになっています。</li>
+    <li><strong>スケーリング</strong>ここでは、アスペクト比を維持する（つまり 4:3 の<span class="notranslate">room</span> が 16:9 で「レターボックス化」される）か、完全に拡大する（フルスクリーンに合わせてイメージを引き伸ばす）かを選べます。<br>
+      <br>
+      <span style="font-size:16px;"><strong>警告!</strong> <em>アプリケーションサーフェスのスイッチを切ると、再びスイッチを入れるまで、<span class="notranslate">Windows</span> ゲームオプションで設定されたすべてのスケーリングオプションが無効になります。詳しくは、アプリケーションサーフェスを参照してください。</em></span>
+    </li>
+  </ul>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。 <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成し、ウィンドウを開いてその見え方を確認できるようにするものです。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なることを防ぎたい場合に非常に便利です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、スペックの低いPCではゲームの互換性が低くなりますので、ご注意ください。</p>
+  <p> </p>
+  <h2>画像</h2>
+  <p><img>Imagesセクションの最初の部分では、UWPが実行可能なさまざまなデバイスでゲームが使用するさまざまな<strong>Tilesを </strong>設定するオプションがあります。設定できるのは以下の通りです（すべて <span class="inline">*.png</span> フォーマットのファイルである必要があります）。</p>
+  <ul class="colour">
+    <li><strong>小さなタイル</strong>画像は、検索バーなどのUIでアプリ名の横に表示されるロゴ画像です。44 x 44ピクセルである必要があります。</li>
+    <li><strong>中タイル</strong>画像は、71x71ピクセルの画像を使用すること。</li>
+    <li>次の<span class="notranslate">tile</span> の画像は、<strong>Store のロゴ<span class="notranslate">tile</span> </strong>で、50 x 50 ピクセルである必要があります。</li>
+    <li><strong>ワイド</strong><strong>画像タイルは</strong>、<span class="notranslate">tile</span> がワイド形式のときに表示される画像で、310 x 150 ピクセルである必要があります。この画像がない場合、<span class="notranslate">tile</span> は正方形のフォーマットでしか表示できず、ワイドテンプレートタイプに基づく通知を受け取ることができません。<span class="notranslate">tile</span> がどのフォーマットを使うかはユーザーが決められるので、ワイド画像<span class="notranslate">tile</span> を含めることをお勧めします。また、ワイド画像<span class="notranslate">tile</span> が提供されている場合、<span class="notranslate">tile</span> は最初ワイドフォーマットで表示される可能性があることに注意してください。</li>
+    <li><strong>大きな画像タイルは</strong>、大きなライブ<span class="notranslate">tile</span> の形式で、310 x 310 ピクセルである必要があります。これはデスクトップOS上でのみ使用されることに注意してください。</li>
+  </ul>
+  <p>次のセクションは、ゲームの<strong>ロゴを</strong>定義するためのものです。これは、基本的にあなたのゲームがUWPエコシステム内で使用するアイコンです。注目すべきは、これらの画像は透明な <span class="inline">.png</span> ファイルであり、その場合、このセクションで指定した<strong>Background Colorの</strong>上に描画されることです。この背景色は、アプリが所有するダイアログボックスのボタンの色や、デバイス上のStoreのApp Descriptionページにも適用されます。</p>
+  <p><img>ロゴを設定した後、ゲームの<strong>スプラッシュスクリーンを</strong>設定することができます。これは、あなたのゲームを起動したときに表示される画面であり、それは620×300ピクセルよりも大きくすることはできませんし、ロゴのように、それはあなたが選択した<strong>背景</strong>色がそれに使用されますその場合には、透明 <span class="inline">.png</span> ファイルであってもかまいません。<img></p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができることは特筆すべきことです。このツールを使用する場合、作成されたイメージがあなたの要求するものであることを確認するために、修正する必要があります。</p>
+  <p> </p>
+  <h2>パッケージング</h2>
+  <p><img><span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">Windows UWP</span> の開発用にデフォルトの<strong>Developer Key</strong>を提供していますが、自分で生成してここで指定することをお勧めします。そのためには、<span class="notranslate">Visual Studio</span> で空のプロジェクトを作成し、自動生成された <span class="inline">*.pfx</span> ファイルのコピーを安全な場所に保存してください。そして、その <span class="inline">*.pfx</span> ファイルをここにリンクしてください。</p>
+  <p>ファイルへのリンク後、関連する<strong>Install </strong>ボタンをクリックし、表示されるコマンドプロンプトの指示に従ってください。これを行わないと、Run/Debug ボタン（または F5 キー）を使用しても失敗し、UWP プラットフォームでゲームをテストできません（ただし、<strong>Create Executable</strong>を使用すると、 <span class="inline">*.pfx</span> がまだ登録されていない場合は、認証インストール プロセスが自動的に開始されます）。</p>
+  <p class="note"><strong>注</strong>：アプリをストアにアップロードする場合、タイトルに適した<span class="inline" style="font-size: 14px">*.pfx </span>を取得する必要があります。これは、アプリを<span class="notranslate">Windows</span> の<span class="notranslate">Visual Studio</span> Store と関連付けることで、<span class="notranslate">Visual Studio</span> がアプリ専用の新しい<span class="inline" style="font-size: 14px">*.pfx </span>を生成することで行われます。<span class="notranslate">Windows</span> <span class="notranslate">Visual Studio</span>つまり、空のプロジェクトを<span class="notranslate">Windows</span> Store アプリに関連付け、生成された<span class="inline" style="font-size: 14px">*.pfx </span>を安全な場所にコピーするだけで、UWP Game Options で使用することができます。この方法は、<a href="https://help.yoyogames.com/hc/en-us/articles/115001349488">YoYo Games Knowledge Baseに</a>記載されています。</p>
+  <p>このセクションでは、署名証明書を生成するために使用された<strong> パブリッシャー</strong>名を指定する必要があります。入力の前には必ず「<span class="inline">CN=</span> 」を付けてください。例： <span class="inline">CN=YoYoGames</span>.</p>
+  <p> </p>
+  <h2>Xbox Live</h2>
+  <p><img>UWPゲームオプションのXbox Liveセクションは、Xbox Oneコンソールで使用するためにUWPプロジェクトを有効にする場所です。ここでプロジェクトをXbox用にアクティベートすると、Xbox One上でプロジェクトを実行したときに以下のことが可能になります。</p>
+  <ul class="colour">
+    <li>アプリ内からのXbox Liveへのサインイン</li>
+    <li>プロジェクトで何らかの形で Xbox Live ユーザー ID を使用する (たとえば、ゲーマータグやゲーマー写真を表示するなど)。</li>
+  </ul>
+  <p>また、<a href="https://www.xbox.com/en-US/developers/creators-program/">Microsoft Creators Program</a>に参加している場合は、<strong>Creators Program App</strong>オプションにもチェックを入れてください。Creators Programに参加している場合は、<strong>Title IDと</strong> <strong>Service Configuration IDを</strong>追加する必要があります（これらの詳細については、<a href="https://docs.microsoft.com/en-us/gaming/xbox-live/test-release/portal-config/live-service-config-ids-mp">Microsoftから</a>入手できます）。</p>
+  <p>現在、プロジェクトでXbox Liveの機能をテストするには、実行ではなく、<strong>実行</strong>ファイルを作成する必要があります。UWP Xboxの出力には、<span data-keyref="GameMaker Name">GameMakerに</span>付属する一時的な証明書ではなく、パッケージ情報（上記参照）の一部として提供する<span class="notranslate">Windows</span> Store署名証明書が必要で、これは実行ボタンを押したときに使用されるものです。</p>
+  <p>XBox Liveを有効にすると、プロジェクトでXBox Liveの機能を使用することができますが、最も基本的な機能を使用するには<a href="https://docs.microsoft.com/en-us/gaming/xbox-live/get-started/setup-partner-center/legacy/live-get-started-creators">Creator Programに</a>参加する必要があり、高度な機能を使用するには<a href="https://www.xbox.com/es-ES/developers/id">ID@XBox</a>アカウントが必要であることに注意してください。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次へ<a href="HTML5.htm">HTML5</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Windows UWP Options
+UWP Options
+-->
+  <!-- TAGS
+uwp_options
+-->
+</body>
+</html>

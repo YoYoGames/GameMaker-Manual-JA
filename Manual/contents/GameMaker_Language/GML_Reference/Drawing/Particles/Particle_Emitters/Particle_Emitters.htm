@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Particle Emitters</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>パーティクルエミッター</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the Particle Emitter functions and variables" />
   <meta name="rh-index-keywords" content="" />
@@ -14,36 +14,30 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h"><span data-field="title" data-format="default">Particle Emitters</span></h1>
-  <p>Particle <strong>emitters </strong>are used by <span data-keyref="GameMaker Name">GameMaker</span> to emit particles over an area of the screen which can have different forms and distributions. They can also either create a continuous stream of particles or they can burst out a number of particles all at once, depending on the way the functions are used.</p>
-  <div data-conref="../../../../../assets/snippets/Note_tip_use_particle_system_editor.hts"> </div>
-  <p>Since a particle emitter is a dynamically created resource, you must create it and store the returned index in a variable to reference the emitter in all further function calls, and it is very important that you also destroy the emitter when it is no longer needed or else you will have a memory leak that will slow down and eventually crash your game. It is also worth noting that particle emitters will live on forever after they are created, even if the index is no longer stored. So even if you change room or restart the game, the systems and the particles will remain, and be visible, in all further rooms so you should ensure you destroy them once you no longer need them.</p>
-  <h2 id="func_ref">Function Reference</h2>
-  <p class="note"> <span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> Each of these functions takes the index of the <a href="../Particle_Systems/Particle_Systems.htm">particle system</a> to which it belongs as a first argument.</p>
+  <h1>パーティクルエミッター</h1>
+  <p><strong>パーティクルエミッターは </strong>、<span data-keyref="GameMaker Name">GameMakerで</span>画面上に様々な形状や分布を持つ粒子を放出するために使用されます。また、パーティクルは連続的に発生させることも、一度に大量に発生させることも可能で、機能の使い分けができます。</p>
+  <p>パーティクルエミッターは動的に作成されるリソースなので、作成し、返されたインデックスを変数に格納して、以降のすべての関数呼び出しでエミッターを参照する必要があります。また、不要になったらエミッターを破棄することが非常に重要で、破棄しないとメモリリークが発生してゲームの動作が遅くなり、最終的にはクラッシュします。また、パーティクルエミッターは作成された後、インデックスが保存されなくなったとしても、永遠に生き続けることも知っておくとよいでしょう。そのため、<span class="notranslate">room</span> を変更したり、ゲームを再起動しても、システムとパーティクルは残り、以降のすべての<span class="notranslate">rooms</span> で表示されます。したがって、不要になったら、確実に破棄する必要があります。</p>
+  <p>エミッタを設定したり、パーティクルを生成させたりするために、以下の関数が用意されています。なお、各関数は第一引数として所属する<a href="../Particle_Systems/Particle_Systems.htm">パーティクルシステムの</a>インデックスを取得します。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="part_emitter_exists.htm">part_emitter_exists</a></li>
-    <li><a data-xref="{title}" href="part_emitter_create.htm">part_emitter_create</a></li>
-    <li><a data-xref="{title}" href="part_emitter_clear.htm">part_emitter_clear</a></li>
-    <li><a data-xref="{title}" href="part_emitter_region.htm">part_emitter_region</a></li>
-    <li><a data-xref="{title}" href="part_emitter_relative.htm">part_emitter_relative</a></li>
-    <li><a data-xref="{title}" href="part_emitter_burst.htm">part_emitter_burst</a></li>
-    <li><a data-xref="{title}" href="part_emitter_stream.htm">part_emitter_stream</a></li>
-    <li><a data-xref="{title}" href="part_emitter_destroy.htm">part_emitter_destroy</a></li>
-    <li><a data-xref="{title}" href="part_emitter_destroy_all.htm">part_emitter_destroy_all</a></li>
-    <li><a data-xref="{title}" href="part_emitter_enable.htm">part_emitter_enable</a></li>
-    <li><a data-xref="{title}" href="part_emitter_delay.htm">part_emitter_delay</a></li>
-    <li><a data-xref="{title}" href="part_emitter_interval.htm">part_emitter_interval</a></li>
+    <li><a href="part_emitter_exists.htm"><span class="notranslate">part_emitter_exists</span></a></li>
+    <li><a href="part_emitter_create.htm"><span class="notranslate">part_emitter_create</span></a></li>
+    <li><a href="part_emitter_clear.htm"><span class="notranslate">part_emitter_clear</span></a></li>
+    <li><a href="part_emitter_region.htm"><span class="notranslate">part_emitter_region</span></a></li>
+    <li><a href="part_emitter_burst.htm"><span class="notranslate">part_emitter_burst</span></a></li>
+    <li><a href="part_emitter_stream.htm"><span class="notranslate">part_emitter_stream</span></a></li>
+    <li><a href="part_emitter_destroy.htm"><span class="notranslate">part_emitter_destroy</span></a></li>
+    <li><a href="part_emitter_destroy_all.htm"><span class="notranslate">part_emitter_destroy_all</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Particles.htm">Particles</a></div>
-        <div style="float:right">Next: <a href="../Particle_Systems/Particle_Systems.htm">Particle Systems</a></div>
+        <div style="float:left">戻る<a href="../Particles.htm">粒子</a></div>
+        <div style="float:right">次へ<a href="../Particle_Systems/Particle_Systems.htm">パーティクルシステム</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Particle Emitters

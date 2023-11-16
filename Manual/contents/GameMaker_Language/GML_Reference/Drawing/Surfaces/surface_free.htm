@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>surface_free</title>
+  <title>サーフェスフリー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for surface_free" />
   <meta name="rh-index-keywords" content="surface_free" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_free</h1>
-  <p>When you are working with surfaces, you should always use this function whenever you are finished using them. Surfaces take up space in memory and so need to be removed, normally at the end of a room, but it can be done at any time depending on the use you put them to. Failure to do so can cause memory leaks which will eventually slow down and crash your game.</p>
-  <p class="note"><b></b><b>NOTE</b>: When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in texture memory. You should <b>ALWAYS</b> check that a surface exists using <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> before referencing them directly.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>サーフェスフリー</h1>
+  <p>サーフェスを使うときは、使い終わったときに必ずこの機能を使うようにしてください。サーフェスはメモリにスペースを取るので、削除する必要があります。通常は<span class="notranslate">room</span> の終了時に削除しますが、使用状況によってはいつでも削除できます。これを怠ると、メモリリークが発生し、最終的にはゲームの動作が遅くなり、クラッシュする可能性があります。</p>
+  <p class="note"><b></b><b>注</b>：サーフェスを使用する場合、<span class="notranslate">texture</span> のメモリーに保存されているため、サーフェスがいつでも存在しなくなる可能性があります。を使用して、サーフェスが存在するかどうかを<b>常に</b>確認する必要があります。 <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>直接参照する前に</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">surface_free(surface_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>surface_id</td><td><span data-keyref="Type_ID_Surface"></span></td>
-        <td>The ID of the surface to be freed.</td>
+        <td><span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td>
+        <td><span class="notranslate">The ID of the surface to be freed.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if keyboard_check_pressed(vk_escape)<br />
     {<br />
         surface_free(surf);<br />
         room_goto(rm_Menu);<br />
     }</p>
-  <p>The above code checks for a key press and if it detects one it frees the memory reserved for the surface indexed in the variable &quot;surf&quot; and then changes room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、キーが押されたかどうかをチェックし、押されたことを検出すると、変数 &quot;surf &quot;でインデックスされた表面用に確保されたメモリを解放し、<span class="notranslate">room</span> を変更します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_save.htm">surface_save</a></div>
+        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ <a href="surface_save.htm"><span class="notranslate">surface_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 surface_free

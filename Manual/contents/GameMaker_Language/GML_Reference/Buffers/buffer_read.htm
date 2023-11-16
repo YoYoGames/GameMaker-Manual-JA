@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_read</title>
+  <title>バッファリード</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_read" />
   <meta name="rh-index-keywords" content="buffer_read,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
@@ -14,51 +14,110 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">buffer_read</span></h1>
-  <p>This function can be used to read data from a previously created buffer. It will read the value at the buffer&#39;s current <a href="buffer_seek.htm">seek position</a>.</p>
-  <p>The return value will depend on the type of data that you are reading, which in itself is defined by the following constants:</p>
-  <div data-conref="../../../assets/snippets/buffer_data_type_constants.hts"> </div>
-  <p>If the function succeeds it will return a value of the given type, however if it fails then it will cause a <a href="../../../Additional_Information/Errors/Runner_Errors.htm">runner error</a>.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Using the incorrect data type for the data being read will result in erroneous values being returned.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">buffer_read</span>(buffer, type)</p>
+  <h1>バッファリード</h1>
+  <p>この関数は、以前に作成された<span class="notranslate">buffer</span> からデータを読み取るために使用することができます。戻り値は，読み込むデータの種類に依存し，それ自体は，以下の定数で定義される。</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The index of the buffer to read from.</td>
+        <td><span class="notranslate"><span class="inline">buffer_u8</span></td>
+        <td>符号なし8ビット整数。0から255までの正の値です。</td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Buffer_Data_Type"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_write.htm" target="_blank">Buffer Data Type Constant</a></span></td>
-        <td>The type of data that is to be read from the buffer (see the list of constants above).</td>
+        <td><span class="notranslate"><span class="inline">buffer_s8</span></td>
+        <td>符号付き8ビット整数。128から127までの正または負の値（0は正として分類される）。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_u16</span></td>
+        <td>符号なし、16ビットの整数。0〜65,535の正の値です。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_s16</span></td>
+        <td>符号付き16ビット整数。32,768～32,767の正または負の値（0は正として分類される）です。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_u32</span></td>
+        <td>符号なし32ビット整数。0から4,294,967,295までの正の値である。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_s32</span></td>
+        <td>符号付き32ビット整数。2,147,483,648 から 2,147,483,647 までの正または負の値（0は正として分類される）です。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_u64</span></td>
+        <td>64ビット符号なし整数。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_f16</span></td>
+        <td>16bit float。65504の範囲内の正または負の値です。<i>(現在はサポートされていません!)</i></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_f32</span></td>
+        <td>32bit float。正または負の値で，±16777216の範囲である。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_f64</span></td>
+        <td>64bitのフロート。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_bool</span></td>
+        <td>ブーリアン値。1 または 0 (<span class="inline">true</span> または <span class="inline">false</span>) のどちらかのみです。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_string</span></td>
+        <td>大きさを問わない<span class="notranslate">string</span> 。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">buffer_text</span></td>
+        <td><span class="notranslate">string</span> 任意の大きさで、最後のヌル終端文字を含まないもの。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span>, <span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span> or <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _cmd = <span data-field="title" data-format="default">buffer_read</span>(buff, buffer_s16);</p>
-  <p>The above code reads from the buffer with the id stored in the variable &quot;buff&quot; a signed 16bit value into the local variable &quot;cmd&quot;.</p>
-  <p> </p>
-  <p> </p>
+  <p>この関数が成功すれば、指定された型の値を返しますが、失敗すればランナーエラーを引き起こします。</p>
+  <p class="note"><span class="note">注</span>読み込むデータに対して誤ったデータ型を使用すると、誤った値が返されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">buffer_read(buffer, type)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">バッファID</a></span></td>
+        <td><span class="notranslate">The index of the buffer to read from.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Buffer_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_write.htm">バッファデータ型定数</a></span></td>
+        <td><span class="notranslate">The type of data that is to be read from the buffer (see the list of constants above).</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span>, <span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> or <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">var cmd = buffer_read(buff, buffer_s16);</p>
+  <p>上記のコードは、変数「buff」に格納されたidを持つ<span class="notranslate">buffer</span> から、符号付き16ビット値をローカル変数「cmd」に読み込んでいます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="buffer_write.htm">buffer_write</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_write.htm"><span class="notranslate">buffer_write</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_read

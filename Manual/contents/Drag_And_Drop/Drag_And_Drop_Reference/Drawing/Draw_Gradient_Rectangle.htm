@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Gradient Rectangle</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>グラデーション矩形の描画</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Gradient Rectangle action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Gradient Rectangle" />
@@ -14,68 +14,71 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Gradient Rectangle Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle_Gradient.png" width="32" /> Draw Gradient Rectangle</h1>
-  <p>This action will draw a rectangle at a given position within the room, using a set of blend colours to create a gradient. You give the top left position and the bottom right position and the rectangle will be drawn between them, and the position can either be an absolute position within the room, or a position relative to the instance calling the action. You then set the colours to blend from each of the corners and can also set whether the rectangle can be filled or outlined by checking the <b>fill</b> box at the bottom.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action is only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a>, and will not draw anything if used elsewhere.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Gradient Rectangle Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Gradient_Rectangle.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> グラデーション矩形の描画</h1>
+  <p>このアクションは、<span class="notranslate">room</span> 内の指定された位置に、ブレンドカラーを使用してグラデーションを作成する矩形を描画します。左上の位置と右下の位置を指定すると、その間に矩形が描かれます。
+    <span class="notranslate">room</span> 内の絶対位置か、アクションを呼び出したインスタンスからの相対位置のどちらかを指定します。次に、各コーナーからブレンドする色を設定し、矩形を塗りつぶすかアウトライン化するかを
+    下部の<b>塗りつぶし</b>ボックス</p>
+  <p class="note"><b>注意</b>：このアクションは、各種<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">描画</a>イベントでのみ使用され、他の場所で使用しても何も描画されません。</p>
+  <p> </p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Draw Gradient Rectangle Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Rectangle_Gradient.png" width="32" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Left</td>
-        <td>The left position to start drawing from</td>
+        <td><span class="notranslate">Left</span></td>
+        <td>描画を開始する左位置</td>
       </tr>
       <tr>
-        <td>Top</td>
-        <td>The top position to start drawing from</td>
+        <td><span class="notranslate">Top</span></td>
+        <td>描画を開始するトップポジション</td>
       </tr>
       <tr>
-        <td>Right</td>
-        <td>The right position to end drawing from</td>
+        <td><span class="notranslate">Right</span></td>
+        <td>描画を終了するのに適した位置</td>
       </tr>
       <tr>
-        <td>Bottom</td>
-        <td>The bottom position to end drawing from</td>
+        <td><span class="notranslate">Bottom</span></td>
+        <td>描画を終了するボトム位置</td>
       </tr>
       <tr>
-        <td>Top Left</td>
-        <td>The colour to blend from the top left corner</td>
+        <td><span class="notranslate">Top Left</span></td>
+        <td>左上からブレンドする色</td>
       </tr>
       <tr>
-        <td>Top Right</td>
-        <td>The colour to blend from the top right corner</td>
+        <td><span class="notranslate">Top Right</span></td>
+        <td>右上からブレンドする色</td>
       </tr>
       <tr>
-        <td>Bottom Left</td>
-        <td>The colour to blend from the bottom left corner</td>
+        <td><span class="notranslate">Bottom Left</span></td>
+        <td>左下からブレンドする色</td>
       </tr>
       <tr>
-        <td>Bottom Right</td>
-        <td>The colour to blend from the bottom right corner</td>
+        <td><span class="notranslate">Bottom Right</span></td>
+        <td>右下隅からブレンドする色</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Gradient Rectangle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Gradient_Rectangle.png" />The above action block code draws a gradient rectangle relative to the instance position with some text over it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、矩形をグラデーションで描画します。
+    インスタンスの位置とその上にテキストを表示します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Ellipse.htm">Draw Ellipse</a></div>
+        <div style="float:left">戻る<a href="Drawing_Actions.htm">描画アクション</a></div>
+        <div style="float:right">次へ<a href="Draw_Ellipse.htm">楕円の描画</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Gradient Rectangle

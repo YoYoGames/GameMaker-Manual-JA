@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Expressions And Operators</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>式と演算子</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different GML expressions" />
   <meta name="rh-index-keywords" content="Expressions And Operators,=,&amp;&amp;,||,^^,&lt;,&gt;,&lt;=,&gt;=,==,!=,|,&amp;,^,&lt;&lt;,&gt;&gt;,+,-,*,/,++,--,div,%,mod,!,~" />
@@ -14,78 +14,78 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Expressions And Operators</h1>
-  <h2>Expressions</h2>
-  <p>An expression is a mathematical phrase that can contain ordinary numbers, variables, strings, or functions as well as one or more <strong>operators </strong>(like add, subtract, multiply, etc...). The values used in an expression can be real numbers (e.g. <span class="inline">3.4 * 6</span>), hexadecimal numbers starting with a <span class="inline">$</span> sign (e.g. <span class="inline">$00FFAA | $88FFAA</span>), strings between double quotes (e.g. <span class="inline">&quot;hello&quot;</span> + <span class="inline">&quot;world&quot;</span>) or more complicated expressions using multiple operators and values.</p>
-  <h2>Operators</h2>
-  <p>The following operators are provided for use with expressions:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Assigning (=)</a></p>
+  <h1>式と演算子</h1>
+  <h2>エクスプレッション</h2>
+  <p>式は、通常の数値、変数、<span class="notranslate">strings</span> 、または関数と、1つまたは複数の<strong>演算子 </strong>（加算、減算、乗算など）を含むことができる数学的なフレーズです。式で使用される値は、実数（例： <span class="inline">3.4 * 6</span> ）、 <span class="inline">$</span> の記号で始まる 16 進数（例： <span class="inline">$00FFAA | $88FFAA</span> ）、二重引用符で囲まれた<span class="notranslate">strings</span> （例： <span class="inline">&quot;hello&quot;</span> + <span class="inline">&quot;world&quot;</span> ）、または複数の演算子や値を使用したより複雑な式とすることができます。</p>
+  <h2>オペレーター</h2>
+  <p>式で使用するために、以下の演算子が用意されている。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">割り当てる（＝）。</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><span class="inline2"><b>=</b></span> is used to assign a value to a variable. Note that this can <i>also</i> be used for comparing variables in <span data-keyref="GameMaker Name">GameMaker</span> and you may see this in examples and other peoples codes. However, this is a legacy from old <i>GameMaker</i> versions and you should use the <b>==</b> operators for comparing and <b>=</b> for assigning, as shown in these examples:</p>
+    <p class="dropspot"><span class="inline2"><b>=</b></span>は、変数に値を代入するために使います。これは<span data-keyref="GameMaker Name">GameMakerの</span>変数の<i>比較にも</i>使えるので、サンプルや他の人のコードで見かけることがあるかもしれません。しかし、これは<i>GameMakerの</i>古いバージョンから受け継いだもので、これらの例にあるように、比較には<b>==</b>演算子、代入には<b>=を</b>使うべきです。</p>
     <p class="code">a = 12;<br />
       speed = 5;<br />
       val = (old_val + 5);</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Combining (&amp;&amp;, ||, ^^)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">結合 (&amp;&amp;, ||, ^^)</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><b><span class="inline2">&amp;&amp;</span>, <span class="inline2">||</span>, <span class="inline2">^^</span> (<span class="inline2">and</span>, <span class="inline2">or</span> and <span class="inline2">xor</span>)</b> are used to combine boolean values to give either true or false. If any of the following examples resolves to <span class="inline">true</span> then the code would be run:</p>
+    <p class="dropspot"><b><span class="inline2">&amp;&amp;</span>,<span class="inline2">||</span>,<span class="inline2">^^</span>(<span class="inline2">and</span>,<span class="inline2">or</span>,<span class="inline2">xor</span></b>) は、ブーリアン値を組み合わせて真か偽のどちらかを与えるために使われます。以下の例のいずれかが <span class="inline">true</span> に解決された場合、そのコードが実行されます。</p>
     <p class="code">if (a == b &amp;&amp; c == d) { do something... }  // and<br />
       if (a == b || c == d) { do something... }   // or<br />
       if (a == b ^^ c == d) { do something... }  // xor</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Nullish (??, ??=)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">ヌリッシュ(??, ?=)</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="note"><span class="note">NOTE</span> &quot;Nullish&quot; simply refers to a value being equal to <span class="inline2">undefined</span> or <span class="inline2">pointer_null</span>.</p>
-    <p class="dropspot"><span class="inline2">??</span> is a <a id="nullish"></a>nullish coalescing operator that returns a specified expression if the given value is <span class="inline2">undefined</span> or <span class="inline2">pointer_null</span>. This operator expects the following syntax:</p>
-    <p class="code_plain">(input ?? null_output)</p>
-    <p class="dropspot">If <span class="inline2">input</span> is <span class="inline2">undefined</span> or <span class="inline2">pointer_null</span>, the expression will return the <span class="inline2">null_output</span> value; however in all other cases it will simply return the <span class="inline2">input</span> value. This can be used to define a &quot;default&quot; value for a variable in case the variable itself does not hold a valid value.</p>
-    <p class="dropspot">Consider the following example:</p>
+    <p class="note"><span class="note">注</span>&quot;Nullish &quot;とは、単に値が<span class="inline2">undefined</span>または<span class="inline2">pointer_nullに</span>等しいことを指します。</p>
+    <p class="dropspot">は、与えられた値が<span class="inline2">undefined</span>または<span class="inline2">pointer_null</span>である場合に、指定された式を返すnullish合体演算子である。この演算子は、以下のような構文を想定しています。</p>
+    <p class="code_plain">(input ?null_output)</p>
+    <p class="dropspot"><span class="inline2">input が</span> <span class="inline2">undefined</span>または<span class="inline2">pointer_null</span> の場合、この式は<span class="inline2">null_output</span>値を返すが、それ以外の場合は単に<span class="inline2">入力</span>値を返す。この式は、変数が有効な値を保持していない場合に、その変数の「デフォルト」値を定義するために使用することができる。</p>
+    <p class="dropspot">次のような例を考えてみましょう。</p>
     <p class="code_plain">username = data.username ?? &quot;INVALID USERNAME&quot;;</p>
-    <p class="dropspot">Here, the <span class="inline2">username</span> variable will get the value stored in <span class="inline2">data.username</span>, however if <span class="inline2">data.username</span> happens to be <span class="inline2">undefined</span> or <span class="inline2">pointer_null</span>, the variable will get the string <span class="inline2">&quot;INVALID USERNAME&quot;</span> instead. This example ensures that any function calls using the <span class="inline2">username</span> variable do not cause an error because of being given a nullish value, and that the user knows when their username was not returned.</p>
-    <p class="note"><span class="note">NOTE</span> The expression on the right hand side of the nullish coalescing operator is only executed when the input value is nullish, meaning that any function calls included in the RHS expression will only be executed if the input value is nullish.</p>
+    <p class="dropspot">しかし、もし<span class="inline2">data.usernameが</span> <span class="inline2">未定義か</span> <span class="inline2">pointer_null</span>であれば、代わりに<span class="notranslate">string</span> <span class="inline2">&quot;INVALID USERNAME &quot;</span>を取得します。この例では、<span class="inline2">username</span>変数を使った関数呼び出しで、nullっぽい値が与えられたためにエラーが発生しないようにし、ユーザが自分のユーザ名が返されなかったときにそれを知ることができるようにしています。</p>
+    <p class="note"><span class="note">注</span>ヌリッシュ合体演算子の右辺の式は、入力値がヌリッシュのときのみ実行されます。つまり、右辺の式に含まれるすべての関数呼び出しは、入力値がヌリッシュのときのみ実行されるということです。</p>
     <hr />
-    <p class="dropspot"><span class="inline2">??=</span> is similar to the nullish coalescing operator described above but is used specifically for variable assignments. This operator expects the following syntax:</p>
+    <p class="dropspot"><span class="inline2">?=</span>は、上で説明したnullishの合体演算子と似ていますが、特に変数の代入に使用されます。この演算子は次のような構文を想定しています。</p>
     <p class="code">variable ??= null_value</p>
-    <p class="dropspot">If <span class="inline2">variable</span> is <span class="inline2">undefined</span> or <span class="inline2">pointer_null</span>, the <span class="inline2">null_value</span> value will be assigned to it; otherwise the variable will remain unchanged. This can be used to assign a custom &quot;default&quot; value to a variable when it holds a nullish value.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="inline2">変数が</span> <span class="inline2">未定義</span>または<span class="inline2">pointer_null の</span>場合、<span class="inline2">null_value</span>値が代入され、それ以外の場合、変数は変更されない。これは、変数がヌル値を保持しているときに、カスタムの「デフォルト」値を割り当てるために使用することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Comparing (&lt;, &lt;=, ==, !=, &gt;, &gt;=)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">比較（&lt;, &lt;=, ==, !=, &gt;, &gt;=）する。</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><b><span class="inline2">&lt;</span>, <span class="inline2">&lt;=</span>, <span class="inline2">==</span>, <span class="inline2">!=</span>, <span class="inline2">&gt;</span>, <span class="inline2">&gt;=</span></b> are comparisons and can only give a <span class="inline">true</span> or <span class="inline">false</span> result (where true can also be interpreted as 1, and false as 0). Examples of use:</p>
+    <p class="dropspot"><b><span class="inline2">&lt;</span>,<span class="inline2">&lt;=</span>,<span class="inline2">==</span>,<span class="inline2">!=</span>,<span class="inline2">&gt;</span>,<span class="inline2">&gt;=</span></b>は比較で、<span class="inline">true</span> または<span class="inline">false</span> の結果しか出せません（ここで true は 1、false は 0 と解釈することも可能です）。使用例</p>
     <p class="code">if (a &lt; b) {do something...}<br />
       if (a != b) {do something...}</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Bitwise (|, &amp;, ^, &lt;&lt;, &gt;&gt;)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">ビット単位（｜、＆、^、&lt;&lt;、&gt;&gt;）で</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot"><b><span class="inline2">|</span>, <span class="inline2">&amp;</span>, <span class="inline2">^</span>, <span class="inline2">&lt;&lt;</span>, <span class="inline2">&gt;&gt;</span> </b>are used to perform bitwise operations, where | = bitwise or, &amp; = bitwise and, ^ = bitwise xor, &lt;&lt; = shift left, &gt;&gt; = shift right. Examples of use:</p>
+    <p class="dropspot"><b><span class="inline2">|</span>,<span class="inline2">&amp;</span>,<span class="inline2">^</span>,<span class="inline2">&lt;&lt;</span>,<span class="inline2">&gt;&gt;</span> </b>は、ビット演算を行うために使用されます。ここで、 | = ビット演算、 &amp; = ビット演算、 ^ = ビット演算の xor、 &lt;&lt; = 左シフト、 &gt;&gt; = 右シフトです。使用例です。</p>
     <p class="code">x = (x &amp; $ffffffe0) + 32;<br />
       if (y ^ $1f) &gt; 0 {do something...};</p>
-    <p class="dropspot">You can find additional information on how to use the bitwise operators and what they do from the section: <a href="../../Additional_Information/Bitwise_Operators.htm">Bitwise Operators</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ビット演算子の使い方とその作用については、「ビット演算子の使い方」のセクションからさらに詳しい情報を得ることができます。ビット演算<a href="../../Additional_Information/Bitwise_Operators.htm">子</a>」 を参照してください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Arithmetical (+, -, *, /)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">算術演算 (+, -, *, /)</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><b><span class="inline2">+</span>, <span class="inline2">-</span>, <span class="inline2">*</span>, <span class="inline2">/</span></b> are add, subtract, multiply and divide, respectively. Examples of use:</p>
+    <p class="dropspot"><b><span class="inline2">+</span>,<span class="inline2">-</span>,<span class="inline2">*</span>,<span class="inline2">/</span></b>はそれぞれ加算、減算、乗算、除算です。使用例です。</p>
     <p class="code">c = a * b;<br />
       str = a + &quot;world&quot;;</p>
-    <p class="note"><span class="note"><b>NOTE</b></span> Floating point numbers do not stop on Divide by Zero as they will get an infinity as the answer. If A and B are integers (either int32 or int64) then the division will be done as integers (and divide by 0 will be checked and error&#39;d. Otherwise it will be done as a floating point division (with no divide by 0 check).</p>
-    <p class="dropspot"> </p>
+    <p class="note"><span class="note"><b>注意</b></span>浮動小数点数の場合、Divide by Zero を実行すると、答えが無限大になるので、停止しません。A と B が整数（int32 または int64）の場合、除算は整数として行われます（0 による除算がチェックされ、エラーになります。それ以外の場合は、浮動小数点数の除算として行われます（0による除算のチェックは行われません）。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Increment/Decrement (++, --)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">インクリメント/デクリメント (++, --)</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot"><span class="inline2"><strong>++</strong></span>, <span class="inline2"><strong>--</strong></span> are used to add or subtract one (<span class="inline2">1</span>) from a value. It is worth noting that placing this before or after the value to be added to or subtracted from will have slightly different results. For example:</p>
+    <p class="dropspot"><span class="inline2"><strong>++</strong></span>, <span class="inline2"><strong>--</strong></span>は、ある値に対して1加算または<span class="inline2">1</span>減算するために使用します。注意すべきは、これを加算・減算する値の前や後に置くと、結果が少し違ってくることです。例えば</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">++a</span> will increment the variable and return the incremented value.</li>
-      <li class="dropspot"><span class="inline">a++</span> will increment the variable but return the value before it was incremented.</li>
+      <li class="dropspot"><span class="inline">++a</span> は、変数をインクリメントし、インクリメントされた値を返します。</li>
+      <li class="dropspot"><span class="inline">a++</span> は、変数をインクリメントしますが、インクリメントされる前の値を返します。</li>
     </ul>
-    <p class="dropspot">Therefore, if you have something like this:</p>
+    <p class="dropspot">したがって、このようなものがあれば</p>
     <p class="code">var a = 1;<br />
       show_debug_message(string(a++));<br />
       show_debug_message(string(++a));</p>
-    <p class="dropspot">The debug output would be 1 and 3. Here are some examples of use:</p>
+    <p class="dropspot">デバッグ出力は、1と3になります。以下は使用例です。</p>
     <p class="code">for (var i = 0; i &lt; 10; i++;)<br />
       {<br />
           do something...<br />
@@ -94,52 +94,52 @@
       {<br />
           --score;<br />
       }</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> On the YoYo Compiler target platforms (those marked (YYC)), these expressions are evaluated from left to right, while on all other target platforms they are evaluated from right to left, meaning that this:</p>
+    <p class="note"><strong>注意</strong>：<span class="notranslate">YoYo</span> コンパイラのターゲットプラットフォーム（(YYC)と表示されているもの）では、これらの式は左から右に評価されますが、その他のターゲットプラットフォームでは、右から左に評価されます、つまり、これは。</p>
     <p class="code">val = max(num, ++num, num++);</p>
-    <p class="note">will give different results depending on the platform.</p>
-    <p class="dropspot"> </p>
+    <p class="note">は、プラットフォームによって異なる結果を得ることができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Division and Modulo (div, %, mod)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">除数とモジュロ (div, %, mod)</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot"><strong><span class="inline2">div</span>, <span class="inline2">mod</span> (<span class="inline2">%</span>)</strong> are division and modulo, where div gives you the amount a value can be divided into producing only an integer quotient, while mod gives you only the remainder of a division. Note that you can only div or mod using integer values. Examples of use:</p>
+    <p class="dropspot"><strong><span class="inline2">div</span>,<span class="inline2">mod</span>(<span class="inline2">%</span></strong>) は除算とモジュロで、div はある値を分割して整数の商だけを生成できる量、mod は分割した余りだけを与える。なお、divやmodは整数値でなければできません。使用例 </p>
     <p class="code">secs = time mod 60;<br />
       time_str = string(time div 60);</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Unary (!, -, ~)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">単項（！、-、～）。</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">The following <strong>unary</strong> operators are provided:</p>
+    <p class="dropspot">以下の<strong>単項</strong>演算子が用意されている。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline2"><strong>!</strong></span>: boolean &quot;not&quot;, so <span class="inline">!true == false</span></li>
-      <li class="dropspot"><span class="inline2"><strong>-</strong></span>: negates the next real or integer value (not valid for strings or booleans)</li>
-      <li class="dropspot"><span class="inline2"><strong>~</strong></span>: negates the next value bitwise</li>
+      <li class="dropspot"><span class="inline2"><strong>!</strong></span>: boolean &quot;not&quot;, だから<span class="inline">!true == false</span></li>
+      <li class="dropspot"><span class="inline2"><strong>-</strong></span>: 次の実数または整数値を否定する (<span class="notranslate">strings</span> またはブール値では無効)</li>
+      <li class="dropspot"><span class="inline2"><strong>~</strong></span>: 次の値をビット単位で否定します。</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <h2>Expression Grouping</h2>
-  <p><i></i>As values in all expressions you can use numbers, variables, or functions that return a value, and sub-expressions can be placed between brackets too. All operators work for real number values, but <em>comparisons </em>also work for strings and the &quot;<strong>+</strong>&quot; operator can be used to concatenate strings.</p>
-  <p>When doing multiple operations in a single expression, it is <b>very important</b> that you use brackets <span class="inline">()</span> to separate out the order of operation, as different platforms may perform them differently if not explicitly stated in this way. For example, consider the following code:</p>
+  <h2>表現のグループ化</h2>
+  <p><i></i>すべての式の値として、数値、変数、値を返す関数を使用することができ、括弧の間に副式を置くこともできます。すべての演算子は実数値に対して機能しますが、<em>比較は </em> <span class="notranslate">strings</span> に対して機能し、<strong>「+」</strong>演算子は文字列を連結するために使用できます。</p>
+  <p>一つの式の中で複数の操作を行う場合、括弧 <span class="inline">()</span> で操作の順序を区切ることが<b>非常に重要</b>です。このように明示的に記述しないと、プラットフォームによって異なる処理を行う可能性があります。例えば、次のようなコードを考えてみましょう。</p>
   <p class="code">a = b == c || d;</p>
-  <p>The different target compilers will perform the operations in different orders since they are not explicitly shown, giving rise to &quot;odd&quot; results that you may not expect when you play your game. to avoid this, use the <span class="inline">()</span> to separate out the parts, like this:</p>
+  <p>ターゲットとなるコンパイラが異なると、明示的に示されていないため、異なる順序で演算が行われ、ゲームをプレイしたときに予想外の「奇妙な」結果が生じる。これを避けるには、次のように <span class="inline">()</span> を使って部分を区切ってください。</p>
   <p class="code">a = (b == c || d);   //better<br />
     a = ((b == c) || d); //best</p>
-  <h2>Statement Grouping</h2>
-  <p>When using various operations and expressions in a single code block, these too should be separated. For example, the following <em>looks</em> like valid code:</p>
+  <h2>ステートメントのグループ化</h2>
+  <p>一つのコードブロックの中で様々な演算や式を使用する場合は、これらも分離する必要があります。例えば、次のようなコードは有効なコードのように<em>見えます</em>。</p>
   <p class="code">if my_var == your_var ++their_var;</p>
-  <p>However, the compiler could interpret this in one of two ways:</p>
+  <p>しかし、コンパイラはこれを2つの方法のいずれかで解釈することができる。</p>
   <p class="code">if my_var == your_var<strong>++</strong> then their_var;<br />
     <br />
     // or<br />
     <br />
     if my_var == your_var then <strong>++</strong>their_var;
   </p>
-  <p>Now, you can tell looking at the code that one of those is a bit stupid, but that&#39;s because we know what we are wanting to achieve and what we want to happen, but the compiler doesn&#39;t. All it sees is two variables with the ++ operator between them so it has to choose which one to apply it to. Therefore, you should <strong>always explicitly bracket expressions, operations and statements</strong>. The correct version of the above code should be:</p>
+  <p>さて、このコードを見れば、そのうちの1つが少し愚かであることがわかります。しかし、これは私たちが何を達成したいのか、何が起きたいのかを知っているからで、コンパイラはそうではありません。コンパイラは、2つの変数とその間の++演算子を見て、どちらを適用するかを選択しなければならないのです。したがって、<strong>式や演算、文は常に明示的に括弧で</strong>囲む必要があります。上記のコードの正しいバージョンは次のようになるはずです。</p>
   <p class="code">if (my_var == your_var)<br />
     {<br />
         ++their_var;<br />
     }</p>
-  <p>This may appear more verbose, but there is no ambiguity about the operations being performed and it will compile and behave consistently across all platforms. Also note that while you can chain expressions and statements without the use of brackets at the moment, this is a legacy feature and going forward may be deprecated and removed from GML, so using brackets appropriately now will &quot;future-proof&quot; your code (and is generally good practice anyway).</p>
-  <p>Here are some final examples of the various different expressions:</p>
+  <p>これはより冗長に見えるかもしれませんが、実行されている操作について曖昧さがなく、すべてのプラットフォームで一貫してコンパイルと動作が行われます。また、現時点では括弧を使わずに式や文を連結することができますが、これはレガシーな機能であり、将来的には非推奨となり<span class="notranslate">GML</span> から削除される可能性があります。</p>
+  <p>最後に様々な異なる表現の例をご紹介します。</p>
   <p class="code">{<br />
         x = 23 div 2;<br />
         colour = $FFAA00 + $00BB12;<br />
@@ -150,21 +150,21 @@
         x = 23 * ((2 + 4) / sin(y));<br />
         b = (x &lt; 5) &amp;&amp; !((x == 2) || (x == 4));<br />
     }</p>
-  <p>One final thing to note is that there are also some expression &quot;short-cuts&quot; called <b>accessors</b> for use with certain <a href="../GML_Reference/Data_Structures/Data_Structures.htm">Data Structures</a> and <a href="Arrays.htm">Arrays</a>. These enable you to add, or replace data within these formats quickly and easily and without the use of any function calls. For full details, please see the following page</p>
+  <p>最後に、特定の<a href="../GML_Reference/Data_Structures/Data_Structures.htm">データ</a>構造と<a href="Arrays.htm">配列で</a>使用するための<b>アクセッサと</b>呼ばれる式の「ショートカット」があることに注意してください。これらを使用すると、関数呼び出しをしなくても、これらのフォーマット内のデータをすばやく簡単に追加したり、置き換えたりすることができます。詳しくは、以下のページをご覧ください。</p>
   <ul class="colour">
-    <li><a href="Accessors.htm">Accessors</a></li>
+    <li><a href="Accessors.htm">アクセサー</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Script_Functions.htm">Script Functions And Variables</a></div>
+        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="Script_Functions.htm">スクリプトの関数と変数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 div

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Stack</title>
+  <title>スタック作成</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Stack action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Stack" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Stack" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Stack.png" /> Create Stack</h1>
-  <p>This action will create a new <b>stack</b> data-structure and return the index value so you can later access the stack through the other Data Structure actions. The stack index will be returned to the Target Variable that you supply, which can have
-    been created earlier using either <a href="../Common/Assign_Variable.htm">Assign Variable</a> or <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, or you can flag the &quot;Temp&quot; checkbox to name and create a temporary local
-    variable to store the value until the end of the script or event. A newly created stack data structure is considered &quot;empty&quot;, ie: it contains no entries. Note that you can create additional DS stacks by clicking the plus icon <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> </span>beside
-    the action, and selecting another variable to hold the stack ID.</p>
-  <p class="note"><b>IMPORTANT!</b> Creating any data structure uses up memory on the target platform, and as such all data structures should be free when no longer needed using the action <a href="Free_Data_Structure.htm">Free Data Structure</a> otherwise you get a
-    memory leak which can impair your games performance or even cause it to crash. This is particularly relevant when using temporary local variables to store data structure indices, as these variables are removed at the end of the code or event, but
-    that does not mean the data structure is removed too! The data structure will still exist, only you will have no way to reference it, so either use an instance variable and free the structure at a later time, or free the structure before the end of
-    the event or function if its index is stored in a temporary variable.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Stack Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Create_Stack.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> スタック作成</h1>
+  <p>このアクションは新しい<b>スタック</b>データ構造を作成し、インデックス値を返すので、後で他のデータ構造アクションでスタックにアクセスすることができます。スタックインデックスは、指定したターゲット変数に返されます。
+    または、<span class="notranslate">flag</span> &quot;Temp&quot; チェックボックスを使用して、一時的なローカル<a href="../Common/Assign_Variable.htm">変数に</a>名前を付けて作成します。
+    変数に格納し、<span class="notranslate">script</span> またはイベントの終了まで値を保存します。新しく作成されたスタックデータ構造は、「空」、つまりエントリを何も含んでいないとみなされます。DS スタックを追加で作成するには、プラスアイコン <span><img> </span>の横にある
+    アクションを実行し、スタックIDを格納する別の変数を選択します。</p>
+  <p class="note"><b>重要!デ</b>ータ構造を作成すると、ターゲット・プラットフォームのメモリを消費します。
+    メモリリークにより、ゲームのパフォーマンスが低下したり、クラッシュしたりする可能性があります。これは、データ構造のインデックスを格納するために一時的なローカル変数を使用している場合に特に関連します。
+    だからといって、データ構造が削除されるわけではありません。データ構造はまだ存在しますが、それを参照する方法がないため、インスタンス変数を使用して後で構造体を解放するか、または
+    イベントや関数のインデックスが一時変数に格納されている場合。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Create Stack" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Stack.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the stack index in</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>スタックインデックスを格納するターゲット変数</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Stack Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Create_Stack.png" />The above action block code creates an instance variable and a new stack data structure.
-    The index of the stack is stored in the new variable, and then a loop is performed which creates 10 instances and pushes their unique ID values onto the stack.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードでは、インスタンス変数と新しいスタックデータ構造を作成しています。
+    スタックのインデックスが新しい変数に格納され、次に<span class="notranslate">loop</span> が実行され、10 個のインスタンスが作成され、それらの固有の ID 値がスタックにプッシュされます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Clear_Data_Structure.htm">Clear Data Structure</a></div>
+        <div style="float:left">戻る<a href="Data_Structure_Actions.htm">データ構造アクション</a></div>
+        <div style="float:right">次へ<a href="Clear_Data_Structure.htm">データ構造をクリアする</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Stack

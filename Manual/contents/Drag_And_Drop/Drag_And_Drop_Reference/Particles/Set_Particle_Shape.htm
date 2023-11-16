@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Particle Shape</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>パーティクル形状を設定する</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Particle Shape action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Particle Shape" />
@@ -14,44 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Particle Shape Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Shape.png" /> Set Particle Shape</h1>
-  <p>This action can be used to set the built in sprite shape that a particle should use when drawing. You supply the unique ID value for the type to set the shape of (as returned when you created the type with the action <a href="Create_Particle_Type.htm">Create Particle Type</a>) and the shape to use. Particle shapes are simply white sprites that have been created for <span data-keyref="GameMaker Name">GameMaker</span> to use specifically as particles and consist of the following forms:</p>
+  <h1><img> パーティクル形状を設定する</h1>
+  <p>このアクションは、パーティクルが描画時に使用する組み込みの<span class="notranslate">sprite</span> の形状を設定するために使用できます。形状を設定するタイプのユニークなID値（<a href="Create_Particle_Type.htm">Create Particle Type</a>アクションでタイプを作成したときに返されたもの）を与えます。
+    と、使用する形状を指定します。パーティクル形状は、<span data-keyref="GameMaker Name">GameMakerが</span>パーティクルとして特別に使用するために作成された、単なる白い<span class="notranslate">sprites</span> 、以下の形状で構成されています。</p>
+  <p><img alt="Set Particle Shape Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Shape.png" /></p>
+  <p class="note"><b>注</b>：このアクションを使用する場合、<a href="Set_Particle_Sprite.htm">Set Particle Sprite</a>アクションは使用<b>しないで</b>ください。<span class="notranslate">sprite</span> <b>か</b>シェイプしか持つことができませんが、両方持つことはできません。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
   <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Particle_Types.png" /></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> If you use this action then you should <b>not</b> use the action <a href="Set_Particle_Sprite.htm">Set Particle Sprite</a> as you can only have a sprite <b>or</b> a shape, but not both.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Particle Shape Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Shape.png" /></p>
-  <h4>Arguments:</h4>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Type</td>
-        <td>The ID value for the type to set the shape of</td>
+        <td><span class="notranslate">Type</span></td>
+        <td>の形状を設定する型のID値。</td>
       </tr>
       <tr>
-        <td>Shape</td>
-        <td>The shape to use for the particle type</td>
+        <td><span class="notranslate">Shape</span></td>
+        <td>パーティクルの種類に使用する形状</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Particle Shape Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Set_Particle_Shape.png" />The above action block code will create a new particle type and assign its unique ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、新しいパーティクル タイプを作成し、そのユニークな
+    ID値をグローバル変数に格納する。その後、パーティクルタイプのすべてのプロパティを設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Particle_Colour.htm">Set Particle Colour</a></div>
+        <div style="float:left">戻る<a href="Particle_Actions.htm">パーティクルアクション</a></div>
+        <div style="float:right">次へ<a href="Set_Particle_Colour.htm">パーティクルカラーを設定する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Shape

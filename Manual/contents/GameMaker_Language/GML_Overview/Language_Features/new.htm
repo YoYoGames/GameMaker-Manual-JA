@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>new</title>
+  <title>新</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the new function" />
   <meta name="rh-index-keywords" content="new" />
@@ -14,32 +14,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>new</h1>
-  <p>The <span class="inline">new</span> operator can be used to create a struct with a function which is called with the given arguments. The function can then populate the struct with variables from the arguments - much like the create event of an instance will set the initial variables for the instance - and then the <span class="inline">new</span> operator will return the struct. Before using this operator it is important to note that the function given <i>must be flagged as a <span class="inline">constructor</span> function</i> otherwise the <span class="inline">new</span> operator will not create the struct (the code example below shows this, and for more information, please see the page on <a href="../Structs.htm">Structs</a>).</p>
-  <p class="note"><span class="note">NOTE</span> You can check a struct to find out which function was used to create it using the runtime function <a href="../../GML_Reference/Variable_Functions/instanceof.htm"><span class="inline">instanceof()</span></a>.</p>
-  <p>This operator has the following syntax:</p>
+  <h1>新</h1>
+  <p> <span class="inline">new</span> 演算子は、与えられた引数で呼び出される関数で<span class="notranslate">struct</span> を作成するために使用されます。この関数は<span class="notranslate">struct</span> に引数の変数を代入し、 <span class="inline">new</span> 演算子は<span class="notranslate">struct</span> を返します。この演算子を使用する前に、与えられた関数が<i> <span class="inline">constructor</span> </i>関数としてフラグされていなければならないことに注意することが重要です。そうでなければ <span class="inline">new</span> 演算子は<span class="notranslate">struct</span> を作成しません (以下のコード例でこれを示します。より詳しい情報は<a href="../Structs.htm">Struct</a> のページを参照してください)。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">struct</span> 関数を使用すると、<span class="notranslate">runtime</span> をチェックして、どの関数で作成されたかを知ることができます。 <a href="../../GML_Reference/Variable_Functions/instanceof.htm"><span class="inline">instanceof()</span></a>.</p>
+  <p>この演算子の構文は次のとおりである。</p>
   <p class="code"><span>&lt;variable&gt; = </span>new &lt;function&gt; (&lt;argument&gt;, &lt;argument&gt;, ...);</p>
-  <p>When you use the new operator along with a function, it will return a struct reference which is stored in the given variable, permitting you to access the struct and any variables that were created within it by the function.</p>
-  <p>The following example shows a function that has been defined to use as a constructor:</p>
+  <p>関数で new 演算子を使用すると、指定した変数に格納されている<span class="notranslate">struct</span> の参照が返され、関数によってその中に作成された<span class="notranslate">struct</span> と任意の変数にアクセスできるようになります。</p>
+  <p>次の例は、コンストラクターとして使用するために定義された関数を示しています。</p>
   <p class="code">function init_struct(_a, _b, _c) constructor<br />
     {<br />
         a = _a;<br />
         b = _b;<br />
         c = _c;<br />
     }</p>
-  <p>This function can then be used along with the <span class="inline">new</span> operator to create a struct and populate it with the variables set to the values of the arguments used in the function, like this:</p>
+  <p>この関数を <span class="inline">new</span> 演算子とともに使用して、次のように<span class="notranslate">struct</span> を作成し、その中に関数で使用した引数の値を設定した変数を入れることができます。</p>
   <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p>
-  <p>It is important to note that calling new on any function that has <em>not</em> been flagged as a constructor will cause a <a href="../../../Additional_Information/Errors/Runner_Errors.htm">runtime exception</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p>注意すべきは、コンストラクタとしてフラグが立って<em>いない</em>関数でnewを呼び出すと、<a href="../../../Additional_Information/Errors/Runner_Errors.htm">実行時例外が</a>発生することです。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="delete.htm">delete</a></div>
+        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:right">次のページ <a href="delete.htm"><span class="notranslate">delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 new

@@ -6,7 +6,7 @@
   <title>tilemap_set_global_mask</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function tilemap_set_global_mask" />
   <meta name="rh-index-keywords" content="tilemap_set_global_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask" />
@@ -15,69 +15,69 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>tilemap_set_global_mask</h1>
-  <p>This function can be used to set the <b>tile bit mask</b> for a all tile maps in the game. The idea is that if you have, for example, pretty small tile sets of 16 x 16 tiles will have a total of 256 different tiles in each tile set, which only uses up 8 bits of your index in the tile data &quot;blob&quot; (from an available 19 bits of data). These bits can be &quot;masked&quot; and then the rest of the tile data can be used to store additional values.</p>
-  <p>An easy way to get the initial index mask value is to take the number of tiles in the tile set and subtract 1, so a 16x16 tile set has 256 tiles and a mask value of 255 (or $ff in hexadecimal), and if the tile set has a number of tiles that are <i>not</i> a power of two, then round up to the nearest power of two to get the mask, for example a tile set that is 20x20 has 400 tiles, which you would round up to 512, and so get a mask index value of 511 ($1ff in hexadecimal). Apart from the index mask, normally you would want to preserve the flip, rotate and mirror values that are assigned to a tile too, so to help with that there are a few <b>constants</b> that can be used. These can be &quot;or&quot;-ed together with the index mask value to preserve those bits of data. The following constants can be used (see the example code below for usage):</p>
+  <p>この関数は、ゲーム内のすべての<span class="notranslate">tile</span> マップの<b>タイルビットマスクを</b>設定するために使用することができます。<span class="notranslate">tile sets</span> このアイデアは、例えば、16 x 16 のかなり小さな<span class="notranslate">tiles</span> がある場合、各<span class="notranslate">tiles</span> に合計 256 の異なる<span class="notranslate">tile set</span> があり、<span class="notranslate">tile</span> データ「ブロブ」のインデックスの 8 ビットしか使用しません（利用可能な 19 ビットのデータから）。これらのビットを「マスク」して、<span class="notranslate">tile</span> データの残りを使用して追加の値を格納することができます。</p>
+  <p>インデックスマスクの初期値を得る簡単な方法は、<span class="notranslate">tiles</span> の<span class="notranslate">tile set</span> の数から 1 を引くことです。したがって、16x16<span class="notranslate">tile set</span> は 256<span class="notranslate">tiles</span> となり、マスク値は 255 (16進数では $ff) です。もし<span class="notranslate">tile set</span> が<span class="notranslate">tiles</span> の数が2のべきで<i>ない</i>場合は、マスクを得るために最も近い2のべきに切り上げます。例えば 20x20<span class="notranslate">tile set</span> は 400<span class="notranslate">tiles</span> で、512 に切り上げ、マスクインデックス値 511(hexadecimal で $1ff) となります。インデックスマスクとは別に、通常は<span class="notranslate">tile</span> に割り当てられた flip、rotate、mirror の値も保持したいので、それを助けるためにいくつかの<b>定数を</b>使用できます。これらの定数をインデックスマスクの値と一緒に &quot;or &quot;することで、これらのビットのデータを保持することができます。以下の定数を使用することができます（使用方法は以下のサンプルコードを参照してください）。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">tile_rotate</span></td>
-        <td>Used to set/get the rotate bit of a tile data blob.</td>
+        <td><span class="notranslate"><span class="inline">tile_rotate</span></td>
+        <td><span class="notranslate">tile</span> データブロブのローテートビットを設定/取得するために使用します。</td>
       </tr>
       <tr>
-        <td><span class="inline">tile_mirror</span></td>
-        <td>Used to set/get the mirror bit of a tile data blob.</td>
+        <td><span class="notranslate"><span class="inline">tile_mirror</span></td>
+        <td><span class="notranslate">tile</span> データブロブのミラービットを設定/取得するために使用されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">tile_flip</span></td>
-        <td>Used to set/get the flip bit of a tile data blob.</td>
+        <td><span class="notranslate"><span class="inline">tile_flip</span></td>
+        <td><span class="notranslate">tile</span> データブロブのフリップビットを設定/取得するために使用されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">tile_index_mask</span></td>
-        <td>A special constant that is for &quot;and&quot;-ing with the tile data blob to extract the tile index.</td>
+        <td><span class="notranslate"><span class="inline">tile_index_mask</span></td>
+        <td><span class="notranslate">tile</span> のインデックスを抽出するために<span class="notranslate">tile</span> データブロブと &quot;and &quot;演算するための特別な定数です。</td>
       </tr>
     </tbody>
   </table>
-  <p>Tile map bit masking is an advanced feature and allows you to use bits of the tile data &quot;blob&quot; for your own use. For example, the user could reserve a bit to mean &quot;solid&quot; in the tile-data structure and then this can be checked for fast collisions. Basically, the bit mask is &quot;and&quot;-ed against the tile data when the tile map is <i>drawn</i> (so it doesn&#39;t affect any of the other functionality), meaning that bits which aren&#39;t in the mask are ignored, but can still be read and written to by the user for their own purposes. Note that there are two different masks – a global one and one per tile map - and these are &quot;and&quot;-ed together internally by <span data-keyref="GameMaker Name">GameMaker</span> before being used for drawing.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>タイルマップのビットマスキングは高度な機能で、<span class="notranslate">tile</span> データの「ブロブ」のビットを独自の用途に使用することができます。例えば、ユーザーはタイルデータ構造で「固体」を意味するビットを予約し、これを高速コリジョンのためにチェックすることができます。基本的に、ビットマスクは<span class="notranslate">tile</span> マップが<i>描画</i>されるときに<span class="notranslate">tile</span> データに対して「and」されます（したがって、他の機能には影響しません）。つまり、マスクにないビットは無視されますが、ユーザーが独自の目的で読み書きをすることはできます。グローバルマスクと<span class="notranslate">tile</span> マップごとのマスクの 2 種類があり、描画に使用する前に<span data-keyref="GameMaker Name">GameMaker</span>内部で &quot;アンド&quot; 処理されることに注意してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">tilemap_set_global_mask(mask)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>mask</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The mask value to use</td>
+        <td><span class="notranslate">mask</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The mask value to use</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var mask = tile_mirror | tile_flip | tile_rotate | 255;<br />
     tilemap_set_global_mask(mask);</p>
-  <p>The above code sets the global tile map bit mask to 8bits, preserving the flip, mirror, and rotate values for each tile in the map.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、グローバル<span class="notranslate">tile</span> マップのビットマスクを 8 ビットに設定し、マップ内の各<span class="notranslate">tile</span> の flip、mirror、rotate 値を保持します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="tilemap_set_width.htm"> tilemap_set_width </a></div>
+        <div style="float:left">戻る<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
+        <div style="float:right">次ページ：<a href="tilemap_set_width.htm"> tilemap_set_width </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_set_global_mask

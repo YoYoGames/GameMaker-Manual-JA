@@ -6,7 +6,7 @@
   <title>iOS</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that details the iOS Game Options" />
   <meta name="rh-index-keywords" content="Game Options - iOS" />
@@ -14,69 +14,65 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">iOS</span> Game Options</h1>
-  <p>This section outlines the different options available to you that control how your iOS game projects will be compiled. The different sections are:</p>
-  <h2>General</h2>
-  <p><img alt="iOS General Options" class="center" src="../../assets/Images/Settings/iOS_General_Options.png" />The first part of the General section covers the <strong>Product Information</strong> about your game, including its <strong>Display Name</strong>, its <strong>Bundle Name</strong> and the <strong>Version</strong> info. Note that the Bundle Name must be in the correct reverse URL format for the final build of the game to work correctly, e.g. <span class="inline">com.[Company].[GameName]</span>. Here you can also give the <strong>Team Identifier</strong> that you wish to use for signing the final application that <span data-keyref="GameMaker Name">GameMaker</span> creates for you. Setting it here will override the Team ID that you have supplied in the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/iOS.htm">iOS Preferences</a>.</p>
-  <p>The second thing to do is fill in the <strong>Build Settings</strong> for your game. To start with you set the allowed <strong>Orientation</strong>s that your game can be run on for the best user experience. The available options are:</p>
-  <ul class="colour">
-    <li>Allow portrait orientation</li>
-    <li>Allow flipped portrait orientation</li>
-    <li>Allow landscape orientation</li>
-    <li>Allow flipped landscape orientation</li>
+  <h1>iOSゲームオプション</h1>
+  <p>このセクションでは、<span class="notranslate">iOS</span> ゲームプロジェクトのコンパイル方法を制御するさまざまなオプションの概要を説明します。各セクションの内容は以下の通りです。</p>
+  <p> </p>
+  <h2>一般</h2>
+  <p><img>Generalセクションの最初の部分は、ゲームの<strong>Build Settingsを</strong>カバーします。まず最初に、最高のユーザーエクスペリエンスを得るために、ゲームを実行できる<strong>向きを </strong>設定します。利用可能なオプションは以下の通りです。</p>
+  <ul class="Disc">
+    <li>ポートレート</li>
+    <li>反転ポートレート</li>
+    <li>風景</li>
+    <li>反転した風景</li>
   </ul>
-  <p>You can then go to the <strong>Device Support</strong> section, with the following options available for the types of device to target:</p>
-  <ul class="colour">
-    <li><strong>iPhone or iPod Touch</strong>: iPhone 6 and above or iPod Touch devices</li>
-    <li><strong>iPad</strong>: iPad devices</li>
-    <li><strong>Both</strong>: Both iPhone/iPod and iPad</li>
+  <p>その後、「<strong>Device Support</strong>」セクションに移動し、以下のオプションから対象となるデバイスの種類を設定することが可能です。</p>
+  <ul class="Disc">
+    <li><strong>iPhoneまたはiPod Touch</strong>：iPhone6以上またはiPod Touch端末</li>
+    <li><strong>iPad</strong>：iPadデバイス</li>
+    <li><strong>両方</strong>：iPhone/iPodとiPadの両方</li>
   </ul>
-  <p>Next, there is the <strong><a id="CocoaPods"></a>CocoaPods</strong> checkbox. Check it to automatically let <span data-keyref="GameMaker Name">GameMaker</span> use the <a href="https://cocoapods.org/">CocoaPods</a> dependency manager. When enabled, <span data-keyref="GameMaker Name">GameMaker</span> will perform the following steps on building your project:</p>
+  <p>次に、<strong>表示名</strong>、<strong>バンドルID</strong>、<strong>バージョン</strong>情報など、ゲームに関する<strong>製品</strong>情報を入力します。バンドルIDは、ゲームの最終ビルドが正しく動作するように、正しい逆引きURL形式である必要があることに注意してください（例： <span class="inline">com.[Company].[GameName]</span> ）。ここで、<span data-keyref="GameMaker Name">GameMakerが</span>作成する最終アプリケーションの署名に使用する<strong>Team Identifierを</strong>指定することもできます。ここで設定すると、<a href="../../Setting_Up_And_Version_Information/Platform_Preferences/iOS.htm">iOS Preferencesで</a>指定したTeam IDが上書きされます。</p>
+  <p>次に、「<strong>ホームインジケータの出力を遅延さ</strong>せる」というオプションにチェックを入れたり外したりすることができます。これがチェックされていると、ホームバーは常に低いアルファ値で表示され、最初のスワイプでバーが起き、2回目のスワイプでホームに移動します。このオプションがチェックされていない場合、ゲーム内ではバーは表示されませんが、最初のエッジスワイプでホームに移動します。デフォルトはチェックなしです。</p>
+  <p>最後に、<strong>Podfileと</strong> <strong>Podfile.lockを</strong>生成するオプションがあります。これらのファイルは、<a href="../../The_Asset_Editors/Extensions.htm">Extension Editorを</a>使用して<a href="../../The_Asset_Editors/Extension_Creation/iOS_Extensions.htm">iOSエクステンションに</a> <span class="notranslate">CocoaPods</span> を追加する場合に必要です。このファイルには、ゲームをビルドする際に<span data-keyref="GameMaker Name">GameMakerが</span>リストアップされた<span class="notranslate">CocaoPods</span> をセットアップするために必要な特定のマクロが含まれています。ボタンをクリックすると、マクロがあらかじめ生成されたファイルが作成されます。また、手動で編集したい場合は、ファイルのある場所でファイルエクスプローラーを開きます。また、ボタンをクリックすると、次のガイドが表示されます。</p>
   <ul class="colour">
-    <li>Check if CocoaPods is installed, if it isn&#39;t, <span data-keyref="GameMaker Name">GameMaker</span> will install it.</li>
-    <li>Check if the Podfile and Podfile.lock files exist and create them if not. These files are required if you are adding CocoaPods to an <a href="../../The_Asset_Editors/Extension_Creation/iOS_Extensions.htm">iOS extension</a> using the <a href="../../The_Asset_Editors/Extensions.htm">Extension Editor</a>. The files contain specific, pre-generated macros required by <span data-keyref="GameMaker Name">GameMaker</span> to setup any listed CocoaPods when building your game.</li>
-    <li>Execute the <span class="inline2">pod install</span> command.</li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOSとtvOS：Cocoa Podsを使用する</a></li>
   </ul>
-  <p>The following guide contains more information on using CocoaPods, including manual installation and creation of the Podfile and Podfile.lock files: </p>
+  <p> </p>
+  <h2>グラフィック</h2>
+  <p><img>ここでは、ゲームの表示方法に関する以下の詳細を変更することができます。</p>
   <ul class="colour">
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS and tvOS: Using Cocoa Pods</a></li>
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん">線形補間を</a>オンにし、基本的にピクセルを「平滑化」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。デフォルトではオフになっています。<strong></strong></li>
+    <li><strong>iPad 1 のテクスチャを半分にする。</strong>iPad 1 は、最近のデバイスに比べて<span class="notranslate">texture</span> のメモリが非常に少ないため、このデバイスをターゲットにしたい場合や最大限の互換性を得たい場合は、このオプションを有効にして<span class="notranslate">textures</span> のサイズを半分に減らすことができます。</li>
+    <li><strong>拡大縮小</strong>。ここで、描画キャンバスをデバイスの画面内のアスペクト比を維持して拡大縮小する（画面に合わせて縁に「パディング」を追加する）か、描画キャンバスをデバイスの画面に合わせて引き伸ばすかを選択できます。</li>
   </ul>
-  <div data-conref="../../assets/snippets/Note_important_CocoaPods.hts"> </div>
-  <p>Finally, you can check or un-check the option to <strong>Defer Home Indicator Output</strong>. When this is checked, the home bar will always be shown at a low alpha, and the first swipe wakes the bar and the second swipe takes you home. If the option is un-checked, then the bar is not shown in-game, but the first edge swipe will take you home. Default is un-checked.</p>
-  <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="iOS Graphics Options" class="center" src="../../assets/Images/Settings/iOS_Graphics_Options.png" />Here you can change the following details related to how your game will be displayed, with the following options available:</p>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトの（そして最も互換性のある）サイズは 2048x2048 ですが、256x256 から 8192x8192 までの間で選択することができます。<strong>Preview </strong>と書かれたボタンがあり、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成して、ウィンドウを開き、どのように見えるかを確認することができます。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なるのを防ぎたい場合に、非常に便利な機能です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、ブラウザやデバイスによってゲームの互換性が失われることに注意してください。</p>
+  <p> </p>
+  <h2>アイコンについて</h2>
+  <p><img>このセクションでは、さまざまなiPhoneおよびiPadデバイスと<span class="notranslate">iOS</span> App Storeのさまざまな部分で必要とされるさまざまな異なるアイコンを追加することを許可します。これらのアイコンは、それぞれ指定されたサイズの24bit <span class="inline">*.png</span> 画像としてオーサリングする必要があります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができることは特筆すべきことです。このツールを使用する場合、作成された画像があなたの要求するものであることを確認するために、修正する必要があります。このツールは、画像だけでなくアイコンも生成します（以下のセクションを参照）。</p>
+  <p class="note"><span class="note">注</span>古いプロジェクトをインポートすると、次のような警告が表示されることがあります：<img>これは、現在の<span class="notranslate">iOS</span> ターゲットバージョンが、以前にプロジェクトをロードしたときと、必要なアイコンのフォーマットが変更されているために表示されます。この場合、アイコンは<span data-keyref="GameMaker Name">GameMakerの</span>一般的なアイコンに置き換えられているため、すべてのアイコンを再作成する必要があります（上記のProject Image Generatorツールを使用すると、すぐに再作成することができます）。</p>
+  <p> </p>
+  <h2>画像</h2>
+  <p><img>このセクションでは、<strong>起動画面</strong>（アプリのロード中に短時間表示される画像）として、デバイスの向きごとに個別のグラフィックを追加することができます。これらの画像は、透過性のない24bit <span class="inline">*.png</span> の画像として、適切なサイズでオーサリングする必要があります。これはスプラッシュ画面とはみなさ<em>れず</em>、Appleはこの設定と使用方法についてかなり厳しいガイドラインを設けていることに注意してください。詳しくは、<a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/launch-screen/">ヒューマンインターフェイスガイドラインの</a>開発者向けページをご覧ください。</p>
+  <p>また、起動画面の表示方法は、以下のオプションから設定できます。</p>
   <ul class="colour">
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="glossterm" data-glossterm="linear interpolation">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is off by default.<strong></strong></li>
-    <li><strong>Half iPad 1 Textures:</strong> The iPad 1 has much less texture memory than more recent devices so you can enable this option to reduce the size of textures by half if you want to target this device or get maximum compatibility.</li>
-    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit the device screen.</li>
+    <li><strong>アスペクト比を維持</strong>する。デバイスの画面と比較して画像のアスペクト比を維持し、必要に応じてエッジの周りに「パディング」を追加します。</li>
+    <li><strong>クロップ・トゥ・フィット(Crop To Fit</strong>)。デバイスの画面と1対1の画像を維持し、必要に応じてエッジをクロップ（またはパッド）します。</li>
+    <li><strong>引き伸ばします</strong>。デバイスの画面いっぱいに画像を引き伸ばします（表示される画像に歪みが生じる場合があります）。</li>
   </ul>
-  <p>Finally there is the option to set the size of the <a class="glossterm" data-glossterm="texture page" href="macOS.htm#">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There is also a button marked <strong>Preview </strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
-  <p> </p>
-  <h2>Icons</h2>
-  <p><img alt="iOS Images Icons Options" class="center" src="../../assets/Images/Settings/iOS_Icons_Options.png" />This section permits you to add the various different icons required by the various iPhone and iPad devices and the different parts of the iOS App Store. These icons should be authored as 24bit <span class="inline">*.png</span> images at the size specified for each one.</p>
-  <p>It is worth noting that <span data-keyref="GameMaker Name">GameMaker</span> has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require. The tool will generate Icons as well as Images (see the section below).</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> On importing an older project you may be presented with the following warning:<img alt="iOS Icon Warning" class="center" height="194" src="../../assets/Images/Settings/iOS_Icon_Warning.png" width="430" />This comes up because the current iOS target version has changed the format of the required icons since the project was previously loaded. You will be required to re-create all the icons, as they will have been replaced with the generic <span data-keyref="GameMaker Name">GameMaker</span> icons (you can use the above mentioned Project Image Generator tool to do this quickly).</p>
-  <p> </p>
-  <h2>Images</h2>
-  <p><img alt="iOS Images Splash Screens Options" class="center" src="../../assets/Images/Settings/iOS_Images_Options.png" />This section permits you to add separate graphics as <strong>Launch Screens</strong> (the image that will be shown briefly while your app loads) for each of the device orientations, as well as the <strong>Border Colour</strong> that will be used as the background for launch screens that are not set to fill the full screen. These images must be authored as individual 24bit <span class="inline">*.png</span> images with no transparencies and at an appropriate size. Note that this is <em>not</em> considered a splash screen and Apple have some fairly strict guidelines on how this should be set up and used. See the developer page on <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/launch-screen/">Human Interface Guidelines</a> for more information.</p>
-  <p>You can also set how the launch screen should be displayed from the following options:</p>
-  <ul class="colour">
-    <li><strong>Keep Aspect Ratio</strong>: This will maintain the aspect ratio of the image compared to the device screen, adding &quot;padding&quot; around the edges where required.</li>
-    <li><strong>Crop To Fit</strong>: This will keep the image 1:1 with the device screen and crop (or pad) the edges as required.</li>
-    <li><strong>Stretch</strong>: This will stretch the image to fill the device screen (and may distort the image shown).</li>
-  </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="tvOS.htm">tvOS</a></div>
+        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次ページ：<a href="tvOS.htm">tvOS</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 iOS Game Options

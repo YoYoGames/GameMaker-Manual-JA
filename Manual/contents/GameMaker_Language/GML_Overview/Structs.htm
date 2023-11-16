@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Structs &amp; Constructors</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>構造体・コンストラクタ</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the use of Structs" />
   <meta name="rh-index-keywords" content="Structs" />
@@ -14,12 +14,10 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Structs &amp; Constructors</span></h1>
-  <p>A <strong><a id="struct"></a>struct </strong>is a variable that holds a collection of other variables. The variables that a struct holds can be of any <a href="Data_Types.htm">data type</a> previously mentioned and these variables can be read from and written to after the initial struct declaration, and you can also add more variables to a struct after it has been declared.</p>
-  <p>The variables used in a struct should follow the usual variable naming scheme, i.e.: they cannot start with a number and should only be made up of alphanumeric characters and the underscore &quot;_&quot; character, and also note that the contents of a struct are <em>independent of the instance or function that created it</em>, and as such you can - if you wish - use built-in variable names such as <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">image_index</a></span> or <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Instances/Instance_Variables/x.htm">x</a></span>
-    <font face="menlo, consolas, monospace"><span style="font-size: 17px;"><b> </b></span></font>and <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Instances/Instance_Variables/y.htm">y</a></span>.
-  </p>
-  <p>After the initial creation, structs have no processing overhead while they exist, although they <i>will</i> take up space in memory. The struct syntax is as follows:</p>
+  <h1>構造体・コンストラクタ</h1>
+  <p><strong>構造体とは </strong>、他の変数のコレクションを保持する変数のことです。<span class="notranslate">struct</span> が保持する変数は、先に述べたどの<a href="Data_Types.htm">データ型でも</a>よく、これらの変数は最初の<span class="notranslate">struct</span> の宣言後に読み書きが可能です。また、宣言後の<span class="notranslate">struct</span> にさらに変数を追加することもできます。</p>
+  <p><span class="notranslate">struct</span> で使用する変数は、通常の変数命名法に従う必要があります。つまり、数字で始めることはできず、英数字とアンダースコア &quot;_&quot; 文字のみで構成されます。また、<span class="notranslate">struct</span> の内容は、<em>それを作成したインスタンスや関数とは無関係</em>であり、希望すれば<span class="inline">image_index</span> や <span class="inline">x</span>, <span class="inline">y</span> などの組み込み変数名を使用できることに注意してください。</p>
+  <p>最初に作成した後、<span class="notranslate">structs</span> は、メモリ上のスペースを占有<i>するものの</i>、存在する間は処理のオーバーヘッドがありません。<span class="notranslate">struct</span> の構文は以下の通りです。</p>
   <p class="code"><i>&lt;variable&gt;</i> =<br />
     {<br />
     <i>    &lt;variable&gt;</i> : <i>&lt;value&gt;</i>,<br />
@@ -27,22 +25,22 @@
         etc...<br />
     };
   </p>
-  <p>So, an example of this in practice would be:</p>
+  <p>では、実際にどのような例があるかというと、次のようなものです。</p>
   <p class="code">mystruct =<br />
     {<br />
         a : 20,<br />
         b : &quot;Hello World&quot;<br />
     };</p>
-  <p>The above code creates an instance scope struct in the variable <span class="inline">mystruct</span> and populates it with some values (structs can be created at local, instance and global scopes, just like any other variable - see the section on <a href="Variables_And_Variable_Scope.htm">Variables and Variable Scope</a> for more information). Note that you don&#39;t have to populate the contents of a struct when it is created initially and you can create an empty struct by simply doing this:</p>
+  <p>上記のコードでは、変数 <span class="inline">mystruct</span> にインスタンススコープ<span class="notranslate">struct</span> を作成し、いくつかの値を代入しています (<span class="notranslate">structs</span> は他の変数と同様に、ローカル、インスタンス、グローバルスコープで作成できます - 詳しくは<a href="Variables_And_Variable_Scope.htm">変数と変数スコープの</a>セクションを参照してください)。<span class="notranslate">struct</span> を最初に作成するときに中身を入れる必要はなく、これを行うだけで空の<span class="notranslate">struct</span> を作成することができることに注意してください。</p>
   <p class="code">mystruct = {};</p>
-  <p>Variables can then be added to this struct at a later point in the game code. To add them afterwards you use the dot operator (in the same way as in <a data-xref="{title}" href="Addressing_Variables_In_Other_Instances.htm">Addressing Variables In Other Instances</a>): </p>
+  <p>ゲームコードの後の段階で、この<span class="notranslate">struct</span> に変数を追加することができます。後から追加するには、ドット演算子を使います（「<a href="Addressing_Variables_In_Other_Instances.htm">他のインスタンスの変数のアドレス</a>指定」と同じ方法です）。 </p>
   <p class="code">mystruct.newItem = &quot;Some Text&quot;;</p>
-  <p>This has the same result as initialising the struct like this: </p>
+  <p>これは、このように<span class="notranslate">struct</span> を初期化するのと同じ結果になります。 </p>
   <p class="code">mystruct =<br />
     {<br />
         newItem : &quot;Some Text&quot;<br />
     };</p>
-  <p>Here is an example of a struct with various variables and data types:</p>
+  <p>以下は、様々な変数やデータ型を持つ<span class="notranslate">struct</span> の例である。</p>
   <p class="code">var _xx = 100;<br />
     mystruct =<br />
     {<br />
@@ -57,52 +55,28 @@
         f : [ 10, 20, 30, 40, 50 ],<br />
         g : image_index<br />
     };</p>
-  <p>You can see in the above code that you can define methods and use runtime functions in structs, and you can also use local and instance variables within the struct declaration.</p>
-  <h3 id="inst_in_struct">Instance Variables in Struct Declaration?</h3>
-  <p>You&#39;ll notice in the above example that the struct variable &quot;g&quot; is being set to <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">image_index</a></span>, which is an instance variable. You might think that you&#39;d need to use the <a href="Instance_Keywords.htm">keyword</a> <span class="inline">other</span> in this case to get the instance variable, but this is not necessary. Essentially, when you define a struct<strong>, all member variables on the left-hand side of the colon &quot;:&quot; are the <em>struct</em> variables, and the values and variables on the right-hand side use the scope of whatever is defining the struct</strong> (in this case, an instance).</p>
-  <p>Let&#39;s look at a simple example to illustrate this. Say you want to define a struct with the variables &quot;x&quot; and &quot;y&quot; and you want to set them to the <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Instances/Instance_Variables/x.htm">x</a></span> and <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Instances/Instance_Variables/y.htm">y</a></span> of the instance defining the struct. In practice the code would look like this:</p>
+  <p>上記のコードでは、<span class="notranslate">runtime</span> でメソッドを定義して<span class="notranslate">structs</span> 関数を使うこともできますし、<span class="notranslate">struct</span> の宣言内でローカル変数やインスタンス変数を使うこともできることに気づかれることでしょう。</p>
+  <h3 id="inst_in_struct"><span class="notranslate">Struct</span> 宣言のインスタンス変数？</h3>
+  <p>例えば、上記の例では、<span class="notranslate">struct</span> の変数「g」にインスタンス変数である「 <span class="inline">image_index</span> 」が設定されていることに気がつくと思います。この場合、インスタンス変数を取得するために<a href="Instance_Keywords.htm">キーワード</a> <span class="inline">other</span> を使用する必要があると思うかもしれませんが、その必要はありません。構造体を定義すると、<strong>コロン「:」の左側にあるすべてのメンバ変数が<em>構造体</em></strong>変数となり、右側にある値や変数は構造体を定義しているもの（この場合はインスタンス<strong>）のスコープを使用</strong>するのが基本的な考え方です。</p>
+  <p>これを説明するために、簡単な例を見てみよう。変数 &quot;x&quot; と &quot;y&quot; で<span class="notranslate">struct</span> を定義し、それらを<span class="notranslate">struct</span> を定義するインスタンスの &quot;x&quot; と &quot;y&quot; に設定したいとします。 実際には、このようなコードになります。</p>
   <p class="code">mystruct =<br />
     {<br />
         x : x,<br />
         y : y<br />
     };</p>
-  <p>In the above code the struct member variables <span class="inline">x</span> and <span class="inline">y</span> are being set to the values held in the instance variables <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Instances/Instance_Variables/x.htm">x</a></span> and <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Asset_Management/Instances/Instance_Variables/y.htm">y</a></span>, since the right-hand side of the colon <span class="inline2">:</span> refers to the instance that is defining the struct. It is worth noting that this means you <em>cannot</em> use struct member variables for defining subsequent variables within the struct declaration. For example, the following would give you an error:</p>
+  <p>上記のコードでは、<span class="notranslate">struct</span> のメンバ変数 <span class="inline">x</span> と <span class="inline">y</span> にインスタンス変数 <span class="inline">x</span> と <span class="inline">y</span> の値が設定されています。コロン &quot;:&quot; の右側は<span class="notranslate">struct</span> を定義しているインスタンスを参照しているからです。このことは、<span class="notranslate">struct</span> の宣言内で後続の変数の定義にメンバ変数<span class="notranslate">struct</span> を使用<em>できない</em>ことを意味していることに注意してください。たとえば、次のようにするとエラーになります。</p>
   <p class="code">mystruct =<br />
     {<br />
         a : 10,<br />
         b : 10,<br />
         c : a + b<br />
     }</p>
-  <p>The error occurs because the variables <span class="inline">a</span> and <span class="inline">b</span> are actually being evaluated at the scope of whatever is defining the struct (they are on the right-hand side of the colon <span class="inline2">:</span>), and are <em>not</em> the ones being defined within the struct itself.<strong></strong></p>
-  <p class="note" style="padding-left: 20px;"><span data-conref="../../assets/snippets/Tag_important.hts"> </span> You cannot use any built-in <strong>global variables</strong> as struct member names, e.g.: <span class="inline2"><a data-xref="{title}" href="../GML_Reference/General_Game_Control/game_id.htm">game_id</a></span>
-    <font face="menlo, consolas, monospace"><b> </b></font>or <span class="inline2"><a data-xref="{title}" href="../GML_Reference/Debugging/fps.htm">fps</a></span>. You can find a full list of these global variables on <a data-xref="{title}" href="Struct_Forbidden_Variables.htm">Struct Forbidden Variables</a>.
-  </p>
-  <h3>Shorthand Initialisation of Variables With The Same Name</h3>
-  <p>Struct variables that you initialise with the value of an existing variable of the same name (a local or instance variable), can be written using a shorthand notation. Instead of having to write:</p>
-  <p class="code">var a = 12;<br />
-    b = 14;<br />
-    <br />
-    mystruct = <br />
-    {<br />
-        a : a,<br />
-        b : b,<br />
-        c : 101<br />
-    }
-  </p>
-  <p>You can write: </p>
-  <p class="code">var a = 12;<br />
-    b = 14;<br />
-    <br />
-    mystruct = <br />
-    {<br />
-        a,<br />
-        b,<br />
-        c: 101<br />
-    }
-  </p>
-  <p>In both cases <span class="inline2">mystruct.a</span> will be assigned the value <span class="inline2">12</span> and <span class="inline2">mystruct.b</span> the value <span class="inline2">14</span>, as it will look for a variable with the same name in the scope where the struct is being initialised.</p>
-  <h3>Accessing Struct Variables</h3>
-  <p>Once a struct has been defined, you can access the data within it using the &quot;point&quot; notation, like this:</p>
+  <p>このエラーは、変数 <span class="inline">a</span> と <span class="inline">b</span> が、<span class="notranslate">struct</span> を定義しているもの（コロン &quot;:&quot; の右側）のスコープで実際に評価されており、<span class="notranslate">struct</span> 自身で定義されているもの<em>ではない</em>ために発生するものだそうです。<strong></strong></p>
+  <h3 style="padding-left: 20px"><em><strong style="margin-left: 0px">重要!</strong></em>  スコープ変数をメンバー名として使用することは<strong>できません </strong>。 <em><strong>グローバル </strong></em>スコープ変数を<span class="notranslate">struct</span> のメンバー名として使用することはできません。 例: <span class="inline">game_id</span> または <span class="inline">fps</span> 。これらのグローバル変数の完全なリストは、次のページにあります。</h3>
+  <ul class="colour">
+    <li><a href="Struct_Forbidden_Variables.htm">構造体禁制の変数</a></li>
+  </ul>
+  <p><span class="notranslate">struct</span> を定義すると、次のように「ポイント」記法でその中のデータにアクセスできるようになります。</p>
   <p class="code">mystruct =<br />
     {<br />
         a : 20,<br />
@@ -111,11 +85,11 @@
     <br />
     mystring = mystruct.b + string(mystruct.a);
   </p>
-  <p>You can also perform operations on the variables within a struct or use them in functions, just as you would with any other variable. For example:</p>
+  <p>また、他の変数と同様に、<span class="notranslate">struct</span> 内の変数に対して操作を行ったり、関数の中で使用したりすることも可能です。例えば</p>
   <p class="code">mystruct.a += 1;<br />
     mystruct.b = mystruct.a + 20;<br />
     mydir = point_direction(mouse_x, mouse_y, mystruct.xx, mystruct.yy);</p>
-  <p>Finally, structs can have other structs nested inside them, like this:</p>
+  <p>最後に、<span class="notranslate">structs</span> は、次のように、その中に他の<span class="notranslate">structs</span> を入れ子にすることができます。</p>
   <p class="code">mystruct =<br />
     {<br />
         a :<br />
@@ -127,21 +101,16 @@
             bb : &quot;And another one&quot;<br />
         },<br />
     };</p>
-  <p>To access such nested structs you would still use the point notation, like this:</p>
-  <p class="code">var _str = mystruct.a.aa + &quot; &quot; + mystruct.b.bb;<br />
+  <p>このようなネストされた<span class="notranslate">structs</span> にアクセスするには、やはり次のようなポイント記法を使うことになる。</p>
+  <p class="code">var _str = mystuct.a.aa + &quot; &quot; + mystruct.b.bb;<br />
     show_debug_message(_str);</p>
-  <p>Another way to access data in a struct is by using the <span class="inline2"><a data-xref="{title}" href="Language_Features/with.htm">with</a></span> statement. So, for example, you could do this:</p>
-  <p class="code">with (mystruct)<br />
+  <p><span class="notranslate">struct</span> のデータにアクセスする別の方法として <a href="Language_Features/with.htm"><span class="inline">with()</span></a>関数を使うことです。つまり、例えばこんなことができる。</p>
+  <p class="code">with(mystruct)<br />
     {<br />
         a += other.x;<br />
     }</p>
-  <p>Using <span class="inline2">with</span> changes the scope of the code to the given struct where you can manipulate the member variables at the struct scope. Note that in the example we also use the <a href="Instance_Keywords.htm"><span class="inline">other</span> keyword</a>. This works just like in an instance when using <span class="inline2">with</span> and will reference the instance (or struct) that is actually running the code block.</p>
-  <p>A last way to access data in a struct is by using the struct accessor <span class="inline2"><a data-xref="{bookmarkText}" href="Accessors.htm#$">$</a></span>. This allows access to struct variables using strings, for both reading: </p>
-  <p class="code">var _value = mystruct[$ &quot;x&quot;];</p>
-  <p>and writing: </p>
-  <p class="code">mystruct[$ &quot;x&quot;] = 200;</p>
-  <p>If you need to use strings to access a struct variable, it is faster to <a href="../GML_Reference/Variable_Functions/variable_get_hash.htm">get its hash</a> and use that in <a href="../GML_Reference/Variable_Functions/struct_get_from_hash.htm">read</a>/<a href="../GML_Reference/Variable_Functions/struct_set_from_hash.htm">write</a> to the variable.</p>
-  <p>When a struct is no longer required it can be removed from memory using the <a href="Language_Features/delete.htm"><span class="inline">delete</span></a> operator, which flags the struct as being able to be garbage collected. This is not strictly required as the <a class="glossterm" data-glossterm="garbage collector" href="#">garbage collector</a> may do this automatically if the struct is no longer referenced in your code, but it is good practice to do so and we recommend it (for example, call <span class="inline2"><a data-xref="{title}" href="Language_Features/delete.htm">delete</a></span> in the <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up event</a> of an instance to explicitly tell the garbage collector that an instance scope struct is to be deleted). Here is an example:</p>
+  <p> <span class="inline">with()</span> を使用すると、コードのスコープが指定した<span class="notranslate">struct</span> に変更され、構造体スコープでメンバ変数を操作できるようになります。この例では、<a href="Instance_Keywords.htm"><span class="inline">other</span> </a> キーワードも使用していることに注意してください。これは、 <span class="inline">with()</span> を使用したときのインスタンスと同じように動作し、実際にコードブロックを実行しているインスタンス（または<span class="notranslate">struct</span> ）を参照することになります。</p>
+  <p><span class="notranslate">struct</span> が不要になった場合、 を使ってメモリから削除することができます。 <a href="Language_Features/delete.htm"><span class="inline">delete</span></a>演算子を使ってメモリから削除することができます。この演算子は<span class="notranslate">flags</span> <span class="notranslate">struct</span> をガベージコレクションできるようにします。これは厳密には必須ではありません。<a class="glossterm" data-glossterm="せいそういん" href="#">ガベージコレクタは</a>、<span class="notranslate">struct</span> がコード内で参照されなくなると自動的にこれを行うからです。しかし、そうすることは良い習慣なので、私たちはそれを推奨します（たとえば、インスタンスの<a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">クリーンアップ</a>イベントで <span class="inline">delete</span> を呼び出し、インスタンススコープ<span class="notranslate">struct</span> が削除されることをガベージコレクタに明示的に知らせます）。以下はその例です。</p>
   <p class="code">// Create event<br />
     mystruct =<br />
     {<br />
@@ -153,8 +122,8 @@
     // Clean Up event<br />
     delete mystruct;
   </p>
-  <h2 id="constr">Constructor Functions</h2>
-  <p>You can also use <a href="Script_Functions.htm">script functions</a> or <a href="Method_Variables.htm">methods</a> to create functions that can be used to generate new structs, which requires the use of the <span class="inline">constructor</span> keyword for the function and the <a href="Language_Features/new.htm"><span class="inline">new</span></a> operator when creating a struct from such a function. See the following function:</p>
+  <h2 id="constr">コンストラクタ関数</h2>
+  <p>また、<a href="Script_Functions.htm">スクリプト関数や</a> <a href="Method_Variables.htm">メソッドを</a>使用して、新しい<span class="notranslate">structs</span> を生成するために使用できる関数を作成することもできます。この場合、関数に対して <span class="inline">constructor</span> キーワードを使用する必要があり、そのような関数から を作成する場合は、演算子を使用する必要があります。 <a href="Language_Features/new.htm"><span class="inline">new</span></a><span class="notranslate">struct</span> 演算子を使用する必要があります。次の関数を参照してください。</p>
   <p class="code">function Vector2(_x, _y) <strong>constructor</strong><br />
     {<br />
         x = _x;<br />
@@ -167,7 +136,7 @@
         }<br />
     }
   </p>
-  <p>Or, using the method variable syntax:</p>
+  <p>または、メソッド変数の構文を使用します。</p>
   <p class="code">Vector2 = function(_x, _y) constructor<br />
     {<br />
         x = _x;<br />
@@ -180,21 +149,21 @@
         }<br />
     }
   </p>
-  <p>Here we are creating a function called <span class="inline">Vector2</span> and telling <span data-keyref="GameMaker Name">GameMaker</span> that this is a function used for creating structs by adding the <span class="inline">constructor</span> keyword after its definition. You can then call this constructor function like this:</p>
+  <p>ここでは、<span class="inline">Vector2</span> という関数を作成し、その定義の後に <span class="inline">constructor</span> キーワードを追加して、これが構造体を作成するための関数であることを<span data-keyref="GameMaker Name">GameMaker</span>に伝えています。そして、このコンストラクタ関数を次のように呼び出すことができます。</p>
   <p class="code">v2 = new Vector2(10, 10);</p>
-  <p>The variable <span class="inline">v2</span> will now contain a struct with the variables <span class="inline">x</span> and <span class="inline">y</span> and the <a href="Functions/Static_Variables.htm">static</a> <a href="Method_Variables.htm">method variable</a> <span class="inline">Add</span>.</p>
-  <p>You can also make use of optional arguments in your constructor functions:</p>
+  <p>変数 <span class="inline">v2</span> には、変数<span class="notranslate">struct</span> と変数 <span class="inline">x</span> と <span class="inline">y</span> と <a href="Functions/Static_Variables.htm"><span class="notranslate">static</span></a><a href="Method_Variables.htm">メソッド変数</a> <span class="inline">Add</span> を含むようになります。</p>
+  <p>また、コンストラクタ関数でオプションの引数を利用することもできます。</p>
   <p class="code">function Vector2(<strong>_x = 0, _y = 0</strong>) constructor<br />
     {<br />
         x = _x;<br />
         y = _y;<br />
     }</p>
-  <p>This constructor will now use <span class="inline">0</span> for the <span class="inline">_x</span> and <span class="inline">_y</span> arguments if they are not specified when the function is called. This means that you can create a new <span class="inline">Vector2</span> struct without having to specify any arguments:</p>
+  <p>このコンストラクタは、関数が呼び出されたときに <span class="inline">_x</span> と <span class="inline">_y</span> の引数が指定されていない場合、 <span class="inline">0</span> を使用するようになりました。つまり、引数を指定しなくても、新しい <span class="inline">Vector2</span> <span class="notranslate">struct</span> を作成することができます。</p>
   <p class="code">empty_vector = new Vector2();</p>
-  <h2>Inheritance</h2>
-  <p>Functions created this way will also support single <b>inheritance</b>, i.e.: you can create a constructor function that inherits data from another constructor function.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> When working with inheritance, you cannot use method variables to define the constructor function, only script functions.</p>
-  <p>For example, we created the <span class="inline">Vector2</span> constructor function above, so we can then use that as the &quot;parent&quot; for another constructor function, which we&#39;ll call <span class="inline">Vector3</span>:</p>
+  <h2>継承</h2>
+  <p><span class="notranslate">inherits</span> この方法で作成された関数は、単一<b>継承も</b>サポートします。つまり、別のコンストラクタ関数からデータを取得するコンストラクタ関数を作成することができます。</p>
+  <p class="note"><strong>注</strong>：継承を扱う場合、コンストラクタ関数の定義にメソッド変数を使用することはできず、<span class="notranslate">script</span> 関数のみ使用できます。</p>
+  <p>例えば、上記で<span class="inline">Vector2</span> というコンストラクタ関数を作成しましたので、これを「親」として別のコンストラクタ関数（<span class="inline">Vector3</span> と呼ぶことにします）を作成します。</p>
   <p class="code">function <strong>Vector3(_x, _y, _z) </strong><strong>:</strong><strong> Vector2(_x, _y) </strong>constructor<br />
     {<br />
         z = _z;<br />
@@ -207,44 +176,41 @@
         }<br />
     }
   </p>
-  <p>As you can see, when defining the function we use a colon &quot;<span class="inline">:</span>&quot; to separate the new constructor from the parent constructor to be inherited from. The child constructor (<span class="inline">Vector3</span>) passes the <span class="inline">_x</span> and <span class="inline">_y</span> arguments into the parent (<span class="inline">Vector2</span>) constructor, which are used to run the parent&#39;s constructor first, after which the child&#39;s constructor is executed. This way the child constructor gets the parent&#39;s variables (<span class="inline">x</span> and <span class="inline">y</span>) and can also define its own (<span class="inline">z</span>).</p>
-  <p>You can also pass values into the parent constructor, so that a certain child constructor always provides the same values to its parent constructor:</p>
-  <p class="code">function item(damage) constructor<br />
+  <p>ご覧のように、関数を定義するときにコロン &quot;<span class="inline">:</span>&quot; を使って、新しいコンストラクタと継承する親コンストラクタを分けています。子コンストラクタ (<span class="inline">Vector3</span>) は <span class="inline">_x</span> と <span class="inline">_y</span> の引数を親 (<span class="inline">Vector2</span>) のコンストラクタに渡し、それを使って親のコンストラクタを先に実行し、その後に子のコンストラクタを実行するのです。このようにして、子コンストラクタは親の変数 (<span class="inline">x</span> と <span class="inline">y</span>) を取得し、さらに自分自身の変数 (<span class="inline">z</span>) も定義できるようになります。</p>
+  <p>また、親コンストラクタに定数値を渡して、特定の子コンストラクタが常に同じ値を親コンストラクタに提供できるようにすることも可能です。</p>
+  <p class="code">function Item(damage) constructor<br />
     {<br />
         my_damage = damage;<br />
     }<br />
     <br />
-    function basic_sword() : item(10) constructor {}<br />
+    function BasicSword() : Item(10) constructor<br />
+    {}<br />
     <br />
-    var _basic_sword = new basic_sword();<br />
+    var _basic_sword = new BasicSword();<br />
     show_debug_message(_basic_sword.my_damage); // Prints 10
   </p>
-  <p>This means that the damage of a basic sword will always be <span class="inline">10</span>, since it passes that value to its parent constructor irrespective of what its own arguments might be.</p>
-  <p>Note that assigning a default value to an argument in a child constructor will override the parent&#39;s default value for that argument. See the following example:</p>
-  <p class="code">function parent(value = 10) constructor<br />
+  <p>つまり、基本的な剣のダメージは常に <span class="inline">10</span> であり、自身の引数が何であろうと、その親コンストラクタにその値を渡すからです。</p>
+  <p>子コンストラクタの引数にデフォルト値を代入すると、その引数に対する親のデフォルト値がオーバーライドされることに注意してください。次の例を見てください。</p>
+  <p class="code">function Parent(value = 10) constructor<br />
     {<br />
         show_debug_message(value);<br />
     }<br />
     <br />
-    function child(value = 20) : parent(value) constructor<br />
+    function Child(value = 20) : Parent(value) constructor<br />
     {<br />
         show_debug_message(value);<br />
     }<br />
     <br />
-    var _child = new child();
+    var _child = new Child();
   </p>
-  <p>Both of these constructors will print <span class="inline">20</span> to the output log, as that was the default value for the argument set by the child constructor, and the same value was passed into the parent constructor.</p>
-  <p>For more details on the <span class="inline">new</span> and <span class="inline">delete</span> operators, please see the following pages:</p>
+  <p>これらのコンストラクタはどちらも出力ログに <span class="inline">20</span> と表示します。これは、子コンストラクタで設定された引数のデフォルト値がこの値であり、同じ値が親コンストラクタに渡されたからです。</p>
+  <p> <span class="inline">new</span> および <span class="inline">delete</span> オペレータの詳細については、以下のページをご覧ください。</p>
   <ul class="colour">
     <li><a href="Language_Features/new.htm"><span class="inline">new</span></a></li>
-    <li><span class="inline"><a href="Language_Features/delete.htm"><span class="inline">delete</span></a> </span></li>
+    <li><span class="inline"><a href="Language_Features/delete.htm"><span class="inline">delete</span> </li>
   </ul>
-  <h3>Checking Constructor Inheritance</h3>
-  <p>You can use <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Variable_Functions/is_instanceof.htm">is_instanceof</a></span> to check if a struct belongs to the given constructor, or has the constructor as a parent constructor.</p>
-  <div data-conref="../../assets/snippets/is_instanceof_example.hts"> </div>
-  <p>This functionality makes use of &quot;static structs&quot;. See: <a data-xref="{title}" href="Structs/Static_Structs.htm">Static Struct</a></p>
-  <h2>String Output</h2>
-  <p>One final thing to mention about structs is that you can change what is output to the console from them for debugging. By default, calling the function <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Debugging/show_debug_message.htm">show_debug_message</a></span> on a struct will output the contents of the struct (as shown above). However, it&#39;s possible to customise this message by adding a specifically named method to the struct called <span class="inline"><a id="A"></a>toString</span>:</p>
+  <h2>文字列出力</h2>
+  <p><span class="notranslate">structs</span> について最後に述べておくと、それらからコンソールに出力される内容を<span class="notranslate">debugging</span> で変更することができます。デフォルトでは、関数 <a href="../GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_message()</span></a><span class="notranslate">struct</span> を呼び出すと、<span class="notranslate">struct</span> の内容が出力されます (上図のように)。しかし、<span class="notranslate">struct</span> に <span class="inline">toString</span> という特別な名前のメソッドを追加することで、このメッセージをカスタマイズすることが可能です。</p>
   <p class="code">mystruct =<br />
     {<br />
         a : 20,<br />
@@ -252,30 +218,31 @@
     <br />
         toString : function()<br />
         {<br />
-            return &quot;This struct says &quot; + b + &quot;, &quot; + string(a) + &quot; times!&quot;;<br />
+            return &quot;This stuct says &quot; + b + &quot;, &quot; + string(a) + &quot; times!&quot;;<br />
         }<br />
     }<br />
     show_debug_message(mystruct);
   </p>
-  <p>Now when the <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Debugging/show_debug_message.htm">show_debug_message</a></span> function is called, the <span class="inline">toString</span> method will be used to generate the output and - with the above example - you&#39;ll get:</p>
+  <p>これで、 <span class="inline">show_debug_message()</span> 関数が呼ばれると、 <span class="inline">toString</span> メソッドが出力に使われ、- 上の例では - となります。</p>
   <p class="code">This struct says Hello World, 20 times!</p>
-  <p>Note that you can also call the <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Strings/string.htm">string</a></span> function on a struct reference and use that to display the contents - or the <span class="inline">toString</span> method - to the screen, or save it to a file, or whatever, e.g.:</p>
+  <p>を呼び出すこともできることに注意してください。 <a href="../GML_Reference/Strings/Strings.htm"><span class="inline">string()</span></a><span class="notranslate">struct</span> 関数を呼び出すこともでき、それを使って、例えば、 <span class="inline">toString</span> メソッドの内容を画面に表示したり、ファイルに保存したりすることができます。</p>
   <p class="code">var _str = string(mystruct);<br />
     draw_text(32, 32, _str);</p>
-  <p>Finally, there are a number of runtime functions that you can use on structs to get the variables they contain as well as a few other things. You can find them in the following section:</p>
+  <p>最後に、<span class="notranslate">structs</span> で使用できる実行時関数がいくつかあり、それらが含む変数を取得したり、他のいくつかのことを行うことができます。それらは次のセクションで見ることができます。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
+    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">変数関数</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Structs/Static_Structs.htm">Static Struct</a></div>
+        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="Commenting_Code.htm">コードのコメント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Structs

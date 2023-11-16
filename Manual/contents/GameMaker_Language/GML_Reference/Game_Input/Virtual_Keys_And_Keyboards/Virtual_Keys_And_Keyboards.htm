@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Virtual Keys And Virtual Keyboards</title>
+  <title>仮想キーと仮想キーボード</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for Virtual Keys And Virtual Keyboards" />
   <meta name="rh-index-keywords" content="" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Virtual Keys And Virtual Keyboards</h1>
-  <p><b></b>When developing games for touchscreen devices, it&#39;s often important to get keyboard input from the user. When using <span data-keyref="GameMaker Name">GameMaker</span> this can be done in one of two ways:</p>
+  <h1>仮想キーと仮想キーボード</h1>
+  <p><b></b>タッチスクリーンデバイス用のゲームを開発する場合、ユーザーからキーボード入力を得ることが重要になることがあります。<span data-keyref="GameMaker Name">GameMakerを</span>使用する場合、これは2つの方法のいずれかで行うことができます。</p>
   <ul class="colour">
-    <li>Create your own on-screen <b>virtual keys</b> to get input</li>
-    <li>Pop up the OS <b>virtual keyboard</b> and get input from that</li>
+    <li>画面上に独自の<b>仮想キーを</b>作成し、入力を得ることができる</li>
+    <li>OSの<b>仮想キーボードを</b>ポップアップし、そこから入力を得ることができる</li>
   </ul>
-  <p>What you use will depend very much on the game and what you need, but in general you would use virtual keys when you want to have onscreen buttons for player control or for menus, while you&#39;d use the virtual keyboard when you need player input, like getting a name or setting a value.</p>
-  <p>In order for your games to work properly on mobile devices with a touch screen, you may need to be able to assign areas of the screen to respond to certain things when they are touched by the user. This is done by assigning a &quot;virtual Key&quot; to an internally mapped standard keyboard key and then using the keyboard events that they generate to control your application. It is worth noting that these &quot;virtual keys&quot; are mapped to the <i>screen</i> position rather than room position and so the x/y values are absolute, based on the display size. This means that you don&#39;t need to worry about the use of views or the relative room coordinates, and can simply define the keys in the Create Event of an object (you only need to define a virtual key once per-room), then draw your key sprites in the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>, sizing the GUI layer to be the same as the screen.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>These functions will not work on the Windows, Ubuntu (Linux), nor the MacOS, target platforms using a touch screen, although they will receive mouse clicks as &quot;touches&quot;.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> These functions are supported in the HTML5 and GX.games targets.</p>
-  <p>The available virtual key functions are:</p>
+  <p>何を使うかはゲームによって大きく異なりますが、一般的には、画面上にプレイヤーの操作ボタンやメニューが欲しいときは仮想キーを使い、名前を取得したり値を設定したりと、プレイヤーの入力が必要なときは仮想キーボードを使うことになると思います。</p>
+  <p>タッチスクリーンを搭載したモバイルデバイスでゲームを正しく動作させるためには、ユーザーによってタッチされたときに特定の反応をするように画面の領域を割り当てることができるようにする必要がある場合があります。これは、内部的にマッピングされた標準的なキーボードキーに「仮想キー」を割り当て、それらが生成するキーボードイベントを使用してアプリケーションを制御することで実現されます。注目すべきは、これらの「仮想キー」は<span class="notranslate">room</span> の位置ではなく、<i>画面の</i>位置にマッピングされるため、ディスプレイサイズに基づいた x/y 値は絶対的なものであるということです。つまり、ビューの使用や相対的な<span class="notranslate">room</span> 座標を気にする必要がなく、単純に<span class="notranslate">object</span> の Create Event でキーを定義し（バーチャルキーは部屋ごとに一度だけ定義する必要があります）、<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a> でキー<span class="notranslate">sprites</span> を描画し、GUI レイヤーをスクリーンと同じサイズにすることが可能です。</p>
+  <p class="note"><b><span class="note">注意</span> </b><span class="notranslate">Windows</span>,<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) および MacOS, タッチスクリーンを使用するターゲットプラットフォームでは、マウスクリックを「タッチ」として受け取りますが、これらの機能は動作しません。</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> これらの機能は、HTML5およびOpera GXのターゲットでサポートされています。</p>
+  <p>利用可能な仮想キー機能は以下の通りです。</p>
   <ul class="colour">
-    <li><a href="virtual_key_add.htm">virtual_key_add</a></li>
-    <li><a href="virtual_key_show.htm">virtual_key_show</a></li>
-    <li><a href="virtual_key_hide.htm">virtual_key_hide</a></li>
-    <li><a href="virtual_key_delete.htm">virtual_key_delete</a></li>
+    <li><a href="virtual_key_add.htm"><span class="notranslate">virtual_key_add</span></a></li>
+    <li><a href="virtual_key_show.htm"><span class="notranslate">virtual_key_show</span></a></li>
+    <li><a href="virtual_key_hide.htm"><span class="notranslate">virtual_key_hide</span></a></li>
+    <li><a href="virtual_key_delete.htm"><span class="notranslate">virtual_key_delete</span></a></li>
   </ul>
-  <p> </p>
-  <p>If you require text or numeric input in your game on a touchscreen device, then you can use the <b>virtual keyboard</b> functions provided to use the device OS keyboard. These functions will call up or hide the OS keyboard and accept input from it, however it will <i>not</i> trigger the regular keyboard events, but rather update the <span class="inline"><a href="../Keyboard_Input/keyboard_string.htm">keyboard_string</a></span> variable with the user input (this is due to the fact that the virtual keyboard can input whole words and not just single characters).</p>
-  <p>Opening or closing the virtual keyboard will generate <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Asynchronous Events</a>, in which the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> DS map will be populated with the following key/value pairs:</p>
+  <p> </p>
+  <p>タッチスクリーンデバイスのゲームでテキストや数字の入力が必要な場合、デバイスのOSキーボードを使用するために提供されている<b>仮想キーボード</b>関数を使用することができます。これらの関数は、OSキーボードを呼び出したり隠したりして入力を受け付けますが、通常のキーボードイベントは発生<i>せず</i>、ユーザー入力で変数 <span class="inline"><a href="../Keyboard_Input/keyboard_string.htm">keyboard_string</a></span> を更新します（これは、仮想キーボードが1文字だけでなく単語全体を入力できるためです）。</p>
+  <p>仮想キーボードを開いたり閉じたりすると、<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">システム非同期イベントが</a>発生し、その中で <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>DSマップには、以下のキーと値のペアが入力されます。</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - the type of system event received, which will be &quot;<b>virtual keyboard status</b>&quot; for virtual keyboards.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li>「<b>event_type</b>&quot; - 受け取ったシステムイベントの種類で、仮想キーボードの場合は &quot;<b>virtual keyboard status</b>&quot; となります。</li>
+    <li>&quot;<b>screen_height</b>&quot; - 仮想キーボードの高さ (ピクセル単位)。キーボードが見えない場合は、0 になります。</li>
+    <li>&quot;<b>keyboard_status</b>&quot; - キーボードの現在のステータスで、以下の文字列のうちの1つとして返されます。
       <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
-        <li>&quot;visible&quot;</li>
+        <li>&quot;隠蔽&quot;</li>
+        <li>&quot;非表示&quot;</li>
+        <li>&quot;表示&quot;</li>
+        <li>&quot;可視&quot;</li>
       </ul>
     </li>
   </ul>
-  <p>The available virtual keyboard functions are:</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>These functions are only valid for the <strong>Android</strong> (including <strong>AndroidTV</strong>), and <strong>iOS </strong>(including <strong>tvOS</strong>) target platforms.</p>
+  <p>利用可能な仮想キーボード機能は以下の通りです。</p>
+  <p class="note"><b><span class="note">注意事項</span> </b>これらの機能は、<strong>Android</strong>（<strong>AndroidTVを</strong>含む）、<strong>iOS </strong>（<strong>tvOSを</strong>含む）、<strong>UWPの </strong>ターゲットプラットフォームに対してのみ有効です。</p>
   <ul class="colour">
-    <li><a href="keyboard_virtual_show.htm">keyboard_virtual_show</a></li>
-    <li><a href="keyboard_virtual_hide.htm">keyboard_virtual_hide</a></li>
-    <li><a href="keyboard_virtual_status.htm">keyboard_virtual_status</a></li>
-    <li><a href="keyboard_virtual_height.htm">keyboard_virtual_height</a></li>
+    <li><a href="keyboard_virtual_show.htm"><span class="notranslate">keyboard_virtual_show</span></a></li>
+    <li><a href="keyboard_virtual_hide.htm"><span class="notranslate">keyboard_virtual_hide</span></a></li>
+    <li><a href="keyboard_virtual_status.htm"><span class="notranslate">keyboard_virtual_status</span></a></li>
+    <li><a href="keyboard_virtual_height.htm"><span class="notranslate">keyboard_virtual_height</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Keyboard_Input/Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:left">戻る<a href="../Game_Input.htm">ゲーム入力</a></div>
+        <div style="float:right">次へ<a href="../Keyboard_Input/Keyboard_Input.htm">キーボード入力</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Virtual Keys

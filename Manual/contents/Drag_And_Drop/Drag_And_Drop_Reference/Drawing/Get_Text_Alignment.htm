@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Text Alignment</title>
+  <title>テキストアライメントを取得する</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Text Alignment action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get Text Alignment" />
@@ -14,55 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Text_Alignment.png" /> Get Text Alignment</h1>
-  <p>This action will get the font alignment for all current draw text actions. You can choose whether to retrieve the horizontal or vertical alignment to check, and the action will return one of the following <i>constant</i> values, that represent a different
-    type of horizontal or vertical alignment:</p>
+  <h1><img> テキストアライメントを取得する</h1>
+  <p>このアクションは、現在のすべての draw text アクションの<span class="notranslate">font</span> のアライメントを取得します。水平方向と垂直方向のどちらのアライメントを取得するかを選択することができ、アクションは以下の<i>定数</i>値のいずれかを返します。
+    タイプの水平または垂直方向の配置を指定する。</p>
   <table>
     <tbody>
       <tr>
+        <td><img alt="Get Text Alignment Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Get_Text_Alignment.png" /></td>
+        <td>テキストが左側に水平に配置される</td>
+      </tr>
+      <tr>
         <td><img alt="Align Left" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_left.png" width="404" /></td>
-        <td>Text is horizontally aligned to the left</td>
+        <td>テキストは水平に中央に配置されます。</td>
       </tr>
       <tr>
         <td><img alt="Align Center" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_center.png" width="404" /></td>
-        <td>Text is horizontally aligned to the center</td>
+        <td>テキストが右側に水平に配置される</td>
       </tr>
       <tr>
-        <td><img alt="Align Right" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_right.png" /></td>
-        <td>Text is horizontally aligned to the right</td>
+        <td style="text-align: center"><img alt="Align Right" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_right.png" /></td>
+        <td>テキストは上部に縦書きで配置されます</td>
       </tr>
       <tr>
         <td style="text-align: center"><img alt="Align Top" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_top.png" /></td>
-        <td>Text is vertically aligned to the top</td>
+        <td>テキストが中央に縦に並ぶ</td>
       </tr>
       <tr>
         <td style="text-align: center"><img alt="Align Middle" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_middle.png" /></td>
-        <td>Text is vertically aligned to the middle</td>
-      </tr>
-      <tr>
-        <td style="text-align: center"><img alt="Align Bottom" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_bottom.png" /></td>
-        <td>Text is vertically aligned to the bottom</td>
+        <td>テキストが下に縦に並ぶ</td>
       </tr>
     </tbody>
   </table>
-  <p>The return constant will be stored in the <b>target variable</b> that you specify, which can have been created previously or can be a new temporary one (if you check the &quot;Temp&quot; check-box).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Text Alignment Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Get_Text_Alignment.png" /></p>
-  <h4>Example:</h4>
-  <p><span><img alt="Get Text Alignment Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Get_Font_Alignment.png"/></span>The above action block code checks the horizontal text alignment and
-    if it&#39;s not set to <span class="inline">fa_left</span>, then it is set to that value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>戻り定数は、指定した<b>ターゲット変数に</b>格納されます。ターゲット変数は、以前に作成されたものでも、（「Temp」チェックボックスをチェックした場合）新しい一時的なものでもかまいません。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Align Bottom" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/fa_bottom.png" /></p>
+  <h4>例</h4>
+  <p><span><img></span>上記のアクションブロックのコードでは、水平方向のテキストアライメントをチェックし
+    が設定されていない場合は、 <span class="inline">fa_left</span> 、その値に設定されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Self.htm">Draw Self</a></div>
+        <div style="float:left">戻る<a href="Drawing_Actions.htm">描画アクション</a></div>
+        <div style="float:right">次へ<a href="Draw_Self.htm">自己を描く</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Text Alignment

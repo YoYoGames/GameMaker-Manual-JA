@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Surfaces</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>サーフェス</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the Surface functions and variables" />
   <meta name="rh-index-keywords" content="" />
@@ -14,18 +14,18 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Surfaces</span></h1>
-  <p>In the normal draw events, <span data-keyref="GameMaker Name">GameMaker</span> doesn&#39;t actually draw directly to the screen, but rather draws to a <b>surface</b> called the <i>application surface</i>. This surface is basically a blank &quot;canvas&quot; that can then later be manipulated before being drawn to the screen when needed, and in most cases <span data-keyref="GameMaker Name">GameMaker</span> handles this for you (although you can also manipulate it yourself in code for shaders, scaling and many other things - further details are given below).</p>
-  <p>However, apart from this application surface, you can also create your own surfaces and use them to create stunning or subtle special effects in your game. For example, you can use surfaces to &quot;catch&quot; instances, which can then be destroyed, and in this way you can create a decal effect where the sprite for the instance is displayed on the surface as if it still existed, permitting graphical effects like debris, blood, etc... without any real processing overhead. Another thing you can do with surfaces is use them as textures to be manipulated, or to create sprites &quot;on the fly&quot;, or to create complex overlays. in fact, the uses for surfaces are endless!</p>
-  <p>Normal surfaces are quite easy to use, but there are a few basic rules to be followed when you use them:</p>
+  <h1>サーフェス</h1>
+  <p>通常の描画イベントでは、<span data-keyref="GameMaker Name">GameMaker</span>は実際には画面に直接描画せず、<i>アプリケーションサーフェスと</i>呼ばれる<b>表面に</b>描画します。このサーフェイスは基本的に白紙の「キャンバス」で、必要なときに画面に描画する前に後で操作することができます。ほとんどの場合、<span data-keyref="GameMaker Name">GameMakerが</span>これを処理します（ただし、コード内で<span class="notranslate">shaders</span> やスケーリングなど、自分で操作することもできます - 詳細は以下で説明します）。</p>
+  <p>しかし、このアプリケーションサーフェスとは別に、独自のサーフェスを作成し、それを使ってゲーム内で見事な、あるいは微妙な特殊効果を作り出すことができます。たとえば、サーフェスを使用してインスタンスを「キャッチ」し、破棄することができます。このようにして、インスタンスの<span class="notranslate">sprite</span> がサーフェスに表示され、まるでそれがまだ存在しているかのようなデカール効果を作成することができます。サーフェスでできるもう一つのことは、サーフェスを<span class="notranslate">textures</span> として使用し、操作したり、<span class="notranslate">sprites</span> を「オンザフライ」で作成したり、複雑なオーバーレイを作成したりすることです。</p>
+  <p>ノーマルサーフェスの使い方はいたって簡単ですが、使用する際にはいくつかの基本的なルールがあります。</p>
   <ul class="colour">
-    <li>First, you should realise that surfaces (<i>except</i> the application surface) are &quot;volatile&quot;. This means that if the device or window loses focus or is minimised (good examples are when you ALT +Tab to different window and back again on Windows, or on an Android device when the app loses focus due to a call) then the surface <strong>may be destroyed</strong>. This is because it is stored <em>only</em> in the texture memory (<a class="glossterm" data-glossterm="VRAM" href="#">VRAM</a>) and may be overwritten when the target platform needs that memory for something else which means that you should <i><b>always</b></i> have some type of fail-safe code in place, usually with the <a href="surface_exists.htm"><span class="inline">surface_exists()</span></a> function.</li>
+    <li>まず、サーフェス<i>（</i>アプリケーションサーフェスを<i>除く</i>）は「揮発性」であることを認識する必要があります。つまり、デバイスやウィンドウがフォーカスを失ったり、最小化されたりすると（WindowsでALT +Tabで別のウィンドウに移動してまた戻るときや、<span class="notranslate">Android</span> デバイスでアプリケーションが呼び出しによってフォーカスを失ったときが良い例です）、サーフェスが<strong>破壊されることがあります</strong>。これは、サーフェスが<span class="notranslate">texture</span> メモリ<a class="glossterm" data-glossterm="ブイラム" href="#">(VRAM</a>)<em>にのみ</em>保存され、ターゲットプラットフォームがそのメモリを他の用途に使用するときに上書きされる可能性があるためです。 <i><b>いつも</b></i>ということは、何らかのフェイルセーフコードを用意する必要があります。 <a href="surface_exists.htm"><span class="inline">surface_exists()</span></a>関数を使用します。</li>
   </ul>
-  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span class="note">NOTE</span><strong> </strong>This doesn&#39;t appear to happen with sprites or other visual assets (but actually does!) as they are also stored in regular memory (RAM) and when they are removed from texture memory (VRAM) they immediately get restored from regular memory when the game regains focus.</p>
+  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span class="note">注</span><strong> </strong>これは<span class="notranslate">sprites</span> や他のビジュアル<span class="notranslate">assets</span> では起きないように見えますが（実際は起きています！）、これらは通常のメモリ（RAM）にも保存されており、<span class="notranslate">texture</span> メモリ（VRAM）から削除されると、ゲームのフォーカスが回復したときにすぐに通常のメモリから復元されるからです。</p>
   <ul class="colour">
-    <li>Second, you should note that surfaces can require large quantities of VRAM to be used, and so you should attempt to keep them as small as possible. Normally you would try and keep them no larger than the size of the view or display window.</li>
-    <li>Third, you should <b>only create surfaces in the draw event</b>. If you create a surface in the Create Event of an instance, you could potentially get the <i>same</i> index as the <span class="inline">application_surface</span>. This can then cause lots of problems and confusion as you think you are using your own surface, but you are actually using the current render target. You should also always try to limit <i>drawing</i> to a surface in the draw event too, since due to the optimised way in which <span data-keyref="GameMaker Name">GameMaker</span> draws to the screen, it is recommended that you keep all draw functions <i>within the draw event</i> - this includes clearing a surface when it is first created, etc... Drawing to a surface outside of the draw event is possible and may even be necessary for some effects, but it&#39;s not how it <em>should</em> be done.</li>
-    <li>Fourth, when drawing to a surface manually, the surface is <i>always</i> at the position of (0,0). This means that you may need to convert <em>absolute</em> coordinates into <em>relative</em> coordinates for the surface. For example, if you have a camera-sized surface and wish to draw something that is currently visible in the camera to that surface, you should subtract the camera view x and y coordinates from the actual x and y coordinates to get a relative position to the surface (0,0) position. So, the code would look something like this:</li>
+    <li>第二に、サーフェイスは大量のVRAMを必要とすることがあるので、できるだけ小さくするように心がける必要があります。通常は、ビューまたはディスプレイウィンドウのサイズより大きくならないようにします。</li>
+    <li>第三に、<b>サーフェスは draw イベントでのみ作成</b>する必要があります。インスタンスのCreateイベントでサーフェイスを作成すると、 <span class="inline">application_surface</span> と<i>同じ</i>インデックスを取得する可能性があります。 これは、自分自身のサーフェイスを使用しているつもりでも、実際には現在のレンダーターゲットを使用しているため、多くの問題や混乱を引き起こす可能性があります。<span data-keyref="GameMaker Name">GameMaker</span>がスクリーンに描画する方法を最適化しているため、すべての<i>描画</i>関数を<i>draw イベントの中で</i>行うことをお勧めします - これには、最初にサーフェスを作成したときにクリアすることなども含まれます。draw イベントの外でサーフェイスに描画することは可能で、ある種の効果には必要かもしれませんが、そう<em>するべきでは</em>ありません。</li>
+    <li>第四に、手動でサーフェスに描画する場合、サーフェスの位置は<i>常に</i>(0,0)になります。つまり、サーフェスの<em>絶対</em>座標を<em>相対</em>座標に変換する必要がある場合があります。例えば、カメラサイズのサーフェスがあり、現在カメラで見えているものをそのサーフェスに描画したい場合、実際のXとY座標からカメラビューのXとY座標を引き、サーフェスの(0,0)の位置に対する相対位置を得る必要があります。つまり、コードは以下のようなものになります。</li>
   </ul>
   <p class="code">if view_current = 0<br />
     {<br />
@@ -43,110 +43,108 @@
         draw_surface(surf, 0, 0);<br />
     }</p>
   <ul class="colour">
-    <li>Finally, it is worth noting that drawing to a surface will take into consideration the colour <em>and</em> the alpha component of each pixel, both from the surface itself and also from what is being drawn to it. This may lead to some rather unintuitive results (for example, drawing a sprite with 0.5 alpha to a surface with 0 alpha will give a final alpha of 0.25). The reasons for this are explained on the following page, and we recommend that you read it before working with surfaces: <a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
+    <li>最後に、表面への描画は、各ピクセルの<em>色と</em>アルファ成分を、表面自身と描画されるものの両方から考慮することに注意してください。このため、直感的でない結果になることがあります (たとえば、アルファ値 0 の表面にアルファ値 0.5 の<span class="notranslate">sprite</span> を描画すると、最終的なアルファ値は 0.25 となります)。この理由は次のページで説明されています。サーフェスを操作する前に、このページを読むことをお勧めします。<a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">ブレンドモード使用ガイド</a></li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> This is not true of the <a href="application_surface.htm">application surface</a>, only user-created surfaces.</p>
-  <p>The basic use of a surface would be as follows:</p>
+  <p class="note"><span class="note">注</span>）<a href="application_surface.htm">アプリケーションサーフェスには</a>当てはまらず、ユーザーが作成したサーフェスのみ当てはまります。</p>
+  <p>サーフェスの基本的な使い方は、次のようになる。</p>
   <ul class="colour">
-    <li>You first create a surface and assign its index to a variable.</li>
-    <li>You would then set the drawing target to the surface rather than the display.</li>
-    <li>Next, you would draw the things you wish as well as perform any other manipulations.</li>
-    <li>Once you are done you reset the drawing target so that all further drawing happens on the screen again.</li>
-    <li>Finally, you would draw the surface (or use it in a shader, or whatever is required).</li>
+    <li>まず、サーフェスを作成し、そのインデックスを変数に代入します。</li>
+    <li>その場合、描画対象をディスプレイではなくサーフェスに設定することになります。</li>
+    <li>次に、好きなものを描いたり、操作したりします。</li>
+    <li>描画が終了したら、描画対象をリセットして、再び画面に描画するようにします。</li>
+    <li>最後に、サーフェスを描画します（または、<span class="notranslate">shader</span> 、または必要なものに使用します）。</li>
   </ul>
-  <p>One thing to note is that should you require drawing the whole display to a surface (including tiles, backgrounds etc...) you can simply access the application surface itself (see below for further details) or you could assign a surface to a view port using the variable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0..7]</span></a> as with this, all that is visible in that view port will be drawn to the corresponding surface.</p>
-  <p>The following functions exist to deal with surfaces (these functions are specific for creating and manipulating surfaces, but to actually draw them to the screen you should be using the specific draw functions that can be found below):</p>
+  <p>ディスプレイ全体をサーフェスに描画する必要がある場合（<span class="notranslate">tiles</span> や背景などを含む）、単純にアプリケーションサーフェス自体にアクセスするか（詳細は後述）、または変数 <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0..7]</span></a>を使用してビューポートにサーフェスを割り当てることもできます。この場合、そのビューポートに表示されているすべてのものが、対応するサーフェスに描画されます。</p>
+  <p>サーフェスを扱うために以下の関数があります（これらの関数はサーフェスの作成と操作に特化していますが、実際にサーフェスを画面に描画するには、以下に示す特定の描画関数を使用する必要があります）。</p>
   <ul class="colour">
-    <li><a href="surface_exists.htm">surface_exists</a></li>
-    <li><a href="surface_create.htm">surface_create</a></li>
-    <li><a href="surface_create_ext.htm">surface_create_ext</a></li>
-    <li><a href="surface_resize.htm">surface_resize</a></li>
-    <li><a href="surface_set_target.htm">surface_set_target</a></li>
-    <li><a href="surface_set_target_ext.htm">surface_set_target_ext</a></li>
-    <li><a href="surface_get_target.htm">surface_get_target</a></li>
-    <li><a href="surface_get_target_ext.htm">surface_get_target_ext</a></li>
-    <li><a href="surface_reset_target.htm">surface_reset_target</a></li>
-    <li><a href="surface_copy.htm">surface_copy</a></li>
-    <li><a href="surface_copy_part.htm">surface_copy_part</a></li>
-    <li><a href="surface_depth_disable.htm">surface_depth_disable</a></li>
-    <li><a href="surface_get_height.htm">surface_get_height</a></li>
-    <li><a href="surface_get_width.htm">surface_get_width</a></li>
-    <li><a href="surface_get_texture.htm">surface_get_texture</a></li>
-    <li><a href="surface_get_depth_disable.htm">surface_get_depth_disable</a></li>
-    <li><a href="surface_getpixel.htm">surface_getpixel</a></li>
-    <li><a href="surface_getpixel_ext.htm">surface_getpixel_ext</a></li>
-    <li><a data-xref="{title}" href="surface_get_format.htm">surface_get_format</a></li>
-    <li><a data-xref="{title}" href="surface_format_is_supported.htm">surface_format_is_supported</a></li>
-    <li><a href="surface_free.htm">surface_free</a></li>
-    <li><a href="surface_save.htm">surface_save</a></li>
-    <li><a href="surface_save_part.htm">surface_save_part</a></li>
+    <li><a href="surface_exists.htm"><span class="notranslate">surface_exists</span></a></li>
+    <li><a href="surface_create.htm"><span class="notranslate">surface_create</span></a></li>
+    <li><a href="surface_create_ext.htm"><span class="notranslate">surface_create_ext</span></a></li>
+    <li><a href="surface_resize.htm"><span class="notranslate">surface_resize</span></a></li>
+    <li><a href="surface_set_target.htm"><span class="notranslate">surface_set_target</span></a></li>
+    <li><a href="surface_set_target_ext.htm"><span class="notranslate">surface_set_target_ext</span></a></li>
+    <li><a href="surface_get_target.htm"><span class="notranslate">surface_get_target</span></a></li>
+    <li><a href="surface_get_target_ext.htm"><span class="notranslate">surface_get_target_ext</span></a></li>
+    <li><a href="surface_reset_target.htm"><span class="notranslate">surface_reset_target</span></a></li>
+    <li><a href="surface_copy.htm"><span class="notranslate">surface_copy</span></a></li>
+    <li><a href="surface_copy_part.htm"><span class="notranslate">surface_copy_part</span></a></li>
+    <li><a href="surface_depth_disable.htm"><span class="notranslate">surface_depth_disable</span></a></li>
+    <li><a href="surface_get_height.htm"><span class="notranslate">surface_get_height</span></a></li>
+    <li><a href="surface_get_width.htm"><span class="notranslate">surface_get_width</span></a></li>
+    <li><a href="surface_get_texture.htm"><span class="notranslate">surface_get_texture</span></a></li>
+    <li><a href="surface_get_depth_disable.htm"><span class="notranslate">surface_get_depth_disable</span></a></li>
+    <li><a href="surface_getpixel.htm"><span class="notranslate">surface_getpixel</span></a></li>
+    <li><a href="surface_getpixel_ext.htm"><span class="notranslate">surface_getpixel_ext</span></a></li>
+    <li><a href="surface_free.htm"><span class="notranslate">surface_free</span></a></li>
+    <li><a href="surface_save.htm"><span class="notranslate">surface_save</span></a></li>
+    <li><a href="surface_save_part.htm"><span class="notranslate">surface_save_part</span></a></li>
   </ul>
-  <p> </p>
-  <p>The following functions exist for drawing surfaces:</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in texture memory. You should <b>ALWAYS</b> check that a surface exists using <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> before referencing them directly.</p>
+  <p> </p>
+  <p>サーフェス描画には、以下の機能があります。</p>
+  <p class="note"><b><span class="note">注意</span> </b>サーフェスで作業する場合、<span class="notranslate">texture</span> のメモリーに保存されているため、いつでもサーフェスが存在しなくなる可能性があります。サーフェスを直接参照する前に、サーフェスが存在するかどうかを<b>常に</b><span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>を使用して、サーフェスが存在するかどうかを必ず確認してください。</p>
   <ul class="colour">
-    <li><a href="draw_surface.htm">draw_surface</a></li>
-    <li><a href="draw_surface_ext.htm">draw_surface_ext</a></li>
-    <li><a href="draw_surface_part.htm">draw_surface_part</a></li>
-    <li><a href="draw_surface_part_ext.htm">draw_surface_part_ext</a></li>
-    <li><a href="draw_surface_stretched.htm">draw_surface_stretched</a></li>
-    <li><a href="draw_surface_stretched_ext.htm">draw_surface_stretched_ext</a></li>
-    <li><a href="draw_surface_tiled.htm">draw_surface_tiled</a></li>
-    <li><a href="draw_surface_tiled_ext.htm">draw_surface_tiled_ext</a></li>
-    <li><a href="draw_surface_general.htm">draw_surface_general</a></li>
+    <li><a href="draw_surface.htm"><span class="notranslate">draw_surface</span></a></li>
+    <li><a href="draw_surface_ext.htm"><span class="notranslate">draw_surface_ext</span></a></li>
+    <li><a href="draw_surface_part.htm"><span class="notranslate">draw_surface_part</span></a></li>
+    <li><a href="draw_surface_part_ext.htm"><span class="notranslate">draw_surface_part_ext</span></a></li>
+    <li><a href="draw_surface_stretched.htm"><span class="notranslate">draw_surface_stretched</span></a></li>
+    <li><a href="draw_surface_stretched_ext.htm"><span class="notranslate">draw_surface_stretched_ext</span></a></li>
+    <li><a href="draw_surface_tiled.htm"><span class="notranslate">draw_surface_tiled</span></a></li>
+    <li><a href="draw_surface_tiled_ext.htm"><span class="notranslate">draw_surface_tiled_ext</span></a></li>
+    <li><a href="draw_surface_general.htm"><span class="notranslate">draw_surface_general</span></a></li>
   </ul>
-  <p> </p>
-  <p>Finally, you have two functions for storing and retrieving surfaces in <a href="../../Buffers/Buffers.htm">Buffers</a>:</p>
+  <p> </p>
+  <p>最後に、<a href="../../Buffers/Buffers.htm">Bufferに</a>表面を保存したり、取り出したりするための2つの機能があります。</p>
   <ul class="colour">
-    <li><a href="../../Buffers/buffer_get_surface.htm">buffer_get_surface</a></li>
-    <li><a href="../../Buffers/buffer_set_surface.htm">buffer_set_surface</a></li>
+    <li><a href="../../Buffers/buffer_get_surface.htm"><span class="notranslate">buffer_get_surface</span></a></li>
+    <li><a href="../../Buffers/buffer_set_surface.htm"><span class="notranslate">buffer_set_surface</span></a></li>
   </ul>
-  <p> </p>
-  <p>As mentioned above, <span data-keyref="GameMaker Name">GameMaker</span> doesn&#39;t actually render most things to the screen directly, but instead it renders them to the <b>application surface</b>. This is essentially a surface - just like any that you can make yourself using the surface functions - and as such it can be manipulated, drawn to, sent to shaders, etc. Basically, anything that you would normally do with a surface you created can also be applied to the application surface.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> </b>The only thing you <b>cannot</b> do with the application surface is free it. It always exists, although the index value to access it may change.</p>
-  <p>When you run your game, this surface is created the first time that the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw event</a> is called in each new room that you enter, which means that nothing is drawn until that point. However, you can still get the application surface position and resize it in the <b>Create Event</b> or any other event without getting any errors and the values used will be relevant to the surface when it is created. The actual sequence of events for the creation and drawing of the application surface is as follows:</p>
+  <p> </p>
+  <p>前述の通り、<span data-keyref="GameMaker Name">GameMaker</span>はほとんどのものを直接スクリーンにレンダリングせず、<b>アプリケーションサーフェスに</b>レンダリングします。これは、サーフェス関数を使って自分で作ったサーフェスと同じように、操作したり、描画したり、<span class="notranslate">shaders</span> に送ったりすることができます。基本的に、作成したサーフェスで通常行うことはすべて、アプリケーションサーフェスに適用することもできます。</p>
+  <p class="note"><b>注</b>：アプリケーションサーフェスで唯一<b>できない</b>ことは、それをフリーにすることです。アプリケーションサーフェスは常に存在しますが、アクセスするためのインデックス値は変更される可能性があります。</p>
+  <p>ゲームを実行すると、このサーフェイスは、新しい<span class="notranslate">room</span> に入るたびに<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw イベントが</a>最初に呼び出されたときに作成されます。つまり、その時点までは何も描画されません。しかし、アプリケーションサーフェスの位置を取得し、<b>Create Eventや</b>その他のイベントでエラーを出さずにサイズを変更することは可能で、使用される値はサーフェスが作成されたときに関連するものになります。実際のアプリケーションサーフェスの作成と描画のためのイベント（<span class="notranslate">sequence</span> ）は以下の通りです。</p>
   <ul class="colour">
-    <li>Pre-draw event<br />
-               --- &gt; <b>the application surface is created (if it doesn&#39;t exist) and the render target is set</b></li>
-    <li><b></b>For each visible view port, or, if no views ports are active, once
+    <li>抽選会前イベント<br>
+              <b>--- アプリケーションサーフェスが作成され、レンダリングターゲットが設定</b>される。</li>
+    <li><b></b>表示されているビューポートごとに、または、ビューポートがアクティブでない場合は、一度だけ
       <ul class="colour">
-        <li>Draw begin event</li>
-        <li>Draw event</li>
-        <li>Draw end event<br />
-                  --- &gt; <b>the application surface render target is reset here</b></li>
+        <li>描画開始イベント</li>
+        <li>描画イベント</li>
+        <li>描画終了イベント<br>
+                 <b>--- アプリケーションサーフェスレンダリングターゲットは、ここでリセット</b>されます。</li>
       </ul>
     </li>
-    <li><b></b>Post draw event<br />
-              --- &gt; <b>the application surface is now drawn to the <a class="glossterm" data-glossterm="display buffer" href="#">display buffer</a> by default<br />
-                         </b>(although you can switch this off using <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
-    <li><b></b>Draw GUI begin event</li>
-    <li>Draw GUI event</li>
-    <li>Draw GUI end event</li>
+    <li><b></b>ポストドローイベント<br>
+             <b>--- アプリケーションの表面は、デフォルトで<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> </b>描画されます。<b><br>
+                        </b> <span class="notranslate">switch</span> (ただし、<span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span> を使って、これをオフにすることができます)</li>
+    <li><b></b>描画GUI開始イベント</li>
+    <li>GUIイベントを描画する</li>
+    <li>ドローGUI終了イベント</li>
   </ul>
-  <p>The use of this surface means that you can easily create incredible transitions using shaders, or take the screen and wrap it around a 3D form, or simply scale a low-res game up to any resolution screen... The possibilities are endless!</p>
-  <p>To access this surface, you need to use the built-in global variable <span class="inline">application_surface</span> which is explained on the following page:</p>
+  <p>このサーフェスを使用すると、<span class="notranslate">shaders</span> を使用して信じられないようなトランジションを簡単に作成したり、画面を3Dフォームに巻き付けたり、低解像度のゲームを任意の解像度の画面に単純に拡大したりすることができます。可能性は無限大です。</p>
+  <p>このサーフェイスにアクセスするには、次のページで説明する組み込みのグローバル変数 <span class="inline">application_surface</span> を使用する必要があります。</p>
   <ul class="colour">
-    <li><a href="application_surface.htm">application_surface</a></li>
+    <li><a href="application_surface.htm"><span class="notranslate">application_surface</span></a></li>
   </ul>
-  <p> </p>
-  <p>You also have a few specialist functions that are designed <em>only </em>for use with the application surface:</p>
+  <p> </p>
+  <p>また、アプリケーションサーフェスでの<em>使用のみを </em>想定した専門的な機能もいくつかありますね。</p>
   <ul class="colour">
-    <li><a href="application_surface_enable.htm">application_surface_enable</a></li>
-    <li><a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></li>
-    <li><a href="application_get_position.htm">application_get_position</a></li>
-    <li><a href="application_surface_draw_enable.htm">application_surface_draw_enable</a></li>
+    <li><a href="application_surface_enable.htm"><span class="notranslate">application_surface_enable</span></a></li>
+    <li><a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a></li>
+    <li><a href="application_get_position.htm"><span class="notranslate">application_get_position</span></a></li>
+    <li><a href="application_surface_draw_enable.htm"><span class="notranslate">application_surface_draw_enable</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Lighting/Lighting.htm">Lighting</a></div>
+        <div style="float:left">戻る<a href="../Drawing.htm">ドローイング</a></div>
+        <div style="float:right">次へ<a href="../Lighting/Lighting.htm">照明</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Surfaces

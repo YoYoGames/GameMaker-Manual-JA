@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sequence_exists</title>
+  <title>シーケンスが存在する</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining function sequence_exists" />
   <meta name="rh-index-keywords" content="sequence_exists" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sequence_exists</h1>
-  <p>With this function you can check to see if a sequence object exists or not. You supply either the sequence object struct (as returned by the function <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a> or <a href="sequence_get.htm"><span class="inline">sequence_get()</span></a>) or the sequence ID (as returned by the function <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_sequence()</span></a> or from the sequence instance struct property <span class="inline">sequence</span>, or the index from the asset browser) and the function will return <span class="inline">true</span> if the sequence object exists or <span class="inline">false</span> if it does not.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>シーケンスが存在する</h1>
+  <p>この関数を使うと、<span class="notranslate">sequence</span> <span class="notranslate">object</span> が存在するかどうかを確認することができます。<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> (この関数が返す)のどちらかを指定します。 <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a>または <a href="sequence_get.htm"><span class="inline">sequence_get()</span></a>) または<span class="notranslate">sequence</span> ID (関数 <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_sequence()</span></a>または<span class="notranslate">sequence</span> インスタンス<span class="notranslate">struct</span> プロパティ <span class="inline">sequence</span> 、または<span class="notranslate">asset</span> ブラウザのインデックスから）、この関数は<span class="notranslate">sequence</span> <span class="notranslate">object</span> が存在する場合は <span class="inline">true</span> を、存在しない場合は <span class="inline">false</span> を返します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">sequence_exists(sequence_struct_or_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>sequence_struct_or_id</td>
-        <td><span data-keyref="Type_Asset_Sequence">Sequence Asset</span> or <span data-keyref="Type_Struct_Sequence_Object">Sequence Object Struct</span></td>
-        <td>The sequence to check for, can be the asset reference itself or its Sequence object struct.</td>
+        <td><span class="notranslate">sequence_struct_or_id</span></td>
+        <td><span data-keyref="Type_Asset_Sequence">Sequence Asset</span>または<span data-keyref="Type_Struct_Sequence_Object">Sequence<span class="notranslate">Object</span> Struct</span>.</td>
+        <td><span class="notranslate">The sequence to check for, can be the asset reference itself or its Sequence object struct.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if sequence_exists(my_seq)<br />
     {<br />
         sequence_destroy(my_seq);<br />
     }</p>
-  <p>The above code checks to see if the given sequence object exists and if it does it is destroyed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、与えられた<span class="notranslate">sequence</span> <span class="notranslate">object</span> が存在するかどうかを確認し、存在する場合は破棄しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_create.htm">sequence_create</a></div>
+        <div style="float:left">戻る<a href="Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次のページ <a href="sequence_create.htm"><span class="notranslate">sequence_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_exists

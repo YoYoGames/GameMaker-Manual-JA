@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Font Editor Preferences</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="The Font Editor Preferences"/>
-  <meta name="rh-index-keywords" content="Prefs - Fonts"/>
-  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>フォントエディタの環境設定</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="The Font Editor Preferences" />
+  <meta name="rh-index-keywords" content="Prefs - Fonts" />
+  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Font Editor Preferences</h1>
-  <p><img alt="Font Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Prefs.png" style="cursor: nesw-resize;"/>The <strong>Font Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Fonts.htm">Font Editor</a> behaves.
-    The different options available are listed below along with a description of what each one does.</p>
+  <h1>フォントエディタの環境設定</h1>
+  <p><img><strong>Font Editor Preferencesは</strong>、<a href="../../The_Asset_Editors/Fonts.htm">Font Editorの</a>動作を定義するために使用されます。
+    以下に、さまざまなオプションと、それぞれの動作について説明します。</p>
   <ul class="colour">
-    <li><strong>Update Fonts imported from <span data-keyref="GameMaker Name">GameMaker</span> 1 projects</strong>: When this is checked, <span data-keyref="GameMaker Name">GameMaker</span> will attempt to update fonts and regenerate their texture. This will happen only if:
+    <li><strong> <span data-keyref="GameMaker Name">GameMaker</span>1 プロジェクトからインポートした<span class="notranslate">Fonts</span> を更新</strong>します。これがチェックされていると、<span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">fonts</span> を更新し、その<span class="notranslate">texture</span> を再生成しようとします。 これは以下の場合にのみ起こります。
       <ul class="Disc">
-        <li>This preference is enabled</li>
-        <li>The font is available on the machine</li>
-        <li><span data-keyref="GameMaker Name">GameMaker</span> can locate a matching face in the font family (this is the most likely cause of inconsistency on import)</li>
+        <li>この環境設定は有効です</li>
+        <li><span class="notranslate">font</span> がマシン上で利用可能である。</li>
+        <li><span data-keyref="GameMaker Name">GameMakerは</span>、<span class="notranslate">font</span> ファミリーで一致する顔を見つけることができます（インポート時に不一致が発生する最も可能性の高い原因です）。</li>
       </ul>
-      Note that it will also happen if the <span data-keyref="GameMaker Name">GameMaker</span> 1 font does not have a <a class="glossterm" data-glossterm="Cache" href="#">cached</a> font texture. If a legacy font cannot be updated, then <span data-keyref="GameMaker Name">GameMaker</span> will default to using the cached
-      font texture, and the Font Editor will no longer permit you to edit the font, showing an option to backup and update to another:<br/>
-      <br/>
-      <img alt="Font Editor Backup And Upgrade" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Backup.png"/>Clicking this will enable you to edit the font, either adding the missing font or setting another one, and the
-      backed up font is stored in the font asset folder, as <span class="inline">&lt;font name&gt;.yy.gms1</span> and <span class="inline">&lt;font name&gt;.png.gms1</span>. To restore these files, manually delete the <span class="inline">&lt;font name&gt;.yy</span>      files and replace them with these by removing the <span class="inline">.gms1</span> extension from the filenames. <em> <strong>Important!</strong></em> All assets store their names in the <span class="inline">.yy</span> file, so you must edit these
-      and put the right name of the resource in the <span class="inline">&lt;name&gt;</span> field as well (if different).</li>
-    <li><strong>Automatic choice for failed content regeneration dialog</strong>: When you go to regenerate a font asset texture, you are shown a warning. Setting this option to &quot;OK&quot; will mean that the font is regenerated without the warning being
-      shown.</li>
-    <li><strong>Automatic choice for failed font regeneration dialog</strong>: When regeneration of a font asset texture fails, you are shown a warning. Setting this option to &quot;OK&quot; will skip showing the message.</li>
-    <li><strong>Automatic choice for upgrading imported legacy fonts</strong>: When you import a legacy project, you may get a warning about legacy fonts and the offer to upgrade. Setting this option to &quot;OK&quot; will okay the update automatically without
-      showing this message.</li>
+     <span data-keyref="GameMaker Name">GameMaker</span>1 の<span class="notranslate">font</span> に<a class="glossterm" data-glossterm="キャッシュ" href="#">キャッシュされた</a> <span class="notranslate">font</span> <span class="notranslate">texture</span> がない場合にも起こることに注意してください。レガシー<span class="notranslate">font</span> が<span data-keyref="GameMaker Name">更新できな</span>い場合、GameMaker はデフォルトでキャッシュされた を使用します。
+     <span class="notranslate">font</span> <span class="notranslate">texture</span> また、<span class="notranslate">Font</span> Editor では<span class="notranslate">font</span> の編集ができなくなり、バックアップして別のものに更新するオプションが表示されます。<br>
+      <br>
+      <img>これをクリックすると、<span class="notranslate">font</span> の編集が可能になり、不足している<span class="notranslate">font</span> を追加するか、別のものを設定することができます。
+      バックアップされた<span class="notranslate">font</span> は、<span class="notranslate">font</span> <span class="notranslate">asset</span> フォルダに、 <span class="inline">&lt;font name&gt;.yy.gms1</span> および <span class="inline">&lt;font name&gt;.png.gms1</span> として保存されます。これらのファイルを復元するには、手動で <span class="inline">&lt;font name&gt;.yy</span> ファイルを削除し、ファイル名から <span class="inline">.gms1</span> <span class="notranslate">extension</span> を削除してこれらのファイルに置き換えてください。 <em> <strong>重要!</strong></em>すべての<span class="notranslate">assets</span> は、 <span class="inline">.yy</span> ファイルに名前を保存しています。
+      を作成し、 <span class="inline">&lt;name&gt;</span> のフィールドにも正しいリソース名を入力します（異なる場合）。</li>
+    <li><strong>コンテンツ再生失敗時の自動選択ダイアログ</strong> <span class="notranslate">font</span> <span class="notranslate">asset</span> <span class="notranslate">texture</span> を再生成しようとすると、警告が表示されます。このオプションを「OK」に設定すると、警告を表示せずに<span class="notranslate">font</span> を再生成することになります。
+      を表示します。</li>
+    <li><strong> <span class="notranslate">font</span> </strong> 再生失敗時の自動選択ダイアログ。<span class="notranslate">font</span> <span class="notranslate">asset</span> <span class="notranslate">texture</span> の再生に失敗した場合、警告が表示されます。このオプションを &quot;OK &quot;にすると、メッセージの表示が省略されます。</li>
+    <li><strong>インポートしたレガシーフォントのアップグレードを自動的に選択</strong>できるようにしました。レガシープロジェクトをインポートするときに、レガシー<span class="notranslate">fonts</span> についての警告とアップグレードのオファーが表示されることがあります。このオプションを &quot;OK &quot;に設定すると、自動的にアップデートが行われます。
+      というメッセージが表示されます。</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Room_Editor_Preferences.htm">Room Editor Preferences</a></div>
+        <div style="float:left">戻る：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
+        <div style="float:right">次へ<a href="Room_Editor_Preferences.htm">ルームエディターの環境設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-Preferences - Font Editor
+Preferences - <span class="notranslate">Font</span> Editor
 -->
   <!-- TAGS
 prefs_font_editor

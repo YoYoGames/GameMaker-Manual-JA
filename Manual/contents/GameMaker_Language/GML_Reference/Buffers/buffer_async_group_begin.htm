@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_async_group_begin</title>
+  <title>バッファアシンクグループ開始</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_async_group_begin" />
   <meta name="rh-index-keywords" content="buffer_async_group_begin" />
@@ -14,49 +14,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_async_group_begin</h1>
-  <p>This function is called when you want to begin the saving out of multiple buffers to multiple files (or loading multiple buffers). The <span class="inline2">groupname</span> is a string and will be used as the directory name for where the files are saved, and should be used as part of the file path when loading the files back into the IDE later (using any of the <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> functions). This function is <i>only</i> for use with the <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> and <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span> functions and you must also end the async group by calling <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> function otherwise the files will not be saved/loaded.</p>
-  <p>Note that for the console platforms (like PS4 for example), the <span class="inline2">groupname</span> will be used as the save slot description, and using this function can help you avoid having the UI show for every file that is being saved out.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>バッファアシンクグループ開始</h1>
+  <p>この関数は、複数の<span class="notranslate">buffers</span> から複数のファイルへの保存出し（あるいは複数の<span class="notranslate">buffers</span> の読み込み）を開始したいときに呼び出されます。<span class="inline2">groupname</span>は<span class="notranslate">string</span> で、ファイルが保存されるディレクトリ名として使用されます。また、後でファイルを<span class="notranslate">path</span> に読み込む際には、ファイル<span class="notranslate">IDE</span> の一部として使用する必要があります（いずれかの <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a>関数)を使用します。この関数は <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a>と <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span> 関数を呼び、非同期グループも終了させる必要があります。 <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a>関数を呼び出さないと、ファイルの保存/読み込みは行われません。</p>
+  <p>なお、コンソールプラットフォーム（例えばPS4など）では、<span class="inline2">グループ</span>名がセーブスロットの説明として使用され、この機能を使用することで、セーブアウトされるファイルごとにUIが表示されることを回避することができます。また、UWPを使用する場合、例えばERA Xboxのグループと同じグループを作成することで、ネイティブXboxとMicrosoftストアのウィンドウ間でセーブゲームをローミングすることができることに注意してください。</p>
+  <p class="code">if os_type == os_uwp<br />
+    {<br />
+        buffer_async_group_begin(&quot;root/yourgroupname&quot;);<br />
+    }<br />
+    else<br />
+    {<br />
+        buffer_async_group_begin(&quot;yourgroupname&quot;);<br />
+    }</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">buffer_async_group_begin(groupname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>groupname</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the group (as a string).</td>
+        <td><span class="notranslate">groupname</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">The name of the group (as a string).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">buffer_async_group_begin(&quot;SaveGame&quot;);<br />
     save1 = buffer_save_async(buff1, &quot;Player_Save1.sav&quot;, 0, 16384);<br />
     save2 = buffer_save_async(buff2, &quot;Player_Save2.sav&quot;, 0, 16384);<br />
     save3 = buffer_save_async(buff3, &quot;Player_Save3.sav&quot;, 0, 16384);<br />
     save4 = buffer_save_async(buff4, &quot;Player_Save4.sav&quot;, 0, 16384);<br />
     buffer_async_group_end();</p>
-  <p>The above code starts a buffer group then sets it to save out 4 files asynchronously. The group definition is then ended (at which point saving will begin).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、<span class="notranslate">buffer</span> グループを起動し、4つのファイルを非同期で保存するように設定します。その後、グループ定義を終了します（この時点で保存が開始されます）。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_async_group_option.htm">buffer_async_group_option</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_begin

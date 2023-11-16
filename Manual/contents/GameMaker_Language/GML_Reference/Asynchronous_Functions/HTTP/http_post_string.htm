@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>http_post_string</title>
+  <title>http_post_string。</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for http_post_string" />
   <meta name="rh-index-keywords" content="http_post_string" />
@@ -15,53 +15,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_post_string</h1>
-  <p>In computing, a <b>post</b> request is used when the client needs to send data to the server as part of the retrieval request, such as when uploading a file or submitting a completed form, and the same is true of this function in <span data-keyref="GameMaker Name">GameMaker</span>. In contrast to the <span class="inline"><a href="http_get.htm">http_get()</a></span> request method where only a URL is sent to the server, <span class="inline">http_post_string()</span> also includes a string that is sent to the server and may result in the creation of a new resource or the update of an existing resource or both. It should be noted that HTTP request parameters (the bits sometimes &quot;tacked on&quot; to the end of a URL when you submit a form on a web page) are perfectly acceptable when using this function too.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see <a data-xref="{text}" href="HTTP.htm#h">Cross Domain Issues</a> for further details.</p>
-  <p>This event will generate a &quot;call back&quot; which is picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP Events</a>, in which case it will generate a <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> (more commonly known as a &quot;dictionary&quot;) that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This DS map  will contain different values depending on whether there is data being returned or not. For example, if you have requested a file, the event will trigger multiple times as each packet of data is received so that you can show a progress bar, for example. The general structure for the DS map will be as follows:</p>
+  <h1>http_post_string。</h1>
+  <p>コンピュータでは、ファイルのアップロードや入力済みフォームの送信など、クライアントが検索要求の一部として<span class="notranslate">server</span> にデータを送信する必要がある場合に<b>ポスト</b>リクエストを使用するが、<span data-keyref="GameMaker Name">GameMaker</span> でもこの機能は同じである。 <span class="inline"><a href="http_get.htm">http_get()</a></span> のリクエスト方式では、URL のみが<span class="notranslate">server</span> に送られるのに対し、 <span class="inline">http_post_string()</span> では<span class="notranslate">string</span> に送られる<span class="notranslate">server</span> も含まれ、結果として新規リソースの作成、既存リソースの 更新、またはその両方を行うことができる。なお、この機能を使用する場合、HTTPリクエストパラメータ(Webページのフォームを送信する際にURLの末尾に「付加」されるビット)も完全に許容範囲内であることに注意してください。</p>
+  <p class="note"><b><span class="note">注意事項</span> </b>ブラウザのXSS保護機能により、ドメインをまたがるリソースへのリクエストや読み込み試行がブロックされ、空白の結果が返されるように見える場合があることに留意してください。詳しくは、「<a href="HTTP.htm">クロスドメインの問題</a>」をご覧ください。</p>
+  <p>このイベントは、任意の<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTPイベントによって</a>ピックアップされる「コールバック」を生成し、その場合、このイベント専用の<a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DSマップ</a>（より一般的には「辞書」として知られている）を生成し、特別な変数に格納されます <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>非同期ロード</b></a>.このDSマップは、返されるデータがあるかないかによって異なる値を含む。たとえば、ファイルを要求した場合、データのパケットを受信するたびにイベントが複数回トリガーされるので、たとえばプログレスバーを表示することができます。DSマップの一般的な構造は、以下のようになります。</p>
   <ul class="colour">
-    <li><b>id: </b>The ID which was returned from the command. If you fire off a series of <span class="inline">http_</span> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally sent the request to find the right one.</li>
-    <li><b>status: </b>Returns a value of less than 0 for an error, 0 for complete and 1 for receiving packets (see below for more details).</li>
-    <li><b>result: </b>The data received (string only).</li>
-    <li><b>url: </b>The complete URL you requested.</li>
-    <li><b>http_status: </b>The raw http status code (if available). This returns the standard web status code for most browsers, eg: 304 for &quot;Not Modified&quot; or 204 for &quot;No Content&quot;, etc...</li>
+    <li><b>idを指定します。 </b>コマンドから返されたID。もし <span class="inline">http_</span> のリクエストを連続して発行した場合、どのリクエストに対する返答なのかを知る必要があります。そのため、この値を使って、最初にリクエストを送ったときに保存した値と比較し、正しいものを探します。</li>
+    <li><b>のステータスを表示します。 </b>エラーなら0未満、完了なら0、パケット受信なら1の値を返す（詳細は後述）。</li>
+    <li><b>の結果が表示されます。 </b>受信したデータ（<span class="notranslate">string</span> のみ）。</li>
+    <li><b>url:要 </b>求された完全なURL。</li>
+    <li><b>http_status。 </b>生の http ステータスコード (利用可能な場合)。例えば 304 は &quot;Not Modified&quot;、204 は &quot;No Content&quot; などです。</li>
   </ul>
-  <p>If there are multiple packets being returned to your game, the callback &quot;status&quot; key will return 1, in which case the DS map will have the following additional keys:</p>
+  <p>ゲームに返されるパケットが複数ある場合、コールバックの「status」キーは1を返し、その場合、DSマップは以下の追加キーを持つことになります。</p>
   <ul class="colour">
-    <li><b>&quot;contentLength&quot;: </b>This is the size of file that the web server has said you should expect to receive (may be -1 if the server does not return this data).</li>
-    <li><b>&quot;sizeDownloaded&quot;: </b>The size of the data that has already been downloaded.</li>
+    <li><b>&quot;contentLength &quot;を指定します。 </b>これは、ウェブ<span class="notranslate">server</span> が受信を期待すべきと言ったファイルのサイズです (<span class="notranslate">server</span> がこのデータを返さない場合は -1 になる可能性があります)。</li>
+    <li><b>&quot;sizeDownloaded&quot;。 </b>すでにダウンロードしたデータのサイズ。</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">http_post_string(url, string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The web address of the server that you wish to get information from</td>
-      </tr>
+        <td><span class="notranslate">url</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The web address of the server that you wish to get information from</span></td>
+     </tr>
       <tr>
-        <td>string</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The string you wish to send to the specified URL</td>
-      </tr>
+        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The string you wish to send to the specified URL</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <span class="inline">http_post_string()</span> function can be called from any event, and since it is asynchronous the callback can be almost instantaneous or could take several seconds. Calling the function is simple and would look something like this:</p>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
+  <p> </p>
+  <h4>拡張された例。</h4>
+  <p> <span class="inline">http_post_string()</span> 関数は任意のイベントから呼び出すことができます。非同期なので、コールバックはほとんど即座に行われることもあれば、数秒かかることもあります。この関数を呼び出すのは簡単で、次のようになります。</p>
   <p class="code">var str = &quot;name=&quot; + global.player_name + &quot;&amp;score=&quot; + string(global.player_score);<br />
     post = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str);</p>
-  <p>The above code sends a retrieval request to the specified URL with the given parameters as well as sending the additional data (player name and score in URL-encoded form) stored in the variable str. This will trigger all defined asynchronous <b>Http Events</b> if a callback is received, and you can check the &quot;id&quot; returned against that stored in the variable <span class="inline">post</span> to make sure that you run the correct code should you have used various <span class="inline">http_post_string()</span> functions. The following example code shows how this would be done:</p>
+  <p>上記のコードでは、指定されたURLに指定されたパラメータで検索リクエストを送信し、変数strに格納されている追加データ（URLエンコード形式のプレーヤー名とスコア）を送信しています。コールバックを受信すると、定義されたすべての非同期<b>Http イベントが</b>トリガーされます。返された「id」を変数 <span class="inline">post</span> に格納されているものと照らし合わせて、さまざまな <span class="inline">http_post_string()</span> 関数を使用している場合に正しいコードを実行しているかどうか確認することができます。次のサンプルコードは、この方法を示しています。</p>
   <p class="code">var r_str = &quot;null&quot;;<br />
     if ds_map_find_value(async_load, &quot;id&quot;) == post<br />
     {<br />
@@ -70,18 +67,18 @@
             r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
         }<br />
     }</p>
-  <p>The above code will first check the id of the DS map that has been created, then check the status of the callback. If the value is equal to 0 (signalling success) the result from the callback will then be stored in a variable for future use, otherwise the variable will simply hold a default value (in this case &quot;null&quot;).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、まず作成されたDSマップのidをチェックし、次にコールバックのステータスをチェックします。値が 0 の場合（成功を意味する）、コールバックの結果は今後使用する変数に格納され、それ以外の場合は単にデフォルト値（この場合は &quot;null&quot;）が格納されるだけである。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">Next: <a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></div>
+        <div style="float:left">戻る：<a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">次のページ <a href="http_get_request_crossorigin.htm"><span class="notranslate">http_get_request_crossorigin</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 http_post_string

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Rename File</title>
+  <title>ファイル名の変更</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Rename File action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Rename File" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Rename File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png" /> Rename File</h1>
-  <p>With this action you can rename any file that has been saved by your game. You give the name of the file to change (as a string) and then the new name (also as a string and including the file extension), and the file will be renamed. Note that you <i>cannot</i>    rename any file that was bundled as an Included File with your game (see the section on <a href="../../../Additional_Information/The_File_System.htm">The File System</a> for more information).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Rename File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Rename_File.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <h1><img> ファイル名の変更</h1>
+  <p>このアクションでは、ゲームで保存されたあらゆるファイルの名前を変更することができます。変更するファイルの名前（<span class="notranslate">string</span> ）と新しい名前（<span class="notranslate">string</span> とファイル<span class="notranslate">extension</span> を含む）を指定すると、ファイル名が変更されます。ただし、Included Fileとしてゲームにバンドルされているファイルの名前は変更<i>できません</i>（詳細は<a href="../../../Additional_Information/The_File_System.htm">ファイル</a>システムのセクションを参照してください）。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Rename File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png" /></p>
+  <h4>論拠となる。</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Filename</td>
-        <td>The name (as a string) of the file to rename</td>
+        <td><span class="notranslate">Filename</span></td>
+        <td>名前を変更するファイルの名前（<span class="notranslate">string</span> ）。</td>
       </tr>
       <tr>
-        <td>New Name</td>
-        <td>The new name (as a string) for the file</td>
+        <td><span class="notranslate">New Name</span></td>
+        <td>ファイルの新しい名前（<span class="notranslate">string</span> ）です。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Rename File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Rename_File.png" />The above action block code will check to see if the file &quot;checkpoint.sav&quot; exists, and if
-    it does it then checks to see if the file &quot;checkpoint_OLD.sav&quot; exists. If that file exists as well, then it is deleted, and then the original &quot;checkpoint.sav&quot; file is renamed to &quot;checkpoint_OLD.sav&quot;. Finally a buffer
-    is saved as &quot;checkpoint.sav&quot; (essentially we are backing up a saved buffer file each time we save it, so that there is always a &quot;current&quot; save and an &quot;old&quot; save file).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、ファイル &quot;checkpoint.sav&quot; が存在するかどうかを確認し、存在する場合は、次のようになります。
+    次に、&quot;checkpoint_OLD.sav&quot; が存在するかどうかを確認します。もしそのファイルが存在すれば、削除され、元の &quot;checkpoint.sav&quot; ファイルは &quot;checkpoint_OLD.sav&quot; に名前が変更されます。最後にバッファ
+    が &quot;checkpoint.sav&quot; として保存されます (本質的には、保存するたびに保存された<span class="notranslate">buffer</span> ファイルをバックアップしているので、常に「現在の」保存ファイルと「古い」保存ファイルが存在することになります)。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Copy_File.htm">Copy File</a></div>
+        <div style="float:left">戻る<a href="File_Actions.htm">ファイル操作</a></div>
+        <div style="float:right">次へ<a href="Copy_File.htm">ファイルをコピーする</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Rename File

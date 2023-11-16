@@ -6,33 +6,44 @@
   <title>xboxlive_achievement_load_friends</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-    <meta name = "rh-authors" content = "Mark Alexander" />
-      <meta name = "topic-comment" content = "Reference page for achievement_load_friends" />
-      <meta name = "rh-index-keywords" content = "achievement_load_friends" />
-      <meta name = "search-keywords" content = "achievement_load_friends,achievement_friends_info" />
+  <script src="../../../../assets/scripts/main_script.js">
+    //<![CDATA[
+    <
+    meta name = "rh-authors"
+    content = "Mark Alexander" / >
+      <
+      meta name = "topic-comment"
+    content = "Reference page for achievement_load_friends" / >
+      <
+      meta name = "rh-index-keywords"
+    content = "achievement_load_friends" / >
+      <
+      meta name = "search-keywords"
+    content = "achievement_load_friends,achievement_friends_info" / >
+    //]]>
+  </script>
   <meta name="topic-comment" content="Page outlining the function xboxlive_achievement_load_friends." />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_achievement_load_friends</h1>
-  <p>This function will send a request to the server for information on all the logged in users friends and will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> map populated with the relevant key/value pairs. The <i>id</i> key of this <span class="inline">DS Map</span> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b> <span class="inline">xboxlive_achievement_friends_info</span> as well as a number of other key/value pairs for each friend. The exact contents of the map are shown below:</p>
+  <p>この関数は、ログインしているすべてのユーザーの友人に関する情報を<span class="notranslate">server</span> にリクエストし、コールバック<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a>をトリガーします。 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>マップに関連するキーと値のペアを入力します。この <span class="inline">DS Map</span> の<i>id</i>キーは、正しいコールバックを識別するために使用されます（任意の非同期イベントに対して複数のトリガー関数が存在する可能性があります）。また、<b>定数</b> <span class="inline">xboxlive_achievement_friends_info</span> と、各友人の他の多くのキー/値のペアが対になっています。マップの正確な内容は以下の通りです。</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - For this function it should be <span class="inline">xboxlive_achievement_friends_info</span></li>
-    <li>&quot;<b>FriendN</b>&quot; - The name of the friend, where &quot;N&quot; is an integer value corresponding to their position within the friends list.</li>
-    <li>&quot;<b>FriendidN</b>&quot; - The unique user id of the friend, &quot;N&quot;.</li>
+    <li>「<b>id</b>&quot; - この関数の場合、以下のようになります。 <span class="inline">xboxlive_achievement_friends_info</span></li>
+    <li>「<b>FriendN</b>&quot; - 友人の名前。&quot;N&quot; は友人リスト内での位置を表す整数値です。</li>
+    <li>&quot;<b>FriendidN</b>&quot; - 友人の一意のユーザーID、&quot;N&quot;。</li>
   </ul>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <p> </p>
+  <h4><b>構文です。</b></h4>
   <p class="code">xboxlive_achievement_load_friends();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following code would probably be called after the player has logged into their game account to get a list of all that users friends:</p>
+  <p> </p>
+  <h4>拡張された例。</h4>
+  <p>以下のコードは、プレイヤーが自分のゲームアカウントにログインした後に呼び出され、そのユーザーのフレンドのリストを取得します。</p>
   <p class="code">xboxlive_achievement_load_friends();</p>
-  <p>This will send off a request for the information on the users friends and generate an asynchronous callback with the special <span class="inline">async_load</span> DS map containing the following data:</p>
+  <p>これは、ユーザーの友人に関する情報のリクエストを送信し、次のデータを含む特別な <span class="inline">async_load</span> DS マップで非同期コールバックを生成します。</p>
   <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if ident == xboxlive_achievement_friends_info<br />
     {<br />
@@ -44,18 +55,18 @@
             global.friendid[i] = ds_map_find_value(async_load, &quot;Friendid&quot; + string(i));<br />
         }<br />
     }</p>
-  <p>The above code checks the returned <span class="inline">DS Map</span> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then loops through the map storing all the different values in a number of arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、<b>ソーシャル非同期</b>イベントで返された <span class="inline">DS Map</span> をチェックし、その「id」がチェック対象の定数と一致した場合、<span class="notranslate">loops</span> 、マップを介して複数の配列にすべての異なる値を格納します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></div>
+        <div style="float:left">戻る<a data-xref="{title}" href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次ページ：<a data-xref="{title}" href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 achievement_load_friends

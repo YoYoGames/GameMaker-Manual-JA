@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>random</title>
+  <title>ランダム</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for random" />
   <meta name="rh-index-keywords" content="random" />
@@ -14,47 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">random</span></h1>
-  <p>This function returns a random floating-point (decimal) number between 0.0 (inclusive) and the specified upper limit (inclusive).</p>
-  <p>For example, <span class="inline">random(100)</span> will return a value from 0 to 100.00, but that value can be 22.56473! You can also use real numbers and not integers in this function like this - <span class="inline">random(0.5)</span>, which will return a value between 0 and 0.500.</p>
-  <div data-conref="../../../../assets/snippets/Note_randomise.hts"> </div>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">random</span>(n);</p>
+  <h1>ランダム</h1>
+  <p>この関数は、整数値を返す必要がない確率に適しています。例えば、 <span class="inline">random(100)</span> は 0 から 99 までの値を返しますが、その値は 22.56473 になる可能性があります!また、この関数では整数ではなく実数を使うこともできます - <span class="inline">random(0.5)</span>, これは 0 から 0.4999999 の間の値を返します。</p>
+  <p class="note"><b>注</b>：この関数は、ゲームが新しく実行されるたびに同じ値を返します。これは、<span data-keyref="GameMaker Name">GameMakerが</span>毎回同じ初期ランダムシードを生成して、<span class="notranslate">debugging</span> のコードをはるかに簡単な作業にするためです。この挙動を避けるには <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span>をゲーム開始時に指定します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">random(n);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The upper range from which the random number will be selected.</td>
-      </tr>
+        <td><span class="notranslate">n</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The upper range from which the random number will be selected.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (<span data-field="title" data-format="default">random</span>(10) &gt;= 9)<br />
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Real"></span></p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">if (random(10) &gt;= 9)<br />
     {<br />
         score += 100;<br />
     }</p>
-  <p>This will produce approximately a one in ten chance of adding 100 to the score.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これにより、およそ10分の1の確率で100点を加算することができます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Number_Functions.htm">Number Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="random_range.htm">random_range</a></div>
+        <div style="float:left">戻る<a href="Number_Functions.htm">ナンバーファンクション</a></div>
+        <div style="float:right">次のページ <a href="random_range.htm"><span class="notranslate">random_range</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 random

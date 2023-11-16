@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Get Tilemap Variable</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Get Tilemap Variable action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Get Tilemap Variable"/>
-  <meta name="search-keywords" content="Get Tilemap Variable"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>タイルマップ変数の取得</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Get Tilemap Variable action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Get Tilemap Variable" />
+  <meta name="search-keywords" content="Get Tilemap Variable" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Timemap Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tilemap_Variable.png" width="32"/> Get Tilemap Variable</h1>
-  <p>With this action you can retrieve any one of a given number of variables for the <a class="glossterm" data-glossterm="tile map" href="#">tile map</a> element on a layer. When you create a tile layer in the room editor, this layer holds a <b>tile map element</b>    which is then populated with tiles from a tile-set. This tile map element has certain values associated with it, like an offset position, the tile-set being used, the width, height, etc... The complete list of values that you can get is:</p>
+  <h1><img> タイルマップ変数の取得</h1>
+  <p>このアクションでは、レイヤーの<a class="glossterm" data-glossterm="タイルマップ" href="#">タイルマップ</a>要素について、指定された数の変数のうちいずれかを取得することができます。<span class="notranslate">tile</span> エディターで<span class="notranslate">room</span> レイヤーを作成すると、このレイヤーは<b>タイルマップ要素を</b>保持し、次にタイルセットから<span class="notranslate">tiles</span> を入力します。この<span class="notranslate">tile</span> マップ要素には、オフセット位置、使用されているタイルセット、幅、高さなど、特定の値が関連付けられています。取得できる値の完全なリストは次のとおりです。</p>
   <ul class="colour">
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_x.htm">X Coordinate</a><span>:</span> The position along the x axis on the layer where the tile map element has been placed.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_y.htm">Y Coordinate</a><span>:</span> The position along the y axis on the layer where the tile map element has been placed.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_width.htm">Columns</a><span>:</span> The width (defined as the number of columns of tile cells) of the tile map element.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_height.htm">Rows</a><span>:</span> The height (defined as the number of rows of tile cells) of the tile map element.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_tile_width.htm">Tile Width</a><span>:</span> The width of a single tile cell.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_tile_height.htm">Tile Height</a><span>:</span> The height of a single tile cell.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_tileset.htm">Tile Set Resource</a><span>:</span> The tile-set resource that has been assigned to the tile map element for drawing.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_frame.htm">Current Frame</a><span>:</span> The current frame being drawn for animated tiles.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_mask.htm">Mask</a><span>:</span> The mask data for the tile map element.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_global_mask.htm">Global Mask</a><span>:</span> The global mask data for all tile map elements.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_x.htm">X座標</a><span>。</span> <span class="notranslate">tile</span> map 要素が配置されたレイヤーの x 軸に沿った位置です。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_y.htm">Y座標</a><span>。</span> <span class="notranslate">tile</span> map 要素が配置されたレイヤーの y 軸に沿った位置です。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_width.htm">列</a><span>。</span> <span class="notranslate">tile</span> map 要素の幅（<span class="notranslate">tile</span> セルの列数として定義される）。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_height.htm">行数</a><span>です</span>。<span class="notranslate">tile</span> map 要素の高さ (<span class="notranslate">tile</span> セルの行数として定義される)。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_tile_width.htm">タイル幅</a><span>：</span> <span class="notranslate">tile</span> のセル1枚の幅。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_tile_height.htm">タイルの高さ</a><span>。</span> <span class="notranslate">tile</span> のセル1枚の高さ。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_tileset.htm">タイルセットリソース（Tile Set Resource</a>）<span>。</span> <span class="notranslate">tile</span> map elementに描画用に割り当てられたtile-set resource。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_frame.htm">現在のフレーム</a><span>。</span>アニメーションのために描画されている現在のフレーム<span class="notranslate">tiles</span> 。</li>
+    <li><span>Mask：</span> <span class="notranslate">tile</span> のマップエレメントのマスクデータ。</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_global_mask.htm">Global Mask</a><span>:</span> <span class="notranslate">tile</span> の全マップエレメントに対応するグローバルマスクデータ。</li>
   </ul>
-  <p>When using this action you supply the layer name (a string, as defined in the Room Editor) to get the tile map element data from, then the type of data that you want to retrieve (as shown in the list above). The returned value will then be stored in
-    the target variable which can have been created previously or can be a new temporary one (if you check the &quot;Temp&quot; check-box). Note that you can retrieve additional values by clicking the plus icon <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> </span>beside
-    the action, and selecting another variable and giving another variable to store the returned value.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Tilemap Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tilemap_Variable.png"/></p>
-  <h4>Arguments:</h4>
+  <p>このアクションを使用する場合、<span class="notranslate">string</span> マップ要素データを取得するレイヤー名（<span class="notranslate">Room</span> 、<span class="notranslate">tile</span> エディタで定義）を指定し、次に取得したいデータの種類（上のリストに示すとおり）を指定します。返された値は、次の場所に保存されます。
+    ターゲット変数は、以前に作成されたものでも、（&quot;Temp &quot;チェックボックスをチェックした場合）新しい一時的なものでもよい。さらに別の値を取得するには、プラス・アイコンである <span><img> </span>横
+    アクションを実行し、別の変数を選択し、返された値を格納する別の変数を指定します。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Get Timemap Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tilemap_Variable.png" width="32"/></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Layer</td>
-        <td>The layer to get data from</td>
+        <td><span class="notranslate">Layer</span></td>
+        <td>データを取得するレイヤー</td>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The variable to retrieve the value of (as listed above)</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>値を取得する変数（上記と同様）</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Tilemap Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Set.png"/>The above action block code checks to see if the tiles on the layer &quot;Floor_Tiles&quot;
-    is using the tile-set &quot;tl_PalaceRuins&quot;, and if they not, then they are set to use it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、レイヤー &quot;Floor_Tiles &quot;上の<span class="notranslate">tiles</span> をチェックするものである。
+    がタイルセット &quot;tl_PalaceRuins &quot;を使用している場合、それを使用するように設定される。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Actions.htm">Tile Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Tile_Data_At_Pixel.htm">Set Tile Data At Pixel</a></div>
+        <div style="float:left">戻る<a href="Tile_Actions.htm">タイルアクション</a></div>
+        <div style="float:right">次へ<a href="Set_Tile_Data_At_Pixel.htm"> <span class="notranslate">Tile</span> </a>データを画素に設定する</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Tilemap Variable

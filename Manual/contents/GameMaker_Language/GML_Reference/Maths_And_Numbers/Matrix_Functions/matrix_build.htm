@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>matrix_build</title>
+  <title>マトリックスビルド</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for matrix_build" />
   <meta name="rh-index-keywords" content="matrix_build" />
@@ -15,75 +15,75 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build</h1>
-  <p>This function can be used to create your own custom matrix and will return a matrix array, which should be stored in a variable for future reference and use. It accepts 3-dimensional (<span class="inline2">x, y, z</span>) translation, rotation and scale values, and uses them to build a matrix array.</p>
-  <p>The matrix array contains 16 values in total, where the initial 4 elements are <em><strong>row/column 1</strong></em>, the next 4 elements are <em><strong>row/column 2</strong></em> and so on, as part of a <a href="Matrix_Functions.htm">4x4 matrix</a>. Whether the array is ordered by rows or columns depends on the target platform, as the graphics renderer used by a platform may use row-major or column-major matrices.</p>
-  <p class="note"><span class="note">NOTE</span> When you build a new matrix in this way, the order of operation is YXZ.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>マトリックスビルド</h1>
+  <p>この関数は，独自の行列を作成するために使用することができ，行列の配列を返します．この配列は，将来参照したり使用したりするために変数に保存しておく必要があります．この関数は，3 次元<span class="inline2">（x, y, z</span>）の平行移動，回転，スケールの値を受け取り，それらを用いて行列の配列を作成します．</p>
+  <p>行列の配列は全部で 16 個の値を持ち，初期 4 要素は <em><strong>行／列1</strong></em>であり、次の4つの要素は <em><strong>行／列2</strong></em>といった具合に、<a href="Matrix_Functions.htm">4x4 の行列を</a>構成する。配列の並び順が行か列かは、ターゲットとなるプラットフォームに依存します。そのプラットフォームで使用されるグラフィックスレンダラは、行メジャーの行列を使用する場合もあれば、列メジャーの行列を使用する場合もあるからです。</p>
+  <p class="note"><span class="note">注</span>この方法で新しい行列を作る場合、操作の順序はYXZとなります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">matrix_build(x, y, z, xrotation, yrotation, zrotation, xscale, yscale, zscale);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x component of the translation vector.</td>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x component of the translation vector.</span></td>
      </tr>
       <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y component of the translation vector.</td>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y component of the translation vector.</span></td>
      </tr>
       <tr>
-        <td>z</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z component of the translation vector.</td>
+        <td><span class="notranslate">z</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z component of the translation vector.</span></td>
      </tr>
       <tr>
-        <td>xrotation</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The angle to rotate around the x-axis (in degrees °).</td>
+        <td><span class="notranslate">xrotation</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The angle to rotate around the x-axis (in degrees °).</span></td>
      </tr>
       <tr>
-        <td>yrotation</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The angle to rotate around the y-axis (in degrees °).</td>
+        <td><span class="notranslate">yrotation</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The angle to rotate around the y-axis (in degrees °).</span></td>
      </tr>
       <tr>
-        <td>zrotation</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The angle to rotate around the z-axis (in degrees °).</td>
+        <td><span class="notranslate">zrotation</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The angle to rotate around the z-axis (in degrees °).</span></td>
      </tr>
       <tr>
-        <td>xscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x scale amount.</td>
+        <td><span class="notranslate">xscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x scale amount.</span></td>
      </tr>
       <tr>
-        <td>yscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y scale amount.</td>
+        <td><span class="notranslate">yscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y scale amount.</span></td>
      </tr>
       <tr>
-        <td>zscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z scale amount.</td>
+        <td><span class="notranslate">zscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z scale amount.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">t_matrix = matrix_build(x, y, 0, 0, 90, 0, 1, 2, 1);</p>
-  <p>The above code will build a new matrix transform and store the resulting matrix index in the variable &quot;t_matrix&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、新しい行列変換を構築し、結果の行列インデックスを変数「t_matrix」に格納します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
-        <div style="float:right">Next: <a href="matrix_multiply.htm">matrix_multiply</a></div>
+        <div style="float:left">戻る<a href="Matrix_Functions.htm">マトリクス機能</a></div>
+        <div style="float:right">次のページ <a href="matrix_multiply.htm"><span class="notranslate">matrix_multiply</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_build

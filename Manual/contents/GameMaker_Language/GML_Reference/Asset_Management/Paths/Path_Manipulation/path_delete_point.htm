@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_delete_point</title>
+  <title>パス削除ポイント</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_delete_point" />
   <meta name="rh-index-keywords" content="path_delete_point" />
@@ -14,35 +14,35 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_delete_point</h1>
-  <p>With this function you can remove a point from the specified path. Path points are numbered from 0 so the first point is always the 0th point and the last path point will be <a href="../path_get_number.htm"><span class="inline">path_get_number()</span></a> - 1. If you call this function on a path asset, <strong>then the removal of the point will be permanent</strong> and all instances assigned the path in the future will be missing the point that was removed. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>パス削除ポイント</h1>
+  <p>この関数を使うと、指定した<span class="notranslate">path</span> からポイントを削除することができます。<span class="notranslate">Path</span> ポイントには 0 から番号が振られているので、最初のポイントは常に 0 番目のポイントになり、最後の<span class="notranslate">path</span> ポイントは <a href="../path_get_number.htm"><span class="inline">path_get_number()</span></a>- 1.<span class="notranslate">path</span> <span class="notranslate">asset</span> でこの関数を呼び出すと、<strong>ポイントの削除は永久に</strong>続き、将来その<span class="notranslate">path</span> を割り当てられたすべてのインスタンスには、削除されたポイントがなくなります。これが必要でない場合は、 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使って、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出す必要があります（不要になったら <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すことを忘れないでください）。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">path_delete_point(ind, n);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to delete a point from.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path">パスアセット</span></td>
+        <td><span class="notranslate">The index of the path to delete a point from.</span></td>
       </tr>
       <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The defining point to delete.</td>
+        <td><span class="notranslate">n</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The defining point to delete.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _col = true;<br />
     while (_col)<br />
     {<br />
@@ -62,18 +62,18 @@
         }<br />
         else _col = false;<br />
     }</p>
-  <p>The above code generates a loop that checks the points on a backwards from the end for a collision with the given object. If a collision is found, a path point is deleted, until there is no collision, or the path is only 2 points long.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、与えられた<span class="notranslate">loop</span> と衝突していないか、端から逆算して点をチェックする<span class="notranslate">object</span> を生成します。衝突が見つかったら、<span class="notranslate">path</span> の点が削除され、衝突がなくなるか、<span class="notranslate">path</span> の長さが 2 点だけになるまで続きます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_clear_points.htm">path_clear_points</a></div>
+        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ <a href="path_clear_points.htm"><span class="notranslate">path_clear_points</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_delete_point

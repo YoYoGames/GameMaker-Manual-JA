@@ -6,7 +6,7 @@
   <title>object_get_visible</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_get_visible" />
   <meta name="rh-index-keywords" content="object_get_visible" />
@@ -16,43 +16,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>object_get_visible</h1>
-  <p>This function will tell you whether the object you are checking has been flagged as &quot;visible&quot; (runs its draw event) or not (does not run its draw event). Please note that this is not an instance function! So, you can have a visible object and an invisible instance of the same object and vice-versa. You can set an individual instances visibility using the <a href="../Instances/Instance_Variables/visible.htm"><span class="inline">visible</span></a> instance variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、チェックしている<span class="notranslate">object</span> が、&quot;visible&quot;（描画イベントを実行する）と判定されたのか、そうでない（描画イベントを実行しない）のか、教えてくれます。これはインスタンス関数ではないことに注意してください!<span class="notranslate">object</span> したがって、同じ<span class="notranslate">object</span> の可視インスタンスと不可視インスタンスを持つことができますし、その逆も可能です。個々のインスタンスの可視性を設定するには <a href="../Instances/Instance_Variables/visible.htm"><span class="inline">visible</span></a>インスタンス変数で指定します。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">object_get_visible(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The index of the object to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (!visible) &amp;&amp; (object_get_visible(object_index))<br />
     {<br />
         visible = true;<br />
     }</p>
-  <p>The above code will check the instance running it to see if it is visible or not as well as check the object index of the instance to see if it is flagged as visible or not. If the instance is <i>not</i> visible yet the object index is flagged as on, it will set &quot;visible&quot; to true for that instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、実行中のインスタンスが可視状態かどうかを確認すると同時に、インスタンスの<span class="notranslate">object</span> インデックスをチェックして、可視状態であるとのフラグが立っているかどうかも確認します。インスタンスが表示されて<i>いないにも</i>かかわらず、<span class="notranslate">object</span> インデックスがオンになっている場合、そのインスタンスに対して &quot;visible&quot; を true に設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_physics.htm">object_get_physics</a></div>
+        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ <a href="object_get_physics.htm"><span class="notranslate">object_get_physics</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_visible

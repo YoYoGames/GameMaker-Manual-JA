@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Android</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>アンドロイド</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that details the Android Game Options" />
   <meta name="rh-index-keywords" content="Game Options - Android" />
@@ -14,124 +14,129 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Android</span> Game Options</h1>
-  <p>This section outlines the different options available to you that control how your Android game projects will be compiled. The different sections are:</p>
-  <h2 id="general">General</h2>
-  <p><img alt="General Android Game Options 1" class="center" src="../../assets/Images/Settings/Android_General1_Options.png" />The first part of the <strong>General </strong>section is dedicated to the <strong>Product Information</strong> and the <strong>Build Settings</strong>. You should fill in the Product information, which includes the projects <strong>Display Name</strong>, its Package information, which consists of a <strong>Domain</strong>, <strong>Company </strong>and <strong>Product</strong>. The package information can only be made up of letters from A-Z and numbers 0-9, with no symbols or other special characters at all, nor should it have uppercase characters. These details will then be used to generate a Package ID with the format &quot;<span class="inline">com.company.myappname</span>&quot;.</p>
-  <p>You then need to set the <strong>Build Tools</strong> as well as the <strong>Target</strong>, <strong>Minimum </strong>and <strong>Compile SDK</strong> versions.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> There is also an option for the &quot;<strong>Support Library</strong>&quot; version to use. From <span data-keyref="GameMaker Name">GameMaker</span> v2.2.4 and above, this is no longer required and any values used here will be ignored. The setting is maintained for use with legacy projects that require an earlier runtime than 2.2.4.</p>
-  <p>The Build Tools (and Support Library if required) are used when <span data-keyref="GameMaker Name">GameMaker</span> builds your game for the Android target and should be set to appropriate values based on the tools you have installed using Android Studio.</p>
+  <h1>Androidゲームオプション</h1>
+  <p>このセクションでは、<span class="notranslate">Android</span> ゲームプロジェクトのコンパイル方法を制御するさまざまなオプションの概要を説明します。各セクションの内容は以下の通りです。</p>
+  <p> </p>
+  <h2>一般</h2>
+  <p><img><strong>General </strong>セクションの最初の部分は、<strong>Product Informationと</strong> <strong>Build Settings</strong>専用です。製品情報には、プロジェクトの<strong>表示名</strong>、パッケージ情報（<strong>ドメイン</strong>、<strong>会社 </strong>名、<strong>製品</strong>名）を入力する必要があります。パッケージ情報は、A-Zの文字と0-9の数字のみで構成され、記号やその他の特殊文字は一切使用できず、大文字も使用できません。これらの情報は&quot;<span class="inline">com.company.myappname</span>&quot;というフォーマットでパッケージIDを生成するために使用されます。</p>
+  <p>その後、<strong>Build Toolsと</strong> <strong>Target</strong>、<strong>Minimum </strong>、<strong>Compileの各SDKの</strong>バージョンを設定する必要があります。</p>
+  <p class="note"><strong>注</strong>：「<strong>サポートライブラリ</strong>」のバージョンを使用するかどうかのオプションもあります。<span data-keyref="GameMaker Name">GameMaker</span>v2.2.4以降では、この設定は不要になり、ここで使用した値は無視されます。この設定は、2.2.4より前の<span class="notranslate">runtime</span> を必要とするレガシープロジェクトで使用するために維持されています。</p>
+  <p>Build Tools (および必要に応じて Support Library) は、<span data-keyref="GameMaker Name">GameMaker</span>が Android ターゲット用にゲームをビルドする際に使用されます。<span class="notranslate">Android</span> Studio を使用してインストールしたツールに基づいて、適切な値に設定する必要があります。</p>
   <ul class="colour">
-    <li>The <strong>Target SDK</strong> indicates that you have tested your app on (up to and including) the version you specify here. This is simply to give the Android OS an idea of how it should handle your app in terms of OS features. For all practical purposes, most apps are going to want to set Target SDK to the latest released version of the API (as used by the Compile SDK setting). This will ensure your app looks as good as possible on the most recent Android devices. Note that from November 2019 Google has made API level 28 the required target.</li>
-    <li>The <strong>Minimum SDK</strong> version is the minimum API level that will run your project. From November 2019 Google has made API level 16 the absolute minimum required, but if you add extensions then they may require a higher minimum API level.</li>
-    <li>The <strong>Compile SDK</strong> version is the version of the API that the project is compiled against. This means you can use Android API features included in that version of the API. If you try and use API 16 features - for example - but set Compile SDK 15, then you will get a compilation error. However, if you set the Compile SDK to 28 then you can still run the app on an API 26 device (as well as all other previous versions too).</li>
+    <li><strong>Target SDK</strong>は、ここで指定されたバージョンでアプリをテストしたことを示します（最大で）。これは、<span class="notranslate">Android</span> OS が、OS の機能の観点からアプリをどのように扱うべきかを示すためのものです。ほとんどのアプリは、実用上、Target SDK を最新リリースバージョンの API（Compile SDK 設定で使用される）に設定することをお勧めします。これにより、アプリは最新の<span class="notranslate">Android</span> デバイスで可能な限り良好に表示されるようになります。なお、2019年11月よりGoogleはAPIレベル28を必須ターゲットとしました。</li>
+    <li><strong>Minimum SDKの</strong>バージョンは、プロジェクトを実行するための最小のAPIレベルです。2019年11月よりGoogleはAPIレベル16を絶対必要最低限としましたが、<span class="notranslate">extensions</span> を追加する場合は、より高い最低APIレベルを要求される可能性があります。</li>
+    <li><strong>コンパイルSDKの</strong>バージョンは、プロジェクトがコンパイルされるAPIのバージョンです。これは、そのバージョンのAPIに含まれる、<span class="notranslate">Android</span> API機能を使用できることを意味します。例えば、API 16の機能を使おうとして、コンパイルSDKを15に設定すると、コンパイルエラーになります。しかし、コンパイルSDKを28に設定すれば、API 26デバイス上でアプリを実行することができます（他のすべての以前のバージョンも同様です）。</li>
   </ul>
-  <p>You can select from one of the predefined target settings by clicking on the <strong>Pre-populate SDK</strong> values to chosen API level button, which will open a list of different APIs to choose from. Selecting any one of them will populate all the SDK files with appropriate values which you can then use or edit as required.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> You must have installed the appropriate APIs in the Android SDK Manager or through Android Studio for your projects to compile correctly.</p>
+  <p>選択したAPIレベルに<strong>SDK</strong>値を<strong>事前入力</strong>する]ボタンをクリックすると、事前定義されたターゲット設定の1つを選択することができます。これらのいずれかを選択すると、すべてのSDKファイルに適切な値が入力され、必要に応じて使用または編集することができます。</p>
+  <p class="note"><strong>注</strong>：プロジェクトを正しくコンパイルするためには、<span class="notranslate">Android</span> SDK Manager または<span class="notranslate">Android</span> Studio から適切な API をインストールする必要があります。</p>
+  <p><img alt="General Android Game Options 1" class="center" src="../../assets/Images/Settings/Android_General1_Options.png" /></p>
+  <p><strong>General</strong>セクションの2番目の部分は、ビルドするCPUアーキテクチャをカバーしており、以下のオプションが利用可能です（これらすべてを選択することも、必要なものだけを選択することもできますが、それぞれがコンパイルされたapkの最終サイズに追加されることに注意してください）。</p>
+  <ul class="Disc">
+    <li>ARMV5用にビルドする（デフォルトでチェックが入っています）</li>
+    <li>ARMV7用にビルドする（デフォルトでチェックが入っています）</li>
+    <li>x86用にビルドする（デフォルトでチェックが入っています）</li>
+    <li>Mips用にビルドする（デフォルトでチェックが入っています）</li>
+    <li>ARM64用にビルド</li>
+    <li>x86_64用ビルド</li>
+  </ul>
+  <p>設定後、最高のユーザーエクスペリエンスのために、ゲームを実行するさまざまな方向を選択することができます。選択可能なオプションは以下の通りです。</p>
+  <ul class="Disc">
+    <li>ポートレート</li>
+    <li>ポートレート・フリップ</li>
+    <li>風景</li>
+    <li>風景を切り取ったような</li>
+  </ul>
+  <p>最後に、以下のような雑多なオプションがあります。</p>
+  <ul class="colour">
+    <li><strong>Bluetooth/iCadeのサポートを有効に</strong>する。ゲームプロジェクトにBluetoothまたはiCadeゲームパッドのサポートを追加します。デフォルトではオンになっています。</li>
+    <li><strong>Lint</strong> コード解析を実行する。このオプションにフラグを立てると、ビルドツールはビルド時にプロジェクトのlintコード解析を実行し、より詳細なエラーチェックを行い、プロジェクトのコンパイル時に出力ウィンドウに多くの情報を表示します（LOGファイルも作成され、<a href="../../Introduction/The_Output_Window.htm">出力ウィンドウには</a>コンパイル終了時にファイルへの<span class="notranslate">path</span> が表示されます）。lint解析でエラーと判定されたものすべてが、必ずしもゲームに問題があるわけではないことに注意してください。この機能を有効にすると、オフのときは問題なくコンパイルして実行できるのに、コンパイルできなくなることがあります。基本的に、これは<span class="notranslate">debugging</span> でのみ有効で、デフォルトではこのオプションはオフになっています。</li>
+    <li><strong>インストール先</strong>。ここでは、ゲームのデフォルトのインストール先を設定することができます。<strong>自動</strong>]に設定すると、ユーザーがデバイスで選択した場所にインストールされます。[<strong>外部を優先</strong>]に設定すると、常にデバイスの外部ストレージにゲームをインストールしようとします。</li>
+  </ul>
+  <p>また、ここでAndroid<strong>Sleep Marginを</strong>設定することができます。このオプションは、特定のシステムでゲームを実行する際のスタッタリングを軽減することに関連しています。基本的に、ゲームの実行速度が<span class="notranslate">room</span> の速度より速い場合、<span data-keyref="GameMaker Name">GameMaker</span>は残りの時間「スリープ」しますが、このスリープはかなり不正確な場合があり、必要以上に長くスリープしてしまい、フレームに時間がかかり、スタッタリングの原因となることがよくあります。この問題を回避するには、スリープ時間を短くして、残りの時間を<span class="notranslate">loop</span> に固定するとより正確になります。ただし、<span class="notranslate">loop</span> に固定すると、CPU 使用率が上昇し、CPU 温度が上昇し、デバイスのバッテリー使用量が増えるという問題があります。デフォルトでは、この値は4に設定されており、99.99%の場合はこれで問題ありませんが、ローエンドのデバイスや多くのバックグラウンドプロセスを実行しているデバイスでは、これは理想的なソリューションではなく、5から10までの値が必要な場合があります。ただし、これはデバイス固有の設定であり、あなたのビルドデバイスで動作するものが、他のユーザーにとって適切でない可能性があることに注意してください。</p>
+  <p> </p>
+  <h2>アダプティブアイコン</h2>
+  <p><img>Android 8.0 (API level 26) では、ゲーム用の<strong>ランチャーアイコンに適応性が</strong>導入され、これらのアイコンは、異なるデバイスモデル間でさまざまな形状を表示することができます。これに対処するため、アイコンのサイズを変えて表示するために、前景画像と背景画像を多数用意する必要があります。これらのアイコンサイズは</p>
+  <ul class="Disc">
+    <li>81x81ピクセル（LDPI）</li>
+    <li>108x108ピクセル MDPI)</li>
+    <li>162x162ピクセル（HDPI）</li>
+    <li>216×216ピクセル（XHDPI）</li>
+    <li>324x324ピクセル（XXHDPI）</li>
+    <li>432x432ピクセル（XXXHDPI）</li>
+  </ul>
+  <p>前景と背景の画像をそれぞれ個別に提供することもできますし、「ファイルからアイコンを生成する」を選択することもできます。これは、<span data-keyref="GameMaker Name">GameMakerが</span>ベースファイル（XXXHDPI）から必要なアイコンイメージを生成することを意味します。前景と背景の画像をそれぞれ1つずつ用意し、Generateというボタンをクリックすると、アイコンが作成されます。画像はすべて <span class="inline">*.png</span> 形式である必要があります。</p>
+  <p>アダプティブアイコンがどのデバイスでもマスクされる可能性があることを理解することが重要です。そのため、「<strong>アダプティブアイコンのプレビュー</strong>」メニューから、マスクされた状態でどのように見えるかを確認するオプションも用意されています。</p>
+  <p><img>これは、選択したマスクで<em>どの </em>ようにアイコンが見えるかの単なるプレビューであり、アイコンのエクスポートや表示方法は、ゲームが実行されるデバイスやOSに依存するため、この設定は影響を与えないことに注意してください。また、これらのアイコンは、<a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクト画像生成</a>ツールを使用した画像生成の一部として作成されたもの<strong>ではない</strong>ことに注意してください。</p>
+  <p> </p>
+  <h2>グラフィック</h2>
+  <p><img>ここでは、ゲームの表示方法に関する以下の詳細を変更することができ、以下のオプションが利用可能です。</p>
+  <ul class="colour">
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん">線形補間を</a>オンにし、基本的にピクセルを「平滑化」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためにはオンのままにしておく方が良いでしょう。これはデフォルトでオンになっています。</li>
+    <li><strong>画面の色深度</strong>。レンダリングの色深度を16ビットまたは24ビットに設定します。24bitに設定すると、一部の古いデバイスとの互換性に影響があり、また必要な<em>ashmem </em>（AmazonFireデバイスの共有メモリ）が増えます。</li>
+    <li><strong>デバイスのサポート</strong>。このオプションは、専用GPUを搭載したデバイスのみをサポートするか、すべてのデバイスをサポートするかを設定します。基本的に、アルファブレンディング、加算ブレンディング、サーフェスなどの高度な描画機能を持つゲームは、GPUを持つデバイスに限定すべきです。そうしないと、古いデバイスでのグラフィックエラーやクラッシュにより、ゲームに対するネガティブなコメントや低い評価を受ける危険性があります。</li>
+    <li><strong>拡大縮小</strong>。ここで、描画キャンバスをデバイスの画面内のアスペクト比を維持して拡大縮小する（画面に合わせて縁に「パディング」を追加する）か、描画キャンバスをデバイスの画面に合わせて引き伸ばすかを選択できます。</li>
+  </ul>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトの（そして最も互換性のある）サイズは 2048x2048 ですが、256x256 から 8192x8192 までの間で選択することができます。<strong>Preview </strong>と書かれたボタンがあり、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成して、ウィンドウを開き、どのように見えるかを確認することができます。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なるのを防ぎたい場合に、非常に便利な機能です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、ブラウザやデバイスによってゲームの互換性が失われることに注意してください。</p>
+  <p> </p>
+  <h2>アイコンについて</h2>
+  <p><img>このセクションでは、プロジェクトで必要となる様々なストアページやデバイス用の<strong>アイコン </strong>画像を追加することができます。すべてのアイコン画像は、24bit <span class="inline">*.png</span> ファイルとして、指定された適切なサイズで作成する必要があります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができることは特筆すべきことです。このツールを使用する場合、作成された画像があなたの要求するものであることを確認するために、修正する必要があります。このツールは、画像だけでなくアイコンも生成します（以下のセクションを参照）。</p>
+  <p> </p>
+  <h2>画像</h2>
+  <p><img>ここでは、全画面表示に設定されていないスプラッシュ画面の背景として使用する<strong>Border Colourを</strong>設定できます。また、最終的なゲームファイルには、<em>ランドスケープモードと </em> <em>ポートレート </em>モードの両方で<strong>スプラッシュスクリーンを</strong>追加できます。この画面は24bit <span class="inline">*.png</span> ファイルで、ゲームの最初の<span class="notranslate">room</span> (またはビュー) と同じサイズにすることを推奨します。スプラッシュスクリーンを特定の時間表示する必要がある場合は、ここで0～10秒の範囲で設定することもできます（デフォルトの時間0は、<span class="notranslate">asset</span> のロード時間だけ表示されることを意味します）。また、スプラッシュスクリーンの表示方法を以下のオプションから設定することができます。</p>
+  <ul class="colour">
+    <li><strong>アスペクト比を維持</strong>する。デバイスの画面と比較して画像のアスペクト比を維持し、必要に応じてエッジの周りに「パディング」を追加します。</li>
+    <li><strong>クロップ・トゥ・フィット(Crop To Fit</strong>)。デバイスの画面と1対1の画像を維持し、必要に応じてエッジをクロップ（またはパッド）します。</li>
+    <li><strong>引き伸ばします</strong>。デバイスの画面いっぱいに画像を引き伸ばします（表示される画像に歪みが生じる場合があります）。</li>
+  </ul>
+  <p>最後に、<span class="notranslate">Android</span> TV デバイスでゲームの<strong>バナー画像を</strong>設定することができます。これも 24bit<span class="inline">*.png</span>.</p>
+  <p> </p>
+  <h2>パッケージング</h2>
   <p><img alt="Android General Options Part 2" class="center" src="../../assets/Images/Settings/Android_General2_Options.png" /></p>
-  <p>The second part of the <strong>General</strong> section covers the CPU Architectures to build for, with the following options available (you can select all of them or only those that you require, but note that each one will add to the final size of the compiled apk):</p>
-  <ul class="Disc">
-    <li>Build for Armv7</li>
-    <li>Build for Arm64 (Checked by default)</li>
-    <li>Build for x86_64</li>
-  </ul>
-  <p>After setting that up you can select the different Orientations that your game can be run on for the best user experience. The available options are:</p>
-  <ul class="Disc">
-    <li>Portrait</li>
-    <li>Portrait-flipped</li>
-    <li>Landscape</li>
-    <li>Landscape-flipped</li>
-  </ul>
-  <p>Finally you have the following miscellaneous options:</p>
+  <p><span class="notranslate">Android</span> のゲームに Google Play を利用する特徴の1つは、ゲームの<strong>ライセンスを </strong>取得できることです。これは、ゲームをGoogleが管理し、Googleのマーケットを通じてダウンロードした人だけがゲームをプレイできるようにすることで、違法コピーの流通を防ぐことを意味します。</p>
+  <p>この機能をゲーム内で有効にするには、<strong>Google Licencing Public</strong> Keyと書かれたボックスに、あなたの<strong>Public Keyを</strong>コピーする必要があります。このライセンスは、<a href="https://play.google.com/apps/publish">Google Playの開発者</a>ページにアクセスし、編集したいゲームを選択することで確認できます。ゲームプロファイルページで、&quot;<em>サービスとAPI</em>&quot;というタイトルのセクションまでスクロールダウンすると、この機能を有効にするために必要なパブリックキーが見つかるはずです。</p>
+  <p>有効化されると、ゲームを所有する権限のない人がゲームをプレイしようとすると、ポップアップ メッセージ ボックスが表示され、ライセンスがデバイスに見つからないことが通知され、再度テストするか、ゲームを終了するかの選択肢が表示されるようになります。</p>
+  <p>Licensingのもう一つの特徴は、あなたのゲームが<strong>APK Expansionsを</strong>使用できることです。これは、Google Play（およびGoogle Playのみ）が課した最大アプリケーションサイズ50MBを回避する方法です。これは、あなたのゲームを2つの部分に分けて作成します。小さな <span class="inline">*.apk</span> ファイルと、あなたのすべてのゲーム<span class="notranslate">assets</span> を保持する大きな <span class="inline">*.zip</span> ファイルの両方が、ストアにアップロードされます。ユーザーが最初にゲームを実行するとき、zipがダウンロードされ、解凍されます。このオプションの詳細については、<a href="https://help.yoyogames.com/hc/en-us/articles/115002418632-Android-Using-APK-Expansions-With-Google-Play">こちらを</a>ご覧ください。</p>
+  <p>また、Google Dynamic<span class="notranslate">Asset</span> Delivery を使用して、<span class="inline">*.aab</span> のエクスポートオプションを使用すると、1GB もの大きなアプリバンドルを作成することができます。これは、すべてのゲーム<span class="notranslate">assets</span> を「インストール時」<span class="notranslate">assets</span> としてパッケージ化し、アプリ本体と一緒にインストールするものです。この機能の詳細については、<a href="https://developer.android.com/guide/playcore/asset-delivery" title="Asset Delivery">こちらを</a>ご覧ください。</p>
+  <p>最後に、最終的なアプリのパッケージを<strong>Android TV</strong>ゲームとして用意するオプションがあります（<a href="https://developer.android.com/training/tv/games/">Android TVガイドラインに</a>準拠する場合のみ、このチェックボックスにチェックを入れてください）。</p>
+  <p> </p>
+  <h2>アクセス権</h2>
+  <p><img>このタブでは、<span class="notranslate">Android</span> Manifest 内でゲームが要求するパーミッションの一部を変更することができます。<span data-keyref="GameMaker Name">GameMakerは</span>、ゲームが使用する機能に基づいて、必要に応じて自動的にパーミッションを割り当てますが、正しく割り当てられていないパーミッションが必要な場合があります（例えば、カスタム<span class="notranslate">extensions</span> ）。その場合は、必要なパーミッションのボックスにチェックを入れてください。</p>
+  <p>以下のリストは、利用可能な許可の概要を示しています。</p>
   <ul class="colour">
-    <li><strong>Enable Bluetooth/iCade support</strong>: This will add support for Bluetooth or iCade gamepads to your game project. This is on by default.</li>
-    <li><strong>Run Lint Code Analysis</strong>: When this option is flagged, the build tools will run a lint code analysis on the project as it builds, giving a more in-depth error check and showing more information in the output window as the project compiles (a LOG file will be created too, with the path to the file shown at the end of compiling in the <a href="../../Introduction/The_Output_Window.htm">Output Window</a>). Note that not everything flagged by lint analysis as an error is necessarily problematic for your game, and having this enabled may mean that your game no longer compiles, even though when it is off, it will compile and run fine. Essentially this is only for debugging, and the option is off by default.</li>
-    <li><strong>Install Location</strong>: Here you can set the default Install Location for your game. This can either be set to <strong>Automatic</strong>, in which case the game will be installed to the location chosen by the user on their device, or it can be set to <strong>Prefer External</strong> which will always try to install the game to the external storage of the device.</li>
+    <li><span class="inline">WRITE_EXTERNAL_STORAGE</span>:外部ストレージへの書き込みを許可します。</li>
+    <li><span class="inline">READ_PHONE_STATE</span>:電話の状態への読み取り専用アクセスを許可する。</li>
+    <li><span class="inline">ACCESS_NETWORK_STATE</span>:ネットワークに関する情報へのアクセスをゲームに許可する。</li>
+    <li><span class="inline">INTERNET</span>:ネットワークソケットを開くことを許可する。</li>
+    <li><span class="inline">BLUETOOTH</span>:ペアリングされたBluetooth機器との接続を許可します。</li>
+    <li><span class="inline">RECORD_AUDIO</span>:マイクからの音声入力を録音できるようにします。</li>
   </ul>
-  <p>You can also set the Android <strong>Sleep Margin</strong> here. This option is related to reducing stuttering when running your game on specific systems. Basically, if your game is running faster than your game speed <span data-keyref="GameMaker Name">GameMaker</span> will &quot;sleep&quot; for the remaining time, but this sleep can be quite inaccurate and you can often end of sleeping for longer than necessary, causing your frame to take longer which causes stuttering. To get around this we can sleep for less time, then sit in a tight loop for the remainder of the time to make it more accurate - although the problem with sitting in a loop is that it causes CPU usage to increase, which in turn can cause your CPU temperatures to rise and your device to use more battery. By default, this value is set to 4, and in 99.99% of the cases you&#39;ll be fine with this, but for low end devices or for devices with a lot of background processes running this may not be an ideal solution and a value of 5 up to 10 may be required. Note though that this is very much a device specific configuration and what works on your build device may not be appropriate for another user, and as such if in doubt leave it set to 4.</p>
-  <p> </p>
-  <h2 id="adaptive_icons">Adaptive Icons</h2>
-  <p><img alt="Android Adaptive Icons Options" class="center" src="../../assets/Images/Settings/Android_AdaptiveIcons_Options.png" />Android 8.0 (API level 26) introduced <strong>adaptive launcher icons</strong> for your games, and these icons can display a variety of shapes across different device models. To deal with this, you are required to supply a number of foreground and background images for your icons to be displayed at different sizes. These icon sizes are:</p>
-  <ul class="Disc">
-    <li>81x81 pixels (LDPI)</li>
-    <li>108x108 pixels MDPI)</li>
-    <li>162x162 pixels (HDPI)</li>
-    <li>216x216 pixels (XHDPI)</li>
-    <li>324x324 pixels (XXHDPI)</li>
-    <li>432x432 pixels (XXXHDPI)</li>
-  </ul>
-  <p>You can supply each forground and background image individually, or you can choose to Generate Icons From File. This means that <span data-keyref="GameMaker Name">GameMaker</span> will generate the required icon images from a base (XXXHDPI) file. You need to supply one image each for the foreground and background and then click the button labeled Generate, and the Icons will be created for you. Images should all be in <span class="inline">*.png</span> format.</p>
-  <p>It&#39;s important to understand that your adaptive icons may be masked on any given device and so you also have the option to see how they&#39;ll look along with these masks from the <strong>Preview Adaptive Icons</strong> menu:</p>
-  <p><img alt="Android Adaptive Mask Preview" class="center" src="../../assets/Images/Settings/Android_AdaptiveIcons_Masks.gif" />Note that this is simply a preview of how the icon <em>could </em>look with the selected mask, and the setting will not affect how the icons are exported and displayed, as that is up to the device and OS the game will be run on. Also note that these icons are <strong>not</strong> created for you as part of the image generation done when using the <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool.</p>
-  <p> </p>
-  <h2 id="graphics">Graphics</h2>
-  <p><img alt="Android Graphics Options" class="center" src="../../assets/Images/Settings/Android_Graphics_Options.png" />Here you can change the following details related to how your game will be displayed, with the following options are available:</p>
+  <p class="note"><strong>注意</strong>：もし、これらが必要かどうかわからない場合は、デフォルトでチェックされていない状態にして、<span data-keyref="GameMaker Name">GameMakerに</span>ゲームのパーミッションを任せるとよいでしょう。</p>
+  <p><span class="notranslate">Android</span> Permissions セクションには、 <span class="inline">Androidmanifest.xml</span> の<strong>Android アプリケーションタグに</strong>パーミッションを注入できるエリアもあります。 利用可能なタグの完全なリストは、<span class="notranslate">Android</span> のドキュメントで確認できます。</p>
   <ul class="colour">
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="glossterm" data-glossterm="linear interpolation">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is on by default.</li>
-    <li><strong>Screen Colour Depth</strong>: This can be used to set the colour depth for rendering to either 16bit or 24bit. This will affect the compatibility with some older devices if it is set to 24bit, and will also increase the <em>ashmem </em>that is needed (this is the shared memory on AmazonFire devices).</li>
-    <li><strong>Device Support</strong>: This option will set whether to support only devices that have a dedicated GPU, or all devices. Basically, if your game has any advanced drawing functions like alpha blending, additive blending, surfaces, etc... you should limit it to those devices that have a GPU otherwise you run the risk of getting negative comments and poor rating for your game due to graphical errors or crashes on older devices.</li>
-    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit the device screen.</li>
+    <li><a href="https://developer.android.com/guide/topics/manifest/application-element">Android開発者。アプリケーションタグ</a></li>
   </ul>
-  <p>Finally there is the option to set the size of the <a class="glossterm" data-glossterm="texture page" href="macOS.htm#">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There is also a button marked <strong>Preview </strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a data-xref="{title}" href="../Texture_Information/Texture_Pages.htm">Texture Pages</a>.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
-  <p> </p>
-  <h2 id="icons">Icons</h2>
-  <p><img alt="Android Icons Options" class="center" src="../../assets/Images/Settings/Android_Icons_Options.png" />This section permits you to add the various <strong>Icon </strong>images that your project will need for the different store pages and devices. All icon images should be created as 24bit <span class="inline">*.png</span> files of the appropriate sizes given.</p>
-  <p>It is worth noting that <span data-keyref="GameMaker Name">GameMaker</span> has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require. The tool will generate Icons as well as Images (see the section below).</p>
-  <p> </p>
-  <h2 id="images">Images</h2>
-  <p><img alt="Android Images Options" class="center" src="../../assets/Images/Settings/Android_Images_Options.png" />Here you can set the <strong>Border Colour</strong> that will be used as the background for splash screens that are not set to fill the full screen. You can also add <strong>Splash Screens</strong> to your final game file, for both <em>landscape </em>and <em>portrait </em>modes, which will be shown while the game loads on the device. This screen should be a 24bit <span class="inline">*.png</span> file, and is recommended to be the same size as the first room (or view) of your game. If you require that the splash screen be shown for a specific time then you can also set it here from 0 to 10 seconds (the default time of 0 means that it will only show for the duration of the asset loading). You can also set how the splash screen should be displayed from the following options:</p>
-  <ul class="colour">
-    <li><strong>Keep Aspect Ratio</strong>: This will maintain the aspect ratio of the image compared to the device screen, adding &quot;padding&quot; around the edges where required.</li>
-    <li><strong>Crop To Fit</strong>: This will keep the image 1:1 with the device screen and crop (or pad) the edges as required.</li>
-    <li><strong>Stretch</strong>: This will stretch the image to fill the device screen (and may distort the image shown).</li>
-  </ul>
-  <p>Finally you can set the <strong>Banner Image</strong> for the game on Android TV devices, which is also a 24bit <span class="inline">*.png</span>.</p>
-  <p> </p>
-  <h2 id="packaging">Packaging</h2>
-  <p><img alt="Android Packaging Options" class="center" src="../../assets/Images/Settings/Android_Packaging_Options.png" /></p>
-  <h3 id="proguard">Proguard</h3>
-  <p>Here you can enable &quot;<strong>minifyEnabled</strong>&quot; and &quot;<strong>shrinkResources</strong>&quot; for Proguard to reduce your APK file size.</p>
-  <p>&quot;<strong>minifyEnabled</strong>&quot; removes unnecessary code from your final executable, and &quot;<strong>shrinkResources</strong>&quot; removes any resources that become unreferenced after minifying, hence it&#39;s dependent on the former option being enabled.</p>
-  <p>See the sections &quot;<strong>Shrink your code</strong>&quot; and &quot;<strong>Shrink your resources</strong>&quot; <a href="https://developer.android.com/studio/build/shrink-code">on Android Developers</a>.</p>
-  <h3 id="google">Google</h3>
-  <p>One of the features of using Google Play for your Android games is the ability to <strong>licence </strong>your games. This means that your games will be controlled by Google so that only people that have downloaded it through their market will be able to play the game, thus avoiding illegal copies of your product from getting distributed.</p>
-  <p>To activate this function in your game, you need to copy your <strong>Public Key</strong> into the box labelled <strong>Google Licencing Public Key</strong>. This licence can be found by going to your <a href="https://play.google.com/apps/publish">Google Play Developers Page</a> and then selecting the game you wish to edit. Once on the game profile page, scroll down to the section titled &quot;<em>Services &amp; APIs</em>&quot; and there you should find the Public key that is needed for this functionality to be enabled.</p>
-  <p>Once activated, if anyone who is not authorised to posses your game tries to play it, they will be shown a pop-up message box that will inform them that the licence cannot be found on their device, and then give them the option to retry and test again, or exit the game.</p>
-  <p>Another feature of Licensing is that your game can use <strong>APK Expansions</strong>. This is a way to bypass the 50MB maximum application size imposed by Google Play (and only Google Play). It will create your game in two parts: a small <span class="inline">*.apk</span> file and a larger <span class="inline">*.zip</span> file which will hold all your games assets, both of which are uploaded to the store. When the user first runs your game, the zip will be downloaded and unpacked. You can find further details of this option <a href="https://help.yoyogames.com/hc/en-us/articles/115002418632-Android-Using-APK-Expansions-With-Google-Play">here</a>.</p>
-  <p>You can also use Google Dynamic Asset Delivery to create app bundles as large as 1GB when using the <span class="inline">*.aab</span> export option. This packages all game assets as &quot;install-time&quot; assets which are installed alongside the app itself. You can find further details on this feature <a href="https://developer.android.com/guide/playcore/asset-delivery" title="Asset Delivery">here</a>.</p>
-  <h3 id="android_tv">Android TV</h3>
-  <p>Finally, you have the option to prepare the final app package as an <strong>Android TV</strong> game (you should only tick this if your game conforms to the <a href="https://developer.android.com/training/tv/games/">Android TV guidelines</a>).</p>
-  <p>You can also select whether your game <a href="https://developer.android.com/jetpack/androidx/releases/leanback">supports Leanback</a>. Enable this if you are using Leanback libraries.</p>
-  <h2 id="permissions">Permissions</h2>
-  <p><img alt="Android Permission Options" class="center" src="../../assets/Images/Settings/Android_Permissions_Options.png" />From this tab you can change some of the permissions that your game may request within the Android Manifest. <span data-keyref="GameMaker Name">GameMaker</span> will allocate permissions automatically as required based on the functions the game uses, however you may find you require a permission for your game that hasn&#39;t been correctly assigned (for example, when you use custom extensions) in which case tick the requisite permission box.</p>
-  <p>The list below outlines those permissions that are available:</p>
-  <ul class="colour">
-    <li><span class="inline">WRITE_EXTERNAL_STORAGE</span>: Will permit your game to write to external storage.</li>
-    <li><span class="inline">READ_PHONE_STATE</span>: Allow read only access to the phone state.</li>
-    <li><span class="inline">ACCESS_NETWORK_STATE</span>: Permit your game to access information about networks.</li>
-    <li><span class="inline">INTERNET</span>: Permit your game to open network sockets.</li>
-    <li><span class="inline">BLUETOOTH</span>: Will permit your game to connect to paired Bluetooth devices.</li>
-    <li><span class="inline">RECORD_AUDIO</span>: Will permit your game to record audio input from the microphone.</li>
-  </ul>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If you are not sure that you need these, you should probably just leave them un-checked by default and let <span data-keyref="GameMaker Name">GameMaker</span> deal with the permissions for your game.</p>
-  <p>The Android Permissions secton also has an area where you can inject permissions into the <strong>Android Application Tags</strong> in the <span class="inline">Androidmanifest.xml</span>. You can find a full list of available tags from the Android documentation here:</p>
-  <ul class="colour">
-    <li><a href="https://developer.android.com/guide/topics/manifest/application-element">Android Developer: Application Tags</a></li>
-  </ul>
-  <p>It is worth noting that for target API 28 and above, you will no longer be permitted to use any external web calls using &quot;<span class="inline">http</span>&quot; - &quot;<span class="inline">https</span>&quot; is required instead - unless you add the following tag:</p>
+  <p>ターゲットAPI 28以降では、以下のタグを追加しない限り、&quot;<span class="inline">http</span>&quot; を使った外部Webコールの使用は許可されません。代わりに &quot;<span class="inline">https</span>&quot; が必要です。</p>
   <p class="code">android:usesCleartextTraffic=&quot;true&quot;</p>
-  <p>Finally you can enable the <a href="https://developer.android.com/guide/topics/manifest/application-element#allowbackup">android:allowBackup</a> attribute.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h2>社会</h2>
+  <p><img>このセクションでは、<span class="notranslate">Android</span> ゲームでさまざまな<strong>ソーシャル </strong>機能を有効にするためのものです。以下のオプションが選択可能です。</p>
+  <ul class="colour">
+    <li><strong>Google - </strong> <strong>クラウド保存を有効に</strong>する。これをチェックすると、Google Cloud Savingが有効になり、<a href="../../Introduction/The_Marketplace.htm">Marketplaceから</a>関連する<span class="notranslate">extension</span> をダウンロードしてインストールするように指示されます。<a href="../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm">非同期関数の</a>ページのクラウド保存のセクションを参照してください。</li>
+    <li><strong>Google - Google サービス ID</strong>。アプリのGoogleサービスIDを入力することができます。</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="iOS.htm">iOS</a></div>
+        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次ページ：<a href="iOS.htm">iOS</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Android Game Options

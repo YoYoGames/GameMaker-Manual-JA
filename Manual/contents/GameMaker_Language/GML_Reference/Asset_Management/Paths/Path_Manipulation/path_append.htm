@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_append</title>
+  <title>パスアペンド</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_append" />
   <meta name="rh-index-keywords" content="path_append" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_append</h1>
-  <p>With this code you can append one path onto another one, effectively joining them together, and for this to work, both paths must previously exist. In general you would want to use this function on paths created using <span class="inline"><a href="path_add.htm">path_add()</a></span>, since if you use it on a path asset, <strong>it will permanently affect the path for instances in the game</strong> from the moment the function is used until the end of the game.</p>
-  <p class="note"><span class="note">NOTE</span> This will not remove the path being appended from the game. It is still there, only it now has no points in it and if you no longer wish to use it you should remove it with the function <span style="font-size:1px;"><a href="path_delete.htm"><span class="inline">path_delete()</span></a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>パスアペンド</h1>
+  <p>このコードを使用すると、1つの<span class="notranslate">path</span> を別のものに追加して、効果的に結合することができます。これが機能するためには、両方の<span class="notranslate">paths</span> が以前に存在する必要があります。一般に、この関数は <span class="inline"><a href="path_add.htm">path_add()</a></span> を使って作成した<span class="notranslate">paths</span> に対して使いたいものです。なぜなら、この関数を<span class="notranslate">path</span> <span class="notranslate">asset</span> に対して使うと、その関数を使った瞬間からゲームの終わりまで、<strong>ゲーム内のインスタンスの<span class="notranslate">path</span> に永久に</strong>影響を与えるからです。</p>
+  <p class="note"><span class="note">注意</span>この操作では、ゲームに追加された<span class="notranslate">path</span> は削除されません。これはまだ存在しますが、ポイントを持っていないだけです。 <span style="font-size:1px;"><a href="path_delete.htm"><span class="inline">path_delete()</span></a></span>.</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">path_append(index, path);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The new index of the path.</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">The new index of the path.</span></td>
      </tr>
       <tr>
-        <td>path</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path that will be appended to &#39;index&#39;.</td>
+        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">The index of the path that will be appended to &#39;index&#39;.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">path_append(mypath, mppath);<br />
     path_delete(mppath);</p>
-  <p>The above code appends the path data indexed in the variable &quot;mppath&quot; to the path indexed in the variable &quot;mypath&quot; and then deletes the &quot;mppath&quot; from memory.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、変数「mppath」にインデックスされた<span class="notranslate">path</span> のデータを、変数「mypath」にインデックスされた<span class="notranslate">path</span> に追加し、「mppath」をメモリから削除しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_assign.htm">path_assign</a></div>
+        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ <a href="path_assign.htm"><span class="notranslate">path_assign</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_append

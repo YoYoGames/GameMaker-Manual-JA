@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sequence_xscale</title>
+  <title>レイヤー・シーケンス・Xスケール</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_sequence_xscale" />
   <meta name="rh-index-keywords" content="layer_sequence_xscale" />
@@ -14,52 +14,52 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_xscale</h1>
-  <p>With this function you can set the X scale for the given sequence element. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a> along with the new scale to set on the X axis and the sequence will be scaled by this amount. A scale of 1 indicates no scaling (1:1), smaller values will scale down (0.5, for example, will half the width of the sequence), larger values will scale up and negative values will mirror the sequence about its origin <i>and</i> scale it unless the value used is exactly -1 (in which case the sequence is just mirrored about its origin with no scaling).</p>
-  <p>It is very important to note that applying <em>uneven</em> scaling (eg: scaling the X axis by 3 and the Y axis by 2) to sequence elements that contain any instance which uses <em>rotation</em>, <strong>may cause issues with the instance drawing, collisions, culling, and many other things</strong>. Basically, if your sequence relies on <em>any</em> instance properties then we do not recommend that you combine uneven scaling along with instance rotation.</p>
-  <p>Also note that you shouldn&#39;t change the <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> variables for any instances in a sequence that uses this function as they will be overwritten as soon as the sequence updates after calling the function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>レイヤー・シーケンス・Xスケール</h1>
+  <p>この関数を使用すると、指定された<span class="notranslate">sequence</span> 要素の X スケールを設定することができます。で返された<span class="notranslate">sequence</span> 要素の ID を指定します。 <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>または<a href="../General_Layer_Functions/General_Layer_Functions.htm">レイヤー要素関数の</a>いずれかによって、X軸に設定する新しいスケールとともに、<span class="notranslate">sequence</span> はこの量だけスケールされます。スケール 1 はスケーリングなし (1:1) を表し、小さい値はスケールダウン (例えば 0.5 は<span class="notranslate">sequence</span> の幅の半分)、大きい値はスケールアップ、負の値は<span class="notranslate">sequence</span> をその原点にミラー<i>リングして</i>スケーリングします (この場合<span class="notranslate">sequence</span> はその原点を中心にミラーリングされてスケーリングなし) が使用される値はちょうど -1 である。</p>
+  <p><em>回転を</em>使用するインスタンスを含む<span class="notranslate">sequence</span> 要素に<em>不均等な</em>スケーリング（例：X軸を3倍、Y軸を2倍）を適用すると、<strong>インスタンスの描画、衝突、カリング、その他</strong>様々な問題が発生することがありますので、非常に重要なポイントです。基本的に、<span class="notranslate">sequence</span> がインスタンスの<em>プロパティに</em>依存している場合、不均等なスケーリングとインスタンスの回転を組み合わせることはお勧めしません。</p>
+  <p>また、この関数を使用している<span class="notranslate">sequence</span> のインスタンスの変数 <span class="inline">image_xscale</span> ￭ <span class="inline">image_yscale</span> ￭ <span class="inline">image_angle</span> ￭ <span class="inline">x</span> ￭ <span class="inline">y</span> は、関数呼び出し後<span class="notranslate">sequence</span> が更新されると同時に上書きになるため変更しないように注意 してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">layer_sequence_xscale(sequence_element_id, xscale)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>sequence_element_id</td><td><span data-keyref="Type_ID_Element_Sequence"></span></td>
-        <td>The unique ID value of the sequence element to target</td>
+        <td><span class="notranslate">sequence_element_id</span></td><td><span data-keyref="Type_ID_Element_Sequence"></span></td>
+        <td><span class="notranslate">The unique ID value of the sequence element to target</span></td>
      </tr>
       <tr>
-        <td>xscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The new X axis scale value to apply to the sequence element</td>
+        <td><span class="notranslate">xscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The new X axis scale value to apply to the sequence element</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if seq_scale &lt; 2<br />
     {<br />
         seq_scale += 0.01;<br />
         layer_sequence_xscale(my_seq, seq_scale);<br />
         layer_sequence_yscale(my_seq, seq_scale);<br />
     }</p>
-  <p>The above code checks the value held in the <span class="inline">seq_scale</span> variable, and if it is less than 2 then it adds to it then uses the value to set the X and Y scale of the sequence element referenced in the variable <span class="inline">my_seq</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、変数 <span class="inline">seq_scale</span> の値をチェックし、2 よりも小さい場合はその値を加算し、その値を使って変数 <span class="inline">my_seq</span> で参照されている<span class="notranslate">sequence</span> 要素の X と Y のスケールを設定しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Layers.htm">Sequence Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sequence_yscale.htm">layer_sequence_yscale</a></div>
+        <div style="float:left">戻る<a href="Sequence_Layers.htm">シークエンスレイヤー</a></div>
+        <div style="float:right">次のページ <a href="layer_sequence_yscale.htm"><span class="notranslate">layer_sequence_yscale</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_xscale

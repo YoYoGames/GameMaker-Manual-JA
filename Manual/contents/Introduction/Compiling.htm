@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Compiling</title>
+  <title>コンパイル</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Compiling Projects In GameMaker" />
   <meta name="rh-index-keywords" content="Compiling" />
@@ -14,107 +14,97 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Compiling</span></h1>
-  <p><a class="glossterm" data-glossterm="Compiling" href="#">Compiling</a> your game can mean one of two things: compiling it for testing, or compiling it to create a final <em><a class="glossterm" data-glossterm="executable package" href="#">executable package</a></em> for a specific target platform. This page aims to explain both of those options in detail.</p>
-  <h2>Compiling for Testing</h2>
-  <p>Compiling your game for testing can be done by simply pressing the Play button <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png" /> at the top of the IDE, which will launch the game for testing using the specified target. You can also run the game in <strong>Debug Mode</strong> by testing using the Debug button <img alt="Debug Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Debug.png" width="24" />. This will run the game, but also open up the <strong>Debug Window</strong>, where you can monitor how your game performs and see any issues (see the section on <a href="Debugging.htm">Debugging</a> for more information).</p>
-  <h2 id="h3">Target Settings</h2>
-  <p>By default <span data-keyref="GameMaker Name">GameMaker</span> will run and debug using the built in <a class="glossterm" data-glossterm="Virtual Machine (VM)" href="#">Virtual Machine (VM)</a>, which is more or less the same as running on the desktop OS being used. However <span data-keyref="GameMaker Name">GameMaker</span> is a <strong>cross platform engine</strong> and you can test, debug and compile executable packages of your projects on a number of different target platforms (the exact platforms available will depend on the details of your licence). To change the current target platform you can click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the Targets button <img alt="Target Manager Icon" class="icon" src="../assets/Images/Icons/Icon_Targets.png" /> to open the <strong>Targets Window</strong>, which will look something like this (exact details will vary based on your licence type):</p>
-  <p><img alt="Target List" class="center" src="../assets/Images/Introduction/QS_TargetList.png" />At the top, beside the Targets button, you have the current settings which tells you the platform and the specific settings actually being used, and then the rest of the window is taken up with the details and options for all the available targets which you can select to use instead. Each section of this window is explained below: </p>
+  <h1>コンパイル</h1>
+  <p>ゲームの<a class="glossterm" data-glossterm="コンパイル" href="#">コンパイルには</a>、テスト用にコンパイルする場合と、特定のターゲットプラットフォーム用に最終的にコンパイルする場合の2通りがあります。 <em><a class="glossterm" data-glossterm="実行形式パッケージ" href="#">実行形式パッケージ</a></em>を作成するためにコンパイルすることです。このページでは、この2つのオプションについて詳しく説明することを目的としています。</p>
+  <h2>テスト用コンパイル</h2>
+  <p>テスト用にゲームをコンパイルするには、<span class="notranslate">IDE</span> の上部にある Play ボタン<img> を押すだけで、指定したターゲットを使用してテスト用にゲームを起動できます。また、Debug ボタン（<img> ）を使用してテストすることにより、ゲームを<strong>Debug モードで</strong>実行することができます。これにより、ゲームが実行されるだけでなく、<strong>デバッグウィンドウが</strong>開き、ゲームのパフォーマンスを監視して問題を確認することができます（詳細は、<a href="Debugging.htm">デバッグの</a>セクションを参照してください）。</p>
+  <h2>ターゲット設定</h2>
+  <p>デフォルトでは、<span data-keyref="GameMaker Name">GameMakerは</span>内蔵の<a class="glossterm" data-glossterm="仮想マシン(VM)" href="#">仮想マシン（VM</a>）を使って実行し、デバッグします。これは、使用しているデスクトップOS上で実行するのとほぼ同じです。しかし、<span data-keyref="GameMaker Name">GameMakerは</span> <strong>クロスプラットフォームエンジン</strong>であり、あなたのプロジェクトの実行可能パッケージを多くの異なるターゲットプラットフォームでテスト、デバッグ、コンパイルすることができます（利用できる正確なプラットフォームは、あなたのライセンスの詳細によって決まります）。<img> 現在のターゲットプラットフォームを変更するには、Targetsボタン（<img> ）をクリックし、<strong>Targets Windowを</strong>開きます。</p>
+  <p><img>上部の[Targets]ボタンの横には、実際に使用されているプラットフォームと特定の設定を示す現在の設定があり、ウィンドウの残りの部分は、代わりに使用するために選択できるすべての利用可能なターゲットの詳細とオプションで占められています。このウィンドウの各セクションを以下に説明します。</p>
   <div class="droptext" data-targetname="drop_down">
     <ul class="colour">
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">Platform</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">プラットフォーム</a></p>
   <div class="droptext" data-targetname="drop_down2">
-    <p class="dropspot">This section lists all the available target platforms, which depends on the licence you have. It will always have at least the &quot;GX.games&quot; target.</p>
-    <p class="dropspot">To select a target, simply click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on it; this will then update the rest of the options windows to show different details depending on the platform selected. If you don&#39;t have the required module installed in the current runtime then <span data-keyref="GameMaker Name">GameMaker</span> will ask you to download and install it when you click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> the target: </p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Module_Not_Installed.png" /></p>
-    <p class="dropspot">If you select &quot;<strong>No</strong>&quot; here then the target will be reset to the previous target you had selected.</p>
-    <p class="dropspot">If you select &quot;<strong>Yes</strong>&quot; then the modules for the target will be downloaded and installed.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> See the <a data-xref="{title}" href="../Setting_Up_And_Version_Information/IDE_Preferences/Runtime_Feed_Preferences.htm">Runtime Feeds Preferences</a> page for more info on how to change which modules are included.</p>
-    <p class="dropspot">Specific details on compiling for each platform are given below in <a data-xref="{text}" href="Compiling.htm#h2">Creating A Final Executable Package</a>.</p>
+    <p class="dropspot">このセクションでは、利用可能なすべてのターゲットプラットフォームをリストアップしています。このリストの内容は、お持ちのライセンスによって異なりますが、少なくとも「Opera GX」ターゲットが常に含まれています。ターゲットを選択するには、<img> をクリックするだけです。これにより、残りのオプションウィンドウが更新され、選択されたプラットフォームに応じて異なる詳細が表示されます。</p>
+    <p class="dropspot">各プラットフォームでのコンパイルの詳細は、後述の「<strong>最終的な実行可能パッケージの作成</strong>」の項で説明します。</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">Output</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">出力</a></p>
   <div class="droptext" data-targetname="drop_down3">
-    <p class="dropspot">Each target platform can have one or more output formats, the main ones being:</p>
+    <p class="dropspot">各ターゲットプラットフォームは1つ以上の出力形式を持つことができ、主なものは以下の通りです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>VM</strong>: The VM (Virtual Machine) target uses a generic <em>runner </em>for each platform and then interprets the code for your game. In general this option is used for testing due to its faster build times, but it does not offer the same performance boost that using the YYC option (if available) offers. You can use this to compile executable packages for smaller games or games where performance is not ever going to be an issue.</li>
-      <li class="dropspot"><strong>YYC</strong>: The YYC (<a data-xref="{title}" href="../Settings/YoYo_Compiler.htm">YoYo Compiler</a>) generates C++ code from your GML code, before using the target&#39;s C++ compiler to compile it into native code for the target platform. It strips out unneeded functions and performs a host of other optimisation techniques to create a smaller and performance-enhanced executable package.<br />
-        <br />
-        This can increase your game&#39;s performance by at least two or three times, especially on logic-heavy games, and is ideal for those larger or CPU-intensive projects. Compile times may take longer and you should always clear the compiler cache before building any final complete asset package for a target platform. Note that the YYC target may require extra tools to be installed for the platform selected, otherwise it will not work - you can find further information about this from the <a href="https://help.yoyogames.com/hc/en-us/articles/227860547-GMS2-Required-SDKs">YoYo Games Help Center</a> as well as on the individual <a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">target Preferences</a> pages detailed in this manual.
+      <li class="dropspot"><strong>VM</strong>です。VM (Virtual Machine) ターゲットは、各プラットフォーム用の汎用<em>ランナーを </em>使用し、ゲーム用にコードを解釈します。一般にこのオプションはビルド時間が早いのでテスト用に使われますが、YYCオプション（利用可能な場合）を使った場合のようなパフォーマンスの向上は望めません。このオプションは、小規模なゲームやパフォーマンスが問題にならないようなゲームの実行形式パッケージをコンパイルするために使用できます。</li>
+      <li class="dropspot"><strong>YYC</strong>YYC<a data-xref="{title}" href="../Settings/YoYo_Compiler.htm">(YoYo Compiler</a>) は、<span class="notranslate">GML</span> のコードから C++ コードを生成し、ターゲットプラットフォームの C++ コンパイラを使ってターゲットプラットフォームのネイティブコードにコンパイルする前に使用します。不要な関数を削除し、その他の最適化技術を多数実行することで、より小さく、パフォーマンスが向上した実行可能なパッケージを作成します。<br>
+        <br>
+        これにより、特にロジックを多用するゲームでは、ゲームのパフォーマンスが少なくとも2～3倍向上し、大規模なプロジェクトやCPU負荷の高いプロジェクトに理想的です。コンパイルに時間がかかる場合があります。ターゲットプラットフォーム用に最終的な完全な<span class="notranslate">cache</span> パッケージを構築する前に、必ずコンパイラの<span class="notranslate">asset</span> をクリアする必要があります。YYCターゲットでは、選択したプラットフォーム用に追加のツールをインストールする必要がある場合があります。
       </li>
-      <li class="dropspot"><strong>JavaScript</strong>: The JavaScript target will only be available for specific targets, like the HTML5 target, and sets the game to be compiled to pure JavaScript. This uses <strong>ECMAScript 2015</strong> (or ES6) for the JS it outputs.</li>
+      <li class="dropspot"><strong>JavaScript</strong>です。JavaScriptターゲットは、HTML5ターゲットのような特定のターゲットでのみ使用でき、ゲームを純粋なJavaScriptにコンパイルするように設定します。これは出力するJSに<strong>ECMAScript 2015</strong>(またはES6)を使用します。</li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#">Device</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#">デバイス</a></p>
   <div class="droptext" data-targetname="drop_down4">
-    <p class="dropspot">Certain platforms (like iOS or Android) permit you to associate one or more devices with <span data-keyref="GameMaker Name">GameMaker</span> so that games can selectively compile to them. Initially, the device list will be empty and you need to click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the Pencil icon <img alt="Pencil Icon" class="icon" height="18" src="../assets/Images/Icons/Icon_Pencil.png" width="18" />  to open the <strong>Device Editor</strong>:</p>
-    <p class="dropspot"><img alt="The Device Editor" class="center" src="../assets/Images/Introduction/QS_DeviceEditor.png" />Here you can add new devices as well as have <span data-keyref="GameMaker Name">GameMaker</span> test for a connection to any device(s) that may be connected. The exact contents of this window will depend on the platform specifics (see the section on the <a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">Device Manager</a> for exact details for any given platform). Once a device has been found or added, it will then be shown in this window, like in this example image for Android:</p>
-    <p class="dropspot"><img alt="Add An Android Device" class="center" src="../assets/Images/Introduction/QS_AddDevice.png" />The exact procedure and requirements for setting up devices and troubleshooting issues can be found in the appropriate section of the <a href="https://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker-Studio-2"><span data-keyref="GameMaker Name">GameMaker</span> Knowledge Base</a>.</p>
+    <p class="dropspot">一部のプラットフォーム（<span class="notranslate">iOS</span> や<span class="notranslate">Android</span> など）では、<span data-keyref="GameMaker Name">GameMaker</span>に1つまたは複数のデバイスを関連付けることができ、ゲームを選択的にコンパイルすることができます。<img> 初期状態では、デバイスのリストは空っぽで、<strong>デバイスエディタを</strong>開くには、鉛筆アイコン<img> をクリックする必要があります。</p>
+    <p class="dropspot"><img>このウィンドウでは、新しいデバイスを追加したり、接続されているデバイスの接続を<span data-keyref="GameMaker Name">GameMaker</span>にテストさせることができます。このウィンドウの正確な内容は、プラットフォームの仕様によって異なります（プラットフォームの詳細については、<a href="../Setting_Up_And_Version_Information/The_Device_Manager.htm">デバイスマネージャの</a>セクションを参照してください）。デバイスが見つかったり、追加されたりすると、このウィンドウに表示されます。</p>
+    <p class="dropspot"><img>デバイスのセットアップやトラブルシューティングの正確な手順や要件は、<a href="https://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker-Studio-2"><span data-keyref="GameMaker Name">GameMaker</span></a> Knowledge Baseの該当セクションに記載されています。</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Config</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">コンフィグ</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><span>As explained in the section on<span> </span></span><a href="../Settings/Configurations.htm">Configurations</a><span>, you can store certain details for compiling your game as<span> </span></span><strong>Configs</strong><span>. This section of the Targets window permits you to have <span data-keyref="GameMaker Name">GameMaker</span> automatically select a specific configuration for a specific target platform.</span></p>
+    <p class="dropspot"><span>のセクションで説明したように<span> </span></span><a href="../Settings/Configurations.htm">コンフィギュレーション</a><span>のセクションで説明したように、ゲームをコンパイルするための特定の詳細を<span> </span></span><strong>コンフィグ</strong><span>.Targetsウィンドウのこのセクションでは、特定のターゲットプラットフォームに対して、<span data-keyref="GameMaker Name">GameMakerが</span>自動的に特定のコンフィギュレーションを選択することを許可します。</span></p>
   </div>
-  <p>There are also a number or preferences that can be set to modify and customise the compile workflow, explained on the following page:</p>
+  <p>また、コンパイルのワークフローを変更したり、カスタマイズするために設定できるプリファレンスがいくつかあります（次のページで説明します）。</p>
   <ul class="colour">
-    <li><a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Compiling.htm">Compiling Preferences</a></li>
+    <li><a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Compiling.htm">コンパイルの環境設定</a></li>
   </ul>
-  <h2 id="h2">Creating A Final Executable Package</h2>
-  <p>You can click the <strong>Create Executable</strong> button <img alt="Compile Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Compile.png" width="24" /> in the IDE to start the compiler build or select <strong>Create Executable</strong> from the <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Build Menu</a>. Either process will start the build process which will depend on the target platform selected.</p>
-  <p>On the GX.games target, it will open a special window allowing you to compile and upload your game to GX.games; on all other targets it will open a file explorer window where you can give the final name that you wish to use for your game executable, before clicking <em>Save </em>to start the compile and build process. Once you have done this, the necessary files will be generated so that you can distribute it as you wish.</p>
-  <h3>You Should Know</h3>
-  <p>Here are some things to keep in mind when creating executables:</p>
+  <h2>最終的な実行可能パッケージの作成</h2>
+  <h3>概要</h3>
+  <p><span class="notranslate">IDE</span> にある実行ファイルの作成ボタン<img> をクリックしてコンパイラのビルドを開始するか、<a href="../IDE_Navigation/Menus/The_Build_Menu.htm">ビルドメニューから</a> <strong>実行ファイルの作成を</strong>選択するだけです。どちらを選んでも、選択したターゲットプラットフォームによってビルドプロセスが開始されます。</p>
+  <p>Opera GXターゲットでは、特別なウィンドウが開き、ゲームをコンパイルしてGX.gamesにアップロードできます。その他のターゲットでは、ファイルエクスプローラウィンドウが開き、ゲームの実行ファイルに使用したい最終的な名前を付けて、<em>保存を </em>クリックしてコンパイルとビルドのプロセスを開始することができます。これが終わると、必要なファイルが生成され、好きなように配布することができます。</p>
+  <p>特定のプラットフォームでは、ゲームプロジェクトをコンパイルするために、正しい設定をする必要があります。 <strong> <a class="glossterm" data-glossterm="ビルドツール" href="#">ビルドツール</a></strong>(<a href="../Setting_Up_And_Version_Information/Required_SDKs.htm">ここを</a>参照) を設定し、適切な<a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences (プラットフォーム設定</a>) を記入する必要があります。</p>
+  <p><a href="https://help.yoyogames.com/hc/en-us/articles/115002637011" title="Which Licence Is Right For Me?">ライセンスによっては</a>、コマンドラインでゲームをビルドするオプションがあり、プロジェクトの継続的統合を設定し、ビルドとテストのプロセスを合理化することができます。コマンドラインでのビルドの詳細については、<a href="../Settings/Building_via_Command_Line.htm">このページを</a>参照してください。</p>
+  <p class="note"><span class="note"><strong>注意</strong></span>プロジェクトの最終ビルドをリリースする前に、<strong>必ず<span class="notranslate">Asset</span> Compiler<a class="glossterm" data-glossterm="キャッシュ" href="#">Cache</a></strong>を<strong>クリアして</strong>ください（<span class="notranslate">IDE</span> の上部にある「ほうき」アイコン<img> を使用します）。<span data-keyref="GameMaker Name">GameMaker</span>はコンパイル速度を最小限にするために多くのゲームファイルを<span class="notranslate">cache</span> しますが、これらは時々破損することがあるので、リリース用ビルドを行う前に<span class="notranslate">cache</span> をクリアしておくと安全です。</p>
+  <p>最終的なゲームパッケージの最大サイズは4GBです。ただし、32ビット版（<span class="notranslate">Windows</span> ）の場合は2GBとなります。最終的なゲームサイズを小さくする<a href="https://help.yoyogames.com/hc/en-us/articles/4642066783505-How-to-Reduce-Your-Game-s-Size">ためのヒントを</a>ご覧ください。</p>
+  <h3>対象フォーマット</h3>
+  <p>各ターゲットオプションは、以下に示すプラットフォーム固有のフォーマットで保存されます。</p>
   <ul class="colour">
-    <li>You will not be able to create an executable if you&#39;re not logged in. Use the <img class="icon" src="../assets/Images/Icons/Icon_AccountMenu.png" /> <a data-xref="{text}" href="../IDE_Navigation/Menus/Version_&amp;_Account_Details.htm#h">Account Menu</a> menu to log in before creating an executable.</li>
-    <li>For certain platforms, compiling your game project will require that you have set up the correct <strong> <a class="glossterm" data-glossterm="build tools" href="#">build tools</a></strong> (see <a data-xref="{title}" href="../Setting_Up_And_Version_Information/Required_SDKs.htm">Required SDKs</a>) and also filled in the appropriate <a data-xref="{title}" href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a>.</li>
-    <li>Depending on your <a href="https://help.yoyogames.com/hc/en-us/articles/115002637011" title="Which Licence Is Right For Me?">licence</a>, you may have the option to build your game via command line, allowing you to set up continuous integration for your project and streamline your building and testing process. See <a data-xref="{title}" href="../Settings/Building_via_Command_Line.htm">Building via Command Line</a> for more information on command line building.</li>
-    <li>The maximum size of the final game package is 4GB (not including <a href="../The_Asset_Editors/Sounds.htm">streamed sounds</a>, <a href="../Settings/Texture_Information/Dynamic_Textures.htm">dynamic textures</a> and <a data-xref="{title}" href="../Settings/Included_Files.htm">Included Files</a>). See <a href="https://help.yoyogames.com/hc/en-us/articles/4642066783505-How-to-Reduce-Your-Game-s-Size">tips for reducing the final game size</a>.</li>
-    <li>Before doing a final build of your project for release, you should <strong>always clear the Asset Compiler <a class="glossterm" data-glossterm="Cache" href="#">Cache</a></strong> (using the &quot;broom&quot; icon <img alt="Clean Cache Icon" class="icon" src="../assets/Images/Icons/Icon_Clean.png" /> at the top of the IDE). <span data-keyref="GameMaker Name">GameMaker</span> will cache many of your game files to keep compilation speed to a minimum and these can sometimes get corrupted, so it is safer to clear that cache before doing a release build.</li>
-  </ul>
-  <h3>How Different Targets Build</h3>
-  <p>Each target option saves to a platform specific format, listed below:</p>
-  <ul class="colour">
-    <li><strong>GX.games</strong> - When compiling for the &quot;GX.games&quot; target, you will see the &quot;GX.games Packaging&quot; window which will first ask you to sign in using your Opera account:<img align="" class="center" src="../assets/Images/Introduction/Compiling/gx_packaging_1.png" />You won&#39;t need to sign in here if you&#39;ve already signed into <span data-keyref="GameMaker Name">GameMaker</span> using <a href="../Setting_Up_And_Version_Information/Licencing_Information.htm">Opera Single Sign-In</a>.<br />
-      <br />
-      Next you will be asked the packaging option to use: <br />
-      <img class="center" src="../assets/Images/Introduction/QS_GX.Games_Compile_Options.png" style="cursor: nesw-resize;" /><br />
-      After you have signed in, it will start compiling your game and proceed to upload it to GX.games. You can then click on &quot;Edit Game on Opera&quot; to edit it on GX.create and publish it:<br />
-      <img class="center" src="../assets/Images/Introduction/Compiling/gx_game_compiled.png" />Please refer to <a href="https://help.yoyogames.com/hc/en-us/articles/4407217145105">this page</a> to learn more about the GX.games upload process, and <a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193">this page</a> for setting up the various exports, such as <a href="../Settings/YoYo_Compiler.htm">YYC</a> and Mobile.
+    <li><strong>Opera GX</strong>- &quot;Opera GX &quot;ターゲット用にコンパイルする場合、&quot;Opera GX Packaging &quot;ウィンドウが表示され、最初にOperaアカウントを使ってサインインするよう求められます。<img>なお、すでにOperaアカウントを使って<span data-keyref="GameMaker Name">GameMakerに</span>サインインしている場合は、ここでサインインする必要はありません。<br>
+      <br>
+      サインイン後、コンパイルが開始され、GX.gamesにアップロードされます。その後、「Edit Game on Opera」をクリックすると、GX.games DevCloud上で編集し、パブリッシュすることができます。<br>
+      <img>Opera GXのアップロード手順については<a href="https://help.yoyogames.com/hc/en-us/articles/4407217145105">こちらのページを</a>、<a href="../Settings/YoYo_Compiler.htm">YYCや</a>Mobileなどの各種エクスポート設定については<a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193">こちらの</a>ページをご参照ください。
     </li>
-    <li><strong>Windows </strong>- Compiling for the general Windows OS will first request that you choose between creating an <em>Installer </em>or a <em>Zip </em>package, where the installer will be a single executable that will install your game, and the Zip file will be a single <span class="inline">*.zip</span> format compressed file with all your game files stored within (the files will need extracted for the game to run). <img alt="Windows Compile Options" class="center" src="../assets/Images/Introduction/QS_Windows_Compile_Options.png" />If you check the box marked <strong>Remember Packaging Option</strong> then <span data-keyref="GameMaker Name">GameMaker</span> will remember the choice for all future compiles (this can be reset or changed from the <a href="../Setting_Up_And_Version_Information/Platform_Preferences/Windows.htm">Windows Preferences</a>). You can find out more from the <a href="https://help.yoyogames.com/hc/en-us/sections/207157668">YoYo Games Help Center</a>.<br />
-      <br />
-      The Windows target only compiles 64-bit executables.
+    <li><strong>Windows - </strong> 一般的な<span class="notranslate">Windows</span> OS用にコンパイルすると、まず<em>インストーラーか </em> <em>Zip </em>パッケージのどちらを作成するかを選択するよう求められます。インストーラーはゲームをインストールするための実行ファイル、Zipファイルはゲームファイルをすべて保存した <span class="inline">*.zip</span> 形式の圧縮ファイル（ゲームを実行するにはファイルを展開する必要があります）です。<img><strong>パッケージングオプションを記憶する</strong>"にチェックを入れると、<span data-keyref="GameMaker Name">GameMakerは</span>その選択を記憶して次回以降のコンパイルに使用します（<a href="../Setting_Up_And_Version_Information/Platform_Preferences/Windows.htm">Windows環境設定</a>からリセットや変更が可能です）。詳しくは<a href="https://help.yoyogames.com/hc/en-us/sections/207157668">YoYo Games Help Center</a>を参照してください。<span class="notranslate">Windows</span> ターゲットは、<a href="../Settings/Game_Options/Windows.htm">一般ゲームオプション</a>で選択した内容によって、32bit<em>または </em>64bitの実行ファイルをコンパイルできることに注意してください。  32bit<span class="notranslate">Runtime</span> は将来的に非推奨となり削除される予定ですので、<strong>全ての新規プロジェクトは64bit実行ファイルを作成するためにx64<span class="notranslate">runtime</span> を使用することを強くお勧め</strong>します。</li>
+    <li><strong>Ubuntu (<span class="notranslate">Linux</span>)</strong>-<span class="notranslate">Ubuntu</span> 用にコンパイルすると、x64 または<span class="notranslate">ARM</span> の実行ファイルを含む<strong>.AppImage</strong>または<strong>.zip</strong>ファイルを作成するかどうか尋ねられます（ただし、AppImage は<span class="notranslate">ARM</span> をサポートしていません）。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/235186168">YoYo Gamesヘルプ</a>センターでご確認ください。<br>
+      <img><strong>.AppImage</strong>は<span class="notranslate">Steam</span> 以外のディストリビューターでパッケージとして共有するために使用され、<strong>.zip</strong>は<span class="notranslate">Steam</span> にアップロードする<strong>ためにのみ</strong>使用されます（特に<span class="notranslate">Steam</span> <span class="notranslate">Runtime</span> を使用するため）。このため、作成された<tt>.zipは</tt>、通常のzipファイルとして開くことができません。
     </li>
-    <li><strong>Ubuntu (Linux)</strong> - Compiling for Ubuntu will ask you to choose between creating an <strong>.AppImage</strong> or a <strong>.zip</strong> file, containing either an x64 or an ARM executable (however AppImage does not support ARM). You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/articles/235186168">YoYo Games Help Center</a>.<br />
-      <img class="center" src="../assets/Images/Introduction/Ubuntu_Exports.png" /><strong>.AppImage</strong> is used for sharing as a package via any distributor except Steam, while <strong>.zip</strong> is used <strong>only</strong> for uploading to Steam (as it uses the Steam Runtime specifically). Because of this, the created <tt>.zip</tt> cannot be opened as a regular zip file.
+    <li><strong>HTML5 - </strong> HTML5のビルドを選択した場合、 <span class="inline">index.html</span> ファイル（これはデフォルトの名前ですが、Platform Preferencesで独自の名前を付けることもできます）と、ゲームファイルを含むフォルダが作成され、指定された場所に保存されます。ゲームを動作させるには、この2つが<a class="glossterm" data-glossterm="サーバ" href="#">サーバーに</a>アップロードされている必要があります。 <span class="inline">index.html</span> をカスタマイズして、背景色を変えたり、位置を変えたりすることもできます。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/sections/115000309008">YoYo Gamesヘルプセンター</a>でご確認ください。</li>
+    <li><strong>Android - </strong> <span class="notranslate">Android</span> デバイスの場合、ゲームを保存するために表示されるウィンドウから、 <span class="inline">*.apk</span> または <span class="inline">*.aab</span> (<span class="notranslate">Android</span> App Bundle) ファイルを構築するよう選択することができます。<br>
+      <br>
+      <img>選択するファイルの種類は、対象とするストアによって異なり、Google Playでは <span class="inline">*.aab</span> 、その他のストアでは <span class="inline">*.apk</span> ファイルを使用する必要があります。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/115001368727">YoYo Gamesヘルプ</a>センターでご確認ください。
     </li>
-    <li><strong>HTML5 </strong>- If you have chosen to build HTML5, then an <span class="inline">index.html</span> file (this is the default name, but you can give your own name too in the Platform Preferences) along with a folder containing your game files will be created and saved to the specified location. For your game to work you will need both of these to be uploaded to a <a class="glossterm" data-glossterm="server" href="#">server</a>. The <span class="inline">index.html</span> can also be customised to show your game with a different background colour, or at a different position etc... but a knowledge of HTML is necessary for this, and you can also specify your own custom index file when you build the package (see the <a href="../Settings/Game_Options/HTML5.htm">HTML5 Game Options</a>). You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/sections/115000309008">YoYo Games Help Center</a>.</li>
-    <li><strong>Android </strong>- For Android devices, you can choose to build an <span class="inline">*.apk</span> or an <span class="inline">*.aab</span> (Android App Bundle) file from the window that is shown for saving the game:<br />
-      <br />
-      <img alt="Andoird APK or AAB File Selector" class="center" src="../assets/Images/Introduction/QS_AndroidFileSelector.png" />The type of file you choose will depend on the store that you wish to target, with the <span class="inline">*.aab</span> file being required for Google Play, while the <span class="inline">*.apk</span> file can be used on other stores. You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/articles/115001368727">YoYo Games Help Center</a>.
+    <li><strong>iOS - </strong> <span class="notranslate">iOS</span> にコンパイルすると <span class="inline">xarchive</span> ファイルが作成され、Xtools で最終的な<span class="notranslate">iOS</span> パッケージを作成するために使用されます。<strong> <span class="notranslate">iOS</span> </strong> のコンパイルには、OSX以上のApple Macコンピュータと、関連する証明書と権限が必要であることに注意してください。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/115001368747">YoYo Gamesヘルプ</a>センターでご確認ください。</li>
+    <li><strong>macOS - </strong> <span class="notranslate">macOS</span> ターゲット用にコンパイルすると、最初に<em>DMGか </em> <em>Zip </em>ファイルのどちらを作成するか選択するよう要求されます。<br>
+      <img>「Package as DMG &quot;を選択すると、Macコンピュータにゲームをインストールするために使用できる.dmgインストーラパッケージがビルドされます。このビルドプロセスの間、Mac上にインストーラが表示されますが、ビルドプロセスが完了すると消えますので注意してください。<br>
+      <br>
+      &quot;Package as Zip&quot; は、後で Mac App Store にアップロードするかどうかによって、 <span class="inline">*.app</span> ファイルか <span class="inline">*.pkg</span> ファイルをビルドします。<span class="notranslate">iOS</span> と同様に、<strong>OSX 以上を搭載した Apple Mac コンピュータと、関連する証明書および権限が必要</strong>です。詳しくは<a href="http://help.yoyogames.com/hc/en-us/articles/235186128">YoYo Gamesヘルプセンター</a>でご確認ください。
     </li>
-    <li><strong>iOS </strong>- Compiling to iOS will create an <span class="inline">xarchive</span> file which is then used in Xtools to create the final iOS package. Note that <strong>to compile for iOS you will require an Apple Mac computer running OSX or higher as well as the relevant certificates and permissions</strong>. You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/articles/115001368747">YoYo Games Help Center</a>.</li>
-    <li><strong>macOS </strong>- Compiling for the macOS target will first request that you choose between creating a <em>DMG </em>or a <em>Zip </em>file:<br />
-      <img class="center" src="../assets/Images/Introduction/QS_macOS_Compile_Options.png" />&quot;Package as DMG&quot; will build a .dmg installer package which can be used to install the game on a Mac computer. Note that during this build process you will see the installer appear on the Mac, which will disappear once the build process is complete.<br />
-      <br />
-      &quot;Package as Zip&quot; will build either an <span class="inline">*.app</span> file or a <span class="inline">*.pkg</span> file, depending on whether you want to later upload it to the Mac App Store or not. As with iOS <strong>you will require an Apple Mac computer running OSX or higher as well as the relevant certificates and permissions</strong>. You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/articles/235186128">YoYo Games Help Center</a>.
+    <li><strong>Windows UWP</strong>-<span class="notranslate">Windows UWP</span> の場合、<span data-keyref="GameMaker Name">GameMaker</span>は <span class="inline">*.appxbundle</span> パッケージを作成し、<span class="notranslate">Windows</span> Store にアップロードするか、他の場所に配布することができます。Create Executable ボタンをクリックすると、<span data-keyref="GameMaker Name">GameMaker</span>に作成したいパッケージの種類（<span class="notranslate">ARM</span> 、x64、x86<a class="glossterm" data-glossterm="アーキテクチャー" href="#">アーキテクチャ</a>用）を伝えるプロンプトが表示されるので、ゲームがサポートされるターゲットを選択します（最低1つは選択しなければなりませんが、3つすべて、または任意の組み合わせを選択することができます）。 <br>
+      <br>
+      <img><strong>Package For Store Upload</strong> のボックスをチェックすると、最終的に作成されるパッケージは <span class="inline">*.appxupload</span> ファイルになります。これは、<a href="https://docs.microsoft.com/en-us/windows/uwp/publish/upload-app-packages">こちらの</a>記事で説明されているように、Microsoft がストアにアプリを提出する際に使用するよう指定しているものです (<span class="inline">*.appxbundle</span> の場合と同様に、選択したすべてのアーキテクチャが含まれます)。UWPプラットフォームへのセットアップとコンパイルについては、<a href="http://help.yoyogames.com/hc/en-us/sections/115000309028">YoYo Gamesヘルプセンター</a>で詳しく説明されています。
     </li>
   </ul>
-  <p>Once you have created your executable asset package you can then give the file to other people or place it on your website to download, or upload these files to the different hosting services for individual distribution or even to online stores (like Google Play, Apple App Store or the Microsoft Store) for general distribution and retail.</p>
-  <p>Note that you are free to distribute the games you create with <span data-keyref="GameMaker Name">GameMaker</span> in any way you like, including selling them. Of course, this assumes that the sprites, images, and sounds you used to make it can be distributed or sold as well and that you have the legal rights to all assets, and it also assumes that the game complies with the <a href="https://www.yoyogames.com/legal/eula">YoYo Games EULA for <span data-keyref="GameMaker Name">GameMaker</span></a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>実行可能な<span class="notranslate">asset</span> パッケージを作成したら、ファイルを他の人に渡したり、ウェブサイトに置いてダウンロードしたり、これらのファイルをさまざまなホスティングサービスにアップロードして個別に配布したり、あるいはオンラインストア（Google Play、Apple App Store、Microsoft Store など）に置いて一般に配布・販売したりすることができます。</p>
+  <p>なお、<span data-keyref="GameMaker Name">GameMakerで</span>作成したゲームは、販売も含めてどのように配布してもかまいません。もちろん、作成に使用した<span class="notranslate">sprites</span> 、画像、サウンドも同様に配布・販売可能であり、すべての<span class="notranslate">assets</span> について法的権利を有していることが前提です。また、そのゲームが<a href="https://www.yoyogames.com/legal/eula">YoYo Games の<span data-keyref="GameMaker Name">GameMaker</span></a> 用 EULA に準拠していることが前提です。 </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To <span data-keyref="GameMaker Name">GameMaker</span></a></div>
-        <div style="float:right">Next: <a href="Debugging.htm">Debugging</a></div>
+        <div style="float:left">戻る：<a href="Introduction_To_GameMaker_Studio_2.htm"> <span data-keyref="GameMaker Name">GameMaker</span></a>入門</div>
+        <div style="float:right">次へ<a href="Debugging.htm">デバッギング</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Compiling

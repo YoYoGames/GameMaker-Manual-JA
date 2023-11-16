@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Ubuntu</title>
+  <title>ウブントゥ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that details the Ubuntu Game Options" />
   <meta name="rh-index-keywords" content="Game Options - Ubuntu (Linux)" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Ubuntu</span> Game Options</h1>
-  <p>This section outlines the different options available to you that control how your Ubuntu (Linux) game projects will be compiled. The different sections are:</p>
-  <p> </p>
-  <h2>General</h2>
-  <p><img alt="Ubuntu General Options" class="center" src="../../assets/Images/Settings/Ubuntu_General_Options.png" />This tab is where you set the name of your game as it is to be displayed while running, and can also supply a contact email and a description (short and long), as well as a URL for the homepage of the game or the developer.</p>
-  <p>Here you also have the option is for enabling <strong>Steam </strong>in your game. If you enable this option, make sure you have the Steamworks SDK installed (see <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">here</a>), and that you have added the <strong>Steam app ID</strong> into the <a href="../Game_Options.htm">General Options</a> for the game.</p>
-  <p>Finally you have the option to <strong>Disable file system sandbox</strong>. Checking this will disable the <span data-keyref="GameMaker Name">GameMaker</span> sandboxing for saving and loading files, permitting your games to access files from anywhere on the system running the game. This option is unchecked by default, as we recommend that you maintain the <span data-keyref="GameMaker Name">GameMaker</span> sandbox for files on all systems and when checked, some save/load areas may still not be available depending on the OS-level permissions. For more information on the sandbox, please see the pages on the <span data-keyref="GameMaker Name">GameMaker</span> <a href="../../Additional_Information/The_File_System.htm">File System</a>.</p>
-  <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="Ubuntu Graphics Options" class="center" src="../../assets/Images/Settings/Ubuntu_Graphics_Options.png" />The graphics options are those that you should configure to determine how your game will use the graphics card of your target Ubuntu machine. The following options are included for you to modify:</p>
+  <h1>Ubuntuのゲームオプション</h1>
+  <p>このセクションでは、<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) ゲームプロジェクトのコンパイル方法を制御するためのさまざまなオプションの概要を説明します。各セクションの内容は以下のとおりです。</p>
+  <p> </p>
+  <h2>一般</h2>
+  <p><img>このタブでは、実行中に表示されるゲームの名前を設定します。また、連絡先のメールアドレスと説明（短いものと長いもの）、ゲームや開発者のホームページのURLを提供することができます。</p>
+  <p>ここでは、ゲーム内で<strong>Steam </strong>を有効にするためのオプションもあります。このオプションを有効にする場合、Steamworks SDK（<a href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">ここを</a>参照）をインストールし、ゲームの<a href="../Game_Options.htm">一般オプション</a>に<strong>SteamアプリIDを</strong>追加していることを確認します。</p>
+  <p>最後に、<strong>Disable file system sandboxという</strong>オプションがあります。これをチェックすると、ファイルのセーブとロードにおける<span data-keyref="GameMaker Name">GameMakerの</span>サンドボックスが無効になり、ゲームを実行しているシステム上のどこからでもファイルにアクセスできるようになります。このオプションはデフォルトではチェックされていません。すべてのシステムでファイルに対する<span data-keyref="GameMaker Name">GameMakerの</span>サンドボックスを維持することを推奨しており、チェックしてもOSレベルのパーミッションによっては一部のセーブ/ロード領域が使用できない場合があるからです。サンドボックスの詳細については、<span data-keyref="GameMaker Name">GameMakerの</span> <a href="../../Additional_Information/The_File_System.htm">ファイル</a>システムのページをご覧ください。</p>
+  <p> </p>
+  <h2>グラフィック</h2>
+  <p><img>グラフィックスオプションは、ゲームがターゲットとする<span class="notranslate">Ubuntu</span> マシンのグラフィックスカードをどのように使用するかを設定するためのものです。以下のオプションが用意されています。</p>
   <ul class="colour">
-    <li><strong>Start Fullscreen</strong>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. This is off by default.</li>
-    <li><strong>Allow Fullscreen Switching</strong>: With this ticked the user can switch from fullscreen to windowed and back again using the standard Ubuntu OS shortcuts. This is off by default.</li>
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edged graphics it is better left on.This is off by default.</li>
-    <li><strong>Display Cursor</strong>: When this option is enabled, the default OS cursor will be shown in your game. If this is disabled, then while the mouse is over the game window, there will be no visible cursor unless you have created one as part of the game project (this is on by default).</li>
-    <li><strong>Use synchronization to avoid tearing</strong>: This toggles <a class="glossterm" data-glossterm="v-sync" href="#">v-sync</a> on or off. Note, that if you have a game with a room speed of 120 and the player has a monitor with a refresh rate of 60, turning this option on will lock your game speed to 60 too. This is off by default.</li>
-    <li><strong>Allow window resize</strong>: Checking this permits the user to change the size of the game window (the Borderless Window option needs to be off for this to work). This option is off by default.</li>
-    <li><strong>Scaling</strong>: Here you can choose to maintain aspect ratio (so a 4:3 room will be &quot;letter boxed&quot; on a 16:9) or to scale fully (stretching the image to fit the full screen).<br />
-      <br />
-      <span style="font-size:16px;"><strong>WARNING!</strong> <em>Switching off the application surface will disable all the scaling options set in the Windows Game Options until it has been switched back on again. See The Application Surface for further details.</em></span>
+    <li><strong>フルスクリーンで起動</strong>する。チェックすると、フルスクリーンで起動し、チェックしないとウィンドウで起動します。デフォルトではオフになっています。</li>
+    <li><strong>Allow Fullscreen Switching</strong> <span class="notranslate">switch</span> <strong></strong>: これにチェックを入れると、ユーザは<span class="notranslate">Ubuntu</span> OS の標準ショートカットを使って、フルスクリーンからウィンドウズへ、そして再びウィンドウズへ戻ることができます。デフォルトではオフになっています。</li>
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>オンにし、基本的にピクセルを「滑らかに」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。</li>
+    <li><strong>カーソルを表示</strong>するこのオプションを有効にすると、デフォルトのOSカーソルがゲームに表示されます。このオプションを無効にすると、マウスがゲームウィンドウ上にあるとき、ゲームプロジェクトの一部としてカーソルを作成しない限り、カーソルは表示されません（これはデフォルトでオンになっています）。</li>
+    <li><strong>テアリングを避けるために同期を使用</strong>します。<a class="glossterm" data-glossterm="ブイシンク" href="#">v-syncの</a>オン・オフを切り替えます。<span class="notranslate">room</span> の速度が120のゲームで、プレイヤーがリフレッシュレート60のモニターを持っている場合、このオプションをオンにすると、ゲームの速度も60に固定されることに注意してください。デフォルトではオフになっています。</li>
+    <li><strong>ウィンドウサイズを変更できるように</strong>する。これをチェックすると、ユーザーがゲームウィンドウのサイズを変更することができます（この機能を使用するには、Borderless Windowオプションがオフになっている必要があります）。このオプションはデフォルトでオフになっています。</li>
+    <li><strong>スケーリング</strong>ここでは、アスペクト比を維持する（つまり 4:3 の<span class="notranslate">room</span> が 16:9 で「レターボックス化」される）か、完全にスケーリングする（画像をフルスクリーンに合わせて引き伸ばす）かを選べます。<br>
+      <br>
+      <span style="font-size:16px;"><strong>警告!</strong> <em>アプリケーションサーフェスのスイッチを切ると、再びスイッチを入れるまで、<span class="notranslate">Windows</span> ゲームオプションで設定されたすべてのスケーリングオプションが無効になります。詳しくは、アプリケーションサーフェスを参照してください。</em></span>
     </li>
   </ul>
-  <p> </p>
-  <p>Finally there is the option to set the size of the <a class="glossterm" data-glossterm="texture page" href="macOS.htm#">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There is also a button marked <strong><strong>Preview </strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be on PC&#39;s with lower specifications.</p>
-  <p> </p>
-  <p> </p>
-  <h2>Images</h2>
-  <p><img alt="Ubuntu Images Options" class="center" src="../../assets/Images/Settings/Ubuntu_Images_Options.png" />Here you can add a <strong>Splash Screen</strong> for your game, and set the game <strong>Icon </strong>that will be used. The icon must be a 64x64 pixel image in the <span class="inline">.png</span> format, and the splash screen should be at least the same size as the first room in your game (or it&#39;s view port) and be <span class="inline">.png</span> format too. The splash screen will be shown while the game loads, and can be enabled or disabled by checking the <strong>Use Splash Screen</strong> option (which is off by default).</p>
-  <p>It is worth noting that <span data-keyref="GameMaker Name">GameMaker</span> has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。 <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成し、ウィンドウを開いてその見え方を確認できるようにするものです。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なることを防ぎたい場合に非常に便利です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、スペックの低いPCではゲームの互換性が低くなりますので、ご注意ください。</p>
+  <p> </p>
+  <p> </p>
+  <h2>画像</h2>
+  <p><img>ここでは、ゲームの<strong>スプラッシュスクリーンを</strong>追加し、使用される<strong>ゲームアイコンを </strong>設定することができます。アイコンは64x64ピクセルの画像で、 <span class="inline">.png</span> 形式でなければなりません。スプラッシュ画面は、少なくともゲームの最初の<span class="notranslate">room</span> （またはそのビューポート）と同じ大きさで、 <span class="inline">.png</span> 形式である必要があります。スプラッシュスクリーンはゲームのロード中に表示され、<strong>Use Splash Screen</strong>オプションをチェックすることで有効または無効にできます（デフォルトではオフになっています）。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができることは特筆すべきことです。このツールを使用する場合、作成されたイメージがあなたの要求するものであることを確認するために、修正する必要があります。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="HTML5.htm">HTML5</a></div>
+        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次へ<a href="Windows_UWP.htm">Windows UWP</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Ubuntu Game Options

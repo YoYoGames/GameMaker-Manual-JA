@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_attributes</title>
+  <title>ファイル属性</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for file_attributes" />
   <meta name="rh-index-keywords" content="file_attributes,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
@@ -14,85 +14,85 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_attributes</h1>
-  <p>You can use this function to check the attributes of a given file. You can add up the following constants to see the type of files you want:</p>
+  <h1>ファイル属性</h1>
+  <p>この関数は、指定されたファイルの属性を確認するために使用することができます。以下の定数を足すことで、ファイルの種類を確認することができます。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">fa_readonly</span></td>
-        <td>Read-only files</td>
+        <td><span class="notranslate"><span class="inline">fa_readonly</span></td>
+        <td>読み取り専用ファイル</td>
       </tr>
       <tr>
-        <td><span class="inline">fa_hidden</span></td>
-        <td>Hidden files</td>
+        <td><span class="notranslate"><span class="inline">fa_hidden</span></td>
+        <td>隠しファイル</td>
       </tr>
       <tr>
-        <td><span class="inline">fa_sysfile</span></td>
-        <td>System files</td>
+        <td><span class="notranslate"><span class="inline">fa_sysfile</span></td>
+        <td>システムファイル</td>
       </tr>
       <tr>
-        <td><span class="inline">fa_volumeid</span></td>
-        <td>Volume-id files</td>
+        <td><span class="notranslate"><span class="inline">fa_volumeid</span></td>
+        <td>ボリュームIDファイル</td>
       </tr>
       <tr>
-        <td><span class="inline">fa_directory</span></td>
-        <td>Directories</td>
+        <td><span class="notranslate"><span class="inline">fa_directory</span></td>
+        <td>ディレクトリー</td>
       </tr>
       <tr>
-        <td><span class="inline">fa_archive</span></td>
-        <td>Archived files</td>
+        <td><span class="notranslate"><span class="inline">fa_archive</span></td>
+        <td>アーカイブされたファイル</td>
       </tr>
     </tbody>
   </table>
   <p><b></b></p>
-  <p class="note"><b>NOTE</b>: This is a Windows only function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>注意</b>：これは<span class="notranslate">Windows</span> のみの機能です。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">file_attributes(fname, attr);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the file to check.</td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The name of the file to check.</span></td>
       </tr>
       <tr>
-        <td>attr</td>
-        <td><span data-keyref="Type_Constant_File_Attribute">File Attribute Constant</span></td>
-        <td>The attributes to check for.</td>
+        <td><span class="notranslate">attr</span></td>
+        <td><span data-keyref="Type_Constant_File_Attribute">ファイル属性定数</span></td>
+        <td><span class="notranslate">The attributes to check for.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if !file_attributes(file, fa_hidden)<br />
     {<br />
         file_delete(file);<br />
     }</p>
-  <p>This would check a file to see if it is hidden or not, and if not it is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これは、ファイルが隠されているかどうかをチェックし、隠されていない場合は削除するものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="filename_name.htm">filename_name</a></div>
+        <div style="float:left">戻る<a href="File_System.htm">ファイルシステム</a></div>
+        <div style="float:right">次のページ <a href="filename_name.htm"><span class="notranslate">filename_name</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_attributes

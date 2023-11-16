@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>font_texture_page_size</title>
+  <title>フォントテクスチャーのページサイズ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function font_texture_page_size" />
   <meta name="rh-index-keywords" content="font_texture_page_size" />
@@ -14,36 +14,36 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_texture_page_size</h1>
-  <p>This <b>built-in variable</b> can be used to either get or set the texture page size when using the function <a href="font_add.htm"><span class="inline">font_add()</span></a>. On adding a font using that function, <span data-keyref="GameMaker Name">GameMaker</span> will create a texture page cache of the required glyphs up to the size defined by this variable. The process is as follows:</p>
+  <h1>フォントテクスチャーのページサイズ</h1>
+  <p><span class="notranslate">texture</span> この<b>組み込み変数を用いて</b>，関数 <a href="font_add.htm"><span class="inline">font_add()</span></a>.その関数を使って<span class="notranslate">font</span> を追加すると、<span data-keyref="GameMaker Name">GameMaker</span>はこの変数で定義されたサイズまで、必要なグリフの<span class="notranslate">texture</span> ページ<span class="notranslate">cache</span> を作成する。その流れは以下の通り。</p>
   <ul class="colour">
-    <li>Each character you use is cached from the font into a texture page</li>
-    <li>When the texture page is full (because you use big characters or a lot of different characters) <span data-keyref="GameMaker Name">GameMaker</span> will remove characters from the cache and replace them with new ones you need</li>
-    <li><span data-keyref="GameMaker Name">GameMaker</span> tries not to make the texture too big because not all devices can cope with large textures, and it tries not to make the texture too small because removing and re-adding characters to the texture takes CPU time and causes your game to run slowly</li>
+    <li>使用する各文字は、<span class="notranslate">font</span> から<span class="notranslate">texture</span> ページにキャッシュされます。</li>
+    <li><span class="notranslate">texture</span> のページがいっぱいになると (大きなキャラクターやたくさんの種類のキャラクターを使うため)<span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">cache</span> からキャラクターを削除し、必要な新しいキャラクターと置き換えます。</li>
+    <li><span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">texture</span> を大きくしすぎないようにしています。これは、すべてのデバイスが大きな<span class="notranslate">textures</span> に対応できるわけではないからです。また、<span class="notranslate">texture</span> を小さくしすぎないようにしています。これは<span class="notranslate">texture</span> への文字の削除と再追加に CPU 時間がかかり、ゲームの実行速度が遅くなるからです。</li>
   </ul>
-  <p>If you think you require a larger or a smaller texture page size than the default 1024px that <span data-keyref="GameMaker Name">GameMaker</span> uses, you can set the value using this built in variable. If you are not using the <span class="inline">font_add()</span> function, then setting this will have no effect on your games performance as fonts added in the IDE are cached on the regular texture pages (which you can control from the <a href="../../../../The_Asset_Editors/Fonts.htm">Font Editor</a> and the <a href="../../../../Settings/Game_Options.htm">Game Options</a> for the target platform).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p><span class="notranslate">texture</span> もし、<span data-keyref="GameMaker Name">GameMakerが</span>使うデフォルトの1024pxより大きい、または小さいページサイズが必要な場合は、この組み込み変数を使って値を設定することができる。 <span class="inline">font_add()</span> 機能を使っていない場合、この設定はゲームのパフォーマンスに影響を与えない。<span class="notranslate">fonts</span> で追加された<span class="notranslate">IDE</span> は通常の<span class="notranslate">texture</span> ページにキャッシュされるからである（これは<a href="../../../../The_Asset_Editors/Fonts.htm">Font Editor</a>とターゲットプラットフォームの<a href="../../../../Settings/Game_Options.htm">Game Options</a>から制御できる）。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">font_texture_page_size;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (maximum width/height in pixels)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Real">Real</span> (maximum width/height in pixels)</p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">font_texture_page_size = 512;<br />
     newfont = font_add(&quot;Arial&quot;, 24, true, true, 32, 128);</p>
-  <p>The above code sets the font cache texture page to a maximum size of 512px and then adds a new font to the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、<span class="notranslate">font</span> <span class="notranslate">cache</span> <span class="notranslate">texture</span> のページを最大サイズ512pxに設定し、新たに<span class="notranslate">font</span> を追加しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="font_set_cache_size.htm">font_set_cache_size</a></div>
+        <div style="float:left">戻る<a href="Fonts.htm">フォント</a></div>
+        <div style="float:right">次のページ <a href="font_get_name.htm"><span class="notranslate">font_get_name</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_texture_page_size

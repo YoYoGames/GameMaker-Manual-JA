@@ -6,7 +6,7 @@
   <title>xboxlive_set_savedata_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_set_savedata_user" />
   <meta name="rh-index-keywords" content="xboxlive_set_savedata_user" />
@@ -15,45 +15,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_set_savedata_user</h1>
-  <p>This function specifies that future file operations which operate in the save game area (i.e. all file writes, and reads from files that aren&#39;t in the bundle area) will be associated with the specified user ID pointer. This can be called as often as necessary to redirect save data to the appropriate user, or you can use the constant <span class="inline">pointer_null</span> to save to the generic machine storage area.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、今後セーブゲーム領域で操作するファイル操作（すなわち、すべてのファイルの書き込み、およびバンドル領域にないファイルからの読み込み）を、指定されたユーザーIDポインタに関連付けることを指定する。これは、セーブデータを適切なユーザにリダイレクトするために何度でも呼び出すことができます。また、定数 <span class="inline">pointer_null</span> を使用して、一般的なマシン記憶領域にセーブすることも可能です。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">xboxlive_set_savedata_user(user_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span> or <span data-keyref="Type_Pointer_Null">pointer_null</span></td>
-        <td>The user ID (a pointer) to set for saving, or <span class="inline">pointer_null</span></td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">Xbox ユーザー ID</span>または<span data-keyref="Type_Pointer_Null">pointer_null</span></td>
+        <td><span class="notranslate">The user ID (a pointer) to set for saving, or <span class="inline">pointer_null</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (xboxlive_get_savedata_user() != user_id[0])<br />
     {<br />
         xboxlive_set_savedata_user(user_id[0]);<br />
     }</p>
-  <p>The above code checks to see if a user is currently assigned as the save target, and if they are not then they are assigned.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、あるユーザーが現在保存先として割り当てられているかどうかを確認し、割り当てられていない場合は割り当てます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Saving_Data.htm">Saving Data</a></div>
-        <div style="float:right">Next: <a href="xboxlive_get_savedata_user.htm">xboxlive_get_savedata_user</a></div>
+        <div style="float:left">戻る<a href="Saving_Data.htm">データの保存</a></div>
+        <div style="float:right">次のページ <a href="xboxlive_get_savedata_user.htm"><span class="notranslate">xboxlive_get_savedata_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_set_savedata_user

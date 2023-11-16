@@ -6,7 +6,7 @@
   <title>sprite_nineslice_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
   <meta name="topic-comment" content="Page explaining the function sprite_nineslice_create" />
   <meta name="rh-index-keywords" content="sprite_nineslice_create" />
@@ -15,16 +15,16 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_nineslice_create</h1>
-  <p><em><span data-keyref="Nine Slicing">Nine Slicing</span> is a technique used to scale rectangular images for preserving details, making them retain their original form after scaling. See <a href="../../../../../The_Asset_Editors/Sprite_Properties/Nine_Slices.htm" title="Nine Slice">this page</a> for information on Nine Slice.</em></p>
-  <p>This function is used to create a Nine Slice <a href="../../../../GML_Overview/Structs.htm" title="Structs">struct</a> which can be modified and then applied to a sprite. The contents of this struct are detailed on <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">this page</a>.</p>
-  <p>You can store this struct in a variable, modify its properties, and apply it to any sprites using <span class="inline"><a href="sprite_set_nineslice.htm" title="sprite_set_nineslice">sprite_set_nineslice()</a></span>.</p>
-  <h4>Syntax:</h4>
+  <p><em><span data-keyref="Nine Slicing">ナインスライシングとは</span>、矩形の画像を細部を保持するためにスケーリングする際に使用する手法で、スケーリング後も元の形状を保持させることができます。ナインスライシングについては、<a href="../../../../../The_Asset_Editors/Sprite_Properties/Nine_Slices.htm" title="Nine Slice">こちらのページを</a>ご覧ください。</em></p>
+  <p>この機能は、Nine Slice<a href="../../../../GML_Overview/Structs.htm" title="Structs">構造体を</a>作成し、それを修正した上で、<span class="notranslate">sprite</span> に適用するために使用します。 この<span class="notranslate">struct</span> の内容については、<a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">このページで</a>詳しく説明します。</p>
+  <p>この<span class="notranslate">struct</span> を変数に格納し、そのプロパティを変更し、 <span class="inline"><a href="sprite_set_nineslice.htm" title="sprite_set_nineslice">sprite_set_nineslice()</a></span> を使って任意の<span class="notranslate">sprites</span> に適用することができます。</p>
+  <h4>構文です。</h4>
   <p class="code">sprite_nineslice_create();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Struct_NineSlice">Nine Slice Struct</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _nineslice = <strong>sprite_nineslice_create</strong>();<br />
     <br />
     _nineslice.enabled = true;<br />
@@ -35,16 +35,16 @@
     <br />
     sprite_set_nineslice(spr_box_0, _nineslice);
   </p>
-  <p>The code above creates a new Nine Slice struct, enables it and sets the offsets for the guides. The struct is then applied to a sprite, changing its Nine Slice properties.</p>
-  <p> </p>
+  <p>上記のコードでは、新しいNine Slice<span class="notranslate">struct</span> を作成し、それを有効にして、ガイドのオフセットを設定しています。次に、<span class="notranslate">struct</span> を<span class="notranslate">sprite</span> に適用し、そのナインスライスプロパティを変更します。</p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_nineslice.htm">sprite_set_nineslice</a></div>
+        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次ページ：<a href="sprite_set_nineslice.htm">sprite_set_nineslice</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_nineslice_create

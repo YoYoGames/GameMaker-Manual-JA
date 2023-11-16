@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_async_group_option</title>
+  <title>バッファアシンクグループオプション</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_async_group_option" />
   <meta name="rh-index-keywords" content="buffer_async_group_option" />
@@ -14,60 +14,60 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_async_group_option</h1>
-  <p>With this function you can set some platform specific options for the buffer group being saved/loaded. The options available are as follows:</p>
+  <h1>バッファアシンクグループオプション</h1>
+  <p>この機能により、保存/読み込み中の<span class="notranslate">buffer</span> グループに対して、プラットフォーム固有のオプションを設定することができます。利用可能なオプションは以下の通りです。</p>
   <ul class="colour">
-    <li>&quot;<b>subtitle</b>&quot; or &quot;<b>slottitle</b>&quot; - The value for this option would be a string, which will be shown to the user when managing their save data in the OS. This is only important when saving data, not when loading again.</li>
-    <li>&quot;<b>showdialog</b>&quot; - The value for this option is a boolean <span class="inline">true</span> or <span class="inline">false</span>. If set to <span class="inline">true</span>, when you save <i>or</i> load <span data-keyref="GameMaker Name">GameMaker</span> will show the System UI, otherwise it will do a quicksave/quickload with no UI shown. You normally only need this if you&#39;re supporting multiple save slots to allow the user to pick a slot, but if you just support one slot per user, set this to <span class="inline">false</span>.</li>
-    <li>&quot;<b>savepadindex</b>&quot; - For this option you would specify the <i>pad index</i> of the player who is saving <i>or</i> loading and the system will write data to and read data from this player&#39;s save folder.</li>
-    <li>&quot;<b>saveslotsize</b>&quot; - This option requires that you specify the actual size in bytes you want to save (so you can do a <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a> and <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a> to get that, for example). Note that it is not obligatory to supply this value as all saves are pre-assigned a minimum space, which usually varies with the target platform.</li>
-    <li>These are some options for PlayStation only. Please refer to <a href="https://help.yoyogames.com/hc/en-us/articles/216756278">this Helpdesk article</a> for information (you&#39;ll need to be logged in with your developer access account).</li>
+    <li>&quot;<b>subtitle</b>&quot; または &quot;<b>slottitle</b>&quot; - このオプションの値は、<span class="notranslate">string</span> 、OSでセーブデータを管理する際にユーザーに表示されます。これはデータを保存するときのみ重要で、再度ロードするときは重要ではありません。</li>
+    <li>&quot;<b>showdialog</b>&quot; - このオプションの値はブール値です <span class="inline">true</span> または <span class="inline">false</span> 。 <span class="inline">true</span> に設定すると、<span data-keyref="GameMaker Name">GameMakerは</span>セーブ<i>または</i>ロード時にシステムUIを表示し、それ以外の場合はUIを表示せずにクイックセーブ/クイックロードを行います。通常、複数のセーブスロットをサポートし、ユーザーがスロットを選べるようにする場合にのみ必要ですが、ユーザーごとに1つのスロットをサポートするだけなら、これを <span class="inline">false</span> にセットしてください。</li>
+    <li>「<b>savepadindex</b>&quot; - このオプションでは、保存<i>または</i>ロードするプレイヤーの<i>パッドインデックスを</i>指定し、システムはこのプレイヤーの保存フォルダにデータを書き込み、そこからデータを読み取ります。</li>
+    <li>&quot;<b>saveslotsize</b>&quot; - このオプションでは、保存する実際のサイズをバイト単位で指定する必要があります (そのため、このオプションでは <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a>と <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a>で取得するなどの方法があります)。すべての保存は最小限のスペースがあらかじめ割り当てられており、それは通常ターゲットプラットフォームによって異なるため、この値を指定することは必須ではないことに注意してください。</li>
+    <li>&quot;<strong>ps_create_backup</strong>&quot; -<em>(PlayStation のみ)</em>- これを <span class="inline">true</span> に設定すると、保存ディレクトリがアンマウントされたとき (すなわち <span class="inline"><a href="buffer_async_group_end.htm">buffer_async_group_end()</a></span> 関数が呼ばれたとき) に保存データがバックアップされるようになります。詳しくはコンソールのドキュメントをご覧ください。</li>
   </ul>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> This function is only valid for PlayStation, Xbox and Nintendo Switch targets. On all the other targets it will do nothing.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>重要!こ</b>の機能は現在、PSVita、PS4、<span class="notranslate">XBox One</span> のターゲットモジュールに対してのみ有効です。それ以外のターゲットでは何もしません。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">buffer_async_group_option(option, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>option</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The option to set.</td>
+        <td><span class="notranslate">option</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">The option to set.</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> or <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The value to set (can be a real or string, depending on the option).</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>または <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">The value to set (can be a real or string, depending on the option).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;);<br />
     buffer_async_group_option(&quot;showdialog&quot;, false);<br />
     buffer_async_group_option(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
     buffer_async_group_option(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
     save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);<br />
     buffer_async_group_end();</p>
-  <p>The above code starts a buffer group then sets the group options before it sets 4 files to save asynchronously. The group definition is then ended (at which point saving will begin).</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、<span class="notranslate">buffer</span> グループを起動し、グループオプションを設定してから、4つのファイルを非同期で保存するように設定しています。その後、グループ定義を終了します（この時点で保存が開始されます）。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_async_group_end.htm">buffer_async_group_end</a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ <a href="buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_option

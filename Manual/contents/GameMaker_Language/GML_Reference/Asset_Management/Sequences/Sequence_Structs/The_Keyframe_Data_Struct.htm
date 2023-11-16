@@ -3,20 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Keyframe Data Struct</title>
+  <title>キーフレームデータ構造</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining The Keyframe Data Struct" />
-  <meta name="rh-index-keywords" content="Sequence Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,seqtextkey_left,seqtextkey_center,seqtextkey_right,seqtextkey_justify,seqtextkey_top,seqtextkey_middle,seqtextkey_bottom" />
-  <meta name="search-keywords" content="The Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,channel,spriteIndex,soundIndex,playbackMode,curve,value,colour,sequence,objectIndex,events,event,seqtextkey_left,seqtextkey_right,seqtextkey_center,seqtextkey_justify,seqtextkey_top,seqtextkey_bottom,seqtextkey_middle" />
+  <meta name="rh-index-keywords" content="Sequence Keyframe Data Struct" />
+  <meta name="search-keywords" content="The Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,channel,spriteIndex,soundIndex,playbackMode,curve,value,colour,sequence,objectIndex,events,event" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Keyframe Data Struct</h1>
-  <p>When you define a <a href="The_Keyframe_Struct.htm">keyframe struct</a> for a track, you need to also define the data that will be associated with it. This is comprised of different <i>channels</i>, where each channel is simply a Keyframe Data Struct. A channel can be given specific type of data depending on what type of track you are setting the keyframe data for.</p>
-  <p>A Keyframe Data Struct contains the following variables:</p>
+  <h1>キーフレームデータ構造</h1>
+  <p>トラックの<a href="The_Keyframe_Struct.htm">キーフレーム構造を</a>定義するとき、それに関連するデータも定義する必要があります。これは異なる<i>チャンネルで</i>構成され、各チャンネルは単純に<span class="notranslate">Keyframe</span> データ<span class="notranslate">Struct</span> となります。チャンネルは、<span class="notranslate">keyframe</span> データを設定するトラックの種類によって、特定のタイプのデータを与えることができます。</p>
+  <p><span class="notranslate">Keyframe</span> データ<span class="notranslate">Struct</span> には、以下の変数が含まれます。</p>
   <table>
     <colgroup>
       <col />
@@ -25,75 +25,75 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Keyframe Data Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Sequence<span class="notranslate">Keyframe</span> データ構造</a></span></th>
       </tr>
       <tr>
-        <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>バリアブル</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
         <td><span class="inline">channel</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>This is the channel that the keyframe data should be applied to. It is a positive integer value starting at 0, and it&#39;s worth noting that when creating parameter tracks for &quot;position&quot; or &quot;scale&quot; keyframes, then you need to use very specific channel values. These are: channel 0 is the X position or the X scale, channel 1 is the Y position or Y scale.</td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span class="notranslate">keyframe</span> データを適用するチャンネルを指定します。0 から始まる正の整数値です。「position」または「scale」のパラメータトラックを作成する場合、<span class="notranslate">keyframes</span> 、非常に特殊なチャンネル値を使用する必要があることに注意する必要があります。チャンネル 0 は X ポジションまたは X スケール、チャンネル 1 は Y ポジションまたは Y スケールです。</td>
       </tr>
       <tr>
         <td><span class="inline">spriteIndex</span></td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite asset to use for the track. This property is only available for tracks of the type <span class="inline">seqtracktype_graphic</span> and you can get or set it.</td>
+        <td><span data-keyref="Type_Asset_Sprite"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Sprites.htm">スプライトアセット</a></span></td>
+        <td>トラックに使用する<span class="notranslate">sprite</span> <span class="notranslate">asset</span> のインデックスです。このプロパティは、タイプ <span class="inline">seqtracktype_graphic</span> のトラックにのみ有効で、取得または設定することができます。</td>
       </tr>
       <tr>
         <td><span class="inline">soundIndex</span></td>
-        <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../../The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span></td>
-        <td>The index of the audio asset to use for the track. This property is only available for tracks of the type <span class="inline">seqtracktype_audio</span> and you can get or set it.</td>
+        <td><span data-keyref="Type_Asset_Sound"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Sounds.htm">サウンドアセット</a></span></td>
+        <td>トラックに使用するオーディオ<span class="notranslate">asset</span> のインデックスです。このプロパティは、タイプ <span class="inline">seqtracktype_audio</span> のトラックでのみ利用可能で、取得または設定することができます。</td>
       </tr>
       <tr>
         <td><span class="inline">playbackMode</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_Audio_Key"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Audio Key Constant</a></span></td>
-        <td>The playback mode for the sound. This property is only available for tracks of the type <span class="inline">seqtracktype_audio</span> and you can get or set it. The property should be one of the constants given in the table below this one.</td>
+        <td><span data-keyref="Type_Constant_Sequence_Audio_Key"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">シーケンスオーディオキー定数</a></span></td>
+        <td>サウンドの再生モード。このプロパティは、タイプ <span class="inline">seqtracktype_audio</span> のトラックにのみ有効で、取得または設定することができます。このプロパティは、この下の表で与えられている定数のいずれかでなければなりません。</td>
       </tr>
       <tr>
         <td><span class="inline">curve</span></td>
-        <td><span data-keyref="Type_Struct_AnimCurve"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm" target="_blank">Animation Curve Struct</a></span></td>
-        <td>This property requires an animation curve struct (see <a href="../../Animation_Curves/animcurve_channel_new.htm">here</a> for more information) and is only available for tracks of the type <span class="inline">seqtracktype_real</span>. If no curve struct is used then the value for this property will be -1.</td>
+        <td><span data-keyref="Type_Struct_AnimCurve"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">アニメーションカーブ構造</a></span></td>
+        <td>このプロパティは<span class="notranslate">animation curve</span> <span class="notranslate">struct</span> を必要とし（詳細は<a href="../../Animation_Curves/animcurve_channel_new.htm">こちらを</a>ご覧ください）、タイプ<span class="inline">seqtracktype_real</span> のトラックでのみ利用可能です。カーブ<span class="notranslate">struct</span> が使用されていない場合、このプロパティの値は -1 になります。</td>
       </tr>
       <tr>
         <td><span class="inline">value</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>This property is simply a value that is associated with the keyframe data channel, and is only available for tracks of the type <span class="inline">seqtracktype_real</span> when no <span class="inline">curve</span> struct is supplied. This can be, for example, the X or Y position of the track if placed inside a <strong>&quot;position&quot;</strong> parameter track.</td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td>このプロパティは、単に<span class="notranslate">keyframe</span> データチャンネルに関連付けられた値で、 <span class="inline">curve</span> <span class="notranslate">struct</span> が供給されない場合、 <span class="inline">seqtracktype_real</span> タイプのトラックでのみ利用可能です。これは、例えば、<strong>「位置」</strong>パラメータトラックの中に置かれた場合、トラックのXまたはY位置とすることができます。</td>
       </tr>
       <tr>
         <td><span class="inline">colour</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span>s</td>
-        <td>This property returns (or requires, if being set) an <a href="../../../../GML_Overview/Arrays.htm">array</a> for the colour value of the keyframe with the format [A, R, G, B]. This is only available for tracks of the type <span class="inline">seqtracktype_colour</span>. Note that the values for each component should be expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour picker for colour tracks in the Sequences Editor).</td>
+        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">アレイ</a></span>の <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>s</td>
+        <td>このプロパティは、<span class="notranslate">keyframe</span> の色値を [A, R, G, B] のフォーマットで<a href="../../../../GML_Overview/Arrays.htm">配列として</a>返す（設定されている場合は必須）ものである。これは、 <span class="inline">seqtracktype_colour</span> タイプのトラックでのみ利用可能です。ここで、0 は HEX 値 #00 に、1 は HEX 値 #FF に対応します (<span class="notranslate">Sequences</span> Editor のカラートラックのカラーピッカーに表示される 0 - 255)。</td>
       </tr>
       <tr>
         <td><span class="inline">sequence</span></td>
-        <td><span data-keyref="Type_Struct_Sequence_Object"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Object_Struct.htm" target="_blank">Sequence Object Struct</a></span></td>
-        <td>This property will return (or requires, if being set) a <a href="The_Sequence_Object_Struct.htm">sequence object struct</a> and is only available for tracks of the type <span class="inline">seqtracktype_sequence</span>.</td>
+        <td><span data-keyref="Type_Struct_Sequence_Object"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Object_Struct.htm">Sequence<span class="notranslate">Object</span> Struct</a></span></td>
+        <td>このプロパティは、<a href="The_Sequence_Object_Struct.htm">シーケンス<span class="notranslate">object</span> 構造</a>体を返し（設定されている場合は要求）、タイプ <span class="inline">seqtracktype_sequence</span> のトラックに対してのみ利用可能である。</td>
       </tr>
       <tr>
         <td><span class="inline">objectIndex</span></td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>This property will return (or requires, if being set) an object index and is only available for tracks of the type <span class="inline">seqtracktype_instance</span>.</td>
+        <td><span data-keyref="Type_Asset_Object"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Objects.htm">オブジェクト・アセット</a></span></td>
+        <td>このプロパティは、<span class="notranslate">object</span> インデックスを返し（設定されている場合は要求）、タイプ <span class="inline">seqtracktype_instance</span> のトラックに対してのみ利用可能です。</td>
       </tr>
       <tr>
         <td><span class="inline">events</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of <span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span>s</td>
-        <td>This property allows access to the <b>events</b> and <b>broadcast messages</b> associated with the keyframe data struct. You can get or set this property, and when getting it an array of strings is returned, and when setting it an array of strings should be specified. For more information on events, please see the section <a href="../Sequence_Events_Moments_Broadcast.htm">Sequence Events And Moments</a>. This property is only available for tracks of the type <span class="inline">seqtracktype_message</span>.</td>
+        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">配列</a></span>の <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span>s</td>
+        <td>このプロパティは、<span class="notranslate">keyframe</span> データ<span class="notranslate">struct</span> に関連する<b>イベントと</b> <b>ブロードキャストメッセージに</b>アクセスすることを可能にする。このプロパティは取得または設定することができ、取得時には<span class="notranslate">strings</span> の配列が返され、設定時には<span class="notranslate">strings</span> の配列を指定する必要がある。イベントの詳細については、「<a href="../Sequence_Events_Moments_Broadcast.htm">シーケンスイベントとモーメント</a>」のセクションを参照してください。このプロパティは、タイプ <span class="inline">seqtracktype_message</span> のトラックでのみ利用可能です。</td>
       </tr>
       <tr>
         <td><span class="inline">event</span></td>
-        <td><span data-keyref="Type_Method"><a href="../../../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Method</a></span></td>
-        <td>This property will return (or can be set to) the <a href="../../../../GML_Overview/Method_Variables.htm">method</a> associated with the keyframe data struct. If no method has been specified or you wish to remove the method, then the property should be -1. This property is only available for tracks of the type <span class="inline">seqtracktype_moment</span>.</td>
+        <td><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">方法</a></span></td>
+        <td>このプロパティは、以下のものを返す（あるいは設定することができる）。 <a href="../../../../GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a>に関連付けられている<span class="notranslate">keyframe</span> データ<span class="notranslate">struct</span> 。メソッドが指定されていない場合、またはメソッドを削除したい場合は、このプロパティは-1でなければなりません。 このプロパティは、 <span class="inline">seqtracktype_moment</span> 型のトラックでのみ利用可能です。</td>
       </tr>
       <tr>
-        <td colspan="3"><em>Any additional variables listed in the table(s) below</em></td>
+        <td colspan="3"><em>以下の表に記載されている追加の変数</em></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>The <span class="inline">playbackMode</span> variable can be one of the following constants:</p>
+  <p> </p>
+  <p>変数 <span class="inline">playbackMode</span> には、以下の定数のいずれかを指定することができます。</p>
   <table>
     <colgroup>
       <col />
@@ -102,28 +102,28 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Sequence_Audio_Key"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Audio Key Constant</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Constant_Sequence_Audio_Key"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">シーケンスオーディオキー定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>定数</th>
+        <th>商品説明</th>
+        <th>価値</th>
       </tr>
       <tr>
-        <td><span class="inline">seqaudiokey_loop</span></td>
-        <td>The sound will loop when played.</td>
-        <td>0</td>
+        <td><span class="notranslate"><span class="inline">seqaudiokey_loop</span></td>
+        <td>再生すると、<span class="notranslate">loop</span> 。</td>
+        <td><span class="notranslate">0</span></td>
       </tr>
       <tr>
-        <td><span class="inline">seqaudiokey_oneshot</span></td>
-        <td>The sound will only play once then stop.</td>
-        <td>1</td>
+        <td><span class="notranslate"><span class="inline">seqaudiokey_oneshot</span></td>
+        <td>音は一度だけ再生され、その後停止します。</td>
+        <td><span class="notranslate">1</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h2 id="text">Text Track Data</h2>
-  <p>The struct will contain the following additional variables if assigned to a <a href="../../../../../The_Asset_Editors/Sequence_Properties/Text_in_Sequences.htm">text track</a> (<span class="inline">seqtracktype_text</span>):</p>
+  <p> </p>
+  <h2 id="text">テキストトラックデータ</h2>
+  <p><span class="notranslate">struct</span> は、<a href="../../../../../The_Asset_Editors/Sequence_Properties/Text_in_Sequences.htm">テキストトラック</a>(<span class="inline">seqtracktype_text</span>)に割り当てられると、以下の追加変数を含みます。</p>
   <table>
     <colgroup>
       <col />
@@ -132,42 +132,42 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Keyframe Data Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Sequence<span class="notranslate">Keyframe</span> データ構造</a></span></th>
       </tr>
       <tr>
-        <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>バリアブル</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
         <td><span class="inline">text</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>This is the text string that is drawn on the track.</td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td>これは、トラック上に描かれるテキスト<span class="notranslate">string</span> 。</td>
       </tr>
       <tr>
         <td><span class="inline">wrap</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>This is a boolean that indicates whether the text should be wrapped (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">ブーリアン</a></span></td>
+        <td>これは、テキストを折り返すか (<span class="inline">true</span>) しないか (<span class="inline">false</span>) を示すブール値である。</td>
       </tr>
       <tr>
         <td><span class="inline">alignmentH</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span></td>
-        <td>This is the horizontal alignment of the text, and will be one of the <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span>s given below.</td>
+        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">シーケンステキストアライメント定数</a></span></td>
+        <td>これはテキストの水平方向のアライメントを表し、以下のいずれかになります。 <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">シーケンステキストアライメント定数</a></span>は以下に示す。</td>
       </tr>
       <tr>
         <td><span class="inline">alignmentV</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span></td>
-        <td>This is the vertical alignment of the text, and will be one of the <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span>s given below.</td>
+        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">シーケンステキストアライメント定数</a></span></td>
+        <td>これはテキストの垂直方向のアライメントで <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">シーケンステキストアライメント定数</a></span>は以下に示す。</td>
       </tr>
       <tr>
         <td><span class="inline">fontIndex</span></td>
-        <td><span data-keyref="Type_Asset_Font"><a href="../../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span></td>
-        <td>This is the <span data-keyref="Type_Asset_Font"><a href="../../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span> used by the text track.</td>
+        <td><span data-keyref="Type_Asset_Font"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Fonts.htm">フォントアセット</a></span></td>
+        <td>これは <span data-keyref="Type_Asset_Font"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Fonts.htm">フォントアセット</a></span>テキストトラックで使用されます。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p><span class="inline">alignmentH</span> can be any of the following constants:</p>
+  <p> </p>
+  <p><span class="inline">alignmentH</span> は、以下のいずれかの定数です。</p>
   <table>
     <colgroup>
       <col />
@@ -175,65 +175,65 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span> (<span class="inline">alignmentH</span>)</th>
+        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">シーケンステキストアライメント定数</a></span>(<span class="inline">alignmentH</span>)</th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_left</span></td>
-        <td>The text will be aligned to the left of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_left</span></td>
+        <td>テキストは枠の左側に配置されます</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_right</span></td>
-        <td>The text will be aligned to the right of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_right</span></td>
+        <td>テキストは枠の右側に整列されます</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_center</span></td>
-        <td>The text will be centred horizontally within the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_center</span></td>
+        <td>テキストはフレーム内の水平方向の中央に配置されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_justify</span></td>
-        <td>The text will be justified within the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_justify</span></td>
+        <td>テキストはフレーム内で両端揃えになります</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p><span class="inline">alignmentV</span> can be any of the following constants:</p>
+  <p> </p>
+  <p><span class="inline">alignmentV</span> は、以下のいずれかの定数です。</p>
   <table>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span> (<span class="inline">alignmentV</span>)</th>
+        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">シーケンステキストアライメント定数</a></span>(<span class="inline">alignmentV</span>)</th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_top</span></td>
-        <td>The text will be aligned to the top of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_top</span></td>
+        <td>テキストはフレームの上部に整列されます</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_bottom</span></td>
-        <td>The text will be aligned to the bottom of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_bottom</span></td>
+        <td>テキストはフレームの下に整列されます</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_middle</span></td>
-        <td>The text will be centred vertically within the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_middle</span></td>
+        <td>テキストはフレーム内の垂直方向の中央に配置されます。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Sequence_Object_Struct.htm">The Sequence Object Struct</a></div>
+        <div style="float:left">戻る<a href="../Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次へ<a href="The_Sequence_Object_Struct.htm"> <span class="notranslate">Sequence</span> <span class="notranslate">Object</span> 構造</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Keyframe Data Struct

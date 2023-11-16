@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Seek Buffer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>シークバッファー</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Seek Buffer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Seek Buffer" />
@@ -14,42 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Seek Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" width="32" /> Seek Buffer</h1>
-  <p>This action can be used to move (seek) to a position within a buffer. You supply the unique buffer ID value as returned by the action <a href="Create_Buffer.htm">Create Buffer</a> and then the offset value in bytes to move to. The offset value will be applied from the <i>start</i> of the buffer, so calling this function will move the read/write position to the start of the buffer then move the number of bytes given along and position the new read/write position there. However, if you flag the offset as relative, it will move the read/write position forward (or backwards if the offset is a negative value) from the current position.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Seek Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Seek_Buffer.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> シークバッファー</h1>
+  <p>このアクションは、<span class="notranslate">buffer</span> 内の位置に移動 (シーク) するために使用します。アクション<a href="Create_Buffer.htm">Create Buffer</a>が返す一意の<span class="notranslate">buffer</span> ID 値と、移動先のオフセット値 (バイト) を指定します。オフセット値は
+   <span class="notranslate">buffer</span> したがって、この関数を呼び出すと、読み取り/書き込み位置が<span class="notranslate">buffer</span> の<i>先頭に</i>移動し、そこから指定されたバイト数だけ移動して、新しい読み取り/書き込み位置がそこに配置されます。ただし，フラグ
+    を相対値として指定すると、現在の位置から前方（オフセットが負の値の場合は後方）へ読み書きの位置を移動させることができます。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Seek Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" width="32" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
+        <td><span class="notranslate">Buffer</span></td>
+        <td><span class="notranslate">buffer</span> のインデックス（変数に格納）。</td>
       </tr>
       <tr>
-        <td>offset</td>
-        <td>The offset (in bytes) relative to the current seek position</td>
+        <td><span class="notranslate">offset</span></td>
+        <td>現在のシーク位置からの相対的なオフセット（バイト）。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Seek Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Seek_Buffer.png" />The above action block code gets the size of the buffer and then uses that value to set the read/write position to the end of the currently stored data.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックコードは、<span class="notranslate">buffer</span> のサイズを取得し、その値で読み取り/書き込みの
+    の位置は、現在格納されているデータの終端である。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Buffer_Size.htm">Get Buffer Size</a></div>
+        <div style="float:left">戻る：<a href="Buffer_Actions.htm">バッファーアクション</a></div>
+        <div style="float:right">次へ<a href="Get_Buffer_Size.htm"> <span class="notranslate">Buffer</span> </a>サイズを取得する</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Seek Buffer

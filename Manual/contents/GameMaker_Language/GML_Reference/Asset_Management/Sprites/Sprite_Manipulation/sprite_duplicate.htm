@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_duplicate</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>スプライト・デュプリケート</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_duplicate" />
   <meta name="rh-index-keywords" content="sprite_duplicate" />
@@ -14,44 +14,42 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_duplicate</h1>
-  <p>This function will return the index of a newly created sprite that is a duplicate (copy) of the one input as the &quot;index&quot; argument. If the function fails, -1 is returned. This function <i>must</i> be used to copy any sprites from the original assets before any transformations can be done on them. For example, if you wish to change the bounding box for a sprite, or set its alpha from another sprite, you must first duplicate it, then perform the operation on the duplicated sprite and use that. A duplicated sprite will be places on its own unique texture page when created, meaning that duplicating multiple sprites will create multiple texture pages and have an impact on performance, so use this function only when necessary.</p>
-  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span></b> When you duplicate a sprite in <span data-keyref="GameMaker Name">GameMaker</span> you must remember to remove it again (with <span style="font-size:1px;"><a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a></span>) when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>スプライト・デュプリケート</h1>
+  <p>この関数は、引数 &quot;index &quot;として入力されたものの複製（コピー）である、新しく作成された<span class="notranslate">sprite</span> のインデックスを返す。失敗した場合は、-1が返される。この関数は、元の<span class="notranslate">sprites</span> から任意の<span class="notranslate">assets</span> をコピーするために、それらに何らかの変形を施す前に使用<i>しなければならない</i>。たとえば、ある<span class="notranslate">sprite</span> のバウンディングボックスを変更したり、別の<span class="notranslate">sprite</span> からそのアルファ値を設定したりする場合は、まずそれを複製し、複製した<span class="notranslate">sprite</span> に対して操作を行い、それを使用しなければなりません。複製された<span class="notranslate">sprite</span> は、作成時に独自の<span class="notranslate">texture</span> ページに配置されます。つまり、複数の<span class="notranslate">sprites</span> を複製すると、複数の<span class="notranslate">texture</span> ページが作成され、パフォーマンスに影響があるため、必要な場合のみこの機能を使用します。</p>
+  <p class="note"><b>注意</b>：<span data-keyref="GameMaker Name">GameMakerで</span> <span class="notranslate">sprite</span> を複製した場合、忘れずに再度削除する必要があります（ を使用）。 <span style="font-size:1px;"><a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a></span>さもないと、メモリーリークが起こり、ゲームのスピードが落ち、最終的にはクラッシュしてしまいます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">sprite_duplicate(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to duplicate.</td>
-      </tr>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to duplicate.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
-  <p class="code"><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span> or -1</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンズ</h4>
+  <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span> or -1</p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">new_spr = sprite_duplicate(sprite_index)</p>
-  <p>The above code duplicates the sprite currently being used as the sprite index of the instance and stores the index for this new sprite in the variable &quot;new_spr&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、現在インスタンスの<span class="notranslate">sprite</span> のインデックスとして使用されている<span class="notranslate">sprite</span> を複製し、この新しい<span class="notranslate">sprite</span> のインデックスを変数 &quot;new_spr&quot; に格納します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_assign.htm">sprite_assign</a></div>
+        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次のページ <a href="sprite_assign.htm"><span class="notranslate">sprite_assign</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_duplicate

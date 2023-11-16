@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>JSDoc Script Comments</title>
+  <title>JSDocスクリプトコメント</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how JSDoc Script Comments work" />
   <meta name="rh-index-keywords" content="Code Editor - JSDoc Comments,JSDoc" />
@@ -14,11 +14,10 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">JSDoc Script Comments</span></h1>
-  <p>If you wish your custom functions to have code completion and to show the required arguments in a specific manner in the code editor, then you need to add some <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDoc style</a> comments. These comments are used to tell the auto-complete feature how the function should be used and filled out in the <a href="../Scripts.htm">script editor</a>.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_tip.hts"> </span> You can generate these comments automatically using <a data-xref="{title}" href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>&#39;s <a data-xref="{text}" href="Feather_Features.htm#h1">Quick Fixes</a> menu (press <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> + Q or click the <img class="icon" src="../../assets/Images/Icons/Icon_Feather.png" /> icon). The option is visible when your text cursor is placed on a function header (i.e. the line where the function&#39;s name is defined).</p>
-  <p>The format for a typical function header would be to have the function name, the description of the function, and then the list of the different arguments (parameters) that the function takes, making sure to start each line with a triple forward slash &quot;<span class="inline">///</span>&quot; as that tells <span data-keyref="GameMaker Name">GameMaker</span> to parse the comment as being JSDoc style. You can alternatively wrap your JSDoc comments in <span class="inline">/**</span> ... <span class="inline">*/</span>, with the <span class="inline">/**</span> being on its own line.</p>
-  <p>The comments themselves need to be given an identifier (preceded by &quot;<span class="inline">@</span>&quot;) and content. The available identifiers are as follows: </p>
+  <h1>JSDoc<span class="notranslate">Script</span> コメント</h1>
+  <p>カスタム関数にコード補完機能を持たせ、コードエディタに必要な引数を特定の方法で表示させたい場合は、<a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDocスタイルの</a>コメントを追加する必要があります。これらのコメントは、<a href="../Scripts.htm">スクリプトエディタで</a>関数をどのように使用し、記入すべきかをオートコンプリート機能に伝えるために使用されます。</p>
+  <p>典型的な関数ヘッダのフォーマットは、関数名、関数の説明、関数が受け取るさまざまな引数（パラメータ）のリストで、各行の最初にトリプルバックスラッシュ &quot;<span class="inline">///</span>&quot; を付けることを忘れないようにすることです。JSDoc コメントを <span class="inline">/**</span>... で囲むこともできます。<span class="inline">*/</span>で囲むこともできます。その場合、 <span class="inline">/**</span> は独立した行になります。</p>
+  <p>コメント自体には識別子（先頭に&quot;<span class="inline">@</span>&quot;）と内容を付与する必要があり、利用可能な識別子は以下の通りである。</p>
   <table>
     <colgroup>
       <col style="width: 306px;" />
@@ -27,59 +26,59 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Identifier</th>
-        <th>Content</th>
-        <th>Syntax</th>
+        <th>識別子</th>
+        <th>コンテンツ</th>
+        <th>シンタックス</th>
       </tr>
       <tr>
         <td><span class="inline">@function</span> / <span class="inline">@func</span></td>
-        <td>The full function name including arguments</td>
+        <td>引数を含む完全な関数名</td>
         <td><span class="inline">@func my_func(args)</span></td>
       </tr>
       <tr>
         <td><span class="inline">@description</span> / <span class="inline">@desc</span></td>
-        <td>A general description of what the function does</td>
+        <td>この関数が何をするのかについての一般的な説明</td>
         <td><span class="inline">@desc &lt;Description goes&gt;</span></td>
       </tr>
       <tr>
-        <td><span class="inline">@param</span> / <span class="inline">@</span><span class="inline">parameter</span> / <span class="inline">@arg</span> / <span class="inline">@argument</span></td>
-        <td>Information on arguments, with an optional <a href="Feather_Data_Types.htm">type</a></td>
+        <td><span class="inline">@param</span> / / / <span class="inline">@</span><span class="inline">parameter</span> <span class="inline">@arg</span> <span class="inline">@argument</span></td>
+        <td>引数の情報、オプションで <a href="Feather_Data_Types.htm"><span class="notranslate">type</span></a></td>
         <td><span class="inline">@param <em>{type}</em> name &lt;Parameter description&gt;</span></td>
       </tr>
       <tr>
         <td><span class="inline">@return / @returns</span></td>
-        <td><a href="Feather_Data_Types.htm">Type</a> of data the function returns</td>
+        <td>関数が返すデータの<a href="Feather_Data_Types.htm">種類</a></td>
         <td><span class="inline">@return {type} &lt;Return description&gt;</span></td>
       </tr>
       <tr>
-        <th colspan="3"><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a> only</th>
+        <th colspan="3"><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">フェザーのみ</a></th>
       </tr>
       <tr>
         <td><span class="inline">@pure</span></td>
-        <td>Marks the function as <a class="glossterm" data-glossterm="pure" href="#">pure</a></td>
+        <td>関数を<a class="glossterm" data-glossterm="じゅんすい" href="#">純粋な</a>ものとしてマークします。</td>
         <td><span class="inline">@pure</span></td>
       </tr>
       <tr>
         <td style=""><span class="inline">@ignore</span></td>
-        <td style="">Hides the function from Feather&#39;s autocomplete</td>
+        <td style="">Featherのオートコンプリートから関数を非表示にする</td>
         <td><span class="inline">@ignore</span></td>
       </tr>
       <tr>
         <td style=""><span class="inline">@deprecated</span></td>
-        <td style="">Marks the function as deprecated</td>
+        <td style="">この関数を非推奨としてマークします。</td>
         <td><span class="inline">@deprecated</span></td>
       </tr>
       <tr>
         <td style=""><span class="inline">@context / @self</span></td>
-        <td style="">Sets the context for the function, which Feather auto-complete uses to provide contextual information. Can be an object or a constructor.</td>
+        <td style="">関数のコンテキストを設定します。Feather オートコンプリートは、コンテキスト情報を提供するためにこれを使用します。<span class="notranslate">object</span> またはコンストラクタを指定します。</td>
         <td><span class="inline">@self &lt;object&gt;</span></td>
       </tr>
     </tbody>
   </table>
-  <p>If you haven&#39;t specified a type for your arguments or return value, and you&#39;re using <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>, it will assume a data type for them automatically, based on your function body.</p>
-  <p>See information on data types for <span class="inline">@param</span> and <span class="inline">@return</span> on <a data-xref="{title}" href="Feather_Data_Types.htm">Feather Data Types</a>.</p>
-  <h2>Examples</h2>
-  <p>To get an idea of how this would work when writing your own functions, let&#39;s take this basic example:</p>
+  <p>引数や戻り値のデータ型を指定せずに<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Featherを</a>使用した場合、関数本体から自動的にそれらのデータ型を想定します。</p>
+  <p><a href="Feather_Data_Types.htm">Feather Data Types</a> の <span class="inline">@param</span> および <span class="inline">@return</span> のデータ型に関する情報を参照してください。</p>
+  <h2>事例紹介</h2>
+  <p>独自の関数を書くときにどのように機能するかを知るために、この基本的な例を見てみましょう。</p>
   <p class="code">function is_same_object(_id, _obj)<br />
     {<br />
         if (_id.object_index == _obj)<br />
@@ -88,12 +87,12 @@
         }<br />
         else return false;<br />
     }</p>
-  <p>All this script does is check to see if an instance has the same <span class="inline">object_index</span> as a given object and would be called simply as:</p>
+  <p>この<span class="notranslate">script</span> がすることは、インスタンスが与えられた<span class="notranslate">object</span> と同じ <span class="inline">object_index</span> を持っているかどうかをチェックするだけであり、単に as と呼ばれるだけであろう。</p>
   <p class="code">if is_same_object(id, obj_Player)<br />
     {<br />
         instance_destroy()<br />
     }</p>
-  <p>However, writing that into the code editor will show you the argument variable names directly (<span class="inline">_id</span> and <span class="inline">_obj</span>) which in most cases is not very descriptive. You can use JSDoc to define custom argument names and descriptions, along with information for the function as well:</p>
+  <p>しかし、これをコードエディタに書き込むと、引数の変数名が直接表示されます (<span class="inline">_id</span> と <span class="inline">_obj</span>)。これは、ほとんどの場合、あまり説明的ではありません。JSDocを使えば、関数の情報とともに、カスタムの引数名と説明を定義することができます。</p>
   <p class="code">/// @function                is_same_object(inst_id, object_id)<br />
     /// @description             Check if the given instance belongs to the given object.<br />
     /// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.<br />
@@ -105,11 +104,11 @@
         return _inst_id.object_index == _object_id;<br />
     }
   </p>
-  <p>Now, when calling this function anywhere in your project, you will see the new argument names that were entered in the JSDoc comments:</p>
-  <p><img alt="JSDoc Example" class="center" height="652" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" />In the image above, the top part shows the function in the auto-complete and the bottom part shows how the argument helper at the bottom works. Note that both the optional &quot;type&quot; and the obligatory &quot;description&quot; parts of <span class="inline">@param</span> are not displayed by default in the IDE code complete, and to see them you must activate the options in the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/GML_Code_Preferences.htm">GML Preferences</a>.</p>
-  <p>When using <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>, you will see detailed information on the function when you hover your mouse over it:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/JSDoc_Feather_Info.png" />You can wrap an argument name in <span class="inline">[]</span> brackets to indicate that it is optional. The code editor will then expect any number of arguments between the minimum required arguments and the total number of arguments.</p>
-  <p>For example, see the following function:</p>
+  <p>これで、プロジェクトのどこかでこの関数を呼び出すと、JSDocのコメントで入力された新しい引数名が表示されます。</p>
+  <p><img>上の画像では、上部がオートコンプリートでの関数の表示、下部が下部の引数ヘルパーの動作を示しています。なお、 <span class="inline">@param</span> のオプションの &quot;type&quot; と義務の &quot;description&quot; の両部分は、デフォルトでは<span class="notranslate">IDE</span> コード・コンプリートに表示されず、表示するには<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/GML_Code_Preferences.htm">GML Preferences</a> でオプションを有効にする必要があります。</p>
+  <p><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Featherを</a>使用する際、機能の上にマウスを乗せると、その機能の詳細情報が表示されます。</p>
+  <p><img>引数名を <span class="inline">[]</span> 大括弧で囲むと、それがオプションであることを示すことができます。そうすると、コードエディターは必要最小限の引数と総引数の間の任意の数の引数を期待するようになります。</p>
+  <p>例えば、次のような機能をご覧ください。</p>
   <p class="code">/// @function    animate_position(end_x, end_y, start_x, start_y)<br />
     /// @desc        Animates the instance to ending point, from optional starting point<br />
     /// @arg end_x<br />
@@ -122,24 +121,24 @@
         // Function code<br />
     }
   </p>
-  <p>The <span class="inline">start_x</span> and <span class="inline">start_y</span> arguments are marked as optional, which means the code editor will now expect 2 to 4 arguments, as can be seen in the warning message:</p>
-  <p><img class="center" height="150" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Optional.png" width="537" /></p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> You will get the same behaviour if you use optional arguments in the function declaration. See <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a> for more information.</p>
-  <p>Since scripts can have multiple functions in them, you can add JSDoc comments for each of them before its declaration:</p>
-  <p><img alt="Multiple Functions With JSDoc Comments Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_MultipleFunctions.png" /></p>
-  <p> </p>
-  <p> </p>
+  <p> <span class="inline">start_x</span> と <span class="inline">start_y</span> の引数はオプションとしてマークされています。これは、警告メッセージに見られるように、コードエディターが2～4個の引数を期待するようになったことを意味します。</p>
+  <p><img alt="JSDoc Example" class="center" height="652" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" /></p>
+  <p class="note"><span class="note">注</span>関数宣言でオプションの引数を使用した場合でも、同じ動作になります。詳しくは、<a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト関数を</a>参照してください。</p>
+  <p><span class="notranslate">scripts</span> 、その中に複数の関数を持つことができるので、その宣言の前に、それぞれの関数に対するJSDocコメントを追加します。</p>
+  <p><img class="center" src="../../assets/Images/Asset_Editors/JSDoc_Feather_Info.png" /></p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Feather_Data_Types.htm">Feather Data Types</a></div>
+        <div style="float:left">戻る<a href="../Scripts.htm"> <span class="notranslate">Script</span> 編集部</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="Feather_Data_Types.htm">フェザーのデータ型</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-JSDoc Script Comments
+JSDoc <span class="notranslate">Script</span> Comments
 -->
   <!-- TAGS
 jsdoc_comments

@@ -6,7 +6,7 @@
   <title>display_get_frequency</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference section for display_get_frequency" />
   <meta name="rh-index-keywords" content="display_get_frequency" />
@@ -15,16 +15,16 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>display_get_frequency</h1>
-  <p>This function returns the frequency (or refresh rate) of the display that the game is being played on. It will return a real value as frames-per-second, so for example if your monitor is 60hz you will get <span class="inline2">60</span>, if it&#39;s running at 144hz then you will get <span class="inline2">144</span>, and so on.</p>
-  <p class="note"><span class="note">NOTE</span> This function is not supported on HTML5.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数は、ゲームがプレイされているディスプレイの周波数（またはリフレッシュレート）を返します。例えばモニターが60Hzなら<span class="inline2">60</span>、144Hzなら<span class="inline2">144という</span>ように、実際の値を返します。</p>
+  <p class="note"><span class="note">注</span>）この機能は、HTML5には対応していません。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">display_get_frequency();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var _freq = display_get_frequency();<br />
     <br />
     if (_freq &gt;= 240)<br />
@@ -44,18 +44,18 @@
         game_set_speed(30, gamespeed_fps);<br />
     }
   </p>
-  <p>The above code gets the frequency of the display, and runs some conditions to set the game running at 240, 120, 60 or 30 fps. This means that if your display is 90hz the game will run at 60 fps, if it&#39;s 144hz then it will run at 120 fps, etc. Of course, you can pass the frequency of the display directly into <span class="inline"><a href="../General_Game_Control/game_set_speed.htm">game_set_speed()</a></span> so it&#39;s used as the game&#39;s frame rate.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、ディスプレイの周波数を取得し、いくつかの条件を実行して、ゲームを240、120、60、30fpsで動作するように設定します。つまり、ディスプレイが90Hzの場合は60fpsで、144Hzの場合は120fpsでゲームが動作する、ということです。もちろん、ディスプレイの周波数を直接 <span class="inline"><a href="../General_Game_Control/game_set_speed.htm">game_set_speed()</a></span> に渡して、ゲームのフレームレートとして使用することもできます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="display_mouse_get_x.htm">display_mouse_get_x</a></div>
+        <div style="float:left">戻る<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
+        <div style="float:right">次ページ：<a data-xref="{title}" href="display_mouse_get_x.htm">display_mouse_get_x</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_get_frequency

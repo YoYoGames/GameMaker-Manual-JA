@@ -6,7 +6,7 @@
   <title>asset_get_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function asset_get_index" />
   <meta name="rh-index-keywords" content="asset_get_index" />
@@ -16,46 +16,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>asset_get_index</h1>
-  <p>This function gets the unique identifying index for a game asset from its name.</p>
-  <p>If the asset is not found, the function will return a value of -1, otherwise it will return the unique index id for the asset being checked. This id can then be used in other functions as you would any other index value, like the <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> or the <a href="../Paths/Path_Variables/path_index.htm"><span class="inline">path_index</span></a>, for example. Please note that although this function can be used to reference assets from strings (see example below), you should always make sure that the asset exists before using it otherwise you may get errors that will crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この関数を使用すると、ゲーム名から<span class="notranslate">asset</span> の一意の識別インデックスを取得することができます。<span class="notranslate">asset</span> が見つからない場合、この関数は値 -1 を返します。そうでない場合は、チェック対象の<span class="notranslate">asset</span> の一意のインデックス ID を返します。この ID は、他の関数で他のインデックス値と同じように使うことができます。 <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>または <a href="../Paths/Path_Variables/path_index.htm"><span class="inline">path_index</span></a>例えばこの関数は<span class="notranslate">assets</span> から<span class="notranslate">strings</span> を参照するために使用できますが (以下の例を参照)、使用する前に必ず<span class="notranslate">asset</span> が存在することを確認する必要があります。そうしないと、エラーが発生してゲームがクラッシュする可能性があります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">asset_get_index(name);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the game asset to get the index of (a string).</td>
-      </tr>
+        <td><span class="notranslate">name</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the game asset to get the index of (a string).</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Asset"><a href="../../../../../The_Asset_Editors/The_Asset_Editors.htm" target="_blank">Asset</a></span> (any asset type)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Asset">Asset</span> (any asset type)</p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var obj = asset_get_index(&quot;obj_Enemy_&quot; + string(global.Level));<br />
     if obj &gt; -1<br />
     {<br />
         instance_create_layer(random(room_width), random(room_height), obj, &quot;Enemy_Layer&quot;);<br />
     }</p>
-  <p>The above code will get an object index from a string, and if that index exists, create an instance of the object in the game.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、<span class="notranslate">object</span> から<span class="notranslate">string</span> のインデックスを取得し、そのインデックスが存在すれば、ゲーム内に<span class="notranslate">object</span> のインスタンスを作成します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="asset_get_type.htm">asset_get_type</a></div>
+        <div style="float:left">戻る<a href="Assets_And_Tags.htm">資産とタグ</a></div>
+        <div style="float:right">次のページ <a href="asset_get_type.htm"><span class="notranslate">asset_get_type</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 asset_get_index

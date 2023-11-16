@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Device Manager</title>
+  <title>デバイスマネージャー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section dedicated explaining the Device Manager
 " />
@@ -15,26 +15,26 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h">The Device Manager</h1>
-  <p>The <strong>Device Manager</strong> is accessed by clicking <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the pencil button <img alt="Icon Pencil" class="icon" src="../assets/Images/Icons/Icon_Pencil.png" /> within the <a href="../Introduction/Compiling.htm">Target List</a>:</p>
-  <p><img alt="Target List" class="center" src="../assets/Images/Setup_And_Version/TargetList.png" />Clicking this button will open the <strong>Device Manager</strong> where you can configure different devices for the target platforms that you wish to compile and test on (note that the platforms available will depend on the <a href="GMS2_Version_Information.htm">Licence</a> that you have and not all of them may be visible). Below you can find details on configuring devices for each of the target platforms:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Android</a></p>
+  <h1 id="h">デバイスマネージャー</h1>
+  <p><strong>デバイスマネージャーは</strong> <img> <strong></strong>、<a href="../Introduction/Compiling.htm">ターゲットリスト</a>内の鉛筆ボタン<img> をクリックすることで表示されます。</p>
+  <p><img>このボタンをクリックすると<strong>デバイスマネージャが</strong>開き、コンパイルやテストを行うターゲットプラットフォームごとに異なるデバイスを設定することができます（利用できるプラットフォームはお持ちの<a href="GMS2_Version_Information.htm">Licenceによって</a>異なり、すべてのプラットフォームが表示されない場合があることにご注意ください）。以下では、各ターゲットプラットフォームのデバイス設定の詳細を説明します。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">アンドロイド</a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">
-      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_Android.png" src="../assets/Images/Setup_And_Version/Device_Manager_Android.png" class="center" alt="Android Device Manager" />Here you can click on the
-      <em>Add New Device</em> button to add a new Android device to the list manually, or you can click the
-      <em>Detect Device</em> button to have <span data-keyref="GameMaker Name">GameMaker</span> automatically detect any devices connected through a wired connection. You can also set up an
-      <strong>Android Virtual Device</strong> by clicking the button marked
-      <em>Run AVD</em>. This will open up the Android Virtual Device manager where you can create a new AVD (see
-      <a href="https://developer.android.com/studio/run/managing-avds.html">here</a> for more information). Once you have one created, you need to launch it from the AVD manager and then in <span data-keyref="GameMaker Name">GameMaker</span> click on the
-      <em>Detect Device</em> button and it should be added automatically to the device list:
-      <br />
+     <img>ここで
+     <em>Add New Device</em>ボタンをクリックして、新しい<span class="notranslate">Android</span> デバイスを手動でリストに追加<em></em>するか、または、Add New Deviceボタンをクリックして、新しい デバイスを手動でリストに追加することができます。
+      有線接続された機器を<span data-keyref="GameMaker Name">GameMakerが</span>自動的に検出する「<em>機器検出</em>」ボタン。また
+     <strong>Android Virtual Deviceと</strong>書かれたボタンをクリックすると、<strong>Android Virtual Device</strong>が表示されます。
+     <em>AVDを実行</em>する。<span class="notranslate">Android</span> Virtual Device managerが表示され、新しいAVDを作成することができます(
+      をご覧<a href="https://developer.android.com/studio/run/managing-avds.html">ください</a>。）作成したら、AVDマネージャから起動し、<span data-keyref="GameMaker Name">GameMakerで</span>
+     <em>Detect Device</em>ボタンを押すと、デバイスリストに自動的に追加されるはずです。
+      <br>
     </p>
     <p class="dropspot">
-      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_AVD.png" src="../assets/Images/Setup_And_Version/Device_Manager_AVD.png" alt="Android Virtual Device" class="center" />Once you have a device (physical or virtual) added,
-      you can then check the connection using the
-      <em>Test Connection</em> button or remove it from the list again by clicking the
-      <em> Remove Device</em> button.
+     <img>デバイス（物理または仮想）が追加されたら。
+      で接続を確認することができます。
+     <em>接続テスト</em>] ボタンをクリックするか、リストから削除してください。
+      <em> デバイスの削除</em>]ボタン
     </p>
     <p class="dropspot">
       <br />
@@ -43,123 +43,142 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">HTML5</a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p class="dropspot">
-      <img alt="HTML5 Device Manager" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_HTML5.png" />The HTML5 device manager is for adding different browsers to the device list for targeting when running. To start with, you should
-      click the
-      <em>Detect Browsers</em> button, which should create devices for each of the installed browsers on your machine. If your browser is not listed, you can also click the
-      <em>Add New Browser</em> button and then give the device a name and point <span data-keyref="GameMaker Name">GameMaker</span> to the path for the browser executable.
+     <img>HTML5のデバイスマネージャーは、実行時にターゲットとする異なるブラウザーをデバイスリストに追加するためのものです。まず始めに
+      をクリックします。
+     <em>Detect Browsers</em>"ボタンをクリックすると、お使いのマシンにインストールされている各ブラウザのデバイスが作成されます。お使いのブラウザがリストにない場合は、[ブラウザの検出]ボタンをクリックすることもできます。
+     <em>Add New Browser</em>」ボタンを押し、デバイスに名前を付け、<span data-keyref="GameMaker Name">GameMakerに</span>ブラウザの実行ファイル用の<span class="notranslate">path</span> を指定する。
     </p>
-    <p class="dropspot">The additional available fields can be set up to help control how the browser runs your projects, with the following options available:</p>
+    <p class="dropspot">追加の利用可能なフィールドを設定することで、ブラウザがプロジェクトを実行する方法を制御するのに役立ち、以下のオプションが利用可能です。</p>
     <ul class="dropspotlist">
       <li class="dropspot">
-        <strong>Browser Command Line Arguments</strong>: Here you can add in any command line arguments to be appended to the browser path. You can find a list of these from the following links to the main popular browsers:
+       <strong>ブラウザのコマンドライン引数</strong>。ここでは、ブラウザ<span class="notranslate">path</span> に追加する任意のコマンドライン引数を追加することができます。これらのリストは、主な一般的なブラウザの次のリンクから見つけることができます。
         <ul>
           <li>
-            <a href="https://peter.sh/experiments/chromium-command-line-switches/">Chromium (Chrome)</a>
+            <a href="https://peter.sh/experiments/chromium-command-line-switches/">クローム(Chrome)</a>
           </li>
           <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options">Firefox</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options">ファイアフォックス</a>
           </li>
           <li>
-            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/general-info/hh826025(v=vs.85)">Internet Explorer</a>
+            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/general-info/hh826025(v=vs.85)">インターネットエクスプローラー</a>
           </li>
         </ul>
       </li>
       <li class="dropspot">
-        <strong>Web Server Address</strong>: The address of the web
-        <a data-glossterm="server" class="glossterm" href="#">server</a> to target (default is 127.0.0.1). You may need to change this depending on the specifications of different APIs, for example, Facebook would require this to be set to
-        <span class="inline">http://localhost</span> (and then have that whitelisted on their app console).
+       <strong>Web<span class="notranslate">Server</span> アドレス</strong>。Webのアドレス
+       <a data-glossterm="サーバ" class="glossterm" href="#">サーバを</a>ターゲットにします（デフォルトは127.0.0.1）。これはAPIの仕様によって変更する必要があります。例えば、Facebookではこれを
+        <span class="inline">http://localhost</span> (そして、そのアプリコンソールでホワイトリストに登録されます)。
       </li>
       <li class="dropspot">
-        <strong>Web Server Port</strong>: Set the
-        <a data-glossterm="port number" class="glossterm" href="#">port number</a> for the web server (default is 51264).
+       <strong>Web<span class="notranslate">Server</span> Port</strong>: 設定します。
+        web<span class="notranslate">server</span> の<a data-glossterm="ポート番号" class="glossterm" href="#">ポート番号</a>（デフォルトは51264）。
       </li>
       <li class="dropspot">
-        <strong>Allowed Web Server IPs / CIDR IP Ranges</strong>: Set the allowed web server, hostnames and CIDR IP ranges as required.
+       <strong>Allowed Web<span class="notranslate">Server</span> IPs / CIDR IP Ranges</strong>:必要に応じて、許可された Web<span class="notranslate">server</span> 、ホスト名、および CIDR IP 範囲を設定します。
       </li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">iOS</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">
-      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_iOS.png" src="../assets/Images/Setup_And_Version/Device_Manager_iOS.png" class="center" alt="iOS Device Manager" />Before you can set up your iOS devices, you must have set
-      up your Mac device and tested it&#39;s connection (see below for details). Once that is done you can select the Mac that you want to target from the drop down menu at the top of the window and then click the
-      <em>Detect Device</em> button to have <span data-keyref="GameMaker Name">GameMaker</span> automatically find any connected iOS devices, including simulators. Once connected, the device details will be shown in the list in this window, and you can edit the device name to make it
-      more user friendly (this change only affects how the device is presented in the Target Manager and nothing else).
+      <img> <span class="notranslate">iOS</span> デバイスのセットアップを行う前に、以下の設定が完了している必要があります。
+      Macデバイスをアップグレードし、接続テストを行います（詳細は下記参照）。これが完了したら、ウィンドウ上部のドロップダウンメニューから対象となるMacを選択し、次に
+     <em>Detect Device</em>ボタンを押すと、<span data-keyref="GameMaker Name">GameMakerが</span>シミュレーターを含む接続された<span class="notranslate">iOS</span> デバイスを自動的に検出します。接続されると、デバイスの詳細がこのウィンドウのリストに表示され、デバイス名を編集することができます。
+      この変更は、ターゲットマネージャでのデバイスの表示方法のみに影響し、それ以外には影響しません）。
     </p>
     <p class="dropspot">
       <br />
     </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">tvOS</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">ティーブイオーエス</a></p>
   <div class="droptext" data-targetname="drop-down3">
     <p class="dropspot">
-      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_tvOS.png" src="../assets/Images/Setup_And_Version/Device_Manager_tvOS.png" class="center" alt="tvOS Device Manager" />Before you can set up your tvOS devices, you must have
-      set up your Mac device and tested it&#39;s connection (see below for details). Once that is done you can select the Mac that you want to target from the drop down menu at the top of the window and then click the
-      <em>Detect Device</em> button to have <span data-keyref="GameMaker Name">GameMaker</span> automatically find any connected tvOS devices, including simulators. Once connected, the device details will be shown in the list in this window, and you can edit the device name to make it
-      more user friendly (this change only affects how the device is presented in the Target Manager and nothing else).
+      <img> <span class="notranslate">tvOS</span> デバイスをセットアップする前に、次のことが必要です。
+      Macデバイスをセットアップし、接続をテストします（詳細は下記参照）。これが完了したら、ウィンドウ上部のドロップダウンメニューから対象となるMacを選択し、次に
+     <em>Detect Device</em>ボタンを押すと、<span data-keyref="GameMaker Name">GameMakerが</span>シミュレーターを含む接続された<span class="notranslate">tvOS</span> デバイスを自動的に検出します。接続されると、デバイスの詳細がこのウィンドウのリストに表示され、デバイス名を編集することができます。
+      この変更は、ターゲットマネージャでのデバイスの表示方法のみに影響し、それ以外には影響しません）。
     </p>
     <p class="dropspot">
       <br />
     </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">macOS</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">マクロス</a></p>
   <div class="droptext" data-targetname="drop-down7">
     <p class="dropspot">
-      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_Mac.png" src="../assets/Images/Setup_And_Version/Device_Manager_Mac.png" class="center" alt="Mac Device Manager" />To add a Mac device to the manager, you must first click
-      on the button labelled
-      <em>Add New device</em> which will add the device and create some blank fields which you will need to fill in to enable the connection.
-      <br />
+     <img>Macデバイスをマネージャに追加するには、最初に
+      というラベルのついたボタンをクリックします。
+     <em>新しいデバイスを</em>追加すると、デバイスが追加され、接続を有効にするために入力する必要があるいくつかの空白のフィールドが作成されます。
+      <br>
     </p>
-    <p class="dropspot">First you need to
-      <strong>name </strong>the device so that you can identify it in the target list and then give the
-      <strong>host name</strong> (or IP) of the Mac. You must then give the
-      <strong>username </strong>of the user that you wish to link to, and the
-      <strong>password </strong>that they used. If you wish, you can also change the
-      <strong>Install Folder</strong> on the Mac to wherever you would prefer <span data-keyref="GameMaker Name">GameMaker</span> to store the build files for your projects.
+    <p class="dropspot">まず最初に
+      ターゲットリストでデバイスを識別できるようにデバイス<strong>名を </strong>付け、その後に
+      Macの<strong>ホスト名</strong>（またはIP）。次に
+      リンクさせたいユーザーの<strong>ユーザー名 </strong>、および
+      の<strong>パスワードが </strong>必要です。また、必要に応じて
+      Mac上の<strong>インストールフォルダは</strong>、<span data-keyref="GameMaker Name">GameMakerに</span>プロジェクトのビルドファイルを保存したい場所に設定します。
     </p>
-    <p class="dropspot">When that is all done, you can click on the
-      <em>Test Connection</em> button to make sure that <span data-keyref="GameMaker Name">GameMaker</span> can communicate with the Mac.
-    </p>
-    <p class="note">
-      <strong>NOTE</strong>: If you are developing for iOS then you must have done this first and have established a working connection to the Mac you wish to use for development.
-      <br />
+    <p class="dropspot">それがすべて終わったら、[OK]をクリックします。
+     <em>Test Connection</em>」ボタンで、<span data-keyref="GameMaker Name">GameMakerが</span>Macと通信できることを確認します。
     </p>
     <p class="note">
-      <strong>NOTE</strong>: You
-      <strong>must </strong>have enabled
-      <strong>Remote Login</strong> on the target mac. This can be done by going to
-      <strong>Preferences </strong>-&gt;
-      <strong>Sharing</strong> and
-      <strong>Enable Remote Login</strong> for the user you want to be able to login.
+     <strong>注：</strong> <span class="notranslate">iOS</span> で開発する場合は、最初にこの作業を行い、開発用に使用する Mac との接続を確立しておく必要があります。
+      <br>
+    </p>
+    <p class="note">
+     <strong>注意</strong>事項
+      を有効にしておく<strong>必要が </strong>あります。
+      ターゲットMacで<strong>リモートログイン</strong>する。これは、以下の方法で行うことができます。
+     <strong>環境設定 </strong>-&gt;
+     <strong>共有と</strong>
+      ログインできるようにしたいユーザーの<strong>リモートログインを有効に</strong>する。
     </p>
     <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Ubuntu (Linux)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Ubuntu (<span class="notranslate">Linux</span>)</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot"><img alt="Ubuntu (Linux) Device Manager" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_Ubuntu.png" />To add an Ubuntu (Linux) device to the manager, you must first click on the button labelled <em>Add New Device </em>which
-      will add the device and create some blank fields which you will need to fill in to enable the connection.</p>
-    <p class="dropspot">First you need to <strong>name </strong>the device so that you can identify it in the target list and then give the <strong>host name</strong> (or IP) of the Ubuntu machine (or VM). You must then give the <strong>username </strong>of the user that
-      you wish to link to, and the <strong>password </strong>that they used. You are also required to give an <strong>install folder </strong>on the Ubuntu machine that you want to use for installing your projects. When that is all done, you can click
-      on the <em>Test Connection</em> button to make sure that <span data-keyref="GameMaker Name">GameMaker</span> can communicate with the Ubuntu machine.</p>
-    <p class="dropspot">Note that the final executable created by GameMaker <strong>will depend on the architecture of the device being targetted</strong>, which can be either <strong>x64</strong> or <strong>ARM</strong>. For example, if you connect a Raspberry Pi 3 or 4,
-      the executable created will be a 32bit ARM executable, and if you connect a Linux PC it will be 64bit x64 executable.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img> <span class="notranslate">Ubuntu</span> ( ) デバイスをマネージャに追加するには、まず「<span class="notranslate">Linux</span><em>Add New Device </em>」というボタンをクリックする必要があります。
+      デバイスが追加され、接続を有効にするために必要ないくつかの空白のフィールドが作成されます。</p>
+    <p class="dropspot">まず、ターゲットリストで識別できるようにデバイスの<strong>名前を </strong>付け、次に<span class="notranslate">Ubuntu</span> マシン（または VM）の<strong>ホスト名</strong>（または IP）を指定する必要があります。次に、使用するユーザーの<strong>ユーザー </strong>名を指定する必要があります。
+      リンクさせたい相手と、その相手が使っていた<strong>パスワード </strong>。また、プロジェクトのインストールに使用する<span class="notranslate">Ubuntu</span> マシンの<strong>インストールフォルダを </strong>指定する必要があります。すべて完了したら、次のようにクリックします。
+      をクリックし、<span data-keyref="GameMaker Name">GameMakerが</span> <span class="notranslate">Ubuntu</span> マシンと通信できることを確認する。</p>
+    <p class="dropspot">なお、GameMakerで作成される最終的な実行ファイルは、<strong>ターゲットとなるデバイスのアーキテクチャ</strong>（<strong>x64</strong>または<strong>ARM</strong>）に<strong>依存</strong>することに注意してください。例えば、Raspberry Pi 3 または 4 を接続した場合。
+      作成される実行ファイルは32bitの<span class="notranslate">ARM</span> 、<span class="notranslate">Linux</span> PCを接続した場合は64bitのx64実行ファイルになります。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>All the different device windows have an option at the bottom to <strong>Clear Devices</strong> which, when clicked, will remove all the connected devices from the list.</p>
-  <p>Once you have set up your devices, you can then connect to any one of them from the Target options at the top of the <span data-keyref="GameMaker Name">GameMaker</span> IDE and testing/building your game will push the project to that device:</p>
-  <p><img alt="Device Manager Target List" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_TargetList.png" /></p>
-  <p> </p>
-  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Windows UWP</a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p class="dropspot"><span class="notranslate">Windows 10</span> UWP ターゲットのデバイスを追加する前に、デバイスで<strong>Developer Mode</strong>を有効にして<strong>Device Portal</strong>をセットアップする必要があります。これを行わないと、<span data-keyref="GameMaker Name">GameMakerが</span>通信できなくなる。
+      デバイスと連携し、UWPアプリを適切に作成することができます。</p>
+    <p class="dropspot"><span class="notranslate">Windows</span> 検索で「<em>Developer Mode</em>」と入力し、表示される「<em>設定</em>」項目をクリックすることで、簡単に開発者モードを有効にすることができます。すると、以下のような画面が表示されます。</p>
+    <p class="dropspot"><img><strong>デベロッパーモードの</strong>オプションを選択する必要があります（この際、<span class="notranslate">Windows</span> がダウンロードされる場合があります）。
+      をインストールし、その下のオプション「<strong>Enable Device Portal</strong>」を選択します。デバイスポータルは、<span data-keyref="GameMaker Name">GameMakerが</span> <span class="notranslate">Windows 10</span> PCと通信するためのもので、有効にすると、次のことが要求されます。
+     <em>ユーザー名</em>と<em>パスワードを</em>入力してください。</p>
+    <p class="dropspot"><img>ユーザー名とパスワードは、ポータルに固有のものでなければならず、Microsoftアカウントで使用されているものであってはなりません。
+      またはその他の<span class="notranslate">Windows</span> の認証情報です。この情報を入力したら、「<em>適用」 </em>ボタンをクリックし、設定マネージャーを閉じて、<span data-keyref="GameMaker Name">GameMakerに</span>戻ります。</p>
+    <p class="dropspot">デバイスポータルの詳細については、こちらのマイクロソフトの記事を参照してください。<a href="https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop">デスクトップ用</a>デバイスポータル。</p>
+    <p class="dropspot">これで、<span data-keyref="GameMaker Name">GameMakerの</span> <strong>デバイスマネージャーを</strong>開き、使用するデバイス（複数可）を設定することができます。</p>
+    <p class="dropspot"><img> <span class="notranslate">Windows 10</span> UWP 準拠のデバイスをマネージャーに追加するには、まず「<em>Add New Device</em>」と書かれたボタンをクリックする必要があります。
+      デバイスが追加され、接続を有効にするために必要ないくつかの空白のフィールドが作成されます。</p>
+    <p class="dropspot">まず、ターゲットリストで識別できるようにデバイス<strong>名を </strong>付け、次に<strong>ホストを </strong>指定します<strong>。 </strong>これは、ゲームをホストするネットワーク上の<span class="notranslate">Windows 10</span> デバイスの IP アドレスで、ポート番号を設定するために &quot; <span class="inline">:50443</span>&quot; を<strong>末尾に</strong>付ける必要があります。その後、Device Portalで設定した<strong>User Nameと</strong> <strong>Passwordを </strong>追加します（前述のとおり）。PINは空白のままでもかまいません。
+      は、UWP<span class="notranslate">Windows 10</span> Desktop では必要ありません。</p>
+    <p class="dropspot">異なるUWP出力（デスクトップ、XboxOne）をカバーする、より具体的な設定の詳細については、YYGヘルプデスクをご覧ください。<a href="https://help.yoyogames.com/hc/en-us/sections/115000309028-UWP">UWPのセットアップ</a>を参照してください。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p> </p>
+  <p>すべてのデバイスウィンドウの下部には、「<strong>デバイスの消去</strong>」というオプションがあり、これをクリックすると、接続されているすべてのデバイスがリストから消去されます。</p>
+  <p>デバイスを設定したら、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> の上部にあるターゲットオプションから、どれか1つのデバイスに接続すれば、ゲームのテスト/ビルドがそのデバイスにプロジェクトをプッシュします。</p>
+  <p><img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../The_IDE/Preferences_And_Information/Preferences_And_Features.htm">Preferences And Features</a></div>
-        <div style="float:right">Next: <a href="Error_Reporting.htm">Error Reporting</a></div>
+        <div style="float:left">戻る：<a data-xref="{title}" href="../The_IDE/Preferences_And_Information/Preferences_And_Features.htm">IDEの環境設定と機能</a></div>
+        <div style="float:right">次へ<a href="Error_Reporting.htm">エラー報告</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences

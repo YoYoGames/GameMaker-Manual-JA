@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Room Editor</title>
+  <title>客室数</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the room editor works" />
   <meta name="rh-index-keywords" content="Room Editor" />
@@ -14,147 +14,148 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Room Editor</span></h1>
+  <h1><span class="notranslate">Room</span> 編集部</h1>
   <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room.png" style="cursor: nesw-resize;" /></p>
-  <p><span data-field="title" data-format="default">The Room Editor</span> is where you create your game <strong>rooms</strong>. Every game requires <em>at least one room to run</em>, and in the room you can place instances, sprites, tiles, paths, backgrounds, sequences and particle systems. Each of these different assets can be placed on their own unique <strong>layer </strong>which can then be ordered however you wish in the <strong>Layers Editor</strong>. Due to the complexity of the room editor, we&#39;ll give you first a brief overview of the most important features, and then you can find more in-depth details from the section links listed below.</p>
-  <p>When you create a room asset, you can right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on it in the Asset Browser to open the context menu, which will permit you to create <strong>child rooms </strong>(see the page on <a href="Room_Properties/Room_Inheritance.htm">Inheritance</a> for more information), open up the room for editing, add a new resource group to better organise the rooms, rename the room or delete it. Note that to change the room order and/or inheritance you need to use the <a href="../Settings/The_Room_Manager.htm">Room Manager</a>, which you can open using the menu in the top right of the Asset Browser.</p>
-  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room_RoomManager.png" /><span data-field="title" data-format="default">The Room Editor</span> is itself a <a href="../Introduction/Workspaces.htm">workspace</a> and as such you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the tab and drag it off of the main window into a new window of its own - perhaps in another display, for example. You can also place it back into the main window by dragging the tab to the top of the IDE and releasing the mouse button.</p>
-  <p>The user interface for the room editor is simple to navigate and split in various discrete sections. Those parts of the editor that are docked - the <a href="../IDE_Tools/The_Inspector.htm">Inspector</a> that shows the <strong>room or layer properties</strong> and the <strong>layer editor</strong> - can also be removed from the dock by simply dragging them out into the workspace, and they can be added back into the docks again by dragging them to the sides or the bottom of the workspace.</p>
-  <p>Below is a brief overview of each of the Room Editor sections:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Rulers / Guides</a></p>
+  <p><span class="notranslate">room</span> エディターは、ゲーム<strong>ルームを</strong>作成する場所です。すべてのゲームは、<em>少なくとも1つの<span class="notranslate">room</span> 、実行する</em>必要があります。<span class="notranslate">room</span> 、インスタンス、<span class="notranslate">sprites</span> 、<span class="notranslate">tiles</span> 、<span class="notranslate">paths</span> 、および背景を配置することができます。これらの異なる<span class="notranslate">assets</span> はそれぞれ独自の<strong>レイヤーに </strong>配置することができ、<strong>レイヤーエディターで</strong>好きなように並べることができます。<span class="notranslate">room</span> エディタは複雑なため、まず最も重要な機能の概要を説明し、その後、以下のセクションのリンクからより詳細な詳細をご覧いただけます。</p>
+  <p><span class="notranslate">room</span> リソースを作成したら、<span class="notranslate">Asset</span> ブラウザで<img> を右クリックしてコンテキストメニューを開き、<strong>子<span class="notranslate">rooms</span> </strong> の作成（詳細は<a href="Room_Properties/Room_Inheritance.htm">継承の</a>ページを参照）、編集用に<span class="notranslate">room</span> を開く、新しいリソースグループを追加して<span class="notranslate">rooms</span> を整理、<span class="notranslate">room</span> の名前を変更、または削除することが可能です。<span class="notranslate">room</span> の順序や継承を変更するには、<a href="../Settings/The_Room_Manager.htm">ルームマネージャーを</a>使用する必要があります。<a href="../Settings/The_Room_Manager.htm">ルーム</a>マネージャーは<span class="notranslate">Asset</span> ブラウザーの右上にあるメニューから開くことができます。</p>
+  <p><img> <span class="notranslate">room</span> エディタはそれ自体が<a href="../Introduction/Workspaces.htm">ワークスペース</a>なので、タブの をクリックして、メインウィンドウからそれ自身の新しいウィンドウにドラッグすることができます。また、タブを の上部にドラッグしてマウスボタンを離すと、メインウィンドウに戻すことができます。<img> <span class="notranslate">IDE</span> </p>
+  <p><span class="notranslate">room</span> エディターのユーザーインターフェイスは、操作が簡単で、さまざまな個別のセクションに分かれています。ドッキングされているエディタのこれらの部分 -<strong>ルームプロパティと</strong> <strong>レイヤーエディタ</strong>、および異なるレイヤープロパティセクション - は、単にそれらを<span class="notranslate">workspace</span> にドラッグすることによってドックから削除することもできますし、それらを<span class="notranslate">workspace</span> の側面または底面にドラッグすることによって再びドックに戻すことができます。</p>
+  <p>以下は、<span class="notranslate">Room</span> Editorの各セクションの概要です。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">定規・ガイド</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The rulers along the edge of the canvas show you the position of the things that are placed within it, and are marked from (0, 0) which is the center of the canvas and the origin for the room. You can click and drag on the rulers to pull a horizontal or vertical guide into the room, and this guide can then be used to accurately position the different assets that are being used, as moving an asset close to one will &quot;snap&quot; it to the guide. While positioning assets within the room, smart guides will also be temporarily shown indicating the distance between assets, as well as the distance from the room boundary or center point.</p>
-    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" />The distance that assets &quot;snap&quot; to guides, as well as other properties, can be set in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">Room Editor Preferences</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">room</span> キャンバスの縁に沿ったルーラは、その中に置かれたものの位置を示し、キャンバスの中心であり<span class="notranslate">room</span> の原点である (0, 0) からマークされています。ルーラをクリックしてドラッグすると、水平または垂直ガイドを<span class="notranslate">assets</span> に引き込むことができ、このガイドを使って、使用中の異なる<span class="notranslate">asset</span> を正確に配置することができます。<span class="notranslate">assets</span> 内で<span class="notranslate">room</span> を位置決めしている間、スマートガイドが<span class="notranslate">assets</span> 間の距離、および<span class="notranslate">room</span> 境界または中心点からの距離を一時的に表示します。</p>
+    <p class="dropspot"><img> <span class="notranslate">assets</span> がガイドに「スナップ」する距離やその他のプロパティは、<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">Room Editor Preferences</a> で設定することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Layer Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">レイヤーエディタ</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The room editor places things onto layers within the room. Each layer is at a discrete &quot;depth&quot;, where those that appear at the bottom of the list in the layer window will be drawn under those that appear near the top.</p>
-    <div data-conref="../assets/snippets/Note_layer_depth_range.hts"> </div>
-    <p class="dropspot">Layers are created by clicking  the appropriate button for the type of layer you want to create, which are:</p>
+    <p class="dropspot"><span class="notranslate">room</span> エディタは、<span class="notranslate">room</span> 内のレイヤーに物を配置します。各レイヤーは、個別の「深さ」にあり、レイヤーウィンドウのリストの一番下に表示されているものは、一番上に表示されているものの下に描かれます。</p>
+    <p class="note"><strong>重要!レ</strong>イヤーの深さは、最小で-16000から最大で16000まであります。この範囲外のレイヤーに配置されたものは描画されませんが、すべてのイベントは通常通り実行されます。</p>
+    <p class="dropspot">レイヤーは、作成したいレイヤーの種類に応じたボタンをクリックすることで作成されます。</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
+          <td class="icons"><img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /></td>
+          <td class="icons"><strong>インスタンス</strong></td>
+          <td class="text">このレイヤーは、<span class="notranslate">room</span> で使用される<a href="../Quick_Start_Guide/Objects_And_Instances.htm">インスタンスを</a>配置するためのものです。</td>
+        </tr>
+        <tr>
+          <td class="icons"><img class="center" src="../assets/Images/Asset_Editors/Editor_Room_RoomManager.png" /></td>
+          <td class="icons"><strong>タイルマップ</strong></td>
+          <td class="text"><a href="../Quick_Start_Guide/Creating_Tile_Sets.htm">タイルセットから</a> <span class="notranslate">tiles</span> 、<a class="glossterm" data-glossterm="タイルマップ" href="#">タイル</a><span class="glossextra">マップとして</span>配置するためのレイヤです。</td>
+        </tr>
+        <tr>
+          <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+          <td class="icons"><strong>パス</strong></td>
+          <td class="text">このレイヤーは、<span class="notranslate">room</span> で<a href="Paths.htm">パスを</a>表示したり追加したりするためのものです。</td>
+        </tr>
+        <tr>
+          <td class="icons"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" /></td>
+          <td class="icons"><strong>資産</strong></td>
+          <td class="text"><span class="notranslate">assets</span> このレイヤーは、<a href="../Quick_Start_Guide/Creating_Sprites.htm">スプライトや</a> <a href="../Quick_Start_Guide/Sequences.htm">シーケンスなど</a>、<span class="notranslate">room</span> に追加されるビジュアル用のレイヤーです。</td>
+        </tr>
+        <tr>
           <td class="icons"><img alt="Instance Layer Icon" src="../assets/Images/Icons/Icon_Instance.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Instances</strong></td>
-          <td class="text">This layer is for placing <a href="../Quick_Start_Guide/Objects_And_Instances.htm">instances</a> that will be used in the room.</td>
+          <td class="icons"><strong>フィルター/エフェクト</strong></td>
+          <td class="text">このタイプのレイヤーは、それ以下のすべてのレイヤーに適用される<a href="Room_Properties/Filters_and_Effects.htm">フィルター/エフェクトを</a>定義します。</td>
         </tr>
         <tr>
           <td class="icons"><img alt="Tile map Layer Icon" src="../assets/Images/Icons/Icon_Tilemap.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Tile Maps</strong></td>
-          <td class="text">This layer is for placing tiles from <a href="../Quick_Start_Guide/Creating_Tile_Sets.htm">tile sets</a> as <a class="glossterm" data-glossterm="tile map" href="#">tile map</a><span class="glossextra">s</span>.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img alt="Path Layer Icon" height="30" src="../assets/Images/Icons/Icon_Paths.png" style="margin-left: 24px;" width="30" /></td>
-          <td class="icons"><strong>Paths</strong></td>
-          <td class="text">This layer is for showing and adding <a href="Paths.htm">paths</a> in the room.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img alt="Asset Layer Icon" src="../assets/Images/Icons/Icon_Assets.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Assets</strong></td>
-          <td class="text">This layer is for visual assets to be added to the room, like <a href="../Quick_Start_Guide/Creating_Sprites.htm">sprites</a>, <a href="../Quick_Start_Guide/Sequences.htm">sequences</a> and <a href="../Additional_Information/Guide_To_Using_Particles.htm">particles</a>.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img src="../assets/Images/Icons/Icon_FX_Layer.png" style="margin-left: 24px" /></td>
-          <td class="icons"><strong>Filter/Effect</strong></td>
-          <td class="text">This type of layer defines a <a href="Room_Properties/Filters_and_Effects.htm">filter/effect</a> that is applied to all layers below it.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img alt="Background Layer Icon" src="../assets/Images/Icons/Icon_Background.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Background</strong></td>
-          <td class="text">This type of layer defines a background, which is essentially a single colour or sprite image that may be tiled over the whole room.</td>
+          <td class="icons"><strong>背景</strong></td>
+          <td class="text">このタイプのレイヤーは背景を定義し、基本的に単色または<span class="notranslate">sprite</span> の画像で、<span class="notranslate">room</span> 全体に敷き詰められていることがあります。</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can also create a layer folder using the folder button <img alt="Folder Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Folder.png" width="24" /> where you can group selected layers together, as well as delete the selected layers with the delete button <img alt="Delete Layer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_DeleteLayer.png" width="24" />. Each of these layer types are discussed <a href="Room_Properties/Layer_Properties.htm">here</a> in more detail.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> You can toggle <a href="Room_Properties/Room_Inheritance.htm">inheritance</a> for the layer editor which will affect layer order and visibility. The visibility itself can be set by clicking the eye icon <img alt="Eye Icon" class="icon" height="21" src="../assets/Images/Icons/Icon_Eye.png" width="21" /> beside each of the layers, or you can click the one at the very top to enable/disable all layers at once. You also have the possibility to &quot;lock&quot; a layer (or all of them) so that they cannot be changed by clicking the padlock icon <img alt="Padlock Icon" class="icon" src="../assets/Images/Icons/Icon_Padlock.png" />.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Layers which are flagged as invisible will <strong>not</strong> be shown when the game is run.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">また、フォルダボタン（<img> ）を使ってレイヤーフォルダを作成し、選択したレイヤーをグループ化することができます。また、削除ボタン（<img> ）を使って選択したレイヤーを削除することも可能です。これらのレイヤーの種類については、それぞれ<a href="Room_Properties/Layer_Properties.htm">ここで</a>詳しく説明します。</p>
+    <p class="dropspot">レイヤーエディタでは、レイヤーの順序と可視性に影響する<a href="Room_Properties/Room_Inheritance.htm">継承を</a>切り替えることができることに注意してください。可視性は、各レイヤーの横にある目のアイコン<img> をクリックすることで設定でき、一番上にあるアイコンをクリックすると、すべてのレイヤーを一度に有効/無効にできます。また、南京錠のアイコン<img> をクリックすると、レイヤー（またはすべてのレイヤー）を変更できないように「ロック」することも可能です。不可視に設定されたレイヤーは、ゲーム実行時に表示さ<strong>れない</strong>ことに注意してください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Layer Properties</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">レイヤープロパティ</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The Inspector window will show layer properties depending on the currently selected layer in the layer editor.</p>
-    <p class="dropspot"><img alt="Room Layer Properties In Full" class="center" src="../assets/Images/Asset_Editors/Editor_Room_LayerProperties.png" /> Each window will have the different properties and lists associated with the currently selected layer type, and you will be able to edit fundamental details for how the layer is displayed and what is actually on the layer. Please see <a href="Room_Properties/Layer_Properties.htm">here</a> for more detail.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">room</span> レイヤープロパティウィンドウは、レイヤーエディタで現在選択されているレイヤーによって変化します。</p>
+    <p class="dropspot"><img> 各ウィンドウには、現在選択されているレイヤーの種類に関連するさまざまなプロパティとリストが表示され、レイヤーの表示方法と実際のレイヤー上の内容に関する基本的な詳細を編集することができるようになります。詳しくは<a href="Room_Properties/Layer_Properties.htm">こちらを</a>ご覧ください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Room Properties</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">ルームプロパティ</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">When the room asset is selected in the Asset Browser, the Inspector shows all the base properties for the room, like its size, whether it uses physics, or any cameras and viewports it requires. These can be changed here as well. This section is dicussed in more detail on the <a href="Room_Properties/Room_Properties.htm">Room Properties page</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">room</span> エディタのこのセクションでは、<span class="notranslate">room</span> のすべての基本プロパティを定義します。たとえば、サイズ、物理学 を使用するかどうか、必要なカメラやビューポートなどです。このセクションについては、<a href="Room_Properties/Room_Properties.htm">こちらで</a>詳しく説明しています。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Layer Toolbox</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">レイヤーツールボックス</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Certain layer types will have additional tools added to the top of the IDE in the <strong>Layer Toolbox</strong> (for example, tile layers or path layers). The exact tools will change based on the layer type currently being edited, and so are explained on the page explaining each layer, <a href="Room_Properties/Layer_Properties.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">レイヤーの種類によっては、<strong>レイヤーツールボックスの</strong> <span class="notranslate">IDE</span> の上部に追加ツールが表示されます（例：<span class="notranslate">tile</span> レイヤー、<span class="notranslate">path</span> レイヤーなど）。正確なツールは、現在編集中のレイヤーの種類によって変わるため、各レイヤーの説明ページで解説しています（<a href="Room_Properties/Layer_Properties.htm">こちら</a>）。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Room Toolbox</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">ルームツールボックス</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">At the top of the main Room Editor canvas you have a few controls to deal with how things are displayed. They are:</p>
+    <p class="dropspot">メインとなる<span class="notranslate">Room</span> Editor キャンバスの上部には、表示方法に関するコントロールがいくつか用意されています。それらは以下の通りです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png" /> <strong>Toggle Canvas Grid</strong>: This will toggle on/off the Room Editor canvas grid. This is a grid that <span data-keyref="GameMaker Name">GameMaker</span> draws over the main canvas to divide it into sections, and by default is set to 32x32px in size. However if you click the Grid Menu icon <img alt="Icon Grid Menu" class="icon" src="../assets/Images/Icons/Icon_CanvasOptions.png" /> you will open the grid options:<img alt="Room Grid Options" class="center" src="../assets/Images/Asset_Editors/Editor_RoomGridControls.png" />These options permit you to set the grid colour and alpha, as well as the cell values for the grid along the X and Y axis. You also have an option to enable or disable grid snapping here (enabled by default). You can use the keyboard shortcuts &quot;G&quot; and <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot;G&quot; to toggle the grid visibility and grid snapping respectively.</li>
-      <li class="dropspot"><img alt="Canvas Zoom Controls Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasZoom.png" width="120" /> <strong>Canvas Zoom Controls</strong>: These buttons control the current canvas zoom level. You can zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /> button will reset the canvas to be 1:1 with the room being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png" /> to make the entire room canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the room canvas to be 1:1 with the room settings.</li>
-      <li class="dropspot"><strong><img alt="Canvas View Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasViews.png" /> Show Views</strong>: Clicking this will enable or disable the view rectangle. When enabled you will see a highlighted area that signifies the different views that are enabled for the room.</li>
-      <li class="dropspot"><strong><img alt="Play Room Icon" class="icon" src="../assets/Images/Icons/Icon_PlayRoom.png" /> Play Animations</strong>: When adding sprites, sequences or animated tiles, you may want to get an idea of how these will look within the room itself without having to compile the whole project, and so you can click this to start all the different animations playing. Clicking it again will stop the animation.</li>
-      <li class="dropspot"><strong><img alt="Canvas Layer Select Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasSelect.png" /> Canvas Select From Any Layer</strong>: By default when you click on an element in the room canvas you will only be able to select those assets that are on the layer currently being edited, however if you enable this option you can then click on any element and it will be selected, changing the target layer to the one that the element is on. You can use the keyboard shortcut &quot; <span class="inline">P</span>&quot; to temporarily enable this (hold &quot;<span class="inline">P</span>&quot; to enable and release to disable)
-        <p class="dropspot"> </p>
-      </li>
+      <li class="dropspot"><img> <strong>キャンバスグリッドのトグル</strong>。 Editor のキャンバスグリッドのオン・オフを切り替えます。これは<span class="notranslate">Room</span> <span data-keyref="GameMaker Name">GameMakerが</span>メインキャンバスを分割するために描くグリッドで、デフォルトでは32x32pxのサイズに設定されています。 このオプションで、グリッドの色とアルファ、X軸とY軸のグリッドのセル値を設定できます。また、グリッドのスナップを有効または無効にするオプションもあります（デフォルトで有効）。キーボードショートカットの &quot;G&quot; と + &quot;G&quot; を使って、グリッドの表示とグリッドスナップをそれぞれ切り替えることができます。<img><img> <img> </li>
+      <li class="dropspot"><img> <strong>キャンバスのズームコントロール</strong>。これらのボタンは、現在のキャンバスのズームレベルを制御します。ズームイン、ズームアウトが可能で、 ボタンをクリックすると、キャンバスが編集中の と1:1になるようにリセットされます。また、Window Fitボタン をクリックすると、 キャンバス全体が現在のエディタ に収まるようにできます（収まるように適宜ズームイン/アウトされます）。 / とマウスホイール を使ってもズームイン、ズームアウトできます。 / + を押すと、 キャンバスが の設定と1:1になるように設定されますので、ご注意ください。<img> <span class="notranslate">room</span> <img> <span class="notranslate">room</span> <span class="notranslate">workspace</span> <img> <img> <img> <img> <img> <img> <span class="notranslate">room</span> <span class="notranslate">room</span> </li>
+      <li class="dropspot"><strong><img> </strong>ビューを表示する。これをクリックすると、ビューの四角形が有効または無効になります。有効にすると、 で有効になっているさまざまなビューを示すハイライトされた領域が表示されます。<span class="notranslate">room</span></li>
+      <li class="dropspot"><strong><img> </strong>アニメーションを再生します。 , , アニメーション を追加するとき、プロジェクト全体をコンパイルすることなく、 自身でどのように見えるかを知りたい場合があります。そのため、これをクリックすると、すべての異なるアニメーションの再生を開始できます。もう一度クリックすると、アニメーションが停止します。<span class="notranslate">sprites</span> <span class="notranslate">sequences</span> <span class="notranslate">tiles</span> <span class="notranslate">room</span> </li>
+      <li class="dropspot"><strong><img> </strong>キャンバス 任意のレイヤーから選択。デフォルトでは、 キャンバスの要素をクリックすると、現在編集中のレイヤーにあるものしか選択できません。このオプションを有効にすると、任意の要素をクリックするとそれが選択され、ターゲットレイヤーはその要素があるレイヤーに変更されます。キーボードショートカット &quot; &quot; を使用すると、一時的にこの機能を有効にすることができます（ &quot; &quot; を押し続けると有効になり、離すと無効になります）。
+        
+     <span class="notranslate">room</span> <span class="notranslate">assets</span> <span class="inline">P</span><span class="inline">P</span> <p class="dropspot"> </p></li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Room Canvas</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ルームキャンバス</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The center of the room editor window is taken up with the area where all the actual editing takes place. Here is where you&#39;ll be placing your instances and assets, drawing your tiles, or positioning your paths. You can zoom in and out using the mouse wheel or the room controls at the top, and you can pan around by holding the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> down and moving the mouse around or using <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> while moving.</p>
-    <p class="dropspot">When creating asset layers or instance layers, you can place the asset or instance by simply dragging it from the Asset Browser and then dropping it where you want it to be positioned. Alternatively you can select an asset or instance from the Asset Browser and then press and hold <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> to preview the resource &quot;in-situ&quot;, and if you additionally click the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> you can add the instance and even &quot;paint&quot; it into the room layer by maintaining the button pressed and dragging the mouse. Note that by default instances and sprites that are added to a room in this way will be snapped to the defined room grid settings, but you can hold down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> to have the instance follow the mouse precisely and not snap (releasing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> will permit snapping again).</p>
-    <p class="dropspot">For paths you can create a new path layer and path resource right from within the Room Editor- or create a new path resource and then drag it into the main editor window as you would for an instance - and then edit the path and its connections in the editor window too. For tile sets, you can &quot;paint&quot; them in from the tile set editor.</p>
-    <p class="dropspot">Note that you can select and move or delete multiple assets from the same layer by holding down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the ones you want, and most resources in the room editor will permit you to rotate and scale them (singly or as a group) by clicking and holding <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> along the outside edges or corners and dragging the mouse. You can also double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on any single asset (tiles, instances, sprites) to have the editor pan to it and open up the properties window for the selected asset in the Inspector.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">room</span> エディタウィンドウの中央は、実際の編集が行われるエリアになっています。ここでインスタンスや<span class="notranslate">assets</span> を配置したり、<span class="notranslate">tiles</span> を描画したり、<span class="notranslate">paths</span> を配置したりします。マウスのホイールまたは上部にある<span class="notranslate">room</span> コントロールを使用してズームインおよびズームアウトすることができます。マウスの中ボタン<img> を押しながらマウスを移動するか、移動中に<img> +<img> を使用すると、周囲をパンすることができます。</p>
+    <p class="dropspot"><span class="notranslate">asset</span> レイヤーやインスタンスレイヤーを作成する場合、<span class="notranslate">asset</span> ブラウザーからドラッグして、配置したい場所にドロップするだけで、<span class="notranslate">Asset</span> やインスタンスを配置することができます。また、<span class="notranslate">asset</span> ブラウザから<span class="notranslate">Asset</span> またはインスタンスを選択し、<img> を押し続けると、リソースを「その場」でプレビューできます。さらに、マウスの左ボタン<img> をクリックすると、ボタンを押したままマウスをドラッグしてインスタンスを追加し、<span class="notranslate">room</span> レイヤに「ペイント」することも可能です。デフォルトでは、この方法で<span class="notranslate">sprites</span> に追加されたインスタンスと<span class="notranslate">room</span> は、定義された<span class="notranslate">room</span> グリッド設定にスナップされますが、<img> /<img> を押し続けると、インスタンスがマウスに正確に追従してスナップしなくなります（<img> /<img> を解放すると再びスナップできるようになります）。</p>
+    <p class="dropspot"><span class="notranslate">paths</span> では、<span class="notranslate">path</span> エディタ内から新しい<span class="notranslate">path</span> レイヤーと<span class="notranslate">Room</span> リソースを作成できます。または、新しい<span class="notranslate">path</span> リソースを作成し、インスタンスの場合と同様にメインエディタウィンドウにドラッグし、<span class="notranslate">path</span> とその接続もエディタウィンドウで編集できます。<span class="notranslate">tile sets</span> については、<span class="notranslate">tile set</span> エディタから「ペイント」することができます。</p>
+    <p class="dropspot"><img> /<img> +<img> 、同じレイヤーから複数の<span class="notranslate">assets</span> を選択して移動または削除できます。また、<span class="notranslate">room</span> エディタのほとんどのリソースでは、外側の端または角に沿って<img> をクリックし、マウスをドラッグすると、（単一またはグループとして）それらを回転および拡大縮小することができ ます。<span class="notranslate">asset</span> (<span class="notranslate">tiles</span>, インスタンス,<span class="notranslate">sprites</span>) の上で<img> をダブルクリックすると、エディタがその場所に移動し、選択した<span class="notranslate">asset</span> のプロパティウィンドウを開くことができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Status Bar</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">ステータスバー</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The status bar is used to show you context specific information. The status bar will always show you where in the room the mouse cursor is, but it will also show additional information based on the layer being edited, the tool being used and the state of that tool.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ステータスバーは、コンテキストに応じた情報を表示するために使用されます。ステータスバーには、マウスカーソルが<span class="notranslate">room</span> のどこにあるか常に表示されますが、編集中のレイヤ、使用中のツール、そのツールの状態に基づいた追加情報も表示されます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>You can get more information about some of the above mentioned sections from the following pages:</p>
+  <p> </p>
+  <p>上記の一部の項目については、以下のページから詳細を確認することができます。</p>
   <ul class="colour">
-    <li><a href="Room_Properties/Layer_Properties.htm">Layer Types And Properties</a></li>
-    <li><a href="Room_Properties/Room_Properties.htm">Room Properties</a></li>
-    <li><a href="Room_Properties/Room_Inheritance.htm">Room Inheritance</a></li>
-    <li><a data-xref="{title}" href="Room_Properties/Filters_and_Effects.htm">Filters and Effects</a></li>
+    <li><a href="Room_Properties/Layer_Properties.htm">レイヤーの種類とプロパティ</a></li>
+    <li><a href="Room_Properties/Room_Properties.htm">ルームプロパティ</a></li>
+    <li><a href="Room_Properties/Room_Inheritance.htm">ルームインヘリテージ</a></li>
+    <li><a data-xref="{title}" href="Room_Properties/Filters_and_Effects.htm">フィルター・エフェクト</a></li>
   </ul>
-  <h2>Room Menu</h2>
-  <p>Apart from the in-editor tools, you will also see a drop down menu at the top of the IDE.</p>
-  <p><img alt="Room Editor Menus" class="center" src="../assets/Images/Asset_Editors/Editor_RoomContextMenu.png" />These menus are explained below:</p>
+  <h2>ルームメニュー</h2>
+  <p>エディター内ツールとは別に、<span class="notranslate">IDE</span> の上部に新しいドロップダウンメニューが追加されているのがわかるでしょう。</p>
+  <p><img>これらのメニューについて、以下に説明します。</p>
   <ul class="colour">
-    <li><strong>Layer View</strong>: This will re-open the Layer Editor window should you have closed it at any time.</li>
-    <li><strong>Instance Creation Order</strong>: This will open the <strong>Instance Creation Order Window </strong>(which can also be opened by using the button in the <a href="Room_Properties/Room_Properties.htm">Room Properties</a><strong> </strong>window):<br />
-      <img alt="Room Creation Order Window" class="center" src="../assets/Images/Asset_Editors/Editor_Room_CreationOrder.png" />This window lists all the instances in the room in the order that they will be created (from top to bottom). Should you require a specific instance to be created before any other, you can simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag it to the position your require.
+    <li><strong>レイヤービュー</strong>。レイヤーエディタ] ウィンドウを閉じた場合、このウィンドウを再度開きます。</li>
+    <li><strong>ルームプロパティ</strong>。これは、<span class="notranslate">Room</span> プロパティ ウィンドウを閉じた場合に、再度開きます。</li>
+    <li><strong>レイヤープロパティ</strong>レイヤーのプロパティ]<a href="Room_Properties/Layer_Properties.htm">ウィンドウを</a>閉じた場合、このウィンドウを再度開きます。</li>
+    <li><strong>Instance Creation Order（インスタンス作成オーダー</strong>）。インスタンス作成順<strong>ウィンドウが </strong>開きます（<a href="Room_Properties/Room_Properties.htm">ルームプロパティ</a><strong> </strong>ウィンドウのボタンを使っても開くことができます）。<br>
+      <img>このウィンドウは、<span class="notranslate">room</span> の全てのインスタンスを、作成される順番（上から下へ）にリストアップします。特定のインスタンスを他のインスタンスより先に作成したい場合は、<img> をクリックし、必要な位置までドラッグします。
     </li>
-    <li><strong>Reset Windows On Current Desktop</strong>: This will reset the room editor window layout to its default values for the desktop workspace currently focused.</li>
+    <li><strong>Reset<span class="notranslate">Windows</span> On Current Desktop</strong>:<span class="notranslate">room</span> エディターウィンドウレイアウトを、現在フォーカスされているデスクトップ<span class="notranslate">workspace</span> のデフォルト値にリセットします。</li>
   </ul>
-  <p> </p>
+  <p> </p>
   <ul class="colour">
-    <li><strong>Tile Editing</strong>: When working with a tile layer, this option will be highlighted in the drop down menu. It has the following sub-menu:<br />
-      <img alt="Room Tile Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Room_TileMenu.png" />When editing the tile layer you can select multiple tiles by clicking, holding down and dragging the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />, or you can select and group individual tiles using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />, or remove individual tiles from the selection using <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />. From this menu you can then clear the selection or invert it as well as cut, copy or paste the selection to another layer (or even the same layer but in another position). The final option will re-open the tile set editor docked window should you have closed it.
+    <li><strong>タイル編集</strong>。<span class="notranslate">tile</span> レイヤーで作業しているとき、このオプションはドロップダウンメニューでハイライトされます。これには以下のサブメニューがあります。<br>
+      <img><span class="notranslate">tile</span> レイヤーを編集する場合、マウスの左ボタンをクリックし、押したままドラッグすることで、複数の<span class="notranslate">tiles</span> を選択できます。<img> 、または<img> /<img> +<img> を使って個々の<span class="notranslate">tiles</span> を選択しグループ化したり、<img> +<img> を使って選択から個々の<span class="notranslate">tiles</span> を削除することができます。このメニューでは、選択範囲をクリアしたり反転させたり、選択範囲をカット、コピー、ペーストして別のレイヤー（または同じレイヤーでも別の位置）に移動させることができます。最後のオプションは、<span class="notranslate">tile set</span> エディタがドッキングされたウィンドウを閉じた場合に、それを再び開くものです。
     </li>
-    <li><strong>Convert Image To Tile Map</strong>: The Convert Image To Tile Map option is a powerful tool that can be used to import a single image and then extract the tiles used from the image and recreate it as a tile map layer in the room editor, creating the required tile set and sprite as part of process. When you select this tool, you will be asked to supply an uncompressed image file (<span class="inline">PNG</span>, <span class="inline">GIF </span>or <span class="inline">BMP</span>) which will then be loaded. On load you will be presented with the <strong>Image Import</strong> tool:<br />
-      <img alt="Convert Image To Tilemap Tool" class="center" src="../assets/Images/Asset_Editors/Editor_Room_ConvertImage.png" />Here you are given options on how to split up the tile when creating the tile set, and you can set the cell width and height as well as any offsets required around the edges. You can also set the approximate width (in pixels) for the final sprite that is created. For example, if the tile set is made up of 64x64 tile cells and you set a width here of 200, the final sprite that is created for use in the tile set will be 192 pixels wide (ie: 3 tile cells). If you leave it at the default value of 0, then <span data-keyref="GameMaker Name">GameMaker</span> will attempt to make as &quot;square&quot; a sprite as possible with approximately the same number of horizontal and vertical tile cells.<br />
-      <br />
-      After setting the way the image is to be split, clicking the swatch beside the <strong>Remove Colour</strong> option will open the colour picker and permit you to select a colour that is to be removed from the final sprite. This is usually a background colour that you want to remove and setting this swatch to anything other than 100% transparent (alpha 0) will remove the selected colour on import.<br />
-      <br />
-      Finally, you have the option to name the sprite, tile set and tile map layer that will be created for you by this tool. When you finalise the import, a sprite with all the images laid out in a grid will be created, as well as a tile set from this sprite. In the room, a new tile map layer will be created and the image reproduced using the generated tile set. Note that the tool will <em>not </em>duplicate tiles and will instead recognise when a cell has image data that coincides with another cell (this includes rotated tiles). You can see this in the following image where only one flower tile has been created and one crate tile too, yet there are multiple instances of both, with some instances rotated in the base image:<br />
-      <img alt="Convert Image To Tilemap Example Tileset" class="center" src="../assets/Images/Asset_Editors/Editor_Room_TileExample.png" />
+    <li><strong>Convert Image To<span class="notranslate">Tile</span> Map（画像を マップに変換</strong>する）。Convert Image To<span class="notranslate">Tile</span> Map オプションは、1つの画像をインポートして、その画像から<span class="notranslate">tiles</span> を抽出し、<span class="notranslate">tile</span> エディタで<span class="notranslate">room</span> マップレイヤーとして再作成し、プロセスの一部として必要な<span class="notranslate">tile set</span> と<span class="notranslate">sprite</span> を作成するために使用できる強力なツールです。このツールを選択すると、圧縮されていない画像ファイル（<span class="inline">PNG</span> 、 <span class="inline">GIF </span>、 <span class="inline">BMP</span> ）が要求され、それがロードされます。読み込むと、<strong>画像インポートツールが</strong>表示されます。<br>
+      <img>ここでは、<span class="notranslate">tile</span> を作成する際に、<span class="notranslate">tile set</span> をどのように分割するかのオプションが表示され、セルの幅と高さ、および端に必要なオフセットを設定することができます。また、最終的に作成される<span class="notranslate">sprite</span> のおおよその幅（ピクセル単位）を設定することもできます。例えば、<span class="notranslate">tile set</span> が 64x64<span class="notranslate">tile</span> のセルで構成されており、ここで幅を 200 に設定した場合、<span class="notranslate">sprite</span> で使用するために作成される最終的な<span class="notranslate">tile set</span> は幅 192 ピクセル（つまり<span class="notranslate">tile</span> セルが 3 つ）となります。デフォルト値の 0 のままにしておくと、<span data-keyref="GameMaker Name">GameMaker</span>はできるだけ「正方形」の<span class="notranslate">sprite</span> を作ろうとし、水平と垂直の<span class="notranslate">tile</span> セルの数がほぼ同じになるようにします。<br>
+      <br>
+      画像の分割方法を設定した後、「<strong>色を取り除く」</strong>オプションの横にあるスウォッチをクリックすると、カラーピッカーが開き、最終的な<span class="notranslate">sprite</span> から取り除く色を選択することができます。これは通常、削除したい背景色で、このスウォッチを100%透明（アルファ 0）以外に設定すると、インポート時に選択した色が削除されます。<br>
+      <br>
+      最後に、このツールで作成される<span class="notranslate">sprite</span> 、<span class="notranslate">tile set</span> 、<span class="notranslate">tile</span> のマップレイヤーに名前を付けるオプションがあります。インポートを完了すると、すべての画像がグリッド状に配置された<span class="notranslate">sprite</span> と、この<span class="notranslate">tile set</span> から<span class="notranslate">sprite</span> が作成されます。<span class="notranslate">room</span> では、新しい<span class="notranslate">tile</span> マップレイヤーが作成され、生成された<span class="notranslate">tile set</span> を使って画像が再生されます。このツールは<span class="notranslate">tiles</span> を複製する<em>のではなく </em>、あるセルが他のセルと一致する画像データを持っていることを認識します （これには回転した<span class="notranslate">tiles</span> も含まれます）。次の画像では、花<span class="notranslate">tile</span> と木箱<span class="notranslate">tile</span> が1つずつしか作成されていませんが、ベース画像には両者の複数のインスタンスがあり、一部のインスタンスは回転しています。<br>
+      <img>
     </li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Scripts.htm">The Script Editor</a></div>
+        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
+        <div style="float:right">次へ<a href="Scripts.htm">スクリプト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Room Editor

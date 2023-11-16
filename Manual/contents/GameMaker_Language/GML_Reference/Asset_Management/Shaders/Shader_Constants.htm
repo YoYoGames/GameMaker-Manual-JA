@@ -3,143 +3,131 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Shader Uniforms</title>
+  <title>シェーダー定数</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the built-in Shader Uniforms" />
+  <meta name="topic-comment" content="Page outlining the different Shader Constants" />
   <meta name="rh-index-keywords" content="gm_Matrices,MATRIX_VIEW,MATRIX_PROJECTION,MATRIX_WORLD,MATRIX_WORLD_VIEW,MATRIX_WORLD_VIEW_PROJECTION,MATRIX_MAX,MAX_VS_LIGHTS,gm_BaseTexture,gm_LightingEnabled,gm_FogStart,gm_RcpFogRange,gm_PS_FogEnabled,gm_FogColour,gm_VS_FogEnabled,gm_AlphaTestEnabled,gm_AlphaRefValue" />
   <meta name="search-keywords" content="Shader Constants,gm_Matrices,MATRIX_VIEW,MATRIX_PROJECTION,MATRIX_WORLD,MATRIX_WORLD_VIEW,MATRIX_WORLD_VIEW_PROJECTION,MATRIX_MAX,MAX_VS_LIGHTS,gm_BaseTexture,gm_LightingEnabled,gm_FogStart,gm_RcpFogRange,gm_PS_FogEnabled,gm_FogColour,gm_VS_FogEnabled,gm_AlphaTestEnabled,gm_AlphaRefValue" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Shader Constants</h1>
-  <p>Apart from the shader functions and constants defined in the OpenGL ES Shading Language (GLSL ES) <a href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" target="_blank">Reference Pages</a>, there are also a number of shader uniforms available to you that are unique to <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p>The following display matrix constants can be used as array indices when using the shader array constant <span class="inline">gm_Matrices</span>:</p>
+  <h1>シェーダー定数</h1>
+  <p>OpenGL ES Shading Language (GLSL ES)<a href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" target="_blank">Reference Pages</a> で定義されている<span class="notranslate">shader</span> 関数と定数とは別に、<span data-keyref="GameMaker Name">GameMaker</span> 独自の<span class="notranslate">shader</span> 定数も多数用意されています。</p>
+  <p><span class="notranslate">shader</span> 配列定数<span class="inline">gm_Matrices</span> を使用する場合、以下のディスプレイマトリクス定数を配列のインデックスとして使用することができます。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">MATRIX_VIEW</span></td>
-        <td>This array index constant holds the index to the current view matrix. The index returned would be used as an array value when calling the <span class="inline">gm_Matrices</span> constant within the shader code.</td>
+        <td><span class="notranslate"><span class="inline">MATRIX_VIEW</span></td>
+        <td>この配列インデックス定数は、現在のビューマトリックスへのインデックスを保持します。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列の値として使用されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">MATRIX_PROJECTION</span></td>
-        <td>This array index constant holds the index to the current projection matrix. The index returned would be used as an array value when calling the <span class="inline">gm_Matrices</span> constant within the shader code.</td>
+        <td><span class="notranslate"><span class="inline">MATRIX_PROJECTION</span></td>
+        <td>この配列インデックス定数は、現在の投影行列のインデックスを保持します。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">MATRIX_WORLD</span></td>
-        <td>This array index constant holds the index to the current world matrix. This can be used for things like lighting if you have light information in world-space. The index returned would be used as an array value when calling the <span class="inline">gm_Matrices</span> constant within the shader code.</td>
+        <td><span class="notranslate"><span class="inline">MATRIX_WORLD</span></td>
+        <td>この配列のインデックス定数は、現在のワールドマトリクスへのインデックスを保持します。これは、ワールド空間に光の情報がある場合、照明などに使用することができます。返されたインデックスは、<span class="notranslate">shader</span> のコード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">MATRIX_WORLD_VIEW</span></td>
-        <td>This array index constant holds the index to the result of the world and view matrices multiplied together. This is often used for things like fog. The index returned would be used as an array value when calling the <span class="inline">gm_Matrices</span> constant within the shader code.</td>
+        <td><span class="notranslate"><span class="inline">MATRIX_WORLD_VIEW</span></td>
+        <td>この配列のインデックス定数は、ワールドマトリクスとビューマトリクスを掛け合わせた結果のインデックスを保持します。これは、フォグなどによく使用されます。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span></td>
-        <td>This array index constant holds the index to the result of the world, view and projection matrices multiplied together. This is the normal transformation matrix used for vertex positions. The index returned would be used as an array value when calling the <span class="inline">gm_Matrices</span> constant within the shader code.</td>
+        <td><span class="notranslate"><span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span></td>
+        <td>この配列のインデックス定数は、ワールド、ビュー、プロジェクションの各マトリックスを掛け合わせた結果のインデックスを保持します。これは、<span class="notranslate">vertex</span> の位置に使用される通常の変換行列です。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出すときに、配列値として使用されます。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">MATRIX_MAX</span></td>
+        <td>これは，配列のインデックスではなく，<span class="notranslate">vertex</span> <span class="notranslate">shader</span> にある行列配列のサイズを返します．</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">MAX_VS_LIGHTS</span></td>
+        <td>これは配列のインデックスではなく、<span class="notranslate">vertex</span> <span class="notranslate">shader</span> にある照明の数を返します。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>The following constants are also available:</p>
+  <p> </p>
+  <p>照明用には以下の定数も用意されています。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">MATRIX_MAX</span></td>
-        <td>The size of the matrix array (<span class="inline2">gm_Matrices</span>) in the vertex shader.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">MAX_VS_LIGHTS</span></td>
-        <td>The maximum number of point and directional lights available in the shader.</td>
+        <td><span class="notranslate"><span class="inline">MAX_VS_LIGHTS</span></td>
+        <td>シェーダーで使用可能なポイントライトとディレクショナルライトの最大数</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>The following pre-defined matrix uniforms and constants can be used in your shader to access <span data-keyref="GameMaker Name">GameMaker</span> specific values:</p>
+  <p> </p>
+  <p>以下の定義済みマトリックスユニフォームと定数を<span class="notranslate">shader</span> で使用することで、<span data-keyref="GameMaker Name">GameMaker</span>固有の値にアクセスすることができます。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">gm_Matrices[matrix]</span></td>
-        <td>This array constant returns a transform matrix and is one of the available pre-defined uniforms that <span data-keyref="GameMaker Name">GameMaker</span> creates for you to use within the shader code editor. The array index is chosen from one of the above listed constants.</td>
+        <td><span class="notranslate"><span class="inline">gm_Matrices[matrix]</span></td>
+        <td>この配列定数は変換行列を返すもので、<span data-keyref="GameMaker Name">GameMakerが</span> <span class="notranslate">shader</span> コードエディター内で使用できるように作成する、利用可能な事前定義されたユニフォームの1つである。配列のインデックスは、上記の定数のいずれかから選択されます。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_BaseTexture</span></td>
-        <td>This is a 2D sampler constant that returns the texture of the current object, as set by <span data-keyref="GameMaker Name">GameMaker</span>. So it would be the current sprite, surface or texture that would normally be used when drawing without the shader being called.</td>
+        <td><span class="notranslate"><span class="inline">gm_BaseTexture</span></td>
+        <td>これは2Dサンプラー定数で、<span data-keyref="GameMaker Name">GameMakerで</span>設定された現在の<span class="notranslate">texture</span> の<span class="notranslate">object</span> を返します。つまり、<span class="notranslate">sprite</span> が呼び出されないで描画するときに通常使用される現在の<span class="notranslate">texture</span> 、サーフェス、<span class="notranslate">shader</span> になります。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_LightingEnabled</span></td>
-        <td>This can be used to get or set the <span data-keyref="GameMaker Name">GameMaker</span> lighting when using 3D.</td>
+        <td><span class="notranslate"><span class="inline">gm_LightingEnabled</span></td>
+        <td>3D使用時に<span data-keyref="GameMaker Name">GameMakerの</span>ライティングを取得・設定するのに使用します。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_Lights_Direction[]</span></td>
-        <td>This is an array of vec4s, each vec4 contains a light&#39;s normalised direction vector (X, Y, Z) and a fourth dimension (W) which is 1 when the light is enabled, and 0 when disabled</td>
+        <td><span class="notranslate"><span class="inline">gm_FogStart</span></td>
+        <td>ポリゴンがフォグ色になじみ始める距離を得るために使用できます。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_Lights_PosRange[]</span></td>
-        <td>This is an array of vec4s, each vec4 contains a light&#39;s position (X, Y, Z) and a fourth dimension (W) which is the light&#39;s range, which is 0 when that light is disabled</td>
+        <td><span class="notranslate"><span class="inline">gm_RcpFogRange</span></td>
+        <td>これは、霧が最大になり、何も見えなくなる距離を求めるのに利用できる。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_Lights_Colour</span></td>
-        <td>This is an array of vec4s, each vec4 contains a light&#39;s colour (R, G, B), with the alpha channel (A) always being 1</td>
+        <td><span class="notranslate"><span class="inline">gm_PS_FogEnabled</span></td>
+        <td>GPU でピクセルフォグが有効かどうか、 <span class="inline">true</span> または <span class="inline">false</span> を返します。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_AmbientColour</span></td>
-        <td>This is a vec4 containing the colour of the ambient light as set in <a href="../../Drawing/Lighting/draw_light_define_ambient.htm"><span class="inline">draw_light_define_ambient()</span></a></td>
+        <td><span class="notranslate"><span class="inline">gm_FogColour</span></td>
+        <td><span data-keyref="GameMaker Name">GameMakerで</span>使用するフォグの色を取得するために使用することができます。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_FogStart</span></td>
-        <td>This can be used to get the distance where polygons start to be blended with the fog colour.</td>
+        <td><span class="notranslate"><span class="inline">gm_VS_FogEnabled</span></td>
+        <td>これは、GPU が<span class="notranslate">vertex</span> フォグを有効にしている場合は <span class="inline">true</span> を、そうでない場合は <span class="inline">false</span> を返します。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_RcpFogRange</span></td>
-        <td>This can be used to get the distance at which fog is maximal and nothing can be seen anymore.</td>
+        <td><span class="notranslate"><span class="inline">gm_AlphaTestEnabled</span></td>
+        <td>これは、<span class="notranslate">shader</span> でアルファテストを取得するために使用することができます。 <a href="../../Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>はアルファテストの詳細です。</td>
       </tr>
       <tr>
-        <td><span class="inline">gm_PS_FogEnabled</span></td>
-        <td>This will return <span class="inline">true</span> or <span class="inline">false</span> if the GPU has pixel fog enabled or not.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">gm_FogColour</span></td>
-        <td>This can be used to get the fog colour used by <span data-keyref="GameMaker Name">GameMaker</span>.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">gm_VS_FogEnabled</span></td>
-        <td>This will return <span class="inline">true</span> or <span class="inline">false</span> if the GPU has vertex fog enabled or not.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">gm_AlphaTestEnabled</span></td>
-        <td>This can be used to get alpha testing in the shader. See <a href="../../Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a> for more information on alpha testing.</td>
-      </tr>
-      <tr>
-        <td><span class="inline">gm_AlphaRefValue</span></td>
-        <td>This can be used to get the current alpha testing reference value. See <a href="../../Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> for more information on the alpha test reference.</td>
+        <td><span class="notranslate"><span class="inline">gm_AlphaRefValue</span></td>
+        <td>これは、現在のアルファテストの基準値を取得するために使用することができます。参照 <a href="../../Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a>は、アルファテストリファレンスの詳細についてです。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Shaders.htm">Shaders</a></div>
+        <div style="float:left">戻る<a href="Shaders.htm">シェーダー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Shader Constants

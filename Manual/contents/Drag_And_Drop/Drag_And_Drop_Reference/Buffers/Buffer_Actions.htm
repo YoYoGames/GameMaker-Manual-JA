@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Buffer Actions</title>
+  <title>バッファーアクション</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section detailing all the Buffer actions" />
   <meta name="rh-index-keywords" content="GML Visual Overview - Buffer Actions Library" />
@@ -14,95 +14,95 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Buffers Action Library</h1>
+  <h1>バッファアクションライブラリ</h1>
   <p><img alt="Buffers Action Library" class="center" height="149" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/Lib_Buffers.png" width="241" /></p>
-  <p>A <b>buffer</b> is a region of physical memory used to temporarily hold data while it is being moved from one place to another or manipulated in some way, for example you can use a buffer to hold game state data. <span data-keyref="GameMaker Name">GameMaker</span> has a number of specific actions related to creating, modifying and loading/saving buffers, but before using them please note the following points:</p>
+  <p><b>バッファとは</b>、データをある場所から別の場所に移動したり、何らかの方法で操作している間、一時的にデータを保持するために使用する物理メモリの領域です。例えば、<span class="notranslate">buffer</span> 、ゲームの状態データを保持するために使用することができます。<span data-keyref="GameMaker Name">GameMakerには</span>、<span class="notranslate">buffers</span> の作成、変更、ロード/セーブに関連する特定のアクションがいくつかありますが、それらを使用する前に、以下の点に注意してください。</p>
   <ul class="colour">
-    <li>When a buffer is created, it is automatically cleared and filled to 0.</li>
-    <li>The &quot;size&quot; argument of the buffer functions always refers to the size <i>in bytes</i> of the buffer.</li>
-    <li>GML Visual buffers are always <i>1 byte aligned</i>. The &quot;alignment&quot; refers to how data is stored within a buffer and is used when using the <a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">GML buffer Functions</a>, but for <span data-keyref="GML_Visual">GML Visual</span>, it&#39;s not relevant.</li>
-    <li>Data in buffers is read and written in a <i>sequential</i> manner (ie: you call the <a href="Write_Buffer.htm">Write Buffer</a> action three times, then it will write the first data, move forward, right the second data, move forward and then write the last data), with something called the &quot;seek&quot; value to tell you where in the buffer the next read/write will take place.</li>
-    <li>All data is written to the buffer and returned from the buffer as a <b>string</b> so if you have stored any real numbers you will have to use one of the <a href="../Data_Types/Data_Type_Actions.htm">Data Type Actions</a> to convert it from the string to the value.</li>
+    <li><span class="notranslate">buffer</span> を作成すると、自動的にクリアされ、0に埋められます。</li>
+    <li><span class="notranslate">buffer</span> 関数の引数 &quot;size &quot;は，常に<span class="notranslate">buffer</span> の<i>バイト単位の</i>大きさを指す。</li>
+    <li>GML Visual<span class="notranslate">buffers</span> は常に<i>1バイトアライメント</i>です。この「アラインメント」とは、<span class="notranslate">buffer</span> 内のデータの格納方法を指し、<a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">GML<span class="notranslate">buffer</span> Functions</a> を使用する際に使用されますが、<span data-keyref="GML_Visual">GML Visual</span> では関係ありません。</li>
+    <li><span class="notranslate">buffers</span> のデータは、<i>順次</i>読み書きが行われます（例えば、<a href="Write_Buffer.htm">Write Buffer</a>アクションを 3 回呼び出すと、最初のデータを書き込み、前に進み、2 番目のデータを右に進み、前に進み、最後のデータを書き込みます）。「seek」値というものがあり、次の読み書きが<span class="notranslate">buffer</span> のどこで行われるかを教えてくれます。</li>
+    <li>すべてのデータは、<span class="notranslate">buffer</span> に書き込まれ、<span class="notranslate">buffer</span> から<b>文字列</b>として返されます。したがって、実数を保存した場合は、<a href="../Data_Types/Data_Type_Actions.htm">データ型アクションの</a>いずれかを使用して、<span class="notranslate">string</span> から値に変換する必要があります。</li>
   </ul>
-  <p>The memory used for creating buffers is system memory so even when the game doesn&#39;t have focus, any data stored in a buffer should be safe, however if the app is closed or re-started then it will be lost. It is also worth noting that buffers can also be saved as files then loaded back into the game using the <a href="../Files/File_Actions.htm">file actions</a>.</p>
-  <p>The following page explains in more detail how buffers work within the context of <span data-keyref="GameMaker Name">GameMaker</span> and contain a couple of GML code examples:</p>
+  <p><span class="notranslate">buffers</span> の作成に使用されるメモリはシステムメモリなので、ゲームにフォーカスがない場合でも<span class="notranslate">buffer</span> に保存されたデータは安全です。ただし、アプリを閉じたり再スタートすると、データは失われます。<span class="notranslate">buffers</span> をファイルとして保存し、<a href="../Files/File_Actions.htm">ファイルアクションを</a>使用してゲームに読み込むこともできます。</p>
+  <p>次のページでは、<span data-keyref="GameMaker Name">GameMaker</span>における<span class="notranslate">buffers</span> の動作について詳しく説明し、<span class="notranslate">GML</span> のコード例をいくつか挙げています。</p>
   <ul class="colour">
-    <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Using Buffers</a></li>
+    <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">バッファの使用</a></li>
   </ul>
-  <p>The <b>Buffer</b> library has the following actions:</p>
-  <p> </p>
+  <p><b>Buffer</b>ライブラリは、次のような動作をします。</p>
+  <p> </p>
   <table class="dnd" style="text-align: left;margin-left:">
     <tbody>
       <tr style="height: 1px;">
         <td class="icons" style="margin-left: 16px;"><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Create_Buffer.htm">Create Buffer</a></td>
+        <td class="dnd" style=""><a href="Create_Buffer.htm">バッファの作成</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Copy_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Copy_Buffer.htm">Copy Buffer</a></td>
+        <td class="dnd" style=""><a href="Copy_Buffer.htm">コピーバッファー</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Delete_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Delete_Buffer.htm">Delete Buffer</a></td>
+        <td class="dnd" style=""><a href="Delete_Buffer.htm">バッファの削除</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Read_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Read_Buffer.htm">Read Buffer</a></td>
+        <td class="dnd" style=""><a href="Read_Buffer.htm">リードバッファ</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Write Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Write_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Write_Buffer.htm">Write Buffer</a></td>
+        <td class="dnd" style=""><a href="Write_Buffer.htm">ライトバッファ</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Seek Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="Seek_Buffer.htm">Seek Buffer</a></td>
+        <td class="dnd" style=""><a href="Seek_Buffer.htm">シークバッファー</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Buffer Size Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Size.png" /></td>
-        <td class="dnd" style=""><a href="Get_Buffer_Size.htm">Get Buffer Size</a></td>
+        <td class="dnd" style=""><a href="Get_Buffer_Size.htm">Get<span class="notranslate">Buffer</span> サイズ</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Buffer Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Position.png" /></td>
-        <td class="dnd" style=""><a href="Get_Buffer_Position.htm">Get Buffer Position</a></td>
+        <td class="dnd" style=""><a href="Get_Buffer_Position.htm">Get<span class="notranslate">Buffer</span> Position</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Buffer Exists Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_Buffer_Exists.png" /></td>
-        <td class="dnd" style=""><a href="If_Buffer_Exists.htm">If Buffer Exists</a></td>
+        <td class="dnd" style=""><a href="If_Buffer_Exists.htm">If<span class="notranslate">Buffer</span> Exists</a></td>
       </tr>
       <tr>
         <td class="dnd_icons" style="margin-left: 16px;"><img alt="If End Of Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_If_End_Of_Buffer.png" /></td>
-        <td class="dnd" style=""><a href="If_End_Of_Buffer.htm">If End Of Buffer</a></td>
+        <td class="dnd" style=""><a href="If_End_Of_Buffer.htm">If バッファーの終わり</a></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
-        <div style="float:right">Next: <a href="../Files/File_Actions.htm">File Actions</a></div>
+        <div style="float:left">戻る：<a href="../DnD_Reference.htm">インデックス</a></div>
+        <div style="float:right">次へ<a href="../Files/File_Actions.htm">ファイルアクション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-GML Visual Buffer Actions
+GML Visual <span class="notranslate">Buffer</span> Actions
 Buffer Actions
 -->
   <!-- TAGS

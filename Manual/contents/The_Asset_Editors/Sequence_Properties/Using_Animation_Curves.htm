@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Using Animation Curves</title>
+  <title>アニメーションのカーブを利用する</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how to use animation curves with sequences
 " />
@@ -15,139 +15,130 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Using Animation Curves</h1>
-  <p>An important feature of the <a href="Using_The_Dope_Sheet.htm">dope sheet</a> is the ability to assign <a href="../Animation_Curves.htm">Animation Curves</a> to parameter tracks within the sequence to create <strong>parameter curves</strong> instead
-    of parameter keyframes. There are two types of curves that can be used for parameter tracks:</p>
+  <h1>アニメーションのカーブを利用する</h1>
+  <p><a href="Using_The_Dope_Sheet.htm">ドープシートの</a>重要な特徴は、<span class="notranslate">sequence</span> 内のパラメータトラックに<a href="../Animation_Curves.htm">アニメーションカーブを</a>割り当てて、<strong>パラメータカーブの</strong>代わりに作成できることです。
+    のパラメータ<span class="notranslate">keyframes</span> 。パラメータトラックに使用できるカーブには、2つのタイプがあります。</p>
   <ul class="colour">
-    <li><strong>Embedded Curves</strong>: These are curves that are embedded in the sequence and are unique to the parameter track they are used on.</li>
-    <li><strong>Shared Curves</strong>: These are curves that are created independently of the sequence using the <a href="../Animation_Curves.htm">Animation Curve Editor</a>.</li>
+    <li><strong>エンベデッドカーブ</strong>。<span class="notranslate">sequence</span> に埋め込まれているカーブで、使用するパラメータトラックに固有のものです。</li>
+    <li><strong>共有カーブ</strong>。<a href="../Animation_Curves.htm">Animation Curve Editorを</a>使用して、<span class="notranslate">sequence</span> とは別に作成されたカーブです。</li>
   </ul>
-  <p>We&#39;ll start by explaining how to use an Animation Curve asset, which is simply a case of creating a new curve, setting up the channels in the Animation Curve Editor, and then dragging the curve asset into the dope sheet to apply it to a parameter
-    track:</p>
-  <p><br/>
+  <p>まず、アニメーションカーブ（Animation Curve）<span class="notranslate">asset</span> の使い方を説明します。これは、新しいカーブを作成し、アニメーションカーブエディタでチャンネルを設定し、カーブ<span class="notranslate">asset</span> を<span class="notranslate">dope sheet</span> にドラッグして、パラメータに適用する簡単な方法です。
+    のトラックを使用します。</p>
+  <p><br />
     <img alt="Add Animation Curve Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_AddAnimCurve.gif" /></p>
-  <p>You can also use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option <strong>Assign Shared Curve (Import)</strong><strong> </strong>to add an animation curve asset
-    to the selected parameter track. This will open the Asset Explorer where you can select the required curve from the ones presented to you:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Shared_Curve.gif" />It is important to note that the animation curve asset <strong>must have the correct number of channels for the track it is being applied to</strong>, as each
-    type of parameter track will require a different number of channels in the animation curve. Any animation curves that do not have enough channels will be shown with a <img class="icon_small" src="../../assets/Images/Icons/Invalid_Triangle_Yellow.png"
-    /> indicator in the asset browser.</p>
-  <p>Below is a list of the different parameter tracks and the channels that they will require in each curve asset (channels should be added in the order given for each parameter type):</p>
+  <p>また、マウスの右ボタン<img> メニューのオプション「<strong>共有カーブの割り当て（インポート）」</strong><strong> </strong>を使って、<span class="notranslate">animation curve</span> アセットを追加することができます。
+    を選択したパラメータトラックに追加します。これにより、<span class="notranslate">Asset</span> エクスプローラが開き、表示されたカーブの中から必要なものを選択することができます。</p>
+  <p><img> <span class="notranslate">animation curve</span> アセットには、<strong>適用するトラックに対して正しい数のチャンネルが必要</strong>です。
+    十分なチャンネル数を持たない は、 ブラウザに インジケータとともに表示されます。<span class="notranslate">animation curve</span> <span class="notranslate">animation curves</span> <span class="notranslate">asset</span> <img> </p>
+  <p><span class="notranslate">asset</span> 以下は、各カーブで必要となるパラメータトラックとチャンネルのリストです（チャンネルは、各パラメータタイプに示された順序で追加する必要があります）。</p>
   <ul class="colour">
-    <li><strong>Position</strong>: 2 channels, X and Y.</li>
-    <li><strong>Rotation</strong>: 1 channel.</li>
-    <li><strong>Colour Multiply</strong>: 4 channels, Alpha, Red, Green and Blue, and the range <em>must</em> be between 0 and 255.</li>
-    <li><strong>Image Index</strong>: 1 channel.</li>
-    <li><strong>Image Speed</strong>: 1 channel.</li>
-    <li><strong>Origin</strong>: 2 channels, X and Y.</li>
-    <li><strong>Scale</strong>: 2 channels, X scale and Y scale, and note that the value is a multiplier, so the base value is 1 (no scale) and greater than one will make the image bigger, and less than 1 will make it smaller. Negative values will flip or
-      mirror the image as well as apply scale.</li>
-    <li><strong>Pitch</strong>: 1 channel, which <em>must</em> be a minimum of 0, where 1 is the default pitch of the sound.</li>
-    <li><strong>Volume</strong>: 1 channel, which <em>must </em>be a minimum of 0 and a maximum of 1.</li>
+    <li><strong>ポジション</strong>：X、Yの2チャンネル。</li>
+    <li><strong>回転させる</strong>。1チャンネル</li>
+    <li><strong>カラーマルチプライス</strong>。アルファ、レッド、グリーン、ブルーの4チャンネルで、範囲は0〜255である<em>こと</em>。</li>
+    <li><strong>画像インデックス</strong>。1チャンネル</li>
+    <li><strong>イメージスピード</strong>：1ch.</li>
+    <li><strong>オリジン</strong>：X、Yの2チャンネル。</li>
+    <li><strong>スケール</strong>：XスケールとYスケールの2チャンネルで、値は乗数なので、基本値は1（スケールなし）で、1より大きいと画像が大きくなり、1より小さいと小さくなることに注意してください。負の値は、反転または
+      画像をミラーリングし、スケールを適用します。</li>
+    <li><strong>Pitch</strong>: 1チャンネル。最低でも0で<em>なければ</em>ならず、1がサウンドのデフォルトピッチとなる。</li>
+    <li><strong>音量</strong>：1ch。最小値0、最大値1である<em>こと </em>。</li>
   </ul>
-  <p>If you import an animation curve that does not have enough channels for the parameter track, you will be prompted to choose whether any missing channels should be added into the animation curve:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve.png" /></p>
-  <p>Shared curves can also be made invalid if any required channels are deleted in an external animation curve editor. In such a case the shared curve will appear as invalid in the dope sheet, and you can click on &quot;Add Channel(s)&quot; to create any
-    missing channels which will make the curve valid again:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve_Error.png" /></p>
-  <p>By default, the animation curve will be applied along the entire length of the asset key it is attached to, however, much like with keyframes, you can click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"
-    /> on a curve and drag it to re-position it on the timeline, and you can also hold down the <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55" /> key and and drag to resize the length of the curve
-    (this also applies to <strong>embedded curves</strong>):</p>
-  <p><img alt="Resize and reposition anim curves" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ResizeCurve.gif" />The other way to add a parameter curve to a track is to embed it. This can be done by either clicking the right mouse button
-    <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on the parameter track and selecting &quot;<em>Convert to Curve</em>&quot;, or by clicking on the <strong>Toggle Curve Mode</strong> <img src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
-    /> button, which will show you the track as an animation curve in the full dope sheet area, and you can then click the <strong>Convert To Curve</strong> button:</p>
-  <p><img alt="Convert keyframes to a curve" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ConvertToCurve.gif" />Once you have converted the parameter keyframe track to a curve it can be edited within the dope sheet, exactly the same way
-    that you can edit <a href="../Animation_Curves.htm">animation curve assets</a>, this includes adding or removing points, changing their position, changing the curve type (linear, smooth or bezier), applying presets, and renaming channels and the colours
-    associated with them.</p>
-  <p class="note"><strong>IMPORTANT</strong>: You can also edit animation curve assets that have been applied to parameter tracks in this way, however any changes you make <strong>will be applied to all tracks that use the animation curve</strong>, as you are editing
-    the curve asset and not a single copy of it. To edit an animation curve asset that has been applied to a track <strong>only</strong> on that track, you must first use the right mouse menu <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
-      width="21" /> on the parameter track and select <b>Embed Curve</b>. This will duplicate the animation curve asset and embed it in the pararmeter track as an independent curve only for that track. Conversely, you can convert an embedded animation curve
-    into an Animation Curve asset using the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option <strong>Export To Shared Curve</strong>. This will convert the embedded
-    curve into a new asset which can then be edited as normal as well as applied to other parameter tracks if required.</p>
-  <p><img alt="The dope sheet curve editor" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_EmbeddedCurves.png" /></p>
-  <p>The image above shows how the embedded animation curve editor looks, and it&#39;s very similar to the <a href="../Animation_Curves.htm">Animation Curve Editor</a>. Expand each section below for more information on the different sections.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Curve Name</a></p>
+  <p>パラメータトラックのチャンネル数が足りない<span class="notranslate">animation curve</span> をインポートした場合、足りないチャンネルをアニメーションカーブに追加するかどうかを選択するプロンプトが表示されます。</p>
+  <p><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></p>
+  <p>また、外部エディタ（<span class="notranslate">animation curve</span> ）で必要なチャンネルを削除すると、共有カーブが無効になることがあります。このような場合、共有カーブは<span class="notranslate">dope sheet</span> で無効と表示されますので、「チャンネルを追加」をクリックして、必要なチャンネルを作成します。
+    を削除すると、カーブは再び有効になります。</p>
+  <p><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Shared_Curve.gif" /></p>
+  <p>デフォルトでは、<span class="notranslate">animation curve</span> は、添付されている<span class="notranslate">asset</span> キーの全長に沿って適用されますが、<span class="notranslate">keyframes</span> と同様に、曲線上の<img> をクリックしてドラッグすると、<span class="notranslate">timeline</span> の位置を変更できます。また、<img> キーを押しながらドラッグすると、曲線の長さを変更することが可能です。
+    (これは、<strong>埋め込まれたカーブにも</strong>適用されます）。</p>
+  <p><img>パラメータカーブをトラックに追加するもう一つの方法は、それを埋め込むことです。これは、マウスの右ボタン
+    <img> を選択するか、<strong>Toggle Curve Mode</strong> <img> ボタンをクリックして、トラックを<span class="notranslate">animation curve</span> として<span class="notranslate">dope sheet</span> の全領域に表示させ、<strong>Convert To Curve</strong>ボタンをクリックすることができます。</p>
+  <p><img>パラメータ<span class="notranslate">keyframe</span> トラックをカーブに変換したら、<span class="notranslate">dope sheet</span> で編集することができます。
+   <a href="../Animation_Curves.htm">アニメーションのカーブアセットを</a>編集するのと同じように、ポイントの追加や削除、位置の変更、カーブタイプの変更（線形、スムーズ、ベジエ）、プリセットの適用、チャンネル名や色の変更などが可能です。
+    に関連付けられます。</p>
+  <p class="note"><strong>重要</strong>：この方法でパラメータトラックに適用された<span class="notranslate">animation curve</span> <span class="notranslate">assets</span> を編集することもできますが、編集した内容は、<strong>アニメーションカーブを使用しているすべてのトラックに適用</strong>されます。
+    カーブのコピーではなく、<span class="notranslate">asset</span> 。あるトラックに適用された<span class="notranslate">animation curve</span> <span class="notranslate">asset</span> をその<strong>トラックだけで</strong>編集するには、まずパラメータトラック上でマウスの右メ ニュー<img> を使い、<b>Embed Curve</b> を選択する必要があります。これにより、<span class="notranslate">animation curve</span> <span class="notranslate">asset</span> が複製され、そのトラックだけの独立したカーブとしてパラメー タトラックに埋め込まれます。逆に、埋め込まれたアニメーションカーブを変換することもできます。
+    マウスの右ボタン<img> メニューの「<strong>Export To Shared Curve</strong>」を使って、「Animation Curve」<span class="notranslate">asset</span> に変換します。これにより、埋め込まれた
+    カーブを新しい<span class="notranslate">asset</span> 、通常通り編集したり、必要に応じて他のパラメータトラックに適用することができます。</p>
+  <p><img class="icon_small" src="../../assets/Images/Icons/Invalid_Triangle_Yellow.png"
+    /></p>
+  <p>上の画像は、埋め込み型<span class="notranslate">animation curve</span> エディタの外観で、<a href="../Animation_Curves.htm">アニメーションカーブエディタと</a>非常によく似ています。以下の各セクションを展開すると、各セクションの詳細が表示されます。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">カーブ名</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This will be the name of the external animation curve asset or the name of the parameter track for an embedded curve.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">これは、外部<span class="notranslate">animation curve</span> <span class="notranslate">asset</span> の名前、または組み込まれたカーブのパラメータトラックの名前になります。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Curve Library</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">カーブライブラリ</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button opens the <strong><span data-keyref="Animation_Curve_Presets_Library">Animation Curve Library</span></strong> window,
-      which allows you to change the Curve Type of the embedded or shared curve, and apply a preset to the selected channel.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" />See the section on <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">Animation Curve Library</a> for
-      information on Curve Types and Presets. Note that opening the window through the <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button will have the <strong>&quot;Overwrite&quot;</strong>      Apply Mode selected by default.</p>
-    <ul class="dropspotlist"><br/>
+    <p class="dropspot"><img> ボタンを押すと <strong><span data-keyref="Animation_Curve_Presets_Library">アニメーション・カーブ・ライブラリ</span></strong>ウィンドウを表示します。
+      で、埋め込みカーブや共有カーブのカーブタイプを変更したり、選択したチャンネルにプリセットを適用したりすることができます。</p>
+    <p class="dropspot"><img><a href="../Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">アニメーション・カーブ・ライブラリ</a>」の項を参照してください。
+      カーブの種類とプリセットに関する情報<img> ボタンからウィンドウを開くと、デフォルトで<strong>「上書き</strong>」適用モードが選択されていることに注意してください。</p>
+    <ul class="dropspotlist"><br />
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Channel List</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">チャンネル一覧</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The channel list is where you can edit the different channels that comprise your parameter curve. Each channel must have a unique name (using <span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>),
-      and you can also set the colour for the channel by double clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on the colour swatch to the left, which will open the colour picker to let you choose a new colour.
-      To rename the channel, you can do a slow double click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and rename, and you can also use the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"
-      /> to open a menu where you can choose to rename, change the colour or copy the channel. Channels can be expanded by clicking the arrow beside the name to show each of the points on the channel curve, and these points can be edited manually by clicking
-      the current value and typing in the new value. You can also toggle the channel visibility in the dope sheet by clicking on the &quot;eye&quot; icon <img alt="Eye Icon" class="icon" src="../../assets/Images/Icons/Icon_ToggleVisibility.png" />.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">チャンネルリストでは、パラメータカーブを構成するさまざまなチャンネルを編集することができます。各チャンネルにはユニークな名前（<span data-keyref="Asset name restriction">英数字とアンダースコア記号「_」のみ</span>使用）を付ける必要があります。
+      また、左側の色見本をダブルクリック（<img> ）すると、カラーピッカーが開き、新しい色を選択することができるので、チャンネルの色を設定することができます。
+      チャンネルの名前を変更するには、ゆっくりダブルクリック<img> して名前を変更します。また、マウスの右ボタン<img> を使ってメニューを開き、名前の変更、色の変更、チャンネルのコピーを選択することも可能です。チャンネルは名前の横の矢印をクリックすることで拡張でき、チャンネルカーブの各ポイントが表示されます。
+      を入力し、新しい値を入力します。また、<span class="notranslate">dope sheet</span> の「目」のアイコン<img> をクリックすると、チャンネルの表示/非表示を切り替えることができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Conversion Control</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">変換制御</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Here keyframes can be converted into parameter curves (as explained fiurther up this page) but there is also a button to convert parameter curves into keyframes. However, you should be aware that when doing this there are a couple of caveats. Keyframes
-      cannot be &quot;between&quot; frames, and so some curve values will need to be rounded to the nearest frame, which in turn will change the way the parameter track behaves. Also, if the parameter curve uses catmull-rom or bezier interpolation, <strong>this will be lost </strong>and
-      the interpolation between keyframes will be set to linear interpolation.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">ここでは、<span class="notranslate">keyframes</span> をパラメータカーブに変換することができます（このページで詳しく説明します）が、パラメータカーブを<span class="notranslate">keyframes</span> に変換するボタンもあります。ただし、この場合、いくつかの注意点があることに注意してください。キーフレーム
+      そのため、いくつかのカーブ値は最も近いフレームに丸める必要があり、その結果、パラメータトラックの動作が変化します。また、パラメータカーブがcatmull-romやbezier補間を使用している場合、<strong>これは失わ </strong>れます。
+      <span class="notranslate">keyframes</span> の間の補間は、線形補間に設定されます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Curve Menu</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">カーブメニュー</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">This menu contains options available elsewhere in the editor, but all in one place. The options are:</p>
+    <p class="dropspot">このメニューには、エディタ内の他の場所で使用できるオプションが含まれていますが、すべて一箇所にまとめられています。オプションは以下の通りです。</p>
     <ul class="dropspotlist">
-      <li><strong>Set Range</strong>: Set the vertical range of the parameter curve (see <em>Channel Range</em>, below).</li>
-      <li><strong>Convert To Curve</strong>: Convert the selected parameter track using keyframes into a parameter curve.</li>
-      <li><strong>Embed Curve</strong>: Embed the shared curve asset being used by the parameter track into the track.</li>
-      <li><strong>Assigned Shared Curve (Import)</strong>: Assign an Animation Curve asset to be used as a shared curve for the parameter track.</li>
-      <li><strong>Convert To Keys</strong>: Convert the selected parameter track using parameter curves into keyframes.</li>
-      <li><strong>Export to Shared Curve</strong>: Convert the embedded curve into a shared curve asset.</li>
+      <li><strong>範囲を設定</strong>します。パラメータカーブの垂直方向の範囲を設定します（下記「<em>チャンネルレンジ</em>」参照）。</li>
+      <li><strong>カーブに変換</strong>する。<span class="notranslate">keyframes</span> を使って選択したパラメータトラックを、パラメータカーブに変換します。</li>
+      <li><strong>カーブを埋め込む</strong>。パラメータトラックで使用されている共有カーブ<span class="notranslate">asset</span> をトラックに埋め込む。</li>
+      <li><strong>Assigned Shared Curve (Import</strong>)。パラメータトラックの共有カーブとして使用するアニメーションカーブ<span class="notranslate">asset</span> をアサインします。</li>
+      <li><strong>キーに変換</strong>する。パラメータカーブを使って選択したパラメータトラックを<span class="notranslate">keyframes</span> に変換します。</li>
+      <li><strong>Shared Curveに</strong>エクスポートします。埋め込みカーブを共有カーブに変換する<span class="notranslate">asset</span>.</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Channel Range</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">チャンネル範囲</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The Channel Range button is used for setting the visual vertical range for the Channel Editor. By default this will be set from -1 to 1, but clicking this button will open the following window:</p>
-    <p><img alt="Animation Curve Editor Channel Range" class="center" height="136" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png" width="198" /></p>
-    <p class="dropspot">Changing these values will change the way the data is represented in the Channel Editor section, permitting you to have higher/lower values along the channel curve than just -1 to 1. Note that this is purely visual and does not clamp the values for
-      the channel.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">チャンネル範囲ボタンは、チャンネルエディタの視覚的な垂直範囲を設定するために使用します。デフォルトでは -1 から 1 に設定されていますが、このボタンをクリックすると次のようなウィンドウが表示されます。</p>
+    <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve.png" /></p>
+    <p class="dropspot">これらの値を変更すると、チャンネルエディタセクションでのデータの表現方法が変わり、チャンネルカーブに沿って-1〜1よりも高い値や低い値を設定することができます。これは純粋に視覚的なものであり、チャンネルの値をクランプするものではありません。
+      を設定します。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Channel Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">チャンネルエディター</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The Channel Editor shows a visual representation of the different channels used in the parameter curve. By default, all channels will be shown here, but you can only edit the channel currently selected from the Channel List, which will be highlighted
-      in the editor. You can change the position of any of the points along the channel curve by clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on them and dragging them around within the editor, but note that
-      the first and last point can only be changed along the vertical axis and their horizontal value will always be 0 and 1 respectively.</p>
+    <p class="dropspot">チャンネルエディターは、パラメータカーブで使用される様々なチャンネルを視覚的に表示します。デフォルトでは、すべてのチャンネルがここに表示されますが、編集できるのはチャンネルリストから現在選択されているチャンネルのみで、ハイライト表示されます。
+      を表示します。チャンネルカーブに沿ったポイントの位置は、<img> をクリックし、エディタ内でドラッグすることで変更することができます。
+      最初と最後の点は、垂直軸に沿ってのみ変更可能で、水平方向の値は常にそれぞれ0と1になります。</p>
     <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot">You can add points directly to the channel curve by moving the mouse close to the main channel line and then clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> when the cursor changes to the &quot;<strong>Add Point</strong>&quot;
-        tool, and you can then edit these points by clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and dragging or by changing their values in the expanded channel options in the Channel List:</p>
-      <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor.gif" /></p>
+      <p class="dropspot">チャンネルカーブに直接ポイントを追加するには、メインチャンネルラインにマウスを近づけ、カーソルが &quot;<strong>ポイントの追加</strong>&quot; に変わった時に<img> をクリックします。
+        その後、<img> をクリックしてドラッグするか、チャンネルリストの拡張チャンネルオプションで値を変更することにより、これらのポイントを編集することができます。</p>
+      <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve_Error.png" /></p>
     </div>
-    <p class="dropspot">You can edit multiple points at once by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging within the editor to select all the points you want to edit or by using <img alt="CTRL Icon"
-        class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
-        width="21" /> to add points to the selection individually. Releasing the mouse button and then clicking again on any of the points in the selection and dragging will move them all together:</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Move.gif" />You can <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> right-click anywhere in the Channel Editor to open the <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a>      window (only when the selected Curve Type is <strong>Bezier</strong>). Applying a preset in this way will affect the whole channel. To modify only a part of the channel, you can <img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
-        width="21" /> right-click on an individual line to apply a preset to it, or select multiple lines by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging, then <img class="icon"
-        height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on the selection to apply a preset to the selected lines.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Library.gif" />Note that opening the <strong>Animation Curve Library</strong> window through the Channel Editor will have the <strong>&quot;Between&quot;</strong>      Apply Mode selected by default.</p>
+    <p class="dropspot"><img> をクリックし、エディタ内でドラッグして編集したいポイントをすべて選択するか、<img> /<img> +<img> を使ってポイントを個別に選択範囲に追加すれば、複数のポイントを一度に編集することができます。マウスボタンを離した後、選択範囲内のいずれかのポイントを再度クリックしてドラッグすると、すべてのポイントをまとめて移動することができます。</p>
+    <p class="dropspot"><img> <img> チャンネルエディタで任意の場所を右クリックして、<a href="../Animation_Curve_Properties/Animation_Curve_Library.htm">アニメーションカーブライブラリウィンドウを</a>開くことができます（選択されたカーブタイプが<strong>ベジェの</strong>場合のみ）。この方法でプリセットを適用すると、チャンネル全体に影響します。チャンネルの一部だけを変更するには、 個々のラインを右クリックしてプリセットを適用するか、 をクリックしてドラッグして複数のラインを選択し、 選択部分を右クリックして選択したラインにプリセットを適用することができます。<img> <img> <img> </p>
+    <p class="dropspot"><img>チャンネルエディタから<strong>アニメーションカーブライブラリウィンドウを</strong>開くと、デフォルトで<strong>「間</strong>」適用モードが選択されていることに注意してください。</p>
   </div>
-  <p> </p>
-  <p>Once you are finished editing the parameter curves you can go back to the regular dope sheet view of the different tracks by clicking on the the <strong>Toggle Curve Mode</strong> <img class="icon" src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
-    /> button.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p>パラメータカーブの編集が終わったら、<strong>Toggle Curve Mode</strong> <img> ボタンをクリックすると、異なるトラックの通常の<span class="notranslate">dope sheet</span> ビューに戻ることができます。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Broadcast_Messages.htm">Broadcast Messages</a></div>
+        <div style="float:left">戻る<a href="../Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次へ<a href="Broadcast_Messages.htm">ブロードキャストメッセージ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Room Editor

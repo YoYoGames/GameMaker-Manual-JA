@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>switch</title>
+  <title>スイッチ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the switch function" />
   <meta name="rh-index-keywords" content="switch,case" />
@@ -14,9 +14,9 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>switch</h1>
-  <p>In a number of situations you want to let your instances perform different actions depending on a particular value. You can do this using a number of consecutive <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> statements, but when the possible choices gets above two or three it is usually easier to use the <span class="inline">switch</span> statement.</p>
-  <p>A <span class="inline">switch</span> statement has the following syntax:</p>
+  <h1>スイッチ</h1>
+  <p>特定の値に応じてインスタンスに異なる動作をさせたい場面は少なくない。これを行うには、いくつかの連続した <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a>ステートメントを使用しますが、可能な選択肢が2つか3つ以上になると、通常は <span class="inline">switch</span> ステートメントを使用する方が簡単です。</p>
+  <p> <span class="inline">switch</span> 文は次のような構文です。</p>
   <p class="code">switch (&lt;expression&gt;)<br />
     {<br />
         case &lt;constant1&gt;:<br />
@@ -33,15 +33,15 @@
             &lt;code&gt;;<br />
     }
   </p>
-  <p>This works as follows:</p>
+  <p>これは次のように動作します。</p>
   <ul class="colour">
-    <li>First the <a class="glossterm" data-glossterm="expression" href="#">expression</a> is executed.</li>
-    <li>Next, its result is compared with the different constants after each of the <span class="inline">case</span> <a class="glossterm" data-glossterm="statement" href="#">statement</a><span class="glossextra">s</span>. When we say &quot;constant&quot; what we mean is that the value in the case cannot be a variable expression and must be a fixed value of any <a href="../Data_Types.htm">data type</a>, like <span class="inline2">&quot;fight&quot;</span> or <span class="inline2">3</span> or the keyword <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
-    <li>The execution begins from the first <span class="inline">case</span> statement with the matching value, <i>until a <a href="break.htm">break</a> statement is encountered</i>.</li>
-    <li>If no <span class="inline">case</span> statement has the matching value, then the <span class="inline">default</span> statement will be executed. It is not required to have a <span class="inline">default</span> statement, and if none is supplied then no action will be taken when there are no matching cases. The <span class="inline">default</span> statement can be placed anywhere in a switch block, however it&#39;s traditionally placed at the bottom, after all the cases.</li>
+    <li>まず、<a class="glossterm" data-glossterm="顔" href="#">式が</a>実行されます。</li>
+    <li>次に、その結果を、 <span class="inline">case</span> の<span class="glossextra">各文章の</span>後にある異なる定数と比較する。定数」と言ったのは、その場合の値が変数式であってはならず、任意の<a href="../Data_Types.htm">データ</a>型の固定値でなければならないという意味であり、例えば<span class="inline2">「fight</span>」や<span class="inline2">3</span>、キーワードの <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
+    <li>実行は、値が一致する最初の <span class="inline">case</span> 文から始まり<i>、<a href="break.htm"><span class="notranslate">break</span></a> 文に遭遇するまで</i>行われます。</li>
+    <li>一致する値を持つ <span class="inline">case</span> 文がない場合、 <span class="inline">default</span> 文が実行されます。 <span class="inline">default</span> ステートメントがあることは必須ではなく、もし何もなければ、マッチするケースがないときに何も行われません。 <span class="inline">default</span> 文は、<span class="notranslate">switch</span> ブロックのどこにでも入れることができますが、伝統的には、すべてのケースの後の一番下に配置されます。</li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> The switch statement will continue to execute code within a <span class="inline">case</span>, until a <span class="inline">break</span> is encountered. If you do not use <span class="inline">break</span>s at the end of your cases, it will cause the switch to &quot;leak&quot; to the next <span class="inline">case</span>, and even to a <span class="inline">default</span> section, if there are no <span class="inline">break</span>s in the way. This can cause unintended behaviour as the execution of one <span class="inline">case</span> can result in multiple <span class="inline">case</span>s being executed, so ensure to use <span class="inline">break</span> where appropriate.</p>
-  <p>A simple example of using a switch statement would be something like this:</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">switch</span> 文は、 <span class="inline">break</span> に遭遇するまで、 <span class="inline">case</span> 内のコードを実行し続けます。 <span class="inline">break</span>をケースの最後に使用しないと、<span class="notranslate">switch</span> が次の <span class="inline">case</span> に「リーク」し、 <span class="inline">break</span>がない場合は <span class="inline">default</span> セクションにさえもリークします。これは、1つの <span class="inline">case</span> の実行が複数の <span class="inline">case</span>の実行につながるため、意図しない動作を引き起こす可能性があります。したがって、適切な場合には、 <span class="inline">break</span> を使用するようにしてください。</p>
+  <p><span class="notranslate">switch</span> 文の簡単な使用例としては、次のようなものがあります。</p>
   <p class="code">switch (player_lives)<br />
     {<br />
         case 3:<br />
@@ -61,7 +61,7 @@
         break;<br />
     }
   </p>
-  <p>Note that multiple <span class="inline">case</span> statements can be used to execute the same statement, as the <span class="inline">break</span> is not always required for each and every <span class="inline">case</span>. If there is no <span class="inline">break</span> statement for a particular <span class="inline">case</span>, the execution simply continues with the code for the next case, e.g.:</p>
+  <p>なお、<span class="inline">break</span> は必ずしもすべての <span class="inline">case</span> で必要なわけではないので、同じステートメントを実行するために複数の <span class="inline">case</span> ステートメントを使用することができます。特定の <span class="inline">case</span> に対して <span class="inline">break</span> ステートメントがない場合、実行は単に次のケースのコードで続行されます、例．</p>
   <p class="code">switch (keyboard_key)<br />
     {<br />
         case vk_left:<br />
@@ -85,19 +85,19 @@
         break;<br />
     }
   </p>
-  <p>The above code uses <span class="inline">switch</span> to check for a keyboard event and then compares that to each <span class="inline">case</span> listed. If it meets any of the required values then the corresponding code is executed. Note how the <span class="inline">switch</span> can check multiple <span class="inline">cases</span> and execute code until the next <span class="inline">break</span>, to permit various keys to be used to get the same result.</p>
-  <p>Each <span class="inline">case</span> can have its own code, so you can set up a sort of &quot;inheritance&quot; system where a case executes its own code and then the code for the next case as well.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、 <span class="inline">switch</span> を使ってキーボードイベントをチェックし、それを <span class="inline">case</span> にリストアップされた各イベントと比較しています。もし、必要な値のいずれかを満たしていれば、対応するコードが実行されます。<span class="inline">switch</span> は、複数の <span class="inline">cases</span> をチェックし、次の<span class="inline">break</span> までコードを実行することができます。</p>
+  <p> <span class="inline">case</span> それぞれが独自のコードを持つことができるので、あるケースが独自のコードを実行し、次のケースのコードも実行するという、一種の「継承」システムを設定することができるのです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="break.htm">break</a></div>
+        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:right">次のページ <a href="break.htm"><span class="notranslate">break</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 switch

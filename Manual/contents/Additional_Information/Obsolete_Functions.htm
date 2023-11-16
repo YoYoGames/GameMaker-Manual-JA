@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Obsolete Functions</title>
+  <title>廃止された機能</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the various Obsolete Functions" />
   <meta name="rh-index-keywords" content="Obsolete Functions" />
@@ -14,173 +14,173 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Obsolete Functions</span></h1>
-  <p>Here you can find a list of all the functions that have been made obsolete when you compare <span data-keyref="GameMaker Name">GameMaker</span> to legacy versions of the product. The functions listed here will be converted into <a href="Compatibility_Scripts.htm">compatibility scripts</a> when you import a <span class="inline">*.yyz</span> made with a legacy version, and you can continue to work on the project as before. However, we recommend that you revise all the compatibility scripts created in a project, and ensure that future projects use the new functions/methods of working rather than depend on these scripts.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Backgrounds</a></p>
+  <h1>廃止された機能</h1>
+  <p>ここでは、<span data-keyref="GameMaker Name">GameMakerを</span>レガシーバージョンと比較した際に、廃止された機能の一覧を掲載しています。ここに記載されている機能は、レガシーバージョンで作成した <span class="inline">*.yyz</span> をインポートすると互換<a href="Compatibility_Scripts.htm">スクリプトに</a>変換され、従来通りプロジェクトで作業することができます。ただし、プロジェクトで作成した互換性<span class="notranslate">scripts</span> はすべて改訂し、今後のプロジェクトではこれらの<span class="notranslate">scripts</span> に依存せず、新しい機能・作業方法を使用するようにすることをお勧めします。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">背景</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">In legacy GameMaker you had a separate <strong>background </strong>resource, where you could add images to be used as backgrounds. In <span data-keyref="GameMaker Name">GameMaker</span> all images are considered sprites, and the use you put them too will depend on the layer they are assigned to in the room. This means that there is no longer a &quot;background&quot; resource, and it also means that the following functions are obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">従来の<span class="notranslate">GameMaker</span> では、個別の<strong>背景 </strong>リソースがあり、そこに画像を追加して背景として使用することができ ました。<span data-keyref="GameMaker Name">GameMaker</span>では、すべての画像は<span class="notranslate">sprites</span> とみなされ、その用途は<span class="notranslate">room</span> で割り当てられたレイヤーに依存します。 これは、「背景」リソースがなくなったことを意味し、また、以下の機能が廃止されたことを意味します。</p>
+    <table>
       <tbody>
         <tr>
-          <td>draw_background</td>
+          <td>ドローバックグラウンド</td>
           <td style="">draw_background_ext</td>
-          <td style="">draw_background_<br />
-            stretched</td>
-          <td>draw_background_<br />
-            stretched_ext</td>
+          <td style="">draw_background_<br>
+            ストレッチング</td>
+          <td>draw_background_<br>
+            伸縮する</td>
         </tr>
         <tr>
-          <td>draw_background_<br />
-            part</td>
-          <td style="">draw_background_<br />
+          <td>draw_background_<br>
+            部分</td>
+          <td style="">draw_background_<br>
             part_ext</td>
-          <td style="">draw_background_<br />
-            general</td>
-          <td>draw_background_<br />
-            tiled</td>
+          <td style="">draw_background_<br>
+            一般的</td>
+          <td>draw_background_<br>
+            タイル状</td>
         </tr>
         <tr>
-          <td>draw_background_<br />
-            tiled_ext</td>
-          <td style="">background_name</td>
-          <td style="">background_exists</td>
-          <td>background_get_<br />
-            name</td>
+          <td>draw_background_<br>
+            タイルドエクスト</td>
+          <td style="">背景名</td>
+          <td style="">背景が存在する</td>
+          <td>background_get_<br>
+            名前</td>
         </tr>
         <tr>
-          <td>draw_background</td>
+          <td>ドローバックグラウンド</td>
           <td style="">draw_background_ext</td>
-          <td style="">draw_background_<br />
-            stretched</td>
-          <td>draw_background_<br />
-            stretched_ext</td>
+          <td style="">draw_background_<br>
+            ストレッチング</td>
+          <td>draw_background_<br>
+            伸縮する</td>
         </tr>
         <tr>
-          <td>background_get_<br />
-            width</td>
-          <td style="">background_get_<br />
-            height</td>
-          <td style="">background_get_<br />
-            transparent</td>
-          <td>background_get_<br />
-            smooth</td>
+          <td>background_get_<br>
+            幅</td>
+          <td style="">background_get_<br>
+            高さ</td>
+          <td style="">background_get_<br>
+            透明</td>
+          <td>background_get_<br>
+            スムース</td>
         </tr>
         <tr>
-          <td>background_get_<br />
-            preload</td>
-          <td style="">background_get_uvs</td>
-          <td style="">background_get_<br />
-            texture</td>
-          <td>background_set_alpha_<br />
-            from_background</td>
+          <td>background_get_<br>
+            プリロード</td>
+          <td style="">背景画像</td>
+          <td style="">background_get_<br>
+            テクスチャ</td>
+          <td>background_set_alpha_<br>
+            背景</td>
         </tr>
         <tr>
-          <td>background_create_<br />
-            from_surface</td>
-          <td style="">background_create_<br />
-            color</td>
-          <td style="">background_create_<br />
-            colour</td>
-          <td>background_create_<br />
-            gradient</td>
+          <td>背景作成<br>
+            表面から</td>
+          <td style="">背景作成<br>
+            色</td>
+          <td style="">背景作成<br>
+            色</td>
+          <td>背景作成<br>
+            グラデーション</td>
         </tr>
         <tr>
-          <td>background_add</td>
-          <td style="">background_replace</td>
-          <td style="">background_add_<br />
-            alpha</td>
-          <td>background_replace_<br />
-            alpha</td>
+          <td>背景追加</td>
+          <td style="">背景を置き換える</td>
+          <td style="">background_add_<br>
+            アルファ</td>
+          <td>background_replace_<br>
+            アルファ</td>
         </tr>
         <tr>
-          <td>background_delete</td>
-          <td style="">background_duplicate</td>
-          <td style="">background_assign</td>
-          <td>background_save</td>
+          <td>バックグラウンド削除</td>
+          <td style="">バックグラウンド複製</td>
+          <td style="">背景を指定する</td>
+          <td>バックグラウンドセーブ</td>
         </tr>
         <tr>
-          <td>background_prefetch</td>
-          <td style="">background_<br />
-            prefetch_multi</td>
+          <td>バックグラウンドプリフェッチ</td>
+          <td style="">background_<br>
+            プリフェッチマルチ</td>
           <td style="">background_flush</td>
-          <td>background_flush_<br />
-            multi</td>
+          <td>background_flush_<br>
+            マルチ</td>
         </tr>
         <tr>
-          <td>room_set_background</td>
-          <td style="">room_set_<br />
-            background_colour</td>
-          <td style=""> </td>
+          <td>ルームセット背景</td>
+          <td style="">room_set_<br>
+            背景色</td>
+          <td style=""> </td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">Legacy GameMaker lso had a number of different background variables that accessed the global background array. These are no longer required in <span data-keyref="GameMaker Name">GameMaker</span>:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">Legacy<span class="notranslate">GameMaker</span> また、グローバルな背景配列にアクセスするために、いくつかの異なる背景変数がありました。これらは<span data-keyref="GameMaker Name">GameMakerでは</span>もう必要ありません。</p>
+    <table>
       <tbody>
         <tr>
         </tr>
         <tr>
-          <td>background_<br />
-            index[0..7]</td>
-          <td>background_<br />
-            visible[0..7]</td>
-          <td>background_<br />
-            alpha[0..7]</td>
-          <td>background_<br />
-            blend[0..7]</td>
+          <td>background_<br>
+            インデックス[0..7]</td>
+          <td>background_<br>
+            可視[0..7]の場合</td>
+          <td>background_<br>
+            α[0...7]の場合</td>
+          <td>background_<br>
+            ブレンド[0..7]</td>
         </tr>
         <tr>
-          <td>background_x[0..7]</td>
-          <td>background_y[0..7]</td>
-          <td>background_<br />
-            colour</td>
-          <td>background_<br />
-            showcolour</td>
+          <td>background_x[0..7]の場合</td>
+          <td>background_y[0..7]の場合</td>
+          <td>background_<br>
+            色</td>
+          <td>background_<br>
+            ショーカラー</td>
         </tr>
         <tr>
-          <td>background_<br />
-            foreground[0..7]</td>
-          <td>background_<br />
-            hspeed[0..7]</td>
-          <td>background_<br />
-            vspeed[0..7]</td>
-          <td>background_<br />
-            htiled[0..7]</td>
+          <td>background_<br>
+            前景[0..7]</td>
+          <td>background_<br>
+            hspeed[0...7]です。</td>
+          <td>background_<br>
+            vspeed[0..7]の場合</td>
+          <td>background_<br>
+            htiled[0..7]です。</td>
         </tr>
         <tr>
-          <td>background_<br />
-            vtiled[0..7]</td>
-          <td>background_<br />
-            width[0..7]</td>
-          <td>background_<br />
-            height[0..7]</td>
-          <td>background_<br />
-            xscale[0..7]</td>
+          <td>background_<br>
+            vtiled[0..7]です。</td>
+          <td>background_<br>
+            幅[0..7]の場合</td>
+          <td>background_<br>
+            高さ[0..7]の場合</td>
+          <td>background_<br>
+            xscale[0..7]の場合</td>
         </tr>
         <tr>
-          <td>background_<br />
-            yscale[0..7]</td>
+          <td>background_<br>
+            yscale[0...7]の場合</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about <b>Background Layers</b> from the section on the <a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Room Editor</a>, and for more information on the functions that control background layers using code see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Background_Layers/Background_Layers.htm">Background Layers</a>.</p>
-    <p> </p>
+    <p class="dropspot"><b>背景レイヤーの</b>詳細については、「<a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">ルームエディタ</a>」のセクションを参照してください。また、コードを使用して背景レイヤーを制御する機能の詳細については、「<a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Background_Layers/Background_Layers.htm">背景レイヤー</a>」を参照してください。</p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Tiles</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">タイル</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">As with backgrounds (explained above) the <strong>tile </strong>resource from legacy GameMaker no longer exists, and instead we have <strong>Tile Sets</strong> in <span data-keyref="GameMaker Name">GameMaker</span>. In legacy <span data-keyref="GameMaker Name">GameMaker</span>, tiles used a background resource and were placed at different depths in the room editor or through code, however the method used was not terribly flexible and was also not that efficient. To address these issues, in <span data-keyref="GameMaker Name">GameMaker</span> tilesets are now created from a sprite resource, and can have various different properties (like animation or auto-tiling). They are then placed on a tilemap layer within the room editor or through code. Due to these changes the following functions are now obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">背景と同様に(上記で説明)、従来のGameMakerにあった<strong>タイル </strong>リソースはもはや存在せず、代わりに<span data-keyref="GameMaker Name">GameMakerには</span> <strong>タイル</strong>セットがあります。従来の<span class="notranslate">GameMaker</span>,<span class="notranslate">tiles</span> では、背景リソースを使い、<span class="notranslate">room</span> エディタやコードで異なる深さに配置していましたが、その方法は非常に柔軟性に欠け、また効率的でもありませんでした。これらの問題を解決するために、<span data-keyref="GameMaker Name">GameMaker</span>では、<span class="notranslate">tilesets</span> は<span class="notranslate">sprite</span> リソースから作成され、さまざまな異なるプロパティ（アニメーションや自動タイル化など）を持つことができます。そして、<span class="notranslate">room</span> エディタ内またはコードでタイルマップレイヤーに配置されます。これらの変更に伴い、以下の機能は廃止されました。</p>
+    <table>
       <tbody>
         <tr>
-          <td>tile_get_x</td>
-          <td>tile_get_y</td>
-          <td>tile_get_left</td>
-          <td>tile_get_top</td>
+          <td>タイルゲットエックス</td>
+          <td>タイルゲットイ</td>
+          <td>タイルゲットレフト</td>
+          <td>タイルゲットトップ</td>
         </tr>
         <tr>
-          <td>tile_get_width</td>
-          <td>tile_get_height</td>
-          <td>tile_get_depth</td>
+          <td>タイルの幅を取得する</td>
+          <td>タイルの高さ</td>
+          <td>タイルの深さを取得する</td>
           <td>tile_get_visible</td>
         </tr>
         <tr>
@@ -191,117 +191,117 @@
         </tr>
         <tr>
           <td>tile_set_visible</td>
-          <td>tile_set_background</td>
-          <td>tile_set_region</td>
-          <td>tile_set_position</td>
+          <td>タイルの背景を設定する</td>
+          <td>タイルの設定領域</td>
+          <td>タイルの位置を設定する</td>
         </tr>
         <tr>
-          <td>tile_set_depth</td>
-          <td>tile_set_scale</td>
-          <td>tile_set_blend</td>
-          <td>tile_set_alpha</td>
+          <td>タイルの深さを設定する</td>
+          <td>タイル_セット_スケール</td>
+          <td>タイルセットブレンド</td>
+          <td>タイル_セット_アルファ</td>
         </tr>
         <tr>
-          <td>tile_get_count</td>
-          <td>tile_get_id</td>
-          <td>tile_get_ids</td>
-          <td>tile_get_ids_at_depth</td>
+          <td>タイルゲットカウント</td>
+          <td>タイルID</td>
+          <td>タイルゲットID</td>
+          <td>タイルの深さを取得します。</td>
         </tr>
         <tr>
-          <td>tile_add</td>
-          <td>tile_exists</td>
-          <td>tile_delete</td>
-          <td>tile_layer_hide</td>
+          <td>タイル追加</td>
+          <td>タイルの存在</td>
+          <td>タイル削除</td>
+          <td>タイル・レイヤー・ハイド</td>
         </tr>
         <tr>
-          <td>tile_layer_show</td>
-          <td>tile_layer_delete</td>
-          <td>tile_layer_shift</td>
-          <td>tile_layer_find</td>
+          <td>タイルレイヤー表示</td>
+          <td>タイルレイヤー削除</td>
+          <td>タイルレイヤーシフト</td>
+          <td>タイルレイヤー検索</td>
         </tr>
         <tr>
-          <td>tile_layer_delete_at</td>
-          <td>tile_layer_depth</td>
-          <td>room_tile_add</td>
-          <td>room_tile_add_ext</td>
+          <td>タイルレイヤー削除</td>
+          <td>タイル・レイヤー・デプス</td>
+          <td>ルームタイルの追加</td>
+          <td>部屋タイルの追加</td>
         </tr>
         <tr>
-          <td>room_tile_clear</td>
+          <td>ルームタイルクリア</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about Tile Sets from the manual section on the <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> and about how to use them in the room editor from the section on <a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Tile Layers</a>. For more information on the functions that control background layers using code see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tilemap Layers</a>. It is also worth noting that the GameMaker Language has some specific funtions related to using legacy tiles in imported projects, and you can find information on those <a href="Compatibility_Functions.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">Tile Sets</span> についてはマニュアルの<a href="../The_Asset_Editors/Tile_Sets.htm">タイルセットエディタの</a>項を、<span class="notranslate">room</span> エディタでの使用方法については<a href="../The_Asset_Editors/Room_Properties/Layer_Properties.htm">タイルレイヤーの</a>項を参照してください。コードを使用して背景レイヤーを制御する関数については、<a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tilemap Layersを</a>参照してください。また、<span class="notranslate">GameMaker Language</span> には、インポートしたプロジェクトでレガシー<span class="notranslate">tiles</span> を使用することに関連する特定の関数がいくつかあり、それに関する情報は<a href="Compatibility_Functions.htm">ここで</a>見つけることができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Objects</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">対象物</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The way objects are treated in <span data-keyref="GameMaker Name">GameMaker</span> has changed slightly due to the introduction of layers in the room editor. There still exists the &quot;depth&quot; variable, but it is now only really used for compatibility and you can no longer get or set the depth for objects, only instances. This makes the following functions obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span> <span class="notranslate">objects</span> を扱う方法は、<span class="notranslate">room</span> エディタにレイヤーが導入されたため、若干変更されました。depth &quot;変数はまだ存在しますが、今では互換性のためにのみ使用され、<span class="notranslate">objects</span> の深さを取得したり設定したりすることはできなくなりました。これにより、以下の関数が廃止されました。</p>
+    <table>
       <tbody>
         <tr>
           <td>object_get_depth</td>
         </tr>
         <tr>
-          <td>object_set_depth</td>
+          <td>オブジェクトの深さを設定する</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about object resources from the manual section on the <a href="../The_Asset_Editors/Objects.htm">Object Editor</a> and on the functions that control objects using code from the section <a href="../GameMaker_Language/GML_Reference/Asset_Management/Objects/Objects.htm">Objects</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">object</span> のリソースについては、マニュアルの「<a href="../The_Asset_Editors/Objects.htm">オブジェクトエディタ</a>」から、コードを使用して<span class="notranslate">objects</span> を制御する関数については、「<a href="../GameMaker_Language/GML_Reference/Asset_Management/Objects/Objects.htm">オブジェクト</a>」のセクションから確認することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Sounds</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">サウンド</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Legacy GameMaker had two different sound API&#39;s, one which used the deprecated <span class="inline">sound_</span> functions (that was only really valid for the HTML5 target platform), and the other which used the <span class="inline">audio_</span> functions. The audio API has been improved and expanded in <span data-keyref="GameMaker Name">GameMaker</span>, making the legacy functions listed below obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">レガシーなGameMakerでは、非推奨の <span class="inline">sound_</span> （HTML5ターゲットプラットフォームでのみ有効）関数と、 <span class="inline">audio_</span> 関数を使用した2つの異なるサウンドAPIがありました。<span data-keyref="GameMaker Name">GameMakerでは</span>オーディオAPIが改良・拡張され、以下のレガシー関数は廃止されました。</p>
+    <table>
       <tbody>
         <tr>
-          <td>sound_name</td>
-          <td>sound_exists</td>
-          <td>sound_get_name</td>
+          <td>サウンドネーム</td>
+          <td>サウンド・イグジスタンス</td>
+          <td>サウンド名(sound_get_name)</td>
           <td>sound_get_kind</td>
         </tr>
         <tr>
           <td>sound_get_preload</td>
-          <td>sound_exists</td>
-          <td>sound_restore</td>
-          <td>sound_delete</td>
+          <td>サウンド・イグジスタンス</td>
+          <td>サウンドレストア</td>
+          <td>音削除</td>
         </tr>
         <tr>
-          <td>sound_play</td>
-          <td>sound_loop</td>
-          <td>sound_stop</td>
-          <td>sound_stop_all</td>
+          <td>サウンドプレイ</td>
+          <td>サウンドループ</td>
+          <td>サウンドストップ</td>
+          <td>サウンドストップオール</td>
         </tr>
         <tr>
-          <td>sound_isplaying</td>
-          <td>sound_volume</td>
-          <td>sound_fade</td>
-          <td>sound_global_volume</td>
+          <td>サウンド・リスプレイング</td>
+          <td>サウンドボリューム</td>
+          <td>サウンドフェード</td>
+          <td>サウンド・グローバル・ボリューム</td>
         </tr>
         <tr>
-          <td>audio_music_gain</td>
-          <td>audio_music_is_playing</td>
-          <td>audio_new_system</td>
-          <td>audio_old_system</td>
+          <td>オーディオミュージックゲイン</td>
+          <td>オーディオ音楽再生中</td>
+          <td>オーディオ新システム</td>
+          <td>オーディオ_オールドシステム</td>
         </tr>
         <tr>
-          <td>audio_pause_music</td>
-          <td>audio_play_music</td>
-          <td>audio_resume_music</td>
-          <td>audio_stop_music</td>
+          <td>オーディオ_ポーズ_ミュージック</td>
+          <td>オーディオプレイミュージック</td>
+          <td>オーディオレゾリューションミュージック</td>
+          <td>オーディオ_ストップ_ミュージック</td>
         </tr>
         <tr>
-          <td>audio_system</td>
+          <td>オーディオシステム</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about audio resources from the manual section on the <a href="../The_Asset_Editors/Sounds.htm">Sound Editor</a> and on the functions that control audio using code from the section on <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">Audio</a>. </p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">オーディオリソースについては「<a href="../The_Asset_Editors/Sounds.htm">サウンドエディター</a>」のマニュアルセクションから、コードを用いてオーディオを制御する機能については「<a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">オーディオ</a>」のセクションから、それぞれ詳細を知ることができます。 </p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">D3D</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">When using 3D models or primitives in legacy GameMaker, you had to use the <span class="inline">d3d_</span> functions. These used an obsolete API for drawing and in many cases were not related strictly to Direct 3D API, or even to using 3D itself. With the advent of vertex buffers, matrices and cameras in <span data-keyref="GameMaker Name">GameMaker</span>, the following functions have been made obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">レガシー<span class="notranslate">GameMaker</span> で 3D モデルやプリミティブを使用する場合、 <span class="inline">d3d_</span> の関数を使用する必要がありました。これらは描画のための旧式の API を使用しており、多くの場合、Direct 3D API とは厳密には関係なく、また 3D そのものを使用することもできませんでした。<span data-keyref="GameMaker Name">GameMaker</span> の<span class="notranslate">vertex</span> <span class="notranslate">buffers</span>, matrices and cameras の出現により、以下の関数は廃止されました。</p>
+    <table>
       <tbody>
         <tr>
         </tr>
@@ -324,70 +324,70 @@
           <td>d3d_set_projection_ext</td>
         </tr>
         <tr>
-          <td>d3d_set_projection_<br />
-            ortho</td>
-          <td>d3d_set_projection_<br />
-            perspective</td>
-          <td>d3d_transform_set_<br />
-            identity</td>
-          <td>d3d_transform_<br />
-            set_translation</td>
+          <td>d3d_set_projection_<br>
+            オルト</td>
+          <td>d3d_set_projection_<br>
+            遠近法</td>
+          <td>d3d_transform_set_。<br>
+            アイデンティティ</td>
+          <td>d3d_transform_<br>
+            変換を設定する</td>
         </tr>
         <tr>
-          <td>d3d_transform_set_<br />
-            scaling</td>
-          <td>d3d_transform_<br />
-            set_rotation_x</td>
-          <td>d3d_transform_set_<br />
-            rotation_y</td>
-          <td>d3d_transform_<br />
-            set_rotation_z</td>
+          <td>d3d_transform_set_。<br>
+            スケーリング</td>
+          <td>d3d_transform_<br>
+            回転角度を設定する</td>
+          <td>d3d_transform_set_。<br>
+            回転</td>
+          <td>d3d_transform_<br>
+            回転角度を設定する</td>
         </tr>
         <tr>
-          <td>d3d_transform_set_<br />
-            rotation_axis</td>
-          <td>d3d_transform_<br />
-            add_translation</td>
-          <td>d3d_transform_add_<br />
-            scaling</td>
-          <td>d3d_transform_<br />
-            add_rotation_x</td>
+          <td>d3d_transform_set_。<br>
+            回転軸</td>
+          <td>d3d_transform_<br>
+            翻訳を追加する</td>
+          <td>d3d_transform_add_。<br>
+            スケーリング</td>
+          <td>d3d_transform_<br>
+            回転角度の追加</td>
         </tr>
         <tr>
-          <td>d3d_transform_add_<br />
-            rotation_y</td>
-          <td>d3d_transform_<br />
-            add_rotation_z</td>
-          <td>d3d_transform_add_<br />
-            rotation_axis</td>
-          <td>d3d_transform_<br />
-            stack_clear</td>
+          <td>d3d_transform_add_。<br>
+            回転</td>
+          <td>d3d_transform_<br>
+            回転角度の追加</td>
+          <td>d3d_transform_add_。<br>
+            回転軸</td>
+          <td>d3d_transform_<br>
+            スタッククリア</td>
         </tr>
         <tr>
-          <td>d3d_transform_stack_<br />
-            empty</td>
-          <td>d3d_transform_<br />
-            stack_push</td>
-          <td>d3d_transform_stack_<br />
-            pop</td>
-          <td>d3d_transform_<br />
-            stack_top</td>
+          <td>d3d_transform_stack_。<br>
+            空</td>
+          <td>d3d_transform_<br>
+            スタックプッシュ</td>
+          <td>d3d_transform_stack_。<br>
+            ポップ</td>
+          <td>d3d_transform_<br>
+            スタックトップ</td>
         </tr>
         <tr>
-          <td>d3d_transform_stack_<br />
-            discard</td>
+          <td>d3d_transform_stack_。<br>
+            廃棄</td>
           <td>d3d_transform_vertex</td>
-          <td>d3d_light_define_<br />
-            ambient</td>
-          <td>d3d_light_define_<br />
-            direction</td>
+          <td>d3d_light_define_<br>
+            アンビエント</td>
+          <td>d3d_light_define_<br>
+            方向</td>
         </tr>
         <tr>
           <td>d3d_light_define_point</td>
           <td>d3d_light_enable</td>
           <td>d3d_primitive_begin</td>
-          <td>d3d_primitive_<br />
-            begin_texture</td>
+          <td>d3d_primitive_<br>
+            テクスチャ</td>
         </tr>
         <tr>
           <td>d3d_primitive_end</td>
@@ -397,25 +397,25 @@
         </tr>
         <tr>
           <td>d3d_vertex_texture</td>
-          <td>d3d_vertex_texture_<br />
-            color</td>
-          <td>d3d_vertex_texture_<br />
-            colour</td>
+          <td>d3d_vertex_texture_。<br>
+            色</td>
+          <td>d3d_vertex_texture_。<br>
+            色</td>
           <td>d3d_vertex_normal</td>
         </tr>
         <tr>
-          <td>d3d_vertex_normal_<br />
-            color</td>
-          <td>d3d_vertex_normal_<br />
-            colour</td>
-          <td>d3d_vertex_normal_<br />
-            texture</td>
-          <td>d3d_vertex_normal_<br />
-            texture_color</td>
+          <td>d3d_vertex_normal_。<br>
+            色</td>
+          <td>d3d_vertex_normal_。<br>
+            色</td>
+          <td>d3d_vertex_normal_。<br>
+            テクスチャ</td>
+          <td>d3d_vertex_normal_。<br>
+            テクスチャカラー</td>
         </tr>
         <tr>
-          <td>d3d_vertex_normal_<br />
-            texture_colour</td>
+          <td>d3d_vertex_normal_。<br>
+            テクスチャカラー</td>
           <td>d3d_draw_block</td>
           <td>d3d_draw_cylinder</td>
           <td>d3d_draw_cone</td>
@@ -434,39 +434,39 @@
         </tr>
         <tr>
           <td>d3d_model_draw</td>
-          <td>d3d_model_primitive_<br />
-            begin</td>
-          <td>d3d_model_<br />
+          <td>d3d_model_primitive_ (プリミティブ)<br>
+            開始</td>
+          <td>d3d_model_<br>
             primitive_end</td>
           <td>d3d_model_vertex</td>
         </tr>
         <tr>
-          <td>d3d_model_vertex_<br />
-            color</td>
-          <td>d3d_model_vertex_<br />
-            colour</td>
-          <td>d3d_model_<br />
-            vertex_texture</td>
-          <td>d3d_model_vertex_<br />
-            texture_color</td>
+          <td>d3d_model_vertex_.<br>
+            色</td>
+          <td>d3d_model_vertex_.<br>
+            色</td>
+          <td>d3d_model_<br>
+            頂点テクスチャ</td>
+          <td>d3d_model_vertex_.<br>
+            テクスチャカラー</td>
         </tr>
         <tr>
-          <td>d3d_model_vertex_<br />
-            texture_colour</td>
-          <td>d3d_model_vertex_<br />
-            normal</td>
-          <td>d3d_model_<br />
-            vertex_normal_color</td>
-          <td>d3d_model_vertex_<br />
-            normal_colour</td>
+          <td>d3d_model_vertex_.<br>
+            テクスチャカラー</td>
+          <td>d3d_model_vertex_.<br>
+            ノーマル</td>
+          <td>d3d_model_<br>
+            頂点法線色</td>
+          <td>d3d_model_vertex_.<br>
+            ノーマルカラー</td>
         </tr>
         <tr>
-          <td>d3d_model_vertex_<br />
-            normal_texture</td>
-          <td>d3d_model_vertex_<br />
-            normal_texture_color</td>
-          <td>d3d_model_vertex_<br />
-            normal_texture_colour</td>
+          <td>d3d_model_vertex_.<br>
+            ノーマルテクスチャ</td>
+          <td>d3d_model_vertex_.<br>
+            通常のテクスチャの色</td>
+          <td>d3d_model_vertex_.<br>
+            ノーマルテクスチャの色</td>
           <td>d3d_model_block</td>
         </tr>
         <tr>
@@ -480,134 +480,134 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about vertex buffers <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">here</a>, more about matrices <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">here</a>, more about cameras <a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">here</a>, and more about the GPU functions <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/GPU_Control.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><span class="notranslate">vertex</span> <span class="notranslate">buffers</span> の詳細は<a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">こちら</a>、行列の詳細は<a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">こちら</a>、カメラの詳細は<a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">こちら</a>、GPUの機能の詳細は<a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/GPU_Control.htm">こちらで</a>ご確認ください。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">View Variables And Window Functions</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">ビュー変数とウィンドウ関数</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">With the advent of the camera functions in <span data-keyref="GameMaker Name">GameMaker</span>, it means that a number of view variables are no longer required, specifically those referring to the view into the room rather than the view_port (which is still used). There are also a few functions for controlling how things are displayed that were available in legacy versions of GameMaker Studio which are also no longer appropriate. These variables and functions are listed below:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> のカメラ機能の出現により、多くのビュー変数が不要になりました。特に、view_port（これはまだ使われています）ではなく、<span class="notranslate">room</span> のビューを参照する変数が不要になったことを意味します。また、GameMaker Studio のレガシーバージョンで利用可能だった、表示方法を制御するための関数もいくつかありますが、これも不要になりました。これらの変数と関数を以下にリストアップします。</p>
+    <table>
       <tbody>
         <tr>
-          <td>view_object</td>
-          <td>view_angle</td>
-          <td>view_xview</td>
-          <td>view_yview</td>
+          <td>ビューオブジェクト</td>
+          <td>ビューアングル</td>
+          <td>ビューxview</td>
+          <td>ビューウィンドウ</td>
         </tr>
         <tr>
-          <td>view_hview</td>
-          <td>view_wview</td>
+          <td>ビュー_ビュー</td>
+          <td>ビューウィンドウ</td>
           <td>view_hborder</td>
-          <td>view_vborder</td>
+          <td>view_vborder（ビューボーダー</td>
         </tr>
         <tr>
-          <td>view_hspeed</td>
-          <td>view_vspeed</td>
-          <td>display_set_windows_<br />
-            vertex_buffer_method</td>
-          <td>display_get_windows_<br />
-            vertex_buffer_method</td>
+          <td>ビューホースピード</td>
+          <td>ビュー速度</td>
+          <td>ディスプレイのウィンドウを設定する<br>
+            バーテックスバッファメソッド</td>
+          <td>display_get_windows_<br>
+            バーテックスバッファメソッド</td>
         </tr>
         <tr>
-          <td>display_set_windows_<br />
-            alternate_sync</td>
-          <td>display_get_windows_<br />
-            alternate_sync</td>
-          <td>room_set_view</td>
+          <td>ディスプレイのウィンドウを設定する<br>
+            オルタネートシンク</td>
+          <td>display_get_windows_<br>
+            オルタネートシンク</td>
+          <td>ルームセットビュー</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about cameras from the manual section on <a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Display.htm">Cameras And The Display</a>.</p>
-    <p> </p>
+    <p class="dropspot">カメラについては、マニュアルの「<a href="../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Display.htm">カメラとディスプレイ</a>」の項目から確認することができます。</p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">3rd Party Support</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">サードパーティ対応</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> moves a lot of built in functionality from previous versions into <a href="../The_Asset_Editors/Extensions.htm">extensions</a>, meaning that the following 3rd party support functions are considered obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerは</span>、旧バージョンに組み込まれていた多くの機能を<a href="../The_Asset_Editors/Extensions.htm">拡張</a>機能に移行しているため、以下のサードパーティ製サポート機能は廃止されたものとみなされます。</p>
+    <table>
       <tbody>
         <tr>
           <td>ads_enable</td>
           <td>ads_disable</td>
           <td>ads_move</td>
-          <td>ads_get_display_<br />
-            width</td>
+          <td>ads_get_display_<br>
+            幅</td>
         </tr>
         <tr>
-          <td>ads_get_display_<br />
-            height</td>
-          <td>ads_interstitial_<br />
-            available</td>
-          <td>ads_interstitial_<br />
-            display</td>
+          <td>ads_get_display_<br>
+            高さ</td>
+          <td>広告_インタースティシャル<br>
+            使用可能</td>
+          <td>広告_インタースティシャル<br>
+            ディスプレイ</td>
           <td>ads_setup</td>
         </tr>
         <tr>
-          <td>ads_engagement_<br />
-            available</td>
-          <td>ads_engagement_<br />
-            launch</td>
-          <td>ads_engagement_<br />
-            active</td>
-          <td>ads_event</td>
+          <td>ads_engagement_<br>
+            利用可能</td>
+          <td>ads_engagement_<br>
+            打ち上げ</td>
+          <td>ads_engagement_<br>
+            アクティブ</td>
+          <td>アドベント</td>
         </tr>
         <tr>
           <td>ads_event_preload</td>
-          <td>ads_set_reward_<br />
-            callback</td>
-          <td>playhaven_add_<br />
-            notification_badge</td>
-          <td>playhaven_hide_<br />
-            notification_badge</td>
+          <td>ads_set_reward_<br>
+            コールバック</td>
+          <td>Playhaven_add_<br>
+            通知バッジ</td>
+          <td>playhaven_hide_<br>
+            通知バッジ</td>
         </tr>
         <tr>
-          <td>playhaven_position_<br />
-            notification_badge</td>
-          <td>playhaven_update_<br />
-            notification_badge</td>
-          <td>pocketchange_display_<br />
-            reward</td>
-          <td>pocketchange_display_<br />
-            shop</td>
+          <td>playhaven_position_<br>
+            通知バッジ</td>
+          <td>Playhaven_Update<br>
+            通知バッジ</td>
+          <td>ポケットチェンジ_ディスプレイ<br>
+            報酬</td>
+          <td>ポケットチェンジ_ディスプレイ<br>
+            ショップ</td>
         </tr>
         <tr>
-          <td>analytics_event</td>
-          <td>analytics_event_ext</td>
+          <td>アナリティクス・イベント</td>
+          <td>アナリティクス_イベント_テキスト</td>
           <td>facebook_init</td>
           <td>facebook_login</td>
         </tr>
         <tr>
-          <td>facebook_request_<br />
-            publish_permissions</td>
-          <td>facebook_request_<br />
-            read_permissions</td>
-          <td>facebook_check_<br />
-            permission</td>
+          <td>facebook_request_<br>
+            公開許可</td>
+          <td>facebook_request_<br>
+            読み込み許可</td>
+          <td>facebook_check_<br>
+            許可</td>
           <td>facebook_status</td>
         </tr>
         <tr>
           <td>facebook_accesstoken</td>
           <td>facebook_user_id</td>
-          <td>facebook_graph_<br />
-            request</td>
+          <td>facebook_graph_。<br>
+            リクエスト</td>
           <td>facebook_dialog</td>
         </tr>
         <tr>
-          <td>facebook_send_invite<span style="display: none;"> </span><span style="display: none;"> </span></td>
-          <td>facebook_post_<br />
-            message <span style="display: none;"> </span><span style="display: none;"> </span></td>
-          <td>facebook_logout<span style="display: none;"> </span></td>
-          <td>facebook_launch_<br />
-            offerwall <span style="display: none;"> </span></td>
+          <td>facebook_send_invite<span style="display: none;"> </span><span style="display: none;"> </span></td>
+          <td>facebook_post_<br>
+            メッセージ<span style="display: none;"> </span><span style="display: none;"> </span></td>
+          <td>facebook_ログアウト<span style="display: none;"> </span></td>
+          <td>facebook_launch_<br>
+            オファーウォール<span style="display: none;"> </span></td>
         </tr>
         <tr>
-          <td>iap_event_queue<span style="display: none;"> </span></td>
-          <td>iap_files_purchased<span style="display: none;"> </span></td>
-          <td>iap_is_downloaded<span style="display: none;"> </span></td>
-          <td>iap_product_files<span style="display: none;"> </span></td>
+          <td>iap_event_queue<span style="display: none;"> </span></td>
+          <td>購入したiap_files_purchased<span style="display: none;"> </span></td>
+          <td>iap_is_downloaded<span style="display: none;"> </span></td>
+          <td>iap_product_files（アイアップ・プロダクト・ファイル<span style="display: none;"> </span></td>
         </tr>
         <tr>
-          <td>iap_product_status<span style="display: none;"> </span></td>
-          <td>iap_store_status<span style="display: none;"> </span></td>
+          <td>iap_product_status<span style="display: none;"> </span></td>
+          <td>iap_store_status<span style="display: none;"> </span></td>
           <td>iap_data</td>
           <td>iap_activate</td>
         </tr>
@@ -619,13 +619,13 @@
         </tr>
         <tr>
           <td>iap_consume</td>
-          <td>iap_product_details</td>
+          <td>iap_product_details（アイアップ・プロダクト・ディテイルズ</td>
           <td>iap_purchase_details</td>
-          <td> </td>
+          <td> </td>
         </tr>
         <tr>
-          <td>immersion_play_effect</td>
-          <td>immersion_stop</td>
+          <td>没入感_遊戯_効果</td>
+          <td>イマージョンストップ</td>
         </tr>
         <tr>
           <td>achievement_*</td>
@@ -634,13 +634,13 @@
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can get our official extensions for advertising and other APIs from the <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">Marketplace Page</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">広告やその他のAPIに対応した公式エクステンションは、<a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">マーケットプレイスページから</a>入手することができます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-keyref="GML_Visual">GML Visual</span> Actions</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-keyref="GML_Visual">GMLビジュアルアクション</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">Both legacy GameMaker and <span data-keyref="GameMaker Name">GameMaker</span> have a visual scripting <strong>GML Visual</strong> interface for creating your games, however the way it is handled in <span data-keyref="GameMaker Name">GameMaker</span> is quite different to the previous methods used. Previously, all GML Visual actions had their own corresponding function which worked &quot;behind the scenes&quot; to get the desired results, however this was not very transparent and added in extra overheads to the function calls, resulting in poorer performance. In <span data-keyref="GameMaker Name">GameMaker</span> this has been changed, and now all actions compile to pure code (and can be shown as such if required), meaning that the following action functions are obsolete:</p>
-    <table class=" cke_show_border">
+    <p class="dropspot">レガシー<span class="notranslate">GameMaker</span> と<span data-keyref="GameMaker Name">GameMaker</span>には、ゲームを作成するためのビジュアルスクリプト<strong>GML Visual</strong>インターフェースがありますが、<span data-keyref="GameMaker Name">GameMaker</span>での処理方法は、以前使われていた方法とはかなり異なっています。以前は、<span class="notranslate">GML</span> Visual のすべてのアクションに対応する関数があり、これが「裏」で働いて目的の結果を得ていましたが、これはあまり透過的ではなく、関数呼び出しに余計なオーバーヘッドが加わるため、パフォーマンスが悪くなっていました。<span data-keyref="GameMaker Name">GameMaker</span>ではこれが変更され、すべてのアクションが純粋なコードにコンパイルされるようになり ました（必要に応じて、そのように表示することも可能です）。</p>
+    <table>
       <tbody>
         <tr>
           <td>action_path_old</td>
@@ -649,22 +649,22 @@
           <td>action_draw_font_old</td>
         </tr>
         <tr>
-          <td>action_fill_color</td>
-          <td>action_fill_colour</td>
-          <td>action_line_color</td>
-          <td>action_line_colour</td>
+          <td>アクションの塗りつぶし色</td>
+          <td>アクションの塗りつぶし色</td>
+          <td>アクションライン色</td>
+          <td>アクションライン色</td>
         </tr>
         <tr>
-          <td>action_highscore</td>
+          <td>アクションハイスコア</td>
           <td>action_set_relative</td>
-          <td>action_move</td>
-          <td>action_set_motion</td>
+          <td>アクションムーブ</td>
+          <td>アクションセットモーション</td>
         </tr>
         <tr>
           <td>action_set_hspeed</td>
           <td>action_set_vspeed</td>
-          <td>action_set_gravity</td>
-          <td>action_set_friction</td>
+          <td>アクション_セット_グラビティ</td>
+          <td>アクション_セット_フリクション</td>
         </tr>
         <tr>
           <td>action_move_point</td>
@@ -673,8 +673,8 @@
           <td>action_move_random</td>
         </tr>
         <tr>
-          <td>action_snap</td>
-          <td>action_wrap</td>
+          <td>アクションスナップ</td>
+          <td>アクションラップ</td>
           <td>action_reverse_xdir</td>
           <td>action_reverse_ydir</td>
         </tr>
@@ -686,15 +686,15 @@
         </tr>
         <tr>
           <td>action_path_position</td>
-          <td>action_path_speed</td>
-          <td>action_linear_step</td>
-          <td>action_potential_step</td>
+          <td>アクションパス速度</td>
+          <td>action_linear_step（アクションリニアステップ</td>
+          <td>アクションポテンシャルステップ</td>
         </tr>
         <tr>
           <td>action_kill_object</td>
           <td>action_create_object</td>
-          <td>action_create_object_motion</td>
-          <td>action_create_object_random</td>
+          <td>アクション_オブジェクトの作成_モーション</td>
+          <td>アクション_オブジェクトの作成_ランダム</td>
         </tr>
         <tr>
           <td>action_change_object</td>
@@ -703,7 +703,7 @@
           <td>action_sprite_transform</td>
         </tr>
         <tr>
-          <td>action_sprite_color</td>
+          <td>アクションスプライトカラー</td>
           <td>action_sprite_colour</td>
           <td>action_sound</td>
           <td>action_end_sound</td>
@@ -711,45 +711,45 @@
         <tr>
           <td>action_if_sound</td>
           <td>action_another_room</td>
-          <td>action_current_room</td>
-          <td>action_previous_room</td>
+          <td>アクション_カレント_ルーム</td>
+          <td>アクション_プレビュールーム</td>
         </tr>
         <tr>
-          <td>action_next_room</td>
-          <td>action_if_previous_room</td>
-          <td>action_if_next_room</td>
+          <td>アクション_ネクストルーム</td>
+          <td>アクション_if_previous_room</td>
+          <td>アクション_if_next_room</td>
           <td>action_set_alarm</td>
         </tr>
         <tr>
-          <td>action_sleep</td>
+          <td>アクションスリープ</td>
           <td>action_set_timeline</td>
           <td>action_timeline_set</td>
           <td>action_timeline_start</td>
         </tr>
         <tr>
           <td>action_timeline_stop</td>
-          <td>action_timeline_pause</td>
+          <td>action_timeline_pause（アクションタイムラインポーズ</td>
           <td>action_set_timeline_position</td>
-          <td>action_set_timeline_speed</td>
+          <td>action_set_timeline_speed (アクションセット タイムライン速度)</td>
         </tr>
         <tr>
-          <td>action_message</td>
+          <td>アクションメッセージ</td>
           <td>action_show_info</td>
           <td>action_show_video</td>
-          <td>action_end_game</td>
+          <td>action_end_game（アクションエンド・ゲーム</td>
         </tr>
         <tr>
-          <td>action_restart_game</td>
-          <td>action_save_game</td>
-          <td>action_load_game</td>
+          <td>アクション_リスタート_ゲーム</td>
+          <td>アクションセーブゲーム</td>
+          <td>アクション_ロード_ゲーム</td>
           <td>action_replace_sprite</td>
         </tr>
         <tr>
           <td>action_replace_sound</td>
-          <td>action_replace_<br />
-            background</td>
+          <td>action_replace_<br>
+            背景</td>
           <td>action_if_empty</td>
-          <td>action_if_collision</td>
+          <td>action_if_collision（アクション・イフ・コリジョン</td>
         </tr>
         <tr>
           <td>action_if</td>
@@ -771,33 +771,33 @@
         </tr>
         <tr>
           <td>action_if_score</td>
-          <td>action_draw_score</td>
+          <td>アクションドロースコア</td>
           <td>action_highscore_show</td>
           <td>action_highscore_clear</td>
         </tr>
         <tr>
-          <td>action_set_life</td>
+          <td>アクション_セット_ライフ</td>
           <td>action_if_life</td>
-          <td>action_draw_life</td>
+          <td>アクションドローライフ</td>
           <td>action_draw_life_images</td>
         </tr>
         <tr>
           <td>action_set_health</td>
           <td>action_if_health</td>
-          <td>action_draw_health</td>
+          <td>action_draw_health（アクション・ドロー・ヘルス</td>
           <td>action_set_caption</td>
         </tr>
         <tr>
           <td>action_partsyst_create</td>
           <td>action_partsyst_destroy</td>
-          <td>action_partsyst_clear</td>
+          <td>アクションパーツシストクリア</td>
           <td>action_parttype_create_old</td>
         </tr>
         <tr>
           <td>action_parttype_create</td>
           <td>action_parttype_color</td>
           <td>action_parttype_colour</td>
-          <td>action_parttype_life</td>
+          <td>アクションパーツタイプライフ</td>
         </tr>
         <tr>
           <td>action_parttype_speed</td>
@@ -809,19 +809,19 @@
           <td>action_partemit_destroy</td>
           <td>action_partemit_burst</td>
           <td>action_partemit_stream</td>
-          <td>action_cd_play</td>
+          <td>アクション_cd_play</td>
         </tr>
         <tr>
-          <td>action_cd_stop</td>
-          <td>action_cd_pause</td>
-          <td>action_cd_resume</td>
-          <td>action_cd_present</td>
+          <td>アクション_cd_stop</td>
+          <td>アクション_cd_pause</td>
+          <td>アクション_cd_resume</td>
+          <td>アクション_cd_present</td>
         </tr>
         <tr>
-          <td>action_cd_playing</td>
-          <td>action_set_cursor</td>
-          <td>action_webpage</td>
-          <td>action_splash_web</td>
+          <td>アクション_cd_playing</td>
+          <td>アクション_セット_カーソル</td>
+          <td>アクションウェブページ</td>
+          <td>アクション_スプラッシュ_ウェブ</td>
         </tr>
         <tr>
           <td>action_draw_sprite</td>
@@ -831,95 +831,79 @@
         </tr>
         <tr>
           <td>action_draw_rectangle</td>
-          <td>action_draw_gradient_hor</td>
+          <td>アクション_描画_グラデーション_ホール</td>
           <td>action_draw_gradient_vert</td>
           <td>action_draw_ellipse</td>
         </tr>
         <tr>
-          <td>action_draw_<br />
-            ellipse_gradient</td>
+          <td>action_draw_<br>
+            楕円グラデーション</td>
           <td>action_draw_line</td>
-          <td>action_draw_arrow</td>
-          <td>action_color</td>
+          <td>action_draw_arrow（アクションドローアロー</td>
+          <td>アクションカラー</td>
         </tr>
         <tr>
-          <td>action_colour</td>
-          <td>action_font</td>
+          <td>アクションカラー</td>
+          <td>アクションフォント</td>
           <td>action_fullscreen</td>
-          <td>action_snapshot</td>
+          <td>アクションスナップショット</td>
         </tr>
         <tr>
-          <td>action_effect</td>
+          <td>作用効果</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can find out more about the new GML Visual from the manual section on <a href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visual</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">新しい<span class="notranslate">GML</span> Visual の詳細は、<a href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visual</a> のマニュアルセクションから確認できます。</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Vectors and Matrices</a></p>
-  <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">The data type used to store vectors and matrices in <span data-keyref="GameMaker Name">GameMaker</span> are <a data-xref="{title}" href="../GameMaker_Language/GML_Overview/Arrays.htm">Arrays</a>. Therefore, the following functions relating to working with vectors and matrices were removed: </p>
-    <table class=" cke_show_border">
-      <tbody>
-        <tr class="rh-cursor-column">
-          <td>is_vec3</td>
-          <td>is_vec4</td>
-          <td>is_matrix</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="dropspot">These functions appeared to check for a specific type, while the underlying type is always an array or a range of an array (of respectively length 3, 4 and 16). E.g. the functions <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/matrix_build.htm">matrix_build</a></span> and <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/matrix_build_identity.htm">matrix_build_identity</a></span> return a <em>matrix</em>, of which the 16 elements are stored in an <em>array</em> datatype. To check the datatype you should use <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Variable_Functions/is_array.htm">is_array</a></span> instead and combine this with the length of the array given by <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Variable_Functions/array_length.htm">array_length</a></span> to work out the datatype.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Checking for an array datatype and its length doesn&#39;t mean the actual contents represent a valid vector or matrix.</p>
-    <p class="dropspot">Alternatively, to store vectors and matrices you can use other data structures provided by <span data-keyref="GameMaker Name">GameMaker</span>, such as <a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">Buffers</a>, <a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm">DS Grids</a> a <a data-xref="{bookmarkText}" href="../GameMaker_Language/GML_Overview/Structs.htm#struct">struct</a> or even a <a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/Surfaces.htm">surface</a> to store the same information, instead of a dedicated data type.</p>
-  </div>
-  <p> </p>
-  <p>The following built-in global variables are also obsolete, although they are still considered reserved variables in GML so that the IDE can recognise them and flag them for updating/removing when a legacy project that uses them is imported (as are the variables listed under the Views and the Backgrounds sections, above):</p>
+  <p> </p>
+  <p><span class="notranslate">GML</span> 以下の組み込みグローバル変数も廃止されましたが、<span class="notranslate">IDE</span> では予約変数として扱われ、それらを使用するレガシープロジェクトがインポートされたときに、<span class="notranslate">flag</span> を認識して更新/削除できるようになっています（上記のビューと背景のセクションにある変数も同じです）。</p>
   <table>
     <tbody>
       <tr>
-        <td>gamemaker_registered</td>
-        <td style="">gamemaker_progamemaker_<br />
-          version</td>
+        <td>ゲームメーカー登録済み</td>
+        <td style="">ゲームメーカー_プロゲーマー<br>
+          バージョン</td>
         <td style="">secure_mode</td>
       </tr>
       <tr>
         <td>show_health</td>
         <td style="">show_score</td>
-        <td style="">show_lives</td>
+        <td style="">ショウライブ</td>
       </tr>
       <tr>
         <td>caption_score</td>
-        <td style="">caption_lives</td>
+        <td style="">キャプションライブス</td>
         <td style="">caption_health</td>
       </tr>
       <tr>
         <td>argument_relative</td>
         <td style="">room_caption</td>
-        <td style="">room_speed</td>
+        <td style="">部屋速度</td>
       </tr>
       <tr>
-        <td>transition_steps</td>
+        <td>トランジションステップス</td>
         <td style="">transition_kind</td>
-        <td style="">game_guid</td>
+        <td style="">ゲームギッド</td>
       </tr>
       <tr>
-        <td>error_last</td>
+        <td>エラーラスト</td>
         <td style="">error_occurred</td>
-        <td style="">buffer_surface_copy</td>
+        <td style="">バッファサーフェスコピー</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="The_File_System.htm">The File System</a></div>
+        <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次へ<a href="The_File_System.htm">ファイルシステム</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Obsolete Functions

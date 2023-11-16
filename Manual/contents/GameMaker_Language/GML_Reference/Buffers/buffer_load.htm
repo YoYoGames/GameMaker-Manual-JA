@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_load</title>
+  <title>バッファロード</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_load" />
   <meta name="rh-index-keywords" content="buffer_load" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_load</h1>
-  <p>This function is used to load a buffer that was previously saved using the <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> functions, as well as any <a href="../../../Settings/Included_Files.htm" title="Included Files">Included Files</a> or files loaded externally. It will return a new buffer&#39;s ID which is created by the function as a &quot;grow&quot; buffer (see <a href="buffer_create.htm">here</a>) with a byte alignment of 1. This ID should be stored in a variable and used in all further function calls to this buffer. If the load fails for whatever reason, the function will return -1 and a message will be shown in the compiler output window saying that the load has failed.</p>
-  <p class="note"><span class="note">NOTE</span> It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
-  <h2>Platform-specific notes</h2>
+  <h1>バッファロード</h1>
+  <p>を使用して保存した<span class="notranslate">buffer</span> を読み込むために使用されます。 <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a>関数、および<a href="../../../Settings/Included_Files.htm" title="Included Files">インクルードファイルや</a>外部で読み込まれたファイルです。これは，この関数が &quot;grow&quot;<span class="notranslate">buffer</span> (<a href="buffer_create.htm">ここを</a>参照)として，バイトアライメントを1にして作成した新しいバッファのIDを返します．このIDは変数に格納し，この<span class="notranslate">buffer</span> に対する以降のすべての関数呼び出しで使用されるべきです．何らかの理由で読み込みに失敗した場合、この関数は -1 を返し、コンパイラの出力ウィンドウに読み込みに失敗した旨のメッセージが表示されます。</p>
+  <p class="note"><span class="note">注意</span>メモリリークを防ぐために、このように動的に作成されたリソースは、不要になった時点でメモリから削除することが重要です。作成した<span class="notranslate">buffer</span> を使い終わったら、再度、以下を使用してリソースを解放してください。 <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
+  <h2>プラットフォーム固有の注意事項</h2>
   <ul class="colour">
-    <li>On HTML5, any buffers loaded from the <strong>local storage</strong> will be decoded using base64 (since they are saved as base64 strings), however, using this function on Included Files or any external files will not use base64 decoding, as they are not expected to be in a base64 format.</li>
-    <li>On HTML5, all Included Files are stored as UTF-8 encoded text, which may result in an increase in the size of the loaded buffer when compared to the original file, as the UTF-8 encoded version of the file may have a different size than your original one (due to the change in format).</li>
+    <li>HTML5 では、<strong>ローカルストレージから</strong>読み込んだ<span class="notranslate">buffers</span> は base64 でデコードされます（base64<span class="notranslate">strings</span> として保存されるため）。しかし、Included Files や外部ファイルに対してこの機能を使用すると、base64 形式であることが期待されないため base64 デコードは使用されません。</li>
+    <li>HTML5では、すべてのIncluded FilesはUTF-8エンコードされたテキストとして保存されます。UTF-8エンコードされたバージョンのファイルは、（フォーマットの変更により）元のファイルとは異なるサイズを持つ可能性があるため、元のファイルと比較すると、読み込んだ<span class="notranslate">buffer</span> のサイズが増加する可能性があります。</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">buffer_load(filename);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>filename</td><td><span data-keyref="Type_String"></span></td>
-        <td>The name of the file to load from.</td>
+        <td><span class="notranslate">filename</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the file to load from.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer">Buffer ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">player_buffer = buffer_load(&quot;Player_Save.sav&quot;);</p>
-  <p>The above code will load a previously saved buffer into memory, creating a new buffer. The index of this new buffer is stored in the variable &quot;player_buffer&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、以前に保存した<span class="notranslate">buffer</span> をメモリにロードし、新しい<span class="notranslate">buffer</span> を作成します。この新しい<span class="notranslate">buffer</span> のインデックスは変数「player_buffer」に格納される。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_load_ext.htm"><span>buffer_load_ext</span></a></div>
+        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次へ <a href="buffer_load_ext.htm"><span>バッファロードエクスト</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_load

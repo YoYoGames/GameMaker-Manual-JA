@@ -6,7 +6,7 @@
   <title>url_open_full</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for url_open_full" />
   <meta name="rh-index-keywords" content="url_open_full" />
@@ -14,133 +14,133 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">url_open_full</span></h1>
-  <p>This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser.</p>
-  <p>The &quot;target&quot; parameter that you specify is the same as the standard JavaScript &quot;name&quot; value when you use the <span class="inline3_func">open()</span> method (be aware that all but &quot;<strong>_self</strong>&quot; may result in the browser blocking, or asking the user if they wish to allow it) and the &quot;options&quot; is the same as the JavaScript &quot;specs&quot; parameter for controlling what properties the new window/tab should display (not all browsers may support all features).</p>
-  <p>Valid targets are:</p>
+  <h1>url_open_full</h1>
+  <p>指定されたURLを、選択されたターゲットデバイスのブラウザ、またはHTML5モジュールを使用している場合は、現在開いているブラウザで開きます。指定する「target」パラメータは、 <span class="inline">open()</span> メソッドを使用した場合の標準的なJavaScriptの「name」値と同じです（<strong>「_self</strong>」以外は、ブラウザがブロックしたり、ユーザーに許可するかどうか尋ねる結果になることがあるので注意してください）。「options」は、新しいウィンドウ/タブが表示すべきプロパティを制御するJavaScriptの「spec」パラメータと同じです（すべてのブラウザがすべての機能をサポートしていない可能性もあります）。</p>
+  <p>有効な対象は</p>
   <table>
     <tbody>
       <tr>
-        <th>Target</th>
-        <th>Description</th>
+        <th>ターゲット</th>
+        <th>商品説明</th>
       </tr>
       <tr>
         <td>_blank</td>
-        <td>Opens the linked document in a new window or tab (this will not work if pop-ups are being blocked by the user, in which case you can use the <a href="Web_And_HTML5.htm"><span class="inline">clickable_*</span></a> functions instead).</td>
+        <td>リンク先の文書を新しいウィンドウまたはタブで開きます（ユーザーによってポップアップがブロックされている場合、これは機能しません。 <a href="Web_And_HTML5.htm"><span class="inline">clickable_*</span></a>関数を使用してください）。</td>
       </tr>
       <tr>
-        <td>_self</td>
-        <td>Opens the linked document in the same frame as it was clicked (this is default).</td>
+        <td>_自分</td>
+        <td>リンク先の文書を、クリックされたのと同じフレームで開きます（デフォルトはこれ）。</td>
       </tr>
       <tr>
-        <td>_parent</td>
-        <td>Opens the linked document in the parent frame.</td>
+        <td>親</td>
+        <td>リンク先のドキュメントを親フレームで開きます。</td>
       </tr>
       <tr>
-        <td>_top</td>
-        <td>Opens the linked document in the full body of the window.</td>
+        <td>_トップ</td>
+        <td>リンク先のドキュメントをウィンドウの全面に表示します。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>Valid options are:</p>
+  <p> </p>
+  <p>有効なオプションは以下の通りです。</p>
   <table>
     <tbody>
       <tr>
-        <th>Parameters</th>
-        <th>Description</th>
+        <th>パラメータ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><b>&#39;height=[</b>px<b>]&#39;</b></td>
-        <td>The height of the window, with the minimum value being 100.</td>
+        <td><b>'height=[px</b><b>]'</b>です。</td>
+        <td>ウィンドウの高さを指定します。最小値は100です。</td>
       </tr>
       <tr>
-        <td><b>&#39;width=[</b>px<b>]&#39;</b></td>
-        <td>The width of the window, with the minimum value being 100.</td>
+        <td><b>'幅=[px</b><b>]'</b></td>
+        <td>ウィンドウの幅を指定します。最小値は100です。</td>
       </tr>
       <tr>
-        <td><b>&#39;left=[</b>px<b>]&#39;</b></td>
-        <td>The left position of the window.</td>
+        <td><b>'left=[px</b><b>]'</b>とする。</td>
+        <td>ウィンドウの左位置。</td>
       </tr>
       <tr>
-        <td><b>&#39;top=[</b>px<b>]&#39;</b></td>
-        <td>The top position of the window (IE only).</td>
+        <td><b>'top=[px</b><b>]'</b>とする。</td>
+        <td>ウィンドウの先頭位置（IEのみ）。</td>
       </tr>
       <tr>
-        <td><b>&#39;location=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the address field (default is 1).</td>
+        <td><b>'location=[</b>boolean<b>]'</b>とする。</td>
+        <td>アドレスフィールドを表示するかどうか（デフォルトは1）。</td>
       </tr>
       <tr>
-        <td><b>&#39;menubar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the menu bar (default is 1).</td>
+        <td><b>'menubar=[</b>boolean<b>]'</b>とする。</td>
+        <td>メニューバーを表示するかどうか（デフォルトは1）。</td>
       </tr>
       <tr>
-        <td><b>&#39;resizable=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not the window is resizable (default is 1).</td>
+        <td><b>'resizable=[</b>boolean<b>]'</b>です。</td>
+        <td>ウィンドウのサイズを変更可能かどうか（デフォルトは1）。</td>
       </tr>
       <tr>
-        <td><b>&#39;scrollbars=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display scroll bars (default is 1).</td>
+        <td><b>'scrollbars=[</b>boolean<b>]'</b>とする。</td>
+        <td>スクロールバーを表示するかどうか（デフォルトは1）。</td>
       </tr>
       <tr>
-        <td><b>&#39;status=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to add a status bar (default is 1).</td>
+        <td><b>'status=[</b>boolean<b>]'</b>とする。</td>
+        <td>ステータスバーを付けるかどうか（デフォルトは1）。</td>
       </tr>
       <tr>
-        <td><b>&#39;titlebar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the title bar. This is ignored unless the calling application is an HTML Application or a trusted dialog box (default is 1);</td>
+        <td><b>'titlebar=[</b>boolean<b>]'</b>です。</td>
+        <td>タイトルバーを表示するかどうか。これは、呼び出し側のアプリケーションがHTMLアプリケーションまたは信頼できるダイアログボックスでない限り無視されます（デフォルトは1）。</td>
       </tr>
       <tr>
-        <td><b>&#39;toolbar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the browser toolbar (default is yes).</td>
+        <td><b>'toolbar=[</b>boolean<b>]'</b>です。</td>
+        <td>ブラウザのツールバーを表示するかどうか（デフォルトはyes）。</td>
       </tr>
     </tbody>
   </table>
   <div data-conref="../../../assets/snippets/Url_open_AV_warning.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">url_open_full</span>(url, target, options);</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">url_open_full(url, target, options);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The URL (website address) to link to.</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span class="notranslate">The URL (website address) to link to.</span></td>
       </tr>
       <tr>
-        <td>target</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>This is the target area to open the URL in (see description). This is only used in HTML5.</td>
+        <td><span class="notranslate">target</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span class="notranslate">This is the target area to open the URL in (see description).</span></td>
       </tr>
       <tr>
-        <td>options</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Standard browser options (see description). This is only used in HTML5.</td>
+        <td><span class="notranslate">options</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span class="notranslate">Standard browser options (see description).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">url_open_full</span>(&quot;http://gamemaker.io&quot;, &quot;_blank&quot;, &quot;resizable=0, height=200, scrollbars=0&quot;);</p>
-  <p>This would open the <span data-keyref="GameMaker Name">GameMaker</span> homepage in a new window that can&#39;t be resized, has a height of 200 pixels and no scrollbars when running in HTML5 or in a new window in the browser of the chosen target device.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p class="code">url_open_full(&quot;http://gamemaker.io&quot;, &quot;_blank&quot;, &quot;resizable=0, height=200, scrollbars=0&quot;);</p>
+  <p>この場合、GameMakerのホームページは、サイズ変更不可、高さ200ピクセル、スクロールバーなしの新しいウィンドウで開かれることになります。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Web_And_HTML5.htm">Web And HTML5</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="url_get_domain.htm">url_get_domain</a></div>
+        <div style="float:left">戻る<a href="Web_And_HTML5.htm">ウェブとHTML5</a></div>
+        <div style="float:right">次のページ <a href="url_get_domain.htm"><span class="notranslate">url_get_domain</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 url_open_full

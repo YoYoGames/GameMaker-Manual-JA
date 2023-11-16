@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_listener_set_velocity</title>
+  <title>オーディオリスナーセットベロシティ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_listener_set_velocity" />
   <meta name="rh-index-keywords" content="audio_listener_set_velocity" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_listener_set_velocity</h1>
-  <p>This function can be used to give the given listener <em>Doppler </em>effects and simulate audio motion based on the vector that is resolved from the given relative x, y and z positions. The default listener index is 0, but you can use the function <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a> to get the different indices available for the target platform.</p>
-  <p>If the given listener is not ever going to move, or the movement is not a constant motion, you would normally not need to set these values, but, for example, if you are making a scrolling game where the player has a constant bottom to top movement and the enemies a constant top to bottom movement, you would set the listener <i>and</i> emitter velocities (for emitters you would use <a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span></a>) to the appropriate vectors to simulate the correct Doppler effect as they move past the player instance.</p>
-  <p>The image below shows how this could be setup for the example game given above:</p>
+  <h1>オーディオリスナーセットベロシティ</h1>
+  <p>この関数は、与えられたリスナーに<em>ドップラー </em>効果を与え、与えられた相対的な x、y、z 位置から分解されるベクトルに基づいて、オーディオの動きをシミュレートするために使用することができます。デフォルトのリスナーインデックスは 0 ですが、関数 <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a>を使用して、ターゲットプラットフォームで利用可能なさまざまなインデックスを取得することができます。</p>
+  <p>しかし、たとえば、プレイヤーが下から上へ、敵が上から下へ一定の動きをするスクロール・ゲームを作る場合、<i>リスナーと</i>エミッタの速度（エミッタの場合は、次のように設定します）を設定する必要があります。 <a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span></a>を適切なベクトルに設定することで、プレイヤーインスタンスを通過する際の正しいドップラー効果をシミュレートすることができます。</p>
+  <p>下の画像は、上記のゲームの例でどのように設定されるかを示しています。</p>
   <p><img alt="Audio Listener Set Velocity Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener_Velocity.png" /></p>
-  <h4>Syntax:</h4>
+  <h4>構文です。</h4>
   <p class="code">audio_listener_set_velocity(index, x, y, z);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Real">Real</span> or <span data-keyref="Type_ID_Audio_Listener">Audio Listener ID</span></td>
-        <td>The listener to change the velocity of (default 0).</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Real">リアル</span>または<span data-keyref="Type_ID_Audio_Listener">オーディオリスナーID</span></td>
+        <td><span class="notranslate">The listener to change the velocity of (default 0).</span></td>
       </tr>
       <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x velocity of the listener (default 0).</td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The x velocity of the listener (default 0).</span></td>
       </tr>
       <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y velocity of the listener (default 0).</td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The y velocity of the listener (default 0).</span></td>
       </tr>
       <tr>
-        <td>z</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The z velocity of the listener (default 0).</td>
+        <td><span class="notranslate">z</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The z velocity of the listener (default 0).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var num = audio_get_listener_count();<br />
     for(var i = 0; i &lt; num; ++i;)<br />
     {<br />
@@ -67,18 +67,18 @@
         ds_map_destroy(info);<br />
         ds_map_destroy(data);<br />
     }</p>
-  <p>The above code checks the number of listeners available then loops through them and if their x velocity is not 0, it sets their velocity values to 0, 0, 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、利用可能なリスナーの数をチェックし、<span class="notranslate">loops</span> 、もし彼らのX速度が0でなければ、彼らの速度値を0、0、0にセットします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
-        <div style="float:right">Next: <a href="audio_listener_set_orientation.htm">audio_listener_set_orientation</a></div>
+        <div style="float:left">戻る<a href="Audio_Listeners.htm">オーディオリスナー</a></div>
+        <div style="float:right">次のページ <a href="audio_listener_set_orientation.htm"><span class="notranslate">audio_listener_set_orientation</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_listener_set_velocity

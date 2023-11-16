@@ -6,7 +6,7 @@
   <title>physics_particle_set_gravity_scale</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_gravity_scale" />
   <meta name="rh-index-keywords" content="physics_particle_set_gravity_scale" />
@@ -15,46 +15,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_set_gravity_scale</h1>
-  <p>With this function you can set the gravity scale factor for particles in the physics simulation. The function is designed to help prevent instability in the physics simulation, especially when using very small particles which may behave unpredictably
-    (i.e. break conservation of momentum) in scenarios such as explosions. Slowing these particles down by reducing gravity scale can stabilize their behaviour. This function is <i>global</i> in scope, in that it will change the gravity scale not just
-    for new particles created after the change, but also for those already present in the simulation.</p>
-  <p class="note"><b>NOTE</b>: Adjusting the number of update iterations per step (using the function <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_update_iterations.htm"><span class="inline">physics_world_update_iterations()</span></a></span>    can also affect the effect of gravity on particles. Larger iteration sizes confer greater resistance to gravity.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>物理シミュレーションのパーティクルに対する重力スケールファクターを設定することができる機能です。この機能は、物理シミュレーションの不安定性を防ぐために設計されており、特に、予測できない振る舞いをする可能性がある非常に小さな粒子を使用する場合
+    (爆発などのシナリオで（運動量保存を破るなど）。重力スケールを小さくしてこれらのパーティクルの速度を遅くすることで、挙動を安定させることができます。この関数は<i>グローバルな</i>もので、重力スケールを変更するのは
+    は、変更後に作成された新しい粒子だけでなく、シミュレーションに既に存在する粒子にも適用されます。</p>
+  <p class="note"><b>注</b>：1ステップあたりの更新反復回数を調整する（関数 <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_update_iterations.htm"><span class="inline">physics_world_update_iterations()</span></a></span>    は、パーティクルに対する重力の影響にも影響を与えることができます。イテレーションサイズを大きくすると、重力に対する耐性が強くなります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">physics_particle_set_gravity_scale(scale)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>scale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The scaling factor to be applied to gravity for all particles.</td>
+        <td><span class="notranslate">scale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The scaling factor to be applied to gravity for all particles.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
     <br/> physics_particle_set_damping(1);
     <br/> physics_particle_set_gravity_scale(1);
   </p>
-  <p>The above code will set the base properties for all particles in the simulation.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、シミュレーション内のすべてのパーティクルの基本プロパティを設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_get_max_count.htm">physics_particle_get_max_count</a></div>
+        <div style="float:left">背中<a href="Soft_Body_Particles.htm">ソフトボディーの粒子</a></div>
+        <div style="float:right">次のページ <a href="physics_particle_get_max_count.htm"><span class="notranslate">physics_particle_get_max_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_gravity_scale

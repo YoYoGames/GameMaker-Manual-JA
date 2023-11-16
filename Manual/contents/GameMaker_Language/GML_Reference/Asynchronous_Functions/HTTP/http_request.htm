@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>http_request</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for http_request" />
   <meta name="rh-index-keywords" content="http_request" />
@@ -15,54 +15,54 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>http_request</h1>
-  <p>With this function, you can create an HTTP header request to define the operating parameters of an HTTP transaction, which can be used for many things like (for example) authentication via HTTP headers if you use RESTful APIs. The function requires the full IP address of the server to request from as well as the type of request to make (as a string, see the note below): &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot;, or &quot;CONNECT&quot;. You will also need to supply a <span class="inline"><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></span> of key/value pairs (as strings, where the key is the header field and the value is the required data for the header), and the final argument is an optional data string that you can add to the request, and if it&#39;s not needed then it can be either 0 or an empty string &quot;&quot;. Note that you can also send a buffer (see the section on <a href="../../Buffers/Buffers.htm">Buffers</a> for more details), in which case the last argument would be the index of the buffer to send.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> HTTP headers normally follow the format &quot;key:value&quot;, but since <span data-keyref="GameMaker Name">GameMaker</span> creates these pairs for you from the ds_map, there is no need to include the colon &quot;:&quot; in your map key or value strings.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> When using a buffer for the body argument, if the buffer seek position is at the start (0) then no body is sent and the buffer is filled with the response from the http call, but if the buffer seek position is non-zero, then the buffer string content is sent as the body.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the part on <a href="HTTP.htm">Cross Domain Issues</a> for further details.</p>
-  <p>This function returns an <span data-keyref="Type_ID_Async_Event"><a href="GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span> which can be used to identify its callback, as described below.</p>
-  <h2>Async Callback</h2>
-  <p>This event will generate a &quot;callback&quot; which is picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">Async HTTP Events</a>, in which case it will generate a <span class="inline">DS Map</span> that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This DS map has the following two keys related to the request function:</p>
+  <p>この関数を使用すると、HTTPトランザクションの操作パラメータを定義するHTTPヘッダーリクエストを作成できます。これは、RESTful APIを使用する場合にHTTPヘッダーを介して（たとえば）認証など、さまざまなことに使用することができます。この関数は、リクエスト元の<span class="notranslate">server</span> の完全な IP アドレスと、リクエストのタイプ (<span class="notranslate">string</span>, 以下の注を参照) を要求します: &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot;, または &quot;CONNECT&quot;.また、キーと値のペアを <span class="inline"><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></span> (<span class="notranslate">strings</span> のように、キーはヘッダーフィールド、値はヘッダーの必須データ)、最後の引数はリクエストに追加できるオプションのデータ<span class="notranslate">string</span> で、必要なければ0か空の<span class="notranslate">string</span> &quot;&quot; にすることができる。<span class="notranslate">buffer</span> を送ることもできることに注意してください (詳しくは<a href="../../Buffers/Buffers.htm">バッファの</a>セクションを参照してください)。その場合、最後の引数は送るべき<span class="notranslate">buffer</span> のインデックスとなります。</p>
+  <p class="note"><b>注</b>：HTTPヘッダーは通常 &quot;key:value &quot;の形式ですが、<span data-keyref="GameMaker Name">GameMakerは</span>ds_mapからこれらのペアを生成するので、マップのキーや値にコロン&quot;: &quot;を含める必要はありません<span class="notranslate">strings</span>.</p>
+  <p class="note"><b>注</b>：body 引数に<span class="notranslate">buffer</span> を使用する場合、<span class="notranslate">buffer</span> のシーク位置がスタート（0）であれば、body は送信されず、<span class="notranslate">buffer</span> に http コールからの応答が入りますが、<span class="notranslate">buffer</span> のシーク位置が 0 以外であれば、<span class="notranslate">buffer</span> <span class="notranslate">string</span> の内容が body として送信されます。</p>
+  <p class="note"><b>注</b>：ブラウザのXSS保護機能により、クロスドメインからのリソースへのリクエストや読み込みの試みはブロックされ、空白の結果が返されるように見える場合がありますので、ご注意ください。詳しくは、「<a href="HTTP.htm">クロスドメインの問題</a>」をご覧ください。</p>
+  <p>この関数は、以下に説明するように、コールバックを識別するために使用できる <span data-keyref="Type_ID_Async_Event"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm">非同期リクエスト ID</a></span>これは、以下に説明するように、そのコールバックを識別するために使用することができます。</p>
+  <h2>非同期コールバック</h2>
+  <p>このイベントは、任意の<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">非同期 HTTP イベントによって</a>ピックアップされる &quot;コールバック&quot; を生成します。この場合、このイベント専用の <span class="inline">DS Map</span> が生成され、特別な変数に格納されます。 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>.この DS マップは、リクエスト関数に関連する以下の 2 つのキーを持つ。</p>
   <ul class="colour">
-    <li><b>id: </b>The ID which was returned from the function. If you fire off a series of <span class="inline">http_</span> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally sent the request to find the right one.</li>
-    <li><b>response_headers:</b> If this has a value greater than or equal to 0, it holds a DS map that contains the HTTP headers returned with the response to the HTTP request.</li>
+    <li><b>id。 </b>関数から返された ID。 <span class="inline">http_</span> リクエストを連続して発行した場合、どのリクエストに対する返答なのかを知る必要があります。 そのため、この値を最初にリクエストを送信したときに保存した値と比較して、 正しいリクエストを探すことになります。</li>
+    <li><b>response_headers を指定します。</b>0 以上の値を持つ場合、HTTP リクエストに対するレスポンスで返される HTTP ヘッダを含む DS マップを保持します。</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">http_request(url, method, header_map, body);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The web address of the server that you wish to get information from</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">The web address of the server that you wish to get information from</span></td>
       </tr>
       <tr>
-        <td>method</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The request method (normally <span class="inline2">&quot;POST&quot;</span> or <span class="inline2">&quot;GET&quot;</span>, but all methods are supported)</td>
+        <td><span class="notranslate">method</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">The request method (normally <span class="inline2">&quot;POST&quot;</span> または<span class="inline2">&quot;GET&quot;</span>、ただしすべてのメソッドがサポートされています)</td>
       </tr>
       <tr>
-        <td>header_map</td>
-        <td><span data-keyref="Type_ID_DS_Map"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span></td>
-        <td>A ds_map with the required header fields</td>
+        <td><span class="notranslate">header_map</span></td>
+        <td><span data-keyref="Type_ID_DS_Map"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm">DSマップID</a></span></td>
+        <td><span class="notranslate">A ds_map with the required header fields</span></td>
       </tr>
       <tr>
-        <td>body</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span>, <span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span>, or <span data-keyref="Type_ID_Buffer"><a href="GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The data to be transmitted following the headers (can be a binary buffer handle)</td>
+        <td><span class="notranslate">body</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>, <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span>または <span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">バッファID</a></span></td>
+        <td><span class="notranslate">The data to be transmitted following the headers (can be a binary buffer handle)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_ID_Async_Event"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm">Async Request ID</a></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var map = ds_map_create();<br />
     ds_map_add(map, &quot;Host&quot;, &quot;225.0.0.97:3000&quot;);<br />
     ds_map_add(map, &quot;Connection&quot;, &quot;keep-alive&quot;);<br />
@@ -77,18 +77,18 @@
     ds_map_add(map, &quot;Cookie&quot;, &quot;request_method=GET; _InAppPurchases_session=69bb6ef6eec2b&quot;);<br />
     var data=&quot;utf8=%E2%9C%93&amp;authenticity_token=kPmS14DcYcuKgMFZUsN3XFfj3mhs%3D&amp;product%5Bname%5D=CatchTheHaggis&amp;product%5Bproduct_id%5D=http_test&amp;commit=Create+Product&quot;;<br />
     request = http_request(&quot;http:225.0.0.97:3000/products&quot;, &quot;POST&quot;, map, data);</p>
-  <p>The above code creates a DS map with the relevant HTTP headers for the function, then creates a data string for use as this is a POST request. Finally the function is called, with it&#39;s ID value being stored in the variable &quot;request&quot; for checking in the HTTP asynchronous event.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、関数に関連するHTTPヘッダを含むDSマップを作成し、次にPOSTリクエストとして使用するためのデータ<span class="notranslate">string</span> を作成しています。最後に関数が呼び出され、その ID 値が変数 &quot;request&quot; に格納されて、HTTP 非同期イベントで確認されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">Next: <a href="http_get.htm">http_get</a></div>
+        <div style="float:left">戻る：<a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">次のページ <a href="http_get.htm"><span class="notranslate">http_get</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 http_request

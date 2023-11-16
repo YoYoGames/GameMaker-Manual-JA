@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>String To Number</title>
+  <title>文字列から数値へ</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the String To Number action" />
   <meta name="rh-index-keywords" content="GML Visual Action - String To Number" />
@@ -14,78 +14,78 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="String To Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_String_To_Number.png" /> String To Number</h1>
-  <p>This action can convert a string into a number. You provide the string to change and then give a target variable to return the real number back to (this variable can be flagged as a temporary local variable). Note that if the string has any characters
-    other than numbers and a decimal point, it will <i>not</i> be converted, although if the string <i>starts</i> with a number then those will be converted and the rest of the string excluded. It is important to note that when passing decimals into this
-    action, the returned string will be rounded to <i>two</i> decimal places only. Below is a table of input values and what you&#39;d expect returned</p>
+  <h1><img> 文字列から数値へ</h1>
+  <p>このアクションは、<span class="notranslate">string</span> を数値に変換することができます。変更する<span class="notranslate">string</span> を指定し、実数を返すターゲット変数を指定します（この変数は一時的なローカル変数としてフラグを立てることができます）。もし，<span class="notranslate">string</span> が何らかの文字を持っている場合は
+    ただし、<span class="notranslate">string</span> が<i>数字で始まって</i>いる場合、それらは変換され、<span class="notranslate">string</span> の残りの部分は除外されます。注意すべきは，この関数に小数を渡す場合です。
+    アクションを実行した場合、返される<span class="notranslate">string</span> は小数点以下<i>2</i>桁に丸められるだけです。以下は、入力値と返される値の表です。</p>
   <table>
     <tbody>
       <tr>
-        <th>String</th>
-        <th>Returned Value</th>
+        <th>文字列</th>
+        <th>戻り値</th>
       </tr>
       <tr>
-        <td>&quot;123&quot;</td>
+        <td><span class="notranslate">&quot;123&quot;</span></td>
         <td>123</td>
       </tr>
       <tr>
-        <td>&quot;123 Hello World&quot;</td>
+        <td><span class="notranslate">&quot;123 Hello World&quot;</span></td>
         <td>123</td>
       </tr>
       <tr>
-        <td>&quot;Hello World&quot;</td>
-        <td>0 (by default if the string can&#39;t be converted, 0 will be returned)</td>
+        <td><span class="notranslate">&quot;Hello World&quot;</span></td>
+        <td>0（デフォルトでは，<span class="notranslate">string</span> が変換できない場合，0が返されます。）</td>
       </tr>
       <tr>
-        <td>&quot;Hello World 123&quot;</td>
+        <td><span class="notranslate">&quot;Hello World 123&quot;</span></td>
         <td>0</td>
       </tr>
       <tr>
-        <td>&quot;123.45678&quot;</td>
+        <td><span class="notranslate">&quot;123.45678&quot;</span></td>
         <td>123.46</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="String To Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_String_To_Number.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="String To Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_String_To_Number.png" /></p>
+  <h4>論拠となる。</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The string to convert</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>変換する<span class="notranslate">string</span> </td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>戻り値を格納するターゲット変数</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="String To Number Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_String_To_Number.png" />The above action block code initialises a global variable and then loads a file with
-    a buffer saved in it. Two strings are read from the buffer and stored in a temporary local variables before one of them is converted into a real number and stored in another temporary local variable. These are then assigned to global variables, and
-    the buffer is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、グローバル変数を初期化した後、ファイルをロードして
+    <span class="notranslate">buffer</span> に保存されている。<span class="notranslate">strings</span> から2つの<span class="notranslate">buffer</span> を読み出して一時的なローカル変数に格納し、そのうちの1つを実数に変換して別の一時的なローカル変数に格納する。これらはグローバル変数に代入され
+    <span class="notranslate">buffer</span> は削除される。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Type_Actions.htm">Data Type Actions</a></div>
-        <div style="float:right">Next: <a href="Number_To_String.htm">Number To String</a></div>
+        <div style="float:left">戻る<a href="Data_Type_Actions.htm">データ型アクション</a></div>
+        <div style="float:right">次へ<a href="Number_To_String.htm">数値から文字列へ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-Action - String To Number
+Action - <span class="notranslate">String</span> To Number
 -->
   <!-- TAGS
 action_string_to_number

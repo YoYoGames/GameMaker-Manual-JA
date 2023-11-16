@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>async_load</title>
+  <title>非同期ロード</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the async_load variable" />
   <meta name="rh-index-keywords" content="async_load" />
@@ -14,18 +14,18 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>async_load</h1>
-  <p>This variable is <b>global</b> in scope and is used to hold a <a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> when used in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Asynchronous Events</a>, and -1 at all other times. The actual contents of the DS map will depend on the type of asynchronous event <a class="glossterm" data-glossterm="callback" href="#">callback</a>, as well as the function that was used to trigger the event, so refer to the individual pages for those events for full details of all the possible DS map contents.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>非同期ロード</h1>
+  <p>この変数は<b>グローバルな</b>スコープで、<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">非同期</a>イベントで使用されるときは<a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DSマップを</a>保持し、それ以外のときは-1するために使用されます。DS マップの実際の内容は、非同期イベントの<a class="glossterm" data-glossterm="コールバック" href="#">コールバックの</a>種類と、イベントの トリガーとして使われた関数に依存するので、可能なすべての DS マップの内容の詳細については、それらのイベントの個々のページを 参照してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">async_load;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_DS_Map">DS Map ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
+  <p> </p>
+  <h4>拡張された例。</h4>
   <p class="code">sprite =  sprite_add(&quot;site.com/path/image.png&quot;, 16, true, true, 0, 0);</p>
-  <p>The above code would be called in an event to load a sprite from an external URL. This would then trigger the <strong>Image Loaded</strong> Asynchronous Event, where you would parse the <span class="inline">async_load</span> map:</p>
+  <p>上記のコードは、外部URLから<span class="notranslate">sprite</span> を読み込むイベントの中で呼び出されることになります。これが<strong>Image Loaded</strong>Asynchronous Event のトリガーとなり、 <span class="inline">async_load</span> マップをパースすることになります。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == sprite<br />
     {<br />
         if (ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0)<br />
@@ -33,18 +33,18 @@
             sprite_index = sprite;<br />
         }<br />
     }</p>
-  <p>The above code will first check the ID of the <span class="inline">async_load</span> map, then check the status of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will then be used to set the sprite index of the instance to the newly loaded image.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、まず <span class="inline">async_load</span> マップの ID をチェックし、次にコールバックのステータスをチェックします。値が0以上であれば（成功を意味する）、コールバックの結果を使用して、インスタンスの<span class="notranslate">sprite</span> インデックスを新しく読み込まれた画像に設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></div>
+        <div style="float:left">戻る<a href="../Global_Variables.htm">グローバル変数</a></div>
+        <div style="float:right">次ページ：<a data-xref="{title}" href="../../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">イベント_データ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 async_load

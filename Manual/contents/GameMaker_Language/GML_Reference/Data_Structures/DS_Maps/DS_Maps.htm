@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>DS Maps</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>DSマップ</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for DS Maps" />
   <meta name="rh-index-keywords" content="" />
@@ -14,71 +14,68 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h"><span data-field="title" data-format="default">DS Maps</span></h1>
-  <p>The DS map data structure lets you store <b>key</b> and <b>value</b> pairs, making it an exceptionally useful one.</p>
-  <p>For example, a character in your game can have a quantity of different items (<i>keys</i>) and for each individual item he can have a number of them (<i>values</i>), like in an RPG where you can have 10 health potions, 5 mana potions and 100 gold. Maps maintain such pairs all together in one place. You can add pairs to the map, search for the value corresponding to certain keys and use some simple functions.</p>
-  <p>There are a couple of things you should know about maps before you use them, however! Maps are <i>not</i> sorted in any (recognisable) way, meaning that to find a certain key you may have to iterate through the whole thing (which is <b>very</b> slow). There is also no way to hold two keys that are the same, nor can you assign one key two values.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> It is recommended to use <a href="../../../GML_Overview/Structs.htm">structs</a> over DS maps as they have similar features, are easier to use and are garbage collected automatically.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <div data-conref="../../../../assets/snippets/Note_Tip_Map_Key_Can_Be_Any.hts"> </div>
-  <p>Apart from the specific functions listed below you can also use an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a> (called an <i>accessor</i>) to add or modify the contents of your DS map. This accessor looks similar to a 1D array with the following syntax:</p>
+  <h1>DSマップ</h1>
+  <p>DSマップのデータ構造は非常に便利で、<b>キーと</b> <b>値の</b>ペアを保存することができます。例えば、RPGでヘルスポーションを10個、マナポーションを5個、ゴールドを100個持っているように、ゲームのキャラクターは様々なアイテム<i>（キー</i>）を大量に持ち、個々のアイテムに対してそれらの数<i>（値</i>）を持つことができます。マップはそのようなペアを一箇所にまとめて管理し、ペアをマップに追加したり、簡単な機能を使って特定のキーに対応する値を検索したりすることができます。しかし、マップを使う前に知っておくべきことがいくつかあります。つまり、あるキーを見つけるためには、マップ全体を繰り返し見る必要があります（これは<b>非常に</b>時間がかかります）。また、同じキーを2つ保持することはできませんし、1つのキーに2つの値を割り当てることもできません。</p>
+  <p class="note"><strong>注</strong>：DSマップよりも<a href="../../../GML_Overview/Structs.htm">構造</a>体を使用することをお勧めします。類似の機能を持ち、使いやすく、自動的にガベージコレクションされるからです。</p>
+  <p class="note"><b><span class="note">注意事項</span></b>すべての動的リソースと同様に、データ構造はメモリを消費するため、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>常に</b>破棄する必要があります。</p>
+  <p>以下に示す特定の関数とは別に、DS マップの内容を追加したり変更したりするために、<a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">式</a>（<i>アクセッサと</i>呼ばれる）を使用することができます。このアクセサは 1 次元配列に似ており、次のような構文になっています。</p>
   <p class="code">map_index[? key]</p>
-  <p>You can find more information, plus examples, from the GML Overview page on <a href="../../../GML_Overview/Accessors.htm">Accessors</a>.</p>
-  <p>The following functions exist that deal with DS maps:</p>
+  <p><a href="../../../GML_Overview/Accessors.htm">Accessors</a> の<span class="notranslate">GML</span> Overview ページに詳細な情報とサンプルが掲載されています。</p>
+  <p>DSマップを扱う機能として、以下のものがある。</p>
   <ul class="colour">
-    <li><a href="ds_map_exists.htm">ds_map_exists</a></li>
-    <li><a href="ds_map_create.htm">ds_map_create</a></li>
-    <li><a href="ds_map_add.htm">ds_map_add</a></li>
-    <li><a href="ds_map_clear.htm">ds_map_clear</a></li>
-    <li><a href="ds_map_copy.htm">ds_map_copy</a></li>
-    <li><a href="ds_map_replace.htm">ds_map_replace</a></li>
-    <li><a href="ds_map_delete.htm">ds_map_delete</a></li>
-    <li><a href="ds_map_empty.htm">ds_map_empty</a></li>
-    <li><a href="ds_map_size.htm">ds_map_size</a></li>
-    <li><a href="ds_map_find_first.htm">ds_map_find_first</a></li>
-    <li><a href="ds_map_find_last.htm">ds_map_find_last</a></li>
-    <li><a href="ds_map_find_next.htm">ds_map_find_next</a></li>
-    <li><a href="ds_map_find_previous.htm">ds_map_find_previous</a></li>
-    <li><a href="ds_map_find_value.htm">ds_map_find_value</a></li>
-    <li><a href="ds_map_keys_to_array.htm">ds_map_keys_to_array</a></li>
-    <li><a href="ds_map_values_to_array.htm">ds_map_values_to_array</a></li>
-    <li><a href="ds_map_set.htm">ds_map_set</a></li>
-    <li><a href="ds_map_read.htm">ds_map_read</a></li>
-    <li><a href="ds_map_write.htm">ds_map_write</a></li>
-    <li><a href="ds_map_destroy.htm">ds_map_destroy</a></li>
+    <li><a href="ds_map_exists.htm"><span class="notranslate">ds_map_exists</span></a></li>
+    <li><a href="ds_map_create.htm"><span class="notranslate">ds_map_create</span></a></li>
+    <li><a href="ds_map_add.htm"><span class="notranslate">ds_map_add</span></a></li>
+    <li><a href="ds_map_clear.htm"><span class="notranslate">ds_map_clear</span></a></li>
+    <li><a href="ds_map_copy.htm"><span class="notranslate">ds_map_copy</span></a></li>
+    <li><a href="ds_map_replace.htm"><span class="notranslate">ds_map_replace</span></a></li>
+    <li><a href="ds_map_delete.htm"><span class="notranslate">ds_map_delete</span></a></li>
+    <li><a href="ds_map_empty.htm"><span class="notranslate">ds_map_empty</span></a></li>
+    <li><a href="ds_map_size.htm"><span class="notranslate">ds_map_size</span></a></li>
+    <li><a href="ds_map_find_first.htm"><span class="notranslate">ds_map_find_first</span></a></li>
+    <li><a href="ds_map_find_last.htm"><span class="notranslate">ds_map_find_last</span></a></li>
+    <li><a href="ds_map_find_next.htm"><span class="notranslate">ds_map_find_next</span></a></li>
+    <li><a href="ds_map_find_previous.htm"><span class="notranslate">ds_map_find_previous</span></a></li>
+    <li><a href="ds_map_find_value.htm"><span class="notranslate">ds_map_find_value</span></a></li>
+    <li><a href="ds_map_keys_to_array.htm"><span class="notranslate">ds_map_keys_to_array</span></a></li>
+    <li><a href="ds_map_values_to_array.htm"><span class="notranslate">ds_map_values_to_array</span></a></li>
+    <li><a href="ds_map_set.htm"><span class="notranslate">ds_map_set</span></a></li>
+    <li><a href="ds_map_read.htm"><span class="notranslate">ds_map_read</span></a></li>
+    <li><a href="ds_map_write.htm"><span class="notranslate">ds_map_write</span></a></li>
+    <li><a href="ds_map_destroy.htm"><span class="notranslate">ds_map_destroy</span></a></li>
   </ul>
-  <p> </p>
-  <p>There are four further functions available for saving and loading a DS map. These functions will obfuscate the map and store it in a secure location on the target platform using a file format that means that the final file is not able to be transferred between devices:</p>
-  <p> </p>
+  <p> </p>
+  <p>DSマップの保存と読み込みには、さらに4つの関数が用意されています。これらの関数は、マップを難読化し、最終ファイルがデバイス間で転送できないようなファイル形式を使用して、ターゲットプラットフォームの安全な場所に保存します。</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="ds_map_secure_save.htm">ds_map_secure_save</a></li>
-    <li><a href="ds_map_secure_save_buffer.htm">ds_map_secure_save_buffer</a></li>
-    <li><a href="ds_map_secure_load.htm">ds_map_secure_load</a></li>
-    <li><a href="ds_map_secure_load_buffer.htm">ds_map_secure_load_buffer</a></li>
+    <li><a href="ds_map_secure_save.htm"><span class="notranslate">ds_map_secure_save</span></a></li>
+    <li><a href="ds_map_secure_save_buffer.htm"><span class="notranslate">ds_map_secure_save_buffer</span></a></li>
+    <li><a href="ds_map_secure_load.htm"><span class="notranslate">ds_map_secure_load</span></a></li>
+    <li><a href="ds_map_secure_load_buffer.htm"><span class="notranslate">ds_map_secure_load_buffer</span></a></li>
   </ul>
-  <p> </p>
-  <p>One of the uses that DS maps have is when working with JSON, and so there are a few special functions that are specific to that:</p>
-  <p> </p>
+  <p> </p>
+  <p>DSマップの用途の一つはJSONを扱うことであり、そのためにいくつかの特殊な関数がある。</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="ds_map_add_list.htm">ds_map_add_list</a></li>
-    <li><a href="ds_map_add_map.htm">ds_map_add_map</a></li>
-    <li><a href="ds_map_replace_list.htm">ds_map_replace_list</a></li>
-    <li><a href="ds_map_replace_map.htm">ds_map_replace_map</a></li>
-    <li><a href="ds_map_is_list.htm">ds_map_is_list</a></li>
-    <li><a href="ds_map_is_map.htm">ds_map_is_map</a></li>
+    <li><a href="ds_map_add_list.htm"><span class="notranslate">ds_map_add_list</span></a></li>
+    <li><a href="ds_map_add_map.htm"><span class="notranslate">ds_map_add_map</span></a></li>
+    <li><a href="ds_map_replace_list.htm"><span class="notranslate">ds_map_replace_list</span></a></li>
+    <li><a href="ds_map_replace_map.htm"><span class="notranslate">ds_map_replace_map</span></a></li>
+    <li><a href="ds_map_is_list.htm"><span class="notranslate">ds_map_is_list</span></a></li>
+    <li><a href="ds_map_is_map.htm"><span class="notranslate">ds_map_is_map</span></a></li>
   </ul>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> While these functions permit you to add lists and maps within a map, they are useless for anything other than JSON, and nested maps and lists will not be read correctly if written to disk or accessed in any other way.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p class="note"><b><span class="note">注意</span></b>これらの関数により、マップ内にリストやマップを追加することができますが、JSON以外では役に立ちません。また、ネストしたマップやリストは、ディスクへの書き込みや他の方法でアクセスしても正しく読み込まれません。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS Priority Queues</a></div>
+        <div style="float:left">戻る<a href="../Data_Structures.htm">データ構造</a></div>
+        <div style="float:right">次へ<a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS優先キュー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 DS Maps

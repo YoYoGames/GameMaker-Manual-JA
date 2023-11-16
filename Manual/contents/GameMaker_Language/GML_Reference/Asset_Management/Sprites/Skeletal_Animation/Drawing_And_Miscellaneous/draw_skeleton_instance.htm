@@ -6,7 +6,7 @@
   <title>draw_skeleton_instance</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function draw_skeleton_instance" />
   <meta name="rh-index-keywords" content="draw_skeleton_instance" />
@@ -16,93 +16,93 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_skeleton_instance</h1>
-  <p>This function is <i>only</i> for use with instances which have sprites assigned to them created using the skeletal animation program Spine. While you can draw these sprites using the normal draw functions (like <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a>), there are times when you may want to draw a single frame or show a change of skin texture without actually changing the sprite properties for an instance. In these cases you can draw the sprite that has been assigned to the instance with this function, where you give the unique Instance ID and then the name of the animation to get the frame from (a string, as set within the program used to make the sprite). Next you give the name of the skin to use (again, as set when the sprite was made), and a frame value. The frame value is for telling <span data-keyref="GameMaker Name">GameMaker</span> what part of the animation to show and is a value between 0 and the <a href="../../Sprite_Instance_Variables/image_number.htm"><span class="inline">image_number</span></a>. The rest of the arguments are the same as those used for normal sprite drawing and will change the scale, angle, blend colour and alpha of the final animation frame being drawn.</p>
-  <p class="note"><b>WARNING!</b> Because of the way skeletal animations are interpolated between various &quot;key&quot; frames, there is an additional overhead associated with this call and therefore it is recommended that you avoid drawing skeleton based sprites using this method unless absolutely necessary.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>この機能は、スケルトン・アニメーション・プログラム<span class="notranslate">sprites</span> を使って作成された<span class="notranslate">Spine</span> が割り当てられた<i>インスタンスにのみ</i>使用します。これらの<span class="notranslate">sprites</span> は通常の描画関数 (たとえば <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a>しかし、インスタンスの<span class="notranslate">texture</span> プロパティを実際に変更することなく、1 つのフレームを描画したり、肌の変化<span class="notranslate">sprite</span> を表示したい場合があります。このような場合、この関数でインスタンスに割り当てられた<span class="notranslate">sprite</span> を描くことができます。一意のインスタンス ID を与え、フレームを取得するアニメーションの名前（<span class="notranslate">string</span> 、<span class="notranslate">sprite</span> を作成するために使用したプログラム内で設定された）を与えます。次に、使用するスキンの名前（これも<span class="notranslate">sprite</span> が作成されたときに設定されたもの）とフレーム値を指定します。フレーム値は、アニメーションのどの部分を表示するかを<span data-keyref="GameMaker Name">GameMakerに</span>指示するためのもので、0から1までの値です。 <a href="../../Sprite_Instance_Variables/image_number.htm"><span class="inline">image_number</span></a>.残りの引数は、通常の<span class="notranslate">sprite</span> の描画に使用するものと同じで、最終的に描画されるアニメーションフレームのスケール、角度、ブレンドカラー、アルファを変更します。</p>
+  <p class="note"><b>警告!ス</b>ケルトン・アニメーションは、さまざまな「キー」フレーム間で補間されるため、この呼び出しには追加のオーバーヘッドがあります。したがって、絶対に必要でない限り、このメソッドを使ってスケルトン・ベース<span class="notranslate">sprites</span> を描画しないことをお勧めします。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">draw_skeleton_instance(instance, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>instance</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The index of the instance to draw the sprite from.</td>
+        <td><span class="notranslate">instance</span></td>
+        <td><span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The index of the instance to draw the sprite from.</span></td>
       </tr>
       <tr>
-        <td>animname</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the animation to get the frame from (a string).</td>
+        <td><span class="notranslate">animname</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The name of the animation to get the frame from (a string).</span></td>
       </tr>
       <tr>
-        <td>skinname</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the skin to use (a string).</td>
+        <td><span class="notranslate">skinname</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The name of the skin to use (a string).</span></td>
       </tr>
       <tr>
-        <td>frame</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The animation frame to draw (from 0 to image_number - 1).</td>
+        <td><span class="notranslate">frame</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The animation frame to draw (from 0 to image_number - 1).</span></td>
       </tr>
       <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The x coordinate of where to draw the sprite.</span></td>
       </tr>
       <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The y coordinate of where to draw the sprite.</span></td>
       </tr>
       <tr>
-        <td>xscale</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The horizontal scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</td>
+        <td><span class="notranslate">xscale</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The horizontal scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</span></td>
       </tr>
       <tr>
-        <td>yscale</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The vertical scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</td>
+        <td><span class="notranslate">yscale</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The vertical scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</span></td>
       </tr>
       <tr>
-        <td>rot</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The rotation of the sprite. 0=normal, 90=turned 90 degrees counter-clockwise etc.</td>
+        <td><span class="notranslate">rot</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The rotation of the sprite. 0=normal, 90=turned 90 degrees counter-clockwise etc.</span></td>
       </tr>
       <tr>
-        <td>colour</td>
-        <td><span data-keyref="Type_Constant_Colour">Colour</span></td>
-        <td>The colour with which to blend the sprite.</td>
+        <td><span class="notranslate">colour</span></td>
+        <td><span data-keyref="Type_Constant_Colour">カラー</span></td>
+        <td><span class="notranslate">The colour with which to blend the sprite.</span></td>
       </tr>
       <tr>
-        <td>alpha</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td>
+        <td><span class="notranslate">alpha</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">draw_skeleton_instance(obj_Player, &quot;jump&quot;, &quot;skin1&quot;, 0, x, y, 1, 1, 0, c_white, 1);</p>
-  <p>The above code will draw the first frame of the skeletal animation sprite assigned to the instance given, using the &quot;jump&quot; animation set and the skin defined as &quot;skin1&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、指定されたインスタンスに割り当てられたスケルトン・アニメーション<span class="notranslate">sprite</span> の最初のフレームを、「jump」アニメーション・セットと「skin1」として定義されたスキンを使って描画するものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_And_Miscellaneous.htm">Drawing And Miscellaneous</a></div>
-        <div style="float:right">Next: <a href="draw_skeleton_collision.htm">draw_skeleton_collision</a></div>
+        <div style="float:left">戻る<a href="Drawing_And_Miscellaneous.htm">図面・雑記</a></div>
+        <div style="float:right">次のページ <a href="draw_skeleton_collision.htm"><span class="notranslate">draw_skeleton_collision</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_skeleton_instance

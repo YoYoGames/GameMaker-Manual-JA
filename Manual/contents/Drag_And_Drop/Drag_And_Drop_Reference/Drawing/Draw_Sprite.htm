@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Sprite</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>スプライトの描画</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Sprite action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Sprite" />
@@ -14,52 +14,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /> Draw Sprite</h1>
-  <p>This action will draw a sprite somewhere in the room. You specify the sprite, the position (either an absolute position within the room, or a relative position to the instance doing the drawing) and the animation frame of the sprite, if it has multiple frames (note that image frames are numbered from 0 upwards). If you have an animated sprite and you want it to draw the frames as if it was assigned to the object, then use -1 for the frame index or the built in instance variable <span class="inline">image_index</span>, but note that if the instance has no sprite assigned then it will not animate, and if the sprite assigned has a different number of frames to the one being drawn then the sprite will be drawn with extra frames or missed frames.</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> </b>This action will not draw the sprite transformed, even if you have changed the image blend or scale. For that see the action <a href="Draw_Sprite_Transformed.htm">Draw Sprite Transformed</a>.<b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Sprite Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Sprite.png" style="cursor: nwse-resize;" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> スプライトの描画</h1>
+  <p>このアクションは<span class="notranslate">sprite</span> のどこかに<span class="notranslate">room</span> を描画します。<span class="notranslate">sprite</span> 、位置 (<span class="notranslate">room</span> 内の絶対位置、または描画するインスタンスに対する相対位置)、<span class="notranslate">sprite</span> のアニメーションフレーム (複数ある場合) を指定します。
+    フレーム（画像フレームは0から順に番号が振られることに注意）。もし、アニメーションの<span class="notranslate">sprite</span> があり、それが<span class="notranslate">object</span> に割り当てられているかのようにフレームを描画したい場合は、フレームインデックスに -1 を使用するか、ビルトインのインスタンス変数 <span class="inline">image_index</span> を使用してください。
+    しかし、インスタンスに<span class="notranslate">sprite</span> が割り当てられていない場合はアニメーションしません。また、割り当てられた<span class="notranslate">sprite</span> のフレーム数が描画されるものと異なる場合は、<span class="notranslate">sprite</span> が余分なフレームで描画されるか、フレームが欠落することに注意してください。</p>
+  <p class="note"><b>重要： </b>このアクションは、イメージのブレンドやスケールを変更しても、<span class="notranslate">sprite</span> を変換して描画することはありません。これについては、<a href="Draw_Sprite_Transformed.htm"> <span class="notranslate">Sprite</span> </a> Transformedを描画するアクションを参照してください。</p>
+  <p class="note"><b></b><b>注意</b>：このアクションは、各種<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">描画</a>イベントでのみ使用され、他の場所で使用しても何も描画されません。</p>
+  <p> </p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>描画する<span class="notranslate">sprite</span> </td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
+        <td><span class="notranslate">x</span></td>
+        <td>描画する x 位置</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
+        <td><span class="notranslate">y</span></td>
+        <td>描画するy位置</td>
       </tr>
       <tr>
-        <td>Frame Index</td>
-        <td>The frame index to draw</td>
+        <td><span class="notranslate">Frame Index</span></td>
+        <td>描画するフレームインデックス</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Sprite Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Self.png" />The above action block code draws a &quot;shadow&quot; sprite at the same relative position as the instance, then draws the instance sprite over the top.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードでは、「影」<span class="notranslate">sprite</span> を同じ相対位置に描画しています。
+    インスタンスを作成し、その上にインスタンス<span class="notranslate">sprite</span> を描画します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Sprite_Transformed.htm">Draw Sprite Transformed</a></div>
+        <div style="float:left">戻る<a href="Drawing_Actions.htm">描画アクション</a></div>
+        <div style="float:right">次へ<a href="Draw_Sprite_Transformed.htm">描画<span class="notranslate">Sprite</span> 変形</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Sprite

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Creating A Tutorial</title>
+  <title>チュートリアルの作成</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining how to make a Marketplace tutorial package" />
   <meta name="rh-index-keywords" content="Marketplace - Creating A Tutorial" />
@@ -14,28 +14,28 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating A Marketplace Tutorial</h1>
-  <p>Creating a tutorial is similar to <a href="Creating_A_Marketplace_Asset.htm">creating a regular Marketplace asset package</a>, only now you have to add in specific included files as well as include an initial tutorial page (and an optional video page). The Tutorial workspace will look something like this:<img alt="Marketplace Tutorial Package" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_CreateTutorial.png" />As explained above for general Marketplace Assets, you need to select a publisher and then give your tutorial a name and a unique ID (reverse URL format), and then in the &quot;type&quot; dropdown select Tutorial. This will then give you additional options to add a base HTML file to start the tutorial from as well as an (optional) video file and URL. The video file should use the template supplied from the Marketplace - as should the rest of the tutorial - which you can get <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">here</a>, and when the user loads the tutorial, the video will be loaded into a separate frame within the IDE. Note that the pages you give for the start page and the video page are relative paths within the Included Files, and you can open an explorer to choose something other than the default ones that <span data-keyref="GameMaker Name">GameMaker</span> populates the fields with.</p>
-  <p>Actually creating your tutorial will require you to add <a href="../../Settings/Included_Files.htm">Included Files</a> into your tutorial project, and these have to be added in a very specific way for the IDE to properly detect which files are to be used for the tutorial. The basic folder structure is shown in the image below:<img alt="Marketplace Tutorial Files" class="center" src="../../assets/Images/Introduction/Tools_Marketplace_TutorialFiles.png" /></p>
-  <p>So, we have two main folders:</p>
+  <h1><span class="notranslate">Marketplace</span> チュートリアルを作成する</h1>
+  <p>チュートリアルの作成は<a href="Creating_A_Marketplace_Asset.htm">通常の<span class="notranslate">Marketplace</span> <span class="notranslate">asset</span> パッケージの作成と似て</a>いますが、特定のインクルードファイルを追加し、最初のチュートリアルページ(およびオプションのビデオページ)を含める必要があることだけが異なります。チュートリアル<span class="notranslate">workspace</span> は次のようになります。<img>一般的な<span class="notranslate">Marketplace</span> <span class="notranslate">Assets</span> で説明したように、パブリッシャーを選択し、チュートリアルに名前と一意の ID (逆 URL 形式) を与え、「タイプ」ドロップダウンでチュートリアルを選択する必要がありま す。これにより、チュートリアルを開始するためのベース HTML ファイルと、（オプションの）ビデオファイルおよび URL を追加するオプションが表示されます。ビデオファイルは、チュートリアルの他の部分と同様に<a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">、</a> <span class="notranslate">Marketplace</span> から提供されたテンプレートを使用する必要があります。ユーザーがチュートリアルをロードすると、ビデオは<span class="notranslate">IDE</span> の中の別のフレームにロードされます。スタートページとビデオページに指定したページは、Included Files の中の<span class="notranslate">paths</span> に相対することに注意し、エクスプロラを開いて<span data-keyref="GameMaker Name">GameMaker</span>が入力するデフォルト以外のものを選ぶことができます。</p>
+  <p>実際にチュートリアルを作成するには、チュートリアルプロジェクトに<a href="../../Settings/Included_Files.htm">インクルードファイルを</a>追加する必要があります。これらは、チュートリアルに使用されるファイルを<span class="notranslate">IDE</span> が適切に検出できるように、非常に特殊な方法で追加する必要があります。基本的なフォルダ構成は、以下の画像のとおりです。<img></p>
+  <p>そこで、大きく分けて2つのフォルダーを用意しました。</p>
   <ul class="colour">
-    <li class="dropspot"><strong>TutorialContent</strong>: All your tutorial <span class="inline">HTML</span> files, the <span class="inline">CSS</span> for styling them, and the images required for them (not the images required for resources, but the ones to be displayed within the tutorial), as well as the video template if required, go here. You can have sub-folders as well if you wish to split the tutorial into chapters, for example, but you should have at least one base <span class="inline">HTML</span> file to be used as the start page for the tutorial.</li>
-    <li class="dropspot"><strong>TutorialResources</strong>: This folder has a further two sub-folders in it for <strong>Images </strong>and <strong>Sound </strong>assets. If your tutorial requires the user to add a sprite (for example) and you want to include it in the tutorial then you would place the image resource in the Images folder. These folders are imported into the tutorial project and when the user opens the sprite editor and goes to add an image, the default path for the explorer window will be to this location, making it easier for the user to find the necessary assets.</li>
+    <li class="dropspot"><strong>TutorialContent</strong>。チュートリアルのすべてのファイル（ <span class="inline">HTML</span> ）、スタイル設定用のファイル（ <span class="inline">CSS</span> ）、画像（リソースに必要な画像ではなく、チュートリアル内で表示する画像）、および必要な場合はビデオテンプレートがここに格納されます。チュートリアルを章に分けたい場合などは、サブフォルダを作成することもできますが、チュートリアルのスタートページとして使用するベースとなる <span class="inline">HTML</span> ファイルを少なくとも1つ用意する必要があります。</li>
+    <li class="dropspot"><strong>TutorialResources</strong>です。このフォルダには、さらに2つのサブフォルダがあり、<strong>画像と </strong> <strong>サウンドの </strong>アセットが格納されています。チュートリアルで、ユーザーが<span class="notranslate">sprite</span> を追加する必要があり（例）、それをチュートリアルに含める場合、画像リソースは Images フォルダに配置します。これらのフォルダはチュートリアルプロジェクトにインポートされ、ユーザーが<span class="notranslate">sprite</span> エディタを開いて画像を追加しようとすると、エクスプローラウィンドウのデフォルトの<span class="notranslate">path</span> がこの場所になり、ユーザーは必要な<span class="notranslate">assets</span> を簡単に見つけることができるようになります。</li>
   </ul>
-  <p>For your tutorial to work within the IDE <strong>you must have this folder structure</strong> as well as have a base <span class="inline">HTML</span> start page with a <span class="inline">CSS</span> file for styling. There are a number of special links that can be used within your tutorial projects which will skip to parts of a video, or open the manual on a specific section or function, and these are all given in the official Tutorial templates from the Marketplace.</p>
-  <p class="note"><strong>IMPORTANT!</strong> We strongly suggest that you <a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">download the Tutorial Templates from the Marketplace</a> before attempting to create your own tutorials. They contain examples of all the important parts of the HTML as well as CSS and images to recreate buttons and menus within the tutorial, leaving you free to worry about the content rather than how to display it.</p>
-  <p>Once you have set up the included files and supplied the required information you can click <em>Okay</em> and the tutorial will be uploaded to the Marketplace, opening a workspace on the asset listing when finished so you can edit it and add icons, text, screenshots, etc... Once the tutorial asset has been published, users will be able to find it within the <strong>Tutorials </strong>section of the <a href="../The_Start_Page.htm">Start Page</a>, where it can be downloaded and installed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>チュートリアルを<span class="notranslate">IDE</span> で動作させるには、<strong>このフォルダ</strong>構造と、スタイル設定用の <span class="inline">CSS</span> ファイルを含むベースとなる <span class="inline">HTML</span> のスタートページを用意する<strong>必要が</strong>あります。チュートリアルプロジェクトでは、ビデオの一部をスキップしたり、特定のセクションや機能に関するマニュアルを開いたりするための特別なリンクがいくつか用意されており、これらはすべて<span class="notranslate">Marketplace</span> の公式チュートリアルテンプレートに記載されています。</p>
+  <p class="note"><strong>重要!独</strong>自のチュートリアルを作成する前に、<a href="https://marketplace.yoyogames.com/assets/5132/tutorial-templates">マーケットプレイスからチュートリアル・テンプレートをダウンロード</a>することを強くお勧めします。これらのテンプレートには、HTML の重要な部分の例、チュートリアル内のボタンやメニューを再現するための CSS や画像が含まれており、表示方法よりもコンテンツについて自由に悩むことができます。</p>
+  <p>含まれるファイルを設定し、必要な情報を提供したら、[<em>OK]</em>をクリックするとチュートリアルが<span class="notranslate">Marketplace</span> にアップロードされます。終了すると<span class="notranslate">workspace</span> に<span class="notranslate">asset</span> が表示されるので、編集してアイコンやテキスト、スクリーンショットなどを追加することができます。チュートリアル<span class="notranslate">asset</span> が公開されると、ユーザーは<a href="../The_Start_Page.htm">スタート</a>ページの<strong>チュートリアル </strong>セクションでそれを見つけることができ、そこでダウンロードしてインストールすることができます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Marketplace.htm">The Marketplace</a></div>
-        <div style="float:right">Next: <a href="Listing_A_Service.htm">Listing A Service</a></div>
+        <div style="float:left">戻る<a href="../The_Marketplace.htm">マーケットプレイス</a></div>
+        <div style="float:right">次へ<a href="Listing_A_Service.htm">サービス一覧</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Marketplace - Creating A Tutorial

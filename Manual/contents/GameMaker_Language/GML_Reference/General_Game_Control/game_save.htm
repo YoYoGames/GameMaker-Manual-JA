@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_save</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>ゲームセーブ</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function game_save" />
   <meta name="rh-index-keywords" content="game_save" />
@@ -14,48 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">game_save</span> <span data-conref="../../../assets/snippets/Tag_deprecated.hts"> </span></h1>
-  <p>This is a legacy function that can be used to save the current state of the game, and is not recommended for use anymore. Use the <a href="../File_Handling/File_Handling.htm">file functions</a> or <a href="../Buffers/Buffers.htm">buffer functions</a> instead to create a custom save system where you only save and load specific game data.</p>
-  <p>This function will save the game&#39;s state as it is, however it will not save any dynamic resources being used at that time, such as data structures, surfaces, assets added at runtime, etc. If such a save file is loaded, any game updates that were made after the save will not be visible, as it will restore the version of the game that was used to create the save.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_deprecated.hts"> </span> Save files created using this function may not be supported by updated <a class="glossterm" data-glossterm="Runtime" href="#">Runtime</a> versions, so replacing this function with a new save system is essential to ensure compatibility with future <span data-keyref="GameMaker Name">GameMaker</span> updates, and for the reasons listed above, updates made to your own game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">game_save</span>(filename);</p>
+  <h1>ゲームセーブ</h1>
+  <p>これは、ゲームの現在の状態を保存するために使用できるレガシー関数であり、もう使用することは推奨されません。特定のゲームデータのみを保存、読み込みするカスタムセーブシステムを作成する場合は、代わりに<a href="../File_Handling/File_Handling.htm">ファイル関数を</a>使用してください。</p>
+  <p>この関数は、ゲームの状態をそのまま保存しますが、その時点で使用されている動的なリソース（データ構造、サーフェス、<span class="notranslate">assets</span> で追加された<span class="notranslate">runtime</span> など）は保存されません。このようなセーブファイルをロードすると、セーブを作成するために使用したゲームのバージョンを復元するため、セーブ後に行われたゲームの更新は表示されません。</p>
+  <p>なお、この機能で作成されたセーブファイルは、アップデートされた<a class="glossterm" data-glossterm="ランタイム" href="#">ランタイムバージョンに</a>対応しない場合がありますので、今後の<span class="notranslate">GameMaker</span> のアップデート、および上記の理由によりご自身のゲームのアップデートを行う際には、この機能を新しいセーブシステムに置き換えることが不可欠となります。</p>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">game_save(filename);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
       <tr>
-        <td>filename</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the file to save the game to.</td>
-      </tr>
+        <td><span class="notranslate">filename</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the file to save the game to.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br />
     {<br />
         global.Saved = true;<br />
         game_save(&quot;Save.dat&quot;);<br />
     }</p>
-  <p>The above code will set a global variable to <span class="inline">true</span> and then save the game to the file &quot;Save.dat&quot; when the key &quot;S&quot; is pressed.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、グローバル変数に <span class="inline">true</span> を設定し、キー「S」が押されたときに「Save.dat」というファイルにゲームを保存します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Game_Control.htm">General Game Control</a></div>
-        <div style="float:right">Next: <a href="game_save_buffer.htm">game_save_buffer</a></div>
+        <div style="float:left">戻る<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
+        <div style="float:right">次のページ <a href="game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_save

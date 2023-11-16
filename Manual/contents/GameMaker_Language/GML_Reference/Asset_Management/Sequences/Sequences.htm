@@ -3,60 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Sequences</title>
+  <title>シーケンス</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Sequences" />
-  <meta name="rh-index-keywords" content="Sequences" />
+  <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Sequences" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Sequences</span></h1>
-  <p>Sequences are usually created in the IDE using <a data-xref="{title}" href="../../../../The_Asset_Editors/Sequences.htm">The Sequence Editor</a>, but they can also be created and edited using code. However, before looking at the functions available, it&#39;s important to understand the way that sequences are defined in <span data-keyref="GameMaker Name">GameMaker</span> and the different terms that will be used.</p>
-  <p>To start with, at the top level, you have a <b>sequence element</b>. This is what you place on a layer in a room, either through <a data-xref="{title}" href="../../../../The_Asset_Editors/Rooms.htm">The Room Editor</a> or in code using the appropriate <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">layer functions</a>. The layer element has no real properties other than an element ID value, but this ID is required to use the above mentioned layer functions to change the sequence playback or to access the sequence data.</p>
-  <p>Next you have <b>sequence objects</b> and <b>sequence instances</b> much like you have general objects and instances. A sequence <i>object</i> is the base resource as you created it in <a data-xref="{title}" href="../../../../Introduction/The_Asset_Browser.htm">The Asset Browser</a> or using the function <span class="inline3_func"><a data-xref="{title}" href="sequence_create.htm">sequence_create</a></span>, and the sequence <i>instance</i> is the &quot;copy&quot; of that sequence object that has been placed in a room as an element on a layer. Think of sequence objects as blueprints and sequence instances as the creation from those blueprints. Sequence objects and instances are <a href="../../../GML_Overview/Structs.htm">structs</a> and - unlike regular objects - a sequence object struct can be edited at runtime, which will affect all further instances of that sequence when you create them as elements (and any editing done to a sequence object will <b>not</b> be reset by restarting the game or the room using the <span class="inline3_func"><a data-xref="{title}" href="../Rooms/room_restart.htm">room_restart</a></span> or <span class="inline3_func"><a data-xref="{title}" href="../../General_Game_Control/game_restart.htm">game_restart</a></span> functions). The sequence instance struct contains a few parameters to control playback and things (this is explained in more detail below) as well as the <b>sequence data</b> struct.</p>
-  <p>Finally, as mentioned above, you have the <b>sequence data</b>, which is another struct. This struct contains <i>all</i> the data about the sequence. The tracks it contains, the properties those tracks have, the playback speed and much more. The exact details of this structs contents are outlined below, but basically consists of <b>asset track</b> structs and <b>parameter track</b> structs which use <b>keyframe data</b> to actually perform actions while the sequence plays.</p>
-  <p>Sequence elements are dealt with using the room <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">layer functions</a>, but for sequence objects, instances and data we have the following functions:</p>
-  <p> </p>
+  <h1>シーケンス</h1>
+  <p>シーケンスは通常、<span class="notranslate">IDE</span> 、<a href="../../../../The_Asset_Editors/Sequences.htm">シーケンスエディタを</a>使用して作成しますが、コードを使用して作成および編集することもできます。しかし、利用可能な機能を見る前に、<span class="notranslate">sequences</span> が<span class="notranslate">GameMaker</span> で定義されている方法と、これから使われるさまざまな用語を理解することが重要です。</p>
+  <p>まず、トップレベルでは、<b>sequence 要素が</b>あります。これは、<span class="notranslate">room</span> のレイヤーに配置するもので、<span class="notranslate">Room</span> エディターで、あるいはコードで適切な<a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">レイヤー関数を</a>使用します。レイヤー要素は要素IDの値以外には何の特性も持ちませんが、このIDは上記のレイヤー関数を使用して<span class="notranslate">sequence</span> の再生を変更したり、<span class="notranslate">sequence</span> のデータにアクセスするために必要です。</p>
+  <p>次に、一般的な<span class="notranslate">objects</span> とインスタンスと同じように、<b>シーケンスオブジェクトと</b> <b>シーケンスインスタンスが</b>あります。<span class="notranslate">sequence</span> <i>オブジェクトは</i>、<b>アセットブラウザで</b>作成したベースリソース、または関数 <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a>そして、<span class="notranslate">sequence</span> <i>インスタンスは</i>、レイヤー上の要素として<span class="notranslate">sequence</span> に配置された、その<span class="notranslate">object</span> <span class="notranslate">room</span> の「コピー」である。<span class="notranslate">sequence</span> <span class="notranslate">objects</span> は青写真、<span class="notranslate">sequence</span> インスタンスはその青写真から作成されたものと考えてください。<span class="notranslate">Sequence</span> <span class="notranslate">objects</span> とインスタンスは<a href="../../../GML_Overview/Structs.htm">構造体で</a>、通常の<span class="notranslate">objects</span> とは異なり、<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> は<span class="notranslate">runtime</span> で編集でき、そのインスタンスを要素として作成すると、さらにその<span class="notranslate">sequence</span> のインスタンスすべてに影響します (<span class="notranslate">sequence</span> <span class="notranslate">object</span> に行った編集はゲームや<span class="notranslate">room</span> を <span class="inline">room_restart()</span> や <span class="inline">game_restart()</span> 機能で再起動してもリセットさ<b>れません</b>)。<span class="notranslate">sequence</span> インスタンス<span class="notranslate">struct</span> には、<b>シーケンスデータ</b> <span class="notranslate">struct</span> の他に、再生などを制御するためのいくつかのパラメータが含まれています（これについては後ほど詳しく説明します）。</p>
+  <p>最後に、前述のように<b>シーケンスデータ</b>ですが、これも<span class="notranslate">struct</span> 。この<span class="notranslate">struct</span> には、<span class="notranslate">sequence</span> に関する<i>すべての</i>データが含まれています。 含まれているトラック、それらのトラックが持つプロパティ、再生速度など、多くの情報が含まれています。この<span class="notranslate">structs</span> の内容の詳細は後述しますが、基本的には<b>アセットトラック</b> <span class="notranslate">structs</span> と<b>パラメータトラック</b> <span class="notranslate">structs</span> で構成されており、<b>キーフレーム・データを</b>使って<span class="notranslate">sequence</span> の再生中に実際にアクションを行います。</p>
+  <p>配列要素は<span class="notranslate">room</span> <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">レイヤーの関数で</a>扱いますが、<span class="notranslate">sequence</span> <span class="notranslate">objects</span> 、インスタンス、データについては、以下のような関数があります。</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="sequence_exists.htm">sequence_exists</a></li>
-    <li><a href="sequence_create.htm">sequence_create</a></li>
-    <li><a href="sequence_destroy.htm">sequence_destroy</a></li>
-    <li><a href="sequence_get.htm">sequence_get</a></li>
-    <li><a href="sequence_track_new.htm">sequence_track_new</a></li>
-    <li><a href="sequence_keyframe_new.htm">sequence_keyframe_new</a></li>
-    <li><a href="sequence_keyframedata_new.htm">sequence_keyframedata_new</a></li>
-    <li><a href="sequence_get_objects.htm">sequence_get_objects</a></li>
-    <li><a href="sequence_instance_override_object.htm">sequence_instance_override_object</a></li>
+    <li><a href="sequence_exists.htm"><span class="notranslate">sequence_exists</span></a></li>
+    <li><a href="sequence_create.htm"><span class="notranslate">sequence_create</span></a></li>
+    <li><a href="sequence_destroy.htm"><span class="notranslate">sequence_destroy</span></a></li>
+    <li><a href="sequence_get.htm"><span class="notranslate">sequence_get</span></a></li>
+    <li><a href="sequence_track_new.htm"><span class="notranslate">sequence_track_new</span></a></li>
+    <li><a href="sequence_keyframe_new.htm"><span class="notranslate">sequence_keyframe_new</span></a></li>
+    <li><a href="sequence_keyframedata_new.htm"><span class="notranslate">sequence_keyframedata_new</span></a></li>
+    <li><a href="sequence_get_objects.htm"><span class="notranslate">sequence_get_objects</span></a></li>
+    <li><a href="sequence_instance_override_object.htm"><span class="notranslate">sequence_instance_override_object</span></a></li>
   </ul>
-  <p> </p>
-  <p>There is also a <strong>built-in variable</strong> associated with instances that can be used to determine of the instance has been used in a sequence or not:</p>
-  <p> </p>
+  <p> </p>
+  <p>また、インスタンスに関連する<strong>組み込み変数が</strong>あり、インスタンスが<span class="notranslate">sequence</span> で使用されたかどうかを判断するために使用することができます。</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="in_sequence.htm">in_sequence</a></li>
+    <li><a href="in_sequence.htm"><span class="notranslate">in_sequence</span></a></li>
   </ul>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"> </span> If your sequence has any instances in it, these instances shouldn&#39;t change their <span class="inline2"><a data-xref="{title}" href="../Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span> / <span class="inline2"><a data-xref="{title}" href="../Sprites/Sprite_Instance_Variables/image_yscale.htm">image_yscale</a></span> / <span class="inline2"><a data-xref="{title}" href="../Sprites/Sprite_Instance_Variables/image_angle.htm">image_angle</a></span> / <span class="inline2">x</span> / <span class="inline2">y</span> variables as they will be overwritten when the sequence updates each step after starting to be played.</p>
-  <p> </p>
-  <p>Before using these functions to create or edit sequences, we recommend that you read the detailed descriptions given below for the struct properties. A general overview of how to create a new sequence would be:</p>
+  <p class="note"><strong>重要!</strong> <span class="notranslate">sequence</span> にインスタンスがある場合、これらのインスタンスは<span class="inline"><span style="font-size:14px;">image_xscale</span> /<span class="inline"><span style="font-size:14px;">image_yscale</span> / <span class="inline"><span style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span> /<span class="inline"><span style="font-size:14px;">y</span> の変数を変更してはいけません。再生開始後に<span class="notranslate">sequence</span> が各ステップを更新するときに上書きされてしまうからです。</p>
+  <p> </p>
+  <p>これらの関数を使用して<span class="notranslate">sequences</span> を作成または編集する前に、<span class="notranslate">struct</span> プロパティに関する以下の詳細な説明を読むことをお勧めします。新しい<span class="notranslate">sequence</span> を作成する方法の一般的な概要は、次のとおりです。</p>
   <ul class="colour">
-    <li>Create the new sequence object using the function <span class="inline3_func"><a data-xref="{title}" href="sequence_create.htm">sequence_create</a></span> and store the sequence object index in a variable. This index gives you access to the sequence object struct.</li>
+    <li>関数 <span class="inline"><a href="sequence_create.htm">sequence_create()</a></span> を使って新しい<span class="notranslate">sequence</span> <span class="notranslate">object</span> を作成し、<span class="notranslate">sequence</span> <span class="notranslate">object</span> のインデックスを変数に格納します。このインデックスにより、<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> にアクセスすることができます。</li>
   </ul>
   <p class="code">myseq = sequence_create();</p>
   <ul class="colour">
-    <li>Set the sequence object top level values like length, play mode, play speed, etc. For example:</li>
+    <li>長さ、再生モード、再生速度など、<span class="notranslate">sequence</span> <span class="notranslate">object</span> のトップレベルの値を設定します。例えば</li>
   </ul>
   <p class="code">myseq.length = 120;<br />
     myseq.loopmode = seqplay_pingpong</p>
   <ul class="colour">
-    <li>Before you can add tracks to the sequence object, you need to create them, so you&#39;d now create an array of <i>asset</i> tracks that have been defined with the function <span class="inline3_func"><a data-xref="{title}" href="sequence_track_new.htm">sequence_track_new</a></span>. Note that in code, there is really no difference between asset tracks and parameter tracks - they are all simply tracks and how they behave will depend on the type of track you create and whether they are assigned as sub-tracks to a top level track or not. So, you would create a track for an asset, and then assign sub-tracks for the different parameters to it and these sub-tracks would act as the <i>parameter</i> tracks for the asset. The example below creates a single graphics asset track that will be added to the sequence later:</li>
+    <li><span class="notranslate">sequence</span> <span class="notranslate">object</span> にトラックを追加する前に、トラックを作成する必要があります。そこで、関数 <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>.コード上では、<span class="notranslate">asset</span> トラックとパラメータトラックに違いはありません。これらはすべて単なるトラックで、作成するトラックの種類と、トップレベルトラックのサブトラックとして割り当てられているかどうかによって、動作が異なりますのでご注意ください。つまり、<span class="notranslate">asset</span> のトラックを作成し、それに異なるパラメータ用のサブトラックを割り当て、これらのサブトラックは<span class="notranslate">asset</span> の<i>パラメータ</i>トラックとして機能します。以下の例では、単一のグラフィックス<span class="notranslate">asset</span> トラックを作成し、後で<span class="notranslate">sequence</span> に追加します。</li>
   </ul>
   <p class="code">var mytracks = array_create(1);<br />
     mytracks[0] = sequence_track_new(seqtracktype_graphic);</p>
   <ul class="colour">
-    <li>Each asset track needs to have some data to tell the sequence how it will look, or its position , etc... and this is added in the form of <i>keyframes</i>. At the top level for an asset track, you can set keyframes for various things (listed in the section on the Track Struct, below), but note that as these are asset track keyframes, they won&#39;t be interpolated and will simply change the value they refer to when the given frame is reached. Each keyframe is a struct that is added to an array, and then this array is assigned to the asset track. To create the keyframe struct we would call the function <span class="inline3_func"><a data-xref="{title}" href="sequence_keyframe_new.htm">sequence_keyframe_new</a></span> and to populate the keyframe with the required data, we would use the function <span class="inline3_func"><a data-xref="{title}" href="sequence_keyframedata_new.htm">sequence_keyframedata_new</a></span>:</li>
+    <li><span class="notranslate">asset</span> 各トラックには、<span class="notranslate">sequence</span> にどのように見えるか、またはその位置などを伝えるためのデータが必要で、これは<i>キーフレームという</i>形で追加されます。<span class="notranslate">asset</span> トラックのトップレベルでは、さまざまなものに<span class="notranslate">keyframes</span> を設定できます（以下のトラック<span class="notranslate">Struct</span> のセクションに記載）。ただし、これらは<span class="notranslate">asset</span> トラック<span class="notranslate">keyframes</span> なので、補間されず、与えられたフレームに到達したときに参照する値を変更するだけであることに注意してください。各<span class="notranslate">keyframe</span> は<span class="notranslate">struct</span> を配列に追加したもので、この配列が<span class="notranslate">asset</span> トラックに代入されます。<span class="notranslate">keyframe</span> <span class="notranslate">struct</span> を作成するために、私たちは関数 <a href="sequence_keyframe_new.htm"><span class="inline">sequence_keyframe_new()</span></a>そして、<span class="notranslate">keyframe</span> に必要なデータを入力するために、私たちは関数 <a href="sequence_keyframedata_new.htm"><span class="inline">sequence_keyframedata_new()</span></a>:</li>
   </ul>
   <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
@@ -77,13 +77,13 @@
     mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
     mytracks[0].keyframes = graphickeys;</p>
   <ul class="colour">
-    <li>We now need to create a parameter track which we&#39;ll assign as a sub-track to the graphics track we just created. This will be done in a similar way as shown above, only now we need to give the track a name that shows its purpose, in this case &quot;position&quot; as we&#39;ll be using this track to move the graphics track track over the course of the sequence animation frames:</li>
+    <li>次に、先ほど作成したグラフィックトラックのサブトラックとして割り当てるパラメータトラックを作成する必要がありま す。このトラックは、<span class="notranslate">sequence</span> のアニメーションフレームの中で、グラフィックトラックのトラックを動かすのに使います。</li>
   </ul>
   <p class="code">// Create a new parameter track struct for the position of the graphic<br />
     var paramtracks = array_create(1);<br />
     paramtracks[0] = sequence_track_new(seqtracktype_real);<br />
     paramtracks[0].name = &quot;position&quot;;<br />
-    paramtracks[0].interpolation = seqinterpolation_lerp;<br />
+    paramtracks[0].interpolation = true;<br />
     // Create the keyframe struct to hold the parameter channel data and set the frame position for the keyframe<br />
     var paramkeys = array_create(2);<br />
     paramkeys[0] = sequence_keyframe_new(seqtracktype_real);<br />
@@ -111,35 +111,35 @@
     // Assign the keys to the parameter track<br />
     paramtracks[0].keyframes = paramkeys;</p>
   <ul class="colour">
-    <li>With that done, the final thing to do is assign the parameter track as a sub-track to our main graphics asset track that we created at the beginning and then assign these tracks to the sequence which we can then create an instance of in the room:</li>
+    <li>最後に、パラメータトラックを、最初に作成したメイングラフィック<span class="notranslate">asset</span> トラックのサブトラックとして割り当て、これらのトラックを<span class="notranslate">sequence</span> に割り当てて、ルーム内にインスタンスを作成します。</li>
   </ul>
   <p class="code">mytracks[0].tracks = paramtracks;<br />
     myseq.tracks = mytracks;<br />
     layer_sequence_create(&quot;Assets_1&quot;, 0, 0, myseq);</p>
-  <p>The above instructions create a very simple sequence object that draws a sprite at the (0, 0) position <i>of the sequence</i> and then moves it to the bottom-right corner and back in a loop. As mentioned, there are a number of places where you need to access different structs to give or get data about the sequence, and the sections below list all the different properties that these structs contain:</p>
+  <p>上記の命令では、<i>シーケンスの</i>(0, 0) の位置に<span class="notranslate">sequence</span> を描き、それを<span class="notranslate">object</span> で右下隅に移動して戻すという、非常に単純な<span class="notranslate">sprite</span> <span class="notranslate">loop</span> を作成しています。前述のように、<span class="notranslate">structs</span> についてのデータを与えたり取得したりするために、異なる<span class="notranslate">sequence</span> にアクセスしなければならない場所が多数あり、以下のセクションでは、これらの<span class="notranslate">structs</span> が含むすべての異なるプロパティをリストアップしています。</p>
   <ul class="colour">
-    <li><a name="object"></a><a href="Sequence_Structs/The_Sequence_Object_Struct.htm"><label for="1">The Sequence Object Struct</label></a></li>
-    <li><a name="instance"></a><a href="Sequence_Structs/The_Sequence_Instance_Struct.htm"><label for="2">The Sequence Instance Struct</label></a></li>
-    <li><a name="track"></a><a href="Sequence_Structs/The_Track_Struct.htm"><label for="3">The Track Struct</label></a></li>
-    <li><a name="keyframe"></a><a href="Sequence_Structs/The_Keyframe_Struct.htm"><label for="4">The Keyframe Struct</label></a></li>
-    <li><a name="keyframe_data"></a><a href="Sequence_Structs/The_Keyframe_Data_Struct.htm"><label for="5">The Keyframe Data Struct</label></a></li>
+    <li><a name="object"></a><a href="Sequence_Structs/The_Sequence_Object_Struct.htm"><label for="1"><span class="notranslate">Sequence</span> <span class="notranslate">Object</span> 構造</label></a></li>
+    <li><a name="instance"></a><a href="Sequence_Structs/The_Sequence_Instance_Struct.htm"><label for="2"><span class="notranslate">Sequence</span> インスタンス構造</label></a></li>
+    <li><a name="track"></a><a href="Sequence_Structs/The_Track_Struct.htm"><label for="3">トラック構造</label></a></li>
+    <li><a name="keyframe"></a><a href="Sequence_Structs/The_Keyframe_Struct.htm"><label for="4"><span class="notranslate">Keyframe</span> 構造</label></a></li>
+    <li><a name="keyframe_data"></a><a href="Sequence_Structs/The_Keyframe_Data_Struct.htm"><label for="5"><span class="notranslate">Keyframe</span> データ構造</label></a></li>
   </ul>
-  <p> </p>
-  <p>Finally, it is possible to add code to sequences that can be triggered as either an <strong>event</strong> a <strong>moment</strong> or as a <strong>broadcast message</strong>. This is explained fully on the following page:</p>
+  <p> </p>
+  <p>最後に、<span class="notranslate">sequences</span> にコードを追加して、<strong>イベントアモーメント</strong>または<strong>ブロードキャスト</strong>メッセージとしてトリガーさせることができます。これについては、次のページで詳しく説明します。</p>
   <ul class="colour">
-    <li><a href="Sequence_Events_Moments_Broadcast.htm">Events, Moments and Broadcast Messages</a></li>
+    <li><a href="Sequence_Events_Moments_Broadcast.htm">イベント、モーメント、ブロードキャストメッセージ</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asset_Management.htm">Asset Management</a></div>
-        <div style="float:right">Next: <a href="../Fonts/Fonts.htm">Fonts</a></div>
+        <div style="float:left">戻る<a href="../Asset_Management.htm">アセットマネジメント</a></div>
+        <div style="float:right">次へ<a href="../Fonts/Fonts.htm">フォント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequences

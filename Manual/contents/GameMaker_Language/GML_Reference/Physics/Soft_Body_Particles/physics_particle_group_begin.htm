@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_particle_group_begin</title>
+  <title>物理学_粒子グループ_開始</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_group_begin" />
   <meta name="rh-index-keywords" content="physics_particle_group_begin,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_group_begin</h1>
-  <p>With this function you can create a group of particles in a room. A group of particles is one where the particles necessary to create a specific form are created all at once as a group, permitting you to create simulated soft-bodies with various properties set by the flags used. The &quot;flags&quot; are the return value of a combination of the <b>particle constants</b> (see the function <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> for details of these), while the &quot;groupFlags&quot; are a combination of the following <b>group constants</b> (or 0 for no flags):</p>
+  <h1>物理学_粒子グループ_開始</h1>
+  <p><span class="notranslate">room</span>粒子群とは、ある形を作るのに必要な粒子をまとめて作るもので、<span class="notranslate">flags</span> によって様々な特性を持ったソフトボディのシミュレーションを行うことができます。フラグ &quot;は<b>パーティクル定数の</b>組み合わせの戻り値です（関数 <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a>は，以下の<b>グループ定数の</b>組み合わせであり，&quot;groupFlags&quot; は<span class="notranslate">flags</span> を含まない場合は 0 となります。</p>
   <table>
     <colgroup>
       <col />
@@ -23,123 +23,123 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Phy_Particle_Group_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_group_begin.htm">Physics Particle Group Flag Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Phy_Particle_Group_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_group_begin.htm">物理学 粒子群<span class="notranslate">Flag</span> 定数</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_group_flag_solid</span></td>
-        <td>A solid particle group prevents other fixtures from lodging inside of it. Should anything penetrate it, the solid particle group pushes the offending fixture back out to its surface, making a a solid particle group possess an especially strong repulsive force.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_group_flag_solid</span></td>
+        <td>固体粒子群は、他の什器がその内部に留まることを防ぐ。万が一、貫通した場合でも、固体粒子群がその表面へ押し戻すため、固体粒子群は特に強い反発力を持っています。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_group_flag_rigid</span></td>
-        <td>Rigid particle groups are ones whose shape does not change, even when they collide with other fixtures.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_group_flag_rigid</span></td>
+        <td>リジッドパーティクルグループとは、他のフィクスチャと衝突しても形状が変化しないパーティクルのことです。</td>
       </tr>
     </tbody>
   </table>
-  <p>These group flags use bit-masking to create a final output value that is then checked to set the different basic properties of the group, apart from those set by the particle flags. You can use none, one or both of these constants by using the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask the appropriate bits (as shown in the example below).</p>
-  <p>Other than the flags, you can also set the position in the room to create the particle group at (the position given will be the center of mass of the finished group), the initial horizontal and vertical velocity, as well as the angular velocity of the group, permitting you to create moving, rotating groups.</p>
-  <p>You can also set initial colour and alpha of all particles in the group, with the values being used when drawing the particles using the function <a href="physics_particle_draw.htm"><span class="inline">physics_particle_draw()</span></a>. After that you set the cohesive strength of particles in the group, which is another way of saying how strongly they &quot;stick&quot; to each other. The strength can be a value between 0 and 1, where 0 is no cohesion, and 1 is maximum cohesion.</p>
-  <p>Finally you have to give the category for your particle group. This value is an arbitrary integer value that you give each particle group that you want to have similar properties, and it can be used to set flags later for that specific category as well as a number of other things.</p>
-  <p class="note"><b>NOTE</b>: You can use any integer value for the category <b>except 0</b> which is reserved by the simulation and is used to select all categories in other functions (like for drawing).</p>
-  <p>It is important to note that calling this function does <i>not</i> create the group in the physics room. This function simply begins the process and sets the base particle properties for the group. To actually create the particle group you need to give it a <i>form</i> (see the example below) and then call the function <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>, at which point it will be created.</p>
-  <p class="note"><b>NOTE</b>: The particle type flags that you set will also influence the cohesion of the particle group, such that if you flag the particles as being of the water type (for example), when the group collides with another fixture it will break apart, while if you flag the particle as a spring type, then it will maintain its cohesion on collision.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>これらのグループ<span class="notranslate">flags</span> はビットマスキングを使用して最終的な出力値を作成し、それをチェックして、パーティクル<span class="notranslate">flags</span> によって設定されるものとは別に、グループのさまざまな基本的なプロパティを設定するのです。<a href="../../../../Additional_Information/Bitwise_Operators.htm">ビットワイズ<i>または&quot;</i></a>|&quot;を使用して適切なビットをマスクすることで、これらの定数のどれも、一方または両方を使用できます（以下の例で示すように）。</p>
+  <p><span class="notranslate">flags</span> 以外に、<span class="notranslate">room</span> でパーティクルグループを作成する位置（指定した位置が完成したグループの重心になります）、水平・垂直方向の初期速度、グループの角速度を設定できますので、移動・回転するグループを作成することも可能です。</p>
+  <p>また、グループ内の全パーティクルの初期色とアルファ値を設定することができ、その値は関数 <a href="physics_particle_draw.htm"><span class="inline">physics_particle_draw()</span></a>.その後、グループ内のパーティクルの凝集力を設定します。これは、パーティクル同士がどれだけ強く「くっつく」かを別の言い方で表現したものです。強さは 0 から 1 の間の値で、0 は凝集力がない状態、1 は最大凝集力を意味します。</p>
+  <p>最後に、パーティクルグループのカテゴリーを指定します。この値は任意の整数値で、似たようなプロパティを持たせたいパーティクルグループに与えます。この値は、後でその特定のカテゴリに対して<span class="notranslate">flags</span> を設定したり、その他様々なことに利用することができます。</p>
+  <p class="note"><b>注</b>：カテゴリーには、シミュレーションで予約され、他の機能（描画など）ですべてのカテゴリーを選択するために使用される<b>0以外の</b>任意の整数値を使用することができます。</p>
+  <p>注意すべきは、この関数を呼び出しても、物理学<span class="notranslate">room</span> にグループが作成さ<i>れない</i>ことです。この関数は単に処理を開始し、グループの基本的なパーティクルプロパティを設定するだけです。実際にパーティクルグループを作成するには、それに<i>フォームを</i>与え（下の例参照）、それからこの関数 <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>この時点で作成されます。</p>
+  <p class="note"><b>注</b>：設定したパーティクルタイプ<span class="notranslate">flags</span> はパーティクルグループの凝集力にも影響します。例えば、パーティクルを水タイプとして<span class="notranslate">flag</span> した場合（例）、グループが他のフィクスチャと衝突するとバラバラになりますが、パーティクルをスプリングタイプとして<span class="notranslate">flag</span> した場合、衝突しても凝集力が維持されます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">physics_particle_group_begin(flags, groupflags, x, y, ang, xv, yv, ang_velocity, col, alpha, strength, category)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_create.htm">Physics Particle Flag Constant</a></span>(s)</td>
-        <td>The flags to set on the particle.</td>
+        <td><span class="notranslate">flags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_create.htm">物理学 粒子<span class="notranslate">Flag</span> 定数</a></span>(s)</td>
+        <td><span class="notranslate">The flags to set on the particle.</span></td>
       </tr>
       <tr>
-        <td>groupflags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_group_begin.htm">Physics Particle Group Flag Constant</a></span>(s)</td>
-        <td>The group flags to set on the particle group (see table at the top).</td>
+        <td><span class="notranslate">groupflags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_group_begin.htm">物理学 粒子群<span class="notranslate">Flag</span> 定数</a></span>(s)</td>
+        <td><span class="notranslate">The group flags to set on the particle group (see table at the top).</span></td>
       </tr>
       <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The x position to create the particle group at.</td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The x position to create the particle group at.</span></td>
       </tr>
       <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The y position to create the particle group at.</td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The y position to create the particle group at.</span></td>
       </tr>
       <tr>
-        <td>ang</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The angle (in degrees) to rotate the group to on create.</td>
+        <td><span class="notranslate">ang</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The angle (in degrees) to rotate the group to on create.</span></td>
       </tr>
       <tr>
-        <td>xv</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The initial horizontal velocity.</td>
+        <td><span class="notranslate">xv</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The initial horizontal velocity.</span></td>
       </tr>
       <tr>
-        <td>yv</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The initial vertical velocity.</td>
+        <td><span class="notranslate">yv</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The initial vertical velocity.</span></td>
       </tr>
       <tr>
-        <td>ang_velocity</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The initial angular velocity.</td>
+        <td><span class="notranslate">ang_velocity</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The initial angular velocity.</span></td>
       </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Constant_Colour"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">Colour</a></span></td>
-        <td>The base colour to use for the particle group.</td>
+        <td><span class="notranslate">col</span></td>
+        <td><span data-keyref="Type_Constant_Colour"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm">カラー</a></span></td>
+        <td><span class="notranslate">The base colour to use for the particle group.</span></td>
       </tr>
       <tr>
-        <td>alpha</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The base alpha to use for the particle group.</td>
+        <td><span class="notranslate">alpha</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The base alpha to use for the particle group.</span></td>
       </tr>
       <tr>
-        <td>strength</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>Set the cohesion strength between particles in the group.</td>
+        <td><span class="notranslate">strength</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">Set the cohesion strength between particles in the group.</span></td>
       </tr>
       <tr>
-        <td>category</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The user defined category to which the group belongs.</td>
+        <td><span class="notranslate">category</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span class="notranslate">The user defined category to which the group belongs.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br />
     var groupflags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br />
     physics_particle_group_begin(flags, groupflags, mouse_x, mouse_y, 0, 0, 0, 0, c_white, 1, 1, 2);<br />
     physics_particle_group_circle(100);<br />
     mLastGroup = physics_particle_group_end();</p>
-  <p>The above code stores the flags for the particle type and the particle group properties in variables then uses these to create a circular particle group with a 100px radius at the mouse position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p><span class="notranslate">flags</span> 上記のコードでは、パーティクルの種類とパーティクルグループのプロパティを変数に格納し、それらを使ってマウス位置で半径100pxの円形パーティクルグループを作成しています。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_group_circle.htm">physics_particle_group_circle</a></div>
+        <div style="float:left">背中<a href="Soft_Body_Particles.htm">ソフトボディーの粒子</a></div>
+        <div style="float:right">次のページ <a href="physics_particle_group_circle.htm"><span class="notranslate">physics_particle_group_circle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_group_begin

@@ -6,7 +6,7 @@
   <title>physics_particle_set_category_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_category_flags" />
   <meta name="rh-index-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
@@ -15,93 +15,93 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_set_category_flags</h1>
-  <p>With this function you can change the particle flags for a category of particles. The <span class="inline">category</span> value is that which you defined in the function <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> or (if you created a group) <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, while the flags are the return value of a combination of the following <b>constants</b>:</p>
+  <p>この機能を使うと、パーティクルカテゴリのパーティクル<span class="notranslate">flags</span> を変更することができます。 <span class="inline">category</span> の値は、この関数で定義したものです。 <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a>または (グループを作成した場合) <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>であり、<span class="notranslate">flags</span> は以下の<b>定数の</b>組み合わせの戻り値である。</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>定数</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_water</span></td>
-        <td>The default properties for a soft body particle.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_water</span></td>
+        <td>ソフトボディパーティクルのデフォルトのプロパティです。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_zombie</span></td>
-        <td>A zombie particle is one that will be destroyed in a single step with all others flagged in this way.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_zombie</span></td>
+        <td>ゾンビパーティクルは、このように他のすべてのフラグを立てて1ステップで破壊されるパーティクルです。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_wall</span></td>
-        <td>This defines the particle as <i>static</i>, essentially creating it as an immovable object in the physics simulation, as they will remain in a fixed position no matter what collides with them. You should use this flag rather than set the density to 0.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_wall</span></td>
+        <td>これはパーティクルを<i>静的と</i>定義し、本質的に物理シミュレーションで不動の<span class="notranslate">object</span> 、何が衝突しても固定された位置に留まるように作成します。密度を0に設定するよりも、この<span class="notranslate">flag</span> を使用する必要があります。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_spring</span></td>
-        <td>Spring particles produce the effect of being attached to one another, as if by a spring. Particles created with this flag are &quot;connected&quot; in pairs, with each particle being connected to the one that was closest to it at the time of creation. Once paired, particles do not change &quot;partners&quot; , and the farther an external force pulls them from one another, the greater the power with which they will collide when that external force is removed. Note that no matter how far paired particles get from each another, the connection between them will not snap.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_spring</span></td>
+        <td>スプリングパーティクルは、バネのように互いにくっついたような効果を生み出します。このパーティクル（<span class="notranslate">flag</span> ）で作られたパーティクルは、ペアで「接続」され、それぞれのパーティクルは、作成時に最も近くにいたパーティクルと接続されます。一度ペアになった粒子は「相手」を変えないので、外力に引っ張られるほど、その外力を取り除いたときに衝突する力が大きくなる。なお、対になった粒子がどんなに離れても、粒子間の結合が切れることはない。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_elastic</span></td>
-        <td>Elastic particles deform and may also bounce when they collide with other rigid bodies in the physics simulation.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_elastic</span></td>
+        <td>弾性体パーティクルは、物理シミュレーションで他の剛体と衝突すると変形したり、バウンドしたりすることがあります。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_viscous</span></td>
-        <td>A viscous particle is one that exhibits &quot;clinginess&quot; or &quot;stickiness&quot;, like oil. Viscous particles will clump and stick together more.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_viscous</span></td>
+        <td>粘性粒子とは、油のように「くっつきやすさ」「粘り強さ」を示す粒子のことです。粘性のある粒子は、より固まり、よりくっつきます。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_powder</span></td>
-        <td>Powder particles produce a scattering effect such as you might see with sand or dust.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_powder</span></td>
+        <td>粉体は、砂やホコリのような散乱効果を生み出します。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_tensile</span></td>
-        <td>Tensile particles are used to produce the effect of surface tension, or the taut curvature on the surface of a body of liquid. They might be used, for example, to create the surface tension you would see on a drop of water. Once the tension is broken, the particles bounce as if they were elastic, but also continue to attract each other. As a result, particles tend to form clusters as they bounce.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_tensile</span></td>
+        <td>引張粒子は、表面張力、つまり液体表面の張ったような曲面の効果を出すために使われます。例えば、水滴に見られるような表面張力を発生させるために使用されます。表面張力がなくなると、粒子は弾力性があるように跳ねますが、互いに引き合うようになります。その結果、粒子は弾みながらクラスターを形成する傾向があります。</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_colourmixing</span></td>
-        <td>Colour-mixing particles take on some of the colour of other particles with which they collide. Note that if only one of the two colliding particles is a colour-mixing one, the other particle retains its pre-collision colour.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_colourmixing</span></td>
+        <td>カラーミキシングパーティクルは、衝突した他のパーティクルの色の一部を取り込みます。ただし、衝突する2つのパーティクルのうち1つだけが混色パーティクルの場合、もう1つのパーティクルは衝突前の色を保持します。</td>
       </tr>
     </tbody>
   </table>
-  <p>These flags use bit-masking to create a final output value that is then checked to set the different basic properties of the particle category (with the base property always being that of <span class="inline">phy_particle_flag_water</span>). For example, if you want to simulate a viscous liquid with surface tension you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask off the appropriate bits as shown in the example below. In this way you can set different properties (other than the global properties) for each category of particle created.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>これらの<span class="notranslate">flags</span> はビットマスキングを使用して最終的な出力値を作成し、それをチェックして粒子カテゴリの異なる基本特性を設定します（基本特性は常に <span class="inline">phy_particle_flag_water</span> のものです）。例えば、表面張力を持つ粘性液体をシミュレートしたい場合、以下の例に示すように、<a href="../../../../Additional_Information/Bitwise_Operators.htm">ビットワイズ<i>または</i></a>「｜」を使用して適切なビットをマスクオフします。このように、作成するパーティクルのカテゴリごとに異なるプロパティ（グローバルプロパティ以外）を設定することができます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">physics_particle_set_category_flags(category, flags)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>category</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The particle category to set.</td>
+        <td><span class="notranslate">category</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The particle category to set.</span></td>
       </tr>
       <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">Physics Particle Flag Constant</span>(s)</td>
-        <td>The flags to set on the particle category.</td>
+        <td><span class="notranslate">flags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">物理学 粒子<span class="notranslate">Flag</span> 定数</span>(s)</td>
+        <td><span class="notranslate">The flags to set on the particle category.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br />
     physics_particle_set_category_flags(1, flags);</p>
-  <p>The above code will create a variable to store the flags value and then use it to set the flags of all particles created with the category value of 1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、<span class="notranslate">flags</span> の値を格納する変数を作成し、それを使ってカテゴリ値 1 で作成されたすべてのパーティクルの<span class="notranslate">flags</span> を設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_set_group_flags.htm">physics_particle_set_group_flags</a></div>
+        <div style="float:left">背中<a href="Soft_Body_Particles.htm">ソフトボディーの粒子</a></div>
+        <div style="float:right">次のページ <a href="physics_particle_set_group_flags.htm"><span class="notranslate">physics_particle_set_group_flags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_category_flags

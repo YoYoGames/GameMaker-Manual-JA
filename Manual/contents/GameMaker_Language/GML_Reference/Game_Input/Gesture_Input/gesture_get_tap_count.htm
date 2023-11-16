@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>gesture_get_tap_count</title>
+  <title>ジェスチャー ゲット タップ カウント</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gesture_get_tap_count" />
   <meta name="rh-index-keywords" content="gesture_get_tap_count" />
@@ -15,32 +15,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gesture_get_tap_count</h1>
-  <p>This function is used to check whether tap counting is enabled or disabled. The function will return <span class="inline">true</span> if it is enabled, and <span class="inline">false</span> otherwise and you can enable or disable tap counting using the function <a href="gesture_tap_count.htm"><span class="inline">gesture_tap_count()</span></a>. When enabled, each tap event will have an additional &quot;tapcount&quot; DS map entry which will have registered the number of taps, and when enabled it means that <i>all</i> tap events will be triggered, ie: two taps will trigger both the single tap event and the double tap event, with the single tap event tap count being 1 and the double tap event tap count being 2. The tap count value will be reset to 0 after the time set for a double-tap detection has passed (see the function <a href="gesture_get_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>). If tap counting is disabled, then the initial tap won&#39;t be registered until the double-tap time has passed and no second tap has been detected. Note that this is <b>enabled</b> by default.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h1>ジェスチャー ゲット タップ カウント</h1>
+  <p>この関数は、タップカウントが有効か無効かを確認するために使用されます。この関数は、有効であれば <span class="inline">true</span> を、そうでなければ <span class="inline">false</span> を返します。タップカウントの有効／無効は、関数 <a href="gesture_tap_count.htm"><span class="inline">gesture_tap_count()</span></a>.例えば、2回タップすると、シングルタップイベントとダブルタップイベントの両方が発生し、シングルタップイベントのタップカウントは1、ダブルタップイベントのタップカウントは2になります。タップカウント値は、ダブルタップ検出のための設定時間が経過すると0にリセットされます（機能 <a href="gesture_get_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>).タップカウントを無効にすると、ダブルタップ時間が経過して2回目のタップが検出されない限り、最初のタップは登録されません。なお、デフォルトでは<b>有効になって</b>います。</p>
+  <p> </p>
+  <h4><b>構文です。</b></h4>
   <p class="code">gesture_get_tap_count();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if !gesture_get_tap_count()<br />
     {<br />
         getsure_tap_count(true);<br />
     }</p>
-  <p>The above code checks to see if tap counting is enabled and if it is not then it is switched on.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、タップカウントが有効かどうかを確認し、有効でない場合はオンにします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gesture_Input.htm">Gesture Input</a></div>
-        <div style="float:right">Next: <a href="gesture_get_pinch_distance.htm">gesture_get_pinch_distance</a></div>
+        <div style="float:left">戻る<a href="Gesture_Input.htm">ジェスチャー入力</a></div>
+        <div style="float:right">次のページ <a href="gesture_get_pinch_distance.htm"><span class="notranslate">gesture_get_pinch_distance</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gesture_get_tap_count

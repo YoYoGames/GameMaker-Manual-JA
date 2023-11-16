@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ドラッグ＆ドロップの環境設定</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="The DnD Preferences" />
+  <meta name="rh-index-keywords" content="Prefs - Drag And Drop™" />
+  <meta name="search-keywords" content="DnD Preferences,DnD Prefs" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Drag And Drop™の環境設定</h1>
+  <p><img><strong>Drag and Drop™</strong>Preferences は、Drag and Drop™<span class="notranslate">script</span> エディターの外観や操作性を定義するために使用されます。
+    利用可能なオプションは、それぞれの機能の説明とともに、以下のとおりです。</p>
+  <ul class="colour">
+    <li><strong>DnD™ ツールボックスのデフォルト位置。</strong>デフォルトでは、DnD™ツールボックス（各種アクション・ライブラリが格納されている）はエディタの右側に配置されていますが、このオプションを使用してデフォルトを左側に設定することができます。</li>
+    <li><strong>DnD™ ノードの概要の可視化モード。</strong>ノードの「概要」とは、例えばこの Destroy Instance アクションのように、Action<span class="notranslate">Workspace</span> の特定のアクションの横に表示される短い説明文のことです。<br>
+      <br>
+      <img>これらを常に有効にするか、アクションがコラプスになった場合のみ有効にするか（デフォルト設定）を選択することができます。
+      または完全に無効にします。</li>
+    <li><strong>DnD™からGameMaker言語への変換時の自動応答について</strong>。<span class="notranslate">Drag and Drop</span> イベントまたは<span class="notranslate">script</span> を<span class="notranslate">GML</span> コードに変換すると、デフォルトでこれから行うことについて警告し、続行するかどうかを尋ねるメッセージが表示されます。
+      このオプションを「OK」にすると、メッセージは表示されず、単に変更が許可されます。</li>
+    <li><strong>DnD™ ノード削除時の自動応答。</strong> <span class="notranslate">Drag and Drop</span> イベントノードを削除すると、デフォルトでは、これから行おうとしていることを警告し、続行するかどうかを尋ねるメッセージが表示されます。このオプションを &quot;OK &quot;に設定すると
+      は、メッセージを表示せず、単に削除を許可します。</li>
+    <li><strong>DnD™ツールボックスのアクションサムネイルの最大サイズです。</strong>アクションツールボックスの下部には、<span class="notranslate">Drag and Drop</span> のアイコンのサイズを変更するためのスライダーがあります。この設定は、最大許容サイズ（デフォルト64px）を定義するために使用されます。</li>
+    <li><strong>DnD™ ツールボックスのアクションサムネイルの最小サイズ。</strong>アクションツールボックスの下部には、<span class="notranslate">Drag and Drop</span> のアイコンのサイズを変更するためのスライダーがあります。この設定は、許容される最小サイズを定義するために使用されます（デフォルトは16px）。</li>
+    <li><strong>DnD™ツールボックスのアクションサムネイルのデフォルトサイズ。</strong>この設定は、ツールボックス内のすべてのアクションアイコンのデフォルトサイズを定義するために使用されます（デフォルトは32px）。</li>
+    <li><strong>最近使用したアクションの最大表示数</strong>です。アクションツールボックスの上部には、最近使用したアクションを保存するライブラリがあります。このオプションを使って、最近使用したアクションの最大表示数を変更することができます。
+      が表示されます（デフォルトは5）。</li>
+    <li><strong>DnD™アクションをつなぐ鎖の太さ。</strong> <span class="notranslate">DnD</span> コードブロックの異なるアクションをリンクするチェーングラフィックの太さを定義します（デフォルトは 3px）。</li>
+    <li><strong>ノードのドラッグを開始するまでのマウスダウン時間(ms)</strong>。ノードをクリックしてドラッグすると、アクションコード内でノードの位置が変更されます。しかし、マウスをしばらく押したまま移動すると、アクションコード内でノードを移動させることになります。
+      ノードの位置は、<span class="notranslate">workspace</span> 内にありますが、コードの順序内ではありません。この設定は、ノードの移動（再配置ではない）が可能になるまでに、マウスボタンを押したまま待機しなければならないミリ秒数を設定します。デフォルトは350です。</li>
+    <li><strong>DnD™ ノードの概要パネルを隠す。</strong>ここでは、アクションコードエディタの概要パネルを非表示にすることを選択できます。デフォルトでは無効になっており、有効にするとエディタからアクションチェーンのプレーンテキストリストが削除されます。</li>
+  </ul>
+  <p>また、DnD™コメントのサブメニューも用意されています。</p>
+  <p><img>コメント」環境設定は、コメントの色と書式を制御します。
+    Drag and Drop™ アクション<span class="notranslate">scripts</span> に追加されます。これらのオプションは次のとおりです。</p>
+  <ul class="colour">
+    <li><strong>色</strong>：ウィンドウに書き込まれるテキストのデフォルトの色（デフォルトは<a class="glossterm" data-glossterm="アールジービー" href="#">ARGBの</a>#FF53E270）。</li>
+    <li><strong>フォント名</strong>。使用する<span class="notranslate">font</span> の名前（使用可能な<span class="notranslate">fonts</span> は、システムにインストールされているものに依存します）。</li>
+    <li><strong>スタイル</strong>。<strong>太字や </strong> <em>斜体など </em>、使用する<span class="notranslate">font</span> のスタイル（すべてのウィンドウが同じスタイルを許可するわけではなく、また使用する<span class="notranslate">font</span> にも依存することに注意してください）。</li>
+    <li><strong>サイズ</strong>。指定された出力ウィンドウに対して<span class="notranslate">font</span> を設定するサイズ。</li>
+    <li><strong>アンチエイリアシング</strong>ここでは、出力ウィンドウ<span class="notranslate">font</span> レンダリングの<a class="glossterm" data-glossterm="アンチエイリアス" href="#">アンチエイリアスモードを</a>設定することができます。<em>デフォルトを使用</em>]を選択すると、<span class="notranslate">IDE</span> の判断に任せることができます。
+      または、どちらかを選択することで強制的に<em>On </em>または<em>Offに </em>することができます。</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">戻る：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
+        <div style="float:right">次へ<a href="Image_Editor_Preferences.htm">画像編集の環境設定</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Preferences - Drag & Drop
+Preferences - Drag And Drop
+-->
+  <!-- TAGS
+prefs_drag_and_drop
+-->
+
+</body></html>

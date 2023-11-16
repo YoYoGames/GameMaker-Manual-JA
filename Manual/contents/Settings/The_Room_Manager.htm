@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Room Manager</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>ルームマネージャー</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how to use the Room Manager" />
   <meta name="rh-index-keywords" content="Room Manager" />
@@ -14,48 +13,63 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Room Manager</h1>
-  <p><img alt="The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager.png" style="cursor: nesw-resize;" />When using the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>, you can create your rooms and move them between the different folder groups to organise the project in a way that best suits you. However, games in <span data-keyref="GameMaker Name">GameMaker</span> generally have rooms that follow a certain order, and at the very least must have a specific <strong>start room</strong> (after the game starts in this room you can use code or actions to go to any room in the game if you wish), which is where the <strong>Room Manager</strong> comes into play.</p>
-  <p>You can open the room manager by clicking the &quot;Extras&quot; button <img alt="Extras Menu Icon" class="icon" src="../assets/Images/Icons/Icon_AssetMenu.png" /> at the top of the Asset Browser and selecting it from the menu that opens, or you can simply click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> the icon to the left of a room in the asset browser:</p>
-  <p><img alt="Opening The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Open.gif" />Once open, the Room Manager presents you with two different tabs, one for <strong>Room Order</strong> and one for <strong>Room Inheritance</strong>. The room order defines the order in which rooms will be accessed if you are traversing the game literally, using the function <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><span class="inline">room_goto_next()</span></a> at the end of each room, and the very top room listed will always be flagged by the &quot;home&quot; icon <img alt="Room Manager Home Room Icon" src="../assets/Images/Icons/icon_RoomManager_Home.png" />, which shows you that this room is the designated <em>start </em>room for the game. This icon will also be shown in the Asset Browser so you can see clearly which room it is, regardless of the how you have filtered or set up your assets.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> The IDs of your room assets will not be in the same order as defined in this list, and so you should not supply a number value directly to change the room at runtime. Always use the room <a class="glossterm" data-glossterm="constant" href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto.htm#">constant</a> for the asset you want to reference (which is simply its name) or retrieve it through a function.</p>
-  <p>You can change the order of rooms by simply clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging the room you want to move up or down the list, and you can use <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> and/or <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> to select multiple rooms then click and drag them to move them altogether:</p>
-  <p><img alt="Moving Rooms Within The Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Move.gif" />The <strong>Room Inheritance</strong> tab is for setting up &quot;child&quot; rooms. A child room is one that has been copied from a &quot;parent&quot; room and set to inherit all of its properties. If you do nothing to this room, then this room will indeed be a copy of the original room, but you can then go into the <a href="../The_Asset_Editors/Rooms.htm">Room Editor</a> and toggle inheritance on or off for specific things like layers, or instances, as well as add new layers, instances and properties to the room.</p>
-  <p><img alt="The Room Inheritance Tab" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance.png" />As with the Room Order tab, you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag to reorder the rooms, but note that selecting a child room and moving it to a different parent will break the room inheritance with the original parent and it will instead inherit the properties of the new room. Note too that you can convert a child into a &quot;full&quot; room with no inheritance by dragging it to the left of the list (the list border will become highlighted), at which point it will simply become a room in its own right.</p>
-  <p>Rooms can have multiple children, and each child can also be a parent and have their own children, for example:</p>
-  <p><img alt="Example Of Room Inheritance With Multiple Children" class="center" src="../assets/Images/Settings/Room_Manager_Inheritance_Example.png" />Here we have a parent room, &quot;<span class="inline">rm_Level_1_Day</span>&quot;, which has two children &quot;<span class="inline">rm_Level_1_Day_AfterBattle</span>&quot; and &quot;<span class="inline">rm_Level_1_Night</span>&quot;. We have also assigned another child room to &quot;<span class="inline">rm_Level_1_Night</span>&quot; called &quot; <span class="inline">rm_Level_1_Night_AfterBattle</span>&quot;. In this way you can re-use resources and level design from one parent room, and then only change what is required to make it slightly different in the child room or rooms.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> For more information on room inheritance, please see <a href="../The_Asset_Editors/Room_Properties/Room_Inheritance.htm">here</a>.</p>
-  <p>Finally, the room manager has some extra tools to help you navigate and organise your rooms. At the top you have a <strong>Search Bar</strong> which enables you to add a search term and then quickly go to the rooms that have the search term in their names. Rooms that have the search term in them will be highlighted, and then you can navigate to them instantly using the up/down buttons on the side:</p>
-  <p><img alt="Searching rooms in the Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_Search.gif" />There are also some helpful buttons at the bottom of the Room Manager that permit you to move rooms up or down the room order list:</p>
-  <p><img alt="Moving rooms up or down in the Room Manager" class="center" src="../assets/Images/Settings/Room_Manager_MoveButtons.gif" />Beside these buttons you also have a <strong>Create Group</strong> button which can be used to create a group folder. These folders can be used to better organise the rooms in your game (room order will still be respected), and you can click and drag rooms onto the folder to add them. You can also select multiple rooms by clicking while holding down <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> and/or <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" />, then click the Create Group button and all the selected rooms will be added to the group. Note that this <em>will</em> change the order of the rooms in your game, and also note that if you choose to delete the group folder later, <strong>any rooms within the folder will be deleted too</strong> (by default GameMaker will warn you about this).</p>
-  <p>You should also note that you can right click on any room in the Room Manager to bring up the following menu:</p>
-  <p><img alt="Room Manager RMB menu" class="center" src="../assets/Images/Settings/Room_Manager_Room_RMB_Menu.png" />This menu gives you the following options:</p>
+  <h1><span class="notranslate">Room</span> マネージャー</h1>
+  <p><img><a href="../Introduction/The_Asset_Browser.htm">アセットブラウザを</a>使用する場合、<span class="notranslate">rooms</span> を作成し、アセットブラウザ間で移動することができます。
+    を使用することで、自分の好きなようにプロジェクトを構成することができます。しかし、<span data-keyref="GameMaker Name">GameMakerの</span>ゲームは一般的に、<span class="notranslate">rooms</span> 、一定の順序に従っており、最低でも特定の<strong>スタートルームを</strong>持つ必要があります(After)
+    この<span class="notranslate">room</span> でゲームを開始すると、コードやアクションを使って、ゲーム内の任意の<span class="notranslate">room</span> に移動することができます。</p>
+  <p><span class="notranslate">room</span> マネージャーは、<span class="notranslate">Asset</span> ブラウザーの上部にある「Extras」ボタン<img> をクリックし、開いたメニューから選択することで開くことができます。また、以下の方法もあります。
+    <img> <span class="notranslate">room</span> ブラウザの<span class="notranslate">asset</span> の左側にあるアイコンをクリックするだけです。</p>
+  <p><img> <span class="notranslate">Room</span> マネージャーを開くと、<strong>ルームオーダーと</strong> <strong>ルームインヘリタンスの</strong>2種類のタブが表示されます。
+     の順番は、ゲーム内で にアクセスする順番を定義します。<span class="notranslate">room</span> <span class="notranslate">rooms</span> <a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto_next.htm"><span class="inline">room_goto_next()</span></a>で
+   <span class="notranslate">room</span> また、一番上の<span class="notranslate">room</span> には、常に「ホーム」アイコン<img> が表示され、この<span class="notranslate">room</span> が指定されたものであることが示されます。
+    の<em>スタート </em>ルームになります。このアイコンは<span class="notranslate">Asset</span> ブラウザにも表示されるので、<span class="notranslate">room</span> のフィルタリングや設定に関係なく、どの<span class="notranslate">assets</span> かを明確に確認することができます。</p>
+  <p class="note"><strong>注意</strong>:<span class="notranslate">room</span> <span class="notranslate">assets</span> の ID は、このリストで定義されているのと同じ順番にはならないので、<span class="notranslate">room</span> を<span class="notranslate">runtime</span> で変更するために直接数値の値を与えてはいけない。常に、参照したい<span class="notranslate">asset</span> の部屋<a class="glossterm" data-glossterm="常数" href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/room_goto.htm#">定数</a>(これは単に名前である) を使用するか、関数を通じて取得するようにしてください。</p>
+  <p><img> をクリックし、移動したい<span class="notranslate">rooms</span> を上下にドラッグするだけで<span class="notranslate">room</span> の順番を変更できます。また、<img> や<img> /<img> を使って複数の<span class="notranslate">rooms</span> を選択し、クリック＆ドラッグして全体を移動することも可能です。</p>
+  <p><img><strong>部屋の継承</strong>] タブでは、「子」<span class="notranslate">rooms</span> を設定します。子」<span class="notranslate">room</span> は、「子」 からコピーされたものです。
+    親」<span class="notranslate">room</span> 、そのすべてのプロパティを<span class="notranslate">inherit</span> に設定します。この<span class="notranslate">room</span> に何もしなければ、この<span class="notranslate">room</span> は確かに元の<span class="notranslate">room</span> のコピーになりますが、<a href="../The_Asset_Editors/Rooms.htm">ルームエディタに</a>アクセスして
+    レイヤーやインスタンスなど特定のものの継承のオン・オフを切り替えたり、新しいレイヤーやインスタンス、プロパティを<span class="notranslate">room</span> に追加したりすることができます。</p>
+  <p><img> <span class="notranslate">Room</span> Order タブと同様に、 をクリックし、ドラッグして を並べ替えることができます。ただし、子 を選択して別の親に移動すると、元の親との の継承が切れて、代わりに新しい のプロパティが になることに注意してください。また、次のように変換することもできます。
+    をリストの左側にドラッグすると、継承のない「完全な」 になります（リストの境界線がハイライトされます）。<img> <span class="notranslate">rooms</span> <span class="notranslate">room</span> <span class="notranslate">room</span> <span class="notranslate">inherit</span> <span class="notranslate">room</span> <span class="notranslate">room</span> <span class="notranslate">room</span> </p>
+  <p>部屋は複数の子供を持つことができ、それぞれの子供は親にもなり、自分の子供を持つこともできる、といった具合です。</p>
+  <p><img>ここでは、親である<span class="notranslate">room</span> 、 &quot;<span class="inline">rm_Level_1_Day</span>&quot; があり、2つの子を持つ。
+    &quot;<span class="inline">rm_Level_1_Day_AfterBattle</span>&quot; と &quot;<span class="inline">rm_Level_1_Night</span>&quot; です。また、&quot;<span class="inline">rm_Level_1_Night</span>&quot; には、もうひとつの子 &quot;<span class="notranslate">room</span> &quot; を割り当てています。
+   <span class="inline">rm_Level_1_Night_AfterBattle</span>&quot;.このように、リソースやレベルデザインを親である<span class="notranslate">room</span> から再利用し、子である<span class="notranslate">room</span> や<span class="notranslate">rooms</span> で必要な部分のみを変更して、少し異なるものにすることができます。</p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">room</span> 相続については、<a href="../The_Asset_Editors/Room_Properties/Room_Inheritance.htm">こちらを</a>ご覧ください。</p>
+  <p>最後に、<span class="notranslate">room</span> マネージャーには、<span class="notranslate">rooms</span> をナビゲートし、整理するのに役立つツールがいくつか用意されています。上部にある<strong>検索バーでは</strong>、検索語を追加して、その検索語が含まれる<span class="notranslate">rooms</span> にすばやく移動できます。
+    <span class="notranslate">Rooms</span> 、検索語が含まれているものはハイライト表示され、横の上下ボタンで瞬時に移動することができます。</p>
+  <p><img> <span class="notranslate">Room</span> また、<span class="notranslate">rooms</span> マネージャーの下部には、<span class="notranslate">room</span> の注文リストを上下に移動するための便利なボタンが用意されています。</p>
+  <p><img>これらのボタンの他に、<strong>グループフォルダを</strong>作成するための「<strong>グループ作成</strong>」ボタンがあります。
+    これらのフォルダは、ゲーム内の<span class="notranslate">rooms</span> をよりよく整理するために使用できます（<span class="notranslate">room</span> の順番はそのまま尊重されます）。また、<span class="notranslate">rooms</span> をクリックしてフォルダにドラッグして追加することもできます。<img> や<img> /<img> を押しながらクリックすることで、複数の<span class="notranslate">rooms</span> を選択し、「Create Group」ボタンをクリックすると、選択したすべての<span class="notranslate">rooms</span> がグループに追加されます。この<em>場合</em>、ゲーム内の<span class="notranslate">rooms</span> の順番が変わることに注意してください。また、後でグループフォルダを削除する場合、<strong>そのフォルダ内の<span class="notranslate">rooms</span> も</strong>すべて削除されることに注意してください（通常
+    デフォルトでは、<span class="notranslate">GameMaker</span> がこのことについて警告を発します）。</p>
+  <p>また、<span class="notranslate">room</span> マネージャーの任意の<span class="notranslate">Room</span> を右クリックすると、次のようなメニューが表示されることに注意してください。</p>
+  <p><img>このメニューでは、以下のオプションを選択できます。</p>
   <ul class="colour">
-    <li><strong>Create Child Room</strong>: This will create a new room as a child of the room that was clicked on, with the new room inheriting the parent room properties.</li>
-    <li><strong>Edit</strong>: This will open the <a href="../The_Asset_Editors/Rooms.htm">Room Editor</a> for the room.</li>
-    <li><strong>Edit Tags</strong>: This will open the <a href="../Introduction/The_Asset_Browser.htm">Tag Editor</a> so you can add tags to the room.</li>
-    <li><strong>Rename</strong>: This permits you to rename the room asset (you can also do a slow double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the room to rename it).</li>
-    <li><strong>Duplicate</strong>: This will duplicate the selected room, placing the new room under the selected room.</li>
-    <li><strong>Favourite</strong>:  This will add the selected room to the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> Favourites section.</li>
-    <li><strong>Delete</strong>: Clicking this will delete the room (or rooms) that have been selected. If used on a group folder, all rooms within the folder will be deleted along with the folder. If used on a parent room, only the parent will be deleted, and all child rooms will remain, although they will now be independent and no longer child rooms.</li>
-    <li><strong>Expand Children</strong>: If a group folder is selected, this option will expand the contents of the folder.</li>
-    <li><strong>Expand All</strong>: This option will expand all folder groups.</li>
-    <li><strong>Collapse All</strong>: This option will collapse all folder groups.</li>
-    <li><strong>Arrange</strong>:  The arrange sub.menu can be used to move rooms up or down in the room manager, much the same as the buttons at the bottom of the manager window.</li>
-    <li><strong>Open In Explorer</strong>: This will open a OS file explorer on the asset in the game project.</li>
-    <li><strong>Asset Colour</strong>: Here you can select a colour for the room (or rooms) to help identify them in the Room Manager. Note that this colour will also be used in the Asset Browser and override any colour that has been set previously.</li>
+    <li><strong>子部屋を作成</strong>します。クリックした<span class="notranslate">room</span> の子として新しい<span class="notranslate">room</span> が作成され、新しい<span class="notranslate">room</span> は親<span class="notranslate">room</span> のプロパティを継承します。</li>
+    <li><strong>Edit</strong>:<span class="notranslate">room</span> の<a href="../The_Asset_Editors/Rooms.htm">ルームエディターが</a>開きます。</li>
+    <li><strong>タグを編集</strong>します。<a href="../Introduction/The_Asset_Browser.htm">タグエディターが</a>起動し、<span class="notranslate">room</span> にタグを追加することができます。</li>
+    <li><strong>Rename</strong> <img> <strong></strong>:<span class="notranslate">room</span> <span class="notranslate">asset</span> の名前を変更することができます（<span class="notranslate">room</span> の上でゆっくりダブルクリックすることで名前を変更することも可能です）。</li>
+    <li><strong>複製を</strong>作成します。選択されている<span class="notranslate">room</span> を複製します。新しい<span class="notranslate">room</span> は、選択されている<span class="notranslate">room</span> の下に配置されます。</li>
+    <li><strong>お気に入り</strong> 選択した<span class="notranslate">room</span> を<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザの</a>「お気に入り」セクションに追加します。</li>
+    <li><strong>削除</strong>する。選択されている<span class="notranslate">room</span> （または<span class="notranslate">rooms</span> ）が削除されます。グループフォルダーで使用した場合、そのフォルダー内のすべての<span class="notranslate">rooms</span> がフォルダーと一緒に削除されます。<span class="notranslate">room</span>親フォルダに使用した場合は、親フォルダのみが削除されます。
+      となり、すべての子<span class="notranslate">rooms</span> は残りますが、独立し、子<span class="notranslate">rooms</span> ではなくなります。</li>
+    <li><strong>子供を展開する</strong>。グループフォルダが選択されている場合、このオプションはフォルダの内容を展開します。</li>
+    <li><strong>Expand All</strong>：このオプションを選択すると、すべてのフォルダグループが展開されます。</li>
+    <li><strong>すべて折りたたむ</strong>：このオプションは、すべてのフォルダーグループを折りたたみます。</li>
+    <li><strong>アレンジする</strong> アレンジサブメニューは、<span class="notranslate">rooms</span> マネージャーの中で<span class="notranslate">room</span> を上下に移動させることができます。これは、マネージャーウィンドウの下部にあるボタンと同じです。</li>
+    <li><strong>エクスプローラで開く</strong>ゲームプロジェクト内の<span class="notranslate">asset</span> 、OSのファイルエクスプローラが開かれます。</li>
+    <li><strong>Asset Colour</strong>：ここでは、<span class="notranslate">room</span> （または<span class="notranslate">rooms</span> ）の色を選択し、<span class="notranslate">Room</span> Manager で識別しやすくすることができます。この色は<span class="notranslate">Asset</span> ブラウザでも使用され、以前に設定された色より優先されることに注意してください。</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a href="Included_Files.htm">Included Files</a></div>
+        <div style="float:left">戻る<a href="Game_Settings.htm">ゲーム設定</a></div>
+        <div style="float:right">次へ<a href="Included_Files.htm">同梱のファイル</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Room Manager
@@ -65,5 +79,5 @@ Child Rooms
   <!-- TAGS
 room_manager
 -->
-</body>
-</html>
+
+</body></html>

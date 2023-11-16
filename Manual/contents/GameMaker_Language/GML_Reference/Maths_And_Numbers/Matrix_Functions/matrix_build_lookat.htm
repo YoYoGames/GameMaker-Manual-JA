@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>matrix_build_lookat</title>
+  <title>マトリックスビルドルックアット</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for matrix_build_lookat" />
   <meta name="rh-index-keywords" content="matrix_build_lookat" />
@@ -15,77 +15,77 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build_lookat</h1>
-  <p>This function builds a &quot;look-at&quot; (view) matrix based on the specified parameters listed below. Since this function modifies the view matrix and not the projection matrix, you should first initialize the projection matrix using the other matrix function <a href="matrix_build_projection_perspective.htm"><span class="inline">matrix_build_projection_perspective()</span></a>, then use this function to move the view camera around within the projection.</p>
-  <p>To set the view you first need to define the position you look <i>from</i>, which is indicated by the parameters (xfrom, yfrom, zfrom). Next you must specify the direction you look <i>at</i> and this is done by giving a second point to look towards with the arguments (xto, yto, zto). Finally, you can still rotate the camera around the line from the viewpoint to the looking point, and to specify this we must give an &quot;up&quot; vector - the direction that is upwards in the camera. This is given by the last three arguments (xup, yup, zup).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>マトリックスビルドルックアット</h1>
+  <p>この関数は、以下に示す指定されたパラメータに基づいて「ルックアット」（ビュー）行列を構築します。この関数は，投影行列ではなくビュー行列を変更するので，まず，他の行列関数 <a href="matrix_build_projection_perspective.htm"><span class="inline">matrix_build_projection_perspective()</span></a>その後、この関数で投影内のビューカメラを移動させる。</p>
+  <p>ビューを設定するには、まず、パラメータ (xfrom, yfrom, zfrom) で示すように、見る<i>位置を</i>定義する必要があります。次に、<i>見る</i>方向を指定する必要があります。これは、2番目の点を引数 (xto, yto, zto) で指定することで行われます。最後に、視点と見ている点を結ぶ線を中心にカメラを回転させることができますが、これを指定するには「up」ベクトル、つまりカメラの上方向となる方向を与えなければなりません。これは最後の3つの引数(xup, yup, zup)で与えられます。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">matrix_build_lookat(xfrom, yfrom, zfrom, xto, yto, zto, xup, yup, zup);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
      </tr>
       <tr>
-        <td>xfrom</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the position to look from.</td>
+        <td><span class="notranslate">xfrom</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the position to look from.</span></td>
      </tr>
       <tr>
-        <td>yfrom</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the position to look from.</td>
+        <td><span class="notranslate">yfrom</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the position to look from.</span></td>
      </tr>
       <tr>
-        <td>zfrom</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z coordinate of the position to look from.</td>
+        <td><span class="notranslate">zfrom</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z coordinate of the position to look from.</span></td>
      </tr>
       <tr>
-        <td>xto</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the position to look to.</td>
+        <td><span class="notranslate">xto</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the position to look to.</span></td>
      </tr>
       <tr>
-        <td>yto</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the position to look to.</td>
+        <td><span class="notranslate">yto</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the position to look to.</span></td>
      </tr>
       <tr>
-        <td>zto</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z coordinate of the position to look to.</td>
+        <td><span class="notranslate">zto</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z coordinate of the position to look to.</span></td>
      </tr>
       <tr>
-        <td>xup</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the &quot;up&quot; vector.</td>
+        <td><span class="notranslate">xup</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the &quot;up&quot; vector.</span></td>
      </tr>
       <tr>
-        <td>yup</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the &quot;up&quot; vector.</td>
+        <td><span class="notranslate">yup</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the &quot;up&quot; vector.</span></td>
      </tr>
       <tr>
-        <td>zup</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z coordinate of the &quot;up&quot; vector.</td>
+        <td><span class="notranslate">zup</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z coordinate of the &quot;up&quot; vector.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br />
     projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br />
     camera_set_view_mat(view_camera[0], viewmat);<br />
     camera_set_proj_mat(view_camera[0], projmat);</p>
-  <p>The above code creates a new look-at matrix and orthographic matrix, stores their IDs in local variables and then uses them to set the view and projection matrices for the camera assigned to view port[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、新しいルックアット行列とオルソグラフィック行列を作成し、それらのIDをローカル変数に格納し、それらを使ってビューポート[0]に割り当てられたカメラのビュー行列と投影行列を設定します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
-        <div style="float:right">Next: <a href="matrix_build_projection_ortho.htm">matrix_build_projection_ortho</a></div>
+        <div style="float:left">戻る<a href="Matrix_Functions.htm">マトリクス機能</a></div>
+        <div style="float:right">次のページ <a href="matrix_build_projection_ortho.htm"><span class="notranslate">matrix_build_projection_ortho</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_build_lookat

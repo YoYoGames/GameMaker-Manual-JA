@@ -4,31 +4,29 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Defining Inputs</title>
+  <title>入力の定義</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
-  <meta name="search-keywords" content="m_axisx,m_axisy,m_axisx_gui,m_axisy_gui,m_scroll_up,m_scroll_down" />
-  <meta name="rh-index-keywords" content="m_axisx,m_axisy,m_axisy_gui,m_axisx_gui,m_scroll_up,m_scroll_down" />
 </head>
 <body>
-  <h1>Defining Inputs</h1>
-  <p>Input is managed by the Rollback system, so it can properly be synchronised between players. Inputs for a player can be retrieved using <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span>, which returns a struct containing the inputs for the player.</p>
-  <h2>Default Inputs</h2>
-  <p>By default you will get the following keys in the input struct:</p>
+  <h1>入力の定義</h1>
+  <p>入力はロールバックシステムによって管理されるので、プレイヤー間で適切に同期させることができます。あるプレーヤーの入力は、 <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span> を使って取得できます。これは、そのプレーヤーの入力を含む<span class="notranslate">struct</span> を返します。</p>
+  <h2>デフォルトの入力</h2>
+  <p>デフォルトでは、入力構造体に以下のキーを取得します。</p>
   <p class="code"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></p>
-  <p>The directional inputs are mapped to the arrow keys.</p>
-  <h2>Input Variants</h2>
-  <p>Each keyboard input defined is read using <span class="inline"><a href="../Game_Input/Keyboard_Input/keyboard_check.htm">keyboard_check()</a></span>, which gets if the key is held or not. For mouse input it uses <span class="inline"><a href="../Game_Input/Mouse_Input/mouse_check_button.htm">mouse_check_button()</a></span>.</p>
-  <p>With each defined input (default or custom), you also get variants that use <span class="inline"><a href="../Game_Input/Keyboard_Input/keyboard_check_pressed.htm">keyboard_check_pressed()</a></span> and <span class="inline"><a href="../Game_Input/Keyboard_Input/keyboard_check_released.htm">keyboard_check_released()</a></span> (and the equivalent functions for mouse input). These are added with the suffix &quot;<strong>_pressed</strong>&quot; and &quot;<strong>_released</strong>&quot; respectively.</p>
-  <p>For example, for the <span class="inline">space</span> input, you will get <span class="inline">space_pressed</span> and <span class="inline">space_released</span> as well.</p>
-  <h2 id="h">Custom Controls</h2>
-  <h3>Defining</h3>
-  <p>To define your own inputs, create a struct containing the input keys and assigned constants to use, and then pass that into <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_input()</a></span>. This will override the default controls mentioned at the top of this page.</p>
-  <p>You define your input names on the left-hand side (e.g. <span class="inline2">fire</span>), and assign an input on the right-hand side (e.g. <span class="inline2">mb_left</span>):</p>
+  <p>方向入力は、矢印キーにマッピングされています。</p>
+  <h2>入力バリアント</h2>
+  <p>定義された各キーボード入力は <span class="inline"><a href="../Game_Input/Keyboard_Input/keyboard_check.htm">keyboard_check()</a></span> を使って読み込まれ、キーが保持されているかどうかを取得します。マウス入力については、 <span class="inline"><a href="../Game_Input/Mouse_Input/mouse_check_button.htm">mouse_check_button()</a></span> を使用する。</p>
+  <p>定義された入力 (デフォルトまたはカスタム) それぞれについて、 <span class="inline"><a href="../Game_Input/Keyboard_Input/keyboard_check_pressed.htm">keyboard_check_pressed()</a></span> と <span class="inline"><a href="../Game_Input/Keyboard_Input/keyboard_check_released.htm">keyboard_check_released()</a></span> (およびマウス入力のための同等の関数) を使用するバリエーションも得られます。これらは、それぞれ &quot;<strong>_pressed</strong>&quot; と &quot;<strong>_released</strong>&quot; という接尾辞を付けて追加されます。</p>
+  <p>例えば、 <span class="inline">space</span> の入力に対して、 <span class="inline">space_pressed</span> と <span class="inline">space_released</span> 、同様に取得します。</p>
+  <h2 id="h">カスタムコントロール</h2>
+  <h3>定義付け</h3>
+  <p>独自の入力を定義するには、使用する入力キーと割り当てられた定数を含む<span class="notranslate">struct</span> を作成し、それを <span class="inline"><a href="Rollback_Functions/rollback_define_player.htm">rollback_define_input()</a></span> に渡してください。これにより、このページの冒頭で述べたデフォルトのコントロールがオーバーライドされます。</p>
+  <p>左側で入力名を定義し（例：<span class="inline2">fire</span>）、右側で入力を割り当てます（例：<span class="inline2">mb_left</span>）。</p>
   <p class="code">// Before starting rollback game<br />
     rollback_define_input({<br />
         fire: mb_left,<br />
@@ -36,10 +34,10 @@
         left: ord(&quot;A&quot;),<br />
         right: ord(&quot;D&quot;)<br />
     });</p>
-  <p>Calling <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span> now will only return the inputs defined here (<span class="inline2">fire</span>, <span class="inline2">interact</span>, etc.), along with <span class="inline2">*_pressed</span> and <span class="inline2">*_released</span> variants for each of them.</p>
-  <p>For GML Visual, use <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Define_Input.htm">Define Input (Rollback)</a>.</p>
-  <h3>Constants</h3>
-  <p>You can assign any of the following input values to the inputs in your struct:</p>
+  <p><span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span> を呼び出すと、ここで定義された入力<span class="inline2">(fire</span>,<span class="inline2">interact</span>, など) と、それぞれの<span class="inline2">*_pressed</span>と<span class="inline2">*_released の</span>バリアントのみが返されます。</p>
+  <p><span class="notranslate">GML</span> Visual の場合、<a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Define_Input.htm">Define Input (Rollback</a>) を使用します。</p>
+  <h3>定数</h3>
+  <p>構造体の入力値には、以下のいずれかの値を割り当てることができます。</p>
   <table>
     <colgroup>
       <col />
@@ -48,101 +46,101 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Input Type</th>
-        <th>Value</th>
-        <th>Description</th>
+        <th>入力タイプ</th>
+        <th>価値</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td colspan="1" rowspan="2"><strong>Keyboard</strong></td>
-        <td><span class="inline">vk_*</span> constants</td>
-        <td>Use these constants to define keyboard keys. A list of such constants is <a href="../Game_Input/Keyboard_Input/Keyboard_Input.htm">given here</a>.</td>
+        <td colspan="1" rowspan="2"><strong>キーボード</strong></td>
+        <td><span class="inline">vk_*</span> 定数</td>
+        <td>これらの定数を使用して、キーボードキーを定義します。このような定数の一覧は、<a href="../Game_Input/Keyboard_Input/Keyboard_Input.htm">ここに示されて</a>います。</td>
       </tr>
       <tr>
         <td><span class="inline">ord(&quot;&quot;)</span></td>
-        <td>Define a letter key by wrapping it in <a href="../Strings/ord.htm"><span class="inline">ord()</span></a>.</td>
+        <td>で囲んで文字キーを定義します。 <a href="../Strings/ord.htm"><span class="inline">ord()</span></a>.</td>
       </tr>
       <tr>
-        <td><strong>Gamepad</strong></td>
-        <td><span class="inline">gp_*</span> constants</td>
-        <td>Use these constants to define gamepad inputs (buttons and axes). A list of such constants is <a href="../Game_Input/GamePad_Input/Gamepad_Input.htm">given here</a>.</td>
+        <td><strong>ゲームパッド</strong></td>
+        <td><span class="inline">gp_*</span> 定数</td>
+        <td>これらの定数は、ゲームパッドの入力（ボタンや軸）を定義するために使用します。そのような定数のリストは<a href="../Game_Input/GamePad_Input/Gamepad_Input.htm">ここにあります</a>。</td>
       </tr>
       <tr>
-        <td colspan="1" rowspan="7"><strong>Mouse</strong></td>
-        <td><span class="inline">mb_*</span> constants</td>
-        <td>Use these constants to define mouse buttons. A list of such constants is <a href="../Game_Input/Mouse_Input/Mouse_Input.htm">given here</a>.<br />
-          <br />
-          <span class="note">NOTE</span>: <span class="inline">mb_any</span> and <span class="inline">mb_none</span> cannot be used.
+        <td colspan="1" rowspan="7"><strong>マウス</strong></td>
+        <td><span class="inline">mb_*</span> 定数</td>
+        <td>これらの定数は、マウスボタンを定義するために使用します。そのような定数のリストは、<a href="../Game_Input/Mouse_Input/Mouse_Input.htm">ここに示されています</a>。<br>
+          <br>
+         <span class="note">注意</span>： <span class="inline">mb_any</span> と <span class="inline">mb_none</span> は使用できません。
         </td>
       </tr>
       <tr>
         <td><span class="inline">m_axisx</span></td>
-        <td>The X position of the mouse in the room (using <span class="inline"><a href="../Game_Input/Mouse_Input/mouse_x.htm">mouse_x</a></span>).</td>
+        <td><span class="notranslate">room</span> におけるマウスの X 位置 (<span class="inline"><a href="../Game_Input/Mouse_Input/mouse_x.htm">mouse_x</a></span> を使用)。</td>
       </tr>
       <tr>
         <td><span class="inline">m_axisy</span></td>
-        <td>The Y position of the mouse in the room (using <span class="inline"><a href="../Game_Input/Device_Input/device_mouse_y.htm">mouse_y</a></span>).</td>
+        <td><span class="notranslate">room</span> におけるマウスの Y 位置（<span class="inline"><a href="../Game_Input/Device_Input/device_mouse_y.htm">mouse_y</a></span> を使用）。</td>
       </tr>
       <tr>
         <td><span class="inline">m_axisx_gui</span></td>
-        <td>The X position of the mouse on the GUI layer (using <a href="../Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
+        <td>GUIレイヤー上のマウスのX位置(using <a href="../Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
       </tr>
       <tr>
         <td><span class="inline">m_axisy_gui</span></td>
-        <td>The Y position of the mouse on the GUI layer (using <a href="../Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
+        <td>GUIレイヤー上のマウスのY位置(using <a href="../Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
       </tr>
       <tr>
         <td><span class="inline">m_scroll_up</span></td>
-        <td><span class="inline">1</span> if the mouse wheel is being scrolled up, <span class="inline">0</span> otherwise</td>
+        <td><span class="inline">1</span> マウスホイールで上方向にスクロールしている場合は それ以外の場合は <span class="inline">0</span> </td>
       </tr>
       <tr>
         <td><span class="inline">m_scroll_down</span></td>
-        <td><span class="inline">1</span> if the mouse wheel is being scrolled down, <span class="inline">0</span> otherwise</td>
+        <td><span class="inline">1</span> マウスホイールで下方向にスクロールしている場合は それ以外の場合は <span class="inline">0</span> </td>
       </tr>
     </tbody>
   </table>
-  <h3>Multiple Controls</h3>
-  <p>You can assign multiple controls to each input, by listing input constants in an array:</p>
+  <h3>マルチコントロール</h3>
+  <p>入力定数を配列で並べることで、各入力に対して複数のコントロールを割り当てることができます。</p>
   <p class="code">rollback_define_input({<br />
         fire:     [mb_left, ord(&quot;X&quot;)],<br />
         interact: [vk_space, ord(&quot;C&quot;)],<br />
         left:     [ord(&quot;A&quot;), vk_left],<br />
         right:    [ord(&quot;D&quot;), vk_right]<br />
     });</p>
-  <p>In this example, <span class="inline2">fire</span> will be triggered by both <span class="inline2">mb_left</span> and the <span class="inline2">X</span> key, <span class="inline2">interact</span> will be triggered by <span class="inline2">vk_space</span> and the <span class="inline2">C</span> key, and so on.</p>
+  <p>この例では、<span class="inline2">fireは</span> <span class="inline2">mb_leftと</span> <span class="inline2">X</span>キーの両方で、<span class="inline2">interactは</span> <span class="inline2">vk_spaceと</span> <span class="inline2">C</span>キーで、といった具合にトリガーされることになります。</p>
   <p class="code">var _input = rollback_get_input();<br />
     if (_input.fire)<br />
     {<br />
         // Runs when LMB or X is pressed<br />
     }</p>
-  <p class="note"><span class="note">NOTE</span> You can&#39;t bind the same input constant to multiple inputs, e.g. a specific input value (say, <span class="inline2">mb_left</span> or <span class="inline2">ord(&quot;A&quot;)</span>) can only be used <strong>once</strong> throughout your whole input struct.</p>
-  <h2 id="h1">Mock Input</h2>
-  <p>When testing locally, you may want to define temporary inputs for remote players so you can test multiplayer gameplay offline.</p>
-  <p>You can achieve that by defining mock input for a player using <a href="Rollback_Functions/rollback_define_mock_input.htm"><span class="inline">rollback_define_mock_input()</span></a>. For example, after calling the code snippet above to define <span class="inline">fire</span>, <span class="inline">interact</span>, <span class="inline">left</span> and <span class="inline">right</span> inputs for all players, you can define a separate set of inputs for the second player specifically, which you can use during Sync Test.</p>
+  <p class="note">例えば、特定の入力値 (例えば<span class="inline2">mb_left</span>や<span class="inline2">ord(&quot;A&quot;)</span>) は、入力全体を通して<strong>一度しか</strong>使用できません。<span class="notranslate">struct</span>.</p>
+  <h2 id="h1">モック入力</h2>
+  <p>ローカルでテストする場合、オフラインでマルチプレイヤーゲームプレイをテストできるように、リモートプレーヤー用の一時的な入力を定義することができます。</p>
+  <p>を使用して、プレーヤーのモック入力を定義することで実現できます。 <a href="Rollback_Functions/rollback_define_mock_input.htm"><span class="inline">rollback_define_mock_input()</span></a>.たとえば、上記のコード スニペットを呼び出してすべてのプレーヤーの <span class="inline">fire</span> 、 <span class="inline">interact</span> 、 <span class="inline">left</span> 、 <span class="inline">right</span> 入力を定義した後、2 番目のプレーヤーの入力セットを別途定義して、同期テスト中に使用することができます。</p>
   <p class="code">rollback_define_mock_input(1, {<br />
         fire: vk_control,<br />
         interact: vk_shift,<br />
         left: ord(&quot;J&quot;),<br />
         right: ord(&quot;L&quot;)<br />
     });</p>
-  <p>This defines mock input for player 1 (the second player), keeping the same input names but assigning different inputs. This way two people could play the game locally on the same computer.</p>
-  <h2>Further Reading</h2>
-  <p>Read the following pages for more information on the Rollback system:</p>
+  <p>これは、プレイヤー1（2人目のプレイヤー）のモック入力を定義し、同じ入力名を維持しながら、異なる入力を割り当てています。こうすることで、2人が同じコンピュータでローカルにゲームをプレイすることができます。</p>
+  <h2>参考文献</h2>
+  <p>ロールバックシステムについて詳しくは、次のページをご覧ください。</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="Rollback_Constraints.htm">Rollback Constraints</a></li>
-    <li><a data-xref="{title}" href="Rollback_Events.htm">Rollback Events</a></li>
-    <li><a href="Creating_Multiplayer.htm">Creating a Multiplayer Game</a></li>
-    <li><a data-xref="{title}" href="Rollback_System.htm">Rollback System</a></li>
+    <li><a data-xref="{title}" href="Rollback_Constraints.htm">ロールバックコンストレイント</a></li>
+    <li><a data-xref="{title}" href="Rollback_Events.htm">ロールバックイベント</a></li>
+    <li><a href="Creating_Multiplayer.htm">マルチプレイヤーゲームを作る</a></li>
+    <li><a data-xref="{title}" href="Rollback_System.htm">ロールバック方式</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Multiplayer.htm">Rollback Multiplayer</a></div>
-        <div>Next: <a data-xref="{title}" href="Rollback_Constraints.htm">Rollback Constraints</a></div>
+        <div>戻る<a data-xref="{title}" href="Rollback_Multiplayer.htm">ロールバックマルチプレイ</a></div>
+        <div>次へ<a data-xref="{title}" href="Rollback_Constraints.htm">ロールバックコンストレイント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
 </body>
 </html>

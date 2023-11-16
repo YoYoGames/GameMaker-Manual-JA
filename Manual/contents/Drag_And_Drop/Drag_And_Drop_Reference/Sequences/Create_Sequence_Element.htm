@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Sequence</title>
+  <title>シーケンスの作成</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Sequence action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Sequence Element" />
@@ -14,57 +14,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Sequence Element Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_create.png" /> Create Sequence</h1>
-  <p>With this action you can create a sequence element of any sequence from the Asset Browser. You give the name of the sequence and an x/y position within the room where it is to be created as well as the layer that it is to be created on (this layer must be an <b>asset layer</b>). You can tick the &quot;relative&quot; flags to position the sequence relative to the instance running the action code blocks. Whenever you create a sequence in the game in this way, it is given a unique <b>element ID</b> value with which you can then identify the sequence in further actions, therefore this action permits you to define a &quot;target&quot; variable to hold this ID value (as shown in the example below). Note that the target can be flagged as a temporary (local) variable, which will be created for the action and can be used in all subsequent actions for the event the action is in.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Sequence Element Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/a_sequence_create.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> シーケンスの作成</h1>
+  <p>このアクションを使用すると、<span class="notranslate">sequence</span> ブラウザから任意の<span class="notranslate">sequence</span> の<span class="notranslate">Asset</span> 要素を作成することができます。<span class="notranslate">sequence</span> の名前と、作成される<span class="notranslate">room</span> 内の x/y 位置、作成されるレイヤー（このレイヤーは<b>アセットレイヤー</b>である必要があります）を指定します。相対&quot;<span class="notranslate">flags</span> にチェックを入れると、アクションコードブロックを実行しているインスタンスに対して、<span class="notranslate">sequence</span> を相対的に配置することができます。この方法でゲーム内に<span class="notranslate">sequence</span> を作成すると、一意の<b>要素 ID</b>値が与えられ、その後のアクションで<span class="notranslate">sequence</span> を識別できます。したがって、このアクションでは、この ID 値を保持する「ターゲット」変数を定義できます（以下の例に示すとおり）。targetは一時的な（ローカル）変数としてフラグを立てることができ、アクションのために作成され、アクションがあるイベントの後続のすべてのアクションで使用することができることに注意してください。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Create Sequence Element Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_create.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Sequence</td>
-        <td>The name of the sequence to create an element of.</td>
+        <td><span class="notranslate">Sequence</span></td>
+        <td>の要素を作成するための<span class="notranslate">sequence</span> の名前。</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position in the room to create the sequence (can be relative to the calling instance).</td>
+        <td><span class="notranslate">x</span></td>
+        <td><span class="notranslate">room</span> を作成するための<span class="notranslate">sequence</span> での x 位置（呼び出し元のインスタンスからの相対位置でも可）。</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position in the room to create the sequence (can be relative to the calling instance).</td>
+        <td><span class="notranslate">y</span></td>
+        <td><span class="notranslate">room</span> を作成するための<span class="notranslate">sequence</span> での y 位置（呼び出し元のインスタンスからの相対位置でも可）。</td>
       </tr>
       <tr>
-        <td>layer</td>
-        <td>The name (a string) of the asset layer to create the sequence on.</td>
+        <td><span class="notranslate">layer</span></td>
+        <td><span class="notranslate">string</span> 上に作成する<span class="notranslate">asset</span> レイヤーの名前（<span class="notranslate">sequence</span> ）です。</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The variable to target for the return value.</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>戻り値の対象となる変数。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Sequence Element Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/e_sequence_create.png" />The above action block code creates a new sequence and stores its unique element ID value in a variable. This variable is then used to pause the sequence using the <a href="Pause_Sequence.htm">Pause Sequence</a> action.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックコードは、新しい<span class="notranslate">sequence</span> を作成し、その一意の要素 ID 値を変数に格納します。この変数は、次に<a href="Pause_Sequence.htm">Pause Sequence</a>アクションを使用して<span class="notranslate">sequence</span> を一時停止するために使用されます。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Actions_Library.htm">Sequence Actions</a></div>
-        <div style="float:right">Next: <a href="Destroy_Sequence_Element.htm">Destroy Sequence Element</a></div>
+        <div style="float:left">戻る<a href="Sequence_Actions_Library.htm">シークエンスアクション</a></div>
+        <div style="float:right">次へ<a href="Destroy_Sequence_Element.htm">Destroy<span class="notranslate">Sequence</span> Element</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Create Sequence Element
+Action - Create <span class="notranslate">Sequence</span> Element
 -->
   <!-- TAGS
 action_create_sequence

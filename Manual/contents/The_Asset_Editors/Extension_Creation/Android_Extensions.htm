@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Android Extensions</title>
+  <title>Android拡張機能</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how Android extensions work" />
   <meta name="rh-index-keywords" content="Extensions - Creating Android Extensions" />
@@ -14,26 +14,26 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Android Extensions</h1>
-  <p>To create an extension for Android you have to do it in two parts. The first part would be to add the extension itself, along with the required files, and the second is to create the functions and macros/constants that the extension requires.</p>
-  <p>The functions and constants are added using <strong>placeholder </strong>files to group them together, so you&#39;d add a placeholder and then define the functions and macros as explained in the previous section. To add the rest of the files though you would need to first tick the <em>Android </em>check-box in the <b>Extra Platforms</b> section of the editor, which will open up the extension&#39;s Android Properties:</p>
+  <h1>Android拡張機能</h1>
+  <p><span class="notranslate">extension</span> 用の<span class="notranslate">Android</span> を作成するには、2つの部分に分けて行わなければなりません。最初の部分は<span class="notranslate">extension</span> 自体と必要なファイルを追加することであり、2 番目の部分は<span class="notranslate">extension</span> が必要とする関数やマクロ/定数を作成することである。</p>
+  <p>関数と定数はグループ化するために<strong>プレースホルダーファイルを </strong>使用して追加されるので、前のセクションで説明したように、プレースホルダーを追加してから関数とマクロを定義します。残りのファイルを追加するには、まずエディタの<b>Extra Platforms</b>セクションで<em>Android </em>チェックボックスにチェックを入れ、拡張機能の<span class="notranslate">Android</span> プロパティを開く必要があります。</p>
   <p class="dropspot"><img alt="Android Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_Android.png" /></p>
-  <p>Here you can give the following details:</p>
+  <p>ここでは、以下の内容をお伝えします。</p>
   <ul class="colour">
-    <li class="dropspot"><strong>Class Name</strong>: Your extension can have multiple classes, with each class having its own functions and constants, so you should give it a name that reflects its purpose.</li>
-    <li class="dropspot"><strong>Android Permissions</strong>: Here you can add in any extra permissions that your extension requires. What these permissions are will depend entirely on the use that the extension has, and so you should <a href="https://developer.android.com/reference/android/Manifest.permission.html">check the documentation supplied by Google</a> for the Android platform, or, if you are using a third party SDK, the documentation that comes with the SDK. To add a new permission you need to click on the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button to add a placeholder permission, and then do a double <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> click on that to edit it to what is required. You can remove permissions using the <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png" /> button.</li>
-    <li class="dropspot"><b>Code Injection</b>: Here you can add any code to be injected (added) into your Android application when your game is built for testing or final release. Make sure to revise this (and your permissions) carefully before submitting any games to the store, as incorrect settings will cause your game to be failed for submission. See the section below for more information.</li>
+    <li class="dropspot"><strong>クラス名</strong>。<span class="notranslate">extension</span> は複数のクラスを持つことができ、各クラスは独自の関数や定数を持ちます。そのため、その目的を反映した名前を付ける必要があります。</li>
+    <li class="dropspot"><strong>Androidのパーミッション</strong>。ここでは、<span class="notranslate">extension</span> が必要とする追加の許可を追加することができます。これらの権限は、<span class="notranslate">extension</span> 、あなたが<span class="notranslate">Android</span> プラットフォームのために<a href="https://developer.android.com/reference/android/Manifest.permission.html">Googleによって提供されるドキュメントをチェック</a>する必要があります、または、サードパーティのSDKを使用している場合は、SDKに付属のドキュメントです何であるか。新しい権限を追加するには、<img> ボタンをクリックしてプレースホルダ権限を追加し、ダブルクリック<img> して必要なものにそれを編集する必要があります。<img> ボタンを使ってパーミッションを削除することができます。</li>
+    <li class="dropspot"><b>コードインジェクション</b>。ここでは、テストまたは最終リリース用にゲームがビルドされたときに、<span class="notranslate">Android</span> アプリケーションに注入 (追加) する任意のコードを追加できます。間違った設定をすると、ゲームの提出に失敗することがあるので、ストアにゲームを提出する前に、この項目（とパーミッション）を慎重に修正してください。詳細については、以下のセクションを参照してください。</li>
   </ul>
-  <h2 id="h">Code Injection</h2>
-  <p>Any code entered into the &quot;Code Injection&quot; window will need to be separated into distinct XML groups, as shown in the screenshot above. The XML tag you use for a group will determine where the code is injected into your application.</p>
-  <p>You can use the following syntax to create code injection groups:</p>
+  <h2 id="h">コードインジェクション</h2>
+  <p>Code Injection」ウィンドウに入力されたコードは、上のスクリーンショットに示すように、個別のXMLグループに分離する必要があります。グループに使用するXMLタグは、コードがアプリケーションに注入される場所を決定します。</p>
+  <p>コードインジェクショングループを作成するには、次の構文を使用します。</p>
   <p class="code">&lt;YYTagName&gt;<br />
     <br />
     // Code to inject<br />
     <br />
     &lt;/YYTagName&gt;
   </p>
-  <p>The following tags are available for the Android platform:</p>
+  <p><span class="notranslate">Android</span> プラットフォームでは、以下のタグが利用可能です。</p>
   <p class="code">YYAndroidTopLevelGradle<br />
     YYAndroidTopLevelGradleBuildscript<br />
     YYAndroidTopLevelGradleBuildscriptRepositories<br />
@@ -54,10 +54,9 @@
     YYAndroidManifestApplicationInject<br />
     YYAndroidStringValuesInjection<br />
     YYAndroidLayout<br />
-    YYAndroidProguard<br />
-    YYAndroidLogcat
+    <span>YYAndroidProguard</span>
   </p>
-  <p>The runtime location where the code is injected will depend on the type of the tag:</p>
+  <p>コードが注入される<span class="notranslate">runtime</span> の位置は、タグの種類によって異なります。</p>
   <table>
     <colgroup>
       <col style="width: 174px;" />
@@ -65,56 +64,45 @@
     </colgroup>
     <tbody>
       <tr>
-        <th style="">Tag Type</th>
-        <th style="">Injection Path</th>
+        <th style="">タグタイプ</th>
+        <th style="">インジェクションパス</th>
       </tr>
       <tr>
-        <td style=""><strong>Top Level Gradle</strong></td>
-        <td style="">{RUNTIME}\android\runner\RootFiles\build.gradle</td>
+        <td style=""><strong>トップレベルGradle</strong></td>
+        <td style="">{RUNTIME}androidrunner ▶build.gradle</td>
       </tr>
       <tr>
-        <td style=""><strong>Module Level Gradle</strong></td>
-        <td style="">{RUNTIME}\android\runner\ProjectFiles\build.gradle</td>
+        <td style=""><strong>モジュールレベル Gradle</strong></td>
+        <td style="">{RUNTIME}androidrunnerProjectFilesbuild.gradle</td>
       </tr>
       <tr>
-        <td style=""><strong>Android Manifest</strong></td>
-        <td style="">{RUNTIME}\android\runner\ProjectFiles\src\main\AndroidManifest.xml</td>
+        <td style=""><strong>アンドロイドマニフェスト</strong></td>
+        <td style="">{RUNTIME} IndroidProjectFiles</td>
       </tr>
       <tr>
-        <td style=""><strong>Strings</strong></td>
-        <td style="">{RUNTIME}\android\runner\ProjectFiles\src\main\res\values\strings.xml</td>
+        <td style=""><strong>ストリングス</strong></td>
+        <td style="">{RUNTIME} IndroidrunnerProjectFiles</td>
       </tr>
       <tr>
-        <td style=""><strong>Layout</strong></td>
-        <td style="">{RUNTIME}\android\runner\ProjectFiles\src\main\res\layout\main.xml</td>
+        <td style=""><strong>レイアウト</strong></td>
+        <td style="">{RUNTIME} IndroidrunnerProjectFiles</td>
       </tr>
     </tbody>
   </table>
-  <p class="note"><span class="note">NOTE</span> These paths are only for VM; for YYC, injected code will go into the <span class="inline">{RUNTIME}\yyc\</span> directory, where the paths may or may not be equivalent to those for VM.</p>
-  <h3>Usage Tips</h3>
-  <ul class="colour">
-    <li>You can use <span class="inline2">YYAndroidLogcat</span> to use custom logging tags with <a href="https://developer.android.com/studio/command-line/logcat">Logcat</a>. Set up your tag with a priority level, e.g.:<br />
-      <br />
-      <span class="inline2">&lt;YYAndroidLogcat&gt;</span><br />
-      <span class="inline2">myDebugTag:V</span><br />
-      <span class="inline2">&lt;/YYAndroidLogcat&gt;</span><br />
-      <br />
-      In your extension, use a logging function to log a message with this tag, e.g. <span class="inline2">Log.i(&quot;myDebugTag&quot;, &quot;Hello World&quot;);</span>
-    </li>
-  </ul>
-  <h2>Source Files</h2>
-  <p>Once you have set this up correctly, you will need to add the files required for your extension package to work. To do this you need to click on the buttons at the bottom, either <em>Add SDK</em> or <em>Add Source</em> and then browse to the files you wish to add. Added files will be stored in the <span class="inline">AndroidSource</span> directory along with your extension. You can open this location at any time by right clicking <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> on the extension and selecting <em>Open in Explorer</em>.</p>
-  <p>For information on your creating native extensions for Android, see <a href="Extended_Examples.htm">Source Examples</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p class="note"><span class="note">YYCの</span> <span class="notranslate">paths</span> <span class="note"></span>場合、注入されたコードは <span class="inline">{RUNTIME}\yyc\</span> ディレクトリに入ります。<span class="notranslate">paths</span> はVM用のものと同等かどうかはわかりません。</p>
+  <h2>ソースファイル</h2>
+  <p>正しくセットアップしたら、<span class="notranslate">extension</span> パッケージを動作させるために必要なファイルを追加する必要があります。これを行うには、下部のボタン、<em>Add SDK</em>または<em>Add Source</em>をクリックし、追加したいファイルをブラウズする必要があります。追加されたファイルは、 <span class="inline">AndroidSource</span> ディレクトリに<span class="notranslate">extension</span> と共に保存されます。<span class="notranslate">extension</span> この場所は、<img> を右クリックし、<em>エクスプローラで開く</em>を選択することで、いつでも開くことができます。</p>
+  <p>あなたが作成した<span class="notranslate">extensions</span> 用のネイティブな<span class="notranslate">Android</span> についての情報は、<a href="Extended_Examples.htm">ソース例を</a>参照してください。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
-        <div style="float:right">Next: <a href="iOS_Extensions.htm">iOS Extensions</a></div>
+        <div style="float:left">戻る<a href="../Extensions.htm"> <span class="notranslate">Extension</span> 編集部</a></div>
+        <div style="float:right">次ページ：<a href="iOS_Extensions.htm">iOSの拡張機能</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Android Extensions

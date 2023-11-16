@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>rollback_leave_game</title>
+  <title>ロールバック・リーヴ・ゲーム</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for rollback_leave_game" />
@@ -16,38 +16,38 @@
   <meta name="search-keywords" content="rollback_leave_game" />
 </head>
 <body>
-  <h1>rollback_leave_game</h1>
-  <p>This function leaves the current multiplayer session, allowing the player to join or create a new game again.</p>
-  <p>When the host of a room leaves, ownership of that room is transferred to another player, so the game can continue. The game only ends when all the players have left.</p>
-  <h3>Avoiding Errors</h3>
-  <p>After the player leaves a multiplayer session, GameMaker continues to execute all game code, however it returns to the &quot;pre-start&quot; state where you cannot create or modify managed instances.</p>
-  <p>This means you need to manually destroy your player instances on leaving a game, and pause any other game logic using <a data-xref="{title}" href="../Rollback_Variables/rollback_game_running.htm">rollback_game_running</a> in a condition, to avoid errors.</p>
-  <p>See: <a data-xref="{text}" href="../Rollback_Constraints.htm#h1">State Before Rollback Start</a></p>
-  <h3>Triggered Event</h3>
-  <p>When a player leaves a game that you are present in, the <strong>Rollback Event</strong> event is triggered. See <a data-xref="{title}" href="../Rollback_Events.htm">Rollback Events</a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ロールバック・リーヴ・ゲーム</h1>
+  <p>この関数は、現在のマルチプレイヤーセッションを終了し、プレーヤーが再び新しいゲームに参加または作成することを可能にします。</p>
+  <p><span class="notranslate">room</span> のホストが退出すると、その<span class="notranslate">room</span> の所有権は他のプレイヤーに移るので、ゲームを続行することができる。すべてのプレーヤーが退出したときのみ、ゲームは終了する。</p>
+  <h3>エラーを回避する</h3>
+  <p>プレイヤーがマルチプレイヤーセッションを離れた後も、<span class="notranslate">GameMaker</span> はすべてのゲームコードを実行し続けますが、マネージドインスタンスを作成または変更できない「開始前」の状態に戻ります。</p>
+  <p>つまり、ゲーム終了時に手動でプレイヤーインスタンスを破棄し、他のゲームロジックは条件内で<a data-xref="{title}" href="../Rollback_Variables/rollback_game_running.htm">rollback_game_runningを</a>使用して一時停止する必要があり、エラーを回避するために必要です。</p>
+  <p>ご覧ください。<a data-xref="{text}" href="../Rollback_Constraints.htm#h1">ロールバック開始前の状態</a></p>
+  <h3>トリガーされたイベント</h3>
+  <p>自分が参加しているゲームからプレイヤーが抜けると、<strong>ロールバックイベントが</strong>発生します。詳しくは、「<a data-xref="{title}" href="../Rollback_Events.htm">ロールバックイベント</a>」を参照してください。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">rollback_leave_game();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">if (keyboard_check_pressed(vk_escape))<br />
     {<br />
         rollback_leave_game();<br />
     }</p>
-  <p>The code above makes the player leave the game when the Escape key is pressed.</p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードでは、Escapeキーが押されたときにプレイヤーがゲームから退出するようになっています。</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_define_input.htm">rollback_define_input</a></div>
+        <div>戻る<a data-xref="{title}" href="Rollback_Functions.htm">ロールバック機能</a></div>
+        <div>次ページ：<a data-xref="{title}" href="rollback_define_input.htm">Rollback_Define_Input</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_leave_game

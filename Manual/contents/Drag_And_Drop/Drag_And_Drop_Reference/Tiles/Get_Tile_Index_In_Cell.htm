@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Tile Index In Cell</title>
+  <title>セル内のタイルインデックスを取得</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Tile Index In Cell action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get Tile Index In Cell" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_In_Cell.png" /> Get Tile Index In Cell</h1>
-  <p>With this action you can get a tile index on a given layer. The layer is specified from the layer name given (a string, as used to name the layer in the Room Editor), and then you give the row and column of the cell within the layer to get the tile
-    index from. Finally you supply the target variable to store the returned tile index in, where 0 is no tile, and a positive integer is the index of the tile. Note that the target variable can be flagged as a temporary (local) variable that can be used
-    until the end of the event.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Tile Index In Cell Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_In_Cell.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> セル内の インデックスを取得<span class="notranslate">Tile</span> </h1>
+  <p>このアクションを使用すると、指定したレイヤーの<span class="notranslate">tile</span> インデックスを取得できます。レイヤーは与えられたレイヤー名（<span class="notranslate">string</span> 、<span class="notranslate">Room</span> エディターでレイヤー名を付けるのに使用）から指定し、次にタイル
+    のインデックスを取得します。最後に、返された<span class="notranslate">tile</span> のインデックスを格納するターゲット変数を指定します。0 は<span class="notranslate">tile</span> がなく、正の整数が<span class="notranslate">tile</span> のインデックスです。ターゲット変数には、一時（ローカル）変数として使用できるフラグを付けることができることに注意してください。
+    イベント終了まで</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Get Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_In_Cell.png" /></p>
+  <h4>論拠となる。</h4>
   
     <table>
       <tbody>
         <tr>
-          <th>Argument</th>
-          <th>Description</th>
+          <th>論証</th>
+          <th>商品説明</th>
         </tr>
         <tr>
-          <td>Layer</td>
-          <td>The layer to get the tile from</td>
+          <td><span class="notranslate">Layer</span></td>
+          <td><span class="notranslate">tile</span> を取得するレイヤー</td>
         </tr>
         <tr>
-          <td>Column</td>
-          <td>The column (from left to right) of the cell</td>
+          <td><span class="notranslate">Column</span></td>
+          <td>セルの列(左から右へ)</td>
         </tr>
         <tr>
-          <td>Row</td>
-          <td>The row (from top to bottom) of the cell</td>
+          <td><span class="notranslate">Row</span></td>
+          <td>セルの行（上から下へ）。</td>
         </tr>
         <tr>
-          <td>Target</td>
-          <td>The target variable for the return value</td>
+          <td><span class="notranslate">Target</span></td>
+          <td>戻り値の対象変数</td>
         </tr>
       </tbody>
     </table>
   
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Tile Index In Cell Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_In_Cell.png" />The above action block code creates a loop to go through
-    the top row of the given room layer, and as it does it checks to see if the tile indexed at the cell for the column is set to 0. If it is not the tile index for that cell is set to 0 and the temporary (local) variable is incremented before the loop
-    does another set of checks.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックコードは、<span class="notranslate">loop</span> を作成して
+   <span class="notranslate">room</span> 与えられた<span class="notranslate">tile</span> レイヤーの一番上の行で、その列のセルのインデックスが 0 になっているかどうかをチェックします。そうでない場合、そのセルの<span class="notranslate">tile</span> インデックスが 0 に設定され、ループの前に一時（ローカル）変数がインクリメントされます。
+    は別のチェックを行う。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Actions.htm">Tile Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Tile_Set.htm">Set Tile Set</a></div>
+        <div style="float:left">戻る<a href="Tile_Actions.htm">タイルアクション</a></div>
+        <div style="float:right">次へ<a href="Set_Tile_Set.htm">タイルセット</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Get Tile Index In Cell
+Action - Get <span class="notranslate">Tile</span> Index In Cell
 -->
   <!-- TAGS
 action_tile_get_in_cell

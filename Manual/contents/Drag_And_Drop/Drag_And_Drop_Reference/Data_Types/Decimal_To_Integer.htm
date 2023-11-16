@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Decimal To Integer</title>
+  <title>10進数から整数へ</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Decimal To Integer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Decimal To Integer" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /> Decimal To Integer</h1>
-  <p>This action will take a decimal number and convert it into an integer. You give the value to convert and then select the type of rounding that should be done to turn it into an integer value. The types of rounding available are:<b></b></p>
+  <h1><img> 10進数から整数へ</h1>
+  <p>このアクションは、10進数を受け取って整数に変換します。変換する値を指定し、それを整数値にするために行う丸めの種類を選択します。選択できる丸めの種類は以下のとおりです。<b></b></p>
   <ul class="colour">
-    <li><b>Round</b>: This takes a decimal number and rounds it up <i>or</i> down to the nearest integer number. In the special case where the number supplied is exactly half an integer (for example, 1.5, 17.5, -2.5, etc...) the number will be rounded to
-      the nearest <b>even</b> value, for example, 2.5 would be rounded to 2, while 3.5 would be rounded to 4. This type of rounding is called <i>bankers rounding</i> and over large numbers of iterations or when using floating point maths, it gives a statistically
-      better rounding than the more traditional &quot;round up if over .5 and round down otherwise&quot; approach.</li>
-    <li><b>Ceil</b>: This will take a decimal value and round it <i>up</i> to the nearest integer. Unlike round (above) this does not take into consideration the decimal part of the value, so a number like 5.0000001 would still be rounded up to 6. It is worth
-      noting that if you are using the Random action <a href="../Random/Get_Random_Number.htm">Get Random Number</a> to generate a random decimal value and then calling this action to round it up, then you <i>may</i> get unexpected results. The random
-      action could potentially return 0, and using &quot;Ceil&quot; on that will not give 1 but 0, so if you get a random decimal from 0 to 9 and use this function you may expect to get integers from 1 to 10, but in reality you could get integers from
-      0 to 10. This is a remote possibility but should be taken into account when using this action.</li>
-    <li><b>Floor</b>: This will take a decimal value and round it <i>down</i> to the nearest integer value. Unlike round (above) this does not take into consideration the decimal part of the value, so a number like 5.9999999 would still be floored down to
+    <li><b>ラウンド</b>10進数を受け取り、最も近い整数に切り上げ<i>または</i>切り下げを行います。指定された数値がちょうど半分の整数である場合（たとえば，1.5，17.5，-2.5 など），数値は
+      例えば、2.5は2に、3.5は4に丸められます。この種の丸めは<i>バンカーズ丸めと</i>呼ばれ、多数の反復計算や浮動小数点演算を使用する場合、統計的に最も近い値を与えます。
+      従来の「0.5を超えたら切り上げ、それ以外は切り捨て」よりも良い丸め方ができます。</li>
+    <li><b>Ceil</b>: 10進数の値を、最も近い整数に<i>切り上げます</i>。round（上記）とは異なり、これは値の小数部分を考慮しないので、5.0000001のような数値はやはり6に切り上げられます。これは
+      Random アクションの<a href="../Random/Get_Random_Number.htm">Get Random Number</a>を使ってランダムな小数の値を生成し、それを丸めるためにこのアクションを呼び出した場合、予期しない結果が得られる<i>可能性が</i>あることに注意してください。ランダム
+      アクションは0を返す可能性があり、それに対して「Ceil」を使用すると1ではなく0を返すので、0から9までのランダムな小数を取得してこの関数を使用すると、1から10までの整数を取得できると期待するかもしれませんが、実際には、1から10までの整数を取得できる可能性があります。
+      0から10まで。この可能性は低いですが、このアクションを使用する際には考慮する必要があります。</li>
+    <li><b>階</b>です。10進数の値を、最も近い整数値に<i>切り捨てます</i>。round（上記）とは異なり、これは値の小数部分を考慮しないので、5.9999999のような数値は、やはり床に落とされます。
       5.</li>
   </ul>
-  <p>Once you have selected the rounding type, you must supply the number to round (this can be a variable), and then give a target variable to return the new integer value to (which can be flagged as a temporary local variable).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Decimal To Integer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_Decimal_To_integer.png" /></p>
-  <h4>Arguments:</h4>
+  <p>丸めの種類を選択したら、丸める数値を与え（これは変数でもよい）、新しい整数値を返すターゲット変数を与えなければなりません（これは一時的なローカル変数としてフラグを立てることができます）。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Rounding</td>
-        <td>The type of rounding to use to get the integer (see description above)</td>
+        <td><span class="notranslate">Rounding</span></td>
+        <td>整数を得るために使用する丸めの種類 (上記の説明を参照)</td>
       </tr>
       <tr>
-        <td>Number</td>
-        <td>The decimal number to round to an integer</td>
+        <td><span class="notranslate">Number</span></td>
+        <td>整数に丸めるための10進数</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the returned integer</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>返された整数を格納するターゲット変数</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Decimal To Integer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_Decimal_To_Integer.png" />The above action block code takes a decimal value and converts it to an integer,
-    storing the returned value in a temporary local variable. This value is then turned into a string and drawn to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、10進数値を受け取り、それを整数に変換しています。
+    を一時的なローカル変数に格納します。この値が<span class="notranslate">string</span> に変換され、画面に描画される。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Type_Actions.htm">Data Type Actions</a></div>
-        <div style="float:right">Next: <a href="String_To_Number.htm">String To Number</a></div>
+        <div style="float:left">戻る<a href="Data_Type_Actions.htm">データ型アクション</a></div>
+        <div style="float:right">次へ<a href="String_To_Number.htm">文字列から数値へ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Decimal To Integer

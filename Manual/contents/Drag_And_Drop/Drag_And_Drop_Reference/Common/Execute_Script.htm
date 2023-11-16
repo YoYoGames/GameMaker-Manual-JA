@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Execute Script</title>
+  <title>スクリプトの実行</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section detailing Execute Script" />
   <meta name="rh-index-keywords" content="GML Visual Action - Execute Script" />
@@ -14,52 +14,52 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Execute Script Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Execute_Script.png" /> Execute Script</h1>
-  <p>This action can be used to call a script function or <a href="Declare_A_New_Function.htm">user-defined function</a>. In general, this action would only be used for legacy support and shouldn&#39;t really be used in current or new projects. To use the
-    action, you give the script asset to call - or the user-defined function variable name to call - and then supply any <i>arguments</i> that it requires, ie: any values (strings, integers, resource indices, etc...) that you wish to input into the script
-    or function so that it can use them. You can add additional arguments as required by clicking the plus icon <span><img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> </span>beside the action.</p>
-  <p>Some scripts and user-defined functions can also return a value for later use in the action block list, and so you can specify the <b>target variable</b> that should store this return value. This can have been created previously or can be a new temporary
-    local one (if you check the &quot;<strong>Temp</strong>&quot; check-box). Both the target and the argument fields can be left blank if they are not required.</p>
-  <p>Note that you are generally better off using the action <a href="Function_Call.htm">Function Call</a> to call user-defined functions, and shouldn&#39;t generally need to use this action, or call a script asset directly in code.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Execute Script Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Execute_Script.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> スクリプトの実行</h1>
+  <p>このアクションは、<span class="notranslate">script</span> 関数または<a href="Declare_A_New_Function.htm">ユーザー定義関数を</a>呼び出すために使用できます。一般的に、このアクションはレガシーサポートにのみ使用され、現在のプロジェクトや新しいプロジェクトではあまり使用されるべきではありません。このアクションを使うには
+    アクションを呼び出すには、呼び出す<span class="notranslate">script</span> <span class="notranslate">asset</span> 、または呼び出すユーザー定義関数の変数名を指定し、それが必要とする<i>引数</i>、つまりスクリプトに入力したい値（<span class="notranslate">strings</span> 、整数、リソースインデックス、など）を指定します。
+    または関数が使用できるようにします。必要に応じて引数を追加するには、プラスアイコン <span><img> </span>アクションの横にある</p>
+  <p><span class="notranslate">scripts</span> とユーザー定義関数の中には、後でアクションブロックリストで使用するために値を返すものもあるので、この戻り値を格納する<b>ターゲット</b>変数を指定することができます。この変数は、以前に作成されたものであっても、新しい一時的なものであっても構いません。
+    ローカルなものです（「<strong>Temp</strong>」チェックボックスをオンにした場合）。targetとargumentの欄は、必要なければ空白にしておくことができます。</p>
+  <p>一般に、ユーザー定義関数を呼び出すには、<a href="Function_Call.htm">Function Call</a>アクションを使用した方が良いことに注意してください。このアクションを使用したり、コード内で<span class="notranslate">script</span> <span class="notranslate">asset</span> を直接呼び出す必要は一般的にはないはずです。</p>
+  <p> </p>
+  <h4>アクションのシンタックス。</h4>
+  <p><img alt="Execute Script Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Execute_Script.png" /></p>
+  <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>Script</td>
-        <td>The name of the script or user-defined function to call.</td>
+        <td><span class="notranslate">Script</span></td>
+        <td>呼び出す<span class="notranslate">script</span> またはユーザー定義関数の名前。</td>
       </tr>
       <tr>
-        <td>Argument0 ... Argument3</td>
-        <td>The different arguments (values) that are to be passed to the script or function (unused arguments can be left blank)</td>
+        <td><span class="notranslate">Argument0 ... Argument3</span></td>
+        <td><span class="notranslate">script</span> または関数に渡すさまざまな引数（値）（未使用の引数は空白にしておくことができます。）</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The name of the variable that is to be targeted for any returned values (can be left blank)</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>返される値の対象となる変数名（空白でも可）</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Execute Script Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Execute_Script.png" />The above action block code calls a user-defined function, passing in two arguments for a
-    random position within the room. It does not return anything.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>例</h4>
+  <p><img>上記のアクションブロックのコードは、ユーザー定義関数を呼び出し、2つの引数を渡すことで
+    <span class="notranslate">room</span> 内のランダムな位置。何も返さない。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="New.htm">New</a></div>
+        <div style="float:left">戻る<a href="Common_Actions_Library.htm">共通アクション</a></div>
+        <div style="float:right">次のページ<a href="New.htm">新着情報</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Execute Script

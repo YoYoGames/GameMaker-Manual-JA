@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Data Structures</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>データ構造</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for Data Structures" />
   <meta name="rh-index-keywords" content="" />
@@ -14,41 +14,42 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Data Structures</h1>
-  <p>In games you often need to store information in a precise and ordered way. For example, you may need to store lists of items that a person carries or you may want to store a grid of places that still need to be visited.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> has a number of built-in <b>data structures</b> that can be accessed through specialist functions. There are six different types of data structure available, each one having its own benefits depending on the type of information that you are looking to store and how you wish to manipulate it later: stacks, queues, lists, maps, priority queues, and grids.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It is recommend to use <a href="../../GML_Overview/Arrays.htm">arrays</a> and <a href="../../GML_Overview/Structs.htm">structs</a> over DS lists and maps, as they now have similar functionality, are easier to use and are garbage collected automatically.</p>
-  <p>Essentially, all data structures work in the same way - you create a data structure and store its reference in a variable. You then use this reference to use the data structure in all further function calls that can perform operations on it. Finally, once you are done you destroy the data structure again to remove it from memory. You can use as many of the structures at the same time as you need, and all structures can store any of the available <a href="../../GML_Overview/Data_Types.htm">data types</a>.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
-  <p>Information on the different data structures can be found in the following sections:</p>
+  <h1>データ構造</h1>
+  <p>ゲームでは、情報を正確に順序立てて保存する必要があることがよくあります。例えば、人が持っているアイテムのリストを保存したり、まだ訪問する必要のある場所のグリッドを保存する必要があるかもしれません。このような場合、配列を使用する<i>ことが</i>できますが、データのソートや特定のアイテムの検索など、より複雑な操作を行う場合は、実行速度が遅く、デバッグが困難な、大規模な<span class="notranslate">GML</span> コードを記述する必要があります。</p>
+  <p>そのため、<span data-keyref="GameMaker Name">GameMakerには</span>いくつかの<b>データ</b>構造が組み込まれており、専門の関数を使ってアクセスすることができます。データ構造には、スタック、<span class="notranslate">queues</span> 、リスト、マップ、プライオリティ、<span class="notranslate">queues</span> 、グリッドの6種類があり、保存する情報の種類と後で操作する方法によって、それぞれメリットがあります。</p>
+  <p class="note"><strong>注</strong>：DSリストやマップよりも<a href="../../GML_Overview/Arrays.htm">配列や</a> <a href="../../GML_Overview/Structs.htm">構造</a>体を使うことをお勧めします。同様の機能を持ち、使いやすく、自動的にガベージコレクションされるからです。</p>
+  <p>データ構造を作成し、その<i>インデックス</i>値を変数に格納します。データ構造を作成し、そのインデックス値を変数に格納します。次に、このインデックスを使用して、データ構造に対して操作を行うことができるすべての関数呼び出しでデータ構造を参照します。最後に、データ構造を破棄し、メモリから削除します。構造体は必要な数だけ同時に使用することができ、すべての構造体は利用可能な<a href="../../GML_Overview/Data_Types.htm">データ型の</a>いずれかを格納することができます。</p>
+  <p class="note"><b><span class="note">注意事項</span> </b>すべての動的リソースと同様に、データ構造はメモリを消費するため、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>常に</b>破棄する必要があります。</p>
+  <p>データ構造を作成するとき、それを識別するためのインデックス値は0から始まる整数値です。 これは、異なるデータ構造が<b>同じ</b>インデックス値を持つことができることを意味します。 <span style="font-size:1px;"><span class="inline"><a data-xref="{title}" href="ds_exists.htm">ds_exists</a></span></span>関数を使用してからアクセスしてください。また、インデックスは再利用されるため、破壊されたデータ構造のインデックス値が、その後に新しく作成されたものによって使用される可能性があることに注意してください。データ構造を破壊した後、DSインデックスを保持する変数には-1を設定することをお勧めします。</p>
+  <p>各データ構造に関する情報は、以下のセクションに記載されています。</p>
   <ul class="colour">
-    <li><a href="DS_Grids/DS_Grids.htm">Grids</a></li>
-    <li><a href="DS_Lists/DS_Lists.htm">Lists</a></li>
-    <li><a href="DS_Maps/DS_Maps.htm">Maps</a></li>
-    <li><a href="DS_Priority_Queues/DS_Priority_Queues.htm">Priority Queues</a></li>
-    <li><a href="DS_Queues/DS_Queues.htm">Queues</a></li>
-    <li><a href="DS_Stacks/DS_Stacks.htm">Stacks</a></li>
+    <li><a href="DS_Grids/DS_Grids.htm">グリッド</a></li>
+    <li><a href="DS_Lists/DS_Lists.htm">リスト</a></li>
+    <li><a href="DS_Maps/DS_Maps.htm">地図</a></li>
+    <li><a href="DS_Priority_Queues/DS_Priority_Queues.htm">優先キュー</a></li>
+    <li><a href="DS_Queues/DS_Queues.htm">キュー</a></li>
+    <li><a href="DS_Stacks/DS_Stacks.htm">スタック</a></li>
   </ul>
-  <p> </p>
-  <p>Before using data structures in your game, you should also be aware that there are certain moments when, due to rounding errors, you may get a result that is not what you expected. This may be resolved by changing the DS precision using the following function:</p>
+  <p> </p>
+  <p>また、ゲーム内でデータ構造を使用する前に、丸め誤差により、期待した結果とは異なる結果が得られる場合があることを認識しておく必要があります。これは、以下の関数でDSの精度を変更することで解決できるかもしれません。</p>
   <ul class="colour">
-    <li><a href="ds_set_precision.htm">ds_set_precision</a></li>
+    <li><a href="ds_set_precision.htm"><span class="notranslate">ds_set_precision</span></a></li>
   </ul>
-  <p> </p>
-  <p>There is also a special function for checking to see whether a data structure of any given type exists:</p>
+  <p> </p>
+  <p>また、任意の型のデータ構造が存在するかどうかを確認するための特別な関数も用意されている。</p>
   <ul class="colour">
-    <li><a href="ds_exists.htm">ds_exists</a></li>
+    <li><a href="ds_exists.htm"><span class="notranslate">ds_exists</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Strings/Strings.htm">Strings</a></div>
+        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次へ<a href="../Strings/Strings.htm">弦楽器</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Data Structures

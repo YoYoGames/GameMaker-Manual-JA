@@ -6,7 +6,7 @@
   <title>display_set_gui_maximise</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for display_set_gui_maximise" />
   <meta name="rh-index-keywords" content="display_set_gui_maximise,display_set_gui_maximize" />
@@ -16,66 +16,66 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>display_set_gui_maximise</h1>
-  <p>This function can be used to maximise the GUI layer and set it to be scaled and offset in relation to the screen dimensions, rather than the default application surface position and dimensions. By default, the GUI layer is 1:1 with the application surface resolution and drawn at the (0,0) position of the surface too. However this is not always what you want and so you can use this function to set it to be drawn relative to the absolute (0,0) position of the display or game window. What arguments you provide to this function will depend on the effect you wish it to have on the GUI layer. Simply calling the function with no arguments will set the GUI layer to be drawn at the (0,0) position of the screen or game window, with the width and height being scaled to fit the whole area:</p>
+  <p>この関数は、GUIレイヤーを最大化し、デフォルトのアプリケーションサーフェス位置と寸法ではなく、スクリーン寸法に関連してスケールとオフセットを設定するために使用することができます。デフォルトでは、GUIレイヤーはアプリケーションサーフェスの解像度と1：1で、サーフェスの（0,0）位置にも描画されます。しかし、これは常に望むものではないので、この関数を使用して、ディスプレイまたはゲームウィンドウの絶対位置（0,0）に対して相対的に描画されるように設定することができます。この関数に与える引数は、GUIレイヤーに与えたい効果に依存します。引数なしでこの関数を呼び出すと、GUIレイヤーはスクリーンまたはゲーム・ウィンドウの(0,0)の位置に描画され、幅と高さは領域全体にフィットするようにスケーリングされるように設定されます。</p>
   <p class="code">display_set_gui_maximise();</p>
-  <p>However, you can set the <i>scaling factor</i> for the GUI layer, and the width and height will be scaled by that amount. Remember that the GUI layer is always made to fit the size of the display or game window, or the application surface, so setting this value to anything other than 1 basically scales the pixel count along the width and height. If your display is 1024x768 and you set the scaling factor to scale by 0.5, then your GUI layer will be half the size of the display, effectively doubling the pixel size:</p>
+  <p>ただし、GUIレイヤーの<i>スケーリングファクターを</i>設定すると、幅と高さがその分拡大されます。GUIレイヤーは常にディスプレイやゲームウィンドウ、またはアプリケーションサーフェイスのサイズに合わせて作られるため、この値を1以外に設定すると、基本的に幅と高さに沿って画素数がスケールされることを覚えておいてください。ディスプレイが1024x768で、スケーリングファクターを0.5に設定すると、GUIレイヤーはディスプレイの半分のサイズになり、事実上ピクセルサイズは2倍になります。</p>
   <p class="code">display_set_gui_maximise(0.5, 0.5);</p>
-  <p>Setting the values in this way will also set the draw position to the (0,0) of the display or game window, so you can provide offset values to &quot;move&quot; the (0,0) position:</p>
+  <p>このように値を設定すると、描画位置もディスプレイやゲームウィンドウの(0,0)に設定されるので、オフセット値を与えて(0,0)の位置を「移動」させることができるようになります。</p>
   <p class="code">var pos = application_get_position();<br />
     display_set_gui_maximise(0.5, 0.5, pos[0], pos[1]);</p>
-  <p>Finally, you can reset the GUI layer using this function by setting the scaling factors to -1. This will set the GUI layer to have a 1:1 scale again and set the draw position to the (0,0) position of the application surface rather than the display or window.</p>
+  <p>最後に、この関数を使用してGUIレイヤーをリセットするには、スケーリング係数を-1に設定します。これにより、GUIレイヤーは再び1:1のスケールを持つようになり、描画位置はディスプレイやウィンドウではなく、アプリケーションサーフェスの(0,0)の位置に設定されます。</p>
   <p class="code">display_set_gui_maximise(-1, -1);</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">display_set_gui_maximise(<i>xscale, yscale, xoffset, yoffset</i>);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>xscale</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The horizontal scaling factor (use -1 to reset to default).</td>
+        <td><span class="notranslate">xscale</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> 水平方向のスケーリングファクター（デフォルトに戻すには-1を使用）。</td>
       </tr>
       <tr>
-        <td>yscale</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The vertical scaling factor (use -1 to reset to default).</td>
+        <td><span class="notranslate">yscale</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> 垂直方向のスケーリングファクター（デフォルトに戻すには-1を使用）。</td>
       </tr>
       <tr>
-        <td>xoffset</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The x offset position for drawing.</td>
+        <td><span class="notranslate">xoffset</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> 描画のためのXオフセット位置。</td>
       </tr>
       <tr>
-        <td>yoffset</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The y offset position for drawing.</td>
+        <td><span class="notranslate">yoffset</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> 描画のためのyオフセット位置。</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">display_set_gui_size(display_get_width() / 2, display_get_height() / 2);<br />
     display_set_gui_maximise(2, 2, 0, 0);</p>
-  <p>The above code will lock the draw GUI event to the given width and height, scaling all components to fit the display, using that proportion.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、draw GUIイベントを与えられた幅と高さに固定し、その比率ですべてのコンポーネントをディスプレイに合うようにスケーリングします。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="display_set_ui_visibility.htm">display_set_ui_visibility</a></div>
+        <div style="float:left">戻る<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
+        <div style="float:right">次のページ <a href="display_set_ui_visibility.htm"><span class="notranslate">display_set_ui_visibility</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_set_gui_maximise

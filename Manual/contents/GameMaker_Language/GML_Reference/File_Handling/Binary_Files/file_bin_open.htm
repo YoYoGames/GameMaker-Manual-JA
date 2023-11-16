@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_bin_open</title>
+  <title>ファイル_bin_open</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for file_bin_open" />
   <meta name="rh-index-keywords" content="file_bin_open" />
@@ -15,56 +15,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_bin_open</h1>
-  <p>This function will open the binary file with the indicated name. The mode indicates what can be done with the file:</p>
+  <h1>ファイル_bin_open</h1>
+  <p>この関数は、指定された名前のバイナリファイルをオープンする。モードは，そのファイルに対して何ができるかを示す。</p>
   <ul class="colour">
-    <li>0 = reading</li>
-    <li>1 = writing</li>
-    <li>2 = both reading and writing</li>
+    <li>0 = 読み取り</li>
+    <li>1 = 書き込み</li>
+    <li>2 = 読み書き両方</li>
   </ul>
-  <p>When the file does not exist it is created, and the function returns the id of the file that must be used in the other functions. You can open multiple files at the same time (32 max), but don&#39;t forget to close them once you are finished with them.</p>
-  <p class="note"><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the <a href="../../../../Additional_Information/The_File_System.htm">File System</a> for more information.</p>
-  <p class="note"><b>NOTE</b>: These functions <b>do not</b> work when the target module is HTML5.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>ファイルが存在しない場合は作成され、他の関数で使用する必要があるファイルのIDが返されます。同時に複数のファイルを開くことができますが（最大32個）、終了したらファイルを閉じることを忘れないでください。</p>
+  <p class="note"><b>警告!</b> <span data-keyref="GameMaker Name">GameMakerは</span>サンドボックス化されているため、この機能は期待通りに動作しない可能性があります!詳しくは「<a href="../../../../Additional_Information/The_File_System.htm">ファイルシステム</a>」の項をご覧ください。</p>
+  <p class="note"><b>注</b>）対象モジュールがHTML5の場合、これらの機能は動作<b>しません</b>。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">file_bin_open(fname, mode);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>論証</th>
+        <th>タイプ</th>
+        <th>商品説明</th>
       </tr>
       <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the file to read from.</td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String">文字列</span></td>
+        <td><span class="notranslate">The name of the file to read from.</span></td>
       </tr>
       <tr>
-        <td>mode</td>
-        <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The indicator of what can be done with the file.</td>
+        <td><span class="notranslate">mode</span></td>
+        <td><span data-keyref="Type_Real">リアル</span></td>
+        <td><span class="notranslate">The indicator of what can be done with the file.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_File_Bin">Binary File ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">file = file_bin_open(&quot;myfile.bin&quot;, 2);</p>
-  <p>This would open a file from the same directory as the game, and assign its index to the variable &quot;file&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>これは、ゲームと同じディレクトリにあるファイルを開き、そのインデックスを変数「file」に代入するものです。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Binary_Files.htm">Binary Files</a></div>
-        <div style="float:right">Next: <a href="file_bin_rewrite.htm">file_bin_rewrite</a></div>
+        <div style="float:left">戻る：<a href="Binary_Files.htm">バイナリファイル</a></div>
+        <div style="float:right">次のページ <a href="file_bin_rewrite.htm"><span class="notranslate">file_bin_rewrite</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_bin_open

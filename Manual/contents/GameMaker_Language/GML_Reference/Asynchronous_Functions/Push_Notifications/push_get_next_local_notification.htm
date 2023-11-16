@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>push_get_next_local_notification（プッシュ・ゲット・ネクスト・ローカル・ノーティフィケーション）。</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for push_get_next_local_notification" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="push_get_next_local_notification" />
+  <meta name="is_pure" content="true" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>push_get_next_local_notification（プッシュ・ゲット・ネクスト・ローカル・ノーティフィケーション）。</h1>
+  <p>この関数は、<span class="notranslate">queue</span> の次のローカル プッシュ通知を表示するための一連のキー/値ペアを、事前に作成された<a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップに</a>入力します。キューに追加された通知がない場合は -1 を返し、そうでない場合は通知の ID を表す実数値を返します。このIDは、次に、関数 <a href="push_cancel_local_notification.htm"><span class="inline">push_cancel_local_notification()</span></a>.を呼び出す必要があります。 <a href="push_get_first_local_notification.htm"><span class="inline">push_get_first_local_notification()</span></a>を使用して<span class="notranslate">queue</span> の最初の通知を取得し、その後この関数を使用してそれを続行します。</p>
+  <p class="note"><b>注</b>：この機能は、<b>iOS</b>および<b>Androidの</b>ターゲットモジュールに限定されます。</p>
+  <p>DSマップは以下のキーと値のペアを保持する。</p>
+  <ul class="colour">
+    <li>&quot;<b>title</b>&quot; - 通知タイトル（<span class="notranslate">iOS</span> はタイトル情報を保存しないため、これは<i>Android</i>プラットフォームでのみ利用可能です）。</li>
+    <li>&quot;<b>message</b>&quot; - メッセージの本文</li>
+    <li>&quot;<b>data</b>&quot; - データパッケージの文字列</li>
+  </ul>
+  <p> </p>
+  <h4>構文です。</h4>
+  <p class="code">push_get_next_local_notification(map);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>論証</th><th>タイプ</th>
+        <th>商品説明</th>
+     </tr>
+      <tr>
+        <td><span class="notranslate">map</span></td><td><span data-keyref="Type_ID_DS_Map"></span></td>
+        <td><span class="notranslate">The <span class="inline">DS Map</span> を使用するためのIDです。</td>
+     </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>リターンです。</h4>
+  <p class="code"><span data-keyref="Type_ID_PushNotif">Push Notification ID</span> or -1</p>
+  <p> </p>
+  <h4>例:</h4>
+  <p class="code">var map = ds_map_create();<br />
+    var ntf = push_get_first_local_notification(map);<br />
+    while(ntf &gt;= 0)<br />
+    {<br />
+        var data = ds_map_find_value(map, &quot;data&quot;);<br />
+        if data == &quot;Daily_Reward&quot;<br />
+        {<br />
+            push_cancel_local_notification(ntf);<br />
+        }<br />
+        ntf = push_get_next_local_notification(map);<br />
+    }<br />
+    ds_map_destroy(map);</p>
+  <p>上記のコードは、 <span class="inline">DS Map</span> を作成し、<span class="notranslate">queue</span> で最初に利用可能な通知のデータを要求します。通知が存在する場合、マップは入力され、コードは次に特定の<span class="notranslate">string</span> のために「データ」キーをチェックします。<span class="notranslate">string</span> が見つかった場合、通知はキャンセルされ、<span class="notranslate">queue</span> のすべてがチェックされるまで、次の通知をチェックするために移動します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">戻る<a href="Push_Notifications.htm">プッシュ通知</a></div>
+        <div style="float:right">次のページ <a href="push_cancel_local_notification.htm"><span class="notranslate">push_cancel_local_notification</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+push_get_next_local_notification
+-->
+  <!-- TAGS
+push_get_next_local_notification
+-->
+</body>
+</html>

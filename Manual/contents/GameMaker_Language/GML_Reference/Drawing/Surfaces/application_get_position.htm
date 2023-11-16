@@ -6,7 +6,7 @@
   <title>application_get_position</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for application_get_position" />
   <meta name="rh-index-keywords" content="application_get_position" />
@@ -16,32 +16,32 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>application_get_position</h1>
-  <p>When you have &quot;maintain aspect ratio&quot; ticked in the Game Options for a target platform, <span data-keyref="GameMaker Name">GameMaker</span> will automatically set the draw position for the application surface so that it is displayed correctly centered and scaled on
-    the given display. However if you are manipulating this surface and wish to draw it yourself, then this function gives you an easy way to find exactly <i>where</i> within the display or window that the surface was being drawn so that you can then
-    draw it there yourself, or align GUI images or post draw images to it.</p>
-  <p>The function will return an <a href="../../../GML_Overview/Arrays.htm">array</a> with four keys, where key 0 and 1 are the x and y position of the top lefthand corner of the surface, and keys 2 and 3 are the x and y of the bottom righthand corner of
-    the surface, all relative to the size of the display or window.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>ターゲットプラットフォームのゲームオプションで「アスペクト比を維持する」にチェックを入れると、<span data-keyref="GameMaker Name">GameMakerは</span>自動的にアプリケーションサーフェイスの描画位置を設定し、正しくセンタリング、スケーリングされて表示されるようにします。
+    指定されたディスプレイしかし、もしあなたがこのサーフェスを操作していて、自分で描画したい場合、この関数を使えば、サーフェスが描画されているディスプレイやウィンドウの<i>場所を</i>正確に知ることができますので、次のことが可能になります。
+    自分で描画したり、GUI画像やポストドロー画像をそこに整列させることができる。</p>
+  <p>この関数は，4つのキーを持つ<a href="../../../GML_Overview/Arrays.htm">配列を</a>返す。キー0と1は表面の左上隅のXとYの位置，キー2と3は表面の右下隅のXとYの位置であり，キー0と1は表面の左上隅のXとYの位置，キー2と3は表面の右下隅のXとYの位置である。
+    は、すべてディスプレイまたはウィンドウのサイズに対する相対値である。</p>
+  <p> </p>
+  <h4>構文です。</h4>
   <p class="code">application_get_position();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Array"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>例</h4>
   <p class="code">var a = application_get_position();<br/> xx = a[0];<br/> yy = a[1];<br/> ww = a[2] - a[0];<br/> hh = a[3] - a[1];</p>
-  <p>The above code will get the position of the application surface, as well as the absolute width and height in relation to the display window, and store them in four variables for future use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>上記のコードは、アプリケーションサーフェスの位置と、ディスプレイウィンドウに対する絶対的な幅と高さを取得し、将来使用するために4つの変数に格納します。</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="application_surface_draw_enable.htm">application_surface_draw_enable</a></div>
+        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ <a href="application_surface_draw_enable.htm"><span class="notranslate">application_surface_draw_enable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 application_get_position
