@@ -24,19 +24,19 @@
   <p>グローバル変数を使用すると、値を変更すると、この変数を参照している<span class="notranslate">objects</span> のすべてのインスタンスにその変更が反映されるのを確認できます。<i>ローカル</i>変数と同様に、グローバル変数にインスタンス変数と同じ名前をつけないように注意しなければなりません。一般的には、ゲームの開始時（例えば、ゲームの最初の<span class="notranslate">object</span> に配置された最初のオブジェクトインスタンスの<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">ルームスタート</a>イベント）に、すべてのグローバル変数を宣言する1つの<span class="notranslate">room</span> 、またはそれらをまとめて宣言する1つの<a href="../Script_Functions.htm">スクリプト関</a>数を用意します。これにより、変数名を確認したり値を編集する必要がある場合に、戻ってすべてを一度に参照できる便利な場所になります。</p>
   <p><span data-keyref="GameMaker Name">GameMakerには</span>「組み込み型」のグローバル変数もあるので、インスタンス変数に同じ名前をつけたり、同じ名前のグローバル変数を持っていて、なぜエラーになるのか不思議に思うことがあるので、注意が必要です。グローバル変数は、コードエディタ上で色が変わり、下部のオートコンプリートバーに表示されるので、簡単に見つけることができます。組み込みのグローバル変数のほとんどは、非常に特殊な用途を持っており、マニュアルの適切なセクションに記載されています - しかし、頻繁に使用され、他の場所に記載されていない2つの重要なものがあります。</p>
   <ul class="colour">
-    <li><a href="Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/async_load.htm">async_load</a></span></li>
     <li><span class="inline"><a data-xref="{title}" href="../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></span></li>
   </ul>
   <p>また、3 つの<b>非推奨の</b>組み込みグローバル変数があります (これらの変数は<span class="notranslate">GameMaker</span> の以前のバージョンからのレガシープロジェクトをサポートするためにのみ設計されています。 <b><i>新しいプロジェクトでは使用しない</i></b>):</p>
   <ul class="colour">
-    <li><a href="Builtin_Global_Variables/score.htm"><span class="inline">score</span></a></li>
-    <li><a href="Builtin_Global_Variables/health.htm"><span class="inline">health</span></a></li>
-    <li><a href="Builtin_Global_Variables/lives.htm"><span class="inline">lives</span></a></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/score.htm">score</a></span></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/health.htm">health</a></span></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/lives.htm">lives</a></span></li>
   </ul>
   <p>最後に、<span class="notranslate">script</span> 関数とメソッドに使用できる2つの変数があります。</p>
   <ul class="colour">
-    <li><span class="inline"><a href="Builtin_Global_Variables/argument.htm">argument</a></span></li>
-    <li><span class="inline"><a href="Builtin_Global_Variables/argument_count.htm">argument_count</a></span></li>
+    <li><a data-xref="{title}" href="Builtin_Global_Variables/argument.htm">argument</a></li>
+    <li><a data-xref="{title}" href="Builtin_Global_Variables/argument_count.htm">argument_count</a></li>
   </ul>
   <p>グローバル変数の宣言には、以下の形式も使用できますが <i><b>後方互換性のためにのみ含まれています</b></i><span class="notranslate">GameMaker</span> の将来のバージョンではこの形式がサポートされない可能性があるため、新しいプロジェクトでこの形式を使用することは推奨されません。</p>
   <p> <span class="inline">globalvar</span> グローバル変数を作成する第二の方法は、ローカル変数と同じように <span class="inline">var</span> 宣言でグローバル変数を宣言することである。</p>

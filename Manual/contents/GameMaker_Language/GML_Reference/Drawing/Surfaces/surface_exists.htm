@@ -43,9 +43,9 @@
     }<br />
     else<br />
     {<br />
-        if view_current = 1<br />
+        if view_current == 1<br />
         {<br />
-            draw_surface(surf,0,0);<br />
+            draw_surface(surf, 0, 0);<br />
         }<br />
     }</p>
   <p>上記のコードでは、変数surfでインデックスされたサーフェイスが存在するかどうかをチェックし、存在しない場合は再作成しています。存在する場合は、現在描画されているビューをチェックし、それがview[1]であればサーフェスを描画します。</p>

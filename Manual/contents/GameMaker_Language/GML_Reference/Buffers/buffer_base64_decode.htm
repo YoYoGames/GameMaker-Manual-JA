@@ -39,7 +39,7 @@
   <p> </p>
   <h4>例</h4>
   <p class="code">ini_open(&quot;Save.ini&quot;);<br />
-    buff = buffer_base64_decode(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
+    buff = <span data-field="title" data-format="default">buffer_base64_decode</span>(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
     ini_close();</p>
   <p>上記のコードでは、iniファイルを開き、そこからデコード関数に<span class="notranslate">string</span> を読み込みます。この関数は<span class="notranslate">buffer</span> のインデックスを返します。このインデックスは変数 &quot;buff&quot; に格納され、以前にエンコードされて保存されたデータを含んでいます。その後、iniファイルは閉じられる。</p>
   <p> </p>
