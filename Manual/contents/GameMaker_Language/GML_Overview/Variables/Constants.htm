@@ -36,7 +36,7 @@
   <p>そして、これをコード内で次のように使うことができます。</p>
   <p class="code">pos++;<br />
     <br />
-    if (pos &gt;= total_weapons)<br />
+    if (pos &gt;= TOTAL_WEAPONS)<br />
     {<br />
         pos = 0;<br />
     }
@@ -62,38 +62,38 @@
   <p>enumは「列挙子」であり、基本的に定数値のリストを持つ独自の限定的なデータ型を作ることができ、それらは次のような構造を持っています。</p>
   <p class="code">enum <i>&lt;variable&gt;</i><br />
     {<br />
-    <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
-    <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
+    <i>    &lt;MEMBER&gt;</i> [= <i>&lt;VALUE&gt;</i>],<br />
+    <i>    &lt;<i>MEMBER</i>&gt;</i> [= <i>&lt;<i>VALUE</i>&gt;</i>],<br />
         // etc...<br />
     }
   </p>
   <p>次の例では、虹の色の列挙型を作成し、さまざまな定数とデフォルト値を割り当てています。</p>
   <p class="code">enum rainbowcolours<br />
     {<br />
-        red,<br />
-        orange,<br />
-        yellow,<br />
-        green,<br />
-        blue,<br />
-        indigo,<br />
-        violet<br />
+        RED,<br />
+        ORANGE,<br />
+        YELLOW,<br />
+        GREEN,<br />
+        BLUE,<br />
+        INDIGO,<br />
+        VIOLET<br />
     }</p>
   <p>enumの項目は<b>整数値か</b>、<b>以前のenumで整数値</b>として<b>評価される<span class="glossextra">式のみ</span></b>で、デフォルトでは0から順に番号が付けられます。したがって、上記の例では、 <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc.がデフォルトで使用されます。</p>
   <p>また、作成時にenum変数に値を代入することも可能である。</p>
   <p class="code">enum enum_test<br />
     {<br />
-        val = 10;<br />
+        VAL = 10<br />
     }<br />
     <br />
-    enum rainbowcolours<br />
+    enum RAINBOW<br />
     {<br />
-        red = 5,<br />
-        orange = 5 * 2,<br />
-        yellow = 15,<br />
-        green = 20,<br />
-        blue = 25,<br />
-        indigo = 30,<br />
-        violet = 35 * enum_test.val<br />
+        RED = 5,<br />
+        ORANGE = 5 * 2,<br />
+        YELLOW = 15,<br />
+        GREEN = 20,<br />
+        BLUE = 25,<br />
+        INDIGO = 30,<br />
+        VIOLET = 35 * ENUM_TEST.VAL<br />
     }
   </p>
   <p>上の例では、別の列挙型を使用して &quot;violet &quot;を表す式を作成していることに注意してください。これは、参照する enum が式で使用する enum より<i>も前に</i>作成されている場合にのみ機能します。ただし、変数や関数に対しては機能しません。また、enumの値はすべて<b>整数</b>値で評価されることに注意してください。自分で作成する場合は、enumが動作するために<i>整数値のみが許可さ</i>れることに注意する必要があります。この値は浮動小数点倍精度の数値が表現できる任意の整数値で、負の値も含まれます。</p>

@@ -39,9 +39,12 @@
   <p> </p>
   <h4>例</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
-    for (var i = 0; i &lt; gp_num; i++;)<br />
+    for (var i = 0; i &lt; gp_num; i++)<br />
     {<br />
-        if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
+        if gamepad_is_connected(i)<br />
+            global.gp[i] = true<br />
+        else<br />
+            global.gp[i] = false;<br />
     }</p>
   <p>上記のコードは、<span class="notranslate">loops</span> 利用可能なゲームパッド（またはゲームパッドスロット）を通して、それぞれゲームパッドが接続されているかどうかをチェックします。返された値は、今後のチェックで使用するために、グローバル配列に <span class="inline">true</span> または <span class="inline">false</span> を設定するために使用されます。</p>
   <p> </p>

@@ -40,7 +40,7 @@
   <p>上記の例1のコードにおいて <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a>の呼び出しは、コードブロックの中にあります。これは、pointメソッドを使って他のインスタンスの値にアクセスしたり変更したりすると、そのインスタンスが存在しない場合にエラーが発生してゲームがクラッシュするためで、この例ではその可能性があります。しかし、例2と3では、例2ではインスタンスを作成し、例3では衝突イベントで他のインスタンスと衝突しているので、インスタンスが存在する<i>ことが分かって</i>いるので、このチェックは必要ではありません。しかし、このメソッドを使用している間に、インスタンスが破壊されたり、無効化されたり、あるいは<span class="notranslate">room</span> から削除される可能性が<i>ある</i>場合は、<i>必ず</i>事前に <span class="inline">instance_exists()</span> 関数または <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>関数を使用します。</p>
   <p>このメソッドでは、すべてのインスタンスを対象とする特別な<a href="Instance_Keywords.htm">キーワード</a>&quot;<span class="inline">all</span>&quot; を使用できないことに注意してください (例: <span class="inline">all.val = 10</span> はエラーになります)。しかし、キーワード &quot;<span class="inline">other</span>&quot; と &quot;<span class="inline">self</span>&quot; は問題なく使用<i>できます</i>。例えば、<a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">衝突</a>イベントで <span class="inline">other</span> を使用する場合。</p>
   <p class="code">// Example 3 other.hp -= 10;<br />
-    if other.hp &lt;= 0<br />
+    if (other.hp &lt;= 0)<br />
     {<br />
         other.sprite_index = spr_E_Dead;<br />
     }</p>
@@ -51,8 +51,8 @@
     <br />
     //or<br />
     <br />
-    var inst = instance_nearest(x, y, obj);<br />
-    inst.speed = 0;
+    var _inst = instance_nearest(x, y, obj);<br />
+    _inst.speed = 0;
   </p>
   <p>これらはすべて、他のインスタンスの変数を読み、変更し、設定するための完全に有効な方法であり、ポイントが実際には<i>演算子</i>であるために機能します。これは、左<a class="glossterm" data-glossterm="オペランド" href="#">オペランドに</a>値、右オペランドに変数を取り、指定された<span class="notranslate">object</span> またはインスタンス内のこの特定の変数のアドレスを返します。<span class="notranslate">object</span> の名前、定数、ID などはすべて単に値を表すもので、これらは他の値と同様に扱うことができます。</p>
   <p>他のインスタンスの変数を参照する方法としては、<span class="notranslate">GameMaker Language</span> 関数 <span class="inline">with()</span> を使用する方法がありますが、これについては<a href="Language_Features/with.htm">こちらで</a>詳しく説明します。</p>
