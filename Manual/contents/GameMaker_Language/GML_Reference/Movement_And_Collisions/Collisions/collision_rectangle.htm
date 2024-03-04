@@ -75,7 +75,7 @@
     inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true);<br />
     if inst != noone<br />
     {<br />
-        with (inst) instance_destroy();<br />
+        instance_destroy(inst);<br />
     }</p>
   <p>この短いコードは collision_rectangle を使って<span class="notranslate">room</span> の 50x, 50y（矩形の左上）から 200x, 200y（矩形の右下）までの範囲で &quot;obj_ball&quot; という<span class="notranslate">object</span> のインスタンスをチェックするものです。戻り値は一時変数に格納され、その値がインスタンスIDであるか、またはキーワード「obj_ball」であるかをチェックします。 <a href="../../../GML_Overview/Instance_Keywords.htm"><b>なし</b></a>.もしそれが<b>誰でも</b> <i>ない</i>場合は、保存されているインスタンスIDを使用して<span class="notranslate">object</span> を破棄します。</p>
   <p> </p>
