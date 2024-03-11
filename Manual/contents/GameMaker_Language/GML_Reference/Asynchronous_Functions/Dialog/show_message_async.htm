@@ -45,9 +45,9 @@
   <p>上記は、与えられた<span class="notranslate">string</span> のメッセージを表示します。メッセージIDは変数 &quot;msg &quot;に格納され、以下のように非同期ダイアログイベントの中で使用されます。</p>
   <p class="code">var i_d, stat;<br />
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
-    if i_d == msg<br />
+    if (i_d == msg) <br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;)<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
         {<br />
             url_open(&quot;https://play.google.com/store&quot;);<br />
         }<br />

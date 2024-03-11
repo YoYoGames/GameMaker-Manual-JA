@@ -59,7 +59,7 @@
   <p>上記のコードは、変数 &quot;name&quot; に保持された<span class="notranslate">string</span> を与えられた<span class="notranslate">server</span> に渡すと同時に、その URL からデータを取得し、async_load DS マップを含む Async Event をトリガーします（async_load マップのインデックスは変数 &quot;get&quot; に格納されるので、正しいコールバックを確認することができます）。トリガーされる非同期イベントは<b>HTTP</b>サブイベントとなり、そのイベントには以下のようなものがあります。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == get<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
         {<br />
             r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
         }<br />

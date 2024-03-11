@@ -38,7 +38,7 @@
   <h4>例</h4>
   <p class="code">if keyboard_check_pressed(ord(&quot;L&quot;))<br />
     {<br />
-        if global.Checkpoint game_load_buffer(save_buff);<br />
+        if (global.Checkpoint) game_load_buffer(save_buff);<br />
     }</p>
   <p>上記のコードは、プレイヤーが「L」キーを押したときに、グローバル変数が <span class="inline">true</span> である場合に限り、変数「save_buff」にインデックスが付けられた<span class="notranslate">buffer</span> から、以前に保存したゲーム状態をロードします。</p>
   <p> </p>

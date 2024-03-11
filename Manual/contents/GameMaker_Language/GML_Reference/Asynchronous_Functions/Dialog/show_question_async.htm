@@ -45,9 +45,9 @@
   <p>上記は、与えられた<span class="notranslate">string</span> で質問を表示し、ユーザーに「はい」または「いいえ」のどちらかを押すように要求します。関数IDは変数「msg」に格納され、次のような<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">非同期ダイアログイベントで</a>使用されます。</p>
   <p class="code">var i_d, stat;<br />
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
-    if i_d == msg<br />
+    if (i_d == msg) <br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;)<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
         {<br />
             coins -= armour[0,5];<br />
             global.protection += armour[0,0];<br />

@@ -200,7 +200,7 @@
     <p class="dropspot"><span class="notranslate">buffer</span> に書き込む前に、ネットワークでは常に<span class="notranslate">buffer</span> の先頭からデータを取得するため、tell を<span class="notranslate">buffer</span> の先頭に設定しました。次にチェック値（これは<span class="notranslate">server</span> で処理するイベントの種類を決定するために使用されます）、使用するキー、キーの状態（この場合、押されていれば真）を書き込んでいます。この<span class="notranslate">buffer</span> は、ネットワーク機能によってデータパケットとして送信されます。このとき、<span class="notranslate">buffer</span> の全体を送信するのではないことに注意してください !buffer_tell 関数を使用して<span class="notranslate">buffer</span> の現在の読み取り/書き込み位置を返し、書き込まれたデータのみを送信します (<span class="notranslate">buffer</span> に書き込むと、書き込まれたデータの最後に &quot;tell&quot; が移動することを思い出してください)。これは単に、必要以上のバイトを送らないようにするためです。</p>
     <p class="dropspot"><span class="notranslate">server</span>受信したデータパケットは、<span class="notranslate">buffer</span> の<span class="notranslate">server</span> に書き込まれ、ゲームの更新に使用される必要があります。そのためには、以下の簡略化したコードのように、<span class="notranslate">object</span> のネットワーク・コントローラ<span class="notranslate">server</span> の<a href="../The_Asset_Editors/Object_Properties/Async_Events.htm">Networking Asynchronous Event</a>を使用することになります。</p>
     <p class="code">var buff = ds_map_find_value(async_load, &quot;buffer&quot;);<br />
-      if cmd == buffer_read(buff, buffer_u8);<br />
+      if (cmd == buffer_read(buff, buffer_u8)) <br />
       {<br />
           key = buffer_read(buff, buffer_s16);<br />
           key_state = buffer_read(buff, buffer_bool);<br />

@@ -78,13 +78,13 @@
   <p>次に、以下のようなコードで、非同期<b>Cloud Event</b>で返された <span class="inline">DS Map</span> をチェックし、ステータスと返された<span class="notranslate">string</span> を取得したいと思います。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == cloud_check<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) &lt; 0<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) &lt; 0) <br />
         {<br />
             show_message_async(&quot;Cloud Services not available. Please check connectivity.&quot;);<br />
         }<br />
         else<br />
         {<br />
-            if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
+            if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
             {<br />
                 var file = file_text_open_write(&quot;Save.txt&quot;);<br />
                 file_text_write_string(file, ds_map_find_value(async_load, &quot;resultString&quot;));<br />
