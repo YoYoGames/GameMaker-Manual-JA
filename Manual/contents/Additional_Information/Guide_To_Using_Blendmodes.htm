@@ -52,7 +52,7 @@
     <p class="dropspot">同じルールで、背景の明るさを単純に50%減らすなら、赤50%、緑50%、青50%の色、つまりRGB（128、128、128）を使用します。このブレンドモードは、主に影を描いたり、興味深いフェードアウト効果を作成するために使用します。</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_max</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_reverse_subtract</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">このブレンドモードは、説明するのがより複雑ですが、基本的には、ソースカラーにソースアルファを乗算し、それを逆ソースカラー値を乗算したデスティネーションカラー値に追加します。bm_max（および他のブレンドモード）の背後にある実際の数学は、我々の記事のパート2で説明しますが、あなたが知っておくべきことは、結果はより「飽和」で明るい色になりますが、 <span class="inline">bm_add</span> を使用して発生するのと同じ真っ白な輝きにつながることはありません。</p>
     <p class="dropspot"><img>このブレンドモードは、重なり合った画像を、見えなくなってしまうほど明るくならずに描画する必要がある場合に便利です。明るい部分はより明るくなりますが、色と色相のレベルは維持されるはずです。ただし、このブレンドモードを使用すると、ソースイメージのアルファ値も最終的な効果に影響を与えることに注意してください。</p>
@@ -99,17 +99,29 @@
     <p class="dropspot"><img>つまり、ブレンドモードは次のようになります。</p>
     <p class="code">Source: (128, 255, 64, 255) = (0.5, 1, 0.25, 1)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (255, 255, 255, 255) = (1, 1, 1, 1)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) =  (0, 0, 0, 0)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 1) * (1, 1, 1, 1) + (0.25, 0.5, 1, 1) * (0, 0, 0, 0)<br />
       (0.5, 1, 0.25, 1) + (0, 0, 0, 0) = (0.5, 1, 0.25, 1) = (128, 255, 64, 255)</p>
     <p class="dropspot">つまり、ソースカラーは変更されないので、最終的なカラー値は<strong>(128, 255, 64, 255)</strong> となります。アルファを含めると、この値にも影響があることがおわかりいただけると思います。</p>
     <p class="code">Source (128, 255, 64, 128) = (0.5, 1, 0.25, 0.5)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (128, 128, 128, 128) = (0.5, 0.5, 0.5, 0.5)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) = (0.5, 0.5, 0.5, 0.5)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 0.5) * (0.5, 0.5, 0.5, 0.5) + (0.25, 0.5, 1, 1) * (0.5, 0.5, 0.5, 0.5)<br />
       (0.25, 0.5, 0.125, 0.25) + (0.125, 0.25, 0.5, 0.5) = (0.375, 0.75, 0.625, 0.75) = (96, 192, 159, 192)</p>
     <p class="dropspot">これにより、最終的な画素の色は（96、192、159、192）となり、下図のような画像になります。</p>
