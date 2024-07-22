@@ -22,9 +22,9 @@
   <p>は、最初のステートメントを単に省略したものなので、まったく同じ効果をもたらします。では、どう<i>すれば</i>このようなことが実現できるのでしょうか。これが、 <span class="inline">with</span> という文が<span class="notranslate">GML</span> の中に存在する理由です。 <span class="inline">with</span> ステートメントは次のような構文になっています。</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-    &lt;statement&gt;;<br />
-    &lt;statement&gt;;<br />
-    ...<br />
+        &lt;statement&gt;;<br />
+        &lt;statement&gt;;<br />
+        ...<br />
     }</p>
   <p><a class="glossterm" data-glossterm="顔" href="#">式に対して</a> <span class="notranslate">struct</span> <a class="glossterm" data-glossterm="顔" href="#"></a>、インスタンスID、<span class="notranslate">object</span> ID（この<span class="notranslate">room</span> の<i>すべてのインスタンスが</i>コードブロックを実行することを示す）、<span class="notranslate">object</span> ID、または特殊<a href="../Instance_Keywords.htm">キーワード</a>（<span class="inline">all</span> または<span class="inline">other</span> ）のいずれかを使用して、コードを実行する1つまたは複数のインスタンス（または<span class="notranslate">struct</span> ）を指示することができます。これにより、中括弧 <span class="inline">{}</span> 内のコードの<strong>スコープが</strong>、実際にコードを保持しているインスタンス、<span class="notranslate">struct</span> または関数から、式で指定されたインスタンス（またはインスタンス、<span class="notranslate">struct</span> ）に変更されます。</p>
   <p>この式で <span class="inline">with</span> のスコープが設定されると、指定されたインスタンスが現在の ( <span class="inline">self</span>) インスタンスであるかのように、そのインスタンスのそれぞれに対して<a class="glossterm" data-glossterm="声明" href="#">文が</a>実行されます。つまり、最初の問題に戻って、ボール<span class="notranslate">object</span> のすべてのインスタンスを 8 ピクセル下に移動させるには、次のように入力します。</p>

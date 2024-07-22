@@ -60,7 +60,7 @@
   <p>上記のコードは、ファイル「<i>Player_Save.sav</i>」の内容を与えられた<span class="notranslate">buffer</span> にロードし、関数呼び出しのIDを変数「<i>loadid</i>」に格納します。ロードが完了すると、非同期Save/Loadイベントがトリガーされ、 <span class="inline">async_load</span> マップを解析して、このように関数の正しいIDを見つけることができます。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == loadid<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Load failed!&quot;);<br />
         }<br />

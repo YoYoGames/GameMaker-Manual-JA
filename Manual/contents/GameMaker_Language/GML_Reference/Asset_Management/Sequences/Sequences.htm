@@ -49,7 +49,7 @@
     <li>長さ、再生モード、再生速度など、<span class="notranslate">sequence</span> <span class="notranslate">object</span> のトップレベルの値を設定します。例えば</li>
   </ul>
   <p class="code">myseq.length = 120;<br />
-    myseq.loopmode = seqplay_pingpong</p>
+    myseq.loopmode = seqplay_pingpong;</p>
   <ul class="colour">
     <li><span class="notranslate">sequence</span> <span class="notranslate">object</span> にトラックを追加する前に、トラックを作成する必要があります。そこで、関数 <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>.コード上では、<span class="notranslate">asset</span> トラックとパラメータトラックに違いはありません。これらはすべて単なるトラックで、作成するトラックの種類と、トップレベルトラックのサブトラックとして割り当てられているかどうかによって、動作が異なりますのでご注意ください。つまり、<span class="notranslate">asset</span> のトラックを作成し、それに異なるパラメータ用のサブトラックを割り当て、これらのサブトラックは<span class="notranslate">asset</span> の<i>パラメータ</i>トラックとして機能します。以下の例では、単一のグラフィックス<span class="notranslate">asset</span> トラックを作成し、後で<span class="notranslate">sequence</span> に追加します。</li>
   </ul>
@@ -61,21 +61,26 @@
   <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
     graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
+    <br />
     // Set the graphics keyframe top level data for the keyframe position and length, etc...<br />
     graphickeys[0].frame = 0;<br />
     graphickeys[0].length = 1;<br />
     graphickeys[0].stretch = true;<br />
     graphickeys[0].disabled = false;<br />
+    <br />
     // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels of keyframe data)<br />
     var graphickeydata = array_create(1);<br />
     graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
     graphickeydata[0].spriteIndex = spr_Platform;<br />
     graphickeydata[0].channel = 0;<br />
+    <br />
     // Add the keyframe data channels to the graphics track keyframe<br />
     graphickeys[0].channels = graphickeydata;<br />
+    <br />
     // Add the definied keyframes to the track<br />
     mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
-    mytracks[0].keyframes = graphickeys;</p>
+    mytracks[0].keyframes = graphickeys;
+  </p>
   <ul class="colour">
     <li>次に、先ほど作成したグラフィックトラックのサブトラックとして割り当てるパラメータトラックを作成する必要がありま す。このトラックは、<span class="notranslate">sequence</span> のアニメーションフレームの中で、グラフィックトラックのトラックを動かすのに使います。</li>
   </ul>
@@ -90,14 +95,17 @@
     paramkeys[0].frame = 0;<br />
     paramkeys[1] = sequence_keyframe_new(seqtracktype_real);<br />
     paramkeys[1].frame = 120;<br />
+    <br />
     // Create the keyframe data structs<br />
     var paramkeydata1 = array_create(2);<br />
     paramkeydata1[0] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata1[0].channel = 0; // Channel 0 for a position track is the X position<br />
     paramkeydata1[0].value = 0;<br />
+    <br />
     paramkeydata1[1] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata1[1].channel = 1; // Channel 1 for a position track is the Y position<br />
     paramkeydata1[1].value = 0;<br />
+    <br />
     var paramkeydata2 = array_create(2);<br />
     paramkeydata2[0] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata2[0].channel = 0;<br />
@@ -105,11 +113,14 @@
     paramkeydata2[1] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata2[1].channel = 1;<br />
     paramkeydata2[1].value = room_height;<br />
+    <br />
     // Assign the keyframe data structs to the channels for each key<br />
     paramkeys[0].channels = paramkeydata1;<br />
     paramkeys[1].channels = paramkeydata2;<br />
+    <br />
     // Assign the keys to the parameter track<br />
-    paramtracks[0].keyframes = paramkeys;</p>
+    paramtracks[0].keyframes = paramkeys;
+  </p>
   <ul class="colour">
     <li>最後に、パラメータトラックを、最初に作成したメイングラフィック<span class="notranslate">asset</span> トラックのサブトラックとして割り当て、これらのトラックを<span class="notranslate">sequence</span> に割り当てて、ルーム内にインスタンスを作成します。</li>
   </ul>
