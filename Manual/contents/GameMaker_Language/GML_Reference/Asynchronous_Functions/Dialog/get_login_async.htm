@@ -45,8 +45,8 @@
   <h4>拡張された例。</h4>
   <p>ユーザーのログインを制御している<span class="notranslate">object</span> の<b>create イベント</b>（例）には、次のようなコードを記述します。</p>
   <p class="code">ini_open(&quot;Profile.ini&quot;);<br />
-    u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br />
-    p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br />
+    u = ini_read_string(&quot;User&quot;, &quot;0&quot;, &quot;&quot;);<br />
+    p = ini_read_string(&quot;User&quot;, &quot;1&quot;, &quot;&quot;);<br />
     ini_close();<br />
     login = get_login_async(u,p);</p>
   <p>上記のコードは、iniファイルを開き（存在しない場合は作成し）、そのファイルに格納されている名前とパスワードを取得します。もしそれらが存在しない場合は、デフォルトの空の<span class="notranslate">string</span> (&quot;&quot;) が返されます。これらの値は、次に <span class="inline">get_login_async()</span> でユーザーにユーザー名とパスワードの詳細を問い合わせるために使用され、リクエストインデックスは変数 &quot;login&quot; に格納されます。ユーザーが必要な情報を提供するのを待つ間、ゲームとそのイベントは通常通り実行され続けることに注意してください。</p>

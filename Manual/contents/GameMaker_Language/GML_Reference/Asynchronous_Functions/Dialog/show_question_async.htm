@@ -47,10 +47,10 @@
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if (i_d == msg) <br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;))<br />
         {<br />
-            coins -= armour[0,5];<br />
-            global.protection += armour[0,0];<br />
+            coins -= armour[0, 5];<br />
+            global.protection += armour[0, 0];<br />
         }<br />
     }</p>
   <p>上記のコードでは、返された <span class="inline">DS Map</span> の「id」キーと、変数「msg」に格納されている値を照合しています。もし同じなら、2つのボタンのうちどちらかが押されたかどうかを調べ、もし <span class="inline">true</span> を返したら、変数から値を引き、グローバル変数にも値を追加します。</p>
