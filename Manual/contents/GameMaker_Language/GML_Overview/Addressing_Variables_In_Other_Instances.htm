@@ -27,7 +27,7 @@
   <p>しかし、最も一般的かつ実用的な方法は、ポイントの左側にある<i>変数を</i>使用することです。ただし、当該変数に<i> 有効な<b>インスタンスIDが</b></i>格納されている場合に限ります。次の例で説明する。</p>
   <p class="code">// Example 1<br />
     var _inst = instance_position(mouse_x, mouse_y, all);<br />
-    if (instance_exists(_inst)) <br />
+    if (instance_exists(_inst))<br />
     {<br />
         _inst.speed = 0;<br />
     }<br />
@@ -64,7 +64,7 @@
     <br />
     // This will affect one instance of the object &quot;obj_Enemy&quot;<br />
     var _enemy = instance_nearest(x, y, obj_Enemy);<br />
-    if (instance_exists(_enemy)) <br />
+    if (instance_exists(_enemy))<br />
     {<br />
         with (_enemy)<br />
         {<br />

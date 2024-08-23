@@ -90,7 +90,7 @@
     draw_sprite(spr_Body, 0, 0, 0);<br />
     draw_sprite(spr_Clothes, 0, 0, 0);<br />
     draw_sprite(spr_Hair, 0, 0, 0);<br />
-    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br />
+    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, false, false, 16, 16);<br />
     surface_reset_target();<br />
     surface_free(surf);</p>
   <p>上記のコードでは、サーフェイスを作成し、そのインデックスをローカル変数「surf」に格納しています。次に、そのサーフェスをターゲットにしてクリアし、<span class="notranslate">sprites</span> をいくつか重ねて描画する。最後に、サーフェスに描かれた合成画像から新しい<span class="notranslate">sprite</span> を作成し、そのインデックスを &quot;spr_Custom&quot; に割り当ててから、サーフェスが使用していたメモリを解放する。</p>
