@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_set_visible</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -45,13 +45,13 @@
   <p> </p>
   <h4>例</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Instances&quot;);<br />
-    if (layer_get_visible(lay_id)) <br />
+    if (layer_get_visible(lay_id))<br />
     {<br />
-        layer_set_visible(lay_id, false);<br />
+    layer_set_visible(lay_id, false);<br />
     }<br />
     else<br />
     {<br />
-        layer_set_visible(lay_id, true);<br />
+    layer_set_visible(lay_id, true);<br />
     }</p>
   <p>上記のコードは、<span class="notranslate">room</span> エディターで「Instances」というレイヤーのID値を取得し、そのIDを使ってレイヤーが表示されているかどうかをチェックし、返された値に応じてレイヤーの表示/非表示を切り替えています。</p>
   <p> </p>
