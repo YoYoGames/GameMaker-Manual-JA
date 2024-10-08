@@ -31,6 +31,10 @@
      <p class="code">gml_pragma(&quot;UnityBuild&quot;, &quot;true&quot;);</p>
       統一ビルドの利点はビルドが速くなることですが、欠点は毎回<i>フルビルドを</i>行うので、コードの一部分を変更しても、キャッシュされたファイルを使用せずにすべてを再度ビルドしてしまうことです。これはYYCを使用したXbox Oneエクスポート専用に追加されましたが、他のビルドにも呼び出すことができます<b>（YYCのみ</b>）。unity buildsの詳細については、<a href="http://buffered.io/posts/the-magic-of-unity-builds/" target="_blank">こちらを</a>ご覧ください。
     </li>
+    <li>&quot;<strong>AllowReentrantStatic</strong>&quot; - This pragma reverts static initialisation to the old re-entrant initialisation behaviour of <span data-keyref="GameMaker Name">GameMaker</span> versions up to 2024.8. It is a project-wide setting and so cannot be put around code sections. The following code enables this old behaviour: 
+      <p class="code"><span data-field="title" data-format="default">gml_pragma</span>( &quot;AllowReentrantStatic&quot;, true);</p>
+      <p><span data-conref="../../../assets/snippets/Tag_warning.hts"> </span> You should only use this in existing projects that make use of the old behaviour. <span data-condition="Export:Beta"><a data-xref="{title}" href="../../../Settings/Runner_Details/GMRT_(GameMaker_Runtime).htm">GMRT (GameMaker Runtime)</a> will no longer allow it.</span></p>
+    </li>
   </ul>
   <p class="note"><b>注</b>： <span class="inline">gml_pragma</span> 関数の最初の引数は、変数ではなく、<b>コンパイル時<span class="notranslate">string</span> の定数でなければ</b>なりません。</p>
   <p> </p>
