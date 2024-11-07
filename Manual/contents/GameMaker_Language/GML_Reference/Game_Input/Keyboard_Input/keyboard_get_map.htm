@@ -39,7 +39,7 @@
   <h4><b>例</b></h4>
   <p class="code">if keyboard_get_map(ord(&quot;A&quot;)) = ord(&quot;A&quot;)<br />
     {<br />
-        keyboard_set_map(ord(&quot;A&quot;), keyboard_lastkey);<br />
+        keyboard_set_map(_keycode, keyboard_lastkey);<br />
     }</p>
   <p>上記のコード例では、まず「A」が他のキーにマッピングされているかどうかを確認し、マッピングされていない場合は、ユーザーが最後に押したキーにマッピングします。</p>
   <p> </p>
