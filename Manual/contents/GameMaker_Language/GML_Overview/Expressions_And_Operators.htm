@@ -103,6 +103,7 @@
   <div class="droptext" data-targetname="drop-down8">
     <p class="dropspot"><strong><span class="inline2">div</span>,<span class="inline2">mod</span>(<span class="inline2">%</span></strong>) は除算とモジュロで、div はある値を分割して整数の商だけを生成できる量、mod は分割した余りだけを与える。なお、divやmodは整数値でなければできません。使用例 </p>
     <p class="code">secs = time mod 60;<br />
+      secs = time % 60;    // Identical to the above line<br />
       time_str = string(time div 60);</p>
     <p class="dropspot"> </p>
   </div>

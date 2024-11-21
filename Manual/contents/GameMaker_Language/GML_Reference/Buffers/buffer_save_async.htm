@@ -61,7 +61,7 @@
   <p>上記のコードは、<span class="notranslate">buffer</span> &quot;<i>buff</i>&quot;の内容を与えられた保存ファイルに保存し、関数呼び出しのIDを変数 &quot;<i>saveid</i>&quot;に格納します。保存が完了すると、非同期Save/Loadイベントが発生し、 <span class="inline">async_load</span> マップを解析して、このように関数の正しいIDを探すことができます。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

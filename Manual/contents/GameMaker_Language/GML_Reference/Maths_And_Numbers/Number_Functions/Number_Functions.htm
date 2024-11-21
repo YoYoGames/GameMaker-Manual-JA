@@ -20,12 +20,12 @@
   <p>この整数と浮動小数点数の区別は、クロスプラットフォーム開発を行う上で非常に重要です。<span class="notranslate">Windows</span> PCで行った計算の精度と、モバイルデバイスで行った同じ計算の精度は同じでは<i>ありません</i>。つまり、例えば比較を行う際には特に注意が必要です。</p>
   <p class="code">if (image_index == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>上記の例では、例えば <span class="inline">image_speed</span> を 0.25 に設定していた場合、4 ステップ後に <span class="inline">image_index</span> の値が 1 になると思っても、浮動小数点演算の仕組み上 1.0000002 のような値になり、評価が <span class="inline">true</span> にならない<i>ことが</i>あります。このようなタイプのエラーはデバッグがかなり難しくなるので、常に注意して、前もって計画的に他の方法で値をチェックしたり、適切な階乗や丸め関数（以下にリストアップ）を使ってチェックする数を整数に変換するのがよいでしょう（浮動小数点数の数学とこれが問題になる理由については、<a href="https://floating-point-gui.de/" target="_blank">ここを</a>参照してください）。例えば、上記のコードは次のように書くことができます。</p>
   <p class="code">if (floor(image_index) == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>また、<b>YoYo Compilerの</b>ターゲットを使用する場合、すべての式と関数は<i>左から右に評価</i>されますが、他のすべてのターゲットプラットフォームでは、<i>右から</i>左に評価されるため、例えばこのような場合、プラットフォームによって異なる結果になることを意味します。</p>
   <p class="code">val = max(num, ++num, num++);</p>

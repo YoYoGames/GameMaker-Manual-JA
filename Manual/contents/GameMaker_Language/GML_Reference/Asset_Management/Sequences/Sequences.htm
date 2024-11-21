@@ -49,7 +49,7 @@
     <li>長さ、再生モード、再生速度など、<span class="notranslate">sequence</span> <span class="notranslate">object</span> のトップレベルの値を設定します。例えば</li>
   </ul>
   <p class="code">myseq.length = 120;<br />
-    myseq.loopmode = seqplay_pingpong</p>
+    myseq.loopmode = seqplay_pingpong;</p>
   <ul class="colour">
     <li><span class="notranslate">sequence</span> <span class="notranslate">object</span> にトラックを追加する前に、トラックを作成する必要があります。そこで、関数 <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>.コード上では、<span class="notranslate">asset</span> トラックとパラメータトラックに違いはありません。これらはすべて単なるトラックで、作成するトラックの種類と、トップレベルトラックのサブトラックとして割り当てられているかどうかによって、動作が異なりますのでご注意ください。つまり、<span class="notranslate">asset</span> のトラックを作成し、それに異なるパラメータ用のサブトラックを割り当て、これらのサブトラックは<span class="notranslate">asset</span> の<i>パラメータ</i>トラックとして機能します。以下の例では、単一のグラフィックス<span class="notranslate">asset</span> トラックを作成し、後で<span class="notranslate">sequence</span> に追加します。</li>
   </ul>
@@ -61,7 +61,7 @@
   <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
     graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
-    // Set the graphics keyframe top level data for the keyframe position and length, etc...<br />
+    // Set the graphics keyframe top level data for the keyframe position and length, etc.<br />
     graphickeys[0].frame = 0;<br />
     graphickeys[0].length = 1;<br />
     graphickeys[0].stretch = true;<br />

@@ -72,6 +72,14 @@
           この<span class="notranslate">script</span> は<span class="inline2">TexturesDir</span> という環境変数を受け取り、生成された<span class="notranslate">path</span> に<span class="notranslate">textures</span> を格納します。
         </td>
       </tr>
+      <tr>
+        <th colspan="3">Platform-Specific Steps</th>
+      </tr>
+      <tr>
+        <td><strong>pre_gradle_step.bat</strong></td>
+        <td><strong>pre_gradle_step.sh</strong></td>
+        <td><span class="important">Android</span> This is executed when the files necessary for the Android tools have been created, but before Gradle is called. You can use this step to access and modify the Android files yourself, before the Android tools compile it into a final executable.</td>
+      </tr>
     </tbody>
   </table>
   <p>これらの<span class="notranslate">script</span> ファイルは、すべてのターゲット・プラットフォームでビルドする際にサポートされます。</p>
