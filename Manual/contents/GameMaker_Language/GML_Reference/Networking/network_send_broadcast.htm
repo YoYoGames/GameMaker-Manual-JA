@@ -56,7 +56,7 @@
   <p> </p>
   <h4>例</h4>
   <p class="code">buffer_seek(broadcast_buffer, buffer_seek_start, 0);<br />
-    buffer_write(broadcast_buffer, buffer_string, global.ServerName);<br />
+    buffer_write(broadcast_buffer, buffer_string, global.server_name);<br />
     network_send_broadcast(server, 6511, broadcast_buffer, buffer_tell(broadcast_buffer));</p>
   <p>上記のコードでは、現在の<span class="notranslate">string</span> の名前<span class="notranslate">server</span> (「global.ServerName」に格納) を、id が「broadcast_buffer」のバイナリ<span class="notranslate">buffer</span> に書き込んでいます。このデータは、ポート6511にIPの範囲（ブロードキャストベースの範囲として、現在デバイスIPが暗示されている）にローカルにブロードキャストされます。</p>
   <p> </p>
