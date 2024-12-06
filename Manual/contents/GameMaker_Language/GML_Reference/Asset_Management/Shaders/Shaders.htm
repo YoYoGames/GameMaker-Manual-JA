@@ -30,9 +30,9 @@
     colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
   <p>均一なハンドルがあれば、それを<span class="notranslate">shader</span> の<b>Draw Event</b>のコードに次のように設定できます。</p>
   <p class="code">shader_set(sShaderDemo5);<br />
-    shader_set_uniform_f(colour_to_find, 1,1,1 );<br />
-    shader_set_uniform_f(colour_to_set, 1,0,0 );<br />
-    draw_sprite(sprite_index,image_index,x+24, y);<br />
+    shader_set_uniform_f(colour_to_find, 1, 1, 1);<br />
+    shader_set_uniform_f(colour_to_set, 1, 0, 0);<br />
+    draw_sprite(sprite_index, image_index, x + 24, y);<br />
     shader_reset();</p>
   <p>最後に、<span class="notranslate">shaders</span> はすべてのプラットフォームで受け入れられますが、デバイスに依存するため、デバイスのハードウェアまたはソフトウェアが<span class="notranslate">shaders</span> を使用できない場合、エラーが発生することに注意してください。したがって、ユニフォームを設定したり、<span class="notranslate">shader</span> 自体を使用する前に、<span class="notranslate">shader</span> がコンパイルされているかどうか、このように確認することをお勧めします。</p>
   <p class="code">if (shader_is_compiled(myShader))<br />
