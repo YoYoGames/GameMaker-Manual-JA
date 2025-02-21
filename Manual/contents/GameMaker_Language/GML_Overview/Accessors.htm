@@ -23,10 +23,10 @@
     <p class="code">list_index[| index]</p>
     <p class="dropspot">そこで、<span class="inline">ds_list_create()</span> を使ってリストを作成した場合、（変数に格納した）リストのインデックスを使って参照することになります。「インデックス」の値は、リスト内で設定または追加する位置を表します。例えば、次のコードは、リストを作成し、10個のエントリーを追加し、各エントリーに0から9までの乱数を設定します。</p>
     <p class="code">ds = ds_list_create();<br />
-      var index = 0;<br />
+      var _index = 0;<br />
       repeat(10)<br />
       {<br />
-          ds[| index++] = irandom(9);<br />
+          ds[| _index++] = irandom(9);<br />
       }</p>
     <p class="dropspot">すでに値を持つインデックスに式を使用して参照を追加する場合、リストにさらにインデックスを追加するのではなく、前の値が置き換えられることに注意してください。さらにエントリーを追加するには、ds_listのサイズを知っていて、最後に追加する必要があります。また、参照されているリストのサイズよりも<i>大きな</i>リストインデックスを設定することができ、これはその値を設定すると同時にリストを拡張し、与えられたインデックスまでのリスト内のすべての位置を0として初期化することは注目に値します。</p>
     <p class="dropspot">リスト構造を作り、そこにデータを入れたら、リストから値を取り出すには次のようにします。</p>
@@ -56,15 +56,15 @@
     <p class="dropspot"><span class="inline">ds_grid_create()</span> 関数でグリッドを作成したら、変数に格納したグリッドのインデックスを使って、「xpos」「ypos」をグリッド内の位置にして、値を取得したり設定したりすることになります。たとえば、次のコードは、グリッドを作成し、0にクリアしてから、いくつかの項目を追加しています。</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
-      var gw = ds_grid_width(ds) - 1;<br />
-      var gh = ds_grid_height(ds) - 1;<br />
+      var _gw = ds_grid_width(ds) - 1;<br />
+      var _gh = ds_grid_height(ds) - 1;<br />
       repeat(10)<br />
       {<br />
-          var xx = irandom(gw);<br />
-          var yy = irandom(gh);<br />
-          if (ds[# xx, yy] == 0)<br />
+          var _xx = irandom(_gw);<br />
+          var _yy = irandom(_gh);<br />
+          if (ds[# _xx, _yy] == 0)<br />
           {<br />
-              ds[# xx, yy] = 1;<br />
+              ds[# _xx, _yy] = 1;<br />
           }<br />
       }</p>
     <p class="dropspot">グリッド構造を作り、データを入れたら、特定のグリッドの位置から値を取得するために、次のような操作を行います。</p>
@@ -84,7 +84,8 @@
     <p class="dropspot">関数そのものは、こんな感じでしょうか。</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
-          var a = _array; var i = 0; repeat(25)<br />
+          var a = _array; var i = 0;<br />
+          repeat(25)<br />
           {<br />
               i = irandom(99);<br />
               while (a[i] != 0)<br />

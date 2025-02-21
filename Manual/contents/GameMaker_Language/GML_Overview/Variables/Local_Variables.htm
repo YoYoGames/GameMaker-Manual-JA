@@ -55,7 +55,7 @@
   <p class="code">var num = instance_number(obj_Enemy);<br />
     with (obj_Enemy)<br />
     {<br />
-        if num&gt;10 instance_destroy();<br />
+        if (num &gt; 10) instance_destroy();<br />
     }</p>
   <p>上記のコードは、 <span class="inline">var</span> 宣言された変数は、インスタンスでもなく、ゲームの世界でもなく、それが含まれる<i>イベント</i>（または関数）のローカルなので、同じコードブロック内であれば、<span class="notranslate">object</span> のどの関数でも使用できるため、動作します。</p>
   <p> </p>

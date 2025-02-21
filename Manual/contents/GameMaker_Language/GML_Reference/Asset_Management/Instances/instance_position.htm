@@ -53,7 +53,10 @@
     inst = instance_position(mouse_x, mouse_y, obj_Pause_Button);<br />
     if (inst != noone)<br />
     {<br />
-        with (inst) image_index=1;<br />
+        with (inst)<br />
+        {<br />
+            image_index = 1;<br />
+        }<br />
         instance_create_layer(room_width / 2, 0, &quot;Controllers&quot;, obj_Menu);<br />
     }</p>
   <p>上記のコードは、マウス位置で &quot;obj_Pause_Button&quot; のインスタンスとの衝突をチェックし、衝突があった場合は、返された id を使ってその image_index を新しい値に設定してから<span class="notranslate">object</span> &quot;obj_Menu&quot; の新しいインスタンスを生成します。</p>

@@ -88,7 +88,7 @@
     {<br />
         if layer_get_element_type(a[i]) == layerelementtype_sprite<br />
         {<br />
-            layer_sprite_destroy(a[i])<br />
+            layer_sprite_destroy(a[i]);<br />
         }<br />
     }</p>
   <p>上記のコードでは、コードを実行しているインスタンスのレイヤーに割り当てられているすべてのインスタンス要素のIDを取得しています。そして、返された要素の中に<span class="notranslate">sprite</span> <span class="notranslate">assets</span> があるかどうかを確認し、ある場合は破棄します。</p>
