@@ -52,10 +52,7 @@
   <h4>例</h4>
   <p class="code">if keyboard_check(vk_left)<br />
     {<br />
-        if (!place_meeting(x - 5, y, obj_wall))<br />
-        {<br />
-            x -= 5;<br />
-        }<br />
+        if !place_meeting(x - 5, y, obj_wall) x -=5;<br />
     }</p>
   <p>上記のコードでは、インスタンスの左側に衝突が<i>ないか</i>どうかをチェックし、衝突がなければインスタンスを移動させます。</p>
   <p> </p>
