@@ -34,7 +34,7 @@
   <p>上記のコードでは、<span class="notranslate">buffer</span> グループを起動し、4つのファイルを非同期で保存するように設定します。その後、グループ定義を終了し（この時点で保存が開始されます）、関数呼び出しのIDを変数「<i>save_id</i>」に格納します。保存が完了すると、非同期保存/読み込みイベントが発生し、 <span class="inline">async_load</span> マップを解析して、次のように関数の正しい ID を見つけることができます。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

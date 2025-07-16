@@ -51,9 +51,9 @@
   <h4>例</h4>
   <p class="code">if mouse_check_button(mb_left)<br />
     {<br />
-        if (!position_meeting(mouse_x, mouse_y, all)) <br />
+        if (!position_meeting(mouse_x, mouse_y, all))<br />
         {<br />
-            instance_create_layer(mouse_x, mouse_y, &quot;Walls&quot;, obj_Wall);<br />
+            instance_create_layer(mouse_x, mouse_y, &quot;Walls&quot;, obj_wall);<br />
         }<br />
     }</p>
   <p>上記のコードでは、マウスの左ボタンをチェックし、押されていれば、マウスのx/yの位置がいずれかのインスタンスと衝突していないかどうかをチェックします。もし何もなければ、&quot;obj_Wall &quot;のインスタンスが作成されます。</p>

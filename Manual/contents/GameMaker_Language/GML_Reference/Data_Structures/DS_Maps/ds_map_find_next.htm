@@ -47,9 +47,10 @@
     {<br />
         if (key != &quot;gold&quot;)<br />
         {<br />
-            key = ds_map_find_next(inventory, key);<br />
+            break;<br />
         }<br />
-        else break;<br />
+        <br />
+        _key = ds_map_find_next(inventory, _key);<br />
     }</p>
   <p>上記のコードでは、いくつかの一時変数を作成した後、DSマップのサイズを取得し、コンピュータがマップに保存している最初のキーを見つけます。次に、 <span class="inline">for</span> <span class="notranslate">loop</span> を使って DS マップを繰り返し、キーの値「gold」を探している。もし見つかったら、<span class="notranslate">loop</span> を展開する。</p>
   <p> </p>

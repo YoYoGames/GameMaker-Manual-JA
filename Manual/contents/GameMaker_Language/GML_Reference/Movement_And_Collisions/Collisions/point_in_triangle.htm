@@ -68,14 +68,11 @@
   <p class="code">var inst = instance_nearest(x, y, obj_Player);<br />
     if (instance_exists(inst)) <br />
     {<br />
-        var x1 = x + lengthdir_x(100, image_angle - 45);<br />
-        var y1 = y + lengthdir_y(100, image_angle - 45);<br />
-        var x2 = x + lengthdir_x(100, image_angle + 45);<br />
-        var y2 = y + lengthdir_y(100, image_angle + 45);<br />
-        if (point_in_triangle(inst.x, inst.y, x, y, x1, y1, x2, y2)) <br />
-        {<br />
-            can_see = true;<br />
-        }<br />
+        var _x1 = x + lengthdir_x(100, image_angle - 45);<br />
+        var _y1 = y + lengthdir_y(100, image_angle - 45);<br />
+        var _x2 = x + lengthdir_x(100, image_angle + 45);<br />
+        var _y2 = y + lengthdir_y(100, image_angle + 45);<br />
+        _can_see = point_in_triangle(_inst.x, _inst.y, x, y, _x1, _y1, _x2, _y2);<br />
     }</p>
   <p>上記のコードでは、 <span class="inline">point_in_triangle</span> 関数を「視界の円錐」として使用し、obj_player のインスタンスをチェックします。<span class="notranslate">objects</span> x/y 位置が定義された三角形内にある場合、変数を <span class="inline">true</span> にセットします。</p>
   <p> </p>
