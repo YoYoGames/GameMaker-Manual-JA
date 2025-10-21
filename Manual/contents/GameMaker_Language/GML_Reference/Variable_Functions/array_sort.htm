@@ -59,9 +59,9 @@
   <h4>例</h4>
   <p class="code">var _a = [10, 9, 8, 7, 6, 5];<br />
     <br />
-    array_sort(_a, function(elm1, elm2)<br />
+    array_sort(_a, function(current, next)<br />
     {<br />
-        return elm1 - elm2;<br />
+        return current - next;<br />
     });
   </p>
   <p>上記のコードでは、独自のソート関数を使用して、配列を昇順にソートしています。このソート関数は、配列の 2 つの要素 <span class="inline">elm1</span> と <span class="inline">elm2</span> を受け取り、引き算を行います。 <span class="inline">elm1</span> が <span class="inline">elm2</span> よりも大きい場合、減算の結果は正の数となり、 <span class="inline">elm1</span> は <span class="inline">elm2</span> よりも後になるように押され、昇順となります。</p>
