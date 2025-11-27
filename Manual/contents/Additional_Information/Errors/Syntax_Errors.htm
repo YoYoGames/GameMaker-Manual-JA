@@ -69,7 +69,7 @@
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ステートメントとして使用される不要な式[val]です。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、構文チェッカーが、文を期待していた式（[val]で示される）を検出したときに発生します。例えば、次のコードは、三項演算子 ? を期待していたのに、32 を検出したため、このエラーを投げます。<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、構文チェッカーが、文を期待していた式（[val]で示される）を検出したときに発生します。例えば、次のコードは、三項演算子 ? を期待していたのに、32 を検出したため、このエラーを投げます。<br />
           <span class="inline">temp_x = x &lt; (room_width / 2)  32: room_width - 32;</span>
         </td>
       </tr>
@@ -101,7 +101,7 @@
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">val1]を取得、[val2]を期待。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、シンタックスチェッカーがある値や記号を期待していたのに、別の値を得たときに起こります。[val1]は現在の記号や値、[val2]は期待された記号や値です。例えば<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、シンタックスチェッカーがある値や記号を期待していたのに、別の値を得たときに起こります。[val1]は現在の記号や値、[val2]は期待された記号や値です。例えば<br />
           <span class="inline">Got &quot;{&quot;, expected &quot;(&quot;</span>
         </td>
       </tr>
@@ -118,14 +118,14 @@
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">空の[val]ステートメント</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、ステートメントを終了して空白にしたときに起こります。例えば、次のようなコードではエラーが発生します（終了するセミコロンに注意）。<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、ステートメントを終了して空白にしたときに起こります。例えば、次のようなコードではエラーが発生します（終了するセミコロンに注意）。<br />
           <span class="inline">if (x &lt; 0);</span>
         </td>
       </tr>
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">関数のネスト呼び出しは不可</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、関数呼び出しを文の中で入れ子にしているときに起こる可能性があります。<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、関数呼び出しを文の中で入れ子にしているときに起こる可能性があります。<br />
           <span class="inline">ds_list_find_value(list, 0)).sprite_index</span>
         </td>
       </tr>

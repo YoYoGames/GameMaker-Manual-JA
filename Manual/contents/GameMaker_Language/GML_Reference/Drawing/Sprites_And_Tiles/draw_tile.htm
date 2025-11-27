@@ -40,7 +40,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     これらの定数と<span class="notranslate">tile</span> のインデックス値をビット単位で &quot;or &quot;することで、最終的なタイルデータを得ることができます。</p>
   <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
   <p>上記のコードでは、<span class="notranslate">tile</span> のタイルデータを格納するローカル変数を作成し、<span class="notranslate">tile set</span> のインデックスを 8 とし、それを回転、反転させているだけです。これは、指定した<span class="notranslate">tile</span> から、そのインデックスで<span class="notranslate">tile set</span> を描画するために使用できます。これは、どのタイルマップレイヤーにもリンクされておらず、<span class="notranslate">tile</span> は描画を行うインスタンスのレイヤー深度で、<span class="notranslate">room</span> で指定した x/y 位置に描画されます。 また、フレームを設定することで、描画もできることに注意してください。インデックス付き<span class="notranslate">tile</span> がアニメーションセットの一部である場合、ここでフレーム番号を設定できます (0 からフレーム数 - 1 まで)。インデックス付き<span class="notranslate">tile</span> は単に、どのアニメーション<span class="notranslate">tile set</span> を使用しているかの指標となり、描画されるのは指定されたフレームになります。もし<span class="notranslate">tile</span> がアニメーションセットの一部でないなら、frame は 0 に設定されるべきです。</p>

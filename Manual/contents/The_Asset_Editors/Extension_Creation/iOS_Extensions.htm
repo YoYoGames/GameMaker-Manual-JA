@@ -26,8 +26,8 @@
       <ol>
         <li>デリゲートソースファイルがデリゲートクラスと同じ名前であることを確認します (例: <span class="inline">@interface MyCustomAppDelegate</span> は &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot; で定義する必要があります)</li>
         <li>アプリのデリゲートヘッダファイルの先頭に、環境変数 <span class="inline">${YYExtAppDelegateIncludes}</span> を追加してください。これは、コンパイル時に、親デリゲートクラスの関連インクルードファイルで置き換えられます。</li>
-        <li>カスタム App デリゲートのベースクラスとして、 <span class="inline">${YYExtAppDelegateBaseClass}</span> 環境変数を使用します。これは、コンパイル時に正しい基本デリゲートクラスに置き換わります。<br>
-          <br>
+        <li>カスタム App デリゲートのベースクラスとして、 <span class="inline">${YYExtAppDelegateBaseClass}</span> 環境変数を使用します。これは、コンパイル時に正しい基本デリゲートクラスに置き換わります。<br />
+          <br />
           カスタム App デリゲートを使用する他の<span class="notranslate">extension</span> と共に<span class="notranslate">extensions</span> が動作するようにするには、子クラスでオーバーライドされたメソッドからベースクラスのメソッドを呼び出す必要があります。スーパークラスのメソッドを呼び出す前に、そのメソッドがクラス階層に実装されていることを確認し、エラーを回避する必要があります。
         </li>
       </ol>
@@ -40,17 +40,17 @@
                 return TRUE;<br />
         }</p>
     </li>
-    <li class="dropspot"><strong>システムフレームワーク</strong>。ここでは、<span class="notranslate">iOS</span> <a class="glossterm" data-glossterm="フレームワーク" href="#">システムフレームワークを</a> <span class="notranslate">extension</span> に追加することができます。<img> ボタンをクリックすると、プレースホルダフレームワークが追加されます。その後、<img> をダブルクリックすると、編集できます。利用可能なシステムフレームワークの詳細については、<a href="https://developer.apple.com/documentation/">こちらを</a>参照してください。システムフレームワークを削除するには、それを選択し、<img> ボタンをクリックします。<br>
-      <br>
+    <li class="dropspot"><strong>システムフレームワーク</strong>。ここでは、<span class="notranslate">iOS</span> <a class="glossterm" data-glossterm="フレームワーク" href="#">システムフレームワークを</a> <span class="notranslate">extension</span> に追加することができます。<img> ボタンをクリックすると、プレースホルダフレームワークが追加されます。その後、<img> をダブルクリックすると、編集できます。利用可能なシステムフレームワークの詳細については、<a href="https://developer.apple.com/documentation/">こちらを</a>参照してください。システムフレームワークを削除するには、それを選択し、<img> ボタンをクリックします。<br />
+      <br />
       <img>フレームワークのチェックボックスを有効にすると、それを「<strong>弱い参照</strong>」としてマークできます。これは、<span class="notranslate">Xcode</span> の「<strong>Build Phases -&gt; Link Binary with Libraries</strong>」セクションに、「<strong>Required</strong>」フレームワーク（デフォルトの動作）とは対照的に、「<strong>Optional</strong>」フレームワークとして追加されます。
     </li>
-    <li class="dropspot"><strong>サードパーティフレームワーク＋バンドル</strong>。このセクションは、サードパーティとSDKバンドルを追加するためのものです。システムフレームワークと同様に、<img> ボタンをクリックして追加し、<img> をダブルクリックして編集します。また、それらを選択してから<img> をクリックすると、それらを削除できます（フレームワーク名に関する情報は、選択した SDK に付属するドキュメントを参照してください）。<br>
-      <br>
-      ここでは、フレームワークを<strong>埋め込まない</strong>、<strong>埋め込んで署名</strong>する、または<strong>署名せずに埋め込むを</strong>選択できます。<br>
+    <li class="dropspot"><strong>サードパーティフレームワーク＋バンドル</strong>。このセクションは、サードパーティとSDKバンドルを追加するためのものです。システムフレームワークと同様に、<img> ボタンをクリックして追加し、<img> をダブルクリックして編集します。また、それらを選択してから<img> をクリックすると、それらを削除できます（フレームワーク名に関する情報は、選択した SDK に付属するドキュメントを参照してください）。<br />
+      <br />
+      ここでは、フレームワークを<strong>埋め込まない</strong>、<strong>埋め込んで署名</strong>する、または<strong>署名せずに埋め込むを</strong>選択できます。<br />
       <img>これは、<span class="notranslate">Xcode</span> の「<strong>Frameworks, Libraries and Embedded Content</strong>」で追加されたフレームワークのオプションと同じものです。
     </li>
-    <li class="dropspot"><strong>Mac上のフレームワーク<span class="notranslate">path</span> </strong> を入力します。プロジェクトのビルドに使用するMac上にファイルが存在する<span class="notranslate">extension</span> 、そのフレームワークを追加したい場合は、このフィールドにそのフレームワークへの<span class="notranslate">path</span> （ビルドマシン上）を入力し、<img> ボタンをクリックして追加することができます。<br>
-      <br>
+    <li class="dropspot"><strong>Mac上のフレームワーク<span class="notranslate">path</span> </strong> を入力します。プロジェクトのビルドに使用するMac上にファイルが存在する<span class="notranslate">extension</span> 、そのフレームワークを追加したい場合は、このフィールドにそのフレームワークへの<span class="notranslate">path</span> （ビルドマシン上）を入力し、<img> ボタンをクリックして追加することができます。<br />
+      <br />
       <span class="notranslate">path</span> は <span class="inline">.framework</span> ファイルを指す必要があります。このファイルは <span class="inline">.zip</span> として圧縮され、<span class="notranslate">extension</span> ディレクトリの下の <span class="inline">iOSSourceFromMac</span> フォルダに置かれます。<span class="notranslate">extension</span> で<img> を右クリックし、<em>エクスプローラで開くを</em>選択すれば、いつでも簡単に開くことができます。
     </li>
     <li class="dropspot"><strong>ソースを追加</strong>します。これを使用して、<span class="notranslate">extension</span> の動作に必要なソースファイルを追加することができます。追加されたファイルは、拡張機能ディレクトリ内の <span class="inline">iOSSource</span> フォルダに格納されます。</li>
@@ -96,28 +96,28 @@
       </tr>
       <tr>
         <td style=""><b>エンタイトルメント</b></td>
-        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}<br>
+        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}<br />
          <span>${YYXCodeProjName}.entitlements</span>
         </td>
       </tr>
       <tr>
         <td style=""><b>info.plist</b></td>
-        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}<br>
+        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}<br />
           Supporting Files${YXCodeProjName}-Info<span>.plist</span></td>
       </tr>
       <tr>
         <td style=""><strong>infoPlist.strings。</strong></td>
-        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}<br>
+        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}<br />
           文字列</td>
       </tr>
       <tr>
         <td style=""><strong>project.pbxproj</strong></td>
-        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}.xcodeproj<br>
+        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}.xcodeproj<br />
           project.pbxproj</td>
       </tr>
       <tr>
         <td style=""><strong>xcscheme</strong></td>
-        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}.xcodeproj<br>
+        <td style="">{RUNTIME}TemplateProject${YXCodeProjName}.xcodeproj<br />
           xcshareddata}${YXCodeProjName}.xcschemes</td>
       </tr>
       <tr>

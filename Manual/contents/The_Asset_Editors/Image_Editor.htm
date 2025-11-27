@@ -43,7 +43,7 @@
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">キャンバスコントロールは、メインの描画キャンバスとそのコンテンツの表示方法に関する様々な側面を扱います。オプションは以下の通りです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot">Toggle Canvas Grid<img>: キャンバスグリッドのON/OFFを切り替えます。これは<span data-keyref="GameMaker Name">GameMakerが</span>メインキャンバスを分割するために描くグリッドで、デフォルトでは1pxのサイズに設定されています。しかし、Grid Menu アイコン<img> をクリックすると、グリッドオプションが表示されます。<br>
+      <li class="dropspot">Toggle Canvas Grid<img>: キャンバスグリッドのON/OFFを切り替えます。これは<span data-keyref="GameMaker Name">GameMakerが</span>メインキャンバスを分割するために描くグリッドで、デフォルトでは1pxのサイズに設定されています。しかし、Grid Menu アイコン<img> をクリックすると、グリッドオプションが表示されます。<br />
         <img>これらのオプションでは、グリッドの色とアルファ、および X 軸と Y 軸に沿ったグリッドのセル値を設定できます。また、グリッドのスナップの有効・無効を設定することもできます（デフォルトでは無効）。
       </li>
       <li class="dropspot">Canvas Zoom Controls<img>: これらのボタンは現在のキャンバスのズームレベルを制御します。ズームイン、ズームアウトが可能で、<img> ボタンをクリックすると、キャンバスが編集中の画像と1:1になるようにリセットされます。また、Window Fit ボタン<img> をクリックすると、画像キャンバス全体が現在のエディタ<span class="notranslate">workspace</span> に収まるようになります（収まるように適宜ズームイン／アウトされます）。<img> /<img> とマウスホイール<img> を使ってもズームイン、ズームアウトできます。<img> /<img> +<img> を押すと、<span class="notranslate">room</span> キャンバスが画像と 1:1 になるように設定されます。</li>
@@ -140,7 +140,7 @@
         <tr>
           <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
           <td class="icons"><strong>テキスト</strong></td>
-          <td class="text"><br>
+          <td class="text"><br />
             テキスト入力ツールです。新しいテキストレイヤーを作成し、そこに必要なものを入力することができます。イメージエディターのトップバーから、使用する<span class="notranslate">font</span> と書式を設定できます。</td>
         </tr>
         <tr>
@@ -208,22 +208,22 @@
       <li class="dropspot"><strong>Add Frame</strong>-<span class="notranslate">sprite</span> に新しいフレームを追加します。</li>
       <li class="dropspot"><strong>フレーム挿入</strong>- 現在表示されているフレームの後に新しいフレームを挿入します。</li>
       <li class="dropspot"><strong>Delete Selected Fames</strong>- 選択したフレームを<span class="notranslate">sprite</span> から削除します（複数のフレームを選択するには<img> /<img> +<img> and/or<img> +<img> を使用します）。</li>
-      <li class="dropspot"><strong>画像の読み込み</strong>- フレームとして使用する画像をディスクから読み込みます。エクスプローラウィンドウでインポートするファイルを個別に選択することで、一度に複数のフレームをロードすることができることに注意してください。ファイルを選択すると、次のようなインポートウィンドウが表示されます。<br>
+      <li class="dropspot"><strong>画像の読み込み</strong>- フレームとして使用する画像をディスクから読み込みます。エクスプローラウィンドウでインポートするファイルを個別に選択することで、一度に複数のフレームをロードすることができることに注意してください。ファイルを選択すると、次のようなインポートウィンドウが表示されます。<br />
         <img>ここでは、インポートした画像を現在の<span class="notranslate">sprite</span> にどのように追加するかを選択でき、描画キャンバス全体のサイズ変更、クロップ、パディング、また新しい画像を配置する「アンカー」位置の設定が可能です。
       </li>
-      <li class="dropspot"><strong>フレームに変換</strong>- このオプションは、単一のイメージをいくつかの個別のフレームに変換します。まず、下図のようなアニメーションのすべてのパーツを含む単一のフレームを作成（または単一のストリップ画像をインポート）する必要があります。<br>
-        <img>これは単一の画像であり、個々のフレームに変換したいので、このオプションを使用することができ、次のウィンドウが表示されます。<br>
+      <li class="dropspot"><strong>フレームに変換</strong>- このオプションは、単一のイメージをいくつかの個別のフレームに変換します。まず、下図のようなアニメーションのすべてのパーツを含む単一のフレームを作成（または単一のストリップ画像をインポート）する必要があります。<br />
+        <img>これは単一の画像であり、個々のフレームに変換したいので、このオプションを使用することができ、次のウィンドウが表示されます。<br />
         <img>ここでは、フレーム数、フレームの幅と高さ、およびオフセット値を設定して、フレームを作成するために単一の画像を分割する方法を設定することができます。
       </li>
       <li class="dropspot">ストリップ<strong>画像のインポート</strong>- このオプションは、ファイルエクスプローラを開き、フレームを作成するために使用する単一のストリップ画像ファイルを探すように要求します。画像を選択すると、インポートストリップウィンドウが開きますが、これは上記の<strong>フレームに変換</strong>オプションと全く同じです。</li>
       <li class="dropspot"><strong>Export to PNG</strong>- このオプションを選択すると、<span class="notranslate">sprite</span> が1つの <span class="inline">PNG</span> イメージとしてエクスポートされます。<span class="notranslate">sprite</span> に複数の画像がある場合、すべての画像を順番に並べた「帯」<span class="notranslate">sprite</span> が作成され、保存ファイル名には自動的に &quot;<span class="inline">_stripX</span>&quot; が追加されます。&quot;<span class="inline">X</span>&quot; はエクスポートされるフレームの数です。例えば、5フレーム<span class="notranslate">sprite</span> は、&quot;<span class="inline">sprite_name_strip5.png</span>&quot;としてエクスポートされます。</li>
-      <li class="dropspot"><strong>Resize All Frames</strong>- このオプションを選択すると、次のウィンドウが開き、スプライトを構成するすべてのアニメーションフレームのサイズを変更する方法を設定することができます。<br>
-        <img>イメージを<strong>拡大縮小 </strong>するか、キャンバスを<strong>リサイズ</strong>するか、どちらかを選ぶことができます。画像の拡大縮小を選択した場合、各フレームの新しい幅や高さ、同じアスペクト比を使用するかどうか、またピクセル単位かパーセント単位かを選択するだけです。スケーリングするとき、<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>オンまたはオフにすることができます。オンにすると、画像をスケーリングするときにピクセルがぼやけたり、「スミア」が発生します（一般に、高解像度アートでは<em>オンに</em>、ピクセルアートでは<em>オフに</em>することをお勧めします）。<br>
-        <br>
+      <li class="dropspot"><strong>Resize All Frames</strong>- このオプションを選択すると、次のウィンドウが開き、スプライトを構成するすべてのアニメーションフレームのサイズを変更する方法を設定することができます。<br />
+        <img>イメージを<strong>拡大縮小 </strong>するか、キャンバスを<strong>リサイズ</strong>するか、どちらかを選ぶことができます。画像の拡大縮小を選択した場合、各フレームの新しい幅や高さ、同じアスペクト比を使用するかどうか、またピクセル単位かパーセント単位かを選択するだけです。スケーリングするとき、<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>オンまたはオフにすることができます。オンにすると、画像をスケーリングするときにピクセルがぼやけたり、「スミア」が発生します（一般に、高解像度アートでは<em>オンに</em>、ピクセルアートでは<em>オフに</em>することをお勧めします）。<br />
+        <br />
         キャンバスのサイズを変更するオプションは、画像内のピクセルを変更するのではなく、画像が描かれているキャンバスのサイズを大きくしたり小さくしたりします。矢印のアイコンを使ってサイズ変更の「アンカー」を設定し、新しいサイズ（ピクセルまたはパーセント）を設定し、さらに元のフレームのアスペクト比を維持するかどうかを設定できます。フレームを元の<span class="notranslate">sprite</span> の画像より小さくすると、ピクセルが切り取られることに注意してください。
       </li>
       <li class="dropspot"><strong>Crop All Frames To Selection</strong>- このオプションは、メインの描画キャンバスで画像の領域を選択しているときのみ利用可能です。このオプションを選択すると、編集中の画像（およびアニメーションの他のすべてのフレーム）は、選択範囲の境界線にクロップされます。</li>
-      <li class="dropspot"><strong>Auto Trim All Frames</strong>- このオプションは、<span class="notranslate">sprite</span> のエッジからすべてのゼロアルファピクセルをトリミングします。これは<span class="notranslate">sprite</span> 内のすべてのイメージフレームを考慮するので、各サイドは、最も遠い非ゼロアルファピクセルがあるフレームのエッジにクロップされます。<br>
+      <li class="dropspot"><strong>Auto Trim All Frames</strong>- このオプションは、<span class="notranslate">sprite</span> のエッジからすべてのゼロアルファピクセルをトリミングします。これは<span class="notranslate">sprite</span> 内のすべてのイメージフレームを考慮するので、各サイドは、最も遠い非ゼロアルファピクセルがあるフレームのエッジにクロップされます。<br />
         <img>
       </li>
       <li class="dropspot"><strong>Reverse Frames</strong>- これを選択すると、<span class="notranslate">sprite</span> のフレーム順が単純に逆になります。</li>
@@ -241,7 +241,7 @@
       <li class="dropspot"><strong>1:1</strong>- 画像を解像度と1:1になるようにスケーリングし（つまり実寸）、画像編集ウィンドウの中央に配置します。</li>
       <li class="dropspot"><strong>画面に合わせる</strong>- 画像を画像編集ウィンドウいっぱいに拡大縮小します。</li>
       <li class="dropspot"><strong>グリッドを表示</strong>- ピクセルグリッドをトグルします。これはキャンバスコントロールにあるグリッドボタンと同じです（このページでさらに詳しく説明します）。</li>
-      <li class="dropspot"><strong>オニオンスキン設定</strong>- オニオンスキンの設定を変更します。以下のウィンドウが表示され、オニオンスキンボタンで表示されるフレームや、スキンされたフレームの不透明度や色などを設定することができます。<br>
+      <li class="dropspot"><strong>オニオンスキン設定</strong>- オニオンスキンの設定を変更します。以下のウィンドウが表示され、オニオンスキンボタンで表示されるフレームや、スキンされたフレームの不透明度や色などを設定することができます。<br />
         <img>
       </li>
     </ul>
@@ -251,10 +251,10 @@
   <div class="droptext" data-targetname="drop-down11">
     <p class="dropspot"><img>エフェクトメニューは、独自のエフェクトプラグインを追加するためのもので、デフォルトで以下のエフェクトが用意されています。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>ブラー - </strong> イメージにブラー効果を適用します。強度の設定、使用するぼかしの種類（ボックスまたはガウス）、水平軸または垂直軸に沿ったぼかしのみか、または両方に沿ったぼかしを設定することができます。また、現在のレイヤーのみ、表示されているレイヤー、またはすべてのレイヤーに適用するように選択することができます。<br>
+      <li class="dropspot"><strong>ブラー - </strong> イメージにブラー効果を適用します。強度の設定、使用するぼかしの種類（ボックスまたはガウス）、水平軸または垂直軸に沿ったぼかしのみか、または両方に沿ったぼかしを設定することができます。また、現在のレイヤーのみ、表示されているレイヤー、またはすべてのレイヤーに適用するように選択することができます。<br />
         <img>
       </li>
-      <li class="dropspot"><strong>グレースケール - </strong> 指定された量だけイメージを脱色します。この処理は、現在のレイヤーのみ、表示されているレイヤー、またはすべてのレイヤーに適用することができます。<br>
+      <li class="dropspot"><strong>グレースケール - </strong> 指定された量だけイメージを脱色します。この処理は、現在のレイヤーのみ、表示されているレイヤー、またはすべてのレイヤーに適用することができます。<br />
         <img>
       </li>
     </ul>

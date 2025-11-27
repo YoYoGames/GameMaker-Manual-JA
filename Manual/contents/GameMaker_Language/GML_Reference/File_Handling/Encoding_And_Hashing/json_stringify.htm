@@ -20,10 +20,10 @@
   <p>この機能を使用する場合、いくつかの注意点があります。</p>
   <ul class="colour">
     <li>この関数は、DSマップやリストなどのデータ構造をJSONに変換<em>せず </em>、単に構造体の内部インデックス値（ゲームの実行ごとにインデックスが変化するため、ほとんど意味がない）を格納するだけである。 <a href="json_encode.htm"><span class="inline">json_encode()</span></a>).</li>
-    <li>この関数は、ほぼすべての値を「有効な」JSON<span class="notranslate">string</span> に変換しますが、JSON標準の動作方法のため、<span class="notranslate">string</span> に含まれる実際の値は、期待したものとは異なる場合があります。<br>
-      <br>
-      「JSONは数字にとらわれない。どのようなプログラミング言語でも、様々な容量と補数を持つ、固定または浮動、2進または10進の数値型が存在する可能性があります。そのため、異なるプログラミング言語間での互換性が難しくなることがあります。代わりにJSONは、人間が使う数字の表現だけを提供します。<span class="notranslate">sequence</span> 、数字が並んでいます。すべてのプログラミング言語は、内部表現に相違があっても、数字<span class="notranslate">sequences</span> を理解する方法を知っています。&quot;<br>
-      <br>
+    <li>この関数は、ほぼすべての値を「有効な」JSON<span class="notranslate">string</span> に変換しますが、JSON標準の動作方法のため、<span class="notranslate">string</span> に含まれる実際の値は、期待したものとは異なる場合があります。<br />
+      <br />
+      「JSONは数字にとらわれない。どのようなプログラミング言語でも、様々な容量と補数を持つ、固定または浮動、2進または10進の数値型が存在する可能性があります。そのため、異なるプログラミング言語間での互換性が難しくなることがあります。代わりにJSONは、人間が使う数字の表現だけを提供します。<span class="notranslate">sequence</span> 、数字が並んでいます。すべてのプログラミング言語は、内部表現に相違があっても、数字<span class="notranslate">sequences</span> を理解する方法を知っています。&quot;<br />
+      <br />
       詳しくは<a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">ECMA JSON Standardを</a>ご覧ください。
     </li>
     <li>JSONに変換する値の中にint64が含まれている場合、int32の有効範囲内であれば<i>intとして</i>、精度を落とさずに<i>ダブルとして</i>、または（そのどちらでもない場合）前に&quot;<span class="inline">@i64@</span>&quot;、後に&quot;<span class="inline">$i64$</span>&quot;という識別子を持つ<i>文字列として</i>書き出されます。JSONを再びパースするとき、<span data-keyref="GameMaker Name">GameMakerは</span>これらの識別子を拾って、値をint64に再変換します。このため、JSONが<span class="notranslate">server</span> などのGameMaker以外のターゲット向けである場合、これらの値は適切ではないため、避ける必要があります。</li>

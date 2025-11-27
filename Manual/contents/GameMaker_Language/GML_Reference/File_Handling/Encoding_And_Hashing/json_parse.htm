@@ -48,12 +48,12 @@
     show_debug_message(data);
   </p>
   <p>上記のコードは、有効なJSON<span class="notranslate">string</span> を含む新しい<span class="notranslate">object</span> を作成し、 <span class="inline">json_parse()</span> を呼び出して<span class="notranslate">string</span> を<span class="notranslate">GML</span> <span class="notranslate">struct</span> に変換しています。</p>
-  <p class="note"><span class="note">注</span>：JSON<span class="notranslate">string</span> は、ダブルクォート（<span class="inline2">&quot;</span>）の前にバックスラッシュ<span class="inline2">（</span>&quot;）が含まれていることに注意してください。<br>
-    <br>
-   <span class="inline2">json = &quot;{<strong>\&quot; </strong></span>myObj<br>
-    <br>
-    これは、ダブルクォートをコードの一部として読み込んで<span class="notranslate">string</span> を早々に閉じてしまうのではなく、<span class="notranslate">string</span> の中で実際の文字として読み込まれるようにするためです。この方法では、バックスラッシュを使用してダブルクォートを「エスケープ」しています。<br>
-    <br>
+  <p class="note"><span class="note">注</span>：JSON<span class="notranslate">string</span> は、ダブルクォート（<span class="inline2">&quot;</span>）の前にバックスラッシュ<span class="inline2">（</span>&quot;）が含まれていることに注意してください。<br />
+    <br />
+   <span class="inline2">json = &quot;{<strong>\&quot; </strong></span>myObj<br />
+    <br />
+    これは、ダブルクォートをコードの一部として読み込んで<span class="notranslate">string</span> を早々に閉じてしまうのではなく、<span class="notranslate">string</span> の中で実際の文字として読み込まれるようにするためです。この方法では、バックスラッシュを使用してダブルクォートを「エスケープ」しています。<br />
+    <br />
     ただし、外部ファイルからJSONを読み込む場合は、そのファイル内の文字をエスケープする必要はなく、エスケープするとパース時にエラーが発生する可能性があります。
   </p>
   <hr />

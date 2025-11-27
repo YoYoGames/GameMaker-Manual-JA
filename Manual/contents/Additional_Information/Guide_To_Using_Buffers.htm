@@ -28,22 +28,22 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
-        <td><br>
+        <td><br />
           バイト単位で固定されたサイズの<span class="notranslate">buffer</span> 。このサイズは<span class="notranslate">buffer</span> の作成時に設定され、以後変更することはできません。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
-        <td><br>
+        <td><br />
           <span class="notranslate">buffer</span> データが追加されると動的に<i>成長</i>する。初期サイズ (格納されるデータのサイズの近似値) で作成し、この初期サイズを超えるデータを受け入れるために拡張します。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
-        <td><br>
+        <td><br />
           <span class="notranslate">buffer</span> データが<i>折り返さ</i>れる場所です。追加されるデータが<span class="notranslate">buffer</span> サイズの限界に達すると、上書きは<span class="notranslate">buffer</span> の先頭に戻され、その時点からさらに書き込みが続けられる。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
-        <td><br>
+        <td><br />
           これは特別な &quot;stripped down&quot;<span class="notranslate">buffer</span> で、読み書きが非常に高速になります。ただし、 <span class="inline"><span class="inline">buffer_u8</span> のデータ型でのみ使用でき、1 バイトアライメントでなければなりません。(<b>データ型と</b> <b>バイトアライメントに関する</b>情報は、このページのさらに下にあります)。</td>
       </tr>
     </tbody>
@@ -53,7 +53,7 @@
   <p><img> <span class="notranslate">buffer</span> を作成する場合、常にその型に適したサイズで作成するようにします。一般的なルールとしては、保存するデータの最大サイズに対応するように作成し、疑わしい場合は、上書きエラーを防止するために grow を使用するようにします。<span class="notranslate">buffer</span> </p>
   <p>実際に<span class="notranslate">buffer</span> を作成するコードは以下のようになります。</p>
   <p class="code">player_buffer = buffer_create(16384, buffer_fixed, 2);</p>
-  <p><br>
+  <p><br />
     この場合、16384バイトでバイトアラインメントが2の固定<span class="notranslate">buffer</span> 。この関数は、後でこの<span class="notranslate">buffer</span> を参照するために変数に格納されるユニークなID値を返します。</p>
   <p><span class="notranslate">buffer</span> にデータを読み書きするときは、その「データ型」で定義されたデータの「チャンク」単位で行います。データ型」は、書き込まれる値に対して<span class="notranslate">buffer</span> 内で割り当てられるバイト数を設定するもので、これを正しく設定しないと、コードに非常に奇妙な結果（あるいはエラー）が発生することになります。</p>
   <p>バッファへの書き込み（および読み込み）は<strong>順次</strong>行われます。つまり、1つのデータが次々と書き込まれ、各データは決められた型になります。つまり、<span class="notranslate">buffer</span> に書き込むデータが何であるかを常に意識しておくことが理想的です。これらのデータ型は、<span class="notranslate">GML</span> 、以下の定数で定義されています。</p>
@@ -68,73 +68,73 @@
       <tr>
         <td><span class="inline">buffer_u8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           符号なし8ビット整数。0から255までの正の値です。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           符号付き8ビット整数。128から127までの正または負の値（0は正として分類される）。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           符号なし、16ビットの整数。0〜65,535の正の値です。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           符号付き16ビット整数です。32,768～32,767の正または負の値（0は正として分類される）です。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           16bit 浮動小数点数。65504の範囲内の正または負の値である。<b>(現在はサポートされていません!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           符号なし32ビット整数。0から4,294,967,295までの正の値である。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           符号付き32ビット整数。2,147,483,648 から 2,147,483,647 までの正または負の値（0は正として分類される）です。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           32bit 浮動小数点数。正または負の値で、±16777216の範囲である。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           64ビット符号なし整数値。<b>(現在、すべての<span class="notranslate">buffer</span> 関数でサポートされているわけではありません!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           64bit 浮動小数点数。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_bool</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           ブーリアン値。1 または 0 (<span class="inline">true</span> または <span class="inline">false</span>) のどちらかのみです。</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_string</span></td>
         <td>N/A</td>
-        <td><br>
+        <td><br />
           これは UTF-8 のヌル終端 (0x00) である<span class="notranslate">string</span> 。基本的には<span class="notranslate">GameMaker</span> <span class="notranslate">string</span> が<span class="notranslate">buffer</span> にダンプされ、末尾に 0 が付きます。</td>
       </tr>
     </tbody>

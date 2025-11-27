@@ -65,7 +65,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     最初のオプション (<span class="inline">network_config_connect_timeout</span>) は、単に<span class="notranslate">server</span> に接続する際のタイムアウトを設定するだけで、待機時間以外の接続動作は変更されません。あまり低く設定せず、LAN専用ゲームなら1000程度、インターネットなら4000程度にしておくことをお勧めします。パケットの送受信のタイムアウト値を設定したい場合は、以下の関数を使用します。 <a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.</p>
   <p>2番目のオプション(<span class="inline">network_config_use_non_blocking_socket</span>)は、 <span class="inline">network_connect_*</span> 関数（非同期）はすべて即座に <span class="inline">socket_id</span> を<i>返しますが、非同期ネットワークイベントを受信するまで、そのソケットで送受信</i>できないことを意味します。トリガーされたイベントは &quot;type &quot;キーが <span class="inline">network_type_non_blocking_connect</span> に設定されます（詳細は<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">ネットワーク非同期</a>イベントのページで確認できます）。<span data-keyref="GameMaker Name">GameMakerは</span>1つのアプリケーションでブロッキングとノンブロッキングを混在させることをサポートしていないため、これは<b>グローバルな</b>設定となる。</p>
   <p>3番目と4番目のオプション(<span class="inline">network_config_enable_reliable_udp</span>, <span class="inline">network_config_disable_reliable_udp</span>)は<span data-keyref="GameMaker Name">GameMakerの</span>信頼性の高いUDPプロトコルを有効または無効にするもので、<b>UDP接続時のみ</b>使用する必要があります。この場合の「信頼できる」とは、接続の<i>両端で</i>有効にした場合、<span data-keyref="GameMaker Name">GameMakerは</span>パケットが正しく到着したかどうかを確認し、到着しないものは再送信しようとするという意味である（注意：パケットが送信順に到着することを保証するものではない）。信頼性の高いソケットタイプを使用する場合、すべてのudpパケットに12バイトのヘッダーが追加され、<span data-keyref="GameMaker Name">GameMakerが</span>パケットのエラーチェックと不足パケットの再送信に必要な情報が含まれている。このオプションを使用する場合、以下の点に注意する必要がある。</p>

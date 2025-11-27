@@ -25,20 +25,20 @@
   <p>Rollbackは決定論的です。他のプレイヤーと入力を共有するだけで、全てのプレイヤーが与えられた入力に対して同じロジックを実行し、全てのクライアントで同じ結果を出すことを期待します。</p>
   <p>マルチプレイとは異なるアプローチとして、クライアント間でゲームの状態を継続的に同期させ、常に同じことができるようにする「状態複製」という方法があります。</p>
   <p>ロールバックはそのようなことはしません。入力を送信するだけでなく、状態を監視して、間違った予測の場合にはロールバックできるようにします。</p>
-  <p class="note"><em><strong>クライアントとは何ですか？</strong></em><br>
-    <br>
+  <p class="note"><em><strong>クライアントとは何ですか？</strong></em><br />
+    <br />
     クライアント」とは、あなたのゲームのプレイヤーのことで、彼らのマシン上で動作しているゲームのコピーのことを指します。
   </p>
   <h2>どのように機能するのですか？</h2>
   <p>前述したように、Rollbackはプレイヤー間の<strong>入力のやりとりのみ</strong>です。</p>
   <p>ロールバックが扱うものは大きく分けて2つあります。</p>
   <ul class="colour">
-    <li><strong>入力</strong>です。各プレイヤーの<a href="Rollback_Functions/rollback_define_input.htm">入力は</a>、他のプレイヤーに送信されます。Player 0が自分のクライアントで<strong>&quot;fire &quot;</strong>を押すと、Rollbackは他のクライアントにもPlayer 0が<strong>&quot;fire &quot;</strong>を押したことがわかるようにします。<br>
-      <br>
+    <li><strong>入力</strong>です。各プレイヤーの<a href="Rollback_Functions/rollback_define_input.htm">入力は</a>、他のプレイヤーに送信されます。Player 0が自分のクライアントで<strong>&quot;fire &quot;</strong>を押すと、Rollbackは他のクライアントにもPlayer 0が<strong>&quot;fire &quot;</strong>を押したことがわかるようにします。<br />
+      <br />
      <strong>予測は入力に対してのみ実行されます。</strong>
     </li>
-    <li><strong>状態</strong>です。これは、管理されたすべての<span class="notranslate">objects</span> とその変数を含みます。これらはプレイヤー間で同期されません。あるクライアントで変数を変更しても、他のクライアントで自動的に更新されることはありません。<br>
-      <br>
+    <li><strong>状態</strong>です。これは、管理されたすべての<span class="notranslate">objects</span> とその変数を含みます。これらはプレイヤー間で同期されません。あるクライアントで変数を変更しても、他のクライアントで自動的に更新されることはありません。<br />
+      <br />
      <strong>ステートは、ロールバックされる目的でのみ管理されます。</strong>
     </li>
   </ul>
@@ -47,8 +47,8 @@
   <p>以下はその一例です。</p>
   <ul class="colour">
     <li><strong>入力</strong>します。プレイヤー0が<strong>&quot;fire &quot;</strong>を押す。</li>
-    <li><strong>状態</strong>です。プレイヤー0が発射ボタンを押したので、弾が発射されました。その弾はやがて岩にぶつかる。この結果、プレイヤー0が1点獲得。<br>
-      <br>
+    <li><strong>状態</strong>です。プレイヤー0が発射ボタンを押したので、弾が発射されました。その弾はやがて岩にぶつかる。この結果、プレイヤー0が1点獲得。<br />
+      <br />
       これが、入力に依存するゲームの本質です。
     </li>
   </ul>
