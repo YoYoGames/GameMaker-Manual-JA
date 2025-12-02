@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スプライトコリジョンマスク</title>
+  <title>sprite_collision_mask</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>スプライトコリジョンマスク</h1>
+  <h1><span data-field="title" data-format="default">sprite_collision_mask</span></h1>
   <p>この機能により、<span class="notranslate">sprite</span> が持つべきコリジョンマスクのプロパティを設定することができます。バウンディングボックスモードとして自動（0）またはフルイメージ（1）を選択した場合、個々のバウンディングボックスの値は0に設定できます。しかし、ユーザー定義のマスク（2）の場合は、これらの値を設定する必要があります。異なるバウンディングボックスの値は、常に<span class="notranslate">sprite</span> の左上隅（x と y の原点に関係なく）を基準としており、これは位置 (0, 0) と見なされます。</p>
   <p>マスクの種類を設定すると、マスク自体の一般的な形状が設定されますが、矩形以外のマスクは、衝突を解決する際に多くの処理能力を必要とし、結果としてパフォーマンスが低下することに注意してください。一般に、矩形以外のマスクタイプは、絶対に必要な場合にのみ使用するようにしてください。</p>
   <p class="note"><b>注</b>：この機能は、<b>回転した矩形の</b>コリジョンマスクの種類を許可していません。</p>
@@ -60,7 +60,7 @@
   <p class="note"><b>注</b>：この機能は、追加された<span class="notranslate">sprites</span> または複製された<span class="notranslate">sprites</span> に対してのみ機能し、既製のリソースに直接作用することは<b>ありません</b>。<span class="notranslate">sprites</span> を複製するには、次の関数を使用します。 <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">sprite_collision_mask(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_collision_mask</span>(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
   <table>
     <tbody>
       <tr>

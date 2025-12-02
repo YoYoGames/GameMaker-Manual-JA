@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_fixture_bind</h1>
+  <h1><span data-field="title" data-format="default">physics_fixture_bind</span></h1>
   <p>いったんフィクスチャを定義したら、それはインスタンスにバインドされなければなりません。これは、その<i>プロパティが</i>、<b>実際のフィクスチャそのものではなく</b>、選択されたインスタンスに転送されることを意味し、すべてのプロパティが同じであるなら、一つのフィクスチャを複数のインスタンスにバインドすることができます。ターゲットに<span class="notranslate">object</span> インデックスを指定すると、その時点で<span class="notranslate">room</span> に存在するすべてのインスタンスがそのフィクスチャのプロパティを受け取ります(ただし、後から作成された<span class="notranslate">object</span> の新しいインスタンスは受け取りません)。また、特殊キーワード<i>other</i>と<i>all</i> を使用することもできます。親を指定することもできます。<span class="notranslate">object</span> 、その親を持つすべての子インスタンスもフィクスチャを受け取ります。いったんフィクスチャが必要なすべてのインスタンスにバインドされたら、不要になったら削除することができます。そのフィクスチャのプロパティを持つインスタンスは影響を受けず、それらのプロパティを維持することができます。</p>
   <p>フィクスチャはインスタンスの原点に重心を置いてインスタンスにバインドされ、ポリゴンフィクスチャは<i>原点に対する</i>点の位置に基づいてバインドされます。もし、フィクスチャを原点以外の点にバインドする必要がある場合は <a href="physics_fixture_bind_ext.htm"><span class="inline">physics_fixture_bind_ext()</span></a>.</p>
   <p><img>この関数は、<i>バインドされた</i>フィクスチャに対してユニークな「id」値を返します。<b>（フィクスチャそのものでは</b>ありません）この値は、その後、関数を用いてインスタンスから物理プロパティを削除（「アンバインド」）するために使われます <a href="physics_remove_fixture.htm"><span class="inline">physics_remove_fixture()</span></a>.これにより、<span class="notranslate">objects</span> を破棄して再作成することなく、インスタンスから物理プロパティを追加および削除することができます。</p>
   <p class="note"><b>NOTE</b>: フィクスチャは不要になったら削除すべきです。削除しないとメモリリークが発生し、ゲームの動作が遅くなり、最終的にはクラッシュする可能性があるからです。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_fixture_bind(fixture, target)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_fixture_bind</span>(fixture, target)</p>
   <table>
     <tbody>
       <tr>

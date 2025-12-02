@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gml_pragma</h1>
+  <h1><span data-field="title" data-format="default">gml_pragma</span></h1>
   <p> <span class="inline">gml_pragma</span> 関数は、与えられたターゲットがあなたのコードをコンパイルする方法に影響を与え、あなたのプロジェクトの最終的なコンパイルをさらに最適化するために、異なるコマンドで呼び出す必要があります。これらのコマンドは、ゲームがコンパイルされる前に効果的に<i>プリプロセスさ</i>れるため、関数をプロジェクトのどこに配置しても、ゲームが完全にコンパイルされる前に処理されることになります。利用可能なコマンドは次のとおりです。</p>
   <ul class="colour">
     <li>&quot;<b>forceinline</b>&quot; -<b>スクリプト</b>関数内で &quot;forceinline&quot; プラグマを使って関数を呼び出すと、YYCはその関数を参照するのではなく、インラインでプロジェクトをコンパイルするようになります。これは処理をさらに向上させますが、最終的な実行ファイルのサイズが大きくなり、特にインライン化されたコードが大きい場合や複数の異なる場所で使用される場合、コンパイル時間が大幅に増加するため、使用する際には注意が必要です。このプラグマは<b>YYCを使用してビルド</b>する場合のみ有効であることに注意してください。</li>
@@ -50,7 +50,7 @@
   <p class="note"><b>注</b>： <span class="inline">gml_pragma</span> 関数の最初の引数は、変数ではなく、<b>コンパイル時<span class="notranslate">string</span> の定数でなければ</b>なりません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gml_pragma(command, [optional...]);</p>
+  <p class="code"><span data-field="title" data-format="default">gml_pragma</span>(command, [optional...]);</p>
   <table>
     <tbody>
       <tr>

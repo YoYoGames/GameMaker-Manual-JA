@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_region</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_region</span></h1>
   <p>この機能により、<span class="notranslate">room</span> 内に、以前にアクティブ化されたインスタンスを非アクティブ化する領域を定義することができます。この領域は、次の画像のように、&quot;inside &quot;または &quot;outside &quot;としてフラグを立てることができます。</p>
   <p><img>上の画像で、&quot;apple&quot; インスタンスが常に非アクティブであることがわかります。これは、<span class="notranslate">sprite</span> 自体がリージョンに重なっていなくても、バウンディングボックスが重なっているためです。つまり、インスタンスは、その<i>バウンディングボックスが</i>領域と重なったときに、指定された領域内にあるとみなされ、コリジョンマスクの状態（正確かどうか）は考慮さ<b>れません</b>。なお、非アクティブ化は瞬間的なものではなく、この方法で非アクティブ化されたインスタンスは、この関数が呼び出されたイベントが終了するまで非アクティブと見なされない。</p>
   <p class="note"><b>注</b>：<span class="notranslate">room</span> の開始時にインスタンスを非アクティブにした場合（つまり、<span class="notranslate">room</span> の作成コード、または<span class="notranslate">room</span> 内のインスタンスの作成イベントから）、<span class="notranslate">room</span> エディタから<span class="notranslate">room</span> 内に配置されたすべてのインスタンスは、非アクティブになる前に<b>作成イベントをまだ実行</b>することになります。</p>
   <p class="note"><b>警告</b>：物理が有効になっているインスタンスを無効化しても、そのフィクスチャーが物理シミュレーションの中で相互作用することを<b>止めません</b>。そのためには、インスタンスの <a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline"><span style="font-size:14px;">phy_active</span></a>変数を <span class="inline">true</span> または <span class="inline">false</span> に設定し、インスタンスをアクティブ/非アクティブにします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_deactivate_region(left, top, width, height, inside, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_region</span>(left, top, width, height, inside, notme);</p>
   <table>
     <tbody>
       <tr>

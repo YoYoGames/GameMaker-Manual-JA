@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>レイヤーシェーダー</title>
+  <title>layer_shader</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>レイヤーシェーダー</h1>
+  <h1><span data-field="title" data-format="default">layer_shader</span></h1>
   <p>この関数を使用すると、任意のレイヤーに<span class="notranslate">shader</span> リソースを割り当てることができ、そのレイヤーは<span class="notranslate">shader</span> を使用してレンダリングされます。レイヤーのユニーク ID 値またはレイヤー名（<span class="notranslate">string</span> - これはパフォーマンスに影響します）を、使用する<span class="notranslate">shader</span> の ID と共に指定します。<span class="notranslate">shader</span> は<span class="notranslate">Asset</span> Browser で以前に作成されている必要があり、<span class="notranslate">shader</span> インデックス (<span class="notranslate">shader</span> リソースの名前) がこの関数に渡されます。割り当てられたレイヤーにインスタンスが追加されている場合、<span class="notranslate">shader</span> はそのインスタンスが使用する<i>すべての</i>描画イベントに適用されます。たとえば、インスタンスが Draw GUI Begin イベントを持っている場合、<span class="notranslate">shader</span> は自動的に適用されます。<span class="notranslate">shader</span> は、<span class="notranslate">sprite</span> <span class="notranslate">assets</span> や<span class="notranslate">tile</span> マップのように、そのレイヤーに描画される他のグラフィック要素にも影響します。</p>
   <p>なお、この関数は描画イベントやステップイベントで呼ばれる<i>ものではなく</i>、<b>ルーム作成コードや</b>インスタンスの<b>作成イベント／ </b> <b>ルーム開始</b>イベントで<span class="notranslate">room</span> の開始時に呼ばれるだけでよいことに注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">layer_shader(layer_id, shader)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_shader</span>(layer_id, shader)</p>
   <table>
     <tbody>
       <tr>

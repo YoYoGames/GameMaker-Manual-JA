@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>http_post_string。</title>
+  <title>http_post_string</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_post_string。</h1>
+  <h1><span data-field="title" data-format="default">http_post_string</span></h1>
   <p>コンピュータでは、ファイルのアップロードや入力済みフォームの送信など、クライアントが検索要求の一部として<span class="notranslate">server</span> にデータを送信する必要がある場合に<b>ポスト</b>リクエストを使用するが、<span data-keyref="GameMaker Name">GameMaker</span> でもこの機能は同じである。 <span class="inline"><a href="http_get.htm">http_get()</a></span> のリクエスト方式では、URL のみが<span class="notranslate">server</span> に送られるのに対し、 <span class="inline">http_post_string()</span> では<span class="notranslate">string</span> に送られる<span class="notranslate">server</span> も含まれ、結果として新規リソースの作成、既存リソースの 更新、またはその両方を行うことができる。なお、この機能を使用する場合、HTTPリクエストパラメータ(Webページのフォームを送信する際にURLの末尾に「付加」されるビット)も完全に許容範囲内であることに注意してください。</p>
   <p class="note"><b><span class="note">注意事項</span> </b>ブラウザのXSS保護機能により、ドメインをまたがるリソースへのリクエストや読み込み試行がブロックされ、空白の結果が返されるように見える場合があることに留意してください。詳しくは、「<a href="HTTP.htm">クロスドメインの問題</a>」をご覧ください。</p>
   <p>このイベントは、任意の<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTPイベントによって</a>ピックアップされる「コールバック」を生成し、その場合、このイベント専用の<a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DSマップ</a>（より一般的には「辞書」として知られている）を生成し、特別な変数に格納されます <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>非同期ロード</b></a>.このDSマップは、返されるデータがあるかないかによって異なる値を含む。たとえば、ファイルを要求した場合、データのパケットを受信するたびにイベントが複数回トリガーされるので、たとえばプログレスバーを表示することができます。DSマップの一般的な構造は、以下のようになります。</p>
@@ -33,7 +33,7 @@
   </ul>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">http_post_string(url, string);</p>
+  <p class="code"><span data-field="title" data-format="default">http_post_string</span>(url, string);</p>
   <table>
     <tbody>
       <tr>

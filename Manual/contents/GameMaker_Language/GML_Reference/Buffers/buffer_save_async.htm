@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バッファセーブアシンク</title>
+  <title>buffer_save_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バッファセーブアシンク</h1>
+  <h1><span data-field="title" data-format="default">buffer_save_async</span></h1>
   <p>この機能を使うと、<span class="notranslate">buffer</span> の内容の一部をファイルに保存して、メモリに読み込むことができます。 <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a>関数（あるいは<span class="notranslate">buffers</span> を読み込むための他の関数）を使用します。offset &quot;は<span class="notranslate">buffer</span> 内の保存開始位置を定義し（バイト単位）、&quot;size &quot;はそのオフセットから保存する<span class="notranslate">buffer</span> の領域の大きさ（同じくバイト単位）である。この関数は非同期で動作するため、保存中もゲームは実行され、この関数を使用して保存されたファイルはすべて「default」フォルダに置かれます。このフォルダは、<span class="notranslate">GameMaker</span> によって自動的に追加されるため、ファイル名に含める必要は<i>ありません</i>。例えば、ファイル名<span class="notranslate">path</span> &quot;<span class="inline">Data\Player_Save.sav</span>&quot; は、実際には &quot;<span class="inline">default\Data\Player_Save.sav</span>&quot; に保存されます。しかし、このファイルを関数 <a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a><span class="notranslate">path</span> の「default」部分を指定する必要はありません。（ただし、Xbox One、PS4、<span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span> を除く他のファイル機能では<i>、</i>指定が必要です。）</p>
   <p class="note"><b>注</b>：HTML5では、&quot;default/&quot;は自動的に追加されないので、コードでこれを考慮する必要があるかもしれません。</p>
   <p>この関数は一意の ID 値を返し、<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">非同期保存/読み込みイベントを</a>トリガーします。このとき、以下の拡張例に示すように、返された ID を使用して <span class="inline">async_load</span> ID 値をチェックすることができます。以下の拡張例のように <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>のマップは、以下の2つのキーと値のペアを持つことになります。</p>
@@ -26,7 +26,7 @@
   <p class="note"><b>注</b>：HTML5では、返された結果をファイルに保存する場合、base64でエンコードされた<span class="notranslate">strings</span> として保存されます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset, size);</p>
   <table>
     <tbody>
       <tr>

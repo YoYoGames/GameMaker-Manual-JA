@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_create_layer</h1>
+  <h1><span data-field="title" data-format="default">instance_create_layer</span></h1>
   <p>この関数を使うと、指定した<span class="notranslate">object</span> の新しいインスタンスを、<span class="notranslate">room</span> 内の任意の位置で、指定したレイヤー上に作成することができます。レイヤーは、レイヤー ID 値（関数 <a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>または、<a href="../../../../The_Asset_Editors/Rooms.htm">ルームエディタで</a>定義されたレイヤーの名前（<span class="notranslate">string</span> 、例えば &quot;instance_layer&quot;）によって特定することができます。</p>
   <p>この関数は新しいインスタンスの <a href="Instance_Variables/id.htm"><span class="inline">id</span></a>を返します。これを変数に格納し、そのインスタンスにアクセスするために使用します。この関数は、この関数を呼び出したイベントのコードやアクションを続行する<i>前に</i>、作成されるインスタンスの<a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Create Eventも</a>呼び出すことに注意してください。</p>
   <p class="note"><span class="important">重要</span>レイヤーの深さは、最小で-16000から最大で16000まであります。この範囲外のレイヤーに配置されたものは<b>描画さ</b>れませんが、すべてのイベントは通常通り実行されます。</p>
@@ -26,7 +26,7 @@
   <p class="note"><span class="note">注</span> <span class="notranslate">struct</span> の変数は新しいインスタンスに「浅くコピー」されます。つまり、あらゆる配列、<span class="notranslate">structs</span> 、およびその他のリソースは参照によってコピーされ、複製されることはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_create_layer(x, y, layer_id, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_layer</span>(x, y, layer_id, obj);</p>
   <table>
     <tbody>
       <tr>

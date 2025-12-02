@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_is_paused</h1>
+  <h1><span data-field="title" data-format="default">os_is_paused</span></h1>
   <p>特に、<span class="notranslate">iOS</span>,<span class="notranslate">Android</span>,<span class="notranslate">Windows Phone</span> のデバイスでは、電話や他のアプリによってゲームが中断されることがあります。この機能を使って、デバイスが一時停止しているかどうかを確認することができます。</p>
   <p>注目すべきは、この関数はデバイス上でコードブロックに含まれるコードを実行しますが、デバイスがバックグラウンドプロセスとしてゲームを<span class="notranslate">caches</span> 、その直後に<span data-keyref="GameMaker Name">GameMakerが</span>一時停止されることです。そのため、下記のコード例のような場合、<i>キャッシュされた状態からゲームが再起動するまで</i>、作成されるインスタンスは実際に表示されず、イベントも実行されません。つまり、 <span class="inline">os_is_paused</span> 関数でアラームを呼び出し、アラームイベント（デバイスの一時停止時に設定されるが、一時停止を解除するまで実行されない）で一時停止メニューや音楽の再開などを作成する方がよいでしょう。</p>
   <p>この機能を<span class="notranslate">Windows</span>,<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>), MacOS, HTML5 プラットフォームで使用する場合、ゲームのフォーカスが外れたときに <span class="inline">true</span> に<b>1ステップだけ</b>トグルし、その後、ゲームのフォーカスが戻る（そして再び外れる）までは再び <span class="inline">false</span> に戻ることになります。これは、これらのプラットフォームでは、<span class="notranslate">cache</span> アプリやゲームがないため、これらがバックグラウンドで実行され続けるからです。</p>
   <p class="note"><b>注</b>：モバイル機器では、OSを一時停止すると、サウンドや音楽は停止します。適切な機能で特別に起動しない限り、再び起動する<b>ことは</b>ありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">os_is_paused()</p>
+  <p class="code"><span data-field="title" data-format="default">os_is_paused</span>()</p>
   <p> </p>
   <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

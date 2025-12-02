@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_vertex_texture</h1>
+  <h1><span data-field="title" data-format="default">draw_vertex_texture</span></h1>
   <p>この関数は、プリミティブのテクスチャ（<span class="notranslate">vertex</span> ）の位置を定義する。プリミティブの最終的な外観は、描画に選択されたプリミティブの種類によって異なります ( <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a><span class="notranslate">texture</span>を呼び出す必要があります。プリミティブを終了して描画するためには <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
   <p>また、サンプリングする適切な xtex/ytex 位置（これらの座標は<b>UV</b>ポイントとも呼ばれます）を設定することで、プリミティブの表面上に<span class="notranslate">texture</span> の<i>一部だけを</i>描画することも可能です。この点は0と1の間の値で定義され、使用するイメージの左上隅が(0,0)点、右下隅が(1,1)点となります。このようにして、元画像の一部だけを使ったプリミティブを<span class="notranslate">texture</span> にすることができます<span class="notranslate">asset</span> 。</p>
   <p>テクスチャ付きプリミティブを描画する場合、<span class="notranslate">texture</span> は<a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span> で設定された色とブレンドされます。</a> <a html="../colour And Blending/draw_set_colour.html">つまり、ブレンドなしで<span class="notranslate">texture</span> を描画するには、以下の例に示すように、これを <span class="inline">c_white</span> に設定</a>する必要があります。</p>

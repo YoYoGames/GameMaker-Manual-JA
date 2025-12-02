@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tilemap_set_mask</h1>
+  <h1><span data-field="title" data-format="default">tilemap_set_mask</span></h1>
   <p>この関数は、単一の<span class="notranslate">tile</span> マップの<b>タイルビットマスクを</b>設定するために使用することができます。<span class="notranslate">tile</span> マップエレメントID（<span class="notranslate">tile</span> マップエレメントの作成時に <a href="layer_tilemap_create.htm"><span class="inline">layer_tilemap_create()</span></a>を使用した場合、または関数 <a href="layer_tilemap_get_id.htm"><span class="inline">layer_tilemap_get_id()</span></a>)、次にマスクの値を指定します。このアイデアは、例えば、16 x 16<span class="notranslate">tile set</span> という非常に小さな<span class="notranslate">tiles</span> がある場合、<span class="notranslate">tiles</span> に合計 256 の異なる<span class="notranslate">tile set</span> があり、<span class="notranslate">tile</span> データ「ブロブ」のインデックスの 8 ビットしか使わないというものです (利用できる 19 ビットのデータから)。これらのビットは「マスク」され、残りの<span class="notranslate">tile</span> データは追加値を格納するために使用されることができます。</p>
   <p>インデックスマスクの初期値を得る簡単な方法は、<span class="notranslate">tiles</span> の<span class="notranslate">tile set</span> の数から 1 を引くことです。したがって、16x16<span class="notranslate">tile set</span> は 256<span class="notranslate">tiles</span> となり、マスク値は 255 (16進数では $ff) です。もし<span class="notranslate">tile set</span> が<span class="notranslate">tiles</span> の数が2のべきでない場合は、マスクを得るために最も近い2のべきに切り上げます。たとえば 20x20<span class="notranslate">tile set</span> は 400<span class="notranslate">tiles</span> で、これは 512 に切り上げ、マスクインデックス値 511 (16 進法で $1ff) となります。インデックスマスクとは別に、通常は<span class="notranslate">tile</span> に割り当てられた flip、rotate、mirror の値も保持したいので、それを助けるためにいくつかの<b>定数を</b>使用できます。これらの定数をインデックスマスクの値と一緒に &quot;or &quot;することで、これらのビットのデータを保持することができます。以下の定数を使用することができます（使用方法は以下のサンプルコードを参照してください）。</p>
   <table>
@@ -51,7 +51,7 @@
   <p>タイルマップのビットマスキングは高度な機能で、<span class="notranslate">tile</span> データの「ブロブ」のビットを独自の用途に使用することができます。例えば、ユーザーはタイルデータ構造で「固体」を意味するビットを予約し、これを高速コリジョンのためにチェックすることができます。基本的に、ビットマスクは<span class="notranslate">tile</span> マップが<i>描画</i>されるときに<span class="notranslate">tile</span> データに対して「and」されます（したがって、他の機能には影響しません）。つまり、マスクにないビットは無視されますが、ユーザーが独自の目的で読み書きをすることはできます。グローバルマスクと<span class="notranslate">tile</span> マップごとのマスクの 2 種類があり、描画に使用する前に<span data-keyref="GameMaker Name">GameMaker</span>内部で &quot;アンド&quot; 処理されることに注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">tilemap_set_mask(tilemap_element_id, mask)</p>
+  <p class="code"><span data-field="title" data-format="default">tilemap_set_mask</span>(tilemap_element_id, mask)</p>
   <table>
     <tbody>
       <tr>

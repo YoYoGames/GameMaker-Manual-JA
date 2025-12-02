@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スケルトン・アニメーション・セット</title>
+  <title>skeleton_animation_set</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">スケルトン・アニメーション・セット</span></h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_set</span></h1>
   <p>インスタンスにスケルトン・アニメーション<span class="notranslate">sprite</span> を割り当てたら、この関数で、どの<i>アニメーション・セットを</i>使用するかを定義します。<span class="notranslate">sprite</span> を作成したとき (<span class="notranslate">Spine</span> で) は、異なる状態に対して複数のアニメーションセットを定義し、それぞれに適切な名前を付けていることでしょう。これらの名前は、<span data-keyref="GameMaker Name">ゲーム</span>中にどのアニメーションセットを使用するかを<span data-keyref="GameMaker Name">GameMaker</span>に伝えるために使用します。たとえば、<span class="notranslate">sprite</span> がプラットフォームゲームの場合、「jump」セット、「run」セット、「idle」セットをすべて1つの<span class="notranslate">sprite</span> に含めて、この関数を使って、ゲーム内でそれらの間で<span class="notranslate">switch</span> を使用することができます。<br />
     アニメーションはデフォルトでループ再生されます。</p>
   <p>この方法で新しいアニメーションを設定すると <a href="../../Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a>を 0 にリセットし、新しいアニメーションセットをそのアニメーションの最初から開始します。<span class="notranslate">loop</span> 。これが望ましい動作<i>ではない</i>場合、「混合」値を <a href="skeleton_animation_mix.htm"><span class="inline">skeleton_animation_mix()</span></a>を設定すると、新しいアニメーションを設定するときに、前のアニメーションとスムーズに補間されるようになります。また、別々のアニメーショントラックを使用する予定がない限り、前のアニメーションからデータが保持されるのを防ぐために、すべてのアニメーションの最初に<span class="notranslate">keyframe</span> を設定する必要があります。</p>

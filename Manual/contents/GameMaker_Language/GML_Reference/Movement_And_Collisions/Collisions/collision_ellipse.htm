@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>コリジョン_エリプス</title>
+  <title>collision_ellipse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>コリジョン_エリプス</h1>
+  <h1><span data-field="title" data-format="default">collision_ellipse</span></h1>
   <p><span class="inline">Collision_ellipse</span> は、最初の 4 つの引数 (x1,y1,x2,y2) を使って現在の 内の楕円の幅と高さを定義し、次に引数 &quot;obj&quot; で定義されている<span class="notranslate">room</span> <span class="notranslate">object</span> <b>が</b>その領域と衝突しているかどうかをチェックします。この衝突は正確にチェックするかしないか、また、コードを実行しているインスタンス自体をチェックするかしないかを選択することができます。この画像を考えてみましょう。</p>
   <p><img>ここでは、真ん中のインスタンスが衝突楕円を使用して、ボール<span class="notranslate">objects</span> をチェックしています。さて、青いものは正確なバウンディングボックスを持って<i>いません</i>。ご覧のように、<span class="notranslate">sprite</span> が実際には楕円に触れていなくても、その<span class="notranslate">sprite</span> のバウンディングボックスが collision_circle で定義された楕円の領域をオーバーラップするので、（関数内の precise オプションを true にしても）衝突は起こりえます。一方、緑のボールは、実際の<span class="notranslate">sprite</span> が定義された楕円をオーバーラップしている場合にのみ衝突が考慮されます。正確な衝突を考慮するためには、<span class="notranslate">object</span> <span class="notranslate">sprite</span> と collision 関数の<i>両方で</i>precise が on になっている必要があることを忘れないでください。また、この関数の戻り値には、衝突とみなされるインスタンスの ID を指定することができることにも注意が必要です。</p>
   <p><span class="notranslate">object</span> インデックスの代わりにインスタンスを指定することができます。 <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a>で特定のインスタンスをチェックするか、<a href="../../../GML_Overview/Instance_Keywords.htm">インスタンスキーワード</a> <span class="inline">all</span>, または <span class="inline">other</span> (イベントと現在のコードスコープによる) をチェックします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">collision_ellipse(x1, y1, x2, y2, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_ellipse</span>(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>

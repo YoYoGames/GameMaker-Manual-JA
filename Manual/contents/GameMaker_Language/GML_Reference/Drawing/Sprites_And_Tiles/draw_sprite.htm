@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite</span></h1>
   <p>この関数は、与えられた<span class="notranslate">sprite</span> と副画像をゲーム内のある位置に描画します<span class="notranslate">room</span> 。<span class="notranslate">sprite</span> には、インスタンス変数 <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>を使用して、コードを実行しているインスタンスに割り当てられている現在の<span class="notranslate">sprite</span> を取得することもできますし、他の任意の<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を使用することもできます。サブイメージも同様に、インスタンス変数に設定します。 <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a>これはサブイメージを現在のインスタンスで選択されたものに設定します<span class="notranslate">sprite</span> (別の<span class="notranslate">sprite</span> を描いても、現在のインスタンスのサブイメージ値を使用することに注意してください) または、選択した<span class="notranslate">sprite</span> の特定のサブイメージを描くために、これに他の値を使用することもできます。この値がサブイメージの数よりも大きい場合、<span data-keyref="GameMaker Name">GameMaker</span>は自動的に<span class="notranslate">loop</span> を指定して対応する画像を選択します (たとえば、描画中の<span class="notranslate">sprite</span> に 0 から 4 までの 5 つのサブイメージがあり、インデックス値を 7 に設定すると、この関数は 0 番のサブイメージ 3 を描画することになります)。最後に、x と y の位置は、<span class="notranslate">room</span> 内で<span class="notranslate">sprite</span> が描画される位置で、<span class="notranslate">sprite</span> の<a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x オフセットと</a> <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y オフセットを</a>中心とした位置である。</p>
   <p class="note"><span class="note">注意</span>この関数は、スケルトンアニメーション<span class="notranslate">sprites</span> を使用する場合、期待通りに動作しないことがあります。また、この関数はデフォルトポーズの最初のフレームしか描画しないことがあるようです。代わりに <span class="inline">draw_skeleton_*</span> の関数を使用する必要があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_sprite(sprite, subimg, x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite</span>(sprite, subimg, x, y);</p>
   <table>
     <tbody>
       <tr>

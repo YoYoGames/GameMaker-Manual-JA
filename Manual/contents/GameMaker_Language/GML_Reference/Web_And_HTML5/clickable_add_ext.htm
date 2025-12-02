@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>クリッカブルアドエクスト</title>
+  <title>clickable_add_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>クリッカブルアドエクスト</h1>
+  <h1><span data-field="title" data-format="default">clickable_add_ext</span></h1>
   <p>この関数を使うと、ゲームキャンバスの外側で、ブラウザウィンドウの中で「ボタン」として機能する、クリック可能なカスタムアイコンを作成することができます。この関数はID値を返します。このID値は変数に格納し、新しいクリッカブルを参照するすべてのボタン関数で使用する必要があります。この関数は、ボタンをクリックしたときにブラウザがポップアップウィンドウを作成するのを防ぐために非常に便利です。</p>
   <p>この関数は <a href="clickable_add.htm"><span class="inline">clickable_add()</span></a>関数では、ブラウザウィンドウの (0,0) を基準とした位置を設定し、ボタンアイコンに持たせたい<span class="notranslate">texture</span> のページエントリを<span class="notranslate">sprite</span> に指定する必要があります (参照)。 <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>) を指定し、開くべきURLか、<span class="notranslate">script</span> (<span data-keyref="GameMaker Name">GameMaker</span> の<span class="notranslate">Asset</span> Browser から) を指定し、使用するターゲットとパラメータを設定する。ただし、この関数には2つのオプションがあり、アイコンのアルファ値を0（完全に透明）から1（完全に不透明）の間で設定できるほか、アイコンのスケール（使用する<span class="notranslate">sprite</span> に適用する乗数値）を設定することが可能です。つまり、値 1 はデフォルトのスケールで、(たとえば) 0.5 は半分のスケール、2 は 2 倍のスケールになります。</p>
   <p>また、URLの引数が<a href="../../GML_Overview/Script_Functions.htm">スクリプト関数の</a>名前（つまり、&quot;http://&quot;で始まっていない）であり、<span class="notranslate">script</span> が <span class="inline"><b>gmcallback_*</b></span> と呼ばれている場合、html5イベントに直接フィードできることも知っておくとよいでしょう。<span data-keyref="GameMaker Name">GameMakerの</span>スクリプト関数名は、 <span class="inline">gmcallback_</span> で始まっていれば難読化さ<i>れない</i>。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">clickable_add_ext(x, y, tpe, url, target, params, alpha, scale);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add_ext</span>(x, y, tpe, url, target, params, alpha, scale);</p>
   <table>
     <tbody>
       <tr>

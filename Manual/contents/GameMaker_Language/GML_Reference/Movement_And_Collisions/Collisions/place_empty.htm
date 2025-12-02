@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>place_empty</h1>
+  <h1><span data-field="title" data-format="default">place_empty</span></h1>
   <p>この関数を使用すると、呼び出したインスタンスが<span class="notranslate">object</span> の<i>他のインスタンス</i>またはゲーム内のすべてのインスタンスと衝突するかどうかをチェックし、確認することができます。この衝突を正しく解決するには、コードを実行しているインスタンスが有効な衝突マスクを持っている必要があります（<span class="notranslate">sprite</span> 自体か、あるいは <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a>) で、有効なマスクを持っているインスタンスとのみ衝突を登録します。</p>
   <p>この関数は，呼び出したインスタンスが特定の位置に配置されたときに衝突が起こらないかどうかを調べます．オプションの引数を指定すると，指定した型のインスタンスとの衝突が起こらないかどうかだけを調べることができます．オプションの<span class="notranslate">object</span> ID が与えられない場合、チェックは<span class="notranslate">room</span> 内の<i>すべての</i>インスタンスに対して行われることに注意してください。衝突チェックは、どの種類のコリジョン マスクを選択したかによって、正確かインスタンスのバウンディング ボックスに基づくかのいずれかとなりますが、正確に衝突が動作するためには、チェック内のすべてのインスタンスが正確にコリジョン マスクを備えている必要があります。</p>
   <p>なお、与えられたx/y座標は、チェックが行われる前に最も近い整数にフロアーされる。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">place_empty(x, y, [object_id]);</p>
+  <p class="code"><span data-field="title" data-format="default">place_empty</span>(x, y, [object_id]);</p>
   <table>
     <tbody>
       <tr>

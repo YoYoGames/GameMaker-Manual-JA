@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_potential_settings</h1>
+  <h1><span data-field="title" data-format="default">mp_potential_settings</span></h1>
   <p> <span class="inline">mp_potential_</span> 関数は、この関数で変更可能ないくつかのパラメータを使用して動作します。全体として、このメソッドは次のように動作する。まず、ゴールに向かってまっすぐ進もうとし、パラメータ &quot;ahead&quot; で設定可能なステップ数だけ先を見る（デフォルト値は 3）。この値を小さくすると、前方が見えにくくなるため方向転換が遅くなり、大きくすると方向転換が早くなります。このチェックが衝突につながる場合は、理想的な直進方向からさらに左と右の方向を見るようになります。これはサイズ &quot;rotstep &quot;のステップで行われ（デフォルト値は10）、これを減らすとインスタンスはより多くの動きの可能性を得ますが、より多くの処理能力を必要とするのでより遅くなります。</p>
   <p>パラメータ &quot;maxrot &quot;は、少し説明が難しいです。インスタンスは現在の移動方向を持ち、maxrot（デフォルト値は30）は、1ステップでその現在の方向から左右にどれだけ方向を変えることができるかを示します。つまり、例えばゴールに向かってまっすぐ進むことができても、この最大方向転換量に違反しない限り、そうすることができる。maxrot を大きな値にすると、インスタンスは各ステップで大きく方向を変えることができ、短い<span class="notranslate">path</span> を見つけるのが容易になりますが、<span class="notranslate">path</span> はより醜く、自然でなくなります。この値を小さくすると、<span class="notranslate">path</span> は滑らかになりますが、より長い回り道をする可能性があります（時にはゴールを見つけるのに失敗することもあります）。最後に、ステップを作れないときの動作は、パラメータ「onspot」の値に依存する。onspotがtrue（デフォルト値）の場合、インスタンスはそのスポットで &quot;maxrot &quot;で示される量だけ回転し、falseの場合は全く動きません。falseに設定すると、車などの場合に便利ですが、インスタンスが<span class="notranslate">path</span> を見つける可能性が低くなります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">mp_potential_settings(maxrot, rotstep, ahead, onspot)</p>
+  <p class="code"><span data-field="title" data-format="default">mp_potential_settings</span>(maxrot, rotstep, ahead, onspot)</p>
   <table>
     <tbody>
       <tr>

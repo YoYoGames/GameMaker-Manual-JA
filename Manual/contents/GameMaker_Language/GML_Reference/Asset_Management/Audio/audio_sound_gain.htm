@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオサウンドゲイン</title>
+  <title>audio_sound_gain</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>オーディオサウンドゲイン</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
   <p>一定時間ごとに音をフェードイン、フェードアウトさせたり、瞬時に音のゲインを設定したりする機能です。</p>
   <p>時間はミリ秒単位で、この関数では、その時間が終了するまでにサウンドが到達すべき最終的なゲインレベルを入力する必要があります。このゲインは0（無音）から0より大きい値まで設定できますが、通常は最大音量を1と考えます。 1以上の値も使用できますが、使用するサウンドとコンパイルするプラットフォームによっては、サウンドを再生したときに歪みやクリッピングが発生する場合があります。なお、ゲインスケールはリニアであり、瞬時にゲインを変更するには、単にtime引数を0に設定します。</p>
   <p>この関数は、インデックスがサウンドリソースの場合、<span class="notranslate">room</span> で現在再生中のサウンドの<i>すべての</i>インスタンスに影響を与え、最終的な音量が、それ以降のすべてのサウンドインスタンスを再生する音量となります。しかし、次のような関数から返されたインデックスを使用した場合は、そのサウンドのそれ以降のすべてのインスタンスが再生される音量となります。 <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>は、その1つのサウンドのインスタンスにのみ影響します。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">audio_sound_gain(index, volume, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(index, volume, time);</p>
   <table>
     <tbody>
       <tr>

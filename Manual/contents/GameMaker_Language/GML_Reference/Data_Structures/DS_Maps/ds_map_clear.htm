@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_clear</h1>
+  <h1><span data-field="title" data-format="default">ds_map_clear</span></h1>
   <p>この関数は、(以前に作成した) DS マップのすべてのキー/値ペアを消去しますが、 DS マップ自体をメモリから削除するわけではありません。そのためには、関数 <a href="ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a>.マップをクリアすると、マップに格納されているデータ構造の参照が解除され、メモリリークが発生することに注意してください。したがって、これを防ぐには、マップをクリアする前に、それを調べてすべてのデータ構造アイテムを手動で破棄する必要があります。この作業が不要なのは、マップ内のアイテムに<a href="../DS_Lists/DS_Lists.htm">DS リストや</a>別の<a href="DS_Maps.htm">DS マップとしての</a>フラグをつけている場合のみで、 その場合は親マップが消去されるときにこれらのアイテムは破棄され (消去されない!)、自動的にメモリがクリーンアップされる。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_map_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

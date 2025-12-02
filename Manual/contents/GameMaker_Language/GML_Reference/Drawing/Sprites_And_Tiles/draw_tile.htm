@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ドロータイル</title>
+  <title>draw_tile</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ドロータイル</h1>
+  <h1><span data-field="title" data-format="default">draw_tile</span></h1>
   <p>この関数を使うと、<span class="notranslate">tile</span> から任意の<span class="notranslate">tile set</span> を描画し、回転、反転、ミラーを競い、フレーム（アニメーションの場合）と<span class="notranslate">room</span> 内の位置を設定できます。<span class="notranslate">tile set</span> ID 値は<span class="notranslate">tile set</span> で設定した<span class="notranslate">IDE</span> インデックス、<span class="notranslate">tile</span> data は<span class="notranslate">tile</span> インデックスと適用した変換に関するすべての情報を含むデータ「blob」です。関数 <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a>を使って<span class="notranslate">tile</span> データを取得し、<a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">タイル関数で</a>操作することもできます。また、以下の<span class="notranslate">tile</span> 定数と、作成する<span class="notranslate">tile</span> のインデックス値を使って、自分でデータを作成することもできます。</p>
   <table>
     <tbody>
@@ -46,7 +46,7 @@
   <p>上記のコードでは、<span class="notranslate">tile</span> のタイルデータを格納するローカル変数を作成し、<span class="notranslate">tile set</span> のインデックスを 8 とし、それを回転、反転させているだけです。これは、指定した<span class="notranslate">tile</span> から、そのインデックスで<span class="notranslate">tile set</span> を描画するために使用できます。これは、どのタイルマップレイヤーにもリンクされておらず、<span class="notranslate">tile</span> は描画を行うインスタンスのレイヤー深度で、<span class="notranslate">room</span> で指定した x/y 位置に描画されます。 また、フレームを設定することで、描画もできることに注意してください。インデックス付き<span class="notranslate">tile</span> がアニメーションセットの一部である場合、ここでフレーム番号を設定できます (0 からフレーム数 - 1 まで)。インデックス付き<span class="notranslate">tile</span> は単に、どのアニメーション<span class="notranslate">tile set</span> を使用しているかの指標となり、描画されるのは指定されたフレームになります。もし<span class="notranslate">tile</span> がアニメーションセットの一部でないなら、frame は 0 に設定されるべきです。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_tile(tileset, tiledata, frame, x, y)</p>
+  <p class="code"><span data-field="title" data-format="default">draw_tile</span>(tileset, tiledata, frame, x, y)</p>
   <table>
     <tbody>
       <tr>

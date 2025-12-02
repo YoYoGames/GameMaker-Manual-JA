@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バッファークリエイトをバーテックスから作成します。</title>
+  <title>buffer_create_from_vertex_buffer_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バッファークリエイトをバーテックスから作成します。</h1>
+  <h1><span data-field="title" data-format="default">buffer_create_from_vertex_buffer_ext</span></h1>
   <p>この関数を使用して、事前に作成した<a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">頂点バッファの</a>データで満たされたメモリの一部を、ゲーム内の<span class="notranslate">buffer</span> として確保します。この<i>バッファIDは</i>変数に格納され，以後，<span class="notranslate">buffer</span> に対するすべての関数呼び出しに使用されます． この関数は，使用する<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> の ID を受け取ります（関数 <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>例えば、以下の定数を用いて、<span class="notranslate">buffer</span> のタイプを定義します。</p>
   <table>
     <tbody>
@@ -60,7 +60,7 @@
   <p class="note"><b>注</b>：このように動的に作成されたリソースは、メモリリークを防ぐために、不要になったらメモリから削除することが重要です。作成した<span class="notranslate">buffer</span> が終了したら、再度、以下を使用してリソースを解放してください。 <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>.また、新しい<span class="notranslate">vertex</span> を作成するために使用された<span class="notranslate">buffer</span> <span class="notranslate">buffer</span> もメモリから削除されないことに注意し、関数 <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><span class="inline">vertex_delete_buffer()</span></a></span>が不要になった時点で</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">buffer_create_from_vertex_buffer_ext(vertex_buffer, type, alignment, start_vertex, num_vertices)</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_create_from_vertex_buffer_ext</span>(vertex_buffer, type, alignment, start_vertex, num_vertices)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオ作成バッファサウンド</title>
+  <title>audio_create_buffer_sound</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>オーディオ作成バッファサウンド</h1>
+  <h1><span data-field="title" data-format="default">audio_create_buffer_sound</span></h1>
   <p>この関数では、<span class="notranslate">buffer</span> の内容から新しい音を作ることができます。<span class="notranslate">buffer</span> は以前に作成され（作成方法の詳細は<a href="../../../Buffers/Buffers.htm">バッファ関数を</a>参照）、データが追加または読み込まれた状態になっています。この関数に、データフォーマット（現在サポートされているのは <span class="inline">buffer_u8</span> または <span class="inline">buffer_s16</span> のみ）、サンプルレート（1000hz から 48000hz の間）、データを取得する<span class="notranslate">buffer</span> のオフセットを渡します。また、<span class="notranslate">buffer</span> のサンプル数と、サウンドが必要とするチャンネルを指定する必要があります。これらのチャンネルは、以下の定数のいずれかで定義されます。</p>
   <table>
     <colgroup>
@@ -47,7 +47,7 @@
   <p>サウンドを作成した後、そのサウンドに関連するポインタインデックスが不要になった場合は、関数 <a href="audio_free_buffer_sound.htm"><span class="inline">audio_free_buffer_sound()</span></a>.これを怠り、変数を再代入したり、<span class="notranslate">rooms</span> 等を変更すると、サウンドIDが失われ、メモリリークを起こします。また、<span class="notranslate">buffer</span> からサウンドが作成され、そのサウンドが最初に解放されないと、削除できないことに注意してください。ですから、まずサウンドを解放してから<i>、</i> <span class="notranslate">buffer</span> を削除してください。 また、サウンドが作成された後に<span class="notranslate">buffer</span> に何かを追加したり、<span class="notranslate">buffer</span> のサイズを変更したりすると、予期しない結果になるので、お勧めできません - 一度<span class="notranslate">buffer</span> からサウンドを作成し始めたら、その後、他の方法で操作するべきではありま せん。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">audio_create_buffer_sound(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_create_buffer_sound</span>(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
   <table>
     <tbody>
       <tr>

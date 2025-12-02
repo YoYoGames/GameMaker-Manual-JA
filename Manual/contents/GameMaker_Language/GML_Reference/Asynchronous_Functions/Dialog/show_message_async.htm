@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_message_async</h1>
+  <h1><span data-field="title" data-format="default">show_message_async</span></h1>
   <p>この関数では、ウィンドウを開き、関数内で定義したメッセージをユーザーに表示します。この関数は非同期関数であるため、<span data-keyref="GameMaker Name">GameMakerは</span>回答を待つ間、実行中のデバイスをブロック<i>せず</i>、通常通りイベントを実行し続ける。ユーザーが &quot;OK &quot;ボタンを押すと、非同期的に <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm"><b>ダイアログ</b></a>イベントがトリガーされ、そのイベントの<i>間だけ</i>、ds_map が変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>id &quot;は関数が呼ばれたときに返された値で、&quot;status &quot;は &quot;Okay &quot;ボタンが押されたときの <span class="inline">true</span> 、メッセージがキャンセルされたときの <span class="inline">false</span> （すべてのターゲットプラットフォームでダイアログのキャンセルができるわけではないので利用可能）である。</p>
   <p class="note"><strong><em><span class="note">注意事項</span></em></strong><em>この機能は<span data-keyref="Dialog for debug only"> <strong>デバッグおよびテスト</strong></span>用であり、<span data-keyref="Dialog for debug only">リリースされたゲームでは</span>使用しないでください。<span data-keyref="Dialog for debug only">そのためには、プレイヤーからの入力を受け取るためのカスタムユーザーインターフェースを作成し、ダイアログの外観や動作を完全に制御できるようにする必要があります。</span></em></p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">show_message_async(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_message_async</span>(string);</p>
   <table>
     <tbody>
       <tr>

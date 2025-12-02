@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バーテックス作成バッファ</title>
+  <title>vertex_create_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バーテックス作成バッファ</h1>
+  <h1><span data-field="title" data-format="default">vertex_create_buffer</span></h1>
   <p>この関数を使用すると、新しい<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を作成することができます。これは<span data-keyref="GameMaker Name">GameMaker</span>が作成する特別な<i>grow</i> <span class="notranslate">buffer</span> で、プリミティブを作るときに使うためにあらかじめフォーマットされています（たとえば<span class="notranslate">shaders</span> で使うため）。この関数は<span class="notranslate">buffer</span> のインデックスを返し、それ以降の呼び出しで使用する必要があります。</p>
   <p>この関数で作成された<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を使用する場合、単に <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a><span class="notranslate">vertex</span> を使用して、<span class="notranslate">buffer</span> のデータの割り当てを開始し、カスタムプリミティブの定義を開始します。その後、<span class="notranslate">shader</span> に保持され、<span class="notranslate">buffer</span> に送信できるようになります。 <a href="vertex_freeze.htm"><span class="inline">vertex_freeze()</span></a>関数)を呼び出すたびに <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a>は、前の<span class="notranslate">buffer</span> のデータを消去し、新しいデータを受け入れる準備をします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">vertex_create_buffer();</p>
+  <p class="code"><span data-field="title" data-format="default">vertex_create_buffer</span>();</p>
   <p> </p>
   <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></p>

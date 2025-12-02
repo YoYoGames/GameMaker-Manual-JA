@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_get_file</h1>
+  <h1><span data-field="title" data-format="default">http_get_file</span></h1>
   <p>この関数は、指定されたURLに接続し、情報をファイルとして取得することができます。非同期関数であるため、<span data-keyref="GameMaker Name">GameMakerは</span>応答待ちの間はブロックせず、コールバック情報を取得しない限り、実行しつづける。この情報は、<span class="notranslate">string</span> の形式で、<span class="notranslate">object</span> プロパティに定義されているインスタンスで<b>Async Event</b>をトリガーすることになる。</p>
   <p class="note"><b><span class="note">注意事項</span> </b>ブラウザのXSS保護機能により、ドメインをまたがるリソースへのリクエストや読み込み試行がブロックされ、空白の結果が返されるように見える場合があることに留意してください。詳しくは、「<a href="HTTP.htm">クロスドメインの問題</a>」をご覧ください。</p>
   <p>このイベントは、任意の<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTPイベントによって</a>ピックアップされる「コールバック」を生成し、その場合、それは <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a>(より一般的には &quot;辞書 &quot;として知られている)は、このイベント専用で、特別な変数である <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>非同期ロード</b></a>.このDSマップは、返されるデータに応じて異なる値を含みます。つまり、例えばプログレスバーを表示できるように、データの各パケットを受信するたびにイベントが複数回トリガーされます。DS マップの一般的な構造は、次のようになる。</p>
@@ -32,7 +32,7 @@
   </ul>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">http_get_file(url, local_target);</p>
+  <p class="code"><span data-field="title" data-format="default">http_get_file</span>(url, local_target);</p>
   <table>
     <tbody>
       <tr>

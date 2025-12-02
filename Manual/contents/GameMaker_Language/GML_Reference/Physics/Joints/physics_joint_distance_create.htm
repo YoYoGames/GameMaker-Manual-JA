@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理接合距離の作成</title>
+  <title>physics_joint_distance_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理接合距離の作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_distance_create</span></h1>
   <p>最も単純なジョイントのひとつが距離ジョイントで、2つのインスタンス上の2点間の距離が一定でなければならないというものです。距離ジョイントを指定する場合、2つのインスタンスはすでに作成され、フィクスチャが割り当てられているはずです。それから、2つのアンカーポイントを<span class="notranslate">room</span> の座標で定義します。最初のアンカーポイントはインスタンス1に、2番目のアンカーポイントはインスタンス2に接続され、これらの点間の距離は距離拘束の長さを意味します。下の画像は、この仕組みを示しています。</p>
   <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span> に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span> エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span> のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。したがって、距離ジョイントをインスタンスの原点以外の場所に作成しても、それはまだ有効であり、それが作成された位置に対して2つのインスタンスを相対的に拘束することになります。col&quot; の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、それは衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_distance_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>
