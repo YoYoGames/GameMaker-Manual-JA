@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_stack_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_stack_destroy</span></h1>
   <p>この関数は、与えられたスタックデータ構造をメモリから取り除き、それが使用していたリソースを解放し、それが含んでいたすべての値を削除します。この関数は、ゲームのスローダウンやクラッシュを引き起こすメモリリークを防ぐため、DS スタックの使用を終了したときに常に使用する必要があります。</p>
   <p class="note"><b>重要!デ</b>ータ構造を作成するとき、それを識別するためのインデックス値は0から始まる整数値です。 これは、異なるタイプのデータ構造が<b>同じ</b>インデックス値を持つことができることを意味します。 <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span>関数を使用してからアクセスします。また、インデックスは再利用されるため、破壊されたデータ構造のインデックス値が、その後新しく作成されたデータ構造で使用される可能性があることに注意してください。したがって、破壊後は必ずDSインデックスを保持していた変数を-1に設定することをお勧めします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_stack_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_stack_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

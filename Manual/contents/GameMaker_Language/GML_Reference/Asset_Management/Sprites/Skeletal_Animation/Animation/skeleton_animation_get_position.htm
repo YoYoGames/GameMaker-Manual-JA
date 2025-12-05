@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スケルトンアニメーションの位置を取得します。</title>
+  <title>skeleton_animation_get_position</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">スケルトンアニメーションの位置を取得します。</span></h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_get_position</span></h1>
   <p>この関数は、指定されたアニメーショントラック上のアニメーションの位置を 0 から 1 までの値で返します。 この方法では、トラックの位置を、値 0 が 0%、値 1 が 100% に対応するパーセントとして取得することができます。</p>
   <p>指定されたトラックにアニメーションが割り当てられていない場合や、インスタンスに<span class="notranslate">sprite</span> が設定されていない場合は、-1 を返します。</p>
   <p> </p>
@@ -43,7 +43,7 @@
   <p class="code">var _position = <span data-field="title" data-format="default">skeleton_animation_get_position</span>(0);<br />
     var _position_percent = _position * 100;<br />
     show_debug_message(&quot;The skeleton animation position on track 0 is at &quot; + string(_position_percent) + &quot;%.&quot;);</p>
-  <p>上記のコードでは、トラック 0 に割り当てられたスケルトン・アニメーションの現在の位置をチェックし、一時変数<span class="inline2">_position</span> に格納しています。次に、その値を 100 倍してパーセンテージに変換し、その結果を別の一時変数<span class="inline2">_position_percent</span> に格納しています。<br>
+  <p>上記のコードでは、トラック 0 に割り当てられたスケルトン・アニメーションの現在の位置をチェックし、一時変数<span class="inline2">_position</span> に格納しています。次に、その値を 100 倍してパーセンテージに変換し、その結果を別の一時変数<span class="inline2">_position_percent</span> に格納しています。<br />
     最後に、パーセントの値を表示するデバッグ・メッセージを表示します。</p>
   <p> </p>
   <p> </p>

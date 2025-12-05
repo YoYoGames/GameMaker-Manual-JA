@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>インスタンスチェンジ</title>
+  <title>instance_change</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>インスタンスチェンジ</h1>
+  <h1><span data-field="title" data-format="default">instance_change</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>この関数を使用して、あるインスタンス<span class="notranslate">object</span> を別のインスタンス<span class="notranslate">object</span> に変更し、その際に最初のインスタンスの Destroy と Clean Up Event と新しいインスタンスの Create Event を実行するかどうかを決定することができる。この場合、爆弾の Destroy イベントと Clean Up イベント、および爆発の Create イベントを実行させたいので、「perf」引数はおそらく true になります。</p>
   <p>インスタンスを変更するということは、そのインスタンスに対して次のステップまで何もしないこと、特に変数にアクセスしようとするとエラーが発生することを意味します。基本的に、インスタンスを変更しても、現在のステップが終了するまで実際には使用できないので、そのインスタンスが含む変数に直接アクセスすることはできません（たとえば、 <span class="inline">obj_Changed.x</span> を呼び出すなど）。</p>
   <p class="note"><b>警告!物</b>理演算が有効なインスタンスを変更した場合、その物理特性は変更先のインスタンスに<b>引き継が</b>れません。そのため、現在のインスタンスの物理状態を新しいインスタンスに「転送」するコードを用意するか、新しいインスタンスの物理プロパティをその作成イベントまたは<span class="notranslate">object</span> エディタで定義しておく必要があります。このため、物理演算が可能なインスタンスにはこの関数を使用せず、むしろ <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span>および<span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_change(obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>

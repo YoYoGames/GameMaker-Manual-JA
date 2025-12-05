@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スケルトンアニメーションミックス</title>
+  <title>skeleton_animation_mix</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>スケルトンアニメーションミックス</h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_mix</span></h1>
   <p>を使えば、簡単に<span class="notranslate">switch</span> アニメーションセットを作成することができます。 <a href="skeleton_animation_set.htm"><span class="inline">skeleton_animation_set()</span></a>関数がありますが、この場合、あるアニメーションから別のアニメーションに切り替わるときに、スキップやスタッターが発生することがあります。これを防ぐには、2つのアニメーションセットの間にミックス値を設定すれば、<span class="notranslate">sprite</span> がそれらの間を補間します。通常、この設定はスケルトンアニメーションのインスタンスの Create Event で行います。この設定は一度だけ行えばよく、<span data-keyref="GameMaker Name">GameMaker</span>はそのインスタンスのアニメーションセットを使って<span class="notranslate">sprite</span> に続くすべての変更を補間します。duration の値は 0 から 1 で、0.5 を指定すると、1つのセットから他のセットへ「半分ずつ」補間されることに注意してください。</p>
   <p class="note"><span class="note">注</span>Spine 4.0では回転アニメーションの動作が変更され、最短経路で回転を補間するのではなく、<span class="notranslate">keyframes</span> の絶対値で補間されるようになりました。このため、<span class="notranslate">Spine</span> のアニメーションを古いバージョンからアップグレードする場合、予期しない動作をする可能性があります。また、回転が必要な動作をするためには、<span class="notranslate">Spine</span> プロジェクト内の変更が必要な場合があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">skeleton_animation_mix(animfrom, animto, duration);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_animation_mix</span>(animfrom, animto, duration);</p>
   <table>
     <tbody>
       <tr>

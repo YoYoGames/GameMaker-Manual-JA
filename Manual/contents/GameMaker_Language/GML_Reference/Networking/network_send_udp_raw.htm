@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_udp_raw</h1>
+  <h1><span data-field="title" data-format="default">network_send_udp_raw</span></h1>
   <p>この関数は、UDPを使用してネットワーク経由でデータを<span class="notranslate">server</span> に送信します。 この関数は、接続する<i>ソケットID</i>、接続先URL、使用するポートを受け取ります。次に、送信するデータを格納する<i>バッファID</i>（<span class="notranslate">buffers</span> の詳細については、<a href="../Buffers/Buffers.htm">リファレンス - バッファを</a>参照してください）と、最後にデータのサイズ（バイト単位）を指定する必要があります。UDP は「コネクションレス型」で、実際には接続を行わず、IP に直接パケットを送信します。<span class="notranslate">server</span> は IP アドレスから受信データを受け取り、それを「そのまま」扱わなければなりません。送信されたデータは<span data-keyref="GameMaker Name">GameMakerでは</span>一切フォーマットされず、受信側のデバイスはデータをストリームとして取得するため、自分で処理する必要がある。この関数は送信されたデータのバイト数を返すが、送信に失敗した場合は0より小さい値を返す。</p>
   <p class="note"><span class="note">注</span>）この機能は、HTML5ターゲット上で動作するプロジェクトで使用した場合は動作しません。また、HTML5プロジェクトでもUDPを受信することはできません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">network_send_udp_raw(socket, url, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_udp_raw</span>(socket, url, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

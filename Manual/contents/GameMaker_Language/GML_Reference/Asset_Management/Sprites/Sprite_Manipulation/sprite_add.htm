@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スプライトアド</title>
+  <title>sprite_add</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>スプライトアド</h1>
+  <h1><span data-field="title" data-format="default">sprite_add</span></h1>
   <p>この関数では、画像を<span class="notranslate">sprite</span> として追加し、外部ソースから読み込みます。読み込む画像ファイルは、<b>常に</b> <span class="inline">*.png</span> 、 <span class="inline">*.gif</span> 、 <span class="inline">*.jpg/jpeg</span> 、 <span class="inline">*.json</span> のいずれかの形式でなければなりません（<span class="inline">*json</span> ファイルは、<span class="notranslate">Spine</span> で作成した<a href="../Skeletal_Animation/Skeletal_Animation.htm">スケルトンアニメーションスプライトの</a>読み込みに使用されます）。この関数は，新しい<span class="notranslate">sprite</span> のインデックスを返します．このインデックスは，今後<span class="notranslate">sprite</span> に関連するすべてのコードで使用されなければなりません． この関数を HTML5 で使用する場合，あるいは URL から画像を取得する場合，この関数は<b>Image Loaded</b>非同期イベントも発生させます．詳しくは<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">こちらのページを</a>ご覧ください。</p>
   <p><span class="notranslate">sprites</span> アニメーション化される画像は、 <span class="inline">*.gif</span> （下記参照）を除き、すべて「帯」の形式でなければならず、<b>スプライト幅＝帯幅／サブ画像という</b>規則に従って、指定された数のサブ画像に分割されます。</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -29,7 +29,7 @@
   <p class="note"><b>注</b>：<b>HTML5では</b>、安全な<span class="notranslate">sprite</span> から<span class="notranslate">server</span> を読み込む場合、cross-origin type を設定し、絶対的な<span class="notranslate">path</span> の代わりに相対的な<span class="notranslate">path</span> を使用する必要がある場合があります。参照 <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="inline">http_set_request_crossorigin()</span></a></span>をご覧ください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_add</span>(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ネットワーク送信パケット</title>
+  <title>network_send_packet</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ネットワーク送信パケット</h1>
+  <h1><span data-field="title" data-format="default">network_send_packet</span></h1>
   <p>この関数を使うと、ネットワークを通じてデータの「パケット」を送信することができます。この関数は接続する<i>ソケット ID</i>を受け取り、次に送信するデータを格納する<i>バッファ ID</i>(<span class="notranslate">buffers</span> に関するより詳しい情報は<a href="../Buffers/Buffers.htm">Reference - Buffers</a> を参照)、最後にデータパケットのサイズ (バイト単位) を指定する必要があります。この関数で送信されたパケットは、データを受け取る<span data-keyref="GameMaker Name">GameMakerの</span>ゲームがパケットを正しく「分割」できるようにフォーマットされ、送信したデータのバイト数、または送信に失敗した場合は0未満の数値が返される。この関数が返す送信データの最終サイズには、さらに12バイトの<span class="notranslate">GameMaker</span> ヘッダー情報が含まれることに注意する必要がある。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">network_send_packet(socket, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_packet</span>(socket, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

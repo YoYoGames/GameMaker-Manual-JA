@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_get_channel</h1>
+  <h1><span data-field="title" data-format="default">animcurve_get_channel</span></h1>
   <p><span class="notranslate">animation curve</span> <span class="notranslate">asset</span> で指定されたチャンネルのデータを含む<a href="../../../GML_Overview/Structs.htm">構造</a>体を返す。<span class="notranslate">animation curve</span> ID または<span class="notranslate">struct</span> と，チャンネル名またはインデックスを指定すると，以下のフォーマットで<span class="notranslate">struct</span> を返す。</p>
   <table>
     <colgroup>
@@ -51,7 +51,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     <span class="notranslate">animation curve</span> ID は、<span class="notranslate">animation curve</span> Browser で定義された<span class="notranslate">Asset</span> の名前、または、関数が返す<span class="notranslate">struct</span> ポインタの名前です。 <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>.チャンネル名は、アニメーションカーブ<span class="notranslate">string</span> で定義されたチャンネルを参照する<span class="notranslate">asset</span> 、またはインデックス値を指定できます。インデックス値は 0 から<i>n</i> で、<i>n</i>はカーブの最後のチャンネルです<span class="notranslate">asset</span> （例：<span class="notranslate">animation curve</span> に 4 つのチャンネルがある場合、0 から 3 のインデックスになります）。インデックス値を渡すと、チャンネル名を渡すよりも少ない処理で済むことに注意してください。この関数が失敗した場合 (つまり、指定した名前あるいはインデックスを持つチャンネルが存在しなかった場合) には、エラーが発生します。</p>
   <p>1つのチャンネルの点は，<span class="notranslate">structs</span> として<a href="../../../GML_Overview/Arrays.htm">配列に</a>格納される．配列の各項目は，1つの点である<span class="notranslate">struct</span> である．点<span class="notranslate">struct</span> は以下の変数を持つ。</p>
   <table>
@@ -76,7 +76,7 @@
   <p> </p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">animcurve_get_channel(curve_struct_or_id, channel_name_or_index);</p>
+  <p class="code"><span data-field="title" data-format="default">animcurve_get_channel</span>(curve_struct_or_id, channel_name_or_index);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理接合部摩擦の作成</title>
+  <title>physics_joint_friction_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理接合部摩擦の作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_friction_create</span></h1>
   <p>摩擦ジョイントは、物理シミュレーションの他のジョイントとは少し異なり、作成された接続がインスタンスの位置や動きを拘束するのではなく、その速度と回転を拘束するものです。これは、力とトルクの最大入力値を取り、それを2番目の固定具に適用して、速度と角運動量を最初のインスタンスのものと同じ値にすることで機能します。つまり、静止しているインスタンスと動いているインスタンスがあり、それらを摩擦ジョイントで接続すると、動いているインスタンスは徐々に減速し、自分も静止することになります。両方のインスタンスが動いている場合、2番目のインスタンスの移動速度は1番目のインスタンスの移動速度に一致するように変更されます。</p>
   <p><img>他のほとんどのジョイントと同様に、結合するインスタンスと、ジョイントを作成する位置を<span class="notranslate">room</span> 内で指定します。次に、最大力と最大トルク（方向と回転の摩擦）を指定します。「col」値を <span class="inline">true</span> に設定すると、2 つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_friction_create(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_friction_create</span>(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
   <table>
     <tbody>
       <tr>

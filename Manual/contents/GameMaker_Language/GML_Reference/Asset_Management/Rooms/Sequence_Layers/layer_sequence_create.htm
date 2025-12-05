@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>レイヤー・シーケンス・クリエイト</title>
+  <title>layer_sequence_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>レイヤー・シーケンス・クリエイト</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_create</span></h1>
   <p>この関数を使うと、与えられたレイヤー上に<span class="notranslate">sequence</span> <span class="notranslate">asset</span> のインスタンスを作成することができます。レイヤーIDは、レイヤー名（<span class="notranslate">string</span> エディターで定義されたもの）の<span class="notranslate">room</span> 、またはユニークレイヤーID（関数 <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>また、<span class="notranslate">room</span> を作成するための<span class="notranslate">sequence</span> での X と Y の位置、そして最後に作成する<span class="notranslate">sequence</span> の ID を指定します。<span class="notranslate">sequence</span> ID は<span class="notranslate">Asset</span> ブラウザで<span class="notranslate">sequence</span> に対して定義した名前定数です。 この関数は<span class="notranslate">sequence</span> 要素のユニーク ID を返します。これは<span class="notranslate">sequences</span> の以降のすべてのレイヤ関数で使用できます。また、この ID は<span class="notranslate">sequence</span> インスタンス<span class="notranslate">struct</span> を関数で取得するために使用できます。 <a href="layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_instance()</span></a>.</p>
   <p>注目すべきは、<span class="notranslate">sequence</span> に<span class="notranslate">object</span> のトラックが含まれている場合、その<span class="notranslate">sequence</span> のキーが<a href="../../../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Dope Sheet</a> 上のどこに配置されているかに関わらず、<span class="notranslate">asset</span> 要素自体が作成されると同時にそのインスタンスが作成されることです。<span class="notranslate">Sequence</span> コントローラは、トラックの<span class="notranslate">asset</span> キーの位置と時間に応じて、インスタンスの<a href="../../Instances/Instance_Variables/visible.htm">可視性を</a>非表示と表示に切り替えるだけで、インスタンスの作成と破棄を繰り返す<em>ことは </em>ありません。その結果、インスタンスは、<span class="notranslate">sequence</span> 要素が作成されたときに Create イベントを実行し、そのアセットキーが開始されたときには実行されません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">layer_sequence_create(layer_id, x, y, sequence_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_create</span>(layer_id, x, y, sequence_id)</p>
   <table>
     <tbody>
       <tr>

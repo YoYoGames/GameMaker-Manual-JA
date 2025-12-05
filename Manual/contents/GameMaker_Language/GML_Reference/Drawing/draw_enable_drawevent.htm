@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_enable_drawevent</h1>
+  <h1><span data-field="title" data-format="default">draw_enable_drawevent</span></h1>
   <p>この関数を使うと、<b>ゲーム内のすべてのインスタンスの</b> draw イベントを有効 (<span class="inline">true</span>) または無効 (<span class="inline">false</span>) にすることができます。これは単にインスタンスが画面に描画しないだけでなく、draw イベントを完全に抑制することになるので、そのイベントに存在するゲームロジックも実行されないので注意が必要です。</p>
   <p>この関数について理解しておくべき重要な点は、ゲームの開始直後、最初のフレームがレンダリングされる前（つまり、ゲームの最初の<span class="notranslate">object</span> の最初の<span class="notranslate">room</span> の Create Event）に呼び出すと、ゲーム ウィンドウが<b>レンダリングされないという</b>ことです。これは、何もレンダリングする必要のない専用の<span class="notranslate">server</span> を必要とするマルチプレイヤー プロジェクトには便利ですが、<span class="notranslate">GameMaker</span> がサポートしていないため、ヘッドレスには<strong>ならない</strong>ことに留意してください -- したがって、グラフィカル インターフェイスを持たない<span class="notranslate">server</span> では実行できません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_enable_drawevent(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_enable_drawevent</span>(enable);</p>
   <table>
     <tbody>
       <tr>

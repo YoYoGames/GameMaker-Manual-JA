@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_raw</h1>
+  <h1><span data-field="title" data-format="default">network_send_raw</span></h1>
   <p>この関数を使うと、ネットワークを通じて「生の」データパケットを送信することができます。この関数は接続する<i>ソケット ID</i>を受け取り、次に送信するデータを格納する<i>バッファ ID</i>(<span class="notranslate">buffers</span> についての詳細は<a href="../Buffers/Buffers.htm">リファレンス - バッファを</a>参照)、最後にデータパケットのサイズ (バイト単位) を指定する必要があります。送信されるデータは<span data-keyref="GameMaker Name">GameMakerによって</span>フォーマットされることはなく、受信側のデバイスはストリームとしてデータを受け取るので、自分で処理する必要がある。この関数は送信したデータのバイト数を返すが、送信に失敗した場合は0より小さい値を返す。</p>
   <h2>オプション引数</h2>
   <p>最後の引数はオプションであり、WebSocketでのみ使用されます。これにより、バイナリデータまたはテキストデータのどちらを送信するかを選択することができます。この引数には、どちらかの定数を指定することができます。</p>
@@ -44,7 +44,7 @@
   <p>一部のプラットフォームの API は、WebSocket を使用する場合、テキストメッセージしか受け付けないため（Twitch など）、そのような場合は<span class="inline2">network_send_text</span>定数を使用することができます。この引数を指定しない場合、デフォルトでバイナリデータが送信されます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">network_send_raw(socket, bufferid, size, [options]);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_raw</span>(socket, bufferid, size, [options]);</p>
   <table>
     <tbody>
       <tr>

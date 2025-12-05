@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ゲームパッド軸の値</title>
+  <title>gamepad_axis_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ゲームパッド軸の値</h1>
+  <h1><span data-field="title" data-format="default">gamepad_axis_value</span></h1>
   <p>この関数を使用すると、指定されたゲームパッドスロットから異なる軸の値を取得することができます。チェックするゲームパッドスロットのインデックスと、軸インデックス定数（<a href="Gamepad_Input.htm">ここに</a>リストアップ）、または <span class="inline">0</span> と <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span> の間の整数値を指定します。返される値は、利用可能な水平軸と垂直軸のそれぞれについて、 <span class="inline">-1</span> と <span class="inline">1</span> の間となります。</p>
   <p>返される値は、軸のデッドゾーンの設定値（関数 <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span> を使用）を考慮して正規化されるため、常に -1 ～ 0、および 0 ～ 1 の間になることに注意してください。2 に設定すると、スティックを右に押して 0 ～ 1 の値を返すのは、<em>生の</em>軸値が 0.2 を超えたときだけということになります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gamepad_axis_value(device, axisIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_axis_value</span>(device, axisIndex);</p>
   <table>
     <tbody>
       <tr>

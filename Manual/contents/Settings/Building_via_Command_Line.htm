@@ -51,10 +51,10 @@
         <tr>
           <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
           <td style="">ライセンス情報の取得に使用するユーザーフォルダ
-            <br>
-            <br>
+            <br />
+            <br />
             <span class="notranslate">Windows</span> の場合、これは次のようになります。<span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
-            <br>
+            <br />
             <span class="notranslate">macOS</span> の場合、これは次のようになります。 <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span> </td>
         </tr>
         <tr>
@@ -76,8 +76,8 @@
         <tr>
           <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
           <td style="">ビルドが展開される出力ディレクトリ。末尾の項目は常に削除されるので、ディレクトリだけを指定しないでください（例： <span class="inline">d:\game\output</span> を指定すると、ゲームファイルは <span class="inline">d:\game</span> に置かれます）。
-            <br>
-            <br>
+            <br />
+            <br />
             これを指定しない場合、 <span class="inline">.bat</span> ファイルと同じディレクトリ（またはコマンドの実行元）に <span class="inline">output</span> というディレクトリが作成され、そこに抽出されたビルドファイルが格納されます。 </td>
         </tr>
         <tr>
@@ -279,21 +279,21 @@
         <tr>
           <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
           <td style="">現在のフォルダーで利用可能な<span class="notranslate">runtimes</span> をリストアップします（<span class="inline">directory</span>=フォルダーへのフル<span class="notranslate">path</span> ）。
-            <br>
-            <br>
+            <br />
+            <br />
             検索するディレクトリを指定できますが、指定しない場合はデフォルトでカレントディレクトリになります
-            <br>
-            <br>
+            <br />
+            <br />
             これは、ディレクトリの中に <span class="inline">receipt.json</span> ファイルと <span class="inline">manifest</span> フォルダがあるかどうかもチェックします (実際には<span class="notranslate">runtime</span> であることを確認します)。 </td>
         </tr>
         <tr>
           <td style=""><span class="inline">Runtime Info [version]</span></td>
           <td style="">指定したフィードの最新の<span class="notranslate">runtime</span> に関する情報を出力します。 また、ユーザが利用できるモジュールに関する情報を表示するために、 ライセンスファイルが必要です。
-            <br>
-            <br>
+            <br />
+            <br />
             <span class="inline">version</span>は、フィードのタイトルを検索するために<span class="notranslate">string</span> を使用するか (例: <span class="inline">&quot;739&quot;</span> はバージョン番号に 739 を含むすべてのビルドの情報を表示します)、または <span class="inline">all</span> を使用してすべてのフィードの情報を表示することができます。
-            <br>
-            <br>
+            <br />
+            <br />
             各モジュールのファイル名（ <span class="inline">.zip</span> ）と共に一覧表示されます。 </td>
         </tr>
         <tr>
@@ -303,11 +303,11 @@
         <tr>
           <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
           <td style="">インストールされたすべてのファイルのチェックサムを計算し、マニフェスト <span class="inline">folder</span> に書き込まれたチェックサムと比較します。チェックするフォルダを指定できますが、指定しない場合はカレントディレクトリをデフォルトとします。
-            <br>
-            <br>
+            <br />
+            <br />
             これにより、チェックサムが一致しないファイル、見つからないファイル、存在しないはずのファイルなどが<span class="notranslate">flag</span> 。
-            <br>
-            <br>
+            <br />
+            <br />
             マニフェストファイル自体は検証されておらず、ユーザーはマニフェストファイルを変更してインストールされたものと一致させることができることに注意してください。 </td>
         </tr>
       </tbody>
@@ -348,8 +348,8 @@
         <tr>
           <td style=""><span class="inline">/target=[list_of_targets]</span></td>
           <td style="">カンマで区切られたターゲットのリスト。 <span class="inline">PLATFORM|DEVICE</span> 形式で、例． <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
-            <br>
-            <br>
+            <br />
+            <br />
            <strong>all</strong> を指定すると、 <span class="inline">devices.json</span> ファイル内のすべてのデバイスに対してテストの実行を試みます。 </td>
         </tr>
       </tbody>

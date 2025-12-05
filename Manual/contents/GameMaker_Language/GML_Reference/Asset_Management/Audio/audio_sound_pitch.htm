@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオサウンドピッチ</title>
+  <title>audio_sound_pitch</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">オーディオサウンドピッチ</span></h1>
+  <h1><span data-field="title" data-format="default">audio_sound_pitch</span></h1>
   <p>この機能は、与えられた音のピッチを変更するために使用されます。を使用したときに変数に格納された、再生中の個々の音のインデックスから参照される音のいずれかを使用することができます。 <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>または <a href="audio_play_sound_at.htm"><span class="inline">audio_play_sound_at()</span></a><span class="notranslate">asset</span> 関数で変数に格納された再生中のサウンドのインデックスから参照したサウンド、または<span class="notranslate">Asset</span> Browserから取得した実際のサウンドのいずれかです。再生中のサウンドのインデックスであれば、そのインスタンスのみが変更されますが、<span class="notranslate">asset</span> ブラウザからサウンド<span class="notranslate">Asset</span> を使用する場合は、再生中のサウンド<span class="notranslate">asset</span> のすべてのインスタンスが変更されます。</p>
   <p>pitch 引数は<i>ピッチ乗算器</i>であり、入力値は現在のピッチにその量を乗算します。したがって、デフォルトの値である 1 はピッチを変更せず、1 未満の値はピッチを下げ、1 より大きい値はピッチを上げます。この機能では、0以下または5以上の値は、いずれにせよ聞き取れない可能性があるため、小さな増分を使用することが最善です。なお、許容されるピッチ変化の総量は（1/256）-256オクターブに固定されており、これを超える値や下回る値は登録されません。</p>
   <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> </b>上記のクランプされた値は、<span data-keyref="GameMaker Name">GameMakerが</span>範囲をクランプしようとする値ですが、この値はすべてのターゲットプラットフォームで保証されるわけ<b>では</b>ありません。<span class="notranslate">iOS</span>例えば、GameMakerの場合、(1/256) - 8に固定されるため、オクターブ上または下の値が必要な場合は、ターゲットプラットフォームごとに実験し、それぞれ異なるバージョンのサウンドリソースを用意し、あらかじめシフトさせる必要があるかもしれません。</p>

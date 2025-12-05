@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_add_surface</h1>
+  <h1><span data-field="title" data-format="default">gif_add_surface</span></h1>
   <p>この関数を使用すると、サーフェスからGIFファイルにフレームを保存することができます。GIFファイルID（関数 <a href="gif_open.htm"><span class="inline">gif_open()</span></a>) とサーフェスID (関数 <a href="../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>) と、フレーム間の遅延時間です。遅延時間は1/100秒単位で計算されますが、いったんGIFが作成されると、たとえばプロモーション目的で使用する場合、ブラウザによってフレーム遅延の解釈が若干異なる可能性があることに注意してください。この場合、GIF に描画される部分はデフォルトの (0,0) 位置ではなくオフセットから始まり、追加するサーフェスのセクションのみを選択できるようになります（オプションで）。量子化値は 0 から 3 までの整数で、0 は完全量子化、3 はゼロ量子化です (低い値ほど品質が落ちますが、より小さな GIF が作成されます)。デフォルトの品質である 2 と最高の品質である 3 の間にはあまり差がなく、3 を使用すると GIF の作成が大幅に遅くなるため、最大値を使用する場合は注意が必要です。</p>
   <p>フレーム数やGIFのフレームサイズに組み込みの制限はありませんが、メモリを使いすぎるとこの関数は失敗して-1を返し、そうでない場合は0を返すことに注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gif_add_surface(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_add_surface</span>(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
   <table>
     <tbody>
       <tr>

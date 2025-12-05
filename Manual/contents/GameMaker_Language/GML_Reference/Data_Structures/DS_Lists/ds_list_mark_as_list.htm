@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_list</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_list</span></h1>
   <p>この関数は、以前に作成した DS リスト内の指定した位置に、 別の DS リストを保持していることを &quot;マーク&quot; (あるいは &quot;フラグ&quot;) するものである。この機能は、JSON<span class="notranslate">strings</span> をエンコードする際に必要となる (これは <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>このようにマークされた項目は、親となる DS リストが破棄されるときに自動的にガベージコレクションされる (破棄される) ため、データ構造をネストするときにも便利です。つまり、&quot;親&quot; リストを破棄する前に、手動でリストの内容を調べ、マークされたデータ構造を個別に破棄する必要がないのです。しかし、リストの位置を個別に削除した場合、そこに含まれていた DS リストはガベージコレクションさ<i>れないので</i>、親リストの位置から項目を削除する前に 適切な DS リスト破棄関数を呼び出さなければなりません。また、この関数 <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a>の場合、リストとしてフラグが立っている項目は、リストがクリアされるときに、同様に破棄されます。</p>
   <p>また、マークされた位置がリスト内で変化した場合、「マーク」も一緒に移動します。例えば、リスト内の位置3をマークした後、その下にさらに2つのアイテムを挿入して位置5まで<i>移動しても</i>、リストとしてのマークは残ります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_list_mark_as_list(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_mark_as_list</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>

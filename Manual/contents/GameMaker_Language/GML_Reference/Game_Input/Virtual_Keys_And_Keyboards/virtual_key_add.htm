@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>virtual_key_add</h1>
+  <h1><span data-field="title" data-format="default">virtual_key_add</span></h1>
   <p>画面領域への「タッチ」をキーボードイベントに対応させることができる機能です。つまり、ある領域を仮想キーに割り当てると、その領域へのタッチはすべて、割り当てたキーに対応するキーボード・イベントをトリガーするようになります。定義した各仮想キーは変数に割り当てることもでき、その変数を使って仮想キーの表示、非表示、削除を行うことができます。これらのキーは<i>部屋</i>ごとに割り当てられ、<span class="notranslate">rooms</span> を変更すると、<span data-keyref="GameMaker Name">GameMaker</span>によって自動的に削除されます。</p>
   <p>仮想キーの実際の位置は、<span class="notranslate">room</span> の位置ではなく、<i>画面の</i>位置を基準にしているので、x/y 値は画面上の絶対値です。つまり、ビューの使用や相対的な<span class="notranslate">room</span> 座標を気にする必要がなく、単純に<span class="notranslate">object</span> の<strong>Create Event</strong>でキーを定義し（バーチャルキーは部屋ごとに一度だけ定義すればよい）、<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a> でキー<span class="notranslate">sprites</span> を描き、GUI 層のサイズをスクリーンと同じにすることが可能です。</p>
   <p> </p>

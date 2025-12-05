@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ファイル_テキスト_ライト_リアル</title>
+  <title>file_text_write_real</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ファイル_テキスト_ライト_リアル</h1>
+  <h1><span data-field="title" data-format="default">file_text_write_real</span></h1>
   <p>この関数を使うと、先に開いているテキストファイルに数値を書き込むことができます。ただし、書き込む値は実数であるため、小数点以下はすべて&quot;. &quot;で区切られます。ファイルがすでに情報を持っている場合、その情報は消去され、<span class="notranslate">string</span> がファイルの先頭に書き込まれます（ただし、あなたがファイルを <a href="file_text_open_append.htm"><span class="inline">file_text_open_append()</span></a>.を使用することで回避することもできます。 <a href="file_text_readln.htm"><span class="inline">file_text_readln()</span></a>関数と一緒に <a href="file_text_eof.htm"><span class="inline">file_text_eof()</span></a>関数を使って、<span class="notranslate">loop</span> ファイルの中身を最後まで見てから、書き込みを開始します。</p>
   <p>注意点としては、この関数を使って非常に大きな数値をテキストファイルに書き込んだ場合、「6.6624e+003」のような標準的な簡略形式に変換されてしまい、<span data-keyref="GameMaker Name">GameMakerに</span>正しく読み込むことができないことがあります。このような問題を防ぐために、代わりに値を<span class="notranslate">string</span> に変換して、関数 <a href="file_text_write_string.htm"><span class="inline">file_text_write_string()</span></a>の代わりに</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">file_text_write_real(fileid, val);</p>
+  <p class="code"><span data-field="title" data-format="default">file_text_write_real</span>(fileid, val);</p>
   <table>
     <tbody>
       <tr>

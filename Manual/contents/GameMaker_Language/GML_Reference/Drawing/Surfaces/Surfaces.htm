@@ -104,18 +104,18 @@
   <p class="note"><b>注</b>：アプリケーションサーフェスで唯一<b>できない</b>ことは、それをフリーにすることです。アプリケーションサーフェスは常に存在しますが、アクセスするためのインデックス値は変更される可能性があります。</p>
   <p>ゲームを実行すると、このサーフェイスは、新しい<span class="notranslate">room</span> に入るたびに<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw イベントが</a>最初に呼び出されたときに作成されます。つまり、その時点までは何も描画されません。しかし、アプリケーションサーフェスの位置を取得し、<b>Create Eventや</b>その他のイベントでエラーを出さずにサイズを変更することは可能で、使用される値はサーフェスが作成されたときに関連するものになります。実際のアプリケーションサーフェスの作成と描画のためのイベント（<span class="notranslate">sequence</span> ）は以下の通りです。</p>
   <ul class="colour">
-    <li>抽選会前イベント<br>
+    <li>抽選会前イベント<br />
               <b>--- アプリケーションサーフェスが作成され、レンダリングターゲットが設定</b>される。</li>
     <li><b></b>表示されているビューポートごとに、または、ビューポートがアクティブでない場合は、一度だけ
       <ul class="colour">
         <li>描画開始イベント</li>
         <li>描画イベント</li>
-        <li>描画終了イベント<br>
+        <li>描画終了イベント<br />
                  <b>--- アプリケーションサーフェスレンダリングターゲットは、ここでリセット</b>されます。</li>
       </ul>
     </li>
-    <li><b></b>ポストドローイベント<br>
-             <b>--- アプリケーションの表面は、デフォルトで<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> </b>描画されます。<b><br>
+    <li><b></b>ポストドローイベント<br />
+             <b>--- アプリケーションの表面は、デフォルトで<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> </b>描画されます。<b><br />
                         </b> <span class="notranslate">switch</span> (ただし、<span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span> を使って、これをオフにすることができます)</li>
     <li><b></b>描画GUI開始イベント</li>
     <li>GUIイベントを描画する</li>

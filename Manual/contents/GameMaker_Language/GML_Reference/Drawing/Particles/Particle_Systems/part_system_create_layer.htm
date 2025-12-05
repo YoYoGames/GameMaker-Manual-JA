@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>パート_システム_レイヤーを作成する</title>
+  <title>part_system_create_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>パート_システム_レイヤーを作成する</h1>
+  <h1><span data-field="title" data-format="default">part_system_create_layer</span></h1>
   <p>この関数は、指定されたレイヤーに新しいパーティクルシステムを作成します。この関数が返すユニークなレイヤー ID を与えます。 <a href="../../../Asset_Management/Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>または<span class="notranslate">string</span> として使用するレイヤーの名前 - 例えば &quot;instance_layer&quot; - そして<span class="notranslate">flag</span> システムが永続的であるかどうかを指定します。もし、システムが永続的であるとフラグが立っていなければ、作成された<span class="notranslate">room</span> の終了時に自動的に破壊されます（これは、あなたが関数 <a href="part_system_destroy.htm"><span class="inline">part_system_destroy()</span></a>また、システムに関連付けられているエミッタもすべて破壊されます）。しかし、persistentとフラグを立てた場合、<span class="notranslate">room</span> が変更されると、システムは次の<span class="notranslate">room</span> に運ばれます。次の<span class="notranslate">room</span> に、割り当てられたレイヤーと同じ名前または深さのレイヤーが<i>ない</i>場合、<span class="notranslate">rooms</span> にわたってpersistentであるシステム用に新しいレイヤーが作られ、それは元のレイヤーと同じ名前にされます。<span class="notranslate">rooms</span> を変更するとき、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあれば、<i>レイヤーの深さに関係</i>なく、その名前を持つレイヤーに永続化インスタンスが割り当てられます。最後に、永続化されたシステムが、システムが作成されたレイヤーと同じ深さのレイヤーを持つ<span class="notranslate">room</span> に移動した場合、そのレイヤーには<i>割り当てられず</i>、代わりに同じ深さに（元のレイヤーと同じ名前を持つ）新しいレイヤーが作成されます。</p>
   <p>この関数はパーティクルシステムのユニークな ID 値を返します。この値は、今後システム ID を指定する必要があるすべての関数呼び出しで使用する必要があります。</p>
   <p class="note"><b>重要!</b> <span class="notranslate">flag</span> パーティクルシステムを永続化する場合、パーティクルシステム（およびそれに割り当てられたエミッター）は、使用していないときに適切なdestroy関数を使用して手動でクリーンアップする必要があり、そうしないとメモリリークが発生して最終的なゲームに悪影響を及ぼす危険性があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">part_system_create_layer(layer_id, persistent);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_create_layer</span>(layer_id, persistent);</p>
   <table>
     <tbody>
       <tr>

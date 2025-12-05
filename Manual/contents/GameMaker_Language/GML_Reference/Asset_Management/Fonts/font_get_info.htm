@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_get_info</h1>
+  <h1><span data-field="title" data-format="default">font_get_info</span></h1>
   <p>この関数は、与えられた<span class="notranslate">font</span> の情報を取得するために使用する。<span class="notranslate">font</span> のインデックス（<a href="../../../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>追加された<span class="notranslate">asset</span> または<span class="notranslate">font</span> で<a href="font_add.htm">追加された</a> <span class="notranslate">runtime</span> ）を指定すると、この関数は次の変数を持つ<a href="../../../GML_Overview/Structs.htm">構造</a>体を返します。</p>
   <table>
     <colgroup>
@@ -117,8 +117,8 @@
       <tr>
         <td><span class="inline">char</span></td>
         <td style="">じっさいにある</td>
-        <td style=""><span class="notranslate">font</span> が<span class="notranslate">sprite</span> か ら 生成 さ れた場合には、 こ れはその<span class="notranslate">sprite</span> のグ リ フ の画像 イ ンデ ッ ク ス にな り 、 そ う でない場合にはその Unicode キ ャ ラ ク タ 番号にな り ます。<br>
-          <br>
+        <td style=""><span class="notranslate">font</span> が<span class="notranslate">sprite</span> か ら 生成 さ れた場合には、 こ れはその<span class="notranslate">sprite</span> のグ リ フ の画像 イ ンデ ッ ク ス にな り 、 そ う でない場合にはその Unicode キ ャ ラ ク タ 番号にな り ます。<br />
+          <br />
          <em><strong>注</strong>：<span class="notranslate">struct</span> がスプライトから作成された場合、これ以下のすべての変数は<span class="notranslate">font</span> には存在</em>しません。
         </td>
       </tr>
@@ -167,7 +167,7 @@
   <p class="note"><span class="note">注</span> <span class="notranslate">fonts</span> <span class="note"></span> <span class="notranslate">runtime</span> で読み込まれたファイル<span class="notranslate">texture</span> については、グリフの<span class="inline">x</span> と <span class="inline">y</span> の値は、それがまだレンダリングされていない場合には -1 になる可能性があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">font_get_info(font);</p>
+  <p class="code"><span data-field="title" data-format="default">font_get_info</span>(font);</p>
   <table>
     <tbody>
       <tr>

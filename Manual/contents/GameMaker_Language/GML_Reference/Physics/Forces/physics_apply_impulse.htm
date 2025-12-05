@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理学_インパルスを適用する</title>
+  <title>physics_apply_impulse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理学_インパルスを適用する</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_impulse</span></h1>
   <p><span data-keyref="GameMaker Name">GameMakerの</span>物理演算では、<span class="notranslate">object</span> に力と重力を加えることができるだけでなく、衝動を加えることもできます。これは力とは少し違って、衝撃を加えると<i>すぐに </i>速度に影響し、特に衝撃を加えるために選んだ点が質量中心（注：質量中心は<i>必ずしも</i>原点と同じでは<i>ありません</i>！）と一致していない場合は、<span class="notranslate">object</span> のトルク（または「スピン」）に影響を与える可能性があります。以下はその例です。</p>
   <p><img>このように、プレイヤーがボールをクリックすることで、ボールが回転しながら右上に移動するインパルスが発生します。正確な衝動は、xpos/ypos座標に対するximpulse/yimpulseの成分から得られるベクトルで定義されます。つまり、衝動はxpos/yposからximpulse/yimpulseまでの距離をニュートンで計算し、方向はxpos/yposからximpulse/yimpulseまでの角度とする、という単純なことです。</p>
   <p class="note"><b>注</b>：物理の世界では、すべての計算にメートルを使用します。1メートルあたりのピクセルの比率は、<span class="notranslate">room</span> エディタで定義するか、または <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_apply_impulse(xpos, ypos, ximpulse, yimpulse)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_impulse</span>(xpos, ypos, ximpulse, yimpulse)</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_set_track_position</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_set_track_position</span></h1>
   <p>この機能は、指定されたサウンドIDまたは<span class="notranslate">asset</span> の位置（秒）を設定します。</p>
   <p>与えられた &quot;index &quot;は、サウンドの単一のインスタンス(index.phpから返されたもの)であることができます。 <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) またはサウンド<span class="notranslate">asset</span> (例:<span class="notranslate">Asset</span> Browser から追加したもの)。この関数の動作は、指定されたインデックスの種類によって異なります。</p>
   <ul class="colour">
@@ -24,7 +24,7 @@
   <p>この関数は、現在再生中のサウンド、またはその次の再生のトラック位置のみを変更します（サウンド<span class="notranslate">asset</span> が提供されている場合）。サウンドのループ再生が有効な場合、次の再生はこの関数で定義したトラック<em>位置からではなく</em>、常に先頭（0.0秒）から開始されます。例えば、<span class="notranslate">loop</span> を 5.7 秒から開始すると、その時点から最初の音が再生されますが、それ以降は、トラックの最初から最後までを繰り返し再生し続けることになります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">audio_sound_set_track_position(index, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_set_track_position</span>(index, time);</p>
   <table>
     <tbody>
       <tr>

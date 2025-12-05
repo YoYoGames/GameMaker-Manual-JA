@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>深さ</title>
+  <title>depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>深さ</h1>
+  <h1><span data-field="title" data-format="default">depth</span></h1>
   <p><span class="notranslate">object</span> を作成するときに、初期<i>深度を</i>割り当てることができます。これは、ゲームをプレイしているときに<span class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span> にどのように描画されるかを定義します。この変数は、ゲームの実行中にこの深度値を取得したり変更したりするのに使用できます。通常、インスタンスは個別の<a href="layer.htm">レイヤーに</a>追加され、そのレイヤーは特定の深さに設定されるので、この変数を使用する必要はありません。しかし、この値を使用してインスタンスの深さを変更したい場合があります。同じ深さのインスタンスがない場合、この一時的なレイヤーはメモリから削除されることに注意してください（通常のレイヤーとは異なり、何もない状態でも残ります）。</p>
   <p class="note"><b>重要!変</b>数 <span class="inline">depth</span> を変更し、<span data-keyref="GameMaker Name">GameMakerが</span>レイヤーを管理する場合、内蔵された変数はレイヤーIDではなく-1を返す。 <span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span>は-1を返し、レイヤーIDを返さない。これは、管理されたレイヤーはコードで操作できないからだ。</p>
   <p><span data-keyref="GameMaker Name">GameMakerでは</span>、あるインスタンスの深度値が低いほど「カメラに近い」インスタンスが描かれ、深度値が高いほど「カメラから遠い」インスタンスが描かれます。例えば、-1000は-100の上に描かれ、0はその上に描かれるというように。</p>
@@ -23,7 +23,7 @@
   <p>深度をFXレイヤーの深度より低く変更すると、インスタンスに適用される<a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">フィルタとエフェクトが</a>変更される可能性があることに留意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">depth;</p>
+  <p class="code"><span data-field="title" data-format="default">depth</span></p>
   <p> </p>
   <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>

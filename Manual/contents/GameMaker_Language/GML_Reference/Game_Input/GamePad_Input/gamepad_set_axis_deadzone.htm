@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_axis_deadzone</h1>
+  <h1><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span></h1>
   <p>この機能は、ジョイスティック軸の「デッドゾーン」を設定するために使用できます。設定するデバイススロットを指定し、0〜1の値を設定し、入力量が指定した値より小さい場合、ジョイスティック軸は0になったものとみなします。
     なお、これはグローバルな設定であり、指定したデバイススロットに接続されているすべてのジョイスティックの<i>全軸に</i>影響します。 </p>
   <p>この関数は、軸の値がデッドゾーンの値から始まることを意味するものではありません。 <a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a>の間の正規化された値を返します。
@@ -22,7 +22,7 @@
     生の値が0.5であれば、戻り値は0.375となり、生の値が0.9であれば、戻り値は0.875となります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gamepad_set_axis_deadzone(device, deadzone);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span>(device, deadzone);</p>
   <table>
     <tbody>
       <tr>

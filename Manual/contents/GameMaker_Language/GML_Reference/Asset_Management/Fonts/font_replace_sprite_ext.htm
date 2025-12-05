@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>フォント置換スプライト文字列</title>
+  <title>font_replace_sprite_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>フォント置換スプライト文字列</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite_ext</span></h1>
   <p>この関数は、以前関数を使って作成した<span class="notranslate">sprite</span> <span class="notranslate">font</span> を置き換えます。 <a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>.これは「スプライトストリップ」を使用し、各サブイメージは個々の記号または文字であり、イメージは関数の引数「string_map」に基づいて文字にマッピングされます。この引数は<span class="notranslate">string</span> で、<span data-keyref="GameMaker Name">GameMaker</span>に<span class="notranslate">sprite</span> <span class="notranslate">font</span> のサブイメージの順番を伝えると、テキストを書くときにこれらを自動的にマッピングしてくれる。例えば、&quot;AaBbCcDdEeFfGgHh &quot;という文字列マップがあれば、<span class="notranslate">sprite</span> <span class="notranslate">font</span> のサブイメージはこのように順番に並んで<i>いなければ</i>ならない。</p>
   <p>また、<span class="notranslate">font</span> の間隔をプロポーショナル (<span class="inline">true</span>) にするかしないか (<span class="inline">false</span>) に設定できます。プロポーショナル<span class="notranslate">font</span> は実際の文字の幅に基づいて間隔が決められ (従って、例えば「i」の文字は「w」の文字よりも<span class="notranslate">room</span> が小さくなります)、非プロポーショナル<span class="notranslate">font</span> は等幅<span class="notranslate">font</span> のようにサブイメージ幅に基づいて間隔が決められま す。最後に、書くときに各文字の間に空けるスペースを定義します。これは任意の整数値で、0 はスペースなし (プロポーショナルの場合、文字が「接触」します) です。この関数は<i>インデックス</i>値を返しますが、これは変数に格納する必要があります。この値は、今後この<span class="notranslate">font</span> を参照するすべてのコードで必要になるからです。</p>
   <p>この関数が失敗した場合，与えられた<span class="notranslate">sprite</span> <span class="notranslate">font</span> を置き換えることなく，静かに失敗します．</p>
   <p class="note"><b><span class="note">注意事項</span> </b><span class="notranslate">sprite</span> <span class="notranslate">font</span> この機能を使用するには、事前に <span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>というのは、これはそれを置き換えるものであり、ゲームリソースの一部として含まれている<span class="notranslate">fonts</span> には使用できないからです。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite_ext</span>(font, spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>

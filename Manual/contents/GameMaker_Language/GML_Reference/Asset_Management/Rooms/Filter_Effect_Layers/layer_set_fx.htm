@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>レイヤーの設定</title>
+  <title>layer_set_fx</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>レイヤーの設定</h1>
+  <h1><span data-field="title" data-format="default">layer_set_fx</span></h1>
   <p>この関数は、FX<span class="notranslate">struct</span> を<span class="notranslate">Room</span> レイヤーに割り当てるために使用します。変更したいレイヤーのIDまたは名前を指定し、指定したレイヤーに適用されるFX<span class="notranslate">struct</span> （ <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される）を指定して、<span class="notranslate">room</span> でエフェクトを表示させます。</p>
   <p>フィルター／エフェクトレイヤ以外のレイヤ（インスタンスレイヤ、<span class="notranslate">Asset</span> レイヤ、<span class="notranslate">Tile</span> レイヤなど）を指定すると、そのレイヤの内容だけでなく、その下のレイヤにも効果が適用されます。</p>
   <p>指定したレイヤーにすでにFX<span class="notranslate">struct</span> 、新しいレイヤーに置き換えられます。</p>
   <p class="note"><span class="note">注</span> <span class="notranslate">script</span> のルートレベルでこの関数を呼び出しても、最初の<span class="notranslate">scripts</span> がロードされる前に<span class="notranslate">room</span> が実行されるため、何も起こりません。最初に<a href="../General_Layer_Functions/layer_set_target_room.htm">ターゲットルームを</a>設定してから、この関数を呼び出すとよいでしょう。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">layer_set_fx(layer_name_or_id, filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_fx</span>(layer_name_or_id, filter_or_effect);</p>
   <table>
     <tbody>
       <tr>

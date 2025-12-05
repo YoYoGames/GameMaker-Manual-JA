@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_add_sprite_ext</h1>
+  <h1><span data-field="title" data-format="default">font_add_sprite_ext</span></h1>
   <p>この機能を使うと、「スプライトストリップ」（<span class="notranslate">sprite</span> 自体は<span class="notranslate">sprite</span> ブラウザの<span class="notranslate">asset</span> <span class="notranslate">Asset</span> か、 <span class="inline">sprite_add</span> を使ってゲームリソースに追加した<span class="notranslate">sprite</span> である<b>必要が</b>あります）を使って、新しい<span class="notranslate">font</span> <span class="notranslate">asset</span> を作成することができます。通常の <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a>この関数は、<span class="notranslate">sprite</span> のサブイメージに特定の順序を持たせていますが、この関数は、関数の引数 &quot;string_map&quot; に基づいて、<span class="notranslate">sprite</span> のサブイメージをマッピングしています。この引数は<span class="notranslate">string</span> で、<span class="notranslate">sprite</span> <span class="notranslate">font</span> のサブイメージの順番を<span data-keyref="GameMaker Name">GameMaker</span>に伝えると、テキストを書くときに自動的にマッピングしてくれます。例えば、&quot;AaBbCcDdEeFfGgHh &quot;という文字列マップがある場合、<span class="notranslate">sprite</span> <span class="notranslate">font</span> のサブイメージはこの順番で並んで<i>いなければ</i>なりません。スペース」を任意の文字、例えばスペースにしたい大きさの一行として定義すると、テキスト内のすべてのスペースがその幅でレンダリングされます（ただし、選択された画像は<i>決して</i>レンダリングされません）。スペースに<span class="notranslate">sprite</span> を指定しない場合は、代わりに<span class="notranslate">sprite</span> <span class="notranslate">font</span> で最も幅の広い文字の幅が使用されます。</p>
   <p>また、<span class="notranslate">font</span> の間隔をプロポーショナル (<span class="inline">true</span>) にするかしないか (<span class="inline">false</span>) に設定できます。プロポーショナル<span class="notranslate">font</span> は実際の文字の幅に基づいて間隔が決められ (従って、例えば「i」の文字は「w」の文字よりも<span class="notranslate">room</span> が小さくなります)、非プロポーショナル<span class="notranslate">font</span> は等幅<span class="notranslate">font</span> のようにサブイメージ幅に基づいて間隔が決められま す。最後に、書くときに各文字の間に空けるスペースを定義できます。これは任意の整数値で、0はスペースなし（プロポーショナルなら文字が「接触」する）です。</p>
   <p>この関数は<i>インデックス</i>値を返す。この値は，今後この<span class="notranslate">font</span> を参照するすべてのコードで必要となるため，変数に格納しておく必要がある。また，何らかの理由で関数が失敗した場合は-1を返す。</p>
@@ -22,7 +22,7 @@
   <p class="note"><b><span class="note">注意事項</span> </b><span data-keyref="GameMaker Name">GameMakerに</span> <span class="notranslate">font</span> を読み込んだら、忘れずに再度削除する必要があります。 <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>さもないと、メモリリークを起こし、ゲームが遅くなり、最終的にはクラッシュしてしまいます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">font_add_sprite_ext(spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add_sprite_ext</span>(spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>

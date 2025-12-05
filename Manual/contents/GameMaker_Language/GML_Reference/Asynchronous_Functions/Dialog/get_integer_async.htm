@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_integer_async</h1>
+  <h1><span data-field="title" data-format="default">get_integer_async</span></h1>
   <p>この関数はウィンドウを開き、メッセージと、ユーザーが値を入力するためのスペースを表示します（最初に提供されたデフォルト値が含まれます）。これは非同期関数なので、<span data-keyref="GameMaker Name">GameMakerは</span>答えを待つ間、実行中のデバイスをブロックすること<i>なく</i>、通常通りイベントを実行し続けます。ユーザーが<span class="notranslate">string</span> を入力し、「OK」ボタンを押すと、非同期の <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm"><b>ダイアログ</b></a>イベントが発生し、そのイベントの<i>間だけ</i>、DS マップが変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>このマップには、&quot;<span class="inline">id</span>&quot;, &quot;<span class="inline">status</span>&quot;, &quot;<span class="inline">value</span>&quot; の3つのキーが含まれます。 &quot;<span class="inline">id</span>&quot; は、関数が呼び出されたときに返された値で、「状態」は、「OK」ボタンが押された場合は <span class="inline">true</span> 、メッセージがキャンセルされた場合は <span class="inline">false</span> (すべてのターゲットプラットフォームがメッセージをキャンセルできるわけではないので適宜) のいずれかになります。最後に &quot;<span class="inline">value</span>&quot; は、ユーザーが<span class="notranslate">string</span> として入力した整数を返します (入力がなかった場合は、空の<span class="notranslate">string</span> &quot;&quot; が返されます)。</p>
   <p class="note"><strong><em><span class="note">注意事項</span></em></strong><em>この機能は<span data-keyref="Dialog for debug only"> <strong>デバッグおよびテスト</strong></span>用であり、<span data-keyref="Dialog for debug only">リリースされたゲームでは</span>使用しないでください。<span data-keyref="Dialog for debug only">そのためには、プレイヤーからの入力を受け取るためのカスタムユーザーインターフェースを作成し、ダイアログの外観や動作を完全に制御できるようにする必要があります。</span></em></p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">get_integer_async(string, default);</p>
+  <p class="code"><span data-field="title" data-format="default">get_integer_async</span>(string, default);</p>
   <table>
     <tbody>
       <tr>

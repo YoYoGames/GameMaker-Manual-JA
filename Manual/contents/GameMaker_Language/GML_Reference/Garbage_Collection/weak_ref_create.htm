@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_create</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_create</span></h1>
   <p>この関数で、<span class="notranslate">struct</span> への<a class="glossterm" data-glossterm="弱参照" href="#">弱い</a>参照を作成し、<span class="notranslate">struct</span> がゲーム内でまだ「生きている」（参照されている）かどうかをチェックするために使用することができます。追跡したい<span class="notranslate">struct</span> への参照を指定すると、この関数はその<span class="notranslate">struct</span> への弱い参照である別の<span class="notranslate">struct</span> を返します。強い参照は &quot;<span class="inline">struct</span>&quot; または<span class="notranslate">struct</span> を生成したコンストラクタ関数の名前を返し、弱い参照は &quot;<span class="inline">weakref</span>&quot; を返しますので、関数 <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span> を使って参照が「強い」か「弱い」かをチェックすることができます。また、弱い参照である<span class="notranslate">struct</span> は変数 &quot;<span class="inline">ref</span>&quot; を持ち、これにアクセスすることで当該<span class="notranslate">struct</span> への強い参照を得ることができます。ただし、ガベージコレクションされている場合は <span class="inline">undefined</span> を返すことに注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">weak_ref_create(struct_to_track);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_create</span>(struct_to_track);</p>
   <table>
     <tbody>
       <tr>

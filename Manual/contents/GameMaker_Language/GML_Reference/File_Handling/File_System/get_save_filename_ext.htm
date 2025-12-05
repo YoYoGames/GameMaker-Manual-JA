@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_save_filename_ext</h1>
+  <h1><span data-field="title" data-format="default">get_save_filename_ext</span></h1>
   <p>この関数は、ダイアログを開き、与えられたフィルタで保存するファイル名をプレイヤーに尋ねます。フィルタは &quot;<i>name1|mask1|name2|mask2|</i>... &quot; という形式で、マスクはセミコロンで区切られた異なるオプションを含むことができ、また &quot;*&quot; は任意の<span class="notranslate">string</span> を意味することができます。例えば、&quot;<i>bitmaps|*.bmp;*.wmf</i>&quot; は、システムからビットマップファイルの名前を選択するようにユーザに要求しますが、指定した2つの<span class="notranslate">extensions</span> (<span class="inline">bmp</span> と <span class="inline">png</span>) を持つものだけです。この関数はファイル自体を保存<b>しません</b>!ファイルのフルネームと<span class="notranslate">string</span> を含む<span class="notranslate">path</span> を返すだけです。ユーザーが「<b>キャンセル</b>」を押した場合は、空の<span class="notranslate">string</span> &quot;&quot; が返されます。また、検索を開始するディレクトリや、ウィンドウの上部に表示するキャプションを、デフォルトのキャプションの代わりに追加することができます。</p>
   <p>この機能を使うときの注意点は、ゲームの間、そのファイルに対して特定のパーミッションを与えることです。つまり、一度ユーザーからファイル<span class="notranslate">path</span> を取得すれば、問い合わせることなく何度でもアクセスすることができ、そのパーミッションは読み書きに等しく適用されます。</p>
   <p class="note"><b>注</b>：この機能は、<span class="notranslate">Windows</span> および<span class="notranslate">macOS</span> のターゲットでのみ有効です。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">get_save_filename_ext(filter, fname, directory, caption);</p>
+  <p class="code"><span data-field="title" data-format="default">get_save_filename_ext</span>(filter, fname, directory, caption);</p>
   <table>
     <tbody>
       <tr>

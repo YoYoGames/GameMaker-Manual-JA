@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Offset</span></td>
-        <td>開始点を設定する時間（秒単位）（デフォルト0）。与えられた音の長さより長い値は無視されます。<br>
+        <td>開始点を設定する時間（秒単位）（デフォルト0）。与えられた音の長さより長い値は無視されます。<br />
           このフィールドを空白にすると、サウンドアセットのオフセット（トラック位置）が使用されます。</td>
       </tr>
       <tr>
@@ -56,10 +56,10 @@
   </table>
   <p> </p>
   <h4>例1．</h4>
-  <p><img>上記のアクションブロックのコードは、マウスボタンが押されたかどうかをチェックし、押されたことが検出されると、グローバル変数が <span class="inline">true</span> でないかをチェックします。 <span class="inline">true</span> でない場合は、サウンドが再生（ループ）され、グローバル変数が <span class="inline">true</span> に設定されます。そうでない場合は、サウンドが停止され、グローバル変数が <span class="inline">false</span> に設定されます。<br>
+  <p><img>上記のアクションブロックのコードは、マウスボタンが押されたかどうかをチェックし、押されたことが検出されると、グローバル変数が <span class="inline">true</span> でないかをチェックします。 <span class="inline">true</span> でない場合は、サウンドが再生（ループ）され、グローバル変数が <span class="inline">true</span> に設定されます。そうでない場合は、サウンドが停止され、グローバル変数が <span class="inline">false</span> に設定されます。<br />
     サウンドはデフォルト設定で再生されます。ゲインおよびピッチ乗算器は1、オフセットは0です（サウンドのデフォルトオフセット<span class="notranslate">asset</span> ）。</p>
   <h4>例2．</h4>
-  <p><img>上記のアクションブロックでは、まず、サウンド<span class="notranslate">asset</span> &quot;snd_MusicBoss &quot;のトラックポジションを20秒に設定します。次に、インスタンス変数 &quot;skip_intro&quot; に <span class="inline">true</span> が設定されているかどうかをチェックします。もし設定されていれば、先に設定したトラック位置の値である20秒から &quot;snd_MusicBoss&quot; の再生を始めます（これは &quot;Offset&quot; フィールドが空のままなので、<strong>アセットオフセットを</strong>使用しているためです）。最初の20秒の音声はスキップされます。<br>
+  <p><img>上記のアクションブロックでは、まず、サウンド<span class="notranslate">asset</span> &quot;snd_MusicBoss &quot;のトラックポジションを20秒に設定します。次に、インスタンス変数 &quot;skip_intro&quot; に <span class="inline">true</span> が設定されているかどうかをチェックします。もし設定されていれば、先に設定したトラック位置の値である20秒から &quot;snd_MusicBoss&quot; の再生を始めます（これは &quot;Offset&quot; フィールドが空のままなので、<strong>アセットオフセットを</strong>使用しているためです）。最初の20秒の音声はスキップされます。<br />
     インスタンス変数 &quot;skip_intro &quot;を <span class="inline">false</span> に設定すると、&quot;snd_MusicBoss &quot;の再生も始まりますが、&quot;Offset &quot;が0に設定されているため、最初から再生が始まります。<strong>サウンドアセットに</strong>先ほど定義したトラック位置の20秒は無視されます。</p>
   <p> </p>
   <p> </p>

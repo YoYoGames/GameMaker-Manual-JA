@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>カメラ作成</title>
+  <title>camera_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>カメラ作成</h1>
+  <h1><span data-field="title" data-format="default">camera_create</span></h1>
   <p>この関数は &quot;空の &quot;カメラ、つまりビューや投影の設定が何も定義されていないカメラを作成します。カメラを作成した後、さまざまな<a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">行列関数を</a>使用して、ビューおよび投影行列を設定することができます。 <span class="inline">camera_set_*</span> ただし、少なくとも位置とビューサイズを指定<i>しなければ</i>、作成されたカメラは有効ではなく、ビューポートに適用するとおかしな結果になることに注意してください (<span class="notranslate">object</span> 以下、境界線、移動速度を設定しない場合、これらは<span class="notranslate">Room</span> エディタでビューカメラのデフォルト値に設定されます)。</p>
   <p>カメラは他のダイナミックリソースと同様に、作成時にメモリを占有することに注意してください。つまり、不必要にカメラを作成しないように注意し、不要なカメラは関数 <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>.これは、カメラが <span class="inline">global</span> 変数に割り当てられた場合、<span class="notranslate">room</span> から<span class="notranslate">room</span> まで持続することも意味します（インスタンス変数やローカル変数に割り当てられた場合も持続しますが、<span class="notranslate">room</span> を変更するとアクセスできなくなるので、メモリリークが発生します）。したがって、たとえば、新しいカメラを作成してグローバル変数に割り当て、各<span class="notranslate">room</span> の開始時に、必要なビューおよび投影マトリクスと使用するビューポートを設定することが可能です。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">camera_create();</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create</span>();</p>
   <p> </p>
   <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p>

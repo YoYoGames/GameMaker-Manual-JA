@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バッファアシンクグループ開始</title>
+  <title>buffer_async_group_begin</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バッファアシンクグループ開始</h1>
+  <h1><span data-field="title" data-format="default">buffer_async_group_begin</span></h1>
   <p>この関数は、複数の<span class="notranslate">buffers</span> から複数のファイルへの保存出し（あるいは複数の<span class="notranslate">buffers</span> の読み込み）を開始したいときに呼び出されます。<span class="inline2">groupname</span>は<span class="notranslate">string</span> で、ファイルが保存されるディレクトリ名として使用されます。また、後でファイルを<span class="notranslate">path</span> に読み込む際には、ファイル<span class="notranslate">IDE</span> の一部として使用する必要があります（いずれかの <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a>関数)を使用します。この関数は <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a>と <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span> 関数を呼び、非同期グループも終了させる必要があります。 <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a>関数を呼び出さないと、ファイルの保存/読み込みは行われません。</p>
   <p>なお、コンソールプラットフォーム（例えばPS4など）では、<span class="inline2">グループ</span>名がセーブスロットの説明として使用され、この機能を使用することで、セーブアウトされるファイルごとにUIが表示されることを回避することができます。また、UWPを使用する場合、例えばERA Xboxのグループと同じグループを作成することで、ネイティブXboxとMicrosoftストアのウィンドウ間でセーブゲームをローミングすることができることに注意してください。</p>
   <p class="code">if os_type == os_uwp<br />
@@ -27,7 +27,7 @@
     }</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">buffer_async_group_begin(groupname);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_async_group_begin</span>(groupname);</p>
   <table>
     <tbody>
       <tr>

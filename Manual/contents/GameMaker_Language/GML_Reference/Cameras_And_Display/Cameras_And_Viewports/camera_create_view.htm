@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>カメラ映像の作成</title>
+  <title>camera_create_view</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>カメラ映像の作成</h1>
+  <h1><span data-field="title" data-format="default">camera_create_view</span></h1>
   <p>この関数は、新しいカメラを作成し、そのビューを<span class="notranslate">room</span> に設定した後、今後の関数呼び出しでカメラを識別するための一意の ID 値を返します。カメラは、この関数で設定した位置、サイズ、その他の詳細の値を使用して作成され、これらは<span class="notranslate">Room</span> エディタ（<a href="../../../../The_Asset_Editors/Rooms.htm">ここを</a>参照）で設定した値と関連します。この関数は<i>可変数の引数を</i>取ることができますが、x/y 位置と width/height 引数のみが必須であることに注意してください。提供されない引数は、デフォルトの引数を使用します。</p>
   <p>カメラは他のダイナミックリソースと同様に、作成時にメモリを占有することに注意してください。つまり、不必要にカメラを作成しないように注意し、不要なカメラは関数 <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>.これは、カメラが <span class="inline">global</span> 変数に割り当てられた場合、<span class="notranslate">room</span> から<span class="notranslate">room</span> まで持続することも意味します（インスタンスまたはローカル変数に割り当てられた場合も持続しますが、<span class="notranslate">room</span> を変更するとアクセスできなくなるので、メモリリークが発生します）。したがって、たとえば、新しいカメラを作成してグローバル変数に割り当て、各<span class="notranslate">room</span> の開始時に <span class="inline">camera_set_*</span> 関数を使用して、ビューポートに割り当てる前にプロパティを設定することができます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">camera_create_view(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create_view</span>(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
   <table>
     <tbody>
       <tr>

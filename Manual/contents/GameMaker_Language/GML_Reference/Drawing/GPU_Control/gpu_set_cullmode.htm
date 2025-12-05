@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_cullmode</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_cullmode</span></h1>
   <p>この関数は、バックフェイスカリングモードを設定するために使用することができます。ポリゴン（プリミティブ）には、<i>表側と</i> <i>裏側が</i>ある。表側とは、<b>反時計回りの</b>順に頂点が定義されている側と言われています。通常は両面を描きますが、ピラミッドのような閉じた図形を作ると、三角形の裏側が見えなくなるので、処理能力の無駄遣いになります。このような場合、<span class="notranslate">switch</span> バックフェイスカリングを使用すると、描画時間を約半分に短縮できます。ただし、問題を防ぐために、ポリゴンを正しい方法で定義する作業が必要になります。</p>
   <p>使用するカリングモード値は、以下の定数のいずれかである必要があります（デフォルト値は <span class="inline">cull_noculling</span> ）。</p>
   <table>
@@ -39,7 +39,7 @@
   </table>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gpu_set_cullmode(cullmode);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_cullmode</span>(cullmode);</p>
   <table>
     <tbody>
       <tr>

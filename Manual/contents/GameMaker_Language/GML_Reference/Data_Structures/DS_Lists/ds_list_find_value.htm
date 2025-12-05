@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_find_value</h1>
+  <h1><span data-field="title" data-format="default">ds_list_find_value</span></h1>
   <p>この関数では、与えられたリストの位置をチェックし、その位置のリスト内の値を返すことができます。指定した位置がリストのサイズから外れている場合 (たとえば 10 個の値を持つリストの 11 番目の位置)、 この関数は <span class="inline">undefined</span> <i>あるいは</i>0 を返すことに注意しましょう。 これは、リストを作成する際に、最初に項目を追加する際のパフォーマンスの問題を最小限に抑えるために、 リストの最初の数項目が内部的に 0 に設定されているからです (しかしながら <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a>関数は、新しく作成されたリストでも0を返します）。もし、リストの作成時に「本当に」空であることを確認したい場合は、リストの作成時に <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a>これは、未入力のリストスロットに返されるすべての値が <span class="inline">undefined</span> であることを意味し、その後に <a href="../../Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>関数があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_list_find_value(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_find_value</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>

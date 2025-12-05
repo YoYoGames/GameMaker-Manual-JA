@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_blendmode_ext_sepalpha</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_blendmode_ext_sepalpha</span></h1>
   <p><span data-keyref="GameMaker Name">GameMakerが</span>ピクセルを描画しようとするとき、ソースカラー（描画しようとするピクセルの色）とデスティネーションカラー（描画先のピクセルにすでにある色）があります。したがって、ピクセルの新しい色を決定するとき、ソースカラーとデスティネーションの色は選択したブレンドモードに従って計算されます。色の各要素は0から1の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に何らかの係数を掛けて、その結果を要素ごとに加算することによって計算されます。</p>
   <p>この関数は、カスタムブレンドモードを作成するために、RGB成分とアルファ成分に異なるブレンドモード係数の部分を選択し、一緒に因数分解すべき異なる構成要素を設定することを許可します。つまり、&quot;src&quot; と &quot;dest&quot; 引数は、最初の3つのブレンドモード値（RGB）を使用し、&quot;alphasrc&quot; と &quot;alphadest&quot; 引数は、ブレンドモードファクターの最後の部分をとります。例えば、RGBのソースを <span class="inline">bm_zero</span> とすると、(0, 0, 0) が使用されます。アルファのソースをbm_oneに設定すると、(1)が使用され、最終的なソースのブレンドモードは(0, 0, 0, 1)となります。</p>
   <p>下図は、各ブレンドモードにおけるRGBA値のうち、（Rs、Gs、Bs、As）をソース値、（Rd、Gd、Bd、Ad）をデスティネーション値と見なしたものである。使用可能な11個の定数は、この機能で使用する場合、ソースまたはデスティネーション（またはその両方）のどちらかになります。</p>
@@ -92,7 +92,7 @@
   </ul>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gpu_set_blendmode(src, dest, alphasrc, alphadest);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode_ext_sepalpha</span>(src, dest, alphasrc, alphadest);</p>
   <table>
     <tbody>
       <tr>

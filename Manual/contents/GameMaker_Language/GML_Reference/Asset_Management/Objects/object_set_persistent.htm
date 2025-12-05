@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_set_persistent</h1>
+  <h1><span data-field="title" data-format="default">object_set_persistent</span></h1>
   <p>この機能により、特定の<span class="notranslate">object</span> のパーシステンスを設定することができます。パーシステントな<span class="notranslate">object</span> は、<span class="notranslate">room</span> から<span class="notranslate">room</span> に「引き継がれ」、常にそのプロパティを維持します（パーシステンスの詳細については、「<a href="../../../../The_Asset_Editors/Objects.htm">オブジェクトエディタ</a>」のセクションを参照してください）。<span class="notranslate">object</span> のパーシステンスを設定すると、<i>パーシステンスを変更した後に</i>作成されるこの<span class="notranslate">object</span> のインスタンスはすべてパーシステントに作成されますが、<span class="notranslate">room</span> にすでにあるインスタンスは影響を受けない場合があります。</p>
   <p><span class="notranslate">room</span> で永続性を有効にしたインスタンスを作成すると、レイヤーまたは深さが割り当てられます（<span class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーが<i>ない</i>場合、<span class="notranslate">rooms</span> にわたって持続するインスタンスのために新しいレイヤーが作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になり、インスタンスに深さを割り当てた場合は、新しいレイヤーが &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot; XXX &quot;はレイヤーに一意な名前を付けるための16進数値です。これらのレイヤーは<span class="notranslate">room</span> から<span class="notranslate">Room</span> End で削除されます。レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスに名前付きのレイヤーを割り当てた場合、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあると、永続的なインスタンスは<i>レイヤーの深さに関係なく</i>同じ名前のレイヤーに割り当てられることです。最後に、永続化されたインスタンスが、インスタンスが作成されたのと同じ深さのレイヤーを持つ<span class="notranslate">room</span> に移動した場合、このレイヤーには<i>割り当てられず</i>、代わりに同じ深さに新しいレイヤーが作成されます（前に説明した命名規則に従っています）。</p>
   <p>これはインスタンス機能ではありません。を使って、個々のインスタンスの persistent<span class="notranslate">flag</span> を設定することができます。 <a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a><span class="notranslate">object</span> <span class="notranslate">flag</span> <span class="notranslate">IDE</span>また、この関数で<span class="notranslate">flag</span> の persistent<span class="notranslate">object</span> を true に変更しても、<span class="notranslate">room</span> にあるインスタンスはすべてそのままで、関数を呼び出した後に作成したインスタンスだけが persistent を true にした状態で起動します。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">object_set_persistent(index, pers);</p>
+  <p class="code"><span data-field="title" data-format="default">object_set_persistent</span>(index, pers);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gc_target_frame_time</h1>
+  <h1><span data-field="title" data-format="default">gc_target_frame_time</span></h1>
   <p>この関数を使うと、<span>ガベージコレクタに対して、各フレームの実行に指定された時間以上を費やさない</span>ようにすることを指示することができます。<span>この関数は、<span>マイクロ秒（1,000,000 マイクロ秒は 1 秒に相当）で指定された</span>時間値を受け取り<span>、デフォルトのターゲットフレーム時間は 100 マイクロ秒</span></span>です。</p>
   <p><span><span>なお、これは単なる </span></span><span>一部の処理は1フレームで完全に実行される必要があり、<em>目標</em>時間よりも長くかかる場合があるからです。また、<span>ターゲット時間を増やすと、ガベージコレクタはメモリ使用量の急激な変化に対応できるようになり、メモリがより迅速に解放されるようになりますが、実際にはほとんどの場合、このようなことは必要ないと思わ</span>れることに注意してください。<span>また、ターゲットフレーム時間を 0 に<em>設定しても </em>、コレクターは完全に停止するわけではなく、各フレームで最小限の作業を行うことになります。コレクタを完全に停止させるには、 <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> 関数を</span>使用します。 </span></p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gc_target_frame_time(time);</p>
+  <p class="code"><span data-field="title" data-format="default">gc_target_frame_time</span>(time);</p>
   <table>
     <tbody>
       <tr>

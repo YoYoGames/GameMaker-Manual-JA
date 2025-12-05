@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ネットワーク接続</title>
+  <title>network_connect</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ネットワーク接続</h1>
+  <h1><span data-field="title" data-format="default">network_connect</span></h1>
   <p>この関数を使うと、<span class="notranslate">server</span> に接続するためのリクエストを送ることができます。 この関数は、接続するための<i>ソケットID</i>(参照)を受け取り、接続先のIPアドレス(参照)と接続するためのポートを要求します。 <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) を受け取り、接続先のIPアドレス (<span class="notranslate">string</span>) と接続するポートを指定する必要がある。接続に失敗した場合は0未満の値が返される。この接続は、<span data-keyref="GameMaker Name">GameMaker</span>ゲームだけが互いに接続できるように特別なプロトコルを使用していますが、<span data-keyref="GameMaker Name">GameMaker</span>ゲームでない<span class="notranslate">server</span> に接続する必要がある場合は、次のように使用します。 <a href="network_connect_raw.htm"><span class="inline">network_connect_raw()</span></a>.デフォルトでは、この機能は同期型であるため、接続中にゲームがハングアップしているように見えることがあることに注意してください。接続のタイムアウト値を設定するか、関数 <span class="inline"><a href="network_set_config.htm">network_set_config()</a></span> を使って非同期で作成するか、あるいは代わりに関数 <span class="inline"><a href="network_connect_async.htm">network_connect_async()</a></span> を使うことができます。</p>
   <p class="note"><span class="note">注意</span>HTML5ではこの関数は使用できません。WebSocketの場合は、<a href="network_connect_async.htm">Async関</a>数を使用してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">network_connect(socket, url, port);</p>
+  <p class="code"><span data-field="title" data-format="default">network_connect</span>(socket, url, port);</p>
   <table>
     <tbody>
       <tr>

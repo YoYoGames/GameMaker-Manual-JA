@@ -13,7 +13,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_map_destroy</span></h1>
   <p>DSマップは、作成時に割り当てられたメモリ内の領域を使用します。つまり、ゲーム実行時のエラーやメモリリーク、パフォーマンスの低下を防ぐために、DSマップが不要になったらこのメモリも解放する必要があります。この機能
     は、まさにそれを行う。マップを破壊すると、そのマップに格納されているデータ構造の参照が解除され、メモリリークが発生することに注意してください。したがって、これを防ぐには、マップを破壊する前に、すべてのデータ構造項目を手動で破壊する必要があります。これを防ぐには
     この作業が必要ないのは、マップ内のアイテムを<a href="../DS_Lists/DS_Lists.htm">DSリスト</a>または別の<a href="DS_Maps.htm">DSマップとして</a>フラグを立てた場合のみで、その場合、これらのアイテムは破棄され、メモリがクリーンアップされます。
@@ -23,7 +23,7 @@
       破棄した後は、DS のインデックスを保持していた変数を常に -1 に設定します。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_map_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

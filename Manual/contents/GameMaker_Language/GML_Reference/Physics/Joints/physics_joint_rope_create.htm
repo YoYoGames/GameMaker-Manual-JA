@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理ジョイントのロープ作成</title>
+  <title>physics_joint_rope_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理ジョイントのロープ作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_rope_create</span></h1>
   <p>ロープジョイントは、どのような力が作用しても一定の距離を保ちたい2つのインスタンスを結合するために使用されるものである。ディスタンスジョイントでは、ジョイントに過度のストレスがかかると、2つのフィクスチャが分離して奇妙な動作をする「ジョイントストレッチング」が発生しますが、ロープジョイントはそのようなことはなく、定義された最大長よりもそれ以上伸びることはありません。ロープジョイントを作るとき、2つのインスタンスはすでに作られ、フィクスチャーがアサインされているはずです。それから、2つのアンカーポイントを<span class="notranslate">room</span> 座標で定義します。最初のアンカーポイントはインスタンス1に、2番目のアンカーポイントはインスタンス2に接続され、距離と maxlength 引数はジョイントの最大長制約を設定します。下の画像はその様子を示しています。</p>
   <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span> に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span> エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span> のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。したがって、ロープジョイントをインスタンスの原点以外の場所に作成しても、それはまだ有効であり、作成された位置を基準として2つのインスタンスを拘束します。col&quot; の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、それは衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_rope_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
   <table>
     <tbody>
       <tr>

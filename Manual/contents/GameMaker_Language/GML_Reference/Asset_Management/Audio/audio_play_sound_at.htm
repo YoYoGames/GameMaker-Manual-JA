@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオプレイサウンドアット</title>
+  <title>audio_play_sound_at</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">オーディオプレイサウンドアット</span></h1>
+  <h1><span data-field="title" data-format="default">audio_play_sound_at</span></h1>
   <p>この機能により、オーディオ空間内の任意の位置にあるサウンドリソースを再生することができます。サウンドインデックスを指定し、3D空間内の位置を指定します。リスナーのデフォルトの位置は<span data-keyref="Position_Origin">(0, 0, 0)</span>なので、リスナーが移動しておらず、音を左から鳴らしたい場合（例えば）、x 位置を負の値に設定する必要があります（リスナー位置の設定に関する詳細は、以下を参照してください）。 <a href="Audio_Listeners/audio_listener_position.htm"><span class="inline">audio_listener_position()</span></a>).</p>
   <p>また、フォールオフ距離（0は無音、デフォルトは100）を設定すると、リスナーの位置から遠くなるにつれて音がフェードアウトします。フェードアウトがどのように聞こえるかは、フォールオフ基準（ソースの音量が通常半分になる距離）とロールオフ係数（フォールオフ基準距離を過ぎた音にのみ影響する）に依存します。デフォルトのファクターは通常1です。異なるフォールオフ値の効果は、選択したモデルによって異なります（異なるフォールオフモデルとこれらの値の使用方法に関する完全なガイドについては、関数 <a href="audio_falloff_set_model.htm"><span class="inline">audio_falloff_set_model()</span></a>).</p>
   <p>次の2つの引数は、サウンドを<span class="notranslate">loop</span> にするかどうかの設定と、サウンドに優先順位を割り当てるためのものです。このプライオリティは、再生中のサウンドの数が関数 <a href="audio_channel_num.htm"><span class="inline">audio_channel_num()</span></a>.優先度の低いサウンドは停止され、優先度の高いサウンドが優先されます。優先度の値は任意の実数です（実際の値は任意で、0から1でも0から100でも<span data-keyref="GameMaker Name">GameMakerは</span>同じように優先順位をつけます）。優先順位を扱う場合、<i>数字が</i>大きいほど優先順位が<i>高く</i>、優先順位100のサウンドは優先順位1のサウンドより優先されることに注意してください。</p>

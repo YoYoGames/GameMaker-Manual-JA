@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_create</h1>
+  <h1><span data-field="title" data-format="default">ds_list_create</span></h1>
   <p>この関数は、新しいリストデータ構造体を作成し、インデックス値を返します。この値は変数に格納し、そのリストに関連する以降のすべての関数呼び出しで使用する必要があります。もしリストに値が入る<i>前</i>、つまりリストが &quot;空&quot; の状態でアクセスしようとすると、返り値が 0 になる可能性があることに注意しましょう。 <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a>関数は、新しく作成されたリストに対しても 0 を返します)。もし、リストの作成時に「本当に」空であることを確認したい場合は、リストの作成時に <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a>これは、未入力のリストスロットに返されるすべての値が <span class="inline">undefined</span> になることを意味します。</p>
   <p class="note"><b>重要!デ</b>ータ構造を作成するとき、それを識別するためのインデックス値は0から始まる整数値です。 これは、異なるタイプのデータ構造でも<b>同じ</b>インデックス値を持つことができることを意味します。 <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span>関数を使用してからアクセスします。また、インデックスは再利用されるため、破壊されたデータ構造のインデックス値が、その後に新しく作成されたデータ構造で使用される可能性があることに注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_list_create();</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_create</span>();</p>
   <p> </p>
   <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span></p>

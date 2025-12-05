@@ -15,7 +15,7 @@
   <meta name="is_pure" content="true" />
 </head>
 <body>
-  <h1>fx_set_single_layer</h1>
+  <h1><span data-field="title" data-format="default">fx_set_single_layer</span></h1>
   <p>フィルター/エフェクトのシングルレイヤーモードの有効/無効を設定する機能です。デフォルトでは、フィルター/エフェクトは、<a href="layer_set_fx.htm">それが割り当てられて</a>いるレイヤーとその下のすべてのレイヤーに適用されますが、FX<span class="notranslate">struct</span> のシングルレイヤーモードを有効にすると、それが割り当てられているレイヤーにのみ適用されることを確認できます。</p>
   <p>FX<span class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される) と、シングルレイヤーモードの有効化 (<span class="inline">true</span>) または無効化 (<span class="inline">false</span>) の<a class="glossterm" data-glossterm="ブーリアン" href="#">ブーリアン</a>値 を指定します。</p>
   <p>次のビジュアルは、シングルレイヤーモードが無効の場合（すべてのFXレイヤーのデフォルト動作です）と、シングルレイヤーモードが有効の場合の同じフィルタの使用状態を示しています。</p>
@@ -30,7 +30,7 @@
   <p class="note"><span class="note">注</span>：FXのシングルレイヤーモードを有効にする場合、<a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">FXレイヤー</a>以外のレイヤーに適用してください。FXレイヤー自体には何も含まれていないため、フィルターやエフェクトは表示されません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">fx_set_single_layer(filter_or_effect, enable);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_set_single_layer</span>(filter_or_effect, enable);</p>
   <table>
     <tbody>
       <tr>

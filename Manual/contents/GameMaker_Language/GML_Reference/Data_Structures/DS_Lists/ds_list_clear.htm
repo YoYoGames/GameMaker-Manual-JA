@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_clear</h1>
+  <h1><span data-field="title" data-format="default">ds_list_clear</span></h1>
   <p>この関数を使用すると、与えられたリストデータ構造からすべてのデータをクリアすることができます。これは，データ構造体を破壊<i>しません</i>（破壊するためには <a href="ds_list_destroy.htm"><span class="inline">ds_list_destroy()</span></a>この場合、すべてのデータが消去され、リストが空（サイズゼロ）になるだけです。）リストを消去すると、そこに格納されているすべてのデータ構造の参照が解除され、メモリリークが発生することに注意してください。したがって、これを防ぐには、リストを消去する前にすべてのデータ構造項目を手動で破棄する必要があります。この作業が不要なのは、リスト内のアイテムに別の<a href="DS_Lists.htm">DS リスト</a>や<a href="../DS_Maps/DS_Maps.htm">DS マップとしての</a>フラグを立てた場合のみで、 その場合は親をクリアする際に、これらのアイテムは破棄され (クリアされない!) 自動的にメモリがクリーンアップされます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_list_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

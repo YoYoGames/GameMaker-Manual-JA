@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_broadcast</h1>
+  <h1><span data-field="title" data-format="default">network_send_broadcast</span></h1>
   <p>この機能を使用すると、<span class="notranslate">buffer</span> からのデータを IP アドレスの範囲にローカルにブロードキャストすることができます (<span class="notranslate">buffers</span> の詳細については、<a href="../Buffers/Buffers.htm">参考 - バッファを</a>参照してください)。この範囲は、<span class="notranslate">server</span> を実行しているデバイスの範囲に限定されます。例えば、デバイスの IP が 92.168.11.130 である場合、データは 92.168.11.* の範囲にブロードキャストされます。この関数は、送信されたデータのバイト数を返し、送信に失敗した場合は0より小さい値を返します。</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> この機能は UDP で使用した場合のみ動作します。 は TCP で、クライアントは UDP でクライアントソケットを作成する必要があります。<span class="notranslate">server</span> <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><span class="inline">network_create_socket_ext()</span></a></span><span class="notranslate">server</span>でUDPクライアントソケットを作成する必要があります。</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> HTML5ターゲットで動作するプロジェクトで使用する場合は、本機能は動作しません。</p>
   <div data-conref="../../../assets/snippets/iOS_14_IP_Multicast_Permissions.hts"> </div>
   <h4>構文です。</h4>
-  <p class="code">network_send_broadcast(socket, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_broadcast</span>(socket, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

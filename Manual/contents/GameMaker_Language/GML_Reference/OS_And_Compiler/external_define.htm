@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>external_define</h1>
+  <h1><span data-field="title" data-format="default">external_define</span></h1>
   <p>この関数は、特定のdll（<span class="notranslate">Windows</span> ）またはdylib（Mac用）に対する外部関数呼び出しを定義するために使用することができます。このファイルは、インクルード・ファイルでも<span class="notranslate">extension</span> の一部でもかまいません。</p>
   <p>ファイル名(および<span class="notranslate">path</span>)を指定し、次に定義したい関数の名前を指定します。次に、使用する呼び出し方法（以下の定数リストを参照）と、期待される結果の種類（これも定数です。）</p>
   <p>最後に、関数が受け取ることのできる引数の数（0から15まで）と、各引数の型も指定する必要があります。4つ以上の引数を持つ関数では，すべての引数が <span class="inline">ty_real</span> という型で<i>なければ</i>ならないことに注意してください．</p>
@@ -67,7 +67,7 @@
   </table>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]);</p>
+  <p class="code"><span data-field="title" data-format="default">external_define</span>(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]);</p>
   <table>
     <tbody>
       <tr>

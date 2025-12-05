@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理適用力</title>
+  <title>physics_apply_force</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理適用力</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_force</span></h1>
   <p>物理を扱う場合、<span class="notranslate">objects</span> に重力だけでなく、力も適用する必要があります。力とは、<span class="notranslate">object</span> に速度の変化、方向の変化、形状の変化を引き起こすあらゆる影響のことで、<span data-keyref="GameMaker Name">GameMaker の</span>物理学の世界では重力の定義と同じように、2つの xforce/yforce 成分からベクトルを得て定義します。力は、<span class="notranslate">object</span> の重心にかかるのではなく、<span class="notranslate">room</span> のある点にかかり、<span class="notranslate">object</span> に作用する他の力（重力など）に依存して、方向や速度、トルク（スピン）が変化することに注意する必要があります。以下は、説明のための画像例である。</p>
   <p><img>上の例では、下部のバネ（<span class="notranslate">object</span> ）により、ボール（<span class="notranslate">object</span> ）に力が発生し、異なる方向に動くようになりました。正確な力は xpos/ypos 座標に対する xforce/yforce の成分から得られるベクトルで定義されます。つまり、力は xpos/ypos から xforce/yforce までの距離をニュートン (1 キロの質量を毎秒 1 メートルの速度で加速するために必要な正味の力の量として定義) で計算し、方向は xpos/ypos から xforce/yforce への角度とする、という単純なことです。上記のような衝突のコードは、spring<span class="notranslate">object</span> の衝突イベント内にあり、以下の例で提供されるようなものになります。</p>
   <p class="note"><b>注</b>：物理の世界では、すべての計算にメートルを使用します。1メートルあたりのピクセルの比率は、<span class="notranslate">room</span> エディタで定義するか、次のようにします。 <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_apply_force(xpos, ypos, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_force</span>(xpos, ypos, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

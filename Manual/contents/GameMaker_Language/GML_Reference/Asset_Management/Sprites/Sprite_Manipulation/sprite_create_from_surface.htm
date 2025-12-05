@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>表面からのスプライト作成</title>
+  <title>sprite_create_from_surface</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>表面からのスプライト作成</h1>
+  <h1><span data-field="title" data-format="default">sprite_create_from_surface</span></h1>
   <p>この関数を使うと、あらかじめ初期化されたサーフェスから<span class="notranslate">sprite</span> を作成することができます（サーフェスインデックス ID 値は、サーフェスを <a href="../../../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>).関数に入力するx,y座標は、ゲームウィンドウ（アクティブな場合はビュー）ではなく、<i>サーフェイスの</i>位置（左上隅）（0,0）を基準にしてください。幅と高さの引数はピクセルで、使用するサーフェスの部分の幅と高さを定義します。</p>
   <p>引数 &quot;removeback&quot; を <span class="inline">true</span> に設定すると、<span class="notranslate">sprite</span> から色を削除します。<span class="notranslate">sprite</span> の<i>左下の</i>ピクセルにある色をチェックし、それを削除する色として使用します。</p>
   <p>removeback」を選択した場合、<span data-keyref="GameMaker Name">GameMakerの</span>「smooth」引数に <span class="inline">true</span> を指定し、<span class="notranslate">sprite</span> のエッジを滑らかにすることもできます。これは、背景を取り除いた後の<span class="notranslate">sprite</span> の端に、半透明の縁取りを作るだけです。</p>
@@ -23,7 +23,7 @@
   <p class="note"><b><span class="note">注意事項</span></b>この方法で<span data-keyref="GameMaker Name">GameMakerに</span> <span class="notranslate">sprite</span> を作成した場合、忘れずに再度削除する必要があります( <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a>さもないと、メモリーリークが起こり、ゲームが遅くなり、最終的にはクラッシュします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_create_from_surface</span>(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

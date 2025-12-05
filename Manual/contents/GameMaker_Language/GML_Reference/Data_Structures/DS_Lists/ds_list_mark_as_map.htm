@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_map</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_map</span></h1>
   <p>この関数は、以前に作成した DS リスト内の指定した位置に<a href="../DS_Maps/DS_Maps.htm">DS マップを</a>持つものとして &quot;マーク&quot; (あるいは &quot;フラグ&quot;) を付ける。この機能は、JSON<span class="notranslate">strings</span> をエンコードする際に必要となる (これは <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>この方法でマークされた項目は、親の DS リストが破棄されたときに自動的にガベージコレクションされる (破棄される) ため、データ構造をネストするときにも便利です。つまり、&quot;親&quot; リストを破棄する前に、手動でリストの内容を調べ、マークされたデータ構造を個別に破棄する必要がないのです。しかし、リストの位置を個別に削除した場合、そこに含まれるデータ構造は ガベージコレクションさ<i>れないので</i>、親リストの位置を削除する前に 適切な DS マップの破棄関数を呼び出さなければなりません。また、もしこの関数 <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a>の場合、マップと判定された項目はリストを消去する際に一緒に破棄されます。</p>
   <p>また、マークされた位置がリスト内で変化した場合、「マーク」も一緒に移動します。例えば、リスト内の位置3をマークした後、その下にさらに2つのアイテムを挿入して位置5に<i>移動しても</i>、マップとしてのマークは残ります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">ds_list_mark_as_map(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_mark_as_map</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>

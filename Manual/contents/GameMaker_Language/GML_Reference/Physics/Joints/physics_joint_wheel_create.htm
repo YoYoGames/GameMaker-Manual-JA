@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理ジョイントホイールの作成</title>
+  <title>physics_joint_wheel_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理ジョイントホイールの作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_wheel_create</span></h1>
   <p>ホイールジョイントは、ピストンとリボルートジョイントを組み合わせたもので、自動車のショックアブソーバーにホイールを取り付けるようなものです。最初のインスタンスはジョイントの「ボディ」として機能し、2番目のインスタンスは「ホイール」として機能し、ジョイント軸の周りに自由に動くことができます。軸ベクトルも設定できます。この軸ベクトルは、ジョイントが「バネ」として機能する仮想線で、車輪が障害物に遭遇すると、この軸に沿って上下にバウンドします（ピストンジョイントのようなものです）。次の画像は、これを示しています。</p>
   <p><img>モーターを有効にすると、2番目のインスタンスがアンカー位置の周りを回転します。希望のモーター速度を達成するために使用する最大モータートルク（N/m）と、モーターが回転する速度を設定することができます。ホイールジョイントにも軸があるので、ジョイントの振動数（Hz）と減衰比を設定できます。これらの値を微調整する必要があるかもしれませんが、最初は小さな値から始めて、望む効果が得られるまで値を増やしていくことをお勧めします。</p>
   <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

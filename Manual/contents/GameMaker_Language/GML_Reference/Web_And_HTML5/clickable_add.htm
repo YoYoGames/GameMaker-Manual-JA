@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>クリッカブルアド</title>
+  <title>clickable_add</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>クリッカブルアド</h1>
+  <h1><span data-field="title" data-format="default">clickable_add</span></h1>
   <p>この関数を使うと、ゲームキャンバスの外側で、ブラウザウィンドウの中で「ボタン」として機能する、クリック可能なカスタムアイコンを作成することができます。この関数はID値を返します。このID値は変数に格納し、新しいクリッカブルを参照するすべてのボタン関数で使用する必要があります。この関数は、ボタンをクリックしたときにブラウザがポップアップウィンドウを作成するのを防ぐために非常に便利です。</p>
   <p><span class="notranslate">texture</span> まず、ブラウザのウィンドウの（0,0）に対する相対位置（左上隅）を設定し、ボタンアイコンに持たせたい<span class="notranslate">sprite</span> のページエントリーを指定します（参照。 <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>).次に、開くURLか、<span class="notranslate">script</span> （<span data-keyref="GameMaker Name">GameMakerの</span> <span class="notranslate">Asset</span> Browserから）を指定して、開いたり、実行したりすることができます。指定する &quot;target &quot;パラメーターは、 <span class="inline">open()</span> メソッドを使用したときの標準的なJavaScriptの &quot;name &quot;値と同じであり（'_self'以外はブラウザがブロックしたり、ユーザーに許可するかどうかを尋ねる結果になることがあるので注意）、&quot;params&quot; 引数は新しいウィンドウ/タブが表示すべきプロパティを制御するためのJavaScript &quot;specs&quot; パラメーターと同じだ（ブラウザによってはすべての機能がサポートしているとは限りません）。アイコンを使って内部を実行する場合<span class="notranslate">script</span> 、これら最後の2つの引数は空<span class="notranslate">strings</span> &quot;&quot;のままにしておくことができます。</p>
   <p>有効な対象は</p>
@@ -97,11 +97,11 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     また、URLの引数が<a href="../../GML_Overview/Script_Functions.htm">スクリプト関数の</a>名前（つまり、&quot;http://&quot;で始まっていない）であり、<span class="notranslate">script</span> が <span class="inline"><b>gmcallback_*</b></span> と呼ばれている場合、html5イベントに直接フィードできることも知っておくとよいでしょう。<span data-keyref="GameMaker Name">GameMakerの</span>スクリプト関数名は、 <span class="inline">gmcallback_</span> で始まっていれば難読化さ<i>れない</i>。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">clickable_add(x, y, tpe, url, target, params);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add</span>(x, y, tpe, url, target, params);</p>
   <table>
     <tbody>
       <tr>

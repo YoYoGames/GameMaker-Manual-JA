@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>タイルマップの取得ピクセル数</title>
+  <title>tilemap_get_at_pixel</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>タイルマップの取得ピクセル数</h1>
+  <h1><span data-field="title" data-format="default">tilemap_get_at_pixel</span></h1>
   <p>この関数を使うと、<span class="notranslate">tile</span> マップエレメントの位置（<span class="notranslate">room</span> 内）から<span class="notranslate">tile</span> のデータを取得することができます。<span class="notranslate">tile</span> マップエレメント ID (<span class="notranslate">tile</span> マップエレメントを作成するときに <a href="layer_tilemap_create.htm"><span class="inline">layer_tilemap_create()</span></a>を使用した場合、または関数 <a href="layer_tilemap_get_id.htm"><span class="inline">layer_tilemap_get_id()</span></a>) と、<span class="notranslate">tile</span> データを取得する<i>部屋の</i>x と y の位置を指定すると、この関数は<span class="notranslate">tile</span> データの &quot;ブロブ&quot; を返します。このデータは基本的にビットマスクで、<span class="notranslate">tile</span> のインデックス、フリップ/ローテート/ミラーブーリアン、および適用されたマスクデータ( <a href="tilemap_set_mask.htm"><span class="inline">tilemap_set_mask()</span></a>を作成し、そのデータ値を <span class="inline">tile_*</span> 関数で使用して、<span class="notranslate">tiles</span> のプロパティを変更することができます。もし、特定の<span class="notranslate">tile</span> セルから<span class="notranslate">tile</span> データを取得する必要がある場合は、関数 <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>の代わりに</p>
   <p class="note"><b>重要!</b> <span class="notranslate">tiles</span> マップの<span class="notranslate">tile</span> が変更されていない場合 (すなわち、回転や反転などされて<b>いない</b>場合)、<span class="notranslate">tile set</span> データの戻り値は<span class="notranslate">tile</span> 上の<span class="notranslate">tile set</span> のインデックスと正確に一致します。 したがって、たとえば<span class="notranslate">tiles</span> のインデックス 1 の<span class="notranslate">tile</span> を使用して<span class="notranslate">tile set</span> の「衝突マップ」を作成し、この関数で 1 または 0 (空の<span class="notranslate">tile</span>) をチェックして衝突を計算することができます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">tilemap_get_at_pixel(tilemap_element_id, x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">tilemap_get_at_pixel</span>(tilemap_element_id, x, y);</p>
   <table>
     <tbody>
       <tr>

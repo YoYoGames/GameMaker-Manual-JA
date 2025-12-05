@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ねばり強い</title>
+  <title>persistent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ねばり強い</h1>
+  <h1><span data-field="title" data-format="default">persistent</span></h1>
   <p>この変数を読み込むと、インスタンスに <span class="inline">persistent</span> というフラグが立っているかどうかがわかります。また、この変数を使用して、インスタンスの persistence を <span class="inline">true</span> (persistent) または <span class="inline">false</span> (not persistent) に設定することも可能です。永続的なインスタンスとは、<span class="notranslate">room</span> から<span class="notranslate">room</span> に「引き継がれる」ものです。つまり、（たとえば）ゲーム開始時に一度だけ作成すれば、その後のすべての<span class="notranslate">rooms</span> で存在することになります。永続化には注意が必要です。永続化されたインスタンスを見失いやすく、ゲーム開発 の後半で問題になる可能性があるからです。</p>
   <p><span class="notranslate">room</span> で永続化を有効にしたインスタンスを作成すると、この変数は <span class="inline">true</span> に設定され、レイヤーまたは深さが割り当てられます (<span class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します)。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーが<i>ない</i>場合、<span class="notranslate">rooms</span> にわたって持続するインスタンスのために新しいレイヤーが作成されます。インスタンスの作成時にレイヤー名を付けた場合は、新しいレイヤーも元のレイヤーと同じ名前になり、インスタンスに深さを割り当てた場合は、新しいレイヤーに &quot;<span class="inline">_layer_XXX</span>&quot; という名前がつきますが、&quot; XXX &quot;はレイヤーに固有の名前を付けるために使用する16進数値です。これらのレイヤーは<span class="notranslate">room</span> から<span class="notranslate">Room</span> End で削除されます。レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスに名前付きのレイヤーを割り当てた場合、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあると、永続的なインスタンスは<i>レイヤーの深さに関係なく</i>同じ名前のレイヤーに割り当てられることです。最後に、永続化されたインスタンスが、インスタンスが作成されたのと同じ深さのレイヤーを持つ<span class="notranslate">room</span> に移動した場合、このレイヤーには<i>割り当てられず</i>、代わりに同じ深さに新しいレイヤーが作成されます（前に説明した命名規則に従っています）。</p>
   <p><span class="notranslate">object</span> は、<b>Game Start</b>、<b>Game End</b>、<b>Room Start</b>、<b>Room End</b>イベントが発生しますが、 <span class="inline">game_restart()</span> などでゲームを再起動すると、<span class="notranslate">objects</span> はすべて削除され、ゲームによって再び作成されたときにのみ存在するようになります。また、永続的な<span class="notranslate">object</span> を無効にすると、<span class="notranslate">room</span> End イベントがトリガーされる前に再アクティブ化しない限り、<span class="notranslate">Room</span> から別の場所に移動することはできなくなるので注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">persistent;</p>
+  <p class="code"><span data-field="title" data-format="default">persistent</span></p>
   <p> </p>
   <h4>リターンです。</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

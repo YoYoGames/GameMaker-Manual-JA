@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_set_persistent</h1>
+  <h1><span data-field="title" data-format="default">room_set_persistent</span></h1>
   <p>この関数を使うと、ゲーム内の<i>現在のもの</i>以外の<span class="notranslate">room</span> のパーシスタンスを変更（または設定）することができます。<span class="notranslate">room</span> の永続性を <span class="inline">true</span> と設定すると、プレイヤーが一度離れてから戻ってきても、その<span class="notranslate">room</span> 内のすべてのインスタンスの状態が維持されます。一方、永続性を <span class="inline">false</span> と設定すると、毎回初期状態にリセットされます。永続的な<span class="notranslate">room</span> は、通常の<span class="notranslate">room</span> よりもかなり多くのメモリを使用することに注意する必要があり、ゲーム内であまり多く持つことは推奨されません。</p>
   <p class="note"><b>注意</b>：この機能は、<span class="notranslate">switch</span> がすでに訪問されている場合、<span class="notranslate">room</span> <b>のパーシス</b>テンスをオフにすることはできません！この機能は、 がすでに訪問されている場合、 のパーシステンスをオフにすることはできません。一旦訪問した永続的な<span class="notranslate">room</span> はメモリに保持されます。<span class="notranslate">switch</span> 永続性をオフにするには、その<span class="notranslate">room</span> に行って <span style="font-size:1px;"><a href="room_persistent.htm"><span class="inline">room_persistent</span></a></span>変数を <span class="inline">false</span> に設定し、再度<span class="notranslate">room</span> を終了してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">room_set_persistent(index, val);</p>
+  <p class="code"><span data-field="title" data-format="default">room_set_persistent</span>(index, val);</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_get</h1>
+  <h1><span data-field="title" data-format="default">http_get</span></h1>
   <p>この関数では、指定されたURLに接続し、情報を取得する。これは非同期関数であるため、<span data-keyref="GameMaker Name">GameMakerは</span>応答を待つ間ブロックせず、コールバック情報を取得しない限り実行しつづける。この情報は<span class="notranslate">string</span> の形式で、<span class="notranslate">object</span> プロパティに定義されているインスタンスで<b>非同期イベントを</b>トリガーすることになる。また、HTTPリクエスト・パラメータ（Webページでフォームを送信するときにURLの末尾に「付加」されるビット）は、例えばこの関数を使用するときに完全に受け入れられることに注意する必要があります。</p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
   <p>は、変数 &quot;name &quot;に格納されている<span class="notranslate">string</span> を<span class="notranslate">server</span> に渡すと同時に、そのURLからデータを取得する。したがって、基本的には、単純で短いデータをクライアントから<span class="notranslate">server</span> に渡す必要がある場合は、この関数を使用するのが妥当でしょう。</p>
@@ -34,7 +34,7 @@
   </ul>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">http_get(url);</p>
+  <p class="code"><span data-field="title" data-format="default">http_get</span>(url);</p>
   <table>
     <tbody>
       <tr>

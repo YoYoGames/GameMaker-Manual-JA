@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texrepeat</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texrepeat</span></h1>
   <p>この関数は、モデルやプリミティブに使用する際に、<span class="notranslate">textures</span> を繰り返すか (<span class="inline">true</span>) しないか (<span class="inline">false</span>) を<span data-keyref="GameMaker Name">GameMaker</span>に指示するために使用できます。通常、<span class="notranslate">texture</span> の幅と高さは 0 - 1 の範囲にありますが、デフォルトで 1 より大きい値を指定すると、残りは描画されません (<span class="notranslate">texture</span> 全体で、1 を超える割合に相当する「空の」部分が描画されます)。つまり、<span class="notranslate">texture</span> の幅や高さに 2 を指定すると、<span class="notranslate">texture</span> の半分のスペースに描画され、残りの半分は空白になります）。しかし、この関数を使って repeat を true に設定すると、<span class="notranslate">texture</span> はすべてのモデルやプリミティブで自動的に繰り返されます。これらの関数の使用例としては、<span class="notranslate">texture</span> を 3D で繰り返すことが考えられますが、<span class="notranslate">texture</span> ページの残りの部分から画像を引っ張ってこないようにするためには、<span class="notranslate">sprite</span> を使用する場合、<span class="notranslate">Texture</span> Editor で「Separate<span class="notranslate">Sprite</span> Page」にマークする必要があります。</p>
   <p class="note"><b>注意</b>:<span class="notranslate">Sprites</span> と背景は常に繰り返し描画されないので、一度<span class="notranslate">sprite</span> または背景を描画すると、この値は <span class="inline">false</span> にリセットされます。 このデフォルト動作は<span class="notranslate">texture</span> のステージ設定には影響しません（つまり、関数を呼ぶと影響しますが、内部設定を false にすると影響しません）。</p>
   <p class="note"><b>注</b>：この設定は、機能使用時に<span class="notranslate">texture</span> に設定された<span class="notranslate">shaders</span> のステージリピートに優先します。 <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gpu_set_texrepeat(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_texrepeat</span>(enable);</p>
   <table>
     <tbody>
       <tr>

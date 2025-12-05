@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>レイヤーの深さを取得する</title>
+  <title>layer_get_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>レイヤーの深さを取得する</h1>
+  <h1><span data-field="title" data-format="default">layer_get_depth</span></h1>
   <p>この関数は、指定されたレイヤーに関連する<i>深さの</i>値を取得するために使用します。レイヤー ID を指定します（レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> - これはパフォーマンスに影響します) を入力すると、この関数はそのレイヤーの深度を実数で返します。深度は、カメラから「遠い」ほど高く、「近い」ほど低くなるように定義されていることに注意してください。したがって、深度 -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100 の順序で描画され、「最上位」レイヤー (つまり、カメラビューに最も近いので他のすべてに重ねて表示) が深度 -100 のレイヤーとなることに注意してください。</p>
   <p>次の画像は、レイヤーの深さがどのように機能するかを示す概略図です。</p>
   <p><img>無効なレイヤーIDの値を指定するとエラーになることに注意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">layer_get_depth(layer_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_get_depth</span>(layer_id)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>レイヤーの深さ</title>
+  <title>layer_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>レイヤーの深さ</h1>
+  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
   <p>この関数は、与えられたレイヤーの<b>深さを</b>変更し、その内容が画面にレンダリングされる順序を変更するために使用できます。レイヤー ID を指定します (レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> - これはパフォーマンスに影響します) を指定し、設定する新しい深さ (-16000 から 16000 までの整数値) を指定します。レイヤーの深さは、カメラから「遠い」ほど高く、「近い」ほど低くなるように定義されます。したがって、深さ -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100 の順序で描かれ、「トップ」レイヤー（つまり、カメラビューに最も近く、他のすべての上に描かれます）は、深さが -100 のレイヤーになります。</p>
   <p>次の画像は、レイヤーの深さがどのように機能するかを示す概略図です。</p>
   <p><img>なお、レイヤーの深さは、いつでも関数 <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>.また、レイヤーの最小および最大の深さは-16000から16000であり、これらの深さ以外のものは<b>レンダリングさ</b>れないことに注意してください。この範囲外の深さが必要な場合は、関数 <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p>レイヤーの深さを変更すると、適用される<a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">フィルタやエフェクトが</a>変わることがあります。FXレイヤーの深さより低く変更すると、そのレイヤーにエフェクトが適用されなくなります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">layer_depth(layer_id, depth)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>

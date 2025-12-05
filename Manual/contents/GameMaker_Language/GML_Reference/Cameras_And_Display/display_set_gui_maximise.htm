@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_set_gui_maximise</h1>
+  <h1><span data-field="title" data-format="default">display_set_gui_maximise</span></h1>
   <p>この関数は、GUIレイヤーを最大化し、デフォルトのアプリケーションサーフェス位置と寸法ではなく、スクリーン寸法に関連してスケールとオフセットを設定するために使用することができます。デフォルトでは、GUIレイヤーはアプリケーションサーフェスの解像度と1：1で、サーフェスの（0,0）位置にも描画されます。しかし、これは常に望むものではないので、この関数を使用して、ディスプレイまたはゲームウィンドウの絶対位置（0,0）に対して相対的に描画されるように設定することができます。この関数に与える引数は、GUIレイヤーに与えたい効果に依存します。引数なしでこの関数を呼び出すと、GUIレイヤーはスクリーンまたはゲーム・ウィンドウの(0,0)の位置に描画され、幅と高さは領域全体にフィットするようにスケーリングされるように設定されます。</p>
   <p class="code">display_set_gui_maximise();</p>
   <p>ただし、GUIレイヤーの<i>スケーリングファクターを</i>設定すると、幅と高さがその分拡大されます。GUIレイヤーは常にディスプレイやゲームウィンドウ、またはアプリケーションサーフェイスのサイズに合わせて作られるため、この値を1以外に設定すると、基本的に幅と高さに沿って画素数がスケールされることを覚えておいてください。ディスプレイが1024x768で、スケーリングファクターを0.5に設定すると、GUIレイヤーはディスプレイの半分のサイズになり、事実上ピクセルサイズは2倍になります。</p>
@@ -27,7 +27,7 @@
   <p class="code">display_set_gui_maximise(-1, -1);</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">display_set_gui_maximise(<i>xscale, yscale, xoffset, yoffset</i>);</p>
+  <p class="code"><span data-field="title" data-format="default">display_set_gui_maximise</span>(<i>xscale, yscale, xoffset, yoffset</i>);</p>
   <table>
     <tbody>
       <tr>

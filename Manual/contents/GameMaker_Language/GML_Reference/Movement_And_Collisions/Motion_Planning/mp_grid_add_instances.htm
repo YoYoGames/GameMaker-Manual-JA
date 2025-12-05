@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_instances</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_instances</span></h1>
   <p>この関数は、インスタンスのコリジョンマスク（<span class="notranslate">sprite</span> プロパティまたは呼び出したインスタンスのマスクインデックスで決定）を使用して、MP グリッド内のセルを禁止または禁止でないとマークします。禁止セルは、どの経路探索関数でも横切ることができないようになっています。この関数では、精密な衝突を考慮するかどうかを指定することができ、この設定に応じてマークされる禁止セルが変化します。この画像は、この挙動を説明するものです。</p>
   <p><img>上の2つのインスタンスは、 <span class="inline">mp_grid_add_instances()</span> 機能を使用して、precise を true に設定して MP グリッドに追加されています。ご覧のように、緑のインスタンスは、<span class="notranslate">sprite</span> のマスクが precise に設定されているため、「触れる」グリッドのマス目のみを禁じ手としてマークしています。しかし、2番目のインスタンスは他のマスもマークしていますが、そのマスは触れていない<i>ように</i>見えます。これは、<span class="notranslate">sprite</span> のマスクが precise に設定されて<b>いない</b>ためです。つまり、関数で precise 設定を使用していても、<span class="notranslate">sprite</span> の bounding box しか考慮されないということです。これは、関数の precise 引数を false に設定した場合にも起こることです。precise<span class="notranslate">sprite</span> マスクを持つインスタンスでさえ、そのバウンディングボックスを基にグリッドに追加されることになります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">mp_grid_add_instances(id, obj, prec);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_instances</span>(id, obj, prec);</p>
   <table>
     <tbody>
       <tr>

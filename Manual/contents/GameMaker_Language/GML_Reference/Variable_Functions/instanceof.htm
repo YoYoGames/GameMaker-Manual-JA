@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>インスタンスオブ</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>instanceof</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>インスタンスオブ</h1>
+  <h1><span data-field="title" data-format="default">instanceof</span></h1>
   <p>この関数は、<span class="notranslate">struct</span> を作成するために使用された<a href="../../GML_Overview/Structs.htm">コンストラクタ関数の</a>名前を取得するために使用できます。<span class="notranslate">struct</span> 自身は、 を使用して作成されているはずです。 <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline"></span></a><a href="../../GML_Overview/Language_Features/new.htm"><span class="inline">new</span></a>演算子を使って作成されているはずです。<span class="notranslate">struct</span> の参照を変数に与えると、この関数はコンストラクタ名を持つ<span class="notranslate">string</span> か、 <span class="inline">undefined</span> のどちらかを返します。</p>
   <p>なお、この関数に<span class="notranslate">struct</span> リテラル（つまり、コンストラクタ関数を使わずに作成された<span class="notranslate">struct</span> ）を渡すと、単に<span class="notranslate">string</span> の<span class="inline2">「構造体</span>」を返すだけです。</p>
   <p>この関数は，<span class="notranslate">struct</span> の参照先が弱参照かどうかを調べるのにも使えます． <strong><a class="glossterm" data-glossterm="弱参照" href="#">弱参照</a></strong>この場合，この関数は<span class="notranslate">string</span> を生成した関数名ではなく，<span class="notranslate">struct</span> <span class="inline2">&quot;weakref&quot;</span>を返します． 詳しくは，関数 <a href="../Garbage_Collection/weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>.</p>
   <p>コンストラクタ関数が<span class="notranslate">script</span> 内で作成されていない場合、返されるコンストラクタ名には追加テキストが含まれます。<span class="notranslate">object</span> 内で作成された場合、その名前には<span class="notranslate">object</span> と作成されたイベントが含まれます。たとえば、<strong>Object1</strong>の Create イベントで作成された<span class="inline2">test_constructor</span>という名前のコンストラクタは、<span class="inline2">&quot;test_constructor_gml_Object_Object1_Create_0&quot;</span> という名前で返されます。これを避けるには、コンストラクタを <a href="../../GML_Overview/Script_Functions.htm"><span class="notranslate">script</span></a>.</p>
-  <p> </p>
+  <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instanceof(struct_id);</p>
+  <p class="code"><span data-field="title" data-format="default">instanceof</span>(struct_id)</p>
   <table>
     <tbody>
       <tr>
@@ -32,15 +32,15 @@
       </tr>
       <tr>
         <td><span class="notranslate">struct</span></td>
-        <td><span data-keyref="Type_Struct"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">構造</a></span></td>
+        <td><span data-keyref="Type_Struct"><a href="../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
         <td><span class="notranslate">The struct reference to use.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span> or <span data-keyref="Type_Undefined"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">undefined</a></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Undefined"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">undefined</a></span></p>
+  <p> </p>
   <h4>拡張された例。</h4>
   <p>この例では、まず<span class="notranslate">struct</span> のコンストラクタとして使用される関数を定義する必要があります。次の関数は、<span class="notranslate">script</span> アセットで定義されています。</p>
   <p class="code">function init_struct(_a, _b, _c) constructor<br />
@@ -53,21 +53,21 @@
   <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p>
   <p>そして、このように使用されたコンストラクタ関数の名前を取得することができます。</p>
   <p class="code">var _name = instanceof(mystruct);<br />
-    if (is_string(_name)) <br />
+    if (is_string(_name))<br />
     {<br />
         show_debug_message(_name);<br />
     }</p>
   <p>これは<span class="notranslate">string</span> <span class="inline2">&quot;init_struct&quot;</span>を出力ログに表示します。これは、その<span class="notranslate">script</span> で定義されているコンストラクタ関数の名前です。</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Variable_Functions.htm">バリアブルファンクション</a></div>
-        <div style="float:right">次のページ <a href="array_create.htm"><span class="notranslate">array_create</span></a></div>
+        <div style="float:left">戻る<a data-xref="{title}" href="Variable_Functions.htm">変数関数</a></div>
+        <div style="float:right">次のページ <a data-xref="{title}" href="array_create.htm">array_create</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instanceof

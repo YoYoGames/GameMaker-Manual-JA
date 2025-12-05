@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>application_surface_enable</h1>
+  <h1><span data-field="title" data-format="default">application_surface_enable</span></h1>
   <p>この機能により、アプリケーションサーフェスの有効・無効を設定することができます。デフォルトでは、アプリケーションサーフェスは有効になっており、Drawイベントのすべての描画はそのサーフェスに行われ、サーフェスはスクリーンに描画されます。しかし、一部の古いデバイスや特定のチップセットでは、パフォーマンスが低下することがあります。そのような場合は、<span class="notranslate">switch</span> アプリケーションサーフェスへの描画をオフにすると、すべてのDrawイベントの描画は、直接スクリーンに行われます<span class="notranslate">buffer</span>.</p>
   <p>この機能を使って、ゲーム中の任意のタイミングでアプリケーションサーフェスの有効・無効を切り替えることができますが、変更が反映されるまでに少なくとも1フレーム（ステップ）必要なことに注意が必要です。オフにする <i><b>は<span class="notranslate">switch</span> 全てのアスペクト比補正をオフにします</b></i>は、ターゲットプラットフォームの<i>ゲームオプションで</i>設定されているとおりです。つまり、必要なデバイス、ウィンドウ、または画面の寸法にゲームをスケーリングする何らかの方法を用意しておく必要があります。<span class="notranslate">switch</span> 再度オンにすると、次のステップで<i>Game Options</i>が再び有効になります。</p>
   <p>この機能は、画面への描画方法に影響を与えるため、慎重に使用することをお勧めします。一般的には、ゲームのメニューにオプションとして組み込むか、ゲームの開始時に一度だけ呼び出し、有効か無効かに応じてコードを記述するのがよいでしょう。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">application_surface_enable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">application_surface_enable</span>(enable);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バッファゲットサーフェス</title>
+  <title>buffer_get_surface</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バッファゲットサーフェス</h1>
+  <h1><span data-field="title" data-format="default">buffer_get_surface</span></h1>
   <p>この関数を使うと、ある表面から与えられた<span class="notranslate">buffer</span> に情報を書き込むことができます。<span class="notranslate">buffer</span> は以前に作成されている必要があり、書き込もうとするサーフェイスのデータを格納するのに十分な大きさの1バイトアラインの<span class="notranslate">buffer</span> でなければなりません（不明な場合は、<a href="buffer_create.htm">グロウバッファを</a>使用するか、このページの一番下の例を参照してください）。</p>
   <p>表面の情報は、（シーク位置に関係なく）常に<span class="notranslate">buffer</span> の先頭に書き込まれますが、書き込み位置を<span class="notranslate">buffer</span> の先頭から移動させるオフセット値（バイト単位）を選択することができます。</p>
   <p>この関数は、<span class="notranslate">buffer</span> ターゲットでは、表面の各ピクセルを<b>RGBA</b>フォーマットで<span class="notranslate">Windows</span> に書き込むが、他のターゲットでは、OS や、デバイスによって異なる場合があることに注意する。</p>
   <p class="note"><strong>注</strong>：この関数は<span data-keyref="GameMaker Name">GameMaker の</span>アップデート 2.3.1 以降で変更されています。以前のバージョンでは、定数 <span class="inline">buffer_surface_copy</span> を使用していましたが、現在は非推奨です。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">buffer_get_surface(buffer, surface, offset);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_get_surface</span>(buffer, surface, offset);</p>
   <table>
     <tbody>
       <tr>

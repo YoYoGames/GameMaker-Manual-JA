@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スケルトンアタッチメントの作成色</title>
+  <title>skeleton_attachment_create_colour</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>スケルトンアタッチメントの作成色</h1>
+  <h1><span data-field="title" data-format="default">skeleton_attachment_create_colour</span></h1>
   <p>スケルトン・アニメーション（<span class="notranslate">sprite</span> ）を作成する際に、<i>アタッチメント・スロットと</i>そこに入れる<i>アタッチメントを</i>割り当てることができます。これらは単に画像 (<span class="notranslate">sprites</span>) で、アニメーションとは別物ですが、添付されると添付されたボーンと一緒に動きます。通常、これらのアタッチメントはアニメーションプログラム (<span class="notranslate">Spine</span>) で割り当てますが、この関数を使用すると、ゲームの<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を使用して、ランタイムに独自のアタッチメントを作成できます。この関数では、アタッチメントに名前を付けて (<span class="notranslate">string</span> のように ) <a href="../../Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>と <a href="../../Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a><span class="notranslate">sprite</span> <span class="notranslate">sprite</span> また、画像に適用したい変形や、画像にブレンドする色、アルファ（透明度）値も設定できます。添付ファイルが正常に作成された場合、この関数は <span class="inline">1</span> を返し、そうでない場合 (<span class="notranslate">sprite</span> のインデックスが無効であるか、ベース<span class="notranslate">sprite</span> が<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> でない) は、 <span class="inline">-1</span> を返します。</p>
   <p>注目すべきは、インスタンス<span class="notranslate">sprite</span> が、ブレンドカラーとアルファの設定(<a href="../../Sprite_Instance_Variables/image_blend.htm"><span class="inline">image_blend</span></a>と <a href="../../Sprite_Instance_Variables/image_alpha.htm"><span class="inline">image_alpha</span></a>)、アタッチメントスロットも同様です(関数 <a href="../Slots/skeleton_slot_colour_set.htm"><span class="inline">skeleton_slot_colour_set()</span></a>そのため、スロットに割り当てられたアタッチメント<span class="notranslate">sprite</span> が持つ最終的な色とアルファは、これらすべての値の合成となります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">skeleton_attachment_create_colour(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot, colour, alpha);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_attachment_create_colour</span>(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot, colour, alpha);</p>
   <table>
     <tbody>
       <tr>

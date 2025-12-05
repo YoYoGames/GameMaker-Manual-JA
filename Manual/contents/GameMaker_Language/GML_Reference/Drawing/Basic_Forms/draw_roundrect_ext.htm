@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_roundrect_ext</h1>
+  <h1><span data-field="title" data-format="default">draw_roundrect_ext</span></h1>
   <p>この関数では、丸みを帯びた矩形の輪郭、または (x1,y1) の位置を左上隅、 (x2,y2) の位置を右下隅とする丸みを帯びた矩形の塗りつぶしのどちらかを描画できます。また、x軸とy軸に半径の値（ピクセル単位）を与える必要があり、角はこれらの量だけ丸められます。角の描画をどの程度正確に行うかを定義するには，関数 <a href="draw_set_circle_precision.htm"><span class="inline">draw_set_circle_precision()</span></a>.描画される矩形は、サポートされるさまざまなプラットフォーム間の違いにより、望ましい寸法で描画されるために異なる値（x、y、または幅、高さの±1）が必要な場合があることに注意してください。</p>
   <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span class="notranslate">texture</span>, 色.しかし、この関数を使用する場合、<span class="notranslate">vertex</span> とカラーデータのみが渡されるため、<span class="notranslate">shader</span> は何も描画しない（または、何か描画するが正しく描画しない）可能性があります。このように図形を描画する必要がある場合は、<span class="notranslate">shader</span> をこの点を考慮してカスタマイズする必要があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_roundrect_ext(x1, y1, x2, y2, xrad, yrad, outline);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_roundrect_ext</span>(x1, y1, x2, y2, xrad, yrad, outline);</p>
   <table>
     <tbody>
       <tr>

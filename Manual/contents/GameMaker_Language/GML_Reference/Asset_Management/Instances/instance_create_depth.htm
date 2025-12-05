@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>インスタンス作成深度</title>
+  <title>instance_create_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>インスタンス作成深度</h1>
+  <h1><span data-field="title" data-format="default">instance_create_depth</span></h1>
   <p>この関数を使うと、指定した<span class="notranslate">object</span> の新しいインスタンスを、<span class="notranslate">room</span> 内の任意の位置に、指定した深さで作成することができます。深度は任意の値で、深度が低いほどカメラに「近く」描かれ、深度が高いほど遠くに描かれます。したがって、深度 -200 のインスタンスは深度 +300 のインスタンスの上に描かれます (例)。</p>
   <p>すべてのインスタンスは<span class="notranslate">room</span> のレイヤー上に<i>なければならない</i>ので、この関数は実際にインスタンスのために<span class="notranslate">room</span> のレイヤーを作成することに注意してください。しかし、これは<i>管理された</i>レイヤー（つまり、あなたがコードや<span class="notranslate">room</span> で作成したものではなく、<span data-keyref="GameMaker Name">GameMaker</span>が自動的に作成したもの）なので、そのレイヤーにはアクセスできません。そのレイヤーにアクセスすることはできず <a href="Instance_Variables/layer.htm"><span class="inline">layer</span></a>インスタンス変数に-1が返されます。</p>
   <p class="note"><span class="important">重要</span>レイヤーの深さの最小値と最大値は、-16000から16000です。この範囲外の深さに配置されたものは<b>描画さ</b>れませんが、すべてのイベントは通常通り実行されます。</p>
@@ -27,7 +27,7 @@
   <p class="note"><span class="note">注</span> <span class="notranslate">struct</span> の変数は新しいインスタンスに「浅くコピー」されます。つまり、あらゆる配列、<span class="notranslate">structs</span> 、およびその他のリソースは参照によってコピーされ、複製されることはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_create_depth(x, y, depth, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_depth</span>(x, y, depth, obj);</p>
   <table>
     <tbody>
       <tr>

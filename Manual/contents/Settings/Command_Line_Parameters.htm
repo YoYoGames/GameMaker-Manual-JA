@@ -36,12 +36,12 @@
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot"><span class="notranslate">YoYo</span> ランナーには、特別なコマンドラインパラメータも用意されています。</p>
     <p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>: 与えられたゲームファイルをロードします。
-      <br>
+      <br />
     </p>
     <p class="dropspot">なぜこれを使うのか？通常は使用しませんが、一度に複数のバージョンのゲームを実行したい場合、これを使用すると、A/B比較テストが非常に簡単に行えるようになります。この方法を使えば、誰かと一緒に集中テストをしたり、デザイナーとして、並べてテストをすることで、より良い感触を得ることができます。</p>
     <p class="dropspot">これをセットアップするには、いくつかのことを事前に知っておく必要があります。まず最初に、ランナー本体への<span class="notranslate">path</span> が必要です。これは、<span class="notranslate">Windows</span> OSの<strong>Program Data</strong>フォルダにあります（デフォルトでは隠されている場合がありますので、表示プロパティを変更する必要があります）。典型的な形式は次のとおりです。
-      <br>
-      <br>
+      <br />
+      <br />
     </p>
     <p class="code">C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe
       <br />
@@ -49,14 +49,14 @@
     <p class="dropspot">runtime_versionフォルダーは、現在インストールされている<span class="notranslate">runtimes</span> に依存することに注意してください。また、ランナーを指定するために、<span class="notranslate">path</span> と <span class="inline">&lt;<em>yourgame</em>&gt;.win</span> ファイルが必要です。これを見つける最も簡単な方法は、<strong>Temp フォルダ </strong>（通常 <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span> にあります）に移動して、 <span class="inline">*.win</span> を検索することです。これにより、利用可能なすべてのファイルが表示され、完全な<span class="notranslate">path</span> を取得する必要があるファイルを簡単に選択できます。</p>
     <p class="dropspot">実行ファイルにしたようにランナーへのショートカットを作成し、必要に応じてパラメータを変更することもできますが、それではテストの間にランナーを開いて編集しなければならず、サイドバイサイドのテストにこの機能を使用する意味がなくなってしまいます。その代わりに、いくつかの小さな「バッチ」ファイルを作成して、これを処理することにします。</p>
     <p class="dropspot">そのためには、まずデスクトップに新しいテキスト文書を作成し、それをメモ帳（または他のテキストエディタ）で開きます。以下を追加してください。
-      <br>
-      <br>
+      <br />
+      <br />
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe -game &lt;LOCAL TEMP PATH&gt;\&lt;GAMENAME&gt;.win
       <br />
     </p>
     <p class="dropspot">temp<span class="notranslate">path</span> をゲームの <span class="inline">*.win</span> ファイルに設定し、これを &quot;<span class="inline">GM_Test_1.bat</span>&quot; としてデスクトップに保存する必要があります（メモ帳は保存ダイアログのオプションで「すべてのファイル」を選択しない限り、自動的に <span class="inline">*.txt</span> ファイルとして保存されることに注意してください）。最終的なコマンドの例は次のようになります。
-      <br>
+      <br />
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\runtime-9.9.1.199\windows\Runner.exe -game D:\Users\Mark\AppData\Local\Temp\GameMaker\AlphaDog_Reboot\AlphaDog_Reboot.win
       <br />

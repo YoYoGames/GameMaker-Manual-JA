@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_set_alpha_from_sprite (スプライトのアルファ値を設定する)</title>
+  <title>sprite_set_alpha_from_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_alpha_from_sprite (スプライトのアルファ値を設定する)</h1>
+  <h1><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span></h1>
   <p>この関数は、ある<span class="notranslate">sprite</span> の値/彩度を用いて、対象<span class="notranslate">sprite</span> のアルファ値と掛け合わせる。新しいアルファマップを生成するために使用する<span class="notranslate">sprite</span> は、白い部分のアルファ値が 1（不透明）、黒い部分のアルファ値が 0（透明）、灰色の部分のアルファ値が 0 と 1 の間である、グレースケールであることが理想的です。 アルファ値を設定する<span class="notranslate">sprite</span> は<i>永久リソースではありませんし</i>、アルファ値の設定に使用した<span class="notranslate">sprite</span> もエラーとなるため、永久リソースではあり得ません。つまり、この関数が正しく動作するためには、何らかの方法でまったく新しい2つの<span class="notranslate">sprites</span> を「その場で」作成する必要があります。これは、サーフェスを使用するか、スクリーンから<span class="notranslate">sprite</span> を作成することで実現できます（以下のコード例では、サーフェスを使用してどのように効果を得ることができるかを示しています）。</p>
   <p class="note"><b>注</b>：この機能は<b>ビットマップ</b> <span class="notranslate">sprites</span> に対してのみ有効であり、SWF や JSON (<span class="notranslate">Spine</span>)<span class="notranslate">sprites</span> では動作しません。</p>
   <p>以下は、この機能がどのように働くかを説明する画像です。</p>
   <p><img alt="Sprite Set Alpha Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png" /></p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">sprite_set_alpha_from_sprite(ind, spr);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span>(ind, spr);</p>
   <table>
     <tbody>
       <tr>

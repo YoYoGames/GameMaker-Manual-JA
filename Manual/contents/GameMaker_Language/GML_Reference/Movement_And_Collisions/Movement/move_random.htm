@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>move_random</h1>
+  <h1><span data-field="title" data-format="default">move_random</span></h1>
   <p>この関数を使うと、インスタンスを<span class="notranslate">room</span> の任意の位置に設定できますが、「見えない」グリッドに整列させることができます。つまり、hsnap と vsnap の値を 32 にすると、32x32 の正方形のグリッドに整列したランダムな位置にインスタンスが設定されます。これらの値を 1 にすると、<span class="notranslate">room</span> の任意の位置に設定することができます。</p>
   <p class="note"><b>注</b>：この関数は、ゲームが新しく実行されるたびに同じ位置にスナップします。これは、<span data-keyref="GameMaker Name">GameMakerが</span>毎回同じ初期ランダムシードを生成して、<span class="notranslate">debugging</span> のコードをはるかに簡単に作成できるようにするためです。この挙動を避けるには <span style="font-size:1px;"><a href="../../Maths_And_Numbers/Number_Functions/randomise.htm"><span class="inline">randomise()</span></a></span>をゲーム開始時に指定します。これは、ゲームのテストと<span class="notranslate">debugging</span> 、最終的な実行可能パッケージはこの動作を示さず、毎回のプレイがランダムになるためです。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">move_random(hsnap, vsnap);</p>
+  <p class="code"><span data-field="title" data-format="default">move_random</span>(hsnap, vsnap);</p>
   <table>
     <tbody>
       <tr>

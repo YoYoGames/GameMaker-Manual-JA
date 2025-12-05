@@ -46,17 +46,17 @@
     </ul>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#" style="margin-left:88px">Persistence and<span class="notranslate">Room</span> Layers</a>  </p>
     <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot" style="margin-left: 132px"><span class="notranslate">room</span> でパーシステンスを有効にしたインスタンスを作成すると、レイヤーまたは深度が割り当てられます（<span class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーがない場合、<strong> 部屋をまたいで永続化されるインスタンスのために、新しいレイヤーが</strong>作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になります。インスタンスに深さを割り当てた場合、新しいレイヤーは &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot;<span class="inline">XXX</span>&quot; はレイヤーに固有の名前を付けるために使用する16進数値です。これらのレイヤーは、<strong>ルームエンドの</strong> <span class="notranslate">room</span> から削除されます。<br>
-        <br>
-        レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスにレイヤー名を割り当てた場合、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあると、永続的なインスタンスはレイヤーの深さに関係なく、同じ名前のレイヤーに割り当てられるということです。<br>
-        <br>
+      <p class="dropspot" style="margin-left: 132px"><span class="notranslate">room</span> でパーシステンスを有効にしたインスタンスを作成すると、レイヤーまたは深度が割り当てられます（<span class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーがない場合、<strong> 部屋をまたいで永続化されるインスタンスのために、新しいレイヤーが</strong>作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になります。インスタンスに深さを割り当てた場合、新しいレイヤーは &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot;<span class="inline">XXX</span>&quot; はレイヤーに固有の名前を付けるために使用する16進数値です。これらのレイヤーは、<strong>ルームエンドの</strong> <span class="notranslate">room</span> から削除されます。<br />
+        <br />
+        レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスにレイヤー名を割り当てた場合、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあると、永続的なインスタンスはレイヤーの深さに関係なく、同じ名前のレイヤーに割り当てられるということです。<br />
+        <br />
         最後に、永続化されたインスタンスが、インスタンスが作成されたのと<em>同じ</em>深さのレイヤーを持つ<span class="notranslate">room</span> に移動した場合、このレイヤーには<em>割り当てられず </em>、代わりに同じ深さに新しいレイヤーが作成されます（上で説明した命名規則に従っています）。
       </p>
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#" style="margin-left: 88px">永続性とイベント</a></p>
     <div class="droptext" data-targetname="drop-down6">
-      <p class="dropspot" style="margin-left: 132px">前述の通り、persistent<span class="notranslate">object</span> は、<strong>Create Event</strong>を<em>一度だけ</em>実行しますが、<strong>Game Start</strong>、<strong>Game End</strong>、<strong>Room Start</strong>、<strong>Room End</strong>イベントも適切なタイミングでトリガーされます。しかし、ゲームを再起動すると（例えば、 <span class="inline">game_restart()</span> 関数を使用して）、<em>すべての永続的な<span class="notranslate">objects</span> は削除され、ゲームによって再び作成されたときにのみ存在</em>します。<br>
-        <br>
+      <p class="dropspot" style="margin-left: 132px">前述の通り、persistent<span class="notranslate">object</span> は、<strong>Create Event</strong>を<em>一度だけ</em>実行しますが、<strong>Game Start</strong>、<strong>Game End</strong>、<strong>Room Start</strong>、<strong>Room End</strong>イベントも適切なタイミングでトリガーされます。しかし、ゲームを再起動すると（例えば、 <span class="inline">game_restart()</span> 関数を使用して）、<em>すべての永続的な<span class="notranslate">objects</span> は削除され、ゲームによって再び作成されたときにのみ存在</em>します。<br />
+        <br />
         また、<span class="notranslate">object</span> を<strong>非アクティブに </strong>すると、<strong>Room End</strong>イベントが発生する前に再アクティブにしない限り、<span class="notranslate">room</span> から別の場所に移動することができなくなるので注意してください。<span class="notranslate">object</span> 再アクティブ化には<em>ゲーム全体のステップが必要</em>なため、実際の<strong>Room End</strong>イベントを使用しても、<span class="notranslate">objects</span> を再アクティブ化するためのゲーム全体のステップが得られないため、非アクティブ化を使用する場合はこの点に注意し、それに応じてコードを計画する必要があります。
       </p>
     </div>

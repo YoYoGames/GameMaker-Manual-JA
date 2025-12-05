@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>フォント置き換えスプライト</title>
+  <title>font_replace_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>フォント置き換えスプライト</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite</span></h1>
   <p>この関数を使うと、以前に作成した<span class="notranslate">sprite</span> <span class="notranslate">font</span> <span class="notranslate">asset</span> を「スプライトストリップ」で置き換えることができます。それぞれのサブイメージは個々のシンボルや文字になります。インデックスには、使用する最初の文字のUTF8マップ番号を指定します。使用する範囲は、通常の<span class="notranslate">font</span> 、&quot;!&quot;で始まるものと同じですが、必要なものだけを含めるべきで、そのためには <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>関数を使って、開始文字に対応する正しい UTF8 値を取得します。</p>
   <p>また、<span class="notranslate">font</span> の間隔をプロポーショナル (<span class="inline">true</span>) にするかしないか (<span class="inline">false</span>) に設定できます。プロポーショナル<span class="notranslate">font</span> は実際の文字の幅に基づいて間隔が決められ (従って、例えば「i」の文字は「w」の文字よりも<span class="notranslate">room</span> が小さくなります)、非プロポーショナル<span class="notranslate">font</span> は等幅<span class="notranslate">font</span> のようにサブイメージ幅に基づいて間隔が決められま す。最後に、書くときに各文字の間に空けるスペースを定義できます。これは任意の整数値で、0はスペースなし（プロポーショナルなら文字が「接触」する）です。 </p>
   <p>この関数が失敗した場合，与えられた<span class="notranslate">sprite</span> <span class="notranslate">font</span> を置き換えることなく，静かに失敗します．</p>
   <p>例えば、'.'と'0'を使って'/'を使わない場合、'/'を含めるか、使用する2文字の間に<i>空白の</i>サブイメージを残す必要があります。下の画像は、典型的な<span class="notranslate">sprite</span> <span class="notranslate">font</span> のレイアウトです。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">font_replace_sprite(ind, spr, first, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite</span>(ind, spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>

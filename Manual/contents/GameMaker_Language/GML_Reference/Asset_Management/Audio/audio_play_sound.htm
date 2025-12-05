@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_play_sound</h1>
+  <h1><span data-field="title" data-format="default">audio_play_sound</span></h1>
   <p>この機能を使えば、ゲーム内のあらゆるサウンドリソースを再生することができま す。サウンドインデックスを提供し、プライオリティを割り当てます。このプライオ リティは、再生中のサウンドの数が関数で設定された上限を超えた時に、どのようにサウン ドを処理するかを決定するのに使われます。 <a href="audio_channel_num.htm"><span class="inline">audio_channel_num()</span></a>.優先度の低いサウンドは停止され、優先度の高いサウンドが優先されます。優先度の値は任意の実数です（実際の値は任意で、0から1でも0から100でも、<span data-keyref="GameMaker Name">GameMakerは</span>同じように優先順位を付けます）。優先順位を扱う場合、<i>数字が</i>大きいほど優先順位が<i>高く</i>なり、優先順位100のサウンドが優先順位1のサウンドよりも優先されることに注意してください。第3引数は、サウンドを<span class="notranslate">loop</span> 。これを <span class="inline">true</span> に設定すると、停止するまでサウンドを<span class="notranslate">loop</span> 。これを <span class="inline">false</span> に設定すると、サウンドを1回だけ再生します。</p>
   <div data-conref="../../../../assets/snippets/audio_play_sound_last_arguments.hts"> </div>
   <p>この関数は、再生中のサウンドのユニークなインデックス番号を返し、それを変数に格納することで、適切な関数でサウンドを一時停止したり停止したりすることができるようになります。つまり、同じサウンドを複数回再生している場合、オーディオ関数を使用することで、そのサウンドの1つのインスタンスだけを対象とすることができます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">audio_play_sound(index, priority, loop, [gain], [offset], [pitch], [listener_mask]);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_play_sound</span>(index, priority, loop, [gain], [offset], [pitch], [listener_mask]);</p>
   <table>
     <tbody>
       <tr>

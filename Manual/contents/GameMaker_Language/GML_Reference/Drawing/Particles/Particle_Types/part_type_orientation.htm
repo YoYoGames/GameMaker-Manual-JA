@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_type_orientation</h1>
+  <h1><span data-field="title" data-format="default">part_type_orientation</span></h1>
   <p>この関数は、パーティクル作成時にパーティクル<span class="notranslate">sprite</span> の向きを決定するために使用します。また、パーティクルのライフタイム中にパーティクルの向きを増加または減少させるために使用することも可能です。初期値は0ですが、この値を変更することで<span data-keyref="GameMaker Name">GameMakerの</span>標準的な方向である0度：右、90度：上、180度：左、270度：下に沿ってランダムに向きを変更することができます。同じ値に設定すると、パーティクルはすべて同じ向きで作成されます。</p>
   <p>また、インクリメント値を設定することで、その有効期間中に方位の角度を加算（正の数値の場合）または減算（負の数値の場合）することができます。この値は、最小で (+/-) 0.01 です。</p>
   <p>他のパーティクル関数と同様に、&quot;wiggle &quot;ファクターも設定することができます。これは、パーティクルの寿命の各ステップごとに、向きにランダムに加算または減算される値です。明らかに小さい値より大きい値の方が顕著で、この値は負にすることもでき、最大範囲は-20から20の間です。</p>
   <p>最後に、向きを相対的にするかしないかを選択できます。これは、パーティクルに方向（および速度）がある間は、パーティクル<span class="notranslate">sprite</span> はそのベクトルを中心に方向づけられることを意味します。パーティクルの速度を下げる設定にしていて0になった場合、速度不足で方向がデフォルト値の0°に設定されるため、相対的な方向はパーティクル<span class="notranslate">sprite</span> が異なる角度に「ジャンプ」することに留意してください。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">part_type_orientation( ind, ang_min, ang_max, ang_incr, ang_wiggle, ang_relative );</p>
+  <p class="code"><span data-field="title" data-format="default">part_type_orientation</span>( ind, ang_min, ang_max, ang_incr, ang_wiggle, ang_relative );</p>
   <table>
     <tbody>
       <tr>

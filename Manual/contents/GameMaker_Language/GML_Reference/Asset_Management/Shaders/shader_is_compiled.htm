@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>シェーダーがコンパイルされているかどうか</title>
+  <title>shader_is_compiled</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>シェーダーがコンパイルされているかどうか</h1>
+  <h1><span data-field="title" data-format="default">shader_is_compiled</span></h1>
   <p>この関数は、実行時に<span class="notranslate">shader</span> が正常にコンパイルされたかどうかを確認します。コンパイルに成功した場合、この関数は <span class="inline">true</span> を返し、失敗した場合、 <span class="inline">false</span> を返します。この関数はゲーム開始時に使用し、ゲームを実行しているプラットフォームで<span class="notranslate">shaders</span> が正常にコンパイルされていることを確認する必要があります（特に<span class="notranslate">Windows</span> では、DX9 で<span class="notranslate">Shader</span> Level 2.0 を使用し、<span class="notranslate">shader</span> Level 3.0 を使用する新しいバージョンではないコンピュータもあるかもしれません）。</p>
   <p>もし、<span class="notranslate">shader</span> がコンパイルされて<i>いない</i>状態で <a href="shader_set.htm"><span class="inline">shader_set()</span></a>はゲームがクラッシュするので、単純な GLSL ES<span class="notranslate">shaders</span> 以外を使用する場合は、常に何らかのチェックをする価値があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">shader_is_compiled(shader);</p>
+  <p class="code"><span data-field="title" data-format="default">shader_is_compiled</span>(shader);</p>
   <table>
     <tbody>
       <tr>

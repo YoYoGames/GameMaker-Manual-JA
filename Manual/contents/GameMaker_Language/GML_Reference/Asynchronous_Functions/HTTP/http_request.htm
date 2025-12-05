@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_request</h1>
+  <h1><span data-field="title" data-format="default">http_request</span></h1>
   <p>この関数を使用すると、HTTPトランザクションの操作パラメータを定義するHTTPヘッダーリクエストを作成できます。これは、RESTful APIを使用する場合にHTTPヘッダーを介して（たとえば）認証など、さまざまなことに使用することができます。この関数は、リクエスト元の<span class="notranslate">server</span> の完全な IP アドレスと、リクエストのタイプ (<span class="notranslate">string</span>, 以下の注を参照) を要求します: &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot;, または &quot;CONNECT&quot;.また、キーと値のペアを <span class="inline"><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></span> (<span class="notranslate">strings</span> のように、キーはヘッダーフィールド、値はヘッダーの必須データ)、最後の引数はリクエストに追加できるオプションのデータ<span class="notranslate">string</span> で、必要なければ0か空の<span class="notranslate">string</span> &quot;&quot; にすることができる。<span class="notranslate">buffer</span> を送ることもできることに注意してください (詳しくは<a href="../../Buffers/Buffers.htm">バッファの</a>セクションを参照してください)。その場合、最後の引数は送るべき<span class="notranslate">buffer</span> のインデックスとなります。</p>
   <p class="note"><b>注</b>：HTTPヘッダーは通常 &quot;key:value &quot;の形式ですが、<span data-keyref="GameMaker Name">GameMakerは</span>ds_mapからこれらのペアを生成するので、マップのキーや値にコロン&quot;: &quot;を含める必要はありません<span class="notranslate">strings</span>.</p>
   <p class="note"><b>注</b>：body 引数に<span class="notranslate">buffer</span> を使用する場合、<span class="notranslate">buffer</span> のシーク位置がスタート（0）であれば、body は送信されず、<span class="notranslate">buffer</span> に http コールからの応答が入りますが、<span class="notranslate">buffer</span> のシーク位置が 0 以外であれば、<span class="notranslate">buffer</span> <span class="notranslate">string</span> の内容が body として送信されます。</p>
@@ -28,7 +28,7 @@
   </ul>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">http_request(url, method, header_map, body);</p>
+  <p class="code"><span data-field="title" data-format="default">http_request</span>(url, method, header_map, body);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>パスローテート</title>
+  <title>path_rotate</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>パスローテート</h1>
+  <h1><span data-field="title" data-format="default">path_rotate</span></h1>
   <p>この関数を使うと、与えられた<span class="notranslate">path</span> をその中心を軸に回転させることができます。<span data-keyref="GameMaker Name">GameMaker</span>では（物理を使わない限り）角度は反時計回りに計算されるので、<span class="notranslate">path</span> を 90 度回転させると<span class="notranslate">path</span> が<i>左に</i>回転することを覚えておいてください。<strong>この関数は実際の<span class="notranslate">path</span> リソースを変更</strong>するので、この関数が使われた瞬間からゲームの終了まで、ゲーム内のすべてのインスタンスで<span class="notranslate">path</span> がどのように使われるかに永久に影響を与えます。これが必要でない場合は、 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すのを忘れないでください）。</p>
   <p><img alt="Rotate path example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/pathrotated.png" /></p>
   <p class="note"><strong>注意</strong>：<span class="notranslate">path</span> をインスタンスに割り当てた後 <span style="font-size:1px;"><span class="inline"><a href="../path_start.htm" style="font-size: 14px">path_start()</a></span></span>関数を使用すると、 <span class="inline"><a href="../Path_Variables/path_orientation.htm" style="font-size: 14px">path_orientation</a></span> 変数を使用して<span class="notranslate">path</span> の回転も変更できます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">path_rotate(index, angle);</p>
+  <p class="code"><span data-field="title" data-format="default">path_rotate</span>(index, angle);</p>
   <table>
     <tbody>
       <tr>

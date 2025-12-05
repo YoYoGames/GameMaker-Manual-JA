@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ネットワーク_送信_udp</title>
+  <title>network_send_udp</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ネットワーク_送信_udp</h1>
+  <h1><span data-field="title" data-format="default">network_send_udp</span></h1>
   <p>この関数を使うと、UDPを使ってネットワーク経由でデータを<span class="notranslate">server</span> に送ることができます。 この関数は、接続する<i>ソケットID</i>、接続先URL、使用するポートを受け取ります。次に、送信するデータを格納する<i>バッファID</i>（<span class="notranslate">buffers</span> の詳細については、<a href="../Buffers/Buffers.htm">リファレンス - バッファを</a>参照してください）と、データのサイズ（バイト単位）を指定する必要があります。UDP は「コネクションレス型」で、実際には接続を行わず、単にパケットを IP に直接送信します。<span class="notranslate">server</span> は IP アドレスから受信データを受け取り、それを「そのまま」処理しなければなりません。この関数は、送信されたデータのバイト数を返し、送信に失敗した場合は0より小さい数値を返します。この関数が返す送信データの最終サイズには、さらに12バイトのヘッダー情報（<span class="notranslate">GameMaker</span> ）も含まれることは注目に値する。</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> この機能は、HTML5ターゲット上で動作するプロジェクトで使用した場合、動作しません。また、HTML5プロジェクトでもUDPを受信することはできません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">network_send_udp(socket, url, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_udp</span>(socket, url, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

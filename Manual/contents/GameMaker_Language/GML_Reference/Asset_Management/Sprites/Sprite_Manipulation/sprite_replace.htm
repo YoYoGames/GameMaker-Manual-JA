@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>スプライトリプレイス</title>
+  <title>sprite_replace</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>スプライトリプレイス</h1>
+  <h1><span data-field="title" data-format="default">sprite_replace</span></h1>
   <p>とほぼ同じ仕組みで動作します。 <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a>ただ、インポートする<span class="notranslate">sprite</span> のインデックスを返す代わりに、以前に作成した<span class="notranslate">sprite</span> のインデックスを上書きします。この関数を使用する場合は、<span class="notranslate">sprite</span> のインデックスを作成し、他の関数で変数に格納したものを使用する必要があります。 <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a>または <a href="sprite_create_from_surface.htm"><span class="inline">sprite_create_from_surface()</span></a>または、さらに <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>リソースツリーではなく、<span class="notranslate">sprite</span> <span class="notranslate">asset</span> 。この関数を使って、ゲーム<span class="notranslate">sprite</span> から<span class="notranslate">assets</span> を置き換える<i>ことは</i>できますが、そうすると <span class="inline">game_restart()</span> を呼び出すかどうかにかかわらず、置き換える<span class="notranslate">sprite</span> の参照 ID を失うことになるので、推奨されません。置き換えられる<span class="notranslate">sprite</span> に関係なく、この関数は<b>スプライトのために新しい<span class="notranslate">texture</span> ページを作成</b>します。そのため、レンダリングに必要な<span class="notranslate">texture</span> のスワップ回数が増え、パフォーマンスに悪影響を及ぼす可能性があるので、使用する際には注意が必要です。</p>
   <p>読み込む画像ファイルは<b>常に</b> <span class="inline">*.png</span> 形式でなければなりません。また、アニメーション<span class="notranslate">sprites</span> にする画像はすべて「strip」形式でなければなりません（下図を参照してください）。画像は「<b>スプライトの幅＝ストリップの幅／サブ画像の</b>幅」という規則に従って、指定された数のサブ画像に分割されます。</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -26,7 +26,7 @@
   <p class="note"><b>注</b>：HTML5 ターゲットゲームでこの関数を使用して外部<span class="notranslate">server</span> からリソースを読み込む場合、ブラウザの XSS 対策により、ドメインをまたがるリソースの読み込み試行がブロックされ、空白の結果が返されるように見える可能性があることを認識しておく必要があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">sprite_replace(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_replace</span>(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

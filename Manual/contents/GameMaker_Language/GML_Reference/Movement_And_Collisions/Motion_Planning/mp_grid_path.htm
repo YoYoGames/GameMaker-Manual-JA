@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_path</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_path</span></h1>
   <p>この関数を使うと、あらかじめ定義しておいた <span class="inline">mp_grid</span> を使って、スタート地点からゴール地点まで、すでにグリッドに追加されている障害物を避けながら移動する<span class="notranslate">path</span> を作成することができる。xstart と ystart 引数は<span class="notranslate">path</span> の開始点を<span class="notranslate">room</span> 座標で示し、xgoal と ygoal 引数は目的地を示します。また、allowdiag 引数に true を指定することで、水平/垂直方向の移動のみか、完全な斜め方向の移動を許可するか、どちらかを選択できます。この関数は，真（<span class="notranslate">path</span> を見つけることに成功した）か偽（失敗した）を返すとともに，選んだ<span class="notranslate">path</span> をセットします．次の図では，この関数がどのように動作しているかがわかります．</p>
   <p><img>ご覧のように、「パイプ」<span class="notranslate">objects</span> がグリッドに追加されています。つまり、作成された<span class="notranslate">path</span> は、これを回り込まなければならないのです。この画像では、2つの<span class="notranslate">paths</span> が作成されています。1つ（緑）は対角線を許可したもので、もう1つ（赤）は許可していないものです。この2つの違いは明らかで、緑の<span class="notranslate">path</span> はより「エレガント」で直接的な印象を与えますが、どのような用途に使うかによって、どちらがいいかは変わってきます。<span class="notranslate">path</span> は現在のインスタンスとは無関係です。特定のインスタンスが<span class="notranslate">path</span> のインデックスを格納する変数を持っていたとしても、それは特定のインスタンスの<span class="notranslate">path</span> ではなく、グリッド全体の<span class="notranslate">path</span> であることに注意してください。また、これらの<span class="notranslate">paths</span> がどのように作成され、ゲーム環境内でどのように作用するかを確認するためにデバッグする必要があるかもしれません。その場合、 <span class="inline"><a href="../../Drawing/Basic_Forms/draw_path.htm">draw_path()</a></span> 関数を使用する必要があります。</p>
   <p class="note"><b>注：</b> <span class="notranslate">path</span> は以前に作成されている必要があります（コード内で <span style="font-size:1px;"><a href="../../Asset_Management/Paths/Path_Manipulation/path_add.htm"><span class="inline">path_add()</span></a></span>またはリソースとして）、この関数で生成された<span class="notranslate">path</span> に置き換えられます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">mp_grid_path(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_path</span>(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p>
   <table>
     <tbody>
       <tr>

@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_layer</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_layer</span></h1>
   <p>この関数を使うと、特定のレイヤーに割り当てられたすべてのインスタンスを非アクティブにすることができます。<b>レイヤー ID</b> は、コードエディターで書かれたレイヤー名（<span class="notranslate">string</span> ）か、あるいは <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>また、この関数では<i>インスタンスレイヤーのみを</i>非アクティブにすることができることに注意してください。もし、<span class="notranslate">objects</span> のインスタンスが<b>永続</b>化されているレイヤーを非アクティブにした場合、そのレイヤーを関数 <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a><span class="notranslate">room</span>さもなければ、レイヤー上の永続的なインスタンスは持ち越さ<i>れず</i>、破棄されます。また、非アクティブ化は即座には行われず、この方法で非アクティブ化されたインスタンスは、この関数が呼ばれたイベントが終了するまで非アクティブとみなされないことに注意してください。</p>
   <p class="note"><b>注</b>：<span class="notranslate">room</span> の開始時にインスタンスを非アクティブにした場合（つまり、<span class="notranslate">room</span> の作成コード、または<span class="notranslate">room</span> 内のインスタンスの作成イベントから）、<span class="notranslate">room</span> エディタから<span class="notranslate">room</span> 内に配置されたすべてのインスタンスは、非アクティブになる前に<b>作成イベントをまだ実行</b>することになります。</p>
   <p class="note"><b></b><b>警告</b>：物理が有効になっているインスタンスを無効化しても、そのフィクスチャーが物理シミュレーションの中で相互作用することを<b>止めません</b>。そのためには、インスタンスの <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span>変数を <span class="inline">true</span> または <span class="inline">false</span> に設定し、インスタンスをアクティブ/非アクティブにします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_deactivate_layer(obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(obj);</p>
   <table>
     <tbody>
       <tr>

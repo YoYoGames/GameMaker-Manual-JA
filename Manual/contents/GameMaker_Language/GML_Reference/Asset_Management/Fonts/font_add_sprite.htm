@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_add_sprite</h1>
+  <h1><span data-field="title" data-format="default">font_add_sprite</span></h1>
   <p>この関数を使うと、「スプライトストリップ」を使って、新しい<span class="notranslate">font</span> <span class="notranslate">asset</span> を作ることができます。ここで、それぞれのサブイメージは、個々の記号や文字になります。インデックスは、使用する最初の文字のUTF8マップ番号で、使用する範囲は、通常の<span class="notranslate">font</span> 、&quot;!&quot;で始まるものと同じですが、必要なものだけを含めるべきで、そのためには <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>関数を使って、開始文字に対応する正しい UTF8 値を取得します。作成された<span class="notranslate">sprite</span> <span class="notranslate">font</span> には<span class="notranslate">font</span> にある個々のグリフがサブ画像として設定され、「最初の」グリフの image_index は 0 になります。「スペース」を任意の文字、たとえばスペースにしたいサイズの 1 行として定義すると、テキスト内のすべてのスペースがその幅でレンダリングされます (ただし選択した画像は<i>決して</i>レンダリングされません) あるいは<span class="notranslate">sprite</span> でスペースを指定していない場合は<span class="notranslate">sprite</span> <span class="notranslate">font</span> で一番幅の広い文字が代わりに使用されます。</p>
   <p>また、<span class="notranslate">font</span> の間隔をプロポーショナル (<span class="inline">true</span>) にするかしないか (<span class="inline">false</span>) に設定できます。プロポーショナル<span class="notranslate">font</span> は実際の文字の幅に基づいて間隔が決められ (従って、例えば「i」の文字は「w」の文字よりも<span class="notranslate">room</span> が小さくなります)、非プロポーショナル<span class="notranslate">font</span> は等幅<span class="notranslate">font</span> のようにサブイメージ幅に基づいて間隔が決められま す。最後に、書くときに各文字の間に空けるスペースを定義できます。これは任意の整数値で、0はスペースなし（プロポーショナルなら文字が「接触」する）です。</p>
   <p>この関数は<i>インデックス</i>値を返す。この値は，今後この<span class="notranslate">font</span> を参照するすべてのコードで必要となるため，変数に格納しておく必要がある。また，何らかの理由で関数が失敗した場合は-1を返す。</p>
@@ -23,7 +23,7 @@
   <p class="note"><b><span class="note">注意事項</span> </b><span data-keyref="GameMaker Name">GameMakerに</span> <span class="notranslate">font</span> を読み込んだら、忘れずに再度削除する必要があります。 <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>さもないと、メモリリークを起こし、ゲームが遅くなり、最終的にはクラッシュしてしまいます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">font_add_sprite(spr, first, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add_sprite</span>(spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>

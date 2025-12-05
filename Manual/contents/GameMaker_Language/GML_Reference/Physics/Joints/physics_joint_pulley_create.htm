@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理ジョイントのプーリー作成</title>
+  <title>physics_joint_pulley_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理ジョイントのプーリー作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_pulley_create</span></h1>
   <p>プーリージョイントは、物理世界内の2つのインスタンスを、一方を動かすと他方の動きに直接影響を与えるように接続するために使用します。これらのジョイントは、まず世界空間の2点に固定され、それぞれがインスタンスの重心に接続されます。これは、ローカルアンカーの x/y 座標をインスタンスの原点に対して設定することで変更できます。つまり、インスタンスから物理世界のアンカーポイントへの実際の接続は、原点以外の場所にオフセットすることができます。次の画像は、これを示しています。</p>
   <p><img>inst2を見てみると、そのローカルアンカーポイントは、原点から20ピクセル左にオフセットされていることがわかります（覚えておいてください！）。ワールドアンカーポイントは<span class="notranslate">room</span> 座標を使って定義され、ローカルアンカーポイントはインスタンスの原点を基準にして定義されます)。プーリージョイントに比率を指定することもできます。これは、片方またはもう片方がより速く動くようにするもので、1 以下の値では最初のインスタンスがより速く動き（例えば 0.5 では 2 倍の速さになります）、1 以上の値では次のインスタンスがより速く動きます（例えば 2 では 2 倍の速さになります）。</p>
   <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_pulley_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
   <table>
     <tbody>
       <tr>

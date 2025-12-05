@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_skeleton</h1>
+  <h1><span data-field="title" data-format="default">draw_skeleton</span></h1>
   <p>この関数は、<span class="notranslate">sprites</span> のようなスケルトン・アニメーション・プログラムを使用して作成された<span class="notranslate">Spine</span> <i>に対してのみ</i>使用されます。これらの<span class="notranslate">sprites</span> は、通常の描画関数（例えば <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a>) しかし、実際に<span class="notranslate">texture</span> のプロパティを変更することなく、1 つのフレームを描画したり、皮膚の変化<span class="notranslate">sprite</span> を表示したい場合があります。このような場合、この関数で<span class="notranslate">sprite</span> を描くことができます。<span class="notranslate">sprite</span> インデックスと、フレームを取得するアニメーションの名前（<span class="notranslate">string</span> 、<span class="notranslate">sprite</span> を作成するためのプログラム内で設定されている）を与えます。次に、使用するスキンの名前 (これも<span class="notranslate">sprite</span> が作成されたときに設定されたもの) とフレーム値を指定します。フレーム値は、アニメーションのどの部分を表示するかを<span data-keyref="GameMaker Name">GameMakerに</span>伝えるためのもので、0と <a href="../../Sprite_Instance_Variables/image_number.htm"><span class="inline">image_number</span></a>.残りの引数は、通常の<span class="notranslate">sprite</span> の描画に使用するものと同じで、最終的に描画されるアニメーションフレームのスケール、角度、ブレンドカラー、アルファを変更します。<b></b></p>
   <p class="note"><b>警告!ス</b>ケルトン・アニメーションは、さまざまな「キー」フレーム間で補間されるため、この呼び出しには追加のオーバーヘッドがあります。したがって、絶対に必要でない限り、このメソッドを使ってスケルトン・ベース<span class="notranslate">sprites</span> を描画しないことをお勧めします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_skeleton(sprite, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_skeleton</span>(sprite, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha);</p>
   <table>
     <tbody>
       <tr>

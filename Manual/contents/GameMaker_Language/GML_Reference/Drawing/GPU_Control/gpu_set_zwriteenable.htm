@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_zwriteenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_zwriteenable</span></h1>
   <p>この関数は、z-buffer を使用した深度順序のオン (<span class="inline">true</span>) とオフ (<span class="inline">false</span>) を切り替えるために使用します。<span data-keyref="GameMaker Name">GameMaker</span>でインスタンスがレンダリングされると、生成されたピクセルの深度 (その z 座標) が z バッファに保存されます。その後、同じピクセルでシーンの別のインスタンスをレンダリングする必要がある場合、2 つの深度を比較します (z-testing - see the same pixel)。 <a href="gpu_set_ztestenable.htm"><span class="inline">gpu_set_ztestenable()</span></a>観察者に &quot;近い &quot;方がz-bufferに保存され、古い方と入れ替わります。しかし、これは常に望むことではなく、z 値が何であれ、何かを他のものの上に描画したい場合があります。そのような場合、この関数を使用して<span class="notranslate">switch</span> z-buffer への書き込みを停止し、描画されるものが他のすべての上に描画されるように強制することができます。ここで説明されているのは、<i>デフォルトの</i>z-testing 比較モードに対するものですが、これは変更することができます。</p>
   <p>初期値は、z-bufferingが有効（<span class="inline">true</span> ）になっています。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gpu_set_zwriteenable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_zwriteenable</span>(enable);</p>
   <table>
     <tbody>
       <tr>

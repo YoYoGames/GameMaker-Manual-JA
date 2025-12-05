@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_type_direction</h1>
+  <h1><span data-field="title" data-format="default">part_type_direction</span></h1>
   <p>この関数は、パーティクル作成時にパーティクルの方向を決定するために使用され、また、パーティクルの寿命が尽きるまでその方向を増加または減少させるために使用することができます。最小値と最大値はデフォルトで0、つまりパーティクルは変化なく右に移動しますが、この値を変更することで<span data-keyref="GameMaker Name">GameMaker</span>標準の0が右、90が上、180が左、270が下という方向に沿って移動方向を制限することが可能です。同じ値を設定すると、パーティクルは一方向にしか動きません。</p>
   <p>また、インクリメント値を設定することで、有効期間中に方向に対してプラス（正の数の場合）またはマイナス（負の数の場合）の度数を追加することができます。この値は、最小で (+/-) 0.01 です。</p>
   <p>最後に、&quot;wiggle &quot;ファクターを設定することができます。これは、パーティクルの寿命の各ステップごとに、方向に対してランダムに加算または減算される値です。明らかに大きな値は小さな値よりも顕著で、この値は負にすることもでき、最大範囲は-20から20の間です。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">part_type_direction(ind, dir_min, dir_max, dir_incr, dir_wiggle);</p>
+  <p class="code"><span data-field="title" data-format="default">part_type_direction</span>(ind, dir_min, dir_max, dir_incr, dir_wiggle);</p>
   <table>
     <tbody>
       <tr>

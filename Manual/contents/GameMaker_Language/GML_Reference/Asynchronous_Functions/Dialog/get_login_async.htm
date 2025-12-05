@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_login_async</h1>
+  <h1><span data-field="title" data-format="default">get_login_async</span></h1>
   <p>この関数は、ユーザにユーザ名とパスワードの入力を求めるウィンドウを開く。これらの引数は、空の<span class="notranslate">string</span> として設定することもできますし、以前に入力した値を保存しておき、必要に応じて使用することもできます。この関数は非同期関数なので、<span data-keyref="GameMaker Name">GameMakerは</span>回答を待つ間、実行中のデバイスをブロック<i>せず</i>、通常通りイベントを実行し続ける。ユーザーが詳細を入力し、「OK」ボタンを押すと、非同期の<b>ユーザーインタラクションイベントが</b>発生し、そのイベントの<i>間だけ</i>、DSマップが変数「Map」に格納されます。 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>このマップには、&quot;<strong>username</strong>&quot;と&quot;<strong>password</strong>&quot;の2つのキーが含まれ、それぞれに対応するユーザー入力が保存されます。作成されたのは DS マップであるため、このマップはたとえば <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>関数は、<span class="notranslate">server</span> に送信したり、選択したデバイスのファイルに書き込む準備ができています。</p>
   <p>この関数は、トリガーされた非同期イベントのインデックス番号を返し、それを対応するイベントでチェックすることで、（おそらく他の関数から）複数の非同期イベントがトリガーされることを想定した場合に、特定のデータを「ターゲット」できるようにします。</p>
   <p class="note"><strong><em><span class="note">注意事項</span></em></strong><em>この機能は<span data-keyref="Dialog for debug only"> <strong>デバッグおよびテスト</strong></span>用であり、<span data-keyref="Dialog for debug only">リリースされたゲームでは</span>使用しないでください。<span data-keyref="Dialog for debug only">そのためには、プレイヤーからの入力を受け取るためのカスタムユーザーインターフェースを作成し、ダイアログの外観や動作を完全に制御できるようにする必要があります。</span></em></p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">get_login_async(name, password);</p>
+  <p class="code"><span data-field="title" data-format="default">get_login_async</span>(name, password);</p>
   <table>
     <tbody>
       <tr>
