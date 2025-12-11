@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオプレイサウンドオン</title>
+  <title>audio_play_sound_on</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>オーディオプレイサウンドオン</h1>
+  <h1><span data-field="title" data-format="default">audio_play_sound_on</span></h1>
   <p>この機能を使えば、任意のサウンドリソースをエミッタ経由で再生することができ、エミッタのゲイン、ポジション、ピッチ、ベロシティを変更すると、最終的に再生されるサウンドをユーザーがどのように聴くかに影響します。使用するエミッタのインデックス、再生するサウンドのインデックス、そしてサウンドを<span class="notranslate">loop</span> にするかどうかを指定します。次にプライオリティ（優先順位）を設定します。このプライオリティは、関数 <a href="../audio_channel_num.htm"><span class="inline">audio_channel_num()</span></a>.優先度の低いサウンドは停止され、優先度の高いサウンドが優先されます。優先度の値は任意の実数です（実際の値は任意で、0から1でも0から100でも、<span data-keyref="GameMaker Name">GameMakerは</span>同じように優先順位をつけます）。優先順位を扱う場合、<i>数字が</i>大きいほど優先順位が<i>高く</i>、優先順位100のサウンドは優先順位1のサウンドより優先されることに注意してください。</p>
   <div data-conref="../../../../../assets/snippets/audio_play_sound_last_arguments.hts"> </div>
   <p>この関数は、再生中のサウンドのユニークなインデックス番号を返し、それを変数に格納することで、適切な関数でサウンドを一時停止したり停止したりすることができるようになります。つまり、同じサウンドを複数回再生している場合、オーディオ関数を使用することで、そのサウンドの1つのインスタンスだけを対象とすることができます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">audio_play_sound_on(emitter, sound, loop, priority, <span>[gain], [offset], [pitch], [listener_mask]</span>);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_play_sound_on</span>(emitter, sound, loop, priority, <span>[gain], [offset], [pitch], [listener_mask]</span>);</p>
   <table>
     <tbody>
       <tr>

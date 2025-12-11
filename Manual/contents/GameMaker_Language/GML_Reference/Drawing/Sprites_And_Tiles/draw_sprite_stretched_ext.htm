@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite_stretched_ext</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite_stretched_ext</span></h1>
   <p>この関数は <a href="draw_sprite_stretched.htm"><span class="inline">draw_sprite_stretched()</span></a>関数に、描画時に<span class="notranslate">sprite</span> のカラーブレンドとアルファ値を設定する機能が追加されました (関数 <a href="draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>).</p>
   <p class="note"><span class="note">注</span> <span class="notranslate">sprite</span> <span class="note"></span>この機能で描画する場合、<span class="notranslate">sprite</span> の<a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x オフセットと</a> <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y オフセット</a>（または原点）は無視され、<span class="notranslate">room</span> で指定した x/y 位置に左上隅が来るように描画されます。</p>
   <p class="note"><span class="note">注</span> <span class="notranslate">sprite</span> <span class="note"></span>：カラーブレンディングは、WebGL が有効な場合にのみ HTML5 ターゲットで推奨されます。ただし、この方法でブレンドすると、<span class="notranslate">sprite</span> の複製が作成され、<span class="notranslate">cache</span> に保存され、必要なときに使用されます。これは最適とは程遠く、複数の色の変更を使用すると、WebGL を有効にしない限り、ゲームのパフォーマンスが低下します。WebGL を使用したくない場合は、<span class="notranslate">font</span> <span class="notranslate">cache</span> のサイズを設定して、必要な場合に制限をかけることができます。 <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><span class="inline">sprite_set_cache_sizee()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_sprite_stretched_ext(sprite, subimg, x, y, w, h, colour, alpha);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite_stretched_ext</span>(sprite, subimg, x, y, w, h, colour, alpha);</p>
   <table>
     <tbody>
       <tr>

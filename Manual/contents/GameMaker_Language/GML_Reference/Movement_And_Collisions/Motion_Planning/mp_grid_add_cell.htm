@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_cell</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_cell</span></h1>
   <p>この機能により、与えられたMPグリッド内の個々のセルを「forbidden（禁止）」としてマークすることができます。つまり、<span class="notranslate">path</span> 検索関数が決してそのセルを横切らないようにすることができます。さて、通常は、MPグリッドの<i>セル</i>座標ではなく、x/yの<i>部屋</i>座標で作業します。そこで、この2つがどのように関連するかを示す次の画像について考えてみましょう。</p>
   <p><img>ご覧のように mp_grid は一連のセルとして番号付けされており（左上の 0,0 から始まる）、このグリッドを<span class="notranslate">room</span> の上に配置すると、<span class="notranslate">room</span> の座標（これも左上の 0,0 から始まる）とグリッド内のセルには直接的な相関があります。画像では、位置260,130のインスタンスがグリッドセル8,4に該当していることがわかります。グリッド解像度で数値を割って<i>切り捨てるか、</i>グリッド解像度の 2 乗（8、16、32 など）を使用している場合は、<a href="../../../../Additional_Information/Bitwise_Operators.htm">ビット演算</a>子を使用すると、位置が該当するセルを簡単に数学的に計算することができます。なお、ビット演算の方が高速であり、以下の例では両方の方法を示しています。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">mp_grid_add_cell(id, h, v);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_cell</span>(id, h, v);</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_format_add_custom</h1>
+  <h1><span data-field="title" data-format="default">vertex_format_add_custom</span></h1>
   <p>この機能により、新規に作成される<span class="notranslate">vertex</span> フォーマットの一部として、特定の<span class="notranslate">vertex</span> フォーマット属性にカスタムデータ型を使用することができます。使用可能な値は、以下に示すデータ型定数によって定義されます。</p>
   <table>
     <colgroup>
@@ -55,7 +55,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     これらの定数の用途も定義して、作成される<span class="notranslate">shader</span> 内で値を適切に「バインド」できるようにする必要があります。これは、DX と OpenGL は異なる要件を持つため、適切にバインドしないと、<span class="notranslate">shader</span> で正しく表示されないという事実から必要です。選択できる使用定数を以下に示しますが、使用する定数は、作成する<span class="notranslate">shader</span> の仕様に依存します。</p>
   <table>
     <colgroup>
@@ -116,7 +116,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     このようなカスタムフォーマットを使用する場合、いくつかの注意点があります。</p>
   <ul class="colour">
     <li> <span class="inline">vertex_format_add_custom()</span> 関数は、GLSL<span class="notranslate">shaders</span> を使用する場合、 <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span>, <span class="inline">vertex_usage_textcoord</span> のみをサポートしています。これらはそれぞれ<span class="notranslate">shader</span> の属性 <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> にマップされます（これらの 3 つの属性のいずれかではないもの、たとえば<span class="notranslate">texture</span> の座標は、定義した任意の属性にマップすることが可能です）。</li>
@@ -145,7 +145,7 @@
      
   </ul>
   <h4>構文です。</h4>
-  <p class="code">vertex_format_add_custom(type, usage);</p>
+  <p class="code"><span data-field="title" data-format="default">vertex_format_add_custom</span>(type, usage);</p>
   <table>
     <tbody>
       <tr>

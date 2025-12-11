@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>表面目標設定</title>
+  <title>surface_set_target</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>表面目標設定</h1>
+  <h1><span data-field="title" data-format="default">surface_set_target</span></h1>
   <p>この関数を使うと、それ以降の描画をすべてスクリーンではなくターゲット面に設定し、特定のものだけを指定した面に描画するように<span data-keyref="GameMaker Name">GameMakerに</span>指示することができる。を呼ばない場合はご注意ください。 <a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a>を終了させると、それ以降のすべての描画は (他のインスタンスでも) サーフェイス上で行われるため、スクリーンには何も描画されなくなります。また、インスタンスの draw イベントでサーフェス自体が画面に描画されないと、何も表示されないことを認識する必要がある。この関数の戻り値も、サーフェスターゲットが設定されたかどうかをチェックするためのデバッグツールとしてチェックすることができる。</p>
   <p>注意点としては、サーフェスは<i>スタック</i>されているので、ターゲットからターゲットへジャンプして、最後に通常の描画ターゲットにリセットすることはできず、レンダリングターゲットを開いたり閉じたりする必要があることです。例えば、このような場合、正しく動作<b>しません</b>。</p>
   <p class="code">surface_set_target(surf1);<br />
@@ -39,7 +39,7 @@
   <p class="note"><b>注</b>：サーフェスを使用する場合、<span class="notranslate">texture</span> のメモリーに保存されているため、サーフェスがいつでも存在しなくなる可能性があります。を使用して、サーフェスが存在するかどうかを<b>常に</b>確認する必要があります。 <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>直接参照する前に</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">surface_set_target(surface_id);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_set_target</span>(surface_id);</p>
   <table>
     <tbody>
       <tr>

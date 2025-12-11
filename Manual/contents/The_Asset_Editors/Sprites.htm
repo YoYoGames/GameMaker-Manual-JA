@@ -120,26 +120,26 @@
     <p class="dropspot"><strong>ナインスライスプレビューウィンドウでは</strong>、画像のサイズを変更することができ、ナインスライステクニックで拡大縮小した後の最終的な画像の見え方を確認することができます。このプレビュー<span class="notranslate">sprite</span> は、回転させることもできます。</p>
     <p class="dropspot"><strong>Nine Slice</strong>セクションには、以下のオプションがあります。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>ナインスライスを有効にする</strong>このオプションは、<span class="notranslate">sprite</span> がスケーリングされるときに Nine Sliceスケーリングを使用するかどうかを制御します。有効にすると、<span class="notranslate">sprite</span> または<span class="notranslate">object</span> レイヤーに配置された<span class="notranslate">sprite</span> （およびその<span class="notranslate">Sequence</span> を使用した<span class="notranslate">Room</span> インスタンス）、および<a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a>やその他の類似の関数で描画されたスケールされた<span class="notranslate">sprites</span> に Nine Slice スケーリンが使用されます。<br>
-        <br>
+      <li class="dropspot"><strong>ナインスライスを有効にする</strong>このオプションは、<span class="notranslate">sprite</span> がスケーリングされるときに Nine Sliceスケーリングを使用するかどうかを制御します。有効にすると、<span class="notranslate">sprite</span> または<span class="notranslate">object</span> レイヤーに配置された<span class="notranslate">sprite</span> （およびその<span class="notranslate">Sequence</span> を使用した<span class="notranslate">Room</span> インスタンス）、および<a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a>やその他の類似の関数で描画されたスケールされた<span class="notranslate">sprites</span> に Nine Slice スケーリンが使用されます。<br />
+        <br />
         <span class="expandtext"><span style="font-size:17px;"><strong>注</strong>：ナインスライシングは、<span class="notranslate">sprite</span> の一部だけを描画したり、<span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a></span> のように歪ませる機能では機能しません。<span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a>.</span></span></span>
       </li>
-      <li class="dropspot"><strong>ガイドです。</strong>このセクションでは、各ガイドの軸のオフセットが表示され、そのオフセットを変更するために使用します。これらのガイドは、<strong>スプライトプレビューウィンドウ</strong>内でマウスでドラッグするだけで移動することもできます。<br>
-        <br>
-       <span class="dropspotnote"><strong><span class="note">注</span></strong></span>：同じ軸上のガイドは、互いに交差することはできません。一方を他方の上にドラッグすると、2番目のガイドが押されます。<br>
-        <br>
-        <img><br>
-        各ガイドのオフセットは、対応するエッジからの相対的なものです。例えば、左のガイドは左のエッジから、右のガイドは右のエッジから、といった具合にオフセットされます。<br>
-        <br>
-        各ガイドの色とアルファ値は、ガイドの位置の横にある色のついたボタンをクリックすることで変更することができます。<br>
+      <li class="dropspot"><strong>ガイドです。</strong>このセクションでは、各ガイドの軸のオフセットが表示され、そのオフセットを変更するために使用します。これらのガイドは、<strong>スプライトプレビューウィンドウ</strong>内でマウスでドラッグするだけで移動することもできます。<br />
+        <br />
+       <span class="dropspotnote"><strong><span class="note">注</span></strong></span>：同じ軸上のガイドは、互いに交差することはできません。一方を他方の上にドラッグすると、2番目のガイドが押されます。<br />
+        <br />
+        <img><br />
+        各ガイドのオフセットは、対応するエッジからの相対的なものです。例えば、左のガイドは左のエッジから、右のガイドは右のエッジから、といった具合にオフセットされます。<br />
+        <br />
+        各ガイドの色とアルファ値は、ガイドの位置の横にある色のついたボタンをクリックすることで変更することができます。<br />
         <img>
       </li>
-      <li class="dropspot"><strong>ハイライト</strong>このオプションは<span class="notranslate">Sprite</span> プレビューウィンドウでの選択スライスの表示方法に影響します。<strong>&quot;Inverted&quot; は</strong>選択スライス以外の<span class="notranslate">sprite</span> をオーバーレイでハイライトし、<strong>&quot;Overlay&quot; は</strong>選択スライスのみをオーバーレイでハイライトします。<br>
-        <img><br>
+      <li class="dropspot"><strong>ハイライト</strong>このオプションは<span class="notranslate">Sprite</span> プレビューウィンドウでの選択スライスの表示方法に影響します。<strong>&quot;Inverted&quot; は</strong>選択スライス以外の<span class="notranslate">sprite</span> をオーバーレイでハイライトし、<strong>&quot;Overlay&quot; は</strong>選択スライスのみをオーバーレイでハイライトします。<br />
+        <img><br />
         オーバーレイの色とアルファ値は、ドロップダウンメニューの横にある色のついたボタンをクリックすることで変更することができます。
       </li>
       <li class="dropspot"><strong>選択されたスライス</strong>このオプションはスライスを選択するのに使用します。端のスライス（左、上、右、下）と中心のスライスから1つを選択します。また、<strong>スプライトプレビューウィンドウで</strong>スライスを<img> 左クリックすることでも選択できます。もう一度クリックすると、選択が解除されます。</li>
-      <li class="dropspot"><strong>タイルモード。 </strong>このオプションは［<strong>選択されたスライス</strong>］オプションと一緒に使用され、<span class="notranslate">sprite</span> が拡大縮小されたときにスライスがどのように表示されるかを制御するために使用されます。各スライスには、以下の<span class="notranslate">Tile</span> モードのいずれかを適用できます。<br>
+      <li class="dropspot"><strong>タイルモード。 </strong>このオプションは［<strong>選択されたスライス</strong>］オプションと一緒に使用され、<span class="notranslate">sprite</span> が拡大縮小されたときにスライスがどのように表示されるかを制御するために使用されます。各スライスには、以下の<span class="notranslate">Tile</span> モードのいずれかを適用できます。<br />
         <img>
         <ul>
           <li class="dropspot"><strong>伸縮する</strong><strong>。</strong>スライスは、接続された角の間のギャップを埋めるように引き伸ばされます。</li>

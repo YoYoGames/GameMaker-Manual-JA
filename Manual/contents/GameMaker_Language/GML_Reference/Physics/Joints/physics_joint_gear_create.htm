@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理ジョイントのギア作成</title>
+  <title>physics_joint_gear_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">物理ジョイントのギア作成</span></h1>
+  <h1><span data-field="title" data-format="default">physics_joint_gear_create</span></h1>
   <p>洗練された機械仕掛けを作りたいなら、歯車を使うのがよいでしょう。原理的には、<span data-keyref="GameMaker Name">GameMaker</span>で複合インスタンスを使って歯車を作ることができますが、これはあまり効率的ではありませんし、オーサリングが面倒になる可能性があります。ありがたいことに、もっと簡単な方法があります。それは、<i>ギアジョイントを</i>使うことです。これらは、1つの<a href="physics_joint_revolute_create.htm">リボルートジョイントと</a> <a href="physics_joint_prismatic_create.htm">プリズムジョイント</a>または別の<i>リボルートジョイントで</i>構成されている<b>必要があります</b>。下の画像は、ゲーム内で歯車がどのように作成されるかを示しています。</p>
   <p><img>では、どうなるのでしょうか？つまり、上の画像の例では、inst2を回転させるとinst3が上下に動き、inst3を上下に動かすとinst2が回転することになります。また、ギア比を変更することもできます。つまり、希望する効果を得るために、1つのインスタンスをより多く（またはより少なく）動かす必要があるということです。下の例のコードは、上の画像のようなものがどのように作成されるかを示しています。</p>
   <p class="note"><b>注</b>：ギアジョイントに関与する2つのインスタンスのいずれかを削除する必要がある場合（または単にジョイントを削除する場合）、ギアジョイントを先に削除する<b>必要が</b>あります。 <span style="font-size:1px;"><a href="physics_joint_delete.htm"><span class="inline">physics_joint_delete()</span></a></span>を使用して削除しなければなりません。</p>

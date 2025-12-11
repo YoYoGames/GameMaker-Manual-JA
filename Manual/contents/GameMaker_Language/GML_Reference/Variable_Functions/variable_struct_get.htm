@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>variable_struct_get</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>struct_get</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,53 +15,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_struct_get</h1>
+  <h1><span data-field="title" data-format="default">struct_get</span></h1>
   <p>この関数を使うと，<span class="notranslate">struct</span> 内の指定された名前の変数から値を取得することができます。<span class="notranslate">struct</span> の参照と，値を取得する変数の名前を<i>文字列で</i>指定します（以下のコード例を参照してください）。この関数は、その変数が持つ値を返しますが、その変数が存在しない場合は、 <span class="inline">undefined</span> 。<b></b></p>
-  <p class="note"><b>重要!取</b>得する変数が存在しない場合、この関数はキーワード <span class="inline">undefined</span> を返し、ゲームの機能を停止させるエラーが発生する可能性があります。 <a href="variable_struct_exists.htm"><span class="inline">variable_struct_exists()</span></a>を最初に指定します。</p>
-  <p> </p>
+  <p class="note"><b>重要!取</b>得する変数が存在しない場合、この関数はキーワード <span class="inline">undefined</span> を返し、ゲームの機能を停止させるエラーが発生する可能性があります。 <a href="variable_struct_exists.htm"><span class="inline">struct_exists()</span></a>を最初に指定します。</p>
+  <p> </p>
   <h4>構文です。</h4>
-  <p class="code">variable_struct_get(struct, name);</p>
+  <p class="code"><span data-field="title" data-format="default">struct_get</span>(struct, name)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
+        <th>論証</th>
+        <th>タイプ</th>
         <th>商品説明</th>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">struct</span></td><td><span data-keyref="Type_Struct"></span></td>
+        <td><span class="notranslate">struct</span></td>
+        <td><span data-keyref="Type_Struct"><a href="../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
         <td><span class="notranslate">The struct reference to use</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">name</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
         <td><span class="notranslate">The name of the variable to get (as a string)</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Any">Variable</span> (any data type) or <span data-keyref="Type_Undefined">undefined</span> (if the named variable does not exist)<span class="inline"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span> (any data type) or <span data-keyref="Type_Undefined"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">undefined</a></span> (if the named variable does not exist)<span class="inline"></span></p>
+  <p> </p>
   <h4>例</h4>
-  <p class="code">if variable_struct_exists(mystruct, &quot;shields&quot;)<br />
+  <p class="code">if (struct_exists(mystruct, &quot;shields&quot;))<br />
     {<br />
-        var ss = variable_struct_get(mystruct, &quot;shields&quot;);<br />
+        var ss = struct_get(mystruct, &quot;shields&quot;);<br />
     }<br />
     else<br />
     {<br />
         var ss = -1;<br />
     }</p>
   <p>上記のコードでは、与えられた<span class="notranslate">struct</span> に変数が存在するかどうかを確認し、存在する場合はその値が取得され、ローカル変数に格納されます。存在しない場合は、ローカル変数に-1がセットされます。</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Variable_Functions.htm">バリアブルファンクション</a></div>
-        <div style="float:right">次のページ <a href="variable_struct_set.htm"><span class="notranslate">variable_struct_set</span></a></div>
+        <div style="float:left">戻る <a data-xref="{title}" href="Variable_Functions.htm">変数関数</a></div>
+        <div style="float:right">次のページ <a data-xref="{title}" href="variable_struct_set.htm">struct_set</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_struct_get

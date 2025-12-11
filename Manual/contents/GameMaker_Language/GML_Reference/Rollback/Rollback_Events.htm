@@ -39,9 +39,9 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_error</span></td>
-        <td>以下の変数を含む<a href="../../GML_Overview/Structs.htm">構造体</a>。<br>
-          <br>
-         <span class="inline2">status</span>レスポンスの HTTP ステータスコード<br>
+        <td>以下の変数を含む<a href="../../GML_Overview/Structs.htm">構造体</a>。<br />
+          <br />
+         <span class="inline2">status</span>レスポンスの HTTP ステータスコード<br />
          <span class="inline2">error</span>エラーが記述された<span class="notranslate">string</span> 
         </td>
       </tr>
@@ -61,18 +61,18 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_chat_message</span></td>
-        <td>からのメッセージを受信したときにトリガーされます。 <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a><a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">/ メッセージを</a>受信したときに発生する。このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br>
-          <br>
-         <span class="inline2">メッセージ</span>。受信したメッセージ<span class="notranslate">string</span> <br>
-         <span class="inline2">from</span>: メッセージを送信したプレイヤーのID<br>
+        <td>からのメッセージを受信したときにトリガーされます。 <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a><a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">/ メッセージを</a>受信したときに発生する。このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br />
+          <br />
+         <span class="inline2">メッセージ</span>。受信したメッセージ<span class="notranslate">string</span> <br />
+         <span class="inline2">from</span>: メッセージを送信したプレイヤーのID<br />
          <span class="inline2">to</span>メッセージを送信したプレイヤーのID。
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_player_prefs</span></td>
-        <td>プレイヤーが<a href="Rollback_Preferences.htm">プリファレンスを</a>設定したときにトリガーされる。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br>
-          <br>
-         <span class="inline2">player_id</span>:環境設定を行ったプレイヤーのID。<br>
+        <td>プレイヤーが<a href="Rollback_Preferences.htm">プリファレンスを</a>設定したときにトリガーされる。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
+          <br />
+         <span class="inline2">player_id</span>:環境設定を行ったプレイヤーのID。<br />
           環境<span class="inline2">設定</span>。そのプレイヤーに設定されている設定値
         </td>
       </tr>
@@ -82,10 +82,10 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_synchronizing_with_peer</span></td>
-        <td>プレーヤーが新しいプレーヤーと同期している間に発生します。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br>
-          <br>
-         <span class="inline2">player_id</span>:同期しているプレイヤーのID<br>
-         <span class="inline2">count</span>:何回目の同期が完了したか<br>
+        <td>プレーヤーが新しいプレーヤーと同期している間に発生します。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
+          <br />
+         <span class="inline2">player_id</span>:同期しているプレイヤーのID<br />
+         <span class="inline2">count</span>:何回目の同期が完了したか<br />
          <span class="inline2">total</span>: あと何回の同期が必要なのか
         </td>
       </tr>
@@ -99,9 +99,9 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_game_interrupted</span></td>
-        <td>接続が不安定なプレイヤーのためにゲームが中断されたときに発生する。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br>
-          <br>
-         <span class="inline2">player_id</span>:接続に問題があるプレイヤーのID<br>
+        <td>接続が不安定なプレイヤーのためにゲームが中断されたときに発生する。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
+          <br />
+         <span class="inline2">player_id</span>:接続に問題があるプレイヤーのID<br />
          <span class="inline2">timeout</span>。そのプレイヤーがタイムアウトして切断されるまでの残り時間（ミリ秒単位）。この時間が経過すると、そのプレイヤーはキックされ、残りのプレイヤーでゲームが再開される。
         </td>
       </tr>
@@ -115,17 +115,17 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_game_info</span></td>
-        <td><span class="notranslate">room</span> に関する情報を受信したとき、ただし完全に参加する前にトリガーされる。<br>
-          このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br>
-          <br>
-         <span class="inline2">num_players</span>:ゲームに参加しているプレイヤーの総数<br>
+        <td><span class="notranslate">room</span> に関する情報を受信したとき、ただし完全に参加する前にトリガーされる。<br />
+          このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br />
+          <br />
+         <span class="inline2">num_players</span>:ゲームに参加しているプレイヤーの総数<br />
          <span class="inline2">player_id</span>:ローカルプレイヤーのID(0から始まる)
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_info</span></td>
-        <td><span class="notranslate">room</span> が作成され、他のプレイヤーと共有できる状態になったときにトリガされます。共有可能なURLは<span class="inline2">rollback_event_param.share_url</span>に格納されます。<br>
-          <br>
+        <td><span class="notranslate">room</span> が作成され、他のプレイヤーと共有できる状態になったときにトリガされます。共有可能なURLは<span class="inline2">rollback_event_param.share_url</span>に格納されます。<br />
+          <br />
           <span class="inline"><a href="../Strings/clipboard_set_text.htm">clipboard_set_text()</a></span> を呼び出すことで、この URL が利用可能になったときに自動的にコピーすることができます。
         </td>
       </tr>

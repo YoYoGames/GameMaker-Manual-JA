@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオフリープレイキュー</title>
+  <title>audio_free_play_queue</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>オーディオフリープレイキュー</h1>
+  <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
   <p>この関数は、与えられたオーディオ<span class="notranslate">queue</span> に関連するメモリーを解放するために使用される。<span class="notranslate">queue</span> インデックスは，この関数を使って<span class="notranslate">queue</span> を作成したときに返された値です。 <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>メモリリークを防ぐため、この関数は<span class="notranslate">queue</span> が不要になったときに呼び出す必要があります。<span class="notranslate">queue</span> を解放すると、再生中のサウンドはすべて停止します。また、サウンドがストリーミングされている<span class="notranslate">buffer</span> は、それが割り当てられている<span class="notranslate">queue</span> が解放されるまで削除することができません。この関数は、<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Event</a> をトリガーし、このイベントで特別な<a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>変数 <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>を、以下のキーと値のペアで作成する。</p>
   <ul class="colour">
     <li>&quot;<strong>queue_id</strong>&quot; - データの再生が終了した<span class="notranslate">queue</span> </li>
@@ -23,7 +23,7 @@
   </ul>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">audio_free_play_queue(queueIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_free_play_queue</span>(queueIndex);</p>
   <table>
     <tbody>
       <tr>

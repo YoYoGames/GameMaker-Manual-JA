@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_get_name</h1>
+  <h1><span data-field="title" data-format="default">fx_get_name</span></h1>
   <p>この関数は、フィルタ/エフェクトの名前を<span class="notranslate">struct</span> から取得するために使用します。読み込むFX<span class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される) を指定すると、この関数はその名前を<span class="notranslate">string</span> として返します。 この名前を<span class="inline"><a href="fx_create.htm">fx_create()</a></span> に渡すと、同じフィルタ/エフェクト タイプを使用して新しいFX<span class="notranslate">struct</span> を作成することができます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">fx_get_name(filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_get_name</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>
@@ -49,7 +49,7 @@
             }<br />
         }<br />
     }</p>
-  <p>上記のコードでは <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a><span class="notranslate">room</span> に存在するすべてのレイヤーをループし、各レイヤーに FX<span class="notranslate">struct</span> があるかどうかをチェックします。もしレイヤーがFX<span class="notranslate">struct</span> を持っていれば、 <span class="inline">fx_get_name()</span> を呼び出して、そのフィルター／効果の名前をチェックします。もしそれが<span class="inline2">&quot;_filter_tintfilter&quot;</span>と等しければ、つまり &quot;Colour Tint&quot; フィルターであれば、その色合いの色を青に変更します。<br>
+  <p>上記のコードでは <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a><span class="notranslate">room</span> に存在するすべてのレイヤーをループし、各レイヤーに FX<span class="notranslate">struct</span> があるかどうかをチェックします。もしレイヤーがFX<span class="notranslate">struct</span> を持っていれば、 <span class="inline">fx_get_name()</span> を呼び出して、そのフィルター／効果の名前をチェックします。もしそれが<span class="inline2">&quot;_filter_tintfilter&quot;</span>と等しければ、つまり &quot;Colour Tint&quot; フィルターであれば、その色合いの色を青に変更します。<br />
      </p>
   <p> </p>
   <p> </p>

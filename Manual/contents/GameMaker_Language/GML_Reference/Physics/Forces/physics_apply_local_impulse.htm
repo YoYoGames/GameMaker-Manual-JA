@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理学_応用_ローカルインパルス</title>
+  <title>physics_apply_local_impulse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理学_応用_ローカルインパルス</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_local_impulse</span></h1>
   <p><span data-keyref="GameMaker Name">GameMakerの</span>物理演算では、<span class="notranslate">object</span> に力と重力を加えることができるだけでなく、衝動を加えることもできます。<span class="notranslate">object</span>これは力とは少し違い、衝撃を加えると<i>すぐに</i>スピードや、トルク（または &quot;スピン&quot;）に影響を与えます。特に、衝撃を加えるために選んだ点が、質量中心と一致しないベクトルを持っている場合（注意：質量中心は<i>必ずしも</i>原点と同じでは<i>ありません</i>！）。この関数は、インスタンスに<i>局所的に</i>インパルスを適用します。これはつまり、衝動の強さと方向は、インスタンスの原点（または<span class="notranslate">sprite</span> がない場合は位置）に基づいて計算され、ゲーム<span class="notranslate">room</span> や物理世界での方向や回転は考慮されません。以下はその例です。</p>
   <p><img>ご覧のように、画像のカエルは下から衝撃を受けて「ジャンプ」しているのです。正確な衝撃は、xpos/ypos座標に対するximpulse/yimpulseの成分から得られるベクトルで定義されます。つまり、衝撃はxpos/yposからximpulse/yimpulseまでの距離をニュートンで計算し、方向はxpos/yposからximpulse/yimpulseまでの角度となる、という単純な話です。</p>
   <p class="note"><b>注</b>：物理の世界では、すべての計算にメートルを使用します。1メートルあたりのピクセルの比率は、<span class="notranslate">room</span> エディタで定義するか、次のようにします。 <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_apply_local_impulse(xpos, ypos, ximpulse, yimpulse)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_local_impulse</span>(xpos, ypos, ximpulse, yimpulse)</p>
   <table>
     <tbody>
       <tr>

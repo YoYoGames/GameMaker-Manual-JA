@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バッファリングテル</title>
+  <title>buffer_tell</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バッファリングテル</h1>
+  <h1><span data-field="title" data-format="default">buffer_tell</span></h1>
   <p>を使用して、<span class="notranslate">buffer</span> にデータを読み書きする場合。 <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a>または <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>を使用すると、現在の「シーク」位置が、書き込んだり読み込んだりしたバイト数だけ進みます。
     この関数は、現在のシーク位置を取得し、他の<span class="notranslate">buffer</span> 関数で使用することができます。例えば、<span class="notranslate">buffer</span> のアライメントを4バイトに設定し、1バイトのデータを書き込む場合、 <span class="inline">buffer_tell()</span> を実行すると、1バイトのデータが書き込まれます。
     しかし、同じ1バイトの別のデータを書いて、 <span class="inline">buffer_tell()</span> を実行すると、アライメントがその位置までデータを「パディング」したため、5という戻り値が得られます。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">buffer_tell(buffer);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_tell</span>(buffer);</p>
   <table>
     <tbody>
       <tr>

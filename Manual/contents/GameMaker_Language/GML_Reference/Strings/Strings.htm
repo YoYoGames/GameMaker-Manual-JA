@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ストリングス</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,18 +14,18 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ストリングス</h1>
-  <p>ゲームを作っていると、いつの間にかテキストを使う必要が出てきます。<span class="notranslate">string</span> <span data-keyref="GameMaker Name">GameMaker</span>には、<span class="notranslate">strings</span> の挿入、<span class="notranslate">string</span> のコピー、<span class="notranslate">strings</span> の数字や文字の解析など、<span class="notranslate">strings</span> をさまざまに操作するための関数が揃っています。一般に、<span class="notranslate">string</span> は二重引用符 &quot; &quot; 内にテキストを追加する<i>ことによってのみ</i>作成でき、<em>一重引用符<span class="notranslate">strings</span> </em> は受け付けません。また、<span class="notranslate">string</span> を複数行に分割して、改行が改行であるかのように<span data-keyref="GameMaker Name">GameMaker で</span>レンダリングすることもできません（ただし、以下に説明するように、<strong>文字列リテラルの</strong> <span class="inline">@</span> 識別子が使用されている場合を除きます）。</p>
+  <h1><span data-field="title" data-format="default">ストリングス</span></h1>
+  <p>ゲームを作っていると、いつの間にかテキストを使う必要が出てきます。<span class="notranslate">string</span> <span data-keyref="GameMaker Name">GameMaker</span>には、<span class="notranslate">strings</span> の挿入、<span class="notranslate">string</span> のコピー、<span class="notranslate">strings</span> の数字や文字の解析など、<span class="notranslate">strings</span> をさまざまに操作するための関数が揃っています。一般に、<span class="notranslate">string</span> は二重引用符 &quot; &quot; 内にテキストを追加する<i>ことによってのみ</i>作成でき、<em>一重引用符<span class="notranslate">strings</span> </em> は受け付けません。また、<span class="notranslate">string</span> を複数行に分割して、改行が改行であるかのように<span data-keyref="GameMaker Name">GameMaker</span>レンダリングすることもできません（ただし、以下に説明するように、<strong>文字列リテラルの</strong> <span class="inline">@</span> 識別子が使用されている場合を除きます）。</p>
   <p><span class="notranslate">strings</span> を作成する際には、<i>エスケープ文字の</i>使用に関する一定の規則があることに注意する必要があります。エスケープ文字とは、「<span class="inline">\</span> 」という記号を前につけた文字のことです。たとえば、<span class="notranslate">string</span> の中に引用符を入れたい場合は、次のようになります。</p>
   <p class="code">str = &quot;Hello\&quot;World\&quot;&quot;;</p>
-  <p><span data-keyref="GameMaker Name">GameMakerは</span>4バイト幅のUnicode文字も完全にサポートしており、標準の上限のUnicode文字（絵文字を含むがこれに限らない）をデコードおよびエンコードすることができる。Unicode 文字を扱うには、任意の Unicode リテラルの前に &quot;<span class="inline">\</span>&quot; を使用することができます。16 進数の数字を &quot;<span class="inline">u</span>&quot; の前に置き、例えば &quot;<span class="inline"><span class="inline">\u00e2</span>&quot; は &quot;á&quot; のように、数字が Unicode 文字の番号になります。このようにUnicodeを扱う場合、<span data-keyref="GameMaker Name">GameMakerは</span>&quot;<span class="inline">u</span>&quot;に続く<i>すべての</i>数字を解釈するという事実に注意する必要があります。例えば、&quot;áa &quot;と書きたい場合は、次のようにします。</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>4バイト幅のUnicode文字も完全にサポートしており、標準の上限のUnicode文字（絵文字を含むがこれに限らない）をデコードおよびエンコードすることができる。Unicode 文字を扱うには、任意の Unicode リテラルの前に &quot;<span class="inline">\</span>&quot; を使用することができます。16 進数の数字を &quot;<span class="inline">u</span>&quot; の前に置き、例えば &quot;<span class="inline">\u00e2</span>&quot; は &quot;á&quot; のように、数字が Unicode 文字の番号になります。このようにUnicodeを扱う場合、<span data-keyref="GameMaker Name">GameMaker</span>&quot;<span class="inline">u</span>&quot;に続く<i>すべての</i>数字を解釈するという事実に注意する必要があります。例えば、&quot;áa &quot;と書きたい場合は、次のようにします。</p>
   <p class="code">&quot;\u00e2\a&quot;</p>
   <p>または</p>
   <p class="code">&quot;\u00e2\u61&quot;</p>
   <p>または</p>
   <p class="code">&quot;\u00e2&quot; + &quot;a&quot;</p>
   <p>というのは、&quot;<span class="inline">\u00e2a</span>&quot;を使うだけで、実際にはユニコード文字 &quot;<span class="inline">ส</span>&quot; になってしまうからです（実質的には &quot;<span class="inline">\ue2a</span>&quot; になります）。<i></i></p>
-  <p><span data-keyref="GameMaker Name">GameMakerは</span>16進数のリテラルも扱うことができます。通常、&quot;<span class="inline">0x</span>&quot;に続く16進数の数字で、例えば&quot;<span class="inline">0xff</span>&quot;のように記述されます。<span data-keyref="GameMaker Name">GameMaker</span>では、これらの文字は &quot;<span class="inline">\x</span>&quot; の後に16進数で記述されます。これらのエスケープ文字と、その他の定義済みエスケープ文字は以下の表のとおりです。</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>16進数のリテラルも扱うことができます。通常、&quot;<span class="inline">0x</span>&quot;に続く16進数の数字で、例えば&quot;<span class="inline">0xff</span>&quot;のように記述されます。<span data-keyref="GameMaker Name">GameMaker</span>では、これらの文字は &quot;<span class="inline">\x</span>&quot; の後に16進数で記述されます。これらのエスケープ文字と、その他の定義済みエスケープ文字は以下の表のとおりです。</p>
   <table>
     <tbody>
       <tr>
@@ -93,7 +93,6 @@
     <li><a href="ansi_char.htm"><span class="notranslate">ansi_char</span></a></li>
     <li><a href="chr.htm"><span class="notranslate">chr</span></a></li>
     <li><a href="ord.htm"><span class="notranslate">ord</span></a></li>
-    <li><a href="real.htm"><span class="notranslate">real</span></a></li>
     <li><a href="string.htm"><span class="notranslate">string</span></a></li>
     <li><a href="string_byte_at.htm"><span class="notranslate">string_byte_at</span></a></li>
     <li><a href="string_byte_length.htm"><span class="notranslate">string_byte_length</span></a></li>
@@ -125,24 +124,24 @@
     <li><a href="string_hash_to_newline.htm"><span class="notranslate">string_hash_to_newline</span></a></li>
     <li><a href="../Variable_Functions/is_string.htm"><span class="notranslate">is_string</span></a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <p><span class="notranslate">strings</span> に特化した機能以外に、いくつかのターゲットでは、クリップボードにアクセスしてテキスト情報を取得・設定することができます。</p>
   <ul class="colour">
     <li><a href="clipboard_has_text.htm"><span class="notranslate">clipboard_has_text</span></a></li>
     <li><a href="clipboard_get_text.htm"><span class="notranslate">clipboard_get_text</span></a></li>
     <li><a href="clipboard_set_text.htm"><span class="notranslate">clipboard_set_text</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a href="../Maths_And_Numbers/Maths_And_Numbers.htm">数学と数字</a></div>
+        <div style="float:left">戻る<a data-xref="{title}" href="../GML_Reference.htm">GML Codeリファレンス</a></div>
+        <div style="float:right">次へ<a data-xref="{title}" href="../Maths_And_Numbers/Maths_And_Numbers.htm">数学と数字</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Strings

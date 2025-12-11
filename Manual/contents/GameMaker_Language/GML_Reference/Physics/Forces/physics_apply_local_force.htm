@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理学的応用力</title>
+  <title>physics_apply_local_force</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理学的応用力</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_local_force</span></h1>
   <p>物理の世界で力を使うもう一つの方法は、力をインスタンスに<i>局所的に</i>適用することである。これは、力の強さと方向が、インスタンスの原点（<span class="notranslate">sprite</span> がない場合は位置）に基づいて計算されることを意味し、ゲーム<span class="notranslate">room</span> や物理世界での方向や回転を考慮する必要はありません。この関数では、力は<span class="notranslate">object</span> の質量中心ではなく、インスタンスに相対する点に適用され、<span class="notranslate">object</span> に作用する他の力（重力など）に依存するため、瞬時に適用されないことに注意する必要があります。この図は、ローカルフォースがどのように機能するかを示しています。</p>
   <p><img>ご覧のように、xlocal と ylocal の座標は、軸の位置を<i>常に</i>インスタンスの原点 (0,0) とみなして計算しているので、<span class="notranslate">room</span> <span class="notranslate">object</span> のどこにいても、xlocal と ylocal は常に同じになるのです。次に、力のベクトル成分（xforce と yforce）を xlocal/ylocal の位置に対してどこに配置するかを決定する必要があります。つまり、力は xlocal/ylocal から xforce/yforce までの距離（ニュートン）、方向は xlocal/ylocal から xforce/yforce までの角度として計算されるのです。少しわかりにくいかもしれませんが、イラストを見れば、この仕組みがわかりますし、複雑な計算の手間が省けますよ。</p>
   <p class="note"><b>注</b>：物理の世界では、すべての計算にメートルを使用します。1メートルあたりのピクセルの比率は、<span class="notranslate">room</span> エディタで定義するか、または <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_apply_local_force(xlocal, ylocal, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_local_force</span>(xlocal, ylocal, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理ジョイントの作成</title>
+  <title>physics_joint_revolute_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理ジョイントの作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_revolute_create</span></h1>
   <p>レボリュートジョイントは、2つのボディに共通のアンカーポイント（ヒンジポイントと呼ばれることもあります）を共有させ、ジョイントは1つの自由度（このポイント周りの2つのボディの相対回転）を持っています。レボリュートを指定するには、<span class="notranslate">room</span> に 2 つのインスタンスと 1 つのアンカー ポイントを指定する必要があります（提供された画像に表示されています）。</p>
   <p><img>画像を見ると、2つのインスタンスが重なるように作成されており、接触している箇所では、リボルートジョイントを定義していることがわかります。このジョイントは、&quot;ang_min_limit&quot; と &quot;ang_max_limit&quot; の値により、回転の自由度を制限することができます。これはどのように機能するのでしょうか？では、別の画像を見てみましょう。</p>
   <p><img>ご覧のように、物理の世界での角度は、<span data-keyref="GameMaker Name">GameMakerの</span>標準的な角度とは<i>異なり</i>、右を0度として、反時計回りに、上が90、左が180、下が270となるようになります。そうではなく、レボリュートジョイントを扱う場合、0度軸はジョイント位置から関数で定義された2番目のインスタンスの原点まで走り、その後時計回りに角度が計算されます。角度の制限を<span class="notranslate">switch</span> した場合、制限はこの 0 度軸を基準に定義され、制限<i>範囲には 0 を含める必要が</i>あります。そうしないと、<span class="notranslate">room</span> を開始したときにジョイントがぐらつくことになります。最後に、ジョイントにモーターがあるかないかを定義できます。これは、衝突の影響がない場合、ジョイントはモーターの速度で定義された方向に動くことを意味し、正の数は時計回り、負の数は反時計回りとなります。max_motor_torque&quot; 引数は回転速度を制限するためのもので、モーターが永久に加速しないように、また衝突が回転に与える影響を制限するためのものです。この方法では、関節速度をゼロに設定し、最大トルクをある小さな、しかし重要な値に設定することで、関節摩擦をシミュレートするために関節モーターを使用することができます。モーターは関節が回転するのを防ごうとしますが、大きな負荷がかかると降伏します。</p>
   <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_revolute_create(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_revolute_create</span>(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>

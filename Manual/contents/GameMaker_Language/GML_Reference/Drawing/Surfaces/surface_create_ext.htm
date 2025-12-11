@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>サーフェス_クリエイト_エクスト</title>
+  <title>surface_create_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>サーフェス_クリエイト_エクスト</h1>
+  <h1><span data-field="title" data-format="default">surface_create_ext</span></h1>
   <p>この機能を使うと、Webページ内に既に存在するcanvas要素にサーフェスを貼り付けることができます。つまり、ゲームの一部をページ内のさまざまな場所に効率よく分割して描画することができるのです。そのためには、ゲームの <span class="inline">*.html</span> ページ内で、作成したいサーフェイスに対応する正しいサイズと名前を使用して、canvas 要素を正しく定義しておく<i>必要が</i>あります。つまり、「メイン」キャンバスと、「セカンダリ」キャンバス要素があり、この機能で正しいサーフェイスに割り当てます。次の画像は、3つのキャンバス要素を持つページのセットアップの例です。</p>
   <p><img>ページレイアウトは、特にすべての要素を正しく並べたい場合、厄介です。しかし、レイアウトの作成という大変な作業が完了したら、<a href="../../../../Settings/Game_Options.htm">ゲームオプションの</a> <a href="../../../../Settings/Game_Options/HTML5.htm">HTML5タブで</a>、この <span class="inline">html</span> ファイルをゲームのデフォルトページファイルとして追加できます。次にやるべきことは、<span class="notranslate">room</span> とビューの設定です。各サーフェイスは、ゲーム画像を「キャプチャ」するために、特定のビューと関連付ける必要があるからです（ビュー変数 <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0...7]</span></a>).以下の画像は、上記のキャンバスの例でゲーム<span class="notranslate">room</span> をどのようにセットアップするかを示しています。</p>
   <p><img>最後に、この関数を使用して表面を作成します。名前はキャンバス要素に使用したものと同じにし、サイズは同じキャンバスのサイズに対応させます。この関数はサーフェスのインデックスを返すので、将来関数を呼び出すときのために変数に格納しておきます。サーフェスが最初に作成されたとき、それは基本的にこの目的のために確保された単なるメモリ領域であるため「ノイズ」を含むことがあります（そしてそのメモリはまだ情報を含んでいるかもしれません）。 <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p>
   <p class="note"><b>注</b>：この機能は、HTML5モジュールでのみ使用可能です。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">surface_create_ext(name, w, h);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_create_ext</span>(name, w, h);</p>
   <table>
     <tbody>
       <tr>

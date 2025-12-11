@@ -35,8 +35,8 @@
     <p class="dropspot">各ターゲットプラットフォームは1つ以上の出力形式を持つことができ、主なものは以下の通りです。</p>
     <ul class="dropspotlist">
       <li class="dropspot"><strong>VM</strong>です。VM (Virtual Machine) ターゲットは、各プラットフォーム用の汎用<em>ランナーを </em>使用し、ゲーム用にコードを解釈します。一般にこのオプションはビルド時間が早いのでテスト用に使われますが、YYCオプション（利用可能な場合）を使った場合のようなパフォーマンスの向上は望めません。このオプションは、小規模なゲームやパフォーマンスが問題にならないようなゲームの実行形式パッケージをコンパイルするために使用できます。</li>
-      <li class="dropspot"><strong>YYC</strong>YYC<a data-xref="{title}" href="../Settings/YoYo_Compiler.htm">(YoYo Compiler</a>) は、<span class="notranslate">GML</span> のコードから C++ コードを生成し、ターゲットプラットフォームの C++ コンパイラを使ってターゲットプラットフォームのネイティブコードにコンパイルする前に使用します。不要な関数を削除し、その他の最適化技術を多数実行することで、より小さく、パフォーマンスが向上した実行可能なパッケージを作成します。<br>
-        <br>
+      <li class="dropspot"><strong>YYC</strong>YYC<a data-xref="{title}" href="../Settings/YoYo_Compiler.htm">(YoYo Compiler</a>) は、<span class="notranslate">GML</span> のコードから C++ コードを生成し、ターゲットプラットフォームの C++ コンパイラを使ってターゲットプラットフォームのネイティブコードにコンパイルする前に使用します。不要な関数を削除し、その他の最適化技術を多数実行することで、より小さく、パフォーマンスが向上した実行可能なパッケージを作成します。<br />
+        <br />
         これにより、特にロジックを多用するゲームでは、ゲームのパフォーマンスが少なくとも2～3倍向上し、大規模なプロジェクトやCPU負荷の高いプロジェクトに理想的です。コンパイルに時間がかかる場合があります。ターゲットプラットフォーム用に最終的な完全な<span class="notranslate">cache</span> パッケージを構築する前に、必ずコンパイラの<span class="notranslate">asset</span> をクリアする必要があります。YYCターゲットでは、選択したプラットフォーム用に追加のツールをインストールする必要がある場合があります。
       </li>
       <li class="dropspot"><strong>JavaScript</strong>です。JavaScriptターゲットは、HTML5ターゲットのような特定のターゲットでのみ使用でき、ゲームを純粋なJavaScriptにコンパイルするように設定します。これは出力するJSに<strong>ECMAScript 2015</strong>(またはES6)を使用します。</li>
@@ -70,28 +70,28 @@
   <h3>対象フォーマット</h3>
   <p>各ターゲットオプションは、以下に示すプラットフォーム固有のフォーマットで保存されます。</p>
   <ul class="colour">
-    <li><strong>Opera GX</strong>- &quot;Opera GX &quot;ターゲット用にコンパイルする場合、&quot;Opera GX Packaging &quot;ウィンドウが表示され、最初にOperaアカウントを使ってサインインするよう求められます。<img>なお、すでにOperaアカウントを使って<span data-keyref="GameMaker Name">GameMakerに</span>サインインしている場合は、ここでサインインする必要はありません。<br>
-      <br>
-      サインイン後、コンパイルが開始され、GX.gamesにアップロードされます。その後、「Edit Game on Opera」をクリックすると、GX.games DevCloud上で編集し、パブリッシュすることができます。<br>
+    <li><strong>Opera GX</strong>- &quot;Opera GX &quot;ターゲット用にコンパイルする場合、&quot;Opera GX Packaging &quot;ウィンドウが表示され、最初にOperaアカウントを使ってサインインするよう求められます。<img>なお、すでにOperaアカウントを使って<span data-keyref="GameMaker Name">GameMakerに</span>サインインしている場合は、ここでサインインする必要はありません。<br />
+      <br />
+      サインイン後、コンパイルが開始され、GX.gamesにアップロードされます。その後、「Edit Game on Opera」をクリックすると、GX.games DevCloud上で編集し、パブリッシュすることができます。<br />
       <img>Opera GXのアップロード手順については<a href="https://help.yoyogames.com/hc/en-us/articles/4407217145105">こちらのページを</a>、<a href="../Settings/YoYo_Compiler.htm">YYCや</a>Mobileなどの各種エクスポート設定については<a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193">こちらの</a>ページをご参照ください。
     </li>
     <li><strong>Windows - </strong> 一般的な<span class="notranslate">Windows</span> OS用にコンパイルすると、まず<em>インストーラーか </em> <em>Zip </em>パッケージのどちらを作成するかを選択するよう求められます。インストーラーはゲームをインストールするための実行ファイル、Zipファイルはゲームファイルをすべて保存した <span class="inline">*.zip</span> 形式の圧縮ファイル（ゲームを実行するにはファイルを展開する必要があります）です。<img><strong>パッケージングオプションを記憶する</strong>"にチェックを入れると、<span data-keyref="GameMaker Name">GameMakerは</span>その選択を記憶して次回以降のコンパイルに使用します（<a href="../Setting_Up_And_Version_Information/Platform_Preferences/Windows.htm">Windows環境設定</a>からリセットや変更が可能です）。詳しくは<a href="https://help.yoyogames.com/hc/en-us/sections/207157668">YoYo Games Help Center</a>を参照してください。<span class="notranslate">Windows</span> ターゲットは、<a href="../Settings/Game_Options/Windows.htm">一般ゲームオプション</a>で選択した内容によって、32bit<em>または </em>64bitの実行ファイルをコンパイルできることに注意してください。  32bit<span class="notranslate">Runtime</span> は将来的に非推奨となり削除される予定ですので、<strong>全ての新規プロジェクトは64bit実行ファイルを作成するためにx64<span class="notranslate">runtime</span> を使用することを強くお勧め</strong>します。</li>
-    <li><strong>Ubuntu (<span class="notranslate">Linux</span>)</strong>-<span class="notranslate">Ubuntu</span> 用にコンパイルすると、x64 または<span class="notranslate">ARM</span> の実行ファイルを含む<strong>.AppImage</strong>または<strong>.zip</strong>ファイルを作成するかどうか尋ねられます（ただし、AppImage は<span class="notranslate">ARM</span> をサポートしていません）。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/235186168">YoYo Gamesヘルプ</a>センターでご確認ください。<br>
+    <li><strong>Ubuntu (<span class="notranslate">Linux</span>)</strong>-<span class="notranslate">Ubuntu</span> 用にコンパイルすると、x64 または<span class="notranslate">ARM</span> の実行ファイルを含む<strong>.AppImage</strong>または<strong>.zip</strong>ファイルを作成するかどうか尋ねられます（ただし、AppImage は<span class="notranslate">ARM</span> をサポートしていません）。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/235186168">YoYo Gamesヘルプ</a>センターでご確認ください。<br />
       <img><strong>.AppImage</strong>は<span class="notranslate">Steam</span> 以外のディストリビューターでパッケージとして共有するために使用され、<strong>.zip</strong>は<span class="notranslate">Steam</span> にアップロードする<strong>ためにのみ</strong>使用されます（特に<span class="notranslate">Steam</span> <span class="notranslate">Runtime</span> を使用するため）。このため、作成された<tt>.zipは</tt>、通常のzipファイルとして開くことができません。
     </li>
     <li><strong>HTML5 - </strong> HTML5のビルドを選択した場合、 <span class="inline">index.html</span> ファイル（これはデフォルトの名前ですが、Platform Preferencesで独自の名前を付けることもできます）と、ゲームファイルを含むフォルダが作成され、指定された場所に保存されます。ゲームを動作させるには、この2つが<a class="glossterm" data-glossterm="サーバ" href="#">サーバーに</a>アップロードされている必要があります。 <span class="inline">index.html</span> をカスタマイズして、背景色を変えたり、位置を変えたりすることもできます。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/sections/115000309008">YoYo Gamesヘルプセンター</a>でご確認ください。</li>
-    <li><strong>Android - </strong> <span class="notranslate">Android</span> デバイスの場合、ゲームを保存するために表示されるウィンドウから、 <span class="inline">*.apk</span> または <span class="inline">*.aab</span> (<span class="notranslate">Android</span> App Bundle) ファイルを構築するよう選択することができます。<br>
-      <br>
+    <li><strong>Android - </strong> <span class="notranslate">Android</span> デバイスの場合、ゲームを保存するために表示されるウィンドウから、 <span class="inline">*.apk</span> または <span class="inline">*.aab</span> (<span class="notranslate">Android</span> App Bundle) ファイルを構築するよう選択することができます。<br />
+      <br />
       <img>選択するファイルの種類は、対象とするストアによって異なり、Google Playでは <span class="inline">*.aab</span> 、その他のストアでは <span class="inline">*.apk</span> ファイルを使用する必要があります。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/115001368727">YoYo Gamesヘルプ</a>センターでご確認ください。
     </li>
     <li><strong>iOS - </strong> <span class="notranslate">iOS</span> にコンパイルすると <span class="inline">xarchive</span> ファイルが作成され、Xtools で最終的な<span class="notranslate">iOS</span> パッケージを作成するために使用されます。<strong> <span class="notranslate">iOS</span> </strong> のコンパイルには、OSX以上のApple Macコンピュータと、関連する証明書と権限が必要であることに注意してください。詳しくは、<a href="http://help.yoyogames.com/hc/en-us/articles/115001368747">YoYo Gamesヘルプ</a>センターでご確認ください。</li>
-    <li><strong>macOS - </strong> <span class="notranslate">macOS</span> ターゲット用にコンパイルすると、最初に<em>DMGか </em> <em>Zip </em>ファイルのどちらを作成するか選択するよう要求されます。<br>
-      <img>「Package as DMG &quot;を選択すると、Macコンピュータにゲームをインストールするために使用できる.dmgインストーラパッケージがビルドされます。このビルドプロセスの間、Mac上にインストーラが表示されますが、ビルドプロセスが完了すると消えますので注意してください。<br>
-      <br>
+    <li><strong>macOS - </strong> <span class="notranslate">macOS</span> ターゲット用にコンパイルすると、最初に<em>DMGか </em> <em>Zip </em>ファイルのどちらを作成するか選択するよう要求されます。<br />
+      <img>「Package as DMG &quot;を選択すると、Macコンピュータにゲームをインストールするために使用できる.dmgインストーラパッケージがビルドされます。このビルドプロセスの間、Mac上にインストーラが表示されますが、ビルドプロセスが完了すると消えますので注意してください。<br />
+      <br />
       &quot;Package as Zip&quot; は、後で Mac App Store にアップロードするかどうかによって、 <span class="inline">*.app</span> ファイルか <span class="inline">*.pkg</span> ファイルをビルドします。<span class="notranslate">iOS</span> と同様に、<strong>OSX 以上を搭載した Apple Mac コンピュータと、関連する証明書および権限が必要</strong>です。詳しくは<a href="http://help.yoyogames.com/hc/en-us/articles/235186128">YoYo Gamesヘルプセンター</a>でご確認ください。
     </li>
-    <li><strong>Windows UWP</strong>-<span class="notranslate">Windows UWP</span> の場合、<span data-keyref="GameMaker Name">GameMaker</span>は <span class="inline">*.appxbundle</span> パッケージを作成し、<span class="notranslate">Windows</span> Store にアップロードするか、他の場所に配布することができます。Create Executable ボタンをクリックすると、<span data-keyref="GameMaker Name">GameMaker</span>に作成したいパッケージの種類（<span class="notranslate">ARM</span> 、x64、x86<a class="glossterm" data-glossterm="アーキテクチャー" href="#">アーキテクチャ</a>用）を伝えるプロンプトが表示されるので、ゲームがサポートされるターゲットを選択します（最低1つは選択しなければなりませんが、3つすべて、または任意の組み合わせを選択することができます）。 <br>
-      <br>
+    <li><strong>Windows UWP</strong>-<span class="notranslate">Windows UWP</span> の場合、<span data-keyref="GameMaker Name">GameMaker</span>は <span class="inline">*.appxbundle</span> パッケージを作成し、<span class="notranslate">Windows</span> Store にアップロードするか、他の場所に配布することができます。Create Executable ボタンをクリックすると、<span data-keyref="GameMaker Name">GameMaker</span>に作成したいパッケージの種類（<span class="notranslate">ARM</span> 、x64、x86<a class="glossterm" data-glossterm="アーキテクチャー" href="#">アーキテクチャ</a>用）を伝えるプロンプトが表示されるので、ゲームがサポートされるターゲットを選択します（最低1つは選択しなければなりませんが、3つすべて、または任意の組み合わせを選択することができます）。 <br />
+      <br />
       <img><strong>Package For Store Upload</strong> のボックスをチェックすると、最終的に作成されるパッケージは <span class="inline">*.appxupload</span> ファイルになります。これは、<a href="https://docs.microsoft.com/en-us/windows/uwp/publish/upload-app-packages">こちらの</a>記事で説明されているように、Microsoft がストアにアプリを提出する際に使用するよう指定しているものです (<span class="inline">*.appxbundle</span> の場合と同様に、選択したすべてのアーキテクチャが含まれます)。UWPプラットフォームへのセットアップとコンパイルについては、<a href="http://help.yoyogames.com/hc/en-us/sections/115000309028">YoYo Gamesヘルプセンター</a>で詳しく説明されています。
     </li>
   </ul>

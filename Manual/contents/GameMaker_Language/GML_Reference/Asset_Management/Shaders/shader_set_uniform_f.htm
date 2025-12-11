@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>shader_set_uniform_f</h1>
+  <h1><span data-field="title" data-format="default">shader_set_uniform_f</span></h1>
   <p>この関数を使うと、<span class="notranslate">shader</span> の定数の値（複数可）を設定することができます。この定数の「ハンドル」は、事前に関数 <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>そして、正しい数の浮動小数点値を渡すために、それがどのような定数であるかを知っておく必要があります。例えば、 <span class="inline">vec2</span> の場合、関数に2つの値を渡す必要があります。</p>
   <p>ただし、32bitの色値を扱う場合は例外である。<span class="notranslate">shader</span> に最大 8 個の 32bit 色値を渡すと、それらは自動的に 0 - 1 の vec4 値に変換されます。ただし、この場合、単一の色には<span class="notranslate">shader</span> 定数名 <span class="inline">in_Colour</span> を、複数の入力値には <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, etc... <span class="inline">in_Colour7</span> までの定数を使用する<i>必要が</i>あります。次の例は、<span class="notranslate">shader</span> 自身がどのように見えるかを示しています。</p>
   <p class="code">    //Single colour<br />
@@ -32,7 +32,7 @@
   <p class="note"><b></b><b>注意</b>：すべてのユニフォームは<b>、</b>関数 <span style="font-size:1px;"><a href="shader_set.htm"><span class="inline">shader_set()</span></a></span>を呼び出す前、そして <span style="font-size:1px;"><a href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">shader_set_uniform_f(handle, value1 [, value2, value3, value4]);</p>
+  <p class="code"><span data-field="title" data-format="default">shader_set_uniform_f</span>(handle, value1 [, value2, value3, value4]);</p>
   <table>
     <tbody>
       <tr>

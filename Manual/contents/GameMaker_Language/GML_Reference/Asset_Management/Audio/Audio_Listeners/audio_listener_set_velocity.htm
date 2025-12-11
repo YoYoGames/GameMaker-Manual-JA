@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオリスナーセットベロシティ</title>
+  <title>audio_listener_set_velocity</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>オーディオリスナーセットベロシティ</h1>
+  <h1><span data-field="title" data-format="default">audio_listener_set_velocity</span></h1>
   <p>この関数は、与えられたリスナーに<em>ドップラー </em>効果を与え、与えられた相対的な x、y、z 位置から分解されるベクトルに基づいて、オーディオの動きをシミュレートするために使用することができます。デフォルトのリスナーインデックスは 0 ですが、関数 <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a>を使用して、ターゲットプラットフォームで利用可能なさまざまなインデックスを取得することができます。</p>
   <p>しかし、たとえば、プレイヤーが下から上へ、敵が上から下へ一定の動きをするスクロール・ゲームを作る場合、<i>リスナーと</i>エミッタの速度（エミッタの場合は、次のように設定します）を設定する必要があります。 <a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span></a>を適切なベクトルに設定することで、プレイヤーインスタンスを通過する際の正しいドップラー効果をシミュレートすることができます。</p>
   <p>下の画像は、上記のゲームの例でどのように設定されるかを示しています。</p>
   <p><img alt="Audio Listener Set Velocity Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener_Velocity.png" /></p>
   <h4>構文です。</h4>
-  <p class="code">audio_listener_set_velocity(index, x, y, z);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_listener_set_velocity</span>(index, x, y, z);</p>
   <table>
     <tbody>
       <tr>

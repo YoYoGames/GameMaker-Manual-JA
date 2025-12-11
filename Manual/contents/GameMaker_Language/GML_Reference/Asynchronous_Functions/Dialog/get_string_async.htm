@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_string_async</h1>
+  <h1><span data-field="title" data-format="default">get_string_async</span></h1>
   <p>この関数はウィンドウを開き、メッセージと、ユーザーが<span class="notranslate">string</span> を入力するためのスペースを表示します (このスペースには、提供されたデフォルトの<span class="notranslate">string</span> が最初に含まれます)。これは非同期関数なので、<span data-keyref="GameMaker Name">GameMakerは</span>答えを待っている間、実行されているデバイスをブロック<i>せず</i>、通常通りイベントを実行し続ける。ユーザーが<span class="notranslate">string</span> を入力して &quot;Okay&quot; ボタンを押すと、<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">非同期の Dialog イベントが </a>発生し、そのイベントの<i>間だけ</i> DS マップが変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p><strong>idは</strong>関数が呼び出されたときに返された値、<strong>statusは</strong>&quot;Okay &quot;ボタンが押されたときの <span class="inline">true</span> 、メッセージがキャンセルされたときの <span class="inline">false</span> （すべてのターゲットプラットフォームがメッセージのキャンセルを許可しないため該当する場合）である。最後に &quot;result &quot;は、ユーザーが入力した<span class="notranslate">string</span> (または、何も入力されなかった場合は空の<span class="notranslate">string</span> &quot;&quot;)が返されます。</p>
   <p class="note"><strong><em><span class="note">注意事項</span></em></strong><em>この機能は<span data-keyref="Dialog for debug only"> <strong>デバッグおよびテスト</strong></span>用であり、<span data-keyref="Dialog for debug only">リリースされたゲームでは</span>使用しないでください。<span data-keyref="Dialog for debug only">そのためには、プレイヤーからの入力を受け取るためのカスタムユーザーインターフェースを作成し、ダイアログの外観や動作を完全に制御できるようにする必要があります。</span></em></p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">get_string_async(string, default);</p>
+  <p class="code"><span data-field="title" data-format="default">get_string_async</span>(string, default);</p>
   <table>
     <tbody>
       <tr>

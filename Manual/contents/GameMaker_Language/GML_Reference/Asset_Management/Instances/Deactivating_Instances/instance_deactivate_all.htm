@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_all</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_all</span></h1>
   <p>この関数は、コードが実行された瞬間に<span class="notranslate">room</span> にある<b>すべての</b>インスタンスを非アクティブにします。notme&quot;<span class="notranslate">flag</span> が <span class="inline">false</span> に設定されている場合、コードを実行しているインスタンスが含まれることがありますが、通常はそのインスタンスをアクティブにしておきたいので、その場合は &quot;notme&quot;<span class="notranslate">flag</span> を <span class="inline">true</span> に設定します。非アクティブ化は即時には行われず、この方法で非アクティブ化されたインスタンスは、関数が呼ばれたイベントが終了するまでアクティブではないと見なされることに注意してください。</p>
   <p class="note"><b>注</b>：<span class="notranslate">room</span> の開始時にインスタンスを非アクティブにした場合（つまり、<span class="notranslate">room</span> の作成コード、または<span class="notranslate">room</span> 内のインスタンスの作成イベントから）、<span class="notranslate">room</span> エディタから<span class="notranslate">room</span> 内に配置されたすべてのインスタンスは、非アクティブになる前に<b>作成イベントをまだ実行</b>することになります。</p>
   <p class="note"><b></b><b>警告</b>：物理が有効になっているインスタンスを無効化しても、そのフィクスチャーが物理シミュレーションの中で相互作用することを<b>止めません</b>。そのためには、インスタンスの <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span>変数を <span class="inline">true</span> または <span class="inline">false</span> に設定し、インスタンスをアクティブ/非アクティブにします。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_deactivate_all(notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_all</span>(notme);</p>
   <table>
     <tbody>
       <tr>

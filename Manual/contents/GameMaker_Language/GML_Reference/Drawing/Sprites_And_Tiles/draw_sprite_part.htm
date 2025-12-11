@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite_part</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite_part</span></h1>
   <p>この機能を使うと、任意の<span class="notranslate">sprite</span> の一部を<span class="notranslate">room</span> 内の任意の位置に描画することができます。 <a href="draw_sprite.htm"><span class="inline">draw_sprite()</span></a>を指定すると、<span class="notranslate">sprite</span> と描画する副画像を指定できます。次に、描画する領域の<span class="notranslate">sprite</span> 内での<i>相対座標を</i>指定する必要があります。つまり、左の位置を 0、上の位置を 0 とすると、<span class="notranslate">sprite</span> の左上隅となり、それ以降の座標はすべてこの位置から取得する必要があります。下の画像はその例です。
     のようになります。</p>
   <p><img>なお、<span class="notranslate">texture</span> のページで自動トリミングを許可している場合、この機能は期待通りに動作しないことがあります。
@@ -25,7 +25,7 @@
   <p class="note"><b>注</b>：この機能は<b>ビットマップ</b> <span class="notranslate">sprites</span> に対してのみ有効であり、SWF や JSON (<span class="notranslate">Spine</span>)<span class="notranslate">sprites</span> では動作しません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">draw_sprite_part(sprite, subimg, left, top, width, height, x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite_part</span>(sprite, subimg, left, top, width, height, x, y);</p>
   <table>
     <tbody>
       <tr>

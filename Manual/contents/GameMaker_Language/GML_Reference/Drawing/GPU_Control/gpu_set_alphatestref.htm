@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_alphatestref</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_alphatestref</span></h1>
   <p>この関数は、アルファテストの基準値を設定します（但し、アルファテストが <a href="gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>).これは、アルファを持つピクセルが描画されない「カットオフ」閾値である。</p>
   <p>基本的に、この値を0に設定し、線形補間をオンにしている場合（ゲームオプションまたは <a href="gpu_set_texfilter.htm"><span class="inline">gpu_set_texfilter()</span></a>) の場合、オーバーラップしている<span class="notranslate">objects</span> のエッジで視覚的なエラーが発生することがあります。これは、<i>ほとんど</i>完全に透明な領域があり、その後ろに描かれたものがブロックされるからです。この参照値をたとえば 254（つまり、最大値の 1 つ下）に設定すると、100% 不透明なピクセルだけが描画されることが保証されます。また、<span class="notranslate">texture</span> 補間をオフにすることもできます。この場合、通常はデフォルトの値で問題なく使用でき、この機能を使用する必要はありませんが、ソースアートワークに大きく依存することになります。</p>
   <p class="note"><b>注意</b>：これは高度な描画機能なので、必要かどうかわからない場合や、何をするのかよくわからない場合は、ゲームの描画に深刻な影響を与える可能性があるので、使わない方がよいでしょう。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gpu_set_alphatestref(val);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_alphatestref</span>(val);</p>
   <table>
     <tbody>
       <tr>

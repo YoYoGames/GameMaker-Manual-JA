@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_mass_properties</h1>
+  <h1><span data-field="title" data-format="default">physics_mass_properties</span></h1>
   <p>この関数を使用すると、物理を有効にしたインスタンスの質量と回転慣性の値をカスタムで設定することができます。通常、インスタンスの質量、重心、回転慣性は、バインドされたフィクスチャの表面積とその密度の組み合わせを使って計算されます。しかし、非常に特別な場合、重心をオフセットしたり、イナーシャを変更したりする必要があるかもしれません。</p>
   <h3>質量</h3>
   <p>質量は現実世界の重さ（つまりキログラム）で計算されるので、常にモデル化するものに対して現実的な値を保つようにする必要があります。ですから、もしあなたの物理学<span class="notranslate">object</span> が人を表すものであるなら、その質量は2kgのようなものではなく、例えば70kgになる可能性があります。</p>
@@ -29,7 +29,7 @@
   <p class="note"><span class="note">注意</span>：物理シミュレーションはフィクスチャーの密度とサイズに基づいて最適な質量とイナーシャになるように設計されているので、この機能は必要な場合にのみ使用してください。これらの値を変更すると、予期しない結果をもたらす可能性があります。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_mass_properties(mass, local_center_x, local_center_y, inertia)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_mass_properties</span>(mass, local_center_x, local_center_y, inertia)</p>
   <table>
     <tbody>
       <tr>

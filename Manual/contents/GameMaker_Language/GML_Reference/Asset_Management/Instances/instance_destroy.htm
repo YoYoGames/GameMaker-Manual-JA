@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>インスタンスデストロイ</title>
+  <title>instance_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>インスタンスデストロイ</h1>
+  <h1><span data-field="title" data-format="default">instance_destroy</span></h1>
   <p>この関数は、インスタンスを「破棄」したいときに呼び出します。通常、<a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Destroy イベントと</a> <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up イベントを</a>トリガします。これにより、<span class="notranslate">room</span> が再起動されるまで、<span class="notranslate">room</span> から削除されます（<span class="notranslate">room</span> が永続的でない限り）。<span class="notranslate">object</span> 引数なしでこの関数を呼び出すと、現在スコープ内にありコードを実行しているインスタンスを単に破壊します。オプションの &quot;id&quot; 引数を指定し、インスタンス <span class="inline"><a href="Instance_Variables/id.htm">id</a></span> の値を使用して特定のインスタンスをターゲットにすることもできます。 <a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>.例えば</p>
   <p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
     instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p>
@@ -28,7 +28,7 @@
   <p><i> <span class="inline">instance_destroy</span> </i> 関数を呼び出しても変数「score」はインクリメントされ、イベントの終了時にようやくインスタンスがゲームから削除されます。インスタンスにデータ構造のような動的リソースを作成し、destroy イベントでそのリソースを破壊した場合、destroy 関数やアクションの実行後にそのリソースへの参照があると、destroy イベントでゲームから削除されたため &quot;unknown resource&quot; エラーが発生するので、この点には注意が必要です。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">instance_destroy([id, execute_event_flag]);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_destroy</span>([id, execute_event_flag]);</p>
   <table>
     <tbody>
       <tr>

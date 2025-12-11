@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>バッファロード</title>
+  <title>buffer_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>バッファロード</h1>
+  <h1><span data-field="title" data-format="default">buffer_load</span></h1>
   <p>を使用して保存した<span class="notranslate">buffer</span> を読み込むために使用されます。 <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a>関数、および<a href="../../../Settings/Included_Files.htm" title="Included Files">インクルードファイルや</a>外部で読み込まれたファイルです。これは，この関数が &quot;grow&quot;<span class="notranslate">buffer</span> (<a href="buffer_create.htm">ここを</a>参照)として，バイトアライメントを1にして作成した新しいバッファのIDを返します．このIDは変数に格納し，この<span class="notranslate">buffer</span> に対する以降のすべての関数呼び出しで使用されるべきです．何らかの理由で読み込みに失敗した場合、この関数は -1 を返し、コンパイラの出力ウィンドウに読み込みに失敗した旨のメッセージが表示されます。</p>
   <p class="note"><span class="note">注意</span>メモリリークを防ぐために、このように動的に作成されたリソースは、不要になった時点でメモリから削除することが重要です。作成した<span class="notranslate">buffer</span> を使い終わったら、再度、以下を使用してリソースを解放してください。 <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
   <h2>プラットフォーム固有の注意事項</h2>
@@ -25,7 +25,7 @@
   <p> </p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">buffer_load(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_load</span>(filename);</p>
   <table>
     <tbody>
       <tr>

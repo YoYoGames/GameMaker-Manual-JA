@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>物理接合部溶接の作成</title>
+  <title>physics_joint_weld_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>物理接合部溶接の作成</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_weld_create</span></h1>
   <p>ウェルドジョイントは、2つの冶具を強固に、かつ柔軟に結合させるために設計されています。ウェルド・ジョイントは、接合された2つのフィクスチャー間のフレックスを許容しますが、例えばディスタンス・ジョイントのような伸縮はなく、ストレスや負荷がかかると常に基準角度に「スプリング」バックしようとします。下の図に示すように、<span class="notranslate">room</span> でジョイントを作成する箇所と、ジョイントが常に維持しようとする角度を定義します。</p>
   <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span> に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span> エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span> のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。ですから、インスタンスの原点以外の場所に溶接ジョイントを作成しても、それはまだ有効で、作成された位置から相対的に2つのインスタンスを拘束することになります。</p>
   <p>溶接ジョイントは柔軟性があり、何らかのストレスがかかると曲がったり屈曲したりするので、ジョイントの振動周波数（Hz）とダンピング比を設定して、さまざまな効果を得ることができます。</p>
   <p>col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_weld_create</span>(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

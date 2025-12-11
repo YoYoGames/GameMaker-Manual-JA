@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>オーディオリスナーの方向性</title>
+  <title>audio_listener_orientation</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>オーディオリスナーの方向性</h1>
+  <h1><span data-field="title" data-format="default">audio_listener_orientation</span></h1>
   <p>この関数を使用すると、3Dオーディオ空間内での<i>リスナーの</i>向きを変更することができます。<b>ルックアット</b>方向と<b>アップ</b>方向は、与えられた相対的なx、y、z位置から分解されるベクトルに基づき、下図のように、ルックアット方向は<span data-keyref="Unit_Vector_Z">（0、0、1）</span>、アップ方向は<span data-keyref="Unit_Vector_Y">（0、1、0</span>）がデフォルトとなります。</p>
   <p><img alt="Listener Orientation Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Base.png" /></p>
   <p class="note"><b><span class="note">注意</span> </b>複数のリスナーがいる場合は、関数 <a href="audio_listener_set_orientation.htm"><span class="inline">audio_listener_set_orientation()</span></a>.</p>
   <p>この関数でリスナーのオリエンテーションを変更すると、ゲーム<span class="notranslate">room</span> の周囲にあるオーディオエミッターによって作られたサウンドが、ゲームのプレイヤーにどのように知覚されるかが変化します。下の例では、リスナーがデフォルトの位置にいる時にエミッタによって作られた音は、リスナーの下と右側から聞こえてくるように見えますが、リスナーの位置と向きを変更すると、<i>上と</i>右側から聞こえてくるように認識されるようになります。</p>
   <p><img alt="Listener Orientation Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Example.png" /></p>
   <h4>構文です。</h4>
-  <p class="code">audio_listener_orientation(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_listener_orientation</span>(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
   <table>
     <tbody>
       <tr>

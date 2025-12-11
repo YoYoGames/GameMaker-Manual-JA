@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texfilter</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texfilter</span></h1>
   <p>この関数は、ゲーム画面に描画されるすべての画像の<span class="notranslate">texture</span> フィルタリング（線形補間）を設定するために使用することができます。この機能を有効にすると (<span class="inline">true</span>)<span class="notranslate">textures</span> はすべて描画時に平滑化されます (<span class="notranslate">sprites</span> も<span class="notranslate">textures</span> とみなされるため)。つまり、拡大縮小や移動時にピクセル比率が 1:1 でない場合、さまざまなピクセルで「にじみ」が発生し、使用するアートスタイルによって画像がぼやけて見えることがあります。この設定を無効にすると (<span class="inline">false</span>) 、拡大縮小や移動の際に、最も近いピクセルに基づいて画像が描画されるため、「ブロック状」の画像になることがあります。デフォルト値は <span class="inline">false</span> で、これは<b>グローバルゲームオプションで</b>個々のターゲットプラットフォーム用に変更することもできます。</p>
   <p class="note"><b>注</b> <span class="notranslate">texture</span> <b></b>：この設定は、<span class="notranslate">shaders</span> のステージ補間の設定を上書きします。 <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
   <p class="note"><b>注</b>：HTML5ターゲットでは、この機能はWebGLが有効な場合のみ動作します。</p>
   <p> </p>
   <h4>構文です。</h4>
-  <p class="code">gpu_set_texfilter(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_texfilter</span>(enable);</p>
   <table>
     <tbody>
       <tr>
