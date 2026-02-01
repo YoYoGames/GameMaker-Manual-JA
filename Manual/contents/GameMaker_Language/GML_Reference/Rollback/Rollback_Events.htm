@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -12,18 +13,21 @@
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
 </head>
+
 <body>
   <h1>ロールバックイベント</h1>
   <p>その他」のカテゴリーで検索できるロールバック関連のイベントは2つあります。</p>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/rollback_events.png" /></p>
+  <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Rollback/rollback_events.png" />
+  </p>
   <h2 id="h">ロールバック開始</h2>
   <p>このイベントは、すべてのプレイヤーが接続され、マルチプレイヤーゲームが開始されたときにトリガーされます。また、後に<span class="notranslate">room</span> が変更されたときにも発生します。</p>
-  <p>このイベント内では、<span class="inline2">rollback_event_param</span>という、イベントに関連するすべての値を含む<span class="notranslate">struct</span> を取得します。</p>
+  <p>このイベント内では、<span class="inline2">rollback_event_param</span>という、イベントに関連するすべての値を含む<span
+      class="notranslate">struct</span> を取得します。</p>
   <table>
     <tbody>
       <tr>
         <th>構造メンバー</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="inline">num_players</span></td>
@@ -35,44 +39,54 @@
       </tr>
       <tr>
         <td><span class="inline">first_start</span></td>
-        <td>マルチプレイヤーゲームが始まったばかりの場合は<span class="inline2">true</span>、<span class="notranslate">room</span> のみが変更された場合は<span class="inline2">falseを</span>返します。</td>
+        <td>マルチプレイヤーゲームが始まったばかりの場合は<span class="inline2">true</span>、<span class="notranslate">room</span>
+          のみが変更された場合は<span class="inline2">falseを</span>返します。</td>
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_error</span></td>
         <td>以下の変数を含む<a href="../../GML_Overview/Structs.htm">構造体</a>。<br />
           <br />
-         <span class="inline2">status</span>レスポンスの HTTP ステータスコード<br />
-         <span class="inline2">error</span>エラーが記述された<span class="notranslate">string</span> 
+          <span class="inline2">status</span>レスポンスの HTTP ステータスコード<br />
+          <span class="inline2">error</span>エラーが記述された<span class="notranslate">string</span>
         </td>
       </tr>
     </tbody>
   </table>
-  <p>このイベントは、プレーヤーではなく、ゲーム マネージャーの<span class="notranslate">object</span> でのみ使用する必要があります。<span class="notranslate">object</span> 、<span class="inline2">rollback_event_param.player_id</span>は常にメイン ローカル プレーヤーの ID であり、イベントが発生するプレーヤー インスタンスの ID ではないからです。</p>
-  <p>例えば、自分がプレイヤー0で、プレイヤー1のインスタンスで<strong>Rollback Start</strong>イベントをキャッチした場合、<span class="inline2">player_id</span>変数はローカルプレイヤーだけのIDを示すため、0になったままです。</p>
+  <p>このイベントは、プレーヤーではなく、ゲーム マネージャーの<span class="notranslate">object</span> でのみ使用する必要があります。<span
+      class="notranslate">object</span> 、<span class="inline2">rollback_event_param.player_id</span>は常にメイン ローカル プレーヤーの
+    ID であり、イベントが発生するプレーヤー インスタンスの ID ではないからです。</p>
+  <p>例えば、自分がプレイヤー0で、プレイヤー1のインスタンスで<strong>Rollback Start</strong>イベントをキャッチした場合、<span
+      class="inline2">player_id</span>変数はローカルプレイヤーだけのIDを示すため、0になったままです。</p>
   <h2 id="h1">ロールバックイベント</h2>
-  <p><strong>ロールバックイベントは</strong>、ゲーム中の様々なポイントでトリガーされ、<span class="inline2">rollback_event_id</span>変数を含んでいます。この変数は、どのようなタイプのイベントがトリガーされたかを示す。</p>
-  <p><span class="inline2">rollback_event_paramと</span>呼ばれる、イベントに関連するすべての値を含む<span class="notranslate">struct</span> が提供される。</p>
+  <p><strong>ロールバックイベントは</strong>、ゲーム中の様々なポイントでトリガーされ、<span
+      class="inline2">rollback_event_id</span>変数を含んでいます。この変数は、どのようなタイプのイベントがトリガーされたかを示す。</p>
+  <p><span class="inline2">rollback_event_paramと</span>呼ばれる、イベントに関連するすべての値を含む<span class="notranslate">struct</span>
+    が提供される。</p>
   <p><span class="inline2">rollback_event_id</span> には、以下の定数のいずれかを格納することができる。</p>
   <table>
     <tbody>
       <tr>
         <th><span class="inline">rollback_event_id</span></th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="inline">rollback_chat_message</span></td>
-        <td>からのメッセージを受信したときにトリガーされます。 <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a><a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">/ メッセージを</a>受信したときに発生する。このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br />
+        <td>からのメッセージを受信したときにトリガーされます。 <a href="Rollback_Functions/rollback_chat.htm"><span
+              class="inline">rollback_chat()</span></a><a data-xref="{title}"
+            href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">/
+            メッセージを</a>受信したときに発生する。このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br />
           <br />
-         <span class="inline2">メッセージ</span>。受信したメッセージ<span class="notranslate">string</span> <br />
-         <span class="inline2">from</span>: メッセージを送信したプレイヤーのID<br />
-         <span class="inline2">to</span>メッセージを送信したプレイヤーのID。
+          <span class="inline2">メッセージ</span>。受信したメッセージ<span class="notranslate">string</span> <br />
+          <span class="inline2">from</span>: メッセージを送信したプレイヤーのID<br />
+          <span class="inline2">to</span>メッセージを送信したプレイヤーのID。
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_player_prefs</span></td>
-        <td>プレイヤーが<a href="Rollback_Preferences.htm">プリファレンスを</a>設定したときにトリガーされる。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
+        <td>プレイヤーが<a href="Rollback_Preferences.htm">プリファレンスを</a>設定したときにトリガーされる。このイベントの間、<span
+            class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
           <br />
-         <span class="inline2">player_id</span>:環境設定を行ったプレイヤーのID。<br />
+          <span class="inline2">player_id</span>:環境設定を行ったプレイヤーのID。<br />
           環境<span class="inline2">設定</span>。そのプレイヤーに設定されている設定値
         </td>
       </tr>
@@ -84,14 +98,15 @@
         <td><span class="inline">rollback_synchronizing_with_peer</span></td>
         <td>プレーヤーが新しいプレーヤーと同期している間に発生します。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
           <br />
-         <span class="inline2">player_id</span>:同期しているプレイヤーのID<br />
-         <span class="inline2">count</span>:何回目の同期が完了したか<br />
-         <span class="inline2">total</span>: あと何回の同期が必要なのか
+          <span class="inline2">player_id</span>:同期しているプレイヤーのID<br />
+          <span class="inline2">count</span>:何回目の同期が完了したか<br />
+          <span class="inline2">total</span>: あと何回の同期が必要なのか
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_synchronized_with_peer</span></td>
-        <td>プレーヤーとの同期が完了したときにトリガーされる。同期したプレーヤーのIDは<span class="inline2">rollback_event_param.player_idに</span>格納される。</td>
+        <td>プレーヤーとの同期が完了したときにトリガーされる。同期したプレーヤーのIDは<span class="inline2">rollback_event_param.player_idに</span>格納される。
+        </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_disconnected_from_peer</span></td>
@@ -101,13 +116,15 @@
         <td><span class="inline">rollback_game_interrupted</span></td>
         <td>接続が不安定なプレイヤーのためにゲームが中断されたときに発生する。このイベントの間、<span class="inline2">rollback_event_paramは</span>以下の変数を含む。<br />
           <br />
-         <span class="inline2">player_id</span>:接続に問題があるプレイヤーのID<br />
-         <span class="inline2">timeout</span>。そのプレイヤーがタイムアウトして切断されるまでの残り時間（ミリ秒単位）。この時間が経過すると、そのプレイヤーはキックされ、残りのプレイヤーでゲームが再開される。
+          <span class="inline2">player_id</span>:接続に問題があるプレイヤーのID<br />
+          <span
+            class="inline2">timeout</span>。そのプレイヤーがタイムアウトして切断されるまでの残り時間（ミリ秒単位）。この時間が経過すると、そのプレイヤーはキックされ、残りのプレイヤーでゲームが再開される。
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_game_resumed</span></td>
-        <td>中断後、ゲームが再開されたときに発生する（上記）。再接続したプレイヤーのIDが<span class="inline2">rollback_event_param.player_idに</span>格納される。</td>
+        <td>中断後、ゲームが再開されたときに発生する（上記）。再接続したプレイヤーのIDが<span class="inline2">rollback_event_param.player_idに</span>格納される。
+        </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_game_full</span></td>
@@ -118,15 +135,17 @@
         <td><span class="notranslate">room</span> に関する情報を受信したとき、ただし完全に参加する前にトリガーされる。<br />
           このイベントの間、<span class="inline2">rollback_event_param</span>は以下の変数を含む。<br />
           <br />
-         <span class="inline2">num_players</span>:ゲームに参加しているプレイヤーの総数<br />
-         <span class="inline2">player_id</span>:ローカルプレイヤーのID(0から始まる)
+          <span class="inline2">num_players</span>:ゲームに参加しているプレイヤーの総数<br />
+          <span class="inline2">player_id</span>:ローカルプレイヤーのID(0から始まる)
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_info</span></td>
-        <td><span class="notranslate">room</span> が作成され、他のプレイヤーと共有できる状態になったときにトリガされます。共有可能なURLは<span class="inline2">rollback_event_param.share_url</span>に格納されます。<br />
+        <td><span class="notranslate">room</span> が作成され、他のプレイヤーと共有できる状態になったときにトリガされます。共有可能なURLは<span
+            class="inline2">rollback_event_param.share_url</span>に格納されます。<br />
           <br />
-          <span class="inline"><a href="../Strings/clipboard_set_text.htm">clipboard_set_text()</a></span> を呼び出すことで、この URL が利用可能になったときに自動的にコピーすることができます。
+          <span class="inline"><a href="../Strings/clipboard_set_text.htm">clipboard_set_text()</a></span> を呼び出すことで、この
+          URL が利用可能になったときに自動的にコピーすることができます。
         </td>
       </tr>
     </tbody>
@@ -141,7 +160,9 @@
         <div>次へ<a data-xref="{title}" href="Rollback_Preferences.htm">ロールバック環境設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
 </body>
+
 </html>

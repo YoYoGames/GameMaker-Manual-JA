@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_fixture_bind_ext</title>
@@ -12,22 +13,37 @@
   <meta name="rh-index-keywords" content="physics_fixture_bind_ext" />
   <meta name="search-keywords" content="physics_fixture_bind_ext" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_fixture_bind_ext</span></h1>
-  <p>いったんフィクスチャを定義したら、それはインスタンスにバインドされなければなりません。これは、その<i>プロパティが</i>、<b>実際のフィクスチャそのものではなく</b>、選択されたインスタンスに転送されることを意味し、すべてのプロパティが同じであるなら、一つのフィクスチャを複数のインスタンスにバインドすることができます。ターゲットに<span class="notranslate">object</span> インデックスを指定すると、その時点で<span class="notranslate">room</span> に存在するすべてのインスタンスがそのフィクスチャのプロパティを受け取ります(ただし、後から作成された<span class="notranslate">object</span> の新しいインスタンスは受け取りません)。また、特殊キーワード<i>other</i>と<i>all</i> を使用することもできます。親を指定することもできます。<span class="notranslate">object</span> 、その親を持つすべての子インスタンスもフィクスチャを受け取ります。いったんフィクスチャが必要なすべてのインスタンスにバインドされたら、不要になったら削除することができます。そのフィクスチャのプロパティを持つインスタンスは影響を受けず、それらのプロパティを維持することができます。</p>
-  <p>通常、フィクスチャはインスタンスの原点に重心を置いてインスタンスにバインドされますが、これは常に必要なことではありません。 <a href="physics_fixture_bind.htm"><span class="inline">physics_fixture_bind()</span></a>となります。）一つのフィクスチャーは<i>一つの</i>オフセットしかサポートしないことに注意。一つのフィクスチャーに複数のオフセットを追加することはBox2Dではサポートされないからだ。</p>
-  <p><img>この関数は、<i>バインドされた</i>フィクスチャに対してユニークな「id」値を返します。<b>（フィクスチャそのものでは</b>ありません）この値は、その後、関数を用いてインスタンスから物理プロパティを削除（「アンバインド」）するために使われます <a href="physics_remove_fixture.htm"><span class="inline">physics_remove_fixture()</span></a>.これにより、<span class="notranslate">objects</span> を破棄して再作成することなく、インスタンスから物理プロパティを追加および削除することができます。</p>
+  <p>
+    いったんフィクスチャを定義したら、それはインスタンスにバインドされなければなりません。これは、その<i>プロパティが</i>、<b>実際のフィクスチャそのものではなく</b>、選択されたインスタンスに転送されることを意味し、すべてのプロパティが同じであるなら、一つのフィクスチャを複数のインスタンスにバインドすることができます。ターゲットに<span
+      class="notranslate">object</span> インデックスを指定すると、その時点で<span class="notranslate">room</span>
+    に存在するすべてのインスタンスがそのフィクスチャのプロパティを受け取ります(ただし、後から作成された<span class="notranslate">object</span>
+    の新しいインスタンスは受け取りません)。また、特殊キーワード<i>other</i>と<i>all</i> を使用することもできます。親を指定することもできます。<span
+      class="notranslate">object</span>
+    、その親を持つすべての子インスタンスもフィクスチャを受け取ります。いったんフィクスチャが必要なすべてのインスタンスにバインドされたら、不要になったら削除することができます。そのフィクスチャのプロパティを持つインスタンスは影響を受けず、それらのプロパティを維持することができます。
+  </p>
+  <p>通常、フィクスチャはインスタンスの原点に重心を置いてインスタンスにバインドされますが、これは常に必要なことではありません。 <a href="physics_fixture_bind.htm"><span
+        class="inline">physics_fixture_bind()</span></a>となります。）一つのフィクスチャーは<i>一つの</i>オフセットしかサポートしないことに注意。一つのフィクスチャーに複数のオフセットを追加することはBox2Dではサポートされないからだ。
+  </p>
+  <p>
+    <img>この関数は、<i>バインドされた</i>フィクスチャに対してユニークな「id」値を返します。<b>（フィクスチャそのものでは</b>ありません）この値は、その後、関数を用いてインスタンスから物理プロパティを削除（「アンバインド」）するために使われます
+    <a href="physics_remove_fixture.htm"><span class="inline">physics_remove_fixture()</span></a>.これにより、<span
+      class="notranslate">objects</span> を破棄して再作成することなく、インスタンスから物理プロパティを追加および削除することができます。
+  </p>
   <p class="note"><b>NOTE</b>: フィクスチャは不要になったら削除すべきです。削除しないとメモリリークが発生し、ゲームの動作が遅くなり、最終的にはクラッシュする可能性があるからです。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_fixture_bind_ext</span>(fixture, target, xoffset, yoffset)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_fixture_bind_ext</span>(fixture, target,
+    xoffset, yoffset)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">fixture</span></td>
@@ -36,8 +52,10 @@
       </tr>
       <tr>
         <td><span class="notranslate">target</span></td>
-        <td><span data-keyref="Type_ID_Instance">インスタンスID</span>または<span data-keyref="Type_Asset_Object">オブジェクトアセット</span></td>
-        <td><span class="notranslate">The target instance that is to receive the fixture (can be an instance id, an object id, <i>other</i>, or <i>all</i>)</span></td>
+        <td><span data-keyref="Type_ID_Instance">インスタンスID</span>または<span
+            data-keyref="Type_Asset_Object">オブジェクトアセット</span></td>
+        <td><span class="notranslate">The target instance that is to receive the fixture (can be an instance id, an
+            object id, <i>other</i>, or <i>all</i>)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">xoffset</span></td>
@@ -52,7 +70,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -63,18 +81,22 @@
     inst = instance_create_layer(x, y, &quot;Instances&quot;, genericBodyObject);<br />
     my_fix = physics_fixture_bind_ext(fix, inst, sprite_width / 2, -(sprite_height / 2));<br />
     physics_fixture_delete(fix);</p>
-  <p>上記のコードでは、フィクスチャーを作成し、そのインデックスを変数「fix」に代入しています。次に、フィクスチャーの形状と密度を定義してから、<span class="notranslate">sprite</span> の幅と高さに基づいたオフセットでインスタンスにバインドします。<b>バインドされた</b>フィクスチャーのインデックスは、変数 &quot;my_fix&quot; に格納されます。最後に、フィクスチャは不要になったので、メモリリークを防ぐために、フィクスチャ自体が削除される。</p>
+  <p>上記のコードでは、フィクスチャーを作成し、そのインデックスを変数「fix」に代入しています。次に、フィクスチャーの形状と密度を定義してから、<span class="notranslate">sprite</span>
+    の幅と高さに基づいたオフセットでインスタンスにバインドします。<b>バインドされた</b>フィクスチャーのインデックスは、変数 &quot;my_fix&quot;
+    に格納されます。最後に、フィクスチャは不要になったので、メモリリークを防ぐために、フィクスチャ自体が削除される。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Fixtures.htm">什器備品</a></div>
-        <div style="float:right">次のページ <a href="physics_fixture_set_collision_group.htm"><span class="notranslate">physics_fixture_set_collision_group</span></a></div>
+        <div style="float:left">前のページ：<a href="Fixtures.htm">什器備品</a></div>
+        <div style="float:right">次のページ：<a href="physics_fixture_set_collision_group.htm"><span
+              class="notranslate">physics_fixture_set_collision_group</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_bind_ext
@@ -83,4 +105,5 @@ physics_fixture_bind_ext
 physics_fixture_bind_ext
 -->
 </body>
+
 </html>

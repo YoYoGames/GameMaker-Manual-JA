@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>path_rotate</title>
@@ -12,21 +13,35 @@
   <meta name="rh-index-keywords" content="path_rotate" />
   <meta name="search-keywords" content="path_rotate" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">path_rotate</span></h1>
-  <p>この関数を使うと、与えられた<span class="notranslate">path</span> をその中心を軸に回転させることができます。<span data-keyref="GameMaker Name">GameMaker</span>では（物理を使わない限り）角度は反時計回りに計算されるので、<span class="notranslate">path</span> を 90 度回転させると<span class="notranslate">path</span> が<i>左に</i>回転することを覚えておいてください。<strong>この関数は実際の<span class="notranslate">path</span> リソースを変更</strong>するので、この関数が使われた瞬間からゲームの終了まで、ゲーム内のすべてのインスタンスで<span class="notranslate">path</span> がどのように使われるかに永久に影響を与えます。これが必要でない場合は、 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すのを忘れないでください）。</p>
-  <p><img alt="Rotate path example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/pathrotated.png" /></p>
-  <p class="note"><strong>注意</strong>：<span class="notranslate">path</span> をインスタンスに割り当てた後 <span style="font-size:1px;"><span class="inline"><a href="../path_start.htm" style="font-size: 14px">path_start()</a></span></span>関数を使用すると、 <span class="inline"><a href="../Path_Variables/path_orientation.htm" style="font-size: 14px">path_orientation</a></span> 変数を使用して<span class="notranslate">path</span> の回転も変更できます。</p>
+  <p>この関数を使うと、与えられた<span class="notranslate">path</span> をその中心を軸に回転させることができます。<span
+      data-keyref="GameMaker Name">GameMaker</span>では（物理を使わない限り）角度は反時計回りに計算されるので、<span class="notranslate">path</span> を
+    90 度回転させると<span class="notranslate">path</span> が<i>左に</i>回転することを覚えておいてください。<strong>この関数は実際の<span
+        class="notranslate">path</span> リソースを変更</strong>するので、この関数が使われた瞬間からゲームの終了まで、ゲーム内のすべてのインスタンスで<span
+      class="notranslate">path</span> がどのように使われるかに永久に影響を与えます。これが必要でない場合は、 <span class="inline"><a
+        href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span>
+    のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a
+        href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すのを忘れないでください）。
+  </p>
+  <p><img alt="Rotate path example" class="center"
+      src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/pathrotated.png" /></p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">path</span> をインスタンスに割り当てた後 <span
+      style="font-size:1px;"><span class="inline"><a href="../path_start.htm"
+          style="font-size: 14px">path_start()</a></span></span>関数を使用すると、 <span class="inline"><a
+        href="../Path_Variables/path_orientation.htm" style="font-size: 14px">path_orientation</a></span> 変数を使用して<span
+      class="notranslate">path</span> の回転も変更できます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">path_rotate</span>(index, angle);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -41,7 +56,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,11 +68,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
-        <div style="float:right">次のページ <a href="path_rescale.htm"><span class="notranslate">path_rescale</span></a></div>
+        <div style="float:left">前のページ：<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ：<a href="path_rescale.htm"><span class="notranslate">path_rescale</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_rotate
@@ -66,4 +83,5 @@ path_rotate
 path_rotate
 -->
 </body>
+
 </html>

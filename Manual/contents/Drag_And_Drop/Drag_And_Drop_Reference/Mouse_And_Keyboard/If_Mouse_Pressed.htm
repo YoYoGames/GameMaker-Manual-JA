@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>マウスが押された場合</title>
@@ -12,26 +13,36 @@
   <meta name="rh-index-keywords" content="GML Visual Action - If Mouse Pressed" />
   <meta name="search-keywords" content="If Mouse Pressed Action" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> マウスが押された場合</h1>
-  <p>このアクションは、マウスボタンの初回押下をチェックする。ボタンが最初に押された1つのゲームステップ（フレーム）で <span class="inline">true</span> 、それ以外のときは <span class="inline">false</span> を返します。 <span class="inline">not</span> モディファイアを有効にすると、このアクションは逆に、ボタンが押されて<i>いないか</i>どうかをチェックし、ボタンが押されているゲームステップ（フレーム）では <span class="inline">false</span> を、それ以外では <span class="inline">true</span> を返します。もし、ボタンが押されているかどうかを、最初に押されたイベントだけでなく、チェックする必要がある場合は、<a href="If_Mouse_Down.htm">If Mouse Downという</a>アクションを使ってください。</p>
+  <p>このアクションは、マウスボタンの初回押下をチェックする。ボタンが最初に押された1つのゲームステップ（フレーム）で <span class="inline">true</span> 、それ以外のときは <span
+      class="inline">false</span> を返します。 <span class="inline">not</span>
+    モディファイアを有効にすると、このアクションは逆に、ボタンが押されて<i>いないか</i>どうかをチェックし、ボタンが押されているゲームステップ（フレーム）では <span class="inline">false</span>
+    を、それ以外では <span class="inline">true</span> を返します。もし、ボタンが押されているかどうかを、最初に押されたイベントだけでなく、チェックする必要がある場合は、<a
+      href="If_Mouse_Down.htm">If Mouse Downという</a>アクションを使ってください。</p>
   <p>なお、「if」ブロックにアクションを追加するには、下の画像のように、アクションの横にドロップする必要があります。</p>
-  <p><img>これらのアクションは、&quot;if &quot;の評価値が <span class="inline">true</span> である場合に実行され、他の場所にドロップされたアクションは、&quot;if &quot;ブロックの後に実行されます。</p>
+  <p><img>これらのアクションは、&quot;if &quot;の評価値が <span class="inline">true</span> である場合に実行され、他の場所にドロップされたアクションは、&quot;if
+    &quot;ブロックの後に実行されます。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="If Mouse Pressed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_KeyboardMouse_Pressed.png" /></p>
+  <p><img alt="If Mouse Pressed Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_KeyboardMouse_Pressed.png" />
+  </p>
   <h4>論拠となる。</h4>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Mouse Button</span></td>
-        <td>チェックするマウスボタンの名前 (<em><a href="../../../GameMaker_Language/GML_Reference/Game_Input/Mouse_Input/Mouse_Input.htm">このページを見る</a></em>は、<em>マウスボタン定数に関する</em>情報を提供します。）</td>
+        <td>チェックするマウスボタンの名前 (<em><a
+              href="../../../GameMaker_Language/GML_Reference/Game_Input/Mouse_Input/Mouse_Input.htm">このページを見る</a></em>は、<em>マウスボタン定数に関する</em>情報を提供します。）
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">Not</span></td>
@@ -41,17 +52,20 @@
   </table>
   <p> </p>
   <h4>例</h4>
-  <p><img>上記のアクションブロックのコードは、1ステップごとにマウスボタンの状態をポーリングし、マウスが押されている場合は、マウスが最初に押されたかをチェックします。チェックが <span class="inline">true</span> であれば、最初の押下時にインスタンス速度が設定され、その後、ボタンが押されている間、<span class="notranslate">sprite</span> ブレンディングが赤に変更されます。マウスが押されていない場合は、マウスを離したときにチェックが行われ、ブレンドの色が白にリセットされ、速度が0に設定されます。</p>
+  <p><img>上記のアクションブロックのコードは、1ステップごとにマウスボタンの状態をポーリングし、マウスが押されている場合は、マウスが最初に押されたかをチェックします。チェックが <span
+      class="inline">true</span> であれば、最初の押下時にインスタンス速度が設定され、その後、ボタンが押されている間、<span class="notranslate">sprite</span>
+    ブレンディングが赤に変更されます。マウスが押されていない場合は、マウスを離したときにチェックが行われ、ブレンドの色が白にリセットされ、速度が0に設定されます。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Mouse_And_Keyboard_Actions.htm">マウスとキーボードの操作</a></div>
-        <div style="float:right">次へ<a href="If_Mouse_Down.htm">マウスを下げた場合</a></div>
+        <div style="float:left">前のページ：<a href="Mouse_And_Keyboard_Actions.htm">マウスとキーボードの操作</a></div>
+        <div style="float:right">次のページ：<a href="If_Mouse_Down.htm">マウスを下げた場合</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Mouse Pressed
@@ -60,4 +74,5 @@ Action - If Mouse Pressed
 action_if_mouse_pressed
 -->
 </body>
+
 </html>

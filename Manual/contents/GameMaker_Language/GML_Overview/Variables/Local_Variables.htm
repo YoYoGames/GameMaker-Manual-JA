@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ローカル変数</title>
@@ -12,10 +13,14 @@
   <meta name="rh-index-keywords" content="var,Local Variables" />
   <meta name="search-keywords" content="local variables,local,var,local scope" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ローカル変数</h1>
-  <p><strong>ローカル</strong>変数とは、特定の<strong>イベントや</strong> <strong>関数の</strong> <i>ためだけに</i>作成し、そのイベントや関数が終了した時点で破棄するものです。カスタム関数で作成された場合、ローカル変数はその関数でのみ使用可能で、関数が終了すると破棄されます。なぜローカル変数が必要なのでしょうか？変数はメモリ上のスペースを占有するので、1つの操作や関数にしか使用しないのであれば、その短い時間だけメモリ上に置いておけばよいからです。このようにすることで、コードベースをすっきりとさせ、メモリ空間を本当に必要なものに最適化することができます。ローカル変数を宣言するには、 <span class="inline"><strong><span class="inline">var</span> 演算子を次のように使用します。</p>
+  <p><strong>ローカル</strong>変数とは、特定の<strong>イベントや</strong> <strong>関数の</strong>
+    <i>ためだけに</i>作成し、そのイベントや関数が終了した時点で破棄するものです。カスタム関数で作成された場合、ローカル変数はその関数でのみ使用可能で、関数が終了すると破棄されます。なぜローカル変数が必要なのでしょうか？変数はメモリ上のスペースを占有するので、1つの操作や関数にしか使用しないのであれば、その短い時間だけメモリ上に置いておけばよいからです。このようにすることで、コードベースをすっきりとさせ、メモリ空間を本当に必要なものに最適化することができます。ローカル変数を宣言するには、
+    <span class="inline"><strong><span class="inline">var</span> 演算子を次のように使用します。
+  </p>
   <p class="code">var _i, _num, _str;<br />
     _i = 0;<br />
     _num = 24.5;<br />
@@ -31,44 +36,61 @@
     var _num = 24.5;<br />
     var _str = &quot;Hello World&quot;;
   </p>
-  <p>このようにして作成された変数は、作成されたイベント（または関数）の終了時にすべて「忘却」されます（つまり、メモリから削除されます）。 <span class="inline">var</span> <span class="notranslate">object</span> また、宣言したイベントや関数の外部で、その変数に格納されている値を使用する意図がないことを確認してください（上記の例では、 <span class="inline">var</span> で宣言したすべての変数にアンダースコア「_」を付けて変数名を定義していますが、これは必須ではなく、単にコード内でローカル変数を扱っていることをより明確にするために行っているものです）。とはいえ、ローカル変数とインスタンス変数が同じである<em>べき</em>だと思うような状況に陥った場合は、例えば <span class="inline">self</span> <a href="../Instance_Keywords.htm">キーワードを使って</a>インスタンス変数を別物として識別することができます。</p>
+  <p>このようにして作成された変数は、作成されたイベント（または関数）の終了時にすべて「忘却」されます（つまり、メモリから削除されます）。 <span class="inline">var</span> <span
+      class="notranslate">object</span> また、宣言したイベントや関数の外部で、その変数に格納されている値を使用する意図がないことを確認してください（上記の例では、 <span
+      class="inline">var</span>
+    で宣言したすべての変数にアンダースコア「_」を付けて変数名を定義していますが、これは必須ではなく、単にコード内でローカル変数を扱っていることをより明確にするために行っているものです）。とはいえ、ローカル変数とインスタンス変数が同じである<em>べき</em>だと思うような状況に陥った場合は、例えば
+    <span class="inline">self</span> <a href="../Instance_Keywords.htm">キーワードを使って</a>インスタンス変数を別物として識別することができます。
+  </p>
   <p class="code">var hp = 10;<br />
     with (obj_Enemy)<br />
     {<br />
         self.hp -= hp;<br />
     }</p>
-  <p>ローカル変数はプログラムの中で多く使われ、特に<span class="notranslate">loops</span> では<a class="glossterm" data-glossterm="くりかえし" href="#">繰り返し</a>回数をカウントしたり、二度と繰り返さない値を1つの操作で何度も使用したりするときに使われます。以下、もう2つほど例を挙げます。</p>
+  <p>ローカル変数はプログラムの中で多く使われ、特に<span class="notranslate">loops</span> では<a class="glossterm" data-glossterm="くりかえし"
+      href="#">繰り返し</a>回数をカウントしたり、二度と繰り返さない値を1つの操作で何度も使用したりするときに使われます。以下、もう2つほど例を挙げます。</p>
   <p class="code">var _i = 0;<br />
     repeat (10)<br />
     {<br />
         inventory[_i] = 0;<br />
         _i += 1;<br />
     }</p>
-  <p>上記のコードでは、&quot;<span class="inline">_i</span>&quot;というローカル変数を作成し、それを0にセットしています。すべて同じ行で行っています。<i>GameMakerの</i>以前のバージョンでは、ローカル変数を最初に<i>宣言してから</i>値を代入しなければなりませんでしたが、このバージョンでは<i>宣言と</i>値の代入を同時に行うことができることに注意してください。そして、上記のコードでは、この変数を使って<a href="../Arrays.htm">配列を</a>初期化しています。変数 &quot;<span class="inline">_i</span>&quot; は、これ以外にインスタンス内の関数で使われることはないので、ローカルスコープにすることができます。もうひとつ例を挙げましょう。</p>
+  <p>上記のコードでは、&quot;<span
+      class="inline">_i</span>&quot;というローカル変数を作成し、それを0にセットしています。すべて同じ行で行っています。<i>GameMakerの</i>以前のバージョンでは、ローカル変数を最初に<i>宣言してから</i>値を代入しなければなりませんでしたが、このバージョンでは<i>宣言と</i>値の代入を同時に行うことができることに注意してください。そして、上記のコードでは、この変数を使って<a
+      href="../Arrays.htm">配列を</a>初期化しています。変数 &quot;<span class="inline">_i</span>&quot;
+    は、これ以外にインスタンス内の関数で使われることはないので、ローカルスコープにすることができます。もうひとつ例を挙げましょう。</p>
   <p class="code">var _x, _y;<br />
     _x = x - 32 + irandom(64);<br />
     _y = y - 32 + irandom(64);<br />
     instance_create_layer(_x, _y, &quot;Effects&quot;, obj_blood);</p>
-  <p>ここでは、ローカル変数 &quot;<span class="inline">_x</span>&quot; と &quot;<span class="inline">_y</span>&quot; を使って、ランダムな座標を保存し、それを使ってインスタンスを生成しています。この例では、これらの変数を使用する必要はありませんが、可読性と使いやすさのために使用しています。このようなコードを使用するよりも、何を行っているのかが非常に明確でわかりやすくなっています。</p>
+  <p>ここでは、ローカル変数 &quot;<span class="inline">_x</span>&quot; と &quot;<span class="inline">_y</span>&quot;
+    を使って、ランダムな座標を保存し、それを使ってインスタンスを生成しています。この例では、これらの変数を使用する必要はありませんが、可読性と使いやすさのために使用しています。このようなコードを使用するよりも、何を行っているのかが非常に明確でわかりやすくなっています。
+  </p>
   <p class="code">instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), &quot;Effects&quot;, obj_guts);</p>
-  <p> <span class="inline">var</span> 宣言されたローカル変数について、もうひとつ注意すべきことがあります......。それらは実行するイベントや関数に固有のものなので、コードを通して他のインスタンスでも使用することができます!つまり、これらの変数を使用して、他のインスタンスで &quot;<span class="inline">with()</span>&quot; 構文で設定や変更を行うことができるのです（詳しくは、<a href="../Variables_And_Variable_Scope.htm">変数のスコープについての</a>セクションを参照してください）。実際のコード自体は以下のようなものになります。</p>
+  <p> <span class="inline">var</span>
+    宣言されたローカル変数について、もうひとつ注意すべきことがあります......。それらは実行するイベントや関数に固有のものなので、コードを通して他のインスタンスでも使用することができます!つまり、これらの変数を使用して、他のインスタンスで
+    &quot;<span class="inline">with()</span>&quot; 構文で設定や変更を行うことができるのです（詳しくは、<a
+      href="../Variables_And_Variable_Scope.htm">変数のスコープについての</a>セクションを参照してください）。実際のコード自体は以下のようなものになります。</p>
   <p class="code">var num = instance_number(obj_Enemy);<br />
     with (obj_Enemy)<br />
     {<br />
         if (num &gt; 10) instance_destroy();<br />
     }</p>
-  <p>上記のコードは、 <span class="inline">var</span> 宣言された変数は、インスタンスでもなく、ゲームの世界でもなく、それが含まれる<i>イベント</i>（または関数）のローカルなので、同じコードブロック内であれば、<span class="notranslate">object</span> のどの関数でも使用できるため、動作します。</p>
+  <p>上記のコードは、 <span class="inline">var</span>
+    宣言された変数は、インスタンスでもなく、ゲームの世界でもなく、それが含まれる<i>イベント</i>（または関数）のローカルなので、同じコードブロック内であれば、<span
+      class="notranslate">object</span> のどの関数でも使用できるため、動作します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Variables_And_Variable_Scope.htm">変数と変数のスコープ</a></div>
-        <div style="float:right">次へ<a href="Instance_Variables.htm">インスタンス変数</a></div>
+        <div style="float:left">前のページ：<a href="../Variables_And_Variable_Scope.htm">変数と変数のスコープ</a></div>
+        <div style="float:right">次のページ：<a href="Instance_Variables.htm">インスタンス変数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 local variables
@@ -79,4 +101,5 @@ var
 local_variables
 -->
 </body>
+
 </html>

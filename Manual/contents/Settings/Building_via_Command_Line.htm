@@ -1,468 +1,582 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>コマンドラインによるビルド</title>
-    <meta name="generator" content="Adobe RoboHelp 2020" />
-    <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-    <script src="../assets/scripts/main_script.js"></script>
-    <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-    <meta name="topic-comment" content="Page that explains how your project can be compiled and tested through a CLI
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>コマンドラインによるビルド</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <script src="../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="Page that explains how your project can be compiled and tested through a CLI
 " />
-    <meta name="rh-index-keywords" content="Building via Command Line" />
-    <meta name="search-keywords" content="build, command line, cli, ci, igor, continuous integration" />
-  </head>
-  <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1 id="h">コマンドラインによるビルド</h1>
-    <p class="note"><span class="note"><strong>注意事項</strong></span>コマンドラインから実行可能なパッケージのビルドは、特定のライセンスでのみ利用可能です。したがって、<a href="https://help.yoyogames.com/hc/en-us/articles/115002637011" title="Which Licence Is Right For Me?">このページで</a>あなたのライセンスがサポートしているかどうかを確認してください。その他のライセンスでは、コマンドラインからプロジェクトを実行し、デバッグすることができます。</p>
-    <p><span class="notranslate">IDE</span> を通してプロジェクトを構築するだけでなく、, <span data-keyref="GameMaker Name"><span data-keyref="GameMaker Name">ゲームメーカー</span></span>では、以下に説明する多くのオプションとコマンドを使用して、コマンドラインインターフェイスからプロジェクトをビルドすることができます。これを利用して、1つのバッチファイルを実行することで、プロジェクトのビルド、テスト、複数のプラットフォームへのデプロイを行ったり、<a href="https://www.jenkins.io/" title="Jenkins">Jenkinsなどの</a>オートメーション<span class="notranslate">server</span> 、継続的インテグレーションをセットアップしたりすることができます。</p>
-    <p>これは、<span class="notranslate">runtime</span> フォルダにある <span class="inline">Igor.exe</span> 実行ファイルを実行し、このページに記載されているオプションとコマンドを渡すことで行われます。<span class="notranslate">Windows</span> では<span class="inline">C:\ProgramData\GameMaker\Cache\runtimes\runtime-[version]\bin</span> フォルダに、Mac では <span class="inline">/Users/Shared/GameMaker/Cache/runtimes/runtime-[version]/bin</span> にあります。</p>
-    <p> </p>
-    <h1>イゴールCIビル</h1>
-    <h2>セットアップ</h2>
-    <p>マシンにCI構築を設定するためには、以下の作業が必要です。</p>
-    <ul class="colour">
-      <li><span data-keyref="GameMaker Name">GameMakerと</span>必要な<span class="notranslate">runtimes</span> をインストールします。</li>
-      <li>必要なターゲットに対して<span class="notranslate">IDE</span> を通してプロジェクトをビルドし、正常に動作することを確認する。</li>
-      <li>コマンドラインからのテストビルド（下記例参照）</li>
-      <li>タスク内で必要なビルドを行うバッチファイルを作成します（コマンドラインからテストします）。</li>
-      <li>CI環境を構築する（これはゲームをどのようにビルドするかによります）。</li>
-      <li>CIタスクを設定し、すべての前提条件が設定されていることを確認します (例:<span class="notranslate">source control</span> あなたのプロジェクトに同期)</li>
-      <li>バッチファイルをCIタスクにフックし、Jenkins環境内でテストする</li>
-    </ul>
-    <h2>備考</h2>
-    <ul class="colour">
-      <li>プラットフォームによっては、ファイルの長さに問題がある場合があります<span class="notranslate">paths</span> その場合は、コマンドに渡す前に、PC上の仮想ドライブを <span class="inline"><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst" title="subst documentation">subst</a></span> (<span class="notranslate">IDE</span> のように)する必要があります。</li>
-      <li>プラットフォームによっては(特に<span class="notranslate">Android</span>)、ビルド中に自動的に<span class="inline">subst</span> ドライブが表示されるので、エラーが発生した場合は手動でクリーンアップする必要があります。</li>
-    </ul>
-    <h2>オプション</h2>
-    <p>以下は、<strong>Igor </strong>実行ファイルを実行する際に使用できるオプションです。</p>
-    <table>
-      <colgroup>
-        <col style="width: 316px;" />
-        <col />
-      </colgroup>
-      <tbody>
-        <tr>
-          <th style="">オプション</th>
-          <th style="">商品説明</th>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
-          <td style="">ライセンス情報の取得に使用するユーザーフォルダ
+  <meta name="rh-index-keywords" content="Building via Command Line" />
+  <meta name="search-keywords" content="build, command line, cli, ci, igor, continuous integration" />
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">-->
+  <h1 id="h">コマンドラインによるビルド</h1>
+  <p class="note"><span class="note"><strong>注意事項</strong></span>コマンドラインから実行可能なパッケージのビルドは、特定のライセンスでのみ利用可能です。したがって、<a
+      href="https://help.yoyogames.com/hc/en-us/articles/115002637011"
+      title="Which Licence Is Right For Me?">このページで</a>あなたのライセンスがサポートしているかどうかを確認してください。その他のライセンスでは、コマンドラインからプロジェクトを実行し、デバッグすることができます。
+  </p>
+  <p><span class="notranslate">IDE</span> を通してプロジェクトを構築するだけでなく、, <span data-keyref="GameMaker Name"><span
+        data-keyref="GameMaker Name">ゲームメーカー</span></span>では、以下に説明する多くのオプションとコマンドを使用して、コマンドラインインターフェイスからプロジェクトをビルドすることができます。これを利用して、1つのバッチファイルを実行することで、プロジェクトのビルド、テスト、複数のプラットフォームへのデプロイを行ったり、<a
+      href="https://www.jenkins.io/" title="Jenkins">Jenkinsなどの</a>オートメーション<span class="notranslate">server</span>
+    、継続的インテグレーションをセットアップしたりすることができます。</p>
+  <p>これは、<span class="notranslate">runtime</span> フォルダにある <span class="inline">Igor.exe</span>
+    実行ファイルを実行し、このページに記載されているオプションとコマンドを渡すことで行われます。<span class="notranslate">Windows</span> では<span
+      class="inline">C:\ProgramData\GameMaker\Cache\runtimes\runtime-[version]\bin</span> フォルダに、Mac では <span
+      class="inline">/Users/Shared/GameMaker/Cache/runtimes/runtime-[version]/bin</span> にあります。</p>
+  <p> </p>
+  <h1>イゴールCIビル</h1>
+  <h2>セットアップ</h2>
+  <p>マシンにCI構築を設定するためには、以下の作業が必要です。</p>
+  <ul class="colour">
+    <li><span data-keyref="GameMaker Name">GameMakerと</span>必要な<span class="notranslate">runtimes</span> をインストールします。
+    </li>
+    <li>必要なターゲットに対して<span class="notranslate">IDE</span> を通してプロジェクトをビルドし、正常に動作することを確認する。</li>
+    <li>コマンドラインからのテストビルド（下記例参照）</li>
+    <li>タスク内で必要なビルドを行うバッチファイルを作成します（コマンドラインからテストします）。</li>
+    <li>CI環境を構築する（これはゲームをどのようにビルドするかによります）。</li>
+    <li>CIタスクを設定し、すべての前提条件が設定されていることを確認します (例:<span class="notranslate">source control</span> あなたのプロジェクトに同期)</li>
+    <li>バッチファイルをCIタスクにフックし、Jenkins環境内でテストする</li>
+  </ul>
+  <h2>備考</h2>
+  <ul class="colour">
+    <li>プラットフォームによっては、ファイルの長さに問題がある場合があります<span class="notranslate">paths</span> その場合は、コマンドに渡す前に、PC上の仮想ドライブを <span
+        class="inline"><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst"
+          title="subst documentation">subst</a></span> (<span class="notranslate">IDE</span> のように)する必要があります。</li>
+    <li>プラットフォームによっては(特に<span class="notranslate">Android</span>)、ビルド中に自動的に<span class="inline">subst</span>
+      ドライブが表示されるので、エラーが発生した場合は手動でクリーンアップする必要があります。</li>
+  </ul>
+  <h2>オプション</h2>
+  <p>以下は、<strong>Igor </strong>実行ファイルを実行する際に使用できるオプションです。</p>
+  <table>
+    <colgroup>
+      <col style="width: 316px;" />
+      <col />
+    </colgroup>
+    <tbody>
+      <tr>
+        <th style="">オプション</th>
+        <th style="">説明</th>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
+        <td style="">ライセンス情報の取得に使用するユーザーフォルダ
+          <br />
+          <br />
+          <span class="notranslate">Windows</span> の場合、これは次のようになります。<span
+            class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
             <br />
-            <br />
-            <span class="notranslate">Windows</span> の場合、これは次のようになります。<span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
-            <br />
-            <span class="notranslate">macOS</span> の場合、これは次のようになります。 <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span> </td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/rp=[runtime_root]</span></td>
-          <td style="">ランタイムのルートフォルダー</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/project=[project_YYP_file]</span></td>
-          <td style="">プロジェクトの <span class="inline">.yyp</span> ファイルへの完全な<span class="notranslate">path</span> </td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/cache=[cache_dir_path]</span></td>
-          <td style="">使用する<span class="notranslate">cache</span> ディレクトリ（デフォルトはカレントディレクトリの <span class="inline">\cache</span> です。）</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/temp=[temp_dir_path]</span></td>
-          <td style="">使用する一時ディレクトリ（デフォルトは <span class="inline">c:\temp</span>)</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
-          <td style="">ビルドが展開される出力ディレクトリ。末尾の項目は常に削除されるので、ディレクトリだけを指定しないでください（例： <span class="inline">d:\game\output</span> を指定すると、ゲームファイルは <span class="inline">d:\game</span> に置かれます）。
-            <br />
-            <br />
-            これを指定しない場合、 <span class="inline">.bat</span> ファイルと同じディレクトリ（またはコマンドの実行元）に <span class="inline">output</span> というディレクトリが作成され、そこに抽出されたビルドファイルが格納されます。 </td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/tf=[target_file]</span></td>
-          <td style="">実際に作成されるZIPファイルまたはNSISインストーラのファイル名</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/config=[configName]</span></td>
-          <td style="">使用するコンフィギュレーション名（デフォルトは <span class="inline">Default</span> ）。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/runtime=YYC|VM</span></td>
-          <td style="">出力タイプ（YYCまたはVM）、デフォルトはVM</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/j=[NumCPUs]</span></td>
-          <td style="">ビルド時に使用するCPUの数</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/device=[device_name_from_IDE]</span></td>
-          <td style="">IDEで設定されたターゲットデバイスの名前</td>
-        </tr>
-      </tbody>
-    </table>
-    <h2>事例紹介</h2>
-    <p>以下は、すべてのプラットフォーム用のビルドコマンドの例です。</p>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">オペラGX</a></p>
-    <div class="droptext" data-targetname="drop-down12">
-      <p>Opera GXのクリーニングプロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- OperaGX Clean</p>
-      <p>Opera GXを実行中。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- OperaGX Run</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">ウィンドウズ</a></p>
-    <div class="droptext" data-targetname="drop-down">
-      <p>クリーニング<span class="notranslate">Windows</span> プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- Windows Clean</p>
-      <p>Building VM for<span class="notranslate">Windows</span> -- <span class="inline">Run</span>, <span class="inline">PackageZip </span>and <span class="inline">PackageNsis</span>:</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- Windows Run</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Windows PackageZip</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Windows PackageNsis</p>
-      <p>Windows版YYCの構築-- <span class="inline">Run</span>, <span class="inline">PackageZip </span>, <span class="inline">PackageNsis</span>:</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /platform=YYC -- Windows Run</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Windows PackageZip</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Windows PackageNsis</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">マクロス</a></p>
-    <div class="droptext" data-targetname="drop-down1">
-      <p>クリーニング<span class="notranslate">macOS</span> プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- Mac Clean</p>
-      <p>Macにいながら、<span class="notranslate">macOS</span> のVMを構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Mac Package</p>
-      <p>Macでは、Igorを実行するためにmonoを使用する必要があるので、すべてのコマンドの前に <span class="inline"><strong>mono</strong></span> を記述する必要があることに<strong>注意して</strong>ください（例）。<span class="inline">mono Igor.exe [options]</span></p>
-      <p>PCにいながら、<span class="notranslate">macOS</span> のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- Mac Package</p>
-      <p>Macを使いながら、YYC for<span class="notranslate">macOS</span> を構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Mac Package</p>
-      <p>PCを使いながらYYC for<span class="notranslate">macOS</span> を構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- Mac Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Linux / Ubuntu</a></p>
-    <div class="droptext" data-targetname="drop-down2">
-      <p>クリーニング<span class="notranslate">Linux</span> プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- Linux Clean</p>
-      <p>PCにいながら、<span class="notranslate">Linux</span> のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- Linux Package</p>
-      <p>PCを使いながらYYC for<span class="notranslate">Linux</span> を構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- Linux Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">HTML5</a></p>
-    <div class="droptext" data-targetname="drop-down3">
-      <p>クリーニングHTML5プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- HTML5 Clean</p>
-      <p>HTML5フォルダの構築（ターゲットフォルダは必ず <span class="inline">/tf)</span> で指定してください。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_folder] -- HTML5 folder</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">iOS</a></p>
-    <div class="droptext" data-targetname="drop-down4">
-      <p>Macにいながら、<span class="notranslate">iOS</span> のVMを構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- ios Package</p>
-      <p>PCにいながら、<span class="notranslate">iOS</span> のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- ios Package</p>
-      <p>Macを使いながら、YYC for<span class="notranslate">iOS</span> を構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- ios Package</p>
-      <p>PCを使いながらYYC for<span class="notranslate">iOS</span> を構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- ios Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">アンドロイド</a></p>
-    <div class="droptext" data-targetname="drop-down5">
-      <p>クリーニング<span class="notranslate">Android</span> プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- Windows Clean</p>
-      <p>VMを使用して<span class="notranslate">Android</span> APKを構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Android Package</p>
-      <p>YYCを使った<span class="notranslate">Android</span> APKの構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Android Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ティーブイオーエス</a></p>
-    <div class="droptext" data-targetname="drop-down6">
-      <p>クリーニング<span class="notranslate">tvOS</span> プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- tvos Clean</p>
-      <p>Macにいながら、<span class="notranslate">tvOS</span> のVMを構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- tvos Package</p>
-      <p>PCにいながら、<span class="notranslate">tvOS</span> のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- tvos Package</p>
-      <p>Macを使いながら、YYC for<span class="notranslate">tvOS</span> を構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- tvos Package</p>
-      <p>PCを使いながらYYC for<span class="notranslate">tvOS</span> を構築する。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- tvos Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">PS4</a></p>
-    <div class="droptext" data-targetname="drop-down7">
-      <p>クリーニングPS4プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- ps4 Clean</p>
-      <p>PCにいながらPS4用のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- ps4 Package</p>
-      <p>PCを使いながらPS4版YYCを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- ps4 Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">PS5</a></p>
-    <div class="droptext" data-targetname="drop-down10">
-      <p>PS5のクリーニングプロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- ps5 Clean</p>
-      <p>PCにいながらPS5用のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- ps5 Package</p>
-      <p>PCを使いながら、PS5用のYYCを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- ps5 Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Xbox One</a></p>
-    <div class="droptext" data-targetname="drop-down8">
-      <p>Xbox Oneのクリーニングプロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- XBoxOne Clean</p>
-      <p>PCにいながらXbox One用のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- XBoxOne Package</p>
-      <p>PCを使いながらXbox One用YYCを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- XBoxOne Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">XboxシリーズX/S</a></p>
-    <div class="droptext" data-targetname="drop-down11">
-      <p>クリーニングXboxシリーズX/Sプロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- XBoxOneSeriesXS Clean</p>
-      <p>Xbox Series X/S用VMの構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- XBoxOneSeriesXS Package</p>
-      <p>XboxシリーズX/S用YYCの構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- XBoxOneSeriesXS Package</p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">スイッチ</a></p>
-    <div class="droptext" data-targetname="drop-down9">
-      <p>クリーニング<span class="notranslate">Switch</span> プロジェクト。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] -- Switch Clean</p>
-      <p>PCにいながら、<span class="notranslate">Switch</span> のVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- Switch Package</p>
-      <p>PCを使いながらYYCのVMを構築。</p>
-      <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path] /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] -- Switch Package</p>
-    </div>
-    <p> </p>
-    <h1>イゴールランタイム</h1>
-    <p>Igorランタイムで使用できるオプションは以下の通りです。</p>
-    <table>
-      <tbody>
-        <tr>
-          <th style="">オプション</th>
-          <th style="">商品説明</th>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
-          <td style="">ライセンス情報の取得に使用するユーザーフォルダーを設定し、どのモジュールがインストール可能かを<span data-keyref="GameMaker Name">GameMakerが</span>把握できるようにする。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/lf=[license_file]</span></td>
-          <td style="">ライセンスファイルを直接<span class="notranslate">path</span> に設定します。ユーザーフォルダー (<span class="inline">/uf</span>) の設定の代わりとして使用できます。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/ru=[runtime_url]</span></td>
-          <td style=""><span class="notranslate">runtime</span> の情報を取得する URL を設定する (デフォルトは安定版リリース)</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/rp=[runtime_root]</span></td>
-          <td style="">ローカルの<span class="notranslate">runtime</span> インストールフォルダーを設定し、インストールされている<span class="notranslate">runtimes</span> を一覧表示したり、新しいランタイムをインストールしたりします。</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Igorランタイムで使用できるコマンドを紹介します。</p>
-    <h4>構文です。</h4>
-    <p class="code">Igor.exe [command]</p>
-    <table>
-      <colgroup>
-        <col style="width: 237px;" />
-        <col style="width: 537px;" />
-      </colgroup>
-      <tbody>
-        <tr>
-          <th style="">コマンド</th>
-          <th style="">商品説明</th>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">Runtime List</span></td>
-          <td style="">フィードで利用可能な<span class="notranslate">runtimes</span> を一覧表示します（バージョン番号、ビルドの日時）</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
-          <td style="">現在のフォルダーで利用可能な<span class="notranslate">runtimes</span> をリストアップします（<span class="inline">directory</span>=フォルダーへのフル<span class="notranslate">path</span> ）。
-            <br />
-            <br />
-            検索するディレクトリを指定できますが、指定しない場合はデフォルトでカレントディレクトリになります
-            <br />
-            <br />
-            これは、ディレクトリの中に <span class="inline">receipt.json</span> ファイルと <span class="inline">manifest</span> フォルダがあるかどうかもチェックします (実際には<span class="notranslate">runtime</span> であることを確認します)。 </td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">Runtime Info [version]</span></td>
-          <td style="">指定したフィードの最新の<span class="notranslate">runtime</span> に関する情報を出力します。 また、ユーザが利用できるモジュールに関する情報を表示するために、 ライセンスファイルが必要です。
-            <br />
-            <br />
-            <span class="inline">version</span>は、フィードのタイトルを検索するために<span class="notranslate">string</span> を使用するか (例: <span class="inline">&quot;739&quot;</span> はバージョン番号に 739 を含むすべてのビルドの情報を表示します)、または <span class="inline">all</span> を使用してすべてのフィードの情報を表示することができます。
-            <br />
-            <br />
-            各モジュールのファイル名（ <span class="inline">.zip</span> ）と共に一覧表示されます。 </td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">Runtime Install [version]</span></td>
-          <td style="">与えられたフィードから最新の<span class="notranslate">runtime</span> を、与えられた <span class="inline">version</span> を検索フィルタとして使用してインストールします。これを指定しない場合は、最新版をデフォルトとします。ユーザーがライセンスを持っているすべてのモジュールを取得します。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
-          <td style="">インストールされたすべてのファイルのチェックサムを計算し、マニフェスト <span class="inline">folder</span> に書き込まれたチェックサムと比較します。チェックするフォルダを指定できますが、指定しない場合はカレントディレクトリをデフォルトとします。
-            <br />
-            <br />
-            これにより、チェックサムが一致しないファイル、見つからないファイル、存在しないはずのファイルなどが<span class="notranslate">flag</span> 。
-            <br />
-            <br />
-            マニフェストファイル自体は検証されておらず、ユーザーはマニフェストファイルを変更してインストールされたものと一致させることができることに注意してください。 </td>
-        </tr>
-      </tbody>
-    </table>
-    <p> </p>
-    <h1>イゴールテスト</h1>
-    <p>Igorでビルドをテストするために使用できるオプションを紹介します。</p>
-    <table>
-      <tbody>
-        <tr>
-          <th style="">オプション</th>
-          <th style="">商品説明</th>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
-          <td style="">ライセンス情報の取得に使用するユーザーフォルダーを設定し、どのモジュールがインストール可能かを<span data-keyref="GameMaker Name">GameMakerが</span>把握できるようにする。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/lf=[license_file]</span></td>
-          <td style="">ライセンスファイルへの直接アクセス（<span class="notranslate">path</span> ）を設定します。ユーザーフォルダーの設定（<span class="inline">/uf</span> ）の代わりとして使用できます。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/df=[device_file]</span></td>
-          <td style=""> <span class="inline">devices.json</span> ファイルに直接<span class="notranslate">path</span> を設定します。ユーザーフォルダ (<span class="inline">/uf</span>) の設定の代わりとして使用できます。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/timeout=[number_of_seconds_to_wait]</span></td>
-          <td style="">テストに使用するタイムアウトを秒単位で指定します。デフォルトは120秒で、このタイムアウトが過ぎるとテストは停止し、失敗とマークされます</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/waittime=[number_of_seconds_to_wait]</span></td>
-          <td style="">テストをパスしたと宣言する前にメイン<span class="notranslate">loop</span> で待機する秒数、デフォルトは 30 秒</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/device=[device_name]</span></td>
-          <td style="">ユーザーフォルダーの <span class="inline">devices.json</span> ファイルからデバイス名を検索するために使用します。</td>
-        </tr>
-        <tr>
-          <td style=""><span class="inline">/target=[list_of_targets]</span></td>
-          <td style="">カンマで区切られたターゲットのリスト。 <span class="inline">PLATFORM|DEVICE</span> 形式で、例． <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
-            <br />
-            <br />
-           <strong>all</strong> を指定すると、 <span class="inline">devices.json</span> ファイル内のすべてのデバイスに対してテストの実行を試みます。 </td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Igorでテストを実行するために使用できるコマンドが1つあります。</p>
-    <p class="code">Igor.exe Tests RunTests [test_directory/test_filename]</p>
-    <p>テストディレクトリまたはテストファイル名のいずれかを指定する必要があります。</p>
-    <ul class="colour">
-      <li>ディレクトリであれば、Igorはディレクトリの中から <span class="inline">tests.json</span> というファイルを探します。
-        <ul>
-          <li>ファイルが<strong>見つからない</strong>場合、Igor はディレクトリ内の <span class="inline">.yyz</span> と <span class="inline">.yyp</span> ファイルを再帰的に検索します。
-            <ul>
-              <li>見つかった各プロジェクトは、Windows上でビルドして実行される</li>
-              <li>ランナーがメインループに到達するまで待ちます。
-                <ul>
-                  <li>待ち時間の後、ランナーがまだ実行されていればテストは合格です。</li>
-                  <li>プロジェクトがタイムアウト時間内にコンパイルされないか、待ち時間が終わる前にクラッシュした場合、テストは失敗します。</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><span class="inline">tests.json</span> ファイルが<strong>見つかった</strong>場合、Igor はそのファイルに記述されたテストを実行します（以下の例を参照してください）。</li>
-        </ul>
-      </li>
-      <li>また、ディレクトリではなく、 <span class="inline">tests.json</span> ファイルに直接<span class="notranslate">path</span> を指定することもできます。</li>
-    </ul>
-    <p> </p>
-    <h1>Tests.jsonファイル</h1>
-    <h2>フォーマット</h2>
-    <p> <span class="inline">tests.json</span> ファイルは以下のフォーマットである必要があります。</p>
-    <ul class="colour">
-      <li>JSONファイルにはオブジェクトの配列が必要です</li>
-      <li>各<span class="notranslate">object</span> は1つのテストを記述する必要があります。
-        <ul>
-          <li>テスト<span class="notranslate">object</span> は、これらのキーを含んでいなければなりません。
-            <ul>
-              <li><span class="inline">name</span>:テストが成功したか失敗したかを報告するために使用される名前</li>
-              <li><span class="inline">path</span>:テスト用の <span class="inline">.yyp</span>, <span class="inline">.yyz</span>, <span class="inline">.gml</span>, <span class="inline">.js</span> ファイルまたはフォルダへの<span class="notranslate">path</span> 。</li>
-              <li><span class="inline">command</span>:テスト用のIgorコマンド(<span class="inline">Run</span>, <span class="inline">CreatePackage</span>, 上記で説明したように)</li>
-            </ul>
-          </li>
-          <li>テスト<span class="notranslate">object</span> は、これらのキーを含むこともできる。
-            <ul>
-              <li><span class="inline">platform</span>:テストを行うためにIgorに直接渡される</li>
-              <li><span class="inline">device</span>: <span class="inline">devices.json</span> ファイルに記載されているデバイス名</li>
-              <li><span class="inline">target</span>:ターゲットは、&quot;<span class="inline">PLATFORM|TARGET&quot;</span> 形式で、例えば次のようになります。<span class="inline">Windows|Local&quot;</span></li>
-              <li><span class="inline">timeout</span>:コンパイルと実行を含む全テストのタイムアウト; これを超えるとテストは停止し、失敗とマークされます。</li>
-              <li><span class="inline">waittime</span>:メイン<span class="notranslate">loop</span> に入ってから、テストに合格したかどうかを判断するまでの待ち時間の長さ</li>
-              <li><span class="inline">owner</span>このテストが失敗した場合に電子メールを送信するユーザーの電子メールアドレス。</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <h2>例</h2>
-    <p>以下は、 <span class="inline">tests.json</span> のファイルの例です。</p>
-    <p class="code">[
-      <br/>
-      {
-      <br/>
-      &quot;name&quot; : &quot;Game Idea Windows&quot;,
-      <br/>
-      &quot;path&quot; : &quot;C:/scratch/GameIdea.yyz&quot;,
-      <br/>
-      &quot;platform&quot; : &quot;Windows&quot;,
-      <br/>
-      &quot;command&quot; : &quot;Run&quot;,
-      <br/>
-      &quot;timeout&quot; : &quot;500&quot;,
-      <br/>
-      &quot;waittime&quot; : &quot;30&quot;
-      <br/>
-      },
-      <br/>
-      {
-      <br/>
-      &quot;name&quot; : &quot;Platformer Game Windows&quot;,
-      <br/>
-      &quot;path&quot; : &quot;C:/Users/&lt;MY USERNAME&gt;/Documents/GameMaker/Platformer Game/PlatformerGame.yyp&quot;,
-      <br/>
-      &quot;target&quot; : &quot;Windows|Local,HTML5|selenium:firefox,PS4|Default&quot;,
-      <br/>
-      &quot;command&quot; : &quot;Run&quot;
-      <br/>
-      },
-      <br/>
-      {
-      <br/>
-      &quot;name&quot; : &quot;Puzzle Game Windows&quot;,
-      <br/>
-      &quot;path&quot; : &quot;C:/Users/&lt;MY USERNAME&gt;/Documents/GameMaker/Puzzle Game/PuzzleGame.yyp&quot;,
-      <br/>
-      &quot;platform&quot; : &quot;HTML5&quot;,
-      <br/>
-      &quot;command&quot; : &quot;Run&quot;,
-      <br/>
-      &quot;device&quot; : &quot;selenium:chrome&quot;
-      <br/>
-      }
-      <br/>
-      ]</p>
-    <p> </p>
-    <p> </p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div style="float:left">戻る<a data-xref="{title}" href="Runner_Details/Runner_Details.htm">ランナー＆コンパイラー</a></div>
-          <div style="float:right">次へ<a data-xref="{title}" href="Runner_Details/Compiler_Batch_Files.htm">コンパイラバッチファイル/スクリプト</a></div>
+            <span class="notranslate">macOS</span> の場合、これは次のようになります。 <span
+              class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span>
+        </td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/rp=[runtime_root]</span></td>
+        <td style="">ランタイムのルートフォルダー</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/project=[project_YYP_file]</span></td>
+        <td style="">プロジェクトの <span class="inline">.yyp</span> ファイルへの完全な<span class="notranslate">path</span> </td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/cache=[cache_dir_path]</span></td>
+        <td style="">使用する<span class="notranslate">cache</span> ディレクトリ（デフォルトはカレントディレクトリの <span
+            class="inline">\cache</span> です。）</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/temp=[temp_dir_path]</span></td>
+        <td style="">使用する一時ディレクトリ（デフォルトは <span class="inline">c:\temp</span>)</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
+        <td style="">ビルドが展開される出力ディレクトリ。末尾の項目は常に削除されるので、ディレクトリだけを指定しないでください（例： <span class="inline">d:\game\output</span>
+          を指定すると、ゲームファイルは <span class="inline">d:\game</span> に置かれます）。
+          <br />
+          <br />
+          これを指定しない場合、 <span class="inline">.bat</span> ファイルと同じディレクトリ（またはコマンドの実行元）に <span class="inline">output</span>
+          というディレクトリが作成され、そこに抽出されたビルドファイルが格納されます。
+        </td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/tf=[target_file]</span></td>
+        <td style="">実際に作成されるZIPファイルまたはNSISインストーラのファイル名</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/config=[configName]</span></td>
+        <td style="">使用するコンフィギュレーション名（デフォルトは <span class="inline">Default</span> ）。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/runtime=YYC|VM</span></td>
+        <td style="">出力タイプ（YYCまたはVM）、デフォルトはVM</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/j=[NumCPUs]</span></td>
+        <td style="">ビルド時に使用するCPUの数</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/device=[device_name_from_IDE]</span></td>
+        <td style="">IDEで設定されたターゲットデバイスの名前</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>事例紹介</h2>
+  <p>以下は、すべてのプラットフォーム用のビルドコマンドの例です。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">オペラGX</a></p>
+  <div class="droptext" data-targetname="drop-down12">
+    <p>Opera GXのクリーニングプロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- OperaGX Clean</p>
+    <p>Opera GXを実行中。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- OperaGX Run</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">ウィンドウズ</a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>クリーニング<span class="notranslate">Windows</span> プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- Windows Clean</p>
+    <p>Building VM for<span class="notranslate">Windows</span> -- <span class="inline">Run</span>, <span
+        class="inline">PackageZip </span>and <span class="inline">PackageNsis</span>:</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- Windows Run</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Windows PackageZip</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Windows PackageNsis</p>
+    <p>Windows版YYCの構築-- <span class="inline">Run</span>, <span class="inline">PackageZip </span>, <span
+        class="inline">PackageNsis</span>:</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /platform=YYC -- Windows Run</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Windows PackageZip</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Windows PackageNsis</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">マクロス</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p>クリーニング<span class="notranslate">macOS</span> プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- Mac Clean</p>
+    <p>Macにいながら、<span class="notranslate">macOS</span> のVMを構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Mac Package</p>
+    <p>Macでは、Igorを実行するためにmonoを使用する必要があるので、すべてのコマンドの前に <span class="inline"><strong>mono</strong></span>
+      を記述する必要があることに<strong>注意して</strong>ください（例）。<span class="inline">mono Igor.exe [options]</span></p>
+    <p>PCにいながら、<span class="notranslate">macOS</span> のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- Mac Package</p>
+    <p>Macを使いながら、YYC for<span class="notranslate">macOS</span> を構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Mac Package</p>
+    <p>PCを使いながらYYC for<span class="notranslate">macOS</span> を構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      Mac Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Linux / Ubuntu</a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p>クリーニング<span class="notranslate">Linux</span> プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- Linux Clean</p>
+    <p>PCにいながら、<span class="notranslate">Linux</span> のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- Linux Package
+    </p>
+    <p>PCを使いながらYYC for<span class="notranslate">Linux</span> を構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      Linux Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">HTML5</a></p>
+  <div class="droptext" data-targetname="drop-down3">
+    <p>クリーニングHTML5プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- HTML5 Clean</p>
+    <p>HTML5フォルダの構築（ターゲットフォルダは必ず <span class="inline">/tf)</span> で指定してください。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_folder] -- HTML5 folder</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">iOS</a></p>
+  <div class="droptext" data-targetname="drop-down4">
+    <p>Macにいながら、<span class="notranslate">iOS</span> のVMを構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- ios Package</p>
+    <p>PCにいながら、<span class="notranslate">iOS</span> のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- ios Package</p>
+    <p>Macを使いながら、YYC for<span class="notranslate">iOS</span> を構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- ios Package</p>
+    <p>PCを使いながらYYC for<span class="notranslate">iOS</span> を構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      ios Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">アンドロイド</a></p>
+  <div class="droptext" data-targetname="drop-down5">
+    <p>クリーニング<span class="notranslate">Android</span> プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- Windows Clean</p>
+    <p>VMを使用して<span class="notranslate">Android</span> APKを構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- Android Package</p>
+    <p>YYCを使った<span class="notranslate">Android</span> APKの構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- Android Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ティーブイオーエス</a></p>
+  <div class="droptext" data-targetname="drop-down6">
+    <p>クリーニング<span class="notranslate">tvOS</span> プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- tvos Clean</p>
+    <p>Macにいながら、<span class="notranslate">tvOS</span> のVMを構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] -- tvos Package</p>
+    <p>PCにいながら、<span class="notranslate">tvOS</span> のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- tvos Package</p>
+    <p>Macを使いながら、YYC for<span class="notranslate">tvOS</span> を構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC -- tvos Package</p>
+    <p>PCを使いながらYYC for<span class="notranslate">tvOS</span> を構築する。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      tvos Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">PS4</a></p>
+  <div class="droptext" data-targetname="drop-down7">
+    <p>クリーニングPS4プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- ps4 Clean</p>
+    <p>PCにいながらPS4用のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- ps4 Package</p>
+    <p>PCを使いながらPS4版YYCを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      ps4 Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">PS5</a></p>
+  <div class="droptext" data-targetname="drop-down10">
+    <p>PS5のクリーニングプロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- ps5 Clean</p>
+    <p>PCにいながらPS5用のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- ps5 Package</p>
+    <p>PCを使いながら、PS5用のYYCを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      ps5 Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Xbox One</a></p>
+  <div class="droptext" data-targetname="drop-down8">
+    <p>Xbox Oneのクリーニングプロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- XBoxOne Clean</p>
+    <p>PCにいながらXbox One用のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- XBoxOne Package
+    </p>
+    <p>PCを使いながらXbox One用YYCを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      XBoxOne Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">XboxシリーズX/S</a></p>
+  <div class="droptext" data-targetname="drop-down11">
+    <p>クリーニングXboxシリーズX/Sプロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- XBoxOneSeriesXS Clean</p>
+    <p>Xbox Series X/S用VMの構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- XBoxOneSeriesXS
+      Package</p>
+    <p>XboxシリーズX/S用YYCの構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      XBoxOneSeriesXS Package</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">スイッチ</a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p>クリーニング<span class="notranslate">Switch</span> プロジェクト。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] -- Switch Clean</p>
+    <p>PCにいながら、<span class="notranslate">Switch</span> のVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /device=[device_IDE_Name] -- Switch Package
+    </p>
+    <p>PCを使いながらYYCのVMを構築。</p>
+    <p class="code">Igor.exe /uf=[user_folder] /rp=[runtime_path] /project=[project_YYP_file] /cache=[cache_dir_path]
+      /temp=[temp_dir_path] /of=[output_folder_filename] /tf=[target_file] /platform=YYC /device=[device_IDE_Name] --
+      Switch Package</p>
+  </div>
+  <p> </p>
+  <h1>イゴールランタイム</h1>
+  <p>Igorランタイムで使用できるオプションは以下の通りです。</p>
+  <table>
+    <tbody>
+      <tr>
+        <th style="">オプション</th>
+        <th style="">説明</th>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
+        <td style="">ライセンス情報の取得に使用するユーザーフォルダーを設定し、どのモジュールがインストール可能かを<span
+            data-keyref="GameMaker Name">GameMakerが</span>把握できるようにする。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/lf=[license_file]</span></td>
+        <td style="">ライセンスファイルを直接<span class="notranslate">path</span> に設定します。ユーザーフォルダー (<span
+            class="inline">/uf</span>) の設定の代わりとして使用できます。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/ru=[runtime_url]</span></td>
+        <td style=""><span class="notranslate">runtime</span> の情報を取得する URL を設定する (デフォルトは安定版リリース)</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/rp=[runtime_root]</span></td>
+        <td style="">ローカルの<span class="notranslate">runtime</span> インストールフォルダーを設定し、インストールされている<span
+            class="notranslate">runtimes</span> を一覧表示したり、新しいランタイムをインストールしたりします。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Igorランタイムで使用できるコマンドを紹介します。</p>
+  <h4>構文</h4>
+  <p class="code">Igor.exe [command]</p>
+  <table>
+    <colgroup>
+      <col style="width: 237px;" />
+      <col style="width: 537px;" />
+    </colgroup>
+    <tbody>
+      <tr>
+        <th style="">コマンド</th>
+        <th style="">説明</th>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">Runtime List</span></td>
+        <td style="">フィードで利用可能な<span class="notranslate">runtimes</span> を一覧表示します（バージョン番号、ビルドの日時）</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
+        <td style="">現在のフォルダーで利用可能な<span class="notranslate">runtimes</span> をリストアップします（<span
+            class="inline">directory</span>=フォルダーへのフル<span class="notranslate">path</span> ）。
+          <br />
+          <br />
+          検索するディレクトリを指定できますが、指定しない場合はデフォルトでカレントディレクトリになります
+          <br />
+          <br />
+          これは、ディレクトリの中に <span class="inline">receipt.json</span> ファイルと <span class="inline">manifest</span>
+          フォルダがあるかどうかもチェックします (実際には<span class="notranslate">runtime</span> であることを確認します)。
+        </td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">Runtime Info [version]</span></td>
+        <td style="">指定したフィードの最新の<span class="notranslate">runtime</span> に関する情報を出力します。 また、ユーザが利用できるモジュールに関する情報を表示するために、
+          ライセンスファイルが必要です。
+          <br />
+          <br />
+          <span class="inline">version</span>は、フィードのタイトルを検索するために<span class="notranslate">string</span> を使用するか (例: <span
+            class="inline">&quot;739&quot;</span> はバージョン番号に 739 を含むすべてのビルドの情報を表示します)、または <span class="inline">all</span>
+          を使用してすべてのフィードの情報を表示することができます。
+          <br />
+          <br />
+          各モジュールのファイル名（ <span class="inline">.zip</span> ）と共に一覧表示されます。
+        </td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">Runtime Install [version]</span></td>
+        <td style="">与えられたフィードから最新の<span class="notranslate">runtime</span> を、与えられた <span class="inline">version</span>
+          を検索フィルタとして使用してインストールします。これを指定しない場合は、最新版をデフォルトとします。ユーザーがライセンスを持っているすべてのモジュールを取得します。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
+        <td style="">インストールされたすべてのファイルのチェックサムを計算し、マニフェスト <span class="inline">folder</span>
+          に書き込まれたチェックサムと比較します。チェックするフォルダを指定できますが、指定しない場合はカレントディレクトリをデフォルトとします。
+          <br />
+          <br />
+          これにより、チェックサムが一致しないファイル、見つからないファイル、存在しないはずのファイルなどが<span class="notranslate">flag</span> 。
+          <br />
+          <br />
+          マニフェストファイル自体は検証されておらず、ユーザーはマニフェストファイルを変更してインストールされたものと一致させることができることに注意してください。
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h1>イゴールテスト</h1>
+  <p>Igorでビルドをテストするために使用できるオプションを紹介します。</p>
+  <table>
+    <tbody>
+      <tr>
+        <th style="">オプション</th>
+        <th style="">説明</th>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
+        <td style="">ライセンス情報の取得に使用するユーザーフォルダーを設定し、どのモジュールがインストール可能かを<span
+            data-keyref="GameMaker Name">GameMakerが</span>把握できるようにする。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/lf=[license_file]</span></td>
+        <td style="">ライセンスファイルへの直接アクセス（<span class="notranslate">path</span> ）を設定します。ユーザーフォルダーの設定（<span
+            class="inline">/uf</span> ）の代わりとして使用できます。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/df=[device_file]</span></td>
+        <td style=""> <span class="inline">devices.json</span> ファイルに直接<span class="notranslate">path</span>
+          を設定します。ユーザーフォルダ (<span class="inline">/uf</span>) の設定の代わりとして使用できます。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/timeout=[number_of_seconds_to_wait]</span></td>
+        <td style="">テストに使用するタイムアウトを秒単位で指定します。デフォルトは120秒で、このタイムアウトが過ぎるとテストは停止し、失敗とマークされます</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/waittime=[number_of_seconds_to_wait]</span></td>
+        <td style="">テストをパスしたと宣言する前にメイン<span class="notranslate">loop</span> で待機する秒数、デフォルトは 30 秒</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/device=[device_name]</span></td>
+        <td style="">ユーザーフォルダーの <span class="inline">devices.json</span> ファイルからデバイス名を検索するために使用します。</td>
+      </tr>
+      <tr>
+        <td style=""><span class="inline">/target=[list_of_targets]</span></td>
+        <td style="">カンマで区切られたターゲットのリスト。 <span class="inline">PLATFORM|DEVICE</span> 形式で、例． <span
+            class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
+          <br />
+          <br />
+          <strong>all</strong> を指定すると、 <span class="inline">devices.json</span> ファイル内のすべてのデバイスに対してテストの実行を試みます。
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Igorでテストを実行するために使用できるコマンドが1つあります。</p>
+  <p class="code">Igor.exe Tests RunTests [test_directory/test_filename]</p>
+  <p>テストディレクトリまたはテストファイル名のいずれかを指定する必要があります。</p>
+  <ul class="colour">
+    <li>ディレクトリであれば、Igorはディレクトリの中から <span class="inline">tests.json</span> というファイルを探します。
+      <ul>
+        <li>ファイルが<strong>見つからない</strong>場合、Igor はディレクトリ内の <span class="inline">.yyz</span> と <span
+            class="inline">.yyp</span> ファイルを再帰的に検索します。
+          <ul>
+            <li>見つかった各プロジェクトは、Windows上でビルドして実行される</li>
+            <li>ランナーがメインループに到達するまで待ちます。
+              <ul>
+                <li>待ち時間の後、ランナーがまだ実行されていればテストは合格です。</li>
+                <li>プロジェクトがタイムアウト時間内にコンパイルされないか、待ち時間が終わる前にクラッシュした場合、テストは失敗します。</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><span class="inline">tests.json</span> ファイルが<strong>見つかった</strong>場合、Igor
+          はそのファイルに記述されたテストを実行します（以下の例を参照してください）。</li>
+      </ul>
+    </li>
+    <li>また、ディレクトリではなく、 <span class="inline">tests.json</span> ファイルに直接<span class="notranslate">path</span> を指定することもできます。
+    </li>
+  </ul>
+  <p> </p>
+  <h1>Tests.jsonファイル</h1>
+  <h2>フォーマット</h2>
+  <p> <span class="inline">tests.json</span> ファイルは以下のフォーマットである必要があります。</p>
+  <ul class="colour">
+    <li>JSONファイルにはオブジェクトの配列が必要です</li>
+    <li>各<span class="notranslate">object</span> は1つのテストを記述する必要があります。
+      <ul>
+        <li>テスト<span class="notranslate">object</span> は、これらのキーを含んでいなければなりません。
+          <ul>
+            <li><span class="inline">name</span>:テストが成功したか失敗したかを報告するために使用される名前</li>
+            <li><span class="inline">path</span>:テスト用の <span class="inline">.yyp</span>, <span
+                class="inline">.yyz</span>, <span class="inline">.gml</span>, <span class="inline">.js</span>
+              ファイルまたはフォルダへの<span class="notranslate">path</span> 。</li>
+            <li><span class="inline">command</span>:テスト用のIgorコマンド(<span class="inline">Run</span>, <span
+                class="inline">CreatePackage</span>, 上記で説明したように)</li>
+          </ul>
+        </li>
+        <li>テスト<span class="notranslate">object</span> は、これらのキーを含むこともできる。
+          <ul>
+            <li><span class="inline">platform</span>:テストを行うためにIgorに直接渡される</li>
+            <li><span class="inline">device</span>: <span class="inline">devices.json</span> ファイルに記載されているデバイス名</li>
+            <li><span class="inline">target</span>:ターゲットは、&quot;<span class="inline">PLATFORM|TARGET&quot;</span>
+              形式で、例えば次のようになります。<span class="inline">Windows|Local&quot;</span></li>
+            <li><span class="inline">timeout</span>:コンパイルと実行を含む全テストのタイムアウト; これを超えるとテストは停止し、失敗とマークされます。</li>
+            <li><span class="inline">waittime</span>:メイン<span class="notranslate">loop</span>
+              に入ってから、テストに合格したかどうかを判断するまでの待ち時間の長さ</li>
+            <li><span class="inline">owner</span>このテストが失敗した場合に電子メールを送信するユーザーの電子メールアドレス。</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>例</h2>
+  <p>以下は、 <span class="inline">tests.json</span> のファイルの例です。</p>
+  <p class="code">[
+    <br />
+    {
+    <br />
+    &quot;name&quot; : &quot;Game Idea Windows&quot;,
+    <br />
+    &quot;path&quot; : &quot;C:/scratch/GameIdea.yyz&quot;,
+    <br />
+    &quot;platform&quot; : &quot;Windows&quot;,
+    <br />
+    &quot;command&quot; : &quot;Run&quot;,
+    <br />
+    &quot;timeout&quot; : &quot;500&quot;,
+    <br />
+    &quot;waittime&quot; : &quot;30&quot;
+    <br />
+    },
+    <br />
+    {
+    <br />
+    &quot;name&quot; : &quot;Platformer Game Windows&quot;,
+    <br />
+    &quot;path&quot; : &quot;C:/Users/&lt;MY USERNAME&gt;/Documents/GameMaker/Platformer Game/PlatformerGame.yyp&quot;,
+    <br />
+    &quot;target&quot; : &quot;Windows|Local,HTML5|selenium:firefox,PS4|Default&quot;,
+    <br />
+    &quot;command&quot; : &quot;Run&quot;
+    <br />
+    },
+    <br />
+    {
+    <br />
+    &quot;name&quot; : &quot;Puzzle Game Windows&quot;,
+    <br />
+    &quot;path&quot; : &quot;C:/Users/&lt;MY USERNAME&gt;/Documents/GameMaker/Puzzle Game/PuzzleGame.yyp&quot;,
+    <br />
+    &quot;platform&quot; : &quot;HTML5&quot;,
+    <br />
+    &quot;command&quot; : &quot;Run&quot;,
+    <br />
+    &quot;device&quot; : &quot;selenium:chrome&quot;
+    <br />
+    }
+    <br />
+    ]
+  </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">前のページ：<a data-xref="{title}" href="Runner_Details/Runner_Details.htm">ランナー＆コンパイラー</a>
         </div>
+        <div style="float:right">次のページ：<a data-xref="{title}"
+            href="Runner_Details/Compiler_Batch_Files.htm">コンパイラバッチファイル/スクリプト</a></div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
     </div>
-    <!-- KEYWORDS
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
 Building via Command Line
 CLI
 Command Line Interface
@@ -470,5 +584,7 @@ CI
 Continuous Integration
 --><!-- TAGS
 building_via_command_line
---></body>
+-->
+</body>
+
 </html>

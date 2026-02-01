@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>display_set_gui_size</title>
@@ -12,37 +13,47 @@
   <meta name="rh-index-keywords" content="display_set_gui_size" />
   <meta name="search-keywords" content="display_set_gui_size" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">display_set_gui_size</span></h1>
-  <p>この関数は、<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI イベントで</a>描画されるものにのみ影響し、そのイベントですべての GUI コンポーネントに特定の幅と高さを設定するために使用でき、どのような
-    GUIを表示するために使用されるディスプレイまたはウィンドウのサイズは、それが正しくフィットするようにスケーリングされます。GUIがどこに配置されるか（つまり、(0,0)の位置）は、この関数を使用したかどうかによって異なります。 <a href="display_set_gui_maximise.htm"><span class="inline">display_set_gui_maximise()</span></a>    を使用します。この機能を使用しない場合（デフォルト設定）、GUIレイヤーの（0,0）点はアプリケーションサーフェス（ゲームが描画される領域）と同じ位置に配置され、幅と高さは、アプリケーションサーフェスの幅と高さになります。
+  <p>この関数は、<a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI
+      イベントで</a>描画されるものにのみ影響し、そのイベントですべての GUI コンポーネントに特定の幅と高さを設定するために使用でき、どのような
+    GUIを表示するために使用されるディスプレイまたはウィンドウのサイズは、それが正しくフィットするようにスケーリングされます。GUIがどこに配置されるか（つまり、(0,0)の位置）は、この関数を使用したかどうかによって異なります。
+    <a href="display_set_gui_maximise.htm"><span class="inline">display_set_gui_maximise()</span></a>
+    を使用します。この機能を使用しない場合（デフォルト設定）、GUIレイヤーの（0,0）点はアプリケーションサーフェス（ゲームが描画される領域）と同じ位置に配置され、幅と高さは、アプリケーションサーフェスの幅と高さになります。
     例えば、アプリケーションサーフェスが512pxのときに、この関数でGUIの幅を256pxに設定すると、その256ピクセルがストレッチされてフィットし、実質的にピクセルが2倍になるように設定されます。これは、以下のようなゲームに最適です。
-    グローバルゲーム設定でアスペクト比補正が設定されている場合。</p>
-  <p> <span class="inline">display_set_gui_maximise()</span> 関数を使用した場合、GUI レイヤーの (0,0) 位置は、ゲーム ウィンドウまたはディスプレイ（フルスクリーンまたはデバイスの場合）の左上隅がデフォルトとなり、この関数で設定されたスケーリング係数が使用されます。
-    で設定され、幅と高さはこちらで設定されます。この関数を幅と高さに-1を指定して呼び出すと、いつでもGUIレイヤーをデフォルトの設定に戻すことができます - この場合、アプリケーションサーフェスの位置が(0, 0)になり、幅と高さが-1になります。
+    グローバルゲーム設定でアスペクト比補正が設定されている場合。
+  </p>
+  <p> <span class="inline">display_set_gui_maximise()</span> 関数を使用した場合、GUI レイヤーの (0,0) 位置は、ゲーム
+    ウィンドウまたはディスプレイ（フルスクリーンまたはデバイスの場合）の左上隅がデフォルトとなり、この関数で設定されたスケーリング係数が使用されます。
+    で設定され、幅と高さはこちらで設定されます。この関数を幅と高さに-1を指定して呼び出すと、いつでもGUIレイヤーをデフォルトの設定に戻すことができます - この場合、アプリケーションサーフェスの位置が(0,
+    0)になり、幅と高さが-1になります。
     と高さも表面と1:1にリセットされます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">display_set_gui_size</span>(width, height);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">width</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">width</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The width of the GUI</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">height</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">height</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The height of the GUI</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -54,11 +65,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
-        <div style="float:right">次のページ <a href="display_set_gui_maximise.htm"><span class="notranslate">display_set_gui_maximise</span></a></div>
+        <div style="float:left">前のページ：<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
+        <div style="float:right">次のページ：<a href="display_set_gui_maximise.htm"><span
+              class="notranslate">display_set_gui_maximise</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_set_gui_size
@@ -67,4 +80,5 @@ display_set_gui_size
 display_set_gui_size
 -->
 </body>
+
 </html>

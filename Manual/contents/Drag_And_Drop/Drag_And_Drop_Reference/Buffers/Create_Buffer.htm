@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>バッファの作成</title>
@@ -12,24 +13,34 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Create Buffer" />
   <meta name="search-keywords" content="Create Buffer" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> バッファの作成</h1>
-  <p>このアクションは、ゲーム内でメモリの一部を<span class="notranslate">buffer</span> として割り当てるために使用できます。この関数は、変数に格納され、その後の<span class="notranslate">buffer</span> に対するすべての関数呼び出しに使用される、一意の<i>バッファ ID</i>値を返します。
-    グローバル変数、インスタンス変数、または<span class="notranslate">buffer</span> ID を格納するための一時的なローカル変数を作成するようにアクションに指示します。<span class="notranslate">buffers</span> を追加で作成するには、プラスアイコンの <span><img> </span>の横にある
+  <p>このアクションは、ゲーム内でメモリの一部を<span class="notranslate">buffer</span> として割り当てるために使用できます。この関数は、変数に格納され、その後の<span
+      class="notranslate">buffer</span> に対するすべての関数呼び出しに使用される、一意の<i>バッファ ID</i>値を返します。
+    グローバル変数、インスタンス変数、または<span class="notranslate">buffer</span> ID を格納するための一時的なローカル変数を作成するようにアクションに指示します。<span
+      class="notranslate">buffers</span> を追加で作成するには、プラスアイコンの <span><img> </span>の横にある
     を選択し、<span class="notranslate">buffer</span> ID を格納する別の変数を選択します。</p>
-  <p class="note"><b>注</b>：このように動的に作成されたリソースは、メモリリークを防ぐため、不要になったらメモリから削除することが重要です。作成した<span class="notranslate">buffer</span> が終了したら、再び解放してください。
-   <a href="Delete_Buffer.htm">Delete Buffer</a>アクション（<a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Other - Clean Up</a>イベント内など）を使用します。これは、一時的なローカル・バッファを使用する場合に特に重要です。
-    イベントまたはアクション<span class="notranslate">buffer</span> が終了する前に<span class="notranslate">script</span> を再度削除しないと、アクセスできなくなり、後で問題が発生する可能性があるからです。</p>
+  <p class="note"><b>注</b>：このように動的に作成されたリソースは、メモリリークを防ぐため、不要になったらメモリから削除することが重要です。作成した<span
+      class="notranslate">buffer</span> が終了したら、再び解放してください。
+    <a href="Delete_Buffer.htm">Delete Buffer</a>アクション（<a
+      href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Other - Clean
+      Up</a>イベント内など）を使用します。これは、一時的なローカル・バッファを使用する場合に特に重要です。
+    イベントまたはアクション<span class="notranslate">buffer</span> が終了する前に<span class="notranslate">script</span>
+    を再度削除しないと、アクセスできなくなり、後で問題が発生する可能性があるからです。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /></p>
+  <p><img alt="Create Buffer Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Buffer</span></td>
@@ -44,18 +55,20 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードでは、グローバル変数を作成し、次に<span class="notranslate">buffer</span> を作成し、一意の
-    <span class="notranslate">buffer</span> IDを変数に設定します。この<span class="notranslate">buffer</span> には、次に2つのデータが書き込まれます。</p>
+    <span class="notranslate">buffer</span> IDを変数に設定します。この<span class="notranslate">buffer</span> には、次に2つのデータが書き込まれます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffer_Actions.htm">バッファーアクション</a></div>
-        <div style="float:right">次へ<a href="Copy_Buffer.htm">コピーバッファー</a></div>
+        <div style="float:left">前のページ：<a href="Buffer_Actions.htm">バッファーアクション</a></div>
+        <div style="float:right">次のページ：<a href="Copy_Buffer.htm">コピーバッファー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Buffer
@@ -64,4 +77,5 @@ Action - Create Buffer
 action_buffer_create
 -->
 </body>
+
 </html>

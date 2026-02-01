@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_debug</title>
@@ -12,39 +13,49 @@
   <meta name="rh-index-keywords" content="audio_debug" />
   <meta name="search-keywords" content="audio_debug" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_debug</span></h1>
-  <p><span class="notranslate">switch</span> この機能は、オーディオシステムのデバッグ情報を表示するために使用することができ、 <span class="inline">true</span> でオン、 <span class="inline">false</span> でオフとすることができます。この方法で<span class="notranslate">debugging</span> オーディオの場合、オーバーレイには次の情報が表示されます。</p>
-  <p><img alt="Audio Debug Overview" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Debug.png" /></p>
+  <p><span class="notranslate">switch</span> この機能は、オーディオシステムのデバッグ情報を表示するために使用することができ、 <span class="inline">true</span>
+    でオン、 <span class="inline">false</span> でオフとすることができます。この方法で<span class="notranslate">debugging</span>
+    オーディオの場合、オーバーレイには次の情報が表示されます。</p>
+  <p><img alt="Audio Debug Overview" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Debug.png" /></p>
   <ul class="colour">
     <li><strong>Handle - </strong> OpenAL のソースハンドル（再生される音ごとにユニークです）．</li>
-    <li><strong>Data Handle</strong>- OpenAL<span class="notranslate">buffer</span> のハンドル（同じソースハンドルを持つ複数のサウンドに同じ値を表示します。）</li>
+    <li><strong>Data Handle</strong>- OpenAL<span class="notranslate">buffer</span>
+      のハンドル（同じソースハンドルを持つ複数のサウンドに同じ値を表示します。）</li>
     <li><strong>Processed Buffers</strong>- 再生されたバッファの数<span class="notranslate">buffers</span> </li>
     <li><strong>Queued Buffers</strong>-<span class="notranslate">buffers</span> がキューに入った数（再生待ちの数）。</li>
     <li><strong>Gain - </strong> オーディオのゲイン値（0～65536）．</li>
     <li><strong>再生オフセット</strong>- 現在のバッファ内のサンプル位置（現在の再生位置）です。</li>
-    <li><strong>Queued<span class="notranslate">Buffers</span> Bars</strong>- 処理された/キューに入れられた<span class="notranslate">buffers</span> の小さなボックス図で、再生オフセット（現在の位置）が青い線で描かれています。</li>
+    <li><strong>Queued<span class="notranslate">Buffers</span> Bars</strong>- 処理された/キューに入れられた<span
+        class="notranslate">buffers</span> の小さなボックス図で、再生オフセット（現在の位置）が青い線で描かれています。</li>
   </ul>
-  <p>オーディオの同期グループについては、次のような機能もあります。 <a href="Audio_Synchronisation/audio_sync_group_debug.htm"><span class="inline">audio_sync_group_debug()</span></a>.</p>
+  <p>オーディオの同期グループについては、次のような機能もあります。 <a href="Audio_Synchronisation/audio_sync_group_debug.htm"><span
+        class="inline">audio_sync_group_debug()</span></a>.</p>
   <p class="note"><b><span class="note">注意事項</span> </b>この機能は、HTML5ターゲットプラットフォームでは動作しません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">audio_debug</span>(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">Enable (set to <span class="inline">true</span>) または無効化 (<span class="inline">false</span>) オーディオ<span class="notranslate">debugging</span>.</td>
-     </tr>
+        <td><span class="notranslate">enable</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Enable (set to <span class="inline">true</span>) または無効化 (<span
+              class="inline">false</span>) オーディオ<span class="notranslate">debugging</span>.</td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -63,12 +74,14 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio.htm">オーディオ</a></div>
-        <div style="float:right">次のページ <a href="audio_system_is_available.htm"><span class="notranslate">audio_system_is_available</span></a></div>
-        
+        <div style="float:left">前のページ：<a href="Audio.htm">オーディオ</a></div>
+        <div style="float:right">次のページ：<a href="audio_system_is_available.htm"><span
+              class="notranslate">audio_system_is_available</span></a></div>
+
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_debug
@@ -77,4 +90,5 @@ audio_debug
 audio_debug
 -->
 </body>
+
 </html>

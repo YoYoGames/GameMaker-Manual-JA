@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>surface_create</title>
@@ -13,32 +14,40 @@
   <meta name="search-keywords" content="surface_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">surface_create</span></h1>
-  <p>この関数はサーフェスを作成するために使用され、サーフェスのインデックスを返します。このインデックスは、将来の関数呼び出しに備えて変数に格納する必要があります。サーフェスが最初に作成されたとき、それは基本的にこの目的のために確保された単なるメモリ領域であるため、「ノイズ」を含むことがあります（そしてそのメモリにはまだ情報が含まれていることがあります）ので、次のような関数で使用する前にサーフェスをクリアすることが望ましいでしょう。 <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p>
-  <p>すべてのサーフェスは2の累乗サイズ、つまり16、128、512、1024ピクセルサイズで作成することを強くお勧めします。これは特定のプラットフォーム（<span class="notranslate">Windows</span> や MacOS など）では必ずしも必要ではありませんが、これらのターゲットでは確実に互換性が高まります。一方、HTML5 やデバイスでは必須で、これを覚えておかないと後で問題に遭遇する可能性があります。</p>
+  <p>
+    この関数はサーフェスを作成するために使用され、サーフェスのインデックスを返します。このインデックスは、将来の関数呼び出しに備えて変数に格納する必要があります。サーフェスが最初に作成されたとき、それは基本的にこの目的のために確保された単なるメモリ領域であるため、「ノイズ」を含むことがあります（そしてそのメモリにはまだ情報が含まれていることがあります）ので、次のような関数で使用する前にサーフェスをクリアすることが望ましいでしょう。
+    <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.
+  </p>
+  <p>すべてのサーフェスは2の累乗サイズ、つまり16、128、512、1024ピクセルサイズで作成することを強くお勧めします。これは特定のプラットフォーム（<span class="notranslate">Windows</span>
+    や MacOS など）では必ずしも必要ではありませんが、これらのターゲットでは確実に互換性が高まります。一方、HTML5 やデバイスでは必須で、これを覚えておかないと後で問題に遭遇する可能性があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">surface_create</span>(w, h);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">w</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The width of the surface to be created.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">h</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The height of the surface to be created.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Surface">Surface ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -50,18 +59,22 @@
         surface_reset_target();<br />
         view_surface_id[0] = surf;<br />
     }</p>
-  <p>上記のコードでは、サーフェスが存在するかどうかをチェックし、存在しない場合は幅1024ピクセル、高さ1024ピクセルのサーフェスを作成し、変数「surf」にインデックスを代入しています。そして描画ターゲットが新しいサーフェスに設定され、クリアされて透明になった後、描画ターゲットがディスプレイにリセットされる。最後に、サーフェスはビューに割り当てられる。</p>
+  <p>
+    上記のコードでは、サーフェスが存在するかどうかをチェックし、存在しない場合は幅1024ピクセル、高さ1024ピクセルのサーフェスを作成し、変数「surf」にインデックスを代入しています。そして描画ターゲットが新しいサーフェスに設定され、クリアされて透明になった後、描画ターゲットがディスプレイにリセットされる。最後に、サーフェスはビューに割り当てられる。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
-        <div style="float:right">次のページ <a href="surface_create_ext.htm"><span class="notranslate">surface_create_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ：<a href="surface_create_ext.htm"><span
+              class="notranslate">surface_create_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 surface_create
@@ -70,4 +83,5 @@ surface_create
 surface_create
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>バッファ</title>
@@ -12,29 +13,51 @@
   <meta name="rh-index-keywords" content="Buffers" />
   <meta name="search-keywords" content="Buffers" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>バッファ</h1>
-  <p><span class="notranslate">buffer</span> は、データをある場所から別の場所に移動したり、何らかの方法で操作している間、一時的にデータを保持するために使用する物理メモリの領域です。たとえば、<span class="notranslate">buffer</span> を使用して、ネットワーク上での送信を待つパケットデータを保持したり、ネットワーク上で受信したパケットを保存したりすることが可能です。<span data-keyref="GameMaker Name">GameMaker</span>には、<span class="notranslate">buffers</span> の作成、変更、ロード／セーブに関連する固有の機能がいくつかあ りますが、使用にあたっては、以下の点に注意してください。</p>
+  <p><span class="notranslate">buffer</span>
+    は、データをある場所から別の場所に移動したり、何らかの方法で操作している間、一時的にデータを保持するために使用する物理メモリの領域です。たとえば、<span class="notranslate">buffer</span>
+    を使用して、ネットワーク上での送信を待つパケットデータを保持したり、ネットワーク上で受信したパケットを保存したりすることが可能です。<span
+      data-keyref="GameMaker Name">GameMaker</span>には、<span class="notranslate">buffers</span>
+    の作成、変更、ロード／セーブに関連する固有の機能がいくつかあ りますが、使用にあたっては、以下の点に注意してください。</p>
   <ul class="colour">
     <li><span class="notranslate">buffer</span> を作成すると、自動的にクリアされ、0に埋められます。</li>
-    <li><span class="notranslate">buffer</span> 関数の引数 &quot;size &quot;は，常に<span class="notranslate">buffer</span> の<i>バイト単位の</i>大きさを指す。</li>
-    <li>アライメント &quot;引数は、データが<span class="notranslate">buffer</span> 内にどのように格納されるかを指します。アライメントが例えば 4 に設定されている場合、サイズが 1 バイトのデータを書き込んでから <span class="inline">buffer_tell</span> を実行すると、オフセットが 1 になります。しかし、サイズが 1 バイトの別のデータを書き込んでから <span class="inline">buffer_tell</span> を実行すると、アライメントはそのサイズにデータを「パディング」しているので、オフセット 5 になります。アライメントが影響を与えるのは書き込む<i>位置だけ</i>なので、何かを書き込んだ後に <span class="inline">buffer_tell</span> を実行すると、書き込んだデータのすぐ後にある現在の書き込み位置が返されます。しかし、その後に別のデータを書き込むと、<span class="notranslate">buffer</span> は、実際にデータを書き込む前に、書き込み位置をアライメントサイズの次の倍数に移動させることに注意してください。</li>
-    <li>オフセット &quot;を扱う場合、これは与えられた<span class="notranslate">buffer</span> の中でデータをオフセットするための<i>バイト</i>数です。つまり、<span class="notranslate">buffer</span> が 2 バイトアラインで、最初の 4 バイトアラインの場所をスキップしたい場合、オフセットは <span class="inline">2 * 4 bytes</span> となります。</li>
-    <li><span class="notranslate">buffer</span> 関数の中には、新しい<span class="notranslate">buffer</span> を作成するものもあります（例えば <span class="inline">buffer_load</span> のようなものです）。これらの<span class="notranslate">buffers</span> は、 <span class="inline">buffer_delete</span> 関数を使用して使用しないときは、メモリから削除する必要があることも覚えておいてください。</li>
-    <li><span class="notranslate">buffers</span> の作成に使用されるメモリは<i>システムメモリ</i>であるため、ゲームにフォーカスがない場合でも<span class="notranslate">buffer</span> に保存されたデータは安全です。</li>
+    <li><span class="notranslate">buffer</span> 関数の引数 &quot;size &quot;は，常に<span class="notranslate">buffer</span>
+      の<i>バイト単位の</i>大きさを指す。</li>
+    <li>アライメント &quot;引数は、データが<span class="notranslate">buffer</span> 内にどのように格納されるかを指します。アライメントが例えば 4 に設定されている場合、サイズが 1
+      バイトのデータを書き込んでから <span class="inline">buffer_tell</span> を実行すると、オフセットが 1 になります。しかし、サイズが 1 バイトの別のデータを書き込んでから <span
+        class="inline">buffer_tell</span> を実行すると、アライメントはそのサイズにデータを「パディング」しているので、オフセット 5
+      になります。アライメントが影響を与えるのは書き込む<i>位置だけ</i>なので、何かを書き込んだ後に <span class="inline">buffer_tell</span>
+      を実行すると、書き込んだデータのすぐ後にある現在の書き込み位置が返されます。しかし、その後に別のデータを書き込むと、<span class="notranslate">buffer</span>
+      は、実際にデータを書き込む前に、書き込み位置をアライメントサイズの次の倍数に移動させることに注意してください。</li>
+    <li>オフセット &quot;を扱う場合、これは与えられた<span class="notranslate">buffer</span> の中でデータをオフセットするための<i>バイト</i>数です。つまり、<span
+        class="notranslate">buffer</span> が 2 バイトアラインで、最初の 4 バイトアラインの場所をスキップしたい場合、オフセットは <span class="inline">2 * 4
+        bytes</span> となります。</li>
+    <li><span class="notranslate">buffer</span> 関数の中には、新しい<span class="notranslate">buffer</span> を作成するものもあります（例えば <span
+        class="inline">buffer_load</span> のようなものです）。これらの<span class="notranslate">buffers</span> は、 <span
+        class="inline">buffer_delete</span> 関数を使用して使用しないときは、メモリから削除する必要があることも覚えておいてください。</li>
+    <li><span class="notranslate">buffers</span> の作成に使用されるメモリは<i>システムメモリ</i>であるため、ゲームにフォーカスがない場合でも<span
+        class="notranslate">buffer</span> に保存されたデータは安全です。</li>
   </ul>
-  <p>以下のページでは、<span data-keyref="GameMaker Name">GameMaker の</span>中で<span class="notranslate">buffers</span> がどのように機能するかを説明し、使い方がよくわからないユーザーのためにコード例をいくつか掲載しています。</p>
+  <p>以下のページでは、<span data-keyref="GameMaker Name">GameMaker の</span>中で<span class="notranslate">buffers</span>
+    がどのように機能するかを説明し、使い方がよくわからないユーザーのためにコード例をいくつか掲載しています。</p>
   <ul class="colour">
     <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">バッファの使用</a></li>
   </ul>
-  <p class="note"><em><strong>重要!</strong></em><span class="notranslate">buffer</span> を作成する際、それを識別するためのインデックス値は 0 から始まる整数値です。これらのインデックスは<span class="notranslate">GameMaker</span> で再利用されるため、破壊された<span class="notranslate">buffer</span> のインデックス値は、その後に新しく作成されたものが使用する可能性があります。また、<span class="notranslate">buffer</span> を破壊した後にバッファのインデックスを保持する変数に -1 を設定することをお勧めします。</p>
+  <p class="note"><em><strong>重要!</strong></em><span class="notranslate">buffer</span> を作成する際、それを識別するためのインデックス値は 0
+    から始まる整数値です。これらのインデックスは<span class="notranslate">GameMaker</span> で再利用されるため、破壊された<span
+      class="notranslate">buffer</span> のインデックス値は、その後に新しく作成されたものが使用する可能性があります。また、<span class="notranslate">buffer</span>
+    を破壊した後にバッファのインデックスを保持する変数に -1 を設定することをお勧めします。</p>
   <p>ゲーム内でバイナリ<span class="notranslate">buffers</span> を使用するために、以下の関数が存在します。</p>
   <ul class="colour">
     <li><a href="buffer_exists.htm"><span class="notranslate">buffer_exists</span></a></li>
     <li><a href="buffer_create.htm"><span class="notranslate">buffer_create</span></a></li>
-    <li><a href="buffer_create_from_vertex_buffer.htm"><span class="notranslate">buffer_create_from_vertex_buffer</span></a></li>
-    <li><a href="buffer_create_from_vertex_buffer_ext.htm"><span class="notranslate">buffer_create_from_vertex_buffer_ext</span></a></li>
+    <li><a href="buffer_create_from_vertex_buffer.htm"><span
+          class="notranslate">buffer_create_from_vertex_buffer</span></a></li>
+    <li><a href="buffer_create_from_vertex_buffer_ext.htm"><span
+          class="notranslate">buffer_create_from_vertex_buffer_ext</span></a></li>
     <li><a href="buffer_delete.htm"><span class="notranslate">buffer_delete</span></a></li>
     <li><a href="buffer_read.htm"><span class="notranslate">buffer_read</span></a></li>
     <li><a href="buffer_write.htm"><span class="notranslate">buffer_write</span></a></li>
@@ -56,7 +79,8 @@
     <li><a href="buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li>
     <li><a href="buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li>
     <li><a href="buffer_copy.htm"><span class="notranslate">buffer_copy</span></a></li>
-    <li><a href="buffer_copy_from_vertex_buffer.htm"><span class="notranslate">buffer_copy_from_vertex_buffer</span></a></li>
+    <li><a href="buffer_copy_from_vertex_buffer.htm"><span class="notranslate">buffer_copy_from_vertex_buffer</span></a>
+    </li>
     <li><a href="buffer_get_type.htm"><span class="notranslate">buffer_get_type</span></a></li>
     <li><a href="buffer_get_alignment.htm"><span class="notranslate">buffer_get_alignment</span></a></li>
     <li><a href="buffer_get_address.htm"><span class="notranslate">buffer_get_address</span></a></li>
@@ -74,10 +98,13 @@
     <li><a href="buffer_set_used_size.htm">バッファの設定と使用サイズ</a></li>
   </ul>
   <p> </p>
-  <p>また、<span class="notranslate">buffers</span> に関連する2つの追加関数があり、ゲーム状態の保存と読み込みに使用できます（これらの関数は、<span class="notranslate">buffer</span> が以前に作成されていることが必要であることに注意してください）。</p>
+  <p>また、<span class="notranslate">buffers</span> に関連する2つの追加関数があり、ゲーム状態の保存と読み込みに使用できます（これらの関数は、<span
+      class="notranslate">buffer</span> が以前に作成されていることが必要であることに注意してください）。</p>
   <ul class="colour">
-    <li><a href="../General_Game_Control/game_load_buffer.htm"><span class="notranslate">game_load_buffer</span></a></li>
-    <li><a href="../General_Game_Control/game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a></li>
+    <li><a href="../General_Game_Control/game_load_buffer.htm"><span class="notranslate">game_load_buffer</span></a>
+    </li>
+    <li><a href="../General_Game_Control/game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a>
+    </li>
   </ul>
   <p> </p>
   <p>最後に、特別な<b>バーテックスバッファを</b>使用して、独自のカスタムプリミティブやモデルなどを作成することもできます。これらについては、マニュアルの次のセクションから詳細を確認できます。</p>
@@ -90,11 +117,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次のページ<a href="../UWP_And_XBox_Live/UWP_And_XBox_Live.htm">UWPとXBox Live</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a href="../UWP_And_XBox_Live/UWP_And_XBox_Live.htm">UWPとXBox Live</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Buffers
@@ -103,4 +131,5 @@ Buffers
 buffer_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_stats_set_stat_string</title>
@@ -12,21 +13,28 @@
   <meta name="rh-index-keywords" content="xboxlive_stats_set_stat_string" />
   <meta name="search-keywords" content="xboxlive_stats_set_stat_string" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_set_stat_string</h1>
-  <p>この関数は、指定されたユーザー ID の stat を<span class="notranslate">string</span> に設定するために使用することができます。によって返されるユーザ ID を指定します。 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>そして、設定する stat<span class="notranslate">string</span> <b>(stat<span class="notranslate">string</span> がまだ存在しない場合、新しい stat が作成され、指定された値に設定</b>されます)、さらに stat を設定する<span class="notranslate">string</span> を指定します。stat名は英数字のみで、記号やスペースは使用できませんが、設定する<span class="notranslate">string</span> の値にはスペースや特殊文字が使用できることに注意してください。</p>
-  <p>stat<span class="notranslate">string</span> を設定する場合、以前の<span class="notranslate">string</span> はすべて上書きされます。したがって、stat<span class="notranslate">string</span> を更新すべきかどうかは、設定する前に現在のstat<span class="notranslate">string</span> と新しいものを比較することで判断してください。</p>
+  <p>この関数は、指定されたユーザー ID の stat を<span class="notranslate">string</span> に設定するために使用することができます。によって返されるユーザ ID を指定します。 <a
+      href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>そして、設定する
+    stat<span class="notranslate">string</span> <b>(stat<span class="notranslate">string</span> がまだ存在しない場合、新しい stat
+      が作成され、指定された値に設定</b>されます)、さらに stat を設定する<span class="notranslate">string</span>
+    を指定します。stat名は英数字のみで、記号やスペースは使用できませんが、設定する<span class="notranslate">string</span> の値にはスペースや特殊文字が使用できることに注意してください。</p>
+  <p>stat<span class="notranslate">string</span> を設定する場合、以前の<span class="notranslate">string</span>
+    はすべて上書きされます。したがって、stat<span class="notranslate">string</span> を更新すべきかどうかは、設定する前に現在のstat<span
+      class="notranslate">string</span> と新しいものを比較することで判断してください。</p>
   <p>この関数は、エラーが発生した場合やユーザーIDが無効な場合は-1、関数が正常に呼び出された場合はその他の値を返します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_stats_set_stat_string(user_id, stat, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">user_id</span></td>
@@ -46,7 +54,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -58,11 +66,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_stats_delete_stat.htm"><span class="notranslate">xboxlive_stats_delete_stat</span></a></div>
+        <div style="float:left">前のページ：<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_stats_delete_stat.htm"><span
+              class="notranslate">xboxlive_stats_delete_stat</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_set_stat_string
@@ -71,4 +81,5 @@ xboxlive_stats_set_stat_string
 xboxlive_stats_set_stat_string
 -->
 </body>
+
 </html>

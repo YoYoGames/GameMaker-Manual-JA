@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>room_duplicate</title>
@@ -12,44 +13,55 @@
   <meta name="rh-index-keywords" content="room_duplicate" />
   <meta name="search-keywords" content="room_duplicate" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">room_duplicate</span></h1>
-  <p>これは、与えられた<span class="notranslate">room</span> を複製し、新しい<span class="notranslate">room</span> を参照するために、以降のすべての呼び出しで使用される複製インデックスを返します。</p>
-  <p class="note"><b>注</b>：新しい<span class="notranslate">rooms</span> は通常の<span class="notranslate">room</span> の順序には含まれないので、「前の」「次の」<span class="notranslate">room</span> はありません（つまり、関数 <span style="font-size:1px;"><a href="room_next.htm"><span class="inline">room_next()</span></a></span>と <span style="font-size:1px;"><a href="room_previous.htm"><span class="inline">room_previous()</span></a></span>は機能しません)。追加された<span class="notranslate">room</span> から別のものにジャンプするには、<span class="notranslate">room</span> 自体のインデックスを使用する必要があります。</p>
+  <p>これは、与えられた<span class="notranslate">room</span> を複製し、新しい<span class="notranslate">room</span>
+    を参照するために、以降のすべての呼び出しで使用される複製インデックスを返します。</p>
+  <p class="note"><b>注</b>：新しい<span class="notranslate">rooms</span> は通常の<span class="notranslate">room</span>
+    の順序には含まれないので、「前の」「次の」<span class="notranslate">room</span> はありません（つまり、関数 <span style="font-size:1px;"><a
+        href="room_next.htm"><span class="inline">room_next()</span></a></span>と <span style="font-size:1px;"><a
+        href="room_previous.htm"><span class="inline">room_previous()</span></a></span>は機能しません)。追加された<span
+      class="notranslate">room</span> から別のものにジャンプするには、<span class="notranslate">room</span> 自体のインデックスを使用する必要があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">room_duplicate</span>(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Room"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Room"></span></td>
         <td><span class="notranslate">The index of the original room to be duplicated.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">global.myroom = room_duplicate(rm_level);</p>
-  <p>これは、&quot;rm_level &quot;でインデックスされた<span class="notranslate">room</span> を複製し、この新しい<span class="notranslate">room</span> の<span class="notranslate">room</span> のインデックスを変数 &quot;global.myroom&quot; に代入するものです。</p>
+  <p>これは、&quot;rm_level &quot;でインデックスされた<span class="notranslate">room</span> を複製し、この新しい<span
+      class="notranslate">room</span> の<span class="notranslate">room</span> のインデックスを変数 &quot;global.myroom&quot;
+    に代入するものです。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Rooms.htm">部屋</a></div>
-        <div style="float:right">次のページ <a href="room_assign.htm"><span class="notranslate">room_assign</span></a></div>
+        <div style="float:left">前のページ：<a href="Rooms.htm">部屋</a></div>
+        <div style="float:right">次のページ：<a href="room_assign.htm"><span class="notranslate">room_assign</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_duplicate
@@ -58,4 +70,5 @@ room_duplicate
 room_duplicate
 -->
 </body>
+
 </html>

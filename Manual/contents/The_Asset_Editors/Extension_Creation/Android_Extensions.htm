@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Android拡張機能</title>
@@ -12,20 +13,36 @@
   <meta name="rh-index-keywords" content="Extensions - Creating Android Extensions" />
   <meta name="search-keywords" content="Android extensions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Android拡張機能</h1>
-  <p><span class="notranslate">extension</span> 用の<span class="notranslate">Android</span> を作成するには、2つの部分に分けて行わなければなりません。最初の部分は<span class="notranslate">extension</span> 自体と必要なファイルを追加することであり、2 番目の部分は<span class="notranslate">extension</span> が必要とする関数やマクロ/定数を作成することである。</p>
-  <p>関数と定数はグループ化するために<strong>プレースホルダーファイルを </strong>使用して追加されるので、前のセクションで説明したように、プレースホルダーを追加してから関数とマクロを定義します。残りのファイルを追加するには、まずエディタの<b>Extra Platforms</b>セクションで<em>Android </em>チェックボックスにチェックを入れ、拡張機能の<span class="notranslate">Android</span> プロパティを開く必要があります。</p>
-  <p class="dropspot"><img alt="Android Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_Android.png" /></p>
+  <p><span class="notranslate">extension</span> 用の<span class="notranslate">Android</span>
+    を作成するには、2つの部分に分けて行わなければなりません。最初の部分は<span class="notranslate">extension</span> 自体と必要なファイルを追加することであり、2 番目の部分は<span
+      class="notranslate">extension</span> が必要とする関数やマクロ/定数を作成することである。</p>
+  <p>関数と定数はグループ化するために<strong>プレースホルダーファイルを
+    </strong>使用して追加されるので、前のセクションで説明したように、プレースホルダーを追加してから関数とマクロを定義します。残りのファイルを追加するには、まずエディタの<b>Extra
+      Platforms</b>セクションで<em>Android </em>チェックボックスにチェックを入れ、拡張機能の<span class="notranslate">Android</span>
+    プロパティを開く必要があります。</p>
+  <p class="dropspot"><img alt="Android Editor" class="center"
+      src="../../assets/Images/Asset_Editors/Editor_Extensions_Android.png" /></p>
   <p>ここでは、以下の内容をお伝えします。</p>
   <ul class="colour">
-    <li class="dropspot"><strong>クラス名</strong>。<span class="notranslate">extension</span> は複数のクラスを持つことができ、各クラスは独自の関数や定数を持ちます。そのため、その目的を反映した名前を付ける必要があります。</li>
-    <li class="dropspot"><strong>Androidのパーミッション</strong>。ここでは、<span class="notranslate">extension</span> が必要とする追加の許可を追加することができます。これらの権限は、<span class="notranslate">extension</span> 、あなたが<span class="notranslate">Android</span> プラットフォームのために<a href="https://developer.android.com/reference/android/Manifest.permission.html">Googleによって提供されるドキュメントをチェック</a>する必要があります、または、サードパーティのSDKを使用している場合は、SDKに付属のドキュメントです何であるか。新しい権限を追加するには、<img> ボタンをクリックしてプレースホルダ権限を追加し、ダブルクリック<img> して必要なものにそれを編集する必要があります。<img> ボタンを使ってパーミッションを削除することができます。</li>
-    <li class="dropspot"><b>コードインジェクション</b>。ここでは、テストまたは最終リリース用にゲームがビルドされたときに、<span class="notranslate">Android</span> アプリケーションに注入 (追加) する任意のコードを追加できます。間違った設定をすると、ゲームの提出に失敗することがあるので、ストアにゲームを提出する前に、この項目（とパーミッション）を慎重に修正してください。詳細については、以下のセクションを参照してください。</li>
+    <li class="dropspot"><strong>クラス名</strong>。<span class="notranslate">extension</span>
+      は複数のクラスを持つことができ、各クラスは独自の関数や定数を持ちます。そのため、その目的を反映した名前を付ける必要があります。</li>
+    <li class="dropspot"><strong>Androidのパーミッション</strong>。ここでは、<span class="notranslate">extension</span>
+      が必要とする追加の許可を追加することができます。これらの権限は、<span class="notranslate">extension</span> 、あなたが<span
+        class="notranslate">Android</span> プラットフォームのために<a
+        href="https://developer.android.com/reference/android/Manifest.permission.html">Googleによって提供されるドキュメントをチェック</a>する必要があります、または、サードパーティのSDKを使用している場合は、SDKに付属のドキュメントです何であるか。新しい権限を追加するには、<img>
+      ボタンをクリックしてプレースホルダ権限を追加し、ダブルクリック<img> して必要なものにそれを編集する必要があります。<img> ボタンを使ってパーミッションを削除することができます。</li>
+    <li class="dropspot"><b>コードインジェクション</b>。ここでは、テストまたは最終リリース用にゲームがビルドされたときに、<span class="notranslate">Android</span>
+      アプリケーションに注入 (追加)
+      する任意のコードを追加できます。間違った設定をすると、ゲームの提出に失敗することがあるので、ストアにゲームを提出する前に、この項目（とパーミッション）を慎重に修正してください。詳細については、以下のセクションを参照してください。
+    </li>
   </ul>
   <h2 id="h">コードインジェクション</h2>
-  <p>Code Injection」ウィンドウに入力されたコードは、上のスクリーンショットに示すように、個別のXMLグループに分離する必要があります。グループに使用するXMLタグは、コードがアプリケーションに注入される場所を決定します。</p>
+  <p>Code Injection」ウィンドウに入力されたコードは、上のスクリーンショットに示すように、個別のXMLグループに分離する必要があります。グループに使用するXMLタグは、コードがアプリケーションに注入される場所を決定します。
+  </p>
   <p>コードインジェクショングループを作成するには、次の構文を使用します。</p>
   <p class="code">&lt;YYTagName&gt;<br />
     <br />
@@ -95,20 +112,28 @@
       </tr>
     </tbody>
   </table>
-  <p class="note"><span class="note">YYCの</span> <span class="notranslate">paths</span> <span class="note"></span>場合、注入されたコードは <span class="inline">{RUNTIME}\yyc\</span> ディレクトリに入ります。<span class="notranslate">paths</span> はVM用のものと同等かどうかはわかりません。</p>
+  <p class="note"><span class="note">YYCの</span> <span class="notranslate">paths</span> <span
+      class="note"></span>場合、注入されたコードは <span class="inline">{RUNTIME}\yyc\</span> ディレクトリに入ります。<span
+      class="notranslate">paths</span> はVM用のものと同等かどうかはわかりません。</p>
   <h2>ソースファイル</h2>
-  <p>正しくセットアップしたら、<span class="notranslate">extension</span> パッケージを動作させるために必要なファイルを追加する必要があります。これを行うには、下部のボタン、<em>Add SDK</em>または<em>Add Source</em>をクリックし、追加したいファイルをブラウズする必要があります。追加されたファイルは、 <span class="inline">AndroidSource</span> ディレクトリに<span class="notranslate">extension</span> と共に保存されます。<span class="notranslate">extension</span> この場所は、<img> を右クリックし、<em>エクスプローラで開く</em>を選択することで、いつでも開くことができます。</p>
-  <p>あなたが作成した<span class="notranslate">extensions</span> 用のネイティブな<span class="notranslate">Android</span> についての情報は、<a href="Extended_Examples.htm">ソース例を</a>参照してください。</p>
+  <p>正しくセットアップしたら、<span class="notranslate">extension</span> パッケージを動作させるために必要なファイルを追加する必要があります。これを行うには、下部のボタン、<em>Add
+      SDK</em>または<em>Add Source</em>をクリックし、追加したいファイルをブラウズする必要があります。追加されたファイルは、 <span class="inline">AndroidSource</span>
+    ディレクトリに<span class="notranslate">extension</span> と共に保存されます。<span class="notranslate">extension</span> この場所は、<img>
+    を右クリックし、<em>エクスプローラで開く</em>を選択することで、いつでも開くことができます。</p>
+  <p>あなたが作成した<span class="notranslate">extensions</span> 用のネイティブな<span class="notranslate">Android</span> についての情報は、<a
+      href="Extended_Examples.htm">ソース例を</a>参照してください。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Extensions.htm"> <span class="notranslate">Extension</span> 編集部</a></div>
+        <div style="float:left">前のページ：<a href="../Extensions.htm"> <span class="notranslate">Extension</span> エディタ</a>
+        </div>
         <div style="float:right">次ページ：<a href="iOS_Extensions.htm">iOSの拡張機能</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Android Extensions
@@ -117,4 +142,5 @@ Android Extensions
 extensions_android
 -->
 </body>
+
 </html>

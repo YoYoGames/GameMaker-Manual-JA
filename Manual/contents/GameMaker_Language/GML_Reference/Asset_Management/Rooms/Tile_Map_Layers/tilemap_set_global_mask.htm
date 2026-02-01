@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>tilemap_set_global_mask</title>
@@ -12,16 +13,28 @@
   <meta name="rh-index-keywords" content="tilemap_set_global_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask" />
   <meta name="search-keywords" content="tilemap_set_global_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">tilemap_set_global_mask</span></h1>
-  <p>この関数は、ゲーム内のすべての<span class="notranslate">tile</span> マップの<b>タイルビットマスクを</b>設定するために使用することができます。<span class="notranslate">tile sets</span> このアイデアは、例えば、16 x 16 のかなり小さな<span class="notranslate">tiles</span> がある場合、各<span class="notranslate">tiles</span> に合計 256 の異なる<span class="notranslate">tile set</span> があり、<span class="notranslate">tile</span> データ「ブロブ」のインデックスの 8 ビットしか使用しません（利用可能な 19 ビットのデータから）。これらのビットを「マスク」して、<span class="notranslate">tile</span> データの残りを使用して追加の値を格納することができます。</p>
-  <p>インデックスマスクの初期値を得る簡単な方法は、<span class="notranslate">tiles</span> の<span class="notranslate">tile set</span> の数から 1 を引くことです。したがって、16x16<span class="notranslate">tile set</span> は 256<span class="notranslate">tiles</span> となり、マスク値は 255 (16進数では $ff) です。もし<span class="notranslate">tile set</span> が<span class="notranslate">tiles</span> の数が2のべきで<i>ない</i>場合は、マスクを得るために最も近い2のべきに切り上げます。例えば 20x20<span class="notranslate">tile set</span> は 400<span class="notranslate">tiles</span> で、512 に切り上げ、マスクインデックス値 511(hexadecimal で $1ff) となります。インデックスマスクとは別に、通常は<span class="notranslate">tile</span> に割り当てられた flip、rotate、mirror の値も保持したいので、それを助けるためにいくつかの<b>定数を</b>使用できます。これらの定数をインデックスマスクの値と一緒に &quot;or &quot;することで、これらのビットのデータを保持することができます。以下の定数を使用することができます（使用方法は以下のサンプルコードを参照してください）。</p>
+  <p>この関数は、ゲーム内のすべての<span class="notranslate">tile</span> マップの<b>タイルビットマスクを</b>設定するために使用することができます。<span
+      class="notranslate">tile sets</span> このアイデアは、例えば、16 x 16 のかなり小さな<span class="notranslate">tiles</span>
+    がある場合、各<span class="notranslate">tiles</span> に合計 256 の異なる<span class="notranslate">tile set</span> があり、<span
+      class="notranslate">tile</span> データ「ブロブ」のインデックスの 8 ビットしか使用しません（利用可能な 19 ビットのデータから）。これらのビットを「マスク」して、<span
+      class="notranslate">tile</span> データの残りを使用して追加の値を格納することができます。</p>
+  <p>インデックスマスクの初期値を得る簡単な方法は、<span class="notranslate">tiles</span> の<span class="notranslate">tile set</span> の数から 1
+    を引くことです。したがって、16x16<span class="notranslate">tile set</span> は 256<span class="notranslate">tiles</span> となり、マスク値は
+    255 (16進数では $ff) です。もし<span class="notranslate">tile set</span> が<span class="notranslate">tiles</span>
+    の数が2のべきで<i>ない</i>場合は、マスクを得るために最も近い2のべきに切り上げます。例えば 20x20<span class="notranslate">tile set</span> は 400<span
+      class="notranslate">tiles</span> で、512 に切り上げ、マスクインデックス値 511(hexadecimal で $1ff) となります。インデックスマスクとは別に、通常は<span
+      class="notranslate">tile</span> に割り当てられた flip、rotate、mirror
+    の値も保持したいので、それを助けるためにいくつかの<b>定数を</b>使用できます。これらの定数をインデックスマスクの値と一緒に &quot;or
+    &quot;することで、これらのビットのデータを保持することができます。以下の定数を使用することができます（使用方法は以下のサンプルコードを参照してください）。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">tile_rotate</span></td>
@@ -37,20 +50,26 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">tile_index_mask</span></td>
-        <td><span class="notranslate">tile</span> のインデックスを抽出するために<span class="notranslate">tile</span> データブロブと &quot;and &quot;演算するための特別な定数です。</td>
+        <td><span class="notranslate">tile</span> のインデックスを抽出するために<span class="notranslate">tile</span> データブロブと &quot;and
+          &quot;演算するための特別な定数です。</td>
       </tr>
     </tbody>
   </table>
-  <p>タイルマップのビットマスキングは高度な機能で、<span class="notranslate">tile</span> データの「ブロブ」のビットを独自の用途に使用することができます。例えば、ユーザーはタイルデータ構造で「固体」を意味するビットを予約し、これを高速コリジョンのためにチェックすることができます。基本的に、ビットマスクは<span class="notranslate">tile</span> マップが<i>描画</i>されるときに<span class="notranslate">tile</span> データに対して「and」されます（したがって、他の機能には影響しません）。つまり、マスクにないビットは無視されますが、ユーザーが独自の目的で読み書きをすることはできます。グローバルマスクと<span class="notranslate">tile</span> マップごとのマスクの 2 種類があり、描画に使用する前に<span data-keyref="GameMaker Name">GameMaker</span>内部で &quot;アンド&quot; 処理されることに注意してください。</p>
+  <p>タイルマップのビットマスキングは高度な機能で、<span class="notranslate">tile</span>
+    データの「ブロブ」のビットを独自の用途に使用することができます。例えば、ユーザーはタイルデータ構造で「固体」を意味するビットを予約し、これを高速コリジョンのためにチェックすることができます。基本的に、ビットマスクは<span
+      class="notranslate">tile</span> マップが<i>描画</i>されるときに<span class="notranslate">tile</span>
+    データに対して「and」されます（したがって、他の機能には影響しません）。つまり、マスクにないビットは無視されますが、ユーザーが独自の目的で読み書きをすることはできます。グローバルマスクと<span
+      class="notranslate">tile</span> マップごとのマスクの 2 種類があり、描画に使用する前に<span data-keyref="GameMaker Name">GameMaker</span>内部で
+    &quot;アンド&quot; 処理されることに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">tilemap_set_global_mask</span>(mask)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">mask</span></td>
@@ -60,24 +79,26 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var mask = tile_mirror | tile_flip | tile_rotate | 255;<br />
     tilemap_set_global_mask(mask);</p>
-  <p>上記のコードでは、グローバル<span class="notranslate">tile</span> マップのビットマスクを 8 ビットに設定し、マップ内の各<span class="notranslate">tile</span> の flip、mirror、rotate 値を保持します。</p>
+  <p>上記のコードでは、グローバル<span class="notranslate">tile</span> マップのビットマスクを 8 ビットに設定し、マップ内の各<span
+      class="notranslate">tile</span> の flip、mirror、rotate 値を保持します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
+        <div style="float:left">前のページ：<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
         <div style="float:right">次ページ：<a href="tilemap_set_width.htm"> tilemap_set_width </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_set_global_mask
@@ -90,4 +111,5 @@ tile_index_mask
 tilemap_set_global_mask
 -->
 </body>
+
 </html>

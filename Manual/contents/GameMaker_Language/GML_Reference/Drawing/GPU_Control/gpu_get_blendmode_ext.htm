@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_get_blendmode_ext</title>
@@ -9,17 +10,26 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_get_blendmode_ext" />
-  <meta name="rh-index-keywords" content="gpu_get_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
-  <meta name="search-keywords" content="gpu_get_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
+  <meta name="rh-index-keywords"
+    content="gpu_get_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
+  <meta name="search-keywords"
+    content="gpu_get_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_get_blendmode_ext</span></h1>
   <p>この関数は、描画に使用されている現在の拡張ブレンドモードを取得するために使用することができます。この関数は、以下の要素を持つ2要素の1次元配列を返します。</p>
   <ul class="colour">
-    <li>[0] = ソース <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>(デフォルトは <span class="inline">bm_src_alpha</span>)</li>
-    <li>[1] = デスティネーション <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>(デフォルトは <span class="inline">bm_inv_src_alpha</span>)</li>
+    <li>[0] = ソース <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover"
+          href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>(デフォルトは
+      <span class="inline">bm_src_alpha</span>)
+    </li>
+    <li>[1] = デスティネーション <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover"
+          href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>(デフォルトは
+      <span class="inline">bm_inv_src_alpha</span>)
+    </li>
   </ul>
   <p>配列の値は、以下の定数のいずれかになります（&quot;s &quot;はソースから取得した値、&quot;d &quot;はデスティネーションから取得した値を表します）。</p>
   <table>
@@ -29,7 +39,9 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>
+        </th>
       </tr>
       <tr>
         <th>定数</th>
@@ -81,13 +93,16 @@
       </tr>
     </tbody>
   </table>
-  <p>これらの値を変更して、配列全体を <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>関数を単一の引数として指定します。</p>
+  <p>これらの値を変更して、配列全体を <a href="gpu_set_blendmode_ext.htm"><span
+        class="inline">gpu_set_blendmode_ext()</span></a>関数を単一の引数として指定します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_get_blendmode_ext</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (2 elements only; see above for constants)</p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (2 elements only; see above
+    for constants)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var bm = gpu_get_blendmode_ext();<br />
@@ -100,11 +115,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_get_blendmode_ext_sepalpha.htm"><span class="notranslate">gpu_get_blendmode_ext_sepalpha</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_get_blendmode_ext_sepalpha.htm"><span
+              class="notranslate">gpu_get_blendmode_ext_sepalpha</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_blendmode_ext
@@ -124,4 +141,5 @@ bm_src_alpha_sat
 gpu_get_blendmode_ext
 -->
 </body>
+
 </html>

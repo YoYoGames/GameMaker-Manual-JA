@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>スケルトンアニメーション</title>
@@ -12,11 +13,20 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Skeletal Animation,gm_SpineTintBlackColour,tint black,Spine" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>スケルトンアニメーションスプライト</h1>
-  <p>このセクションの関数は、スケルトン・アニメーション・ファイルからインポートされた<span class="notranslate">sprites</span> <i>に対してのみ</i>使用されます（具体的には、JSON ファイルを使用した <a href="http://es.esotericsoftware.com/"><b>背骨</b></a>をエクスポートし、ゲーム内のアニメーション（<span class="notranslate">asset</span> ）に関する情報を取得したり、アニメーション内の特定のプロパティを設定するために使用することができます。これらの関数は、通常の<span class="notranslate">sprite</span> 関数や変数と一緒に使用することができます。例えば、これらの特殊な関数を使用して 2 つのスケルトン・アニメーションを混ぜながら、通常の<span class="notranslate">sprite</span> インスタンス変数で画像のスケールを設定できます（<span class="notranslate">sprite</span> インスタンス変数の詳細については、<a href="../Sprite_Instance_Variables/Sprite_Instance_Variables.htm">ここを</a>参照してください）。</p>
-  <p class="note"><span class="note">注</span> <span class="notranslate">sprites</span> で作成されたスケルトンアニメーション<span class="notranslate">Spine</span> のインポートに関する詳細については、「<a href="../../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">非ビットマップスプ リートのインポート</a>」のセクションを参照してください。</p>
+  <p>このセクションの関数は、スケルトン・アニメーション・ファイルからインポートされた<span class="notranslate">sprites</span> <i>に対してのみ</i>使用されます（具体的には、JSON
+    ファイルを使用した <a href="http://es.esotericsoftware.com/"><b>背骨</b></a>をエクスポートし、ゲーム内のアニメーション（<span
+      class="notranslate">asset</span> ）に関する情報を取得したり、アニメーション内の特定のプロパティを設定するために使用することができます。これらの関数は、通常の<span
+      class="notranslate">sprite</span> 関数や変数と一緒に使用することができます。例えば、これらの特殊な関数を使用して 2 つのスケルトン・アニメーションを混ぜながら、通常の<span
+      class="notranslate">sprite</span> インスタンス変数で画像のスケールを設定できます（<span class="notranslate">sprite</span>
+    インスタンス変数の詳細については、<a href="../Sprite_Instance_Variables/Sprite_Instance_Variables.htm">ここを</a>参照してください）。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">sprites</span> で作成されたスケルトンアニメーション<span
+      class="notranslate">Spine</span> のインポートに関する詳細については、「<a
+      href="../../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">非ビットマップスプ リートのインポート</a>」のセクションを参照してください。
+  </p>
   <p>これらの機能については、以下のセクションから<span class="notranslate">sprites</span> をご覧ください。</p>
   <ul class="colour">
     <li><a href="Animation/Animation.htm"><label for="a">アニメーション</label></a></li>
@@ -24,12 +34,21 @@
     <li><a href="Attachments/Attachments.htm"><label for="c">添付資料</label></a></li>
     <li><a href="Bones/Bones.htm"><label for="d">骨</label></a></li>
     <li><a href="Slots/Slots.htm"><label for="f">スロット</label></a></li>
-    <li><a href="Drawing_And_Miscellaneous/Drawing_And_Miscellaneous.htm"><label for="e">図面・雑記</label></a></li>
+    <li><a href="Drawing_And_Miscellaneous/Drawing_And_Miscellaneous.htm"><label for="e">描画・雑記</label></a></li>
   </ul>
   <p> </p>
   <h2>ティントブラックサポート</h2>
-  <p>この機能により、<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> スロットの暗い部分を明るい部分と異なる色合いにすることができます（これは<span class="notranslate">Spine</span> <span class="notranslate">IDE</span> の機能です。詳しくは<a href="http://esotericsoftware.com/spine-attachments" target="_blank">こちらの</a>「<b>Tint black</b>」のセクションをご覧ください）。現在、<span data-keyref="GameMaker Name">GameMakerで</span>この機能を利用するためには、この機能を利用した<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> を描画する際に、<a href="../../../../../The_Asset_Editors/Shaders.htm">カスタムシェーダを</a>使用する必要があります。この<span class="notranslate">shader</span> には &quot;<span class="inline">gm_SpineTintBlackColour</span>&quot; というグローバルユニフォーム変数があり、ランナーは<span class="notranslate">Spine</span> のデータから自動的に取得した現在のティントブラックの色で塗りつぶします。必要な<span class="notranslate">shader</span> は以下の通りです。</p>
-  <p><span class="notranslate">Vertex</span> <span class="notranslate">Shader</span> (これはデフォルトのパススルー<span class="notranslate">vertex</span> <span class="notranslate">shader</span> と同じです)</p>
+  <p>この機能により、<span class="notranslate">Spine</span> <span class="notranslate">sprite</span>
+    スロットの暗い部分を明るい部分と異なる色合いにすることができます（これは<span class="notranslate">Spine</span> <span class="notranslate">IDE</span>
+    の機能です。詳しくは<a href="http://esotericsoftware.com/spine-attachments" target="_blank">こちらの</a>「<b>Tint
+      black</b>」のセクションをご覧ください）。現在、<span data-keyref="GameMaker Name">GameMakerで</span>この機能を利用するためには、この機能を利用した<span
+      class="notranslate">Spine</span> <span class="notranslate">sprite</span> を描画する際に、<a
+      href="../../../../../The_Asset_Editors/Shaders.htm">カスタムシェーダを</a>使用する必要があります。この<span
+      class="notranslate">shader</span> には &quot;<span class="inline">gm_SpineTintBlackColour</span>&quot;
+    というグローバルユニフォーム変数があり、ランナーは<span class="notranslate">Spine</span> のデータから自動的に取得した現在のティントブラックの色で塗りつぶします。必要な<span
+      class="notranslate">shader</span> は以下の通りです。</p>
+  <p><span class="notranslate">Vertex</span> <span class="notranslate">Shader</span> (これはデフォルトのパススルー<span
+      class="notranslate">vertex</span> <span class="notranslate">shader</span> と同じです)</p>
   <p class="code">attribute vec3 in_Position; // (x,y,z)<br />
     attribute vec4 in_Colour; // (r,g,b,a)<br />
     attribute vec2 in_TextureCoord; // (u,v)<br />
@@ -57,12 +76,14 @@
         vec4 texcol = texture2D( gm_BaseTexture, v_vTexcoord );<br />
         vec4 outcol;<br />
         outcol.rgb = v_vColour.rgb * texcol.rgb;<br />
-        outcol.rgb += tb.rgb * ((tb.a * (texcol.a - 1.0)) + (1.0 - texcol.rgb)); // This line performs the tint-    black blending logic<br />
+        outcol.rgb += tb.rgb * ((tb.a * (texcol.a - 1.0)) + (1.0 - texcol.rgb)); // This line performs the tint-   
+    black blending logic<br />
         outcol.a = v_vColour.a * texcol.a;<br />
         gl_FragColor = outcol;<br />
     }
   </p>
-  <p>まず<span class="notranslate">shader</span> を呼び出し、次に<span class="notranslate">sprite</span> を描画し、次に<span class="notranslate">shader</span> をリセットする、というような使い方をします。</p>
+  <p>まず<span class="notranslate">shader</span> を呼び出し、次に<span class="notranslate">sprite</span> を描画し、次に<span
+      class="notranslate">shader</span> をリセットする、というような使い方をします。</p>
   <p class="code">shader_set(shd_spine_tint_black);<br />
     draw_self();<br />
     shader_reset();</p>
@@ -72,11 +93,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="../Sprites.htm">スプライト</a></div>
-        <div style="float:right">次へ <a href="../Sprite_Information/Sprite_Information.htm"><label for="three">スプライト情報</label></a></div>
+        <div style="float:left">前のページ：<a href="../Sprites.htm">スプライト</a></div>
+        <div style="float:right">次のページ：<a href="../Sprite_Information/Sprite_Information.htm"><label
+              for="three">スプライト情報</label></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Spine Sprites
@@ -89,4 +112,5 @@ tint black
 sprite_spìne_functions
 -->
 </body>
+
 </html>

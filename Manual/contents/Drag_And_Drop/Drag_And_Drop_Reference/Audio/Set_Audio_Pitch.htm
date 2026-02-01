@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオのピッチを設定する</title>
@@ -12,25 +13,31 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Audio Pitch" />
   <meta name="search-keywords" content="Set Audio Pitch" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> オーディオのピッチを設定する</h1>
-  <p>このアクションは、音の高さを設定するために使用します。<span class="notranslate">asset</span> Browserからサウンド<span class="notranslate">Asset</span> 、希望するピッチを指定すると、そのサウンドのインスタンスを再生すると、ピッチが変更されます。この操作
+  <p>このアクションは、音の高さを設定するために使用します。<span class="notranslate">asset</span> Browserからサウンド<span
+      class="notranslate">Asset</span> 、希望するピッチを指定すると、そのサウンドのインスタンスを再生すると、ピッチが変更されます。この操作
     ただし、現在再生中のサウンドのピッチは変更されないので、そのサウンドに対して<a href="Play_Audio.htm">Play Audio</a>アクションを使用する前に使用する必要があります。</p>
   <p>ピッチ値は、入力値が現在のピッチにその値を乗じるという意味で、ピッチの<i>乗数</i>です。したがって、デフォルトの1ではピッチの変化はなく、1より小さい値ではピッチは下がり、1より大きい値ではピッチは上がります。
     この機能では、0以下や5以上の値はいずれにせよ聞き取れない可能性があるため、小さな増分を使用するのが最善です。ピッチの総変化量は（1/256）-256オクターブに固定されているため、これを超える値や下回る値を設定しても、ピッチは変化しません。
     を登録します。<b></b></p>
-  <p class="note"><b>注</b>：上記のクランプ値は、<span data-keyref="GameMaker Name">GameMakerが</span>範囲をクランプしようとする値ですが、すべてのターゲットプラットフォームでこの値が保証されるわけではありません。<span class="notranslate">iOS</span>例えば、(1/256) - 8にクランプされるため、各ターゲットプラットフォームで実験する必要があるかもしれません。
+  <p class="note"><b>注</b>：上記のクランプ値は、<span
+      data-keyref="GameMaker Name">GameMakerが</span>範囲をクランプしようとする値ですが、すべてのターゲットプラットフォームでこの値が保証されるわけではありません。<span
+      class="notranslate">iOS</span>例えば、(1/256) - 8にクランプされるため、各ターゲットプラットフォームで実験する必要があるかもしれません。
     また、オクターブの高い値や低い値が必要な場合は、あらかじめシフトされた異なるバージョンのサウンドリソースを用意します。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Audio Pitch Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Pitch.png" width="32" /></p>
+  <p><img alt="Set Audio Pitch Icon" class="icon" height="32"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Pitch.png"
+      width="32" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Sound</span></td>
@@ -53,11 +60,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Actions.htm">オーディオアクション</a></div>
-        <div style="float:right">次へ<a href="Get_Audio_Pitch.htm">オーディオピッチを取得する</a></div>
+        <div style="float:left">前のページ：<a href="Audio_Actions.htm">オーディオアクション</a></div>
+        <div style="float:right">次のページ：<a href="Get_Audio_Pitch.htm">オーディオピッチを取得する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Audio Pitch
@@ -66,4 +74,5 @@ Action - Set Audio Pitch
 action_audio_set_pitch
 -->
 </body>
+
 </html>

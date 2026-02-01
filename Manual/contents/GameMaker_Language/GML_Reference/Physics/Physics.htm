@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>物理学</title>
@@ -12,21 +13,49 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Physics,Box2D" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>物理学</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerに</span>専用の物理ライブラリを統合したことで、ゲーム世界内での<span class="notranslate">objects</span> の物理的挙動、特に衝突や<span class="notranslate">object</span> の相互作用をあらゆる面からコントロールすることができるようになりました。従来の」衝突システム(<span data-keyref="GameMaker Name">GameMakerの</span>デフォルト)は「反応型」システムで、衝突をチェックし<i>、</i>個々の<span class="notranslate">objects</span> に配置したコードでその衝突に反応するものです。これは、単純なゲームには良いのですが、多数の<span class="notranslate">objects</span> があり、それらがゲーム世界の異なる状況にどのように反応するかをコード化しなければならない場合、このシステムでは不十分であることがすぐに明らかになります。そこで、<span data-keyref="GameMaker Name">GameMakerの</span>物理システムに頼ることになるのです。</p>
-  <p>物理システムは、通常の衝突とは全く異なる方法で動作します。衝突や相互作用が起こる前に、ゲーム世界でのあなたの<span class="notranslate">objects</span> 、ゲーム世界自体のプロパティと同様に一連のプロパティを定義する、どちらかというと「受動的」なシステムです。これらのコード化された &quot;ルール &quot;は、ゲームワールド内のすべてのものの相互作用の方法を支配します。このように、いくつかの簡単なコードと正しい<span class="notranslate">room</span> のセットアップで、<span class="notranslate">objects</span> と世界の間に非常に複雑な相互作用を作成することができます。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerに</span>専用の物理ライブラリを統合したことで、ゲーム世界内での<span
+      class="notranslate">objects</span> の物理的挙動、特に衝突や<span class="notranslate">object</span>
+    の相互作用をあらゆる面からコントロールすることができるようになりました。従来の」衝突システム(<span
+      data-keyref="GameMaker Name">GameMakerの</span>デフォルト)は「反応型」システムで、衝突をチェックし<i>、</i>個々の<span
+      class="notranslate">objects</span> に配置したコードでその衝突に反応するものです。これは、単純なゲームには良いのですが、多数の<span
+      class="notranslate">objects</span>
+    があり、それらがゲーム世界の異なる状況にどのように反応するかをコード化しなければならない場合、このシステムでは不十分であることがすぐに明らかになります。そこで、<span
+      data-keyref="GameMaker Name">GameMakerの</span>物理システムに頼ることになるのです。</p>
+  <p>物理システムは、通常の衝突とは全く異なる方法で動作します。衝突や相互作用が起こる前に、ゲーム世界でのあなたの<span class="notranslate">objects</span>
+    、ゲーム世界自体のプロパティと同様に一連のプロパティを定義する、どちらかというと「受動的」なシステムです。これらのコード化された &quot;ルール
+    &quot;は、ゲームワールド内のすべてのものの相互作用の方法を支配します。このように、いくつかの簡単なコードと正しい<span class="notranslate">room</span> のセットアップで、<span
+      class="notranslate">objects</span> と世界の間に非常に複雑な相互作用を作成することができます。</p>
   <p><span data-keyref="GameMaker Name">GameMakerの</span>物理世界を扱う上で、いくつか注意すべき点があります。</p>
   <ul class="colour">
-    <li>物理システムは、<span data-keyref="GameMaker Name">GameMakerの</span>基本的な<span class="notranslate">room</span> とインスタンス構造から「離れて」存在します。つまり、そのタイミングと機能は、他のすべてのもののように<span class="notranslate">room</span> 速度とステップ順序に必ずしも結びついていません。</li>
-    <li>物理システムは、通常のインスタンス関数の多くを置き換えます。例えば、インスタンスに速度と方向を設定するのではなく、完全にシミュレーションされた物理体として宣言されている場合、ゲーム世界で動き回るようにするために力や<i>衝動を</i>使用しますし、物理が有効になっていない場合は、自分でXとY位置を設定する必要があります。物理関数をプロジェクトに組み込む前に、物理関数を試してみて、どのように動くかを知ってください。</li>
-    <li>作成するインスタンスの数を制限し、物理世界が扱う衝突や衝突グループの数も制限する必要があります。物理学はかなり集中的な計算を必要とするため、何千ものインスタンス、すべての物理的特性と衝突を持ち、すべてがうまく機能することを期待することは<i>できません</i>。</li>
-    <li>コリジョンシステムは、Box2Dが衝突を検出するためにインスタンスに割り当てることができる<i>コリジョンビットの</i>数が限られているため、衝突を設定するときはできるだけ親を使用するようにしましょう。例えば、5つの異なる壁<span class="notranslate">objects</span> がある場合、5つの衝突をチェックするのではなく、親<span class="notranslate">object</span> を作成して5つの壁に割り当て、親との1つの衝突をチェックするようにします。<span class="notranslate">objects</span> の物理特性は<i>継承されず</i>、衝突だけが継承されます。このようにして、ゲームを最適化し、エラーのない状態に保つことができます。</li>
-    <li>物理関数を使う以外の方法で、<span class="notranslate">room</span> のある地点から別の地点にインスタンスを移動しないようにしてください（つまり、x/y 座標を手動で設定しないでください）。これは可能であり、状況によっては必要かもしれませんが、物理エンジン、特に衝突を解決しようとするときに、予測できない結果をもたらす可能性があるため、一般的には避けるべきでしょう。</li>
-    <li>フィクスチャは<span class="notranslate">objects</span> とインスタンスに独立してバインドすることができるため、フィクスチャをバインドする際には注意を払う必要があります。これは、フィクスチャを (たとえば) &quot;o_Wall&quot; にバインドすると、その<span class="notranslate">object</span> の<b>すべての</b>インスタンスがそのフィクスチャを取得することになることを意味します。もしフィクスチャを1つのインスタンスにだけバインドしたいのであれば、適切な関数でそのインスタンスの id を使ってください。</li>
-    <li>浮動小数点数の精度が異なるため、ターゲットプラットフォームが異なると、ゲームのバージョンが標準の<span class="notranslate">Windows</span> バージョンと微妙に異なる挙動を示すことがありますが、各バージョンはその後の実行で自己一貫性を保ちますので、ご注意ください。</li>
-    <li>物理シミュレーションの不安定さを防ぐため、Box2Dは1回の更新でボディが回転・並進する量を上限として制約している。物理シミュレーションの精度によって、物理世界の更新回数や更新速度、また物理世界のスケーリングによって、見かけ上の制限は変化する。つまり、（例えば）世界の更新速度が60の場合、最大移動速度は20となります。</li>
+    <li>物理システムは、<span data-keyref="GameMaker Name">GameMakerの</span>基本的な<span class="notranslate">room</span>
+      とインスタンス構造から「離れて」存在します。つまり、そのタイミングと機能は、他のすべてのもののように<span class="notranslate">room</span> 速度とステップ順序に必ずしも結びついていません。
+    </li>
+    <li>
+      物理システムは、通常のインスタンス関数の多くを置き換えます。例えば、インスタンスに速度と方向を設定するのではなく、完全にシミュレーションされた物理体として宣言されている場合、ゲーム世界で動き回るようにするために力や<i>衝動を</i>使用しますし、物理が有効になっていない場合は、自分でXとY位置を設定する必要があります。物理関数をプロジェクトに組み込む前に、物理関数を試してみて、どのように動くかを知ってください。
+    </li>
+    <li>
+      作成するインスタンスの数を制限し、物理世界が扱う衝突や衝突グループの数も制限する必要があります。物理学はかなり集中的な計算を必要とするため、何千ものインスタンス、すべての物理的特性と衝突を持ち、すべてがうまく機能することを期待することは<i>できません</i>。
+    </li>
+    <li>
+      コリジョンシステムは、Box2Dが衝突を検出するためにインスタンスに割り当てることができる<i>コリジョンビットの</i>数が限られているため、衝突を設定するときはできるだけ親を使用するようにしましょう。例えば、5つの異なる壁<span
+        class="notranslate">objects</span> がある場合、5つの衝突をチェックするのではなく、親<span class="notranslate">object</span>
+      を作成して5つの壁に割り当て、親との1つの衝突をチェックするようにします。<span class="notranslate">objects</span>
+      の物理特性は<i>継承されず</i>、衝突だけが継承されます。このようにして、ゲームを最適化し、エラーのない状態に保つことができます。</li>
+    <li>物理関数を使う以外の方法で、<span class="notranslate">room</span> のある地点から別の地点にインスタンスを移動しないようにしてください（つまり、x/y
+      座標を手動で設定しないでください）。これは可能であり、状況によっては必要かもしれませんが、物理エンジン、特に衝突を解決しようとするときに、予測できない結果をもたらす可能性があるため、一般的には避けるべきでしょう。</li>
+    <li>フィクスチャは<span class="notranslate">objects</span>
+      とインスタンスに独立してバインドすることができるため、フィクスチャをバインドする際には注意を払う必要があります。これは、フィクスチャを (たとえば) &quot;o_Wall&quot; にバインドすると、その<span
+        class="notranslate">object</span>
+      の<b>すべての</b>インスタンスがそのフィクスチャを取得することになることを意味します。もしフィクスチャを1つのインスタンスにだけバインドしたいのであれば、適切な関数でそのインスタンスの id を使ってください。</li>
+    <li>浮動小数点数の精度が異なるため、ターゲットプラットフォームが異なると、ゲームのバージョンが標準の<span class="notranslate">Windows</span>
+      バージョンと微妙に異なる挙動を示すことがありますが、各バージョンはその後の実行で自己一貫性を保ちますので、ご注意ください。</li>
+    <li>
+      物理シミュレーションの不安定さを防ぐため、Box2Dは1回の更新でボディが回転・並進する量を上限として制約している。物理シミュレーションの精度によって、物理世界の更新回数や更新速度、また物理世界のスケーリングによって、見かけ上の制限は変化する。つまり、（例えば）世界の更新速度が60の場合、最大移動速度は20となります。
+    </li>
   </ul>
   <p>物理機能の情報は、以下のページでご覧いただけます。</p>
   <ul class="colour">
@@ -38,7 +67,8 @@
     <li><a href="Physics_Variables/Physics_Variables.htm">物理変数</a></li>
   </ul>
   <p> </p>
-  <p>最後に、より高度な物理シミュレーションに有用な特殊な物理関数がいくつかあります。1つは、<span class="notranslate">room</span> の特定のポイントでの衝突の可能性をテストするためのもので、もう1つはインスタンス内でカスタム質量と慣性のプロパティを生成するためのものです。</p>
+  <p>最後に、より高度な物理シミュレーションに有用な特殊な物理関数がいくつかあります。1つは、<span class="notranslate">room</span>
+    の特定のポイントでの衝突の可能性をテストするためのもので、もう1つはインスタンス内でカスタム質量と慣性のプロパティを生成するためのものです。</p>
   <ul class="colour">
     <li><a href="physics_test_overlap.htm"><span class="notranslate">physics_test_overlap</span></a></li>
     <li><a href="physics_mass_properties.htm"><span class="notranslate">physics_mass_properties</span></a></li>
@@ -49,11 +79,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a href="../In_App_Purchases/In_App_Purchases.htm">アプリ内課金</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a href="../In_App_Purchases/In_App_Purchases.htm">アプリ内課金</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Physics
@@ -63,4 +94,5 @@ Physics Functions
 physics_functions
 -->
 </body>
+
 </html>

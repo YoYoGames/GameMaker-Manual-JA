@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>merge_colour</title>
@@ -13,35 +14,43 @@
   <meta name="search-keywords" content="merge_colour,merge_color" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">merge_colour</span></h1>
-  <p>この関数を使うと、2つの色を取り込んで、それらを合成して新しい色を作ることができます。各構成色の量は、引数 &quot;amount&quot; を変更することで定義できます。0 の値は最初の色 (col1) を返し、1 の値は 2 番目の色 (col2) を返し、その間の値は対応する混合を返します。例えば、0.5を指定すると、2つの色が均等に混合されます。次の画像は、赤と青の色を合成することで、この機能を説明しています。</p>
-  <p><img alt="Mege colour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/merge_colour.png" /></p>
-  <h4>構文です。</h4>
+  <p>この関数を使うと、2つの色を取り込んで、それらを合成して新しい色を作ることができます。各構成色の量は、引数 &quot;amount&quot; を変更することで定義できます。0 の値は最初の色 (col1) を返し、1 の値は
+    2 番目の色 (col2) を返し、その間の値は対応する混合を返します。例えば、0.5を指定すると、2つの色が均等に混合されます。次の画像は、赤と青の色を合成することで、この機能を説明しています。</p>
+  <p><img alt="Mege colour example" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/merge_colour.png" /></p>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">merge_colour</span>(col1, col2, amount);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">col1</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">col1</span></td>
+        <td><span data-keyref="Type_Constant_Colour"></span></td>
         <td><span class="notranslate">The first colour to merge</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">col2</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">col2</span></td>
+        <td><span data-keyref="Type_Constant_Colour"></span></td>
         <td><span class="notranslate">The second colour to merge</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">amount</span></td><td><span data-keyref="Type_Real"></span></td>
-        <td><span class="notranslate">How much of each colour should be merged. For example, 0 will return col1, 1 will return col2, and 0.5 would return a merge of both colours equally</span></td>
-     </tr>
+        <td><span class="notranslate">amount</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">How much of each colour should be merged. For example, 0 will return col1, 1 will
+            return col2, and 0.5 would return a merge of both colours equally</span></td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Constant_Colour">Colour Constant</span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,11 +62,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Colour_And_Alpha.htm">カラーとアルファベット</a></div>
-        <div style="float:right">次のページ <a href="draw_clear.htm"><span class="notranslate">draw_clear</span></a></div>
+        <div style="float:left">前のページ：<a href="Colour_And_Alpha.htm">カラーとアルファベット</a></div>
+        <div style="float:right">次のページ：<a href="draw_clear.htm"><span class="notranslate">draw_clear</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 merge_colour
@@ -67,4 +77,5 @@ merge_color
 merge_colour
 -->
 </body>
+
 </html>

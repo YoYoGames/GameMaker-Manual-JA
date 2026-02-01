@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ini_write_string</title>
@@ -12,22 +13,25 @@
   <meta name="rh-index-keywords" content="ini_write_string" />
   <meta name="search-keywords" content="ini_write_string" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ini_write_string</span></h1>
-  <p>ini データファイルに<span class="notranslate">string</span> (テキスト)を書き込むことができます。Ini ファイルは<b>セクションに</b>分割され、その後各セクションは<b>キーと</b> <b>値の</b>ペアに分割されます。ですから、典型的なiniファイルは、次のようなものです。</p>
-  <p><img>ini<span class="notranslate">strings</span> を記述する際に引用符やエスケープ文字を使用すると、後でデータを読み返す際に、早々に切り捨てられる可能性があり、問題が発生する可能性があることに留意する必要があります。例えば、このように書くと問題になります。</p>
+  <p>ini データファイルに<span class="notranslate">string</span> (テキスト)を書き込むことができます。Ini
+    ファイルは<b>セクションに</b>分割され、その後各セクションは<b>キーと</b> <b>値の</b>ペアに分割されます。ですから、典型的なiniファイルは、次のようなものです。</p>
+  <p><img>ini<span class="notranslate">strings</span>
+    を記述する際に引用符やエスケープ文字を使用すると、後でデータを読み返す際に、早々に切り捨てられる可能性があり、問題が発生する可能性があることに留意する必要があります。例えば、このように書くと問題になります。</p>
   <p class="code">ini_write_string(&quot;test2&quot;, &quot;section&quot;, &quot;hello \&quot;Fritz\&quot;&quot;);</p>
   <p> </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ini_write_string</span>(section, key, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">section</span></td>
@@ -47,25 +51,28 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">ini_open(&quot;savedata.ini&quot;);<br />
     ini_write_string(&quot;Save&quot;, &quot;Player&quot;, global.Name);<br />
     ini_close();</p>
-  <p>上記のコードは、読み書きのためにiniファイルを開き、グローバル変数「Name」に格納されている<span class="notranslate">string</span> を「Player」をキーに「Save」セクションに書き込んでから、再びファイルを閉じています。</p>
+  <p>上記のコードは、読み書きのためにiniファイルを開き、グローバル変数「Name」に格納されている<span class="notranslate">string</span>
+    を「Player」をキーに「Save」セクションに書き込んでから、再びファイルを閉じています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Ini_Files.htm">Iniファイル</a></div>
-        <div style="float:right">次のページ <a href="ini_read_real.htm"><span class="notranslate">ini_read_real</span></a></div>
+        <div style="float:left">前のページ：<a href="Ini_Files.htm">Iniファイル</a></div>
+        <div style="float:right">次のページ：<a href="ini_read_real.htm"><span class="notranslate">ini_read_real</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ini_write_string
@@ -74,4 +81,5 @@ ini_write_string
 ini_write_string
 -->
 </body>
+
 </html>

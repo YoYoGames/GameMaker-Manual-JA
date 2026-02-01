@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>texture_set_stage</title>
@@ -12,20 +13,26 @@
   <meta name="rh-index-keywords" content="texture_set_stage" />
   <meta name="search-keywords" content="texture_set_stage" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">texture_set_stage</span></h1>
-  <p>この関数は、与えられたステージ &quot;スロット &quot;を<span class="notranslate">texture</span> に設定します。利用可能なステージ「スロット」の数は、コンパイルするプラットフォームによって異なります。<span class="notranslate">Windows</span> 、Mac、<span class="notranslate">Linux</span> では最大8個利用可能ですが、ローエンドの<span class="notranslate">Android</span> デバイス（例）では、この数は2個までとなります。また、最初のステージスロット（1）は常に<span data-keyref="GameMaker Name">GameMaker</span> によって自動的に使用されることは特筆すべきことです。</p>
-  <p class="note"><b>注</b>：この関数は、実行中の<span class="notranslate">shader</span> のコンテキスト以外では何も行いません !詳しくは<a href="../../Asset_Management/Shaders/Shaders.htm">シェーダーを </a>参照してください。</p>
+  <p>この関数は、与えられたステージ &quot;スロット &quot;を<span class="notranslate">texture</span>
+    に設定します。利用可能なステージ「スロット」の数は、コンパイルするプラットフォームによって異なります。<span class="notranslate">Windows</span> 、Mac、<span
+      class="notranslate">Linux</span> では最大8個利用可能ですが、ローエンドの<span class="notranslate">Android</span>
+    デバイス（例）では、この数は2個までとなります。また、最初のステージスロット（1）は常に<span data-keyref="GameMaker Name">GameMaker</span>
+    によって自動的に使用されることは特筆すべきことです。</p>
+  <p class="note"><b>注</b>：この関数は、実行中の<span class="notranslate">shader</span> のコンテキスト以外では何も行いません !詳しくは<a
+      href="../../Asset_Management/Shaders/Shaders.htm">シェーダーを </a>参照してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">texture_set_stage</span>(stage, tex);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">stage</span></td>
@@ -40,7 +47,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -49,18 +56,23 @@
     shader_set(GlassShader);<br />
     texture_set_stage(glassshader_bgsampler, spr);<br />
     shader_reset();</p>
-  <p>上記のコードでは、&quot;GlassShader &quot;というインデックスを持つ<span class="notranslate">shader</span> 内のサンプラーの<i>ハンドルを</i>取得し、その<span class="notranslate">shader</span> 定数を与えられた<span class="notranslate">sprite</span> <span class="notranslate">texture</span> に設定します。</p>
+  <p>上記のコードでは、&quot;GlassShader &quot;というインデックスを持つ<span class="notranslate">shader</span>
+    内のサンプラーの<i>ハンドルを</i>取得し、その<span class="notranslate">shader</span> 定数を与えられた<span class="notranslate">sprite</span>
+    <span class="notranslate">texture</span> に設定します。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背面<a href="Textures.htm">テクスチャー</a></div>
-        <div style="float:right">次のページ <a href="texture_global_scale.htm"><span class="notranslate">texture_global_scale</span></a></div>
+        <div style="float:left">前のページ：<a href="Textures.htm">テクスチャー</a></div>
+        <div style="float:right">次のページ：<a href="texture_global_scale.htm"><span
+              class="notranslate">texture_global_scale</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 texture_set_stage
@@ -69,4 +81,5 @@ texture_set_stage
 texture_set_stage
 -->
 </body>
+
 </html>

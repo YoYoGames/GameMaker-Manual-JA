@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_text_transformed</title>
@@ -13,53 +14,66 @@
   <meta name="search-keywords" content="draw_text_transformed" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_text_transformed</span></h1>
-  <p>と同様の方法でテキストを描画します。 <a href="draw_text.htm"><span class="inline">draw_text</span><span class="inline">()</span><span class="inline"></span></a>ただし、テキストを水平軸または垂直軸に沿って拡大縮小（効果的に引き伸ばす、または縮める）することを選択でき、さらに
-   <span data-keyref="GameMaker Name">GameMakerは</span>角度をつけて描画する（0が通常で、0を超えると反時計回りに回転する）。</p>
+  <p>と同様の方法でテキストを描画します。 <a href="draw_text.htm"><span class="inline">draw_text</span><span class="inline">()</span><span
+        class="inline"></span></a>ただし、テキストを水平軸または垂直軸に沿って拡大縮小（効果的に引き伸ばす、または縮める）することを選択でき、さらに
+    <span data-keyref="GameMaker Name">GameMakerは</span>角度をつけて描画する（0が通常で、0を超えると反時計回りに回転する）。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">draw_text_transformed</span>(x, y, string, xscale, yscale, angle);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">draw_text_transformed</span>(x, y, string, xscale,
+    yscale, angle);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the drawn string.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the drawn string.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">string</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The string to draw.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">xscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">xscale</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The horizontal scale (default 1).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">yscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">yscale</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The vertical scale(default 1).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">angle</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">angle</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The angle of the text.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">draw_set_halign(fa_center);<br/> draw_set_valign(fa_middle);
-    <br/> image_angle += 1;<br/> draw_text_transformed(room_width / 2, room_height / 2, &quot;GAME OVER!&quot;, 2, 2, image_angle);</p>
+  <p class="code">draw_set_halign(fa_center);<br /> draw_set_valign(fa_middle);
+    <br /> image_angle += 1;<br /> draw_text_transformed(room_width / 2, room_height / 2, &quot;GAME OVER!&quot;, 2, 2,
+    image_angle);
+  </p>
   <p>上記のコードは、与えられたテキストを<span class="notranslate">room</span> の中央に、回転しながら元の大きさの2倍に拡大して描画します。</p>
   <p> </p>
   <p> </p>
@@ -67,11 +81,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Text.htm">テキスト</a></div>
-        <div style="float:right">次のページ <a href="draw_text_ext_colour.htm"><span class="notranslate">draw_text_ext_colour</span></a></div>
+        <div style="float:left">前のページ：<a href="Text.htm">テキスト</a></div>
+        <div style="float:right">次のページ：<a href="draw_text_ext_colour.htm"><span
+              class="notranslate">draw_text_ext_colour</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_transformed
@@ -80,4 +96,5 @@ draw_text_transformed
 draw_text_transformed
 -->
 </body>
+
 </html>

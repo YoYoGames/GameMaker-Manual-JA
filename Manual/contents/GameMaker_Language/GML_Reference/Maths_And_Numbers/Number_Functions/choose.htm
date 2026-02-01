@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>choose</title>
@@ -13,20 +14,27 @@
   <meta name="search-keywords" content="choose" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">choose</span></h1>
-  <p>乱数選択のために数字以外のものを指定したい場合や、欲しい数字が実際の順序や設定された範囲内にない場合があります。このような場合、 <span class="inline">choose()</span> を使ってランダムな結果を生成することになります。例えば、先頭にランダムな<span class="notranslate">object</span> を持つ<span class="notranslate">sprite</span> を作成したい場合、この関数を使用して<span class="notranslate">sprite</span> のインデックスを与えられた<span class="notranslate">sprites</span> のセットのうちの1つに設定することができます。引数はいくつでも指定できます(ただし、引数が多くなると解析に時間がかかることに注意してください)。</p>
-  <p class="note"><span class="note">注意</span>この関数は、ゲームを新たに実行するたびに同じ値を返します。これは、<span data-keyref="GameMaker Name">GameMaker</span>が毎回同じ初期ランダムシードを生成し、<span class="notranslate">debugging</span> のコードをはるかに簡単にするためです。この挙動を避けるには <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span>をゲーム開始時に指定します。</p>
+  <p>乱数選択のために数字以外のものを指定したい場合や、欲しい数字が実際の順序や設定された範囲内にない場合があります。このような場合、 <span class="inline">choose()</span>
+    を使ってランダムな結果を生成することになります。例えば、先頭にランダムな<span class="notranslate">object</span> を持つ<span
+      class="notranslate">sprite</span> を作成したい場合、この関数を使用して<span class="notranslate">sprite</span> のインデックスを与えられた<span
+      class="notranslate">sprites</span> のセットのうちの1つに設定することができます。引数はいくつでも指定できます(ただし、引数が多くなると解析に時間がかかることに注意してください)。</p>
+  <p class="note"><span class="note">注意</span>この関数は、ゲームを新たに実行するたびに同じ値を返します。これは、<span
+      data-keyref="GameMaker Name">GameMaker</span>が毎回同じ初期ランダムシードを生成し、<span class="notranslate">debugging</span>
+    のコードをはるかに簡単にするためです。この挙動を避けるには <span style="font-size:1px;"><a href="randomise.htm"><span
+          class="inline">randomise()</span></a></span>をゲーム開始時に指定します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">choose</span>(val0, val1, val2... max_val);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">val0... max_val</span></td>
@@ -36,13 +44,14 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Any">Variable</span> (One of the given arguments)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">sprite_index = choose(spr_Cactus, spr_Flower, spr_Tree, spr_Shrub);<br />
     hp = choose(5, 8, 15, 32, 40);<br />
-    name = choose(&quot;John&quot;, &quot;Steven&quot;, &quot;Graham&quot;, &quot;Jack&quot;, &quot;Emily&quot;, &quot;Tina&quot;, &quot;Jill&quot;, &quot;Helen&quot;);</p>
+    name = choose(&quot;John&quot;, &quot;Steven&quot;, &quot;Graham&quot;, &quot;Jack&quot;, &quot;Emily&quot;,
+    &quot;Tina&quot;, &quot;Jill&quot;, &quot;Helen&quot;);</p>
   <p>上記のコードでは、chooseを使ってインスタンスのプロパティをいくつも設定しています。</p>
   <p> </p>
   <p> </p>
@@ -50,11 +59,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Number_Functions.htm">ナンバーファンクション</a></div>
-        <div style="float:right">次のページ <a href="random.htm"><span class="notranslate">random</span></a></div>
+        <div style="float:left">前のページ：<a href="Number_Functions.htm">ナンバーファンクション</a></div>
+        <div style="float:right">次のページ：<a href="random.htm"><span class="notranslate">random</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 choose
@@ -63,4 +73,5 @@ choose
 choose
 -->
 </body>
+
 </html>

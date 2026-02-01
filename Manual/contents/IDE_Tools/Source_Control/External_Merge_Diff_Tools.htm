@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>外部マージ/差分ツール</title>
@@ -12,50 +13,83 @@
   <meta name="rh-index-keywords" content="Source Control - Esternal Merge/Dif Tools" />
   <meta name="search-keywords" content="merge,diff,external tools" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>外部マージ/差分ツール</h1>
   <h2>マージツール</h2>
-  <p>他の人と一緒にプロジェクトに取り組む場合、複数の人が同じファイルを編集するため、競合が発生する可能性が常にあります。ほとんどの<span class="notranslate">source control</span> システムでは、競合するファイルをうまくマージすることができますが、同じ場所に変更がある場合、何をすべきか知るために少し手助けが必要です - ここで、変更を表示し、あなたに判断させる<strong>マージツールの </strong>出番です。</p>
-  <p>マージツールはそれぞれ異なるため、ファイルを指定するのに役立つ4つのマクロがあります。これは、<strong>コンフリクトウィンドウで </strong>「<strong>マージツールを選択</strong>する」<strong></strong> というボタンをクリックして設定します。</p>
-  <p><img alt="Source Control Conflict Window" class="center" src="../../assets/Images/IDE Tools/SCM_ConflictsWindow.png" /></p>
-  <p>このボタンをクリックすると、<span class="notranslate">Git</span> のプラグインで<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">環境設定</a>ウィンドウが表示されます。</p>
-  <p><img>ここでは、選択したマージツールに<span class="notranslate">path</span> を提供し、次に、何を行うかを決定する際に使用する<strong>マージツールオプションマクロ</strong>（またはマクロ）を提供します。</p>
+  <p>他の人と一緒にプロジェクトに取り組む場合、複数の人が同じファイルを編集するため、競合が発生する可能性が常にあります。ほとんどの<span class="notranslate">source control</span>
+    システムでは、競合するファイルをうまくマージすることができますが、同じ場所に変更がある場合、何をすべきか知るために少し手助けが必要です - ここで、変更を表示し、あなたに判断させる<strong>マージツールの
+    </strong>出番です。</p>
+  <p>マージツールはそれぞれ異なるため、ファイルを指定するのに役立つ4つのマクロがあります。これは、<strong>コンフリクトウィンドウで
+    </strong>「<strong>マージツールを選択</strong>する」<strong></strong> というボタンをクリックして設定します。</p>
+  <p><img alt="Source Control Conflict Window" class="center"
+      src="../../assets/Images/IDE Tools/SCM_ConflictsWindow.png" /></p>
+  <p>このボタンをクリックすると、<span class="notranslate">Git</span> のプラグインで<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">環境設定</a>ウィンドウが表示されます。</p>
+  <p><img>ここでは、選択したマージツールに<span class="notranslate">path</span>
+    を提供し、次に、何を行うかを決定する際に使用する<strong>マージツールオプションマクロ</strong>（またはマクロ）を提供します。</p>
   <ul class="colour">
     <li><span class="inline">${scm_mine}</span>:<span class="notranslate">path</span> あなたのバージョンに</li>
     <li><span class="inline">${scm_theirs}</span>:<span class="notranslate">path</span> to their version</li>
     <li><span class="inline">${scm_base}</span>:<span class="notranslate">path</span> 衝突した変更が発生する前のバージョンに戻ります。</li>
     <li><span class="inline">${scm_merged}</span>:<span class="notranslate">path</span> マージツールの保存先を指定します。</li>
   </ul>
-  <p>セットアップのヘルプとして、特定のマージツールに<span class="notranslate">path</span> を与えると、<span data-keyref="GameMaker Name">GameMaker</span>は選択したツールに応じた、開始時のデフォルトをいくつか埋めてくれます。</p>
+  <p>セットアップのヘルプとして、特定のマージツールに<span class="notranslate">path</span> を与えると、<span
+      data-keyref="GameMaker Name">GameMaker</span>は選択したツールに応じた、開始時のデフォルトをいくつか埋めてくれます。</p>
   <ul class="colour">
-    <li><strong>KDiff3</strong>です。 <span class="inline"><span>&quot;${scm_theirs} &quot;${scm_mine}&quot; -o &quot;${scm_merged}&quot;</span></li>
-    <li><strong>メルド</strong> <span class="inline"><span>&quot;${scm_mine}&quot; &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></li>
+    <li><strong>KDiff3</strong>です。 <span class="inline"><span>&quot;${scm_theirs} &quot;${scm_mine}&quot; -o
+          &quot;${scm_merged}&quot;</span></li>
+    <li><strong>メルド</strong> <span class="inline"><span>&quot;${scm_mine}&quot; &quot;${scm_merged}&quot;
+          &quot;${scm_theirs}&quot;</span></li>
     <li><strong>メモ帳++</strong>です。 <span class="inline">${scm_merged}</span></li>
-    <li><strong>トータスマージ</strong> <span class="inline"><span>/base:&quot;${scm_base}&quot; /theirs:&quot;${scm_theirs}&quot; /mine:&quot;${scm_mine}&quot; /merged:&quot;${scm_merged}&quot;</span></li>
-    <li><strong>DiffMerge</strong>:<strong> &quot;</strong><strong><span class="inline"><span>${scm_mine}&quot; &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></strong></li>
+    <li><strong>トータスマージ</strong> <span class="inline"><span>/base:&quot;${scm_base}&quot;
+          /theirs:&quot;${scm_theirs}&quot; /mine:&quot;${scm_mine}&quot; /merged:&quot;${scm_merged}&quot;</span></li>
+    <li><strong>DiffMerge</strong>:<strong> &quot;</strong><strong><span class="inline"><span>${scm_mine}&quot;
+            &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></strong></li>
   </ul>
-  <p>なお、マージツールを持っていない（あるいは使いたくない）場合は、<span class="notranslate">script</span> を<span class="notranslate">IDE</span> で開き、そこから修正を試みることができます。</p>
-  <p>さて、<a href="Conflicts.htm">コンフリクトの</a>セクションで述べたコンフリクトの例に戻りましょう。マスターからのプルを行い、ファイルのひとつがコンフリクトしています。<span class="notranslate">Source Control</span> <strong>Conflicts </strong>ウィンドウが開きますので、コンフリクトしている<span class="notranslate">script</span> をクリックし、<strong>マージ</strong>ツールを設定しましたので、<strong>マージを</strong>クリックします。マージ」をクリックすると、コンフリクトを処理するためのツールが表示され、提供されたマクロを使用して必要な変更を行うことができます。マージツールを終了して閉じると、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> に以下のような確認ウィンドウが表示されます。</p>
-  <p><img>マージツールを使って自分で行ったように、このプロンプトに対して &quot;Yes&quot; と答えるだけです。そして、マージ操作の終了を意味するためにこの変更をコミットする必要があります<strong>(Source Control &gt; </strong> <strong>Commit Changes</strong>)。コミットウィンドウにマージ中であることが表示され、ステージされていないファイルもいくつか表示されます。</p>
-  <p><img>これらのステージングされていないファイルは、私たちの<span class="notranslate">script</span> ファイルに、 <span class="inline">.base</span> 、 <span class="inline">.ours</span> 、 <span class="inline">.theirs</span> が加わったものです。これらを安全に削除するために、一番上の<img> と、一番下の<img> +<img> をクリックし、すべて選択します。次に、選択したファイルを右クリックして、<strong>パスの削除を</strong>選択すると、削除されます。これはマージであり、競合があったことを示すコミットメッセージもあらかじめ入力されています（希望に応じて、これに追加したり編集したりすることができます）。</p>
+  <p>なお、マージツールを持っていない（あるいは使いたくない）場合は、<span class="notranslate">script</span> を<span class="notranslate">IDE</span>
+    で開き、そこから修正を試みることができます。</p>
+  <p>さて、<a href="Conflicts.htm">コンフリクトの</a>セクションで述べたコンフリクトの例に戻りましょう。マスターからのプルを行い、ファイルのひとつがコンフリクトしています。<span
+      class="notranslate">Source Control</span> <strong>Conflicts </strong>ウィンドウが開きますので、コンフリクトしている<span
+      class="notranslate">script</span>
+    をクリックし、<strong>マージ</strong>ツールを設定しましたので、<strong>マージを</strong>クリックします。マージ」をクリックすると、コンフリクトを処理するためのツールが表示され、提供されたマクロを使用して必要な変更を行うことができます。マージツールを終了して閉じると、<span
+      data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> に以下のような確認ウィンドウが表示されます。</p>
+  <p><img>マージツールを使って自分で行ったように、このプロンプトに対して &quot;Yes&quot; と答えるだけです。そして、マージ操作の終了を意味するためにこの変更をコミットする必要があります<strong>(Source
+      Control &gt; </strong> <strong>Commit Changes</strong>)。コミットウィンドウにマージ中であることが表示され、ステージされていないファイルもいくつか表示されます。</p>
+  <p><img>これらのステージングされていないファイルは、私たちの<span class="notranslate">script</span> ファイルに、 <span class="inline">.base</span> 、
+    <span class="inline">.ours</span> 、 <span class="inline">.theirs</span> が加わったものです。これらを安全に削除するために、一番上の<img>
+    と、一番下の<img> +<img>
+    をクリックし、すべて選択します。次に、選択したファイルを右クリックして、<strong>パスの削除を</strong>選択すると、削除されます。これはマージであり、競合があったことを示すコミットメッセージもあらかじめ入力されています（希望に応じて、これに追加したり編集したりすることができます）。
+  </p>
   <p>今なら「<strong>コミット </strong>」をクリックできます。</p>
   <p>他のファイルで問題が発生する可能性があるため、リモートリポジトリや共有リポジトリを使用する際のワークフローは、以下のようにする必要があるということです。</p>
   <p class="code">Make Changes &gt; Save &gt; Commit &gt; Pull &gt; Merge &gt; Push</p>
   <h2>ディフ・ツール</h2>
-  <p>リポジトリへのコミット時に使用する<strong>Diff ツールも</strong>設定する必要があります。これは Merge ツールと同じように<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">Preferences</a> から設定します。</p>
-  <p><img>Diff ツールは Merge ツールとほぼ同じ方法で設定されますが、 <span class="inline">${scm_base}</span> と <span class="inline">${scm_theirs}</span> オプションのみを使用します。この場合、 <span class="inline">${scm_base}</span> は変更されていないファイルを表し、 <span class="inline">${scm_theirs}</span> はファイルの現在の状態を表します。ツールオプションには、<strong>Merge</strong> ツールと同様に、<strong>Meld</strong>、<strong>KDiff3 </strong>、<strong>TortoiseMerge</strong> のデフォルトオプションがあらかじめ入力されているはずです。<span data-keyref="GameMaker Name">GameMaker</span>は単一ファイルの差分パッチの出力をサポートして<em>いない </em>ため、<strong>Notepad++</strong> のデフォルトはないことに注意してください。</p>
-  <p>Diff ツールを使って現在のリビジョンと以前のリビジョン間の変更点を表示するには、Commit ウィンドウを開いて、ファイルをダブルクリックするだけです。ツールが正しく設定されていれば、ツールが起動し、ファイル間の変更点を見ることができるようになります。</p>
+  <p>リポジトリへのコミット時に使用する<strong>Diff ツールも</strong>設定する必要があります。これは Merge ツールと同じように<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">Preferences</a> から設定します。
+  </p>
+  <p><img>Diff ツールは Merge ツールとほぼ同じ方法で設定されますが、 <span class="inline">${scm_base}</span> と <span
+      class="inline">${scm_theirs}</span> オプションのみを使用します。この場合、 <span class="inline">${scm_base}</span> は変更されていないファイルを表し、
+    <span class="inline">${scm_theirs}</span> はファイルの現在の状態を表します。ツールオプションには、<strong>Merge</strong>
+    ツールと同様に、<strong>Meld</strong>、<strong>KDiff3 </strong>、<strong>TortoiseMerge</strong>
+    のデフォルトオプションがあらかじめ入力されているはずです。<span data-keyref="GameMaker Name">GameMaker</span>は単一ファイルの差分パッチの出力をサポートして<em>いない
+    </em>ため、<strong>Notepad++</strong> のデフォルトはないことに注意してください。
+  </p>
+  <p>Diff ツールを使って現在のリビジョンと以前のリビジョン間の変更点を表示するには、Commit
+    ウィンドウを開いて、ファイルをダブルクリックするだけです。ツールが正しく設定されていれば、ツールが起動し、ファイル間の変更点を見ることができるようになります。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Source_Control.htm">ソースコントロール</a></div>
-        <div style="float:right">次へ<a href="Setting_Up_Git_Plugin.htm"> <span class="notranslate">Git</span> </a>プラグインを設定する</div>
+        <div style="float:left">前のページ：<a href="../Source_Control.htm">ソースコントロール</a></div>
+        <div style="float:right">次のページ：<a href="Setting_Up_Git_Plugin.htm"> <span class="notranslate">Git</span>
+          </a>プラグインを設定する</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control External Tools
@@ -68,4 +102,5 @@ Diff
 source_control_tools
 -->
 </body>
+
 </html>

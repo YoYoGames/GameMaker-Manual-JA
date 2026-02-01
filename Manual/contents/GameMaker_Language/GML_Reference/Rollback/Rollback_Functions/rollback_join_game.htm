@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -15,35 +16,43 @@
   <meta name="rh-index-keywords" content="rollback_join_game" />
   <meta name="search-keywords" content="rollback_join_game" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_join_game</span></h1>
   <p>説明： ゲームに参加しようとする。参加するためには、仮想の<span class="notranslate">room</span> の ID を含む URL にいる必要があります。</p>
-  <p><span class="notranslate">room</span> に参加した場合は<span class="inline2">true</span> を返し、ゲームに参加していない場合は<span class="inline2">false</span> を返します。</p>
-  <p>自分がすでに参加しているゲームに新しいプレイヤーが参加すると、「<strong>ロールバックイベント</strong>」イベントが発生します。詳しくは、「<a data-xref="{title}" href="../Rollback_Events.htm">ロールバックイベント</a>」を参照してください。</p>
-  <p><span class="inline2">dry_run</span>引数はオプションで、<span class="inline2">trueに</span>設定すると実際にゲームに参加せずに関数を実行できるようになります。これは、実際にゲームに参加することなく、ゲームに参加できるかどうかを確認するために使用されます。</p>
+  <p><span class="notranslate">room</span> に参加した場合は<span class="inline2">true</span> を返し、ゲームに参加していない場合は<span
+      class="inline2">false</span> を返します。</p>
+  <p>自分がすでに参加しているゲームに新しいプレイヤーが参加すると、「<strong>ロールバックイベント</strong>」イベントが発生します。詳しくは、「<a data-xref="{title}"
+      href="../Rollback_Events.htm">ロールバックイベント</a>」を参照してください。</p>
+  <p><span class="inline2">dry_run</span>引数はオプションで、<span
+      class="inline2">trueに</span>設定すると実際にゲームに参加せずに関数を実行できるようになります。これは、実際にゲームに参加することなく、ゲームに参加できるかどうかを確認するために使用されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_join_game</span>([dry_run]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">dry_run</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">ブーリアン</a></span></td>
-        <td><span class="notranslate">Disabled by default (<span class="inline2">false</span>).有効にすると<span class="inline2">（true</span>）、この関数はゲームに参加せず、単にゲームに参加できる場合は<span class="inline2">trueを</span>返し、そうでない場合は<span class="inline2">falseを</span>返します。<br />
-          <br />
-          このように、この関数を使用して、プレイヤーが招待されているかどうかだけをチェックすることができます。
+        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">ブーリアン</a></span></td>
+        <td><span class="notranslate">Disabled by default (<span class="inline2">false</span>).有効にすると<span
+              class="inline2">（true</span>）、この関数はゲームに参加せず、単にゲームに参加できる場合は<span
+              class="inline2">trueを</span>返し、そうでない場合は<span class="inline2">falseを</span>返します。<br />
+            <br />
+            このように、この関数を使用して、プレイヤーが招待されているかどうかだけをチェックすることができます。
         </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+        target="_blank">Boolean</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">rollback_define_player(obj_player);<br />
@@ -54,7 +63,8 @@
         rollback_create_game(2, false);<br />
     }
   </p>
-  <p>上記のコードでは、プレイヤー<span class="notranslate">object</span> を定義し、ゲームに参加しようとします。参加できなかった場合は、代わりに新しいゲームを作成します。最大プレイヤー数は2人で、Sync Testは無効になっています。</p>
+  <p>上記のコードでは、プレイヤー<span class="notranslate">object</span>
+    を定義し、ゲームに参加しようとします。参加できなかった場合は、代わりに新しいゲームを作成します。最大プレイヤー数は2人で、Sync Testは無効になっています。</p>
   <p>拡張例については、「<a data-xref="{title}" href="../Creating_Multiplayer.htm">マルチプレイヤーゲームを作成</a>する」を参照してください。</p>
   <p> </p>
   <p> </p>
@@ -65,7 +75,8 @@
         <div>次ページ：<a data-xref="{title}" href="rollback_start_game.htm">Rollback_start_game</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_join_game
@@ -74,4 +85,5 @@ rollback_join_game
 rollback_join_game
 -->
 </body>
+
 </html>

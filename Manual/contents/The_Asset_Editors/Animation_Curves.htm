@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>アニメーション・カーブ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,55 +13,79 @@
   <meta name="rh-index-keywords" content="Animation Curve Editor" />
   <meta name="search-keywords" content="Animation Curves,Anim Curves,Curves" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>アニメーション・カーブ・エディター</h1>
-  <p><img> <span class="notranslate">animation curve</span> は、値が時間とともにどのように変化するかを表す1つ以上の曲線を含む で、曲線内の異なる点間を移動するために<span class="notranslate">asset</span> <a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間</a>、<a class="glossterm" data-glossterm="スムーズインターポレーション" href="#">スムーズ補間</a>、<a class="glossterm" data-glossterm="ベジェほかん" href="#">ベジエ補間を</a>使用することができます。縦軸に設定する値は、任意の2つの値の間（デフォルトでは-1〜1）で、横軸に沿った期間は<em>常に </em>0〜1で正規化されているため、以下のことが容易に行えます。
-    ゲームコードで乗数を使用して異なる時間範囲をターゲットにしたり、<a href="Sequence_Properties/Using_Animation_Curves.htm">シーケンスエディタで</a>トラックに合わせて引き伸ばしたりすることができます。</p>
+  <h1>アニメーション・カーブ・エディタ</h1>
+  <p><img> <span class="notranslate">animation curve</span> は、値が時間とともにどのように変化するかを表す1つ以上の曲線を含む で、曲線内の異なる点間を移動するために<span
+      class="notranslate">asset</span> <a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間</a>、<a
+      class="glossterm" data-glossterm="スムーズインターポレーション" href="#">スムーズ補間</a>、<a class="glossterm" data-glossterm="ベジェほかん"
+      href="#">ベジエ補間を</a>使用することができます。縦軸に設定する値は、任意の2つの値の間（デフォルトでは-1〜1）で、横軸に沿った期間は<em>常に
+    </em>0〜1で正規化されているため、以下のことが容易に行えます。
+    ゲームコードで乗数を使用して異なる時間範囲をターゲットにしたり、<a
+      href="Sequence_Properties/Using_Animation_Curves.htm">シーケンスエディタで</a>トラックに合わせて引き伸ばしたりすることができます。</p>
   <p>アニメーションカーブは「チャンネル」で構成され、各チャンネルにカーブ設定を持たせることができるため、例えば、空間位置をx/y位置の2チャンネルで表現したり、カラーグラデーションを4チャンネルで表現することができます。
-    <span class="notranslate">Animation curve</span> <span class="notranslate">assets</span> は、<span class="notranslate">Sequences</span> で作業するときに使用でき、コードでアクセスすることもできるため、ゲームを作成するときの強力なツールになります。</p>
-  <p><span class="notranslate">animation curve</span> <span class="notranslate">asset</span> を初めて作成すると、エディタウィンドウが開き、以下のセクションが表示されます。</p>
+    <span class="notranslate">Animation curve</span> <span class="notranslate">assets</span> は、<span
+      class="notranslate">Sequences</span> で作業するときに使用でき、コードでアクセスすることもできるため、ゲームを作成するときの強力なツールになります。
+  </p>
+  <p><span class="notranslate">animation curve</span> <span class="notranslate">asset</span>
+    を初めて作成すると、エディタウィンドウが開き、以下のセクションが表示されます。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">カーブ名</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">ここで、<span class="notranslate">animation curve</span> に固有の名前<span data-keyref="Asset name restriction">（英数字と「_」アンダースコア記号のみ</span>）を付けることができます。この名前は、カーブとそのすべてのチャンネルを参照するために使用されます。
+    <p class="dropspot">ここで、<span class="notranslate">animation curve</span> に固有の名前<span
+        data-keyref="Asset name restriction">（英数字と「_」アンダースコア記号のみ</span>）を付けることができます。この名前は、カーブとそのすべてのチャンネルを参照するために使用されます。
       コードまたは<span class="notranslate">sequence</span> でアクセスする場合。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">カーブライブラリ</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot"><img> ボタンを押すと <strong><span data-keyref="Animation_Curve_Presets_Library">アニメーション・カーブ・ライブラリ</span></strong>ウィンドウを表示します。
+    <p class="dropspot"><img> ボタンを押すと <strong><span
+          data-keyref="Animation_Curve_Presets_Library">アニメーション・カーブ・ライブラリ</span></strong>ウィンドウを表示します。
       アニメーションカーブのカーブタイプを変更したり、選択したチャンネルにプリセットを適用したりすることができます。</p>
-    <p class="dropspot"><img><a href="Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">アニメーション・カーブ・ライブラリ</a>」の項を参照してください。
+    <p class="dropspot"><img><a href="Animation_Curve_Properties/Animation_Curve_Library.htm"
+        title="Animation Curve Library">アニメーション・カーブ・ライブラリ</a>」の項を参照してください。
       カーブの種類とプリセットについて<img> ボタンからウィンドウを開くと、デフォルトで<strong>「上書き</strong>」適用モードが選択されていることに注意してください。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">チャンネル一覧</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">チャンネルリストでは、<span class="notranslate">animation curve</span> <span class="notranslate">asset</span> を構成するさまざまなチャンネルを追加し、名前を付けることができます。<span class="notranslate">animation curve</span> を最初に作成したときのデフォルトでは、1つのチャンネルが追加されています。
-      をクリックすると、カーブ名の左にある<img> のボタンが表示されます。各チャンネルにはユニークな名前を付ける必要があります（<span data-keyref="Asset name restriction">英数字とアンダースコア記号「_」のみ</span>使用）。
+    <p class="dropspot">チャンネルリストでは、<span class="notranslate">animation curve</span> <span
+        class="notranslate">asset</span> を構成するさまざまなチャンネルを追加し、名前を付けることができます。<span class="notranslate">animation
+        curve</span> を最初に作成したときのデフォルトでは、1つのチャンネルが追加されています。
+      をクリックすると、カーブ名の左にある<img> のボタンが表示されます。各チャンネルにはユニークな名前を付ける必要があります（<span
+        data-keyref="Asset name restriction">英数字とアンダースコア記号「_」のみ</span>使用）。
       また、左側の色見本をダブルクリック（<img> ）すると、カラーピッカーが開き、新しい色を選択することができるので、チャンネルの色を設定することができます。
       チャンネルの名前を変更するには、ゆっくりダブルクリック<img> して名前を変更します。また、マウスの右ボタン<img> を使ってメニューを開き、名前の変更、色の変更、チャンネルの削除を選択することも可能です。</p>
-    <p class="dropspot">チャンネルは、名前の横の矢印をクリックすることで拡張でき、チャンネルカーブの各ポイントを表示します。これらのポイントは、現在の値をクリックし、新しい値を入力することで、手動で編集することができます。</p>
+    <p class="dropspot">
+      チャンネルは、名前の横の矢印をクリックすることで拡張でき、チャンネルカーブの各ポイントを表示します。これらのポイントは、現在の値をクリックし、新しい値を入力することで、手動で編集することができます。</p>
     <p class="dropspot"><img>目」アイコン<img> をクリックするとチャンネルの表示/非表示を切り替えられ、「ビン」アイコン<img> をクリックするとチャンネルを削除することができます。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">チャンネル範囲</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">チャンネル範囲ボタンは、チャンネルエディタの視覚的な垂直範囲を設定するために使用します。デフォルトでは -1 から 1 に設定されていますが、このボタンをクリックすると次のようなウィンドウが表示されます。</p>
+    <p class="dropspot">チャンネル範囲ボタンは、チャンネルエディタの視覚的な垂直範囲を設定するために使用します。デフォルトでは -1 から 1
+      に設定されていますが、このボタンをクリックすると次のようなウィンドウが表示されます。</p>
     <p class="dropspot"><img>これらの値を変更することで、チャンネルエディタセクションでのデータの表現方法が変わり、以下のことが可能になります。
       のみならず、チャンネルカーブに沿ってより高い／低い値を設定することができます。これは純粋に視覚的なものであり、チャンネルの値をクランプするものではないことに注意してください。</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">チャンネルエディター</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">チャンネルエディタ</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">チャンネルエディターは、<span class="notranslate">animation curve</span> で使用されている様々なチャンネルを視覚的に表示します。 デフォルトでは、すべてのチャンネルがここに表示されますが、チャンネルリストから現在選択されているチャンネルのみを編集することができ、そのチャンネルはハイライト表示され ます。
+    <p class="dropspot">チャンネルエディタは、<span class="notranslate">animation curve</span> で使用されている様々なチャンネルを視覚的に表示します。
+      デフォルトでは、すべてのチャンネルがここに表示されますが、チャンネルリストから現在選択されているチャンネルのみを編集することができ、そのチャンネルはハイライト表示され ます。
       をエディタで表示します。チャンネルカーブに沿ったポイントの位置は、<img> をクリックし、エディタ内でドラッグすることで変更することができます。
       最初と最後の点は、垂直軸に沿ってのみ変更可能で、水平方向の値は常にそれぞれ0と1になります。</p>
-    <p class="dropspot">チャンネルカーブに直接ポイントを追加するには、メインチャンネルラインにマウスを近づけ、カーソルが &quot;<strong>ポイントの追加</strong>&quot; に変わった時に<img> をクリックします。
+    <p class="dropspot">チャンネルカーブに直接ポイントを追加するには、メインチャンネルラインにマウスを近づけ、カーソルが &quot;<strong>ポイントの追加</strong>&quot;
+      に変わった時に<img> をクリックします。
       その後、<img> をクリックしてドラッグするか、チャンネルリストの拡張チャンネルオプションで値を変更することにより、これらのポイントを編集することができます。</p>
-    <p class="dropspot"><img> <img> をクリックし、エディタ内でドラッグして編集したいポイントをすべて選択するか、 / + を使ってポイントを個別に選択範囲に追加すると、複数のポイントを一度に編集することができます。マウスボタンを離した後、選択範囲内の任意のポイントを再度クリックすることで、複数のポイントを一度に編集することができます。
+    <p class="dropspot"><img> <img> をクリックし、エディタ内でドラッグして編集したいポイントをすべて選択するか、 / +
+      を使ってポイントを個別に選択範囲に追加すると、複数のポイントを一度に編集することができます。マウスボタンを離した後、選択範囲内の任意のポイントを再度クリックすることで、複数のポイントを一度に編集することができます。
       をクリックしてドラッグすると、まとめて移動できます。<img> <img> <img> </p>
-    <p class="dropspot"><img> <img> チャンネルエディタで任意の場所を右クリックして、<a href="Animation_Curve_Properties/Animation_Curve_Library.htm">アニメーションカーブライブラリウィンドウを</a>開くことができます（選択されたカーブタイプが<strong>ベジェの</strong>場合のみ）。この方法でプリセットを適用すると、チャンネル全体に影響します。チャンネルの一部だけを変更するには、 個々のラインを右クリックしてプリセットを適用するか、 をクリックしてドラッグして複数のラインを選択し、 選択部分を右クリックして選択したラインにプリセットを適用することができます。<img> <img> <img> </p>
-    <p class="dropspot"><img>チャンネルエディタから<strong>アニメーションカーブライブラリウィンドウを</strong>開くと、デフォルトで<strong>「間</strong>」適用モードが選択されていることに注意してください。</p>
+    <p class="dropspot"><img> <img> チャンネルエディタで任意の場所を右クリックして、<a
+        href="Animation_Curve_Properties/Animation_Curve_Library.htm">アニメーションカーブライブラリウィンドウを</a>開くことができます（選択されたカーブタイプが<strong>ベジェの</strong>場合のみ）。この方法でプリセットを適用すると、チャンネル全体に影響します。チャンネルの一部だけを変更するには、
+      個々のラインを右クリックしてプリセットを適用するか、 をクリックしてドラッグして複数のラインを選択し、 選択部分を右クリックして選択したラインにプリセットを適用することができます。<img> <img> <img> </p>
+    <p class="dropspot">
+      <img>チャンネルエディタから<strong>アニメーションカーブライブラリウィンドウを</strong>開くと、デフォルトで<strong>「間</strong>」適用モードが選択されていることに注意してください。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ズームコントロール</a></p>
@@ -67,24 +93,30 @@
     <p class="dropspot">ズームコントロールにより、<img> または<img> 、拡大または縮小することができます。
       チャンネルエディタのチャンネルカーブの垂直スケール。また、&quot;Center Fit&quot; ボタン<img> をクリックすると、チャンネルエディタビューのスケールを調整することができます。
       は、チャンネルカーブ上のすべてのポイントを、値の中間値を中心にエディタ内に収まるようにスケールを調整します。</p>
-    <p class="dropspot"><img alt="The Animation Curve Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves.png"/></p>
+    <p class="dropspot"><img alt="The Animation Curve Editor" class="center"
+        src="../assets/Images/Asset_Editors/Editor_Animation_Curves.png" /></p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p><span class="notranslate">animation curves</span> とともに使用できるさまざまな<a class="glossterm" data-glossterm="ランタイム" href="#">Runtime</a>関数については、マニュアルの次のセクションを参照してください。</p>
+  <p><span class="notranslate">animation curves</span> とともに使用できるさまざまな<a class="glossterm" data-glossterm="ランタイム"
+      href="#">Runtime</a>関数については、マニュアルの次のセクションを参照してください。</p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/Animation_Curves.htm">アニメーションカーブ機能</a></li>
+    <li><a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/Animation_Curves.htm">アニメーションカーブ機能</a>
+    </li>
   </ul>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Animation_Curve_Properties/Animation_Curve_Library.htm">アニメーション・カーブ・ライブラリ</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a
+            href="Animation_Curve_Properties/Animation_Curve_Library.htm">アニメーション・カーブ・ライブラリ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Animation Curve Editor
@@ -94,4 +126,6 @@ Animation Curves
 animation_curve_editor
 -->
 
-</body></html>
+</body>
+
+</html>

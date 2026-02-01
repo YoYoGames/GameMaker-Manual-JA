@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_copy</title>
@@ -12,61 +13,76 @@
   <meta name="rh-index-keywords" content="buffer_copy" />
   <meta name="search-keywords" content="buffer_copy" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_copy</span></h1>
-  <p>この機能は、ある<span class="notranslate">buffer</span> に保存されているデータの一部（または全部）を別の にコピーするために使用することができます。2つの<span class="notranslate">buffers</span> を使い、一方から他方へコピーする場合、両方の<span class="notranslate">buffers</span> は、以前に <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a>    関数（例）を使用し、コピー元の<span class="notranslate">buffer</span> からコピーするデータの開始点を<span class="notranslate">buffer</span> の開始点に対して指定するデータオフセット（バイト単位）、およびデータをコピーする位置を定義する別のデータオフセットを指定することができます。
+  <p>この機能は、ある<span class="notranslate">buffer</span> に保存されているデータの一部（または全部）を別の にコピーするために使用することができます。2つの<span
+      class="notranslate">buffers</span> を使い、一方から他方へコピーする場合、両方の<span class="notranslate">buffers</span> は、以前に <a
+      href="buffer_create.htm"><span class="inline">buffer_create()</span></a> 関数（例）を使用し、コピー元の<span
+      class="notranslate">buffer</span> からコピーするデータの開始点を<span class="notranslate">buffer</span>
+    の開始点に対して指定するデータオフセット（バイト単位）、およびデータをコピーする位置を定義する別のデータオフセットを指定することができます。
     を宛先<span class="notranslate">buffer</span> に挿入します。</p>
   <p class="note"><b>注</b>：同じ<span class="notranslate">buffer</span> にコピーすることはできません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">buffer_copy</span>(src_buffer, src_offset, size, dest_buffer, dest_offset);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">buffer_copy</span>(src_buffer, src_offset, size,
+    dest_buffer, dest_offset);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">src_buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">src_buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The index of the buffer to copy <i>from</i>.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">src_offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">src_offset</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The data offset to start copying from (in bytes).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The size of the data to copy (in bytes).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">dest_buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">dest_buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The index of the buffer to copy <i>to</i>.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">dest_offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">dest_offset</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The offset position to copy the data to (in bytes).</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">buffer_copy(buff1, 0, 2048, buff2, 2048);</p>
-  <p>上記のコードは、変数 &quot;buff1 &quot;にインデックスされた<span class="notranslate">buffer</span> に格納されているデータをコピーし、変数 &quot;buff2 &quot;にインデックスされた<span class="notranslate">buffer</span> に2048バイトだけオフセットしてペーストします。</p>
+  <p>上記のコードは、変数 &quot;buff1 &quot;にインデックスされた<span class="notranslate">buffer</span> に格納されているデータをコピーし、変数 &quot;buff2
+    &quot;にインデックスされた<span class="notranslate">buffer</span> に2048バイトだけオフセットしてペーストします。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_copy_from_vertex_buffer.htm"><span class="notranslate">buffer_copy_from_vertex_buffer</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_copy_from_vertex_buffer.htm"><span
+              class="notranslate">buffer_copy_from_vertex_buffer</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_copy
@@ -75,4 +91,5 @@ buffer_copy
 buffer_copy
 -->
 </body>
+
 </html>

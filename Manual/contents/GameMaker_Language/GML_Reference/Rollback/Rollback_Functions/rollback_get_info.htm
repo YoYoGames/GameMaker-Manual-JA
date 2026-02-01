@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -15,35 +16,44 @@
   <meta name="rh-index-keywords" content="rollback_get_info" />
   <meta name="search-keywords" content="rollback_get_info" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_get_info</span></h1>
-  <p>この関数は、プレイヤーに関する情報を含む<span class="notranslate">struct</span> を返します。これは、プレイヤー インスタンスを手動で管理する場合にのみ使用する必要があります。を使用している場合、各プレイヤーインスタンスは自動的にこの情報を変数として受け取ります。 <a href="rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a>を使用している場合、各プレイヤー・インスタンスは自動的にこの情報を<a href="../Rollback_Variables/Rollback_Variables.htm">変数として</a>受け取ります。</p>
+  <p>この関数は、プレイヤーに関する情報を含む<span class="notranslate">struct</span> を返します。これは、プレイヤー
+    インスタンスを手動で管理する場合にのみ使用する必要があります。を使用している場合、各プレイヤーインスタンスは自動的にこの情報を変数として受け取ります。 <a
+      href="rollback_define_player.htm"><span
+        class="inline">rollback_define_player()</span></a>を使用している場合、各プレイヤー・インスタンスは自動的にこの情報を<a
+      href="../Rollback_Variables/Rollback_Variables.htm">変数として</a>受け取ります。</p>
   <p>この関数は、プレイヤーのIDを引数に取り、以下の変数を持つ<span class="notranslate">struct</span> 。</p>
   <table>
     <tbody>
       <tr>
         <th>バリアブル</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="inline">player_avatar_url</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">文字列</a></span></td>
         <td>プレイヤーのアバター画像を指すURL</td>
       </tr>
       <tr>
         <td><span class="inline">player_avatar_sprite</span></td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">スプライトアセット</a></span></td>
+        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm"
+              target="_blank">スプライトアセット</a></span></td>
         <td>プレイヤーのアバターが含まれるスプライト</td>
       </tr>
       <tr>
         <td><span class="inline">player_name</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">文字列</a></span></td>
         <td>プレーヤー名</td>
       </tr>
       <tr>
         <td><span class="inline">player_type</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">文字列</a></span></td>
         <td>GX.gamesにサインインしているかどうか。<br />
           <br />
           ゲストユーザーの場合は<span class="inline2">「Guest」</span>、サインインしている場合は<span class="inline2">「User</span>」になります。
@@ -51,19 +61,22 @@
       </tr>
       <tr>
         <td><span class="inline">player_user_id</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">文字列</a></span></td>
         <td>GX.gamesに登録されているプレイヤーのID</td>
       </tr>
       <tr>
         <td><span class="inline">player_prefs</span></td>
-        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">任意の</a></span></td>
+        <td><span data-keyref="Type_Any"><a
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable"
+              target="_blank">任意の</a></span></td>
         <td>プレーヤーに設定されている<a href="rollback_set_player_prefs.htm">プリファレンス</a></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_get_info</span>(player_id);</p>
   <table>
     <colgroup>
@@ -73,20 +86,22 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">player_id</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The ID of the player for which information will be returned.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm"
+        target="_blank">Struct</a></span></p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -97,7 +112,8 @@
         <div>次ページ：<a data-xref="{title}" href="rollback_get_input.htm">rollback_get_input</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_get_info
@@ -106,4 +122,5 @@ rollback_get_info
 rollback_get_info
 -->
 </body>
+
 </html>

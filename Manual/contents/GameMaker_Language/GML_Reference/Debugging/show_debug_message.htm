@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>show_debug_message</title>
@@ -12,28 +13,40 @@
   <meta name="rh-index-keywords" content="show_debug_message" />
   <meta name="search-keywords" content="show_debug_message" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">show_debug_message</span></h1>
-  <p>この関数は、カスタムデバッグメッセージを作成し、コンパイラーウィンドウに<span class="notranslate">runtime</span> で表示します。<span class="notranslate">string</span> メッセージは<span class="notranslate">string</span> でも<i>実数でも</i>構いませんが、もし両方が必要な場合は、最初に <a href="../Strings/Strings.htm"><span class="inline">string()</span></a>また、小数点以下が2桁以上ある数値の場合は <a href="../Strings/string_format.htm"><span class="inline">string_format()</span></a>というのは、デフォルトでは小数は小数点以下2桁に丸められるからです（つまり、「1.2468」は出力ウィンドウに「1.25」と表示されます）。</p>
-  <p>この機能で表示されるデバッグメッセージは、デバッグモードでゲームを実行すると、<span class="notranslate">IDE</span> の下部にある<a href="../../../Introduction/The_Output_Window.htm">Compiler Output Window</a>と、<span class="notranslate">debugger</span> の<a href="../../../IDE_Tools/The_Debugger.htm">グラフビューに</a>表示されます。もし、デバッグモードで表示されるメッセージだけを見たい場合は <a href="debug_event.htm"><span class="inline">debug_event()</span></a>の代わりに</p>
+  <p>この関数は、カスタムデバッグメッセージを作成し、コンパイラーウィンドウに<span class="notranslate">runtime</span> で表示します。<span
+      class="notranslate">string</span> メッセージは<span class="notranslate">string</span>
+    でも<i>実数でも</i>構いませんが、もし両方が必要な場合は、最初に <a href="../Strings/Strings.htm"><span
+        class="inline">string()</span></a>また、小数点以下が2桁以上ある数値の場合は <a href="../Strings/string_format.htm"><span
+        class="inline">string_format()</span></a>というのは、デフォルトでは小数は小数点以下2桁に丸められるからです（つまり、「1.2468」は出力ウィンドウに「1.25」と表示されます）。
+  </p>
+  <p>この機能で表示されるデバッグメッセージは、デバッグモードでゲームを実行すると、<span class="notranslate">IDE</span> の下部にある<a
+      href="../../../Introduction/The_Output_Window.htm">Compiler Output Window</a>と、<span
+      class="notranslate">debugger</span> の<a
+      href="../../../IDE_Tools/The_Debugger.htm">グラフビューに</a>表示されます。もし、デバッグモードで表示されるメッセージだけを見たい場合は <a
+      href="debug_event.htm"><span class="inline">debug_event()</span></a>の代わりに</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">show_debug_message</span>(string);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">string</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The custom debug message to show.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4><b>例</b></h4>
@@ -50,11 +63,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Debugging.htm">デバッギング</a></div>
-        <div style="float:right">次のページ <a href="show_debug_overlay.htm"><span class="notranslate">show_debug_overlay</span></a></div>
+        <div style="float:left">前のページ：<a href="Debugging.htm">デバッギング</a></div>
+        <div style="float:right">次のページ：<a href="show_debug_overlay.htm"><span
+              class="notranslate">show_debug_overlay</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 show_debug_message
@@ -63,4 +78,5 @@ show_debug_message
 show_debug_message
 -->
 </body>
+
 </html>

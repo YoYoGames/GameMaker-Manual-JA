@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -14,17 +15,22 @@
   <meta name="rh-index-keywords" content="rollback_confirmed_frame" />
   <meta name="search-keywords" content="rollback_confirmed_frame" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_confirmed_frame</span></h1>
   <p>全プレーヤーの入力が同期して確認された最後のフレーム番号が格納されるグローバル変数です。</p>
-  <p>これを<span class="inline"><a data-xref="{title}" href="rollback_current_frame.htm">rollback_current_frame</a></span> と比較することで、現在のフレームですべてのプレイヤーの入力が確認されているかどうかを確認することができます。</p>
-  <p>また、関数 <span class="inline"><a href="../Rollback_Functions/rollback_sync_on_frame.htm">rollback_sync_on_frame()</a></span> 、現在のフレームが同期しているかどうかを確認することができます。</p>
+  <p>これを<span class="inline"><a data-xref="{title}" href="rollback_current_frame.htm">rollback_current_frame</a></span>
+    と比較することで、現在のフレームですべてのプレイヤーの入力が確認されているかどうかを確認することができます。</p>
+  <p>また、関数 <span class="inline"><a
+        href="../Rollback_Functions/rollback_sync_on_frame.htm">rollback_sync_on_frame()</a></span>
+    、現在のフレームが同期しているかどうかを確認することができます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_confirmed_frame</span></p>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+        target="_blank">Real</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _is_frame_confirmed = (rollback_current_frame == rollback_confirmed_frame);<br />
@@ -34,7 +40,8 @@
         evaluate_game_over();<br />
     }
   </p>
-  <p>このコードは、現在のフレームの<a href="rollback_current_frame.htm">値が</a> <strong>確認されたフレームの</strong>値と等しいかどうかをチェックすることによって、現在のフレームがすべてのプレーヤーから確認された入力を持っているかどうかをチェックします。</p>
+  <p>このコードは、現在のフレームの<a href="rollback_current_frame.htm">値が</a>
+    <strong>確認されたフレームの</strong>値と等しいかどうかをチェックすることによって、現在のフレームがすべてのプレーヤーから確認された入力を持っているかどうかをチェックします。</p>
   <p>それが真であれば、ゲームオーバーの条件が満たされているかどうかを確認する関数を実行し、ゲームを終了させることができます。</p>
   <p>これは、予測に基づく状態でのゲーム終了を避けるために行われ、ゲームオーバー条件の確認を試みる前に、完全に同期されたフレームを待ちます。</p>
   <p> </p>
@@ -46,7 +53,8 @@
         <div>次ページ：<a data-xref="{title}" href="rollback_current_frame.htm">Rollback_Current_Frame</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_confirmed_frame
@@ -55,4 +63,5 @@ rollback_confirmed_frame
 rollback_confirmed_frame
 -->
 </body>
+
 </html>

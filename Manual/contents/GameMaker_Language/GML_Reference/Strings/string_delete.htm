@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>string_delete</title>
@@ -13,52 +14,62 @@
   <meta name="search-keywords" content="string_delete" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">string_delete</span></h1>
-  <p>この関数は、与えられた<span class="notranslate">string</span> の一部を削除するために使用される。入力<span class="notranslate">string</span> と、その<span class="notranslate">string</span> 内で文字を削除する開始位置 (インデックスは 1 から始まります)、そして削除する文字数を指定します。この関数は，その部分を除いた新しい<span class="notranslate">string</span> を返します．</p>
+  <p>この関数は、与えられた<span class="notranslate">string</span> の一部を削除するために使用される。入力<span class="notranslate">string</span>
+    と、その<span class="notranslate">string</span> 内で文字を削除する開始位置 (インデックスは 1
+    から始まります)、そして削除する文字数を指定します。この関数は，その部分を除いた新しい<span class="notranslate">string</span> を返します．</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">string_delete</span>(str, index, count);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">str</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">str</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The string to copy and delete from.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The position of the first character to remove (from 1).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">count</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">count</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The number of characters to remove.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String">String</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">str1 = &quot;Helloo World&quot;;<br />
     str2 = string_delete(str1, 5, 1);</p>
-  <p>これは <span class="inline">str2</span> を &quot;Hello World&quot; に設定します。&quot;Hello&quot; から余分な &quot;o&quot; (位置 5 に存在) を削除しているためです。</p>
+  <p>これは <span class="inline">str2</span> を &quot;Hello World&quot; に設定します。&quot;Hello&quot; から余分な &quot;o&quot; (位置 5
+    に存在) を削除しているためです。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Strings.htm">弦楽器</a></div>
-        <div style="float:right">次のページ <a href="string_digits.htm"><span class="notranslate">string_digits</span></a></div>
+        <div style="float:left">前のページ：<a href="Strings.htm">弦楽器</a></div>
+        <div style="float:right">次のページ：<a href="string_digits.htm"><span class="notranslate">string_digits</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 string_delete
@@ -67,4 +78,5 @@ string_delete
 string_delete
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -16,17 +17,21 @@ rollback_chat" />
   <meta name="rh-index-keywords" content="rollback_chat" />
   <meta name="search-keywords" content="rollback_chat" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_chat</span></h1>
   <p>この機能は、他のプレイヤーに<span class="notranslate">string</span> のメッセージを送信するために使用されます。</p>
-  <p>送信する<span class="notranslate">string</span> 、最大128バイトの<a href="../../Strings/string_byte_length.htm">サイズを</a>指定します。</p>
+  <p>送信する<span class="notranslate">string</span> 、最大128バイトの<a href="../../Strings/string_byte_length.htm">サイズを</a>指定します。
+  </p>
   <p>第2引数を指定しない場合、送信者を含む全プレイヤーに送信される。</p>
   <p>第2引数には、メッセージを受け取るプレイヤーであるプレイヤーIDを指定することができます。</p>
   <h3>使い方は？</h3>
-  <p>この関数は「ローカル」での使用を想定しているため、<a href="rollback_get_input.htm">ロールバック入力ではなく</a>、<a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">ローカル入力</a>の結果となる。</p>
-  <p>最下部の使用例を参照してください。<a data-xref="{text}" href="../Rollback_Events.htm#h1">Rollback Event</a>イベントで受信したメッセージをリッスンします。 </p>
+  <p>この関数は「ローカル」での使用を想定しているため、<a href="rollback_get_input.htm">ロールバック入力ではなく</a>、<a
+      href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">ローカル入力</a>の結果となる。</p>
+  <p>最下部の使用例を参照してください。<a data-xref="{text}" href="../Rollback_Events.htm#h1">Rollback Event</a>イベントで受信したメッセージをリッスンします。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_chat</span>(message, [to]);</p>
   <table>
     <colgroup>
@@ -36,24 +41,27 @@ rollback_chat" />
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">message</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">文字列</a></span></td>
         <td><span class="notranslate">The message to send, as a string.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">to</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> メッセージの送信先となるプレイヤーのIDを指定します。この引数を指定しないか、または<span class="inline2">-1を</span>指定すると、すべてのプレーヤーにメッセージが送信されます。</td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span>
+            メッセージの送信先となるプレイヤーのIDを指定します。この引数を指定しないか、または<span class="inline2">-1を</span>指定すると、すべてのプレーヤーにメッセージが送信されます。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -62,8 +70,11 @@ rollback_chat" />
         rollback_chat(keyboard_string);<br />
         keyboard_string = &quot;&quot;;<br />
     }</p>
-  <p>ローカルでエンターキーが押されると、その値が全プレイヤーに送信されます。 <a href="../../Game_Input/Keyboard_Input/keyboard_string.htm"><span class="inline">keyboard_string</span></a>の値がすべてのプレイヤーに送信されます。その後、その<span class="notranslate">string</span> はクリアされ、新しいメッセージを入力することができます。</p>
-  <p>これにより、（送信者を含む）すべてのクライアントがメッセージを受信すると、<a data-xref="{text}" href="../Rollback_Events.htm#h1">ロールバックイベントが</a>トリガーされます。</p>
+  <p>ローカルでエンターキーが押されると、その値が全プレイヤーに送信されます。 <a href="../../Game_Input/Keyboard_Input/keyboard_string.htm"><span
+        class="inline">keyboard_string</span></a>の値がすべてのプレイヤーに送信されます。その後、その<span class="notranslate">string</span>
+    はクリアされ、新しいメッセージを入力することができます。</p>
+  <p>これにより、（送信者を含む）すべてのクライアントがメッセージを受信すると、<a data-xref="{text}"
+      href="../Rollback_Events.htm#h1">ロールバックイベントが</a>トリガーされます。</p>
   <p class="code_heading">ロールバックイベント</p>
   <p class="code">if (rollback_event_id == rollback_chat_message)<br />
     {<br />
@@ -87,7 +98,8 @@ rollback_chat" />
         <div>次：<a data-xref="{title}" href="rollback_use_player_prefs.htm">rollback_use_player_prefsを使用</a>する。</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_chat
@@ -96,4 +108,5 @@ rollback_chat
 rollback_chat
 -->
 </body>
+
 </html>

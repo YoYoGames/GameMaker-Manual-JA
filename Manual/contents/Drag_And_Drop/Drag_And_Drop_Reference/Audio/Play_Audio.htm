@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオを再生する</title>
@@ -12,20 +13,24 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Play Audio" />
   <meta name="search-keywords" content="Play Audio" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> <span data-field="title" data-format="default">オーディオを再生する</span></h1>
-  <p>このアクションは、指定されたサウンドを再生するように設定します。<span class="notranslate">Asset</span> Explorerからサウンドを選択し、サウンドをループさせるかどうかを &quot;Loop&quot;<span class="notranslate">flag</span> で設定します（ループしたサウンドは停止するまで何度でも再生されます）。</p>
+  <p>このアクションは、指定されたサウンドを再生するように設定します。<span class="notranslate">Asset</span> Explorerからサウンドを選択し、サウンドをループさせるかどうかを
+    &quot;Loop&quot;<span class="notranslate">flag</span> で設定します（ループしたサウンドは停止するまで何度でも再生されます）。</p>
   <p>さらに、ゲイン、オフセット（再生を開始するトラックの位置）、再生するピッチを設定することができます。</p>
-  <p>再生されるサウンドのゲインとピッチの最終的な値は、サウンドに設定されたゲインとピッチの値の積になります<span class="notranslate">asset</span>.オフセット値は、&quot;Offset &quot;フィールドに入力された値<strong>、または</strong>フィールドを空にした場合は再生中の<strong>サウンドアセットの</strong>オフセット値です（例2参照）。</p>
+  <p>再生されるサウンドのゲインとピッチの最終的な値は、サウンドに設定されたゲインとピッチの値の積になります<span class="notranslate">asset</span>.オフセット値は、&quot;Offset
+    &quot;フィールドに入力された値<strong>、または</strong>フィールドを空にした場合は再生中の<strong>サウンドアセットの</strong>オフセット値です（例2参照）。</p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /></p>
+  <p><img alt="Play Audio Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Sound</span></td>
@@ -56,21 +61,30 @@
   </table>
   <p> </p>
   <h4>例1．</h4>
-  <p><img>上記のアクションブロックのコードは、マウスボタンが押されたかどうかをチェックし、押されたことが検出されると、グローバル変数が <span class="inline">true</span> でないかをチェックします。 <span class="inline">true</span> でない場合は、サウンドが再生（ループ）され、グローバル変数が <span class="inline">true</span> に設定されます。そうでない場合は、サウンドが停止され、グローバル変数が <span class="inline">false</span> に設定されます。<br />
-    サウンドはデフォルト設定で再生されます。ゲインおよびピッチ乗算器は1、オフセットは0です（サウンドのデフォルトオフセット<span class="notranslate">asset</span> ）。</p>
+  <p><img>上記のアクションブロックのコードは、マウスボタンが押されたかどうかをチェックし、押されたことが検出されると、グローバル変数が <span class="inline">true</span> でないかをチェックします。
+    <span class="inline">true</span> でない場合は、サウンドが再生（ループ）され、グローバル変数が <span class="inline">true</span>
+    に設定されます。そうでない場合は、サウンドが停止され、グローバル変数が <span class="inline">false</span> に設定されます。<br />
+    サウンドはデフォルト設定で再生されます。ゲインおよびピッチ乗算器は1、オフセットは0です（サウンドのデフォルトオフセット<span class="notranslate">asset</span> ）。
+  </p>
   <h4>例2．</h4>
-  <p><img>上記のアクションブロックでは、まず、サウンド<span class="notranslate">asset</span> &quot;snd_MusicBoss &quot;のトラックポジションを20秒に設定します。次に、インスタンス変数 &quot;skip_intro&quot; に <span class="inline">true</span> が設定されているかどうかをチェックします。もし設定されていれば、先に設定したトラック位置の値である20秒から &quot;snd_MusicBoss&quot; の再生を始めます（これは &quot;Offset&quot; フィールドが空のままなので、<strong>アセットオフセットを</strong>使用しているためです）。最初の20秒の音声はスキップされます。<br />
-    インスタンス変数 &quot;skip_intro &quot;を <span class="inline">false</span> に設定すると、&quot;snd_MusicBoss &quot;の再生も始まりますが、&quot;Offset &quot;が0に設定されているため、最初から再生が始まります。<strong>サウンドアセットに</strong>先ほど定義したトラック位置の20秒は無視されます。</p>
+  <p><img>上記のアクションブロックでは、まず、サウンド<span class="notranslate">asset</span> &quot;snd_MusicBoss
+    &quot;のトラックポジションを20秒に設定します。次に、インスタンス変数 &quot;skip_intro&quot; に <span class="inline">true</span>
+    が設定されているかどうかをチェックします。もし設定されていれば、先に設定したトラック位置の値である20秒から &quot;snd_MusicBoss&quot; の再生を始めます（これは &quot;Offset&quot;
+    フィールドが空のままなので、<strong>アセットオフセットを</strong>使用しているためです）。最初の20秒の音声はスキップされます。<br />
+    インスタンス変数 &quot;skip_intro &quot;を <span class="inline">false</span> に設定すると、&quot;snd_MusicBoss
+    &quot;の再生も始まりますが、&quot;Offset &quot;が0に設定されているため、最初から再生が始まります。<strong>サウンドアセットに</strong>先ほど定義したトラック位置の20秒は無視されます。
+  </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Actions.htm">オーディオアクション</a></div>
-        <div style="float:right">次へ<a href="Stop_Audio.htm">オーディオの停止</a></div>
+        <div style="float:left">前のページ：<a href="Audio_Actions.htm">オーディオアクション</a></div>
+        <div style="float:right">次のページ：<a href="Stop_Audio.htm">オーディオの停止</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Play Audio
@@ -79,4 +93,5 @@ Action - Play Audio
 action_play_audio
 -->
 </body>
+
 </html>

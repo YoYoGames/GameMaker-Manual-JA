@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gif_add_surface</title>
@@ -12,20 +13,28 @@
   <meta name="rh-index-keywords" content="gif_add_surface" />
   <meta name="search-keywords" content="gif_add_surface" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gif_add_surface</span></h1>
-  <p>この関数を使用すると、サーフェスからGIFファイルにフレームを保存することができます。GIFファイルID（関数 <a href="gif_open.htm"><span class="inline">gif_open()</span></a>) とサーフェスID (関数 <a href="../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>) と、フレーム間の遅延時間です。遅延時間は1/100秒単位で計算されますが、いったんGIFが作成されると、たとえばプロモーション目的で使用する場合、ブラウザによってフレーム遅延の解釈が若干異なる可能性があることに注意してください。この場合、GIF に描画される部分はデフォルトの (0,0) 位置ではなくオフセットから始まり、追加するサーフェスのセクションのみを選択できるようになります（オプションで）。量子化値は 0 から 3 までの整数で、0 は完全量子化、3 はゼロ量子化です (低い値ほど品質が落ちますが、より小さな GIF が作成されます)。デフォルトの品質である 2 と最高の品質である 3 の間にはあまり差がなく、3 を使用すると GIF の作成が大幅に遅くなるため、最大値を使用する場合は注意が必要です。</p>
+  <p>この関数を使用すると、サーフェスからGIFファイルにフレームを保存することができます。GIFファイルID（関数 <a href="gif_open.htm"><span
+        class="inline">gif_open()</span></a>) とサーフェスID (関数 <a href="../Drawing/Surfaces/surface_create.htm"><span
+        class="inline">surface_create()</span></a>)
+    と、フレーム間の遅延時間です。遅延時間は1/100秒単位で計算されますが、いったんGIFが作成されると、たとえばプロモーション目的で使用する場合、ブラウザによってフレーム遅延の解釈が若干異なる可能性があることに注意してください。この場合、GIF
+    に描画される部分はデフォルトの (0,0) 位置ではなくオフセットから始まり、追加するサーフェスのセクションのみを選択できるようになります（オプションで）。量子化値は 0 から 3 までの整数で、0 は完全量子化、3
+    はゼロ量子化です (低い値ほど品質が落ちますが、より小さな GIF が作成されます)。デフォルトの品質である 2 と最高の品質である 3 の間にはあまり差がなく、3 を使用すると GIF
+    の作成が大幅に遅くなるため、最大値を使用する場合は注意が必要です。</p>
   <p>フレーム数やGIFのフレームサイズに組み込みの制限はありませんが、メモリを使いすぎるとこの関数は失敗して-1を返し、そうでない場合は0を返すことに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">gif_add_surface</span>(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">gif_add_surface</span>(gif_index, surface, delay_time,
+    [xoffset], [yoffset]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">gif_index</span></td>
@@ -60,7 +69,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -89,11 +98,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
-        <div style="float:right">次のページ <a href="gif_save.htm"><span class="notranslate">gif_save</span></a></div>
+        <div style="float:left">前のページ：<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
+        <div style="float:right">次のページ：<a href="gif_save.htm"><span class="notranslate">gif_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gif_add_surface
@@ -102,4 +112,5 @@ gif_add_surface
 gif_add_surface
 -->
 </body>
+
 </html>

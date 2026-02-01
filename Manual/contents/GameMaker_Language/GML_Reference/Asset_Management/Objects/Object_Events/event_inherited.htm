@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>event_inherited</title>
@@ -12,15 +13,23 @@
   <meta name="rh-index-keywords" content="event_inherited" />
   <meta name="search-keywords" content="event_inherited" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">event_inherited</span></h1>
-  <p>この関数は、インスタンスの親である<span class="notranslate">object</span> の現在のイベントを呼び出します。通常、インスタンスが親<span class="notranslate">object</span> を持つ場合、自動的に親と同じすべてのイベントを<span class="notranslate">inherits</span> します。しかし、（たとえば）親<span class="notranslate">object</span> に create イベントがあり、子<span class="notranslate">object</span> にそれを追加すると、子<span class="notranslate">object</span> のすべてのインスタンスは親<span class="notranslate">object</span> にある<i>イベントではなく</i>、あなたが追加した新しい create イベントを実行することになります。同じタイプの親イベント<span class="notranslate">object</span> と子イベント<span class="notranslate">object</span> の両方を使用する必要がある場合は、この関数を使用してください。この関数は、子イベントが含む残りのコードやアクションを実行する前に、親イベント<span class="notranslate">object</span> を実行します。</p>
+  <p>この関数は、インスタンスの親である<span class="notranslate">object</span> の現在のイベントを呼び出します。通常、インスタンスが親<span
+      class="notranslate">object</span> を持つ場合、自動的に親と同じすべてのイベントを<span class="notranslate">inherits</span>
+    します。しかし、（たとえば）親<span class="notranslate">object</span> に create イベントがあり、子<span class="notranslate">object</span>
+    にそれを追加すると、子<span class="notranslate">object</span> のすべてのインスタンスは親<span class="notranslate">object</span>
+    にある<i>イベントではなく</i>、あなたが追加した新しい create イベントを実行することになります。同じタイプの親イベント<span class="notranslate">object</span>
+    と子イベント<span class="notranslate">object</span>
+    の両方を使用する必要がある場合は、この関数を使用してください。この関数は、子イベントが含む残りのコードやアクションを実行する前に、親イベント<span class="notranslate">object</span>
+    を実行します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">event_inherited</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -31,18 +40,23 @@
         case spr_Enemy_4: dmg -= 1; break;<br />
         case spr_Enemy_10: dmg +=10; break;<br />
     }</p>
-  <p>上記のコードでは、継承した親イベントを呼び出し（その中で変数 &quot;<span class="inline">dmg</span>&quot; を初期化しています）、次に変数 &quot;<span class="inline">dmg</span>&quot; を変更しています。このコードを実行しているインスタンスに親が指定されていない場合、 <span class="inline">dmg</span> が定義されていないため、「不明な変数」エラーが発生します。</p>
+  <p>上記のコードでは、継承した親イベントを呼び出し（その中で変数 &quot;<span class="inline">dmg</span>&quot; を初期化しています）、次に変数 &quot;<span
+      class="inline">dmg</span>&quot; を変更しています。このコードを実行しているインスタンスに親が指定されていない場合、 <span class="inline">dmg</span>
+    が定義されていないため、「不明な変数」エラーが発生します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Generating_Object_Events.htm"> <span class="notranslate">Object</span> </a>イベントを発生させる</div>
-        <div style="float:right">次のページ <a href="event_perform.htm"><span class="notranslate">event_perform</span></a></div>
+        <div style="float:left">前のページ：<a href="Generating_Object_Events.htm"> <span class="notranslate">Object</span>
+          </a>イベントを発生させる</div>
+        <div style="float:right">次のページ：<a href="event_perform.htm"><span class="notranslate">event_perform</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 event_inherited
@@ -51,4 +65,5 @@ event_inherited
 event_inherited
 -->
 </body>
+
 </html>

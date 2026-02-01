@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>point_distance</title>
@@ -13,40 +14,48 @@
   <meta name="search-keywords" content="point_distance" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">point_distance</span></h1>
-  <p>この関数は、指定された成分 [x1,y1] と [x2,y2] で形成されるベクトルの長さを返す。例えば、下の画像で、プレイヤー船の位置と敵の位置の距離を求め、敵が撃つのに十分近いかどうかを計算したい場合、この関数を使うことになる（正確なコードは画像の下の例で見ることができる）。</p>
-  <p><img alt="Point distance example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_distance.png" /></p>
+  <p>この関数は、指定された成分 [x1,y1] と [x2,y2]
+    で形成されるベクトルの長さを返す。例えば、下の画像で、プレイヤー船の位置と敵の位置の距離を求め、敵が撃つのに十分近いかどうかを計算したい場合、この関数を使うことになる（正確なコードは画像の下の例で見ることができる）。</p>
+  <p><img alt="Point distance example" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_distance.png" /></p>
   <p> </p>
   <h4><b>構文です。</b></h4>
   <p class="code">point_distance(x1, y1, x2, y2);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the first component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the first component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the second component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the second component of the vector</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,18 +66,21 @@
     {<br />
         instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile)<br />
     }</p>
-  <p>上記のコードは、最も近い敵のxとyの座標を取得し、それを使って敵が形成するベクトルとプレイヤー座標の距離（長さ）をチェックします。もしその値が200以下であれば、プレイヤー<span class="notranslate">object</span> 、「obj_Missile」のインスタンスが作成されます。</p>
+  <p>上記のコードは、最も近い敵のxとyの座標を取得し、それを使って敵が形成するベクトルとプレイヤー座標の距離（長さ）をチェックします。もしその値が200以下であれば、プレイヤー<span
+      class="notranslate">object</span> 、「obj_Missile」のインスタンスが作成されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Angles_And_Distance.htm">角度と距離</a></div>
-        <div style="float:right">次のページ <a href="point_distance_3d.htm"><span class="notranslate">point_distance_3d</span></a></div>
+        <div style="float:left">前のページ：<a href="Angles_And_Distance.htm">角度と距離</a></div>
+        <div style="float:right">次のページ：<a href="point_distance_3d.htm"><span
+              class="notranslate">point_distance_3d</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 point_distance
@@ -77,4 +89,5 @@ point_distance
 point_distance
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ドープシートを使用する</title>
@@ -12,95 +13,197 @@
   <meta name="rh-index-keywords" content="Sequences - The Dope Sheet" />
   <meta name="search-keywords" content="dope sheet,playhead" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ドープシートを使用する</h1>
-  <p><img><strong>Dope Sheetは </strong>、<span class="notranslate">sequence</span> に追加されたさまざまなトラックのデータが時系列で表示され、各トラックの概要だけでなく、トラックの位置やパラメータの変更タイミングなどを編集する手段でもあります...</p>
-  <p>新しい<span class="notranslate">asset</span> を<span class="notranslate">sequence</span> に追加すると、トラックパネルに<a class="glossterm" data-glossterm="資産トラック" href="#">アセットトラックが</a>作成され、現在の<a class="glossterm" data-glossterm="プレイヘッド" href="#">再生ヘッド</a>位置の<span class="notranslate">dope sheet</span> に<a class="glossterm" data-glossterm="アセットキー" href="#">アセットキーが</a>追加されます。このキーは、<span class="notranslate">asset</span> の再生時間をフレーム単位で反映します。</p>
-  <p><img> <span class="notranslate">asset</span> キー自体を編集するには、キーフレームの始点または終点にマウスを移動し、カーソルが変わったら をクリックし、ドラッグしてください。この操作により、キーの始点または終点が移動しますが、どちらもキーの長さに影響します。 をクリックし、左右にドラッグするだけで、 のキー位置を変更することもできます。<img> <img> <span class="notranslate">asset</span> </p>
-  <p><img> <span class="notranslate">asset</span> <span class="notranslate">dope sheet</span> キーの他に、 には<span class="notranslate">asset</span> <a class="glossterm" data-glossterm="パラメーターキー" href="#">パラメータ</a> <span class="glossextra">キーも</span>表示されます。パラメータキーは、最初は時間の「点」で、関連する のプロパティに変化を与えると、その点の値を使用して が変化します。これがどのように行われるかは、<span class="notranslate">sequence</span> <span class="notranslate">asset</span><a href="The_Track_Panel.htm">トラックパネルで</a>キーを<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間に</a>設定したかどうかで決まります。パラメータキーはトラックキーと同様に、 をクリックし、 に沿って新しい位置までドラッグすることで移動できます。また、ドラッグと同時に キーを使用して、キーを 1 フレーム以上に拡張することもできます（カーソルが変化してこれを表示します）。つまり、次のキーへの補間を続ける前に、時間経過とともにキー値を保持することができるのです。<img> <span class="notranslate">timeline</span> <img> </p>
-  <p><img> <span class="notranslate">dope sheet</span> <img> / とマウスの左ボタン で 1 つまたは複数のトラックを任意の順番で選択し、 とマウスの左ボタン で連続したトラックを選択します。また、 / +&quot; &quot;, / + &quot; &quot;, / + &quot; &quot; のキーコンビネーションでカット、コピー、ペーストすることができ ます。<img> <img> <img> <img> <img> <img><span class="inline">X</span> <img> <img><span class="inline">C</span> <img> <img><span class="inline">V</span></p>
-  <p>また、マウスの右ボタン<img> メニューから利用できるキーに関するさまざまなオプションがあり、以下に詳細を示します。これらのコマンドを使用して<span class="notranslate">dope sheet</span> にキーをペーストする場合、キーはプレイヘッドの<em>現在の </em>位置にペーストされることに注意してください。</p>
+  <p><img><strong>Dope Sheetは </strong>、<span class="notranslate">sequence</span>
+    に追加されたさまざまなトラックのデータが時系列で表示され、各トラックの概要だけでなく、トラックの位置やパラメータの変更タイミングなどを編集する手段でもあります...</p>
+  <p>新しい<span class="notranslate">asset</span> を<span class="notranslate">sequence</span> に追加すると、トラックパネルに<a
+      class="glossterm" data-glossterm="資産トラック" href="#">アセットトラックが</a>作成され、現在の<a class="glossterm"
+      data-glossterm="プレイヘッド" href="#">再生ヘッド</a>位置の<span class="notranslate">dope sheet</span> に<a class="glossterm"
+      data-glossterm="アセットキー" href="#">アセットキーが</a>追加されます。このキーは、<span class="notranslate">asset</span>
+    の再生時間をフレーム単位で反映します。</p>
+  <p><img> <span class="notranslate">asset</span> キー自体を編集するには、キーフレームの始点または終点にマウスを移動し、カーソルが変わったら
+    をクリックし、ドラッグしてください。この操作により、キーの始点または終点が移動しますが、どちらもキーの長さに影響します。 をクリックし、左右にドラッグするだけで、 のキー位置を変更することもできます。<img> <img>
+    <span class="notranslate">asset</span>
+  </p>
+  <p><img> <span class="notranslate">asset</span> <span class="notranslate">dope sheet</span> キーの他に、 には<span
+      class="notranslate">asset</span> <a class="glossterm" data-glossterm="パラメーターキー" href="#">パラメータ</a> <span
+      class="glossextra">キーも</span>表示されます。パラメータキーは、最初は時間の「点」で、関連する のプロパティに変化を与えると、その点の値を使用して が変化します。これがどのように行われるかは、<span
+      class="notranslate">sequence</span> <span class="notranslate">asset</span><a
+      href="The_Track_Panel.htm">トラックパネルで</a>キーを<a class="glossterm" data-glossterm="せんけいほかん"
+      href="#">線形補間に</a>設定したかどうかで決まります。パラメータキーはトラックキーと同様に、 をクリックし、 に沿って新しい位置までドラッグすることで移動できます。また、ドラッグと同時に キーを使用して、キーを 1
+    フレーム以上に拡張することもできます（カーソルが変化してこれを表示します）。つまり、次のキーへの補間を続ける前に、時間経過とともにキー値を保持することができるのです。<img> <span
+      class="notranslate">timeline</span> <img> </p>
+  <p><img> <span class="notranslate">dope sheet</span> <img> / とマウスの左ボタン で 1 つまたは複数のトラックを任意の順番で選択し、 とマウスの左ボタン
+    で連続したトラックを選択します。また、 / +&quot; &quot;, / + &quot; &quot;, / + &quot; &quot; のキーコンビネーションでカット、コピー、ペーストすることができ ます。<img>
+    <img> <img> <img> <img> <img><span class="inline">X</span> <img> <img><span class="inline">C</span> <img> <img><span
+      class="inline">V</span>
+  </p>
+  <p>また、マウスの右ボタン<img> メニューから利用できるキーに関するさまざまなオプションがあり、以下に詳細を示します。これらのコマンドを使用して<span class="notranslate">dope sheet</span>
+    にキーをペーストする場合、キーはプレイヘッドの<em>現在の </em>位置にペーストされることに注意してください。</p>
   <p>以上が<span class="notranslate">dope sheet</span> の基本的な使い方ですが、以下では各セクションの用途と使い方をもう少し詳しく説明します。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">リージョンスタート／リージョンエンド</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">これらのマーカーは、<strong>クリップ領域の</strong>開始点と終了点です。これらのマーカーは、ゲーム実行時に<span class="notranslate">sequence</span> に表示される<span class="notranslate">room</span> の特定のセクションを設定するために使用されます。また、シーケンスをプレビューする際に<span class="notranslate">loop</span> のポイントとして使用されます。
-      をエディタで表示します。これらのポイントは、<span class="notranslate">sequence</span> Editor<strong>Sequence Controls</strong> で設定した<span class="notranslate">Sequence</span> の合計の長さより大きくも小さくもできません。クリップリージョンマーカーの位置を変更するには、<img> をクリックし、希望のフレームにドラッグするだけです。</p>
+    <p class="dropspot">これらのマーカーは、<strong>クリップ領域の</strong>開始点と終了点です。これらのマーカーは、ゲーム実行時に<span
+        class="notranslate">sequence</span> に表示される<span class="notranslate">room</span>
+      の特定のセクションを設定するために使用されます。また、シーケンスをプレビューする際に<span class="notranslate">loop</span> のポイントとして使用されます。
+      をエディタで表示します。これらのポイントは、<span class="notranslate">sequence</span> Editor<strong>Sequence Controls</strong>
+      で設定した<span class="notranslate">Sequence</span> の合計の長さより大きくも小さくもできません。クリップリージョンマーカーの位置を変更するには、<img>
+      をクリックし、希望のフレームにドラッグするだけです。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">ズームコントロール</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">このバーは、<span class="notranslate">dope sheet</span> の現在のズームを表示するために使用され、このズームレベルを変更することも可能です。エンドウィジェット上で<img> をクリックし、ドラッグすることでズームレベルを変更することができます。</p>
-    <p><img alt="The Dope Sheet Editor" class="center" src="../../assets/Images/Asset_Editors/DopeSheet_Editor.png" /></p>
-    <p class="dropspot"><img> /<img> キーとマウスホイール<img> を使って、<span class="notranslate">dope sheet</span> を拡大・縮小できることにもご注目ください。</p>
+    <p class="dropspot">このバーは、<span class="notranslate">dope sheet</span>
+      の現在のズームを表示するために使用され、このズームレベルを変更することも可能です。エンドウィジェット上で<img> をクリックし、ドラッグすることでズームレベルを変更することができます。</p>
+    <p><img alt="The Dope Sheet Editor" class="center" src="../../assets/Images/Asset_Editors/DopeSheet_Editor.png" />
+    </p>
+    <p class="dropspot"><img> /<img> キーとマウスホイール<img> を使って、<span class="notranslate">dope sheet</span>
+      を拡大・縮小できることにもご注目ください。</p>
     <p><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">アセットトラック</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">アセットトラックは<span class="notranslate">dope sheet</span> 上で「キー」として表現されます。これは<span class="notranslate">asset</span> の位置と<span class="notranslate">sequence</span> でアクティブな時間の長さを表す色付きのバーです。 上述のように、これらは必要に応じて移動し、長くしたり短くしたりすることができます。<span class="notranslate">asset</span> トラックのキーが<span class="notranslate">asset</span> の長さよりも長い場合（例えば、サウンドが5フレームで、そのキーを15フレームに伸ばす場合）、そのキーの長さ全体が繰り返されます。<span class="notranslate">Asset</span> トラックとキーは、標準のキーボードショートカットでコピー＆ペーストでき、さらに右マウスボタンの<img> メニューオプション（このページの下部で説明）で変更することができます。</p>
-    <p class="dropspot"><span class="notranslate">asset</span> トラックキーを削除しても、トラック自体は削除されず、追加されたトラックパラ メータも削除されず、単に<span class="notranslate">asset</span> キーが<span class="notranslate">dope sheet</span> から削除されます。このトラックのキーがもうない場合、<span class="notranslate">asset</span> ブラウザから<span class="notranslate">Asset</span> を<span class="notranslate">dope sheet</span> にドラッグして、新しいキーとして追加できます。ただし、元の<span class="notranslate">asset</span> と異なる<span class="notranslate">asset</span> を追加することはできません（例：<span class="notranslate">sprite</span> のキーを削除すると、そのキーポジションにサウンド<span class="notranslate">asset</span> を追加できません）。</p>
-    <p class="dropspot"><span class="notranslate">object</span> にある<span class="notranslate">Sequence</span> のトラックは、<span class="notranslate">Sequence</span> に<span class="notranslate">room</span> の要素が作成されると同時に、そのインスタンスが作成されることに注意してください。その<span class="notranslate">asset</span> のキーがトラック上のどこから始まるかは関係ありません。<span class="notranslate">Sequence</span> コントローラは、トラックの<span class="notranslate">asset</span> キーの位置と時間に応じて、インスタンスの<a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/visible.htm">可視性を</a>非表示と表示に切り替えるだけで、インスタンスの作成と破棄を繰り返す<em>ことは </em>ありません。その結果、インスタンスは、<span class="notranslate">sequence</span> 要素が作成されたときに Create イベントを実行し、そのアセットキーが開始されたときには実行されません。</p>
+    <p class="dropspot">アセットトラックは<span class="notranslate">dope sheet</span> 上で「キー」として表現されます。これは<span
+        class="notranslate">asset</span> の位置と<span class="notranslate">sequence</span> でアクティブな時間の長さを表す色付きのバーです。
+      上述のように、これらは必要に応じて移動し、長くしたり短くしたりすることができます。<span class="notranslate">asset</span> トラックのキーが<span
+        class="notranslate">asset</span> の長さよりも長い場合（例えば、サウンドが5フレームで、そのキーを15フレームに伸ばす場合）、そのキーの長さ全体が繰り返されます。<span
+        class="notranslate">Asset</span> トラックとキーは、標準のキーボードショートカットでコピー＆ペーストでき、さらに右マウスボタンの<img>
+      メニューオプション（このページの下部で説明）で変更することができます。</p>
+    <p class="dropspot"><span class="notranslate">asset</span> トラックキーを削除しても、トラック自体は削除されず、追加されたトラックパラ メータも削除されず、単に<span
+        class="notranslate">asset</span> キーが<span class="notranslate">dope sheet</span> から削除されます。このトラックのキーがもうない場合、<span
+        class="notranslate">asset</span> ブラウザから<span class="notranslate">Asset</span> を<span class="notranslate">dope
+        sheet</span> にドラッグして、新しいキーとして追加できます。ただし、元の<span class="notranslate">asset</span> と異なる<span
+        class="notranslate">asset</span> を追加することはできません（例：<span class="notranslate">sprite</span>
+      のキーを削除すると、そのキーポジションにサウンド<span class="notranslate">asset</span> を追加できません）。</p>
+    <p class="dropspot"><span class="notranslate">object</span> にある<span class="notranslate">Sequence</span>
+      のトラックは、<span class="notranslate">Sequence</span> に<span class="notranslate">room</span>
+      の要素が作成されると同時に、そのインスタンスが作成されることに注意してください。その<span class="notranslate">asset</span> のキーがトラック上のどこから始まるかは関係ありません。<span
+        class="notranslate">Sequence</span> コントローラは、トラックの<span class="notranslate">asset</span> キーの位置と時間に応じて、インスタンスの<a
+        href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/visible.htm">可視性を</a>非表示と表示に切り替えるだけで、インスタンスの作成と破棄を繰り返す<em>ことは
+      </em>ありません。その結果、インスタンスは、<span class="notranslate">sequence</span> 要素が作成されたときに Create
+      イベントを実行し、そのアセットキーが開始されたときには実行されません。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">パラメーター・トラック</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">パラメータトラックは、<span class="notranslate">dope sheet</span> 、所属するメイントラック（<span class="notranslate">asset</span> ）の下に色付きのバーで表示されます。この色のついたバー自体は編集することができず、純粋にパラメータキーが使用されているトラックを視覚的に表現しています。
+    <p class="dropspot">パラメータトラックは、<span class="notranslate">dope sheet</span> 、所属するメイントラック（<span
+        class="notranslate">asset</span> ）の下に色付きのバーで表示されます。この色のついたバー自体は編集することができず、純粋にパラメータキーが使用されているトラックを視覚的に表現しています。
       編集するのはパラメータ・トラック上の個々のポイントです（後述の「<strong>パラメータ・キー</strong>」をご参照ください）。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">プレイヘッド</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">プレイヘッドとは、現在<span class="notranslate">timeline</span> をプレビューしている時間的な位置のことです。この位置は、<span class="notranslate">assets</span> を<a href="The_Sequence_Canvas.htm">シーケンスキャンバスに</a>ドロップして、追加した位置を設定するときに使用されます。
-      パラメータを追加したり、キーを分割したりと、さまざまなことができます。<span class="notranslate">sequence</span> エディタキャンバスで &quot;play&quot; を押すと、プレイヘッドが<span class="notranslate">sequence</span> の中を移動します。また、<img> をクリックしてドラッグすると、<span class="notranslate">sequence</span> の中の特定のフレームに移動したり、複数のフレームを &quot;scrub&quot; して、すばやく表示することができます。
+    <p class="dropspot">プレイヘッドとは、現在<span class="notranslate">timeline</span> をプレビューしている時間的な位置のことです。この位置は、<span
+        class="notranslate">assets</span> を<a href="The_Sequence_Canvas.htm">シーケンスキャンバスに</a>ドロップして、追加した位置を設定するときに使用されます。
+      パラメータを追加したり、キーを分割したりと、さまざまなことができます。<span class="notranslate">sequence</span> エディタキャンバスで &quot;play&quot;
+      を押すと、プレイヘッドが<span class="notranslate">sequence</span> の中を移動します。また、<img> をクリックしてドラッグすると、<span
+        class="notranslate">sequence</span> の中の特定のフレームに移動したり、複数のフレームを &quot;scrub&quot; して、すばやく表示することができます。
       を再生することなく、プレビューすることができます。</p>
     <p class="dropspot"><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">パラメーターキー</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">パラメータキーとは、パラメータトラックに表示される、パラメータに変化があった箇所の「点」のことです。これらのポイントは必要に応じて移動したり、1フレーム以上続くように拡張することができます（このページでさらに詳しく説明します）。
-     <a href="The_Track_Panel.htm">トラックパネルから</a>、または<a href="The_Sequence_Canvas.htm">キャンバス</a>上の<span class="notranslate">asset</span> を変更することで値を編集できます（スケール、位置、回転のパラメータの場合）。なお、すべてのパラメータトラック
-      キーは、そのパラメータが属する<em>アセットキートラック </em>上のポイントとしても反映されますが、これらのポイントは編集することができず、トラックパネルで異なるパラメータトラックを折りたたんだときの情報補助として存在するものです。<br /></p>
+    <p class="dropspot">
+      パラメータキーとは、パラメータトラックに表示される、パラメータに変化があった箇所の「点」のことです。これらのポイントは必要に応じて移動したり、1フレーム以上続くように拡張することができます（このページでさらに詳しく説明します）。
+      <a href="The_Track_Panel.htm">トラックパネルから</a>、または<a href="The_Sequence_Canvas.htm">キャンバス</a>上の<span
+        class="notranslate">asset</span> を変更することで値を編集できます（スケール、位置、回転のパラメータの場合）。なお、すべてのパラメータトラック
+      キーは、そのパラメータが属する<em>アセットキートラック
+      </em>上のポイントとしても反映されますが、これらのポイントは編集することができず、トラックパネルで異なるパラメータトラックを折りたたんだときの情報補助として存在するものです。<br />
+    </p>
     <p class="dropspot"><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">パラメーターカーブ</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><span class="notranslate">dope sheet</span> では、パラメータトラックで<span class="notranslate">keyframes</span> の代わりに<strong>パレメータカーブを </strong>使用して、パラメータ値を変更することもできます。これらの曲線は、<span class="notranslate">sequence</span> <span class="notranslate">asset</span> の一部として<strong>埋め込む</strong>ことができます。
-      または、パラメータトラックに適用される外部<a href="../Animation_Curves.htm">アニメーションカーブ</a> <span class="notranslate">assets</span> を使用することができます。の項を参照してください。 <a href="Using_Animation_Curves.htm" title="Using Animation Curves"><strong>アニメーションカーブの使用</strong></a>をご覧ください。</p>
+    <p class="dropspot"><span class="notranslate">dope sheet</span> では、パラメータトラックで<span
+        class="notranslate">keyframes</span> の代わりに<strong>パレメータカーブを </strong>使用して、パラメータ値を変更することもできます。これらの曲線は、<span
+        class="notranslate">sequence</span> <span class="notranslate">asset</span> の一部として<strong>埋め込む</strong>ことができます。
+      または、パラメータトラックに適用される外部<a href="../Animation_Curves.htm">アニメーションカーブ</a> <span class="notranslate">assets</span>
+      を使用することができます。の項を参照してください。 <a href="Using_Animation_Curves.htm"
+        title="Using Animation Curves"><strong>アニメーションカーブの使用</strong></a>をご覧ください。</p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
   <p> </p>
   <h1>RMBメニュー</h1>
-  <p><strong>アセットトラックの</strong> <span class="notranslate">dope sheet</span> 内でマウスの右ボタン（<img> ）をクリックすると、以下のメニューが表示されます（クリックしたトラックの部分にキーがあるかないかで、表示されないオプションがあることに注意してください）。</p>
-  <p><img alt="Add An Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_Asset.gif" /></p>
+  <p><strong>アセットトラックの</strong> <span class="notranslate">dope sheet</span> 内でマウスの右ボタン（<img>
+    ）をクリックすると、以下のメニューが表示されます（クリックしたトラックの部分にキーがあるかないかで、表示されないオプションがあることに注意してください）。</p>
+  <p><img alt="Add An Asset To The Dope Sheet" class="center"
+      src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_Asset.gif" /></p>
   <ul class="colour">
-    <li><strong>カット</strong>、<strong>コピー</strong>、ペーストの<strong>キー（複数</strong>可）。これらのオプションにより、カット／コピー／ペーストを行うことができます。<span class="notranslate">asset</span> 。これらのオプションを使って<span class="notranslate">dope sheet</span> にペーストされたキーは、プレイヘッドの位置にペーストされることに注意してください。</li>
-    <li><strong>Add Key In Place（キーを所定の位置に追加</strong>する）。これは、新しい<span class="notranslate">asset</span> キーを、プレイヘッドの<em>位置ではなく </em>、マウスがクリックされた場所に最も近いフレーム位置の<span class="notranslate">asset</span> トラックに追加します。</li>
-    <li><strong>Split Key In Place（キーを分割</strong>する）。使用すると、マウス下の<span class="notranslate">asset</span> キーを2つのキーに分割します。分割は、再生ヘッド<em>位置ではなく</em>、マウスがクリックされた場所に最も近いフレームで作成されます。</li>
-    <li><strong>キーを所定の</strong>位置に貼り付けます。このオプションを使用すると、コピーまたはカットされたキーは、再生ヘッド<em>位置ではなく </em>、マウスの右ボタンをクリックした位置に最も近いフレーム位置にペーストされます。</li>
+    <li>
+      <strong>カット</strong>、<strong>コピー</strong>、ペーストの<strong>キー（複数</strong>可）。これらのオプションにより、カット／コピー／ペーストを行うことができます。<span
+        class="notranslate">asset</span> 。これらのオプションを使って<span class="notranslate">dope sheet</span>
+      にペーストされたキーは、プレイヘッドの位置にペーストされることに注意してください。
+    </li>
+    <li><strong>Add Key In Place（キーを所定の位置に追加</strong>する）。これは、新しい<span class="notranslate">asset</span>
+      キーを、プレイヘッドの<em>位置ではなく </em>、マウスがクリックされた場所に最も近いフレーム位置の<span class="notranslate">asset</span> トラックに追加します。</li>
+    <li><strong>Split Key In Place（キーを分割</strong>する）。使用すると、マウス下の<span class="notranslate">asset</span>
+      キーを2つのキーに分割します。分割は、再生ヘッド<em>位置ではなく</em>、マウスがクリックされた場所に最も近いフレームで作成されます。</li>
+    <li><strong>キーを所定の</strong>位置に貼り付けます。このオプションを使用すると、コピーまたはカットされたキーは、再生ヘッド<em>位置ではなく
+      </em>、マウスの右ボタンをクリックした位置に最も近いフレーム位置にペーストされます。</li>
     <li><strong>Delete Key(s</strong>):現在選択されているキーを削除します。</li>
-    <li><strong>開始位置にコピー</strong>する。このオプションは、選択したキー（複数可）を<span class="notranslate">sequence</span> の一番最初にコピーします<em>（ </em>クリップ領域の開始点ではありません）。</li>
-    <li><strong>コピー・トゥ・エンド</strong>。このオプションは、選択したキー（複数可）を<span class="notranslate">sequence</span> の一番最後にコピーします<em>（ </em>クリップ領域の最後では<em>ありません </em>）。</li>
-    <li><strong>Stretch<span class="notranslate">Asset</span> Key</strong>:これを選択すると、選択した<span class="notranslate">asset</span> キーが<span class="notranslate">sequence</span> の終わり（クリップ領域の終わりではありません）まで、または同じトラック上の他の<span class="notranslate">asset</span> キーの始まりと重なるまで引き伸ばされます。</li>
-    <li><strong> <span class="notranslate">Asset</span> </strong> キーを削除します。これを使用すると、選択されている<span class="notranslate">asset</span> キーが削除されます。その後、削除された<span class="notranslate">asset</span> トラックに<span class="notranslate">asset</span> ブラウザからドラッグして、新しい<span class="notranslate">dope sheet</span> をトラックに追加することができます。この操作により、新しい<span class="notranslate">asset</span> キーが作成されます。このキーを編集することができ、<span class="notranslate">asset</span> に関連するパラメータトラックは維持されます。</li>
+    <li><strong>開始位置にコピー</strong>する。このオプションは、選択したキー（複数可）を<span class="notranslate">sequence</span> の一番最初にコピーします<em>（
+      </em>クリップ領域の開始点ではありません）。</li>
+    <li><strong>コピー・トゥ・エンド</strong>。このオプションは、選択したキー（複数可）を<span class="notranslate">sequence</span> の一番最後にコピーします<em>（
+      </em>クリップ領域の最後では<em>ありません </em>）。</li>
+    <li><strong>Stretch<span class="notranslate">Asset</span> Key</strong>:これを選択すると、選択した<span
+        class="notranslate">asset</span> キーが<span class="notranslate">sequence</span>
+      の終わり（クリップ領域の終わりではありません）まで、または同じトラック上の他の<span class="notranslate">asset</span> キーの始まりと重なるまで引き伸ばされます。</li>
+    <li><strong> <span class="notranslate">Asset</span> </strong> キーを削除します。これを使用すると、選択されている<span
+        class="notranslate">asset</span> キーが削除されます。その後、削除された<span class="notranslate">asset</span> トラックに<span
+        class="notranslate">asset</span> ブラウザからドラッグして、新しい<span class="notranslate">dope sheet</span>
+      をトラックに追加することができます。この操作により、新しい<span class="notranslate">asset</span> キーが作成されます。このキーを編集することができ、<span
+        class="notranslate">asset</span> に関連するパラメータトラックは維持されます。</li>
   </ul>
-  <p><strong>パラメータトラックの</strong> <span class="notranslate">dope sheet</span> 内でマウスの右ボタン<img> をクリックすると、以下のメニューオプションが表示されます（クリックしたトラックの部分にキーフレームがあるかどうか、トラックが<span class="notranslate">keyframes</span> とパラメータカーブのどちらを使っているかによって、表示されないオプションがあることに注意してください）。</p>
+  <p><strong>パラメータトラックの</strong> <span class="notranslate">dope sheet</span> 内でマウスの右ボタン<img>
+    をクリックすると、以下のメニューオプションが表示されます（クリックしたトラックの部分にキーフレームがあるかどうか、トラックが<span class="notranslate">keyframes</span>
+    とパラメータカーブのどちらを使っているかによって、表示されないオプションがあることに注意してください）。</p>
   <p><img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /></p>
   <ul class="colour">
-    <li><strong>カット</strong>、<strong>コピー</strong>、<strong>ペーストキー（複数</strong>可）。これらのオプションにより、パラメータキーをカット/コピー/ペーストすることができます。これらのオプションを使って<span class="notranslate">dope sheet</span> にペーストされたキーは、プレイヘッドの位置にペーストされることに注意してください。</li>
-    <li><strong>Add Key In Place（キーを所定の位置に追加</strong>する）。これは、パラメータトラックに新しいパラメータキーを、再生ヘッド<em>位置ではなく </em>、マウスがクリックされた場所に最も近いフレーム位置に追加するものです。</li>
-    <li><strong>Split Key In Place（キーを分割</strong>する）。使用すると、マウス下のパラメータキーが2つに分割されます（<span class="notranslate">keyframes</span> ）。分割は、再生ヘッド<em>位置ではなく</em>、マウスをクリックした位置に最も近いフレームで作成されます。</li>
+    <li>
+      <strong>カット</strong>、<strong>コピー</strong>、<strong>ペーストキー（複数</strong>可）。これらのオプションにより、パラメータキーをカット/コピー/ペーストすることができます。これらのオプションを使って<span
+        class="notranslate">dope sheet</span> にペーストされたキーは、プレイヘッドの位置にペーストされることに注意してください。
+    </li>
+    <li><strong>Add Key In Place（キーを所定の位置に追加</strong>する）。これは、パラメータトラックに新しいパラメータキーを、再生ヘッド<em>位置ではなく
+      </em>、マウスがクリックされた場所に最も近いフレーム位置に追加するものです。</li>
+    <li><strong>Split Key In Place（キーを分割</strong>する）。使用すると、マウス下のパラメータキーが2つに分割されます（<span
+        class="notranslate">keyframes</span> ）。分割は、再生ヘッド<em>位置ではなく</em>、マウスをクリックした位置に最も近いフレームで作成されます。</li>
     <li><strong>キーを所定の</strong>位置に貼り付けます。このオプションを使用すると、コピーまたはカットされたキーフレームは、再生ヘッド位置ではなく、マウスの右ボタンをクリックした位置に貼り付けられます。</li>
-    <li><strong>Delete Key(s</strong>)。これを選択すると、現在選択されている<span class="notranslate">keyframe</span> または<span class="notranslate">keyframes</span> が削除されます。</li>
-    <li><strong>埋め込み型アニメーションカーブに変換</strong>する。このオプションは、選択されたパラメータトラック（複数可）のすべての<span class="notranslate">keyframes</span> を埋め込みアニメーションカーブに変換します（詳しくは「<a href="Using_Animation_Curves.htm">アニメーションカーブの使用</a>」のセクションを参照してください）。また、アニメーションカーブ（<span class="notranslate">asset</span> ）を使用しているパラメー タカーブで使用すると、カーブ（<span class="notranslate">asset</span> ）が埋め込みパラメータカーブとしてトラックにコピーされます。</li>
-    <li><strong>外部アニムカーブに設定</strong>する。このオプションでは、パラメータトラックにアニメーションカーブ（<span class="notranslate">asset</span> ）を割り当てることができます（詳しくは「<a href="Using_Animation_Curves.htm">アニメーションカーブの使用</a>」のセクションを参照してください）。</li>
-    <li><strong>キーに変換</strong>する。このオプションで、<span class="notranslate">animation curve</span> を個々の<span class="notranslate">keyframes</span> に変換することができます。もし曲線が<a class="glossterm" data-glossterm="カトマルロム補間" href="#">catmull-rom補間を</a>使用していた場合、これは失われ、代わりに<span class="notranslate">keyframes</span> は曲線上のポイント間の<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>使用することに注意してください。また、<span class="notranslate">animation curve</span> から生成されたキーは<em>フレームに収まらなければならない</em>ことに注意してください。これは、フレーム間にある点を持つ曲線は、キーに変換されるときに最も近い整数フレーム値に配置され、曲線の挙動が変化する可能性があることを意味します。</li>
-    <li><strong>埋め込みアニメーションカー</strong>ブをエクスポートします。このオプションを使用すると、埋め込まれた<span class="notranslate">animation curve</span> を<a href="../Animation_Curves.htm">アニメーション カーブ アセットに</a>変換し、<span class="notranslate">Asset</span> Browser に表示し、他の場所で使用することができます。</li>
-    <li><strong>エディターを開く</strong>。これは<span class="notranslate">dope sheet</span> カーブエディタを開いて、パラメータトラックに適用された組み込みまたは外部<span class="notranslate">animation curves</span> を編集するためのものです。これは、<span class="notranslate">dope sheet</span> の<strong>Toggle Curve Mode</strong> <img> ボタンを使用するのと同じです。</li>
-    <li><strong>開始位置にコピー</strong>する。このオプションは、選択されたキーフレームを<span class="notranslate">sequence</span> の一番最初にコピーします<em>（ </em>クリップ領域の最初では<em>ありません </em>）。</li>
-    <li><strong>コピー・トゥ・エンド</strong>。このオプションは、選択されたキーフレームを<span class="notranslate">sequence</span> の一番最後にコピーします<em>（ </em>クリップ領域の最後では<em>ありません </em>）。</li>
-    <li><strong>パラメータキーの伸縮</strong>。これを選択すると、選択した<span class="notranslate">asset</span> キーが<span class="notranslate">sequence</span> の終わり（クリップ領域の終わりではありません）ま で、またはトラック上の次の<span class="notranslate">keyframe</span> までストレッチされます。ストレッチされたパラメータキーは、ストレッチされたフレーム数だけその値を維持することを意味します。パラメータカーブで使用すると、カーブは<span class="notranslate">sequence</span> の終わりまで、またはトラック上の他のカーブに出会うまで、ストレッチされます。</li>
+    <li><strong>Delete Key(s</strong>)。これを選択すると、現在選択されている<span class="notranslate">keyframe</span> または<span
+        class="notranslate">keyframes</span> が削除されます。</li>
+    <li><strong>埋め込み型アニメーションカーブに変換</strong>する。このオプションは、選択されたパラメータトラック（複数可）のすべての<span
+        class="notranslate">keyframes</span> を埋め込みアニメーションカーブに変換します（詳しくは「<a
+        href="Using_Animation_Curves.htm">アニメーションカーブの使用</a>」のセクションを参照してください）。また、アニメーションカーブ（<span
+        class="notranslate">asset</span> ）を使用しているパラメー タカーブで使用すると、カーブ（<span class="notranslate">asset</span>
+      ）が埋め込みパラメータカーブとしてトラックにコピーされます。</li>
+    <li><strong>外部アニムカーブに設定</strong>する。このオプションでは、パラメータトラックにアニメーションカーブ（<span class="notranslate">asset</span>
+      ）を割り当てることができます（詳しくは「<a href="Using_Animation_Curves.htm">アニメーションカーブの使用</a>」のセクションを参照してください）。</li>
+    <li><strong>キーに変換</strong>する。このオプションで、<span class="notranslate">animation curve</span> を個々の<span
+        class="notranslate">keyframes</span> に変換することができます。もし曲線が<a class="glossterm" data-glossterm="カトマルロム補間"
+        href="#">catmull-rom補間を</a>使用していた場合、これは失われ、代わりに<span class="notranslate">keyframes</span> は曲線上のポイント間の<a
+        class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>使用することに注意してください。また、<span
+        class="notranslate">animation curve</span>
+      から生成されたキーは<em>フレームに収まらなければならない</em>ことに注意してください。これは、フレーム間にある点を持つ曲線は、キーに変換されるときに最も近い整数フレーム値に配置され、曲線の挙動が変化する可能性があることを意味します。
+    </li>
+    <li><strong>埋め込みアニメーションカー</strong>ブをエクスポートします。このオプションを使用すると、埋め込まれた<span class="notranslate">animation curve</span>
+      を<a href="../Animation_Curves.htm">アニメーション カーブ アセットに</a>変換し、<span class="notranslate">Asset</span> Browser
+      に表示し、他の場所で使用することができます。</li>
+    <li><strong>エディタを開く</strong>。これは<span class="notranslate">dope sheet</span>
+      カーブエディタを開いて、パラメータトラックに適用された組み込みまたは外部<span class="notranslate">animation curves</span> を編集するためのものです。これは、<span
+        class="notranslate">dope sheet</span> の<strong>Toggle Curve Mode</strong> <img> ボタンを使用するのと同じです。</li>
+    <li><strong>開始位置にコピー</strong>する。このオプションは、選択されたキーフレームを<span class="notranslate">sequence</span> の一番最初にコピーします<em>（
+      </em>クリップ領域の最初では<em>ありません </em>）。</li>
+    <li><strong>コピー・トゥ・エンド</strong>。このオプションは、選択されたキーフレームを<span class="notranslate">sequence</span> の一番最後にコピーします<em>（
+      </em>クリップ領域の最後では<em>ありません </em>）。</li>
+    <li><strong>パラメータキーの伸縮</strong>。これを選択すると、選択した<span class="notranslate">asset</span> キーが<span
+        class="notranslate">sequence</span> の終わり（クリップ領域の終わりではありません）ま で、またはトラック上の次の<span
+        class="notranslate">keyframe</span>
+      までストレッチされます。ストレッチされたパラメータキーは、ストレッチされたフレーム数だけその値を維持することを意味します。パラメータカーブで使用すると、カーブは<span
+        class="notranslate">sequence</span> の終わりまで、またはトラック上の他のカーブに出会うまで、ストレッチされます。</li>
     <li><strong>パラメータキーの削除</strong>。選択されているパラメータキーフレームが削除されます。</li>
   </ul>
   <p> </p>
@@ -109,11 +212,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Sequences.htm">シークエンス</a></div>
-        <div style="float:right">次へ<a href="Using_Animation_Curves.htm">アニメーションカーブを使う</a></div>
+        <div style="float:left">前のページ：<a href="../Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次のページ：<a href="Using_Animation_Curves.htm">アニメーションカーブを使う</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequences - The Dope Sheet
@@ -123,4 +227,5 @@ Dope Sheet
 sequences_dope_sheet
 -->
 </body>
+
 </html>

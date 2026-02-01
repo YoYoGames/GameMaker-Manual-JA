@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instance_destroy</title>
@@ -13,47 +14,67 @@
   <meta name="search-keywords" content="instance_destroy" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">instance_destroy</span></h1>
-  <p>この関数は、インスタンスを「破棄」したいときに呼び出します。通常、<a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Destroy イベントと</a> <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up イベントを</a>トリガします。これにより、<span class="notranslate">room</span> が再起動されるまで、<span class="notranslate">room</span> から削除されます（<span class="notranslate">room</span> が永続的でない限り）。<span class="notranslate">object</span> 引数なしでこの関数を呼び出すと、現在スコープ内にありコードを実行しているインスタンスを単に破壊します。オプションの &quot;id&quot; 引数を指定し、インスタンス <span class="inline"><a href="Instance_Variables/id.htm">id</a></span> の値を使用して特定のインスタンスをターゲットにすることもできます。 <a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>.例えば</p>
+  <p>この関数は、インスタンスを「破棄」したいときに呼び出します。通常、<a
+      href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Destroy イベントと</a> <a
+      href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up イベントを</a>トリガします。これにより、<span
+      class="notranslate">room</span> が再起動されるまで、<span class="notranslate">room</span> から削除されます（<span
+      class="notranslate">room</span> が永続的でない限り）。<span class="notranslate">object</span>
+    引数なしでこの関数を呼び出すと、現在スコープ内にありコードを実行しているインスタンスを単に破壊します。オプションの &quot;id&quot; 引数を指定し、インスタンス <span class="inline"><a
+        href="Instance_Variables/id.htm">id</a></span> の値を使用して特定のインスタンスをターゲットにすることもできます。 <a
+      href="../Objects/object_index.htm"><span class="inline">object_index</span></a>.例えば</p>
   <p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
     instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p>
-  <p>2つ目の<i>オプション</i> <span class="notranslate">flag</span> では、破壊されるインスタンスの Destroy Event を「オフ」にすることができます。デフォルトでは Destroy Event は<i>常に</i>実行されますが、この<span class="notranslate">flag</span> を <span class="inline">false</span> に設定すると、インスタンスを自壊させ、そのイベントの実行をスキップさせることができます。</p>
+  <p>2つ目の<i>オプション</i> <span class="notranslate">flag</span> では、破壊されるインスタンスの Destroy Event を「オフ」にすることができます。デフォルトでは
+    Destroy Event は<i>常に</i>実行されますが、この<span class="notranslate">flag</span> を <span class="inline">false</span>
+    に設定すると、インスタンスを自壊させ、そのイベントの実行をスキップさせることができます。</p>
   <p class="note"><b>重要!こ</b>れにより、Destroy イベントはスキップされますが、Clean Up イベントは呼び出されたままになります。</p>
-  <p>注意すべきは、インスタンスを破棄する場合、その破棄イベントは、破棄関数を呼び出すコードやアクションの<i>直後に</i>呼び出されることです。また、destroy イベントは実行されますが、インスタンスは<i>すぐにゲームから削除</i>されるわけではなく、現在のイベントに含まれるコードを実行し続けることになります。現在のイベントが終了したときのみ、ゲームから削除されます。</p>
+  <p>注意すべきは、インスタンスを破棄する場合、その破棄イベントは、破棄関数を呼び出すコードやアクションの<i>直後に</i>呼び出されることです。また、destroy
+    イベントは実行されますが、インスタンスは<i>すぐにゲームから削除</i>されるわけではなく、現在のイベントに含まれるコードを実行し続けることになります。現在のイベントが終了したときのみ、ゲームから削除されます。</p>
   <p>ですから、例えばこのようなコードがあったとします。</p>
   <p class="code">if (hp &lt;= 0) instance_destroy();<br />
     score += 10;</p>
-  <p><i> <span class="inline">instance_destroy</span> </i> 関数を呼び出しても変数「score」はインクリメントされ、イベントの終了時にようやくインスタンスがゲームから削除されます。インスタンスにデータ構造のような動的リソースを作成し、destroy イベントでそのリソースを破壊した場合、destroy 関数やアクションの実行後にそのリソースへの参照があると、destroy イベントでゲームから削除されたため &quot;unknown resource&quot; エラーが発生するので、この点には注意が必要です。</p>
+  <p><i> <span class="inline">instance_destroy</span> </i>
+    関数を呼び出しても変数「score」はインクリメントされ、イベントの終了時にようやくインスタンスがゲームから削除されます。インスタンスにデータ構造のような動的リソースを作成し、destroy
+    イベントでそのリソースを破壊した場合、destroy 関数やアクションの実行後にそのリソースへの参照があると、destroy イベントでゲームから削除されたため &quot;unknown resource&quot;
+    エラーが発生するので、この点には注意が必要です。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">instance_destroy</span>([id, execute_event_flag]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">id</span></td>
-        <td><span data-keyref="Type_ID_Instance">インスタンスID</span>または<span data-keyref="Type_Asset_Object">オブジェクトアセット</span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> 破棄するインスタンス ID、あるいはインスタンスを破棄する (オプション。デフォルトは呼び出し元のインスタンス)<span class="notranslate">object</span> <span class="notranslate">asset</span> </td>
+        <td><span data-keyref="Type_ID_Instance">インスタンスID</span>または<span
+            data-keyref="Type_Asset_Object">オブジェクトアセット</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> 破棄するインスタンス ID、あるいはインスタンスを破棄する
+            (オプション。デフォルトは呼び出し元のインスタンス)<span class="notranslate">object</span> <span class="notranslate">asset</span>
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">execute_event_flag</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Destroy イベントを実行するかどうかを または に設定する（オプション、デフォルトは ）。 <span class="inline">true</span> <span class="inline">false</span> <span class="inline">true</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Destroy イベントを実行するかどうかを または
+            に設定する（オプション、デフォルトは ）。 <span class="inline">true</span> <span class="inline">false</span> <span
+              class="inline">true</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">if (bbox_right &lt; 0 || bbox_left &gt; room_width || bbox_bottom &lt; 0 || bbox_top &gt; room_height)<br />
+  <p class="code">if (bbox_right &lt; 0 || bbox_left &gt; room_width || bbox_bottom &lt; 0 || bbox_top &gt;
+    room_height)<br />
     {<br />
         instance_destroy(id, false);<br />
     }</p>
@@ -64,11 +85,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instances.htm">インスタンス</a></div>
-        <div style="float:right">次のページ <a href="instance_exists.htm"><span class="notranslate">instance_exists</span></a></div>
+        <div style="float:left">前のページ：<a href="Instances.htm">インスタンス</a></div>
+        <div style="float:right">次のページ：<a href="instance_exists.htm"><span
+              class="notranslate">instance_exists</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_destroy
@@ -77,4 +100,5 @@ instance_destroy
 instance_destroy
 -->
 </body>
+
 </html>

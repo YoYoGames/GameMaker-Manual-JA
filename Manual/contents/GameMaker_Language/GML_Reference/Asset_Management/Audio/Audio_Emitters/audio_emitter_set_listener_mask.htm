@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_emitter_set_listener_mask</title>
@@ -12,19 +13,26 @@
   <meta name="rh-index-keywords" content="audio_emitter_set_listener_mask" />
   <meta name="search-keywords" content="audio_emitter_set_listener_mask" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_emitter_set_listener_mask</span></h1>
-  <p>この関数は、エミッタのビットマスクを設定し、エミッタで再生されるすべてのサウンドが指定されたリスナーからしか再生されないようにするために使用できます。ビットマスクの作成には <a href="../Audio_Listeners/audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a>を作成し、ビット単位で <span class="inline">or</span> (&quot;|&quot;) を使って、サウンドを再生する必要のあるリスナーでカスタムマスクを作成し、このカスタムマスクをエミッタに適用します。このマスクは、デフォルトのマスクや、関数 <a href="../Audio_Listeners/audio_set_listener_mask.htm"><span class="inline">audio_set_listener_mask()</span></a>.</p>
+  <p>この関数は、エミッタのビットマスクを設定し、エミッタで再生されるすべてのサウンドが指定されたリスナーからしか再生されないようにするために使用できます。ビットマスクの作成には <a
+      href="../Audio_Listeners/audio_get_listener_info.htm"><span
+        class="inline">audio_get_listener_info()</span></a>を作成し、ビット単位で <span class="inline">or</span> (&quot;|&quot;)
+    を使って、サウンドを再生する必要のあるリスナーでカスタムマスクを作成し、このカスタムマスクをエミッタに適用します。このマスクは、デフォルトのマスクや、関数 <a
+      href="../Audio_Listeners/audio_set_listener_mask.htm"><span class="inline">audio_set_listener_mask()</span></a>.
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_emitter_set_listener_mask</span>(emitterID, mask);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">audio_emitter_set_listener_mask</span>(emitterID,
+    mask);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">emitterID</span></td>
@@ -39,7 +47,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -52,11 +60,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Emitters.htm">オーディオエミッター</a></div>
-        <div style="float:right">次のページ <a href="audio_emitter_free.htm"><span class="notranslate">audio_emitter_free</span></a></div>
+        <div style="float:left">前のページ：<a href="Audio_Emitters.htm">オーディオエミッター</a></div>
+        <div style="float:right">次のページ：<a href="audio_emitter_free.htm"><span
+              class="notranslate">audio_emitter_free</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_set_listener_mask
@@ -65,4 +75,5 @@ audio_emitter_set_listener_mask
 audio_emitter_set_listener_mask
 -->
 </body>
+
 </html>

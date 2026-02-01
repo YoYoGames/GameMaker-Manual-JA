@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>tag_get_asset_ids</title>
@@ -9,19 +10,24 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function tag_get_asset_ids" />
-  <meta name="rh-index-keywords" content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
-  <meta name="search-keywords" content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown" />
+  <meta name="rh-index-keywords"
+    content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="search-keywords"
+    content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">tag_get_asset_ids</span></h1>
-  <p>この関数を使うと、与えられたタグが割り当てられている、与えられた型の<span class="notranslate">assets</span> をすべて取得することができます。単一のタグ（<span class="notranslate">string</span> ）か、配列の各項目がタグ（<span class="notranslate">string</span> ）である配列、およびチェックする<span class="notranslate">asset</span> の型を指定します。<span class="notranslate">asset</span> の型は、以下の定数のいずれかである必要があります。</p>
+  <p>この関数を使うと、与えられたタグが割り当てられている、与えられた型の<span class="notranslate">assets</span> をすべて取得することができます。単一のタグ（<span
+      class="notranslate">string</span> ）か、配列の各項目がタグ（<span class="notranslate">string</span> ）である配列、およびチェックする<span
+      class="notranslate">asset</span> の型を指定します。<span class="notranslate">asset</span> の型は、以下の定数のいずれかである必要があります。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">asset_object</span></td>
@@ -49,7 +55,8 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">asset_script</span></td>
-        <td>与えられた名前から <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.</td>
+        <td>与えられた名前から <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">asset_font</span></td>
@@ -74,16 +81,17 @@
     </tbody>
   </table>
   <p> </p>
-  <p>この関数は配列を返します。配列の各項目は、<span class="notranslate">asset</span> のインデックス値 1 つになります。指定したタグを持つ型が<span class="notranslate">assets</span> に存在しない場合は、空の配列が返されます。</p>
+  <p>この関数は配列を返します。配列の各項目は、<span class="notranslate">asset</span> のインデックス値 1 つになります。指定したタグを持つ型が<span
+      class="notranslate">assets</span> に存在しない場合は、空の配列が返されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">tag_get_asset_ids</span>(tags, asset_type);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">tags</span></td>
@@ -98,25 +106,28 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Array">Array</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _paths = tag_get_asset_ids(&quot;enemy&quot;, asset_path);<br />
     var _num = irandom(array_length(_paths) - 1);<br />
     path_start(_paths[_num], 1, path_action_reverse, false);</p>
-  <p>上記のコードでは、&quot;enemy &quot;というタグを使って、そのタグを持つすべての<span class="notranslate">path</span> <span class="notranslate">assets</span> 、ランダムに1つを選んで、コードを実行しているインスタンスに割り当てています。</p>
+  <p>上記のコードでは、&quot;enemy &quot;というタグを使って、そのタグを持つすべての<span class="notranslate">path</span> <span
+      class="notranslate">assets</span> 、ランダムに1つを選んで、コードを実行しているインスタンスに割り当てています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Assets_And_Tags.htm">資産とタグ</a></div>
-        <div style="float:right">次のページ <a href="tag_get_assets.htm"><span class="notranslate">tag_get_assets</span></a></div>
+        <div style="float:left">前のページ：<a href="Assets_And_Tags.htm">資産とタグ</a></div>
+        <div style="float:right">次のページ：<a href="tag_get_assets.htm"><span class="notranslate">tag_get_assets</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tag_get_asset_ids
@@ -137,4 +148,5 @@ asset_sequence
 tag_get_asset_ids
 -->
 </body>
+
 </html>

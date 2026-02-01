@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>asset_clear_tags</title>
@@ -9,19 +10,27 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function asset_clear_tags" />
-  <meta name="rh-index-keywords" content="asset_clear_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
-  <meta name="search-keywords" content="asset_clear_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="rh-index-keywords"
+    content="asset_clear_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="search-keywords"
+    content="asset_clear_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">asset_clear_tags</span></h1>
-  <p>この関数を使うと、<span class="notranslate">asset</span> ブラウザから、任意の<span class="notranslate">asset</span> に存在するすべてのタグをクリアすることができます。<span class="notranslate">asset</span> の名前 (<span class="notranslate">string</span>) か、その<span class="notranslate">asset</span> インデックスを指定します。<span class="notranslate">asset</span> インデックス値を指定する場合は、オプションで<span class="notranslate">asset</span> タイプ引数 (定数) を指定する必要があります。異なるタイプの<span class="notranslate">assets</span> は、同じ名前を持つことはできませんが、同じインデックスを持つことができるからです。利用可能な<span class="notranslate">asset</span> のタイプは、以下の表のとおりです。</p>
+  <p>この関数を使うと、<span class="notranslate">asset</span> ブラウザから、任意の<span class="notranslate">asset</span>
+    に存在するすべてのタグをクリアすることができます。<span class="notranslate">asset</span> の名前 (<span class="notranslate">string</span>)
+    か、その<span class="notranslate">asset</span> インデックスを指定します。<span class="notranslate">asset</span>
+    インデックス値を指定する場合は、オプションで<span class="notranslate">asset</span> タイプ引数 (定数) を指定する必要があります。異なるタイプの<span
+      class="notranslate">assets</span> は、同じ名前を持つことはできませんが、同じインデックスを持つことができるからです。利用可能な<span
+      class="notranslate">asset</span> のタイプは、以下の表のとおりです。</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">asset_object</span></td>
@@ -49,7 +58,8 @@
       </tr>
       <tr>
         <td><span class="notranslate">asset_script</span></td>
-        <td>与えられた名前から <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.</td>
+        <td>与えられた名前から <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">asset_font</span></td>
@@ -77,14 +87,14 @@
   <p>この関数がタグのクリアに成功した場合は、 <span class="inline">true</span> を返し、そうでない場合は、 <span class="inline">false</span> を返します。</p>
   <p> </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">asset_clear_tags</span>(name,[asset_type]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">name_or_index</span></td>
@@ -94,12 +104,13 @@
       <tr>
         <td><span class="notranslate">[asset_type]</span></td>
         <td><span data-keyref="Type_Constant_Asset_Type">アセットタイプ 定数</span></td>
-        <td><span class="notranslate">OPTIONAL! The type of asset to clear the tags from, only used when supplying an index for the first argument.</span></td>
+        <td><span class="notranslate">OPTIONAL! The type of asset to clear the tags from, only used when supplying an
+            index for the first argument.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
   <p> </p>
   <h4>例</h4>
@@ -111,11 +122,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Assets_And_Tags.htm">資産とタグ</a></div>
-        <div style="float:right">次のページ <a href="asset_get_index.htm"><span class="notranslate">asset_get_index</span></a></div>
+        <div style="float:left">前のページ：<a href="Assets_And_Tags.htm">資産とタグ</a></div>
+        <div style="float:right">次のページ：<a href="asset_get_index.htm"><span
+              class="notranslate">asset_get_index</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 asset_clear_tags
@@ -136,4 +149,5 @@ asset_sequence
 asset_clear_tags
 -->
 </body>
+
 </html>

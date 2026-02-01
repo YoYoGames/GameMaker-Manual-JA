@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>array_sort</title>
@@ -12,48 +13,66 @@
   <meta name="rh-index-keywords" content="array_sort" />
   <meta name="search-keywords" content="array_sort" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">array_sort</span></h1>
   <p>この関数を使用すると、配列を昇順あるいは降順で並べ替えたり、 カスタム関数を使用して並べ替えの順序を決めたりすることができます。この関数では、並べ替えの対象となる配列を指定したうえで、 以下のいずれかの関数を使用します。</p>
   <ul class="colour">
-    <li>定数 <span class="inline">true</span> または <span class="inline">false</span> は、<span>昇順 (<span class="inline">true</span>) または降順 (<span class="inline">false</span>) のソート順を</span>示す。</li>
+    <li>定数 <span class="inline">true</span> または <span class="inline">false</span> は、<span>昇順 (<span
+          class="inline">true</span>) または降順 (<span class="inline">false</span>) のソート順を</span>示す。</li>
     <li>ソート順を定義するカスタム関数</li>
   </ul>
-  <p>この関数は、指定された元の配列の内容を変更します。ソートされたコピーを作成するには、 <span class="inline"><a href="array_copy.htm">array_copy()</a></span> を使ってまず配列を複製し、それをこの関数に渡します。</p>
+  <p>この関数は、指定された元の配列の内容を変更します。ソートされたコピーを作成するには、 <span class="inline"><a href="array_copy.htm">array_copy()</a></span>
+    を使ってまず配列を複製し、それをこの関数に渡します。</p>
   <h3>カスタム関数の使用</h3>
-  <p>ソート用のカスタム関数を使用する場合、2つの引数を取る必要があり、それぞれ現在の要素と次の要素の値を受け取ります。この関数は、ソート順を変更するために、以下の値のいずれかを返す必要があります（ここで、<span class="inline">elm1</span> は現在の要素、 <span class="inline">elm2</span> は次の要素です）。</p>
+  <p>ソート用のカスタム関数を使用する場合、2つの引数を取る必要があり、それぞれ現在の要素と次の要素の値を受け取ります。この関数は、ソート順を変更するために、以下の値のいずれかを返す必要があります（ここで、<span
+      class="inline">elm1</span> は現在の要素、 <span class="inline">elm2</span> は次の要素です）。</p>
   <ul class="colour">
     <li><span class="inline">0</span>: <span class="inline">elm1</span> と <span class="inline">elm2</span> が等しい場合</li>
-    <li><span class="inline">&lt;= -1</span> (負の整数): が先になる場合 <span class="inline">elm1</span> <span class="inline">elm2</span></li>
-    <li><span class="inline">&gt;= 1</span> (正の整数): の後に行く場合 <span class="inline">elm1</span> <span class="inline">elm2</span></li>
+    <li><span class="inline">&lt;= -1</span> (負の整数): が先になる場合 <span class="inline">elm1</span> <span
+        class="inline">elm2</span></li>
+    <li><span class="inline">&gt;= 1</span> (正の整数): の後に行く場合 <span class="inline">elm1</span> <span
+        class="inline">elm2</span></li>
   </ul>
-  <p class="note"><span class="note">注</span>：カスタム関数が返す値は整数でなければなりません。1 未満の浮動小数点値は 0 として読み込まれます。 <a href="../Maths_And_Numbers/Number_Functions/sign.htm"><span class="inline">sign()</span></a>または <a href="../Maths_And_Numbers/Number_Functions/round.htm"><span class="inline">round()</span></a>を使用する必要があります。</p>
-  <p>配列が<span class="notranslate">strings</span> のセットを含んでいる場合、デフォルトの昇順/降順ソートタイプを使用すると、<span class="notranslate">strings</span> は英語のアルファベットに基づきアルファベット順にソートされます。他のすべてのデータ型は、その数値に基づいてソートされます。その正確な値は、データ型自体に依存します (たとえば、<span class="notranslate">buffers</span> の配列は、そのメモリアドレスの数値に基づいてソートされます)。</p>
+  <p class="note"><span class="note">注</span>：カスタム関数が返す値は整数でなければなりません。1 未満の浮動小数点値は 0 として読み込まれます。 <a
+      href="../Maths_And_Numbers/Number_Functions/sign.htm"><span class="inline">sign()</span></a>または <a
+      href="../Maths_And_Numbers/Number_Functions/round.htm"><span class="inline">round()</span></a>を使用する必要があります。</p>
+  <p>配列が<span class="notranslate">strings</span> のセットを含んでいる場合、デフォルトの昇順/降順ソートタイプを使用すると、<span
+      class="notranslate">strings</span>
+    は英語のアルファベットに基づきアルファベット順にソートされます。他のすべてのデータ型は、その数値に基づいてソートされます。その正確な値は、データ型自体に依存します (たとえば、<span
+      class="notranslate">buffers</span> の配列は、そのメモリアドレスの数値に基づいてソートされます)。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">array_sort</span>(variable, sorttype_or_function);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">variable</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">アレイ</a></span></td>
+        <td><span data-keyref="Type_Array"><a href="../../../../GameMaker_Language/GML_Overview/Arrays.htm"
+              target="_blank">アレイ</a></span></td>
         <td><span class="notranslate">The variable that holds the array.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate"><span>sorttype_or_function<span> </span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">ブーリアン</a></span>または <span data-keyref="Type_Function_Script"><a href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">スクリプト関数</a></span>/<span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">メソッド</a></span></td>
-        <td><span class="notranslate">The sort type (<span><span class="inline">true</span> は昇順、 は降順) またはソートに使用する関数のリファレンス。 <span class="inline">false</span> </td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">ブーリアン</a></span>または <span data-keyref="Type_Function_Script"><a
+              href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm"
+              target="_blank">スクリプト関数</a></span>/<span data-keyref="Type_Method"><a
+              href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">メソッド</a></span>
+        </td>
+        <td><span class="notranslate">The sort type (<span><span class="inline">true</span> は昇順、 は降順)
+              またはソートに使用する関数のリファレンス。 <span class="inline">false</span> </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -64,7 +83,10 @@
         return current - next;<br />
     });
   </p>
-  <p>上記のコードでは、独自のソート関数を使用して、配列を昇順にソートしています。このソート関数は、配列の 2 つの要素 <span class="inline">elm1</span> と <span class="inline">elm2</span> を受け取り、引き算を行います。 <span class="inline">elm1</span> が <span class="inline">elm2</span> よりも大きい場合、減算の結果は正の数となり、 <span class="inline">elm1</span> は <span class="inline">elm2</span> よりも後になるように押され、昇順となります。</p>
+  <p>上記のコードでは、独自のソート関数を使用して、配列を昇順にソートしています。このソート関数は、配列の 2 つの要素 <span class="inline">elm1</span> と <span
+      class="inline">elm2</span> を受け取り、引き算を行います。 <span class="inline">elm1</span> が <span class="inline">elm2</span>
+    よりも大きい場合、減算の結果は正の数となり、 <span class="inline">elm1</span> は <span class="inline">elm2</span> よりも後になるように押され、昇順となります。
+  </p>
   <p>ここでは、その拡大例をご紹介します。</p>
   <p class="code">var _xx, _yy, _a;<br />
     <br />
@@ -87,7 +109,9 @@
   </p>
   <p>上記のコードは、<span class="notranslate">room</span> 内のランダムな位置に 10 個のインスタンスの配列を作成します。 デバッグメッセージには、次のような内容が表示されます。</p>
   <p class="code">[ 100003,100004,100005,100006,100007,100008,100009,100010,100011,100012 ]</p>
-  <p>このコードでは、 <span class="inline">array_sort()</span> 関数で使用するメソッドを作成し、<span class="notranslate">room</span> のインスタンスの各 X 位置の差を返します。次に、そのメソッドを使用して<span class="inline">array_sort()</span> 関数を実行し、X でインスタンスを最小から最大まで並べ替えます。すると、配列の出力は次のようになります。</p>
+  <p>このコードでは、 <span class="inline">array_sort()</span> 関数で使用するメソッドを作成し、<span class="notranslate">room</span> のインスタンスの各 X
+    位置の差を返します。次に、そのメソッドを使用して<span class="inline">array_sort()</span> 関数を実行し、X
+    でインスタンスを最小から最大まで並べ替えます。すると、配列の出力は次のようになります。</p>
   <p class="code">[ 100011,100004,100009,100006,100012,100008,100010,100005,100007,100003 ]</p>
   <p> </p>
   <p> </p>
@@ -95,11 +119,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Variable_Functions.htm">バリアブルファンクション</a></div>
-        <div style="float:right">次のページ <a href="array_length.htm"><span class="notranslate">array_length</span></a></div>
+        <div style="float:left">前のページ：<a href="Variable_Functions.htm">バリアブルファンクション</a></div>
+        <div style="float:right">次のページ：<a href="array_length.htm"><span class="notranslate">array_length</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 array_sort
@@ -108,4 +134,5 @@ array_sort
 array_sort
 -->
 </body>
+
 </html>

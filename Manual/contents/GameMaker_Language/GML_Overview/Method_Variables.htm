@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>メソッド変数</title>
@@ -12,10 +13,14 @@
   <meta name="rh-index-keywords" content="Method Variables" />
   <meta name="search-keywords" content="Method Variables,methods,method" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>メソッド変数</h1>
-  <p>メソッド変数とは、基本的に関数が代入された変数のことで、関数をインスタンスに「バインド」し、その変数を使用して関数を参照できるようにします。これは、組み込みの<span class="notranslate">GML</span> 関数を参照するのに<a href="Runtime_Functions.htm">ランタイムの関数</a>名を使用するのと同じです。使用される変数のスコープは<em>ローカル</em>、<em>インスタンス</em>、<em>グローバルの</em>いずれでもかまいません（変数のスコープについては<a href="Variables_And_Variable_Scope.htm">こちらを</a>参照してください）。</p>
+  <p>メソッド変数とは、基本的に関数が代入された変数のことで、関数をインスタンスに「バインド」し、その変数を使用して関数を参照できるようにします。これは、組み込みの<span class="notranslate">GML</span>
+    関数を参照するのに<a
+      href="Runtime_Functions.htm">ランタイムの関数</a>名を使用するのと同じです。使用される変数のスコープは<em>ローカル</em>、<em>インスタンス</em>、<em>グローバルの</em>いずれでもかまいません（変数のスコープについては<a
+      href="Variables_And_Variable_Scope.htm">こちらを</a>参照してください）。</p>
   <p>こちらもご覧ください。<a data-xref="{title}" href="Script_Functions_vs_Methods.htm">スクリプトの関数とメソッドの比較</a></p>
   <h2>メソッドの作成</h2>
   <p>メソッド変数を作成するための構文は以下のとおりです。</p>
@@ -34,10 +39,17 @@
     <span>    ...</span><br />
     <span>}</span>
   </p>
-  <p class="note"><span class="notranslate">GML</span> Visual で関数を作成するには、<a data-xref="{title}" href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a> を使用します。その「Temp」オプションを有効にして、メソッド変数を作成します（上に示す最初の構文）。</p>
-  <p>なぜなら、2<em>番 </em>目の形式では関数名に<span class="notranslate">script</span> というインデックスが割り当てられ、1 番目の形式は &quot;真の&quot; メソッドとなるからです (そして、スクリプト<a href="Script_Functions.htm">関数を</a>定義する場合は、プレフィックスを使用する必要があります)。 <a href="Variables/Global_Variables.htm"><span class="notranslate">global</span></a>のプレフィックスが必要になります)。</p>
-  <p class="note"><span class="note">注</span>: プロジェクトで両方のフォームを使用し、それぞれについて<span class="notranslate">runtime</span> 関数<a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a>を呼び出すと、これを確認することができます。一方は「数値」として分類され (<span class="notranslate">script</span> のインデックス ID を返すからです)、 もう一方は「メソッド」として分類されます。</p>
-  <p>ですから、一般的に、メソッドやメソッド変数について話すときは、常に<span class="notranslate">script</span> のインデックスで定義されて<em>いない </em>関数を参照することになる、ということを心に留めておいてください。 </p>
+  <p class="note"><span class="notranslate">GML</span> Visual で関数を作成するには、<a data-xref="{title}"
+      href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>
+    を使用します。その「Temp」オプションを有効にして、メソッド変数を作成します（上に示す最初の構文）。</p>
+  <p>なぜなら、2<em>番 </em>目の形式では関数名に<span class="notranslate">script</span> というインデックスが割り当てられ、1 番目の形式は &quot;真の&quot;
+    メソッドとなるからです (そして、スクリプト<a href="Script_Functions.htm">関数を</a>定義する場合は、プレフィックスを使用する必要があります)。 <a
+      href="Variables/Global_Variables.htm"><span class="notranslate">global</span></a>のプレフィックスが必要になります)。</p>
+  <p class="note"><span class="note">注</span>: プロジェクトで両方のフォームを使用し、それぞれについて<span class="notranslate">runtime</span> 関数<a
+      href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a>を呼び出すと、これを確認することができます。一方は「数値」として分類され (<span
+      class="notranslate">script</span> のインデックス ID を返すからです)、 もう一方は「メソッド」として分類されます。</p>
+  <p>ですから、一般的に、メソッドやメソッド変数について話すときは、常に<span class="notranslate">script</span> のインデックスで定義されて<em>いない
+    </em>関数を参照することになる、ということを心に留めておいてください。 </p>
   <p>以下では、異なるスコープを使用してメソッド変数を作成する3つの簡単な例を紹介します。</p>
   <p class="code">// Local<br />
     var _debug = function(message)<br />
@@ -57,9 +69,20 @@
         return point_distance(_x1, _y1, _x2, _y2);<br />
     }
   </p>
-  <p>上記のコードでは、関数の入力として与えられるさまざまなパラメータにすべて名前が付けられており、これらの名前は関数内でさまざまな入力を参照するために使用されるべきものであることに注意してください。また、 <span class="inline"><a href="Language_Features/return.htm">return</a></span> ステートメントを使用すると、コード内の他の場所で使用するために関数から値を返すことができます。戻り値が定義されて<em>いない</em>関数は、デフォルトで<span class="inline">undefined</span>.を返すことに注意してください。</p>
-  <p class="note"><span class="note">注意</span>変数は選択したスコープに入りますが、実際の関数は最初に定義されたスコープに束縛されます。例えば、<a href="Script_Functions.htm">スクリプトの関数は</a>すべてグローバルスコープで「非束縛」（つまり、インスタンスと関連付けられていない）ですが、<span class="notranslate">script</span> 関数があり、その中でメソッド変数として別の関数を作成し、インスタンスからこの<span class="notranslate">script</span> 関数を呼び出すと、<span class="notranslate">script</span> の中で使用した関数は<strong>メソッドとしてインスタンス変数と結合</strong>されます。一般的にはあまり気にする必要はありませんが、メソッド変数を使った複雑な操作の場合は、考慮したほうがいいでしょう。これは、以下のような他のコンストラクトを使用する場合にも当てはまります。 <a href="Language_Features/with.htm"><span class="inline">with</span></a>- の中でメソッド変数を作成した場合、その関数は現在スコープ内にあるインスタンスに束縛されます。</p>
-  <p>一度作成したメソッド変数は、例えば<span class="notranslate">runtime</span> 関数や<span class="notranslate">script</span> 関数と同じように使用することができます。</p>
+  <p>上記のコードでは、関数の入力として与えられるさまざまなパラメータにすべて名前が付けられており、これらの名前は関数内でさまざまな入力を参照するために使用されるべきものであることに注意してください。また、 <span
+      class="inline"><a href="Language_Features/return.htm">return</a></span>
+    ステートメントを使用すると、コード内の他の場所で使用するために関数から値を返すことができます。戻り値が定義されて<em>いない</em>関数は、デフォルトで<span
+      class="inline">undefined</span>.を返すことに注意してください。</p>
+  <p class="note"><span class="note">注意</span>変数は選択したスコープに入りますが、実際の関数は最初に定義されたスコープに束縛されます。例えば、<a
+      href="Script_Functions.htm">スクリプトの関数は</a>すべてグローバルスコープで「非束縛」（つまり、インスタンスと関連付けられていない）ですが、<span
+      class="notranslate">script</span> 関数があり、その中でメソッド変数として別の関数を作成し、インスタンスからこの<span class="notranslate">script</span>
+    関数を呼び出すと、<span class="notranslate">script</span>
+    の中で使用した関数は<strong>メソッドとしてインスタンス変数と結合</strong>されます。一般的にはあまり気にする必要はありませんが、メソッド変数を使った複雑な操作の場合は、考慮したほうがいいでしょう。これは、以下のような他のコンストラクトを使用する場合にも当てはまります。
+    <a href="Language_Features/with.htm"><span class="inline">with</span></a>-
+    の中でメソッド変数を作成した場合、その関数は現在スコープ内にあるインスタンスに束縛されます。
+  </p>
+  <p>一度作成したメソッド変数は、例えば<span class="notranslate">runtime</span> 関数や<span class="notranslate">script</span>
+    関数と同じように使用することができます。</p>
   <p class="code">create_vec = function(_x1, _y1, _x2, _y2);<br />
     {<br />
         var _array;<br />
@@ -70,21 +93,26 @@
     <br />
     vec = create_vec(x, y, mouse_x, mouse_y);
   </p>
-  <p>関数内で作成された変数は、通常と同じ規則に従い、使用されたキーワードや関数呼び出しのスコープに従ってスコープされます。上記の例では、 <span class="inline">var</span> を使用しているので、配列変数は関数の<em>ローカル </em>スコープにあります。キーワードを使用しなかった場合、変数は関数を呼び出したインスタンスのスコープに作成されることになります。</p>
+  <p>関数内で作成された変数は、通常と同じ規則に従い、使用されたキーワードや関数呼び出しのスコープに従ってスコープされます。上記の例では、 <span class="inline">var</span>
+    を使用しているので、配列変数は関数の<em>ローカル </em>スコープにあります。キーワードを使用しなかった場合、変数は関数を呼び出したインスタンスのスコープに作成されることになります。</p>
   <p>メソッドは、<span class="notranslate">script</span> 関数と同様に、省略可能な引数を取ることができ、その引数が渡されない場合のデフォルト値を持ちます。</p>
   <p class="code">create_attachment = function(_attachment, <strong>_x = x</strong>, <strong>_y = y</strong>)<br />
     {<br />
         return instance_create_layer(_x, _y, layer, _attachment);<br />
     }</p>
-  <p>上記の関数は3つの引数を取りますが、最後の2つは任意です。もし関数が呼ばれたときにそれらが渡されなかった場合は、デフォルトでインスタンスの <span class="inline">x</span> と <span class="inline">y</span> の座標が使われます。</p>
+  <p>上記の関数は3つの引数を取りますが、最後の2つは任意です。もし関数が呼ばれたときにそれらが渡されなかった場合は、デフォルトでインスタンスの <span class="inline">x</span> と <span
+      class="inline">y</span> の座標が使われます。</p>
   <p>なお、引数が渡されず、かつ、デフォルト値がない場合は、 <span class="inline">undefined</span> と同じになる。</p>
-  <p>メソッドは静的変数を使用することもできます。静的変数は、関数が呼び出されるたびにその値を保持します。詳しくは<a href="Functions/Static_Variables.htm">このページを</a>ご覧ください。</p>
+  <p>メソッドは静的変数を使用することもできます。静的変数は、関数が呼び出されるたびにその値を保持します。詳しくは<a href="Functions/Static_Variables.htm">このページを</a>ご覧ください。
+  </p>
   <p>以下に、メソッド変数に関連するいくつかのヘルパー関数を列挙します。</p>
   <ul class="colour">
     <li><a href="../GML_Reference/Variable_Functions/is_method.htm"><span class="notranslate">is_method</span></a></li>
     <li><a href="../GML_Reference/Variable_Functions/method.htm"><span class="notranslate">method</span></a></li>
-    <li><a href="../GML_Reference/Variable_Functions/method_get_self.htm"><span class="notranslate">method_get_self</span></a></li>
-    <li><a href="../GML_Reference/Variable_Functions/method_get_index.htm"><span class="notranslate">method_get_index</span></a></li>
+    <li><a href="../GML_Reference/Variable_Functions/method_get_self.htm"><span
+          class="notranslate">method_get_self</span></a></li>
+    <li><a href="../GML_Reference/Variable_Functions/method_get_index.htm"><span
+          class="notranslate">method_get_index</span></a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -92,11 +120,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Script_Functions_vs_Methods.htm">スクリプト関数とメソッドの比較</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Script_Functions_vs_Methods.htm">スクリプト関数とメソッドの比較</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions
@@ -106,4 +136,5 @@ User Defined Functions
 method_variables
 -->
 </body>
+
 </html>

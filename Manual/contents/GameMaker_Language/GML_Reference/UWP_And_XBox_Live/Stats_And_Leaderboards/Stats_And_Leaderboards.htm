@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>統計とリーダーボード</title>
@@ -12,14 +13,22 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="XBox Live Stats,Xbox Live Leaderboards" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>統計とリーダーボード</h1>
-  <p>Xbox One Stats（実績とリーダーボード）はUWP使用時に機能し、リーダーボード用の標準組み込み機能の一部も使用しますが、それらを扱うための特別な機能を備えています。2017年のXbox Liveのスタッツシステムでは、実績やリーダーボードの作成手順が簡略化され、<span data-keyref="GameMaker Name">GameMaker</span>内からそれぞれのシステムを作成・利用することができるようになりました。2017年版（Title-Managed）システムとこれまでのシステムとの主な違いは、ゲーム内で使用するすべてのスタッツをパートナーセンターで定義する必要がなくなり、実績のアンロックをスタッツイベント/ルールに結びつける必要がないことです（代わりに直接関数呼び出しでアンロックされるため）。</p>
-  <p class="note"><span class="note">注</span>このシステムではマニフェスト・ファイルは必要ありませんが、XDP/Partner Centerでいくつかの統計情報を設定することができます。そこで設定された統計は、グローバル リーダーボードとゲーム ダッシュボード ページに表示される<b>特集統計と</b>みなされます。詳細については、<a href="https://docs.microsoft.com/en-us/windows/uwp/xbox-live/leaderboards-and-stats-2017/player-stats-configure-2017" target="_blank">マイクロソフトのこちらの記事を</a>ご覧ください。</p>
+  <p>Xbox One Stats（実績とリーダーボード）はUWP使用時に機能し、リーダーボード用の標準組み込み機能の一部も使用しますが、それらを扱うための特別な機能を備えています。2017年のXbox
+    Liveのスタッツシステムでは、実績やリーダーボードの作成手順が簡略化され、<span
+      data-keyref="GameMaker Name">GameMaker</span>内からそれぞれのシステムを作成・利用することができるようになりました。2017年版（Title-Managed）システムとこれまでのシステムとの主な違いは、ゲーム内で使用するすべてのスタッツをパートナーセンターで定義する必要がなくなり、実績のアンロックをスタッツイベント/ルールに結びつける必要がないことです（代わりに直接関数呼び出しでアンロックされるため）。
+  </p>
+  <p class="note"><span class="note">注</span>このシステムではマニフェスト・ファイルは必要ありませんが、XDP/Partner
+    Centerでいくつかの統計情報を設定することができます。そこで設定された統計は、グローバル リーダーボードとゲーム ダッシュボード ページに表示される<b>特集統計と</b>みなされます。詳細については、<a
+      href="https://docs.microsoft.com/en-us/windows/uwp/xbox-live/leaderboards-and-stats-2017/player-stats-configure-2017"
+      target="_blank">マイクロソフトのこちらの記事を</a>ご覧ください。</p>
   <p>以下の統計関数を呼び出す前に、ユーザーがログインしていることを確認し（上記のユーザー関数を参照）、統計システムを設定し、これらの関数を使用してユーザーを追加する必要があります。</p>
   <ul class="colour">
-    <li><a href="xboxlive_stats_setup.htm"><span class="notranslate">xboxlive_stats_setup</span></a><em>(イベントベース(2013年)の統計のみ）</em></li>
+    <li><a href="xboxlive_stats_setup.htm"><span
+          class="notranslate">xboxlive_stats_setup</span></a><em>(イベントベース(2013年)の統計のみ）</em></li>
     <li><a href="xboxlive_stats_add_user.htm"><span class="notranslate">xboxlive_stats_add_user</span></a></li>
   </ul>
   <p> </p>
@@ -27,24 +36,33 @@
   <ul class="colour">
     <li><a href="xboxlive_stats_remove_user.htm"><span class="notranslate">xboxlive_stats_remove_user</span></a></li>
     <li><a href="xboxlive_stats_flush_user.htm"><span class="notranslate">xboxlive_stats_flush_user</span></a></li>
-    <li><a href="xboxlive_stats_set_stat_real.htm"><span class="notranslate">xboxlive_stats_set_stat_real</span></a></li>
+    <li><a href="xboxlive_stats_set_stat_real.htm"><span class="notranslate">xboxlive_stats_set_stat_real</span></a>
+    </li>
     <li><a href="xboxlive_stats_set_stat_int.htm"><span class="notranslate">xboxlive_stats_set_stat_int</span></a></li>
-    <li><a href="xboxlive_stats_set_stat_string.htm"><span class="notranslate">xboxlive_stats_set_stat_string</span></a></li>
+    <li><a href="xboxlive_stats_set_stat_string.htm"><span class="notranslate">xboxlive_stats_set_stat_string</span></a>
+    </li>
     <li><a href="xboxlive_stats_delete_stat.htm"><span class="notranslate">xboxlive_stats_delete_stat</span></a></li>
-    <li><a href="xboxlive_stats_get_stat_names.htm"><span class="notranslate">xboxlive_stats_get_stat_names</span></a></li>
+    <li><a href="xboxlive_stats_get_stat_names.htm"><span class="notranslate">xboxlive_stats_get_stat_names</span></a>
+    </li>
     <li><a href="xboxlive_stats_get_stat.htm"><span class="notranslate">xboxlive_stats_get_stat</span></a></li>
-    <li><a href="xboxlive_stats_get_leaderboard.htm"><span class="notranslate">xboxlive_stats_get_leaderboard</span></a></li>
-    <li><a href="xboxlive_stats_get_social_leaderboard.htm"><span class="notranslate">xboxlive_stats_get_social_leaderboard</span></a></li>
-    <li><a data-xref="{title}" href="xboxlive_achievement_show_achievements.htm">xboxlive_achievement_show_achievements</a></li>
+    <li><a href="xboxlive_stats_get_leaderboard.htm"><span class="notranslate">xboxlive_stats_get_leaderboard</span></a>
+    </li>
+    <li><a href="xboxlive_stats_get_social_leaderboard.htm"><span
+          class="notranslate">xboxlive_stats_get_social_leaderboard</span></a></li>
+    <li><a data-xref="{title}"
+        href="xboxlive_achievement_show_achievements.htm">xboxlive_achievement_show_achievements</a></li>
     <li><a data-xref="{title}" href="xboxlive_achievement_load_friends.htm">xboxlive_achievement_load_friends</a></li>
-    <li><a data-xref="{title}" href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></li>
-    <li><a href="xboxlive_achievements_set_progress.htm"><span class="notranslate">xboxlive_achievements_set_progress</span></a></li>
+    <li><a data-xref="{title}"
+        href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></li>
+    <li><a href="xboxlive_achievements_set_progress.htm"><span
+          class="notranslate">xboxlive_achievements_set_progress</span></a></li>
   </ul>
   <p> </p>
   <p>2013 (Event-Based) Stats システムでは、以下の機能を使用します。</p>
   <ul class="colour">
     <li><a href="xboxlive_get_stats_for_user.htm"><span class="notranslate">xboxlive_get_stats_for_user</span></a></li>
-    <li><a href="xboxlive_read_player_leaderboard.htm"><span class="notranslate">xboxlive_read_player_leaderboard</span></a></li>
+    <li><a href="xboxlive_read_player_leaderboard.htm"><span
+          class="notranslate">xboxlive_read_player_leaderboard</span></a></li>
     <li><a href="xboxlive_fire_event.htm"><span class="notranslate">xboxlive_fire_event</span></a></li>
   </ul>
   <p> </p>
@@ -52,11 +70,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../UWP_And_XBox_Live.htm">UWPとXBox Live</a></div>
-        <div style="float:right">次へ<a href="../Match_Making/Match_Making.htm">マッチメイク</a></div>
+        <div style="float:left">前のページ：<a href="../UWP_And_XBox_Live.htm">UWPとXBox Live</a></div>
+        <div style="float:right">次のページ：<a href="../Match_Making/Match_Making.htm">マッチメイク</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 XBox Live Stats And Leaderboards
@@ -65,4 +84,5 @@ XBox Live Stats And Leaderboards
 xboxlive_stat_functions
 -->
 </body>
+
 </html>

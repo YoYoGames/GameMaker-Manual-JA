@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_grid_create</title>
@@ -13,70 +14,87 @@
   <meta name="search-keywords" content="mp_grid_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">mp_grid_create</span></h1>
-  <p>この関数で、モーションプランニング関数用の mp_grid を作成することができます。この関数は、他のすべての MP グリッド関数のコールで使用するために、変数に格納されるべきインデックスを返します。x 座標と y 座標はグリッドの左上隅の位置を、hcells と vcells はグリッド内に作成する水平および垂直セルの数を、cell width と cell height はセルの大きさをピクセル単位で示す。異なる用途で必要であれば、複数のグリッド構造を同時に作成・管理することもできますが、各グリッドにはメモリが必要であり、セル数が多いほど必要なメモリ量も多くなることに注意してください。また、MP 関数はかなりプロセッサ負荷が高いので、頻繁に呼び出すほど、またセルの解像度が高いほど、パフォーマンスが低下する可能性が高くなることに注意してください。</p>
+  <p>この関数で、モーションプランニング関数用の mp_grid を作成することができます。この関数は、他のすべての MP グリッド関数のコールで使用するために、変数に格納されるべきインデックスを返します。x 座標と y
+    座標はグリッドの左上隅の位置を、hcells と vcells はグリッド内に作成する水平および垂直セルの数を、cell width と cell height
+    はセルの大きさをピクセル単位で示す。異なる用途で必要であれば、複数のグリッド構造を同時に作成・管理することもできますが、各グリッドにはメモリが必要であり、セル数が多いほど必要なメモリ量も多くなることに注意してください。また、MP
+    関数はかなりプロセッサ負荷が高いので、頻繁に呼び出すほど、またセルの解像度が高いほど、パフォーマンスが低下する可能性が高くなることに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">mp_grid_create</span>(left, top, hcells, vcells, cellwidth, cellheight);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_create</span>(left, top, hcells, vcells,
+    cellwidth, cellheight);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">left</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
         <td><span class="notranslate">Starting x coordinate of the mp_grid in the room</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">top</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
         <td><span class="notranslate">Starting y coordinate of the mp_grid in the room</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">hcells</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
         <td><span class="notranslate">Number of horizontal cells that the mp_grid will contain</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">vcells</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
         <td><span class="notranslate">Number of vertical cells that the mp_grid will contain</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">cellwidth</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
         <td><span class="notranslate">The width (in pixels) of each individual cell of the mp_grid</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">cellheight</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span></td>
         <td><span class="notranslate">The height (in pixels) of each individual cell of the mp_grid</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_MP_Grid"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Movement_And_Collisions/Motion_Planning/mp_grid_create.htm">MP Grid ID</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_MP_Grid"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../../GameMaker_Language/GML_Reference/Movement_And_Collisions/Motion_Planning/mp_grid_create.htm">MP
+        Grid ID</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">global.grid = mp_grid_create(0, 0, room_width / 32, room_height / 32, 32, 32);</p>
-  <p>上記のコードでは、グローバル変数 &quot;grid&quot; を作成し、mp_grid を生成してそのインデックス (id) を変数に代入し、以降のすべての mp_grid 関数呼び出しで使用します。グリッドは<span class="notranslate">room</span> をカバーし、セル解像度は 32x32 ピクセルである。これは、例えば、640x480 の<span class="notranslate">room</span> の場合、グリッドは 300 個のセルを含むことを意味します：20 の水平セル (640 / 32) と 15 の垂直セル (480 / 32) を掛け合わせると 300 個のセルとなります。</p>
+  <p>上記のコードでは、グローバル変数 &quot;grid&quot; を作成し、mp_grid を生成してそのインデックス (id) を変数に代入し、以降のすべての mp_grid 関数呼び出しで使用します。グリッドは<span
+      class="notranslate">room</span> をカバーし、セル解像度は 32x32 ピクセルである。これは、例えば、640x480 の<span class="notranslate">room</span>
+    の場合、グリッドは 300 個のセルを含むことを意味します：20 の水平セル (640 / 32) と 15 の垂直セル (480 / 32) を掛け合わせると 300 個のセルとなります。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
-        <div style="float:right">次のページ <a href="mp_grid_destroy.htm"><span class="notranslate">mp_grid_destroy</span></a></div>
+        <div style="float:left">前のページ：<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ：<a href="mp_grid_destroy.htm"><span
+              class="notranslate">mp_grid_destroy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_grid_create
@@ -85,4 +103,5 @@ mp_grid_create
 mp_grid_create
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>フィルター・エフェクト</title>
@@ -12,42 +13,65 @@
   <meta name="rh-index-keywords" content="Filters and Effects" />
   <meta name="search-keywords" content="filters, effects, fx, shaders, graphics, visuals" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>フィルター・エフェクト</h1>
   <h2>フィルター/エフェクトレイヤー</h2>
   <p><span class="notranslate">Room</span> エディタで、<img> ボタンをクリックすると、新しいフィルタ／エフェクトのレイヤーが追加され、そのプロパティが下に表示されます。</p>
   <p><img class="icon_small" src="../../assets/Images/Icons/Icon_FX_Layer.png" /></p>
-  <p>フィルタ／エフェクト（または FX）レイヤーは、いくつかのレイヤーにビジュアルフィルタやエフェクトを適用するために使用されます。エフェクトタイプ」のプルダウンリストからエフェクトを選択し、レイヤープロパティウインドウでそのパラメータを表示し、見た目や動作を変更することができます。</p>
+  <p>フィルタ／エフェクト（または
+    FX）レイヤーは、いくつかのレイヤーにビジュアルフィルタやエフェクトを適用するために使用されます。エフェクトタイプ」のプルダウンリストからエフェクトを選択し、レイヤープロパティウインドウでそのパラメータを表示し、見た目や動作を変更することができます。
+  </p>
   <p>例えば、「スクリーンシェイク」エフェクトを選択すると、その大きさ、シェイク速度を変更し、そのノイズテクスチャとして<span class="notranslate">sprite</span> を適用することができます。</p>
   <p><img>FX レイヤーを追加すると、このビジュアルに示すように、選択したエフェクトが FX<em>レイヤーより下に</em>ある他のすべてのレイヤーに適用されます。</p>
-  <p><img>つまり、FXレイヤーの下にあるすべての「影響を受ける」レイヤーに、選択したフィルタが適用されます（ここでは「脱色」）。FXレイヤーの上にあるレイヤーは、影響を受けません。レイヤーは、レイヤー順序のどこにでも、その上に存在する複数の効果レイヤーから影響を受けることがあります。</p>
+  <p>
+    <img>つまり、FXレイヤーの下にあるすべての「影響を受ける」レイヤーに、選択したフィルタが適用されます（ここでは「脱色」）。FXレイヤーの上にあるレイヤーは、影響を受けません。レイヤーは、レイヤー順序のどこにでも、その上に存在する複数の効果レイヤーから影響を受けることがあります。
+  </p>
   <p>1つのレイヤーにのみ適用されるフィルター/エフェクトを作成するには、以下を参照してください。<a href="#h">シングルレイヤーFXを</a>参照してください。</p>
-  <p class="note"><span class="note">注</span> <span class="notranslate">runtime</span> で<a href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_depth.htm">レイヤー</a>または<a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/depth.htm">インスタンスの</a> <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_depth.htm">深度を</a>変更すると、その深度をFXレイヤーの深度より高くする（本質的にFXレイヤーの<em>下に</em>入り、影響を受ける）か、その深度をFXレイヤーの深度より低くする（FXレイヤーの<em>上に</em>入り、影響を受けない）ことによって、その上に適用されるFXレイヤーが変わる場合があります。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">runtime</span> で<a
+      href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_depth.htm">レイヤー</a>または<a
+      href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/depth.htm">インスタンスの</a>
+    <a
+      href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_depth.htm">深度を</a>変更すると、その深度をFXレイヤーの深度より高くする（本質的にFXレイヤーの<em>下に</em>入り、影響を受ける）か、その深度をFXレイヤーの深度より低くする（FXレイヤーの<em>上に</em>入り、影響を受けない）ことによって、その上に適用されるFXレイヤーが変わる場合があります。
+  </p>
   <h2>フィルター vs. エフェクト</h2>
-  <p>Filter は<span class="notranslate">shaders</span> を使用するだけで、<span class="notranslate">Room</span> Editor でプレビューすることができます。</p>
-  <p>エフェクトは、<span class="notranslate">shaders</span> に加えて、自分自身を管理するための内部コードも持っています。このため、<span class="notranslate">Room</span> Editorでプレビューすることはできず、<span class="notranslate">runtime</span> （インゲーム）でしか機能的に表示されません。</p>
-  <p>例えば、「<strong>カラーライズ</strong>」はフィルター、「<strong>風切り粒子</strong>」はエフェクトです。</p>
+  <p>Filter は<span class="notranslate">shaders</span> を使用するだけで、<span class="notranslate">Room</span> Editor
+    でプレビューすることができます。</p>
+  <p>エフェクトは、<span class="notranslate">shaders</span> に加えて、自分自身を管理するための内部コードも持っています。このため、<span
+      class="notranslate">Room</span> Editorでプレビューすることはできず、<span class="notranslate">runtime</span>
+    （インゲーム）でしか機能的に表示されません。</p>
+  <p>例えば、「<strong>カラーライズ</strong>」はフィルター、「<strong>風切りパーティクル</strong>」はエフェクトです。</p>
   <h2>エフェクトの種類</h2>
-  <p><strong>エフェクトタイプ &quot;の</strong>ドロップダウンリストにあるすべてのフィルターとエフェクトは、このページで説明されています。<a data-xref="{title}" href="FX/All_Filter_Effect_Types.htm">FXの種類とパラメータ</a>」をご覧ください。</p>
+  <p><strong>エフェクトタイプ &quot;の</strong>ドロップダウンリストにあるすべてのフィルターとエフェクトは、このページで説明されています。<a data-xref="{title}"
+      href="FX/All_Filter_Effect_Types.htm">FXの種類とパラメータ</a>」をご覧ください。</p>
   <h2 id="h">シングルレイヤーFX</h2>
-  <p>FX レイヤーを作成すると、複数のレイヤーにフィルタを適用できますが、<a href="../../IDE_Tools/The_Inspector.htm">インスペクタを</a>使用して、特定の 1 つのレイヤーにのみフィルタを割り当てることもできます。インスペクタを開いて、<span class="notranslate">room</span> レイヤーを選択すると、フィルタ／エフェクトを適用できます。そのレイヤーが非 FX レイヤー（インスタンスレイヤー、<span class="notranslate">Asset</span> レイヤーなど）の場合、エフェクトはそのレイヤーだけに適用され、その下の他のレイヤーに適用されることはありません。</p>
+  <p>FX レイヤーを作成すると、複数のレイヤーにフィルタを適用できますが、<a href="../../IDE_Tools/The_Inspector.htm">インスペクタを</a>使用して、特定の 1
+    つのレイヤーにのみフィルタを割り当てることもできます。インスペクタを開いて、<span class="notranslate">room</span> レイヤーを選択すると、フィルタ／エフェクトを適用できます。そのレイヤーが非 FX
+    レイヤー（インスタンスレイヤー、<span class="notranslate">Asset</span> レイヤーなど）の場合、エフェクトはそのレイヤーだけに適用され、その下の他のレイヤーに適用されることはありません。</p>
   <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Room_LayerFilterProperties.png" /></p>
   <p>また、<img> のアイコンをクリックすると、選択したレイヤーのFXを有効/無効にすることができます。</p>
   <h2>ランタイムユーズメント</h2>
-  <p><a href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">Filter/Effect<span class="notranslate">runtime</span> Functions</a> を使って、<span class="notranslate">GML</span> でエフェクトを追加したりコントロールすることができます。</p>
+  <p><a
+      href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">Filter/Effect<span
+        class="notranslate">runtime</span> Functions</a> を使って、<span class="notranslate">GML</span>
+    でエフェクトを追加したりコントロールすることができます。</p>
   <div data-conref="../../assets/snippets/FX_only_added_through_IDE.hts"> </div>
-  <p>詳しくは、「<a data-xref="{title}" href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">フィルターとエフェクトの機能</a>」をお読みください。</p>
+  <p>詳しくは、「<a data-xref="{title}"
+      href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">フィルターとエフェクトの機能</a>」をお読みください。
+  </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Rooms.htm"> <span class="notranslate">Room</span> 編集部</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="FX/All_Filter_Effect_Types.htm">FXの種類とパラメータ</a></div>
+        <div style="float:left">前のページ：<a href="../Rooms.htm"> <span class="notranslate">Room</span> エディタ</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="FX/All_Filter_Effect_Types.htm">FXの種類とパラメータ</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Filters
@@ -61,4 +85,5 @@ Visuals
 filters_effects
 -->
 </body>
+
 </html>

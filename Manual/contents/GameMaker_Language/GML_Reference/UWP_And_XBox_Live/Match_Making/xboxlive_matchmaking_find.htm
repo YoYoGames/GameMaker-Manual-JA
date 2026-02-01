@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_matchmaking_find</title>
@@ -12,27 +13,37 @@
   <meta name="rh-index-keywords" content="xboxlive_matchmaking_find" />
   <meta name="search-keywords" content="xboxlive_matchmaking_find" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_matchmaking_find</h1>
-  <p>この機能は、XDPダッシュボードであらかじめ作成しておいたSession Template、matchmaking hopper、Secure Device Associationのテンプレートを使って、マルチプレイヤー・セッションを検索するものです。を呼び出すことで、特定のゲーム・パッドのユーザーIDを取得することができます。 <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><span class="inline">xboxlive_user_for_pad()</span></a>関数を使用します。この関数は一意のリクエスト ID 値を返し、それを使ってこの関数の正しい<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">ソーシャル非同期</a>イベントを特定することができます。このイベントはセッションが作成されたときに起動され、DS Map を変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>には、以下のキーと値のペアが含まれます。</p>
+  <p>この機能は、XDPダッシュボードであらかじめ作成しておいたSession Template、matchmaking hopper、Secure Device
+    Associationのテンプレートを使って、マルチプレイヤー・セッションを検索するものです。を呼び出すことで、特定のゲーム・パッドのユーザーIDを取得することができます。 <a
+      href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><span
+        class="inline">xboxlive_user_for_pad()</span></a>関数を使用します。この関数は一意のリクエスト ID 値を返し、それを使ってこの関数の正しい<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">ソーシャル非同期</a>イベントを特定することができます。このイベントはセッションが作成されたときに起動され、DS
+    Map を変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>には、以下のキーと値のペアが含まれます。</p>
   <ul class="colour">
     <li>「requestid&quot; - 呼び出し関数によって返されたリクエストIDを含む。</li>
-    <li>&quot;status&quot; -<span class="notranslate">string</span> &quot;session_created &quot;を含み、どのような種類のイベントが発生したかを知らせます。</li>
+    <li>&quot;status&quot; -<span class="notranslate">string</span> &quot;session_created
+      &quot;を含み、どのような種類のイベントが発生したかを知らせます。</li>
     <li>「num_results&quot; - セッションが見つかった場合は1以上、そうでない場合は0を格納。</li>
-    <li>&quot;sessionid&lt;index&gt; &quot; - セッションIDを格納、失敗の場合は-1<i>(&lt;index/gt;</i>は0から &quot;num_results&quot; - 1までの値)。</li>
-    <li>&quot;sessionOwner&lt;index&gt; &quot; - セッションが見つかった場合、セッションホストのIDを含みます<i>(&lt;index&gt;</i>は 0 から &quot;num_results&quot; - 1 までの値です)。</li>
+    <li>&quot;sessionid&lt;index&gt; &quot; - セッションIDを格納、失敗の場合は-1<i>(&lt;index/gt;</i>は0から &quot;num_results&quot; -
+      1までの値)。</li>
+    <li>&quot;sessionOwner&lt;index&gt; &quot; - セッションが見つかった場合、セッションホストのIDを含みます<i>(&lt;index&gt;</i>は 0 から
+      &quot;num_results&quot; - 1 までの値です)。</li>
     <li>「error&quot; - 成功した場合は0，失敗した場合は-1が格納されます．</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_matchmaking_find(user_id, template, hopper, sdatemplate, [matchattributes]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">user_id</span></td>
@@ -62,12 +73,13 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var userID = xboxone_user_for_pad(global.PadIndex);<br />
-    result = xboxone_matchmaking_find(userID, &quot;MatchTicketSession&quot;, &quot;MatchTicketHopper&quot;, &quot;PeerServerTraffic&quot;);</p>
+    result = xboxone_matchmaking_find(userID, &quot;MatchTicketSession&quot;, &quot;MatchTicketHopper&quot;,
+    &quot;PeerServerTraffic&quot;);</p>
   <p>上記は、与えられたゲームパッド上のユーザーのユーザーIDを取得し、そのユーザーのマッチメイキングセッションを探そうとするものです。</p>
   <p> </p>
   <p> </p>
@@ -75,11 +87,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Match_Making.htm">マッチメイキング</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_matchmaking_session_get_users.htm"><span class="notranslate">xboxlive_matchmaking_session_get_users</span></a></div>
+        <div style="float:left">前のページ：<a href="Match_Making.htm">マッチメイキング</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_matchmaking_session_get_users.htm"><span
+              class="notranslate">xboxlive_matchmaking_session_get_users</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_matchmaking_find
@@ -88,4 +102,5 @@ xboxlive_matchmaking_find
 xboxlive_matchmaking_find
 -->
 </body>
+
 </html>

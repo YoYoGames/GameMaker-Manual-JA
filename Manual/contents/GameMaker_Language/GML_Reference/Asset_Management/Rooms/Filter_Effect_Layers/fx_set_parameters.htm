@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>fx_set_parameters</title>
@@ -12,32 +13,43 @@
   <meta name="rh-index-keywords" content="fx_set_parameters" />
   <meta name="search-keywords" content="fx_set_parameters" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">fx_set_parameters</span></h1>
-  <p>この機能は、フィルター／エフェクトのパラメータを変更するために使用されます。FX<span class="notranslate">struct</span> （ <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返されるもの）と、そのパラメータを含む<span class="notranslate">struct</span> （ <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span> から返されるもの）を指定します。これにより、FX<span class="notranslate">struct</span> が割り当てられているレイヤーで変更内容が表示されます。</p>
-  <p>パラメータ<span class="notranslate">struct</span> には、フィルター/エフェクトに適用できるすべてのパラメータを含める必要はなく、与えられた<span class="notranslate">struct</span> に存在する変数のみが、フィルター/エフェクトのために更新されます。</p>
+  <p>この機能は、フィルター／エフェクトのパラメータを変更するために使用されます。FX<span class="notranslate">struct</span> （ <span class="inline"><a
+        href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a
+        href="layer_get_fx.htm">layer_get_fx()</a></span> から返されるもの）と、そのパラメータを含む<span class="notranslate">struct</span> （
+    <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span> から返されるもの）を指定します。これにより、FX<span
+      class="notranslate">struct</span> が割り当てられているレイヤーで変更内容が表示されます。
+  </p>
+  <p>パラメータ<span class="notranslate">struct</span> には、フィルター/エフェクトに適用できるすべてのパラメータを含める必要はなく、与えられた<span
+      class="notranslate">struct</span> に存在する変数のみが、フィルター/エフェクトのために更新されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">fx_set_parameters</span>(filter_or_effect, parameter_struct);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">fx_set_parameters</span>(filter_or_effect,
+    parameter_struct);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td>
+        <td><span class="notranslate">filter_or_effect</span></td>
+        <td><span data-keyref="Type_Struct_FX"></span></td>
         <td><span class="notranslate">The FX struct to modify</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">parameter_struct</span></td><td><span data-keyref="Type_Struct"></span></td>
+        <td><span class="notranslate">parameter_struct</span></td>
+        <td><span data-keyref="Type_Struct"></span></td>
         <td><span class="notranslate">A struct containing the parameters for the filter/effect</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -52,18 +64,27 @@
         fx_set_parameters(_fx_struct, _params);<br />
     }
   </p>
-  <p>上記のコードでは、「Colour Tint」フィルターを適用したレイヤーのFX<span class="notranslate">struct</span> を取得し、そのパラメーター<span class="notranslate">struct</span> を呼び出して取得しています。 <a href="fx_get_parameters.htm"><span class="inline">fx_get_parameters()</span></a>.その後、 <span class="inline"><a href="../../../Maths_And_Numbers/Angles_And_Distance/sin.htm">sin()</a></span> と <span class="inline"><a href="../../../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span> を使って振動する値を作成し、それが色合い効果の RGBA 値に使用されるので、アニメーションが継続します。RGBA配列はパラメータ<span class="notranslate">struct</span> の変数 <span class="inline">g_TintCol</span> に代入され、<span class="notranslate">struct</span> は <span class="inline">fx_set_parameters()</span> を呼び出すことによってFX<span class="notranslate">struct</span> に戻されます。</p>
+  <p>上記のコードでは、「Colour Tint」フィルターを適用したレイヤーのFX<span class="notranslate">struct</span> を取得し、そのパラメーター<span
+      class="notranslate">struct</span> を呼び出して取得しています。 <a href="fx_get_parameters.htm"><span
+        class="inline">fx_get_parameters()</span></a>.その後、 <span class="inline"><a
+        href="../../../Maths_And_Numbers/Angles_And_Distance/sin.htm">sin()</a></span> と <span class="inline"><a
+        href="../../../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span> を使って振動する値を作成し、それが色合い効果の
+    RGBA 値に使用されるので、アニメーションが継続します。RGBA配列はパラメータ<span class="notranslate">struct</span> の変数 <span
+      class="inline">g_TintCol</span> に代入され、<span class="notranslate">struct</span> は <span
+      class="inline">fx_set_parameters()</span> を呼び出すことによってFX<span class="notranslate">struct</span> に戻されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
-        <div style="float:right">Next:<a data-xref="{title}" href="fx_set_single_layer.htm">fx_set_single_layer</a></div>
+        <div style="float:left">前のページ：<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
+        <div style="float:right">Next:<a data-xref="{title}" href="fx_set_single_layer.htm">fx_set_single_layer</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fx_set_parameters
@@ -72,4 +93,5 @@ fx_set_parameters
 fx_set_parameters
 -->
 </body>
+
 </html>

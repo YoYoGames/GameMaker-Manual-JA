@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>vertex_create_buffer_from_buffer_ext</title>
@@ -13,19 +14,27 @@
   <meta name="search-keywords" content="vertex_create_buffer_from_buffer_ext" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">vertex_create_buffer_from_buffer_ext</span></h1>
-  <p>関数と同様に <a href="vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>この関数は、新しい<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を作成します。ただし、保存する<span class="notranslate">vertex</span> データは、ソースとして指定された通常の<span class="notranslate">buffer</span> からコピーされます。<span class="notranslate">buffer</span> は、(たとえば)<span class="notranslate">vertex</span> で使用するプリミティブを構築するための<span class="notranslate">shaders</span> フォーマットであらかじめフォーマットされています。また、コピー元の<span class="notranslate">buffer</span> 内のオフセットと、最終的に<span class="notranslate">buffer</span> が持つべき頂点の数を指定することも可能です。もし頂点の数がコピーされるものと一致しない場合、<span class="notranslate">vertex</span> のデータが破損する可能性があることに注意してください。</p>
+  <p>関数と同様に <a href="vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>この関数は、新しい<span
+      class="notranslate">vertex</span> <span class="notranslate">buffer</span> を作成します。ただし、保存する<span
+      class="notranslate">vertex</span> データは、ソースとして指定された通常の<span class="notranslate">buffer</span> からコピーされます。<span
+      class="notranslate">buffer</span> は、(たとえば)<span class="notranslate">vertex</span> で使用するプリミティブを構築するための<span
+      class="notranslate">shaders</span> フォーマットであらかじめフォーマットされています。また、コピー元の<span class="notranslate">buffer</span>
+    内のオフセットと、最終的に<span class="notranslate">buffer</span> が持つべき頂点の数を指定することも可能です。もし頂点の数がコピーされるものと一致しない場合、<span
+      class="notranslate">vertex</span> のデータが破損する可能性があることに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">vertex_create_buffer_from_buffer_ext</span>(buffer, format, src_offset, vert_num);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">vertex_create_buffer_from_buffer_ext</span>(buffer,
+    format, src_offset, vert_num);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td>
@@ -50,7 +59,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -60,18 +69,24 @@
     vertex_format_add_textcoord();<br />
     var my_format = vertex_format_end();<br />
     v_buff = vertex_create_buffer_from_buffer(global.modelBuff, myFormat, 0, 512);</p>
-  <p>上記のコードは、新しい<span class="notranslate">vertex</span> フォーマットを作成し、以前に作成した通常の<span class="notranslate">vertex</span> から新しい<span class="notranslate">buffer</span> <span class="notranslate">buffer</span> を作成し、それにカスタム<span class="notranslate">vertex</span> フォーマットをオフセット 0 で適用します。この関数は、新しい<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> に、512 個の頂点を期待することを伝えます。</p>
+  <p>上記のコードは、新しい<span class="notranslate">vertex</span> フォーマットを作成し、以前に作成した通常の<span class="notranslate">vertex</span>
+    から新しい<span class="notranslate">buffer</span> <span class="notranslate">buffer</span> を作成し、それにカスタム<span
+      class="notranslate">vertex</span> フォーマットをオフセット 0 で適用します。この関数は、新しい<span class="notranslate">vertex</span> <span
+      class="notranslate">buffer</span> に、512 個の頂点を期待することを伝えます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></div>
-        <div style="float:right">次のページ <a href="vertex_get_buffer_size.htm"><span class="notranslate">vertex_get_buffer_size</span></a></div>
+        <div style="float:left">前のページ：<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span
+              class="notranslate">Vertex</span> フォーマット</a></div>
+        <div style="float:right">次のページ：<a href="vertex_get_buffer_size.htm"><span
+              class="notranslate">vertex_get_buffer_size</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_create_buffer_from_buffer_ext
@@ -80,4 +95,5 @@ vertex_create_buffer_from_buffer_ext
 vertex_create_buffer_from_buffer_ext
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_get_device_count</title>
@@ -13,17 +14,20 @@
   <meta name="search-keywords" content="gamepad_get_device_count" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gamepad_get_device_count</span></h1>
   <p>この機能は、接続されているゲームパッドの数、<i>または</i>ゲームパッドが接続可能な「スロット」の数を表示するものです。</p>
-  <p>実際の戻り値はプラットフォームとその内部設定に依存するため、この関数は関数 <a href="gamepad_is_connected.htm"><span class="inline">gamepad_is_connected()</span></a>を併用し、正確なパッド接続数を確認する必要があります。</p>
+  <p>実際の戻り値はプラットフォームとその内部設定に依存するため、この関数は関数 <a href="gamepad_is_connected.htm"><span
+        class="inline">gamepad_is_connected()</span></a>を併用し、正確なパッド接続数を確認する必要があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gamepad_get_device_count</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+        target="_blank">Real</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
@@ -38,18 +42,21 @@
             global.gp[i] = false;<br />
         }<br />
     }</p>
-  <p>上記のコードは、<span class="notranslate">loops</span> 利用可能なゲームパッド（またはゲームパッドスロット）を通して、それぞれゲームパッドが接続されているかどうかをチェックします。返された値は、今後のチェックに使用するために、グローバル配列に <span class="inline">true</span> または <span class="inline">false</span> を設定するために使用されます。</p>
+  <p>上記のコードは、<span class="notranslate">loops</span>
+    利用可能なゲームパッド（またはゲームパッドスロット）を通して、それぞれゲームパッドが接続されているかどうかをチェックします。返された値は、今後のチェックに使用するために、グローバル配列に <span
+      class="inline">true</span> または <span class="inline">false</span> を設定するために使用されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
         <div style="float:right">次ページ:<a href="gamepad_get_description.htm"> Gamepad_get_description </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_device_count
@@ -58,4 +65,5 @@ gamepad_get_device_count
 gamepad_get_device_count
 -->
 </body>
+
 </html>

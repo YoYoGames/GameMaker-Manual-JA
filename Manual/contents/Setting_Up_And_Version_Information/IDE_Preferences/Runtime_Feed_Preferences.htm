@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ランタイムフィードの環境設定</title>
@@ -12,24 +13,47 @@
   <meta name="rh-index-keywords" content="Prefs - Runtime Feeds" />
   <meta name="search-keywords" content="Runtimes,Runtime Feed Preferences,Runtime Feed Prefs,Prefs Runtime" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ランタイムフィードの環境設定</h1>
-  <p><img><strong>ランタイムフィード環境</strong>設定は、現在インストールされている<a class="glossterm" data-glossterm="ランタイム" href="#">ランタイムと</a>、現在使用中の<span class="notranslate">runtime</span> を表示および変更するために使用します。<span data-keyref="GameMaker Name">GameMakerは</span>、一度に複数の異なる<span class="notranslate">runtime</span> ツールをインストールすることができ、この環境設定から使用するツールを設定することができます。理想的には最新の<span class="notranslate">runtime</span> を使いたいところですが、問題があったり、比較のために古いものを使わなければならない場合もあります。そのため、ここで<span data-keyref="GameMaker Name">GameMaker が</span>ゲームを作るのに使う<span class="notranslate">runtime</span> ツールを変更することができます。</p>
-  <p>この設定の最初の部分は、<span class="notranslate">runtime</span> ツールをどこから取得するかに関連しており、<a class="glossterm" data-glossterm="RSS" href="#">RSS</a>フィードの<a class="glossterm" data-glossterm="URL" href="#">URL</a>を入力する必要があります。このフィードは、<span class="notranslate">runtime</span> ツールのアップデートをスキャンし、ダウンロードおよびインストールすることができます。このセクションにはデフォルトでMaster<span class="notranslate">runtime</span> feedのURLが表示されますが、<em>Add </em>ボタンをクリックして新しい<span class="notranslate">Runtime</span> Feedを作成し、RSSフィードの名前とURLを入力し、Applyをクリックして<span data-keyref="GameMaker Name">GameMakerに</span>アクセスするように指示することが可能です。新しいフィードを表示させるためには、Preferencesウィンドウを一度閉じて再度開く必要があります。</p>
-  <p><span class="notranslate">Runtime</span> フィードを作成すると、このセクションにサブカテゴリとして表示され、常に少なくとも 1 つのフィードが表示されます (デフォルトでは、これが<em>マスター </em>フィードになります)。どのフィードを使用しても、<span class="notranslate">runtime</span> の機能は同じです。以下、マスターフィードを例にとって説明します。</p>
-  <p><img> <span class="notranslate">Runtime</span> フィード環境設定は、さまざまな ツールの選択、インストール、アンインストールを行うために使用します。上部には、現在使用されている ツール、作成日、ハードディスクに保存されている場所が表示されます。これらの詳細の下には、利用可能なすべての のリストがあり、このリストから任意の 1 つを選択して、プロジェクトのコンパイルに使用する「実行中の」 に変更することができます。<span class="notranslate">runtime</span> <span class="notranslate">runtime</span> <span class="notranslate">runtimes</span> <span class="notranslate">runtime</span> </p>
-  <p>使用する別の<span class="notranslate">runtime</span> を選択するには、リストで見つけてから、<img> をダブルクリックするだけです。<span class="notranslate">runtime</span> がダウンロード、インストールされていない場合は、インストールするよう促されます。インストールが完了したら、新しい<span class="notranslate">IDE</span> を初期化できるように<span class="notranslate">runtime</span> を終了し、再起動するよう求められます。</p>
-  <p>このリストには、利用可能なすべての<span class="notranslate">runtimes</span> 、そのバージョン番号、リリースされた日付、そして（インストールされている場合は）インストール先の<span class="notranslate">path</span> の詳細が記載されています。右側には、以下のようなステータスアイコンも表示されます。</p>
+  <p><img><strong>ランタイムフィード環境</strong>設定は、現在インストールされている<a class="glossterm" data-glossterm="ランタイム"
+      href="#">ランタイムと</a>、現在使用中の<span class="notranslate">runtime</span> を表示および変更するために使用します。<span
+      data-keyref="GameMaker Name">GameMakerは</span>、一度に複数の異なる<span class="notranslate">runtime</span>
+    ツールをインストールすることができ、この環境設定から使用するツールを設定することができます。理想的には最新の<span class="notranslate">runtime</span>
+    を使いたいところですが、問題があったり、比較のために古いものを使わなければならない場合もあります。そのため、ここで<span data-keyref="GameMaker Name">GameMaker
+      が</span>ゲームを作るのに使う<span class="notranslate">runtime</span> ツールを変更することができます。</p>
+  <p>この設定の最初の部分は、<span class="notranslate">runtime</span> ツールをどこから取得するかに関連しており、<a class="glossterm" data-glossterm="RSS"
+      href="#">RSS</a>フィードの<a class="glossterm" data-glossterm="URL" href="#">URL</a>を入力する必要があります。このフィードは、<span
+      class="notranslate">runtime</span> ツールのアップデートをスキャンし、ダウンロードおよびインストールすることができます。このセクションにはデフォルトでMaster<span
+      class="notranslate">runtime</span> feedのURLが表示されますが、<em>Add </em>ボタンをクリックして新しい<span
+      class="notranslate">Runtime</span> Feedを作成し、RSSフィードの名前とURLを入力し、Applyをクリックして<span
+      data-keyref="GameMaker Name">GameMakerに</span>アクセスするように指示することが可能です。新しいフィードを表示させるためには、Preferencesウィンドウを一度閉じて再度開く必要があります。
+  </p>
+  <p><span class="notranslate">Runtime</span> フィードを作成すると、このセクションにサブカテゴリとして表示され、常に少なくとも 1 つのフィードが表示されます
+    (デフォルトでは、これが<em>マスター </em>フィードになります)。どのフィードを使用しても、<span class="notranslate">runtime</span>
+    の機能は同じです。以下、マスターフィードを例にとって説明します。</p>
+  <p><img> <span class="notranslate">Runtime</span> フィード環境設定は、さまざまな ツールの選択、インストール、アンインストールを行うために使用します。上部には、現在使用されている
+    ツール、作成日、ハードディスクに保存されている場所が表示されます。これらの詳細の下には、利用可能なすべての のリストがあり、このリストから任意の 1 つを選択して、プロジェクトのコンパイルに使用する「実行中の」
+    に変更することができます。<span class="notranslate">runtime</span> <span class="notranslate">runtime</span> <span
+      class="notranslate">runtimes</span> <span class="notranslate">runtime</span> </p>
+  <p>使用する別の<span class="notranslate">runtime</span> を選択するには、リストで見つけてから、<img> をダブルクリックするだけです。<span
+      class="notranslate">runtime</span> がダウンロード、インストールされていない場合は、インストールするよう促されます。インストールが完了したら、新しい<span
+      class="notranslate">IDE</span> を初期化できるように<span class="notranslate">runtime</span> を終了し、再起動するよう求められます。</p>
+  <p>このリストには、利用可能なすべての<span class="notranslate">runtimes</span> 、そのバージョン番号、リリースされた日付、そして（インストールされている場合は）インストール先の<span
+      class="notranslate">path</span> の詳細が記載されています。右側には、以下のようなステータスアイコンも表示されます。</p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img alt="The Runtime Feeds Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Runtime_Prefs.png" /></td>
+        <td class="icons"><img alt="The Runtime Feeds Preferences" class="center"
+            src="../../assets/Images/Setup_And_Version/Preferences/Runtime_Prefs.png" /></td>
         <td class="text">これは、プロジェクトを構築する際に使用するために選択されている現在の<span class="notranslate">runtime</span> をマークします。</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="The Runtime Feed Master Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Runtime_Master_Prefs.png" /></td>
-        <td class="text">これをクリックすると、選択した<span class="notranslate">runtime</span> のダウンロードとインストールが開始されます (<a class="glossterm" data-glossterm="アイディーイー" href="#">IDE</a> の右上にステータスバーが表示されます)。</td>
+        <td class="icons"><img alt="The Runtime Feed Master Preferences" class="center"
+            src="../../assets/Images/Setup_And_Version/Preferences/Runtime_Master_Prefs.png" /></td>
+        <td class="text">これをクリックすると、選択した<span class="notranslate">runtime</span> のダウンロードとインストールが開始されます (<a
+            class="glossterm" data-glossterm="アイディーイー" href="#">IDE</a> の右上にステータスバーが表示されます)。</td>
       </tr>
       <tr>
         <td class="icons"><img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /></td>
@@ -37,18 +61,20 @@
       </tr>
     </tbody>
   </table>
-  <p><span class="notranslate">runtime</span> <img> また、「Clean<span class="notranslate">runtimes</span> Now」ボタンをクリックすると、古い<span class="notranslate">Runtimes</span> のハードドライブを掃除することができます。</p>
+  <p><span class="notranslate">runtime</span> <img> また、「Clean<span class="notranslate">runtimes</span>
+    Now」ボタンをクリックすると、古い<span class="notranslate">Runtimes</span> のハードドライブを掃除することができます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
-        <div style="float:right">次へ<a href="Redefine_Keys_Preferences.htm">キーの環境設定の再定義</a></div>
+        <div style="float:left">前のページ：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
+        <div style="float:right">次のページ：<a href="Redefine_Keys_Preferences.htm">キーの環境設定の再定義</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - <span class="notranslate">Runtime</span> Feeds
@@ -57,4 +83,5 @@ Preferences - <span class="notranslate">Runtime</span> Feeds
 prefs_runtimes
 -->
 </body>
+
 </html>

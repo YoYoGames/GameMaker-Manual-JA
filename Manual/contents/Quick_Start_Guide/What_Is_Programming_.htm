@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>プログラミングとは？</title>
@@ -8,52 +9,98 @@
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
   <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="A brief description of what makes a program, generally and specifically using GameMaker." />
+  <meta name="topic-comment"
+    content="A brief description of what makes a program, generally and specifically using GameMaker." />
   <meta name="rh-index-keywords" content="Quick Start - What Is Programming?" />
   <meta name="search-keywords" content="programming" />
   <meta name="robots" content="NOODP" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>プログラミングとは？</h1>
-  <p><a href="Quick_Start_Guide.htm">前項では</a>、<span data-keyref="GameMaker Name">GameMakerが</span>どのような仕組みでゲームを作るかを説明しましたが、<span class="notranslate">sprites</span>,<span class="notranslate">objects</span>,<span class="notranslate">rooms</span> を追加しても、それを<strong>プログラム </strong>しなければ何も起こりません。しかし、プログラムとは何でしょうか？</p>
-  <p>一般に、プログラムとは、単純に命令（または <strong> <a class="glossterm" data-glossterm="声明" href="#">ステートメント</a></strong><span class="glossextra">を</span>与えることで、コンピュータに特定のタスクを実行させることができます。これらのタスクは、単に画面に何かを描くようにコンピュータに指示するものから、ユーザーの入力に基づいて値を計算し、それに反応するものまで、実にさまざまですが、いずれの場合も、何らかの結果をもたらす論理構造になっています。前のページでは、<span class="notranslate">object</span> のインスタンスを右に2ピクセル移動させるという話をしましたが、実際にそれを行うプログラムを見てみましょう。</p>
+  <p><a href="Quick_Start_Guide.htm">前項では</a>、<span
+      data-keyref="GameMaker Name">GameMakerが</span>どのような仕組みでゲームを作るかを説明しましたが、<span
+      class="notranslate">sprites</span>,<span class="notranslate">objects</span>,<span class="notranslate">rooms</span>
+    を追加しても、それを<strong>プログラム </strong>しなければ何も起こりません。しかし、プログラムとは何でしょうか？</p>
+  <p>一般に、プログラムとは、単純に命令（または <strong> <a class="glossterm" data-glossterm="声明" href="#">ステートメント</a></strong><span
+      class="glossextra">を</span>与えることで、コンピュータに特定のタスクを実行させることができます。これらのタスクは、単に画面に何かを描くようにコンピュータに指示するものから、ユーザーの入力に基づいて値を計算し、それに反応するものまで、実にさまざまですが、いずれの場合も、何らかの結果をもたらす論理構造になっています。前のページでは、<span
+      class="notranslate">object</span> のインスタンスを右に2ピクセル移動させるという話をしましたが、実際にそれを行うプログラムを見てみましょう。</p>
   <p><span data-keyref="GML_Visual">GML Visualでは</span>次のようになります。</p>
   <p><img alt="GML VisualExample" class="center" src="../assets/Images/QS_Guide/QS_DnD_Example.png" /></p>
   <p>そして、<span data-keyref="GML_Code">GML Codeを</span>使うと、次のようになります。</p>
   <p class="code">x = x + 2;</p>
-  <p>上記の内容を理解するためには、まず<strong>変数について</strong>説明し、次に<strong>関数について </strong>、最後に<strong>条件式について </strong>説明する必要があります。この3つが、一般的にプログラムの大部分を構成しているからです。</p>
+  <p>上記の内容を理解するためには、まず<strong>変数について</strong>説明し、次に<strong>関数について </strong>、最後に<strong>条件式について
+    </strong>説明する必要があります。この3つが、一般的にプログラムの大部分を構成しているからです。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="What_Is_Programming_.htm#">変数</a></p>
   <div class="droptext" data-targetname="drop_down">
-    <p class="dropspot">変数とは、<strong>関数 </strong>（これから簡単に説明します）と共に、プログラミングの要となるものです。変数とは、単に<em>名前のついた</em>値のことで、上の例では、&quot;<span class="inline">x</span>&quot;という変数が使われています。さて、&quot;<span class="inline">x</span>&quot; は -126 とか 583 とか 1.56378 とか、どんな値でも構いませんが、&quot;<span class="inline">x</span>&quot; の実際の値は変わり得るので関係ありません（だから「変数」という名前なのです）。重要なのは、&quot;<span class="inline">x</span>&quot;に2を足すということです。この場合、&quot;<span class="inline">x</span>&quot;は<strong>組み込み変数</strong>であることに注目しましょう。つまり、<span data-keyref="GameMaker Name">GameMakerが</span>すべての<span class="notranslate">objects</span> に対して作成する変数ですが、自分で変数を作成することも可能です。</p>
-    <p class="dropspot">変数を作成するには、それを使用する前に<strong>宣言 </strong>する必要があります。変数の宣言は、<span data-keyref="GameMaker Name">GameMakerに</span>この新しい変数が存在し、初期値を持っていることを伝えるものです。変数を宣言するには、次のようにします。</p>
-    <p class="dropspot"><img alt="Declare GML VisualVariables" class="center" src="../assets/Images/QS_Guide/QS_DnD_Declare.png" /></p>
+    <p class="dropspot">変数とは、<strong>関数
+      </strong>（これから簡単に説明します）と共に、プログラミングの要となるものです。変数とは、単に<em>名前のついた</em>値のことで、上の例では、&quot;<span
+        class="inline">x</span>&quot;という変数が使われています。さて、&quot;<span class="inline">x</span>&quot; は -126 とか 583 とか 1.56378
+      とか、どんな値でも構いませんが、&quot;<span class="inline">x</span>&quot; の実際の値は変わり得るので関係ありません（だから「変数」という名前なのです）。重要なのは、&quot;<span
+        class="inline">x</span>&quot;に2を足すということです。この場合、&quot;<span
+        class="inline">x</span>&quot;は<strong>組み込み変数</strong>であることに注目しましょう。つまり、<span
+        data-keyref="GameMaker Name">GameMakerが</span>すべての<span class="notranslate">objects</span>
+      に対して作成する変数ですが、自分で変数を作成することも可能です。</p>
+    <p class="dropspot">変数を作成するには、それを使用する前に<strong>宣言 </strong>する必要があります。変数の宣言は、<span
+        data-keyref="GameMaker Name">GameMakerに</span>この新しい変数が存在し、初期値を持っていることを伝えるものです。変数を宣言するには、次のようにします。</p>
+    <p class="dropspot"><img alt="Declare GML VisualVariables" class="center"
+        src="../assets/Images/QS_Guide/QS_DnD_Declare.png" /></p>
     <p class="dropspot">または</p>
     <p class="code">points = 0;</p>
-    <p class="dropspot">一度宣言された変数は、その後のプログラムコードやアクションで使用することができます。変数の素晴らしいところは、実際に値が何であるかを気にすることなく、複数の場所で値を「再利用」できることです。例えば、「<span class="inline">damage</span> 」という変数があり、これをいろいろな場所で使って、<span data-keyref="GameMaker Name">ゲーム</span>中の他の<span class="notranslate">objects</span> にある量のダメージを与えるように<span data-keyref="GameMaker Name">GameMaker</span>に指示するとします。<span class="inline">damage</span>&quot; を 20 と宣言しても、後でこの値は大きすぎると判断し、10 に変更したいとします。もし変数ではなく20という値を使った場合、すべてのコードやアクションを調べて20を10に変更する必要がありますが、これは時間がかかり、エラーになりやすいものです。しかし、変数を使えば、宣言したときに<em>一度だけ </em>10に変更すれば、残りのコードやアクションはこの新しい値を使うことになります。</p>
-    <p class="dropspot">注目すべきは、変数には多くの種類があり、それぞれ微妙に使い方が異なることです。ここでは取り上げませんが、マニュアルの「<a href="../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">GameMaker言語概要</a>」の項目から詳細を確認することができます。</p>
+    <p class="dropspot">
+      一度宣言された変数は、その後のプログラムコードやアクションで使用することができます。変数の素晴らしいところは、実際に値が何であるかを気にすることなく、複数の場所で値を「再利用」できることです。例えば、「<span
+        class="inline">damage</span> 」という変数があり、これをいろいろな場所で使って、<span data-keyref="GameMaker Name">ゲーム</span>中の他の<span
+        class="notranslate">objects</span> にある量のダメージを与えるように<span
+        data-keyref="GameMaker Name">GameMaker</span>に指示するとします。<span class="inline">damage</span>&quot; を 20
+      と宣言しても、後でこの値は大きすぎると判断し、10
+      に変更したいとします。もし変数ではなく20という値を使った場合、すべてのコードやアクションを調べて20を10に変更する必要がありますが、これは時間がかかり、エラーになりやすいものです。しかし、変数を使えば、宣言したときに<em>一度だけ
+      </em>10に変更すれば、残りのコードやアクションはこの新しい値を使うことになります。</p>
+    <p class="dropspot">注目すべきは、変数には多くの種類があり、それぞれ微妙に使い方が異なることです。ここでは取り上げませんが、マニュアルの「<a
+        href="../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">GameMaker言語概要</a>」の項目から詳細を確認することができます。
+    </p>
     <p class="dropspot">しかし、変数は物語の最初の部分に過ぎません。次の部分は、Functionsの使い方です...</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="What_Is_Programming_.htm#">機能</a></p>
   <div class="droptext" data-targetname="drop_down1">
-    <p class="dropspot">プログラミングで次に重要なのは、変数と一緒に<strong>関数を </strong>使うことです。関数とは、コンピュータに何かをさせる命令で、入力値と出力値を持つことができます（つまり、ある値を与えると、何らかの処理を行い、別の値を返す）。ただし、すべての関数が入力と出力を必要とするわけではありません。このことをよりよく理解するために、<span data-keyref="GameMaker Name">GameMakerの</span>組み込み関数を見てみましょう。</p>
-    <p class="dropspot">今回取り上げる関数は <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>これは<span class="notranslate">GML</span> Visual では、<a href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Get_Instance_Count.htm">Get Instance Count</a>アクションです。この関数/アクションは、ゲーム内の指定された<span class="notranslate">object</span> のインスタンス数を取得します<span class="notranslate">room</span> 、このように使用することになります。</p>
-    <p class="dropspot"><img alt="Get Instance Count GML VisualAction" class="center" src="../assets/Images/QS_Guide/QS_DnD_GetInstanceCount.png" /></p>
+    <p class="dropspot">プログラミングで次に重要なのは、変数と一緒に<strong>関数を
+      </strong>使うことです。関数とは、コンピュータに何かをさせる命令で、入力値と出力値を持つことができます（つまり、ある値を与えると、何らかの処理を行い、別の値を返す）。ただし、すべての関数が入力と出力を必要とするわけではありません。このことをよりよく理解するために、<span
+        data-keyref="GameMaker Name">GameMakerの</span>組み込み関数を見てみましょう。</p>
+    <p class="dropspot">今回取り上げる関数は <a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span
+          class="inline">instance_number()</span></a>これは<span class="notranslate">GML</span> Visual では、<a
+        href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Get_Instance_Count.htm">Get Instance
+        Count</a>アクションです。この関数/アクションは、ゲーム内の指定された<span class="notranslate">object</span> のインスタンス数を取得します<span
+        class="notranslate">room</span> 、このように使用することになります。</p>
+    <p class="dropspot"><img alt="Get Instance Count GML VisualAction" class="center"
+        src="../assets/Images/QS_Guide/QS_DnD_GetInstanceCount.png" /></p>
     <p class="dropspot">または</p>
     <p class="code">number = instance_number(obj_Enemy);</p>
-    <p class="dropspot">上記のいずれの例でも、関数は入力値として<span class="notranslate">object</span> ID を受け取り（the <strong> <a class="glossterm" data-glossterm="議論" href="#">引数</a></strong>これは、関数/アクションが呼び出されたときに、<span class="notranslate">object</span> に存在する指定された<span class="notranslate">room</span> のインスタンスの数です。返り値を格納するために、変数 &quot;<span class="inline">number</span>&quot; を使用していることに注意してください。この変数は、このコードが実行される前に宣言することもできますし、コードが実行され、関数/アクションからの戻り値が代入されたときに宣言されたものとみなされます。</p>
-    <p class="dropspot">特筆すべきは、内蔵されている<span class="notranslate">GameMaker Language</span> や<span class="notranslate">GML</span> Visual のアクションを使用するだけでなく、実際に独自の関数を構築して、プログラミング時に可能なことを拡張できることです（これについては、<span class="notranslate">GML</span> と<span class="notranslate">GML</span> Visual<a href="../Drag_And_Drop/Drag_And_Drop_Overview/Action_Block_Functions.htm">で</a>詳しく説明されています）。</p>
+    <p class="dropspot">上記のいずれの例でも、関数は入力値として<span class="notranslate">object</span> ID を受け取り（the <strong> <a
+          class="glossterm" data-glossterm="議論" href="#">引数</a></strong>これは、関数/アクションが呼び出されたときに、<span
+        class="notranslate">object</span> に存在する指定された<span class="notranslate">room</span> のインスタンスの数です。返り値を格納するために、変数
+      &quot;<span class="inline">number</span>&quot;
+      を使用していることに注意してください。この変数は、このコードが実行される前に宣言することもできますし、コードが実行され、関数/アクションからの戻り値が代入されたときに宣言されたものとみなされます。</p>
+    <p class="dropspot">特筆すべきは、内蔵されている<span class="notranslate">GameMaker Language</span> や<span
+        class="notranslate">GML</span> Visual のアクションを使用するだけでなく、実際に独自の関数を構築して、プログラミング時に可能なことを拡張できることです（これについては、<span
+        class="notranslate">GML</span> と<span class="notranslate">GML</span> Visual<a
+        href="../Drag_And_Drop/Drag_And_Drop_Overview/Action_Block_Functions.htm">で</a>詳しく説明されています）。</p>
     <p class="dropspot">関数や変数を使えばいろいろなことができますが、プログラミングの最後の重要なピースである<strong>条件分岐が</strong>なければ、ほとんど意味がありません...。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="What_Is_Programming_.htm#">条件付き</a></p>
   <div class="droptext" data-targetname="drop_down2">
-    <p class="dropspot">プログラミングの大部分は質問することで成り立っています。これらの質問は一般に真か偽のどちらかに評価できる単純なもので、<strong>条件文と </strong>呼ばれます（また、 <span class="inline">true </span>と <span class="inline">false </span>の値を<strong>ブール </strong>値と呼びます）。最も一般的で広く使われている条件文は &quot;<span class="inline">if</span>&quot; という質問で、これは何かが <span class="inline">true </span>か <span class="inline">false </span>かを調べて、それに応じて行動するために使われます。簡単な例では、キャラクターの体力が0以下になったらゲームから外すというようなもので、平たく言えば次のように表現されます。</p>
+    <p class="dropspot">プログラミングの大部分は質問することで成り立っています。これらの質問は一般に真か偽のどちらかに評価できる単純なもので、<strong>条件文と </strong>呼ばれます（また、 <span
+        class="inline">true </span>と <span class="inline">false </span>の値を<strong>ブール
+      </strong>値と呼びます）。最も一般的で広く使われている条件文は &quot;<span class="inline">if</span>&quot; という質問で、これは何かが <span
+        class="inline">true </span>か <span class="inline">false
+      </span>かを調べて、それに応じて行動するために使われます。簡単な例では、キャラクターの体力が0以下になったらゲームから外すというようなもので、平たく言えば次のように表現されます。</p>
     <p class="code">if the character variable &quot;hp&quot; is less than or equal to zero, then destroy it.</p>
     <p class="dropspot">上記をコード化すると、次のようになります。</p>
-    <p class="dropspot"><img alt="GML VisualConditional" class="center" src="../assets/Images/QS_Guide/QS_DnD_Conditional.png" /></p>
+    <p class="dropspot"><img alt="GML VisualConditional" class="center"
+        src="../assets/Images/QS_Guide/QS_DnD_Conditional.png" /></p>
     <p class="dropspot">または</p>
     <p class="code">if (hp &lt;= 0)<br />
       {<br />
@@ -62,9 +109,23 @@
       <br />
       }
     </p>
-    <p class="dropspot">そこで、上記では「hp変数が0以下であれば」という質問をし、それがtrueと評価された場合に、関数を呼び出しています。 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_destroy.htm"><span class="inline">instance_destroy()</span></a>またはアクション<a href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Destroy_Object_Instance.htm">Destroy<span class="notranslate">Object</span> Instanceを</a>実行します。<span class="inline">then</span>&quot; (if something... then something...) は<em>暗黙の了解 </em>なので、追加する必要はありません。また、<span class="notranslate">GML</span> のコードでは、&quot; <span class="inline">if</span>&quot; が <span class="inline">true </span> に評価されたときに実行させたいコードを中括弧 <span class="inline">{} </span>で「ブロックオフ」しています (<span class="notranslate">GML</span> Visual では &quot;<span class="inline">If</span>&quot; アクションの<em>右側で </em>これを象徴的に表しています)。中括弧の間に追加されたものは、&quot; <span class="inline">if</span>&quot; が <span class="inline">true</span> と評価された場合にのみ実行されるので、1つの「ブロック」の中で複数のステートメントを実行させることができます。</p>
-    <p class="dropspot">もうひとつ、「<span class="inline">if</span> 」という条件文に「<span class="inline">else</span> 」という文も追加できるので、「もし何かが <span class="inline">true </span>と評価されたら何かをし、<em>さもなければ </em>別の何かをする」という条件にもなります。このようにして、 <span class="inline">true </span> <em>または </em> <span class="inline">false</span> を返す条件式を扱うことができます。その例も挙げておこう。</p>
-    <p class="dropspot"><img alt="GML VisualIf... Else.. Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_IfElse.png" /></p>
+    <p class="dropspot">そこで、上記では「hp変数が0以下であれば」という質問をし、それがtrueと評価された場合に、関数を呼び出しています。 <a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_destroy.htm"><span
+          class="inline">instance_destroy()</span></a>またはアクション<a
+        href="../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Destroy_Object_Instance.htm">Destroy<span
+          class="notranslate">Object</span> Instanceを</a>実行します。<span class="inline">then</span>&quot; (if something...
+      then something...) は<em>暗黙の了解 </em>なので、追加する必要はありません。また、<span class="notranslate">GML</span> のコードでは、&quot; <span
+        class="inline">if</span>&quot; が <span class="inline">true </span> に評価されたときに実行させたいコードを中括弧 <span
+        class="inline">{} </span>で「ブロックオフ」しています (<span class="notranslate">GML</span> Visual では &quot;<span
+        class="inline">If</span>&quot; アクションの<em>右側で </em>これを象徴的に表しています)。中括弧の間に追加されたものは、&quot; <span
+        class="inline">if</span>&quot; が <span class="inline">true</span>
+      と評価された場合にのみ実行されるので、1つの「ブロック」の中で複数のステートメントを実行させることができます。</p>
+    <p class="dropspot">もうひとつ、「<span class="inline">if</span> 」という条件文に「<span class="inline">else</span>
+      」という文も追加できるので、「もし何かが <span class="inline">true </span>と評価されたら何かをし、<em>さもなければ </em>別の何かをする」という条件にもなります。このようにして、
+      <span class="inline">true </span> <em>または </em> <span class="inline">false</span> を返す条件式を扱うことができます。その例も挙げておこう。
+    </p>
+    <p class="dropspot"><img alt="GML VisualIf... Else.. Example" class="center"
+        src="../assets/Images/QS_Guide/QS_DnD_IfElse.png" /></p>
     <p class="dropspot">または</p>
     <p class="code">if (countdown &lt;= 0)<br />
       {<br />
@@ -84,7 +145,8 @@
     <p class="dropspot">上記のコードを平たく訳すと、次のようになる。</p>
     <p class="code">if the countdown variable is less than or equal to zero then:<br />
       <br />
-          create an instance of the object &quot;obj_Bullet&quot; at the current x/y position on the layer &quot;instances&quot;,<br />
+          create an instance of the object &quot;obj_Bullet&quot; at the current x/y position on the layer
+      &quot;instances&quot;,<br />
       <br />
           reset the countdown variable to 30.<br />
       <br />
@@ -92,10 +154,18 @@
       <br />
           subtract one from the countdown variable.
     </p>
-    <p class="dropspot">上記のコードの実際のインスタンス生成部分については、次のセクションで詳しく説明しますので、あまり気にしないでください。ここで理解すべき重要なことは、何かが <span class="inline">true </span>か <span class="inline">false </span>かをチェックする条件式を作成し、プログラムに様々な反応をさせることができる、ということです。これは非常に単純なことのように見えますが、実は非常に強力で、<span data-keyref="GameMaker Name">GameMakerで</span>プログラミングする際のほとんどすべての基礎を形成することになります。</p>
+    <p class="dropspot">上記のコードの実際のインスタンス生成部分については、次のセクションで詳しく説明しますので、あまり気にしないでください。ここで理解すべき重要なことは、何かが <span
+        class="inline">true </span>か <span class="inline">false
+      </span>かをチェックする条件式を作成し、プログラムに様々な反応をさせることができる、ということです。これは非常に単純なことのように見えますが、実は非常に強力で、<span
+        data-keyref="GameMaker Name">GameMakerで</span>プログラミングする際のほとんどすべての基礎を形成することになります。</p>
   </div>
   <p> </p>
-  <p>つまり、「プログラミングとは何か」という問いに答えるには、<strong>プログラミングとは </strong> <strong>文の </strong>組み合わせを使うことだと言えるでしょう。 <strong> <a class="glossterm" data-glossterm="変数" href="#">変数</a></strong><span class="glossextra">s</span><strong> </strong>を形成する。 <strong> <a class="glossterm" data-glossterm="顔" href="#">式</a></strong>タスクを実行する<strong>関数 </strong>、そして <strong><a class="glossterm" data-glossterm="ただし" href="#">条件付き</a></strong><span class="glossextra">を</span>質問する文があり、それらを同時に実行して目的を達成します。以下では、<span class="notranslate">GML</span> Visual と<span class="notranslate">GML</span> で、少し複雑なプログラムを見ることができます。このプログラムが何をするか分かりますか？</p>
+  <p>つまり、「プログラミングとは何か」という問いに答えるには、<strong>プログラミングとは </strong> <strong>文の </strong>組み合わせを使うことだと言えるでしょう。 <strong> <a
+        class="glossterm" data-glossterm="変数" href="#">変数</a></strong><span class="glossextra">s</span><strong>
+    </strong>を形成する。 <strong> <a class="glossterm" data-glossterm="顔" href="#">式</a></strong>タスクを実行する<strong>関数
+    </strong>、そして <strong><a class="glossterm" data-glossterm="ただし" href="#">条件付き</a></strong><span
+      class="glossextra">を</span>質問する文があり、それらを同時に実行して目的を達成します。以下では、<span class="notranslate">GML</span> Visual と<span
+      class="notranslate">GML</span> で、少し複雑なプログラムを見ることができます。このプログラムが何をするか分かりますか？</p>
   <p><img alt="GML VisualFinal Code Example" class="center" src="../assets/Images/QS_Guide/QS_DnD_FinalCode.png" /></p>
   <p>または</p>
   <p class="code">if mouse_check_button_pressed(mb_left) == true<br />
@@ -120,23 +190,31 @@
     <br />
     }
   </p>
-  <p><a class="expandspot" data-rhwidget="ExpandSpot" data-target="expanding" href="What_Is_Programming_.htm#">ネタバレ</a><span class="expandtext" data-targetname="expanding">上記のコードでは、まずマウスのボタンが押されているかどうかをチェックします (マウスの<strong>左 </strong>ボタン。定数 &quot; <span class="inline">mb_left</span>&quot; で定義されています)。
-      それが押された場合、コードを実行しているインスタンスを現在のマウス位置 (組み込み変数 &quot; <span class="inline">mouse_x</span>&quot; と &quot; <span class="inline">mouse_y</span>&quot; で定義) に移動させ
+  <p><a class="expandspot" data-rhwidget="ExpandSpot" data-target="expanding"
+      href="What_Is_Programming_.htm#">ネタバレ</a><span class="expandtext"
+      data-targetname="expanding">上記のコードでは、まずマウスのボタンが押されているかどうかをチェックします (マウスの<strong>左 </strong>ボタン。定数 &quot; <span
+        class="inline">mb_left</span>&quot; で定義されています)。
+      それが押された場合、コードを実行しているインスタンスを現在のマウス位置 (組み込み変数 &quot; <span class="inline">mouse_x</span>&quot; と &quot; <span
+        class="inline">mouse_y</span>&quot; で定義) に移動させ
       また、インスタンスのブレンドカラーを<strong>赤に</strong>設定します。マウスボタンが押されていない場合は、マウスボタンが<strong>離さ</strong>れたかどうかをチェックし、離された場合はインスタンスのブレンドカラーを白にリセットします（注：このとき、インスタンスのブレンドカラーは白になります。
-      ここでも、組み込み<strong>定数 </strong>&quot; <span class="inline">c_red</span>&quot; と &quot; <span class="inline">c_white</span>&quot; を使って、簡単に色を定義しています）。</span></p>
+      ここでも、組み込み<strong>定数 </strong>&quot; <span class="inline">c_red</span>&quot; と &quot; <span
+        class="inline">c_white</span>&quot; を使って、簡単に色を定義しています）。</span></p>
   <p> </p>
-  <p>それでは、<span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="アイディーイー" href="#">IDE</a>を使って、<em>スプライトや </em> <em>オブジェクトなどの </em> <span class="notranslate">assets</span> や、ゲームに必要な重要なリソースをどのように追加するかを見ていきましょう。</p>
+  <p>それでは、<span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="アイディーイー"
+      href="#">IDE</a>を使って、<em>スプライトや </em> <em>オブジェクトなどの </em> <span class="notranslate">assets</span>
+    や、ゲームに必要な重要なリソースをどのように追加するかを見ていきましょう。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../Content.htm">インデックス</a></div>
-        <div style="float:right">次へ<a href="Creating_Sprites.htm">スプライトの作成</a></div>
+        <div style="float:left">前のページ：<a href="../Content.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="Creating_Sprites.htm">スプライトの作成</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 What is Programming?
@@ -146,4 +224,5 @@ Quick Start: Programming
 qs_programming
 -->
 </body>
+
 </html>

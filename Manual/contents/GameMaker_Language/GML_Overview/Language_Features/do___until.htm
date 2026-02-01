@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>する／するまで</title>
@@ -12,10 +13,14 @@
   <meta name="rh-index-keywords" content="do,until" />
   <meta name="search-keywords" content="do,until" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>する／するまで</h1>
-  <p> <span class="inline">do</span> 関数は、1つまたは複数の<span class="glossextra">ステートメントを</span>複数回反復する別の方法であり、実際には「<span class="inline">do... until</span> 」ステートメントです。特定の<a class="glossterm" data-glossterm="顔" href="#">式が</a> <span class="inline">true</span> を返すまで何かをするよう<span data-keyref="GameMaker Name">GameMaker に</span>指示しているので、一方がなければもう一方は存在しません。このような形になっています。</p>
+  <p> <span class="inline">do</span> 関数は、1つまたは複数の<span class="glossextra">ステートメントを</span>複数回反復する別の方法であり、実際には「<span
+      class="inline">do... until</span> 」ステートメントです。特定の<a class="glossterm" data-glossterm="顔" href="#">式が</a> <span
+      class="inline">true</span> を返すまで何かをするよう<span data-keyref="GameMaker Name">GameMaker
+      に</span>指示しているので、一方がなければもう一方は存在しません。このような形になっています。</p>
   <p class="code">do<br />
     {<br />
         &lt;statement&gt;;<br />
@@ -23,16 +28,25 @@
         ...<br />
     }<br />
     until (&lt;expression&gt;);</p>
-  <p>文（中括弧内の複数の文からなるコードブロックでもよい <span class="inline">{}</span> ）は、式が <span class="inline">true</span> と判明するまで実行され、最初の文は<strong>常に少なくとも一</strong>度は実行されます。以下に、 <span class="inline">do... until</span> の典型的な使用方法の例を示します。</p>
+  <p>文（中括弧内の複数の文からなるコードブロックでもよい <span class="inline">{}</span> ）は、式が <span class="inline">true</span>
+    と判明するまで実行され、最初の文は<strong>常に少なくとも一</strong>度は実行されます。以下に、 <span class="inline">do... until</span> の典型的な使用方法の例を示します。
+  </p>
   <p class="code">do<br />
     {<br />
         x = random(room_width);<br />
         y = random(room_height);<br />
     }<br />
     until (place_free(x, y));</p>
-  <p>上記のコードは、現在の<span class="notranslate">object</span> を自由な位置に配置しようとし、少なくとも一度は x/y 変数を設定し、 <span class="inline">place_free()</span> 式が <span class="inline">true</span> を返すまで必要なだけ<a class="glossterm" data-glossterm="くりかえし" href="#">繰り返し</a>実行するものである。</p>
-  <p><strong> <span class="inline">do</span> / <span class="inline">until</span> <span class="notranslate">loop</span> はどのような時に使うのでしょうか？</strong>1つ以上のステートメントを繰り返したいけれど、実際には何回繰り返さなければならないかわからない、<span class="notranslate">loop</span> が終了するまでに<em>少なくとも1回は</em>ステートメントが実行されることを確認したい、といった場合に使用する必要があります。</p>
-  <p>を使用することもできます。 <a href="break.htm"><span class="inline">break</span></a>と <a href="continue.htm"><span class="inline">continue</span></a>ステートメントを <span class="inline">do</span> <span class="notranslate">loops</span> 内で使用します。 <span class="inline">break</span> を使用すると、<span class="notranslate">loop</span> を直ちに終了し、<span class="notranslate">loop</span> が終了した後にイベントや関数内にあるコードに移動します。</p>
+  <p>上記のコードは、現在の<span class="notranslate">object</span> を自由な位置に配置しようとし、少なくとも一度は x/y 変数を設定し、 <span
+      class="inline">place_free()</span> 式が <span class="inline">true</span> を返すまで必要なだけ<a class="glossterm"
+      data-glossterm="くりかえし" href="#">繰り返し</a>実行するものである。</p>
+  <p><strong> <span class="inline">do</span> / <span class="inline">until</span> <span class="notranslate">loop</span>
+      はどのような時に使うのでしょうか？</strong>1つ以上のステートメントを繰り返したいけれど、実際には何回繰り返さなければならないかわからない、<span class="notranslate">loop</span>
+    が終了するまでに<em>少なくとも1回は</em>ステートメントが実行されることを確認したい、といった場合に使用する必要があります。</p>
+  <p>を使用することもできます。 <a href="break.htm"><span class="inline">break</span></a>と <a href="continue.htm"><span
+        class="inline">continue</span></a>ステートメントを <span class="inline">do</span> <span class="notranslate">loops</span>
+    内で使用します。 <span class="inline">break</span> を使用すると、<span class="notranslate">loop</span> を直ちに終了し、<span
+      class="notranslate">loop</span> が終了した後にイベントや関数内にあるコードに移動します。</p>
   <p class="code">var _id = noone;<br />
     do<br />
     {<br />
@@ -47,7 +61,13 @@
     <br />
     target = _id;
   </p>
-  <p>上記のコードでは、ローカル変数を作成し、キーワードを格納するように設定しています。 <a href="../Instance_Keywords.htm"><span class="notranslate">noone</span></a>.次に、 <span class="inline">do / until</span> <span class="notranslate">loop</span> DS リストの最初の位置が有効なインスタンス ID を保持しているかどうかをチェックし、保持している場合は <span class="inline">break</span> <span class="notranslate">loop</span> 、そうでない場合はリストの位置の値を削除する、という処理を行います。<span class="notranslate">loop</span> が終了すると ( <span class="inline">break</span> によって、またはリストが空になったために)、ローカル変数の値がインスタンス変数 <span class="inline">target</span> に代入されます。</p>
+  <p>上記のコードでは、ローカル変数を作成し、キーワードを格納するように設定しています。 <a href="../Instance_Keywords.htm"><span
+        class="notranslate">noone</span></a>.次に、 <span class="inline">do / until</span> <span
+      class="notranslate">loop</span> DS リストの最初の位置が有効なインスタンス ID を保持しているかどうかをチェックし、保持している場合は <span
+      class="inline">break</span> <span class="notranslate">loop</span> 、そうでない場合はリストの位置の値を削除する、という処理を行います。<span
+      class="notranslate">loop</span> が終了すると ( <span class="inline">break</span> によって、またはリストが空になったために)、ローカル変数の値がインスタンス変数
+    <span class="inline">target</span> に代入されます。
+  </p>
   <p> <span class="inline">do / until</span> <span class="notranslate">loop</span> でcontinueを使う例としては、次のようなものがあります。</p>
   <p class="code">do<br />
     {<br />
@@ -61,21 +81,31 @@
     <br />
         instance_create_layer(_x, _y, &quot;Instances&quot;, obj_Enemy);<br />
     }<br />
-    until (instance_count(obj_Enemy) &gt;= 10);</p>
-  <p>このコードはランダムな<span class="notranslate">room</span> の位置を生成し、その位置に<span class="notranslate">object</span> <span class="inline">obj_Enemy</span> のインスタンスが存在するかどうかをチェックします。もし存在すれば、現在の<span class="notranslate">loop</span> の反復は <span class="inline">continue</span> を使って終了され、新しい反復が開始されます。もし存在しなければ、<span class="notranslate">object</span> <span class="inline">obj_Enemy</span> のインスタンスがランダムな位置に生成されます。<span class="notranslate">loop</span> は<span class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span> の中に10個以上あるときのみ終了する。</p>
-  <p>最後の注意点として、 <span class="inline">do</span> <span class="notranslate">loops</span> の扱いに注意してください。簡単に<span class="notranslate">loop</span> を永遠に表示させることができます。その場合、ゲームはハングし、ユーザーの入力に反応しなくなり、ユーザーはゲームを強制終了しなければならなくなります。</p>
-  <p><span class="notranslate">loop</span> キーワードの詳細な例については、以下のセクションを参照してください。 <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>と <a href="for.htm"><span class="inline">for</span></a>.</p>
+    until (instance_count(obj_Enemy) &gt;= 10);
+  </p>
+  <p>このコードはランダムな<span class="notranslate">room</span> の位置を生成し、その位置に<span class="notranslate">object</span> <span
+      class="inline">obj_Enemy</span> のインスタンスが存在するかどうかをチェックします。もし存在すれば、現在の<span class="notranslate">loop</span> の反復は
+    <span class="inline">continue</span> を使って終了され、新しい反復が開始されます。もし存在しなければ、<span class="notranslate">object</span> <span
+      class="inline">obj_Enemy</span> のインスタンスがランダムな位置に生成されます。<span class="notranslate">loop</span> は<span
+      class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span> の中に10個以上あるときのみ終了する。
+  </p>
+  <p>最後の注意点として、 <span class="inline">do</span> <span class="notranslate">loops</span> の扱いに注意してください。簡単に<span
+      class="notranslate">loop</span> を永遠に表示させることができます。その場合、ゲームはハングし、ユーザーの入力に反応しなくなり、ユーザーはゲームを強制終了しなければならなくなります。</p>
+  <p><span class="notranslate">loop</span> キーワードの詳細な例については、以下のセクションを参照してください。 <a href="repeat.htm"><span
+        class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>と <a
+      href="for.htm"><span class="inline">for</span></a>.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
-        <div style="float:right">次のページ <a href="for.htm"><span class="notranslate">for</span></a></div>
+        <div style="float:left">前のページ：<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:right">次のページ：<a href="for.htm"><span class="notranslate">for</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 do
@@ -86,4 +116,5 @@ do
 until
 -->
 </body>
+
 </html>

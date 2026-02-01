@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>衝突</title>
@@ -12,11 +13,16 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="collision,collisions,collision functions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>衝突</h1>
-  <p>モーションを計画したり、ある行動を決定するとき、ゲームワールド内の特定の場所で他の<span class="notranslate">objects</span> と衝突するかどうかを確認することはしばしば重要であり、その仕事に適したコリジョンを選択することは最も重要な作業となります。<span data-keyref="GameMaker Name">GameMakerには</span>、プロジェクトのニーズに応じて正しくコリジョンを処理するための機能が多数組み込まれています。</p>
-  <p class="note"><span class="note"><b>注意事項</b></span>コリジョン関数は、以前のバージョンの<span class="notranslate">GameMaker</span> では整数値を使用していましたが、現在では浮動小数点値を使用します。つまり、コリジョン関数は整数値以外の引数を丸めなくなりました。詳しくは<a data-xref="{title}" href="Collision_Compatibility_Mode.htm">Collision Compatibility Mode</a> をご覧ください。</p>
+  <p>モーションを計画したり、ある行動を決定するとき、ゲームワールド内の特定の場所で他の<span class="notranslate">objects</span>
+    と衝突するかどうかを確認することはしばしば重要であり、その仕事に適したコリジョンを選択することは最も重要な作業となります。<span
+      data-keyref="GameMaker Name">GameMakerには</span>、プロジェクトのニーズに応じて正しくコリジョンを処理するための機能が多数組み込まれています。</p>
+  <p class="note"><span class="note"><b>注意事項</b></span>コリジョン関数は、以前のバージョンの<span class="notranslate">GameMaker</span>
+    では整数値を使用していましたが、現在では浮動小数点値を使用します。つまり、コリジョン関数は整数値以外の引数を丸めなくなりました。詳しくは<a data-xref="{title}"
+      href="Collision_Compatibility_Mode.htm">Collision Compatibility Mode</a> をご覧ください。</p>
   <h2><label for="one">簡易衝突判定</label></h2>
   <p>以下の関数は、インスタンスが他のインスタンスと衝突していないかどうかをチェックするためのさまざまな方法を扱っています。</p>
   <ul class="colour">
@@ -27,20 +33,39 @@
     <li><a href="position_meeting.htm"><span class="notranslate">position_meeting</span></a></li>
     <li><a href="position_change.htm"><span class="notranslate">position_change</span></a></li>
     <li><a href="position_destroy.htm"><span class="notranslate">position_destroy</span></a></li>
-    <li><a href="../../Asset_Management/Instances/instance_place.htm"><span class="notranslate">instance_place</span></a></li>
-    <li><a href="../../Asset_Management/Instances/instance_place_list.htm"><span class="notranslate">instance_place_list</span></a></li>
-    <li><a href="../../Asset_Management/Instances/instance_position.htm"><span class="notranslate">instance_position</span></a></li>
-    <li><a href="../../Asset_Management/Instances/instance_position_list.htm"><span class="notranslate">instance_position_list</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_place.htm"><span
+          class="notranslate">instance_place</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_place_list.htm"><span
+          class="notranslate">instance_place_list</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_position.htm"><span
+          class="notranslate">instance_position</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_position_list.htm"><span
+          class="notranslate">instance_position_list</span></a></li>
   </ul>
   <p> </p>
   <h2>アドバンスト・コリジョン・チェッキング</h2>
-  <p>これには、以下のルーチンを使用することができます（「<b>移動</b>」と「<b>インスタンス</b>」に関連するセクションで詳述されている他の関数と同様）。これらのコリジョン関数はすべて若干異なる動作をしますが、3つの共通の引数を保持しているので、ここで説明します。</p>
+  <p>
+    これには、以下のルーチンを使用することができます（「<b>移動</b>」と「<b>インスタンス</b>」に関連するセクションで詳述されている他の関数と同様）。これらのコリジョン関数はすべて若干異なる動作をしますが、3つの共通の引数を保持しているので、ここで説明します。
+  </p>
   <ul class="colour">
-    <li><b>obj</b>: ここで、関数が衝突をチェックする必要がある<span class="notranslate">object</span> を指定します。インスタンス ID、<span class="notranslate">object</span> タイプ、または GM の特別なキーワード<b>all</b> を指定できます。<span class="notranslate">object</span> のタイプが他の<span class="notranslate">objects</span> の指定された<b>親</b>である場合、その<span class="notranslate">object</span> のすべての<i>子も</i>このチェックに含まれることも知っておくとよいでしょう。<b></b></li>
-    <li><b>prec</b>:これは <span class="inline">true</span> または <span class="inline">false</span> で、コリジョンチェックの精度に関係するものです。 <span class="inline">true</span> に設定すると、正確な衝突が計算されます (ただし、チェック対象の<span class="notranslate">object</span> のマスク プロパティで、衝突検出に「正確」をマークしている場合のみ)。これは CPU にとって少し複雑なタスクなので、注意して使用する必要があります。 <span class="inline">false</span> の場合、衝突はチェック対象の<span class="notranslate">object</span> のバウンディングボックスに基づいて計算されます。<b></b></li>
-    <li><b>notme</b>:コードを実行している<span class="notranslate">object</span> と同じインデックスを持つ<span class="notranslate">object</span> との衝突をチェックする必要があるかもしれないので、コードが自分との衝突を見つけるのを防ぐために、これを <span class="inline">true</span> に設定します。コードを実行している<span class="notranslate">object</span> のインスタンスを特に探している場合、またはそれが重要でない場合は <span class="inline">false</span> のままにしておくことができます。</li>
+    <li><b>obj</b>: ここで、関数が衝突をチェックする必要がある<span class="notranslate">object</span> を指定します。インスタンス ID、<span
+        class="notranslate">object</span> タイプ、または GM の特別なキーワード<b>all</b> を指定できます。<span class="notranslate">object</span>
+      のタイプが他の<span class="notranslate">objects</span> の指定された<b>親</b>である場合、その<span class="notranslate">object</span>
+      のすべての<i>子も</i>このチェックに含まれることも知っておくとよいでしょう。<b></b></li>
+    <li><b>prec</b>:これは <span class="inline">true</span> または <span class="inline">false</span> で、コリジョンチェックの精度に関係するものです。
+      <span class="inline">true</span> に設定すると、正確な衝突が計算されます (ただし、チェック対象の<span class="notranslate">object</span> のマスク
+      プロパティで、衝突検出に「正確」をマークしている場合のみ)。これは CPU にとって少し複雑なタスクなので、注意して使用する必要があります。 <span class="inline">false</span>
+      の場合、衝突はチェック対象の<span class="notranslate">object</span> のバウンディングボックスに基づいて計算されます。<b></b>
+    </li>
+    <li><b>notme</b>:コードを実行している<span class="notranslate">object</span> と同じインデックスを持つ<span
+        class="notranslate">object</span> との衝突をチェックする必要があるかもしれないので、コードが自分との衝突を見つけるのを防ぐために、これを <span
+        class="inline">true</span> に設定します。コードを実行している<span class="notranslate">object</span>
+      のインスタンスを特に探している場合、またはそれが重要でない場合は <span class="inline">false</span> のままにしておくことができます。</li>
   </ul>
-  <p>基本関数は、衝突が見つかったインスタンスのIDを返すか、衝突がない場合は特別なキーワード<span class="inline">noone</span> 。<i>リスト</i>関数は、衝突しているインスタンスの数を返し、そのIDをあらかじめ作られたDSリストに入力します。これらの関数で定義された領域と与えられた<span class="notranslate">object</span> のインスタンスとの間に複数の衝突があった場合、<i>1つの</i>インスタンスIDのみが返され、それは<i>衝突しているインスタンスの</i>うちのどれでもよいことに注意されたい。</p>
+  <p>基本関数は、衝突が見つかったインスタンスのIDを返すか、衝突がない場合は特別なキーワード<span class="inline">noone</span>
+    。<i>リスト</i>関数は、衝突しているインスタンスの数を返し、そのIDをあらかじめ作られたDSリストに入力します。これらの関数で定義された領域と与えられた<span
+      class="notranslate">object</span>
+    のインスタンスとの間に複数の衝突があった場合、<i>1つの</i>インスタンスIDのみが返され、それは<i>衝突しているインスタンスの</i>うちのどれでもよいことに注意されたい。</p>
   <p>高度な衝突に対応する機能として、以下のものがあります。</p>
   <ul class="colour">
     <li><a href="collision_circle.htm"><span class="notranslate">collision_circle</span></a></li>
@@ -56,7 +81,9 @@
   </ul>
   <p> </p>
   <h2>マスクなしでのコリジョンチェック</h2>
-  <p>上記の機能はすべて<i>コリジョンチェックインスタンスに</i>関連しており、そのためインスタンスに定義されているコリジョンマスクに依存しています。しかし、インスタンスに<span class="notranslate">sprite</span> が割り当てられていない場合や、マウスで操作している場合など、ポイントやエリアとの「衝突」をチェックする必要がある場面は多々あります。そこで、<span data-keyref="GameMaker Name">GameMakerでは</span>、このような場合に役立つ以下のような機能も用意しています。</p>
+  <p>上記の機能はすべて<i>コリジョンチェックインスタンスに</i>関連しており、そのためインスタンスに定義されているコリジョンマスクに依存しています。しかし、インスタンスに<span
+      class="notranslate">sprite</span> が割り当てられていない場合や、マウスで操作している場合など、ポイントやエリアとの「衝突」をチェックする必要がある場面は多々あります。そこで、<span
+      data-keyref="GameMaker Name">GameMakerでは</span>、このような場合に役立つ以下のような機能も用意しています。</p>
   <ul class="colour">
     <li><a href="point_in_rectangle.htm"><span class="notranslate">point_in_rectangle</span></a></li>
     <li><a href="point_in_triangle.htm"><span class="notranslate">point_in_triangle</span></a></li>
@@ -67,7 +94,10 @@
   </ul>
   <p> </p>
   <h2>物理学衝突</h2>
-  <p>ビルトイン物理を使用する場合、物理対応インスタンスでは上記のコリジョン関数の動作は保証されません。これは主に、これらのインスタンスが通常のビルトイン変数の大部分を使用しなくなったこと（代わりに、物理対応インスタンスは<a href="../../Physics/Physics_Variables/Physics_Variables.htm">独自の変数セットを</a>持ちます）と、代わりに<a href="../../Physics/Fixtures/Fixtures.htm">フィクスチャを</a>使用するため、コリジョンマスクやバウンディングボックスを使用しないことが原因です。しかし、物理を有効にして衝突をテストするための特別な関数があり、フィクスチャが重なっているかどうかをチェックします。</p>
+  <p>ビルトイン物理を使用する場合、物理対応インスタンスでは上記のコリジョン関数の動作は保証されません。これは主に、これらのインスタンスが通常のビルトイン変数の大部分を使用しなくなったこと（代わりに、物理対応インスタンスは<a
+      href="../../Physics/Physics_Variables/Physics_Variables.htm">独自の変数セットを</a>持ちます）と、代わりに<a
+      href="../../Physics/Fixtures/Fixtures.htm">フィクスチャを</a>使用するため、コリジョンマスクやバウンディングボックスを使用しないことが原因です。しかし、物理を有効にして衝突をテストするための特別な関数があり、フィクスチャが重なっているかどうかをチェックします。
+  </p>
   <ul class="colour">
     <li><a href="../../Physics/physics_test_overlap.htm"><span class="notranslate">physics_test_overlap</span></a></li>
   </ul>
@@ -77,11 +107,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="../Movement_And_Collisions.htm">移動と衝突</a></div>
-        <div style="float:right">次へ<a href="../Movement/Movement.htm">ムーブメント</a></div>
+        <div style="float:left">前のページ：<a href="../Movement_And_Collisions.htm">移動と衝突</a></div>
+        <div style="float:right">次のページ：<a href="../Movement/Movement.htm">ムーブメント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Collision Functions
@@ -90,4 +121,5 @@ Collision Functions
 collision_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_set_alpha_from_sprite</title>
@@ -12,30 +13,42 @@
   <meta name="rh-index-keywords" content="sprite_set_alpha_from_sprite" />
   <meta name="search-keywords" content="sprite_set_alpha_from_sprite" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span></h1>
-  <p>この関数は、ある<span class="notranslate">sprite</span> の値/彩度を用いて、対象<span class="notranslate">sprite</span> のアルファ値と掛け合わせる。新しいアルファマップを生成するために使用する<span class="notranslate">sprite</span> は、白い部分のアルファ値が 1（不透明）、黒い部分のアルファ値が 0（透明）、灰色の部分のアルファ値が 0 と 1 の間である、グレースケールであることが理想的です。 アルファ値を設定する<span class="notranslate">sprite</span> は<i>永久リソースではありませんし</i>、アルファ値の設定に使用した<span class="notranslate">sprite</span> もエラーとなるため、永久リソースではあり得ません。つまり、この関数が正しく動作するためには、何らかの方法でまったく新しい2つの<span class="notranslate">sprites</span> を「その場で」作成する必要があります。これは、サーフェスを使用するか、スクリーンから<span class="notranslate">sprite</span> を作成することで実現できます（以下のコード例では、サーフェスを使用してどのように効果を得ることができるかを示しています）。</p>
-  <p class="note"><b>注</b>：この機能は<b>ビットマップ</b> <span class="notranslate">sprites</span> に対してのみ有効であり、SWF や JSON (<span class="notranslate">Spine</span>)<span class="notranslate">sprites</span> では動作しません。</p>
+  <p>この関数は、ある<span class="notranslate">sprite</span> の値/彩度を用いて、対象<span class="notranslate">sprite</span>
+    のアルファ値と掛け合わせる。新しいアルファマップを生成するために使用する<span class="notranslate">sprite</span> は、白い部分のアルファ値が 1（不透明）、黒い部分のアルファ値が
+    0（透明）、灰色の部分のアルファ値が 0 と 1 の間である、グレースケールであることが理想的です。 アルファ値を設定する<span class="notranslate">sprite</span>
+    は<i>永久リソースではありませんし</i>、アルファ値の設定に使用した<span class="notranslate">sprite</span>
+    もエラーとなるため、永久リソースではあり得ません。つまり、この関数が正しく動作するためには、何らかの方法でまったく新しい2つの<span class="notranslate">sprites</span>
+    を「その場で」作成する必要があります。これは、サーフェスを使用するか、スクリーンから<span class="notranslate">sprite</span>
+    を作成することで実現できます（以下のコード例では、サーフェスを使用してどのように効果を得ることができるかを示しています）。</p>
+  <p class="note"><b>注</b>：この機能は<b>ビットマップ</b> <span class="notranslate">sprites</span> に対してのみ有効であり、SWF や JSON (<span
+      class="notranslate">Spine</span>)<span class="notranslate">sprites</span> では動作しません。</p>
   <p>以下は、この機能がどのように働くかを説明する画像です。</p>
-  <p><img alt="Sprite Set Alpha Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png" /></p>
+  <p><img alt="Sprite Set Alpha Example" class="center"
+      src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png" /></p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span>(ind, spr);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Sprite"></span></td>
         <td><span class="notranslate">The index of the sprite to change the transparency map of.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">spr</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">spr</span></td>
+        <td><span data-keyref="Type_Asset_Sprite"></span></td>
         <td><span class="notranslate">The index of the sprite to take the transparency map data from.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -43,7 +56,9 @@
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>拡張された例。</h4>
-  <p>この拡張例では、2つの<span class="notranslate">sprite</span> リソースから特殊効果<span class="notranslate">sprite</span> を作成する方法を紹介します。まず始めに、インスタンスの<b>Create Eventに</b>コントローラ変数を用意する必要があります。この変数は、<span class="notranslate">sprite</span> が一度だけ作成されることを保証するためのものです。</p>
+  <p>この拡張例では、2つの<span class="notranslate">sprite</span> リソースから特殊効果<span class="notranslate">sprite</span>
+    を作成する方法を紹介します。まず始めに、インスタンスの<b>Create Eventに</b>コントローラ変数を用意する必要があります。この変数は、<span class="notranslate">sprite</span>
+    が一度だけ作成されることを保証するためのものです。</p>
   <p class="code">spr_create = true;</p>
   <p>これが完了したら、次に<b>描画</b>イベントに移動して、次のコードを追加します。</p>
   <p class="code">if spr_create<br />
@@ -69,8 +84,16 @@
     <br />
     draw_sprite(sprite_index, 0, x, y);
   </p>
-  <p>上記のコードでは、まずコントロール変数が true かどうかを確認し、true ならば<span class="notranslate">sprite</span> のアルファ値を設定するコードを実行し、コードが複数回実行されないように変数を false に設定しています。この場合、使用したいアルファ マスクのサイズのサーフェスを作成し、アルファを変更する<span class="notranslate">sprite</span> をサーフェスに描画して、そこから新しい<span class="notranslate">sprite</span> を作成し、それを<span class="notranslate">object</span> の <span class="inline">sprite_index</span> として割り当てます。次にコードはサーフェスをクリアして、そこにアルファ マップ<span class="notranslate">sprite</span> を描き、別の新しい<span class="notranslate">sprite</span> を作成してそのインデックスをローカル変数に格納します。最後に、<span class="notranslate">sprite</span> に割り当てられた新しい<span class="notranslate">object</span> は、この一時的な<span class="notranslate">sprite</span> からそのアルファセットを取得し、サーフェイスが解放され、一時的な<span class="notranslate">sprite</span> が削除されます。</p>
-  <p>それは、<span class="notranslate">sprite</span> のために作成された<span class="notranslate">object</span> を、使用していないときはメモリから削除することです。これは、<b>Destroyイベントか</b> <b>Room End</b>イベントで、次のように行います。</p>
+  <p>上記のコードでは、まずコントロール変数が true かどうかを確認し、true ならば<span class="notranslate">sprite</span>
+    のアルファ値を設定するコードを実行し、コードが複数回実行されないように変数を false に設定しています。この場合、使用したいアルファ マスクのサイズのサーフェスを作成し、アルファを変更する<span
+      class="notranslate">sprite</span> をサーフェスに描画して、そこから新しい<span class="notranslate">sprite</span> を作成し、それを<span
+      class="notranslate">object</span> の <span class="inline">sprite_index</span> として割り当てます。次にコードはサーフェスをクリアして、そこにアルファ
+    マップ<span class="notranslate">sprite</span> を描き、別の新しい<span class="notranslate">sprite</span>
+    を作成してそのインデックスをローカル変数に格納します。最後に、<span class="notranslate">sprite</span> に割り当てられた新しい<span
+      class="notranslate">object</span> は、この一時的な<span class="notranslate">sprite</span>
+    からそのアルファセットを取得し、サーフェイスが解放され、一時的な<span class="notranslate">sprite</span> が削除されます。</p>
+  <p>それは、<span class="notranslate">sprite</span> のために作成された<span class="notranslate">object</span>
+    を、使用していないときはメモリから削除することです。これは、<b>Destroyイベントか</b> <b>Room End</b>イベントで、次のように行います。</p>
   <p class="code">sprite_delete(sprite_index);</p>
   <p> </p>
   <p> </p>
@@ -78,11 +101,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
-        <div style="float:right">次のページ <a href="sprite_set_cache_size.htm"><span class="notranslate">sprite_set_cache_size</span></a></div>
+        <div style="float:left">前のページ：<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次のページ：<a href="sprite_set_cache_size.htm"><span
+              class="notranslate">sprite_set_cache_size</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_alpha_from_sprite
@@ -91,4 +116,5 @@ sprite_set_alpha_from_sprite
 sprite_set_alpha_from_sprite
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_play_sound</title>
@@ -12,62 +13,81 @@
   <meta name="rh-index-keywords" content="audio_play_sound" />
   <meta name="search-keywords" content="audio_play_sound" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_play_sound</span></h1>
-  <p>この機能を使えば、ゲーム内のあらゆるサウンドリソースを再生することができま す。サウンドインデックスを提供し、プライオリティを割り当てます。このプライオ リティは、再生中のサウンドの数が関数で設定された上限を超えた時に、どのようにサウン ドを処理するかを決定するのに使われます。 <a href="audio_channel_num.htm"><span class="inline">audio_channel_num()</span></a>.優先度の低いサウンドは停止され、優先度の高いサウンドが優先されます。優先度の値は任意の実数です（実際の値は任意で、0から1でも0から100でも、<span data-keyref="GameMaker Name">GameMakerは</span>同じように優先順位を付けます）。優先順位を扱う場合、<i>数字が</i>大きいほど優先順位が<i>高く</i>なり、優先順位100のサウンドが優先順位1のサウンドよりも優先されることに注意してください。第3引数は、サウンドを<span class="notranslate">loop</span> 。これを <span class="inline">true</span> に設定すると、停止するまでサウンドを<span class="notranslate">loop</span> 。これを <span class="inline">false</span> に設定すると、サウンドを1回だけ再生します。</p>
+  <p>この機能を使えば、ゲーム内のあらゆるサウンドリソースを再生することができま す。サウンドインデックスを提供し、プライオリティを割り当てます。このプライオ
+    リティは、再生中のサウンドの数が関数で設定された上限を超えた時に、どのようにサウン ドを処理するかを決定するのに使われます。 <a href="audio_channel_num.htm"><span
+        class="inline">audio_channel_num()</span></a>.優先度の低いサウンドは停止され、優先度の高いサウンドが優先されます。優先度の値は任意の実数です（実際の値は任意で、0から1でも0から100でも、<span
+      data-keyref="GameMaker Name">GameMakerは</span>同じように優先順位を付けます）。優先順位を扱う場合、<i>数字が</i>大きいほど優先順位が<i>高く</i>なり、優先順位100のサウンドが優先順位1のサウンドよりも優先されることに注意してください。第3引数は、サウンドを<span
+      class="notranslate">loop</span> 。これを <span class="inline">true</span> に設定すると、停止するまでサウンドを<span
+      class="notranslate">loop</span> 。これを <span class="inline">false</span> に設定すると、サウンドを1回だけ再生します。</p>
   <div data-conref="../../../../assets/snippets/audio_play_sound_last_arguments.hts"> </div>
-  <p>この関数は、再生中のサウンドのユニークなインデックス番号を返し、それを変数に格納することで、適切な関数でサウンドを一時停止したり停止したりすることができるようになります。つまり、同じサウンドを複数回再生している場合、オーディオ関数を使用することで、そのサウンドの1つのインスタンスだけを対象とすることができます。</p>
+  <p>
+    この関数は、再生中のサウンドのユニークなインデックス番号を返し、それを変数に格納することで、適切な関数でサウンドを一時停止したり停止したりすることができるようになります。つまり、同じサウンドを複数回再生している場合、オーディオ関数を使用することで、そのサウンドの1つのインスタンスだけを対象とすることができます。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_play_sound</span>(index, priority, loop, [gain], [offset], [pitch], [listener_mask]);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">audio_play_sound</span>(index, priority, loop, [gain],
+    [offset], [pitch], [listener_mask]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
-        <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../The_Asset_Editors/Sounds.htm" target="_blank">サウンドアセット</a></span></td>
+        <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../The_Asset_Editors/Sounds.htm"
+              target="_blank">サウンドアセット</a></span></td>
         <td><span class="notranslate">The index of the sound to play.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">priority</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">Set the channel priority for the sound.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">loop</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">ブーリアン</a></span></td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">ブーリアン</a></span></td>
         <td><span class="notranslate">Sets the sound to loop or not.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">gain</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate"><span class="optional">OPTIONAL</span> 利得を得るための価値。</td>
       </tr>
       <tr>
         <td><span class="notranslate">offset</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate"><span class="optional">OPTIONAL</span> 開始点を設定する時間（秒単位）。与えられた音の長さより長い値は無視される。</td>
       </tr>
       <tr>
         <td><span class="notranslate">pitch</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate"><span class="optional">OPTIONAL</span> ピッチ乗算器（初期値1）。</td>
       </tr>
       <tr>
         <td><span class="notranslate">listener_mask</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> サウンドに設定するビットマスクデータを指定します。HTML5 ターゲットでは、複数のリスナーをサポートしないため、この値は影響しません。</td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> サウンドに設定するビットマスクデータを指定します。HTML5
+            ターゲットでは、複数のリスナーをサポートしないため、この値は影響しません。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_Sound_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_play_sound.htm" target="_blank">Sound Instance ID</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_Sound_Instance"><a
+        href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_play_sound.htm"
+        target="_blank">Sound Instance ID</a></span></p>
   <p> </p>
   <h4>例1．</h4>
   <p class="code">if health &lt;= 0<br />
@@ -87,11 +107,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio.htm">オーディオ</a></div>
-        <div style="float:right">次のページ <a href="audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a></div>
+        <div style="float:left">前のページ：<a href="Audio.htm">オーディオ</a></div>
+        <div style="float:right">次のページ：<a href="audio_play_sound_at.htm"><span
+              class="notranslate">audio_play_sound_at</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_play_sound
@@ -100,4 +122,5 @@ audio_play_sound
 audio_play_sound
 -->
 </body>
+
 </html>

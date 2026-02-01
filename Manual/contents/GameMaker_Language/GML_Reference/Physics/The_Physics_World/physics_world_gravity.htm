@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_world_gravity</title>
@@ -12,53 +13,65 @@
   <meta name="rh-index-keywords" content="physics_world_gravity" />
   <meta name="search-keywords" content="physics_world_gravity" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_world_gravity</span></h1>
-  <p><span class="notranslate">room</span> 他の物理関数と同様に、 <span class="inline">physics_world_gravity()</span> は、<span class="notranslate">room</span> エディタで物理ワールドが定義されている場合、または、 エディタで <a href="physics_world_create.htm"><span class="inline">physics_world_create()</span></a>.それは
+  <p><span class="notranslate">room</span> 他の物理関数と同様に、 <span class="inline">physics_world_gravity()</span> は、<span
+      class="notranslate">room</span> エディタで物理ワールドが定義されている場合、または、 エディタで <a href="physics_world_create.htm"><span
+        class="inline">physics_world_create()</span></a>.それは
     そして、物理世界の定義点0,0を使用して、xgとygの入力から計算されたベクトルに基づき、重力の方向と強さを計算します。以下は、説明のための画像です...</p>
   <p><img>xg,ygの座標は、0,0を基準としています。
     を計算し、重力自体はその2成分のベクトルとして計算されます。つまり、デフォルトの0,10は、重力方向が下（270度）、加速度が10メートル/秒の2乗となります。<i>メートル毎秒の2乗に</i>注意してください!
-    他の物理関数と同様に、重力はメートル単位で計算されるので、 <span class="inline">physics_world_create</span> 関数で設定したピクセルからメートル単位へのスケールが重要です。重力は<span class="notranslate">object</span> でも<i>累積さ</i>れます (ただし、その値は
-    正確な量は、関数に何を設定したかに依存します。 <a href="../Fixtures/physics_fixture_set_linear_damping.htm"><span class="inline">physics_fixture_set_linear_damping()</span></a>つまり、<span class="notranslate">room</span> で、room_speed が 60 で、ダンピングがない場合、インスタンス
+    他の物理関数と同様に、重力はメートル単位で計算されるので、 <span class="inline">physics_world_create</span>
+    関数で設定したピクセルからメートル単位へのスケールが重要です。重力は<span class="notranslate">object</span> でも<i>累積さ</i>れます (ただし、その値は
+    正確な量は、関数に何を設定したかに依存します。 <a href="../Fixtures/physics_fixture_set_linear_damping.htm"><span
+        class="inline">physics_fixture_set_linear_damping()</span></a>つまり、<span class="notranslate">room</span>
+    で、room_speed が 60 で、ダンピングがない場合、インスタンス
     これは、0.1 ピクセルから 1 メートルの縮尺の場合、60 ステップで 1 秒間に 100 ピクセルの速度まで加速するのと同じことです。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">physics_world_gravity</span>(xg, yg)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">xg</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">xg</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x component of the gravity vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">yg</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">yg</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y component of the gravity vector</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">physics_world_gravity(-5, 0);</p>
-  <p>上記のコードでは、重力が（<span class="notranslate">room</span> physics 0,0 を左上に設定したと仮定して）右側、つまり0度、加速度は5メートル/秒の2乗になるように設定します。</p>
+  <p>上記のコードでは、重力が（<span class="notranslate">room</span> physics 0,0 を左上に設定したと仮定して）右側、つまり0度、加速度は5メートル/秒の2乗になるように設定します。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Physics_World.htm">物理の世界</a></div>
-        <div style="float:right">次のページ <a href="physics_world_update_iterations.htm"><span class="notranslate">physics_world_update_iterations</span></a></div>
+        <div style="float:left">前のページ：<a href="The_Physics_World.htm">物理の世界</a></div>
+        <div style="float:right">次のページ：<a href="physics_world_update_iterations.htm"><span
+              class="notranslate">physics_world_update_iterations</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_world_gravity
@@ -67,4 +80,5 @@ physics_world_gravity
 physics_world_gravity
 -->
 </body>
+
 </html>

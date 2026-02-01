@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>part_system_automatic_draw</title>
@@ -12,20 +13,30 @@
   <meta name="rh-index-keywords" content="part_system_automatic_draw" />
   <meta name="search-keywords" content="part_system_automatic_draw" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">part_system_automatic_draw</span></h1>
-  <p>この機能を使うと、パーティクルシステムの描画を<span class="notranslate">switch</span> オフにし、システムに対して行われた更新（自動的またはそれ以外）を見えなくすることができます。これは純粋に視覚的なオプションで、 <span class="inline">false</span> に設定すると、パーティクルは描画されないので見ることができませんが、パーティクルはまだ存在し、通常と同じように位置や色などを変化させています。自動描画がオフの場合、<span data-keyref="GameMaker Name">GameMakerに</span>パーティクルシステムの現在の状態を描画するよう<i>明示的に</i>命令するには、関数 <a href="part_system_drawit.htm"><span class="inline">part_system_drawit()</span></a>また、この関数を再度 <span class="inline">true</span> に設定すると、<span class="notranslate">switch</span> 自動描画をオンに戻すことができます。</p>
-  <p>注意点としては、関数で作成したシンプルなエフェクトを使う場合は <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a>または <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a>の場合、パーティクルシステムのインデックスとして 0（以下の効果）または 1（上記の効果）を使用し、これらの自動描画を切り替えることができます（これは<span class="notranslate">GML</span> Visual particle effect の描画を切り替えるためにも機能します）。</p>
+  <p>この機能を使うと、パーティクルシステムの描画を<span class="notranslate">switch</span>
+    オフにし、システムに対して行われた更新（自動的またはそれ以外）を見えなくすることができます。これは純粋に視覚的なオプションで、 <span class="inline">false</span>
+    に設定すると、パーティクルは描画されないので見ることができませんが、パーティクルはまだ存在し、通常と同じように位置や色などを変化させています。自動描画がオフの場合、<span
+      data-keyref="GameMaker Name">GameMakerに</span>パーティクルシステムの現在の状態を描画するよう<i>明示的に</i>命令するには、関数 <a
+      href="part_system_drawit.htm"><span class="inline">part_system_drawit()</span></a>また、この関数を再度 <span
+      class="inline">true</span> に設定すると、<span class="notranslate">switch</span> 自動描画をオンに戻すことができます。</p>
+  <p>注意点としては、関数で作成したシンプルなエフェクトを使う場合は <a href="../effect_create_above.htm"><span
+        class="inline">effect_create_above()</span></a>または <a href="../effect_create_below.htm"><span
+        class="inline">effect_create_below()</span></a>の場合、パーティクルシステムのインデックスとして 0（以下の効果）または
+    1（上記の効果）を使用し、これらの自動描画を切り替えることができます（これは<span class="notranslate">GML</span> Visual particle effect
+    の描画を切り替えるためにも機能します）。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">part_system_automatic_draw</span>(ind, automatic);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">ind</span></td>
@@ -40,7 +51,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -52,11 +63,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Particle_Systems.htm">粒子システム</a></div>
-        <div style="float:right">次のページ <a href="part_system_update.htm"><span class="notranslate">part_system_update</span></a></div>
+        <div style="float:left">前のページ：<a href="Particle_Systems.htm">パーティクルシステム</a></div>
+        <div style="float:right">次のページ：<a href="part_system_update.htm"><span
+              class="notranslate">part_system_update</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_automatic_draw
@@ -65,4 +78,5 @@ part_system_automatic_draw
 part_system_automatic_draw
 -->
 </body>
+
 </html>

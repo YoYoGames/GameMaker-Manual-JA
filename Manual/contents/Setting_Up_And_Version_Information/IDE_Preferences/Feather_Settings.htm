@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>フェザー</title>
@@ -12,10 +13,12 @@
   <meta name="rh-index-keywords" content="Prefs - Feather Settings" />
   <meta name="search-keywords" content="Feather Settings, Feather Options, Feather Preferences, Feather Prefs" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>フェザー</h1>
-  <p>Feather は、<a href="../../GameMaker_Language/GameMaker_Language_Index.htm">GML コード</a> <span class="notranslate">scripts</span> において、インテリジェントなコード補完と高度な構文チェックを提供し、スマートなリファクタリングオプションも提供します。</p>
+  <p>Feather は、<a href="../../GameMaker_Language/GameMaker_Language_Index.htm">GML コード</a> <span
+      class="notranslate">scripts</span> において、インテリジェントなコード補完と高度な構文チェックを提供し、スマートなリファクタリングオプションも提供します。</p>
   <p>このページでは、「Feather」の以下の部分について情報を掲載しています。</p>
   <ul class="colour">
     <li><a href="#s1">ベースオプション</a></li>
@@ -24,7 +27,8 @@
     <li><a href="#s4">命名規則</a>(<span class="notranslate">assets</span>, 変数などの場合)</li>
   </ul>
   <div class="seealso" data-type="seealso" style="">
-    <p class="seealso-caption" data-close-text="" data-expanded="true" data-open-text="See Also" data-type="seealso-caption" style="">参照（プレースホルダー）</p>
+    <p class="seealso-caption" data-close-text="" data-expanded="true" data-open-text="See Also"
+      data-type="seealso-caption" style="">参照（プレースホルダー）</p>
     <ol class="seealso-list" data-keywords="" data-type="seealso-list" style="">
       <li><a class="seealso-list-item" href="#">トピック一覧</a></li>
     </ol>
@@ -32,12 +36,22 @@
   <h2 id="s1">ベースオプション</h2>
   <p><img>ベースとなるFeather Settingsには、以下のオプションがあります。</p>
   <ul class="colour">
-    <li>Featherを<strong>有効に</strong>する。ここで Feather を有効化または無効化します。無効にすると、<span class="notranslate">IDE</span> 全体で Feather の機能は利用できなくなります。</li>
-    <li><strong>Document Parse Delay (ドキュメント解析遅延</strong>)。<span class="notranslate">script</span> に変更を加えた後、Feather がチェックするために待つ時間です。</li>
-    <li><strong>コンパクトなツールチップ</strong>。この機能を有効にすると、関数のパラメータ説明など、キーワードにカーソルを合わせたときに表示される特定のツールチップ情報を削除し、ツールチップを小さくすることができます。</li>
-    <li><strong>ツールチップで表示される<span class="notranslate">struct</span> フィールドの最大数</strong>です。<span class="notranslate">struct</span> の参照にカーソルを合わせると、その<span class="notranslate">struct</span> 内の変数がツールチップで表示されます（ここに入力した数まで）。</li>
-    <li><strong> <span class="notranslate">asset</span> が<span class="notranslate">asset</span> ブラウザーでリネームされたときに<span class="notranslate">Asset</span> の名前への参照をリファクタリング</strong>します。これを有効にすると、<span class="notranslate">asset</span> ブラウザで<span class="notranslate">Asset</span> の名前を変更したときに、コード内のその名前に関するすべての言及も編集され、それらの参照が壊れないようにします。</li>
-    <li><strong>Quick Fixから作成する場合、複数行のJSDocコメント・スタイルを優先</strong>するようにしました。Quick<a data-xref="{text}" href="../../The_Asset_Editors/Code_Editor_Properties/Feather_Features.htm#h1">Fixes</a>メニューから関数のJSDocコメントを生成する場合、このオプションによって、生成されるJSDocは単一行または複数行の<a href="../../GameMaker_Language/GML_Overview/Commenting_Code.htm">コメントを</a>使用するようになります。</li>
+    <li>Featherを<strong>有効に</strong>する。ここで Feather を有効化または無効化します。無効にすると、<span class="notranslate">IDE</span> 全体で Feather
+      の機能は利用できなくなります。</li>
+    <li><strong>Document Parse Delay (ドキュメント解析遅延</strong>)。<span class="notranslate">script</span> に変更を加えた後、Feather
+      がチェックするために待つ時間です。</li>
+    <li>
+      <strong>コンパクトなツールチップ</strong>。この機能を有効にすると、関数のパラメータ説明など、キーワードにカーソルを合わせたときに表示される特定のツールチップ情報を削除し、ツールチップを小さくすることができます。
+    </li>
+    <li><strong>ツールチップで表示される<span class="notranslate">struct</span> フィールドの最大数</strong>です。<span
+        class="notranslate">struct</span> の参照にカーソルを合わせると、その<span class="notranslate">struct</span>
+      内の変数がツールチップで表示されます（ここに入力した数まで）。</li>
+    <li><strong> <span class="notranslate">asset</span> が<span class="notranslate">asset</span> ブラウザーでリネームされたときに<span
+          class="notranslate">Asset</span> の名前への参照をリファクタリング</strong>します。これを有効にすると、<span class="notranslate">asset</span>
+      ブラウザで<span class="notranslate">Asset</span> の名前を変更したときに、コード内のその名前に関するすべての言及も編集され、それらの参照が壊れないようにします。</li>
+    <li><strong>Quick Fixから作成する場合、複数行のJSDocコメント・スタイルを優先</strong>するようにしました。Quick<a data-xref="{text}"
+        href="../../The_Asset_Editors/Code_Editor_Properties/Feather_Features.htm#h1">Fixes</a>メニューから関数のJSDocコメントを生成する場合、このオプションによって、生成されるJSDocは単一行または複数行の<a
+        href="../../GameMaker_Language/GML_Overview/Commenting_Code.htm">コメントを</a>使用するようになります。</li>
     <li><strong>Strict Type モ</strong>ードを有効にします。このモードを有効にすると、コード内で正しいデータ型が使用されているかどうかを確認するために、より厳格になります。</li>
   </ul>
   <h2 id="s2">ハイライト表示</h2>
@@ -51,7 +65,8 @@
   <h2 id="s3">メッセージの重要度</h2>
   <p><img>このセクションには、Feather がコードのチェックに使用するすべてのルールが含まれており、各ルールの重大度を調整することができます。</p>
   <h3>プロフィール</h3>
-  <p>このドロップダウンボックスでは、<a data-xref="{text}" href="Feather_Settings.htm#h">GM*ルールの</a>プリセットをいくつか選択することができます。以下のプロファイルが利用可能です。 </p>
+  <p>このドロップダウンボックスでは、<a data-xref="{text}"
+      href="Feather_Settings.htm#h">GM*ルールの</a>プリセットをいくつか選択することができます。以下のプロファイルが利用可能です。 </p>
   <ul class="Disc">
     <li><strong>なし</strong>。このプロファイルは、エラーメッセージを表示しません。</li>
     <li><strong>SyntaxErrors</strong>。このプロファイルを使用すると、<strong>None</strong>プロファイルで表示される内容に加えて、シンタックスエラーが表示されます。</li>
@@ -59,25 +74,35 @@
     <li><strong>すべて</strong>：Featherが解析できるすべてのものを表示するプロファイルです。</li>
   </ul>
   <h3 id="h">GM*ルール</h3>
-  <p>ルールを「<strong>エラー</strong>」「<strong>警告</strong>」「<strong>提案</strong>」に設定することで、コードエディタやFeatherメッセージウィンドウでルール違反のコードが報告される方法に影響を与えることができます。</p>
+  <p>
+    ルールを「<strong>エラー</strong>」「<strong>警告</strong>」「<strong>提案</strong>」に設定することで、コードエディタやFeatherメッセージウィンドウでルール違反のコードが報告される方法に影響を与えることができます。
+  </p>
   <p>ルールを「<strong>無視</strong>」に設定すると、そのルールに違反したすべてのインスタンスを無視することができます。</p>
-  <p><strong>GM1000</strong>」から始まるルールは、致命的なエラーがないかをチェックするもので、「<strong>GM2000</strong>」から始まるルールは、ゲームのバグを防ぐためのベストプラクティス（最善の方法）ルールです。</p>
+  <p>
+    <strong>GM1000</strong>」から始まるルールは、致命的なエラーがないかをチェックするもので、「<strong>GM2000</strong>」から始まるルールは、ゲームのバグを防ぐためのベストプラクティス（最善の方法）ルールです。
+  </p>
   <h2 id="s4">ネーミングルール</h2>
-  <p><img>このセクションでは、<span class="notranslate">assets</span> 、変数、および<span class="notranslate">GML</span> コードの様々な部分の命名規則を設定することができます。</p>
+  <p><img>このセクションでは、<span class="notranslate">assets</span> 、変数、および<span class="notranslate">GML</span>
+    コードの様々な部分の命名規則を設定することができます。</p>
   <p>ネーミングルールを有効にするには、「メッセージの重要度」の GM2017 ルールが有効である必要があります。デフォルトでは、無効になっています。</p>
   <p>このセクションの設定は次のとおりです。</p>
   <ul class="colour">
     <li><strong>Identifiier Blocklist (識別子ブロックリスト</strong>)。すべての命名規則で無視される識別子をスペースで区切ったリストです。<br />
       <br />
-      たとえば、<span class="notranslate">objects</span> のプレフィックスとして<span class="inline2">obj_</span>を使用するルールがあるが、<span class="notranslate">objects</span> <span class="inline2">マネージャと</span> <span class="inline2">ネットワークは</span>そのままにして、<span class="inline2">obj_</span>プレフィックスを使用しないようにしたいとします。<br />
+      たとえば、<span class="notranslate">objects</span> のプレフィックスとして<span class="inline2">obj_</span>を使用するルールがあるが、<span
+        class="notranslate">objects</span> <span class="inline2">マネージャと</span> <span
+        class="inline2">ネットワークは</span>そのままにして、<span class="inline2">obj_</span>プレフィックスを使用しないようにしたいとします。<br />
       <br />
-      この場合、<span class="inline2">manager network</span>を<strong>Indentifier Blocklist</strong>フィールドに記述します。Feather はこれらの<span class="notranslate">objects</span> <em>と、</em>同じ名前の他の識別子（変数、列挙型、パラメータなど）を無視します。
+      この場合、<span class="inline2">manager network</span>を<strong>Indentifier Blocklist</strong>フィールドに記述します。Feather
+      はこれらの<span class="notranslate">objects</span> <em>と、</em>同じ名前の他の識別子（変数、列挙型、パラメータなど）を無視します。
     </li>
-    <li><strong>&lt;identifier&gt; 命名規則</strong>:<span class="notranslate">assets</span>, マクロ, enum, 関数パラメーター, 変数など、リストにある識別子の種類ごとに命名規則を設定することができます。<br />
+    <li><strong>&lt;identifier&gt; 命名規則</strong>:<span class="notranslate">assets</span>, マクロ, enum, 関数パラメーター,
+      変数など、リストにある識別子の種類ごとに命名規則を設定することができます。<br />
       <br />
       各命名ルールのドロップダウンには、以下のオプションがあります。
       <ul>
-        <li><strong>プレフィックス</strong>。<span class="notranslate">objects</span> の場合は<span class="inline2">obj_</span>、ローカル変数の場合は<span class="inline2">_</span>といった具合に、好みに応じて指定します。</li>
+        <li><strong>プレフィックス</strong>。<span class="notranslate">objects</span> の場合は<span
+            class="inline2">obj_</span>、ローカル変数の場合は<span class="inline2">_</span>といった具合に、好みに応じて指定します。</li>
         <li><strong>サフィックス</strong>。識別子名の後につけるテキスト。</li>
         <li><strong>ネーミング・スタイル</strong>識別子のネーミング・スタイルを選択します。オプションは以下の通りです。
           <ul>
@@ -96,11 +121,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Marketplace_Preferences.htm">マーケットプレイスの環境設定</a></div>
+        <div style="float:left">前のページ：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Marketplace_Preferences.htm">マーケットプレイスの環境設定</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Feather Settings
@@ -109,4 +136,5 @@ Preferences - Feather Settings
 prefs_feather
 -->
 </body>
+
 </html>

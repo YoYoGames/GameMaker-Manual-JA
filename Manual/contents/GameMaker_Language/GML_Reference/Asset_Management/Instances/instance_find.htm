@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instance_find</title>
@@ -13,14 +14,23 @@
   <meta name="search-keywords" content="instance_find" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">instance_find</span></h1>
-  <p>すべてのインスタンスには一意の識別子(<a href="Instance_Variables/id.htm"><span class="inline">id</span></a>しかし、特定のインスタンスの ID が何であるかを常に知っているわけではありません。<span class="notranslate">object</span> インスタンスリストのその位置にインスタンスがあれば、この関数はそのインスタンスの id を返し、なければ特別な<a href="../../../GML_Overview/Instance_Keywords.htm">キーワード</a> <span class="inline"><b>noone</b></span> を返します。また、キーワード <span class="inline"><b>all</b></span> を使用して、<span class="notranslate">room</span> 内のすべてのインスタンスを反復処理し、親<span class="notranslate">object</span> を使用して、その親/子階層に属するすべてのインスタンスを反復処理できます。さらに、現在の<span class="notranslate">room</span> に実際に存在するかどうかを確認するために、（その <span class="inline">id</span> がある場合）インスタンスを指定することも可能です。インスタンスは<i>任意の</i>方法でソートされるため、この関数でチェックされる順序は決まっておらず、どのインスタンスもどの位置にも存在しうることに注意してください。</p>
+  <p>すべてのインスタンスには一意の識別子(<a href="Instance_Variables/id.htm"><span class="inline">id</span></a>しかし、特定のインスタンスの ID
+    が何であるかを常に知っているわけではありません。<span class="notranslate">object</span> インスタンスリストのその位置にインスタンスがあれば、この関数はそのインスタンスの id
+    を返し、なければ特別な<a href="../../../GML_Overview/Instance_Keywords.htm">キーワード</a> <span class="inline"><b>noone</b></span>
+    を返します。また、キーワード <span class="inline"><b>all</b></span> を使用して、<span class="notranslate">room</span>
+    内のすべてのインスタンスを反復処理し、親<span class="notranslate">object</span> を使用して、その親/子階層に属するすべてのインスタンスを反復処理できます。さらに、現在の<span
+      class="notranslate">room</span> に実際に存在するかどうかを確認するために、（その <span class="inline">id</span>
+    がある場合）インスタンスを指定することも可能です。インスタンスは<i>任意の</i>方法でソートされるため、この関数でチェックされる順序は決まっておらず、どのインスタンスもどの位置にも存在しうることに注意してください。</p>
   <p>この関数の &quot;n &quot;の最大値は次のようになります。</p>
   <ul class="colour">
-    <li>キーワードについて <span class="inline"><b>all</b></span>: <a href="instance_count.htm"><span class="inline">instance_count - 1</span></a></li>
-    <li><span class="notranslate">object</span> インデックスの場合。 <a href="instance_number.htm"><span class="inline">instance_number(OBJ) - 1</span></a></li>
+    <li>キーワードについて <span class="inline"><b>all</b></span>: <a href="instance_count.htm"><span
+          class="inline">instance_count - 1</span></a></li>
+    <li><span class="notranslate">object</span> インデックスの場合。 <a href="instance_number.htm"><span
+          class="inline">instance_number(OBJ) - 1</span></a></li>
   </ul>
   <p> </p>
   <h4><b>構文です。</b></h4>
@@ -28,9 +38,9 @@
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
@@ -45,26 +55,30 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span
+      data-keyref="Type_ID_noone">noone</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">for (var i = 0; i &lt; instance_number(obj_Enemy); ++i;)<br />
     {<br />
         enemy[i] = instance_find(obj_Enemy,i);<br />
     }</p>
-  <p>上記のコードでは、 <span class="inline">for</span> <span class="notranslate">loop</span> 、「obj_Enemy」のすべてのインスタンスを繰り返し処理し、その<b>idを</b>配列「enemy[]」に格納します。</p>
+  <p>上記のコードでは、 <span class="inline">for</span> <span class="notranslate">loop</span>
+    、「obj_Enemy」のすべてのインスタンスを繰り返し処理し、その<b>idを</b>配列「enemy[]」に格納します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instances.htm">インスタンス</a></div>
-        <div style="float:right">次のページ <a href="instance_furthest.htm"><span class="notranslate">instance_furthest</span></a></div>
+        <div style="float:left">前のページ：<a href="Instances.htm">インスタンス</a></div>
+        <div style="float:right">次のページ：<a href="instance_furthest.htm"><span
+              class="notranslate">instance_furthest</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_find
@@ -73,4 +87,5 @@ instance_find
 instance_find
 -->
 </body>
+
 </html>

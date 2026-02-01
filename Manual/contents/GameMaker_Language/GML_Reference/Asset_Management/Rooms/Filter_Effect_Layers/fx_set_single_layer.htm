@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -14,48 +15,67 @@
   <meta name="search-keywords" content="fx_set_single_layer" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">fx_set_single_layer</span></h1>
-  <p>フィルター/エフェクトのシングルレイヤーモードの有効/無効を設定する機能です。デフォルトでは、フィルター/エフェクトは、<a href="layer_set_fx.htm">それが割り当てられて</a>いるレイヤーとその下のすべてのレイヤーに適用されますが、FX<span class="notranslate">struct</span> のシングルレイヤーモードを有効にすると、それが割り当てられているレイヤーにのみ適用されることを確認できます。</p>
-  <p>FX<span class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される) と、シングルレイヤーモードの有効化 (<span class="inline">true</span>) または無効化 (<span class="inline">false</span>) の<a class="glossterm" data-glossterm="ブーリアン" href="#">ブーリアン</a>値 を指定します。</p>
+  <p>フィルター/エフェクトのシングルレイヤーモードの有効/無効を設定する機能です。デフォルトでは、フィルター/エフェクトは、<a
+      href="layer_set_fx.htm">それが割り当てられて</a>いるレイヤーとその下のすべてのレイヤーに適用されますが、FX<span class="notranslate">struct</span>
+    のシングルレイヤーモードを有効にすると、それが割り当てられているレイヤーにのみ適用されることを確認できます。</p>
+  <p>FX<span class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または
+    <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される) と、シングルレイヤーモードの有効化 (<span
+      class="inline">true</span>) または無効化 (<span class="inline">false</span>) の<a class="glossterm"
+      data-glossterm="ブーリアン" href="#">ブーリアン</a>値 を指定します。
+  </p>
   <p>次のビジュアルは、シングルレイヤーモードが無効の場合（すべてのFXレイヤーのデフォルト動作です）と、シングルレイヤーモードが有効の場合の同じフィルタの使用状態を示しています。</p>
   <div class="image_columns">
-    <figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png" title="Fire Jump man is woozy with the universe" />
+    <figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow"
+        src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png"
+        title="Fire Jump man is woozy with the universe" />
       <figcaption>シングルレイヤーモードOFF</figcaption>
     </figure>
-    <figure><img alt="Fire Jump man is woozy... alone" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png" style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" />
+    <figure><img alt="Fire Jump man is woozy... alone" class="center_shadow"
+        src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png"
+        style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" />
       <figcaption>シングルレイヤーモードON</figcaption>
     </figure>
   </div>
-  <p class="note"><span class="note">注</span>：FXのシングルレイヤーモードを有効にする場合、<a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">FXレイヤー</a>以外のレイヤーに適用してください。FXレイヤー自体には何も含まれていないため、フィルターやエフェクトは表示されません。</p>
+  <p class="note"><span class="note">注</span>：FXのシングルレイヤーモードを有効にする場合、<a
+      href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">FXレイヤー</a>以外のレイヤーに適用してください。FXレイヤー自体には何も含まれていないため、フィルターやエフェクトは表示されません。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">fx_set_single_layer</span>(filter_or_effect, enable);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">fx_set_single_layer</span>(filter_or_effect, enable);
+  </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td>
+        <td><span class="notranslate">filter_or_effect</span></td>
+        <td><span data-keyref="Type_Struct_FX"></span></td>
         <td><span class="notranslate">The FX struct to modify</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">A <a class="glossterm" data-glossterm="ブーリアン" href="#">boolean</a> value to enable (<span class="inline">true</span>) または無効化 (<span class="inline">false</span>) シングルレイヤーモード</td>
-     </tr>
+        <td><span class="notranslate">enable</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">A <a class="glossterm" data-glossterm="ブーリアン" href="#">boolean</a> value to enable
+            (<span class="inline">true</span>) または無効化 (<span class="inline">false</span>) シングルレイヤーモード</td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">shake_fx = fx_create(&quot;_filter_screenshake&quot;);<br />
     fx_set_single_layer(shake_fx, true);<br />
     layer_set_fx(&quot;ShakeyThings&quot;, shake_fx);</p>
-  <p>上記のコードでは、新しいスクリーンシェイクFXを作成し、その上でシングルレイヤーモードを有効にし、<span class="notranslate">room</span> レイヤーに適用しています。つまり、スクリーンセイクフィルタは「<span class="inline2">ShakeyThings」</span>レイヤーにのみ適用されることになります。</p>
+  <p>上記のコードでは、新しいスクリーンシェイクFXを作成し、その上でシングルレイヤーモードを有効にし、<span class="notranslate">room</span>
+    レイヤーに適用しています。つまり、スクリーンセイクフィルタは「<span class="inline2">ShakeyThings」</span>レイヤーにのみ適用されることになります。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
@@ -65,7 +85,8 @@
         <div>次ページ：<a data-xref="{title}" href="layer_set_fx.htm">レイヤーの設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fx_set_single_layer
@@ -74,4 +95,5 @@ fx_set_single_layer
 fx_set_single_layer
 -->
 </body>
+
 </html>

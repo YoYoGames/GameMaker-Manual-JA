@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>if / else と条件演算子</title>
@@ -12,10 +13,15 @@
   <meta name="rh-index-keywords" content="?,if,else,ternary operator,then" />
   <meta name="search-keywords" content="if,else,then,?,ternary,conditional" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>if / else と条件演算子</h1>
-  <p>ほとんどのプログラミング言語の基本的な機能は、ブーリアン <span class="inline">true</span> または <span class="inline">false</span> の答えを与える簡単な質問をする機能です。<span class="notranslate">GML</span> では、これは <span class="inline">if</span> キーワードを使用して実現されています。単純な <span class="inline">if</span> の条件は<a class="glossterm" data-glossterm="顔" href="#">式を</a>取り、その式が <span class="inline">true</span> と解決された場合に1つ以上の<span class="glossextra">文を</span>実行するもので、その基本形は以下の通りです。</p>
+  <p>ほとんどのプログラミング言語の基本的な機能は、ブーリアン <span class="inline">true</span> または <span class="inline">false</span>
+    の答えを与える簡単な質問をする機能です。<span class="notranslate">GML</span> では、これは <span class="inline">if</span>
+    キーワードを使用して実現されています。単純な <span class="inline">if</span> の条件は<a class="glossterm" data-glossterm="顔"
+      href="#">式を</a>取り、その式が <span class="inline">true</span> と解決された場合に1つ以上の<span
+      class="glossextra">文を</span>実行するもので、その基本形は以下の通りです。</p>
   <p class="code">if (&lt;expression&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
@@ -23,14 +29,17 @@
         ...<br />
     }</p>
   <p><br />
-    ここでは、もしある式が <span class="inline">true</span> と解決されたら、何かをする、ということを言っているのです。なお、条件の「then」の部分は<em>暗黙の</em>了解ですが、 <span class="inline">then</span> というキーワードがあり、（ほとんど省略されますが）このような条件文も作成できます。</p>
+    ここでは、もしある式が <span class="inline">true</span> と解決されたら、何かをする、ということを言っているのです。なお、条件の「then」の部分は<em>暗黙の</em>了解ですが、 <span
+      class="inline">then</span> というキーワードがあり、（ほとんど省略されますが）このような条件文も作成できます。</p>
   <p class="code">if (&lt;expression&gt;) then<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p> <span class="inline">if</span> と <span class="inline">then</span> 以外に、チェックする式が<span class="inline">false</span> と評価された場合、 <span class="inline">else</span> キーワードを使って別のことをすることもできます。この &quot;<span class="inline">if... then... else...</span>&quot; の形は次のようになります。</p>
+  <p> <span class="inline">if</span> と <span class="inline">then</span> 以外に、チェックする式が<span class="inline">false</span>
+    と評価された場合、 <span class="inline">else</span> キーワードを使って別のことをすることもできます。この &quot;<span class="inline">if... then...
+      else...</span>&quot; の形は次のようになります。</p>
   <p class="code">if (&lt;expression&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
@@ -39,9 +48,12 @@
     {<br />
         &lt;statement&gt;;<br />
     }</p>
-  <p>この場合、式が評価され、 <span class="inline">false</span> と評価されれば、 <span class="inline">else</span> の次の文が実行され、そうでなければ、最初の文が実行されます（ <span class="inline">true</span> です）。</p>
-  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker</span> 言語では、0 以下の値は <span class="inline">false</span> として評価され、0 より大きい値は <span class="inline">true</span> として評価されます。</p>
-  <p> <span class="inline">if</span> では、必ず式を大括弧で囲み、文を中括弧{}で囲むのが良い習慣です（そうしないと、最初の文しか実行されません）。また、文ごとにブロック内で改行するなどしてください。</p>
+  <p>この場合、式が評価され、 <span class="inline">false</span> と評価されれば、 <span class="inline">else</span>
+    の次の文が実行され、そうでなければ、最初の文が実行されます（ <span class="inline">true</span> です）。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker</span> 言語では、0 以下の値は <span
+      class="inline">false</span> として評価され、0 より大きい値は <span class="inline">true</span> として評価されます。</p>
+  <p> <span class="inline">if</span> では、必ず式を大括弧で囲み、文を中括弧{}で囲むのが良い習慣です（そうしないと、最初の文しか実行されません）。また、文ごとにブロック内で改行するなどしてください。
+  </p>
   <p class="code">// This will work<br />
     if &lt;expression&gt; &lt;statement&gt;;<br />
     <br />
@@ -68,9 +80,14 @@
         variable = true;<br />
     }
   </p>
-  <p>この方法は少し冗長ですが、コードに曖昧さがなく、常にすべてのプラットフォームで正しくコンパイルされることを意味します。しかし、最初の例では、<a href="../Expressions_And_Operators.htm">式と演算</a>子のページで説明したように、そうならないかもしれません。</p>
-  <p class="note"><strong>注意</strong>: 2つの値を比較して等しいかどうかを確認する場合は、&quot;<span class="inline">==</span>&quot; 演算子を使用し、代入の場合は &quot;<span class="inline">=</span>&quot; 演算子のみを使用する必要があります。現在のところ、<span class="notranslate">GameMaker</span> はこれらを互換性のあるものとして扱いますが、将来的には変更される可能性があり、比較と代入に正しい演算子を使用した方がコードがすっきりして分かりやすくなります。</p>
-  <p> <span class="inline">if</span> の正しい使い方を説明するために、次のコードを考えてみましょう。このコードは、ステップイベントに配置されると、インスタンスを<span class="notranslate">room</span> の位置 <span class="inline">x=200</span> に向かって移動させます。</p>
+  <p>この方法は少し冗長ですが、コードに曖昧さがなく、常にすべてのプラットフォームで正しくコンパイルされることを意味します。しかし、最初の例では、<a
+      href="../Expressions_And_Operators.htm">式と演算</a>子のページで説明したように、そうならないかもしれません。</p>
+  <p class="note"><strong>注意</strong>: 2つの値を比較して等しいかどうかを確認する場合は、&quot;<span class="inline">==</span>&quot;
+    演算子を使用し、代入の場合は &quot;<span class="inline">=</span>&quot; 演算子のみを使用する必要があります。現在のところ、<span
+      class="notranslate">GameMaker</span>
+    はこれらを互換性のあるものとして扱いますが、将来的には変更される可能性があり、比較と代入に正しい演算子を使用した方がコードがすっきりして分かりやすくなります。</p>
+  <p> <span class="inline">if</span> の正しい使い方を説明するために、次のコードを考えてみましょう。このコードは、ステップイベントに配置されると、インスタンスを<span
+      class="notranslate">room</span> の位置 <span class="inline">x=200</span> に向かって移動させます。</p>
   <p class="code">if (x &lt; 200)<br />
     {<br />
         x += 4;<br />
@@ -79,23 +96,40 @@
     {<br />
         x = 200;<br />
     }</p>
-  <p>また、 <span class="inline">if</span> 、つまり同じ文の中で様々な値や式をチェックする<i>複合</i>チェックを行うことができます。これらのチェックには、さまざまな<a href="../Expressions_And_Operators.htm">結合演算子</a>(<span class="inline">&amp;&amp;</span> and, <span class="inline">||</span> or, and <span class="inline">^^</span> xor) を使用できます。この場合、<span data-keyref="GameMaker Name">GameMakerは</span>それぞれを一度に評価し、その評価によっては残りをスキップすることができます。例えば</p>
+  <p>また、 <span class="inline">if</span> 、つまり同じ文の中で様々な値や式をチェックする<i>複合</i>チェックを行うことができます。これらのチェックには、さまざまな<a
+      href="../Expressions_And_Operators.htm">結合演算子</a>(<span class="inline">&amp;&amp;</span> and, <span
+      class="inline">||</span> or, and <span class="inline">^^</span> xor) を使用できます。この場合、<span
+      data-keyref="GameMaker Name">GameMakerは</span>それぞれを一度に評価し、その評価によっては残りをスキップすることができます。例えば</p>
   <p class="code">if (keyboard_check_pressed(vk_enter)) &amp;&amp; (instance_exists(obj_Player))<br />
     {<br />
         go = false;<br />
         alarm[0] = room_speed;<br />
     }</p>
-  <p>ここでは、 <span class="inline">&amp;&amp;</span> 「and」演算子を使ってチェックしているので、 <span class="inline">if</span> の条件が<em>両方とも </em> <span class="inline">true</span> と評価されればチェックされ、もし最初の条件が <span class="inline">false</span> なら、2番目の条件はチェックされないことになります。これはコードの「短絡化」と呼ばれます。したがって、チェックする式を組み合わせるときは、パフォーマンス上「最も安い」ものが常に最初になるようにして、最初のものが <span class="inline">false</span> と評価された場合に、より高価なものを評価しないようにする必要があります。同じように、ある条件がコンパイル時に<span class="inline">true</span> または <span class="inline">false</span> と評価される場合、その条件全体がコードから削除されます。たとえば、 <span class="inline">DEBUG_ON </span>for<span class="notranslate">debugging</span> という<a href="../Variables/Constants.htm">マクロが</a>あり、 <span class="inline">true</span> または <span class="inline">false</span> のどちらかになるとします。これが <span class="inline">false</span> になると、次のコードブロックがコンパイル時にゲームから削除されることになります。</p>
+  <p>ここでは、 <span class="inline">&amp;&amp;</span> 「and」演算子を使ってチェックしているので、 <span class="inline">if</span> の条件が<em>両方とも
+    </em> <span class="inline">true</span> と評価されればチェックされ、もし最初の条件が <span class="inline">false</span>
+    なら、2番目の条件はチェックされないことになります。これはコードの「短絡化」と呼ばれます。したがって、チェックする式を組み合わせるときは、パフォーマンス上「最も安い」ものが常に最初になるようにして、最初のものが <span
+      class="inline">false</span> と評価された場合に、より高価なものを評価しないようにする必要があります。同じように、ある条件がコンパイル時に<span class="inline">true</span>
+    または <span class="inline">false</span> と評価される場合、その条件全体がコードから削除されます。たとえば、 <span class="inline">DEBUG_ON
+    </span>for<span class="notranslate">debugging</span> という<a href="../Variables/Constants.htm">マクロが</a>あり、 <span
+      class="inline">true</span> または <span class="inline">false</span> のどちらかになるとします。これが <span
+      class="inline">false</span> になると、次のコードブロックがコンパイル時にゲームから削除されることになります。</p>
   <p class="code">if DEBUG_ON == true<br />
     {<br />
         show_debug_message(&quot;Instances = &quot; + string(instance_count));<br />
     }</p>
-  <p>また、<b>条件付き操作</b>（<b>三項</b>操作とも呼ばれる）を行うこともできます。これは、基本的な <span class="inline">if</span> を実行するための「ショートカット」方法です。これは次のような構文になっています。</p>
-  <p class="code">variable = &lt;condition&gt; ? &lt;statement1 (if <i>true</i>)&gt; : &lt;statement2 (if <i>false</i>)&gt;</p>
-  <p>条件演算子 &quot;<span class="inline">?</span>&quot; は、例えば条件式の評価値が <span class="inline">true</span> か <span class="inline">false</span> かによって、与えられた2つの値のうち1つを返します。</p>
+  <p>また、<b>条件付き操作</b>（<b>三項</b>操作とも呼ばれる）を行うこともできます。これは、基本的な <span class="inline">if</span>
+    を実行するための「ショートカット」方法です。これは次のような構文になっています。</p>
+  <p class="code">variable = &lt;condition&gt; ? &lt;statement1 (if <i>true</i>)&gt; : &lt;statement2 (if
+    <i>false</i>)&gt;
+  </p>
+  <p>条件演算子 &quot;<span class="inline">?</span>&quot; は、例えば条件式の評価値が <span class="inline">true</span> か <span
+      class="inline">false</span> かによって、与えられた2つの値のうち1つを返します。</p>
   <p class="code">var temp_x = (x &lt; (room_width / 2)) ? 32 : (room_width - 32);</p>
-  <p>上記のコードでは、&quot;x&quot; の値を<span class="notranslate">room</span> の幅の半分の値と比較して、小さければ &quot;<span class="inline">temp_x</span>&quot; に 32 を設定し、そうでなければ &quot;<span class="inline">temp_x</span>&quot; に<span class="notranslate">room</span> の幅 - 32 を設定します。さらにいくつかの使用例を紹介します。</p>
-  <p class="code">draw_text(x, y, &quot;The fee is &quot; + (global.Member ? &quot;$2.00&quot; : &quot;$10.00&quot;));<br />
+  <p>上記のコードでは、&quot;x&quot; の値を<span class="notranslate">room</span> の幅の半分の値と比較して、小さければ &quot;<span
+      class="inline">temp_x</span>&quot; に 32 を設定し、そうでなければ &quot;<span class="inline">temp_x</span>&quot; に<span
+      class="notranslate">room</span> の幅 - 32 を設定します。さらにいくつかの使用例を紹介します。</p>
+  <p class="code">draw_text(x, y, &quot;The fee is &quot; + (global.Member ? &quot;$2.00&quot; :
+    &quot;$10.00&quot;));<br />
     path_start(((global.level &gt; 10) ? path_hard : path_easy;), 2, path_action_reverse, true);<br />
     (--hp &lt;= 0) ? instance_destroy() : score += 10;</p>
   <p>また、条件付き操作を入れ子にすることができますが、その場合は各操作を大括弧で囲む必要があることなども留意すべき点です。</p>
@@ -107,11 +141,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a data-xref="{title}" href="../GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="../Addressing_Variables_In_Other_Instances.htm">他のインスタンスで変数を扱う</a></div>
+        <div style="float:left">前のページ：<a data-xref="{title}" href="../GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}"
+            href="../Addressing_Variables_In_Other_Instances.htm">他のインスタンスで変数を扱う</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 if
@@ -126,4 +162,5 @@ else
 then
 -->
 </body>
+
 </html>

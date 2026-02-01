@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -13,14 +14,21 @@
   <meta name="search-keywords" content="yyc,yoyo compiler,compiler,compile" />
   <meta name="rh-index-keywords" content="yyc,yoyo compiler" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">YoYoコンパイラ</span></h1>
-  <p><span data-field="title" data-format="default">YoYo Compiler</span>(YYC) は、インタープリタコードとランナー (<span data-keyref="GameMaker Name">GameMaker</span>VM コンパイルが使用しているもの) ではなく、<a class="glossterm" data-glossterm="マシンコード" href="#">マシンコードを</a>使用した実行可能パッケージを作成するための特別なコンパイラです。コンパイルされたコードは実行速度が速くなりますが、実行ファイルのコンパイルにはより多くの時間がかかります。</p>
+  <p><span data-field="title" data-format="default">YoYo Compiler</span>(YYC) は、インタープリタコードとランナー (<span
+      data-keyref="GameMaker Name">GameMaker</span>VM コンパイルが使用しているもの) ではなく、<a class="glossterm" data-glossterm="マシンコード"
+      href="#">マシンコードを</a>使用した実行可能パッケージを作成するための特別なコンパイラです。コンパイルされたコードは実行速度が速くなりますが、実行ファイルのコンパイルにはより多くの時間がかかります。</p>
   <h2>ライセンス</h2>
-  <p><span class="notranslate">GameMaker</span> のライセンスには<span class="notranslate">YoYo</span> Compiler が含まれる場合と含まれない場合があります。詳しくは、ヘルプセンターの「<a href="https://help.yoyogames.com/hc/en-us/articles/115002637011">どのサブスクリプションが適切か</a>」をご覧ください。</p>
+  <p><span class="notranslate">GameMaker</span> のライセンスには<span class="notranslate">YoYo</span> Compiler
+    が含まれる場合と含まれない場合があります。詳しくは、ヘルプセンターの「<a
+      href="https://help.yoyogames.com/hc/en-us/articles/115002637011">どのサブスクリプションが適切か</a>」をご覧ください。</p>
   <h2>SDKのセットアップ</h2>
-  <p><span data-field="title" data-format="default">YoYo Compilerが</span>ターゲットプラットフォーム用にコンパイルできるようにするためには、正しい<a class="glossterm" data-glossterm="エスディーケー" href="#">SDKが</a>インストールされている必要があります。</p>
-  <p>これに関する一般的な概要は、以下のヘルプセンターのページをご覧ください。<a href="https://help.yoyogames.com/hc/en-us/articles/227860547">GameMakerが必要とするSDK</a>」をご覧ください。</p>
+  <p><span data-field="title" data-format="default">YoYo Compilerが</span>ターゲットプラットフォーム用にコンパイルできるようにするためには、正しい<a
+      class="glossterm" data-glossterm="エスディーケー" href="#">SDKが</a>インストールされている必要があります。</p>
+  <p>これに関する一般的な概要は、以下のヘルプセンターのページをご覧ください。<a
+      href="https://help.yoyogames.com/hc/en-us/articles/227860547">GameMakerが必要とするSDK</a>」をご覧ください。</p>
   <p>プラットフォームごとに必要なSDKの情報は、ヘルプセンターにも掲載されています。 </p>
   <ul class="Disc">
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193-Setting-Up-For-Opera-GX">オペラGX</a></li>
@@ -32,23 +40,32 @@
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/360025349592">ティーブイオーエス</a></li>
   </ul>
   <h2>YYCでプロジェクトを構築する</h2>
-  <p><a class="glossterm" data-glossterm="エスディーケー" href="#">SDKを</a>正しくセットアップしたら、選択したプラットフォームのOutputオプションをYYCに変更することができます。 </p>
+  <p><a class="glossterm" data-glossterm="エスディーケー"
+      href="#">SDKを</a>正しくセットアップしたら、選択したプラットフォームのOutputオプションをYYCに変更することができます。 </p>
   <p><img class="center_shadow" src="../assets/Images/Introduction/QS_TargetYYC.png" /></p>
   <p>その後、VMの出力と同様に<a href="../IDE_Navigation/Menus/The_Build_Menu.htm">The Build Menuから</a>実行ファイルを作成することができます。</p>
-  <p><a class="glossterm" data-glossterm="エスディーケー" href="#">SDK</a>への<span class="notranslate">path</span> が正しく設定されていない場合、以下のようなエラーが表示されることがあります（画像は<span class="notranslate">Windows</span> プラットフォームでのメッセージです）。 </p>
-  <p><img class="center_shadow" height="86" src="../assets/Images/Introduction/QS_Debug_CompileError_VSPath.png" style="cursor: nesw-resize;" width="941" /></p>
-  <p><span data-keyref="GameMaker Name">GameMakerは</span>、選択したプラットフォームで実行ファイルをビルドするために必要なファイルの場所を知っておく必要があります。これが正しく設定されていない場合、コンパイルエラーが表示されます。</p>
-  <p>選択したプラットフォームに<span class="notranslate">paths</span> が正しく設定されていることを確認するために、<a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a> を確認することができます。</p>
+  <p><a class="glossterm" data-glossterm="エスディーケー" href="#">SDK</a>への<span class="notranslate">path</span>
+    が正しく設定されていない場合、以下のようなエラーが表示されることがあります（画像は<span class="notranslate">Windows</span> プラットフォームでのメッセージです）。 </p>
+  <p><img class="center_shadow" height="86" src="../assets/Images/Introduction/QS_Debug_CompileError_VSPath.png"
+      style="cursor: nesw-resize;" width="941" /></p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerは</span>、選択したプラットフォームで実行ファイルをビルドするために必要なファイルの場所を知っておく必要があります。これが正しく設定されていない場合、コンパイルエラーが表示されます。
+  </p>
+  <p>選択したプラットフォームに<span class="notranslate">paths</span> が正しく設定されていることを確認するために、<a
+      href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a> を確認することができます。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div>戻る<a href="Runner_Details/Runner_Details.htm">ランナー＆コンパイラー</a></div>
-        <div>次のページ<a href="../The_Asset_Editors/The_Asset_Editors.htm"> <span class="notranslate">Asset</span> 編集部</a></div>
+        <div>次のページ：<a href="../The_Asset_Editors/The_Asset_Editors.htm"> <span class="notranslate">Asset</span> エディタ</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ナンバーファンクション</title>
@@ -12,32 +13,50 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Number Functions,numbers" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ナンバーファンクション</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>実数は<i>倍精度浮動小数点数</i>、つまり小数点以下の桁数が決まっていないもの、または<i>整数</i>、つまり小数点以下の値が決まっていない整数とみなされます。例えば、2は整数ですが、2.01は浮動小数点実数です。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerの</span>実数は<i>倍精度浮動小数点数</i>、つまり小数点以下の桁数が決まっていないもの、または<i>整数</i>、つまり小数点以下の値が決まっていない整数とみなされます。例えば、2は整数ですが、2.01は浮動小数点実数です。
+  </p>
   <p class="note"><b>注</b>：<b>HTML5</b>ターゲットでは、実数はすべて2倍です。</p>
-  <p>この整数と浮動小数点数の区別は、クロスプラットフォーム開発を行う上で非常に重要です。<span class="notranslate">Windows</span> PCで行った計算の精度と、モバイルデバイスで行った同じ計算の精度は同じでは<i>ありません</i>。つまり、例えば比較を行う際には特に注意が必要です。</p>
+  <p>この整数と浮動小数点数の区別は、クロスプラットフォーム開発を行う上で非常に重要です。<span class="notranslate">Windows</span>
+    PCで行った計算の精度と、モバイルデバイスで行った同じ計算の精度は同じでは<i>ありません</i>。つまり、例えば比較を行う際には特に注意が必要です。</p>
   <p class="code">if (image_index == 1)<br />
     {<br />
         // Do something...<br />
     }</p>
-  <p>上記の例では、例えば <span class="inline">image_speed</span> を 0.25 に設定していた場合、4 ステップ後に <span class="inline">image_index</span> の値が 1 になると思っても、浮動小数点演算の仕組み上 1.0000002 のような値になり、評価が <span class="inline">true</span> にならない<i>ことが</i>あります。このようなタイプのエラーはデバッグがかなり難しくなるので、常に注意して、前もって計画的に他の方法で値をチェックしたり、適切な階乗や丸め関数（以下にリストアップ）を使ってチェックする数を整数に変換するのがよいでしょう（浮動小数点数の数学とこれが問題になる理由については、<a href="https://floating-point-gui.de/" target="_blank">ここを</a>参照してください）。例えば、上記のコードは次のように書くことができます。</p>
+  <p>上記の例では、例えば <span class="inline">image_speed</span> を 0.25 に設定していた場合、4 ステップ後に <span
+      class="inline">image_index</span> の値が 1 になると思っても、浮動小数点演算の仕組み上 1.0000002 のような値になり、評価が <span
+      class="inline">true</span>
+    にならない<i>ことが</i>あります。このようなタイプのエラーはデバッグがかなり難しくなるので、常に注意して、前もって計画的に他の方法で値をチェックしたり、適切な階乗や丸め関数（以下にリストアップ）を使ってチェックする数を整数に変換するのがよいでしょう（浮動小数点数の数学とこれが問題になる理由については、<a
+      href="https://floating-point-gui.de/" target="_blank">ここを</a>参照してください）。例えば、上記のコードは次のように書くことができます。</p>
   <p class="code">if (floor(image_index) == 1)<br />
     {<br />
         // Do something...<br />
     }</p>
-  <p>また、<b>YoYo Compilerの</b>ターゲットを使用する場合、すべての式と関数は<i>左から右に評価</i>されますが、他のすべてのターゲットプラットフォームでは、<i>右から</i>左に評価されるため、例えばこのような場合、プラットフォームによって異なる結果になることを意味します。</p>
+  <p>また、<b>YoYo
+      Compilerの</b>ターゲットを使用する場合、すべての式と関数は<i>左から右に評価</i>されますが、他のすべてのターゲットプラットフォームでは、<i>右から</i>左に評価されるため、例えばこのような場合、プラットフォームによって異なる結果になることを意味します。
+  </p>
   <p class="code">val = max(num, ++num, num++);</p>
-  <p class="note"><strong>注</strong>：詳細については、「<a href="../../../GML_Overview/Evaluation_Order.htm">評価順序</a>」の項を参照ください。</p>
-  <p>また、<span data-keyref="GameMaker Name">GameMakerに</span>用意されている特殊な関数を使って、浮動小数点演算の<b>イプシロン</b>値を設定することができます。実数が最も近い浮動小数点数に丸められるとき、イプシロン（「マシンイプシロン」とも呼ばれる）は相対誤差の上限を形成し、以下の関数を使用してイプシロン値を取得および設定することができます。</p>
+  <p class="note"><strong>注</strong>：詳細については、「<a href="../../../GML_Overview/Evaluation_Order.htm">評価順序</a>」の項を参照ください。
+  </p>
+  <p>また、<span
+      data-keyref="GameMaker Name">GameMakerに</span>用意されている特殊な関数を使って、浮動小数点演算の<b>イプシロン</b>値を設定することができます。実数が最も近い浮動小数点数に丸められるとき、イプシロン（「マシンイプシロン」とも呼ばれる）は相対誤差の上限を形成し、以下の関数を使用してイプシロン値を取得および設定することができます。
+  </p>
   <ul class="colour">
     <li><a href="math_set_epsilon.htm"><span class="notranslate">math_set_epsilon</span></a></li>
     <li><a href="math_get_epsilon.htm"><span class="notranslate">math_get_epsilon</span></a></li>
   </ul>
   <p> </p>
   <p id="random">これらの関数は、すべて乱数や値を使用することを扱っています。</p>
-  <p class="note"><b><span class="note">注意事項</span> </b>ランダム関数を使用する場合、<span data-keyref="GameMaker Name">GameMaker</span>はゲームを起動するたびに同じ乱数種を維持します。これにより、<span class="notranslate">debugging</span> 、ランダム関数が常に同じ値を返すことが保証されるため、非常に簡単になります。ただし、そうしたくない場合は、まずゲーム開始時に新しいランダムシードを設定する必要があります。 <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span>または <span style="font-size:1px;"><a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a></span>.</p>
+  <p class="note"><b><span class="note">注意事項</span> </b>ランダム関数を使用する場合、<span
+      data-keyref="GameMaker Name">GameMaker</span>はゲームを起動するたびに同じ乱数種を維持します。これにより、<span
+      class="notranslate">debugging</span>
+    、ランダム関数が常に同じ値を返すことが保証されるため、非常に簡単になります。ただし、そうしたくない場合は、まずゲーム開始時に新しいランダムシードを設定する必要があります。 <span
+      style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span>または <span
+      style="font-size:1px;"><a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a></span>.</p>
   <ul class="colour">
     <li><a href="choose.htm"><span class="notranslate">choose</span></a></li>
     <li><a href="random.htm"><span class="notranslate">random</span></a></li>
@@ -82,11 +101,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Maths_And_Numbers.htm">数学と数字</a></div>
-        <div style="float:right">次へ<a href="../Angles_And_Distance/Angles_And_Distance.htm">ベクター</a></div>
+        <div style="float:left">前のページ：<a href="../Maths_And_Numbers.htm">数学と数字</a></div>
+        <div style="float:right">次のページ：<a href="../Angles_And_Distance/Angles_And_Distance.htm">ベクター</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Number Functions
@@ -95,4 +115,5 @@ Number Functions
 number_functions
 -->
 </body>
+
 </html>

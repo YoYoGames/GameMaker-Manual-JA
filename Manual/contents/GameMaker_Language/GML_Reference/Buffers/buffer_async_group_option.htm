@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_async_group_option</title>
@@ -12,62 +13,88 @@
   <meta name="rh-index-keywords" content="buffer_async_group_option" />
   <meta name="search-keywords" content="buffer_async_group_option" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_async_group_option</span></h1>
-  <p>この機能により、保存/読み込み中の<span class="notranslate">buffer</span> グループに対して、プラットフォーム固有のオプションを設定することができます。利用可能なオプションは以下の通りです。</p>
+  <p>この機能により、保存/読み込み中の<span class="notranslate">buffer</span> グループに対して、プラットフォーム固有のオプションを設定することができます。利用可能なオプションは以下の通りです。
+  </p>
   <ul class="colour">
-    <li>&quot;<b>subtitle</b>&quot; または &quot;<b>slottitle</b>&quot; - このオプションの値は、<span class="notranslate">string</span> 、OSでセーブデータを管理する際にユーザーに表示されます。これはデータを保存するときのみ重要で、再度ロードするときは重要ではありません。</li>
-    <li>&quot;<b>showdialog</b>&quot; - このオプションの値はブール値です <span class="inline">true</span> または <span class="inline">false</span> 。 <span class="inline">true</span> に設定すると、<span data-keyref="GameMaker Name">GameMakerは</span>セーブ<i>または</i>ロード時にシステムUIを表示し、それ以外の場合はUIを表示せずにクイックセーブ/クイックロードを行います。通常、複数のセーブスロットをサポートし、ユーザーがスロットを選べるようにする場合にのみ必要ですが、ユーザーごとに1つのスロットをサポートするだけなら、これを <span class="inline">false</span> にセットしてください。</li>
-    <li>「<b>savepadindex</b>&quot; - このオプションでは、保存<i>または</i>ロードするプレイヤーの<i>パッドインデックスを</i>指定し、システムはこのプレイヤーの保存フォルダにデータを書き込み、そこからデータを読み取ります。</li>
-    <li>&quot;<b>saveslotsize</b>&quot; - このオプションでは、保存する実際のサイズをバイト単位で指定する必要があります (そのため、このオプションでは <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a>と <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a>で取得するなどの方法があります)。すべての保存は最小限のスペースがあらかじめ割り当てられており、それは通常ターゲットプラットフォームによって異なるため、この値を指定することは必須ではないことに注意してください。</li>
-    <li>&quot;<strong>ps_create_backup</strong>&quot; -<em>(PlayStation のみ)</em>- これを <span class="inline">true</span> に設定すると、保存ディレクトリがアンマウントされたとき (すなわち <span class="inline"><a href="buffer_async_group_end.htm">buffer_async_group_end()</a></span> 関数が呼ばれたとき) に保存データがバックアップされるようになります。詳しくはコンソールのドキュメントをご覧ください。</li>
+    <li>&quot;<b>subtitle</b>&quot; または &quot;<b>slottitle</b>&quot; - このオプションの値は、<span
+        class="notranslate">string</span> 、OSでセーブデータを管理する際にユーザーに表示されます。これはデータを保存するときのみ重要で、再度ロードするときは重要ではありません。</li>
+    <li>&quot;<b>showdialog</b>&quot; - このオプションの値はブール値です <span class="inline">true</span> または <span
+        class="inline">false</span> 。 <span class="inline">true</span> に設定すると、<span
+        data-keyref="GameMaker Name">GameMakerは</span>セーブ<i>または</i>ロード時にシステムUIを表示し、それ以外の場合はUIを表示せずにクイックセーブ/クイックロードを行います。通常、複数のセーブスロットをサポートし、ユーザーがスロットを選べるようにする場合にのみ必要ですが、ユーザーごとに1つのスロットをサポートするだけなら、これを
+      <span class="inline">false</span> にセットしてください。
+    </li>
+    <li>「<b>savepadindex</b>&quot; -
+      このオプションでは、保存<i>または</i>ロードするプレイヤーの<i>パッドインデックスを</i>指定し、システムはこのプレイヤーの保存フォルダにデータを書き込み、そこからデータを読み取ります。</li>
+    <li>&quot;<b>saveslotsize</b>&quot; - このオプションでは、保存する実際のサイズをバイト単位で指定する必要があります (そのため、このオプションでは <a
+        href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a>と <a href="buffer_tell.htm"><span
+          class="inline">buffer_tell()</span></a>で取得するなどの方法があります)。すべての保存は最小限のスペースがあらかじめ割り当てられており、それは通常ターゲットプラットフォームによって異なるため、この値を指定することは必須ではないことに注意してください。
+    </li>
+    <li>&quot;<strong>ps_create_backup</strong>&quot; -<em>(PlayStation のみ)</em>- これを <span class="inline">true</span>
+      に設定すると、保存ディレクトリがアンマウントされたとき (すなわち <span class="inline"><a
+          href="buffer_async_group_end.htm">buffer_async_group_end()</a></span> 関数が呼ばれたとき)
+      に保存データがバックアップされるようになります。詳しくはコンソールのドキュメントをご覧ください。</li>
   </ul>
-  <p class="note"><b>重要!こ</b>の機能は現在、PSVita、PS4、<span class="notranslate">XBox One</span> のターゲットモジュールに対してのみ有効です。それ以外のターゲットでは何もしません。</p>
+  <p class="note"><b>重要!こ</b>の機能は現在、PSVita、PS4、<span class="notranslate">XBox One</span>
+    のターゲットモジュールに対してのみ有効です。それ以外のターゲットでは何もしません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">buffer_async_group_option</span>(option, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">option</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
         <td><span class="notranslate">The option to set.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">value</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>または <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>または <span
+            data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
         <td><span class="notranslate">The value to set (can be a real or string, depending on the option).</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;);<br />
-    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;showdialog&quot;, false);<br />
-    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
-    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;showdialog&quot;,
+    false);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;slottitle&quot;, &quot;Catch
+    The Haggis Save&quot;);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;subtitle&quot;, &quot;All your
+    haggis are saved here!&quot;);<br />
     save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);<br />
-    buffer_async_group_end();</p>
-  <p>上記のコードでは、<span class="notranslate">buffer</span> グループを起動し、グループオプションを設定してから、4つのファイルを非同期で保存するように設定しています。その後、グループ定義を終了します（この時点で保存が開始されます）。</p>
+    buffer_async_group_end();
+  </p>
+  <p>上記のコードでは、<span class="notranslate">buffer</span>
+    グループを起動し、グループオプションを設定してから、4つのファイルを非同期で保存するように設定しています。その後、グループ定義を終了します（この時点で保存が開始されます）。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_async_group_end.htm"><span
+              class="notranslate">buffer_async_group_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_option
@@ -76,4 +103,5 @@ buffer_async_group_option
 buffer_async_group_option
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_queue_clear</title>
@@ -12,27 +13,33 @@
   <meta name="rh-index-keywords" content="ds_queue_clear" />
   <meta name="search-keywords" content="ds_queue_clear" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_queue_clear</span></h1>
-  <p>この関数を使うと、与えられた<span class="notranslate">queue</span> データ構造からすべてのデータをクリアすることができます。これは，データ構造を破壊するもの<i>ではありません</i>（破壊するには <a href="ds_queue_destroy.htm"><span class="inline">ds_queue_destroy()</span></a>) からすべてのデータを消去し、空の<span class="notranslate">queue</span> を返すだけです。</p>
+  <p>この関数を使うと、与えられた<span class="notranslate">queue</span>
+    データ構造からすべてのデータをクリアすることができます。これは，データ構造を破壊するもの<i>ではありません</i>（破壊するには <a href="ds_queue_destroy.htm"><span
+        class="inline">ds_queue_destroy()</span></a>) からすべてのデータを消去し、空の<span class="notranslate">queue</span> を返すだけです。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_queue_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_Queue"></span></td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_DS_Queue"></span></td>
         <td><span class="notranslate">The id of the data structure to clear.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -42,18 +49,21 @@
         alarm[0] = room_speed;<br />
         ai_count = 0;<br />
     }</p>
-  <p>上記のコードは、ある変数が特定の値に達したかどうかをチェックし、達した場合は変数 &quot;command_queue&quot; でインデックスされた DS キューをクリアし、アラームを設定し、変数を 0 にリセットしています。</p>
+  <p>上記のコードは、ある変数が特定の値に達したかどうかをチェックし、達した場合は変数 &quot;command_queue&quot; でインデックスされた DS キューをクリアし、アラームを設定し、変数を 0
+    にリセットしています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Queues.htm">DSキュー</a></div>
-        <div style="float:right">次のページ <a href="ds_queue_empty.htm"><span class="notranslate">ds_queue_empty</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Queues.htm">DSキュー</a></div>
+        <div style="float:right">次のページ：<a href="ds_queue_empty.htm"><span class="notranslate">ds_queue_empty</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_queue_clear
@@ -62,4 +72,5 @@ ds_queue_clear
 ds_queue_clear
 -->
 </body>
+
 </html>

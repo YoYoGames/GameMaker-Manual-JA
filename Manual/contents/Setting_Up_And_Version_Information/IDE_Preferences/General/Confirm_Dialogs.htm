@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>確認ダイアログ</title>
@@ -12,21 +13,32 @@
   <meta name="rh-index-keywords" content="Prefs - General - Confirm Dialogs" />
   <meta name="search-keywords" content="Confirm Dialogs Preferences" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ダイアログの環境設定を確認する</h1>
-  <p><img alt="Confirm Dialog Prefs" class="center" src="../../../assets/Images/Setup_And_Version/Preferences/General_Confirm_Prefs.png" /></p>
-  <p>確認ダイアログの設定は、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> で特定のアクションを実行する際に表示される一般的な確認ポップアップのいくつかを扱います。オプションは以下の通りです。</p>
+  <p><img alt="Confirm Dialog Prefs" class="center"
+      src="../../../assets/Images/Setup_And_Version/Preferences/General_Confirm_Prefs.png" /></p>
+  <p>確認ダイアログの設定は、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span>
+    で特定のアクションを実行する際に表示される一般的な確認ポップアップのいくつかを扱います。オプションは以下の通りです。</p>
   <ul class="colour">
-    <li><strong>キーボードショートカットで<span class="notranslate">workspace</span> を閉じたときの自動応答</strong>。上記のキーボードショートカットは、開いているすべてのタブを閉じることができますが、時には誤って必要な空のタブを閉じてしまうことがあります。これを防ぐには
+    <li><strong>キーボードショートカットで<span class="notranslate">workspace</span>
+        を閉じたときの自動応答</strong>。上記のキーボードショートカットは、開いているすべてのタブを閉じることができますが、時には誤って必要な空のタブを閉じてしまうことがあります。これを防ぐには
       このオプションを「メッセージを表示する」（デフォルトのオプション）に設定すると、その空のタブを本当に閉じるかどうか尋ねることができます。その他の設定は、ショートカットを使用しても何もしない「いいえ」と、何もせずにタブを閉じる「はい」です。
       メッセージはありません。</li>
-    <li><strong>実行中のビルドを再起動した際の自動対応</strong>ビルドを再起動する際、以前の別のビルドがまだ実行されている場合、現在のビルドを先に停止するかどうか尋ねられます。このメッセージのチェックを外すと、このメッセージが表示されなくなります。
-      というメッセージが表示され、強制的に「OK」をクリックしたものとみなされます。このオプションは、デフォルトで「メッセージを表示する」に設定されています。</li>
-    <li><strong>YYCのデバッグ試行時の警告に自動対応</strong>。YYC ターゲットはネイティブ コードにコンパイルされているため、ビルトイン<span class="notranslate">debugger</span> を使用してデバッグすることはできません。YYCターゲットで<span class="notranslate">debugger</span> を使用しようとすると、警告が表示されます。
-      プロジェクトはVMを使用してコンパイルされることを通知します。このオプションはデフォルトで &quot;Show Message &quot;に設定されていますが、&quot;OK &quot;に設定するとこの警告は表示されなくなります。</li>
-    <li><strong>プロジェクトレイアウトリセット時の自動対応</strong>プロジェクトレイアウトのリセットを選択した場合（<a href="../../../IDE_Navigation/Menus/The_Layouts_Menu.htm">レイアウトメニューから</a>）、デフォルトで警告メッセージが表示されます。
-      開いているリソースウィンドウをすべて閉じます。しかし、&quot;Okay &quot;を選択するとこのメッセージを抑制し、自動的にレイアウトをリセットすることができ、&quot;No &quot;を選択すると何もしないことができます。デフォルトは &quot;Show
+    <li>
+      <strong>実行中のビルドを再起動した際の自動対応</strong>ビルドを再起動する際、以前の別のビルドがまだ実行されている場合、現在のビルドを先に停止するかどうか尋ねられます。このメッセージのチェックを外すと、このメッセージが表示されなくなります。
+      というメッセージが表示され、強制的に「OK」をクリックしたものとみなされます。このオプションは、デフォルトで「メッセージを表示する」に設定されています。
+    </li>
+    <li><strong>YYCのデバッグ試行時の警告に自動対応</strong>。YYC ターゲットはネイティブ コードにコンパイルされているため、ビルトイン<span
+        class="notranslate">debugger</span> を使用してデバッグすることはできません。YYCターゲットで<span class="notranslate">debugger</span>
+      を使用しようとすると、警告が表示されます。
+      プロジェクトはVMを使用してコンパイルされることを通知します。このオプションはデフォルトで &quot;Show Message &quot;に設定されていますが、&quot;OK
+      &quot;に設定するとこの警告は表示されなくなります。</li>
+    <li><strong>プロジェクトレイアウトリセット時の自動対応</strong>プロジェクトレイアウトのリセットを選択した場合（<a
+        href="../../../IDE_Navigation/Menus/The_Layouts_Menu.htm">レイアウトメニューから</a>）、デフォルトで警告メッセージが表示されます。
+      開いているリソースウィンドウをすべて閉じます。しかし、&quot;Okay &quot;を選択するとこのメッセージを抑制し、自動的にレイアウトをリセットすることができ、&quot;No
+      &quot;を選択すると何もしないことができます。デフォルトは &quot;Show
       メッセージ &quot;を表示します。</li>
   </ul>
   <p> </p>
@@ -35,11 +47,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../General_Preferences.htm">一般的な環境設定</a></div>
-        <div style="float:right">次へ<a href="Debugging.htm">デバッグの環境設定</a></div>
+        <div style="float:left">前のページ：<a href="../General_Preferences.htm">一般的な環境設定</a></div>
+        <div style="float:right">次のページ：<a href="Debugging.htm">デバッグの環境設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - General, Confirm Dialogues
@@ -48,4 +61,5 @@ Preferences - General, Confirm Dialogues
 prefs_confirm
 -->
 </body>
+
 </html>

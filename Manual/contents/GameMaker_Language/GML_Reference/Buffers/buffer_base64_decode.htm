@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_base64_decode</title>
@@ -13,46 +14,59 @@
   <meta name="search-keywords" content="buffer_base64_decode" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_base64_decode</span></h1>
-  <p>この関数を使うと、base64 でエンコードされた<span class="notranslate">string</span> (この関数で作成された) をデコードすることができます。 <a href="buffer_base64_encode.htm"><span class="inline">buffer_base64_encode()</span></a><span class="notranslate">buffer</span>この関数は，（1バイトにアラインされた &quot;grow &quot;バッファとして）<span class="notranslate">buffer</span> を生成し，<span class="notranslate">buffer</span> に対するユニークなインデックスを返します．</p>
-  <p class="note"><b>注</b>：このように動的に作成されたリソースは、メモリリークを防ぐために、不要になったらメモリから削除することが重要です。作成した<span class="notranslate">buffer</span> が終了したら、再度、以下を使用してリソースを解放してください。 <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>.</p>
+  <p>この関数を使うと、base64 でエンコードされた<span class="notranslate">string</span> (この関数で作成された) をデコードすることができます。 <a
+      href="buffer_base64_encode.htm"><span class="inline">buffer_base64_encode()</span></a><span
+      class="notranslate">buffer</span>この関数は，（1バイトにアラインされた &quot;grow &quot;バッファとして）<span
+      class="notranslate">buffer</span> を生成し，<span class="notranslate">buffer</span> に対するユニークなインデックスを返します．</p>
+  <p class="note"><b>注</b>：このように動的に作成されたリソースは、メモリリークを防ぐために、不要になったらメモリから削除することが重要です。作成した<span
+      class="notranslate">buffer</span> が終了したら、再度、以下を使用してリソースを解放してください。 <span style="font-size:1px;"><a
+        href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>.</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">buffer_base64_decode</span>(string);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">string</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The base64 encoded string to decode</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer">Buffer ID</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">ini_open(&quot;Save.ini&quot;);<br />
-    buff = <span data-field="title" data-format="default">buffer_base64_decode</span>(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
+    buff = <span data-field="title" data-format="default">buffer_base64_decode</span>(ini_read_string(&quot;Save&quot;,
+    &quot;Slot1&quot;, &quot;&quot;));<br />
     ini_close();</p>
-  <p>上記のコードでは、iniファイルを開き、そこからデコード関数に<span class="notranslate">string</span> を読み込みます。この関数は<span class="notranslate">buffer</span> のインデックスを返します。このインデックスは変数 &quot;buff&quot; に格納され、以前にエンコードされて保存されたデータを含んでいます。その後、iniファイルは閉じられる。</p>
+  <p>上記のコードでは、iniファイルを開き、そこからデコード関数に<span class="notranslate">string</span> を読み込みます。この関数は<span
+      class="notranslate">buffer</span> のインデックスを返します。このインデックスは変数 &quot;buff&quot;
+    に格納され、以前にエンコードされて保存されたデータを含んでいます。その後、iniファイルは閉じられる。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_base64_decode_ext.htm"><span class="notranslate">buffer_base64_decode_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_base64_decode_ext.htm"><span
+              class="notranslate">buffer_base64_decode_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_base64_decode
@@ -61,4 +75,5 @@ buffer_base64_decode
 buffer_base64_decode
 -->
 </body>
+
 </html>

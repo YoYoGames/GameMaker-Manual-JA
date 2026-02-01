@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ウィンドウズ</title>
@@ -12,56 +13,120 @@
   <meta name="rh-index-keywords" content="Game Options - Windows" />
   <meta name="search-keywords" content="Windows Game Options" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Windowsゲームオプション</h1>
   <p>このセクションでは、<span class="notranslate">Windows</span> ゲームプロジェクトのコンパイル方法を制御するさまざまなオプションの概要を説明します。各セクションの内容は以下の通りです。</p>
   <h2>一般</h2>
-  <p><img> <span class="notranslate">Windows</span> ゲームの<strong>一般 </strong>ページでは、ゲームがインストールされ実行されているときに が表示するために必要な情報を提供する必要があります。この情報は、<span class="notranslate">Windows</span> <strong>製品情報</strong>セクションに記載され、完全に記入される必要があります。</p>
-  <p>このウィンドウの<strong>オプション </strong>セクションでは、ゲームパッケージのインストール先を、&quot;<span class="inline">%localappdata%</span>&quot; または &quot;<span class="inline">%appdata%</span>&quot; フォルダーのどちらかにするか、また、<strong>Copy exe to output folder</strong> を設定するかどうかを選択できます。このオプションを有効にすると、テスト時にゲームEXEを<em>Tempフォルダ </em>に置かず、出力フォルダに保持します。</p>
-  <p>次に、<strong>Windowsのスリープマージンを</strong>設定します。このオプションは、特定のシステムでゲームを実行する際のスタッタリングを軽減することに関連します。基本的に、ゲームの実行速度が<span class="notranslate">room</span> の速度より速い場合、<span data-keyref="GameMaker Name">GameMaker</span>は残りの時間「スリープ」しますが、このスリープはかなり不正確な場合があり、必要以上に長くスリープしてしまい、フレームに時間がかかり、スタッターの原因となることがよくあります。これを回避するには、スリープ時間を短くして、残りの時間を<span class="notranslate">loop</span> に固定するとより正確になります。ただし、<span class="notranslate">loop</span> に固定すると、CPU 使用率が上昇し、CPU 温度が上昇し、ファンの回転が速くなるという問題が発生します。デフォルトでは、この値は10に設定されており、99.99%の場合はこれで問題ありませんが、ローエンドのマシンや多くのバックグラウンドプロセスを実行しているマシンでは、これは理想的なソリューションではないかもしれません（または非常にハイエンドなマシンでも）、1や15などの値が必要かもしれません。しかし、これはシステム固有の設定であり、あなたのビルドマシンではうまくいっても、他のユーザーには適切でない可能性があることに注意してください。</p>
-  <p class="note"><strong>注</strong>：スリープマージンに加えて、<span class="notranslate">Windows</span> で<a href="../../GameMaker_Language/GML_Reference/OS_And_Compiler/scheduler_resolution_set.htm">スレッドスケジューラの解像度を</a>調整することで、パフォーマンスと消費電力をさらに制御できます。<span class="notranslate">runtime</span> 。</p>
-  <p>次のオプションは、ゲームのために<strong>Steamを有効に</strong>することです。このオプションを有効にする場合、Steamworks SDK がインストールされていること（<a href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">ここを</a>参照）、およびゲームの<a href="../Game_Options.htm">General Options</a>に<strong>Steam App ID</strong>が追加されていることを確認します。<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">Windows</span> <span data-keyref="GameMaker Name"></span>を<span class="notranslate">Steam</span> と<span class="notranslate">IDE</span> のバージョンから起動している場合、および<span class="notranslate">Steam</span> 用のゲームを開発している場合は、<strong>Use alternative launcher for Steam</strong>application オプションもチェックする必要がある場合があることに注意してください。このオプションは、テスト時に代替ランチャープログラムを使ってゲームを起動し、ゲーム自身のアプリケーションIDではなく、<span data-keyref="GameMaker Name">GameMakerの</span>アプリケーションIDで<span class="notranslate">Steam</span> 、フラグが立つのを防ぐためのものです。このオプションは、<span class="notranslate">Steam</span> 向けに開発する際、ゲームの起動に問題があると判断された場合のみ有効にしてください。</p>
-  <p>最後のオプションは、「<strong>ファイルシステムのサンドボックスを無効に</strong>する」オプションです。これをチェックすると、<span data-keyref="GameMaker Name">GameMaker の</span>ファイルの保存と読み込みのサンドボックスが無効になり、ゲームが動作しているシステムのどこからでもファイルにアクセスできるようになります。このオプションはデフォルトではチェックされていません。すべてのシステムでファイルに対する<span data-keyref="GameMaker Name">GameMakerの</span>サンドボックスを維持することを推奨しており、チェックしてもOSレベルのパーミッションによっては一部のセーブ/ロード領域が使用できない場合があるからです。サンドボックスの詳細については、<span data-keyref="GameMaker Name">GameMakerの</span> <a href="../../Additional_Information/The_File_System.htm">ファイルシステムに関する</a>ページをご覧ください。</p>
-  <p>最後に、<span data-keyref="GameMaker Name">GameMakerで</span> <span class="notranslate">Windows</span> プロジェクトのx64実行ファイルを作成するオプションがあります。このオプションを有効にすると、コンパイル時に64bitの実行ファイルを作成します。<strong>すべての新規プロジェクトでこのオプションを使用することを強くお勧め</strong>します。このオプションは、長期的には<span class="notranslate">Windows</span> の実行ファイルのデフォルト形式となり、32ビットランナーは廃止される予定です。このオプションを有効にすると、プロジェクトで使用されている<span class="notranslate">extension</span> の dll も 64bit にする必要があることに注意してください (詳しくは<a href="../../The_Asset_Editors/Extensions.htm">ここを</a>参照)。</p>
+  <p><img> <span class="notranslate">Windows</span> ゲームの<strong>一般 </strong>ページでは、ゲームがインストールされ実行されているときに
+    が表示するために必要な情報を提供する必要があります。この情報は、<span class="notranslate">Windows</span>
+    <strong>製品情報</strong>セクションに記載され、完全に記入される必要があります。
+  </p>
+  <p>このウィンドウの<strong>オプション </strong>セクションでは、ゲームパッケージのインストール先を、&quot;<span class="inline">%localappdata%</span>&quot; または
+    &quot;<span class="inline">%appdata%</span>&quot; フォルダーのどちらかにするか、また、<strong>Copy exe to output folder</strong>
+    を設定するかどうかを選択できます。このオプションを有効にすると、テスト時にゲームEXEを<em>Tempフォルダ </em>に置かず、出力フォルダに保持します。</p>
+  <p>次に、<strong>Windowsのスリープマージンを</strong>設定します。このオプションは、特定のシステムでゲームを実行する際のスタッタリングを軽減することに関連します。基本的に、ゲームの実行速度が<span
+      class="notranslate">room</span> の速度より速い場合、<span
+      data-keyref="GameMaker Name">GameMaker</span>は残りの時間「スリープ」しますが、このスリープはかなり不正確な場合があり、必要以上に長くスリープしてしまい、フレームに時間がかかり、スタッターの原因となることがよくあります。これを回避するには、スリープ時間を短くして、残りの時間を<span
+      class="notranslate">loop</span> に固定するとより正確になります。ただし、<span class="notranslate">loop</span> に固定すると、CPU 使用率が上昇し、CPU
+    温度が上昇し、ファンの回転が速くなるという問題が発生します。デフォルトでは、この値は10に設定されており、99.99%の場合はこれで問題ありませんが、ローエンドのマシンや多くのバックグラウンドプロセスを実行しているマシンでは、これは理想的なソリューションではないかもしれません（または非常にハイエンドなマシンでも）、1や15などの値が必要かもしれません。しかし、これはシステム固有の設定であり、あなたのビルドマシンではうまくいっても、他のユーザーには適切でない可能性があることに注意してください。
+  </p>
+  <p class="note"><strong>注</strong>：スリープマージンに加えて、<span class="notranslate">Windows</span> で<a
+      href="../../GameMaker_Language/GML_Reference/OS_And_Compiler/scheduler_resolution_set.htm">スレッドスケジューラの解像度を</a>調整することで、パフォーマンスと消費電力をさらに制御できます。<span
+      class="notranslate">runtime</span> 。</p>
+  <p>次のオプションは、ゲームのために<strong>Steamを有効に</strong>することです。このオプションを有効にする場合、Steamworks SDK がインストールされていること（<a
+      href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">ここを</a>参照）、およびゲームの<a
+      href="../Game_Options.htm">General Options</a>に<strong>Steam App ID</strong>が追加されていることを確認します。<span
+      data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">Windows</span> <span
+      data-keyref="GameMaker Name"></span>を<span class="notranslate">Steam</span> と<span class="notranslate">IDE</span>
+    のバージョンから起動している場合、および<span class="notranslate">Steam</span> 用のゲームを開発している場合は、<strong>Use alternative launcher for
+      Steam</strong>application
+    オプションもチェックする必要がある場合があることに注意してください。このオプションは、テスト時に代替ランチャープログラムを使ってゲームを起動し、ゲーム自身のアプリケーションIDではなく、<span
+      data-keyref="GameMaker Name">GameMakerの</span>アプリケーションIDで<span class="notranslate">Steam</span>
+    、フラグが立つのを防ぐためのものです。このオプションは、<span class="notranslate">Steam</span> 向けに開発する際、ゲームの起動に問題があると判断された場合のみ有効にしてください。</p>
+  <p>最後のオプションは、「<strong>ファイルシステムのサンドボックスを無効に</strong>する」オプションです。これをチェックすると、<span data-keyref="GameMaker Name">GameMaker
+      の</span>ファイルの保存と読み込みのサンドボックスが無効になり、ゲームが動作しているシステムのどこからでもファイルにアクセスできるようになります。このオプションはデフォルトではチェックされていません。すべてのシステムでファイルに対する<span
+      data-keyref="GameMaker Name">GameMakerの</span>サンドボックスを維持することを推奨しており、チェックしてもOSレベルのパーミッションによっては一部のセーブ/ロード領域が使用できない場合があるからです。サンドボックスの詳細については、<span
+      data-keyref="GameMaker Name">GameMakerの</span> <a
+      href="../../Additional_Information/The_File_System.htm">ファイルシステムに関する</a>ページをご覧ください。</p>
+  <p>最後に、<span data-keyref="GameMaker Name">GameMakerで</span> <span class="notranslate">Windows</span>
+    プロジェクトのx64実行ファイルを作成するオプションがあります。このオプションを有効にすると、コンパイル時に64bitの実行ファイルを作成します。<strong>すべての新規プロジェクトでこのオプションを使用することを強くお勧め</strong>します。このオプションは、長期的には<span
+      class="notranslate">Windows</span> の実行ファイルのデフォルト形式となり、32ビットランナーは廃止される予定です。このオプションを有効にすると、プロジェクトで使用されている<span
+      class="notranslate">extension</span> の dll も 64bit にする必要があることに注意してください (詳しくは<a
+      href="../../The_Asset_Editors/Extensions.htm">ここを</a>参照)。</p>
   <h2>グラフィック</h2>
-  <p><img>グラフィックスオプションは、ゲームがターゲット<span class="notranslate">Windows</span> PC のグラフィックスカードをどのように使用するかを設定するためのものです。以下のオプションが含まれています。</p>
+  <p><img>グラフィックスオプションは、ゲームがターゲット<span class="notranslate">Windows</span> PC
+    のグラフィックスカードをどのように使用するかを設定するためのものです。以下のオプションが含まれています。</p>
   <ul class="colour">
     <li><strong>カーソルを表示</strong>する。チェックを外すと、ゲームコードでカーソルを作成していない限り、カーソルは表示されません。デフォルトではオンになっています。</li>
     <li><strong>フルスクリーンで起動</strong>します。チェックするとフルスクリーンで起動し、チェックしない場合はウィンドウで起動します。デフォルトではオフになっています。</li>
-    <li><strong>Allow Fullscreen Switching</strong> <span class="notranslate">switch</span> <strong></strong>: これにチェックを入れると、ユーザーは標準の<span class="notranslate">Windows</span> ショートカットを使って、フルスクリーンからウィンドウズへ、そして再びウィンドウズへ戻ることができます。デフォルトではオフになっています。</li>
-    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>オンにし、基本的にピクセルを「滑らかに」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためにはオンのままにしておく方が良いでしょう。</li>
-    <li><strong>テアリングを避けるために同期を使用</strong>します。<a class="glossterm" data-glossterm="ブイシンク" href="#">Vシンクの</a>ON/OFFを切り替えます。<span class="notranslate">room</span> の速度が120のゲームで、プレイヤーがリフレッシュレート60のモニターを持っている場合、このオプションをオンにすると、ゲームの速度も60に固定されることに注意してください。デフォルトではオフになっています。</li>
-    <li><strong>ウィンドウサイズを変更できるように</strong>する。これをチェックすると、ユーザーはゲームウィンドウのサイズを変更することができます（これを機能させるには、Borderless Windowオプションがオフになっている必要があります）。このオプションはデフォルトでオフになっています。</li>
-    <li><strong>Borderless Window（ボーダーレスウィンドウ</strong>）。これをチェックすると、ゲームはボーダーレスウィンドウで実行され、通常の最小化、最大化、閉じるボタンとゲームタイトルは削除されます。デフォルトではオフになっています。</li>
-    <li><strong>スケーリング</strong>ここでは、アスペクト比を維持する（つまり 4:3 の<span class="notranslate">room</span> が 16:9 で「レターボックス化」される）か、完全に拡大する（フルスクリーンに合わせてイメージを引き伸ばす）かを選択できます。<br />
+    <li><strong>Allow Fullscreen Switching</strong> <span class="notranslate">switch</span> <strong></strong>:
+      これにチェックを入れると、ユーザーは標準の<span class="notranslate">Windows</span>
+      ショートカットを使って、フルスクリーンからウィンドウズへ、そして再びウィンドウズへ戻ることができます。デフォルトではオフになっています。</li>
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん"
+        href="#">線形補間を</a>オンにし、基本的にピクセルを「滑らかに」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためにはオンのままにしておく方が良いでしょう。
+    </li>
+    <li><strong>テアリングを避けるために同期を使用</strong>します。<a class="glossterm" data-glossterm="ブイシンク"
+        href="#">Vシンクの</a>ON/OFFを切り替えます。<span class="notranslate">room</span>
+      の速度が120のゲームで、プレイヤーがリフレッシュレート60のモニターを持っている場合、このオプションをオンにすると、ゲームの速度も60に固定されることに注意してください。デフォルトではオフになっています。</li>
+    <li><strong>ウィンドウサイズを変更できるように</strong>する。これをチェックすると、ユーザーはゲームウィンドウのサイズを変更することができます（これを機能させるには、Borderless
+      Windowオプションがオフになっている必要があります）。このオプションはデフォルトでオフになっています。</li>
+    <li><strong>Borderless
+        Window（ボーダーレスウィンドウ</strong>）。これをチェックすると、ゲームはボーダーレスウィンドウで実行され、通常の最小化、最大化、閉じるボタンとゲームタイトルは削除されます。デフォルトではオフになっています。
+    </li>
+    <li><strong>スケーリング</strong>ここでは、アスペクト比を維持する（つまり 4:3 の<span class="notranslate">room</span> が 16:9
+      で「レターボックス化」される）か、完全に拡大する（フルスクリーンに合わせてイメージを引き伸ばす）かを選択できます。<br />
       <br />
-      <span style="font-size:16px;"><strong>警告!</strong> <em>アプリケーションサーフェスのスイッチを切ると、再びスイッチを入れるまで、<span class="notranslate">Windows</span> ゲームオプションで設定されたすべてのスケーリングオプションが無効になります。詳しくは、アプリケーションサーフェスを参照してください。</em></span>
+      <span style="font-size:16px;"><strong>警告!</strong> <em>アプリケーションサーフェスのスイッチを切ると、再びスイッチを入れるまで、<span
+            class="notranslate">Windows</span>
+          ゲームオプションで設定されたすべてのスケーリングオプションが無効になります。詳しくは、アプリケーションサーフェスを参照してください。</em></span>
     </li>
   </ul>
-  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。 <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成し、その見え方を確認できるようにウィンドウを開くものです。これは、<span class="notranslate">texture</span> のページがどのように構成されているかを確認し、<span class="notranslate">texture</span> のページが必要以上に大きく（または小さく）なるのを防ぎたい場合に、非常に便利な機能です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
-  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、スペックの低いPCではゲームの互換性が低くなりますので、ご注意ください。</p>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ"
+      href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。
+    <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span>
+    ページを生成し、その見え方を確認できるようにウィンドウを開くものです。これは、<span class="notranslate">texture</span> のページがどのように構成されているかを確認し、<span
+      class="notranslate">texture</span> のページが必要以上に大きく（または小さく）なるのを防ぎたい場合に、非常に便利な機能です。<span
+      class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。
+  </p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span>
+    のページサイズが大きくなると、スペックの低いPCではゲームの互換性が低くなりますので、ご注意ください。</p>
   <h2>画像</h2>
-  <p><img>画像セクションは、ゲームに必要な画像を提供する場所です。<span class="notranslate">Windows</span> の場合、<strong>Icon</strong>ファイル（ <span class="inline">.ico</span> 形式であること）とスプラッシュスクリーン（ <span class="inline">.png</span> 、 <span class="inline">.bmp</span> 、 <span class="inline">.jpg</span> 、 <span class="inline">.gif</span> 形式であること）を指定する必要があります。スプラッシュスクリーンは、ゲームのロード中に表示され、<strong>Use Splash Screen</strong>オプションをチェックすることで有効または無効にできます（デフォルトではオフになっています）。</p>
-  <p>なお、<span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレーターという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができます。このツールを使用する場合、作成されたイメージがあなたの要求するものであることを確認するために、修正する必要があります。</p>
+  <p><img>画像セクションは、ゲームに必要な画像を提供する場所です。<span class="notranslate">Windows</span> の場合、<strong>Icon</strong>ファイル（ <span
+      class="inline">.ico</span> 形式であること）とスプラッシュスクリーン（ <span class="inline">.png</span> 、 <span
+      class="inline">.bmp</span> 、 <span class="inline">.jpg</span> 、 <span class="inline">.gif</span>
+    形式であること）を指定する必要があります。スプラッシュスクリーンは、ゲームのロード中に表示され、<strong>Use Splash
+      Screen</strong>オプションをチェックすることで有効または無効にできます（デフォルトではオフになっています）。</p>
+  <p>なお、<span data-keyref="GameMaker Name">GameMakerには</span> <a
+      href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレーターという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができます。このツールを使用する場合、作成されたイメージがあなたの要求するものであることを確認するために、修正する必要があります。
+  </p>
   <h2>インストーラー</h2>
-  <p><img>Windowsゲームは<strong>インストーラーで </strong>作成することができ、ここで<span data-keyref="GameMaker Name">GameMakerが</span>作成時に使用する様々な設定やグラフィックを定義することができます。まず最初に、インストーラの外観を決めるグラフィックオプションがあります。</p>
+  <p><img>Windowsゲームは<strong>インストーラーで </strong>作成することができ、ここで<span
+      data-keyref="GameMaker Name">GameMakerが</span>作成時に使用する様々な設定やグラフィックを定義することができます。まず最初に、インストーラの外観を決めるグラフィックオプションがあります。
+  </p>
   <ul class="colour">
-    <li><strong>終了しました</strong>。インストーラーの &quot;Finished &quot;ページに表示されるグラフィック。 <span class="inline">*.bmp</span> 形式で、サイズは 164x314px である必要があります。</li>
-    <li><strong>ヘッダー</strong>です。インストーラの実行中に表示されるグラフィック。 <span class="inline">*.bmp</span> 形式で、サイズは 150x57px である必要があります。</li>
+    <li><strong>終了しました</strong>。インストーラーの &quot;Finished &quot;ページに表示されるグラフィック。 <span class="inline">*.bmp</span>
+      形式で、サイズは 164x314px である必要があります。</li>
+    <li><strong>ヘッダー</strong>です。インストーラの実行中に表示されるグラフィック。 <span class="inline">*.bmp</span> 形式で、サイズは 150x57px である必要があります。
+    </li>
   </ul>
-  <p>また、必要であれば、特定の<strong>License Agreement</strong>ファイル（<span data-keyref="GameMaker Name">GameMaker</span> にサンプルが付属しています）やカスタム<strong>NSI<span class="notranslate">script</span> ファイル</strong>（詳細は<a href="http://nsis.sourceforge.net/Main_Page">こちら</a>）を指定したり、適切なボタンをクリックして<span data-keyref="GameMaker Name">GameMaker</span> 付属のデフォルトファイルに戻ったりすることも可能です。</p>
+  <p>また、必要であれば、特定の<strong>License Agreement</strong>ファイル（<span data-keyref="GameMaker Name">GameMaker</span>
+    にサンプルが付属しています）やカスタム<strong>NSI<span class="notranslate">script</span> ファイル</strong>（詳細は<a
+      href="http://nsis.sourceforge.net/Main_Page">こちら</a>）を指定したり、適切なボタンをクリックして<span
+      data-keyref="GameMaker Name">GameMaker</span> 付属のデフォルトファイルに戻ったりすることも可能です。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:left">前のページ：<a href="../Game_Options.htm">ゲームオプション</a></div>
         <div style="float:right">次ページ：<a href="macOS.htm">macOS</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Windows Game Options
@@ -72,4 +137,5 @@ Installer
 windows_options
 -->
 </body>
+
 </html>

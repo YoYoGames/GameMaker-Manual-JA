@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>対象物</title>
+  <title>オブジェクト</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -12,16 +13,25 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Objects" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>対象物</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、<span class="notranslate">objects</span> とインスタンスがあります。<span class="notranslate">Objects</span> は基本的にインスタンスのベーステンプレートなので、<span class="notranslate">room</span> の中に直接存在する<i>ことは</i>ありません。<span class="notranslate">object</span> の<i>インスタンスだけが</i> <span class="notranslate">room</span> の中に置かれます。
+  <h1>オブジェクト</h1>
+  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、<span class="notranslate">objects</span> とインスタンスがあります。<span
+      class="notranslate">Objects</span> は基本的にインスタンスのベーステンプレートなので、<span class="notranslate">room</span>
+    の中に直接存在する<i>ことは</i>ありません。<span class="notranslate">object</span> の<i>インスタンスだけが</i> <span
+      class="notranslate">room</span> の中に置かれます。
     つまり、作成するすべてのインスタンスについて何かを変更したい場合は、<i>オブジェクトを</i>変更することで実現できます。</p>
-  <p class="note"><b>重要!</b> <span class="notranslate">object</span> について何かを変更しても、<span class="notranslate">room</span> に現在存在するインスタンスは変更さ<b>れず</b>、変更後に作成されるインスタンスが変更されるだけです。</p>
-  <p>また、ベースとなる<span class="notranslate">object</span> の情報にアクセスして、ゲームの動作や変更を指示するために使用することもできます。例えば、親の<span class="notranslate">object</span> ID をチェックし、その親を持つインスタンスが見つかったら、以下のコードでチェックすることができます。
+  <p class="note"><b>重要!</b> <span class="notranslate">object</span> について何かを変更しても、<span class="notranslate">room</span>
+    に現在存在するインスタンスは変更さ<b>れず</b>、変更後に作成されるインスタンスが変更されるだけです。</p>
+  <p>また、ベースとなる<span class="notranslate">object</span> の情報にアクセスして、ゲームの動作や変更を指示するために使用することもできます。例えば、親の<span
+      class="notranslate">object</span> ID をチェックし、その親を持つインスタンスが見つかったら、以下のコードでチェックすることができます。
     その <span class="inline">object_index</span> 、何をすべきかを決定します。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerには</span>、<span class="notranslate">object</span> についての様々な詳細を得ることができる関数があります。 注意：<span class="notranslate">object</span> はインスタンス（ゲーム内の実体<i>）ではなく</i>、純粋にすべてのインスタンスを作成するためのリソースです。つまり
-    インスタンスが作成されると、コードと<span class="notranslate">room</span> Visual アクションによって変更できるため、これらの関数の戻り値は、<span class="notranslate">GML</span> のインスタンスが示す実際の値とは異なる可能性があります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span>、<span class="notranslate">object</span>
+    についての様々な詳細を得ることができる関数があります。 注意：<span class="notranslate">object</span>
+    はインスタンス（ゲーム内の実体<i>）ではなく</i>、純粋にすべてのインスタンスを作成するためのリソースです。つまり
+    インスタンスが作成されると、コードと<span class="notranslate">room</span> Visual アクションによって変更できるため、これらの関数の戻り値は、<span
+      class="notranslate">GML</span> のインスタンスが示す実際の値とは異なる可能性があります。</p>
   <p> </p>
   <ul class="colour">
     <li><a href="object_index.htm"><span class="notranslate">object_index</span></a></li>
@@ -37,8 +47,11 @@
     <li><a href="object_is_ancestor.htm"><span class="notranslate">object_is_ancestor</span></a></li>
   </ul>
   <p> </p>
-  <p><span class="notranslate">object</span> <span class="notranslate">object</span> また、<span class="notranslate">room</span> のプロパティを設定するための関数もいくつかあります。
-   <span class="notranslate">room</span> そのため、<span class="notranslate">objects</span> のインスタンスが現在の<span class="notranslate">object</span> に存在する場合は、<span class="notranslate">room</span> のプロパティを決して変更しないことを推奨します。</p>
+  <p><span class="notranslate">object</span> <span class="notranslate">object</span> また、<span
+      class="notranslate">room</span> のプロパティを設定するための関数もいくつかあります。
+    <span class="notranslate">room</span> そのため、<span class="notranslate">objects</span> のインスタンスが現在の<span
+      class="notranslate">object</span> に存在する場合は、<span class="notranslate">room</span> のプロパティを決して変更しないことを推奨します。
+  </p>
   <p> </p>
   <ul class="colour">
     <li><a href="object_set_mask.htm"><span class="notranslate">object_set_mask</span></a></li>
@@ -48,7 +61,8 @@
     <li><a href="object_set_visible.htm"><span class="notranslate">object_set_visible</span></a></li>
   </ul>
   <p> </p>
-  <p>また、特定の関数を使用して、特定のインスタンスまたは<span class="notranslate">object</span> 内のコードからイベントを生成することもできます。 これらの関数は、特に<a href="../../../../The_Asset_Editors/Object_Properties/Parent_Objects.htm">Parents と Children</a> を処理する場合に非常に便利です。
+  <p>また、特定の関数を使用して、特定のインスタンスまたは<span class="notranslate">object</span> 内のコードからイベントを生成することもできます。 これらの関数は、特に<a
+      href="../../../../The_Asset_Editors/Object_Properties/Parent_Objects.htm">Parents と Children</a> を処理する場合に非常に便利です。
     であり、その概要は次のとおりである。</p>
   <ul class="colour">
     <li><a href="Object_Events/Generating_Object_Events.htm"><span class="notranslate">Object</span> イベントを発生させる</a></li>
@@ -59,11 +73,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Asset_Management.htm">アセットマネジメント</a></div>
-        <div style="float:right">次へ<a href="../Instances/Instances.htm">インスタンス</a></div>
+        <div style="float:left">前のページ：<a href="../Asset_Management.htm">アセットマネジメント</a></div>
+        <div style="float:right">次のページ：<a href="../Instances/Instances.htm">インスタンス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Objects
@@ -72,4 +87,5 @@ Objects
 object_functions
 -->
 </body>
+
 </html>

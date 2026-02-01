@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_slot_data_instance</title>
@@ -13,25 +14,31 @@
   <meta name="search-keywords" content="skeleton_slot_data_instance" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_slot_data_instance</span></h1>
-  <p>この関数を使用すると、現在のインスタンスに関連付けられた<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> の利用可能な添付ファイルスロットの各データを (事前に作成された)<a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">DS リストに</a>入力できます (添付ファイルの変更も含まれます)。このデータは、以下のキー/値のペアを含む<a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップの</a>形で返されます。</p>
+  <p>この関数を使用すると、現在のインスタンスに関連付けられた<span class="notranslate">Spine</span> <span class="notranslate">sprite</span>
+    の利用可能な添付ファイルスロットの各データを (事前に作成された)<a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">DS リストに</a>入力できます
+    (添付ファイルの変更も含まれます)。このデータは、以下のキー/値のペアを含む<a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップの</a>形で返されます。
+  </p>
   <ul class="colour">
     <li><b>&quot;name&quot;（名前）。</b>スロットの名前。</li>
     <li><b>&quot;bone&quot;（骨）。</b>骨の名前。</li>
     <li><b>&quot;attachment&quot;（添付ファイル）。</b>添付ファイルがある場合はその名前、添付ファイルがない場合は&quot;(none) &quot;を指定する。</li>
   </ul>
-  <p>各キーの値は<span class="notranslate">strings</span> となり、これらのタイプの他のスケルトン添付関数で使用することができます<span class="notranslate">sprite</span> 。作成された <span class="inline">DS Map</span> は破棄さ<i>れないので</i>、<span class="notranslate">loop</span> DS リストを通して、作成された各マップを自分で破棄する必要があることに注意してください。</p>
+  <p>各キーの値は<span class="notranslate">strings</span> となり、これらのタイプの他のスケルトン添付関数で使用することができます<span
+      class="notranslate">sprite</span> 。作成された <span class="inline">DS Map</span> は破棄さ<i>れないので</i>、<span
+      class="notranslate">loop</span> DS リストを通して、作成された各マップを自分で破棄する必要があることに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_slot_data_instance</span>(list);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">list</span></td>
@@ -41,7 +48,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -66,18 +73,22 @@
     <br />
     ds_list_destroy(list);
   </p>
-  <p>上記のコードでは、DS リストを作成し、そのリストにインスタンス<span class="notranslate">sprite</span> のスロット データを入力します。このデータは次に解析され、スロットデータを持つ個々の DS マップが抽出されます。そして、空のスロットがあるかどうかを調べ、もしあれば、 DS マップを破棄する前に、変数 &quot;slot_name&quot; に空のスロット名が代入されます。最後に、DS リストが不要になったので、これを破棄します。</p>
+  <p>上記のコードでは、DS リストを作成し、そのリストにインスタンス<span class="notranslate">sprite</span> のスロット データを入力します。このデータは次に解析され、スロットデータを持つ個々の
+    DS マップが抽出されます。そして、空のスロットがあるかどうかを調べ、もしあれば、 DS マップを破棄する前に、変数 &quot;slot_name&quot; に空のスロット名が代入されます。最後に、DS
+    リストが不要になったので、これを破棄します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Slots.htm">スロット</a></div>
-        <div style="float:right">次のページ <a href="skeleton_find_slot.htm"><span class="notranslate">skeleton_find_slot</span></a></div>
+        <div style="float:left">前のページ：<a href="Slots.htm">スロット</a></div>
+        <div style="float:right">次のページ：<a href="skeleton_find_slot.htm"><span
+              class="notranslate">skeleton_find_slot</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_slot_data_instance
@@ -86,4 +97,5 @@ skeleton_slot_data_instance
 skeleton_slot_data_instance
 -->
 </body>
+
 </html>

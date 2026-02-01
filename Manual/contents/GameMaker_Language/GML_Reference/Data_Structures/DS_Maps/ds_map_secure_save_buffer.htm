@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_map_secure_save_buffer</title>
@@ -12,21 +13,25 @@
   <meta name="rh-index-keywords" content="ds_map_secure_save_buffer" />
   <meta name="search-keywords" content="ds_map_secure_save_buffer" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_map_secure_save_buffer</span></h1>
-  <p>この関数は，以前に作成した DS マップを<span class="notranslate">buffer</span> に保存する。 DS マップの ID 値 (関数 <a href="ds_map_create.htm"><span class="inline">ds_map_create()</span></a>) と，書き込む<span class="notranslate">buffer</span> の ID (関数 <a href="../../Buffers/buffer_create.htm"><span class="inline">buffer_create()</span></a>).保存される DS マップに配列が含まれている場合、保存時にこれは DS リストに変換されることに注意しましょう。</p>
+  <p>この関数は，以前に作成した DS マップを<span class="notranslate">buffer</span> に保存する。 DS マップの ID 値 (関数 <a
+      href="ds_map_create.htm"><span class="inline">ds_map_create()</span></a>) と，書き込む<span
+      class="notranslate">buffer</span> の ID (関数 <a href="../../Buffers/buffer_create.htm"><span
+        class="inline">buffer_create()</span></a>).保存される DS マップに配列が含まれている場合、保存時にこれは DS リストに変換されることに注意しましょう。</p>
   <p class="note"><b>重要!セ</b>キュアセーブされたDSマップファイルは、それを作成したデバイスにしか読み込めませんので、別のデバイスに保存されたファイルを読み込もうとしても、それは機能しません。</p>
   <p class="note"><strong>注</strong>：この機能は、HTML5およびUWPではサポートされていません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_map_secure_save_buffer</span>(filename);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">id</span></td>
@@ -41,7 +46,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -51,18 +56,21 @@
     ds_map_add(map,&quot;money&quot;,10);<br />
     ds_map_secure_save_buffer(map, buff);<br />
     ds_map_destroy(map);</p>
-  <p>上記のコードは、<span class="notranslate">buffer</span> と DS マップを作成し、マップにいくつかの値を入れて<span class="notranslate">buffer</span> に書き込んでからマップを削除します。</p>
+  <p>上記のコードは、<span class="notranslate">buffer</span> と DS マップを作成し、マップにいくつかの値を入れて<span class="notranslate">buffer</span>
+    に書き込んでからマップを削除します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Maps.htm">DSマップ</a></div>
-        <div style="float:right">次のページ <a href="ds_map_secure_load.htm"><span class="notranslate">ds_map_secure_load</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Maps.htm">DSマップ</a></div>
+        <div style="float:right">次のページ：<a href="ds_map_secure_load.htm"><span
+              class="notranslate">ds_map_secure_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_secure_save_buffer
@@ -71,4 +79,5 @@ ds_map_secure_save_buffer
 ds_map_secure_save_buffer
 -->
 </body>
+
 </html>

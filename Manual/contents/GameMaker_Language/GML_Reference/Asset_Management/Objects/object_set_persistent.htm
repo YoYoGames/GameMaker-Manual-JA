@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>object_set_persistent</title>
@@ -12,21 +13,42 @@
   <meta name="rh-index-keywords" content="object_set_persistent" />
   <meta name="search-keywords" content="object_set_persistent" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">object_set_persistent</span></h1>
-  <p>この機能により、特定の<span class="notranslate">object</span> のパーシステンスを設定することができます。パーシステントな<span class="notranslate">object</span> は、<span class="notranslate">room</span> から<span class="notranslate">room</span> に「引き継がれ」、常にそのプロパティを維持します（パーシステンスの詳細については、「<a href="../../../../The_Asset_Editors/Objects.htm">オブジェクトエディタ</a>」のセクションを参照してください）。<span class="notranslate">object</span> のパーシステンスを設定すると、<i>パーシステンスを変更した後に</i>作成されるこの<span class="notranslate">object</span> のインスタンスはすべてパーシステントに作成されますが、<span class="notranslate">room</span> にすでにあるインスタンスは影響を受けない場合があります。</p>
-  <p><span class="notranslate">room</span> で永続性を有効にしたインスタンスを作成すると、レイヤーまたは深さが割り当てられます（<span class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーが<i>ない</i>場合、<span class="notranslate">rooms</span> にわたって持続するインスタンスのために新しいレイヤーが作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になり、インスタンスに深さを割り当てた場合は、新しいレイヤーが &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot; XXX &quot;はレイヤーに一意な名前を付けるための16進数値です。これらのレイヤーは<span class="notranslate">room</span> から<span class="notranslate">Room</span> End で削除されます。レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスに名前付きのレイヤーを割り当てた場合、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあると、永続的なインスタンスは<i>レイヤーの深さに関係なく</i>同じ名前のレイヤーに割り当てられることです。最後に、永続化されたインスタンスが、インスタンスが作成されたのと同じ深さのレイヤーを持つ<span class="notranslate">room</span> に移動した場合、このレイヤーには<i>割り当てられず</i>、代わりに同じ深さに新しいレイヤーが作成されます（前に説明した命名規則に従っています）。</p>
-  <p>これはインスタンス機能ではありません。を使って、個々のインスタンスの persistent<span class="notranslate">flag</span> を設定することができます。 <a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a><span class="notranslate">object</span> <span class="notranslate">flag</span> <span class="notranslate">IDE</span>また、この関数で<span class="notranslate">flag</span> の persistent<span class="notranslate">object</span> を true に変更しても、<span class="notranslate">room</span> にあるインスタンスはすべてそのままで、関数を呼び出した後に作成したインスタンスだけが persistent を true にした状態で起動します。</p>
+  <p>この機能により、特定の<span class="notranslate">object</span> のパーシステンスを設定することができます。パーシステントな<span
+      class="notranslate">object</span> は、<span class="notranslate">room</span> から<span class="notranslate">room</span>
+    に「引き継がれ」、常にそのプロパティを維持します（パーシステンスの詳細については、「<a
+      href="../../../../The_Asset_Editors/Objects.htm">オブジェクトエディタ</a>」のセクションを参照してください）。<span
+      class="notranslate">object</span> のパーシステンスを設定すると、<i>パーシステンスを変更した後に</i>作成されるこの<span
+      class="notranslate">object</span> のインスタンスはすべてパーシステントに作成されますが、<span class="notranslate">room</span>
+    にすでにあるインスタンスは影響を受けない場合があります。</p>
+  <p><span class="notranslate">room</span> で永続性を有効にしたインスタンスを作成すると、レイヤーまたは深さが割り当てられます（<span
+      class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span
+      class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーが<i>ない</i>場合、<span class="notranslate">rooms</span>
+    にわたって持続するインスタンスのために新しいレイヤーが作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になり、インスタンスに深さを割り当てた場合は、新しいレイヤーが
+    &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot; XXX
+    &quot;はレイヤーに一意な名前を付けるための16進数値です。これらのレイヤーは<span class="notranslate">room</span> から<span
+      class="notranslate">Room</span> End で削除されます。レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスに名前付きのレイヤーを割り当てた場合、次の<span
+      class="notranslate">rooms</span>
+    に同じ名前の別のレイヤーがあると、永続的なインスタンスは<i>レイヤーの深さに関係なく</i>同じ名前のレイヤーに割り当てられることです。最後に、永続化されたインスタンスが、インスタンスが作成されたのと同じ深さのレイヤーを持つ<span
+      class="notranslate">room</span> に移動した場合、このレイヤーには<i>割り当てられず</i>、代わりに同じ深さに新しいレイヤーが作成されます（前に説明した命名規則に従っています）。</p>
+  <p>これはインスタンス機能ではありません。を使って、個々のインスタンスの persistent<span class="notranslate">flag</span> を設定することができます。 <a
+      href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a><span
+      class="notranslate">object</span> <span class="notranslate">flag</span> <span
+      class="notranslate">IDE</span>また、この関数で<span class="notranslate">flag</span> の persistent<span
+      class="notranslate">object</span> を true に変更しても、<span class="notranslate">room</span>
+    にあるインスタンスはすべてそのままで、関数を呼び出した後に作成したインスタンスだけが persistent を true にした状態で起動します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">object_set_persistent</span>(index, pers);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -36,12 +58,13 @@
       <tr>
         <td><span class="notranslate">pers</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the object should be flagged as persistent (<span class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
+        <td><span class="notranslate">Whether the object should be flagged as persistent (<span
+              class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -50,18 +73,21 @@
         object_set_persistent(obj_Player, false);<br />
     }<br />
     instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player);</p>
-  <p>上記のコードでは、インスタンスが現在どの<span class="notranslate">room</span> にあるかを確認し、指定された &quot;rm_final&quot; にあれば、<span class="notranslate">object</span> &quot;obj_Player&quot; のパーシステンスを false に設定し、インスタンスを生成しています。</p>
+  <p>上記のコードでは、インスタンスが現在どの<span class="notranslate">room</span> にあるかを確認し、指定された &quot;rm_final&quot; にあれば、<span
+      class="notranslate">object</span> &quot;obj_Player&quot; のパーシステンスを false に設定し、インスタンスを生成しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
-        <div style="float:right">次のページ <a href="object_set_solid.htm"><span class="notranslate">object_set_solid</span></a></div>
+        <div style="float:left">前のページ：<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ：<a href="object_set_solid.htm"><span
+              class="notranslate">object_set_solid</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_set_persistent
@@ -70,4 +96,5 @@ object_set_persistent
 object_set_persistent
 -->
 </body>
+
 </html>

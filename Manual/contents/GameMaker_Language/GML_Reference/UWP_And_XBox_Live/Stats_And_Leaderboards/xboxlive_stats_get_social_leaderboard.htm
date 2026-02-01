@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_stats_get_social_leaderboard（ソーシャルリーダーボード）。</title>
@@ -12,15 +13,26 @@
   <meta name="rh-index-keywords" content="xboxlive_stats_get_social_leaderboard, achievement_stat_event" />
   <meta name="search-keywords" content="xboxlive_stats_get_social_leaderboard,achievement_stat_event" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_get_social_leaderboard（ソーシャルリーダーボード）。</h1>
-  <p>この関数は、指定された統計値に対するランクのソーシャルリーダーボードを取得するために使用することができます。ユーザ ID を指定します (たとえば、関数 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>) 、統計情報<span class="notranslate">string</span> (xboxlive_stats_set_stat_* 関数で作成したときの定義)、そして取得したいリーダーボード情報についての詳細をいくつか指定します。ソーシャルリーダーボードを取得できるのは、<span class="notranslate">int</span> または real 統計情報のみで、<span class="notranslate">string</span> 統計情報は取得できません。また、<span class="notranslate">flag</span> 引数 &quot;favourites_only&quot; を true にすると、ユーザーが「お気に入り」としてマークしているフレンドのデータのみが結果に含まれることに注意してください。</p>
-  <p class="note"><b>重要!ソ</b>ーシャルリーダーボードで使用する統計情報は、XDP/Windows Dev Centerで &quot;Featured Stats &quot;として登録する必要は<b>ありません</b>。</p>
-  <p>この関数は、<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">ソーシャル非同期イベントの</a>トリガーとなるコールバックを生成します。このイベントは、特別な DS マップ <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>を解析し、以下のキーを取得する必要があります。</p>
+  <p>この関数は、指定された統計値に対するランクのソーシャルリーダーボードを取得するために使用することができます。ユーザ ID を指定します (たとえば、関数 <a
+      href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>) 、統計情報<span
+      class="notranslate">string</span> (xboxlive_stats_set_stat_*
+    関数で作成したときの定義)、そして取得したいリーダーボード情報についての詳細をいくつか指定します。ソーシャルリーダーボードを取得できるのは、<span class="notranslate">int</span> または real
+    統計情報のみで、<span class="notranslate">string</span> 統計情報は取得できません。また、<span class="notranslate">flag</span> 引数
+    &quot;favourites_only&quot; を true にすると、ユーザーが「お気に入り」としてマークしているフレンドのデータのみが結果に含まれることに注意してください。</p>
+  <p class="note"><b>重要!ソ</b>ーシャルリーダーボードで使用する統計情報は、XDP/Windows Dev Centerで &quot;Featured Stats
+    &quot;として登録する必要は<b>ありません</b>。</p>
+  <p>この関数は、<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">ソーシャル非同期イベントの</a>トリガーとなるコールバックを生成します。このイベントは、特別な
+    DS マップ <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>を解析し、以下のキーを取得する必要があります。</p>
   <ul class="colour">
     <li>「<b>id</b>&quot; - 定数を保持します。 <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>event</b>&quot; -<span class="notranslate">string</span> &quot;<i>GetLeaderboardComplete</i>&quot; を保持します。</li>
+    <li>&quot;<b>event</b>&quot; -<span class="notranslate">string</span> &quot;<i>GetLeaderboardComplete</i>&quot;
+      を保持します。</li>
     <li>&quot;<b>userid</b>&quot; - リクエストに関連付けられたユーザー ID。</li>
     <li>&quot;<b>error</b>&quot; - 成功した場合は 0、エラーが発生した場合は他の値。以下は、最も一般的に返されるエラーです。
       <ul>
@@ -39,14 +51,15 @@
     <li>&quot;<b>ScoreN</b>&quot; - プレイヤー &quot;N &quot;のスコア。</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code">xboxlive_stats_get_social_leaderboard(user_id, stat, num_entries, start_rank, start_at_user, favourites_only);</p>
+  <h4>構文</h4>
+  <p class="code">xboxlive_stats_get_social_leaderboard(user_id, stat, num_entries, start_rank, start_at_user,
+    favourites_only);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">user_id</span></td>
@@ -66,22 +79,27 @@
       <tr>
         <td><span class="notranslate">start_rank</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot; argument is set to <span class="inline">true</span>)</td>
+        <td><span class="notranslate">The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot;
+            argument is set to <span class="inline">true</span>)</td>
       </tr>
       <tr>
         <td><span class="notranslate">start_at_user</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Set to <span class="inline">true</span> はユーザーIDのランクから開始、それ以外は (引数 &quot;start_rank&quot; が 0 以外の場合は に設定される) <span class="inline">false</span> <span class="inline">false</span> </td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> はユーザーIDのランクから開始、それ以外は (引数
+            &quot;start_rank&quot; が 0 以外の場合は に設定される) <span class="inline">false</span> <span
+              class="inline">false</span> </td>
       </tr>
       <tr>
         <td><span class="notranslate">favourites_only</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Set to <span class="inline">true</span> をクリックすると、&quot;お気に入り &quot;としてマークされた友人だけを表示することができます。または、 それ以外の場合は、&quot;お気に入り &quot;をクリックします。 <span class="inline">false</span> </td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> をクリックすると、&quot;お気に入り
+            &quot;としてマークされた友人だけを表示することができます。または、 それ以外の場合は、&quot;お気に入り &quot;をクリックします。 <span class="inline">false</span>
+        </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>拡張された例。</h4>
@@ -102,18 +120,22 @@
             }<br />
         }<br />
     }</p>
-  <p>上記のコードは、ソーシャル非同期イベントで返されたDSマップをチェックし、その「id」がチェック対象の定数と一致する場合、返されたリーダーボードデータによってイベントがトリガーされたかどうかをチェックしてからマップをループし、すべての異なる値をいくつかのグローバル配列に格納しています。</p>
+  <p>
+    上記のコードは、ソーシャル非同期イベントで返されたDSマップをチェックし、その「id」がチェック対象の定数と一致する場合、返されたリーダーボードデータによってイベントがトリガーされたかどうかをチェックしてからマップをループし、すべての異なる値をいくつかのグローバル配列に格納しています。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
-        <div style="float:right">次:<a data-xref="{title}" href="xboxlive_achievement_show_achievements.htm">xboxlive_achievement_show_achievements</a></div>
+        <div style="float:left">前のページ：<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次:<a data-xref="{title}"
+            href="xboxlive_achievement_show_achievements.htm">xboxlive_achievement_show_achievements</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_social_leaderboard
@@ -124,4 +146,5 @@ xboxlive_achievement_stat_event
 xboxlive_stats_get_social_leaderboard
 -->
 </body>
+
 </html>

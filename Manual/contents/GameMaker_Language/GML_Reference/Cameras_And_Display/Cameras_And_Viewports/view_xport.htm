@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>view_xport</title>
@@ -12,22 +13,28 @@
   <meta name="rh-index-keywords" content="view_xport" />
   <meta name="search-keywords" content="view_xport" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">view_xport</span></h1>
-  <p>この内蔵の配列を使って、指定したビューポートの x 位置を取得または設定することができます。ビューポートとは、画面上のビューを描画する領域のことで、一度に最大 8 つまでアクティブにできます (配列の値は 0 から 7 までで、合計 8 つになります)。
-    ポート)。さて、<span data-keyref="GameMaker Name">GameMaker</span>のデフォルトでは、ゲームウィンドウ（または背景キャンバス）は<span class="notranslate">room</span> と同じサイズですが、ビューポートやカメラを有効にすると、この動作は変わり、<i>すべてのビューポートのバウンディングボックスの合計サイズが</i>使用されます。つまり、2つの異なる位置に2つのビューポートがある場合、それらがカバーする領域の合計がゲームウィンドウの大きさを決定します。次の画像は、これを説明するためのものです。</p>
+  <p>この内蔵の配列を使って、指定したビューポートの x 位置を取得または設定することができます。ビューポートとは、画面上のビューを描画する領域のことで、一度に最大 8 つまでアクティブにできます (配列の値は 0 から 7
+    までで、合計 8 つになります)。
+    ポート)。さて、<span data-keyref="GameMaker Name">GameMaker</span>のデフォルトでは、ゲームウィンドウ（または背景キャンバス）は<span
+      class="notranslate">room</span>
+    と同じサイズですが、ビューポートやカメラを有効にすると、この動作は変わり、<i>すべてのビューポートのバウンディングボックスの合計サイズが</i>使用されます。つまり、2つの異なる位置に2つのビューポートがある場合、それらがカバーする領域の合計がゲームウィンドウの大きさを決定します。次の画像は、これを説明するためのものです。
+  </p>
   <p><img>ビューポートが<i>1</i>つしかない場合、ポートのxまたはyの値を設定することで、ビューポートを変更することができます。
     には面白い効果がありますが、通常は実用的ではありません（下図参照）ので、xとyの位置は（0,0）のままにしておくのがよいでしょう。</p>
-  <p><img alt="Canvas with multiple view ports example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png" /></p>
-  <h4>構文です。</h4>
+  <p><img alt="Canvas with multiple view ports example" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/viewport_canvas.png" /></p>
+  <h4>構文</h4>
   <p class="code">view_xport[0 .. 7];</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">view_xport[0] = 0;<br/> view_yport[0] = 0;</p>
+  <p class="code">view_xport[0] = 0;<br /> view_yport[0] = 0;</p>
   <p>上記のコードは、ビューポート[0]の位置をディスプレイの(0,0)の位置（左上隅）にリセットしています。</p>
   <p> </p>
   <p> </p>
@@ -35,11 +42,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背面<a href="Cameras_And_View_Ports.htm">カメラとビューポート</a></div>
-        <div style="float:right">次のページ <a href="view_yport.htm"><span class="notranslate">view_yport</span></a></div>
+        <div style="float:left">前のページ：<a href="Cameras_And_View_Ports.htm">カメラとビューポート</a></div>
+        <div style="float:right">次のページ：<a href="view_yport.htm"><span class="notranslate">view_yport</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 view_xport
@@ -48,4 +56,5 @@ view_xport
 view_xport
 -->
 </body>
+
 </html>

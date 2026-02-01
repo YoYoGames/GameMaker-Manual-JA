@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>テクスチャページ</title>
@@ -12,48 +13,77 @@
   <meta name="rh-index-keywords" content="Texture Groups - Texture Pages,Texture Pages" />
   <meta name="search-keywords" content="textures,texture pages,texture page,texture atlas,atlas" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>テクスチャページ</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerで</span>ゲームを作ると、それに伴うグラフィック（<span class="notranslate">sprites</span>,<span class="notranslate">tilesets</span>,<span class="notranslate">fonts</span> ）を必ず作成することになると思います。これらのグラフィックは、<strong>テクスチャ</strong>ページに格納されており、<span data-keyref="GameMaker Name">GameMakerが</span>すべての
+  <p><span data-keyref="GameMaker Name">GameMakerで</span>ゲームを作ると、それに伴うグラフィック（<span
+      class="notranslate">sprites</span>,<span class="notranslate">tilesets</span>,<span
+      class="notranslate">fonts</span> ）を必ず作成することになると思います。これらのグラフィックは、<strong>テクスチャ</strong>ページに格納されており、<span
+      data-keyref="GameMaker Name">GameMakerが</span>すべての
     の画像リソースが含まれています。以下は、完成した<span class="notranslate">texture</span> のページの例です。</p>
   <p><img>ご覧のように、ゲーム・グラフィックはすべて、512x512、1024x512といった2のべき乗のサイズのページに収まるように、ごちゃごちゃと並べられているのです。
     などなど、最大4096x4096ピクセルのページまで。<span class="notranslate">texture</span> ページの最大サイズは、選択したエクスポートプラットフォームによって異なることに注意してください。
     は、ターゲットプラットフォームのOSを使用するすべてのデバイスに最適とは限りません。</p>
-  <p>また、画像の周囲に多くの空きスペース（つまり透明なピクセル）がある場合、これらの「見えない」ピクセルを取り除き、1つの<span class="notranslate">texture</span> ページにできるだけ多くの画像を詰め込むために、デフォルトでトリミングされることに注意してください。もし
+  <p>また、画像の周囲に多くの空きスペース（つまり透明なピクセル）がある場合、これらの「見えない」ピクセルを取り除き、1つの<span class="notranslate">texture</span>
+    ページにできるだけ多くの画像を詰め込むために、デフォルトでトリミングされることに注意してください。もし
     この機能を無効にするには、"<a href="../Texture_Groups.htm">Texture Groups "</a>ウィンドウを開いて、この機能を無効にする必要があります。</p>
-  <p><span class="notranslate">texture</span> の設定が画像にどのような影響を与えるかを理解することは重要です。そこで、<a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a>の<strong>Texture Settings</strong> というセクションを見てみましょう。</p>
+  <p><span class="notranslate">texture</span> の設定が画像にどのような影響を与えるかを理解することは重要です。そこで、<a
+      href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a>の<strong>Texture Settings</strong> というセクションを見てみましょう。
+  </p>
   <p><img>ここでは、<span class="notranslate">texture</span> のページにどのように画像を保存するか、また、3D で使用する専用の画像であるかどうかを定義できます。
-    を別途保存し、<span class="notranslate">texture</span> のどのページに割り当てるか、その他いくつかのオプション（<a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a>のページで詳しく説明されています）。私たちが関心を持つのは、以下のオプションです。
-    の2つです。Tile Horizontalと<span class="notranslate">Tile</span> Verticalです。これらは、<span class="notranslate">texture</span> ページに配置されたときに、画像の端がどのように作成されるかに関係します。</p>
-  <p>タイル化される画像は、エッジ（水平または垂直）が反対側のエッジによって追加されます。一方、タイル化を選択しない場合、<span class="notranslate">sprite</span> は<em>クランプさ </em>れ、エッジピクセルが繰り返されます（<span class="notranslate">tilesets</span> も注意してください）。
-    は、<a href="../../The_Asset_Editors/Tile_Sets.htm">タイルセットのプロパティ</a>にある出力ボーダー幅の設定があり、セット内の各<span class="notranslate">tile</span> に対してのみ、同じことを行います)。次の画像はこれを示しています。</p>
-  <p><img>これらの設定の下に、<strong>Separate<span class="notranslate">Texture</span> Page </strong>の設定があります。このオプションは、<span data-keyref="GameMaker Name">GameMakerが</span>この画像を強制的に
-   <span class="notranslate">texture</span> で、タイリングやクランプはコードで直接制御されるため、これに関連するオプションはありません。これは、3D モデルのテクスチャに最もよく使われます（この場合、<span class="notranslate">texture</span> は 2 の累乗であるべきです、例えば、128x128。
-    512x512, 256x1024, etc...）でも、どんな画像でも独自のページに描画するように強制するために使うことができます。</p>
-  <p class="note"><strong>注</strong>：このオプションを使用する場合、特にモバイル機器では、<span class="notranslate">texture</span> のページ数が多すぎると、利用可能な<span class="notranslate">texture</span> のメモリーをすぐに使い切ってしまうので、注意が必要です。</p>
-  <p><span class="notranslate">room</span> さて、アーティスティックなリソースを多用する大規模なゲームの場合、<span data-keyref="GameMaker Name">GameMakerが</span>自動的にこれらのページを作成する方法は、ターゲットデバイスを最大限に活用するためには最適とは言えないかもしれません。
-    4 つの異なる<span class="notranslate">texture</span> ページからリソースを必要とする場合、デバイスはこれらのページを常にメモリにスワップ（およびスワップアウト）する必要があり、パフォーマンスの低下を引き起こす可能性があります。そのため、<span data-keyref="GameMaker Name">GameMakerに</span>どのような画像を表示させるかを指示するオプションがあります。
-    特定の<strong>テクスチャ</strong>グループに割り当てることで、特定の<span class="notranslate">texture</span> ページに配置されます。この最終的な目的は、ゲーム内で一度に行われるスワップの数を最小限に抑えることです（<span class="notranslate">texture</span> ページは<a href="../Texture_Groups.htm">Texture Groups</a>ウィンドウから追加できます）。</p>
-  <p><a href="../Game_Options.htm">Game Optionsに</a>ある各プラットフォームのタブには、定義した<span class="notranslate">texture</span> のページを表示するボタンがあります。
+    を別途保存し、<span class="notranslate">texture</span> のどのページに割り当てるか、その他いくつかのオプション（<a
+      href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a>のページで詳しく説明されています）。私たちが関心を持つのは、以下のオプションです。
+    の2つです。Tile Horizontalと<span class="notranslate">Tile</span> Verticalです。これらは、<span class="notranslate">texture</span>
+    ページに配置されたときに、画像の端がどのように作成されるかに関係します。</p>
+  <p>タイル化される画像は、エッジ（水平または垂直）が反対側のエッジによって追加されます。一方、タイル化を選択しない場合、<span class="notranslate">sprite</span> は<em>クランプさ
+    </em>れ、エッジピクセルが繰り返されます（<span class="notranslate">tilesets</span> も注意してください）。
+    は、<a href="../../The_Asset_Editors/Tile_Sets.htm">タイルセットのプロパティ</a>にある出力ボーダー幅の設定があり、セット内の各<span
+      class="notranslate">tile</span> に対してのみ、同じことを行います)。次の画像はこれを示しています。</p>
+  <p><img>これらの設定の下に、<strong>Separate<span class="notranslate">Texture</span> Page </strong>の設定があります。このオプションは、<span
+      data-keyref="GameMaker Name">GameMakerが</span>この画像を強制的に
+    <span class="notranslate">texture</span> で、タイリングやクランプはコードで直接制御されるため、これに関連するオプションはありません。これは、3D
+    モデルのテクスチャに最もよく使われます（この場合、<span class="notranslate">texture</span> は 2 の累乗であるべきです、例えば、128x128。
+    512x512, 256x1024, etc...）でも、どんな画像でも独自のページに描画するように強制するために使うことができます。
+  </p>
+  <p class="note"><strong>注</strong>：このオプションを使用する場合、特にモバイル機器では、<span class="notranslate">texture</span>
+    のページ数が多すぎると、利用可能な<span class="notranslate">texture</span> のメモリーをすぐに使い切ってしまうので、注意が必要です。</p>
+  <p><span class="notranslate">room</span> さて、アーティスティックなリソースを多用する大規模なゲームの場合、<span
+      data-keyref="GameMaker Name">GameMakerが</span>自動的にこれらのページを作成する方法は、ターゲットデバイスを最大限に活用するためには最適とは言えないかもしれません。
+    4 つの異なる<span class="notranslate">texture</span>
+    ページからリソースを必要とする場合、デバイスはこれらのページを常にメモリにスワップ（およびスワップアウト）する必要があり、パフォーマンスの低下を引き起こす可能性があります。そのため、<span
+      data-keyref="GameMaker Name">GameMakerに</span>どのような画像を表示させるかを指示するオプションがあります。
+    特定の<strong>テクスチャ</strong>グループに割り当てることで、特定の<span class="notranslate">texture</span>
+    ページに配置されます。この最終的な目的は、ゲーム内で一度に行われるスワップの数を最小限に抑えることです（<span class="notranslate">texture</span> ページは<a
+      href="../Texture_Groups.htm">Texture Groups</a>ウィンドウから追加できます）。</p>
+  <p><a href="../Game_Options.htm">Game Optionsに</a>ある各プラットフォームのタブには、定義した<span class="notranslate">texture</span>
+    のページを表示するボタンがあります。
     ターゲットになります。何ページが作成され、何が書かれているのかを知るのに非常に便利です。</p>
-  <p>あなたのゲームに、選択した最大ページサイズ（<span class="notranslate">texture</span> ）より大きい<span class="notranslate">texture</span> がある場合、これは最大ページサイズに収まるまで<em>半分に縮小さ </em>れます（必要に応じてさらに半分に縮小されます）。分割されることは<em>ありません </em>。
-    セクションをさまざまな<span class="notranslate">texture</span> ページに分割します。つまり、<span class="notranslate">Windows</span> 、<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) または MacOS でゲームをテストする場合、より大きな<span class="notranslate">texture</span> ページを使用しているため、ゲームは正常に見えるかもしれませんが、<span class="notranslate">iOS</span> ( または、より小さな<span class="notranslate">texture</span> ページを必要とする他のターゲット ) では、ゲームは正常に見えるかもしれません。
-    最適なパフォーマンスを得るために、<span class="notranslate">texture</span> がぼやけて見えたり、アーティファクトが発生したりする場合があります。あなたのゲームが使用する最小のページサイズ<span class="notranslate">texture</span> に画像が収まるようにすることが重要です。
+  <p>あなたのゲームに、選択した最大ページサイズ（<span class="notranslate">texture</span> ）より大きい<span class="notranslate">texture</span>
+    がある場合、これは最大ページサイズに収まるまで<em>半分に縮小さ </em>れます（必要に応じてさらに半分に縮小されます）。分割されることは<em>ありません </em>。
+    セクションをさまざまな<span class="notranslate">texture</span> ページに分割します。つまり、<span class="notranslate">Windows</span> 、<span
+      class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) または MacOS でゲームをテストする場合、より大きな<span
+      class="notranslate">texture</span> ページを使用しているため、ゲームは正常に見えるかもしれませんが、<span class="notranslate">iOS</span> (
+    または、より小さな<span class="notranslate">texture</span> ページを必要とする他のターゲット ) では、ゲームは正常に見えるかもしれません。
+    最適なパフォーマンスを得るために、<span class="notranslate">texture</span>
+    がぼやけて見えたり、アーティファクトが発生したりする場合があります。あなたのゲームが使用する最小のページサイズ<span class="notranslate">texture</span> に画像が収まるようにすることが重要です。
     を小さな画像に分割し、ゲーム内でそれらをまとめて描画することで、あたかも1つの大きな画像が完成したかのように見せることができます。</p>
-  <p class="note"><strong>注</strong>：<span class="notranslate">texture</span> ページにグラフィックを分割する前に、これは必ずしも必要ではなく、また最も効率的な方法でもないことを認識しておく必要があります。ゲームによっては、GPU よりも CPU に依存するものがあります (
+  <p class="note"><strong>注</strong>：<span class="notranslate">texture</span>
+    ページにグラフィックを分割する前に、これは必ずしも必要ではなく、また最も効率的な方法でもないことを認識しておく必要があります。ゲームによっては、GPU よりも CPU に依存するものがあります (
     また、すべての画像を2つの
-    <span class="notranslate">texture</span> ページを作成し、その間をスワップする方が、複数のページに分散してメモリを浪費するだけです。</p>
+    <span class="notranslate">texture</span> ページを作成し、その間をスワップする方が、複数のページに分散してメモリを浪費するだけです。
+  </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Texture_Groups.htm">テクスチャーグループ</a></div>
-        <div style="float:right">次へ<a href="Non-Bitmap_Sprites.htm">非ビットマップスプライト</a></div>
+        <div style="float:left">前のページ：<a href="../Texture_Groups.htm">テクスチャーグループ</a></div>
+        <div style="float:right">次のページ：<a href="Non-Bitmap_Sprites.htm">非ビットマップスプライト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Texture Pages
@@ -65,4 +95,5 @@ Textures
 texture_pages
 -->
 </body>
+
 </html>

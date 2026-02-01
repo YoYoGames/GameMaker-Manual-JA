@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_vertex_texture</title>
@@ -13,22 +14,34 @@
   <meta name="search-keywords" content="draw_vertex_texture" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_vertex_texture</span></h1>
-  <p>この関数は、プリミティブのテクスチャ（<span class="notranslate">vertex</span> ）の位置を定義する。プリミティブの最終的な外観は、描画に選択されたプリミティブの種類によって異なります ( <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a><span class="notranslate">texture</span>を呼び出す必要があります。プリミティブを終了して描画するためには <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
-  <p>また、サンプリングする適切な xtex/ytex 位置（これらの座標は<b>UV</b>ポイントとも呼ばれます）を設定することで、プリミティブの表面上に<span class="notranslate">texture</span> の<i>一部だけを</i>描画することも可能です。この点は0と1の間の値で定義され、使用するイメージの左上隅が(0,0)点、右下隅が(1,1)点となります。このようにして、元画像の一部だけを使ったプリミティブを<span class="notranslate">texture</span> にすることができます<span class="notranslate">asset</span> 。</p>
-  <p>テクスチャ付きプリミティブを描画する場合、<span class="notranslate">texture</span> は<a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span> で設定された色とブレンドされます。</a> <a html="../colour And Blending/draw_set_colour.html">つまり、ブレンドなしで<span class="notranslate">texture</span> を描画するには、以下の例に示すように、これを <span class="inline">c_white</span> に設定</a>する必要があります。</p>
-  <p class="note"><a html="../colour And Blending/draw_set_colour.html"><b><span class="note">注意事項</span></b><span class="notranslate">texture</span> を繰り返すには、32x32、128x128 など、2のべき乗のサイズである必要があります。</a></p>
+  <p>この関数は、プリミティブのテクスチャ（<span class="notranslate">vertex</span> ）の位置を定義する。プリミティブの最終的な外観は、描画に選択されたプリミティブの種類によって異なります ( <a
+      href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a><span
+      class="notranslate">texture</span>を呼び出す必要があります。プリミティブを終了して描画するためには <a href="draw_primitive_end.htm"><span
+        class="inline">draw_primitive_end()</span></a>.</p>
+  <p>また、サンプリングする適切な xtex/ytex 位置（これらの座標は<b>UV</b>ポイントとも呼ばれます）を設定することで、プリミティブの表面上に<span
+      class="notranslate">texture</span>
+    の<i>一部だけを</i>描画することも可能です。この点は0と1の間の値で定義され、使用するイメージの左上隅が(0,0)点、右下隅が(1,1)点となります。このようにして、元画像の一部だけを使ったプリミティブを<span
+      class="notranslate">texture</span> にすることができます<span class="notranslate">asset</span> 。</p>
+  <p>テクスチャ付きプリミティブを描画する場合、<span class="notranslate">texture</span> は<a
+      html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span>
+      で設定された色とブレンドされます。</a> <a html="../colour And Blending/draw_set_colour.html">つまり、ブレンドなしで<span
+        class="notranslate">texture</span> を描画するには、以下の例に示すように、これを <span class="inline">c_white</span> に設定</a>する必要があります。
+  </p>
+  <p class="note"><a html="../colour And Blending/draw_set_colour.html"><b><span class="note">注意事項</span></b><span
+        class="notranslate">texture</span> を繰り返すには、32x32、128x128 など、2のべき乗のサイズである必要があります。</a></p>
   <p> </p>
   <h4><a html="../colour And Blending/draw_set_colour.html">構文です。</a></h4>
   <p class="code"><a html="../colour And Blending/draw_set_colour.html">draw_vertex_texture(x, y, xtex, ytex)</a></p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x</span></td>
@@ -65,18 +78,23 @@
       draw_vertex_texture(0, 480, 0, 1);<br />
       draw_vertex_texture(640, 480, 1, 1);<br />
       draw_primitive_end();</a></p>
-  <p><a html="../colour And Blending/draw_set_colour.html">上記のコードでは、変数 &quot;tex&quot; に保持された<span class="notranslate">vertex</span> でテクスチャを貼った 4<span class="notranslate">texture</span> の三角形の帯（長方形を作る）を描き、その<span class="notranslate">texture</span> 全体で完成したプリミティブを覆うことになります。</a></p>
+  <p><a html="../colour And Blending/draw_set_colour.html">上記のコードでは、変数 &quot;tex&quot; に保持された<span
+        class="notranslate">vertex</span> でテクスチャを貼った 4<span class="notranslate">texture</span> の三角形の帯（長方形を作る）を描き、その<span
+        class="notranslate">texture</span> 全体で完成したプリミティブを覆うことになります。</a></p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></div>
-        <div style="float:right">次のページ <a href="draw_vertex_texture_colour.htm"><span class="notranslate">draw_vertex_texture_colour</span></a></div>
+        <div style="float:left">前のページ：<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span
+              class="notranslate">Vertex</span> フォーマット</a></div>
+        <div style="float:right">次のページ：<a href="draw_vertex_texture_colour.htm"><span
+              class="notranslate">draw_vertex_texture_colour</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_vertex_texture
@@ -85,4 +103,5 @@ draw_vertex_texture
 draw_vertex_texture
 -->
 </body>
+
 </html>

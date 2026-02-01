@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_map_find_last</title>
@@ -13,29 +14,35 @@
   <meta name="search-keywords" content="ds_map_find_last" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_map_find_last</span></h1>
-  <p>この関数は、DS マップに格納されている最後のキーを返します。<b>これは、追加した順番で最後のキーになるわけではありません!</b>DS マップは線形に保存されるわけではなく、<a href="../DS_Lists/DS_Lists.htm">DS リストを</a>使用するため、この関数が行うのはコンピュータに保存されている最後のキーを見つけることだけです。これは、DS マップを繰り返し検索する必要がある場合に便利ですが、 時間がかかるので、できれば避けたいところです。</p>
+  <p>この関数は、DS マップに格納されている最後のキーを返します。<b>これは、追加した順番で最後のキーになるわけではありません!</b>DS マップは線形に保存されるわけではなく、<a
+      href="../DS_Lists/DS_Lists.htm">DS リストを</a>使用するため、この関数が行うのはコンピュータに保存されている最後のキーを見つけることだけです。これは、DS
+    マップを繰り返し検索する必要がある場合に便利ですが、 時間がかかるので、できれば避けたいところです。</p>
   <p>なお、この関数は、与えられたDSマップが空の場合、 <span class="inline">undefined</span> を返す。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_map_find_last</span>(id);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_Map"></span></td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_DS_Map"></span></td>
         <td><span class="notranslate">The id of the map to use.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Any">Variable</span> or <span data-keyref="Type_Undefined">undefined</span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Any">Variable</span> or <span data-keyref="Type_Undefined">undefined</span>
+  </p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var size = ds_map_size(inventory);<br />
@@ -48,18 +55,22 @@
         }<br />
         else break;<br />
     }</p>
-  <p>上記のコードでは、いくつかの一時変数を作成した後、DSマップのサイズを取得し、コンピュータがマップに保存している最後のキーを見つけます。そして、 <span class="inline">for</span> <span class="notranslate">loop</span> を使って DS マップを繰り返し検索し、キー値「gold」を探します。もし見つかったら、<span class="notranslate">loop</span> を実行する。</p>
+  <p>上記のコードでは、いくつかの一時変数を作成した後、DSマップのサイズを取得し、コンピュータがマップに保存している最後のキーを見つけます。そして、 <span class="inline">for</span> <span
+      class="notranslate">loop</span> を使って DS マップを繰り返し検索し、キー値「gold」を探します。もし見つかったら、<span class="notranslate">loop</span>
+    を実行する。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Maps.htm">DSマップ</a></div>
-        <div style="float:right">次のページ <a href="ds_map_find_next.htm"><span class="notranslate">ds_map_find_next</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Maps.htm">DSマップ</a></div>
+        <div style="float:right">次のページ：<a href="ds_map_find_next.htm"><span
+              class="notranslate">ds_map_find_next</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_find_last
@@ -68,4 +79,5 @@ ds_map_find_last
 ds_map_find_last
 -->
 </body>
+
 </html>

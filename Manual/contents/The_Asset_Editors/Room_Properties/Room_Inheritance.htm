@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ルームインヘリテージ</title>
@@ -12,28 +13,68 @@
   <meta name="rh-index-keywords" content="Rooms - Inheritance" />
   <meta name="search-keywords" content="room inheritance,inherit,inheritance" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ルームインヘリテージ</h1>
-  <p><span class="notranslate">room</span> エディターの重要な機能として、<strong>継承が</strong>あります。継承とは、「親」<span class="notranslate">room</span> を作成し、そこから「子」<span class="notranslate">room</span> を作成し、親のルームのすべてのプロパティを<span class="notranslate">inherit</span> することができるということです。この子<span class="notranslate">room</span> は基本的に親の<em>クローン </em>であり、その中のすべてが<strong>親のルームにリンクされて</strong>います。つまり、親のビューを変更したり、<span class="notranslate">tile</span> を移動したり、インスタンスを追加すると、子<span class="notranslate">room</span> に反映されます。それだけでなく、子の<span class="notranslate">room</span> では、特定のレイヤー、インスタンス、<span class="notranslate">switch</span> など、必要なものに対して選択的に<span class="notranslate">assets</span> の継承をオフにすることができます。</p>
-  <p>継承されたプロパティを持つ<span class="notranslate">room</span> は、下の画像のように<span class="notranslate">inherit</span> ボタンが点灯し、このボタンで指定されたレイヤーやリソースなどの継承をオンまたはオフに切り替えることができます。</p>
-  <p><img>例えば、<span class="notranslate">room</span> 、真ん中に街とお城があるとします。街と城は異なるレイヤー（<span class="notranslate">tile</span> ）で描かれ、NPCが歩き回るためのインスタンスといくつかの<span class="notranslate">paths</span> もあります。ゲームでは、城は破壊されますが、街の他のすべては同じように見え、同じように動作するようにしたいと思います。まず、すべてのものが通常通りである初期<span class="notranslate">room</span> を作成し、次に、親<span class="notranslate">room</span> のレイヤーを<span class="notranslate">inherits</span> とする子<span class="notranslate">room</span> を作成します。<span class="notranslate">room</span> 子<span class="notranslate">switch</span> では、城エリアの<span class="notranslate">tile</span> レイヤー（または個別の<span class="notranslate">tiles</span> ）の継承を<em>解除 </em>し、<span class="notranslate">tiles</span> を移動/追加/削除して、破壊された城の外観を作成します。プレイヤーがその<span class="notranslate">room</span> に入ると、破壊された城のインスタンス以外、親の<span class="notranslate">room</span> とすべての<span class="notranslate">tiles</span> などのインスタンスは、まったく同じままです。</p>
-  <p class="note"><strong>重要!継</strong>承されたプロパティを編集すると、そのプロパティが属するセクションの継承が自動的にオフになり、最初に<span class="notranslate">inherit</span> ボタンを押す必要はありません。</p>
-  <p><span class="notranslate">room</span> 継承を行うには、<a href="../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>子を作成したい<span class="notranslate">room</span> を選択し、<img> を右クリックするだけです。すると、<span class="notranslate">room</span> メニューが表示されるので、「<strong>子部屋を作成 </strong>」を選択して、新しい子部屋<span class="notranslate">room</span> を作成することができます。これは、<span class="notranslate">Asset</span> ブラウザーに作成されます。</p>
-  <p><img> <span class="notranslate">room</span> の順番や継承を変更するには、<a href="../../Settings/The_Room_Manager.htm">ルームマネージャーを</a>使用する必要があります。<a href="../../Settings/The_Room_Manager.htm">ルーム</a>マネージャーは ブラウザーの右上にあるメニューを使用して開くことができます。ここで、[<span class="notranslate">Asset</span> <em>継承 </em>] タブをクリックし、 をクリックして、任意の を他の にドラッグすると、その の子になります (または、子 を親からドラッグすると継承が解除されます)。<img> <span class="notranslate">room</span> <span class="notranslate">room</span> <span class="notranslate">room</span> <span class="notranslate">room</span> </p>
-  <p><img> <span class="notranslate">room</span> 内では、継承は多層的で、個々のアイテム、単一レイヤーのアイテムのグループ、アイテムのプロパティ、または 全体を継承していると確認できます。また、連続した から も可能です（つまり C は B、その次は A から継承していることになります）。例えば、ビューの設定以外何もないベース を作成した場合、その子としてさらに を作成すると、それらはすべて親 のビュープロパティを することができます。しかし、さらに一歩進んで、「ビュー」 を親として別のベース を作成し、一般的な<span class="notranslate">rooms</span> <span class="notranslate">inherit</span> <span class="notranslate">rooms</span> <span class="notranslate">room</span> <span class="notranslate">inherits</span> <span class="notranslate">room</span> <span class="notranslate">Room</span> <span class="notranslate">room</span> <span class="notranslate">rooms</span> <span class="notranslate">inherit</span> <span class="notranslate">room</span> <span class="notranslate">room</span> <span class="notranslate">room</span> <a class="glossterm" data-glossterm="GUI" href="#">GUI</a>インスタンスとすべてのゲームに必要なコントローラを保持することができます .このベースから子 を作成すると、親 のコントローラと GUI の両方と、その親 のビューのセットアップを にすることができます！このように、子 は、親 のコントローラやGUIと、その親 のビューのセットアップの両方を持つことになります。<span class="notranslate">room</span> <span class="notranslate">rooms</span> <span class="notranslate">inherit</span> <span class="notranslate">room</span> <span class="notranslate">room</span> </p>
-  <p>このように、継承は非常に強力で、これを利用することで、<span class="notranslate">room</span> の構造をよりきれいに保ち、ワークフローを高速化し、<span class="notranslate">rooms</span> の作成と設計に費やす時間を全般的に最適化することができます。</p>
+  <p><span class="notranslate">room</span> エディタの重要な機能として、<strong>継承が</strong>あります。継承とは、「親」<span
+      class="notranslate">room</span> を作成し、そこから「子」<span class="notranslate">room</span> を作成し、親のルームのすべてのプロパティを<span
+      class="notranslate">inherit</span> することができるということです。この子<span class="notranslate">room</span> は基本的に親の<em>クローン
+    </em>であり、その中のすべてが<strong>親のルームにリンクされて</strong>います。つまり、親のビューを変更したり、<span class="notranslate">tile</span>
+    を移動したり、インスタンスを追加すると、子<span class="notranslate">room</span> に反映されます。それだけでなく、子の<span class="notranslate">room</span>
+    では、特定のレイヤー、インスタンス、<span class="notranslate">switch</span> など、必要なものに対して選択的に<span class="notranslate">assets</span>
+    の継承をオフにすることができます。</p>
+  <p>継承されたプロパティを持つ<span class="notranslate">room</span> は、下の画像のように<span class="notranslate">inherit</span>
+    ボタンが点灯し、このボタンで指定されたレイヤーやリソースなどの継承をオンまたはオフに切り替えることができます。</p>
+  <p><img>例えば、<span class="notranslate">room</span> 、真ん中に街とお城があるとします。街と城は異なるレイヤー（<span class="notranslate">tile</span>
+    ）で描かれ、NPCが歩き回るためのインスタンスといくつかの<span class="notranslate">paths</span>
+    もあります。ゲームでは、城は破壊されますが、街の他のすべては同じように見え、同じように動作するようにしたいと思います。まず、すべてのものが通常通りである初期<span class="notranslate">room</span>
+    を作成し、次に、親<span class="notranslate">room</span> のレイヤーを<span class="notranslate">inherits</span> とする子<span
+      class="notranslate">room</span> を作成します。<span class="notranslate">room</span> 子<span
+      class="notranslate">switch</span> では、城エリアの<span class="notranslate">tile</span> レイヤー（または個別の<span
+      class="notranslate">tiles</span> ）の継承を<em>解除 </em>し、<span class="notranslate">tiles</span>
+    を移動/追加/削除して、破壊された城の外観を作成します。プレイヤーがその<span class="notranslate">room</span> に入ると、破壊された城のインスタンス以外、親の<span
+      class="notranslate">room</span> とすべての<span class="notranslate">tiles</span> などのインスタンスは、まったく同じままです。</p>
+  <p class="note"><strong>重要!継</strong>承されたプロパティを編集すると、そのプロパティが属するセクションの継承が自動的にオフになり、最初に<span
+      class="notranslate">inherit</span> ボタンを押す必要はありません。</p>
+  <p><span class="notranslate">room</span> 継承を行うには、<a
+      href="../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>子を作成したい<span class="notranslate">room</span>
+    を選択し、<img> を右クリックするだけです。すると、<span class="notranslate">room</span> メニューが表示されるので、「<strong>子部屋を作成
+    </strong>」を選択して、新しい子部屋<span class="notranslate">room</span> を作成することができます。これは、<span class="notranslate">Asset</span>
+    ブラウザーに作成されます。</p>
+  <p><img> <span class="notranslate">room</span> の順番や継承を変更するには、<a
+      href="../../Settings/The_Room_Manager.htm">ルームマネージャーを</a>使用する必要があります。<a
+      href="../../Settings/The_Room_Manager.htm">ルーム</a>マネージャーは ブラウザーの右上にあるメニューを使用して開くことができます。ここで、[<span
+      class="notranslate">Asset</span> <em>継承 </em>] タブをクリックし、 をクリックして、任意の を他の にドラッグすると、その の子になります (または、子
+    を親からドラッグすると継承が解除されます)。<img> <span class="notranslate">room</span> <span class="notranslate">room</span> <span
+      class="notranslate">room</span> <span class="notranslate">room</span> </p>
+  <p><img> <span class="notranslate">room</span> 内では、継承は多層的で、個々のアイテム、単一レイヤーのアイテムのグループ、アイテムのプロパティ、または
+    全体を継承していると確認できます。また、連続した から も可能です（つまり C は B、その次は A から継承していることになります）。例えば、ビューの設定以外何もないベース を作成した場合、その子としてさらに
+    を作成すると、それらはすべて親 のビュープロパティを することができます。しかし、さらに一歩進んで、「ビュー」 を親として別のベース を作成し、一般的な<span class="notranslate">rooms</span>
+    <span class="notranslate">inherit</span> <span class="notranslate">rooms</span> <span
+      class="notranslate">room</span> <span class="notranslate">inherits</span> <span class="notranslate">room</span>
+    <span class="notranslate">Room</span> <span class="notranslate">room</span> <span class="notranslate">rooms</span>
+    <span class="notranslate">inherit</span> <span class="notranslate">room</span> <span class="notranslate">room</span>
+    <span class="notranslate">room</span> <a class="glossterm" data-glossterm="GUI"
+      href="#">GUI</a>インスタンスとすべてのゲームに必要なコントローラを保持することができます .このベースから子 を作成すると、親 のコントローラと GUI の両方と、その親 のビューのセットアップを
+    にすることができます！このように、子 は、親 のコントローラやGUIと、その親 のビューのセットアップの両方を持つことになります。<span class="notranslate">room</span> <span
+      class="notranslate">rooms</span> <span class="notranslate">inherit</span> <span class="notranslate">room</span>
+    <span class="notranslate">room</span>
+  </p>
+  <p>このように、継承は非常に強力で、これを利用することで、<span class="notranslate">room</span> の構造をよりきれいに保ち、ワークフローを高速化し、<span
+      class="notranslate">rooms</span> の作成と設計に費やす時間を全般的に最適化することができます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Rooms.htm"> <span class="notranslate">Room</span> 編集部</a></div>
-        <div style="float:right">次へ<a href="Filters_and_Effects.htm">フィルタとエフェクト</a></div>
+        <div style="float:left">前のページ：<a href="../Rooms.htm"> <span class="notranslate">Room</span> エディタ</a></div>
+        <div style="float:right">次のページ：<a href="Filters_and_Effects.htm">フィルタとエフェクト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Room Inheritance
@@ -42,4 +83,5 @@ Room Inheritance
 rooms_inheritance
 -->
 </body>
+
 </html>

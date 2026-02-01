@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>OSとコンパイラ</title>
@@ -12,10 +13,13 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="OS And Compiler,OS functions,Compiler Functions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>OSとコンパイラ</h1>
-  <p>クロスプラットフォームゲームを作成する場合、ゲームを実行しているデバイスが使用しているオペレーティングシステムの詳細を取得することが極めて重要になる場合があります。言語、バージョン、ネットワーク状態など、ゲームを実行するシステムに適応させ、エンドユーザーの体験を最高のものにするために、<span data-keyref="GameMaker Name">GameMakerには</span>必要な情報を取得するための特別な機能が多数用意されています。</p>
+  <p>
+    クロスプラットフォームゲームを作成する場合、ゲームを実行しているデバイスが使用しているオペレーティングシステムの詳細を取得することが極めて重要になる場合があります。言語、バージョン、ネットワーク状態など、ゲームを実行するシステムに適応させ、エンドユーザーの体験を最高のものにするために、<span
+      data-keyref="GameMaker Name">GameMakerには</span>必要な情報を取得するための特別な機能が多数用意されています。</p>
   <p>以下の関数と変数は、ゲームを実行しているオペレーティングシステムやブラウザに関する特定の情報を取得するために使用するために存在します。</p>
   <ul class="colour">
     <li><a href="os_browser.htm"><span class="notranslate">os_browser</span></a></li>
@@ -34,7 +38,8 @@
     <li><a href="os_request_permission.htm"><span class="notranslate">os_request_permission</span></a></li>
   </ul>
   <p> </p>
-  <p>ある種の関数はゲーム実行時に<i>プリコンパイルさ</i>れます（つまり、最終的なゲームのコンパイル方法を定義するために使用されます）。また、いくつかの関数はゲームがコンパイルされたときに、<span class="notranslate">runtime</span> 環境に関する特定の詳細を取得するために使用されます。ここでは、これらの関数の全リストを見ることができます。</p>
+  <p>ある種の関数はゲーム実行時に<i>プリコンパイルさ</i>れます（つまり、最終的なゲームのコンパイル方法を定義するために使用されます）。また、いくつかの関数はゲームがコンパイルされたときに、<span
+      class="notranslate">runtime</span> 環境に関する特定の詳細を取得するために使用されます。ここでは、これらの関数の全リストを見ることができます。</p>
   <ul class="colour">
     <li><a href="GM_build_date.htm"><span class="notranslate">GM_build_date</span></a></li>
     <li><a href="GM_build_type.htm">GM_build_type</a></li>
@@ -48,14 +53,17 @@
     <li><a href="environment_get_variable.htm"><span class="notranslate">environment_get_variable</span></a></li>
   </ul>
   <p> </p>
-  <p><span class="notranslate">Windows</span> では、ゲーム実行時の<span class="notranslate">Windows</span> スレッドスケジューラの解像度はデフォルトで 1ms に設定されています。実行時に<span class="notranslate">Windows</span> のスレッドスケジューラの解像度を取得・変更するには、次の関数を使用し ます。</p>
+  <p><span class="notranslate">Windows</span> では、ゲーム実行時の<span class="notranslate">Windows</span> スレッドスケジューラの解像度はデフォルトで
+    1ms に設定されています。実行時に<span class="notranslate">Windows</span> のスレッドスケジューラの解像度を取得・変更するには、次の関数を使用し ます。</p>
   <ul class="colour">
     <li><a href="scheduler_resolution_get.htm">スケジューラ解像度の取得</a></li>
     <li><a href="scheduler_resolution_set.htm">スケジューラレゾリューションセット</a></li>
   </ul>
   <p> </p>
-  <p>最後に、<a href="../../../The_Asset_Editors/Extensions.htm">Extensionsを</a>扱う場合、<span class="notranslate">runtime</span> 、外部関数を定義して呼び出すことができるようにする必要があるかもしれないので、次のようにします。</p>
-  <p class="note"><strong>注</strong>：これらはレガシー関数であり、<span class="notranslate">extension</span> 関数は<span class="notranslate">Extension</span> Editor 自身で定義する必要があります。</p>
+  <p>最後に、<a href="../../../The_Asset_Editors/Extensions.htm">Extensionsを</a>扱う場合、<span
+      class="notranslate">runtime</span> 、外部関数を定義して呼び出すことができるようにする必要があるかもしれないので、次のようにします。</p>
+  <p class="note"><strong>注</strong>：これらはレガシー関数であり、<span class="notranslate">extension</span> 関数は<span
+      class="notranslate">Extension</span> Editor 自身で定義する必要があります。</p>
   <p class="note"><strong>注</strong>：これらの機能は、<strong>Windowsと</strong> <b>macOSの</b>ターゲットプラットフォームのみです。</p>
   <ul class="colour">
     <li><a href="external_define.htm"><span class="notranslate">external_define</span></a></li>
@@ -68,11 +76,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a href="../Debugging/Debugging.htm">デバッギング</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a href="../Debugging/Debugging.htm">デバッギング</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Reference
@@ -81,4 +90,5 @@ GML Reference
 gml_reference
 -->
 </body>
+
 </html>

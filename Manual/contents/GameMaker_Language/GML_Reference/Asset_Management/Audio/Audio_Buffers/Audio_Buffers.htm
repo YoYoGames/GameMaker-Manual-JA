@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオバッファ</title>
@@ -8,29 +9,49 @@
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Buffers" />
+  <meta name="topic-comment"
+    content="Page outlining the different functions and variables associated with Audio Buffers" />
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Audio Buffers" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>オーディオバッファ</h1>
-  <p><b>オーディオバッファを</b>使用して、ゲーム内でオーディオファイルをロード、保存、操作することができます。これらの<span class="notranslate">buffers</span> は、適切な<a href="../../../Buffers/Buffers.htm">バッファ関数を</a>使用して事前に作成され、以下の関数を使用してプロジェクトで使用するサウンドを作成することができます。</p>
+  <p><b>オーディオバッファを</b>使用して、ゲーム内でオーディオファイルをロード、保存、操作することができます。これらの<span class="notranslate">buffers</span> は、適切な<a
+      href="../../../Buffers/Buffers.htm">バッファ関数を</a>使用して事前に作成され、以下の関数を使用してプロジェクトで使用するサウンドを作成することができます。</p>
   <ul class="colour">
     <li><a href="audio_create_buffer_sound.htm"><span class="notranslate">audio_create_buffer_sound</span></a></li>
     <li><a href="audio_free_buffer_sound.htm"><span class="notranslate">audio_free_buffer_sound</span></a></li>
   </ul>
   <p> </p>
-  <p>オーディオ<span class="notranslate">buffer</span> からサウンドを作成した場合、メモリ内に新しいサウンドを作成する<i>のではなく</i>、サウンドが格納されている<span class="notranslate">buffer</span> 内の位置を指していることに注意してください。サウンドが関連付けられた後にこの<span class="notranslate">buffer</span> を変更すると、予期せぬ結果を招くことがあります。また、サウンドが関連付けられている間は、<span class="notranslate">buffer</span> を削除することはできません。その代わりに、まずサウンド（または複数のサウンド）を解放してから、<span class="notranslate">buffer</span> を削除します。<span class="notranslate">buffer</span> から新しいオーディオリソースを作成したら、そのインデックス値を使って、通常のオーディオ関数で再生、ゲインやピッチの変更、一時停止などを行うことができます。オーディオの読み込みに使用される<span class="notranslate">buffer</span> は、<b>PCM サウンドのみをサポートする</b>ため、OGG のようなフォーマットはサポートされないことに注意してください。</p>
-  <p>バッファードオーディオのもう一つの特徴は、<span class="notranslate">buffer</span> を使ってオーディオの<span class="notranslate">queue</span> を作成し、プロジェクトを実行しているデバイスにストリーミングすることができることです。オーディオ<span class="notranslate">queue</span> は、あらかじめオーディオデータを入れておいた通常の<span class="notranslate">buffer</span> 、その一部を「ポイント」して、その<span class="notranslate">buffer</span> から指定された順番でオーディオをストリーミングするよう<span data-keyref="GameMaker Name">GameMakerに</span>指示することができるものです。オーディオ<span class="notranslate">queues</span> で利用可能な関数は以下の通りです。</p>
+  <p>オーディオ<span class="notranslate">buffer</span> からサウンドを作成した場合、メモリ内に新しいサウンドを作成する<i>のではなく</i>、サウンドが格納されている<span
+      class="notranslate">buffer</span> 内の位置を指していることに注意してください。サウンドが関連付けられた後にこの<span class="notranslate">buffer</span>
+    を変更すると、予期せぬ結果を招くことがあります。また、サウンドが関連付けられている間は、<span class="notranslate">buffer</span>
+    を削除することはできません。その代わりに、まずサウンド（または複数のサウンド）を解放してから、<span class="notranslate">buffer</span> を削除します。<span
+      class="notranslate">buffer</span>
+    から新しいオーディオリソースを作成したら、そのインデックス値を使って、通常のオーディオ関数で再生、ゲインやピッチの変更、一時停止などを行うことができます。オーディオの読み込みに使用される<span
+      class="notranslate">buffer</span> は、<b>PCM サウンドのみをサポートする</b>ため、OGG のようなフォーマットはサポートされないことに注意してください。</p>
+  <p>バッファードオーディオのもう一つの特徴は、<span class="notranslate">buffer</span> を使ってオーディオの<span class="notranslate">queue</span>
+    を作成し、プロジェクトを実行しているデバイスにストリーミングすることができることです。オーディオ<span class="notranslate">queue</span>
+    は、あらかじめオーディオデータを入れておいた通常の<span class="notranslate">buffer</span> 、その一部を「ポイント」して、その<span
+      class="notranslate">buffer</span> から指定された順番でオーディオをストリーミングするよう<span
+      data-keyref="GameMaker Name">GameMakerに</span>指示することができるものです。オーディオ<span class="notranslate">queues</span>
+    で利用可能な関数は以下の通りです。</p>
   <ul class="colour">
     <li><a href="audio_create_play_queue.htm"><span class="notranslate">audio_create_play_queue</span></a></li>
     <li><a href="audio_free_play_queue.htm"><span class="notranslate">audio_free_play_queue</span></a></li>
     <li><a href="audio_queue_sound.htm"><span class="notranslate">audio_queue_sound</span></a></li>
   </ul>
   <p> </p>
-  <p><span class="notranslate">queue</span> が作成されると、通常のサウンドのサウンドインデックスと同様に、返された<span class="notranslate">queue</span> のインデックスを使用して、再生、一時停止、再起動、ゲインやピッチを変更することができます。唯一できないことは、トラックの長さを取得したり、トラックの位置を設定することですが、それ以外は、オーディオ<span class="notranslate">queue</span> 、他のサウンドと同じように使用することができます。また、オーディオ<span class="notranslate">queue</span> の機能の中には、<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Eventを</a>トリガーするものがあることにも注意が必要です。</p>
-  <p>Audio<span class="notranslate">buffers</span> 、マイクやOSなどの音源を録音し、上記の機能を使ってキューイングやストリーミングを行うことも可能です（例）。オーディオを録音すると、録音される内容に関する特定の情報を含む<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">オーディオ録音非同期</a>イベントがトリガーされます。<br />
+  <p><span class="notranslate">queue</span> が作成されると、通常のサウンドのサウンドインデックスと同様に、返された<span class="notranslate">queue</span>
+    のインデックスを使用して、再生、一時停止、再起動、ゲインやピッチを変更することができます。唯一できないことは、トラックの長さを取得したり、トラックの位置を設定することですが、それ以外は、オーディオ<span
+      class="notranslate">queue</span> 、他のサウンドと同じように使用することができます。また、オーディオ<span class="notranslate">queue</span>
+    の機能の中には、<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback
+      Asynchronous Eventを</a>トリガーするものがあることにも注意が必要です。</p>
+  <p>Audio<span class="notranslate">buffers</span>
+    、マイクやOSなどの音源を録音し、上記の機能を使ってキューイングやストリーミングを行うことも可能です（例）。オーディオを録音すると、録音される内容に関する特定の情報を含む<a
+      href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">オーディオ録音非同期</a>イベントがトリガーされます。<br />
     <br />
     音声の録音には、以下の機能があります。
   </p>
@@ -41,18 +62,23 @@
     <li><a href="audio_get_recorder_info.htm"><span class="notranslate">audio_get_recorder_info</span></a></li>
   </ul>
   <p> </p>
-  <p class="note"><b><span class="note">注意事項</span> </b><b>HTML5を除く</b>ほとんどのプラットフォームは何らかの形で音声の録音をサポートしていますが、プラットフォームが許可していても、すべてのデバイスが許可しているわけではありません。 <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span>関数は 0 より大きな値を返し、 残りの録音関数を使用する前に録音デバイスが利用可能であることを確認します。</p>
+  <p class="note"><b><span class="note">注意事項</span>
+    </b><b>HTML5を除く</b>ほとんどのプラットフォームは何らかの形で音声の録音をサポートしていますが、プラットフォームが許可していても、すべてのデバイスが許可しているわけではありません。 <span
+      style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span
+          class="inline">audio_get_recorder_count()</span></a></span>関数は 0 より大きな値を返し、
+    残りの録音関数を使用する前に録音デバイスが利用可能であることを確認します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Audio.htm">オーディオ</a></div>
-        <div style="float:right">次へ<a href="../Audio_Synchronisation/Audio_Synchronisation.htm">オーディオの同期</a></div>
+        <div style="float:left">前のページ：<a href="../Audio.htm">オーディオ</a></div>
+        <div style="float:right">次のページ：<a href="../Audio_Synchronisation/Audio_Synchronisation.htm">オーディオの同期</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Buffers
@@ -61,4 +87,5 @@ Audio Buffers
 audio_buffer_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>乱数取得</title>
@@ -12,22 +13,27 @@
   <meta name="rh-index-keywords" content="GML Visual Action - get Random Number" />
   <meta name="search-keywords" content="Get Random Number" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 乱数取得</h1>
   <p>このアクションは、設定された最小値と最大値の範囲内で乱数を生成します。生成する数値の種類（10進数か整数）を選び、生成する数値の範囲を
     最小値と最大値を指定します。生成された乱数値は、ターゲット変数（一時的なローカル変数としてフラグを立てることができる）に返される。</p>
-  <p class="note"><b>注</b>：乱数を生成する場合、最小値と最大<b>値の</b>間の整数値を返します。したがって、5〜10の範囲では、5または10と、その間の任意の整数が返されます。しかし、ランダムな小数を生成する場合
-    は最大値を返さないので、5から10の範囲では5を返すことはあっても10を返すことはありません（9.99999999は返すことがありますが）。</p>
+  <p class="note">
+    <b>注</b>：乱数を生成する場合、最小値と最大<b>値の</b>間の整数値を返します。したがって、5〜10の範囲では、5または10と、その間の任意の整数が返されます。しかし、ランダムな小数を生成する場合
+    は最大値を返さないので、5から10の範囲では5を返すことはあっても10を返すことはありません（9.99999999は返すことがありますが）。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Random/i_Mathematics_Get_Random_Number.png" /></p>
+  <p><img alt="Get Random Number Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Random/i_Mathematics_Get_Random_Number.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Type</span></td>
@@ -50,18 +56,20 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、ランダムな値を生成し、それをテンポラリに代入しています。
-    ローカル変数に格納されます。この値は、次に<span class="notranslate">loop</span> を繰り返し、さらにランダムコールを行って<span class="notranslate">room</span> 内の位置を生成する際に使用されます。</p>
+    ローカル変数に格納されます。この値は、次に<span class="notranslate">loop</span> を繰り返し、さらにランダムコールを行って<span class="notranslate">room</span>
+    内の位置を生成する際に使用されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Random_Actions.htm">ランダムアクション</a></div>
-        <div style="float:right">次へ<a href="Randomise.htm">ランダム化</a></div>
+        <div style="float:left">前のページ：<a href="Random_Actions.htm">ランダムアクション</a></div>
+        <div style="float:right">次のページ：<a href="Randomise.htm">ランダム化</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Random Number
@@ -70,4 +78,5 @@ Action - Get Random Number
 action_get_random_number
 -->
 </body>
+
 </html>

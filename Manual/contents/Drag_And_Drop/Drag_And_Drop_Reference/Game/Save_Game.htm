@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>セーブゲーム</title>
@@ -12,25 +13,31 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Save Game" />
   <meta name="search-keywords" content="Save Game" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> セーブゲーム</h1>
-  <p>このアクションは、与えられたファイルへのゲームの基本的な保存を行います。ファイル名（<span class="notranslate">string</span> と<span class="notranslate">extension</span> を含む）を指定すると、現在のゲーム状態から限定的にセーブを実行するアクションです。重要なのは、このアクションが
-    現在のゲーム状態の「スナップショット」を取るように設計されており、動的リソース（<a href="../Data_Structures/Data_Structure_Actions.htm">データ</a>構造や<a href="../Particles/Particle_Actions.htm">パーティクルなど</a>）を保存<i>しない</i>ため、ユニバーサルセーブシステムというよりもチェックポイントシステムとして使用するためのものです。そのため、このアクションはエラーやメモリリークを起こさないよう、非常に慎重に使用する必要があります。ゲームデータを保存するためのより包括的なアプローチについては、<a href="../Files/File_Actions.htm">ファイルアクションを</a>参照してください。</p>
+  <p>このアクションは、与えられたファイルへのゲームの基本的な保存を行います。ファイル名（<span class="notranslate">string</span> と<span
+      class="notranslate">extension</span> を含む）を指定すると、現在のゲーム状態から限定的にセーブを実行するアクションです。重要なのは、このアクションが
+    現在のゲーム状態の「スナップショット」を取るように設計されており、動的リソース（<a href="../Data_Structures/Data_Structure_Actions.htm">データ</a>構造や<a
+      href="../Particles/Particle_Actions.htm">パーティクルなど</a>）を保存<i>しない</i>ため、ユニバーサルセーブシステムというよりもチェックポイントシステムとして使用するためのものです。そのため、このアクションはエラーやメモリリークを起こさないよう、非常に慎重に使用する必要があります。ゲームデータを保存するためのより包括的なアプローチについては、<a
+      href="../Files/File_Actions.htm">ファイルアクションを</a>参照してください。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Save Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Save_Game.png" /></p>
+  <p><img alt="Save Game Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Save_Game.png" /></p>
   <h4>論拠となる。</h4>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Filename</span></td>
-        <td>保存するファイルの名前 -<span class="notranslate">string</span> および<span class="notranslate">extension</span> - (ファイルがすでに存在する場合は上書きされます)</td>
+        <td>保存するファイルの名前 -<span class="notranslate">string</span> および<span class="notranslate">extension</span> -
+          (ファイルがすでに存在する場合は上書きされます)</td>
       </tr>
     </tbody>
   </table>
@@ -44,11 +51,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Game_Actions.htm">ゲームアクション</a></div>
-        <div style="float:right">次へ<a href="Load_Game.htm">ゲームのロード</a></div>
+        <div style="float:left">前のページ：<a href="Game_Actions.htm">ゲームアクション</a></div>
+        <div style="float:right">次のページ：<a href="Load_Game.htm">ゲームのロード</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Save Game
@@ -57,4 +65,5 @@ Action - Save Game
 action_save_game
 -->
 </body>
+
 </html>

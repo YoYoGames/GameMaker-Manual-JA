@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>file_text_write_real</title>
@@ -12,32 +13,44 @@
   <meta name="rh-index-keywords" content="file_text_write_real" />
   <meta name="search-keywords" content="file_text_write_real" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">file_text_write_real</span></h1>
-  <p>この関数を使うと、先に開いているテキストファイルに数値を書き込むことができます。ただし、書き込む値は実数であるため、小数点以下はすべて&quot;. &quot;で区切られます。ファイルがすでに情報を持っている場合、その情報は消去され、<span class="notranslate">string</span> がファイルの先頭に書き込まれます（ただし、あなたがファイルを <a href="file_text_open_append.htm"><span class="inline">file_text_open_append()</span></a>.を使用することで回避することもできます。 <a href="file_text_readln.htm"><span class="inline">file_text_readln()</span></a>関数と一緒に <a href="file_text_eof.htm"><span class="inline">file_text_eof()</span></a>関数を使って、<span class="notranslate">loop</span> ファイルの中身を最後まで見てから、書き込みを開始します。</p>
-  <p>注意点としては、この関数を使って非常に大きな数値をテキストファイルに書き込んだ場合、「6.6624e+003」のような標準的な簡略形式に変換されてしまい、<span data-keyref="GameMaker Name">GameMakerに</span>正しく読み込むことができないことがあります。このような問題を防ぐために、代わりに値を<span class="notranslate">string</span> に変換して、関数 <a href="file_text_write_string.htm"><span class="inline">file_text_write_string()</span></a>の代わりに</p>
+  <p>この関数を使うと、先に開いているテキストファイルに数値を書き込むことができます。ただし、書き込む値は実数であるため、小数点以下はすべて&quot;.
+    &quot;で区切られます。ファイルがすでに情報を持っている場合、その情報は消去され、<span class="notranslate">string</span> がファイルの先頭に書き込まれます（ただし、あなたがファイルを <a
+      href="file_text_open_append.htm"><span class="inline">file_text_open_append()</span></a>.を使用することで回避することもできます。 <a
+      href="file_text_readln.htm"><span class="inline">file_text_readln()</span></a>関数と一緒に <a
+      href="file_text_eof.htm"><span class="inline">file_text_eof()</span></a>関数を使って、<span
+      class="notranslate">loop</span> ファイルの中身を最後まで見てから、書き込みを開始します。</p>
+  <p>注意点としては、この関数を使って非常に大きな数値をテキストファイルに書き込んだ場合、「6.6624e+003」のような標準的な簡略形式に変換されてしまい、<span
+      data-keyref="GameMaker Name">GameMakerに</span>正しく読み込むことができないことがあります。このような問題を防ぐために、代わりに値を<span
+      class="notranslate">string</span> に変換して、関数 <a href="file_text_write_string.htm"><span
+        class="inline">file_text_write_string()</span></a>の代わりに</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">file_text_write_real</span>(fileid, val);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">fileid</span></td><td><span data-keyref="Type_ID_File_Text"></span></td>
+        <td><span class="notranslate">fileid</span></td>
+        <td><span data-keyref="Type_ID_File_Text"></span></td>
         <td><span class="notranslate">The id of the file to edit.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">val</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">val</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The real value to write to the file.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -50,18 +63,21 @@
         file_text_writeln(file);<br />
     }<br />
     file_text_close(file);</p>
-  <p>上記のコードは、書き込み用にファイルを開き、<span class="notranslate">loops</span> 、2つの配列を通して、配列の各値をファイルの新しい行に書き込んでいます。そして、<span class="notranslate">loop</span> が終了すると、ファイルは閉じられます。</p>
+  <p>上記のコードは、書き込み用にファイルを開き、<span class="notranslate">loops</span> 、2つの配列を通して、配列の各値をファイルの新しい行に書き込んでいます。そして、<span
+      class="notranslate">loop</span> が終了すると、ファイルは閉じられます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Text_Files.htm">テキストファイル</a></div>
-        <div style="float:right">次のページ <a href="file_text_write_string.htm"><span class="notranslate">file_text_write_string</span></a></div>
+        <div style="float:left">前のページ：<a href="Text_Files.htm">テキストファイル</a></div>
+        <div style="float:right">次のページ：<a href="file_text_write_string.htm"><span
+              class="notranslate">file_text_write_string</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_text_write_real
@@ -70,4 +86,5 @@ file_text_write_real
 file_text_write_real
 -->
 </body>
+
 </html>

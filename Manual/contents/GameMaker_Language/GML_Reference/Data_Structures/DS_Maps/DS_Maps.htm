@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>DSマップ</title>
@@ -12,15 +13,24 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="DS Maps" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>DSマップ</h1>
-  <p>DSマップのデータ構造は非常に便利で、<b>キーと</b> <b>値の</b>ペアを保存することができます。例えば、RPGでヘルスポーションを10個、マナポーションを5個、ゴールドを100個持っているように、ゲームのキャラクターは様々なアイテム<i>（キー</i>）を大量に持ち、個々のアイテムに対してそれらの数<i>（値</i>）を持つことができます。マップはそのようなペアを一箇所にまとめて管理し、ペアをマップに追加したり、簡単な機能を使って特定のキーに対応する値を検索したりすることができます。しかし、マップを使う前に知っておくべきことがいくつかあります。つまり、あるキーを見つけるためには、マップ全体を繰り返し見る必要があります（これは<b>非常に</b>時間がかかります）。また、同じキーを2つ保持することはできませんし、1つのキーに2つの値を割り当てることもできません。</p>
-  <p class="note"><strong>注</strong>：DSマップよりも<a href="../../../GML_Overview/Structs.htm">構造</a>体を使用することをお勧めします。類似の機能を持ち、使いやすく、自動的にガベージコレクションされるからです。</p>
-  <p class="note"><b><span class="note">注意事項</span></b>すべての動的リソースと同様に、データ構造はメモリを消費するため、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>常に</b>破棄する必要があります。</p>
-  <p>以下に示す特定の関数とは別に、DS マップの内容を追加したり変更したりするために、<a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">式</a>（<i>アクセッサと</i>呼ばれる）を使用することができます。このアクセサは 1 次元配列に似ており、次のような構文になっています。</p>
+  <p>DSマップのデータ構造は非常に便利で、<b>キーと</b>
+    <b>値の</b>ペアを保存することができます。例えば、RPGでヘルスポーションを10個、マナポーションを5個、ゴールドを100個持っているように、ゲームのキャラクターは様々なアイテム<i>（キー</i>）を大量に持ち、個々のアイテムに対してそれらの数<i>（値</i>）を持つことができます。マップはそのようなペアを一箇所にまとめて管理し、ペアをマップに追加したり、簡単な機能を使って特定のキーに対応する値を検索したりすることができます。しかし、マップを使う前に知っておくべきことがいくつかあります。つまり、あるキーを見つけるためには、マップ全体を繰り返し見る必要があります（これは<b>非常に</b>時間がかかります）。また、同じキーを2つ保持することはできませんし、1つのキーに2つの値を割り当てることもできません。
+  </p>
+  <p class="note"><strong>注</strong>：DSマップよりも<a
+      href="../../../GML_Overview/Structs.htm">構造</a>体を使用することをお勧めします。類似の機能を持ち、使いやすく、自動的にガベージコレクションされるからです。</p>
+  <p class="note"><b><span
+        class="note">注意事項</span></b>すべての動的リソースと同様に、データ構造はメモリを消費するため、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>常に</b>破棄する必要があります。
+  </p>
+  <p>以下に示す特定の関数とは別に、DS マップの内容を追加したり変更したりするために、<a class="tooltip"
+      title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">式</a>（<i>アクセッサと</i>呼ばれる）を使用することができます。このアクセサは
+    1 次元配列に似ており、次のような構文になっています。</p>
   <p class="code">map_index[? key]</p>
-  <p><a href="../../../GML_Overview/Accessors.htm">Accessors</a> の<span class="notranslate">GML</span> Overview ページに詳細な情報とサンプルが掲載されています。</p>
+  <p><a href="../../../GML_Overview/Accessors.htm">Accessors</a> の<span class="notranslate">GML</span> Overview
+    ページに詳細な情報とサンプルが掲載されています。</p>
   <p>DSマップを扱う機能として、以下のものがある。</p>
   <ul class="colour">
     <li><a href="ds_map_exists.htm"><span class="notranslate">ds_map_exists</span></a></li>
@@ -64,18 +74,21 @@
     <li><a href="ds_map_is_list.htm"><span class="notranslate">ds_map_is_list</span></a></li>
     <li><a href="ds_map_is_map.htm"><span class="notranslate">ds_map_is_map</span></a></li>
   </ul>
-  <p class="note"><b><span class="note">注意</span></b>これらの関数により、マップ内にリストやマップを追加することができますが、JSON以外では役に立ちません。また、ネストしたマップやリストは、ディスクへの書き込みや他の方法でアクセスしても正しく読み込まれません。</p>
+  <p class="note"><b><span
+        class="note">注意</span></b>これらの関数により、マップ内にリストやマップを追加することができますが、JSON以外では役に立ちません。また、ネストしたマップやリストは、ディスクへの書き込みや他の方法でアクセスしても正しく読み込まれません。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Data_Structures.htm">データ構造</a></div>
-        <div style="float:right">次へ<a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS優先キュー</a></div>
+        <div style="float:left">前のページ：<a href="../Data_Structures.htm">データ構造</a></div>
+        <div style="float:right">次のページ：<a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS優先キュー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 DS Maps
@@ -84,4 +97,5 @@ DS Maps
 ds_map_functions
 -->
 </body>
+
 </html>

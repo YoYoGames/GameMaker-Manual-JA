@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>セルにタイルのインデックスを設定する</title>
@@ -12,57 +13,69 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Tile Index In Cell" />
   <meta name="search-keywords" content="Set Tile Index In Cell" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> <span class="notranslate">Tile</span> インデックスをセルに設定する</h1>
-  <p>このアクションでは、指定されたレイヤーの<span class="notranslate">tile</span> を新しいインデックスに設定することができます。レイヤーは、与えられたレイヤー名（<span class="notranslate">string</span> 、<span class="notranslate">Room</span> エディターでレイヤー名を付けるのに使用）から指定し、次に、レイヤー内のセルの行と列を指定して、新しいインデックスを取得します。
-    を設定する。<span class="notranslate">tile</span> 。最後に、<span class="notranslate">tile</span> に設定する<span class="notranslate">tile</span> のインデックスを指定します (<span class="notranslate">tiles</span> は左から右、上から下へのインデックスで、0 は左上です)。なお、<span class="notranslate">tile</span> のインデックスを0にすれば、いつでも<span class="notranslate">tile</span> をクリアすることができます。</p>
+  <p>このアクションでは、指定されたレイヤーの<span class="notranslate">tile</span> を新しいインデックスに設定することができます。レイヤーは、与えられたレイヤー名（<span
+      class="notranslate">string</span> 、<span class="notranslate">Room</span>
+    エディタでレイヤー名を付けるのに使用）から指定し、次に、レイヤー内のセルの行と列を指定して、新しいインデックスを取得します。
+    を設定する。<span class="notranslate">tile</span> 。最後に、<span class="notranslate">tile</span> に設定する<span
+      class="notranslate">tile</span> のインデックスを指定します (<span class="notranslate">tiles</span> は左から右、上から下へのインデックスで、0
+    は左上です)。なお、<span class="notranslate">tile</span> のインデックスを0にすれば、いつでも<span class="notranslate">tile</span>
+    をクリアすることができます。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_In_Cell.png" /></p>
+  <p><img alt="Set Tile Index In Cell Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_In_Cell.png" /></p>
   <h4>論拠となる。</h4>
-  
-    <table>
-      <tbody>
-        <tr>
-          <th>論証</th>
-          <th>商品説明</th>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Layer</span></td>
-          <td><span class="notranslate">tile</span> を設定するレイヤー</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Column</span></td>
-          <td>セルの列(左から右へ)</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Row</span></td>
-          <td>セルの行（上から下へ）。</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Tile</span></td>
-          <td>セルに設定する<span class="notranslate">tile</span> インデックス</td>
-        </tr>
-      </tbody>
-    </table>
-  
+
+  <table>
+    <tbody>
+      <tr>
+        <th>引数</th>
+        <th>説明</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Layer</span></td>
+        <td><span class="notranslate">tile</span> を設定するレイヤー</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Column</span></td>
+        <td>セルの列(左から右へ)</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Row</span></td>
+        <td>セルの行（上から下へ）。</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Tile</span></td>
+        <td>セルに設定する<span class="notranslate">tile</span> インデックス</td>
+      </tr>
+    </tbody>
+  </table>
+
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、<span class="notranslate">loop</span> を作成して最上行を通過させます。
-   <span class="notranslate">room</span> <span class="notranslate">tile</span> もしそうでなければ、そのセルの<span class="notranslate">tile</span> インデックスを 0 に設定し、一時的な (ローカル) 変数をインクリメントしてから、<span class="notranslate">loop</span> は別の処理をします。
-    をセットでチェックする。</p>
+    <span class="notranslate">room</span> <span class="notranslate">tile</span> もしそうでなければ、そのセルの<span
+      class="notranslate">tile</span> インデックスを 0 に設定し、一時的な (ローカル) 変数をインクリメントしてから、<span class="notranslate">loop</span>
+    は別の処理をします。
+    をセットでチェックする。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Actions.htm">タイルアクション</a></div>
-        <div style="float:right">次へ<a href="Get_Tile_Index_In_Cell.htm">セル内の<span class="notranslate">Tile</span> インデックスを取得</a>する</div>
+        <div style="float:left">前のページ：<a href="Tile_Actions.htm">タイルアクション</a></div>
+        <div style="float:right">次のページ：<a href="Get_Tile_Index_In_Cell.htm">セル内の<span class="notranslate">Tile</span>
+            インデックスを取得</a>する</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set <span class="notranslate">Tile</span> Index In Cell
@@ -71,4 +84,5 @@ Action - Set <span class="notranslate">Tile</span> Index In Cell
 action_tile_set_in_cell
 -->
 </body>
+
 </html>

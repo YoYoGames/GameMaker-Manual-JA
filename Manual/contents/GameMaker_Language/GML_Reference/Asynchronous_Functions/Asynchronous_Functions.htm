@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>非同期関数</title>
@@ -12,17 +13,26 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Asynchronous Functions,Async Functions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>非同期関数</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>文脈では、非同期関数とは、Web<span class="notranslate">server</span> に送信したり、ユーザーの入力を求めたり、あるいはデータのストリームを行いながら、実行中のゲームをブロックすることなく<span data-keyref="GameMaker Name">GameMakerの</span>実行を継続させるものを指します。情報の<a class="glossterm" data-glossterm="コールバック" href="#">コールバックを</a>受け取ると、特別な<b>Async Eventが</b>発生し、Async Eventが割り当てられたインスタンスがさらに関数を実行できるようになる（ただし、必ずしもそうである必要はない）。つまり、基本的には、ゲームやプロジェクトが応答を待つ間に停止することなく、外部のリソース（<span class="notranslate">server</span> 、ユーザーまたはデバイス）と通信するための方法です。</p>
-  <p>なぜこれが重要なのか？<span data-keyref="GameMaker Name">GameMakerは</span>データの送受信中も機能し続けることができるので、<span class="notranslate">loop</span> 、ゲームをブロックすることなくいろいろなことができるようになります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>文脈では、非同期関数とは、Web<span class="notranslate">server</span>
+    に送信したり、ユーザーの入力を求めたり、あるいはデータのストリームを行いながら、実行中のゲームをブロックすることなく<span
+      data-keyref="GameMaker Name">GameMakerの</span>実行を継続させるものを指します。情報の<a class="glossterm" data-glossterm="コールバック"
+      href="#">コールバックを</a>受け取ると、特別な<b>Async Eventが</b>発生し、Async
+    Eventが割り当てられたインスタンスがさらに関数を実行できるようになる（ただし、必ずしもそうである必要はない）。つまり、基本的には、ゲームやプロジェクトが応答を待つ間に停止することなく、外部のリソース（<span
+      class="notranslate">server</span> 、ユーザーまたはデバイス）と通信するための方法です。</p>
+  <p>なぜこれが重要なのか？<span data-keyref="GameMaker Name">GameMakerは</span>データの送受信中も機能し続けることができるので、<span
+      class="notranslate">loop</span> 、ゲームをブロックすることなくいろいろなことができるようになります。</p>
   <ul class="colour">
     <li>プレイヤーがロードを待つことなく、デバイスからゲームにデータをストリームする</li>
     <li>正しい情報を受け取ったときだけ処理を行うコールバックイベントがある</li>
     <li>ウェブサーバーと通信し、データを交換する</li>
   </ul>
-  <p>これにより、すべてがより流動的で控えめな方法で機能するようになります。非同期イベントは、それを持つ<em>すべての </em>インスタンスに対してトリガーされることに注意してください。したがって、あるインスタンスで非同期関数を使用し、別のインスタンスで返信を処理する非同期イベント、あるいは他のさまざまなインスタンスを持つことができます。非同期イベントがどのように動作するかについては、こちら（<a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">非同期イベント</a>）を参照してください。</p>
+  <p>これにより、すべてがより流動的で控えめな方法で機能するようになります。非同期イベントは、それを持つ<em>すべての
+    </em>インスタンスに対してトリガーされることに注意してください。したがって、あるインスタンスで非同期関数を使用し、別のインスタンスで返信を処理する非同期イベント、あるいは他のさまざまなインスタンスを持つことができます。非同期イベントがどのように動作するかについては、こちら（<a
+      href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">非同期イベント</a>）を参照してください。</p>
   <p>非同期関数の種類は以下の通りです。</p>
   <ul class="colour">
     <li><a name="async_http"></a><a href="HTTP/HTTP.htm"><label for="one">HTTP</label></a></li>
@@ -32,12 +42,16 @@
     <li><a href="Facebook/Facebook.htm"><label for="five">フェイスブック</label></a></li>
   </ul>
   <p> </p>
-  <p>また、<span data-keyref="GameMaker Name">GameMaker</span>がサポートする様々なコンソールで作業する際に必要となる、<span class="notranslate">buffers</span> を非同期でロード、セーブするための<a href="../Buffers/Buffers.htm">Buffer</a>関数が多数用意されていますが、これらは他のターゲットプラットフォームでも使用することが可能です。</p>
+  <p>また、<span data-keyref="GameMaker Name">GameMaker</span>がサポートする様々なコンソールで作業する際に必要となる、<span
+      class="notranslate">buffers</span> を非同期でロード、セーブするための<a
+      href="../Buffers/Buffers.htm">Buffer</a>関数が多数用意されていますが、これらは他のターゲットプラットフォームでも使用することが可能です。</p>
   <ul class="colour">
     <li><a href="../Buffers/buffer_save_async.htm"><span class="notranslate">buffer_save_async</span></a></li>
     <li><a href="../Buffers/buffer_load_async.htm"><span class="notranslate">buffer_load_async</span></a></li>
-    <li><a href="../Buffers/buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a></li>
-    <li><a href="../Buffers/buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a>
+    </li>
+    <li><a href="../Buffers/buffer_async_group_option.htm"><span
+          class="notranslate">buffer_async_group_option</span></a></li>
     <li><a href="../Buffers/buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li>
   </ul>
   <p> </p>
@@ -46,11 +60,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a href="../Networking/Networking.htm">ネットワーク</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a href="../Networking/Networking.htm">ネットワーク</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Reference
@@ -59,4 +74,5 @@ GML Reference
 gml_reference
 -->
 </body>
+
 </html>

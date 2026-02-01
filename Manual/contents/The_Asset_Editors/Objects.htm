@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>対象物</title>
+  <title>オブジェクト</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
   <script src="../assets/scripts/main_script.js"></script>
@@ -12,61 +13,140 @@
   <meta name="rh-index-keywords" content="Object Editor" />
   <meta name="search-keywords" content="objects,object editor" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span class="notranslate">Object</span> 編集部</h1>
-  <p><img>オブジェクトは、ゲームのアスペクトを制御したり、特定のことを行うために使用するリソースです。ほとんどの場合、オブジェクトは<span class="notranslate">sprite</span> に関連付けられ、ゲーム内でそれらを見ることができます<span class="notranslate">rooms</span> が、時には「舞台裏」のコントローラーとして、ユーザーに関することやタイミングなどのために使用されることもあります。ゲーム内で見ることのできるほとんどのものは、<span class="notranslate">objects</span> とそのインタラクションに基づいています。さて、「基づく」と言ったのは、実際に<span class="notranslate">objects</span> をゲーム<span class="notranslate">rooms</span> に直接配置するのではなく、基本的に<span class="notranslate">objects</span> リソースのコピー（あるいはクローン）であるこれらの<span class="notranslate">object</span> の<strong>インスタンスを</strong>配置するためです。インスタンスと<span class="notranslate">objects</span> <em>は同じ</em>ものではなく、それぞれに影響を与えることができる機能があります。</p>
-  <p>これを明確にするために、<span data-keyref="GameMaker Name">GameMakerで</span>作られたゲームを考えてみてください。キャラクター、モンスター、ボール、壁などなど、すべて<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>作成した<span class="notranslate">objects</span> です。そして、その<em>オブジェクトを </em> <a href="Rooms.htm">ルームエディターの</a> <span class="notranslate">room</span> にドラッグすると、基本的な<span class="notranslate">object</span> テンプレートからコピーされた<em>インスタンスが </em>作成されます。<span class="notranslate">room</span> のインスタンスは、エディタまたはコードで変更することができ、スケール、色、その他の詳細を「ベース」<span class="notranslate">object</span> から変更することができます。つまり、何かが<strong>インスタンスに</strong>影響を与えたり、変更したりするというのは、<em>部屋にある<span class="notranslate">object</span> の特定のコピーに</em>影響を与えるということです。その1つのインスタンスだけが影響を受け、残りのすべては影響を受けません。しかし、<strong>オブジェクトに</strong>影響を与えたり、変更したりするということは、<span class="notranslate">object</span> ブラウザの<span class="notranslate">Asset</span> を変更するということであり、それに対して行ったことは、その時点から作成されるすべてのインスタンスにも反映されることになります。つまり、<span class="notranslate">object</span> はインスタンスのテンプレートであり、インスタンスは<span class="notranslate">room</span> に配置してゲームを作るものなのです。</p>
-  <p>ゲーム内に<span class="notranslate">object</span> を作成するには、<span class="notranslate">Asset</span> Browser 上で<img> を右クリックし、<em>Create Object</em>オプションをクリックします。すると、このページの上部にある写真のようなウィンドウが開き、以下のセクションが表示されます。</p>
+  <h1><span class="notranslate">Object</span> エディタ</h1>
+  <p><img>オブジェクトは、ゲームのアスペクトを制御したり、特定のことを行うために使用するリソースです。ほとんどの場合、オブジェクトは<span class="notranslate">sprite</span>
+    に関連付けられ、ゲーム内でそれらを見ることができます<span class="notranslate">rooms</span>
+    が、時には「舞台裏」のコントローラーとして、ユーザーに関することやタイミングなどのために使用されることもあります。ゲーム内で見ることのできるほとんどのものは、<span
+      class="notranslate">objects</span> とそのインタラクションに基づいています。さて、「基づく」と言ったのは、実際に<span class="notranslate">objects</span>
+    をゲーム<span class="notranslate">rooms</span> に直接配置するのではなく、基本的に<span class="notranslate">objects</span>
+    リソースのコピー（あるいはクローン）であるこれらの<span class="notranslate">object</span> の<strong>インスタンスを</strong>配置するためです。インスタンスと<span
+      class="notranslate">objects</span> <em>は同じ</em>ものではなく、それぞれに影響を与えることができる機能があります。</p>
+  <p>これを明確にするために、<span data-keyref="GameMaker Name">GameMakerで</span>作られたゲームを考えてみてください。キャラクター、モンスター、ボール、壁などなど、すべて<a
+      href="../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>作成した<span class="notranslate">objects</span>
+    です。そして、その<em>オブジェクトを </em> <a href="Rooms.htm">ルームエディタの</a> <span class="notranslate">room</span>
+    にドラッグすると、基本的な<span class="notranslate">object</span> テンプレートからコピーされた<em>インスタンスが </em>作成されます。<span
+      class="notranslate">room</span> のインスタンスは、エディタまたはコードで変更することができ、スケール、色、その他の詳細を「ベース」<span
+      class="notranslate">object</span> から変更することができます。つまり、何かが<strong>インスタンスに</strong>影響を与えたり、変更したりするというのは、<em>部屋にある<span
+        class="notranslate">object</span>
+      の特定のコピーに</em>影響を与えるということです。その1つのインスタンスだけが影響を受け、残りのすべては影響を受けません。しかし、<strong>オブジェクトに</strong>影響を与えたり、変更したりするということは、<span
+      class="notranslate">object</span> ブラウザの<span class="notranslate">Asset</span>
+    を変更するということであり、それに対して行ったことは、その時点から作成されるすべてのインスタンスにも反映されることになります。つまり、<span class="notranslate">object</span>
+    はインスタンスのテンプレートであり、インスタンスは<span class="notranslate">room</span> に配置してゲームを作るものなのです。</p>
+  <p>ゲーム内に<span class="notranslate">object</span> を作成するには、<span class="notranslate">Asset</span> Browser 上で<img>
+    を右クリックし、<em>Create Object</em>オプションをクリックします。すると、このページの上部にある写真のようなウィンドウが開き、以下のセクションが表示されます。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">詳細</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">ここで、<span class="notranslate">object</span> に名前を付けることができます。この名前は、スペースや不正な文字（英数字とアンダーバー&quot;_&quot;のみ使用可能）を含んではならず、短くても覚えやすい名前にすることで、後で多くのリソースが必要になったときに、簡単に識別できるようにします。
-      また、短いけれども覚えやすい名前にすることで、後で多くのリソースが必要になったときに簡単に識別できるようにします。たとえば、多くの人はリソース間の違いを識別するために、&quot;<span class="inline">obj_Ship</span>&quot; や &quot;<span class="inline">Ship_obj</span>&quot; のような接頭辞や接尾辞を使用します。</p>
-    <p class="dropspot">次に、<span class="notranslate">sprite</span> の<span class="notranslate">object</span> を選択することができます。<img> <span class="notranslate">sprite</span> のボックスをマウスの左ボタンでクリックすると、<strong>アセットエクスプローラが</strong>表示され、<span class="notranslate">sprites</span> ブラウザから利用可能なすべての<span class="notranslate">Asset</span> のリストが表示されます。</p>
-    <p class="dropspot"><img> <span class="notranslate">object</span> <span class="notranslate">sprite</span> <span class="notranslate">object</span> <span class="notranslate">sprite</span> が に割り当てられたら、<span class="notranslate">object</span> <em>Edit Sprite</em>ボタン をクリックして<img> <a href="Sprites.htm">スプライトのプロパティを</a>変更することができます。
-     <em>Add Sprite</em>」ボタン をクリックして、新しい を作成し、それを割り当てます。また、割り当てられた の画像を編集することもできます。
-     <img> <span class="notranslate">sprite</span> <span class="notranslate">asset</span> <span class="notranslate">sprite</span> <span class="notranslate">asset</span> <em>Edit Image</em>」ボタン（ ）をクリックすると、<img> <a href="Image_Editor.htm">Image Editorが</a>表示されます。</p>
+    <p class="dropspot">ここで、<span class="notranslate">object</span>
+      に名前を付けることができます。この名前は、スペースや不正な文字（英数字とアンダーバー&quot;_&quot;のみ使用可能）を含んではならず、短くても覚えやすい名前にすることで、後で多くのリソースが必要になったときに、簡単に識別できるようにします。
+      また、短いけれども覚えやすい名前にすることで、後で多くのリソースが必要になったときに簡単に識別できるようにします。たとえば、多くの人はリソース間の違いを識別するために、&quot;<span
+        class="inline">obj_Ship</span>&quot; や &quot;<span class="inline">Ship_obj</span>&quot; のような接頭辞や接尾辞を使用します。</p>
+    <p class="dropspot">次に、<span class="notranslate">sprite</span> の<span class="notranslate">object</span>
+      を選択することができます。<img> <span class="notranslate">sprite</span>
+      のボックスをマウスの左ボタンでクリックすると、<strong>アセットエクスプローラが</strong>表示され、<span class="notranslate">sprites</span>
+      ブラウザから利用可能なすべての<span class="notranslate">Asset</span> のリストが表示されます。</p>
+    <p class="dropspot"><img> <span class="notranslate">object</span> <span class="notranslate">sprite</span> <span
+        class="notranslate">object</span> <span class="notranslate">sprite</span> が に割り当てられたら、<span
+        class="notranslate">object</span> <em>Edit Sprite</em>ボタン をクリックして<img> <a
+        href="Sprites.htm">スプライトのプロパティを</a>変更することができます。
+      <em>Add Sprite</em>」ボタン をクリックして、新しい を作成し、それを割り当てます。また、割り当てられた の画像を編集することもできます。
+      <img> <span class="notranslate">sprite</span> <span class="notranslate">asset</span> <span
+        class="notranslate">sprite</span> <span class="notranslate">asset</span> <em>Edit Image</em>」ボタン（
+      ）をクリックすると、<img> <a href="Image_Editor.htm">Image Editorが</a>表示されます。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">コリジョンマスク</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot"><span class="notranslate">sprite</span> のアサインエリアの下には、特定の<strong>コリジョンマスクを</strong>選択するボタンがあります。デフォルトでは、<span class="notranslate">object</span> は、それに割り当てられた<span class="notranslate">sprite</span> に基づいてコリジョン プロパティを生成しますが、以下のようなケースもあります。
-     <span class="notranslate">sprite</span> の異なる形状を基にコリジョンを生成したい場合があります。たとえば、トップダウンゲームでメインの<span class="notranslate">sprite</span> には長方形のコリジョン マスクがありますが、コリジョンをよりスムーズにするには円形のマスクの方がよい場合があり ます。このような場合
-      この場合、Collision Mask ボタンをクリックして、別の<span class="notranslate">sprite</span> リソースを選択すると、<span class="notranslate">object</span> のインスタンスは割り当てられた<span class="notranslate">sprite</span> を<em>描画 </em>しますが、<em>衝突は </em>マスク<span class="notranslate">sprite</span> を基に行われます。コリジョンマスクの詳細については、スプ
-      マスクの詳細については、<a href="Sprites.htm">スプライトエディタの</a>ページを参照してください。</p>
+    <p class="dropspot"><span class="notranslate">sprite</span>
+      のアサインエリアの下には、特定の<strong>コリジョンマスクを</strong>選択するボタンがあります。デフォルトでは、<span class="notranslate">object</span>
+      は、それに割り当てられた<span class="notranslate">sprite</span> に基づいてコリジョン プロパティを生成しますが、以下のようなケースもあります。
+      <span class="notranslate">sprite</span> の異なる形状を基にコリジョンを生成したい場合があります。たとえば、トップダウンゲームでメインの<span
+        class="notranslate">sprite</span> には長方形のコリジョン マスクがありますが、コリジョンをよりスムーズにするには円形のマスクの方がよい場合があり ます。このような場合
+      この場合、Collision Mask ボタンをクリックして、別の<span class="notranslate">sprite</span> リソースを選択すると、<span
+        class="notranslate">object</span> のインスタンスは割り当てられた<span class="notranslate">sprite</span> を<em>描画
+      </em>しますが、<em>衝突は </em>マスク<span class="notranslate">sprite</span> を基に行われます。コリジョンマスクの詳細については、スプ
+      マスクの詳細については、<a href="Sprites.htm">スプライトエディタの</a>ページを参照してください。
+    </p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">物件紹介</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">プロパティ</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">ここでは、オブジェクトに関する以下のオプションが表示されます。<strong></strong></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Visible（可視</strong>）。Visible は、<span class="notranslate">object</span> の起動時に、この<span class="notranslate">room</span> のインスタンスが表示されているかどうかを示します。通常、ほとんどのインスタンスは可視ですが、時には不可視のインスタンスがあると便利です。例えば、移動するモンスターを制御するためのウェイポイントに使用したり、値を追跡して特定の時間制限のあるアクションを実行するために使用したりできます。不可視の<span class="notranslate">objects</span> は、イベントには反応し、<span class="notranslate">sprite</span> やマスクが割り当てられている場合は、他のインスタンスが衝突したときにも反応します... ただ、見えないので、<strong>描画</strong>イベントは実行さ<em>れません </em>。デフォルトでは、visible<span class="notranslate">flag</span> がチェックされています。<strong></strong></li>
-      <li class="dropspot"><strong>Solid</strong> <span class="notranslate">flag</span> <strong></strong>: インスタンスをSolidと指定すると、<span data-keyref="GameMaker Name">GameMakerに</span> <strong>Collision Eventを</strong>トリガーする前にコリジョンを解決するよう指示します。これは非常に基本的な機能で、実際には Collision Event 自体にあるコードや<span class="notranslate">GML</span> Visual を実行する前に、衝突が検出される前のインスタンスの位置に戻すだけなので、用途は限定されます。</li>
-      <li class="dropspot">永<strong>続的</strong>。永続的な<span class="notranslate">object</span> とは、<span class="notranslate">room</span> が変更されても消えずに、「持続」して新しい<span class="notranslate">room</span> に引き継がれるものです。これは、destroy アクションまたはコードで明示的に破壊したときにのみ消えます。<span class="notranslate">object</span> <span class="notranslate">room</span> <span class="notranslate">rooms</span> <span class="notranslate">object</span> <em>ただし </em>、<strong>Create Eventは</strong>最初に作成されたときに<em>一度だけ </em>発生し、新しい<span class="notranslate">room</span> に変更されたときには発生しません。これは、例えば主人公が<span class="notranslate">room</span> から<span class="notranslate">room</span> に移動する場合、インスタンス内の変数を同じに保ちたい場合に便利です。しかし、誤ってプロジェクトにエラーを忍び込ませてしまうことがあるので、永続的な<span class="notranslate">objects</span> の作成と破棄には細心の注意を払う必要があります。</li>
+      <li class="dropspot"><strong>Visible（可視</strong>）。Visible は、<span class="notranslate">object</span> の起動時に、この<span
+          class="notranslate">room</span>
+        のインスタンスが表示されているかどうかを示します。通常、ほとんどのインスタンスは可視ですが、時には不可視のインスタンスがあると便利です。例えば、移動するモンスターを制御するためのウェイポイントに使用したり、値を追跡して特定の時間制限のあるアクションを実行するために使用したりできます。不可視の<span
+          class="notranslate">objects</span> は、イベントには反応し、<span class="notranslate">sprite</span>
+        やマスクが割り当てられている場合は、他のインスタンスが衝突したときにも反応します... ただ、見えないので、<strong>描画</strong>イベントは実行さ<em>れません
+        </em>。デフォルトでは、visible<span class="notranslate">flag</span> がチェックされています。<strong></strong></li>
+      <li class="dropspot"><strong>Solid</strong> <span class="notranslate">flag</span> <strong></strong>:
+        インスタンスをSolidと指定すると、<span data-keyref="GameMaker Name">GameMakerに</span> <strong>Collision
+          Eventを</strong>トリガーする前にコリジョンを解決するよう指示します。これは非常に基本的な機能で、実際には Collision Event 自体にあるコードや<span
+          class="notranslate">GML</span> Visual を実行する前に、衝突が検出される前のインスタンスの位置に戻すだけなので、用途は限定されます。</li>
+      <li class="dropspot">永<strong>続的</strong>。永続的な<span class="notranslate">object</span> とは、<span
+          class="notranslate">room</span> が変更されても消えずに、「持続」して新しい<span class="notranslate">room</span>
+        に引き継がれるものです。これは、destroy アクションまたはコードで明示的に破壊したときにのみ消えます。<span class="notranslate">object</span> <span
+          class="notranslate">room</span> <span class="notranslate">rooms</span> <span class="notranslate">object</span>
+        <em>ただし </em>、<strong>Create Eventは</strong>最初に作成されたときに<em>一度だけ </em>発生し、新しい<span
+          class="notranslate">room</span> に変更されたときには発生しません。これは、例えば主人公が<span class="notranslate">room</span> から<span
+          class="notranslate">room</span> に移動する場合、インスタンス内の変数を同じに保ちたい場合に便利です。しかし、誤ってプロジェクトにエラーを忍び込ませてしまうことがあるので、永続的な<span
+          class="notranslate">objects</span> の作成と破棄には細心の注意を払う必要があります。
+      </li>
     </ul>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#" style="margin-left:88px">Persistence and<span class="notranslate">Room</span> Layers</a>  </p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"
+        style="margin-left:88px">Persistence and<span class="notranslate">Room</span> Layers</a> </p>
     <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot" style="margin-left: 132px"><span class="notranslate">room</span> でパーシステンスを有効にしたインスタンスを作成すると、レイヤーまたは深度が割り当てられます（<span class="notranslate">object</span> のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span> に、割り当てられたものと同じ名前または深さのレイヤーがない場合、<strong> 部屋をまたいで永続化されるインスタンスのために、新しいレイヤーが</strong>作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になります。インスタンスに深さを割り当てた場合、新しいレイヤーは &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot;<span class="inline">XXX</span>&quot; はレイヤーに固有の名前を付けるために使用する16進数値です。これらのレイヤーは、<strong>ルームエンドの</strong> <span class="notranslate">room</span> から削除されます。<br />
+      <p class="dropspot" style="margin-left: 132px"><span class="notranslate">room</span>
+        でパーシステンスを有効にしたインスタンスを作成すると、レイヤーまたは深度が割り当てられます（<span class="notranslate">object</span>
+        のインスタンスを作成するために使用した関数に依存します）。<span class="notranslate">room</span> が変更され、次の<span class="notranslate">room</span>
+        に、割り当てられたものと同じ名前または深さのレイヤーがない場合、<strong>
+          部屋をまたいで永続化されるインスタンスのために、新しいレイヤーが</strong>作成されます。インスタンスの作成時にレイヤー名を付けた場合、新しいレイヤーも元のレイヤーと同じ名前になります。インスタンスに深さを割り当てた場合、新しいレイヤーは
+        &quot;<span class="inline">_layer_XXX</span>&quot; という名前になります。&quot;<span class="inline">XXX</span>&quot;
+        はレイヤーに固有の名前を付けるために使用する16進数値です。これらのレイヤーは、<strong>ルームエンドの</strong> <span class="notranslate">room</span>
+        から削除されます。<br />
         <br />
-        レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスにレイヤー名を割り当てた場合、次の<span class="notranslate">rooms</span> に同じ名前の別のレイヤーがあると、永続的なインスタンスはレイヤーの深さに関係なく、同じ名前のレイヤーに割り当てられるということです。<br />
+        レイヤーと永続的なインスタンスに関するもう一つの注意点は、作成時にインスタンスにレイヤー名を割り当てた場合、次の<span class="notranslate">rooms</span>
+        に同じ名前の別のレイヤーがあると、永続的なインスタンスはレイヤーの深さに関係なく、同じ名前のレイヤーに割り当てられるということです。<br />
         <br />
-        最後に、永続化されたインスタンスが、インスタンスが作成されたのと<em>同じ</em>深さのレイヤーを持つ<span class="notranslate">room</span> に移動した場合、このレイヤーには<em>割り当てられず </em>、代わりに同じ深さに新しいレイヤーが作成されます（上で説明した命名規則に従っています）。
+        最後に、永続化されたインスタンスが、インスタンスが作成されたのと<em>同じ</em>深さのレイヤーを持つ<span class="notranslate">room</span>
+        に移動した場合、このレイヤーには<em>割り当てられず </em>、代わりに同じ深さに新しいレイヤーが作成されます（上で説明した命名規則に従っています）。
       </p>
     </div>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#" style="margin-left: 88px">永続性とイベント</a></p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"
+        style="margin-left: 88px">永続性とイベント</a></p>
     <div class="droptext" data-targetname="drop-down6">
-      <p class="dropspot" style="margin-left: 132px">前述の通り、persistent<span class="notranslate">object</span> は、<strong>Create Event</strong>を<em>一度だけ</em>実行しますが、<strong>Game Start</strong>、<strong>Game End</strong>、<strong>Room Start</strong>、<strong>Room End</strong>イベントも適切なタイミングでトリガーされます。しかし、ゲームを再起動すると（例えば、 <span class="inline">game_restart()</span> 関数を使用して）、<em>すべての永続的な<span class="notranslate">objects</span> は削除され、ゲームによって再び作成されたときにのみ存在</em>します。<br />
+      <p class="dropspot" style="margin-left: 132px">前述の通り、persistent<span class="notranslate">object</span>
+        は、<strong>Create Event</strong>を<em>一度だけ</em>実行しますが、<strong>Game Start</strong>、<strong>Game
+          End</strong>、<strong>Room Start</strong>、<strong>Room End</strong>イベントも適切なタイミングでトリガーされます。しかし、ゲームを再起動すると（例えば、
+        <span class="inline">game_restart()</span> 関数を使用して）、<em>すべての永続的な<span class="notranslate">objects</span>
+          は削除され、ゲームによって再び作成されたときにのみ存在</em>します。<br />
         <br />
-        また、<span class="notranslate">object</span> を<strong>非アクティブに </strong>すると、<strong>Room End</strong>イベントが発生する前に再アクティブにしない限り、<span class="notranslate">room</span> から別の場所に移動することができなくなるので注意してください。<span class="notranslate">object</span> 再アクティブ化には<em>ゲーム全体のステップが必要</em>なため、実際の<strong>Room End</strong>イベントを使用しても、<span class="notranslate">objects</span> を再アクティブ化するためのゲーム全体のステップが得られないため、非アクティブ化を使用する場合はこの点に注意し、それに応じてコードを計画する必要があります。
+        また、<span class="notranslate">object</span> を<strong>非アクティブに </strong>すると、<strong>Room
+          End</strong>イベントが発生する前に再アクティブにしない限り、<span class="notranslate">room</span> から別の場所に移動することができなくなるので注意してください。<span
+          class="notranslate">object</span> 再アクティブ化には<em>ゲーム全体のステップが必要</em>なため、実際の<strong>Room
+          End</strong>イベントを使用しても、<span class="notranslate">objects</span>
+        を再アクティブ化するためのゲーム全体のステップが得られないため、非アクティブ化を使用する場合はこの点に注意し、それに応じてコードを計画する必要があります。
       </p>
     </div>
     <ul class="dropspotlist">
-      <li class="dropspot">物理を<strong>使用</strong>します。物理を使用する: 物理を使用するボックスをチェックすると、この<span class="notranslate">object</span> が物理世界の一部であることを<span data-keyref="GameMaker Name">GameMaker</span>に伝えます (<strong></strong><a href="Rooms.htm"></a> ルームエディタで設定されています)。これをチェックすると、さらに連鎖したウィンドウが開き、この<span class="notranslate">object</span> のすべてのインスタンスの物理プロパティを定義することができます。これに関する詳細は、<a href="Object_Properties/Physics_Objects.htm">物理オブジェクトの</a>セクションを参照してください。</li>
-      <li class="dropspot"><strong>Managed（管理する</strong>）。<a href="../GameMaker_Language/GML_Reference/Rollback/Rollback_Multiplayer.htm">Rollback Multiplayerを</a>使用する際に、この<span class="notranslate">object</span> を管理するかどうかを指定します。マネージドオブジェクトの状態を<i>ロールバック</i>し、その上で予測を実行することができます。<a data-xref="{text}" href="../GameMaker_Language/GML_Reference/Rollback/Rollback_System.htm#h2">マネージドオブジェクトを</a>参照してください。</li>
+      <li class="dropspot">物理を<strong>使用</strong>します。物理を使用する: 物理を使用するボックスをチェックすると、この<span
+          class="notranslate">object</span> が物理世界の一部であることを<span data-keyref="GameMaker Name">GameMaker</span>に伝えます
+        (<strong></strong><a href="Rooms.htm"></a> ルームエディタで設定されています)。これをチェックすると、さらに連鎖したウィンドウが開き、この<span
+          class="notranslate">object</span> のすべてのインスタンスの物理プロパティを定義することができます。これに関する詳細は、<a
+          href="Object_Properties/Physics_Objects.htm">物理オブジェクトの</a>セクションを参照してください。</li>
+      <li class="dropspot"><strong>Managed（管理する</strong>）。<a
+          href="../GameMaker_Language/GML_Reference/Rollback/Rollback_Multiplayer.htm">Rollback
+          Multiplayerを</a>使用する際に、この<span class="notranslate">object</span>
+        を管理するかどうかを指定します。マネージドオブジェクトの状態を<i>ロールバック</i>し、その上で予測を実行することができます。<a data-xref="{text}"
+          href="../GameMaker_Language/GML_Reference/Rollback/Rollback_System.htm#h2">マネージドオブジェクトを</a>参照してください。</li>
     </ul>
   </div>
   <p> </p>
-  <p><span class="notranslate">Object</span> Editor の最後の部分は、さまざまなオブジェクトの<strong>オプションで占められて</strong>います。各オプションについては、以下のリンク先のページで説明されています。</p>
+  <p><span class="notranslate">Object</span> Editor
+    の最後の部分は、さまざまなオブジェクトの<strong>オプションで占められて</strong>います。各オプションについては、以下のリンク先のページで説明されています。</p>
   <ul class="colour">
     <li><a href="Object_Properties/Object_Events.htm">オブジェクトのイベント</a></li>
     <li><a href="Object_Properties/Parent_Objects.htm">親オブジェクト</a></li>
@@ -79,11 +159,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Paths.htm">パス</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Paths.htm">パス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Object Editor
@@ -93,4 +174,5 @@ Objects
 object_editor
 -->
 </body>
+
 </html>

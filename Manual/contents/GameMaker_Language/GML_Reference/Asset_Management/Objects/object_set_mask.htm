@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>object_set_mask</title>
@@ -12,20 +13,30 @@
   <meta name="rh-index-keywords" content="object_set_mask" />
   <meta name="search-keywords" content="object_set_mask" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">object_set_mask</span></h1>
-  <p>この関数を使うと、特定の<span class="notranslate">object</span> の mask_index を設定することができます (マスクの詳細については、<a href="../../../../The_Asset_Editors/Objects.htm">The<span class="notranslate">Object</span> Editor</a> を参照してください)。これは、<i>マスクが変更された後に</i>作成されたこの<span class="notranslate">object</span> のすべてのインスタンスが、この新しいマスクで作成されることを意味し、<span class="notranslate">room</span> にすでにあるインスタンスは影響を受けないかもしれません。これを-1に設定すると、<span class="notranslate">sprite</span> のマスクが削除され、<span class="notranslate">sprite</span> の<span class="notranslate">object</span> に定義されたマスクがデフォルトになります (<span class="notranslate">sprite</span> が選択されていない場合はマスクがありません)。</p>
-  <p>これはインスタンス機能ではありません。個々のインスタンスのマスク・インデックスを設定することができます。 <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a><span class="notranslate">object</span> この関数を使用して<span class="notranslate">object</span> のマスクインデックスを変更しても、現在<span class="notranslate">room</span> にあるすべてのインスタンスはそのまま残り、この関数を呼び出した後に作成されたインスタンスだけが新しいマスクで開始されます。</p>
+  <p>この関数を使うと、特定の<span class="notranslate">object</span> の mask_index を設定することができます (マスクの詳細については、<a
+      href="../../../../The_Asset_Editors/Objects.htm">The<span class="notranslate">Object</span> Editor</a>
+    を参照してください)。これは、<i>マスクが変更された後に</i>作成されたこの<span class="notranslate">object</span>
+    のすべてのインスタンスが、この新しいマスクで作成されることを意味し、<span class="notranslate">room</span>
+    にすでにあるインスタンスは影響を受けないかもしれません。これを-1に設定すると、<span class="notranslate">sprite</span> のマスクが削除され、<span
+      class="notranslate">sprite</span> の<span class="notranslate">object</span> に定義されたマスクがデフォルトになります (<span
+      class="notranslate">sprite</span> が選択されていない場合はマスクがありません)。</p>
+  <p>これはインスタンス機能ではありません。個々のインスタンスのマスク・インデックスを設定することができます。 <a
+      href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a><span
+      class="notranslate">object</span> この関数を使用して<span class="notranslate">object</span> のマスクインデックスを変更しても、現在<span
+      class="notranslate">room</span> にあるすべてのインスタンスはそのまま残り、この関数を呼び出した後に作成されたインスタンスだけが新しいマスクで開始されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">object_set_mask</span>(index, spr);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -40,7 +51,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -48,18 +59,21 @@
     {<br />
         object_set_mask(obj_Platform, spr_mask_10);<br />
     }</p>
-  <p>上記のコードは、グローバル変数の値をチェックし、<span class="notranslate">object</span> &quot;obj_Platform&quot; のマスクインデックスが10に等しければ変更します。</p>
+  <p>上記のコードは、グローバル変数の値をチェックし、<span class="notranslate">object</span> &quot;obj_Platform&quot; のマスクインデックスが10に等しければ変更します。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
-        <div style="float:right">次のページ <a href="object_set_persistent.htm"><span class="notranslate">object_set_persistent</span></a></div>
+        <div style="float:left">前のページ：<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ：<a href="object_set_persistent.htm"><span
+              class="notranslate">object_set_persistent</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_set_mask
@@ -68,4 +82,5 @@ object_set_mask
 object_set_mask
 -->
 </body>
+
 </html>

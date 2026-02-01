@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_text_ext_colour</title>
@@ -13,14 +14,26 @@
   <meta name="search-keywords" content="draw_text_ext_colour,draw_text_ext_color" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_text_ext_colour</span></h1>
-  <p>この機能は、ベース <a href="draw_text.htm"><span class="inline">draw_text</span><span class="inline">()</span><span class="inline"></span></a>関数に <a href="draw_text_ext.htm"><span class="inline">draw_text_ext</span><span class="inline">()</span><span class="inline"></span></a>と <a href="draw_text_colour.htm"><span class="inline">draw_text_colour</span><span class="inline">()</span><span class="inline"></span></a>この関数を使うと、テキストのグラデーションカラーや、行間、1行の最大幅を一括して定義することができます。</p>
-  <p class="note"><b><span class="note">注意事項</span> </b>グラデーション ブレンディングは、WebGL が有効になっていない限り、HTML5 ターゲットでは利用できません。ただし、ブレンディング カラーを設定すると、<span class="notranslate">font</span> を最初に指定した色でブレンディングします。ただし、この方法でブレンドすると、<span class="notranslate">font</span> の複製が作成され、<span class="notranslate">cache</span> に保存されて必要なときに使用されます。これは最適とは言えず、複数の色変更を使用するとゲームのパフォーマンスが低下することになります。<span class="notranslate">font</span> <span class="notranslate">cache</span> のサイズを設定することで、これを制限することができます。 <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><span class="inline">font_set_cache_size()</span></a>.</p>
+  <p>この機能は、ベース <a href="draw_text.htm"><span class="inline">draw_text</span><span class="inline">()</span><span
+        class="inline"></span></a>関数に <a href="draw_text_ext.htm"><span class="inline">draw_text_ext</span><span
+        class="inline">()</span><span class="inline"></span></a>と <a href="draw_text_colour.htm"><span
+        class="inline">draw_text_colour</span><span class="inline">()</span><span
+        class="inline"></span></a>この関数を使うと、テキストのグラデーションカラーや、行間、1行の最大幅を一括して定義することができます。</p>
+  <p class="note"><b><span class="note">注意事項</span> </b>グラデーション ブレンディングは、WebGL が有効になっていない限り、HTML5
+    ターゲットでは利用できません。ただし、ブレンディング カラーを設定すると、<span class="notranslate">font</span>
+    を最初に指定した色でブレンディングします。ただし、この方法でブレンドすると、<span class="notranslate">font</span> の複製が作成され、<span
+      class="notranslate">cache</span> に保存されて必要なときに使用されます。これは最適とは言えず、複数の色変更を使用するとゲームのパフォーマンスが低下することになります。<span
+      class="notranslate">font</span> <span class="notranslate">cache</span> のサイズを設定することで、これを制限することができます。 <a
+      href="../../Asset_Management/Fonts/font_set_cache_size.htm"><span class="inline">font_set_cache_size()</span></a>.
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">draw_text_ext_colour</span>(x, y, string, sep, w, c1, c2, c3, c4, alpha);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">draw_text_ext_colour</span>(x, y, string, sep, w, c1,
+    c2, c3, c4, alpha);</p>
   <table>
     <colgroup>
       <col />
@@ -29,9 +42,9 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x</span></td>
@@ -86,23 +99,26 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">draw_text_ext_colour(200, 200, keyboard_string, 5, 300, c_blue, c_blue, c_navy, c_navy, 1);</p>
-  <p>上記のコードは、ユーザーがキーボードで入力したテキストを、<span class="notranslate">string</span> の長さが 300 ピクセルを超えるたびに新しい行に分割して描画します。この場合、行間も 5 ピクセルの間隔を維持します。各行のテキストは青のグラデーションで色付けされ、上部が明るい青、下部が暗い青になります。</p>
+  <p>上記のコードは、ユーザーがキーボードで入力したテキストを、<span class="notranslate">string</span> の長さが 300 ピクセルを超えるたびに新しい行に分割して描画します。この場合、行間も 5
+    ピクセルの間隔を維持します。各行のテキストは青のグラデーションで色付けされ、上部が明るい青、下部が暗い青になります。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Text.htm">テキスト</a></div>
-        <div style="float:right">次のページ <a href="draw_text_ext_transformed.htm"><span class="notranslate">draw_text_ext_transformed</span></a></div>
+        <div style="float:left">前のページ：<a href="Text.htm">テキスト</a></div>
+        <div style="float:right">次のページ：<a href="draw_text_ext_transformed.htm"><span
+              class="notranslate">draw_text_ext_transformed</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_ext_colour
@@ -112,4 +128,5 @@ draw_text_ext_color
 draw_text_ext_colour
 -->
 </body>
+
 </html>

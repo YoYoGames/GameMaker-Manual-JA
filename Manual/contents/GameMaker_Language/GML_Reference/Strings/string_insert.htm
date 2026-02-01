@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>string_insert</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
@@ -17,49 +19,58 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">string_insert</span></h1>
-  <p>この機能を使うと、2つの<span class="notranslate">string</span> からなる新しい<span class="notranslate">strings</span> を作成することができます。例えば、ユーザー名を定義済みのテキストに追加して、ゲームのプレイヤーを感じさせたい場合に便利です。
-    よりアクションに参加することができます。挿入する位置を計算するとき、<span class="notranslate">strings</span> は 1 からインデックスされるので、<span class="notranslate">string</span> の最初の文字は 1 であり、期待されるような 0 ではないことに留意してください。</p>
+  <p>この機能を使うと、2つの<span class="notranslate">string</span> からなる新しい<span class="notranslate">strings</span>
+    を作成することができます。例えば、ユーザー名を定義済みのテキストに追加して、ゲームのプレイヤーを感じさせたい場合に便利です。
+    よりアクションに参加することができます。挿入する位置を計算するとき、<span class="notranslate">strings</span> は 1 からインデックスされるので、<span
+      class="notranslate">string</span> の最初の文字は 1 であり、期待されるような 0 ではないことに留意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">string_insert</span>(substr, str, index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">substr</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">substr</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The substring to be inserted.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">str</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">str</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The string to be copied.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The position in characters of the string to insert the substring.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">str2 = string_insert(username, &quot;Hello, , how are you?&quot;, 8);</p>
-  <p>これは、&quot;username &quot;変数にある<span class="notranslate">string</span> を与えられたフレーズに挿入し、結果として<span class="notranslate">string</span> は次のようになります： &quot;Hello, NAME, how are you?&quot;.</p>
+  <p>これは、&quot;username &quot;変数にある<span class="notranslate">string</span> を与えられたフレーズに挿入し、結果として<span
+      class="notranslate">string</span> は次のようになります： &quot;Hello, NAME, how are you?&quot;.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Strings.htm">弦楽器</a></div>
-        <div style="float:right">次のページ <a href="string_length.htm"><span class="notranslate">string_length</span></a></div>
+        <div style="float:left">前のページ：<a href="Strings.htm">弦楽器</a></div>
+        <div style="float:right">次のページ：<a href="string_length.htm"><span class="notranslate">string_length</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 string_insert
@@ -68,4 +79,6 @@ string_insert
 string_insert
 -->
 
-</body></html>
+</body>
+
+</html>

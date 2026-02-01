@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シーケンス</title>
@@ -12,14 +13,44 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Sequences" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>シーケンス</h1>
-  <p>シーケンスは通常、<span class="notranslate">IDE</span> 、<a href="../../../../The_Asset_Editors/Sequences.htm">シーケンスエディタを</a>使用して作成しますが、コードを使用して作成および編集することもできます。しかし、利用可能な機能を見る前に、<span class="notranslate">sequences</span> が<span class="notranslate">GameMaker</span> で定義されている方法と、これから使われるさまざまな用語を理解することが重要です。</p>
-  <p>まず、トップレベルでは、<b>sequence 要素が</b>あります。これは、<span class="notranslate">room</span> のレイヤーに配置するもので、<span class="notranslate">Room</span> エディターで、あるいはコードで適切な<a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">レイヤー関数を</a>使用します。レイヤー要素は要素IDの値以外には何の特性も持ちませんが、このIDは上記のレイヤー関数を使用して<span class="notranslate">sequence</span> の再生を変更したり、<span class="notranslate">sequence</span> のデータにアクセスするために必要です。</p>
-  <p>次に、一般的な<span class="notranslate">objects</span> とインスタンスと同じように、<b>シーケンスオブジェクトと</b> <b>シーケンスインスタンスが</b>あります。<span class="notranslate">sequence</span> <i>オブジェクトは</i>、<b>アセットブラウザで</b>作成したベースリソース、または関数 <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a>そして、<span class="notranslate">sequence</span> <i>インスタンスは</i>、レイヤー上の要素として<span class="notranslate">sequence</span> に配置された、その<span class="notranslate">object</span> <span class="notranslate">room</span> の「コピー」である。<span class="notranslate">sequence</span> <span class="notranslate">objects</span> は青写真、<span class="notranslate">sequence</span> インスタンスはその青写真から作成されたものと考えてください。<span class="notranslate">Sequence</span> <span class="notranslate">objects</span> とインスタンスは<a href="../../../GML_Overview/Structs.htm">構造体で</a>、通常の<span class="notranslate">objects</span> とは異なり、<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> は<span class="notranslate">runtime</span> で編集でき、そのインスタンスを要素として作成すると、さらにその<span class="notranslate">sequence</span> のインスタンスすべてに影響します (<span class="notranslate">sequence</span> <span class="notranslate">object</span> に行った編集はゲームや<span class="notranslate">room</span> を <span class="inline">room_restart()</span> や <span class="inline">game_restart()</span> 機能で再起動してもリセットさ<b>れません</b>)。<span class="notranslate">sequence</span> インスタンス<span class="notranslate">struct</span> には、<b>シーケンスデータ</b> <span class="notranslate">struct</span> の他に、再生などを制御するためのいくつかのパラメータが含まれています（これについては後ほど詳しく説明します）。</p>
-  <p>最後に、前述のように<b>シーケンスデータ</b>ですが、これも<span class="notranslate">struct</span> 。この<span class="notranslate">struct</span> には、<span class="notranslate">sequence</span> に関する<i>すべての</i>データが含まれています。 含まれているトラック、それらのトラックが持つプロパティ、再生速度など、多くの情報が含まれています。この<span class="notranslate">structs</span> の内容の詳細は後述しますが、基本的には<b>アセットトラック</b> <span class="notranslate">structs</span> と<b>パラメータトラック</b> <span class="notranslate">structs</span> で構成されており、<b>キーフレーム・データを</b>使って<span class="notranslate">sequence</span> の再生中に実際にアクションを行います。</p>
-  <p>配列要素は<span class="notranslate">room</span> <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">レイヤーの関数で</a>扱いますが、<span class="notranslate">sequence</span> <span class="notranslate">objects</span> 、インスタンス、データについては、以下のような関数があります。</p>
+  <p>シーケンスは通常、<span class="notranslate">IDE</span> 、<a
+      href="../../../../The_Asset_Editors/Sequences.htm">シーケンスエディタを</a>使用して作成しますが、コードを使用して作成および編集することもできます。しかし、利用可能な機能を見る前に、<span
+      class="notranslate">sequences</span> が<span class="notranslate">GameMaker</span>
+    で定義されている方法と、これから使われるさまざまな用語を理解することが重要です。</p>
+  <p>まず、トップレベルでは、<b>sequence 要素が</b>あります。これは、<span class="notranslate">room</span> のレイヤーに配置するもので、<span
+      class="notranslate">Room</span> エディタで、あるいはコードで適切な<a
+      href="../Rooms/Sequence_Layers/Sequence_Layers.htm">レイヤー関数を</a>使用します。レイヤー要素は要素IDの値以外には何の特性も持ちませんが、このIDは上記のレイヤー関数を使用して<span
+      class="notranslate">sequence</span> の再生を変更したり、<span class="notranslate">sequence</span> のデータにアクセスするために必要です。</p>
+  <p>次に、一般的な<span class="notranslate">objects</span> とインスタンスと同じように、<b>シーケンスオブジェクトと</b> <b>シーケンスインスタンスが</b>あります。<span
+      class="notranslate">sequence</span> <i>オブジェクトは</i>、<b>アセットブラウザで</b>作成したベースリソース、または関数 <a
+      href="sequence_create.htm"><span class="inline">sequence_create()</span></a>そして、<span
+      class="notranslate">sequence</span> <i>インスタンスは</i>、レイヤー上の要素として<span class="notranslate">sequence</span>
+    に配置された、その<span class="notranslate">object</span> <span class="notranslate">room</span> の「コピー」である。<span
+      class="notranslate">sequence</span> <span class="notranslate">objects</span> は青写真、<span
+      class="notranslate">sequence</span> インスタンスはその青写真から作成されたものと考えてください。<span class="notranslate">Sequence</span> <span
+      class="notranslate">objects</span> とインスタンスは<a href="../../../GML_Overview/Structs.htm">構造体で</a>、通常の<span
+      class="notranslate">objects</span> とは異なり、<span class="notranslate">sequence</span> <span
+      class="notranslate">object</span> <span class="notranslate">struct</span> は<span
+      class="notranslate">runtime</span> で編集でき、そのインスタンスを要素として作成すると、さらにその<span class="notranslate">sequence</span>
+    のインスタンスすべてに影響します (<span class="notranslate">sequence</span> <span class="notranslate">object</span> に行った編集はゲームや<span
+      class="notranslate">room</span> を <span class="inline">room_restart()</span> や <span
+      class="inline">game_restart()</span> 機能で再起動してもリセットさ<b>れません</b>)。<span class="notranslate">sequence</span>
+    インスタンス<span class="notranslate">struct</span> には、<b>シーケンスデータ</b> <span class="notranslate">struct</span>
+    の他に、再生などを制御するためのいくつかのパラメータが含まれています（これについては後ほど詳しく説明します）。</p>
+  <p>最後に、前述のように<b>シーケンスデータ</b>ですが、これも<span class="notranslate">struct</span> 。この<span class="notranslate">struct</span>
+    には、<span class="notranslate">sequence</span> に関する<i>すべての</i>データが含まれています。
+    含まれているトラック、それらのトラックが持つプロパティ、再生速度など、多くの情報が含まれています。この<span class="notranslate">structs</span>
+    の内容の詳細は後述しますが、基本的には<b>アセットトラック</b> <span class="notranslate">structs</span> と<b>パラメータトラック</b> <span
+      class="notranslate">structs</span> で構成されており、<b>キーフレーム・データを</b>使って<span class="notranslate">sequence</span>
+    の再生中に実際にアクションを行います。</p>
+  <p>配列要素は<span class="notranslate">room</span> <a
+      href="../Rooms/Sequence_Layers/Sequence_Layers.htm">レイヤーの関数で</a>扱いますが、<span class="notranslate">sequence</span>
+    <span class="notranslate">objects</span> 、インスタンス、データについては、以下のような関数があります。
+  </p>
   <p> </p>
   <ul class="colour">
     <li><a href="sequence_exists.htm"><span class="notranslate">sequence_exists</span></a></li>
@@ -30,35 +61,65 @@
     <li><a href="sequence_keyframe_new.htm"><span class="notranslate">sequence_keyframe_new</span></a></li>
     <li><a href="sequence_keyframedata_new.htm"><span class="notranslate">sequence_keyframedata_new</span></a></li>
     <li><a href="sequence_get_objects.htm"><span class="notranslate">sequence_get_objects</span></a></li>
-    <li><a href="sequence_instance_override_object.htm"><span class="notranslate">sequence_instance_override_object</span></a></li>
+    <li><a href="sequence_instance_override_object.htm"><span
+          class="notranslate">sequence_instance_override_object</span></a></li>
   </ul>
   <p> </p>
-  <p>また、インスタンスに関連する<strong>組み込み変数が</strong>あり、インスタンスが<span class="notranslate">sequence</span> で使用されたかどうかを判断するために使用することができます。</p>
+  <p>また、インスタンスに関連する<strong>組み込み変数が</strong>あり、インスタンスが<span class="notranslate">sequence</span>
+    で使用されたかどうかを判断するために使用することができます。</p>
   <p> </p>
   <ul class="colour">
     <li><a href="in_sequence.htm"><span class="notranslate">in_sequence</span></a></li>
   </ul>
-  <p class="note"><strong>重要!</strong> <span class="notranslate">sequence</span> にインスタンスがある場合、これらのインスタンスは<span class="inline"><span style="font-size:14px;">image_xscale</span> /<span class="inline"><span style="font-size:14px;">image_yscale</span> / <span class="inline"><span style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span> /<span class="inline"><span style="font-size:14px;">y</span> の変数を変更してはいけません。再生開始後に<span class="notranslate">sequence</span> が各ステップを更新するときに上書きされてしまうからです。</p>
+  <p class="note"><strong>重要!</strong> <span class="notranslate">sequence</span> にインスタンスがある場合、これらのインスタンスは<span
+      class="inline"><span style="font-size:14px;">image_xscale</span> /<span class="inline"><span
+          style="font-size:14px;">image_yscale</span> / <span class="inline"><span
+            style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span>
+            /<span class="inline"><span style="font-size:14px;">y</span> の変数を変更してはいけません。再生開始後に<span
+                class="notranslate">sequence</span> が各ステップを更新するときに上書きされてしまうからです。</p>
   <p> </p>
-  <p>これらの関数を使用して<span class="notranslate">sequences</span> を作成または編集する前に、<span class="notranslate">struct</span> プロパティに関する以下の詳細な説明を読むことをお勧めします。新しい<span class="notranslate">sequence</span> を作成する方法の一般的な概要は、次のとおりです。</p>
+  <p>これらの関数を使用して<span class="notranslate">sequences</span> を作成または編集する前に、<span class="notranslate">struct</span>
+    プロパティに関する以下の詳細な説明を読むことをお勧めします。新しい<span class="notranslate">sequence</span> を作成する方法の一般的な概要は、次のとおりです。</p>
   <ul class="colour">
-    <li>関数 <span class="inline"><a href="sequence_create.htm">sequence_create()</a></span> を使って新しい<span class="notranslate">sequence</span> <span class="notranslate">object</span> を作成し、<span class="notranslate">sequence</span> <span class="notranslate">object</span> のインデックスを変数に格納します。このインデックスにより、<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> にアクセスすることができます。</li>
+    <li>関数 <span class="inline"><a href="sequence_create.htm">sequence_create()</a></span> を使って新しい<span
+        class="notranslate">sequence</span> <span class="notranslate">object</span> を作成し、<span
+        class="notranslate">sequence</span> <span class="notranslate">object</span> のインデックスを変数に格納します。このインデックスにより、<span
+        class="notranslate">sequence</span> <span class="notranslate">object</span> <span
+        class="notranslate">struct</span> にアクセスすることができます。</li>
   </ul>
   <p class="code">myseq = sequence_create();</p>
   <ul class="colour">
-    <li>長さ、再生モード、再生速度など、<span class="notranslate">sequence</span> <span class="notranslate">object</span> のトップレベルの値を設定します。例えば</li>
+    <li>長さ、再生モード、再生速度など、<span class="notranslate">sequence</span> <span class="notranslate">object</span>
+      のトップレベルの値を設定します。例えば</li>
   </ul>
   <p class="code">myseq.length = 120;<br />
     myseq.loopmode = seqplay_pingpong;</p>
   <ul class="colour">
-    <li><span class="notranslate">sequence</span> <span class="notranslate">object</span> にトラックを追加する前に、トラックを作成する必要があります。そこで、関数 <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>.コード上では、<span class="notranslate">asset</span> トラックとパラメータトラックに違いはありません。これらはすべて単なるトラックで、作成するトラックの種類と、トップレベルトラックのサブトラックとして割り当てられているかどうかによって、動作が異なりますのでご注意ください。つまり、<span class="notranslate">asset</span> のトラックを作成し、それに異なるパラメータ用のサブトラックを割り当て、これらのサブトラックは<span class="notranslate">asset</span> の<i>パラメータ</i>トラックとして機能します。以下の例では、単一のグラフィックス<span class="notranslate">asset</span> トラックを作成し、後で<span class="notranslate">sequence</span> に追加します。</li>
+    <li><span class="notranslate">sequence</span> <span class="notranslate">object</span>
+      にトラックを追加する前に、トラックを作成する必要があります。そこで、関数 <a href="sequence_track_new.htm"><span
+          class="inline">sequence_track_new()</span></a>.コード上では、<span class="notranslate">asset</span>
+      トラックとパラメータトラックに違いはありません。これらはすべて単なるトラックで、作成するトラックの種類と、トップレベルトラックのサブトラックとして割り当てられているかどうかによって、動作が異なりますのでご注意ください。つまり、<span
+        class="notranslate">asset</span> のトラックを作成し、それに異なるパラメータ用のサブトラックを割り当て、これらのサブトラックは<span
+        class="notranslate">asset</span> の<i>パラメータ</i>トラックとして機能します。以下の例では、単一のグラフィックス<span
+        class="notranslate">asset</span> トラックを作成し、後で<span class="notranslate">sequence</span> に追加します。</li>
   </ul>
   <p class="code">var mytracks = array_create(1);<br />
     mytracks[0] = sequence_track_new(seqtracktype_graphic);</p>
   <ul class="colour">
-    <li><span class="notranslate">asset</span> 各トラックには、<span class="notranslate">sequence</span> にどのように見えるか、またはその位置などを伝えるためのデータが必要で、これは<i>キーフレームという</i>形で追加されます。<span class="notranslate">asset</span> トラックのトップレベルでは、さまざまなものに<span class="notranslate">keyframes</span> を設定できます（以下のトラック<span class="notranslate">Struct</span> のセクションに記載）。ただし、これらは<span class="notranslate">asset</span> トラック<span class="notranslate">keyframes</span> なので、補間されず、与えられたフレームに到達したときに参照する値を変更するだけであることに注意してください。各<span class="notranslate">keyframe</span> は<span class="notranslate">struct</span> を配列に追加したもので、この配列が<span class="notranslate">asset</span> トラックに代入されます。<span class="notranslate">keyframe</span> <span class="notranslate">struct</span> を作成するために、私たちは関数 <a href="sequence_keyframe_new.htm"><span class="inline">sequence_keyframe_new()</span></a>そして、<span class="notranslate">keyframe</span> に必要なデータを入力するために、私たちは関数 <a href="sequence_keyframedata_new.htm"><span class="inline">sequence_keyframedata_new()</span></a>:</li>
+    <li><span class="notranslate">asset</span> 各トラックには、<span class="notranslate">sequence</span>
+      にどのように見えるか、またはその位置などを伝えるためのデータが必要で、これは<i>キーフレームという</i>形で追加されます。<span class="notranslate">asset</span>
+      トラックのトップレベルでは、さまざまなものに<span class="notranslate">keyframes</span> を設定できます（以下のトラック<span
+        class="notranslate">Struct</span> のセクションに記載）。ただし、これらは<span class="notranslate">asset</span> トラック<span
+        class="notranslate">keyframes</span> なので、補間されず、与えられたフレームに到達したときに参照する値を変更するだけであることに注意してください。各<span
+        class="notranslate">keyframe</span> は<span class="notranslate">struct</span> を配列に追加したもので、この配列が<span
+        class="notranslate">asset</span> トラックに代入されます。<span class="notranslate">keyframe</span> <span
+        class="notranslate">struct</span> を作成するために、私たちは関数 <a href="sequence_keyframe_new.htm"><span
+          class="inline">sequence_keyframe_new()</span></a>そして、<span class="notranslate">keyframe</span>
+      に必要なデータを入力するために、私たちは関数 <a href="sequence_keyframedata_new.htm"><span
+          class="inline">sequence_keyframedata_new()</span></a>:</li>
   </ul>
-  <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
+  <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have
+    multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
     graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
     // Set the graphics keyframe top level data for the keyframe position and length, etc.<br />
@@ -67,7 +128,8 @@
     graphickeys[0].stretch = true;<br />
     graphickeys[0].disabled = false;<br />
     <br />
-    // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels of keyframe data)<br />
+    // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels
+    of keyframe data)<br />
     var graphickeydata = array_create(1);<br />
     graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
     graphickeydata[0].spriteIndex = spr_Platform;<br />
@@ -81,7 +143,8 @@
     mytracks[0].keyframes = graphickeys;
   </p>
   <ul class="colour">
-    <li>次に、先ほど作成したグラフィックトラックのサブトラックとして割り当てるパラメータトラックを作成する必要がありま す。このトラックは、<span class="notranslate">sequence</span> のアニメーションフレームの中で、グラフィックトラックのトラックを動かすのに使います。</li>
+    <li>次に、先ほど作成したグラフィックトラックのサブトラックとして割り当てるパラメータトラックを作成する必要がありま す。このトラックは、<span class="notranslate">sequence</span>
+      のアニメーションフレームの中で、グラフィックトラックのトラックを動かすのに使います。</li>
   </ul>
   <p class="code">// Create a new parameter track struct for the position of the graphic<br />
     var paramtracks = array_create(1);<br />
@@ -121,21 +184,31 @@
     paramtracks[0].keyframes = paramkeys;
   </p>
   <ul class="colour">
-    <li>最後に、パラメータトラックを、最初に作成したメイングラフィック<span class="notranslate">asset</span> トラックのサブトラックとして割り当て、これらのトラックを<span class="notranslate">sequence</span> に割り当てて、ルーム内にインスタンスを作成します。</li>
+    <li>最後に、パラメータトラックを、最初に作成したメイングラフィック<span class="notranslate">asset</span> トラックのサブトラックとして割り当て、これらのトラックを<span
+        class="notranslate">sequence</span> に割り当てて、ルーム内にインスタンスを作成します。</li>
   </ul>
   <p class="code">mytracks[0].tracks = paramtracks;<br />
     myseq.tracks = mytracks;<br />
     layer_sequence_create(&quot;Assets_1&quot;, 0, 0, myseq);</p>
-  <p>上記の命令では、<i>シーケンスの</i>(0, 0) の位置に<span class="notranslate">sequence</span> を描き、それを<span class="notranslate">object</span> で右下隅に移動して戻すという、非常に単純な<span class="notranslate">sprite</span> <span class="notranslate">loop</span> を作成しています。前述のように、<span class="notranslate">structs</span> についてのデータを与えたり取得したりするために、異なる<span class="notranslate">sequence</span> にアクセスしなければならない場所が多数あり、以下のセクションでは、これらの<span class="notranslate">structs</span> が含むすべての異なるプロパティをリストアップしています。</p>
+  <p>上記の命令では、<i>シーケンスの</i>(0, 0) の位置に<span class="notranslate">sequence</span> を描き、それを<span
+      class="notranslate">object</span> で右下隅に移動して戻すという、非常に単純な<span class="notranslate">sprite</span> <span
+      class="notranslate">loop</span> を作成しています。前述のように、<span class="notranslate">structs</span>
+    についてのデータを与えたり取得したりするために、異なる<span class="notranslate">sequence</span> にアクセスしなければならない場所が多数あり、以下のセクションでは、これらの<span
+      class="notranslate">structs</span> が含むすべての異なるプロパティをリストアップしています。</p>
   <ul class="colour">
-    <li><a name="object"></a><a href="Sequence_Structs/The_Sequence_Object_Struct.htm"><label for="1"><span class="notranslate">Sequence</span> <span class="notranslate">Object</span> 構造</label></a></li>
-    <li><a name="instance"></a><a href="Sequence_Structs/The_Sequence_Instance_Struct.htm"><label for="2"><span class="notranslate">Sequence</span> インスタンス構造</label></a></li>
+    <li><a name="object"></a><a href="Sequence_Structs/The_Sequence_Object_Struct.htm"><label for="1"><span
+            class="notranslate">Sequence</span> <span class="notranslate">Object</span> 構造</label></a></li>
+    <li><a name="instance"></a><a href="Sequence_Structs/The_Sequence_Instance_Struct.htm"><label for="2"><span
+            class="notranslate">Sequence</span> インスタンス構造</label></a></li>
     <li><a name="track"></a><a href="Sequence_Structs/The_Track_Struct.htm"><label for="3">トラック構造</label></a></li>
-    <li><a name="keyframe"></a><a href="Sequence_Structs/The_Keyframe_Struct.htm"><label for="4"><span class="notranslate">Keyframe</span> 構造</label></a></li>
-    <li><a name="keyframe_data"></a><a href="Sequence_Structs/The_Keyframe_Data_Struct.htm"><label for="5"><span class="notranslate">Keyframe</span> データ構造</label></a></li>
+    <li><a name="keyframe"></a><a href="Sequence_Structs/The_Keyframe_Struct.htm"><label for="4"><span
+            class="notranslate">Keyframe</span> 構造</label></a></li>
+    <li><a name="keyframe_data"></a><a href="Sequence_Structs/The_Keyframe_Data_Struct.htm"><label for="5"><span
+            class="notranslate">Keyframe</span> データ構造</label></a></li>
   </ul>
   <p> </p>
-  <p>最後に、<span class="notranslate">sequences</span> にコードを追加して、<strong>イベントアモーメント</strong>または<strong>ブロードキャスト</strong>メッセージとしてトリガーさせることができます。これについては、次のページで詳しく説明します。</p>
+  <p>最後に、<span class="notranslate">sequences</span>
+    にコードを追加して、<strong>イベントアモーメント</strong>または<strong>ブロードキャスト</strong>メッセージとしてトリガーさせることができます。これについては、次のページで詳しく説明します。</p>
   <ul class="colour">
     <li><a href="Sequence_Events_Moments_Broadcast.htm">イベント、モーメント、ブロードキャストメッセージ</a></li>
   </ul>
@@ -145,11 +218,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Asset_Management.htm">アセットマネジメント</a></div>
-        <div style="float:right">次へ<a href="../Fonts/Fonts.htm">フォント</a></div>
+        <div style="float:left">前のページ：<a href="../Asset_Management.htm">アセットマネジメント</a></div>
+        <div style="float:right">次のページ：<a href="../Fonts/Fonts.htm">フォント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequences
@@ -158,4 +232,5 @@ Sequences
 sequence_functions
 -->
 </body>
+
 </html>

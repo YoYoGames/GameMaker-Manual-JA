@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_clear_fx</title>
@@ -12,30 +13,40 @@
   <meta name="rh-index-keywords" content="layer_clear_fx" />
   <meta name="search-keywords" content="layer_clear_fx" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_clear_fx</span></h1>
-  <p>この関数は、指定したレイヤーに適用されているFX（<span class="notranslate">struct</span> ）をクリアするために使用します。変更したいレイヤーのIDまたは名前を指定すると、この関数はそのレイヤーに適用されているFX<span class="notranslate">struct</span> を削除し、その効果を完全に無効にします。</p>
-  <p>この機能を使って一時的にエフェクトを無効にし、レイヤーを元に戻す必要がある場合、まず <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> を呼び出してレイヤーの FX<span class="notranslate">struct</span> を保存し、次にこの関数を呼び出してレイヤー上でそれをクリアする必要があります。その後、 <span class="inline"><a href="layer_set_fx.htm">layer_set_fx()</a></span> を呼び出すことで、レイヤにそれを適用し、エフェクトを再び有効にすることができます。</p>
+  <p>この関数は、指定したレイヤーに適用されているFX（<span class="notranslate">struct</span>
+    ）をクリアするために使用します。変更したいレイヤーのIDまたは名前を指定すると、この関数はそのレイヤーに適用されているFX<span class="notranslate">struct</span>
+    を削除し、その効果を完全に無効にします。</p>
+  <p>この機能を使って一時的にエフェクトを無効にし、レイヤーを元に戻す必要がある場合、まず <span class="inline"><a
+        href="layer_get_fx.htm">layer_get_fx()</a></span> を呼び出してレイヤーの FX<span class="notranslate">struct</span>
+    を保存し、次にこの関数を呼び出してレイヤー上でそれをクリアする必要があります。その後、 <span class="inline"><a
+        href="layer_set_fx.htm">layer_set_fx()</a></span> を呼び出すことで、レイヤにそれを適用し、エフェクトを再び有効にすることができます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_clear_fx</span>(layer_name_or_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer_name_or_id</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span>または <span data-keyref="Type_ID_Layer"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm">レイヤーID</a></span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span>または <span
+            data-keyref="Type_ID_Layer"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm">レイヤーID</a></span>
+        </td>
         <td><span class="notranslate">The name or ID of the layer to clear the FX for</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,18 +68,22 @@
             temp_fx = -1;<br />
         }<br />
     }</p>
-  <p>上記のコードは、&quot;E &quot;キーが押されたかどうかをチェックし、レイヤー &quot;EffectLayer &quot;にフィルターやエフェクトが適用されているかを調べます。その場合、そのFX<span class="notranslate">struct</span> を一時インスタンス変数に格納して、フィルターやエフェクトのあるレイヤーをクリアーします。F &quot;キーが押されると、一時変数に-1以外が格納されているかどうかをチェックし、その場合はそのFXをレイヤーに適用し、一時変数を-1にリセットします。このように、エフェクトのパラメータを失うことなく、必要なときにいつでもエフェクトを有効／無効にすることができるのです。</p>
+  <p>上記のコードは、&quot;E &quot;キーが押されたかどうかをチェックし、レイヤー &quot;EffectLayer &quot;にフィルターやエフェクトが適用されているかを調べます。その場合、そのFX<span
+      class="notranslate">struct</span> を一時インスタンス変数に格納して、フィルターやエフェクトのあるレイヤーをクリアーします。F
+    &quot;キーが押されると、一時変数に-1以外が格納されているかどうかをチェックし、その場合はそのFXをレイヤーに適用し、一時変数を-1にリセットします。このように、エフェクトのパラメータを失うことなく、必要なときにいつでもエフェクトを有効／無効にすることができるのです。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
+        <div style="float:left">前のページ：<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
         <div style="float:right">次ページ：<a data-xref="{title}" href="layer_enable_fx.htm">レイヤー有効化</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_clear_fx
@@ -77,4 +92,5 @@ layer_clear_fx
 layer_clear_fx
 -->
 </body>
+
 </html>

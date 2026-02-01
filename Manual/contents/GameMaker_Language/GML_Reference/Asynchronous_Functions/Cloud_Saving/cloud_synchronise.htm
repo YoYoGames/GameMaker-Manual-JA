@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>cloud_synchronise</title>
@@ -13,14 +14,22 @@
   <meta name="search-keywords" content="cloud_synchronise" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">cloud_synchronise</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
-  <p>この関数は通常、新しいゲームの開始時に呼び出され、ゲーム起動時にクラウドサービスの現在のステータスを取得するために使用されます。この関数は一意の<b>ID</b>値を返し、これを<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Cloud.htm">非同期クラウドイベントで</a>使用して、作成される DS マップから関連情報を取得します。</p>
-  <p>この関数は、クラウドにデータを送信し、適切な非同期イベントをトリガーします。このイベントでは、返された <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>DSマップに以下の値があるかどうか。</p>
+  <h1><span data-field="title" data-format="default">cloud_synchronise</span> <span
+      data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
+  <p>この関数は通常、新しいゲームの開始時に呼び出され、ゲーム起動時にクラウドサービスの現在のステータスを取得するために使用されます。この関数は一意の<b>ID</b>値を返し、これを<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Cloud.htm">非同期クラウドイベントで</a>使用して、作成される DS
+    マップから関連情報を取得します。</p>
+  <p>この関数は、クラウドにデータを送信し、適切な非同期イベントをトリガーします。このイベントでは、返された <a
+      href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>DSマップに以下の値があるかどうか。</p>
   <ul class="colour">
-    <li><b>&quot;status&quot;（ステータス）。 </b>負の値はエラーを表し、その説明は &quot;errorString &quot;に含まれる。0(または正の値)は成功を表し(正確な値は下記参照)、&quot;resultString &quot;には返されたデータまたは成功メッセージが格納される。</li>
-    <li><b>&quot;id &quot;を指定します。 </b>呼び出された関数から返されたid。もし <span class="inline">cloud_</span> のリクエストを連続して発行した場合、どのリクエストに対する返答なのかを知る必要があります。そのため、この値を使って、最初にリクエストを送ったときに保存した値と比較し、正しいものを探すことになります。</li>
+    <li><b>&quot;status&quot;（ステータス）。 </b>負の値はエラーを表し、その説明は &quot;errorString
+      &quot;に含まれる。0(または正の値)は成功を表し(正確な値は下記参照)、&quot;resultString &quot;には返されたデータまたは成功メッセージが格納される。</li>
+    <li><b>&quot;id &quot;を指定します。 </b>呼び出された関数から返されたid。もし <span class="inline">cloud_</span>
+      のリクエストを連続して発行した場合、どのリクエストに対する返答なのかを知る必要があります。そのため、この値を使って、最初にリクエストを送ったときに保存した値と比較し、正しいものを探すことになります。</li>
     <li><b>&quot;description&quot;（説明）。 </b>最後にアップロードされたファイルの説明。</li>
     <li><b>&quot;resultString &quot;です。 </b>クラウドから返されたデータブロブである<span class="notranslate">string</span> を保持します。</li>
     <li><b>&quot;errorString&quot;: </b>あらゆるエラーに対して、Error<span class="notranslate">String</span> を返す。</li>
@@ -31,7 +40,7 @@
       <tr>
         <th>ステータス値</th>
         <th>errorString / resultString</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">-1</span></td>
@@ -41,7 +50,8 @@
       <tr>
         <td><span class="notranslate">0</span></td>
         <td>resultString = 復元されたデータ</td>
-        <td><span class="notranslate">New game data downloaded from the cloud (following a cloud_synchronise call)</span></td>
+        <td><span class="notranslate">New game data downloaded from the cloud (following a cloud_synchronise
+            call)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">1</span></td>
@@ -56,7 +66,9 @@
       <tr>
         <td><span class="notranslate">3</span></td>
         <td>resultString = &quot;GameUploadSuccess&quot;。</td>
-        <td><span class="notranslate">data from <a href="cloud_string_save.htm"><span class="inline">cloud_string_save()</span> または <a href="cloud_file_save.htm"><span class="inline">cloud_file_save()</span></a>がクラウドに正常にアップロードされました</td>
+        <td><span class="notranslate">data from <a href="cloud_string_save.htm"><span
+                class="inline">cloud_string_save()</span> または <a href="cloud_file_save.htm"><span
+                  class="inline">cloud_file_save()</span></a>がクラウドに正常にアップロードされました</td>
       </tr>
       <tr>
         <td><span class="notranslate">-n</span></td>
@@ -66,16 +78,19 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">cloud_synchronise</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
   <p> </p>
   <h4>拡張された例。</h4>
-  <p>この関数は、<strong>Game Start Eventなどの</strong>イベント、またはゲームの最初の<span class="notranslate">object</span> に配置される<span class="notranslate">room</span> 、クラウド<span class="notranslate">server</span> から現在のデータブロブが最新かどうかをチェックするというアイデアで呼び出されるでしょう。</p>
+  <p>この関数は、<strong>Game Start Eventなどの</strong>イベント、またはゲームの最初の<span class="notranslate">object</span> に配置される<span
+      class="notranslate">room</span> 、クラウド<span class="notranslate">server</span>
+    から現在のデータブロブが最新かどうかをチェックするというアイデアで呼び出されるでしょう。</p>
   <p class="code">cloud_check = cloud_synchronise();</p>
-  <p>次に、以下のようなコードで、非同期<b>Cloud Event</b>で返された <span class="inline">DS Map</span> をチェックし、ステータスと返された<span class="notranslate">string</span> を取得したいと思います。</p>
+  <p>次に、以下のようなコードで、非同期<b>Cloud Event</b>で返された <span class="inline">DS Map</span> をチェックし、ステータスと返された<span
+      class="notranslate">string</span> を取得したいと思います。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == cloud_check<br />
     {<br />
         if (ds_map_find_value(async_load, &quot;status&quot;) &lt; 0) <br />
@@ -99,11 +114,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Cloud_Saving.htm">クラウド保存</a></div>
-        <div style="float:right">次のページ <a href="cloud_string_save.htm"><span class="notranslate">cloud_string_save</span></a></div>
+        <div style="float:left">前のページ：<a href="Cloud_Saving.htm">クラウド保存</a></div>
+        <div style="float:right">次のページ：<a href="cloud_string_save.htm"><span
+              class="notranslate">cloud_string_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 cloud_synchronise
@@ -112,4 +129,5 @@ cloud_synchronise
 cloud_synchronise
 -->
 </body>
+
 </html>

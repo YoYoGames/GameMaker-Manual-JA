@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>パス</title>
@@ -12,40 +13,65 @@
   <meta name="rh-index-keywords" content="Path Editor" />
   <meta name="search-keywords" content="paths,path editor" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span class="notranslate">Path</span> 編集部</h1>
-  <p><img>ゲーム作成中に、インスタンスの1つがレベルを通して<span class="notranslate">path</span> を追跡する必要がある場合があります。この場合、<span class="notranslate">room</span> 内に位置の配列を作成し、インスタンスがその間を移動することでコード化できますが、セットアップが面倒で、インスタンスの変更、テスト、適応が困難です。このため<span data-keyref="GameMaker Name">GameMakerでは</span>、<span class="notranslate">path</span> のリソースと専用のエディタ（<span class="notranslate">path</span> ）を用意しています。</p>
-  <p>基本的な考え方はとてもシンプルで、<span class="notranslate">path</span> を<span class="notranslate">path</span> エディタで描画して定義し、<span class="notranslate">object</span> の作成イベントにアクション（またはコード）を配置すると、インスタンスがその特定の<span class="notranslate">path</span> に従うように指示します。また、<span class="notranslate">path</span> に従う速度を設定したり、<span class="notranslate">path</span> 内の<span class="notranslate">room</span> の位置や向きに関連する他の多くのアクションを設定できます。 最初に<span class="notranslate">path</span> リソースを作成すると、<span class="notranslate">path</span> エディタウィンドウが次のオプションで開きます。</p>
+  <h1><span class="notranslate">Path</span> エディタ</h1>
+  <p><img>ゲーム作成中に、インスタンスの1つがレベルを通して<span class="notranslate">path</span> を追跡する必要がある場合があります。この場合、<span
+      class="notranslate">room</span> 内に位置の配列を作成し、インスタンスがその間を移動することでコード化できますが、セットアップが面倒で、インスタンスの変更、テスト、適応が困難です。このため<span
+      data-keyref="GameMaker Name">GameMakerでは</span>、<span class="notranslate">path</span> のリソースと専用のエディタ（<span
+      class="notranslate">path</span> ）を用意しています。</p>
+  <p>基本的な考え方はとてもシンプルで、<span class="notranslate">path</span> を<span class="notranslate">path</span> エディタで描画して定義し、<span
+      class="notranslate">object</span> の作成イベントにアクション（またはコード）を配置すると、インスタンスがその特定の<span class="notranslate">path</span>
+    に従うように指示します。また、<span class="notranslate">path</span> に従う速度を設定したり、<span class="notranslate">path</span> 内の<span
+      class="notranslate">room</span> の位置や向きに関連する他の多くのアクションを設定できます。 最初に<span class="notranslate">path</span>
+    リソースを作成すると、<span class="notranslate">path</span> エディタウィンドウが次のオプションで開きます。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">パスプロパティ</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span>のすべてのリソースと同様に、新しい<span class="notranslate">path</span> にもユニークな名前を付けてください。この名前は、作成中のゲーム全体でこのリソースを識別するために使用されます。
-      コードやアクションで認識しやすいように（例： <span class="inline">path_Enemy_1</span> や <span class="inline">PowerUp_path</span> ）。 <br /></p>
-    <p class="dropspot"><span class="notranslate">path</span> という名前をつけたら、右側のメインエディタでポイントを配置して定義を始めます。各ポイントは、位置と速度とともに、ここのリストに追加されます。<span class="notranslate">path</span> ポイントのスピード値は、パーセンテージで定義されます。
-      インスタンスを<span class="notranslate">path</span> に沿って移動させる速度のことです（デフォルトは100%）。つまり、<span class="notranslate">path</span> に沿って速度 2（1ステップにつき2ピクセル）でインスタンスを開始し、<span class="notranslate">path</span> ポイントの 1 つが速度値 50% の場合、インスタンスは速度を下げます。
-      に近づくと、速度が1（<span class="notranslate">path</span> の50%）になります。同様に、速度を150%に設定すると、インスタンスはポイントに到達するにつれて加速します。このように、コード無しでダイナミックな動きを作ることができます。
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span>のすべてのリソースと同様に、新しい<span
+        class="notranslate">path</span> にもユニークな名前を付けてください。この名前は、作成中のゲーム全体でこのリソースを識別するために使用されます。
+      コードやアクションで認識しやすいように（例： <span class="inline">path_Enemy_1</span> や <span class="inline">PowerUp_path</span> ）。
+      <br />
+    </p>
+    <p class="dropspot"><span class="notranslate">path</span>
+      という名前をつけたら、右側のメインエディタでポイントを配置して定義を始めます。各ポイントは、位置と速度とともに、ここのリストに追加されます。<span class="notranslate">path</span>
+      ポイントのスピード値は、パーセンテージで定義されます。
+      インスタンスを<span class="notranslate">path</span> に沿って移動させる速度のことです（デフォルトは100%）。つまり、<span
+        class="notranslate">path</span> に沿って速度 2（1ステップにつき2ピクセル）でインスタンスを開始し、<span class="notranslate">path</span> ポイントの 1
+      つが速度値 50% の場合、インスタンスは速度を下げます。
+      に近づくと、速度が1（<span class="notranslate">path</span>
+      の50%）になります。同様に、速度を150%に設定すると、インスタンスはポイントに到達するにつれて加速します。このように、コード無しでダイナミックな動きを作ることができます。
       を使用します。
     </p>
     <p class="dropspot">特筆すべきは、リスト内の定義されたポイントのいずれかを高速でダブルクリック（<img> ）することで、エディタをパンすることができることです。
       または、値の1つをゆっくりダブルクリック（<img> ）して手動で編集します（x、y、または速度）。<br /></p>
-    <p class="dropspot">また、<span class="notranslate">path</span> 全体の接続の種類と、<span class="notranslate">path</span> を閉じるかどうかを指定できます (<span class="notranslate">path</span> を閉じると、<span class="notranslate">path</span> 上の最後の点と最初の点が接続されます)。接続の種類は、<strong>直線</strong>、または<strong>スムース </strong>です。
-      直線接続では、<span class="notranslate">path</span> の各点を直線的に接続し、各点で角度を変更します。一方、滑らかな接続では、どの点も直接通過せず、むしろ以下の点を取る、より柔らかい<span class="notranslate">path</span> を作成します。
-     <a data-glossterm="スムーズインターポレーション" class="glossterm" href="#">スムーズな補間で</a>美しいカーブを描く。また、曲線の精度（デフォルトは4）も指定でき、1〜8の間で設定可能です。
-      が最も滑らかです。下の画像は、これらのオプションがパスに与える影響の一例です。</p>
-    <p class="dropspot"><img alt="The Path Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Paths.png" /><br /></p>
+    <p class="dropspot">また、<span class="notranslate">path</span> 全体の接続の種類と、<span class="notranslate">path</span>
+      を閉じるかどうかを指定できます (<span class="notranslate">path</span> を閉じると、<span class="notranslate">path</span>
+      上の最後の点と最初の点が接続されます)。接続の種類は、<strong>直線</strong>、または<strong>スムース </strong>です。
+      直線接続では、<span class="notranslate">path</span> の各点を直線的に接続し、各点で角度を変更します。一方、滑らかな接続では、どの点も直接通過せず、むしろ以下の点を取る、より柔らかい<span
+        class="notranslate">path</span> を作成します。
+      <a data-glossterm="スムーズインターポレーション" class="glossterm"
+        href="#">スムーズな補間で</a>美しいカーブを描く。また、曲線の精度（デフォルトは4）も指定でき、1〜8の間で設定可能です。
+      が最も滑らかです。下の画像は、これらのオプションがパスに与える影響の一例です。
+    </p>
+    <p class="dropspot"><img alt="The Path Editor" class="center"
+        src="../assets/Images/Asset_Editors/Editor_Paths.png" /><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">パス編集</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot"><span class="notranslate">path</span> <img> 編集ウィンドウの任意の場所をクリックすると、ポイントが追加されます。エディタに配置されたポイントは、以下の方法で移動できます。
+    <p class="dropspot"><span class="notranslate">path</span> <img>
+      編集ウィンドウの任意の場所をクリックすると、ポイントが追加されます。エディタに配置されたポイントは、以下の方法で移動できます。
       <img> をクリックしてドラッグするか、左側に表示される X と Y の位置と速度の値を変更します（前出の「<strong>パスのプロパティ</strong>」を参照）。また
-      <img> /<img> を使い、複数のポイントを左クリック<img> でまとめて選択すると、このポイント群をドラッグして好きなように配置することができます。<img> を押すと、選択したポイントを削除することもできます。</p>
+      <img> /<img> を使い、複数のポイントを左クリック<img> でまとめて選択すると、このポイント群をドラッグして好きなように配置することができます。<img> を押すと、選択したポイントを削除することもできます。
+    </p>
     <p class="dropspot">エディタウィンドウで<img> を右クリックすると、以下のような追加メニューが用意されています。</p>
     <p class="dropspot"><img>このメニューの各項目は、次のように動作します。</p>
     <ul class="dropspotlist">
       <li class="dropspot"><strong>Delete Points</strong>- 選択されたポイントを削除します。</li>
       <li class="dropspot"><strong>Pan To Path</strong>- エディタ内のビューを<span class="notranslate">path</span> の中心にパンします。</li>
-      <li class="dropspot"><strong>Reverse</strong>-<span class="notranslate">path</span> ポイントの順序を逆にします。これは移動するのではなく、処理される順番を変更し、開始点が終了点に、またはその逆が行われます。</li>
+      <li class="dropspot"><strong>Reverse</strong>-<span class="notranslate">path</span>
+        ポイントの順序を逆にします。これは移動するのではなく、処理される順番を変更し、開始点が終了点に、またはその逆が行われます。</li>
       <li class="dropspot"><strong>Flip</strong>-<span class="notranslate">path</span> を水平軸に沿って反転させます。</li>
       <li class="dropspot"><strong>Mirror</strong>-<span class="notranslate">path</span> を垂直軸に沿って反転させます。</li>
     </ul>
@@ -54,18 +80,26 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">ツールボックス</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">上部にあるツールボックスのボタンは、エディタウィンドウでの描画をコントロールするためのものです。背景のグリッドのオン・オフを切り替えたり、<span class="notranslate">path</span> ポイントの追加をこのグリッドにスナップさせるかどうかを設定したりできます。<br /></p>
+    <p class="dropspot">上部にあるツールボックスのボタンは、エディタウィンドウでの描画をコントロールするためのものです。背景のグリッドのオン・オフを切り替えたり、<span
+        class="notranslate">path</span> ポイントの追加をこのグリッドにスナップさせるかどうかを設定したりできます。<br /></p>
     <p class="dropspot"><img>スナップの値は、グリッドセルの大きさを示します。
-      この値は任意に変更することができます。残りのツールは、エディタエリアのズームイン、ズームアウト、パン専用で、<img> ボタンをクリックすると、ディスプレイと 1:1 になるようにリセットできます。<span class="notranslate">path</span> を描画したい場所からパンしすぎた場合は、マウスの右ボタンで<img> メニューを表示し、「<strong>Pan to Path</strong>」をクリックして作業していた場所までスクロールして戻れます。</p>
+      この値は任意に変更することができます。残りのツールは、エディタエリアのズームイン、ズームアウト、パン専用で、<img> ボタンをクリックすると、ディスプレイと 1:1 になるようにリセットできます。<span
+        class="notranslate">path</span> を描画したい場所からパンしすぎた場合は、マウスの右ボタンで<img> メニューを表示し、「<strong>Pan to
+        Path</strong>」をクリックして作業していた場所までスクロールして戻れます。</p>
     <p class="dropspot"><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">パスポイント</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">パスとは、単純に線で結ばれた点の集まりのことです。エディタでは、マウスの左ボタン<img> を使って、これらの点を配置します。<span class="notranslate">room</span> エディタ内のどこにでもポイントを追加でき、それらはポイントリストに連続して追加され、<span class="notranslate">path</span> を作成します。 接続線や他のノードの近くにポイントを配置すると、新しいポイントは<span class="notranslate">path</span> に追加されるのではなく、挿入されます。
-      この検出距離は<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Spline_Editor.htm">環境</a>設定で設定できます）。<img> /<img> を押しながら、すでに配置されているポイント上で<img> をクリックして選択すると、<span class="notranslate">path</span> のポイントに対して行った移動などの操作は、すべてのポイントに適用されます。
+    <p class="dropspot">パスとは、単純に線で結ばれた点の集まりのことです。エディタでは、マウスの左ボタン<img> を使って、これらの点を配置します。<span
+        class="notranslate">room</span> エディタ内のどこにでもポイントを追加でき、それらはポイントリストに連続して追加され、<span class="notranslate">path</span>
+      を作成します。 接続線や他のノードの近くにポイントを配置すると、新しいポイントは<span class="notranslate">path</span> に追加されるのではなく、挿入されます。
+      この検出距離は<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Spline_Editor.htm">環境</a>設定で設定できます）。<img>
+      /<img> を押しながら、すでに配置されているポイント上で<img> をクリックして選択すると、<span class="notranslate">path</span>
+      のポイントに対して行った移動などの操作は、すべてのポイントに適用されます。
       をグループとして選択します。ポイントまたは選択したポイントを削除するには、<img> を右クリックして「Delete
       ポイント &quot;をクリックするか、<img> キーを押してください。</p>
-    <p class="dropspot">なお、以下のショートカットを使用すると、選択した<span class="notranslate">path</span> ポイントのマウスの右ボタンメニューでは利用できない、いくつかの追加操作を行うことができます。</p>
+    <p class="dropspot">なお、以下のショートカットを使用すると、選択した<span class="notranslate">path</span>
+      ポイントのマウスの右ボタンメニューでは利用できない、いくつかの追加操作を行うことができます。</p>
     <ul class="dropspotlist">
       <li class="dropspot">T +<img>:<span class="notranslate">path</span> のポイントをトランスレート（移動）します。</li>
       <li class="dropspot">R +<img>:<span class="notranslate">path</span> のポイントを回転させます。</li>
@@ -80,11 +114,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Rooms.htm">客室</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Rooms.htm">客室</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Path Editor
@@ -94,4 +129,5 @@ Paths
 path_editor
 -->
 </body>
+
 </html>

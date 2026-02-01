@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>object_get_mask</title>
@@ -13,27 +14,35 @@
   <meta name="search-keywords" content="object_get_mask" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">object_get_mask</span></h1>
-  <p>この関数は、チェックしている<span class="notranslate">object</span> がマスクのインデックスを持っているかどうかを調べ、持っている場合はそのマスクのインデックス（これは<span class="notranslate">sprite</span> <span class="notranslate">asset</span> ）、持っていない場合は -1 を返します。これはインスタンス関数ではないことに注意してください!マスクを持たない<span class="notranslate">object</span> があっても、同じ<span class="notranslate">object</span> のインスタンスはマスクを持つことができますし、その逆もまた可能です。個々のインスタンスのマスクインデックスを設定するには <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a>インスタンス変数があります。</p>
+  <p>この関数は、チェックしている<span class="notranslate">object</span> がマスクのインデックスを持っているかどうかを調べ、持っている場合はそのマスクのインデックス（これは<span
+      class="notranslate">sprite</span> <span class="notranslate">asset</span> ）、持っていない場合は -1
+    を返します。これはインスタンス関数ではないことに注意してください!マスクを持たない<span class="notranslate">object</span> があっても、同じ<span
+      class="notranslate">object</span> のインスタンスはマスクを持つことができますし、その逆もまた可能です。個々のインスタンスのマスクインデックスを設定するには <a
+      href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span
+        class="inline">mask_index</span></a>インスタンス変数があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">object_get_mask</span>(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object"></span></td>
         <td><span class="notranslate">The index of the object to check</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p>
   <p> </p>
   <h4>例</h4>
@@ -41,18 +50,21 @@
     {<br />
         mask_index = object_get_mask(object_index);<br />
     }</p>
-  <p>上記の例では、インスタンスのマスクインデックスとインスタンスのobject_indexのマスクを照合しています。もしそれらが同じでなければ、<span class="notranslate">object</span> インデックスが持っているマスクと同じものをインスタンスに割り当てます。</p>
+  <p>上記の例では、インスタンスのマスクインデックスとインスタンスのobject_indexのマスクを照合しています。もしそれらが同じでなければ、<span class="notranslate">object</span>
+    インデックスが持っているマスクと同じものをインスタンスに割り当てます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
-        <div style="float:right">次のページ <a href="object_get_parent.htm"><span class="notranslate">object_get_parent</span></a></div>
+        <div style="float:left">前のページ：<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ：<a href="object_get_parent.htm"><span
+              class="notranslate">object_get_parent</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_mask
@@ -61,4 +73,5 @@ object_get_mask
 object_get_mask
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_depth</title>
@@ -12,27 +13,38 @@
   <meta name="rh-index-keywords" content="layer_depth" />
   <meta name="search-keywords" content="layer_depth" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_depth</span></h1>
-  <p>この関数は、与えられたレイヤーの<b>深さを</b>変更し、その内容が画面にレンダリングされる順序を変更するために使用できます。レイヤー ID を指定します (レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> - これはパフォーマンスに影響します) を指定し、設定する新しい深さ (-16000 から 16000 までの整数値) を指定します。レイヤーの深さは、カメラから「遠い」ほど高く、「近い」ほど低くなるように定義されます。したがって、深さ -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100 の順序で描かれ、「トップ」レイヤー（つまり、カメラビューに最も近く、他のすべての上に描かれます）は、深さが -100 のレイヤーになります。</p>
+  <p>この関数は、与えられたレイヤーの<b>深さを</b>変更し、その内容が画面にレンダリングされる順序を変更するために使用できます。レイヤー ID を指定します (レイヤーを作成するときに <a
+      href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span
+      class="notranslate">string</span> - これはパフォーマンスに影響します) を指定し、設定する新しい深さ (-16000 から 16000 までの整数値)
+    を指定します。レイヤーの深さは、カメラから「遠い」ほど高く、「近い」ほど低くなるように定義されます。したがって、深さ -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100
+    の順序で描かれ、「トップ」レイヤー（つまり、カメラビューに最も近く、他のすべての上に描かれます）は、深さが -100 のレイヤーになります。</p>
   <p>次の画像は、レイヤーの深さがどのように機能するかを示す概略図です。</p>
-  <p><img>なお、レイヤーの深さは、いつでも関数 <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>.また、レイヤーの最小および最大の深さは-16000から16000であり、これらの深さ以外のものは<b>レンダリングさ</b>れないことに注意してください。この範囲外の深さが必要な場合は、関数 <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
-  <p>レイヤーの深さを変更すると、適用される<a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">フィルタやエフェクトが</a>変わることがあります。FXレイヤーの深さより低く変更すると、そのレイヤーにエフェクトが適用されなくなります。</p>
+  <p><img>なお、レイヤーの深さは、いつでも関数 <a href="layer_get_depth.htm"><span
+        class="inline">layer_get_depth()</span></a>.また、レイヤーの最小および最大の深さは-16000から16000であり、これらの深さ以外のものは<b>レンダリングさ</b>れないことに注意してください。この範囲外の深さが必要な場合は、関数
+    <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.
+  </p>
+  <p>レイヤーの深さを変更すると、適用される<a
+      href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">フィルタやエフェクトが</a>変わることがあります。FXレイヤーの深さより低く変更すると、そのレイヤーにエフェクトが適用されなくなります。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer_id</span></td>
         <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
-        <td><span class="notranslate">The unique ID value of the layer to set the depth of (or the layer name as a string)</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to set the depth of (or the layer name as a
+            string)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">depth</span></td>
@@ -42,7 +54,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,11 +69,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
-        <div style="float:right">次のページ <a href="layer_force_draw_depth.htm"><span class="notranslate">layer_force_draw_depth</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ：<a href="layer_force_draw_depth.htm"><span
+              class="notranslate">layer_force_draw_depth</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_depth
@@ -70,4 +84,5 @@ layer_depth
 layer_depth
 -->
 </body>
+
 </html>

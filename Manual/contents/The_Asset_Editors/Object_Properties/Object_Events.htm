@@ -1,196 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>オブジェクトのイベント</title>
-    <meta name="generator" content="Adobe RoboHelp 2020" />
-    <meta name="rh-authors" content="Mark Alexander" />
-    <meta name="topic-comment" content="Page detailing the events system and the different events in an object" />
-    <meta name="rh-index-keywords" content="Objects - Events" />
-    <meta name="search-keywords" content="events,object events,events list" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-    <script src="../../assets/scripts/main_script.js"></script>
-  </head>
-  <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1>オブジェクトのイベント</h1>
-    <p>では、<span class="notranslate">object</span> <strong>イベントとは</strong>何でしょうか？基本的には、ゲーム中<span class="notranslate">loop</span> 、あなたがプログラムした内容に基づいて物事が起こるようにする、目立たない瞬間のことです。<span data-keyref="GameMaker Name">GameMakerは</span>このイベントのサイクルで動作します。<span class="notranslate">room</span> が開始された瞬間から終了する瞬間まで、ゲーム<span class="notranslate">loop</span> が動作しており、<strong>ステップ </strong>ごとに一連のイベントが実行またはチェックされます。あなたはこれらのイベントに反応するコードまたは<span class="notranslate">GML</span> Visual アクションを<span class="notranslate">objects</span> に配置することができます（ステップとはゲーム時間内の一瞬で、<span class="notranslate">room</span> スピード設定によって支配され、<strong>フレームと</strong>呼ばれることもあります） 。</p>
-    <p>イベントとコードによる典型的な<span class="notranslate">object</span> の設定を見てみましょう。</p>
-    <p><img> <span class="notranslate">object</span> の例でわかるように、対応すべきイベントが多数リストアップされています。しかし、 を作成した当初はこのリストは空です。どのイベントが必要で、これらのイベントがトリガーされたときに のインスタンスが何をすべきかを決定する必要があります。 にイベントを追加するには、イベントリストの下にある「<span class="notranslate">object</span> <span class="notranslate">object</span> <span class="notranslate">object</span><em>Add Event</em>」ボタンを押すと、次のウィンドウが表示されます。</p>
-    <p><img>これは、<span class="notranslate">object</span> が反応できるすべての基本イベントとイベントカテゴリーのリストで、各カテゴリー内には、動作をさらに細かく設定するためのサブイベントがあります。例えば、<strong>Key Press</strong> <img> イベントカテゴリーをクリックすると、<span class="notranslate">object</span> が<em>どの </em>キーに反応するかを選択するためのイベントが表示されたウィンドウがポップアップ表示されます。</p>
-    <p>イベントを選択すると、イベントのエディターウィンドウが連鎖して右側に開きます。</p>
-    <div data-conref="../../assets/snippets/Visual_Code_Choice.hts"> </div>
-    <p><span class="notranslate">GML</span> のコード（またはブロック）を編集して、そのイベントに対する特定の動作や反応を<span class="notranslate">object</span> に与えることができるようになりました。</p>
-    <p><span class="notranslate">object</span> に追加されたイベント上でマウスの右ボタン<img> をクリックすると、以下のメニューが表示されます。</p>
-    <p><img>これらのオプションは</p>
-    <ul class="colour">
-      <li><strong>イベント追加</strong>- イベントリストから新しいイベントを追加します。</li>
-      <li><strong>イベントの</strong><strong>切り取り／ </strong> <strong>コピー／ </strong> <strong>貼り付け</strong>- 選択したイベントを切り取り、コピーまたは貼り付けます。標準的なキーボードショートカットも使用できます。 <img> /<img> + <span class="inline">X</span>,<img> /<img> + <span class="inline">C</span>, および<img> /<img> + <span class="inline">V</span>.</li>
-      <li><strong>Duplicate Event</strong>- 選択したイベントを複製します。これは、選択したイベントの内容を、指定した別のイベントに複製します。</li>
-      <li><strong>Change Event</strong>- イベントを変更します。選択すると、現在のイベントの内容が新しいイベントに変更されます（その過程で元のイベントが削除されます）。</li>
-      <li><strong>Convert To<span class="notranslate">GML</span> Visual / Code</strong>-<span class="notranslate">Object</span> イベントは、プロジェクト作成時に選択した方法（コードを使用するか、<span class="notranslate">GML</span> Visual アクションを使用するか）で作成されます。このオプションを使えば、プロジェクトの種類に関係なく、一方から他方へ変換することができます。</li>
-      <li><strong>イベントを削除</strong>する - イベントを削除します。</li>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>オブジェクトのイベント</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page detailing the events system and the different events in an object" />
+  <meta name="rh-index-keywords" content="Objects - Events" />
+  <meta name="search-keywords" content="events,object events,events list" />
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>オブジェクトのイベント</h1>
+  <p>では、<span class="notranslate">object</span> <strong>イベントとは</strong>何でしょうか？基本的には、ゲーム中<span
+      class="notranslate">loop</span> 、あなたがプログラムした内容に基づいて物事が起こるようにする、目立たない瞬間のことです。<span
+      data-keyref="GameMaker Name">GameMakerは</span>このイベントのサイクルで動作します。<span class="notranslate">room</span>
+    が開始された瞬間から終了する瞬間まで、ゲーム<span class="notranslate">loop</span> が動作しており、<strong>ステップ
+    </strong>ごとに一連のイベントが実行またはチェックされます。あなたはこれらのイベントに反応するコードまたは<span class="notranslate">GML</span> Visual アクションを<span
+      class="notranslate">objects</span> に配置することができます（ステップとはゲーム時間内の一瞬で、<span class="notranslate">room</span>
+    スピード設定によって支配され、<strong>フレームと</strong>呼ばれることもあります） 。</p>
+  <p>イベントとコードによる典型的な<span class="notranslate">object</span> の設定を見てみましょう。</p>
+  <p><img> <span class="notranslate">object</span> の例でわかるように、対応すべきイベントが多数リストアップされています。しかし、
+    を作成した当初はこのリストは空です。どのイベントが必要で、これらのイベントがトリガーされたときに のインスタンスが何をすべきかを決定する必要があります。 にイベントを追加するには、イベントリストの下にある「<span
+      class="notranslate">object</span> <span class="notranslate">object</span> <span
+      class="notranslate">object</span><em>Add Event</em>」ボタンを押すと、次のウィンドウが表示されます。</p>
+  <p><img>これは、<span class="notranslate">object</span>
+    が反応できるすべての基本イベントとイベントカテゴリーのリストで、各カテゴリー内には、動作をさらに細かく設定するためのサブイベントがあります。例えば、<strong>Key Press</strong> <img>
+    イベントカテゴリーをクリックすると、<span class="notranslate">object</span> が<em>どの </em>キーに反応するかを選択するためのイベントが表示されたウィンドウがポップアップ表示されます。
+  </p>
+  <p>イベントを選択すると、イベントのエディタウィンドウが連鎖して右側に開きます。</p>
+  <div data-conref="../../assets/snippets/Visual_Code_Choice.hts"> </div>
+  <p><span class="notranslate">GML</span> のコード（またはブロック）を編集して、そのイベントに対する特定の動作や反応を<span class="notranslate">object</span>
+    に与えることができるようになりました。</p>
+  <p><span class="notranslate">object</span> に追加されたイベント上でマウスの右ボタン<img> をクリックすると、以下のメニューが表示されます。</p>
+  <p><img>これらのオプションは</p>
+  <ul class="colour">
+    <li><strong>イベント追加</strong>- イベントリストから新しいイベントを追加します。</li>
+    <li><strong>イベントの</strong><strong>切り取り／ </strong> <strong>コピー／ </strong> <strong>貼り付け</strong>-
+      選択したイベントを切り取り、コピーまたは貼り付けます。標準的なキーボードショートカットも使用できます。 <img> /<img> + <span class="inline">X</span>,<img> /<img> +
+      <span class="inline">C</span>, および<img> /<img> + <span class="inline">V</span>.
+    </li>
+    <li><strong>Duplicate Event</strong>- 選択したイベントを複製します。これは、選択したイベントの内容を、指定した別のイベントに複製します。</li>
+    <li><strong>Change Event</strong>- イベントを変更します。選択すると、現在のイベントの内容が新しいイベントに変更されます（その過程で元のイベントが削除されます）。</li>
+    <li><strong>Convert To<span class="notranslate">GML</span> Visual / Code</strong>-<span
+        class="notranslate">Object</span> イベントは、プロジェクト作成時に選択した方法（コードを使用するか、<span class="notranslate">GML</span> Visual
+      アクションを使用するか）で作成されます。このオプションを使えば、プロジェクトの種類に関係なく、一方から他方へ変換することができます。</li>
+    <li><strong>イベントを削除</strong>する - イベントを削除します。</li>
+  </ul>
+  <p>イベントを削除する場合、<img> +<img> で複数のイベントを選択し、まとめて削除することができます。作成した各<span class="notranslate">object</span>
+    には、<strong>オブジェクトエディタから</strong>追加されるイベントのリストが個別に用意されています。これらのイベントは、2つのカテゴリに分類されます。</p>
+  <ul class="colour">
+    <li>ゲームのステップごとに実行するもの</li>
+    <li>は、インスタンスが<span class="notranslate">room</span> の端に到達したり、キーボードやマウスが押されるなど、ゲームイベントによって「トリガー」されるものです。</li>
+  </ul>
+  <p>イベント一覧は以下の通りです。</p>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">作成</a></p>
+  <div class="droptext" data-targetname="drop-down8">
+    <p class="dropspot">このイベントは、<span class="notranslate">object</span> のインスタンスが最初に作成されたときに発生し、<span
+        class="notranslate">room</span> Editor を通して<span class="notranslate">Room</span> に入力されたときに<span
+        class="notranslate">room</span> に配置されたインスタンス内で最初に発生するものである。つまり、このイベントは<span class="glossextra">変数の</span>初期化、<a
+        href="../Timelines.htm">タイムラインの</a>開始、<a href="../Paths.htm">パスの</a>設定など、一般的に一度だけ、またはインスタンスが<span
+        class="notranslate">room</span> で最初に作成されたときだけ行う必要があることを行うのに理想的な場所です。<span class="notranslate">object</span>
+      が<span class="notranslate">Object</span> Editor または<span class="notranslate">Room</span> Editor
+      で<strong>オブジェクト変数</strong>または<strong>インスタンス変数を</strong>追加した場合、これらの変数は最初に初期化されてから、<strong>Create
+        Event</strong>が実行されます。</p>
+    <p class="dropspot">インスタンスの作成イベントの後に直接実行され、<strong>インスタンス変数を</strong>作成したり、<span class="notranslate">Room</span>
+      変数や実際の作成イベントで追加された変数を上書きするために使用できるため、<span class="notranslate">Object</span> エディタの<a
+        href="../Room_Properties/Layer_Properties.htm">インスタンス作成コード</a>から作成イベントで設定したものを変更できることを忘れないでください。</p>
+    <div data-conref="../../assets/snippets/Instance_creation_order_warning.hts"> </div>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">デストロイ</a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p class="dropspot">このイベントは、インスタンスが破壊されたときに実行されるイベントです。<span class="notranslate">objects</span>
+      にビヘイビアを追加するときに見落とされがちですが、例えば敵が殺されたときに爆発やパーティクル効果を作ったり、<span class="notranslate">object</span> の新しいインスタンスを<span
+        class="notranslate">room</span> の別の場所に再スポーニングしたり、あるいはスコアにポイントを追加したりと、非常に便利なものである場合があります。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">クリーンアップ</a></p>
+  <div class="droptext" data-targetname="drop-down10">
+    <p class="dropspot"><span>このイベントは、<span class="notranslate">object</span> のインスタンスを<span
+          class="notranslate">room</span> から削除するイベントの後に呼び出されます。 したがって、次の場合にトリガーされます。</span></p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><span>インスタンスが破棄される</span></li>
+      <li class="dropspot"><span>the<span class="notranslate">room</span> ends</span></li>
+      <li class="dropspot"><span>試合終了</span></li>
     </ul>
-    <p>イベントを削除する場合、<img> +<img> で複数のイベントを選択し、まとめて削除することができます。作成した各<span class="notranslate">object</span> には、<strong>オブジェクトエディタから</strong>追加されるイベントのリストが個別に用意されています。これらのイベントは、2つのカテゴリに分類されます。</p>
-    <ul class="colour">
-      <li>ゲームのステップごとに実行するもの</li>
-      <li>は、インスタンスが<span class="notranslate">room</span> の端に到達したり、キーボードやマウスが押されるなど、ゲームイベントによって「トリガー」されるものです。</li>
+    <p class="dropspot"><span>これは、ゲーム内の動的リソース（サーフェス、データ構造など）を「クリーンアップ」したり、インスタンスが何らかの方法でゲームから削除されたときに、<em>一度
+        </em>実行する必要があるタスクを実行するために使用するために設計されています。</span></p>
+    <p class="dropspot"><span>このイベントは、トリガーとなったイベントの後に<em>即座に
+        </em>呼び出されますが、<strong>現在のイベントが終了するまで</strong>、インスタンスは実際にゲームから削除されないことに注意してください。例えば、ステップイベントで <span
+          class="inline">instance_destroy()</span> を呼び出すと、Destroy イベントが呼び出され、次に Clean Up
+        イベントが呼び出され、<em>ステップイベントの残りの部分が実行され</em>終わります。つまり、 <span class="inline">instance_destroy()</span>
+        の呼び出しの後にあるコードはまだ実行されており、コードが必要とするデータ構造などのリソースをクリーンアップした場合、エラーの原因になる可能性があるので、このイベントを使用する場合は注意が必要です。</span> </p>
+    <p> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">アラーム</a></p>
+  <div class="droptext" data-targetname="drop-down11">
+    <p class="dropspot">アラームカテゴリは12のイベントに分割され、インスタンスに設定可能なアラームごとに1つずつ設定されます。そのため、<em>Add Alarm
+      </em>カテゴリをクリックすると、このようなウィンドウが表示されます。</p>
+    <p class="dropspot">
+      <img>ここで、作成したいアラームを選択すると、イベントウィンドウに追加され、通常通りコードを追加できるようになるのがわかります。しかし、アラームとは何でしょうか？アラームが設定されていない限り何もしない特別なイベントで、アラームがカウントダウンして0になるまで待ってから、追加したアクションやコードを実行します。
+    </p>
+    <p class="dropspot">
+      アラームが0に達してコードを実行すると、その後-1までカウントダウンされ、再び設定されるまでそのままです（つまり、アラームの値が-1より大きいかどうかを確認することで、実行中かどうかが分かります）。つまり、<span
+        class="notranslate">object</span> の create イベントで <span class="inline">alarm[0]</span> を 30 に設定すると、<span
+        data-keyref="GameMaker Name">GameMaker は</span> <span class="inline">alarm[0]</span>
+      イベントに配置されたアクションやコードを実行する前に、30ゲームステップのカウントダウンを行うということです。なお、アラームを0に設定すると、イベントが発生してもアラームコードは実行さ<em>れず
+      </em>、すぐに-1に設定されるため、コードはスキップされます。もし、アラームが次のステップで実行される必要がある場合は、アラームを1に設定する必要があります。</p>
+    <p class="dropspot">
+      これは非常に便利な機能で、正確なタイミングで物事を動かすことができますし、独自のイベントにアラームを設定することを妨げるものは何もないので、繰り返させることも可能です。例えば、モンスターが3秒ごとに右折するとします。そのモンスターの生成イベントで、<span
+        class="notranslate">room</span> 速度 * 3 にアラームを設定します（<span class="notranslate">room</span> の速度が 30 であれば、1 秒あたり 30
+      ステップなので、それを 3 倍すれば 3 秒です！）そして、アラームイベントで方向を設定するコードまたはアクションと、そのアラームを再び<span class="notranslate">room</span> 速度 * 3
+      に設定するアクション（またはコード）が用意されているのです。このようにして、特定の間隔でしか物事が起こらないような、シンプルなゲーム<span class="notranslate">loops</span>
+      を設定することができます。</p>
+    <p class="dropspot">注意すべきは、アクションやコードが何も入っていないアラームはカウントダウンさ<em>れないという
+      </em>ことです。しかし、コメントだけでコードやアクションがない場合でも、アラームはカウントダウンを続け、通常と同じように設定や確認ができます。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">ステップ</a></p>
+  <div class="droptext" data-targetname="drop-down12">
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerは</span>時間を<strong>ステップに </strong>分割し、<span
+        class="notranslate">room</span>
+      、1秒間にいくつのステップがあるのかを定義します（1ステップは1<strong>フレームとも</strong>呼ばれることがあります）。1つのステップは、基本的に<span
+        class="notranslate">loop</span> で、ゲームが動いている間、すべてのイベントがチェックされ、必要に応じてトリガーされます。したがって、<strong>ステップ
+      </strong>イベントは、インスタンスが存在する間、ゲームのすべてのステップをチェックするイベントです。</p>
+    <p class="dropspot">ステップイベントは、実際には以下の3つのサブイベントから構成されています。</p>
+    <p class="dropspot"><img>しかし、どのコードをどのタイミングで実行するか、もう少しコントロールしたい場合もあります。そこで、<strong>Beginと </strong> <strong>Endの
+      </strong>ステップイベントが用意されています。この3つはステップごとにチェックされますが、その順番は<span
+        data-keyref="GameMaker Name">GameMaker</span>エンジンのアップデートで他のイベントが変更されても変わることはありません。つまり、これは何かが必ず他の何かの前に起こることを確認する唯一の信頼できる方法なのです。
+    </p>
+    <p class="dropspot">ステップイベントは何に使えるのでしょうか？連続的に実行される必要のあるアクションやコードに使うことができます。例えば、ある<span
+        class="notranslate">object</span> が別のものを追いかける場合、ここで、追いかけている<span class="notranslate">object</span>
+      に向かって動く方向を適応させ、スムーズに後ろに移動し続けることができるのです。<span class="notranslate">objects</span>しかし、このイベントには注意が必要です。特に、ゲーム内で<span
+        class="notranslate">object</span> のインスタンスがたくさんある場合、<span class="notranslate">room</span> の step
+      イベントには複雑な動作をあまり入れないようにしましょう。これは、ゲームの速度を遅くする可能性があります。特に、ゲーム内で多くのインスタンスを作成する場合は、ゲームが遅くなる可能性があるので、注意してください。</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">衝突</a></p>
+  <div class="droptext" data-targetname="drop-down13">
+    <p class="dropspot">もちろん、ゲームを作るときには、2つ（またはそれ以上）の<span class="notranslate">object</span>
+      のインスタンスが衝突したことを知ることが非常に重要です。そのために、<strong>衝突</strong>イベントがあります。これは<span class="notranslate">object</span>
+      に配置し、他のどの<span class="notranslate">object</span> に対して衝突をチェックするかを指定するイベントです。</p>
+    <p class="dropspot">物理をオンにしていない場合、これらの衝突は、2つの<span class="notranslate">objects</span> のマスク（マスクは<span
+        class="notranslate">sprite</span> プロパティで定義されますが、<span class="notranslate">object</span>
+      プロパティで個別に割り当てることもできます）と重なるかどうかに基づいて計算されます。衝突するインスタンスの一方にマスクが割り当てられていない場合（または<span
+        class="notranslate">sprite</span> のマスクが何も設定されていない場合）、たとえ<em>何かを描いていた</em>としても衝突は検出されませんのでご注意ください。</p>
+    <p class="dropspot"><strong>Physicsが </strong>オンの場合、衝突は、その物理プロパティで<span class="notranslate">object</span>
+      に定義した<strong>衝突形状</strong><em>（Fixture</em>）のタイプに基づき、衝突に対する反応も同様となります。つまり、衝突を処理するためのコードは必要ありませんが、衝突を検出するために、このイベントには<em>少なくともコメントが必要
+      </em>です。</p>
+    <p class="dropspot">
+      最後に、すべての衝突は、衝突イベントがトリガーされる前にゲームステップごとに1回計算されることに注意してください。つまり、このイベントでインスタンスを作成し、そのインスタンスで衝突をチェックしようとすると、次のゲームの<a
+        class="glossterm" data-glossterm="くりかえし" href="#">繰り返しまで</a>衝突は検出されず、解決されません。<span
+        class="notranslate">loop</span>.</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">キーボードです。</a> <img><a
+      class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">キーボードプレス</a> <img> <a
+      class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">キーボードリリース</a></p>
+  <div class="droptext" data-targetname="drop-down14">
+    <p class="dropspot">プレイヤーにゲームの様々な側面をコントロールさせることは非常に重要で、そのために<span
+        data-keyref="GameMaker Name">GameMakerは</span>、3つの主要なキーボードカテゴリのいずれでも使用できる、非常に包括的なキーボードイベントのリストを提供します。一般的なキーボードカテゴリの場合、選択したキーが押されている限り、毎ステップ継続的にトリガーされますが、プレス＆リリースカテゴリのイベントは、最初にキーを押したり離したりした時に一度だけトリガーされることになります。
+    </p>
+    <p class="dropspot">キーボードイベントは、キーが使われるたびに<span class="notranslate">room</span>
+      のすべてのアクティブなインスタンスで実際にトリガーされますが、その特定のキーに対してイベントが定義されているものだけが反応します。また、任意の<span class="notranslate">object</span>
+      で複数のキーボードイベントを作成でき、ゲーム実行中はその<span class="notranslate">object</span> のインスタンスがすべてのイベントに反応します。</p>
+    <p class="dropspot"><span class="notranslate">object</span>
+      にキーボードイベントを追加すると、キーボードサブイベントメニューが表示され、チェックするキーを指定することができます。</p>
+    <p class="dropspot"><img>一番上に矢印キー、次によく使うモディファイアキー、そして残りのキーボード（さらにサブセクションに分かれているので、<img> や<img>
+      など必要なキーを正確に取得できます）、最後に<strong>No Key</strong>と<strong>Any Key</strong>
+      という非常に特殊なサブイベントがあります。これらは、その名前が示すように、キーが押されて<em>いない </em>ときと、<em>いずれかの
+      </em>キーが押されたときにチェックされるサブイベントです。テンキーのキーは、<strong>Number Lockが </strong>有効な場合にのみ対応するイベントを発生させることに注意してください。</p>
+    <p class="dropspot">キーボードの<strong>Press </strong>と<strong>Release
+      </strong>イベントは、通常のキーボードイベントとほぼ同じですが、連続的にトリガーされるのではなく、一度だけトリガーされる点が異なります。キーボードが最初にキーを押したと認識すると、<strong>Keyboard
+        Pressed</strong>イベント（通常のキーボードイベントと同様）を生成し、その後、キーが押されたと認識されなくなると、<strong>Keyboard
+        Release</strong>イベントを1回だけトリガーします。</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">マウス</a></p>
+  <div class="droptext" data-targetname="drop-down16">
+    <p class="dropspot">
+      マウス」カテゴリは、選択可能な一連のイベントに分かれており、ゲーム内で起こっていることをより正確にコントロールすることができます。ここでは、これらのイベントがどのようなものであるか、正確に知ることができます。</p>
+    <p class="dropspot"><img>左<img> 、右<img> 、中央<img> のボタンイベント（<strong>通常</strong>、<strong>押した
+      </strong>、<strong>離したに</strong>関わらず）はすべて、そのイベントを持つインスタンスのマスクで動作します。つまり、<span
+        data-keyref="GameMaker Name">GameMakerは</span>これらのボタンが使われたときに、<span class="notranslate">room</span>
+      におけるマウスの位置を、マウスイベントを持つインスタンスのコリジョンマスクと照らし合わせるということです。インスタンスの<a class="glossterm" data-glossterm="バウンディングボックス"
+        href="#">バウンディングボックスと</a>「衝突」した場合、イベントがトリガーされます。したがって、これらのイベントを持つインスタンスは、有効なコリジョンマスクを持つ<span
+        class="notranslate">sprite</span> を持っているか、<span class="notranslate">object</span> のマスク<span
+        class="notranslate">sprite</span> を<span class="notranslate">object</span>
+      のプロパティで選択していることを確認します。これらのイベントは、その名前が示すように、選択されたマウスボタンが最初に押されたり離されたりしたときに一度だけ、またはボタンが維持されている間は各ステップで連続的にトリガーされます。
+    </p>
+    <p class="dropspot">
+      マウスの入力と離脱のイベントも、インスタンスのマスクに依存して動作するという点ではボタンイベントに似ていますが、今回は、マウスが最初にインスタンスに「入る」（触れる）ときと、「離れる」（触れなくなる）ときにトリガーされます。これらのイベントは連続的ではなく、マウスが<span
+        class="notranslate">object</span>
+      に入ったり出たりするたびに一度だけトリガーされます。したがって、例えば、マウスがその上に乗ったときに変化し、マウスを離すと元に戻るようなボタンを作成する場合に理想的な方法と言えます。</p>
+    <p class="dropspot">
+      最後に、<strong>グローバルマウスと</strong>呼ばれるマウスイベントの別のセクションを紹介します。このサブメニューでは、マウスがインスタンスの上や近くにない場合でも、インスタンスのマウスイベントを記録するためのイベントが選択できます。これらのイベントは、<em>すべての
+      </em>インスタンスに対して生成され、指定されたイベントに対してアクションやコードが定義されていれば、ゲーム内のマウスの位置に関係なく、それが実行されます<span
+        class="notranslate">room</span> 。</p>
+    <p class="dropspot">なお、モバイル機器やタッチスクリーン機器では、マウスの左ボタン<img> 、タッチスクリーン上で指のタブを確認することもでき、マウスの右ボタン<img>
+      、画面をダブルタップするとトリガーされます（この動作はコードを使用して変更可能です）。</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#">ジェスチャー</a></p>
+  <div class="droptext" data-targetname="drop-down18">
+    <p class="dropspot">
+      このイベントは、ユーザーが画面に触れたとき（モバイルの場合）、またはマウスをクリックして動かしたとき（他のすべてのプラットフォームの場合）に発生するものです。これらのイベントは、通常バージョンと<em>グローバル</em>バージョンがあるという点で、マウスイベントと似ています。これらのイベントの通常バージョンは、<span
+        class="notranslate">sprite</span> （またはマスク）を持つインスタンスでタッチが発生し、その<a class="glossterm" data-glossterm="バウンディングボックス"
+        href="#">バウンディング ボックス</a>内でタッチが発生した場合にのみトリガーされます。一方、グローバルバージョンのイベントは、ユーザーが画面上の<em>任意の </em>場所をタッチしたときにトリガーされます。
+    </p>
+    <p class="dropspot">ジェスチャーイベントは、以下を検出します。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><img> <strong>タップ - </strong> ユーザーがクリック/タッチしてすぐに離すとき</li>
+      <li class="dropspot"><img> <strong>ドラッグ - </strong> ユーザーがタッチ/クリックし、それを維持したまま指/カーソルを移動させる場合。</li>
+      <li class="dropspot"><img> <strong>フリック - </strong> ユーザーがタッチ/クリックを移動して離す動作を一度に行う場合</li>
+      <li class="dropspot"><img> <strong>ピンチ - </strong> 画面の上に2本の指を置いた状態で、指をそろえたり離したりすること。</li>
+      <li class="dropspot"><img> <strong>rotates - </strong> 画面の上に2本の指を置き、ある点を中心に回転させる場合。</li>
     </ul>
-    <p>イベント一覧は以下の通りです。</p>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">作成</a></p>
-    <div class="droptext" data-targetname="drop-down8">
-      <p class="dropspot">このイベントは、<span class="notranslate">object</span> のインスタンスが最初に作成されたときに発生し、<span class="notranslate">room</span> Editor を通して<span class="notranslate">Room</span> に入力されたときに<span class="notranslate">room</span> に配置されたインスタンス内で最初に発生するものである。つまり、このイベントは<span class="glossextra">変数の</span>初期化、<a href="../Timelines.htm">タイムラインの</a>開始、<a href="../Paths.htm">パスの</a>設定など、一般的に一度だけ、またはインスタンスが<span class="notranslate">room</span> で最初に作成されたときだけ行う必要があることを行うのに理想的な場所です。<span class="notranslate">object</span> が<span class="notranslate">Object</span> Editor または<span class="notranslate">Room</span> Editor で<strong>オブジェクト変数</strong>または<strong>インスタンス変数を</strong>追加した場合、これらの変数は最初に初期化されてから、<strong>Create Event</strong>が実行されます。</p>
-      <p class="dropspot">インスタンスの作成イベントの後に直接実行され、<strong>インスタンス変数を</strong>作成したり、<span class="notranslate">Room</span> 変数や実際の作成イベントで追加された変数を上書きするために使用できるため、<span class="notranslate">Object</span> エディタの<a href="../Room_Properties/Layer_Properties.htm">インスタンス作成コード</a>から作成イベントで設定したものを変更できることを忘れないでください。</p>
-      <div data-conref="../../assets/snippets/Instance_creation_order_warning.hts"> </div>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">デストロイ</a></p>
-    <div class="droptext" data-targetname="drop-down9">
-      <p class="dropspot">このイベントは、インスタンスが破壊されたときに実行されるイベントです。<span class="notranslate">objects</span> にビヘイビアを追加するときに見落とされがちですが、例えば敵が殺されたときに爆発やパーティクル効果を作ったり、<span class="notranslate">object</span> の新しいインスタンスを<span class="notranslate">room</span> の別の場所に再スポーニングしたり、あるいはスコアにポイントを追加したりと、非常に便利なものである場合があります。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">クリーンアップ</a></p>
-    <div class="droptext" data-targetname="drop-down10">
-      <p class="dropspot"><span>このイベントは、<span class="notranslate">object</span> のインスタンスを<span class="notranslate">room</span> から削除するイベントの後に呼び出されます。 したがって、次の場合にトリガーされます。</span></p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><span>インスタンスが破棄される</span></li>
-        <li class="dropspot"><span>the<span class="notranslate">room</span> ends</span></li>
-        <li class="dropspot"><span>試合終了</span></li>
-      </ul>
-      <p class="dropspot"><span>これは、ゲーム内の動的リソース（サーフェス、データ構造など）を「クリーンアップ」したり、インスタンスが何らかの方法でゲームから削除されたときに、<em>一度 </em>実行する必要があるタスクを実行するために使用するために設計されています。</span></p>
-      <p class="dropspot"><span>このイベントは、トリガーとなったイベントの後に<em>即座に </em>呼び出されますが、<strong>現在のイベントが終了するまで</strong>、インスタンスは実際にゲームから削除されないことに注意してください。例えば、ステップイベントで <span class="inline">instance_destroy()</span> を呼び出すと、Destroy イベントが呼び出され、次に Clean Up イベントが呼び出され、<em>ステップイベントの残りの部分が実行され</em>終わります。つまり、 <span class="inline">instance_destroy()</span> の呼び出しの後にあるコードはまだ実行されており、コードが必要とするデータ構造などのリソースをクリーンアップした場合、エラーの原因になる可能性があるので、このイベントを使用する場合は注意が必要です。</span> </p>
-      <p> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">アラーム</a></p>
-    <div class="droptext" data-targetname="drop-down11">
-      <p class="dropspot">アラームカテゴリは12のイベントに分割され、インスタンスに設定可能なアラームごとに1つずつ設定されます。そのため、<em>Add Alarm </em>カテゴリをクリックすると、このようなウィンドウが表示されます。</p>
-      <p class="dropspot"><img>ここで、作成したいアラームを選択すると、イベントウィンドウに追加され、通常通りコードを追加できるようになるのがわかります。しかし、アラームとは何でしょうか？アラームが設定されていない限り何もしない特別なイベントで、アラームがカウントダウンして0になるまで待ってから、追加したアクションやコードを実行します。</p>
-      <p class="dropspot">アラームが0に達してコードを実行すると、その後-1までカウントダウンされ、再び設定されるまでそのままです（つまり、アラームの値が-1より大きいかどうかを確認することで、実行中かどうかが分かります）。つまり、<span class="notranslate">object</span> の create イベントで <span class="inline">alarm[0]</span> を 30 に設定すると、<span data-keyref="GameMaker Name">GameMaker は</span> <span class="inline">alarm[0]</span> イベントに配置されたアクションやコードを実行する前に、30ゲームステップのカウントダウンを行うということです。なお、アラームを0に設定すると、イベントが発生してもアラームコードは実行さ<em>れず </em>、すぐに-1に設定されるため、コードはスキップされます。もし、アラームが次のステップで実行される必要がある場合は、アラームを1に設定する必要があります。</p>
-      <p class="dropspot">これは非常に便利な機能で、正確なタイミングで物事を動かすことができますし、独自のイベントにアラームを設定することを妨げるものは何もないので、繰り返させることも可能です。例えば、モンスターが3秒ごとに右折するとします。そのモンスターの生成イベントで、<span class="notranslate">room</span> 速度 * 3 にアラームを設定します（<span class="notranslate">room</span> の速度が 30 であれば、1 秒あたり 30 ステップなので、それを 3 倍すれば 3 秒です！）そして、アラームイベントで方向を設定するコードまたはアクションと、そのアラームを再び<span class="notranslate">room</span> 速度 * 3 に設定するアクション（またはコード）が用意されているのです。このようにして、特定の間隔でしか物事が起こらないような、シンプルなゲーム<span class="notranslate">loops</span> を設定することができます。</p>
-      <p class="dropspot">注意すべきは、アクションやコードが何も入っていないアラームはカウントダウンさ<em>れないという </em>ことです。しかし、コメントだけでコードやアクションがない場合でも、アラームはカウントダウンを続け、通常と同じように設定や確認ができます。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">ステップ</a></p>
-    <div class="droptext" data-targetname="drop-down12">
-      <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerは</span>時間を<strong>ステップに </strong>分割し、<span class="notranslate">room</span> 、1秒間にいくつのステップがあるのかを定義します（1ステップは1<strong>フレームとも</strong>呼ばれることがあります）。1つのステップは、基本的に<span class="notranslate">loop</span> で、ゲームが動いている間、すべてのイベントがチェックされ、必要に応じてトリガーされます。したがって、<strong>ステップ </strong>イベントは、インスタンスが存在する間、ゲームのすべてのステップをチェックするイベントです。</p>
-      <p class="dropspot">ステップイベントは、実際には以下の3つのサブイベントから構成されています。</p>
-      <p class="dropspot"><img>しかし、どのコードをどのタイミングで実行するか、もう少しコントロールしたい場合もあります。そこで、<strong>Beginと </strong> <strong>Endの </strong>ステップイベントが用意されています。この3つはステップごとにチェックされますが、その順番は<span data-keyref="GameMaker Name">GameMaker</span>エンジンのアップデートで他のイベントが変更されても変わることはありません。つまり、これは何かが必ず他の何かの前に起こることを確認する唯一の信頼できる方法なのです。</p>
-      <p class="dropspot">ステップイベントは何に使えるのでしょうか？連続的に実行される必要のあるアクションやコードに使うことができます。例えば、ある<span class="notranslate">object</span> が別のものを追いかける場合、ここで、追いかけている<span class="notranslate">object</span> に向かって動く方向を適応させ、スムーズに後ろに移動し続けることができるのです。<span class="notranslate">objects</span>しかし、このイベントには注意が必要です。特に、ゲーム内で<span class="notranslate">object</span> のインスタンスがたくさんある場合、<span class="notranslate">room</span> の step イベントには複雑な動作をあまり入れないようにしましょう。これは、ゲームの速度を遅くする可能性があります。特に、ゲーム内で多くのインスタンスを作成する場合は、ゲームが遅くなる可能性があるので、注意してください。</p>
-      <p class="dropspot"> </p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">衝突</a></p>
-    <div class="droptext" data-targetname="drop-down13">
-      <p class="dropspot">もちろん、ゲームを作るときには、2つ（またはそれ以上）の<span class="notranslate">object</span> のインスタンスが衝突したことを知ることが非常に重要です。そのために、<strong>衝突</strong>イベントがあります。これは<span class="notranslate">object</span> に配置し、他のどの<span class="notranslate">object</span> に対して衝突をチェックするかを指定するイベントです。</p>
-      <p class="dropspot">物理をオンにしていない場合、これらの衝突は、2つの<span class="notranslate">objects</span> のマスク（マスクは<span class="notranslate">sprite</span> プロパティで定義されますが、<span class="notranslate">object</span> プロパティで個別に割り当てることもできます）と重なるかどうかに基づいて計算されます。衝突するインスタンスの一方にマスクが割り当てられていない場合（または<span class="notranslate">sprite</span> のマスクが何も設定されていない場合）、たとえ<em>何かを描いていた</em>としても衝突は検出されませんのでご注意ください。</p>
-      <p class="dropspot"><strong>Physicsが </strong>オンの場合、衝突は、その物理プロパティで<span class="notranslate">object</span> に定義した<strong>衝突形状</strong><em>（Fixture</em>）のタイプに基づき、衝突に対する反応も同様となります。つまり、衝突を処理するためのコードは必要ありませんが、衝突を検出するために、このイベントには<em>少なくともコメントが必要 </em>です。</p>
-      <p class="dropspot">最後に、すべての衝突は、衝突イベントがトリガーされる前にゲームステップごとに1回計算されることに注意してください。つまり、このイベントでインスタンスを作成し、そのインスタンスで衝突をチェックしようとすると、次のゲームの<a class="glossterm" data-glossterm="くりかえし" href="#">繰り返しまで</a>衝突は検出されず、解決されません。<span class="notranslate">loop</span>.</p>
-      <p class="dropspot"> </p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">キーボードです。</a>  <img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">キーボードプレス</a>  <img> <a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">キーボードリリース</a></p>
-    <div class="droptext" data-targetname="drop-down14">
-      <p class="dropspot">プレイヤーにゲームの様々な側面をコントロールさせることは非常に重要で、そのために<span data-keyref="GameMaker Name">GameMakerは</span>、3つの主要なキーボードカテゴリのいずれでも使用できる、非常に包括的なキーボードイベントのリストを提供します。一般的なキーボードカテゴリの場合、選択したキーが押されている限り、毎ステップ継続的にトリガーされますが、プレス＆リリースカテゴリのイベントは、最初にキーを押したり離したりした時に一度だけトリガーされることになります。</p>
-      <p class="dropspot">キーボードイベントは、キーが使われるたびに<span class="notranslate">room</span> のすべてのアクティブなインスタンスで実際にトリガーされますが、その特定のキーに対してイベントが定義されているものだけが反応します。また、任意の<span class="notranslate">object</span> で複数のキーボードイベントを作成でき、ゲーム実行中はその<span class="notranslate">object</span> のインスタンスがすべてのイベントに反応します。</p>
-      <p class="dropspot"><span class="notranslate">object</span> にキーボードイベントを追加すると、キーボードサブイベントメニューが表示され、チェックするキーを指定することができます。</p>
-      <p class="dropspot"><img>一番上に矢印キー、次によく使うモディファイアキー、そして残りのキーボード（さらにサブセクションに分かれているので、<img> や<img> など必要なキーを正確に取得できます）、最後に<strong>No Key</strong>と<strong>Any Key</strong> という非常に特殊なサブイベントがあります。これらは、その名前が示すように、キーが押されて<em>いない </em>ときと、<em>いずれかの </em>キーが押されたときにチェックされるサブイベントです。テンキーのキーは、<strong>Number Lockが </strong>有効な場合にのみ対応するイベントを発生させることに注意してください。</p>
-      <p class="dropspot">キーボードの<strong>Press </strong>と<strong>Release </strong>イベントは、通常のキーボードイベントとほぼ同じですが、連続的にトリガーされるのではなく、一度だけトリガーされる点が異なります。キーボードが最初にキーを押したと認識すると、<strong>Keyboard Pressed</strong>イベント（通常のキーボードイベントと同様）を生成し、その後、キーが押されたと認識されなくなると、<strong>Keyboard Release</strong>イベントを1回だけトリガーします。</p>
-      <p class="dropspot"> </p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">マウス</a></p>
-    <div class="droptext" data-targetname="drop-down16">
-      <p class="dropspot">マウス」カテゴリは、選択可能な一連のイベントに分かれており、ゲーム内で起こっていることをより正確にコントロールすることができます。ここでは、これらのイベントがどのようなものであるか、正確に知ることができます。</p>
-      <p class="dropspot"><img>左<img> 、右<img> 、中央<img> のボタンイベント（<strong>通常</strong>、<strong>押した </strong>、<strong>離したに</strong>関わらず）はすべて、そのイベントを持つインスタンスのマスクで動作します。つまり、<span data-keyref="GameMaker Name">GameMakerは</span>これらのボタンが使われたときに、<span class="notranslate">room</span> におけるマウスの位置を、マウスイベントを持つインスタンスのコリジョンマスクと照らし合わせるということです。インスタンスの<a class="glossterm" data-glossterm="バウンディングボックス" href="#">バウンディングボックスと</a>「衝突」した場合、イベントがトリガーされます。したがって、これらのイベントを持つインスタンスは、有効なコリジョンマスクを持つ<span class="notranslate">sprite</span> を持っているか、<span class="notranslate">object</span> のマスク<span class="notranslate">sprite</span> を<span class="notranslate">object</span> のプロパティで選択していることを確認します。これらのイベントは、その名前が示すように、選択されたマウスボタンが最初に押されたり離されたりしたときに一度だけ、またはボタンが維持されている間は各ステップで連続的にトリガーされます。 </p>
-      <p class="dropspot">マウスの入力と離脱のイベントも、インスタンスのマスクに依存して動作するという点ではボタンイベントに似ていますが、今回は、マウスが最初にインスタンスに「入る」（触れる）ときと、「離れる」（触れなくなる）ときにトリガーされます。これらのイベントは連続的ではなく、マウスが<span class="notranslate">object</span> に入ったり出たりするたびに一度だけトリガーされます。したがって、例えば、マウスがその上に乗ったときに変化し、マウスを離すと元に戻るようなボタンを作成する場合に理想的な方法と言えます。</p>
-      <p class="dropspot">最後に、<strong>グローバルマウスと</strong>呼ばれるマウスイベントの別のセクションを紹介します。このサブメニューでは、マウスがインスタンスの上や近くにない場合でも、インスタンスのマウスイベントを記録するためのイベントが選択できます。これらのイベントは、<em>すべての </em>インスタンスに対して生成され、指定されたイベントに対してアクションやコードが定義されていれば、ゲーム内のマウスの位置に関係なく、それが実行されます<span class="notranslate">room</span> 。</p>
-      <p class="dropspot">なお、モバイル機器やタッチスクリーン機器では、マウスの左ボタン<img> 、タッチスクリーン上で指のタブを確認することもでき、マウスの右ボタン<img> 、画面をダブルタップするとトリガーされます（この動作はコードを使用して変更可能です）。</p>
-      <p class="dropspot"> </p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#">ジェスチャー</a></p>
-    <div class="droptext" data-targetname="drop-down18">
-      <p class="dropspot">このイベントは、ユーザーが画面に触れたとき（モバイルの場合）、またはマウスをクリックして動かしたとき（他のすべてのプラットフォームの場合）に発生するものです。これらのイベントは、通常バージョンと<em>グローバル</em>バージョンがあるという点で、マウスイベントと似ています。これらのイベントの通常バージョンは、<span class="notranslate">sprite</span> （またはマスク）を持つインスタンスでタッチが発生し、その<a class="glossterm" data-glossterm="バウンディングボックス" href="#">バウンディング ボックス</a>内でタッチが発生した場合にのみトリガーされます。一方、グローバルバージョンのイベントは、ユーザーが画面上の<em>任意の </em>場所をタッチしたときにトリガーされます。</p>
-      <p class="dropspot">ジェスチャーイベントは、以下を検出します。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><img> <strong>タップ - </strong> ユーザーがクリック/タッチしてすぐに離すとき</li>
-        <li class="dropspot"><img> <strong>ドラッグ - </strong> ユーザーがタッチ/クリックし、それを維持したまま指/カーソルを移動させる場合。</li>
-        <li class="dropspot"><img> <strong>フリック - </strong> ユーザーがタッチ/クリックを移動して離す動作を一度に行う場合</li>
-        <li class="dropspot"><img> <strong>ピンチ - </strong> 画面の上に2本の指を置いた状態で、指をそろえたり離したりすること。</li>
-        <li class="dropspot"><img> <strong>rotates - </strong> 画面の上に2本の指を置き、ある点を中心に回転させる場合。</li>
-      </ul>
-      <p class="dropspot"><img><span class="inline">event_data</span>このマップには、タッチ/クリックの位置と移動に関するデータを含むいくつかのキー/値のペアが含まれます。利用可能なすべてのサブイベントとその動作の詳細については、次のセクションを参照してください。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><a href="Gesture_Events.htm">ジェスチャーイベント</a></li>
-      </ul>
-      <p class="dropspot"> </p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#">その他</a></p>
-    <div class="droptext" data-targetname="drop-down19">
-      <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>ゲームを作るときに使う特殊なイベントがいくつかあり、それらはほとんどOtherイベントにまとめられていて、これを選択すると出てくるサブイベントのポップアップメニューから選択することができます。以下は、これらのその他のイベントのイメージです。</p>
-      <p class="dropspot"><img>上記画像に記載されている各イベントの詳細については、以下の項目をご覧ください。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><a href="Other_Events.htm">その他のイベント</a></li>
-      </ul>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down20" href="#">ドロー</a></p>
-    <div class="droptext" data-targetname="drop-down20">
-      <p class="dropspot">このイベントカテゴリは、ゲームを実行したときに画面に表示される内容を管理するもので、様々な個別のイベントに分かれています。</p>
-      <p class="dropspot"><img>ご覧のように、ドローイベントのカテゴリーには複数の異なるイベントタイプがあります。<strong>Draw Begin</strong>、<strong>Draw </strong>、<strong>Draw End</strong>はおそらく最もよく使われる「標準的な」描画イベントです。デフォルトでは、メインの Draw イベントは、インスタンスが<span class="notranslate">sprite</span> を持っているかどうかに関係なく、すべてのインスタンスに対して常に呼び出されます。ただし、インスタンスを invisible として<span class="notranslate">flag</span> にすると、イベントはトリガーされません (invisible<span class="notranslate">object</span> の draw イベントで何らかのゲームロジックがある場合、実行されないのでこの点に注意してください)。メイン描画イベントは、コードやアクションがない場合（つまり、<span class="notranslate">sprite</span> のイベントリストに追加していない場合）、<span data-keyref="GameMaker Name">GameMaker が</span>インスタンス<span class="notranslate">object</span> をデフォルトで描画する場所でもあります。デフォルトの描画は、インスタンスに関連付けられた<span class="notranslate">sprite</span> を使用し、コードで設定されたトランスフォームやアクションが適用された状態で描画されます。</p>
-      <p class="dropspot">標準描画イベントは、<strong>GUI描画 </strong>イベントの<em>前 </em>、<strong>Pre Drawと </strong> <strong>Post Draw </strong>イベントの<em>間に </em>描画します。つまり、このイベントで描画されたものは、レイヤに関係なく<strong>GUI描画 </strong>イベントの下に描画されます（つまり、GUI描画イベントでの描画は、レイヤ順序に関係なく常に通常の描画イベントでの描画よりも上に描かれます）。</p>
-      <p class="dropspot">上記は、描画イベントがどのように動作するかの概要を説明したものですが、利用可能なすべてのサブイベントの詳細については、次のセクションを参照してください。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><a href="Draw_Events.htm">ドローイベント</a></li>
-      </ul>
-      <p> </p>
-      <p> </p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#">非同期</a></p>
-    <div class="droptext" data-targetname="drop-down21">
-      <p class="dropspot">このイベントカテゴリは、<span data-keyref="GameMaker Name">GameMakerによって</span>デフォルトで起動されるのではなく、ファイルのロードやWeb<span class="notranslate">server</span> からの返信など、他のアクションの終了によって起動されるという点で特殊なものです。このカテゴリは、以下のイベントに分かれている。</p>
-      <p class="dropspot"><img alt="Object Editor Events View" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Events.png"/></p>
-      <p class="dropspot">そこで、<span data-keyref="GameMaker Name">GameMakerに</span>画像ファイルを追加したいとします。その場合、<span class="notranslate">object</span> の別のイベント（Create Eventかもしれない）でコーディングし、<span class="notranslate">object</span> にローディングバーを描かせ、（例えば）待つ間に適切な非同期イベントをポーリングし、ファイルがロードされたことを<span data-keyref="GameMaker Name">GameMaker</span>に伝える<a class="glossterm" data-glossterm="コールバック" href="#">コールバックを</a>行う。そして、このイベントで返されたデータを使って、<span class="notranslate">room</span> を変更したり、アイテムを購入したりと、他のことをすることができる。</p>
-      <p class="dropspot">なお、上記は非同期イベントの動作概要にすぎませんが、利用可能なすべてのサブイベントの詳細については、次のセクションを参照してください。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><a href="Async_Events.htm">非同期イベント一覧</a></li>
-      </ul>
-      <p class="dropspot"> </p>
-    </div>
-    <p> </p>
-    <p>また、イベントには名前を付けることができ、少なくともEvent Editorでイベントの横に表示される短い説明テキストを付けることができることに留意してください。<span data-keyref="GML_Code">GMLコードを</span>使用する場合）イベントのコードエディターの最初の行に次のように記述します。</p>
-    <p class="code">/// @description Your text here</p>
-    <p>そのため、例えば<strong>Alarm </strong>イベントにはこのようなものがあります。</p>
-    <p class="code">/// @description This is the AI Fight alarm</p>
-    <p>そして、イベントエディターには、このように表示されます。</p>
-    <p><img alt="Object Editor Events List" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_EventList.png"/></p>
-    <p><span data-keyref="GML_Visual">GML Visual</span>の場合、コメントを追加するには、<strong>Execute Code</strong>アクションを使用する必要があります。このアクションを追加したら、そのイベントに名前をつけるために、上に示したのと同じ行を、例えば、次のように与えます。</p>
-    <p><img>上記イベントの一部と一般的なイベントの実行順序については、以下のセクションを参照してください。</p>
-    <ul class="colour">
-      <li><a href="Event_Order.htm">イベントオーダー</a></li>
-      <li><a href="Other_Events.htm">その他のイベント</a></li>
-      <li><a href="Draw_Events.htm">抽選会イベント</a></li>
-      <li><a href="Async_Events.htm">非同期イベント</a></li>
-      <li><a href="Gesture_Events.htm">ジェスチャーイベント</a></li>
+    <p class="dropspot"><img><span
+        class="inline">event_data</span>このマップには、タッチ/クリックの位置と移動に関するデータを含むいくつかのキー/値のペアが含まれます。利用可能なすべてのサブイベントとその動作の詳細については、次のセクションを参照してください。
+    </p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="Gesture_Events.htm">ジェスチャーイベント</a></li>
+    </ul>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#">その他</a></p>
+  <div class="droptext" data-targetname="drop-down19">
+    <p class="dropspot"><span
+        data-keyref="GameMaker Name">GameMakerで</span>ゲームを作るときに使う特殊なイベントがいくつかあり、それらはほとんどOtherイベントにまとめられていて、これを選択すると出てくるサブイベントのポップアップメニューから選択することができます。以下は、これらのその他のイベントのイメージです。
+    </p>
+    <p class="dropspot"><img>上記画像に記載されている各イベントの詳細については、以下の項目をご覧ください。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="Other_Events.htm">その他のイベント</a></li>
+    </ul>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down20" href="#">ドロー</a></p>
+  <div class="droptext" data-targetname="drop-down20">
+    <p class="dropspot">このイベントカテゴリは、ゲームを実行したときに画面に表示される内容を管理するもので、様々な個別のイベントに分かれています。</p>
+    <p class="dropspot"><img>ご覧のように、ドローイベントのカテゴリーには複数の異なるイベントタイプがあります。<strong>Draw Begin</strong>、<strong>Draw
+      </strong>、<strong>Draw End</strong>はおそらく最もよく使われる「標準的な」描画イベントです。デフォルトでは、メインの Draw イベントは、インスタンスが<span
+        class="notranslate">sprite</span> を持っているかどうかに関係なく、すべてのインスタンスに対して常に呼び出されます。ただし、インスタンスを invisible として<span
+        class="notranslate">flag</span> にすると、イベントはトリガーされません (invisible<span class="notranslate">object</span> の draw
+      イベントで何らかのゲームロジックがある場合、実行されないのでこの点に注意してください)。メイン描画イベントは、コードやアクションがない場合（つまり、<span class="notranslate">sprite</span>
+      のイベントリストに追加していない場合）、<span data-keyref="GameMaker Name">GameMaker が</span>インスタンス<span
+        class="notranslate">object</span> をデフォルトで描画する場所でもあります。デフォルトの描画は、インスタンスに関連付けられた<span
+        class="notranslate">sprite</span> を使用し、コードで設定されたトランスフォームやアクションが適用された状態で描画されます。</p>
+    <p class="dropspot">標準描画イベントは、<strong>GUI描画 </strong>イベントの<em>前 </em>、<strong>Pre Drawと </strong> <strong>Post Draw
+      </strong>イベントの<em>間に </em>描画します。つまり、このイベントで描画されたものは、レイヤに関係なく<strong>GUI描画
+      </strong>イベントの下に描画されます（つまり、GUI描画イベントでの描画は、レイヤ順序に関係なく常に通常の描画イベントでの描画よりも上に描かれます）。</p>
+    <p class="dropspot">上記は、描画イベントがどのように動作するかの概要を説明したものですが、利用可能なすべてのサブイベントの詳細については、次のセクションを参照してください。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="Draw_Events.htm">ドローイベント</a></li>
     </ul>
     <p> </p>
     <p> </p>
-    <p> </p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div style="float:left">戻る<a href="../Objects.htm"> <span class="notranslate">Object</span> 編集部</a></div>
-          <div style="float:right">次へ親オブジェクト</div>
-        </div>
+    <p class="dropspot"> </p>
+  </div>
+  <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#">非同期</a></p>
+  <div class="droptext" data-targetname="drop-down21">
+    <p class="dropspot">このイベントカテゴリは、<span
+        data-keyref="GameMaker Name">GameMakerによって</span>デフォルトで起動されるのではなく、ファイルのロードやWeb<span
+        class="notranslate">server</span> からの返信など、他のアクションの終了によって起動されるという点で特殊なものです。このカテゴリは、以下のイベントに分かれている。</p>
+    <p class="dropspot"><img alt="Object Editor Events View" class="center"
+        src="../../assets/Images/Asset_Editors/Editor_Objects_Events.png" /></p>
+    <p class="dropspot">そこで、<span data-keyref="GameMaker Name">GameMakerに</span>画像ファイルを追加したいとします。その場合、<span
+        class="notranslate">object</span> の別のイベント（Create Eventかもしれない）でコーディングし、<span class="notranslate">object</span>
+      にローディングバーを描かせ、（例えば）待つ間に適切な非同期イベントをポーリングし、ファイルがロードされたことを<span data-keyref="GameMaker Name">GameMaker</span>に伝える<a
+        class="glossterm" data-glossterm="コールバック" href="#">コールバックを</a>行う。そして、このイベントで返されたデータを使って、<span
+        class="notranslate">room</span> を変更したり、アイテムを購入したりと、他のことをすることができる。</p>
+    <p class="dropspot">なお、上記は非同期イベントの動作概要にすぎませんが、利用可能なすべてのサブイベントの詳細については、次のセクションを参照してください。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="Async_Events.htm">非同期イベント一覧</a></li>
+    </ul>
+    <p class="dropspot"> </p>
+  </div>
+  <p> </p>
+  <p>また、イベントには名前を付けることができ、少なくともEvent Editorでイベントの横に表示される短い説明テキストを付けることができることに留意してください。<span
+      data-keyref="GML_Code">GMLコードを</span>使用する場合）イベントのコードエディタの最初の行に次のように記述します。</p>
+  <p class="code">/// @description Your text here</p>
+  <p>そのため、例えば<strong>Alarm </strong>イベントにはこのようなものがあります。</p>
+  <p class="code">/// @description This is the AI Fight alarm</p>
+  <p>そして、イベントエディタには、このように表示されます。</p>
+  <p><img alt="Object Editor Events List" class="center"
+      src="../../assets/Images/Asset_Editors/Editor_Objects_EventList.png" /></p>
+  <p><span data-keyref="GML_Visual">GML Visual</span>の場合、コメントを追加するには、<strong>Execute
+      Code</strong>アクションを使用する必要があります。このアクションを追加したら、そのイベントに名前をつけるために、上に示したのと同じ行を、例えば、次のように与えます。</p>
+  <p><img>上記イベントの一部と一般的なイベントの実行順序については、以下のセクションを参照してください。</p>
+  <ul class="colour">
+    <li><a href="Event_Order.htm">イベントオーダー</a></li>
+    <li><a href="Other_Events.htm">その他のイベント</a></li>
+    <li><a href="Draw_Events.htm">抽選会イベント</a></li>
+    <li><a href="Async_Events.htm">非同期イベント</a></li>
+    <li><a href="Gesture_Events.htm">ジェスチャーイベント</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">前のページ：<a href="../Objects.htm"> <span class="notranslate">Object</span> エディタ</a></div>
+        <div style="float:right">次のページ親オブジェクト</div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
     </div>
-    <!-- KEYWORDS
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
 Object Events
 Named Events
 --><!-- TAGS
 object_events
---></body>
+-->
+</body>
+
 </html>

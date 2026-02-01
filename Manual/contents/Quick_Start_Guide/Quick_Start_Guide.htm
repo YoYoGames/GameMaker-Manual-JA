@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>GameMakerを使ったゲーム制作</title>
@@ -13,32 +14,59 @@
   <meta name="search-keywords" content="" />
   <meta name="robots" content="NOODP" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>クイックスタートガイド</h1>
-  <p><strong>クイックスタートガイドへ</strong>ようこそこのセクションでは、<span data-keyref="GameMaker Name">GameMakerの</span>最も重要な側面に慣れ親しみ、できるだけ早くゲームを作れるようにするための基本的なことを紹介します。このガイドでは、<span data-keyref="GML_Code">GML Code</span>と<span data-keyref="GML_Visual">GML Visual</span> のどちらをお使いの場合でも、できるだけ早く製品を最大限に活用できるよう、<span class="notranslate">IDE</span> の必須機能に加えて、プログラミングの簡単な紹介も行っています。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>ワークフローを説明し、すぐに制作に取り掛かれるように、<span data-keyref="GameMaker Name">GameMakerとは</span>何か、プログラムとは何かという基本的なことから、一般的な<span class="notranslate">assets</span> 、動きやスコアなどの基本的なコーディング方法まで、このガイドブックで紹介しています。</p>
+  <p><strong>クイックスタートガイドへ</strong>ようこそこのセクションでは、<span
+      data-keyref="GameMaker Name">GameMakerの</span>最も重要な側面に慣れ親しみ、できるだけ早くゲームを作れるようにするための基本的なことを紹介します。このガイドでは、<span
+      data-keyref="GML_Code">GML Code</span>と<span data-keyref="GML_Visual">GML Visual</span>
+    のどちらをお使いの場合でも、できるだけ早く製品を最大限に活用できるよう、<span class="notranslate">IDE</span> の必須機能に加えて、プログラミングの簡単な紹介も行っています。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>ワークフローを説明し、すぐに制作に取り掛かれるように、<span
+      data-keyref="GameMaker Name">GameMakerとは</span>何か、プログラムとは何かという基本的なことから、一般的な<span class="notranslate">assets</span>
+    、動きやスコアなどの基本的なコーディング方法まで、このガイドブックで紹介しています。</p>
   <p><span data-keyref="GameMaker Name">GameMakerを</span>使ったゲーム作りは、概念的には以下のような一般的な手順で、かなりシンプルでわかりやすいものとなっています。</p>
   <ul class="colour">
-    <li><strong>画像 </strong>アセット<a class="glossterm" data-glossterm="スプライト" href="#">（スプライト</a>、<a class="glossterm" data-glossterm="かわらばん" href="#">タイルセット</a>、<a class="glossterm" data-glossterm="フォント" href="#">フォント</a>）を作成し、<span class="notranslate">Asset</span> Browserに追加します。</li>
+    <li><strong>画像 </strong>アセット<a class="glossterm" data-glossterm="スプライト" href="#">（スプライト</a>、<a class="glossterm"
+        data-glossterm="かわらばん" href="#">タイルセット</a>、<a class="glossterm" data-glossterm="フォント"
+        href="#">フォント</a>）を作成し、<span class="notranslate">Asset</span> Browserに追加します。</li>
     <li>ゲーム内で使いたいものを表す<strong>オブジェクトアセットを </strong>作成し、必要な画像<span class="notranslate">assets</span> を割り当てます。</li>
     <li>これらの<span class="notranslate">objects</span> 、特定の<strong>イベントに</strong>応答して何かを行うようにプログラムします。</li>
-    <li>これらの<strong>インスタンス </strong>（<span class="notranslate">objects</span> ）を、プログラムを実行する<strong>部屋に </strong>追加します。</li>
+    <li>これらの<strong>インスタンス </strong>（<span class="notranslate">objects</span> ）を、プログラムを実行する<strong>部屋に </strong>追加します。
+    </li>
   </ul>
-  <p>上記で挙げた各項目の具体的な説明は次のページで行いますが、ゲームを作るために必要な動作の大まかな流れはこのようになっています。ここで重要なのは、ゲームの主な「構成要素」は常に<span class="notranslate">sprites</span> 、<span class="notranslate">objects</span> 、<span class="notranslate">rooms</span> であるということです。ただし、これらのアイテムに追加機能や動作を追加するために使用できる補助的な<span class="notranslate">assets</span> も数多くあります（例えば、以下のようなものです）。 <strong> <a class="glossterm" data-glossterm="シェーダー" href="#">シェーダー</a></strong>または <strong> <a class="glossterm" data-glossterm="タイムライン" href="#">タイムライン</a></strong>).</p>
-  <p>さて、それぞれの内容を詳しく説明する前に、上記の構成要素を<span data-keyref="GameMaker Name">GameMakerが</span>どのようにゲームにしていくのか、その概要を簡単に説明します。基本的に、すべては<strong>ゲームループと</strong>呼ばれる部分で行われ、その速度は<strong> Frames Per Secondで</strong>計測され、1つの「フレーム」は<span class="notranslate">GameMaker</span> で<strong>Stepと </strong>呼ばれます。デフォルトのFrame Per Second（<strong>FPS</strong>）は60です。つまり、1秒経過するごとに<span data-keyref="GameMaker Name">GameMakerは</span>ゲーム（<span class="notranslate">loop</span> ）を60回実行し、それぞれのステップ（ループ/フレーム）でいくつかのイベントが発生し、ゲームが進行していくことになります。</p>
-  <p>これを理解するために、ゲーム内で移動させたいキャラクターがあるとします。<span class="notranslate">room</span> 。そのキャラクターの<em>スプライトを </em>作成し、<em>オブジェクトを </em>作成して<span class="notranslate">sprite</span> に割り当て、<span class="notranslate">object</span> に<strong>ステップイベントと</strong>呼ばれる<em>イベントを </em>追加することになります。このイベントで、2ピクセル分右に移動するように指示します。そして、その<strong>インスタンス </strong> <span class="notranslate">object</span> をゲーム<span class="notranslate">room</span> に配置し、ゲームを実行すると、インスタンスは1ステップごとに2ピクセルずつ右に移動し始め、（ステップイベントはゲームステップごとに1回実行されます）1秒後には120ピクセル右に移動していることになります。</p>
-  <p>上記の例では、<span class="notranslate">object</span> に右へ移動するように指示することを話していますが、どのようにそれを行うのでしょうか。それは、<a data-xref="{title}" href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visualか</a> <a data-xref="{title}" href="../GameMaker_Language/GameMaker_Language_Index.htm">GML Codeの</a>どちらかを使って書いた<strong>プログラムによって </strong>行われます。どちらを使うかはあなた次第ですが、それらを使うことでゲームを<em>プログラミングして </em>いることになります。詳しくは次のセクションで説明します。</p>
+  <p>上記で挙げた各項目の具体的な説明は次のページで行いますが、ゲームを作るために必要な動作の大まかな流れはこのようになっています。ここで重要なのは、ゲームの主な「構成要素」は常に<span
+      class="notranslate">sprites</span> 、<span class="notranslate">objects</span> 、<span
+      class="notranslate">rooms</span> であるということです。ただし、これらのアイテムに追加機能や動作を追加するために使用できる補助的な<span
+      class="notranslate">assets</span> も数多くあります（例えば、以下のようなものです）。 <strong> <a class="glossterm" data-glossterm="シェーダー"
+        href="#">シェーダー</a></strong>または <strong> <a class="glossterm" data-glossterm="タイムライン"
+        href="#">タイムライン</a></strong>).</p>
+  <p>さて、それぞれの内容を詳しく説明する前に、上記の構成要素を<span
+      data-keyref="GameMaker Name">GameMakerが</span>どのようにゲームにしていくのか、その概要を簡単に説明します。基本的に、すべては<strong>ゲームループと</strong>呼ばれる部分で行われ、その速度は<strong>
+      Frames Per Secondで</strong>計測され、1つの「フレーム」は<span class="notranslate">GameMaker</span> で<strong>Stepと
+    </strong>呼ばれます。デフォルトのFrame Per Second（<strong>FPS</strong>）は60です。つまり、1秒経過するごとに<span
+      data-keyref="GameMaker Name">GameMakerは</span>ゲーム（<span class="notranslate">loop</span>
+    ）を60回実行し、それぞれのステップ（ループ/フレーム）でいくつかのイベントが発生し、ゲームが進行していくことになります。</p>
+  <p>これを理解するために、ゲーム内で移動させたいキャラクターがあるとします。<span class="notranslate">room</span> 。そのキャラクターの<em>スプライトを </em>作成し、<em>オブジェクトを
+    </em>作成して<span class="notranslate">sprite</span> に割り当て、<span class="notranslate">object</span>
+    に<strong>ステップイベントと</strong>呼ばれる<em>イベントを </em>追加することになります。このイベントで、2ピクセル分右に移動するように指示します。そして、その<strong>インスタンス
+    </strong> <span class="notranslate">object</span> をゲーム<span class="notranslate">room</span>
+    に配置し、ゲームを実行すると、インスタンスは1ステップごとに2ピクセルずつ右に移動し始め、（ステップイベントはゲームステップごとに1回実行されます）1秒後には120ピクセル右に移動していることになります。</p>
+  <p>上記の例では、<span class="notranslate">object</span> に右へ移動するように指示することを話していますが、どのようにそれを行うのでしょうか。それは、<a data-xref="{title}"
+      href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visualか</a> <a data-xref="{title}"
+      href="../GameMaker_Language/GameMaker_Language_Index.htm">GML Codeの</a>どちらかを使って書いた<strong>プログラムによって
+    </strong>行われます。どちらを使うかはあなた次第ですが、それらを使うことでゲームを<em>プログラミングして </em>いることになります。詳しくは次のセクションで説明します。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../Content.htm">インデックス</a></div>
-        <div style="float:right">次へ<a href="What_Is_Programming_.htm">プログラミングとは？</a></div>
+        <div style="float:left">前のページ：<a href="../Content.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="What_Is_Programming_.htm">プログラミングとは？</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Quick Start Guide
@@ -47,4 +75,5 @@ Quick Start Guide
 quick_start
 -->
 </body>
+
 </html>

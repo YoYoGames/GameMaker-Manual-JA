@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_map_is_list</title>
@@ -13,32 +14,38 @@
   <meta name="search-keywords" content="ds_map_is_list" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_map_is_list</span></h1>
-  <p>この関数を使うと、与えられたマップキーに<a href="../DS_Lists/DS_Lists.htm">DSリストが</a>格納されているかどうかを確認することができます。与えられたキーに DS リスト ID が含まれている場合、この関数は <span class="inline">true</span> を返します。 そうでない場合は、 <span class="inline">false</span> を返します。</p>
-  <p><span> </span><span class="inline"><a href="ds_map_add_list.htm">ds_map_add_list()</a></span> <span> </span> 関数を使って追加されたリストのみを検出することに注意してください。</p>
+  <p>この関数を使うと、与えられたマップキーに<a href="../DS_Lists/DS_Lists.htm">DSリストが</a>格納されているかどうかを確認することができます。与えられたキーに DS リスト ID
+    が含まれている場合、この関数は <span class="inline">true</span> を返します。 そうでない場合は、 <span class="inline">false</span> を返します。</p>
+  <p><span> </span><span class="inline"><a href="ds_map_add_list.htm">ds_map_add_list()</a></span> <span> </span>
+    関数を使って追加されたリストのみを検出することに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_map_is_list</span>(id, key)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_Map"></span></td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_DS_Map"></span></td>
         <td><span class="notranslate">The id of the map to use.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">key</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">key</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The key to check.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,18 +60,21 @@
         key = ds_map_find_next(inventory);<br />
     }<br />
     ds_map_destroy(inventory);</p>
-  <p>上記のコードは<span class="notranslate">loops</span> DS マップを走査し、その中のキーが DS リストのものであるかどうかをチェックします。もしそうであれば、DS リストが破壊され、<span class="notranslate">loop</span> の最後に DS マップも破壊される。</p>
+  <p>上記のコードは<span class="notranslate">loops</span> DS マップを走査し、その中のキーが DS リストのものであるかどうかをチェックします。もしそうであれば、DS
+    リストが破壊され、<span class="notranslate">loop</span> の最後に DS マップも破壊される。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Maps.htm">DSマップ</a></div>
-        <div style="float:right">次へ <a href="ds_map_is_map.htm"><span class="footer"><span class="buttons"><span class="clear"><span style="float:right;">ds_map_is_map</span></span> </span> </span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Maps.htm">DSマップ</a></div>
+        <div style="float:right">次のページ：<a href="ds_map_is_map.htm"><span class="footer"><span class="buttons"><span
+                  class="clear"><span style="float:right;">ds_map_is_map</span></span> </span> </span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_is_list
@@ -73,4 +83,5 @@ ds_map_is_list
 ds_map_is_list
 -->
 </body>
+
 </html>

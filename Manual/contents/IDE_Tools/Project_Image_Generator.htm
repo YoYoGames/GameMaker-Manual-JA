@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>プロジェクトイメージジェネレーター</title>
@@ -12,30 +13,42 @@
   <meta name="rh-index-keywords" content="Project Image Generator" />
   <meta name="search-keywords" content="Project Image Generator,image generator,icons,backgrounds" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>プロジェクトイメージジェネレーター</h1>
-  <p><img><strong>プロジェクトイメージジェネレーターは</strong>、"<a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">Tools "メニューから</a>アクセスすることができます。
-   <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> の上部にあります。このツールは、さまざまなターゲットプラットフォームで必要とされるスプラッシュスクリーン、プロモ画像、アイコンを、1つの画像セットから素早く作成するために設計されています。ベースとなる画像
-    とベースアイコンが表示され、<strong>Generate </strong>ボタンをクリックすると、各プラットフォームの<a href="../Settings/Game_Options.htm">Game Optionsが</a>新しい画像で更新されます。</p>
+  <p><img><strong>プロジェクトイメージジェネレーターは</strong>、"<a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">Tools
+      "メニューから</a>アクセスすることができます。
+    <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span>
+    の上部にあります。このツールは、さまざまなターゲットプラットフォームで必要とされるスプラッシュスクリーン、プロモ画像、アイコンを、1つの画像セットから素早く作成するために設計されています。ベースとなる画像
+    とベースアイコンが表示され、<strong>Generate </strong>ボタンをクリックすると、各プラットフォームの<a href="../Settings/Game_Options.htm">Game
+      Optionsが</a>新しい画像で更新されます。
+  </p>
   <p>正しく動作させるためには、高解像度のスプラッシュ画面と高解像度のアイコン画像を提供する必要があります。推奨されるサイズは以下の通りです。</p>
   <ul class="colour">
-    <li><strong>スプラッシュスクリーン</strong>：最低1920x1080px、ポートレートの場合は1080x1920pxで、透明度のない24bit <span class="inline">*.png</span> としてオーサリングされたもの。</li>
-    <li><strong>アイコン</strong>：1024x1024px以上（これは必要な最大アイコンのサイズです）、24bitでオーサリングされ、透過性を持つことができます <span class="inline">*.png</span> </li>
+    <li><strong>スプラッシュスクリーン</strong>：最低1920x1080px、ポートレートの場合は1080x1920pxで、透明度のない24bit <span class="inline">*.png</span>
+      としてオーサリングされたもの。</li>
+    <li><strong>アイコン</strong>：1024x1024px以上（これは必要な最大アイコンのサイズです）、24bitでオーサリングされ、透過性を持つことができます <span
+        class="inline">*.png</span> </li>
   </ul>
   <p>これらの画像を提供すると、<strong>プレビューウィンドウに</strong>表示され、異なるプラットフォームに適用する際に使用する「フィット」の種類を設定することができます。以下の中から選択することができます。</p>
   <ul class="colour">
     <li><strong>アスペクト比を維持</strong>- 画像をアスペクト比を維持したまま拡大縮小し、1:1でない場合は背景色を追加して横を塗りつぶします。</li>
     <li><strong>Stretch To Fit</strong>- 画像を引き伸ばして、画像/アイコンのフルサイズにフィットさせます。</li>
-    <li><strong>Crop To Fit</strong>- ベースとなる画像を取得し、水平または垂直軸のどちらかに沿って最適になるようにし、残りをクロップします。例えば、640x480の画像を480x800のスプラッシュスクリーンとして使用しなければならない場合。
+    <li><strong>Crop To Fit</strong>-
+      ベースとなる画像を取得し、水平または垂直軸のどちらかに沿って最適になるようにし、残りをクロップします。例えば、640x480の画像を480x800のスプラッシュスクリーンとして使用しなければならない場合。
       の場合、画像は縦軸（480→800）に合わせて拡大<em>さ</em>れ、残りは切り取られます。同様に、1080x1920の画像を800x800に収めなければならない場合、画像は横軸に合うように縮小されます。
       を軸に、残りを切り取る。</li>
   </ul>
   <p>また、アイコンと画像の両方に<strong>背景色を</strong>設定することができます。この色は、アスペクト比で拡大縮小されたときに、画像の「パッド」に使用されます。次の画像は、すべての設定が完了したときの様子です。</p>
-  <p><img>あとは、<strong>Generateを </strong>クリックするだけで、<span data-keyref="GameMaker Name">GameMakerが</span>ゲームオプションの<strong>画像と </strong>
-   <strong>アイコンの </strong>設定に、各プラットフォームの画像を使用します。</p>
-  <p class="note"><strong>注</strong>：上記の記述の例外は、<a href="../Settings/Game_Options/Android.htm">Android Adaptive Icons</a>です。これらは、その構造上、このツールを使用して<strong>生成さ</strong>れることはありません。</p>
-  <p class="note"><strong>重要!こ </strong>のツールは、あなたが必要とするすべての画像を生成しますが、それはそれが完璧であることを意味するものではありません!各プラットフォームの異なるサイズや解像度に合うよう、最善を尽くしますが、時にはそれが不可能な場合もあります。
+  <p><img>あとは、<strong>Generateを </strong>クリックするだけで、<span
+      data-keyref="GameMaker Name">GameMakerが</span>ゲームオプションの<strong>画像と </strong>
+    <strong>アイコンの </strong>設定に、各プラットフォームの画像を使用します。
+  </p>
+  <p class="note"><strong>注</strong>：上記の記述の例外は、<a href="../Settings/Game_Options/Android.htm">Android Adaptive
+      Icons</a>です。これらは、その構造上、このツールを使用して<strong>生成さ</strong>れることはありません。</p>
+  <p class="note"><strong>重要!こ
+    </strong>のツールは、あなたが必要とするすべての画像を生成しますが、それはそれが完璧であることを意味するものではありません!各プラットフォームの異なるサイズや解像度に合うよう、最善を尽くしますが、時にはそれが不可能な場合もあります。
     というのも、「1つのサイズですべて解決する」ということはあり得ないからです。したがって、このツールを実行した後、各プラットフォームのゲームオプションですべての画像を修正し、正確にどのように見えるかわからないものを調整することをお勧めします。
     を手動で行ってください。</p>
   <p> </p>
@@ -44,11 +57,14 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span> </a>その他のツール</div>
-        <div style="float:right">次へ<a href="Sound_Mixer.htm">サウンドミキサー</a></div>
+        <div style="float:left">前のページ：<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span>
+          </a>その他のツール
+        </div>
+        <div style="float:right">次のページ：<a href="Sound_Mixer.htm">サウンドミキサー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Project Image Generator
@@ -60,4 +76,5 @@ Image Generator
 project_image_generator
 -->
 </body>
+
 </html>

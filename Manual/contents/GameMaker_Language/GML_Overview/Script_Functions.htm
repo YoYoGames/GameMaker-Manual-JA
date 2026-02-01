@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>スクリプトの関数と変数</title>
@@ -8,16 +9,25 @@
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the use of scripts to create functions and global variables and macros" />
+  <meta name="topic-comment"
+    content="Page outlining the use of scripts to create functions and global variables and macros" />
   <meta name="rh-index-keywords" content="Script Functions And Variables" />
   <meta name="search-keywords" content="user defined functions,script functions,gmcallback_,gmcallback" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>スクリプトの関数と変数</h1>
-  <p>スクリプトアセットは、基本的に1つ以上のユーザー定義関数または変数のコレクションで、<a href="../../The_Asset_Editors/Scripts.htm">スクリプトエディタで</a>コードのスニペットとして自分で記述します。<span class="notranslate">script</span> で定義した関数は、ビルトインの<a href="Runtime_Functions.htm">ランタイム関数と</a>同様に、式の解決、戻り値、その他<span class="notranslate">GameMaker Language</span> が許可するあらゆることを行うことができます。</p>
-  <p>スクリプト関数は一般に、複数の場所または<span class="notranslate">object</span> で使用するコードブロックがある場合、またはモジュール方式で複数の<span class="notranslate">objects</span> で使用するコードブロックがある場合に使用されるべきです。<span class="notranslate">scripts</span> を使って関数を定義すると、必要なときに一度だけ関数を変更すれば、その関数を呼び出しているすべての<span class="notranslate">object</span> で変更が「反映」されます。</p>
-  <p>スクリプトは、特定のカテゴリに属する関数のグループを作成できるため、整理整頓の観点からも非常に便利です。例えば、ゲーム内でインスタンス間の衝突に関連する関数をいくつか持っている場合、「<span class="inline">Collision_Functions</span> 」<span class="notranslate">script</span> を作成し、その中にこれらの関数をまとめて格納することが可能です。</p>
+  <p>スクリプトアセットは、基本的に1つ以上のユーザー定義関数または変数のコレクションで、<a
+      href="../../The_Asset_Editors/Scripts.htm">スクリプトエディタで</a>コードのスニペットとして自分で記述します。<span
+      class="notranslate">script</span> で定義した関数は、ビルトインの<a href="Runtime_Functions.htm">ランタイム関数と</a>同様に、式の解決、戻り値、その他<span
+      class="notranslate">GameMaker Language</span> が許可するあらゆることを行うことができます。</p>
+  <p>スクリプト関数は一般に、複数の場所または<span class="notranslate">object</span> で使用するコードブロックがある場合、またはモジュール方式で複数の<span
+      class="notranslate">objects</span> で使用するコードブロックがある場合に使用されるべきです。<span class="notranslate">scripts</span>
+    を使って関数を定義すると、必要なときに一度だけ関数を変更すれば、その関数を呼び出しているすべての<span class="notranslate">object</span> で変更が「反映」されます。</p>
+  <p>スクリプトは、特定のカテゴリに属する関数のグループを作成できるため、整理整頓の観点からも非常に便利です。例えば、ゲーム内でインスタンス間の衝突に関連する関数をいくつか持っている場合、「<span
+      class="inline">Collision_Functions</span> 」<span class="notranslate">script</span>
+    を作成し、その中にこれらの関数をまとめて格納することが可能です。</p>
   <p>こちらもご覧ください。<a data-xref="{title}" href="Script_Functions_vs_Methods.htm">スクリプトの関数とメソッドの比較</a></p>
   <h2>関数の作成</h2>
   <p>関数が含まれる<span class="notranslate">script</span> を作成する場合、関数は以下のフォーマットで作成する必要があります。</p>
@@ -36,10 +46,18 @@
     <span>    ...</span><br />
     <span>}</span>
   </p>
-  <p class="note"><span class="notranslate">GML</span> Visual で関数を作成するには、<a data-xref="{title}" href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a> を使用します。その「Temp」オプションを有効にして、メソッド変数を作成します（上に示す2番目の構文）。</p>
-  <p><span class="notranslate">script</span> <span class="notranslate">script</span> つまり、<strong>グローバルな </strong> <a href="Variables_And_Variable_Scope.htm">スコープを</a>持ち、<strong>スクリプトインデックスが</strong>割り当てられ、コンパイラが<span class="notranslate">script</span> 関数として認識するため、 <span class="inline">global</span> という接頭辞は必要ありません。</p>
-  <p>2番目の形式を使用すると、代わりにグローバルスコープの<a href="Method_Variables.htm">メソッド変数が</a>生成されます。そのため、<span class="notranslate">script</span> では<span class="notranslate">IDE</span> 関数として認識さ<em>れず </em>、コード内で参照する場合は <span class="inline">global</span> というプレフィックスを使用する必要があります。</p>
-  <p class="note"><span class="note">注</span>:<span class="notranslate">script</span> で両方のフォームを使用し、それぞれに対して実行時の関数<a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a>を呼び出すことで確認することができます。一方は「数値」として分類され、<span class="notranslate">script</span> インデックス ID を返すので、もう一方は「メソッド」として分類されます。</p>
+  <p class="note"><span class="notranslate">GML</span> Visual で関数を作成するには、<a data-xref="{title}"
+      href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>
+    を使用します。その「Temp」オプションを有効にして、メソッド変数を作成します（上に示す2番目の構文）。</p>
+  <p><span class="notranslate">script</span> <span class="notranslate">script</span> つまり、<strong>グローバルな </strong> <a
+      href="Variables_And_Variable_Scope.htm">スコープを</a>持ち、<strong>スクリプトインデックスが</strong>割り当てられ、コンパイラが<span
+      class="notranslate">script</span> 関数として認識するため、 <span class="inline">global</span> という接頭辞は必要ありません。</p>
+  <p>2番目の形式を使用すると、代わりにグローバルスコープの<a href="Method_Variables.htm">メソッド変数が</a>生成されます。そのため、<span
+      class="notranslate">script</span> では<span class="notranslate">IDE</span> 関数として認識さ<em>れず </em>、コード内で参照する場合は <span
+      class="inline">global</span> というプレフィックスを使用する必要があります。</p>
+  <p class="note"><span class="note">注</span>:<span class="notranslate">script</span> で両方のフォームを使用し、それぞれに対して実行時の関数<a
+      href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a>を呼び出すことで確認することができます。一方は「数値」として分類され、<span
+      class="notranslate">script</span> インデックス ID を返すので、もう一方は「メソッド」として分類されます。</p>
   <h2>パラメータ/引数</h2>
   <p>関数に対して独自のパラメータ/引数を定義することができ、これらはローカル変数としてその関数内で任意の目的に使用することができます。</p>
   <p class="code">function move(<strong>spd, dir</strong>)<br />
@@ -47,27 +65,36 @@
         speed = <strong>spd</strong>;<br />
         direction = <strong>dir</strong>;<br />
     }</p>
-  <p>この関数は2つの引数を取り、その値をインスタンスの変数 <span class="inline">speed</span> と <span class="inline">direction</span> に適用します。この関数は<span class="notranslate">runtime</span> の関数と同様に呼び出すことができ、引数を渡すことができます。</p>
+  <p>この関数は2つの引数を取り、その値をインスタンスの変数 <span class="inline">speed</span> と <span class="inline">direction</span>
+    に適用します。この関数は<span class="notranslate">runtime</span> の関数と同様に呼び出すことができ、引数を渡すことができます。</p>
   <p class="code">var _mouse_dir = point_direction(x, y, mouse_x, mouse_y);<br />
     <br />
     <strong>move(4, _mouse_dir);</strong>
   </p>
   <h2>オプションの引数</h2>
-  <p>関数に引数が与えられない場合、その値は<span class="inline">undefined</span> となります。これを利用して<em>オプションの</em>引数を定義し、引数が渡されたかどうかを <span class="inline">undefined</span> と等しいかどうかでチェックすることができます。 しかし、引数にデフォルト値を明示的に定義して、それが渡されないときに <span class="inline">undefined</span> の代わりに使われるようにすることも可能です。</p>
+  <p>関数に引数が与えられない場合、その値は<span class="inline">undefined</span> となります。これを利用して<em>オプションの</em>引数を定義し、引数が渡されたかどうかを <span
+      class="inline">undefined</span> と等しいかどうかでチェックすることができます。 しかし、引数にデフォルト値を明示的に定義して、それが渡されないときに <span
+      class="inline">undefined</span> の代わりに使われるようにすることも可能です。</p>
   <p>このようなデフォルト値は、等号(<span class="inline">=</span>)を使ってパラメータに代入し、オプション変数とすることができます。</p>
   <p class="code">function move(spd, <strong>dir = 90</strong>)<br />
     {<br />
         speed = spd;<br />
         direction = dir;<br />
     }</p>
-  <p>上記の関数を呼び出す際に引数 <span class="inline">dir</span> を渡さなかった場合、その値はデフォルトで <span class="inline">90</span> になり、インスタンスは上方向に移動します。</p>
-  <p class="note"><span class="tip">ヒント</span>関数の呼び出しで引数を省略すると、 <span class="inline">undefined</span> （または関数で定義されたその引数のデフォルト値）がデフォルトになります。<br />
+  <p>上記の関数を呼び出す際に引数 <span class="inline">dir</span> を渡さなかった場合、その値はデフォルトで <span class="inline">90</span>
+    になり、インスタンスは上方向に移動します。</p>
+  <p class="note"><span class="tip">ヒント</span>関数の呼び出しで引数を省略すると、 <span class="inline">undefined</span>
+    （または関数で定義されたその引数のデフォルト値）がデフォルトになります。<br />
     <br />
-    例えば、<span class="inline">my_func(0,,,1)</span> と書くと、<span class="inline">my_func(0, undefined, undefined, 1)</span> と書くのと同じになります。
+    例えば、<span class="inline">my_func(0,,,1)</span> と書くと、<span class="inline">my_func(0, undefined, undefined, 1)</span>
+    と書くのと同じになります。
   </p>
   <hr />
-  <p>オプショナル変数のデフォルト値は式にすることができるので、例えば、オプショナル変数を定義しながら変数を使用したり、関数を呼び出したりすることができます。このような式は、そのオプション引数が関数呼び出しで提供されない場合にのみ実行されることに注意してください。次のロギング関数の例をご覧ください。</p>
-  <p class="code">function log(text = &quot;Log&quot;, object = object_index, time = date_datetime_string(date_current_datetime()))<br />
+  <p>
+    オプショナル変数のデフォルト値は式にすることができるので、例えば、オプショナル変数を定義しながら変数を使用したり、関数を呼び出したりすることができます。このような式は、そのオプション引数が関数呼び出しで提供されない場合にのみ実行されることに注意してください。次のロギング関数の例をご覧ください。
+  </p>
+  <p class="code">function log(text = &quot;Log&quot;, object = object_index, time =
+    date_datetime_string(date_current_datetime()))<br />
     {<br />
         var _string = &quot;[&quot; + string(time) + &quot;] &quot;;<br />
         _string += object_get_name(object) + &quot;: &quot;;<br />
@@ -75,7 +102,9 @@
         <br />
         show_debug_message(_string);<br />
     }</p>
-  <p>この関数は 3 つの引数を取ります。第 1 引数のデフォルトは<span class="notranslate">string</span> 定数、第 2 引数のデフォルトはインスタンス変数（呼び出し元のインスタンスのスコープ内）、第 3 引数のデフォルトは現在の日付と時刻を取得する関数を呼び出した式です。この関数は、次の例に見られるように、最大3つの引数で呼び出すことができるようになりました。</p>
+  <p>この関数は 3 つの引数を取ります。第 1 引数のデフォルトは<span class="notranslate">string</span> 定数、第 2
+    引数のデフォルトはインスタンス変数（呼び出し元のインスタンスのスコープ内）、第 3
+    引数のデフォルトは現在の日付と時刻を取得する関数を呼び出した式です。この関数は、次の例に見られるように、最大3つの引数で呼び出すことができるようになりました。</p>
   <p class="code">log();<br />
     // Prints: [09-Jun-21 12:34:37 PM] Object1: Log<br />
     <br />
@@ -83,7 +112,9 @@
     // Prints: [10] obj_player: Player Shot
   </p>
   <h2>ジェーディーオーシー</h2>
-  <p>また、関数のプロパティを定義するコメントを追加することをお勧めします（詳細は<a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JSDocコメントの</a>セクションをご覧ください）。例えば、簡単な<span class="notranslate">script</span> は次のようになります。</p>
+  <p>また、関数のプロパティを定義するコメントを追加することをお勧めします（詳細は<a
+      href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JSDocコメントの</a>セクションをご覧ください）。例えば、簡単な<span
+      class="notranslate">script</span> は次のようになります。</p>
   <p class="code">/// @function                 log(message);<br />
     /// @param {string}  message  The message to show<br />
     /// @description              Show a message whenever the function is called.<br />
@@ -93,12 +124,18 @@
         show_debug_message(message);<br />
     }
   </p>
-  <p><span class="notranslate">script</span> の機能は，上記と同じフォーマットで<span class="notranslate">script</span> <span class="notranslate">asset</span> 内に順次追加していくことが可能である。</p>
-  <p><img alt="Multiple Functions In One Script" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/Multiple_Functions_Scripts.png" /></p>
+  <p><span class="notranslate">script</span> の機能は，上記と同じフォーマットで<span class="notranslate">script</span> <span
+      class="notranslate">asset</span> 内に順次追加していくことが可能である。</p>
+  <p><img alt="Multiple Functions In One Script" class="center"
+      src="../../assets/Images/Scripting_Reference/GML/Overview/Multiple_Functions_Scripts.png" /></p>
   <h2>戻り値</h2>
-  <p><span class="notranslate">scripts</span> の関数も<span class="notranslate">runtime</span> の関数と同様に値を返すことができますので、式の中で使用することができます。この場合 <a href="Language_Features/return.htm"><span class="inline">return</span></a>という文を使います。</p>
+  <p><span class="notranslate">scripts</span> の関数も<span class="notranslate">runtime</span>
+    の関数と同様に値を返すことができますので、式の中で使用することができます。この場合 <a href="Language_Features/return.htm"><span
+        class="inline">return</span></a>という文を使います。</p>
   <p class="code">return &lt;expression&gt;</p>
-  <p>という点に注意する必要があります。 <strong><i>関数の実行は return 文で終了する</i></strong>これは、<strong>returnの </strong>後に呼び出されたコードは<i>実行</i>されないことを意味します。以下は &quot;<span class="inline">sqr_calc</span>&quot; という関数の短い例で、渡された値の2乗を計算します。渡された値が実数でない場合は<strong>return</strong>で関数を早めに終了させ、実際の計算が行われないようにしています。</p>
+  <p>という点に注意する必要があります。 <strong><i>関数の実行は return 文で終了する</i></strong>これは、<strong>returnの
+    </strong>後に呼び出されたコードは<i>実行</i>されないことを意味します。以下は &quot;<span class="inline">sqr_calc</span>&quot;
+    という関数の短い例で、渡された値の2乗を計算します。渡された値が実数でない場合は<strong>return</strong>で関数を早めに終了させ、実際の計算が行われないようにしています。</p>
   <p class="code">/// @function           sqr_calc(val);<br />
     /// @param {real}  val  The value to calculate the square of<br />
     /// @description        Calculate the square of the given value<br />
@@ -113,15 +150,24 @@
         return (val * val);<br />
     }
   </p>
-  <p><span class="notranslate">script</span> 関数を作成し、戻り値をチェック<em>した</em>場合、デフォルトで <span class="inline">undefined</span> という値が得られることに注意してください。</p>
-  <p>コード内から<span class="notranslate">script</span> 関数を呼び出すには、<span class="notranslate">runtime</span> 関数を呼び出す場合と同じように、関数名を括弧で括って記述します。つまり、上記の<span class="notranslate">script</span> は、次のように呼び出すことになります。</p>
+  <p><span class="notranslate">script</span> 関数を作成し、戻り値をチェック<em>した</em>場合、デフォルトで <span class="inline">undefined</span>
+    という値が得られることに注意してください。</p>
+  <p>コード内から<span class="notranslate">script</span> 関数を呼び出すには、<span class="notranslate">runtime</span>
+    関数を呼び出す場合と同じように、関数名を括弧で括って記述します。つまり、上記の<span class="notranslate">script</span> は、次のように呼び出すことになります。</p>
   <p class="code">if keyboard_check_pressed(vk_enter)<br />
     {<br />
         val = sqr_calc(amount);<br />
     }</p>
-  <p class="note"><strong>注</strong>：コードエディターで<span class="notranslate">scripts</span> から独自の関数を使用する場合は、以下のように<span> <img></span>を押すか、関数名の上でマウスの中ボタン <span><img> </span>を押すと、その関数を含む<span class="notranslate">script</span> が開き、直接編集することができます。</p>
+  <p class="note"><strong>注</strong>：コードエディタで<span class="notranslate">scripts</span> から独自の関数を使用する場合は、以下のように<span>
+      <img></span>を押すか、関数名の上でマウスの中ボタン <span><img> </span>を押すと、その関数を含む<span class="notranslate">script</span>
+    が開き、直接編集することができます。</p>
   <h2>スクリプト名と関数名</h2>
-  <p><span class="notranslate">script</span> <span class="notranslate">scripts</span> つまり、すべてのAI関数を<span class="notranslate">script</span> &quot;<span class="inline">Enemy_AI</span>&quot; に入れることができます（英数字とアンダーバー&quot;_&quot;のみという標準的な<span class="notranslate">asset</span> の命名規則に従っています）。しかし、ゲーム内で<span class="notranslate">scripts</span> を呼び出すことはできます。また、<span class="notranslate">scripts</span> に定義した関数と同じ名前を付けることもできます。これは、<span data-keyref="GameMaker Name">GameMaker</span>が<span class="notranslate">asset</span> の参照を保存する方法によって問題が発生する可能性があります。例として、インスタンスから呼び出される次のようなコードを考えてみましょう。</p>
+  <p><span class="notranslate">script</span> <span class="notranslate">scripts</span> つまり、すべてのAI関数を<span
+      class="notranslate">script</span> &quot;<span class="inline">Enemy_AI</span>&quot;
+    に入れることができます（英数字とアンダーバー&quot;_&quot;のみという標準的な<span class="notranslate">asset</span> の命名規則に従っています）。しかし、ゲーム内で<span
+      class="notranslate">scripts</span> を呼び出すことはできます。また、<span class="notranslate">scripts</span>
+    に定義した関数と同じ名前を付けることもできます。これは、<span data-keyref="GameMaker Name">GameMaker</span>が<span
+      class="notranslate">asset</span> の参照を保存する方法によって問題が発生する可能性があります。例として、インスタンスから呼び出される次のようなコードを考えてみましょう。</p>
   <p class="code">function indirectCall(func, arg)<br />
     {<br />
         func(arg);<br />
@@ -129,7 +175,11 @@
     <br />
     indirectCall(myscript, arg);
   </p>
-  <p>上記のコードは、メソッド内で「myscript」という<span class="notranslate">script</span> を呼び出そうとしています。この場合、失敗します。これは、インライン関数が実際には<span class="notranslate">script</span> <span class="notranslate">asset</span> の<em>インデックスを</em>使用しており<strong>、 </strong>実際には<span class="notranslate">script</span> 関数を呼び出していないからです。例えば、<span class="notranslate">script</span> のインデックスが &quot;4&quot; に解決される場合、この関数は本質的に <span class="inline">4(arg);</span> を呼び出しており、これは意味がありません。このため、コードは次の2つの方法のどちらかで構成する必要があります。</p>
+  <p>上記のコードは、メソッド内で「myscript」という<span class="notranslate">script</span> を呼び出そうとしています。この場合、失敗します。これは、インライン関数が実際には<span
+      class="notranslate">script</span> <span class="notranslate">asset</span> の<em>インデックスを</em>使用しており<strong>、
+    </strong>実際には<span class="notranslate">script</span> 関数を呼び出していないからです。例えば、<span class="notranslate">script</span>
+    のインデックスが &quot;4&quot; に解決される場合、この関数は本質的に <span class="inline">4(arg);</span>
+    を呼び出しており、これは意味がありません。このため、コードは次の2つの方法のどちらかで構成する必要があります。</p>
   <p class="code">function indirectCall(func, arg)<br />
     {<br />
         func(arg);<br />
@@ -145,10 +195,17 @@
     <br />
     indirectCall(myscript, arg);
   </p>
-  <p>特に、レガシーなプロジェクトで、<span class="notranslate">scripts</span> が一つの関数を含んでいて、その関数が<span class="notranslate">script</span> と同じ名前になっている場合、注意が必要です。 しかし、これは<em>絶対にやっては</em>いけません。<span class="notranslate">scripts</span> は、それが含む関数と独立して名前を付ける必要があります。</p>
+  <p>特に、古いプロジェクトで、<span class="notranslate">scripts</span> が一つの関数を含んでいて、その関数が<span class="notranslate">script</span>
+    と同じ名前になっている場合、注意が必要です。 しかし、これは<em>絶対にやっては</em>いけません。<span class="notranslate">scripts</span>
+    は、それが含む関数と独立して名前を付ける必要があります。</p>
   <div data-conref="../../assets/snippets/Script_empty_reference_error.hts"> </div>
   <h2>スクリプトスコープ</h2>
-  <p>このことから、<span class="notranslate">scripts</span> とそれに含まれる関数について知っておくべき最後の、そして最も重要なことがわかります。<span class="notranslate">scripts</span> は<b>グローバル</b>レベルで解析され、<strong>ゲームの一番最初の段階でコンパイル</strong>されます。つまり、<em>技術的には</em> <span class="notranslate">script</span> 内のすべての関数は「束縛されない」<a href="Method_Variables.htm">メソッド変数</a>であり、<span class="notranslate">script</span> 内の関数の外で宣言された変数は<a href="Variables/Global_Variables.htm">グローバル変数と</a>みなされます。たとえば、次のようなスクリプトを考えてみましょう。</p>
+  <p>このことから、<span class="notranslate">scripts</span> とそれに含まれる関数について知っておくべき最後の、そして最も重要なことがわかります。<span
+      class="notranslate">scripts</span> は<b>グローバル</b>レベルで解析され、<strong>ゲームの一番最初の段階でコンパイル</strong>されます。つまり、<em>技術的には</em>
+    <span class="notranslate">script</span> 内のすべての関数は「束縛されない」<a href="Method_Variables.htm">メソッド変数</a>であり、<span
+      class="notranslate">script</span> 内の関数の外で宣言された変数は<a
+      href="Variables/Global_Variables.htm">グローバル変数と</a>みなされます。たとえば、次のようなスクリプトを考えてみましょう。
+  </p>
   <p class="code">function Foo()<br />
     {<br />
         // Do something<br />
@@ -158,9 +215,16 @@
     {<br />
         // Do something else<br />
     }</p>
-  <p>上記の場合、関数 <span class="inline">Foo</span> と <span class="inline">Bar</span> だけでなく、変数 <span class="inline">blah</span> も定義しており、これらはすべて<b>グローバル</b>スコープで作成されたものとみなされます。コンパイラはこれらの関数が<span class="notranslate">script</span> の一部であると理解するので、これらの関数を認識するために <span class="inline">global</span> キーワードを必要としませんが、もし <span class="inline">blah</span> にアクセスしたい場合は、そのようにする必要があります。</p>
+  <p>上記の場合、関数 <span class="inline">Foo</span> と <span class="inline">Bar</span> だけでなく、変数 <span
+      class="inline">blah</span> も定義しており、これらはすべて<b>グローバル</b>スコープで作成されたものとみなされます。コンパイラはこれらの関数が<span
+      class="notranslate">script</span> の一部であると理解するので、これらの関数を認識するために <span class="inline">global</span>
+    キーワードを必要としませんが、もし <span class="inline">blah</span> にアクセスしたい場合は、そのようにする必要があります。</p>
   <p class="code">val = global.blah;</p>
-  <p><span class="notranslate">scripts</span> <span class="notranslate">Scripts</span> は<strong>マクロや</strong> <strong>Enum</strong><a href="Variables/Constants.htm">（定数</a>）を定義するのに理想的な場所です。関数の外で に追加すると、ゲームコードが実際に実行される前に使用するために作成されることになるからです。以下は、 、ゲームに異なるグローバルスコープの値を作成する例です。<span class="notranslate">script</span> <span class="notranslate">script</span> </p>
+  <p><span class="notranslate">scripts</span> <span class="notranslate">Scripts</span> は<strong>マクロや</strong>
+    <strong>Enum</strong><a href="Variables/Constants.htm">（定数</a>）を定義するのに理想的な場所です。関数の外で
+    に追加すると、ゲームコードが実際に実行される前に使用するために作成されることになるからです。以下は、 、ゲームに異なるグローバルスコープの値を作成する例です。<span
+      class="notranslate">script</span> <span class="notranslate">script</span>
+  </p>
   <p class="code">/// Initialise All Global Scope Values And Constants<br />
     global.player_score = 0;<br />
     global.player_hp = 100;<br />
@@ -184,7 +248,9 @@
     #macro weapon_bomb 1<br />
     #macro weapon_knife 2
   </p>
-  <p>これらの定数は、関数呼び出しの外で設定されています。つまり、<em>グローバル </em>スコープで他のすべてのものより先に初期化されます。つまり、この定数は他のすべての関数よりも先に、グローバルスコープで初期化されます。このため、スクリプトで<em>インスタンス </em>スコープの変数を初期化したい場合は、たとえば関数でラップしなければなりません。</p>
+  <p>これらの定数は、関数呼び出しの外で設定されています。つまり、<em>グローバル
+    </em>スコープで他のすべてのものより先に初期化されます。つまり、この定数は他のすべての関数よりも先に、グローバルスコープで初期化されます。このため、スクリプトで<em>インスタンス
+    </em>スコープの変数を初期化したい場合は、たとえば関数でラップしなければなりません。</p>
   <p class="code">/// @function                init_enemy();<br />
     /// @description             Initialise enemy instance vars<br />
     <br />
@@ -195,10 +261,17 @@
         mana = 50;<br />
     }
   </p>
-  <p>そこで、<span class="notranslate">scripts</span> 、ゲーム開始前にマクロ、列挙型、グローバル変数を生成して、いつでも使えるようにすることができます。また、<span class="notranslate">GML</span> <span class="notranslate">runtime</span> 関数のようにゲーム内で使える「未束縛」メソッド（ユーザー定義関数）の生成にも使用できます。</p>
-  <p><span class="notranslate">script</span> 関数について最後に注意しておきたいのは、<strong>Web </strong> 用に開発している場合（つまり<strong>HTML5</strong> をターゲットにしている場合）、関数を<span class="notranslate">scripts</span> に追加する際に使用できる追加の関数プロトコルがあります。これは、関数名の前に <span class="inline">gmcallback_</span> を付けるというもので、例えば次のようになります。</p>
+  <p>そこで、<span class="notranslate">scripts</span> 、ゲーム開始前にマクロ、列挙型、グローバル変数を生成して、いつでも使えるようにすることができます。また、<span
+      class="notranslate">GML</span> <span class="notranslate">runtime</span>
+    関数のようにゲーム内で使える「未束縛」メソッド（ユーザー定義関数）の生成にも使用できます。</p>
+  <p><span class="notranslate">script</span> 関数について最後に注意しておきたいのは、<strong>Web </strong>
+    用に開発している場合（つまり<strong>HTML5</strong> をターゲットにしている場合）、関数を<span class="notranslate">scripts</span>
+    に追加する際に使用できる追加の関数プロトコルがあります。これは、関数名の前に <span class="inline">gmcallback_</span> を付けるというもので、例えば次のようになります。</p>
   <p class="code">gmcallback_create_button</p>
-  <p>上記の関数名を使用すると、関数 <span class="inline">gmcallback_create_button()</span> は難読化されないので、JavaScript<span class="notranslate">extensions</span> やゲームの他の部分、例えば、以下のような場合に使用できます。 <a href="../GML_Reference/Web_And_HTML5/Web_And_HTML5.htm"><span class="inline">clickable_*</span></a>関数を使用することができます。</p>
+  <p>上記の関数名を使用すると、関数 <span class="inline">gmcallback_create_button()</span> は難読化されないので、JavaScript<span
+      class="notranslate">extensions</span> やゲームの他の部分、例えば、以下のような場合に使用できます。 <a
+      href="../GML_Reference/Web_And_HTML5/Web_And_HTML5.htm"><span class="inline">clickable_*</span></a>関数を使用することができます。
+  </p>
   <h2>静的変数</h2>
   <p>関数では、静的変数を使用することもできます。静的変数は、関数を呼び出すたびにその値を保持します。詳しくは<a href="Functions/Static_Variables.htm">このページを</a>ご覧ください。</p>
   <p> </p>
@@ -206,11 +279,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a href="Method_Variables.htm">メソッド変数</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a href="Method_Variables.htm">メソッド変数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions
@@ -222,4 +296,5 @@ gmcallback
 script_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>matrix_build_projection_perspective</title>
@@ -13,42 +14,51 @@
   <meta name="search-keywords" content="matrix_build_projection_perspective" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">matrix_build_projection_perspective</span></h1>
   <p>この関数は、以下に示す指定されたパラメータを用いて、ニアクリッピング平面の次元に基づく透視投影行列を構築する。</p>
-  <p>引数 <span class="inline">znear</span> で指定された Z 位置に投影幅と高さが配置されるため、指定された <span class="inline">width</span>, <span class="inline">height</span>, <span class="inline">znear</span> の値によってカメラの視野が変化することに注意すること。</p>
-  <p>例えば、640x480の一定サイズであれば、 <span class="inline">znear</span> がカメラに近いと視野は広くなり、 <span class="inline">znear</span> がカメラから遠いと視野は狭くなります。この挙動は、次のビジュアルで実証されています。</p>
+  <p>引数 <span class="inline">znear</span> で指定された Z 位置に投影幅と高さが配置されるため、指定された <span class="inline">width</span>, <span
+      class="inline">height</span>, <span class="inline">znear</span> の値によってカメラの視野が変化することに注意すること。</p>
+  <p>例えば、640x480の一定サイズであれば、 <span class="inline">znear</span> がカメラに近いと視野は広くなり、 <span class="inline">znear</span>
+    がカメラから遠いと視野は狭くなります。この挙動は、次のビジュアルで実証されています。</p>
   <p><img>このため、投影幅と同じ <span class="inline">znear</span> を使用し、等価な正投影図と一致する視野を得ることを推奨する。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">matrix_build_projection_perspective</span>(width, height, znear, zfar);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">matrix_build_projection_perspective</span>(width,
+    height, znear, zfar);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">w</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The width of the projection at the near Z position.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">h</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The height of the projection at the near Z position.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">znear</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">znear</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The near clipping plane.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">zfar</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">zfar</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The far clipping plane.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p>
   <p> </p>
   <h4>例</h4>
@@ -61,11 +71,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Matrix_Functions.htm">マトリクス機能</a></div>
-        <div style="float:right">次のページ <a href="matrix_build_projection_perspective_fov.htm"><span class="notranslate">matrix_build_projection_perspective_fov</span></a></div>
+        <div style="float:left">前のページ：<a href="Matrix_Functions.htm">マトリクス機能</a></div>
+        <div style="float:right">次のページ：<a href="matrix_build_projection_perspective_fov.htm"><span
+              class="notranslate">matrix_build_projection_perspective_fov</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_build_projection_perspective
@@ -74,4 +86,5 @@ matrix_build_projection_perspective
 matrix_build_projection_perspective
 -->
 </body>
+
 </html>

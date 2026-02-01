@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>collision_ellipse</title>
@@ -13,21 +14,36 @@
   <meta name="search-keywords" content="collision_ellipse" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">collision_ellipse</span></h1>
-  <p><span class="inline">Collision_ellipse</span> は、最初の 4 つの引数 (x1,y1,x2,y2) を使って現在の 内の楕円の幅と高さを定義し、次に引数 &quot;obj&quot; で定義されている<span class="notranslate">room</span> <span class="notranslate">object</span> <b>が</b>その領域と衝突しているかどうかをチェックします。この衝突は正確にチェックするかしないか、また、コードを実行しているインスタンス自体をチェックするかしないかを選択することができます。この画像を考えてみましょう。</p>
-  <p><img>ここでは、真ん中のインスタンスが衝突楕円を使用して、ボール<span class="notranslate">objects</span> をチェックしています。さて、青いものは正確なバウンディングボックスを持って<i>いません</i>。ご覧のように、<span class="notranslate">sprite</span> が実際には楕円に触れていなくても、その<span class="notranslate">sprite</span> のバウンディングボックスが collision_circle で定義された楕円の領域をオーバーラップするので、（関数内の precise オプションを true にしても）衝突は起こりえます。一方、緑のボールは、実際の<span class="notranslate">sprite</span> が定義された楕円をオーバーラップしている場合にのみ衝突が考慮されます。正確な衝突を考慮するためには、<span class="notranslate">object</span> <span class="notranslate">sprite</span> と collision 関数の<i>両方で</i>precise が on になっている必要があることを忘れないでください。また、この関数の戻り値には、衝突とみなされるインスタンスの ID を指定することができることにも注意が必要です。</p>
-  <p><span class="notranslate">object</span> インデックスの代わりにインスタンスを指定することができます。 <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a>で特定のインスタンスをチェックするか、<a href="../../../GML_Overview/Instance_Keywords.htm">インスタンスキーワード</a> <span class="inline">all</span>, または <span class="inline">other</span> (イベントと現在のコードスコープによる) をチェックします。</p>
+  <p><span class="inline">Collision_ellipse</span> は、最初の 4 つの引数 (x1,y1,x2,y2) を使って現在の 内の楕円の幅と高さを定義し、次に引数 &quot;obj&quot;
+    で定義されている<span class="notranslate">room</span> <span class="notranslate">object</span>
+    <b>が</b>その領域と衝突しているかどうかをチェックします。この衝突は正確にチェックするかしないか、また、コードを実行しているインスタンス自体をチェックするかしないかを選択することができます。この画像を考えてみましょう。
+  </p>
+  <p><img>ここでは、真ん中のインスタンスが衝突楕円を使用して、ボール<span class="notranslate">objects</span>
+    をチェックしています。さて、青いものは正確なバウンディングボックスを持って<i>いません</i>。ご覧のように、<span class="notranslate">sprite</span>
+    が実際には楕円に触れていなくても、その<span class="notranslate">sprite</span> のバウンディングボックスが collision_circle
+    で定義された楕円の領域をオーバーラップするので、（関数内の precise オプションを true にしても）衝突は起こりえます。一方、緑のボールは、実際の<span
+      class="notranslate">sprite</span> が定義された楕円をオーバーラップしている場合にのみ衝突が考慮されます。正確な衝突を考慮するためには、<span
+      class="notranslate">object</span> <span class="notranslate">sprite</span> と collision 関数の<i>両方で</i>precise が on
+    になっている必要があることを忘れないでください。また、この関数の戻り値には、衝突とみなされるインスタンスの ID を指定することができることにも注意が必要です。</p>
+  <p><span class="notranslate">object</span> インデックスの代わりにインスタンスを指定することができます。 <a
+      href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span
+        class="inline">id</span></a>で特定のインスタンスをチェックするか、<a
+      href="../../../GML_Overview/Instance_Keywords.htm">インスタンスキーワード</a> <span class="inline">all</span>, または <span
+      class="inline">other</span> (イベントと現在のコードスコープによる) をチェックします。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">collision_ellipse</span>(x1, y1, x2, y2, obj, prec, notme);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">collision_ellipse</span>(x1, y1, x2, y2, obj, prec,
+    notme);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x1</span></td>
@@ -51,31 +67,37 @@
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
-        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span
+            data-keyref="Type_ID_Instance">インスタンスID</span></td>
         <td><span class="notranslate">The object to check for instance collisions.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">prec</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the check is based on precise collisions (<span class="inline">true</span>より遅い）、またはそのバウンディングボックス全般（<span class="inline">false</span> 、より速い）。</td>
+        <td><span class="notranslate">Whether the check is based on precise collisions (<span
+              class="inline">true</span>より遅い）、またはそのバウンディングボックス全般（<span class="inline">false</span> 、より速い）。</td>
       </tr>
       <tr>
         <td><span class="notranslate">notme</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
+        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span
+              class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span
+      data-keyref="Type_ID_noone">noone</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">if collision_ellipse(50, 50, 200, 100, obj_Player, false, true)<br />
     {<br />
         instance_create_layer(obj_Player.x, obj_Player.y, &quot;Effects&quot;, obj_Splash);<br />
     }</p>
-  <p>これは<span class="notranslate">object</span> &quot;obj_Player&quot; の 50x, 50y と 200x, 100y の範囲にある楕円形のゾーンをチェックします。もしその<span class="notranslate">object</span> 、衝突があれば、obj_Playerのx/y座標に &quot;obj_Splash &quot;のインスタンスが生成されます。</p>
+  <p>これは<span class="notranslate">object</span> &quot;obj_Player&quot; の 50x, 50y と 200x, 100y
+    の範囲にある楕円形のゾーンをチェックします。もしその<span class="notranslate">object</span> 、衝突があれば、obj_Playerのx/y座標に &quot;obj_Splash
+    &quot;のインスタンスが生成されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -83,11 +105,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Collisions.htm">衝突</a></div>
-        <div style="float:right">次のページ <a href="collision_ellipse_list.htm"><span class="notranslate">collision_ellipse_list</span></a></div>
+        <div style="float:left">前のページ：<a href="Collisions.htm">衝突</a></div>
+        <div style="float:right">次のページ：<a href="collision_ellipse_list.htm"><span
+              class="notranslate">collision_ellipse_list</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 collision_ellipse
@@ -96,4 +120,5 @@ collision_ellipse
 collision_ellipse
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ガベージコレクション</title>
@@ -12,14 +13,36 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Garbage Collection" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ガベージコレクション</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span> <strong>ガーベジコレクタが</strong>存在するのは、メソッドがスタック上に渡され、参照されないまま放置されることがあるからだ。<span class="notranslate">structs</span> や他のいくつかのものと同様、何らかの方法で「クリーンアップ」しなければ、今度はメモリリークを引き起こすことになる。ガベージコレクタはゲームのバックグラウンドで動作し、参照されなくなったものを収集し、最適なメモリ使用量を維持することができるのです。参照解除されたものというのは、一般的に<span class="notranslate">struct</span> や関数が<strong>グローバル </strong>変数や<strong>オブジェクトのインスタンス変数</strong>に（直接でなくとも、他の変数の連鎖によって）接続されていないものを指します。また、<span class="notranslate">scripts</span> の<span class="notranslate">IDE</span> で定義された関数も、暗黙のうちにグローバル化されているため、回収されないことに注意しましょう。</p>
-  <p class="note"><b>注</b>：サーフェス、データ構造、<span class="notranslate">buffers</span> 、その他の動的リソースなどはガベージコレクションさ<b>れず</b>、それらに関連するメモリをクリーンアップするための独自の <span class="inline">destroy</span> 関数を持っていることに注意してください。経験則として、実行時に作成したものが <span class="inline">destroy</span> 関数を持つ場合、それはガベージコレクションされないので、コードで自分で処理する必要があります。この例外は、<span class="notranslate">sequences</span> 、<span class="notranslate">animation curves</span> 、インスタンスです。これらはガベージコレクタを必要と<b>しますが、それでもdestroy関数が呼び出される必要が</b>あります。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerが</span>採用しているガベージコレクションは「世代別」である。つまり、毎フレーム行わなければならない作業を減らすために、<span class="notranslate">objects</span> は「世代」に分けられている。新しい<span class="notranslate">objects</span> は第 0 世代で作成され、それ自体が古くなると古い世代に移されます。一般的な考え方は、しばらくはぶら下がる<span class="notranslate">objects</span> は、削除すべきかどうか継続的にテストする必要はなく、より少ない頻度でチェックできるということです (ここでいう「オブジェクト」とは、ガベージコレクションできるもので、<span class="notranslate">object</span> Browser で定義されている一般的な<span class="notranslate">Asset</span> インスタンス<i>ではない</i>ことに注意してください) 。チェックシステムは世代別ですが、実際のチェックは &quot;インクリメンタル&quot; な方法で行われます。例えば、1 つのフレームで世代から何千もの<span class="notranslate">objects</span> を消去する代わりに、CPU 使用率を大きく上昇させ、ゲームプレイに影響を与える可能性があります - 各世代のチェックと必要な場合は複数のフレームに渡るクリーニングを行いますので、ガベージコレクタはより頻繁に動作しますが、収集中のフレームごとに行う作業は少なくなります（関数 <span class="inline"><a href="gc_target_frame_time.htm">gc_target_frame_time()</a></span> を使用して、各フレームに費やしたいガベージコレクタの目標時間を設定できます）。</p>
-  <p>一般的に、<span data-keyref="GameMaker Name">GameMaker の</span>ガベージコレクションシステムと対話する必要はなく、通常その動作結果は見えませんが、いくつかの<span class="notranslate">GML</span> コマンドは、コレクターが何をしているかについての情報を取得し、その動作に限定的に影響を与えることが可能です。</p>
-  <p class="note"><b>重要!H</b>TML5 ターゲットプラットフォームでは、ガベージコレクションは JavaScript エンジンによって処理されるため、以下のどの関数もその動作に影響を与えず、関数 <span class="inline">gc_get_stats()</span> はすべてのフィールドに対して 0 を返すことに注意してください。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>
+    <strong>ガーベジコレクタが</strong>存在するのは、メソッドがスタック上に渡され、参照されないまま放置されることがあるからだ。<span class="notranslate">structs</span>
+    や他のいくつかのものと同様、何らかの方法で「クリーンアップ」しなければ、今度はメモリリークを引き起こすことになる。ガベージコレクタはゲームのバックグラウンドで動作し、参照されなくなったものを収集し、最適なメモリ使用量を維持することができるのです。参照解除されたものというのは、一般的に<span
+      class="notranslate">struct</span> や関数が<strong>グローバル
+    </strong>変数や<strong>オブジェクトのインスタンス変数</strong>に（直接でなくとも、他の変数の連鎖によって）接続されていないものを指します。また、<span
+      class="notranslate">scripts</span> の<span class="notranslate">IDE</span>
+    で定義された関数も、暗黙のうちにグローバル化されているため、回収されないことに注意しましょう。
+  </p>
+  <p class="note"><b>注</b>：サーフェス、データ構造、<span class="notranslate">buffers</span>
+    、その他の動的リソースなどはガベージコレクションさ<b>れず</b>、それらに関連するメモリをクリーンアップするための独自の <span class="inline">destroy</span>
+    関数を持っていることに注意してください。経験則として、実行時に作成したものが <span class="inline">destroy</span>
+    関数を持つ場合、それはガベージコレクションされないので、コードで自分で処理する必要があります。この例外は、<span class="notranslate">sequences</span> 、<span
+      class="notranslate">animation curves</span> 、インスタンスです。これらはガベージコレクタを必要と<b>しますが、それでもdestroy関数が呼び出される必要が</b>あります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerが</span>採用しているガベージコレクションは「世代別」である。つまり、毎フレーム行わなければならない作業を減らすために、<span
+      class="notranslate">objects</span> は「世代」に分けられている。新しい<span class="notranslate">objects</span> は第 0
+    世代で作成され、それ自体が古くなると古い世代に移されます。一般的な考え方は、しばらくはぶら下がる<span class="notranslate">objects</span>
+    は、削除すべきかどうか継続的にテストする必要はなく、より少ない頻度でチェックできるということです (ここでいう「オブジェクト」とは、ガベージコレクションできるもので、<span
+      class="notranslate">object</span> Browser で定義されている一般的な<span class="notranslate">Asset</span>
+    インスタンス<i>ではない</i>ことに注意してください) 。チェックシステムは世代別ですが、実際のチェックは &quot;インクリメンタル&quot; な方法で行われます。例えば、1 つのフレームで世代から何千もの<span
+      class="notranslate">objects</span> を消去する代わりに、CPU 使用率を大きく上昇させ、ゲームプレイに影響を与える可能性があります -
+    各世代のチェックと必要な場合は複数のフレームに渡るクリーニングを行いますので、ガベージコレクタはより頻繁に動作しますが、収集中のフレームごとに行う作業は少なくなります（関数 <span class="inline"><a
+        href="gc_target_frame_time.htm">gc_target_frame_time()</a></span> を使用して、各フレームに費やしたいガベージコレクタの目標時間を設定できます）。</p>
+  <p>一般的に、<span data-keyref="GameMaker Name">GameMaker の</span>ガベージコレクションシステムと対話する必要はなく、通常その動作結果は見えませんが、いくつかの<span
+      class="notranslate">GML</span> コマンドは、コレクターが何をしているかについての情報を取得し、その動作に限定的に影響を与えることが可能です。</p>
+  <p class="note"><b>重要!H</b>TML5 ターゲットプラットフォームでは、ガベージコレクションは JavaScript エンジンによって処理されるため、以下のどの関数もその動作に影響を与えず、関数 <span
+      class="inline">gc_get_stats()</span> はすべてのフィールドに対して 0 を返すことに注意してください。</p>
   <ul class="colour">
     <li><a href="gc_enable.htm"><span class="notranslate">gc_enable</span></a></li>
     <li><a href="gc_is_enabled.htm"><span class="notranslate">gc_is_enabled</span></a></li>
@@ -29,7 +52,10 @@
     <li><a href="gc_get_stats.htm"><span class="notranslate">gc_get_stats</span></a></li>
   </ul>
   <p> </p>
-  <p>何がいつガベージコレクションされるかを決めるために、<span class="notranslate">structs</span> への<strong>弱い参照を</strong>作成したりチェックしたりするために使用できる関数もいくつか用意されています。弱い参照とは、参照された<span class="notranslate">object</span> をガベージコレクタによる収集から保護しない参照です。そのため、ゲーム内のどこかで<span class="notranslate">struct</span> がまだ「生きている」（参照されている）かどうかを確認するために使用することができ ます。弱参照で利用できる関数は次のとおりです。</p>
+  <p>何がいつガベージコレクションされるかを決めるために、<span class="notranslate">structs</span>
+    への<strong>弱い参照を</strong>作成したりチェックしたりするために使用できる関数もいくつか用意されています。弱い参照とは、参照された<span class="notranslate">object</span>
+    をガベージコレクタによる収集から保護しない参照です。そのため、ゲーム内のどこかで<span class="notranslate">struct</span>
+    がまだ「生きている」（参照されている）かどうかを確認するために使用することができ ます。弱参照で利用できる関数は次のとおりです。</p>
   <ul class="colour">
     <li><a href="weak_ref_create.htm"><span class="notranslate">weak_ref_create</span></a></li>
     <li><a href="weak_ref_alive.htm"><span class="notranslate">weak_ref_alive</span></a></li>
@@ -41,11 +67,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a href="../Variable_Functions/Variable_Functions.htm">変数関数</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a href="../Variable_Functions/Variable_Functions.htm">変数関数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Reference
@@ -54,4 +81,5 @@ GML Reference
 gml_reference
 -->
 </body>
+
 </html>

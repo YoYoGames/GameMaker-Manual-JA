@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_linear_path</title>
@@ -13,44 +14,59 @@
   <meta name="search-keywords" content="mp_linear_path" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">mp_linear_path</span></h1>
-  <p>この関数は、現在のインスタンス位置から &quot;xgoal &quot;と &quot;ygoal &quot;の値で指定された点までの直線<span class="notranslate">path</span> を計算する。この関数では、指定されたステップサイズ、つまり、関数 <a href="mp_linear_step.htm"><span class="inline">mp_linear_step()</span></a>.指定された<span class="notranslate">path</span> はすでに存在しなければならず、新しい<span class="notranslate">path</span> で上書きされます。この関数は、完全な<span class="notranslate">path</span> が見つかった場合 (true) か、そうでない場合 (false) を返します。false が返された場合，<span class="notranslate">path</span> が生成されますが，<span class="notranslate">path</span> がブロックされた位置までしか実行されません．</p>
-  <p class="note"><b>注</b>：この関数はインスタンスを移動させません。これは<span class="notranslate">path</span> を設定するだけで、移動には<a href="../../Asset_Management/Paths/Paths.htm">Path</a>関数を使用する必要があります。</p>
+  <p>この関数は、現在のインスタンス位置から &quot;xgoal &quot;と &quot;ygoal &quot;の値で指定された点までの直線<span class="notranslate">path</span>
+    を計算する。この関数では、指定されたステップサイズ、つまり、関数 <a href="mp_linear_step.htm"><span
+        class="inline">mp_linear_step()</span></a>.指定された<span class="notranslate">path</span> はすでに存在しなければならず、新しい<span
+      class="notranslate">path</span> で上書きされます。この関数は、完全な<span class="notranslate">path</span> が見つかった場合 (true) か、そうでない場合
+    (false) を返します。false が返された場合，<span class="notranslate">path</span> が生成されますが，<span class="notranslate">path</span>
+    がブロックされた位置までしか実行されません．</p>
+  <p class="note"><b>注</b>：この関数はインスタンスを移動させません。これは<span class="notranslate">path</span> を設定するだけで、移動には<a
+      href="../../Asset_Management/Paths/Paths.htm">Path</a>関数を使用する必要があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">mp_linear_path</span>(path, xgoal, ygoal, stepsize, checkall);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">mp_linear_path</span>(path, xgoal, ygoal, stepsize,
+    checkall);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">path</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The index of the path to be used.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">xgoal</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">xgoal</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The target x position.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">ygoal</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">ygoal</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The target y position.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">stepsize</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">stepsize</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The speed the instance moves in pixels per step.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">checkall</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">Whether to check for collisions with all instances (true) or just solid ones (false).</span></td>
-     </tr>
+        <td><span class="notranslate">checkall</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Whether to check for collisions with all instances (true) or just solid ones
+            (false).</span></td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -58,18 +74,21 @@
     {<br />
         path_start(path, 2, 0, 0);<br />
     }</p>
-  <p>これは、<span class="notranslate">object</span> 、現在の位置からobj_Playerの位置まで直線的な<span class="notranslate">path</span> があるかどうかをチェックするようになります。もし存在すれば、<span class="notranslate">path</span> を開始します。</p>
+  <p>これは、<span class="notranslate">object</span> 、現在の位置からobj_Playerの位置まで直線的な<span class="notranslate">path</span>
+    があるかどうかをチェックするようになります。もし存在すれば、<span class="notranslate">path</span> を開始します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
-        <div style="float:right">次のページ <a href="mp_linear_path_object.htm"><span class="notranslate">mp_linear_path_object</span></a></div>
+        <div style="float:left">前のページ：<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ：<a href="mp_linear_path_object.htm"><span
+              class="notranslate">mp_linear_path_object</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_linear_path
@@ -78,4 +97,5 @@ mp_linear_path
 mp_linear_path
 -->
 </body>
+
 </html>

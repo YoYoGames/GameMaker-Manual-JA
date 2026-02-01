@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instance_change</title>
@@ -13,21 +14,33 @@
   <meta name="search-keywords" content="instance_change" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">instance_change</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
-  <p>この関数を使用して、あるインスタンス<span class="notranslate">object</span> を別のインスタンス<span class="notranslate">object</span> に変更し、その際に最初のインスタンスの Destroy と Clean Up Event と新しいインスタンスの Create Event を実行するかどうかを決定することができる。この場合、爆弾の Destroy イベントと Clean Up イベント、および爆発の Create イベントを実行させたいので、「perf」引数はおそらく true になります。</p>
-  <p>インスタンスを変更するということは、そのインスタンスに対して次のステップまで何もしないこと、特に変数にアクセスしようとするとエラーが発生することを意味します。基本的に、インスタンスを変更しても、現在のステップが終了するまで実際には使用できないので、そのインスタンスが含む変数に直接アクセスすることはできません（たとえば、 <span class="inline">obj_Changed.x</span> を呼び出すなど）。</p>
-  <p class="note"><b>警告!物</b>理演算が有効なインスタンスを変更した場合、その物理特性は変更先のインスタンスに<b>引き継が</b>れません。そのため、現在のインスタンスの物理状態を新しいインスタンスに「転送」するコードを用意するか、新しいインスタンスの物理プロパティをその作成イベントまたは<span class="notranslate">object</span> エディタで定義しておく必要があります。このため、物理演算が可能なインスタンスにはこの関数を使用せず、むしろ <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span>および<span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>。</p>
+  <h1><span data-field="title" data-format="default">instance_change</span> <span
+      data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
+  <p>この関数を使用して、あるインスタンス<span class="notranslate">object</span> を別のインスタンス<span class="notranslate">object</span>
+    に変更し、その際に最初のインスタンスの Destroy と Clean Up Event と新しいインスタンスの Create Event を実行するかどうかを決定することができる。この場合、爆弾の Destroy イベントと
+    Clean Up イベント、および爆発の Create イベントを実行させたいので、「perf」引数はおそらく true になります。</p>
+  <p>
+    インスタンスを変更するということは、そのインスタンスに対して次のステップまで何もしないこと、特に変数にアクセスしようとするとエラーが発生することを意味します。基本的に、インスタンスを変更しても、現在のステップが終了するまで実際には使用できないので、そのインスタンスが含む変数に直接アクセスすることはできません（たとえば、
+    <span class="inline">obj_Changed.x</span> を呼び出すなど）。
+  </p>
+  <p class="note">
+    <b>警告!物</b>理演算が有効なインスタンスを変更した場合、その物理特性は変更先のインスタンスに<b>引き継が</b>れません。そのため、現在のインスタンスの物理状態を新しいインスタンスに「転送」するコードを用意するか、新しいインスタンスの物理プロパティをその作成イベントまたは<span
+      class="notranslate">object</span> エディタで定義しておく必要があります。このため、物理演算が可能なインスタンスにはこの関数を使用せず、むしろ <span
+      style="font-size:1px;"><span class="inline">instance_destroy()</span></span>および<span><span
+        style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
@@ -37,12 +50,13 @@
       <tr>
         <td><span class="notranslate">perf</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether to perform that new object&#39;s Create and Destroy events (true) or not (false).</span></td>
+        <td><span class="notranslate">Whether to perform that new object&#39;s Create and Destroy events (true) or not
+            (false).</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -51,18 +65,21 @@
         instance_change(obj_Player_Swimming, false);<br />
         exit;<br />
     }</p>
-  <p>上記のコードは、ユーザーが &quot;Enter &quot;キーを押したときに、元のインスタンスのdestroyイベントや新しいインスタンスのcreateイベントを実行せずに、呼び出し元のインスタンスを &quot;obj_Player_Swimming &quot;のインスタンスに変更し、完了したらコードブロックを終了させるものです。</p>
+  <p>上記のコードは、ユーザーが &quot;Enter &quot;キーを押したときに、元のインスタンスのdestroyイベントや新しいインスタンスのcreateイベントを実行せずに、呼び出し元のインスタンスを
+    &quot;obj_Player_Swimming &quot;のインスタンスに変更し、完了したらコードブロックを終了させるものです。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instances.htm">インスタンス</a></div>
-        <div style="float:right">次のページ <a href="instance_copy.htm"><span class="notranslate">instance_copy</span></a></div>
+        <div style="float:left">前のページ：<a href="Instances.htm">インスタンス</a></div>
+        <div style="float:right">次のページ：<a href="instance_copy.htm"><span class="notranslate">instance_copy</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_change
@@ -71,4 +88,5 @@ instance_change
 instance_change
 -->
 </body>
+
 </html>

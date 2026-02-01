@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シェーダー定数</title>
@@ -9,47 +10,63 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different Shader Constants" />
-  <meta name="rh-index-keywords" content="gm_Matrices,MATRIX_VIEW,MATRIX_PROJECTION,MATRIX_WORLD,MATRIX_WORLD_VIEW,MATRIX_WORLD_VIEW_PROJECTION,MATRIX_MAX,MAX_VS_LIGHTS,gm_BaseTexture,gm_LightingEnabled,gm_FogStart,gm_RcpFogRange,gm_PS_FogEnabled,gm_FogColour,gm_VS_FogEnabled,gm_AlphaTestEnabled,gm_AlphaRefValue" />
-  <meta name="search-keywords" content="Shader Constants,gm_Matrices,MATRIX_VIEW,MATRIX_PROJECTION,MATRIX_WORLD,MATRIX_WORLD_VIEW,MATRIX_WORLD_VIEW_PROJECTION,MATRIX_MAX,MAX_VS_LIGHTS,gm_BaseTexture,gm_LightingEnabled,gm_FogStart,gm_RcpFogRange,gm_PS_FogEnabled,gm_FogColour,gm_VS_FogEnabled,gm_AlphaTestEnabled,gm_AlphaRefValue" />
+  <meta name="rh-index-keywords"
+    content="gm_Matrices,MATRIX_VIEW,MATRIX_PROJECTION,MATRIX_WORLD,MATRIX_WORLD_VIEW,MATRIX_WORLD_VIEW_PROJECTION,MATRIX_MAX,MAX_VS_LIGHTS,gm_BaseTexture,gm_LightingEnabled,gm_FogStart,gm_RcpFogRange,gm_PS_FogEnabled,gm_FogColour,gm_VS_FogEnabled,gm_AlphaTestEnabled,gm_AlphaRefValue" />
+  <meta name="search-keywords"
+    content="Shader Constants,gm_Matrices,MATRIX_VIEW,MATRIX_PROJECTION,MATRIX_WORLD,MATRIX_WORLD_VIEW,MATRIX_WORLD_VIEW_PROJECTION,MATRIX_MAX,MAX_VS_LIGHTS,gm_BaseTexture,gm_LightingEnabled,gm_FogStart,gm_RcpFogRange,gm_PS_FogEnabled,gm_FogColour,gm_VS_FogEnabled,gm_AlphaTestEnabled,gm_AlphaRefValue" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>シェーダー定数</h1>
-  <p>OpenGL ES Shading Language (GLSL ES)<a href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" target="_blank">Reference Pages</a> で定義されている<span class="notranslate">shader</span> 関数と定数とは別に、<span data-keyref="GameMaker Name">GameMaker</span> 独自の<span class="notranslate">shader</span> 定数も多数用意されています。</p>
-  <p><span class="notranslate">shader</span> 配列定数<span class="inline">gm_Matrices</span> を使用する場合、以下のディスプレイマトリクス定数を配列のインデックスとして使用することができます。</p>
+  <p>OpenGL ES Shading Language (GLSL ES)<a
+      href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" target="_blank">Reference
+      Pages</a> で定義されている<span class="notranslate">shader</span> 関数と定数とは別に、<span
+      data-keyref="GameMaker Name">GameMaker</span> 独自の<span class="notranslate">shader</span> 定数も多数用意されています。</p>
+  <p><span class="notranslate">shader</span> 配列定数<span class="inline">gm_Matrices</span>
+    を使用する場合、以下のディスプレイマトリクス定数を配列のインデックスとして使用することができます。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MATRIX_VIEW</span></td>
-        <td>この配列インデックス定数は、現在のビューマトリックスへのインデックスを保持します。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列の値として使用されます。</td>
+        <td>この配列インデックス定数は、現在のビューマトリックスへのインデックスを保持します。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span
+            class="inline">gm_Matrices</span> 定数を呼び出す際に、配列の値として使用されます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MATRIX_PROJECTION</span></td>
-        <td>この配列インデックス定数は、現在の投影行列のインデックスを保持します。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
+        <td>この配列インデックス定数は、現在の投影行列のインデックスを保持します。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span
+            class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MATRIX_WORLD</span></td>
-        <td>この配列のインデックス定数は、現在のワールドマトリクスへのインデックスを保持します。これは、ワールド空間に光の情報がある場合、照明などに使用することができます。返されたインデックスは、<span class="notranslate">shader</span> のコード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
+        <td>この配列のインデックス定数は、現在のワールドマトリクスへのインデックスを保持します。これは、ワールド空間に光の情報がある場合、照明などに使用することができます。返されたインデックスは、<span
+            class="notranslate">shader</span> のコード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MATRIX_WORLD_VIEW</span></td>
-        <td>この配列のインデックス定数は、ワールドマトリクスとビューマトリクスを掛け合わせた結果のインデックスを保持します。これは、フォグなどによく使用されます。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
+        <td>この配列のインデックス定数は、ワールドマトリクスとビューマトリクスを掛け合わせた結果のインデックスを保持します。これは、フォグなどによく使用されます。返されたインデックスは、<span
+            class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出す際に、配列値として使用されます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span></td>
-        <td>この配列のインデックス定数は、ワールド、ビュー、プロジェクションの各マトリックスを掛け合わせた結果のインデックスを保持します。これは、<span class="notranslate">vertex</span> の位置に使用される通常の変換行列です。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span class="inline">gm_Matrices</span> 定数を呼び出すときに、配列値として使用されます。</td>
+        <td>この配列のインデックス定数は、ワールド、ビュー、プロジェクションの各マトリックスを掛け合わせた結果のインデックスを保持します。これは、<span class="notranslate">vertex</span>
+          の位置に使用される通常の変換行列です。返されたインデックスは、<span class="notranslate">shader</span> コード内で <span
+            class="inline">gm_Matrices</span> 定数を呼び出すときに、配列値として使用されます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MATRIX_MAX</span></td>
-        <td>これは，配列のインデックスではなく，<span class="notranslate">vertex</span> <span class="notranslate">shader</span> にある行列配列のサイズを返します．</td>
+        <td>これは，配列のインデックスではなく，<span class="notranslate">vertex</span> <span class="notranslate">shader</span>
+          にある行列配列のサイズを返します．</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MAX_VS_LIGHTS</span></td>
-        <td>これは配列のインデックスではなく、<span class="notranslate">vertex</span> <span class="notranslate">shader</span> にある照明の数を返します。</td>
+        <td>これは配列のインデックスではなく、<span class="notranslate">vertex</span> <span class="notranslate">shader</span>
+          にある照明の数を返します。</td>
       </tr>
     </tbody>
   </table>
@@ -59,7 +76,7 @@
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">MAX_VS_LIGHTS</span></td>
@@ -68,7 +85,8 @@
     </tbody>
   </table>
   <p> </p>
-  <p>以下の定義済みマトリックスユニフォームと定数を<span class="notranslate">shader</span> で使用することで、<span data-keyref="GameMaker Name">GameMaker</span>固有の値にアクセスすることができます。</p>
+  <p>以下の定義済みマトリックスユニフォームと定数を<span class="notranslate">shader</span> で使用することで、<span
+      data-keyref="GameMaker Name">GameMaker</span>固有の値にアクセスすることができます。</p>
   <table>
     <colgroup>
       <col />
@@ -78,15 +96,20 @@
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">gm_Matrices[matrix]</span></td>
-        <td>この配列定数は変換行列を返すもので、<span data-keyref="GameMaker Name">GameMakerが</span> <span class="notranslate">shader</span> コードエディター内で使用できるように作成する、利用可能な事前定義されたユニフォームの1つである。配列のインデックスは、上記の定数のいずれかから選択されます。</td>
+        <td>この配列定数は変換行列を返すもので、<span data-keyref="GameMaker Name">GameMakerが</span> <span
+            class="notranslate">shader</span>
+          コードエディタ内で使用できるように作成する、利用可能な事前定義されたユニフォームの1つである。配列のインデックスは、上記の定数のいずれかから選択されます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">gm_BaseTexture</span></td>
-        <td>これは2Dサンプラー定数で、<span data-keyref="GameMaker Name">GameMakerで</span>設定された現在の<span class="notranslate">texture</span> の<span class="notranslate">object</span> を返します。つまり、<span class="notranslate">sprite</span> が呼び出されないで描画するときに通常使用される現在の<span class="notranslate">texture</span> 、サーフェス、<span class="notranslate">shader</span> になります。</td>
+        <td>これは2Dサンプラー定数で、<span data-keyref="GameMaker Name">GameMakerで</span>設定された現在の<span
+            class="notranslate">texture</span> の<span class="notranslate">object</span> を返します。つまり、<span
+            class="notranslate">sprite</span> が呼び出されないで描画するときに通常使用される現在の<span class="notranslate">texture</span>
+          、サーフェス、<span class="notranslate">shader</span> になります。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">gm_LightingEnabled</span></td>
@@ -110,15 +133,20 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">gm_VS_FogEnabled</span></td>
-        <td>これは、GPU が<span class="notranslate">vertex</span> フォグを有効にしている場合は <span class="inline">true</span> を、そうでない場合は <span class="inline">false</span> を返します。</td>
+        <td>これは、GPU が<span class="notranslate">vertex</span> フォグを有効にしている場合は <span class="inline">true</span> を、そうでない場合は
+          <span class="inline">false</span> を返します。
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">gm_AlphaTestEnabled</span></td>
-        <td>これは、<span class="notranslate">shader</span> でアルファテストを取得するために使用することができます。 <a href="../../Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>はアルファテストの詳細です。</td>
+        <td>これは、<span class="notranslate">shader</span> でアルファテストを取得するために使用することができます。 <a
+            href="../../Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span
+              class="inline">gpu_set_alphatestenable()</span></a>はアルファテストの詳細です。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">gm_AlphaRefValue</span></td>
-        <td>これは、現在のアルファテストの基準値を取得するために使用することができます。参照 <a href="../../Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a>は、アルファテストリファレンスの詳細についてです。</td>
+        <td>これは、現在のアルファテストの基準値を取得するために使用することができます。参照 <a href="../../Drawing/GPU_Control/gpu_set_alphatestref.htm"><span
+              class="inline">gpu_set_alphatestref()</span></a>は、アルファテストリファレンスの詳細についてです。</td>
       </tr>
     </tbody>
   </table>
@@ -129,10 +157,11 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Shaders.htm">シェーダー</a></div>
+        <div style="float:left">前のページ：<a href="Shaders.htm">シェーダー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Shader Constants
@@ -159,4 +188,5 @@ gm_AlphaRefValue
 shader_constants
 -->
 </body>
+
 </html>

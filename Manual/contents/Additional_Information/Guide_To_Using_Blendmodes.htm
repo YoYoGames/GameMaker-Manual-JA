@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Blendmodesの使い方ガイド</title>
@@ -12,61 +13,97 @@
   <meta name="rh-index-keywords" content="blendmodes,Guide To Using Blendmodes" />
   <meta name="search-keywords" content="blendmodes,blending,blend modes" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Blendmodesの使い方ガイド</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerを</span>長く使っていると、ほぼ間違いなく<a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/GPU_Control.htm">ブレンドモードを</a>目にし、おそらくゲームでも使っていることでしょう。ブレンドモードは、描画方法を変更することで、興味深い特殊なグラフィック効果を与えることができる素晴らしい方法ですが、その仕組みや使い方をご存知でしょうか？このセクションでは、ブレンドモードにまつわる謎を解き明かし、ゲームに最大限に活用できるようにしたいと思います。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerを</span>長く使っていると、ほぼ間違いなく<a
+      href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/GPU_Control.htm">ブレンドモードを</a>目にし、おそらくゲームでも使っていることでしょう。ブレンドモードは、描画方法を変更することで、興味深い特殊なグラフィック効果を与えることができる素晴らしい方法ですが、その仕組みや使い方をご存知でしょうか？このセクションでは、ブレンドモードにまつわる謎を解き明かし、ゲームに最大限に活用できるようにしたいと思います。
+  </p>
   <p> </p>
   <h2>概要</h2>
-  <p>ブレンドモードは基本的に、ゲームに特定のものをあらかじめ描画されているものとブレンドして描画するように指示します。画面に描画されるものはすべて、赤、緑、青、アルファの4つの要素で構成されており、デフォルトでは、ブレンドモード（ <span class="inline">bm_normal</span> ）を使って画面に描画されます。このブレンドモードは、すべてのピクセルの色とアルファ値を基本的に変えずに描画します（ただし、このセクションの後半で、これが真実<em>ではない</em>ことがわかります...）が、<span data-keyref="GameMaker Name">GameMaker</span>には、この動作を変更するために設定できる、いくつかのブレンドモードが組み込まれています。</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>がピクセルを描画しようとするとき、<strong>ソースカラー</strong>（描画しようとするピクセルの色）と<strong>デスティネーションカラー</strong>（描画先のピクセルに既にある色）があります。ピクセルの新しい色を決定する際、<span class="notranslate">GameMaker</span> 、前述のように<strong>ブレンドモードに従って</strong>ソースカラーとデスティネーションカラーを組み合わせます。色の各要素は 0 から 1 の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に何らかの係数を掛けて、その結果を要素ごとに加算することによって計算されます。</p>
+  <p>ブレンドモードは基本的に、ゲームに特定のものをあらかじめ描画されているものとブレンドして描画するように指示します。画面に描画されるものはすべて、赤、緑、青、アルファの4つの要素で構成されており、デフォルトでは、ブレンドモード（
+    <span class="inline">bm_normal</span>
+    ）を使って画面に描画されます。このブレンドモードは、すべてのピクセルの色とアルファ値を基本的に変えずに描画します（ただし、このセクションの後半で、これが真実<em>ではない</em>ことがわかります...）が、<span
+      data-keyref="GameMaker Name">GameMaker</span>には、この動作を変更するために設定できる、いくつかのブレンドモードが組み込まれています。
+  </p>
+  <p><span
+      data-keyref="GameMaker Name">GameMaker</span>がピクセルを描画しようとするとき、<strong>ソースカラー</strong>（描画しようとするピクセルの色）と<strong>デスティネーションカラー</strong>（描画先のピクセルに既にある色）があります。ピクセルの新しい色を決定する際、<span
+      class="notranslate">GameMaker</span> 、前述のように<strong>ブレンドモードに従って</strong>ソースカラーとデスティネーションカラーを組み合わせます。色の各要素は 0 から 1
+    の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に何らかの係数を掛けて、その結果を要素ごとに加算することによって計算されます。</p>
   <p> </p>
   <h2>基本的なブレンドモード</h2>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>は関数<a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode.htm">gpu_set_blendmode()</a>を使って、ゲームが描画に使用するブレンディングを変更します。この関数は、たとえば<span class="notranslate">sprite</span> を描画する前に呼び、描画後に再び設定する、というようなものです。</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>は関数<a
+      href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode.htm">gpu_set_blendmode()</a>を使って、ゲームが描画に使用するブレンディングを変更します。この関数は、たとえば<span
+      class="notranslate">sprite</span> を描画する前に呼び、描画後に再び設定する、というようなものです。</p>
   <p class="code">gpu_set_blendmode(bm_add);<br />
     draw_self();<br />
     gpu_set_blendmode(bm_normal);</p>
-  <p>このコードは、<strong>加算 </strong>ブレンドモードを使用してインスタンス<span class="notranslate">sprite</span> を描画します。加算ブレンドモードは、利用可能な<span class="notranslate">GML</span> 定数のうちの 1 つを使用して設定します（基本モードには 4 つあります）。</p>
+  <p>このコードは、<strong>加算 </strong>ブレンドモードを使用してインスタンス<span class="notranslate">sprite</span> を描画します。加算ブレンドモードは、利用可能な<span
+      class="notranslate">GML</span> 定数のうちの 1 つを使用して設定します（基本モードには 4 つあります）。</p>
   <p class="code">bm_normal<br />
     bm_add<br />
     bm_subtract<br />
     bm_max</p>
   <p> <span class="inline">bm_normal</span> がどのように見えるかは、すでに見てきました。- では、他の3つについてもう少し詳しく見ていきましょう...</p>
-  <p><img alt="bm_normal example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BlendModes1_BmNormal.png" /></p>
+  <p><img alt="bm_normal example" class="center"
+      src="../assets/Images/Scripting_Reference/Additional_Information/BlendModes1_BmNormal.png" /></p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">bm_add</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">このブレンドモードは、ソースピクセルとデスティネーションピクセルの色を足し合わせます（ただし、アルファ値には影響を与えません）。例えば、背景画像が RGB 値 (100,15,70) の無地で、次に RGB 値 (120,25,30) の矩形を描くと、（bm_add を使って）矩形の各画素の RGB 値は (220,40,100) に仕上がります。色の値は255以上（または0以下）にはならないので、それ以上の値を足すと255に固定されることに注意してください。</p>
+    <p class="dropspot">このブレンドモードは、ソースピクセルとデスティネーションピクセルの色を足し合わせます（ただし、アルファ値には影響を与えません）。例えば、背景画像が RGB 値 (100,15,70)
+      の無地で、次に RGB 値 (120,25,30) の矩形を描くと、（bm_add を使って）矩形の各画素の RGB 値は (220,40,100)
+      に仕上がります。色の値は255以上（または0以下）にはならないので、それ以上の値を足すと255に固定されることに注意してください。</p>
     <p class="dropspot"><img>このブレンドモードを使用すると、「ネオンの輝き」のような外観を得ることができ、照明効果やレーザーなど、光っているように見せたいものに最もよく使用される方法です。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">bm_subtract</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">このブレンドモードは、前のものとは少し異なり、直接的な値ではなく、パーセントベースで動作します。このパーセントは、出力色（描画されるピクセルの色）から差し引かれるものです。これをよりよく説明するために、例を見てみましょう。</p>
-    <p class="dropspot"><img> <span class="notranslate">room</span> のある領域に描かれたすべてのピクセルの赤の値を 25% 減らしたい場合を想像してください。まず 255 の 25% を取得し、それを RGB の色値に変換し、最後に bm_subtract と共にそれを使用して領域上に描画する必要があります。このようなものです。</p>
+    <p class="dropspot">
+      このブレンドモードは、前のものとは少し異なり、直接的な値ではなく、パーセントベースで動作します。このパーセントは、出力色（描画されるピクセルの色）から差し引かれるものです。これをよりよく説明するために、例を見てみましょう。
+    </p>
+    <p class="dropspot"><img> <span class="notranslate">room</span> のある領域に描かれたすべてのピクセルの赤の値を 25% 減らしたい場合を想像してください。まず 255
+      の 25% を取得し、それを RGB の色値に変換し、最後に bm_subtract と共にそれを使用して領域上に描画する必要があります。このようなものです。</p>
     <p class="code">var red = (25 / 100) * 255;<br />
       var col = make_colour_rgb(red, 0, 0);<br />
       gpu_set_blendmode(bm_subtract);<br />
       draw_rectangle_colour(0, 0, 128, 256, col, col, col, col, false);<br />
       gpu_set_blendmode(bm_normal);</p>
-    <p class="dropspot">同じルールで、背景の明るさを単純に50%減らすなら、赤50%、緑50%、青50%の色、つまりRGB（128、128、128）を使用します。このブレンドモードは、主に影を描いたり、興味深いフェードアウト効果を作成するために使用します。</p>
+    <p class="dropspot">
+      同じルールで、背景の明るさを単純に50%減らすなら、赤50%、緑50%、青50%の色、つまりRGB（128、128、128）を使用します。このブレンドモードは、主に影を描いたり、興味深いフェードアウト効果を作成するために使用します。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_reverse_subtract</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">このブレンドモードは、説明するのがより複雑ですが、基本的には、ソースカラーにソースアルファを乗算し、それを逆ソースカラー値を乗算したデスティネーションカラー値に追加します。bm_max（および他のブレンドモード）の背後にある実際の数学は、我々の記事のパート2で説明しますが、あなたが知っておくべきことは、結果はより「飽和」で明るい色になりますが、 <span class="inline">bm_add</span> を使用して発生するのと同じ真っ白な輝きにつながることはありません。</p>
-    <p class="dropspot"><img>このブレンドモードは、重なり合った画像を、見えなくなってしまうほど明るくならずに描画する必要がある場合に便利です。明るい部分はより明るくなりますが、色と色相のレベルは維持されるはずです。ただし、このブレンドモードを使用すると、ソースイメージのアルファ値も最終的な効果に影響を与えることに注意してください。</p>
+    <p class="dropspot">
+      このブレンドモードは、説明するのがより複雑ですが、基本的には、ソースカラーにソースアルファを乗算し、それを逆ソースカラー値を乗算したデスティネーションカラー値に追加します。bm_max（および他のブレンドモード）の背後にある実際の数学は、我々の記事のパート2で説明しますが、あなたが知っておくべきことは、結果はより「飽和」で明るい色になりますが、
+      <span class="inline">bm_add</span> を使用して発生するのと同じ真っ白な輝きにつながることはありません。
+    </p>
+    <p class="dropspot">
+      <img>このブレンドモードは、重なり合った画像を、見えなくなってしまうほど明るくならずに描画する必要がある場合に便利です。明るい部分はより明るくなりますが、色と色相のレベルは維持されるはずです。ただし、このブレンドモードを使用すると、ソースイメージのアルファ値も最終的な効果に影響を与えることに注意してください。
+    </p>
   </div>
   <p> </p>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>ブレンドモードの基本的な使い方はご理解いただけたと思います。ブレンドモードは、元画像（描画されているもの）のRGBとアルファ値を取り、それを先画像（描画されているもの）のRGBとアルファ値にブレンドします。このブレンドは、各ピクセルの色とアルファの個々のコンポーネントに、達成したい効果に応じて異なる量を乗算することで行われます。この知識をもとに、ゲーム内でブレンドモードを使い始め、光るレーザー、リアルな影、彩度の高いトランジションエフェクトを得ることができますが、まだまだ学ぶべきことはあります。以下では、<strong>拡張ブレンドモード</strong>について説明し、その背後にある数学についても少し掘り下げて、乗算やオーバーレイなどの独自のブレンディングエフェクトを作成できるようにします。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerの</span>ブレンドモードの基本的な使い方はご理解いただけたと思います。ブレンドモードは、元画像（描画されているもの）のRGBとアルファ値を取り、それを先画像（描画されているもの）のRGBとアルファ値にブレンドします。このブレンドは、各ピクセルの色とアルファの個々のコンポーネントに、達成したい効果に応じて異なる量を乗算することで行われます。この知識をもとに、ゲーム内でブレンドモードを使い始め、光るレーザー、リアルな影、彩度の高いトランジションエフェクトを得ることができますが、まだまだ学ぶべきことはあります。以下では、<strong>拡張ブレンドモード</strong>について説明し、その背後にある数学についても少し掘り下げて、乗算やオーバーレイなどの独自のブレンディングエフェクトを作成できるようにします。
+  </p>
   <p> </p>
   <h2>拡張ブレンドモード</h2>
-  <p>上記では、関数 <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode.htm"><span class="inline">gpu_set_blendmode()</span></a>について説明しましたが、ここでは <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>.これは（その名の通り）<em>カスタムブレンドモードを </em>設定するための拡張関数ですが、これはどのように機能するのでしょうか？先に進む前に、技術的な答えを先に見ておきましょう。</p>
+  <p>上記では、関数 <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode.htm"><span
+        class="inline">gpu_set_blendmode()</span></a>について説明しましたが、ここでは <a
+      href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode_ext.htm"><span
+        class="inline">gpu_set_blendmode_ext()</span></a>.これは（その名の通り）<em>カスタムブレンドモードを
+    </em>設定するための拡張関数ですが、これはどのように機能するのでしょうか？先に進む前に、技術的な答えを先に見ておきましょう。</p>
   <ul class="colour">
-    <li>関数 <span class="inline">gpu_set_blendmode_ext</span><span class="inline">(src, dest)</span> は、ソースとデスティネーションの両方の色にどのようなブレンドモードを使用するかを示します。新しい色は、ある係数の元色と別の係数の先色になります。これらの係数はこの関数で設定します。これを理解するために、ソースとデスティネーションは両方とも、赤、緑、青、アルファの各成分を持っています。つまり、<strong>ソースは </strong>(<span class="inline">Rs, Gs, Bs, As</span>) で、<strong>デスティネーションは </strong>(<span class="inline">Rd, Gd, Bd, Ad</span>) です。すべての値は0と1の間にあるとみなされます。</li>
+    <li>関数 <span class="inline">gpu_set_blendmode_ext</span><span class="inline">(src, dest)</span>
+      は、ソースとデスティネーションの両方の色にどのようなブレンドモードを使用するかを示します。新しい色は、ある係数の元色と別の係数の先色になります。これらの係数はこの関数で設定します。これを理解するために、ソースとデスティネーションは両方とも、赤、緑、青、アルファの各成分を持っています。つまり、<strong>ソースは
+      </strong>(<span class="inline">Rs, Gs, Bs, As</span>) で、<strong>デスティネーションは </strong>(<span class="inline">Rd, Gd,
+        Bd, Ad</span>) です。すべての値は0と1の間にあるとみなされます。</li>
   </ul>
   <p>さて、この文章は正しく、ブレンドモードが何をするものかを説明していますが、直感的に理解できるものではありません...そこで、もう少し詳しく、これがどういうものかを説明しましょう。</p>
-  <p><strong>ソースとは </strong>描画されるピクセルの色とアルファ値のことで、<strong>デスティネーションとは </strong>その上に描画されるピクセルの色とアルファ値のことである。簡単に説明するために、元となる色を構成要素として書き出すと、次のようになります。</p>
+  <p><strong>ソースとは </strong>描画されるピクセルの色とアルファ値のことで、<strong>デスティネーションとは
+    </strong>その上に描画されるピクセルの色とアルファ値のことである。簡単に説明するために、元となる色を構成要素として書き出すと、次のようになります。</p>
   <ul class="colour">
     <li><span class="inline">(Rs, Gs, Bs, As)</span> = 描画する色のRGBとアルファ値を指定します。</li>
   </ul>
@@ -75,8 +112,10 @@
     <li><span class="inline">(Rd, Gd, Bd, Ad)</span> = 描画する色のRGBとアルファ値を指定します。</li>
   </ul>
   <p>つまり、私たちが画面に何かを描くとき、グラフィックス・プロセッサは実際には1ピクセルごとに次のような処理を行っているのです。</p>
-  <p class="code">final_pixel_colour =  (Rs,Gs,Bs,As) * source_blend_factor + (Rd,Gd,Bd,Ad) * destination_blend_factor</p>
-  <p>上記の<strong>ブレンドファクターは</strong>、<span data-keyref="GameMaker Name">GameMakerでは</span>いくつかの定数（<span class="notranslate">GML</span> ）で定義されており、それぞれがソースまたはデスティネーションのR、G、B、A値に乗じるべきファクターを表しています。利用可能なファクターは以下の通りです。</p>
+  <p class="code">final_pixel_colour =  (Rs,Gs,Bs,As) * source_blend_factor + (Rd,Gd,Bd,Ad) * destination_blend_factor
+  </p>
+  <p>上記の<strong>ブレンドファクターは</strong>、<span data-keyref="GameMaker Name">GameMakerでは</span>いくつかの定数（<span
+      class="notranslate">GML</span> ）で定義されており、それぞれがソースまたはデスティネーションのR、G、B、A値に乗じるべきファクターを表しています。利用可能なファクターは以下の通りです。</p>
   <ul class="colour">
     <li><span class="inline">bm_zero</span>:ブレンド率：（0, 0, 0, 0）</li>
     <li><span class="inline">bm_one</span>:ブレンド率は（1、1、1、1）</li>
@@ -93,9 +132,11 @@
   <p><span data-keyref="GameMaker Name">GameMakerが</span>持つ4つの「基本」ブレンドモードは、実はこのうちの2つのブレンドファクターを合成したものです。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">bm_normalの動作例</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">それでは、<span data-keyref="GameMaker Name">GameMakerで</span>描画するための実用的な例を見てみましょう。今回は、bm_normalについて見ていきます。</p>
+    <p class="dropspot">それでは、<span
+        data-keyref="GameMaker Name">GameMakerで</span>描画するための実用的な例を見てみましょう。今回は、bm_normalについて見ていきます。</p>
     <p class="code">gpu_set_blendmode_ext(bm_src_alpha, bm_inv_src_alpha);</p>
-    <p class="dropspot">ブレンドモードに関する問題の1つは、結果を視覚化することです。そこで、ブレンドモードの背後にある数学を示すために、このブレンドモードをテスト対象として使用することにします。色(64, 128, 255, 255, 255)の背景の上に、色(128, 255, 64, 255)の矩形を描いているとします。</p>
+    <p class="dropspot">ブレンドモードに関する問題の1つは、結果を視覚化することです。そこで、ブレンドモードの背後にある数学を示すために、このブレンドモードをテスト対象として使用することにします。色(64, 128,
+      255, 255, 255)の背景の上に、色(128, 255, 64, 255)の矩形を描いているとします。</p>
     <p class="dropspot"><img>つまり、ブレンドモードは次のようになります。</p>
     <p class="code">Source: (128, 255, 64, 255) = (0.5, 1, 0.25, 1)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
@@ -109,8 +150,10 @@
       <br />
       <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 1) * (1, 1, 1, 1) + (0.25, 0.5, 1, 1) * (0, 0, 0, 0)<br />
-      (0.5, 1, 0.25, 1) + (0, 0, 0, 0) = (0.5, 1, 0.25, 1) = (128, 255, 64, 255)</p>
-    <p class="dropspot">つまり、ソースカラーは変更されないので、最終的なカラー値は<strong>(128, 255, 64, 255)</strong> となります。アルファを含めると、この値にも影響があることがおわかりいただけると思います。</p>
+      (0.5, 1, 0.25, 1) + (0, 0, 0, 0) = (0.5, 1, 0.25, 1) = (128, 255, 64, 255)
+    </p>
+    <p class="dropspot">つまり、ソースカラーは変更されないので、最終的なカラー値は<strong>(128, 255, 64, 255)</strong>
+      となります。アルファを含めると、この値にも影響があることがおわかりいただけると思います。</p>
     <p class="code">Source (128, 255, 64, 128) = (0.5, 1, 0.25, 0.5)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
       <br />
@@ -123,40 +166,66 @@
       <br />
       <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 0.5) * (0.5, 0.5, 0.5, 0.5) + (0.25, 0.5, 1, 1) * (0.5, 0.5, 0.5, 0.5)<br />
-      (0.25, 0.5, 0.125, 0.25) + (0.125, 0.25, 0.5, 0.5) = (0.375, 0.75, 0.625, 0.75) = (96, 192, 159, 192)</p>
+      (0.25, 0.5, 0.125, 0.25) + (0.125, 0.25, 0.5, 0.5) = (0.375, 0.75, 0.625, 0.75) = (96, 192, 159, 192)
+    </p>
     <p class="dropspot">これにより、最終的な画素の色は（96、192、159、192）となり、下図のような画像になります。</p>
-    <p class="dropspot"><img alt="bm_add example" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/BlendModes1_BmAdd.png" /></p>
-    <p class="dropspot">ブレンドモードファクターが何をするのか、そしてそれらを組み合わせることで描画がどのように変化し、興味深い効果を生み出すのか、ご理解いただけたかと思います。次に、これらの要素を組み合わせて独自のブレンドモードを作成する方法を、実際の例で見ていきます。</p>
+    <p class="dropspot"><img alt="bm_add example" class="center"
+        src="../assets/Images/Scripting_Reference/Additional_Information/BlendModes1_BmAdd.png" /></p>
+    <p class="dropspot">
+      ブレンドモードファクターが何をするのか、そしてそれらを組み合わせることで描画がどのように変化し、興味深い効果を生み出すのか、ご理解いただけたかと思います。次に、これらの要素を組み合わせて独自のブレンドモードを作成する方法を、実際の例で見ていきます。
+    </p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
   <p>ブレンドモードの設定方法と、日常的なドローイングの使用例を見ていただきましたが、もう少し複雑なものを見てみましょう。</p>
   <p> </p>
   <h2>独自のブレンドモードを作成する</h2>
-  <p>利用可能なさまざまな要素を使用して、独自のブレンドモードを作成し、通常では利用できないブレンドオプションを実現することができます。この例では、Photoshopで使用されているような<strong>マルチプライエフェクトを </strong>作成することにします。このブレンドモードは、上記のブレンドモード係数定数を2つ使って、次のようにシミュレートすることができます。</p>
+  <p>利用可能なさまざまな要素を使用して、独自のブレンドモードを作成し、通常では利用できないブレンドオプションを実現することができます。この例では、Photoshopで使用されているような<strong>マルチプライエフェクトを
+    </strong>作成することにします。このブレンドモードは、上記のブレンドモード係数定数を2つ使って、次のようにシミュレートすることができます。</p>
   <p class="code">gpu_set_blendmode_ext(bm_dest_colour, bm_zero);</p>
   <p>このブレンドモードを使って実際に何かを描く前に、Photoshopでどのように見えるかを見てみましょう。</p>
   <p><img>拡張ブレンドモードを使用すると、次のようになります。</p>
-  <p class="code">(Rs, Gs, Bs, As) * (Rd, Gd, Bd, Ad) + (Rd, Gd, Bd, Ad) * (0,0,0,0) = (Rs, Gs, Bs, As) * (Rd, Gd, Bd, Ad)<br />
+  <p class="code">(Rs, Gs, Bs, As) * (Rd, Gd, Bd, Ad) + (Rd, Gd, Bd, Ad) * (0,0,0,0) = (Rs, Gs, Bs, As) * (Rd, Gd, Bd,
+    Ad)<br />
     Source colour * dest colour + dest colour * zero = source colour * dest colour</p>
-  <p>ブレンドファクター（ <span class="inline">bm_zero</span> ）は、デスティネーションカラーを効果的に方程式から排除します（ゼロの何倍もゼロなので）。したがって、ソースカラーにデスティネーションカラーのブレンドファクターを掛けたものが残り、このモードの名前が「マルチプライ」になっています。<span data-keyref="GameMaker Name">GameMakerで</span>これを使うには、<strong>Drawイベント</strong>内に以下のような内容を記述します。</p>
+  <p>ブレンドファクター（ <span class="inline">bm_zero</span>
+    ）は、デスティネーションカラーを効果的に方程式から排除します（ゼロの何倍もゼロなので）。したがって、ソースカラーにデスティネーションカラーのブレンドファクターを掛けたものが残り、このモードの名前が「マルチプライ」になっています。<span
+      data-keyref="GameMaker Name">GameMakerで</span>これを使うには、<strong>Drawイベント</strong>内に以下のような内容を記述します。</p>
   <p class="code">gpu_set_blendmode_ext(bm_dest_colour, bm_zero);<br />
     draw_self();<br />
     gpu_set_blendmode(bm_normal);</p>
   <p>次の画像は、このコードを正確に使用した<span class="notranslate">GameMaker</span> のテストプロジェクトで撮影したものです。</p>
-  <p><img>その違いを見分けられますか？おそらくないでしょう。しかし、使用するレンダリングツールの違いにより、両者の間には多少の誤差が生じますが、ほぼ予想通りの結果となります。ただし、アートプログラムで使用されているブレンドモードの中には、色値を255以上にすることで特殊な効果を生み出すものがあるため、<span data-keyref="GameMaker Name">GameMakerで</span>すべてのブレンドモードを使用できるわけではありませんが、これらのエフェクトの模倣や、まったく新しいエフェクトを作成することができないわけではありません。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、 <span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode_ext_sepalpha.htm">gpu_set_blendmode_ext_sepalpha()</a></span> という機能を使うことで、さらに一歩踏み込むことができます。これは、異なるブレンドモードファクタのアルファ成分を分離し、それらを個別に使用して、さらに多くの組み合わせを作成することができます。この関数については、マニュアルで詳しく説明されているので、ここでは説明しませんが、使用可能であることを知っておくために、言及する価値があります。</p>
+  <p>
+    <img>その違いを見分けられますか？おそらくないでしょう。しかし、使用するレンダリングツールの違いにより、両者の間には多少の誤差が生じますが、ほぼ予想通りの結果となります。ただし、アートプログラムで使用されているブレンドモードの中には、色値を255以上にすることで特殊な効果を生み出すものがあるため、<span
+      data-keyref="GameMaker Name">GameMakerで</span>すべてのブレンドモードを使用できるわけではありませんが、これらのエフェクトの模倣や、まったく新しいエフェクトを作成することができないわけではありません。
+  </p>
+  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、 <span class="inline"><a
+        href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendmode_ext_sepalpha.htm">gpu_set_blendmode_ext_sepalpha()</a></span>
+    という関数を使うことで、さらに一歩踏み込むことができます。これは、異なるブレンドモードファクタのアルファ成分を分離し、それらを個別に使用して、さらに多くの組み合わせを作成することができます。この関数については、マニュアルで詳しく説明されているので、ここでは説明しませんが、使用可能であることを知っておくために、言及する価値があります。
+  </p>
   <p> </p>
   <h2>サーフェスとアルファ</h2>
-  <p>それは、ブレンドモードが色の<strong>アルファ </strong>成分にどのような影響を与えるかということです。<a class="glossterm" data-glossterm="アプリケーションサーフェス" href="#">アプリケーションサーフェスや</a> <a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a>描画する場合、描画先のアルファ値は<em>常に </em>1であるため、考慮する必要はあまりありません。しかし、自分で作ったサーフェイスは違います。サーフェイスをクリアして、0から1までの好きなアルファ値を持たせることができるからです。これは、多くの人が予想するのとは逆の、興味深い効果をもたらします。</p>
-  <p>これを説明するために、基本的なデフォルトの <span class="inline">bm_normal</span> を使って描画することを見ていきます。ほとんどの人は、サーフェイスをアルファ 0 にクリアして、アルファ 0.5 のものを描画すると、結果的にアルファ値も 0.5 になると思って<strong>いますが、</strong>これはそうではなく、多くの人が<span data-keyref="GameMaker Name">GameMaker の</span>レンダリング方法における「バグ」だと思っているものです。しかし、見ての通り、これは全くバグではありません。</p>
-  <p>例えば、すべてのピクセルがアルファ0のサーフェイスがあり、その上に <span class="inline">bm_normal</span> ブレンドモードを使ってアルファ0.5の円を描くとします。サーフェス全体はアルファ 0 のままですが、円の中のアルファは実際には 0.25 になります。</p>
+  <p>それは、ブレンドモードが色の<strong>アルファ </strong>成分にどのような影響を与えるかということです。<a class="glossterm" data-glossterm="アプリケーションサーフェス"
+      href="#">アプリケーションサーフェスや</a> <a class="glossterm" data-glossterm="ディスプレイバッファ"
+      href="#">ディスプレイバッファに</a>描画する場合、描画先のアルファ値は<em>常に
+    </em>1であるため、考慮する必要はあまりありません。しかし、自分で作ったサーフェイスは違います。サーフェイスをクリアして、0から1までの好きなアルファ値を持たせることができるからです。これは、多くの人が予想するのとは逆の、興味深い効果をもたらします。
+  </p>
+  <p>これを説明するために、基本的なデフォルトの <span class="inline">bm_normal</span> を使って描画することを見ていきます。ほとんどの人は、サーフェイスをアルファ 0 にクリアして、アルファ 0.5
+    のものを描画すると、結果的にアルファ値も 0.5 になると思って<strong>いますが、</strong>これはそうではなく、多くの人が<span data-keyref="GameMaker Name">GameMaker
+      の</span>レンダリング方法における「バグ」だと思っているものです。しかし、見ての通り、これは全くバグではありません。</p>
+  <p>例えば、すべてのピクセルがアルファ0のサーフェイスがあり、その上に <span class="inline">bm_normal</span> ブレンドモードを使ってアルファ0.5の円を描くとします。サーフェス全体はアルファ 0
+    のままですが、円の中のアルファは実際には 0.25 になります。</p>
   <p class="code">0.5 * 0.5 + 0 * 0.5 = 0.5 * 0.5 = 0.25</p>
   <p>次に、既存の円の中にもう一つ円を描き、これもアルファ値を0.5とすると、円の外のアルファ値は0、円と円の間は0.25、小さい円の中は0.375となります。</p>
   <p class="code">0.5 * 0.5 + 0.25 * 0.5 = 0.25 + 0.125 = 0.375</p>
   <p>0アルファのサーフェイスに0.5アルファの円をいくつも描き続け、このサーフェイスを<span class="notranslate">room</span> に描くとしたら、このことがはっきりとわかるはずだ。</p>
-  <p><img>アルファについてまだ少し混乱しているのであれば、アルファを単なる色の1つとして思い浮かべてみてください。アルファは色と同じように振る舞い、アルファに関するすべての計算は同じように行われます。アルファが他の色に与える影響はありますが、アルファは実際には見えません。ここで、サーフェスやブレンドモード（ <span class="inline">bm_normal</span> も）を使用する際の最後の注意点があります...</p>
-  <p>サーフェスのアルファ値が0, <em><strong>色成分はそのまま存在し、すべてのブレンド操作に影響します。</strong></em>.したがって、赤色でクリアされたアルファ値0のサーフェスに描画すると（例えば）、ソースカラーとデスティネーションカラーがブレンドされ、あなたが考えるのとは異なる効果が得られます。上のイメージは、黒い背景の上に黒でクリアされたサーフェスで作成されましたが、サーフェスを赤でクリアすると、代わりにこのようなイメージになります。</p>
+  <p>
+    <img>アルファについてまだ少し混乱しているのであれば、アルファを単なる色の1つとして思い浮かべてみてください。アルファは色と同じように振る舞い、アルファに関するすべての計算は同じように行われます。アルファが他の色に与える影響はありますが、アルファは実際には見えません。ここで、サーフェスやブレンドモード（
+    <span class="inline">bm_normal</span> も）を使用する際の最後の注意点があります...
+  </p>
+  <p>サーフェスのアルファ値が0,
+    <em><strong>色成分はそのまま存在し、すべてのブレンド操作に影響します。</strong></em>.したがって、赤色でクリアされたアルファ値0のサーフェスに描画すると（例えば）、ソースカラーとデスティネーションカラーがブレンドされ、あなたが考えるのとは異なる効果が得られます。上のイメージは、黒い背景の上に黒でクリアされたサーフェスで作成されましたが、サーフェスを赤でクリアすると、代わりにこのようなイメージになります。
+  </p>
   <p><img>なぜこのようなことが起こるのか、先に説明した計算式と <span class="inline">bm_normal</span> の適切な数値を使って、ご自身で考えてみてください。</p>
   <p> </p>
   <p> </p>
@@ -164,11 +233,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
-        <div style="float:right">次へ<a href="Error_Reporting.htm">エラー報告</a></div>
+        <div style="float:left">前のページ：<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次のページ：<a href="Error_Reporting.htm">エラー報告</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Blendmodes
@@ -179,4 +249,5 @@ Blend Modes
 using_blendmodes
 -->
 </body>
+
 </html>

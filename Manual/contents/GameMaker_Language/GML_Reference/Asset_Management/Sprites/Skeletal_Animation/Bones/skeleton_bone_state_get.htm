@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_bone_state_get</title>
@@ -13,10 +14,13 @@
   <meta name="search-keywords" content="skeleton_bone_state_get" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_bone_state_get</span></h1>
-  <p>骨格アニメーションはいくつかの &quot;ボーン&quot; で構成されており、アニメーションプログラムの中で定義し、名前をつけています。このデータは、使用されるアニメーションセットによって、骨格の<b>現在の</b>ポーズを参照することに注意してください。また、この関数は以前に作成された<a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>必要とし、それは関数を呼び出した後、次のキーと同等の値を持つことになります。</p>
+  <p>骨格アニメーションはいくつかの &quot;ボーン&quot;
+    で構成されており、アニメーションプログラムの中で定義し、名前をつけています。このデータは、使用されるアニメーションセットによって、骨格の<b>現在の</b>ポーズを参照することに注意してください。また、この関数は以前に作成された<a
+      href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>必要とし、それは関数を呼び出した後、次のキーと同等の値を持つことになります。</p>
   <ul class="colour">
     <li><b>&quot;x&quot;:</b>親ボーンに相対するボーンのローカル x 位置。</li>
     <li><b>&quot;y&quot;:</b>親ボーンに対するボーンのローカルy位置。</li>
@@ -32,17 +36,24 @@
     <li><b>&quot;appliedAngle&quot;。</b>スケルトンボーンをポージングするために使用されるローカルな回転です。</li>
     <li><b>&quot;parent&quot;（親）。</b>親骨の名前（<span class="notranslate">string</span> ）。</li>
   </ul>
-  <p>を使用した場合のデフォルトのポーズで返されるマップデータと似ています。 <a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_data_get()</span></a>ただ、&quot;world&quot; キーが追加されています。これらは、スケルトンアニメーションの<i>ルート</i>(原点) に相対するボーンの位置を参照しています<span class="notranslate">sprite</span> 、返される値は、 <span class="inline">image_xscale</span> や <span class="inline">image_angle</span> のような組み込み<span class="notranslate">sprite</span> 変数の設定によって行われたスケーリングや回転は考慮されません。 ワールド値は<i>読み取り専用で</i>設定することはできません。</p>
-  <p>この関数は、画面に描画される前にアニメーションデータを「傍受」して修正するために用意されています。このイベントは Draw イベントの直前に発生するため、<a href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other - Animation Update</a>イベントで使用することになるでしょう。</p>
+  <p>を使用した場合のデフォルトのポーズで返されるマップデータと似ています。 <a href="skeleton_bone_state_get.htm"><span
+        class="inline">skeleton_bone_data_get()</span></a>ただ、&quot;world&quot;
+    キーが追加されています。これらは、スケルトンアニメーションの<i>ルート</i>(原点) に相対するボーンの位置を参照しています<span class="notranslate">sprite</span> 、返される値は、
+    <span class="inline">image_xscale</span> や <span class="inline">image_angle</span> のような組み込み<span
+      class="notranslate">sprite</span> 変数の設定によって行われたスケーリングや回転は考慮されません。 ワールド値は<i>読み取り専用で</i>設定することはできません。
+  </p>
+  <p>この関数は、画面に描画される前にアニメーションデータを「傍受」して修正するために用意されています。このイベントは Draw イベントの直前に発生するため、<a
+      href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other - Animation
+      Update</a>イベントで使用することになるでしょう。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_bone_state_get</span>(bone, map);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">bone</span></td>
@@ -58,7 +69,7 @@
   </table>
   <p> </p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -72,18 +83,21 @@
     ds_map_replace(map, &quot;angle&quot;, angle);<br />
     skeleton_bone_state_set(&quot;head&quot;, map);<br />
     ds_map_destroy(map);</p>
-  <p>上のコードはDSマップを作成し、&quot;head &quot;という名前のボーンからデータを取り込んでいます。そして、そのボーンのワールドポジションを抽出し、そのデータを使って、ゲーム中のマウスの位置を追跡するためにボーンの &quot;角度&quot; を設定します。</p>
+  <p>上のコードはDSマップを作成し、&quot;head &quot;という名前のボーンからデータを取り込んでいます。そして、そのボーンのワールドポジションを抽出し、そのデータを使って、ゲーム中のマウスの位置を追跡するためにボーンの
+    &quot;角度&quot; を設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背面：<a href="Bones.htm">骨</a></div>
-        <div style="float:right">次のページ <a href="skeleton_bone_state_set.htm"><span class="notranslate">skeleton_bone_state_set</span></a></div>
+        <div style="float:left">前のページ：<a href="Bones.htm">骨</a></div>
+        <div style="float:right">次のページ：<a href="skeleton_bone_state_set.htm"><span
+              class="notranslate">skeleton_bone_state_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_bone_state_get
@@ -92,4 +106,5 @@ skeleton_bone_state_get
 skeleton_bone_state_get
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ゲームオプション</title>
@@ -12,30 +13,71 @@
   <meta name="rh-index-keywords" content="Game Options" />
   <meta name="search-keywords" content="Game Options,Options" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ゲームオプション</h1>
-  <p>ゲームオプションは、メインオプションとプラットフォーム設定の2つのセクションに分かれています。メインオプションは、<strong>一般</strong>オプションから始まり、ここでは、実行するように設計されているプラットフォームに関係なく、ゲームに影響を与える特定のものを設定することができます。</p>
+  <p>
+    ゲームオプションは、メインオプションとプラットフォーム設定の2つのセクションに分かれています。メインオプションは、<strong>一般</strong>オプションから始まり、ここでは、実行するように設計されているプラットフォームに関係なく、ゲームに影響を与える特定のものを設定することができます。
+  </p>
   <p><img>このウィンドウには、次のセクションがあります。</p>
   <ul class="colour">
-    <li><strong>デフォルトのスクリプト言語</strong>。現在のプロジェクトの<span class="notranslate">Objects</span> イベントと<span class="notranslate">Scripts</span> で<span data-keyref="GML_Code">GML Code</span>と<span data-keyref="GML_Visual">GML Visual</span> のどちらを使うか、あるいは新しい<span class="notranslate">script</span> の作成時に常に尋ねるかどうかを選択します。</li>
-    <li><strong>Game Frames Per Second</strong>: この値は、<span data-keyref="GameMaker Name">GameMaker</span>がゲーム実行時に維持しようとする、1 秒あたりのフレーム数の制限を設定します。この値は、ゲーム<span class="notranslate">loop</span> が 1 秒間に実行される回数を表し（1 つのゲーム<span class="notranslate">loop</span> は 1 つの「フレーム」とみなされます）、デフォルトでは 60 に設定されていますが、30 もよく使用されます。どの<span class="notranslate">room</span> の速度が理想的かについては多くの議論がありますが、実際の答えは、作っているゲームの種類、<span class="notranslate">room</span> のサイズ、インスタンスの数、コードの集中度によって異なります。たとえば、大きな<span class="notranslate">room</span> と<span class="notranslate">room</span> の速度が 30 の場合、見ている領域が大きければ大きいほど、低い<span class="notranslate">room</span> 速度を知覚しやすくなるため、ゲームが「ぎこちなく」見えることがあります。一方、ゲームに集中する場合、<span class="notranslate">room</span> 速度を 120 に設定すると、処理量が多いために fps が低下してゲームが「遅延」することがあります。したがって、この値には注意を払い、常にゲームの必要性に応じて調整するようにしてください。</li>
+    <li><strong>デフォルトのスクリプト言語</strong>。現在のプロジェクトの<span class="notranslate">Objects</span> イベントと<span
+        class="notranslate">Scripts</span> で<span data-keyref="GML_Code">GML Code</span>と<span
+        data-keyref="GML_Visual">GML Visual</span> のどちらを使うか、あるいは新しい<span class="notranslate">script</span>
+      の作成時に常に尋ねるかどうかを選択します。</li>
+    <li><strong>Game Frames Per Second</strong>: この値は、<span
+        data-keyref="GameMaker Name">GameMaker</span>がゲーム実行時に維持しようとする、1 秒あたりのフレーム数の制限を設定します。この値は、ゲーム<span
+        class="notranslate">loop</span> が 1 秒間に実行される回数を表し（1 つのゲーム<span class="notranslate">loop</span> は 1
+      つの「フレーム」とみなされます）、デフォルトでは 60 に設定されていますが、30 もよく使用されます。どの<span class="notranslate">room</span>
+      の速度が理想的かについては多くの議論がありますが、実際の答えは、作っているゲームの種類、<span class="notranslate">room</span>
+      のサイズ、インスタンスの数、コードの集中度によって異なります。たとえば、大きな<span class="notranslate">room</span> と<span
+        class="notranslate">room</span> の速度が 30 の場合、見ている領域が大きければ大きいほど、低い<span class="notranslate">room</span>
+      速度を知覚しやすくなるため、ゲームが「ぎこちなく」見えることがあります。一方、ゲームに集中する場合、<span class="notranslate">room</span> 速度を 120 に設定すると、処理量が多いために
+      fps が低下してゲームが「遅延」することがあります。したがって、この値には注意を払い、常にゲームの必要性に応じて調整するようにしてください。</li>
     <li><strong>デフォルトの描画色</strong>：コードで色が設定されていない場合に、テキストやフォーラム（およびその他のもの）を描画するためのデフォルトの色です。</li>
-    <li><strong>Default Draw Colour<span class="notranslate">room</span> 領域の</strong>外側の色。ゲーム<span class="notranslate">room</span> の領域外の背景をクリアするために使用されるデフォルトの色です。</li>
+    <li><strong>Default Draw Colour<span class="notranslate">room</span> 領域の</strong>外側の色。ゲーム<span
+        class="notranslate">room</span> の領域外の背景をクリアするために使用されるデフォルトの色です。</li>
     <li><strong>プロジェクト画像を生成する</strong>。これをクリックすると、プロジェクト画像生成ツールが表示されます。</li>
     <li><strong>プロジェクト開始日</strong>。プロジェクトが開始された日付。</li>
     <li><strong>プロジェクト使用時間</strong>：プロジェクトを開始してから経過した時間です。</li>
-    <li><strong>プロジェクトGUID</strong>：<span data-keyref="GameMaker Name">GameMaker</span>内で各プロジェクトに作成される一意の識別子です。変更したい場合は、Create New GUIDボタンをクリックして新しいGUIDを生成することができます。</li>
-    <li><strong>Generate mipmaps for separate<span class="notranslate">texture</span> 別々のページにミップマップを</strong>作成する。このオプションは、<span class="notranslate">sprites</span> Editorの<span class="notranslate">Texture</span> 設定でSeperate<span class="notranslate">Texture</span> Pageオプションにフラグを立てた<span class="notranslate">Sprite</span> に対して、<span data-keyref="GameMaker Name">GameMakerが</span>ミップマップを作成するものです。ミップマップを有効にすると、<span class="notranslate">texture</span> のオリジナル<span class="notranslate">sprite</span> ページが、<span class="notranslate">texture</span> ファイル内で複数の解像度にスケーリング・フィルタリングされることになります。これは通常オフになっていますが、ビューを使ってゲーム<span class="notranslate">room</span> の広い範囲を拡大・縮小している場合や、3Dゲームを扱っている場合は、これを有効にして、Mipmapping Functions を使ってゲームが異なるミップマップレベルをどう扱うかを調整するとよいでしょう。<span class="notranslate">sprites</span> で個別の<span class="notranslate">texture</span> ページを使用するフラグを立てない場合でも、<span class="notranslate">Texture</span> Group Manager からテクスチャグループ単位でミップマップを有効にすることができ ます。このオプションはデフォルトではオフになっています。</li>
-    <li><strong>ソース管理を有効に</strong>する。プロジェクトをSCM(<span class="notranslate">Source Control</span> Management)下に置きたい場合は、この項目にチェックを入れる必要があります。デフォルトではオフになっています（<span class="notranslate">source control</span> の詳細についてはこちらをご覧ください）。</li>
+    <li><strong>プロジェクトGUID</strong>：<span
+        data-keyref="GameMaker Name">GameMaker</span>内で各プロジェクトに作成される一意の識別子です。変更したい場合は、Create New
+      GUIDボタンをクリックして新しいGUIDを生成することができます。</li>
+    <li><strong>Generate mipmaps for separate<span class="notranslate">texture</span>
+        別々のページにミップマップを</strong>作成する。このオプションは、<span class="notranslate">sprites</span> Editorの<span
+        class="notranslate">Texture</span> 設定でSeperate<span class="notranslate">Texture</span> Pageオプションにフラグを立てた<span
+        class="notranslate">Sprite</span> に対して、<span
+        data-keyref="GameMaker Name">GameMakerが</span>ミップマップを作成するものです。ミップマップを有効にすると、<span
+        class="notranslate">texture</span> のオリジナル<span class="notranslate">sprite</span> ページが、<span
+        class="notranslate">texture</span> ファイル内で複数の解像度にスケーリング・フィルタリングされることになります。これは通常オフになっていますが、ビューを使ってゲーム<span
+        class="notranslate">room</span> の広い範囲を拡大・縮小している場合や、3Dゲームを扱っている場合は、これを有効にして、Mipmapping Functions
+      を使ってゲームが異なるミップマップレベルをどう扱うかを調整するとよいでしょう。<span class="notranslate">sprites</span> で個別の<span
+        class="notranslate">texture</span> ページを使用するフラグを立てない場合でも、<span class="notranslate">Texture</span> Group Manager
+      からテクスチャグループ単位でミップマップを有効にすることができ ます。このオプションはデフォルトではオフになっています。</li>
+    <li><strong>ソース管理を有効に</strong>する。プロジェクトをSCM(<span class="notranslate">Source Control</span>
+      Management)下に置きたい場合は、この項目にチェックを入れる必要があります。デフォルトではオフになっています（<span class="notranslate">source control</span>
+      の詳細についてはこちらをご覧ください）。</li>
     <li><strong>作者</strong>。ゲーム作者（または出版社、スタジオ）の名前です。</li>
     <li><strong>プロジェクトの最終変更</strong>日：このセクションには、プロジェクトが最後に変更された日付/タイムスタンプが表示されます（これは編集できません）。</li>
-    <li><strong> <span class="notranslate">Spine</span> </strong> ライセンスを承認する。ここにチェックを入れると、<span class="notranslate">Spine</span> <span class="notranslate">Runtime</span> のライセンスが表示され、承諾することができます。これで、<span class="notranslate">Spine</span> <span class="notranslate">sprites</span> をゲーム内で使用することができます（このライセンスは、<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> をプロジェクトに追加しようとして、事前にここでライセンスを確認しなかった場合にも表示されます）。</li>
-    <li><strong>コリジョン互換モード(Collision Compatibility Mode</strong>)。2022年バージョン以前のレガシーコリジョンシステム（floatではなくinteger値を使用）を使用するよう、<span class="notranslate">GameMaker</span> 。詳しくは<a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collision_Compatibility_Mode.htm">Collision Compatibility Mode</a>をご覧ください。これはデフォルトでは無効になっており、新しいプロジェクトでは無効にしておくことが推奨されます。</li>
-    <li><strong>Copy on Write Behaviour for Arrays（書き込み時コピー動作</strong>）を有効にする。現在開いているプロジェクトで、非推奨の<strong>Copy on Write</strong>配列動作を有効にします。詳しくは、<a data-xref="{text}" href="../GameMaker_Language/GML_Overview/Arrays.htm#h">Copy on Writeを</a>ご覧ください。これはデフォルトでは無効になっており、新しいプロジェクトでは無効にしておくことが推奨されます。</li>
+    <li><strong> <span class="notranslate">Spine</span> </strong> ライセンスを承認する。ここにチェックを入れると、<span
+        class="notranslate">Spine</span> <span class="notranslate">Runtime</span> のライセンスが表示され、承諾することができます。これで、<span
+        class="notranslate">Spine</span> <span class="notranslate">sprites</span> をゲーム内で使用することができます（このライセンスは、<span
+        class="notranslate">Spine</span> <span class="notranslate">sprite</span>
+      をプロジェクトに追加しようとして、事前にここでライセンスを確認しなかった場合にも表示されます）。</li>
+    <li><strong>コリジョン互換モード(Collision Compatibility
+        Mode</strong>)。2022年バージョン以前のレガシーコリジョンシステム（floatではなくinteger値を使用）を使用するよう、<span
+        class="notranslate">GameMaker</span> 。詳しくは<a data-xref="{title}"
+        href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collision_Compatibility_Mode.htm">Collision
+        Compatibility Mode</a>をご覧ください。これはデフォルトでは無効になっており、新しいプロジェクトでは無効にしておくことが推奨されます。</li>
+    <li><strong>Copy on Write Behaviour for Arrays（書き込み時コピー動作</strong>）を有効にする。現在開いているプロジェクトで、非推奨の<strong>Copy on
+        Write</strong>配列動作を有効にします。詳しくは、<a data-xref="{text}" href="../GameMaker_Language/GML_Overview/Arrays.htm#h">Copy
+        on Writeを</a>ご覧ください。これはデフォルトでは無効になっており、新しいプロジェクトでは無効にしておくことが推奨されます。</li>
   </ul>
   <p>メインオプションセクションには、「<a href="Game_Options/Template_Info.htm">テンプレート情報</a>」のメニューもあります。</p>
-  <p><a href="../Introduction/The_Asset_Browser.htm">アセットブラウザには</a>、お持ちの<a href="../Setting_Up_And_Version_Information/GMS2_Version_Information.htm">ライセンスで</a>利用可能なターゲットプラットフォームに応じて、他のゲームオプションも用意されており、それらのすべてが利用可能または表示されるとは限りません。</p>
+  <p><a href="../Introduction/The_Asset_Browser.htm">アセットブラウザには</a>、お持ちの<a
+      href="../Setting_Up_And_Version_Information/GMS2_Version_Information.htm">ライセンスで</a>利用可能なターゲットプラットフォームに応じて、他のゲームオプションも用意されており、それらのすべてが利用可能または表示されるとは限りません。
+  </p>
   <h2>プラットフォーム設定</h2>
   <p>以下のプラットフォーム別のゲームオプションが存在します。</p>
   <ul class="colour">
@@ -49,8 +91,15 @@
     <li><a href="Game_Options/iOS.htm">iOS</a></li>
     <li><a href="Game_Options/tvOS.htm">ティーブイオーエス</a></li>
   </ul>
-  <p class="note"><span class="note">注</span>：様々な<strong>コンソールゲームオプションは</strong>、異なる会社によって維持される様々な法的制限のためにここに記載されていません。コンソールライセンスをお持ちの場合は、<a href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo Gamesヘルプデスクから</a>情報を得ることができますが、まずコンソールIDの電子メールを<span class="notranslate">YoYo Games</span> に連絡し、さまざまなセクションを表示する許可を要求する必要があります。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>プロジェクトによっては、<strong>Amazon Fire</strong>ターゲットのゲームオプションが表示される場合があります。<span data-keyref="GameMaker Name">GameMakerは</span>現在、<strong>Androidの</strong>ゲームオプションを使用してFireプラットフォームを直接サポートしているため、これらはレガシーで読み取り専用のオプションです。もし、プロジェクトにまだ<span class="notranslate">Amazon Fire</span> が表示されている場合は、以下のページでオプションに関する情報を確認できます。</p>
+  <p class="note"><span
+      class="note">注</span>：様々な<strong>コンソールゲームオプションは</strong>、異なる会社によって維持される様々な法的制限のためにここに記載されていません。コンソールライセンスをお持ちの場合は、<a
+      href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo
+      Gamesヘルプデスクから</a>情報を得ることができますが、まずコンソールIDの電子メールを<span class="notranslate">YoYo Games</span>
+    に連絡し、さまざまなセクションを表示する許可を要求する必要があります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>プロジェクトによっては、<strong>Amazon
+      Fire</strong>ターゲットのゲームオプションが表示される場合があります。<span
+      data-keyref="GameMaker Name">GameMakerは</span>現在、<strong>Androidの</strong>ゲームオプションを使用してFireプラットフォームを直接サポートしているため、これらはレガシーで読み取り専用のオプションです。もし、プロジェクトにまだ<span
+      class="notranslate">Amazon Fire</span> が表示されている場合は、以下のページでオプションに関する情報を確認できます。</p>
   <ul class="colour">
     <li><a href="Game_Options/Amazon_Fire.htm">Amazon Fire（レガシー）</a></li>
   </ul>
@@ -60,11 +109,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Game_Settings.htm">ゲーム設定</a></div>
-        <div style="float:right">次へ<a href="Configurations.htm">コンフィギュレーション</a></div>
+        <div style="float:left">前のページ：<a href="Game_Settings.htm">ゲーム設定</a></div>
+        <div style="float:right">次のページ：<a href="Configurations.htm">コンフィギュレーション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Game Settings
@@ -73,4 +123,5 @@ Game Settings
 game_settings
 -->
 </body>
+
 </html>

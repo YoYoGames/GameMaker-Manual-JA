@@ -1,77 +1,126 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>アクションブロックのコード構築</title>
-    <meta name="generator" content="Adobe RoboHelp 2020" />
-    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-    <script src="../../assets/scripts/main_script.js"></script>
-    <meta name="rh-authors" content="Mark Alexander" />
-    <meta name="topic-comment" content="Article explaining how to construct GML Visual actions" />
-    <meta name="rh-index-keywords" content="GML Visual Overview - Constructing Action Block Code" />
-    <meta name="search-keywords" content="GML Visual Comments" />
-  </head>
-  <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1>アクションブロックのコード構築</h1>
-    <p><span class="notranslate">objects</span> にビヘイビアを追加するには、<strong>Action Toolboxから</strong>利用できるさまざまなライブラリの<strong>Actionを使って </strong>コードを構築します。まず始めに、<a href="../../Introduction/The_Start_Page.htm"> <span class="notranslate">GML</span> </a>Visualプロジェクトを新規に作成し、新しい<a href="../../The_Asset_Editors/Objects.htm">オブジェクトを</a>作成する必要があります（必要であれば、<span class="notranslate">object</span> に<a href="../../The_Asset_Editors/Sprites.htm">スプライトを</a>割り当てることもできます）。新しい<span class="notranslate">object</span> に、以下のものを追加してください。 <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">events</span></a>そして、イベントには<span class="notranslate">GML</span> Visual コードのアクションを追加します。</p>
-    <p><img>新しいイベントを追加すると、指定したイベント用のタブを持つ「コード」ウィンドウが開かれ（上図参照）、右側のツールボックスからコードウィンドウのアクションブロックペインに好きなアクションをドラッグできるようになっていることに注意してください。さて、どんなアクションでも追加できるのは事実ですが、だからといって、それらがすべて動作したり、それらを使ってプロジェクトがコンパイルされるとは限りません。アクションの中には、少なくとも1つの<a class="glossterm" data-glossterm="変数" href="#">変数が</a>ないと動作しないものもありますし、<a href="../Drag_And_Drop_Reference/Drawing/Drawing_Actions.htm">描画</a>アクションのように特定のイベントで使用しないと動作しないものもあります。どのアクションを使えばいいのか、どうすればわかるのでしょうか？アクションが変数を必要とし、まだ定義していない場合は、変数を作成するアクションを追加するまで、そのアクションを使用すべきではありません。</p>
-    <p>ToolboxからメインのAction Block<span class="notranslate">workspace</span> にアクションをドラッグすると、それが展開されて利用可能な<span class="glossextra">引数</span>（パラメータ）が表示されるので、それを記入・変更して動作を設定することができます。下の画像では、「Toolbox<a href="../Drag_And_Drop_Reference/Common/Common_Actions_Library.htm">Common」ライブラリから</a>「<a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">Assign Variable」</a>アクションをアクションブロックのワークスペースにド ラッグしています。</p>
-    <p><img>新しいアクションは、コードウィンドウの左側にも略語で表示されていることがわかります。このアクションの一覧は「アクションの概要」と呼ばれ、クリックするとそのアクションに素早く移動して編集することができます。必要であれば、イベントにアクションを追加していくことができます。それぞれの新しいアクションは、構築中の<span class="notranslate">GML</span> Visual コードのフローを示すために、前のアクションに「連鎖」していきます。さらにアクションを追加できるエリアは、最初のアクションの下でハイライト表示されます。また、使用しているアクションによっては、連鎖のどこで追加できるかを示すために、異なるエリアがハイライト表示されます。</p>
-    <p><img> <span class="notranslate">workspace</span> にアクションを追加すると、それらは上のアクションに「連鎖」するので、1つのアクションが別のアクションにつながる Visual コードの流れを見ることができ、概要ペインはそれらを省略形と実行順序で表示します。<span class="notranslate">GML</span> </p>
-    <p><img>アクションによっては、メインフローから離れた別のチェーンにコードを配置します。<a href="../Drag_And_Drop_Reference/Common/If_Variable.htm">If Variableの</a>ように、メインチェーンに進む前に、正しい条件が満たされた場合に発生すべきアクションの<em>サブ</em>チェーンを作成します。</p>
-    <p><img>このようにサイドチェーンブロックを持つことができるアクションを使用する場合、アクションにはさらなるアクションをドロップするための<em>2つの </em>領域が強調表示されることに注意してください。</p>
-    <ul class="colour">
-      <li>通常通りアクションの下に1つ</li>
-      <li>アクションの右側に1つ、最初のアクションの条件がtrueを返したときに実行されるアクションのブロックを別に作成することを示します。</li>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>アクションブロックのコード構築</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Article explaining how to construct GML Visual actions" />
+  <meta name="rh-index-keywords" content="GML Visual Overview - Constructing Action Block Code" />
+  <meta name="search-keywords" content="GML Visual Comments" />
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>アクションブロックのコード構築</h1>
+  <p><span class="notranslate">objects</span> にビヘイビアを追加するには、<strong>Action
+      Toolboxから</strong>利用できるさまざまなライブラリの<strong>Actionを使って </strong>コードを構築します。まず始めに、<a
+      href="../../Introduction/The_Start_Page.htm"> <span class="notranslate">GML</span> </a>Visualプロジェクトを新規に作成し、新しい<a
+      href="../../The_Asset_Editors/Objects.htm">オブジェクトを</a>作成する必要があります（必要であれば、<span class="notranslate">object</span>
+    に<a href="../../The_Asset_Editors/Sprites.htm">スプライトを</a>割り当てることもできます）。新しい<span class="notranslate">object</span>
+    に、以下のものを追加してください。 <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span
+        class="notranslate">events</span></a>そして、イベントには<span class="notranslate">GML</span> Visual コードのアクションを追加します。</p>
+  <p>
+    <img>新しいイベントを追加すると、指定したイベント用のタブを持つ「コード」ウィンドウが開かれ（上図参照）、右側のツールボックスからコードウィンドウのアクションブロックペインに好きなアクションをドラッグできるようになっていることに注意してください。さて、どんなアクションでも追加できるのは事実ですが、だからといって、それらがすべて動作したり、それらを使ってプロジェクトがコンパイルされるとは限りません。アクションの中には、少なくとも1つの<a
+      class="glossterm" data-glossterm="変数" href="#">変数が</a>ないと動作しないものもありますし、<a
+      href="../Drag_And_Drop_Reference/Drawing/Drawing_Actions.htm">描画</a>アクションのように特定のイベントで使用しないと動作しないものもあります。どのアクションを使えばいいのか、どうすればわかるのでしょうか？アクションが変数を必要とし、まだ定義していない場合は、変数を作成するアクションを追加するまで、そのアクションを使用すべきではありません。
+  </p>
+  <p>ToolboxからメインのAction Block<span class="notranslate">workspace</span> にアクションをドラッグすると、それが展開されて利用可能な<span
+      class="glossextra">引数</span>（パラメータ）が表示されるので、それを記入・変更して動作を設定することができます。下の画像では、「Toolbox<a
+      href="../Drag_And_Drop_Reference/Common/Common_Actions_Library.htm">Common」ライブラリから</a>「<a
+      href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">Assign Variable」</a>アクションをアクションブロックのワークスペースにド
+    ラッグしています。</p>
+  <p>
+    <img>新しいアクションは、コードウィンドウの左側にも略語で表示されていることがわかります。このアクションの一覧は「アクションの概要」と呼ばれ、クリックするとそのアクションに素早く移動して編集することができます。必要であれば、イベントにアクションを追加していくことができます。それぞれの新しいアクションは、構築中の<span
+      class="notranslate">GML</span> Visual
+    コードのフローを示すために、前のアクションに「連鎖」していきます。さらにアクションを追加できるエリアは、最初のアクションの下でハイライト表示されます。また、使用しているアクションによっては、連鎖のどこで追加できるかを示すために、異なるエリアがハイライト表示されます。
+  </p>
+  <p><img> <span class="notranslate">workspace</span> にアクションを追加すると、それらは上のアクションに「連鎖」するので、1つのアクションが別のアクションにつながる Visual
+    コードの流れを見ることができ、概要ペインはそれらを省略形と実行順序で表示します。<span class="notranslate">GML</span> </p>
+  <p><img>アクションによっては、メインフローから離れた別のチェーンにコードを配置します。<a href="../Drag_And_Drop_Reference/Common/If_Variable.htm">If
+      Variableの</a>ように、メインチェーンに進む前に、正しい条件が満たされた場合に発生すべきアクションの<em>サブ</em>チェーンを作成します。</p>
+  <p><img>このようにサイドチェーンブロックを持つことができるアクションを使用する場合、アクションにはさらなるアクションをドロップするための<em>2つの </em>領域が強調表示されることに注意してください。</p>
+  <ul class="colour">
+    <li>通常通りアクションの下に1つ</li>
+    <li>アクションの右側に1つ、最初のアクションの条件がtrueを返したときに実行されるアクションのブロックを別に作成することを示します。</li>
+  </ul>
+  <p><img>チェーン内のアクションの位置を変更するには、<img> をクリックして、必要な新しい位置にドラッグするだけです。また、クリック<img>
+    をして、1秒間保持してからマウスを動かすと、アクションのブロックチェーン内での位置を維持したまま、<span class="notranslate">workspace</span> 内でアクションを移動できます。</p>
+  <p>また、<span class="notranslate">GML</span>
+    Visualアクションに<strong>コメントを</strong>追加することも可能なので、異なるブロックの横にメモを残して、何をするのか説明することができます（チームで作業する場合に特に便利です）。</p>
+  <p><img>この機能については、「<a href="Right_Mouse_Button_Menu_Options.htm">マウスの右ボタンメニュー</a>」のページで詳しく説明しています。</p>
+  <p>以上が<span class="notranslate">GML</span> Visual コードエディタの使い方の基本ですが、さらに重要な内容を以下のセクションで説明します。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">対象変数</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">多くのアクションが「ターゲット」変数を提供し、例えば「一時的」というフラグを立てることができることに注意することが重要です。</p>
+    <p class="dropspot">
+      <img>これはどういうことかというと、アクションが返す値を保持するターゲットとなる変数を与えることができるということです。上のアクションの例では、選択したオーディオリソースの音量を返すので、この値を保持するターゲット変数を与えて、後で参照できるようにします。
+    </p>
+    <p class="dropspot">ここで、このターゲット変数は、<a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">Assign
+        Variable</a>（<strong>インスタンス変数を</strong>作成）または<a
+        href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">Declare Temporary
+        Variable</a>（<strong>ローカルテンポラリー変数を</strong>作成）を使用して事前に宣言されている必要があります。この後使用されるアクションは、一時的な変数の値にアクセス<strong>できますが、同じイベントまたはスクリプト内に限ら</strong>れます。一時的な変数は、作成された範囲内でのみ使用できます。変数と変数スコープの詳細については、<a
+        href="../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">こちらを</a>参照してください。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">アクションスコープ</a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p class="dropspot">変数にスコープがあるだけでなく（上記の<strong>ターゲット変数の
+      </strong>項を参照）、アクションにも異なるスコープがあります。実際、ほとんどすべてのアクションは異なるスコープを持つことができ、 ここに示すように、アクション自身で開かれるドロップダウン・ウィンドウから設定します。
+    </p>
+    <p class="dropspot"><img>また、特殊なアクションである<a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">Apply
+        toを</a>使用すると、それ以降のすべてのアクションの範囲を設定することができます。<span class="notranslate">GML</span>
+      ビジュアルアクションのこの機能の詳細については、ここを参照してください。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="Applying_Actions_To_Other_Instances.htm">他のインスタンスにアクションを適用する</a></li>
     </ul>
-    <p><img>チェーン内のアクションの位置を変更するには、<img> をクリックして、必要な新しい位置にドラッグするだけです。また、クリック<img> をして、1秒間保持してからマウスを動かすと、アクションのブロックチェーン内での位置を維持したまま、<span class="notranslate">workspace</span> 内でアクションを移動できます。</p>
-    <p>また、<span class="notranslate">GML</span> Visualアクションに<strong>コメントを</strong>追加することも可能なので、異なるブロックの横にメモを残して、何をするのか説明することができます（チームで作業する場合に特に便利です）。</p>
-    <p><img>この機能については、「<a href="Right_Mouse_Button_Menu_Options.htm">マウスの右ボタンメニュー</a>」のページで詳しく説明しています。</p>
-    <p>以上が<span class="notranslate">GML</span> Visual コードエディターの使い方の基本ですが、さらに重要な内容を以下のセクションで説明します。</p>
-    <p> </p>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">対象変数</a></p>
-    <div class="droptext" data-targetname="drop-down1">
-      <p class="dropspot">多くのアクションが「ターゲット」変数を提供し、例えば「一時的」というフラグを立てることができることに注意することが重要です。</p>
-      <p class="dropspot"><img>これはどういうことかというと、アクションが返す値を保持するターゲットとなる変数を与えることができるということです。上のアクションの例では、選択したオーディオリソースの音量を返すので、この値を保持するターゲット変数を与えて、後で参照できるようにします。</p>
-      <p class="dropspot">ここで、このターゲット変数は、<a href="../Drag_And_Drop_Reference/Common/Assign_Variable.htm">Assign Variable</a>（<strong>インスタンス変数を</strong>作成）または<a href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">Declare Temporary Variable</a>（<strong>ローカルテンポラリー変数を</strong>作成）を使用して事前に宣言されている必要があります。この後使用されるアクションは、一時的な変数の値にアクセス<strong>できますが、同じイベントまたはスクリプト内に限ら</strong>れます。一時的な変数は、作成された範囲内でのみ使用できます。変数と変数スコープの詳細については、<a href="../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">こちらを</a>参照してください。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">アクションスコープ</a></p>
-    <div class="droptext" data-targetname="drop-down2">
-      <p class="dropspot">変数にスコープがあるだけでなく（上記の<strong>ターゲット変数の </strong>項を参照）、アクションにも異なるスコープがあります。実際、ほとんどすべてのアクションは異なるスコープを持つことができ、 ここに示すように、アクション自身で開かれるドロップダウン・ウィンドウから設定します。</p>
-      <p class="dropspot"><img>また、特殊なアクションである<a href="../Drag_And_Drop_Reference/Common/Apply_To...htm">Apply toを</a>使用すると、それ以降のすべてのアクションの範囲を設定することができます。<span class="notranslate">GML</span> ビジュアルアクションのこの機能の詳細については、ここを参照してください。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot"><a href="Applying_Actions_To_Other_Instances.htm">他のインスタンスにアクションを適用する</a></li>
-      </ul>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">オートコンプリート</a></p>
-    <div class="droptext" data-targetname="drop-down3">
-      <p class="dropspot"><span class="notranslate">GML</span> Visual で作業する場合、アクションの異なる入力フィールドに変数や式を追加する必要があります。しかし、これを行う際、しばしば<strong>オートコンプリートウィンドウが</strong>ポップアップ表示され、あなたを助けてくれます。</p>
-      <p class="dropspot"><img>このポップアップウィンドウは、内蔵の<span class="notranslate">GML</span> (<span class="notranslate">GameMaker Language</span>) 変数、定数、関数、および入力した内容の頭文字を含むリソースをすべてリストアップします。これは、アクションに必要なリソースや変数を、自分ですべて入力することなく、すばやく見つけるために使用できます。たとえば、すべての<span class="notranslate">rooms</span> の頭に &quot;<span class="inline">rm_</span>&quot; が付いている場合、それを入力してしばらく待つと、 &quot;<span class="inline">rm_</span>&quot; で始まるすべての<span class="notranslate">assets</span> を含むオートコンプリートウィンドウが表示されます。オートコンプリートウィンドウに表示されるすべての組み込み変数は、ほとんどの<span class="notranslate">GML</span> 関数と同様に、アクションで変数や式が必要とされる場所ならどこでも使用できることに注意してください。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">アクションエクスパンション</a></p>
-    <div class="droptext" data-targetname="drop-down4">
-      <p class="dropspot">アクションを使用する際に、横に小さなプラスアイコン（<img> ）が表示されることがあります。これは、アクションを拡張して、さらにタスクを実行したり、引数を取ることができることを意味します。たとえば、<a href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">Declare Temporary Variables</a>アクションを見ると、このようなアイコンが表示されているのがわかります。</p>
-      <p class="dropspot"><img>アイコンをクリックすると、アクションが<em>展開さ </em>れ、より多くの変数を宣言できるようになり、複数の変数を同時に簡単かつ迅速に定義できるようになります。</p>
-      <p class="dropspot"><img>このアイコンは、<a href="../Drag_And_Drop_Reference/Random/Choose.htm">Choose</a>アクションのように<strong>オプションの </strong>引数を必要とするアクションにも使用することができます。</p>
-      <p class="dropspot"><img alt="GML Visual Create Event" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Create_Event.png"/></p>
-    </div>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div style="float:left">戻る：<a href="../../Content.htm">インデックス</a></div>
-          <div style="float:right">次へ<a href="Applying_Actions_To_Other_Instances.htm">他のインスタンスにアクションを適用する</a></div>
-        </div>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">オートコンプリート</a></p>
+  <div class="droptext" data-targetname="drop-down3">
+    <p class="dropspot"><span class="notranslate">GML</span> Visual
+      で作業する場合、アクションの異なる入力フィールドに変数や式を追加する必要があります。しかし、これを行う際、しばしば<strong>オートコンプリートウィンドウが</strong>ポップアップ表示され、あなたを助けてくれます。
+    </p>
+    <p class="dropspot"><img>このポップアップウィンドウは、内蔵の<span class="notranslate">GML</span> (<span class="notranslate">GameMaker
+        Language</span>)
+      変数、定数、関数、および入力した内容の頭文字を含むリソースをすべてリストアップします。これは、アクションに必要なリソースや変数を、自分ですべて入力することなく、すばやく見つけるために使用できます。たとえば、すべての<span
+        class="notranslate">rooms</span> の頭に &quot;<span class="inline">rm_</span>&quot; が付いている場合、それを入力してしばらく待つと、
+      &quot;<span class="inline">rm_</span>&quot; で始まるすべての<span class="notranslate">assets</span>
+      を含むオートコンプリートウィンドウが表示されます。オートコンプリートウィンドウに表示されるすべての組み込み変数は、ほとんどの<span class="notranslate">GML</span>
+      関数と同様に、アクションで変数や式が必要とされる場所ならどこでも使用できることに注意してください。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">アクションエクスパンション</a></p>
+  <div class="droptext" data-targetname="drop-down4">
+    <p class="dropspot">アクションを使用する際に、横に小さなプラスアイコン（<img>
+      ）が表示されることがあります。これは、アクションを拡張して、さらにタスクを実行したり、引数を取ることができることを意味します。たとえば、<a
+        href="../Drag_And_Drop_Reference/Common/Declare_Temporary_Variable.htm">Declare Temporary
+        Variables</a>アクションを見ると、このようなアイコンが表示されているのがわかります。</p>
+    <p class="dropspot"><img>アイコンをクリックすると、アクションが<em>展開さ </em>れ、より多くの変数を宣言できるようになり、複数の変数を同時に簡単かつ迅速に定義できるようになります。</p>
+    <p class="dropspot"><img>このアイコンは、<a
+        href="../Drag_And_Drop_Reference/Random/Choose.htm">Choose</a>アクションのように<strong>オプションの
+      </strong>引数を必要とするアクションにも使用することができます。</p>
+    <p class="dropspot"><img alt="GML Visual Create Event" class="center"
+        src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Create_Event.png" /></p>
+  </div>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">前のページ：<a href="../../Content.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="Applying_Actions_To_Other_Instances.htm">他のインスタンスにアクションを適用する</a></div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2025 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
+  </div>
+  <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2025 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Construction
@@ -80,4 +129,5 @@ GML Visual Construction
 drag_and_drop_construction
 -->
 </body>
+
 </html>

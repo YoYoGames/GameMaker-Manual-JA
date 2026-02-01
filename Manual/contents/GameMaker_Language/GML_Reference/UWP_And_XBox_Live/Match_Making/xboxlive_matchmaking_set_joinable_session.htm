@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_matchmaking_set_joinable_session</title>
@@ -12,31 +13,37 @@
   <meta name="rh-index-keywords" content="xboxlive_matchmaking_set_joinable_session" />
   <meta name="search-keywords" content="xboxlive_matchmaking_set_joinable_session" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_matchmaking_set_joinable_session</h1>
-  <p>この関数は、他のユーザーがシステム UI から参加できるように、（以前に作成された）セッションを設定します。ユーザは一度に一つの参加可能なセッションしか持てず、ユーザがセッションから離れる（あるいはセッションが終了する）と、このセッションは消去されます。しかし、session 引数に -1 を渡すことで、手動でこれを消去することができます。</p>
+  <p>この関数は、他のユーザーがシステム UI
+    から参加できるように、（以前に作成された）セッションを設定します。ユーザは一度に一つの参加可能なセッションしか持てず、ユーザがセッションから離れる（あるいはセッションが終了する）と、このセッションは消去されます。しかし、session
+    引数に -1 を渡すことで、手動でこれを消去することができます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_matchmaking_set_joinable_session(local_user, session_that_is_joinable);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">local_user</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
+        <td><span class="notranslate">local_user</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"></span></td>
         <td><span class="notranslate">The local user ID pointer.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">session_that_is_joinable</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">session_that_is_joinable</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The session ID to make joinable, or -1.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -51,11 +58,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Match_Making.htm">マッチメイキング</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_matchmaking_join_invite.htm"><span class="notranslate">xboxlive_matchmaking_join_invite</span></a></div>
+        <div style="float:left">前のページ：<a href="Match_Making.htm">マッチメイキング</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_matchmaking_join_invite.htm"><span
+              class="notranslate">xboxlive_matchmaking_join_invite</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_matchmaking_set_joinable_session
@@ -64,4 +73,5 @@ xboxlive_matchmaking_set_joinable_session
 xboxlive_matchmaking_set_joinable_session
 -->
 </body>
+
 </html>

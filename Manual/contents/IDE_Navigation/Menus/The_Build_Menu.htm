@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ビルドメニュー</title>
@@ -12,27 +13,43 @@
   <meta name="rh-index-keywords" content="Menu - Build" />
   <meta name="search-keywords" content="build menu,run,debug,clean,create executable,remote worker" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ビルドメニュー</h1>
   <p><img alt="The Build Menu" class="center" src="../../assets/Images/IDE_Input/Build_Menu.png" /></p>
-  <p>ビルドメニューでは、テスト用、<span class="notranslate">debugging</span> 、または最終的な実行ファイルとしてプロジェクトをビルドすることを選択できます。利用可能なオプションは以下の通りです。</p>
+  <p>ビルドメニューでは、テスト用、<span class="notranslate">debugging</span>
+    、または最終的な実行ファイルとしてプロジェクトをビルドすることを選択できます。利用可能なオプションは以下の通りです。</p>
   <ul class="colour">
-    <li><strong>Run - </strong> 選択したターゲットプラットフォームで現在のプロジェクトを実行し、テストします。コンパイル時に利用できる様々なコンパイルオプションについては、<a href="../../Introduction/Compiling.htm">コンパイルの</a>セクションを参照してください。このコマンドは、<span class="notranslate">IDE</span> の実行ボタン（<img> ）を押すのと同じであることに注意してください。</li>
-    <li><strong>デバッグ - </strong> <span class="notranslate">debugger</span> で現在のプロジェクトをテスト用に実行し、詳細なパフォーマンス情報を確認し、エラーや問題があればデバッグできます。<span class="notranslate">debugging</span> の詳細については、<a href="../../Introduction/Debugging.htm">デバッグの</a>セクションを参照してください。このコマンドは、<span class="notranslate">IDE</span> の「Debug」ボタン（<img> ）を押すのと同じであることに注意してください。</li>
-    <li><strong>クリーン - </strong> <span data-keyref="GameMaker Name">GameMakerは</span>テスト時のコンパイル時間を短縮するために、ファイルの<a class="glossterm" data-glossterm="キャッシュ" href="#">キャッシュを</a>保持しています。しかし、時には &quot;stale&quot;<span class="notranslate">cache</span> がゲームの中で奇妙で予期せぬエラーを引き起こすことがあります。その場合、まず<span class="notranslate">cache</span> をここからクリーンにして、再テストを行うべきです。また、ターゲットプラットフォーム用の最終的な実行ファイルを作成する前に、<span class="notranslate">cache</span> をクリーンアップするのも良いアイデアです。このコマンドは、<span class="notranslate">IDE</span> の<strong>Clean Cache</strong>ボタン<img> を押すのと同じであることに注意してください。</li>
-    <li><strong>実行ファイルを作成</strong>する - 現在のプロジェクトをコンパイルし、ターゲットプラットフォーム用の<a class="glossterm" data-glossterm="実行形式パッケージ" href="#">実行パッケージ</a>（またはパッケージ）を作成します。最初にファイルエクスプローラーを開き、プロジェクトの保存先を選択してから、ゲームをコンパイルします。コンパイルターゲットの設定については、<a href="../../Introduction/Compiling.htm">コンパイルの</a>項を参照してください。なお、このコマンドは、<span class="notranslate">IDE</span> の<strong>Create Executable</strong>ボタン<img> を押すのと同じです。</li>
+    <li><strong>Run - </strong> 選択したターゲットプラットフォームで現在のプロジェクトを実行し、テストします。コンパイル時に利用できる様々なコンパイルオプションについては、<a
+        href="../../Introduction/Compiling.htm">コンパイルの</a>セクションを参照してください。このコマンドは、<span class="notranslate">IDE</span>
+      の実行ボタン（<img> ）を押すのと同じであることに注意してください。</li>
+    <li><strong>デバッグ - </strong> <span class="notranslate">debugger</span>
+      で現在のプロジェクトをテスト用に実行し、詳細なパフォーマンス情報を確認し、エラーや問題があればデバッグできます。<span class="notranslate">debugging</span> の詳細については、<a
+        href="../../Introduction/Debugging.htm">デバッグの</a>セクションを参照してください。このコマンドは、<span class="notranslate">IDE</span>
+      の「Debug」ボタン（<img> ）を押すのと同じであることに注意してください。</li>
+    <li><strong>クリーン - </strong> <span data-keyref="GameMaker Name">GameMakerは</span>テスト時のコンパイル時間を短縮するために、ファイルの<a
+        class="glossterm" data-glossterm="キャッシュ" href="#">キャッシュを</a>保持しています。しかし、時には &quot;stale&quot;<span
+        class="notranslate">cache</span> がゲームの中で奇妙で予期せぬエラーを引き起こすことがあります。その場合、まず<span class="notranslate">cache</span>
+      をここからクリーンにして、再テストを行うべきです。また、ターゲットプラットフォーム用の最終的な実行ファイルを作成する前に、<span class="notranslate">cache</span>
+      をクリーンアップするのも良いアイデアです。このコマンドは、<span class="notranslate">IDE</span> の<strong>Clean Cache</strong>ボタン<img>
+      を押すのと同じであることに注意してください。</li>
+    <li><strong>実行ファイルを作成</strong>する - 現在のプロジェクトをコンパイルし、ターゲットプラットフォーム用の<a class="glossterm" data-glossterm="実行形式パッケージ"
+        href="#">実行パッケージ</a>（またはパッケージ）を作成します。最初にファイルエクスプローラーを開き、プロジェクトの保存先を選択してから、ゲームをコンパイルします。コンパイルターゲットの設定については、<a
+        href="../../Introduction/Compiling.htm">コンパイルの</a>項を参照してください。なお、このコマンドは、<span class="notranslate">IDE</span>
+      の<strong>Create Executable</strong>ボタン<img> を押すのと同じです。</li>
   </ul>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Menus.htm">メニュー</a></div>
-        <div style="float:right">次へ<a href="The_Windows_Menu.htm">Windowsメニュー</a></div>
+        <div style="float:left">前のページ：<a href="../Menus.htm">メニュー</a></div>
+        <div style="float:right">次のページ：<a href="The_Windows_Menu.htm">Windowsメニュー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Build Menu
@@ -41,4 +58,5 @@ The Build Menu
 build_menu
 -->
 </body>
+
 </html>

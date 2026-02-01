@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>network_set_config</title>
@@ -9,9 +10,12 @@
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for network_set_config" />
-  <meta name="rh-index-keywords" content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait " />
-  <meta name="search-keywords" content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait " />
+  <meta name="rh-index-keywords"
+    content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait " />
+  <meta name="search-keywords"
+    content="network_set_config,network_config_connect_timeout,network_config_use_non_blocking_socket,network_config_enable_reliable_udp,network_config_disable_reliable_udp,network_config_avoid_time_wait " />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">network_set_config</span></h1>
@@ -26,11 +30,13 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Network_Config"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">ネットワークコンフィグ定数</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Constant_Network_Config"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">ネットワークコンフィグ定数</a></span>
+        </th>
       </tr>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
         <th>設定</th>
       </tr>
       <tr>
@@ -66,40 +72,62 @@
     </tbody>
   </table>
   <p><br />
-    最初のオプション (<span class="inline">network_config_connect_timeout</span>) は、単に<span class="notranslate">server</span> に接続する際のタイムアウトを設定するだけで、待機時間以外の接続動作は変更されません。あまり低く設定せず、LAN専用ゲームなら1000程度、インターネットなら4000程度にしておくことをお勧めします。パケットの送受信のタイムアウト値を設定したい場合は、以下の関数を使用します。 <a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.</p>
-  <p>2番目のオプション(<span class="inline">network_config_use_non_blocking_socket</span>)は、 <span class="inline">network_connect_*</span> 関数（非同期）はすべて即座に <span class="inline">socket_id</span> を<i>返しますが、非同期ネットワークイベントを受信するまで、そのソケットで送受信</i>できないことを意味します。トリガーされたイベントは &quot;type &quot;キーが <span class="inline">network_type_non_blocking_connect</span> に設定されます（詳細は<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">ネットワーク非同期</a>イベントのページで確認できます）。<span data-keyref="GameMaker Name">GameMakerは</span>1つのアプリケーションでブロッキングとノンブロッキングを混在させることをサポートしていないため、これは<b>グローバルな</b>設定となる。</p>
-  <p>3番目と4番目のオプション(<span class="inline">network_config_enable_reliable_udp</span>, <span class="inline">network_config_disable_reliable_udp</span>)は<span data-keyref="GameMaker Name">GameMakerの</span>信頼性の高いUDPプロトコルを有効または無効にするもので、<b>UDP接続時のみ</b>使用する必要があります。この場合の「信頼できる」とは、接続の<i>両端で</i>有効にした場合、<span data-keyref="GameMaker Name">GameMakerは</span>パケットが正しく到着したかどうかを確認し、到着しないものは再送信しようとするという意味である（注意：パケットが送信順に到着することを保証するものではない）。信頼性の高いソケットタイプを使用する場合、すべてのudpパケットに12バイトのヘッダーが追加され、<span data-keyref="GameMaker Name">GameMakerが</span>パケットのエラーチェックと不足パケットの再送信に必要な情報が含まれている。このオプションを使用する場合、以下の点に注意する必要がある。</p>
+    最初のオプション (<span class="inline">network_config_connect_timeout</span>) は、単に<span class="notranslate">server</span>
+    に接続する際のタイムアウトを設定するだけで、待機時間以外の接続動作は変更されません。あまり低く設定せず、LAN専用ゲームなら1000程度、インターネットなら4000程度にしておくことをお勧めします。パケットの送受信のタイムアウト値を設定したい場合は、以下の関数を使用します。
+    <a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.
+  </p>
+  <p>2番目のオプション(<span class="inline">network_config_use_non_blocking_socket</span>)は、 <span
+      class="inline">network_connect_*</span> 関数（非同期）はすべて即座に <span class="inline">socket_id</span>
+    を<i>返しますが、非同期ネットワークイベントを受信するまで、そのソケットで送受信</i>できないことを意味します。トリガーされたイベントは &quot;type &quot;キーが <span
+      class="inline">network_type_non_blocking_connect</span> に設定されます（詳細は<a
+      href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">ネットワーク非同期</a>イベントのページで確認できます）。<span
+      data-keyref="GameMaker Name">GameMakerは</span>1つのアプリケーションでブロッキングとノンブロッキングを混在させることをサポートしていないため、これは<b>グローバルな</b>設定となる。
+  </p>
+  <p>3番目と4番目のオプション(<span class="inline">network_config_enable_reliable_udp</span>, <span
+      class="inline">network_config_disable_reliable_udp</span>)は<span
+      data-keyref="GameMaker Name">GameMakerの</span>信頼性の高いUDPプロトコルを有効または無効にするもので、<b>UDP接続時のみ</b>使用する必要があります。この場合の「信頼できる」とは、接続の<i>両端で</i>有効にした場合、<span
+      data-keyref="GameMaker Name">GameMakerは</span>パケットが正しく到着したかどうかを確認し、到着しないものは再送信しようとするという意味である（注意：パケットが送信順に到着することを保証するものではない）。信頼性の高いソケットタイプを使用する場合、すべてのudpパケットに12バイトのヘッダーが追加され、<span
+      data-keyref="GameMaker Name">GameMakerが</span>パケットのエラーチェックと不足パケットの再送信に必要な情報が含まれている。このオプションを使用する場合、以下の点に注意する必要がある。
+  </p>
   <ul class="colour">
     <li>データを送信する前に、双方でプロトコルを有効/無効にする必要があり、オプションが有効/無効にされる前に送受信されたデータは影響を受けません。</li>
     <li><span class="notranslate">server</span> 側とクライアント側の両方で適切に管理されていれば、任意のソケット ID に対して何度でもプロトコルの有効化/無効化を行うことが可能です</li>
     <li>2つの独立したUDPソケットを持ち、一方は信頼性の高いUDPを有効にし、もう一方は信頼性の高いUDPを無効にすることが可能です。</li>
   </ul>
-  <p>最後のオプションである<span class="inline">network_config_avoid_time_wait</span> は<strong>TCP接続のみに</strong>使用され、 <span class="inline">SO_LINGER</span> の値を<span class="inline2">0に</span>設定することで、<span>大量の接続が <span class="inline">TIME_WAIT</span> の状態で待機 </span><span>し、<span class="notranslate">server</span> の利用可能なリソースをすべて使い切って</span>しまうことを<span>回避 </span>できます。 この変更はソケットが生きている間は永久で、元に戻せません。</p>
+  <p>最後のオプションである<span class="inline">network_config_avoid_time_wait</span> は<strong>TCP接続のみに</strong>使用され、 <span
+      class="inline">SO_LINGER</span> の値を<span class="inline2">0に</span>設定することで、<span>大量の接続が <span
+        class="inline">TIME_WAIT</span> の状態で待機 </span><span>し、<span class="notranslate">server</span>
+      の利用可能なリソースをすべて使い切って</span>しまうことを<span>回避 </span>できます。 この変更はソケットが生きている間は永久で、元に戻せません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">network_set_config</span>(config_value, setting);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">config_value</span></td>
-        <td><span data-keyref="Type_Constant_Network_Config"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">ネットワークコンフィグ定数</a></span></td>
-        <td><span class="notranslate">The config constant to set (refer to the table at the top of this page).</span></td>
+        <td><span data-keyref="Type_Constant_Network_Config"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm">ネットワークコンフィグ定数</a></span>
+        </td>
+        <td><span class="notranslate">The config constant to set (refer to the table at the top of this page).</span>
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">setting</span></td>
-        <td><span data-keyref="Type_Any"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">バリアブル</a></span></td>
+        <td><span data-keyref="Type_Any"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">バリアブル</a></span></td>
         <td><span class="notranslate">The setting value of the config.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">String</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../LINKGOESHERE">String</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">network_set_config(network_config_connect_timeout, 1000);<br />
@@ -111,11 +139,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Networking.htm">ネットワーク</a></div>
-        <div style="float:right">次のページ <a href="network_set_timeout.htm"><span class="notranslate">network_set_timeout</span></a></div>
+        <div style="float:left">前のページ：<a href="Networking.htm">ネットワーク</a></div>
+        <div style="float:right">次のページ：<a href="network_set_timeout.htm"><span
+              class="notranslate">network_set_timeout</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_set_config
@@ -129,4 +159,5 @@ network_config_avoid_time_wait
 network_set_config
 -->
 </body>
+
 </html>

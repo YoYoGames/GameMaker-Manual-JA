@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>コードの基本構造</title>
@@ -12,41 +13,52 @@
   <meta name="rh-index-keywords" content="Code Structure" />
   <meta name="search-keywords" content="Code Structure,begin,end,statement" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>コードの基本構造</h1>
-  <p>コードは<em>ブロック</em>単位で記述され、典型的なコードブロックは<span class="glossextra">ステートメントと</span>呼ばれる一連の命令で構成されています。ステートメントは<span data-keyref="GameMaker Name">GameMakerによって</span>解釈され、ゲーム内で何かを起こすために使用されます。その「何か」は、2と2を足して4にするような単純なものから、敵の体力が一定値以下になったら逃げさせるような複雑なものまであります。実際のプログラムの構造は、使用する関数によって大きく異なりますが、基本的にはこのような感じです。</p>
+  <p>コードは<em>ブロック</em>単位で記述され、典型的なコードブロックは<span class="glossextra">ステートメントと</span>呼ばれる一連の命令で構成されています。ステートメントは<span
+      data-keyref="GameMaker Name">GameMakerによって</span>解釈され、ゲーム内で何かを起こすために使用されます。その「何か」は、2と2を足して4にするような単純なものから、敵の体力が一定値以下になったら逃げさせるような複雑なものまであります。実際のプログラムの構造は、使用する関数によって大きく異なりますが、基本的にはこのような感じです。
+  </p>
   <p class="code">&lt;statement&gt;;<br />
     &lt;statement&gt;;<br />
     ...</p>
-  <p>ステートメントは、<a class="glossterm" data-glossterm="変数" href="#">変数</a>宣言の誤りを防ぎ、コードをきれいに整理するために「;」記号で区切る必要があり、変数宣言、<span class="glossextra">式</span>、特定の<strong>関数の</strong>呼び出しで構成することができます。また、次の<a class="glossterm" data-glossterm="ただし" href="#">条件の</a>例のように、中括弧 <span class="inline">{}</span> を使ってステートメントをブロックとして「グループ化」して、一緒に実行することもできます。</p>
+  <p>ステートメントは、<a class="glossterm" data-glossterm="変数" href="#">変数</a>宣言の誤りを防ぎ、コードをきれいに整理するために「;」記号で区切る必要があり、変数宣言、<span
+      class="glossextra">式</span>、特定の<strong>関数の</strong>呼び出しで構成することができます。また、次の<a class="glossterm" data-glossterm="ただし"
+      href="#">条件の</a>例のように、中括弧 <span class="inline">{}</span> を使ってステートメントをブロックとして「グループ化」して、一緒に実行することもできます。</p>
   <p class="code">if (&lt;conditional&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span> は、中括弧 <span class="inline">{}</span> の代わりに <span class="inline">begin</span><span> </span> と <span class="inline">end</span><span>  </span> も受け付けますが、これは一般的に最も一般的な方法とは言えません。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span> は、中括弧 <span
+      class="inline">{}</span> の代わりに <span class="inline">begin</span><span> </span> と <span
+      class="inline">end</span><span> </span> も受け付けますが、これは一般的に最も一般的な方法とは言えません。</p>
   <p class="code">if (&lt;conditional&gt;)<br />
     begin<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     end</p>
-  <p>ここでは、<span data-keyref="GameMaker Name">GameMaker</span> <a href="../../The_Asset_Editors/Scripts.htm">Script Editorで</a> <b>スクリプトとして</b>作成したコードブロックを、より視覚的に表現しています。</p>
-  <p><img alt="Program Example" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/ProgramExample.png" style="cursor: nwse-resize;" /></p>
+  <p>ここでは、<span data-keyref="GameMaker Name">GameMaker</span> <a href="../../The_Asset_Editors/Scripts.htm">Script
+      Editorで</a> <b>スクリプトとして</b>作成したコードブロックを、より視覚的に表現しています。</p>
+  <p><img alt="Program Example" class="center"
+      src="../../assets/Images/Scripting_Reference/GML/Overview/ProgramExample.png" style="cursor: nwse-resize;" /></p>
   <p>ステートメント、式、条件文、関数など、さまざまな種類がありますが、これらはすべて、本書の後続のセクションで詳しく説明します。</p>
-  <p class="note"><span class="note">注</span>：プログラミングに慣れていない方は、先に『<a href="../../Quick_Start_Guide/Quick_Start_Guide.htm">クイックスタートガイド</a>』をご覧ください。</p>
+  <p class="note"><span class="note">注</span>：プログラミングに慣れていない方は、先に『<a
+      href="../../Quick_Start_Guide/Quick_Start_Guide.htm">クイックスタートガイド</a>』をご覧ください。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a href="Runtime_Functions.htm">ランタイムファンクション</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a href="Runtime_Functions.htm">ランタイムファンクション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Basic Code Structure
@@ -61,4 +73,5 @@ end
 structure
 -->
 </body>
+
 </html>

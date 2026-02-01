@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>プリミティブとバーテックス構築のガイド</title>
@@ -12,21 +13,31 @@
   <meta name="rh-index-keywords" content="Guide To Primitives And Vertex Building" />
   <meta name="search-keywords" content="primitive building,primitives,vertex,vertex buffers,vertex formats" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Guide To Primitives And<span class="notranslate">Vertex</span> Building</h1>
-  <p>このガイドでは、カスタム<strong>頂点フォーマットと</strong> <strong>頂点バッファを</strong>使用した<a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">プリミティブの</a>構築と使用方法について簡単に説明します。 </p>
-  <p>一般に、3D、特殊効果、複雑な描画処理、<span class="notranslate">shaders</span> を扱うようになると、<span data-keyref="GameMaker Name">GameMaker</span>が自動的に<a class="glossterm" data-glossterm="てんちょう" href="#">頂点</a>データをセットアップして渡してくれるので、<span class="notranslate">vertex</span> の形式をあまり気にする必要はないでしょう。しかし、速度を上げる必要がある場合や、余分な情報を渡したい場合など、独自に<span class="notranslate">vertex</span> データを作成し、適切なフォーマットにすることが必要な場合があります。例えば、標準の<span class="notranslate">vertex</span> フォーマットは、x, y, z の 3D ポジション、カラー（アルファ付き）、UV<span class="notranslate">texture</span> 座標を含み、自分で作成する場合、次のようになります。</p>
+  <p>このガイドでは、カスタム<strong>頂点フォーマットと</strong> <strong>頂点バッファを</strong>使用した<a
+      href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">プリミティブの</a>構築と使用方法について簡単に説明します。
+  </p>
+  <p>一般に、3D、特殊効果、複雑な描画処理、<span class="notranslate">shaders</span> を扱うようになると、<span
+      data-keyref="GameMaker Name">GameMaker</span>が自動的に<a class="glossterm" data-glossterm="てんちょう"
+      href="#">頂点</a>データをセットアップして渡してくれるので、<span class="notranslate">vertex</span>
+    の形式をあまり気にする必要はないでしょう。しかし、速度を上げる必要がある場合や、余分な情報を渡したい場合など、独自に<span class="notranslate">vertex</span>
+    データを作成し、適切なフォーマットにすることが必要な場合があります。例えば、標準の<span class="notranslate">vertex</span> フォーマットは、x, y, z の 3D
+    ポジション、カラー（アルファ付き）、UV<span class="notranslate">texture</span> 座標を含み、自分で作成する場合、次のようになります。</p>
   <p class="code">vertex_format_begin();<br />
     vertex_format_add_position_3d();<br />
     vertex_format_add_colour();<br />
     vertex_format_add_textcoord();<br />
     my_format = vertex_format_end();</p>
-  <p>しかし、（例えば）<span class="notranslate">shader</span> を使って<span class="notranslate">vertex</span> の位置を操作するだけであれば、色や<span class="notranslate">texture</span> のデータを渡す必要はないでしょう。この場合、このように独自のフォーマットを作成することになる。</p>
+  <p>しかし、（例えば）<span class="notranslate">shader</span> を使って<span class="notranslate">vertex</span> の位置を操作するだけであれば、色や<span
+      class="notranslate">texture</span> のデータを渡す必要はないでしょう。この場合、このように独自のフォーマットを作成することになる。</p>
   <p class="code">vertex_format_begin();<br />
     vertex_format_add_position_3d();<br />
     my_format = vertex_format_end();</p>
-  <p><span class="notranslate">vertex</span> フォーマットを定義する際に使用できる<span class="notranslate">vertex</span> の属性は、全部で 5 種類あります。</p>
+  <p><span class="notranslate">vertex</span> フォーマットを定義する際に使用できる<span class="notranslate">vertex</span> の属性は、全部で 5
+    種類あります。</p>
   <ul class="colour">
     <li>カラー</li>
     <li>通常</li>
@@ -35,8 +46,16 @@
     <li>テクスチャ座標</li>
   </ul>
   <p>一般に、フォーマットの一部として位置または3D位置を<em>必ず</em>提供しなければならないが、その他はすべて任意である。</p>
-  <p><span class="notranslate">vertex</span> フォーマットを作成したら、<strong>プリミティブを</strong>構築する際に<span class="notranslate">vertex</span> 属性の定義順を<i>守らなければ</i>ならないことに注意しなければなりません。つまり、<span class="notranslate">vertex</span> フォーマットに位置、色、<span class="notranslate">texture</span> 座標を定義した場合、<b>これらの属性を同じ順序でプリミティブに追加しなければ<i>ならず</i></b>、そうでない場合はエラーが発生します。また、他の動的リソースと同様に、<span class="notranslate">vertex</span> フォーマットはメモリを必要とするので、不要になったら関数 <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_delete.htm"><span class="inline">vertex_format_delete()</span></a>.</p>
-  <p>作成したプリミティブは、<b>頂点バッファに</b>保持されます。これはあらかじめ作成しておき、プリミティブを構築するための関数から参照される必要があります。<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> は何度でも再利用して異なるプリミティブを作成することができます。また、ゲームやレベルの間、特定のプリミティブタイプを維持するために「凍結」することもできます（これは最も早い方法です。）</p>
+  <p><span class="notranslate">vertex</span> フォーマットを作成したら、<strong>プリミティブを</strong>構築する際に<span
+      class="notranslate">vertex</span> 属性の定義順を<i>守らなければ</i>ならないことに注意しなければなりません。つまり、<span
+      class="notranslate">vertex</span> フォーマットに位置、色、<span class="notranslate">texture</span>
+    座標を定義した場合、<b>これらの属性を同じ順序でプリミティブに追加しなければ<i>ならず</i></b>、そうでない場合はエラーが発生します。また、他の動的リソースと同様に、<span
+      class="notranslate">vertex</span> フォーマットはメモリを必要とするので、不要になったら関数 <a
+      href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_delete.htm"><span
+        class="inline">vertex_format_delete()</span></a>.</p>
+  <p>作成したプリミティブは、<b>頂点バッファに</b>保持されます。これはあらかじめ作成しておき、プリミティブを構築するための関数から参照される必要があります。<span
+      class="notranslate">vertex</span> <span class="notranslate">buffer</span>
+    は何度でも再利用して異なるプリミティブを作成することができます。また、ゲームやレベルの間、特定のプリミティブタイプを維持するために「凍結」することもできます（これは最も早い方法です。）</p>
   <p>単一の三角形プリミティブを構築する例を次のコードに示す。</p>
   <p class="code">// CREATE EVENT<br />
     v_buff = vertex_create_buffer();<br />
@@ -58,12 +77,32 @@
     vertex_submit(v_buff, pr_trianglelist, tex);<br />
     shader_reset();
   </p>
-  <p>ここでは、まずインスタンスの Create イベントで頂点<span class="notranslate">buffer</span> を作成します。次に、三角形プリミティブを構成するさまざまな頂点の定義を始め、使用する 3 点のそれぞれの位置、色、および<span class="notranslate">texture</span> UV 座標を指定します。そして、<span class="notranslate">vertex</span> の定義を終了し、この<span class="notranslate">vertex</span> データを含む<span class="notranslate">buffer</span> <span class="notranslate">vertex</span> が変数 &quot;v_buff&quot; に格納されていることがわかります。  </p>
-  <p class="note"><strong>注：</strong> <span class="notranslate">buffer</span> の内容が常に更新される場合、<span class="notranslate">buffer</span> が作成され、<span class="notranslate">vertex</span> のデータが与えられ、描画された後、再び破壊されることになるが、これらはすべて同じステップで行われる。</p>
-  <p><span class="notranslate">vertex</span> <span class="notranslate">buffer</span> <span class="notranslate">shader</span>これは非常に単純な例で、基本的に<span data-keyref="GameMaker Name">GameMaker</span>が内部でどのように動作しているかを示しています。つまり、<span class="notranslate">sprite</span> を描くと、<span class="notranslate">GameMaker</span> は 4 つの頂点で 2 つの三角形を作る<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を作り（これは「四角形」とも呼ばれます）、<span class="notranslate">textures</span> この 2 つの三角形に<span class="notranslate">sprite</span> の画像を配置します。この<span class="notranslate">sprite</span> を描画すると、<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を送信していることになり、その内容が画面に描画される。</p>
-  <p><span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を描画用に提出するときに、プリミティブタイプを供給していることにお気づきでしょう。プリミティブの種類には、点、線のリストまたはストリップ、三角形のリストまたはストリップがありますが、ほとんどのモバイルハードウェアはこのプリミティブの種類を受け付けないので、三角形のファンは許可されて<i>いません</i>。<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を、描画に使用するプリミティブの種類に応じた正しい形式にすることを忘れないでください。たとえば、2つの三角形のプリミティブを三角形のリストとして描くには6ポイントが必要ですが、三角形のストリップとしてなら4ポイントでよいのです。どちらのタイプを使うかは、描画するものや実現したい効果によります。</p>
-  <p>この方法で独自の<span class="notranslate">vertex</span> <span class="notranslate">buffers</span> を使用する場合の最後の重要なポイントは、GPU に送信される頂点バッチにどのような影響を与えるかということです。<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を作成するとき、あなたは最下層のグラフィックデータを作成していることになります。したがって、描画すると、<span data-keyref="GameMaker Name">GameMaker</span>はあなたの<span class="notranslate">buffer</span> を直接グラフィックカードに送信することだけが起こります。このため、より良いバッチ処理を行いたい場合は、自分で工夫して、バッチ処理したいものを同じ<span class="notranslate">buffer</span> 内に格納する必要があります。</p>
-  <p>すでに述べたように、<span class="notranslate">vertex</span> のフォーマットは、以下の 5 種類の属性（適切な <span class="inline">vertex_format_add_*</span> 関数で追加される）を併用することで構築される。</p>
+  <p>ここでは、まずインスタンスの Create イベントで頂点<span class="notranslate">buffer</span> を作成します。次に、三角形プリミティブを構成するさまざまな頂点の定義を始め、使用する 3
+    点のそれぞれの位置、色、および<span class="notranslate">texture</span> UV 座標を指定します。そして、<span class="notranslate">vertex</span>
+    の定義を終了し、この<span class="notranslate">vertex</span> データを含む<span class="notranslate">buffer</span> <span
+      class="notranslate">vertex</span> が変数 &quot;v_buff&quot; に格納されていることがわかります。 </p>
+  <p class="note"><strong>注：</strong> <span class="notranslate">buffer</span> の内容が常に更新される場合、<span
+      class="notranslate">buffer</span> が作成され、<span class="notranslate">vertex</span>
+    のデータが与えられ、描画された後、再び破壊されることになるが、これらはすべて同じステップで行われる。</p>
+  <p><span class="notranslate">vertex</span> <span class="notranslate">buffer</span> <span
+      class="notranslate">shader</span>これは非常に単純な例で、基本的に<span
+      data-keyref="GameMaker Name">GameMaker</span>が内部でどのように動作しているかを示しています。つまり、<span class="notranslate">sprite</span>
+    を描くと、<span class="notranslate">GameMaker</span> は 4 つの頂点で 2 つの三角形を作る<span class="notranslate">vertex</span> <span
+      class="notranslate">buffer</span> を作り（これは「四角形」とも呼ばれます）、<span class="notranslate">textures</span> この 2 つの三角形に<span
+      class="notranslate">sprite</span> の画像を配置します。この<span class="notranslate">sprite</span> を描画すると、<span
+      class="notranslate">vertex</span> <span class="notranslate">buffer</span> を送信していることになり、その内容が画面に描画される。</p>
+  <p><span class="notranslate">vertex</span> <span class="notranslate">buffer</span>
+    を描画用に提出するときに、プリミティブタイプを供給していることにお気づきでしょう。プリミティブの種類には、点、線のリストまたはストリップ、三角形のリストまたはストリップがありますが、ほとんどのモバイルハードウェアはこのプリミティブの種類を受け付けないので、三角形のファンは許可されて<i>いません</i>。<span
+      class="notranslate">vertex</span> <span class="notranslate">buffer</span>
+    を、描画に使用するプリミティブの種類に応じた正しい形式にすることを忘れないでください。たとえば、2つの三角形のプリミティブを三角形のリストとして描くには6ポイントが必要ですが、三角形のストリップとしてなら4ポイントでよいのです。どちらのタイプを使うかは、描画するものや実現したい効果によります。
+  </p>
+  <p>この方法で独自の<span class="notranslate">vertex</span> <span class="notranslate">buffers</span> を使用する場合の最後の重要なポイントは、GPU
+    に送信される頂点バッチにどのような影響を与えるかということです。<span class="notranslate">vertex</span> <span class="notranslate">buffer</span>
+    を作成するとき、あなたは最下層のグラフィックデータを作成していることになります。したがって、描画すると、<span data-keyref="GameMaker Name">GameMaker</span>はあなたの<span
+      class="notranslate">buffer</span> を直接グラフィックカードに送信することだけが起こります。このため、より良いバッチ処理を行いたい場合は、自分で工夫して、バッチ処理したいものを同じ<span
+      class="notranslate">buffer</span> 内に格納する必要があります。</p>
+  <p>すでに述べたように、<span class="notranslate">vertex</span> のフォーマットは、以下の 5 種類の属性（適切な <span
+      class="inline">vertex_format_add_*</span> 関数で追加される）を併用することで構築される。</p>
   <ul class="colour">
     <li>カラー</li>
     <li>通常</li>
@@ -78,7 +117,11 @@
     <li>ポジション</li>
     <li>テクスチャ座標</li>
   </ul>
-  <p><span class="notranslate">vertex</span> <span class="notranslate">vertex</span> <span class="notranslate">shader</span>しかし、<span class="notranslate">shader</span> では、<i>Position が</i>&quot;x&quot; と &quot;y&quot; の座標だけであるのに対し、<i>3D Position</i>は &quot;x&quot;, &quot;y&quot;, &quot;z&quot; の座標を持つことを除いて、<i>Position</i>と<i>3D Position</i>は<em>同じ </em>属性として扱われています。では、<span class="notranslate">vertex</span> のフォーマットと、<span class="notranslate">shader</span> の属性定義をどのように対応させるのでしょうか。まず、デフォルトシェーダの典型的なアトリビュートセットを見てみましょ う。</p>
+  <p><span class="notranslate">vertex</span> <span class="notranslate">vertex</span> <span
+      class="notranslate">shader</span>しかし、<span class="notranslate">shader</span> では、<i>Position が</i>&quot;x&quot; と
+    &quot;y&quot; の座標だけであるのに対し、<i>3D Position</i>は &quot;x&quot;, &quot;y&quot;, &quot;z&quot;
+    の座標を持つことを除いて、<i>Position</i>と<i>3D Position</i>は<em>同じ </em>属性として扱われています。では、<span class="notranslate">vertex</span>
+    のフォーマットと、<span class="notranslate">shader</span> の属性定義をどのように対応させるのでしょうか。まず、デフォルトシェーダの典型的なアトリビュートセットを見てみましょ う。</p>
   <p> </p>
   <p class="code">attribute vec3 in_Position;        // (x,y,z)<br />
     //attribute vec3 in_Normal;        // (x,y,z) unused in this shader.<br />
@@ -90,14 +133,27 @@
     vertex_format_add_colour();<br />
     vertex_format_add_textcoord();<br />
     my_format = vertex_format_end();</p>
-  <p>さて、<span class="notranslate">shader</span> 属性はどのようにして<span class="notranslate">vertex</span> フォーマットタイプにマッチするのでしょうか？それは単に命名規則に基づいています。</p>
+  <p>さて、<span class="notranslate">shader</span> 属性はどのようにして<span class="notranslate">vertex</span>
+    フォーマットタイプにマッチするのでしょうか？それは単に命名規則に基づいています。</p>
   <ul class="colour">
-    <li><span class="inline">&quot;in_Position&quot;</span> 宛先 <span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_position.htm">vertex_format_add_position</a>/<a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_position_3d.htm">_3d()</a></span></li>
-    <li><span class="inline">&quot;in_Colour&quot;</span> 宛先 <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_colour.htm"><span class="inline">vertex_format_add_colour()</span></a></li>
-    <li><span class="inline">&quot;in_TextureCoord&quot;</span> 宛先 <a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_texcoord.htm"><span class="inline">vertex_format_add_texcoord()</span></a></li>
+    <li><span class="inline">&quot;in_Position&quot;</span> 宛先 <span class="inline"><a
+          href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_position.htm">vertex_format_add_position</a>/<a
+          href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_position_3d.htm">_3d()</a></span>
+    </li>
+    <li><span class="inline">&quot;in_Colour&quot;</span> 宛先 <a
+        href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_colour.htm"><span
+          class="inline">vertex_format_add_colour()</span></a></li>
+    <li><span class="inline">&quot;in_TextureCoord&quot;</span> 宛先 <a
+        href="../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_texcoord.htm"><span
+          class="inline">vertex_format_add_texcoord()</span></a></li>
   </ul>
-  <p><span class="inline"><span class="inline"><span class="inline"></span> さて、同じ種類の属性が複数ある場合、事態はより複雑になりますが、それでも物事は同じ命名規則に基づいています。 または フォーマットでは、位置と法線の属性は<span class="notranslate">shader</span> <span class="notranslate">vertex</span> <b>1</b> <b>つしか</b>ありませんが、色または の属性は複数存在<span class="notranslate">texture</span> <em>できます</em>。</p>
-  <p><span class="notranslate">shader</span> に色属性を追加する場合、<span class="notranslate">shader</span> 属性の末尾に番号を追加して、その属性が<span class="notranslate">vertex</span> フォーマットのどの項目に対応するのかを示す必要があります。以下はその例です。まず、<span class="notranslate">vertex</span> フォーマットの場合です。</p>
+  <p><span class="inline"><span class="inline"><span class="inline"></span>
+        さて、同じ種類の属性が複数ある場合、事態はより複雑になりますが、それでも物事は同じ命名規則に基づいています。 または フォーマットでは、位置と法線の属性は<span
+          class="notranslate">shader</span> <span class="notranslate">vertex</span> <b>1</b> <b>つしか</b>ありませんが、色または
+        の属性は複数存在<span class="notranslate">texture</span> <em>できます</em>。</p>
+  <p><span class="notranslate">shader</span> に色属性を追加する場合、<span class="notranslate">shader</span>
+    属性の末尾に番号を追加して、その属性が<span class="notranslate">vertex</span> フォーマットのどの項目に対応するのかを示す必要があります。以下はその例です。まず、<span
+      class="notranslate">vertex</span> フォーマットの場合です。</p>
   <p class="code">vertex_format_begin();<br />
     vertex_format_add_position_3d();<br />
     vertex_format_add_colour();<br />
@@ -109,8 +165,13 @@
     attribute vec4 in_Colour0;       // (r,g,b,a)<br />
     attribute vec4 in_Colour1;       // (r,g,b,a)<br />
     attribute vec2 in_TextureCoord;  // (u,v)</p>
-  <p>この場合、 <span class="inline">in_Colour0</span> は最初の <span class="inline">vertex_format_add_colour()</span> に、 <span class="inline">in_Colour1</span> は 2 番目のマップに対応します。</p>
-  <p>テクスチャ座標は、色とは若干異なる扱いを受けます。基本的に、 <span class="inline">in_Position</span> 、 <span class="inline">in_Normal</span> または <span class="inline">in_Colour[0 ... ]</span> のいずれかの属性と呼ばれていないものは、<span class="notranslate">texture</span> の座標として扱われます。<span class="notranslate">shader</span> の属性リストで定義されている順番が、<span class="notranslate">vertex</span> のどの属性に対応するかを示しています。次の<span class="notranslate">GML</span> の例を参照してください。</p>
+  <p>この場合、 <span class="inline">in_Colour0</span> は最初の <span class="inline">vertex_format_add_colour()</span> に、 <span
+      class="inline">in_Colour1</span> は 2 番目のマップに対応します。</p>
+  <p>テクスチャ座標は、色とは若干異なる扱いを受けます。基本的に、 <span class="inline">in_Position</span> 、 <span class="inline">in_Normal</span> または
+    <span class="inline">in_Colour[0 ... ]</span> のいずれかの属性と呼ばれていないものは、<span class="notranslate">texture</span>
+    の座標として扱われます。<span class="notranslate">shader</span> の属性リストで定義されている順番が、<span class="notranslate">vertex</span>
+    のどの属性に対応するかを示しています。次の<span class="notranslate">GML</span> の例を参照してください。
+  </p>
   <p class="code">vertex_format_begin();<br />
     vertex_format_add_position_3d();<br />
     vertex_format_add_colour();<br />
@@ -124,10 +185,14 @@
     attribute vec2 in_myTexcoord;    // (u,v)<br />
     attribute vec2 in_TextureCoord;  // (u,v)<br />
     attribute vec2 in_Something;     // (u,v)</p>
-  <p>この例では、 <span class="inline">in_myTexcoord</span> 、 <span class="inline">in_TextureCoord</span> 、 <span class="inline">in_Something</span> が、<span class="notranslate">texture</span> 形式で定義された 3 つの連続する<span class="notranslate">vertex</span> 座標属性に対応します。</p>
-  <p><span class="notranslate">vertex</span> フォーマット、<span class="notranslate">vertex</span> <span class="notranslate">buffers</span> 、プリミティブの作成に必要な全機能の一覧は、次のページでご覧いただけます。</p>
+  <p>この例では、 <span class="inline">in_myTexcoord</span> 、 <span class="inline">in_TextureCoord</span> 、 <span
+      class="inline">in_Something</span> が、<span class="notranslate">texture</span> 形式で定義された 3 つの連続する<span
+      class="notranslate">vertex</span> 座標属性に対応します。</p>
+  <p><span class="notranslate">vertex</span> フォーマット、<span class="notranslate">vertex</span> <span
+      class="notranslate">buffers</span> 、プリミティブの作成に必要な全関数の一覧は、次のページでご覧いただけます。</p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></li>
+    <li><a href="../GameMaker_Language/GML_Reference/Drawing/Primitives/Primitives_And_Vertex_Formats.htm">プリミティブと<span
+          class="notranslate">Vertex</span> フォーマット</a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -135,11 +200,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
-        <div style="float:right">次へ<a href="Guide_To_Using_Blendmodes.htm">ブレンドモード使用ガイド</a></div>
+        <div style="float:left">前のページ：<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次のページ：<a href="Guide_To_Using_Blendmodes.htm">ブレンドモード使用ガイド</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Primitive Building
@@ -150,4 +216,5 @@ Vertex Buffers
 using_primitives_vertex_buffers
 -->
 </body>
+
 </html>

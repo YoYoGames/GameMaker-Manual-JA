@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>セットシーケンスヘッド</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,31 +13,40 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Sequence Head" />
   <meta name="search-keywords" content="Set Sequence Head" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> セット ヘッド<span class="notranslate">Sequence</span> </h1>
-  <p>このアクションを使うと、<span class="notranslate">sequence</span> の指定された<span class="notranslate">room</span> 要素の<a class="glossterm" data-glossterm="プレイヘッド" href="#">再生ヘッド</a>位置を、指定されたフレームに設定することができます。指定するのは、<span class="notranslate">sequence</span> 要素 ID（アクション<a href="Create_Sequence_Element.htm">Create Sequence</a> が返すもの）および
-    新しい再生位置（フレーム単位）。プレイヘッドに関する情報は、「<a href="../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">ドープシートの使用</a>」を参照してください。</p>
-  <p>位置は<span> </span><i>フレーム</i><span> </span>であり、総フレーム数より大きい（または 0 より小さい）値を設定すると、実際の最終プレイヘッド位置は、選択されている<span class="notranslate">sequence</span> 再生の種類によって異なることに注意してください。
+  <p>このアクションを使うと、<span class="notranslate">sequence</span> の指定された<span class="notranslate">room</span> 要素の<a
+      class="glossterm" data-glossterm="プレイヘッド" href="#">再生ヘッド</a>位置を、指定されたフレームに設定することができます。指定するのは、<span
+      class="notranslate">sequence</span> 要素 ID（アクション<a href="Create_Sequence_Element.htm">Create Sequence</a> が返すもの）および
+    新しい再生位置（フレーム単位）。プレイヘッドに関する情報は、「<a
+      href="../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">ドープシートの使用</a>」を参照してください。</p>
+  <p>位置は<span> </span><i>フレーム</i><span> </span>であり、総フレーム数より大きい（または 0 より小さい）値を設定すると、実際の最終プレイヘッド位置は、選択されている<span
+      class="notranslate">sequence</span> 再生の種類によって異なることに注意してください。
     を、以下のルールに沿って設定します。</p>
   <ul class="colour">
     <li><strong>ループしない</strong>。再生ヘッドは、<span class="notranslate">loop</span> の終わり（指定された値が負の場合は、始まり）にクランプします。</li>
-    <li><strong>ループする</strong>。再生ヘッドは、<span class="notranslate">sequence</span> の始まりに余分なフレームを加えて折り返します。例えば、30 フレームの<span class="notranslate">sequence</span> で再生ヘッドを 45 フレームに設定すると、実際の再生ヘッド位置は 15 になります。もし
+    <li><strong>ループする</strong>。再生ヘッドは、<span class="notranslate">sequence</span> の始まりに余分なフレームを加えて折り返します。例えば、30 フレームの<span
+        class="notranslate">sequence</span> で再生ヘッドを 45 フレームに設定すると、実際の再生ヘッド位置は 15 になります。もし
       を負の値で指定すると、<span class="notranslate">sequence</span> の再生ヘッドが逆方向にラップされます。</li>
-    <li><strong>ピンポン・ルーピング</strong>再生ヘッドが最後まで進み、全フレーム長を超えるフレーム数分、再生方向を反転させて戻る。<span class="notranslate">sequence</span> が30フレームで、プレイヘッドを設定した場合。
-      を40に設定すると、最終的な再生ヘッド位置は20になり、方向は逆になります（0に下がる）。<span> </span><i> </i><span> </span> <span class="notranslate">sequence</span> のピンポン再生に負の値を与えてはいけないことに注意してください。
+    <li><strong>ピンポン・ルーピング</strong>再生ヘッドが最後まで進み、全フレーム長を超えるフレーム数分、再生方向を反転させて戻る。<span class="notranslate">sequence</span>
+      が30フレームで、プレイヘッドを設定した場合。
+      を40に設定すると、最終的な再生ヘッド位置は20になり、方向は逆になります（0に下がる）。<span> </span><i> </i><span> </span> <span
+        class="notranslate">sequence</span> のピンポン再生に負の値を与えてはいけないことに注意してください。
       の結果が得られます。</li>
   </ul>
   <p>このようにヘッド位置を設定しても再生は停止せず、<span class="notranslate">sequence</span> 、一時停止しない限り新しいプレイヘッド位置から再生が継続されるだけです。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_set_head.png"/></p>
+  <p><img class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_set_head.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Variable</span></td>
@@ -50,17 +61,20 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックは、<span class="notranslate">sequence</span> の要素 ID の現在のヘッドポジションを取得します。
-    は、変数 &quot;<span class="inline">seq_id</span>&quot; を使用します。その値を使って、同じ<span class="notranslate">sequence</span> の要素の先頭位置を設定し、4フレーム分前進させる。</p>
+    は、変数 &quot;<span class="inline">seq_id</span>&quot; を使用します。その値を使って、同じ<span class="notranslate">sequence</span>
+    の要素の先頭位置を設定し、4フレーム分前進させる。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sequence_Actions_Library.htm">シークエンスアクション</a></div>
-        <div style="float:right">次へ<a href="Create_Sequence_Element.htm"> <span class="notranslate">Sequence</span> </a>要素の作成 </div>
+        <div style="float:left">前のページ：<a href="Sequence_Actions_Library.htm">シークエンスアクション</a></div>
+        <div style="float:right">次のページ：<a href="Create_Sequence_Element.htm"> <span class="notranslate">Sequence</span>
+          </a>要素の作成 </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set <span class="notranslate">Sequence</span> Head
@@ -69,4 +83,5 @@ Action - Set <span class="notranslate">Sequence</span> Head
 action_set_sequence_head
 -->
 </body>
+
 </html>

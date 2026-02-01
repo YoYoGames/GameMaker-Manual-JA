@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gml_pragma</title>
@@ -12,67 +13,118 @@
   <meta name="rh-index-keywords" content="gml_pragma" />
   <meta name="search-keywords" content="gml_pragma" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gml_pragma</span></h1>
-  <p> <span class="inline">gml_pragma</span> 関数は、与えられたターゲットがあなたのコードをコンパイルする方法に影響を与え、あなたのプロジェクトの最終的なコンパイルをさらに最適化するために、異なるコマンドで呼び出す必要があります。これらのコマンドは、ゲームがコンパイルされる前に効果的に<i>プリプロセスさ</i>れるため、関数をプロジェクトのどこに配置しても、ゲームが完全にコンパイルされる前に処理されることになります。利用可能なコマンドは次のとおりです。</p>
+  <p> <span class="inline">gml_pragma</span>
+    関数は、与えられたターゲットがあなたのコードをコンパイルする方法に影響を与え、あなたのプロジェクトの最終的なコンパイルをさらに最適化するために、異なるコマンドで呼び出す必要があります。これらのコマンドは、ゲームがコンパイルされる前に効果的に<i>プリプロセスさ</i>れるため、関数をプロジェクトのどこに配置しても、ゲームが完全にコンパイルされる前に処理されることになります。利用可能なコマンドは次のとおりです。
+  </p>
   <ul class="colour">
-    <li>&quot;<b>forceinline</b>&quot; -<b>スクリプト</b>関数内で &quot;forceinline&quot; プラグマを使って関数を呼び出すと、YYCはその関数を参照するのではなく、インラインでプロジェクトをコンパイルするようになります。これは処理をさらに向上させますが、最終的な実行ファイルのサイズが大きくなり、特にインライン化されたコードが大きい場合や複数の異なる場所で使用される場合、コンパイル時間が大幅に増加するため、使用する際には注意が必要です。このプラグマは<b>YYCを使用してビルド</b>する場合のみ有効であることに注意してください。</li>
-    <li>&quot;<b>global</b>&quot;, &quot;<b>[gml code]</b>&quot; - &quot;global&quot; プラグマは、コンパイル時に、ゲームの最初の<span class="notranslate">GML</span> が実行される前に、<b>グローバル</b>スコープで<span class="notranslate">string</span> としてフォーマットされたいくつかの<span class="notranslate">room</span> コードを呼び出すことを許可しています。たとえば、次のようになります。
-     <p class="code">gml_pragma(&quot;global&quot;, &quot;Init()&quot;);</p>
-      これは、ゲームの最初の<span class="notranslate">script</span> が実行される前に、<span class="notranslate">room</span> 関数 &quot;Init&quot; を呼び出すことになります。第2引数の<span class="notranslate">GML</span> は<b>コンパイル時の定数でなければ</b>ならないことに注意してください。また、このプラグマを使ってインスタンスを作成したり、<span class="notranslate">room</span> （または<span class="notranslate">room</span> の中の何か）を機能させる必要がある操作を実行することはできません。
+    <li>&quot;<b>forceinline</b>&quot; -<b>スクリプト</b>関数内で &quot;forceinline&quot;
+      プラグマを使って関数を呼び出すと、YYCはその関数を参照するのではなく、インラインでプロジェクトをコンパイルするようになります。これは処理をさらに向上させますが、最終的な実行ファイルのサイズが大きくなり、特にインライン化されたコードが大きい場合や複数の異なる場所で使用される場合、コンパイル時間が大幅に増加するため、使用する際には注意が必要です。このプラグマは<b>YYCを使用してビルド</b>する場合のみ有効であることに注意してください。
     </li>
-    <li>&quot;<b>PNGCrush</b>&quot; - &quot;PNGCrush&quot; プラグマは、<span class="notranslate">texture</span> を作成するたびに<a href="https://pmt.sourceforge.io/pngcrush/" target="_blank">PNGCrush</a>プログラムを使用します。これはゲームのコンパイルにかかる時間を大幅に増加させるので、常にオンにしておく必要はありませんが、最終的なファイルサイズを大幅に削減することができますので、注意してください。このオプションは、PNG形式を使用する<span class="notranslate">Texture</span> Groupsにのみ適用されます（<a data-xref="{text}" href="../../../Settings/Texture_Groups.htm#h">Group Settingsを</a>参照）。</li>
-    <li>&quot;<b>Texgroup.Scale</b>&quot;, &quot;<b>[TextureGroupName]</b>&quot;, &quot;<b>[Scale Divisor]</b>&quot; - &quot;Texgroup.Scale&quot; は、与えられた<span class="notranslate">texture</span> グループをコンパイル時にスケーリングします。スケーリングする<span class="notranslate">string</span> グループの名前（<span class="notranslate">texture</span> ）である &quot;[TexGroupName]&quot; と、スケーリングに使用する除数である &quot;[Scale Divisor]&quot; （これも<span class="notranslate">string</span> ）、つまり、2つの引数を追加で指定する必要があります。
-     <p class="code">gml_pragma(&quot;Texgroup.Scale&quot;, &quot;level1&quot;, &quot;2&quot;);</p>
-      この場合、&quot;level1&quot;<span class="notranslate">textures</span> グループ内のすべての<span class="notranslate">texture</span> が半分になります。
+    <li>&quot;<b>global</b>&quot;, &quot;<b>[gml code]</b>&quot; - &quot;global&quot; プラグマは、コンパイル時に、ゲームの最初の<span
+        class="notranslate">GML</span> が実行される前に、<b>グローバル</b>スコープで<span class="notranslate">string</span>
+      としてフォーマットされたいくつかの<span class="notranslate">room</span> コードを呼び出すことを許可しています。たとえば、次のようになります。
+      <p class="code">gml_pragma(&quot;global&quot;, &quot;Init()&quot;);</p>
+      これは、ゲームの最初の<span class="notranslate">script</span> が実行される前に、<span class="notranslate">room</span> 関数
+      &quot;Init&quot; を呼び出すことになります。第2引数の<span class="notranslate">GML</span>
+      は<b>コンパイル時の定数でなければ</b>ならないことに注意してください。また、このプラグマを使ってインスタンスを作成したり、<span class="notranslate">room</span> （または<span
+        class="notranslate">room</span> の中の何か）を機能させる必要がある操作を実行することはできません。
     </li>
-    <li>&quot;<b>UnityBuild</b>&quot;, &quot;<b>[enable/disable]</b>&quot; - このプラグマで関数を呼び出し、enable/disable 引数を <span class="inline">true</span> に設定すると、コンパイル時にプロジェクト内のすべての .cpp ファイルを 1 つのファイルにまとめ、それを使用してすべてのビルドを行います（例：）。
-     <p class="code">gml_pragma(&quot;UnityBuild&quot;, &quot;true&quot;);</p>
-      統一ビルドの利点はビルドが速くなることですが、欠点は毎回<i>フルビルドを</i>行うので、コードの一部分を変更しても、キャッシュされたファイルを使用せずにすべてを再度ビルドしてしまうことです。これはYYCを使用したXbox Oneエクスポート専用に追加されましたが、他のビルドにも呼び出すことができます<b>（YYCのみ</b>）。unity buildsの詳細については、<a href="http://buffered.io/posts/the-magic-of-unity-builds/" target="_blank">こちらを</a>ご覧ください。
+    <li>&quot;<b>PNGCrush</b>&quot; - &quot;PNGCrush&quot; プラグマは、<span class="notranslate">texture</span> を作成するたびに<a
+        href="https://pmt.sourceforge.io/pngcrush/"
+        target="_blank">PNGCrush</a>プログラムを使用します。これはゲームのコンパイルにかかる時間を大幅に増加させるので、常にオンにしておく必要はありませんが、最終的なファイルサイズを大幅に削減することができますので、注意してください。このオプションは、PNG形式を使用する<span
+        class="notranslate">Texture</span> Groupsにのみ適用されます（<a data-xref="{text}"
+        href="../../../Settings/Texture_Groups.htm#h">Group Settingsを</a>参照）。</li>
+    <li>&quot;<b>Texgroup.Scale</b>&quot;, &quot;<b>[TextureGroupName]</b>&quot;, &quot;<b>[Scale Divisor]</b>&quot; -
+      &quot;Texgroup.Scale&quot; は、与えられた<span class="notranslate">texture</span> グループをコンパイル時にスケーリングします。スケーリングする<span
+        class="notranslate">string</span> グループの名前（<span class="notranslate">texture</span> ）である
+      &quot;[TexGroupName]&quot; と、スケーリングに使用する除数である &quot;[Scale Divisor]&quot; （これも<span
+        class="notranslate">string</span> ）、つまり、2つの引数を追加で指定する必要があります。
+      <p class="code">gml_pragma(&quot;Texgroup.Scale&quot;, &quot;level1&quot;, &quot;2&quot;);</p>
+      この場合、&quot;level1&quot;<span class="notranslate">textures</span> グループ内のすべての<span
+        class="notranslate">texture</span> が半分になります。
     </li>
-    <li>&quot;<strong>AllowReentrantStatic</strong>&quot; - This pragma reverts static initialisation to the old re-entrant initialisation behaviour of <span data-keyref="GameMaker Name">GameMaker</span> versions up to 2024.8. It is a project-wide setting and so cannot be put around code sections. The following code enables this old behaviour: 
-      <p class="code"><span data-field="title" data-format="default">gml_pragma</span>(&quot;AllowReentrantStatic&quot;, true);</p>
-      <p><span data-conref="../../../assets/snippets/Tag_warning.hts"> </span> You should only use this in existing projects that make use of the old behaviour. <span data-condition="Export:Beta"><a data-xref="{title}" href="../../../Settings/Runner_Details/GMRT_(GameMaker_Runtime).htm">GMRT (GameMaker Runtime)</a> will no longer allow it.</span></p>
+    <li>&quot;<b>UnityBuild</b>&quot;, &quot;<b>[enable/disable]</b>&quot; - このプラグマで関数を呼び出し、enable/disable 引数を <span
+        class="inline">true</span> に設定すると、コンパイル時にプロジェクト内のすべての .cpp ファイルを 1 つのファイルにまとめ、それを使用してすべてのビルドを行います（例：）。
+      <p class="code">gml_pragma(&quot;UnityBuild&quot;, &quot;true&quot;);</p>
+      統一ビルドの利点はビルドが速くなることですが、欠点は毎回<i>フルビルドを</i>行うので、コードの一部分を変更しても、キャッシュされたファイルを使用せずにすべてを再度ビルドしてしまうことです。これはYYCを使用したXbox
+      Oneエクスポート専用に追加されましたが、他のビルドにも呼び出すことができます<b>（YYCのみ</b>）。unity buildsの詳細については、<a
+        href="http://buffered.io/posts/the-magic-of-unity-builds/" target="_blank">こちらを</a>ご覧ください。
     </li>
-    <li>&quot;<strong>MarkTagAsUsed</strong>&quot; - When &quot;<strong>Automatically remove unused assets when compiling</strong>&quot; is enabled in the <a data-xref="{title}" href="../../../Settings/Game_Options.htm">Game Options</a>, any unused assets are stripped from the compiled game. This can break games that dynamically load assets at runtime. With this pragma you can mark the <a data-xref="{text}" href="../../../Introduction/The_Asset_Browser.htm#h" title="tags">Tags</a> that should not be stripped and any assets with the assigned tags will always be present in the compiled game package.
+    <li>&quot;<strong>AllowReentrantStatic</strong>&quot; - This pragma reverts static initialisation to the old
+      re-entrant initialisation behaviour of <span data-keyref="GameMaker Name">GameMaker</span> versions up to 2024.8.
+      It is a project-wide setting and so cannot be put around code sections. The following code enables this old
+      behaviour: 
+      <p class="code"><span data-field="title" data-format="default">gml_pragma</span>(&quot;AllowReentrantStatic&quot;,
+        true);</p>
+      <p><span data-conref="../../../assets/snippets/Tag_warning.hts"> </span> You should only use this in existing
+        projects that make use of the old behaviour. <span data-condition="Export:Beta"><a data-xref="{title}"
+            href="../../../Settings/Runner_Details/GMRT_(GameMaker_Runtime).htm">GMRT (GameMaker Runtime)</a> will no
+          longer allow it.</span></p>
+    </li>
+    <li>&quot;<strong>MarkTagAsUsed</strong>&quot; - When &quot;<strong>Automatically remove unused assets when
+        compiling</strong>&quot; is enabled in the <a data-xref="{title}" href="../../../Settings/Game_Options.htm">Game
+        Options</a>, any unused assets are stripped from the compiled game. This can break games that dynamically load
+      assets at runtime. With this pragma you can mark the <a data-xref="{text}"
+        href="../../../Introduction/The_Asset_Browser.htm#h" title="tags">Tags</a> that should not be stripped and any
+      assets with the assigned tags will always be present in the compiled game package.
       <p class="code">gml_pragma(&quot;MarkTagAsUsed&quot;, &quot;used&quot;);<br />
-        gml_pragma(&quot;MarkTagAsUsed&quot;, &quot;multiple&quot;, &quot;tags&quot;, &quot;can&quot;, &quot;be&quot;, &quot;specified&quot;);</p>
+        gml_pragma(&quot;MarkTagAsUsed&quot;, &quot;multiple&quot;, &quot;tags&quot;, &quot;can&quot;, &quot;be&quot;,
+        &quot;specified&quot;);</p>
     </li>
-    <li><strong>&quot;LegacySetObjectOrder&quot;</strong> - This pragma ensures that the given object references are listed in the specified relative order on export, without moving other objects in the list. It can be used more than once in your project and the results will depend on which pragmas are processed first, so if you have a paradox in the commands then the output will be ill-defined and depend on the asset compiler&#39;s order of processing. An error is thrown when an object is mentioned more than once in the list or when an object name is not in the project. Note that this pragma has been added for pragmatic reasons and <em>using it is strongly discouraged</em>. It is unlikely to be supported in future versions of <span data-keyref="GameMaker Name">GameMaker</span>.
+    <li><strong>&quot;LegacySetObjectOrder&quot;</strong> - This pragma ensures that the given object references are
+      listed in the specified relative order on export, without moving other objects in the list. It can be used more
+      than once in your project and the results will depend on which pragmas are processed first, so if you have a
+      paradox in the commands then the output will be ill-defined and depend on the asset compiler&#39;s order of
+      processing. An error is thrown when an object is mentioned more than once in the list or when an object name is
+      not in the project. Note that this pragma has been added for pragmatic reasons and <em>using it is strongly
+        discouraged</em>. It is unlikely to be supported in future versions of <span
+        data-keyref="GameMaker Name">GameMaker</span>.
       <p class="code">gml_pragma(&quot;LegacySetObjectOrder&quot;, Object2, Object3, Object1);</p>
-      Using the code above, <span class="inline2">Object2</span> will be listed first, followed by <span class="inline2">Object3</span> and <span class="inline2">Object1</span>.
+      Using the code above, <span class="inline2">Object2</span> will be listed first, followed by <span
+        class="inline2">Object3</span> and <span class="inline2">Object1</span>.
     </li>
-    <li><strong>&quot;MarkUILayerAsUsed&quot;</strong> - This pragma marks the UI layer with the given name as used to the asset compiler. This makes sure a UI layer present in a prefab is added to the main project upon export.<br />
-      Note that the object which calls this pragma should itself not be on any UI layer which you mark as used, as this will result in a situation where dragging the prefab into an Instances layer in your room will then give you two instances of the object when the game is run - <span>the one you dragged onto the Instances layer and the original one on your marked UI layer.</span>
+    <li><strong>&quot;MarkUILayerAsUsed&quot;</strong> - This pragma marks the UI layer with the given name as used to
+      the asset compiler. This makes sure a UI layer present in a prefab is added to the main project upon export.<br />
+      Note that the object which calls this pragma should itself not be on any UI layer which you mark as used, as this
+      will result in a situation where dragging the prefab into an Instances layer in your room will then give you two
+      instances of the object when the game is run - <span>the one you dragged onto the Instances layer and the original
+        one on your marked UI layer.</span>
       <p class="code">gml_pragma(&quot;MarkUILayerAsUsed&quot;, &quot;UI Layer Name&quot;);</p>
     </li>
   </ul>
-  <p class="note"><b>注</b>： <span class="inline">gml_pragma</span> 関数の最初の引数は、変数ではなく、<b>コンパイル時<span class="notranslate">string</span> の定数でなければ</b>なりません。</p>
+  <p class="note"><b>注</b>： <span class="inline">gml_pragma</span> 関数の最初の引数は、変数ではなく、<b>コンパイル時<span
+        class="notranslate">string</span> の定数でなければ</b>なりません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gml_pragma</span>(command, [optional...]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">command</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
         <td><span class="notranslate">A string with one of the commands listed above.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">[optional]</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
-        <td><span class="notranslate">Some of the available commands require an optional argument or arguments. These are explained above for each command.</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">文字列</a></span></td>
+        <td><span class="notranslate">Some of the available commands require an optional argument or arguments. These
+            are explained above for each command.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -84,11 +136,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
-        <div style="float:right">次のページ <a href="parameter_count.htm"><span class="notranslate">parameter_count</span></a></div>
+        <div style="float:left">前のページ：<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
+        <div style="float:right">次のページ：<a href="parameter_count.htm"><span
+              class="notranslate">parameter_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gml_pragma
@@ -97,4 +151,5 @@ gml_pragma
 gml_pragma
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_world_draw_debug</title>
@@ -9,14 +10,20 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_world_draw_debug" />
-  <meta name="rh-index-keywords" content="physics_world_draw_debug,phy_debug_render_aabb,phy_debug_render_collision_pairs,phy_debug_render_coms,phy_debug_render_core_shapes,phy_debug_render_joints,phy_debug_render_obb,phy_debug_render_shapes" />
-  <meta name="search-keywords" content="physics_world_draw_debug,phy_debug_render_aabb,phy_debug_render_collision_pairs,phy_debug_render_coms,phy_debug_render_core_shapes,phy_debug_render_joints,phy_debug_render_obb,phy_debug_render_shapes" />
+  <meta name="rh-index-keywords"
+    content="physics_world_draw_debug,phy_debug_render_aabb,phy_debug_render_collision_pairs,phy_debug_render_coms,phy_debug_render_core_shapes,phy_debug_render_joints,phy_debug_render_obb,phy_debug_render_shapes" />
+  <meta name="search-keywords"
+    content="physics_world_draw_debug,phy_debug_render_aabb,phy_debug_render_collision_pairs,phy_debug_render_coms,phy_debug_render_core_shapes,phy_debug_render_joints,phy_debug_render_obb,phy_debug_render_shapes" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_world_draw_debug</span></h1>
-  <p>この関数は<span class="notranslate">room</span> の物理世界システムの表現を描画し、物理シーンが正しく動作しないときに<span class="notranslate">debugging</span> の手助けをします。たとえば、<span class="notranslate">sprite</span> が間違った位置や回転で描かれ、正しくない物理学のように見えることがあります。また、計算が正しくないこともあります。いずれにせよ、この関数は物理システムで起こっていることを描画することで、問題を発見し解決する手助けをします。これを行うには、システムのどの部分を描画するかを指示する必要がある。これは、さまざまな「フラグ」定数に格納されたビットから作成された値を渡すことで行われる。</p>
+  <p>この関数は<span class="notranslate">room</span> の物理世界システムの表現を描画し、物理シーンが正しく動作しないときに<span
+      class="notranslate">debugging</span> の手助けをします。たとえば、<span class="notranslate">sprite</span>
+    が間違った位置や回転で描かれ、正しくない物理学のように見えることがあります。また、計算が正しくないこともあります。いずれにせよ、この関数は物理システムで起こっていることを描画することで、問題を発見し解決する手助けをします。これを行うには、システムのどの部分を描画するかを指示する必要がある。これは、さまざまな「フラグ」定数に格納されたビットから作成された値を渡すことで行われる。
+  </p>
   <table>
     <colgroup>
       <col />
@@ -24,11 +31,13 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Phy_Debug"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">物理デバッグフラグ</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Phy_Debug"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">物理デバッグフラグ</a></span>
+        </th>
       </tr>
       <tr>
         <th>フラッグ</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="inline">phy_debug_render_aabb</span></td>
@@ -60,30 +69,38 @@
       </tr>
     </tbody>
   </table>
-  <p>そこで、これらのオプションのうちどれか2つを描画するには、その2つに対して<a href="../../../../Additional_Information/Bitwise_Operators.htm">ビット単位の「または」</a>（<span data-keyref="GameMaker Name">GameMakerでは</span>｜で表します）を実行し、その結果を変数に格納して、関数に使用する必要があります。以下は、部屋にあるすべての備品の重心とジョイントだけを描画する関数で使用する変数を設定する方法の一例です。</p>
+  <p>そこで、これらのオプションのうちどれか2つを描画するには、その2つに対して<a
+      href="../../../../Additional_Information/Bitwise_Operators.htm">ビット単位の「または」</a>（<span
+      data-keyref="GameMaker Name">GameMakerでは</span>｜で表します）を実行し、その結果を変数に格納して、関数に使用する必要があります。以下は、部屋にあるすべての備品の重心とジョイントだけを描画する関数で使用する変数を設定する方法の一例です。
+  </p>
   <p class="code">flag = phy_debug_render_coms | phy_debug_render_shapes;</p>
   <p>そうすると、こんな感じになります。</p>
-  <p><img>上記のコードでわかるように、画面には形状と重心だけが描かれます（その状態を表す色も描かれます - 詳しくはオンラインのBox 2D documentationをご覧ください）。同じように、デバッグしたい定数を表示することができます。ただ、それらをすべて一緒に &quot;or &quot;するだけですこの関数は、デバッグしたい定数より小さい深さのインスタンスの draw<i>イベントでのみ</i>呼び出さなければならない。</p>
+  <p><img>上記のコードでわかるように、画面には形状と重心だけが描かれます（その状態を表す色も描かれます - 詳しくはオンラインのBox 2D
+    documentationをご覧ください）。同じように、デバッグしたい定数を表示することができます。ただ、それらをすべて一緒に &quot;or &quot;するだけですこの関数は、デバッグしたい定数より小さい深さのインスタンスの
+    draw<i>イベントでのみ</i>呼び出さなければならない。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">physics_world_draw_debug</span>(flag)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">flag</span></td>
-        <td><span data-keyref="Type_Constant_Phy_Debug"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">物理デバッグフラグ</a></span>(s)</td>
+        <td><span data-keyref="Type_Constant_Phy_Debug"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">物理デバッグフラグ</a></span>(s)
+        </td>
         <td><span class="notranslate">The flag value for showing different debug features</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../../LINKGOESHERE">N/A</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">flag = phy_debug_render_aabb | phy_debug_render_collision_pairs | phy_debug_render_obb;<br />
@@ -95,11 +112,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Physics_World.htm">物理の世界</a></div>
-        <div style="float:right">次のページ <a href="physics_draw_debug.htm"><span class="notranslate">physics_draw_debug</span></a></div>
+        <div style="float:left">前のページ：<a href="The_Physics_World.htm">物理の世界</a></div>
+        <div style="float:right">次のページ：<a href="physics_draw_debug.htm"><span
+              class="notranslate">physics_draw_debug</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_world_draw_debug
@@ -115,4 +134,5 @@ phy_debug_render_shapes
 physics_world_draw_debug
 -->
 </body>
+
 </html>

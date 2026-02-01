@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -14,12 +15,17 @@
   <meta name="rh-index-keywords" content="call_later" />
   <meta name="search-keywords" content="call_later" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">call_later</span></h1>
-  <p>この関数は、指定された時間の後、または一定の間隔の後にコールバック関数をトリガーします。これは<span data-keyref="Type_Resource_TimeSource">タイムソースを</span>作成することで行います（<a data-xref="{title}" href="Time_Sources.htm">タイムソースを</a>参照）。</p>
+  <p>この関数は、指定された時間の後、または一定の間隔の後にコールバック関数をトリガーします。これは<span
+      data-keyref="Type_Resource_TimeSource">タイムソースを</span>作成することで行います（<a data-xref="{title}"
+      href="Time_Sources.htm">タイムソースを</a>参照）。</p>
   <p>コールバック関数をキャンセルするには、<a data-xref="{title}" href="call_cancel.htm">call_cancel</a> を参照してください。</p>
-  <p class="note">この<span class="important">関数は</span>実際のタイムソースIDを返しますが、このIDはタイムソース関数で使用することはできません。ただし、これらは<a href="../Debugging/debug_event.htm">debug_event(&quot;ResourceCou<span class="inline"></span>nts&quot;)</a>によって返されるタイムソースカウントに含まれ ます。</p>
-  <h2>論証</h2>
+  <p class="note">この<span class="important">関数は</span>実際のタイムソースIDを返しますが、このIDはタイムソース関数で使用することはできません。ただし、これらは<a
+      href="../Debugging/debug_event.htm">debug_event(&quot;ResourceCou<span
+        class="inline"></span>nts&quot;)</a>によって返されるタイムソースカウントに含まれ ます。</p>
+  <h2>引数</h2>
   <p>この関数の引数の内訳は次のとおりです。 </p>
   <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">期間</a></h3>
   <div class="droptext" data-targetname="drop-down2">
@@ -28,22 +34,28 @@
   </div>
   <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">単位</a></h3>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">周期を表す単位で、<span class="inline2">time_source_units_seconds</span>または<span class="inline2">time_source_units_frames</span> のいずれかを指定する。</p>
+    <p class="dropspot">周期を表す単位で、<span class="inline2">time_source_units_seconds</span>または<span
+        class="inline2">time_source_units_frames</span> のいずれかを指定する。</p>
     <p class="dropspot">ご覧ください。<a data-xref="{title}" href="Time_Source_Units.htm">タイムソースユニット</a></p>
-    <p class="dropspot"> <span class="inline"><a href="time_bpm_to_seconds.htm">time_bpm_to_seconds()</a></span> を使って、1分あたりの拍数の値を使用することができます。</p>
+    <p class="dropspot"> <span class="inline"><a href="time_bpm_to_seconds.htm">time_bpm_to_seconds()</a></span>
+      を使って、1分あたりの拍数の値を使用することができます。</p>
   </div>
   <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">コールバック</a></h3>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">タイムソースの有効期限が切れたときに呼び出される &quot;コールバック&quot; を指定する必要があります。 <a href="../../GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a>を指定する必要があります。これは、<span data-keyref="Type_Resource_TimeSource">タイムソースの</span>有効期限が切れたときに呼び出されます。</p>
+    <p class="dropspot">タイムソースの有効期限が切れたときに呼び出される &quot;コールバック&quot; を指定する必要があります。 <a
+        href="../../GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a>を指定する必要があります。これは、<span
+        data-keyref="Type_Resource_TimeSource">タイムソースの</span>有効期限が切れたときに呼び出されます。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ループ</a>
-  </p><p class="dropspot" data-targetname="drop-down6">タイムソースを<span class="notranslate">loop</span> にするかどうか。</p>
-  
+  </p>
+  <p class="dropspot" data-targetname="drop-down6">タイムソースを<span class="notranslate">loop</span> にするかどうか。</p>
+
   <p> </p>
   <p> </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">call_later</span>(period, unit, callback, [loop=false]);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">call_later</span>(period, unit, callback,
+    [loop=false]);</p>
   <table>
     <colgroup>
       <col />
@@ -52,35 +64,47 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">period</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
-        <td><span class="notranslate">The period that the <span data-keyref="Type_Resource_TimeSource">Time Source</span> を実行し、与えられた単位で</td>
+        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
+        <td><span class="notranslate">The period that the <span data-keyref="Type_Resource_TimeSource">Time
+              Source</span> を実行し、与えられた単位で</td>
       </tr>
       <tr>
         <td><span class="notranslate">units</span></td>
-        <td><span data-keyref="Type_Constant_TimeSource_Unit"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm" target="_blank">時間源 単位 定数</a></span></td>
+        <td><span data-keyref="Type_Constant_TimeSource_Unit"><a
+              href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm" target="_blank">時間源
+              単位 定数</a></span></td>
         <td><span class="notranslate">The units that the given period is in</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">callback</span></td>
-        <td><span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">メソッド</a></span>または <span data-keyref="Type_Function_Script"><a href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">スクリプト機能</a></span></td>
+        <td><span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm"
+              target="_blank">メソッド</a></span>または <span data-keyref="Type_Function_Script"><a
+              href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">スクリプト機能</a></span>
+        </td>
         <td><span class="notranslate">The method or script function to call after the specified time</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">loop</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">ブーリアン</a></span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> <span data-keyref="Type_Resource_TimeSource">タイムソースを</span>ループさせるかどうか（デフォルトは<span class="inline2">false）</span></td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">ブーリアン</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> <span
+              data-keyref="Type_Resource_TimeSource">タイムソースを</span>ループさせるかどうか（デフォルトは<span class="inline2">false）</span>
+        </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time Source ID</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_TimeSource"><a
+        href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time
+        Source ID</a></span></p>
   <p> </p>
   <h4>例1．</h4>
   <p class="code">var _callback = function()<br />
@@ -88,7 +112,8 @@
         show_debug_message(&quot;Five seconds have passed!&quot;);<br />
     }<br />
     var _handle = call_later(5, time_source_units_seconds, _callback);</p>
-  <p>この例では、5秒経過後にデバッグメッセージを表示するコールバック関数を作成します。その後、基盤となる<span data-keyref="Type_Resource_TimeSource">タイムソースは</span>破棄されます。</p>
+  <p>この例では、5秒経過後にデバッグメッセージを表示するコールバック関数を作成します。その後、基盤となる<span
+      data-keyref="Type_Resource_TimeSource">タイムソースは</span>破棄されます。</p>
   <h4>例2．</h4>
   <p class="code">var _create_enemy = function()<br />
     {<br />
@@ -99,8 +124,12 @@
     <br />
     var _handle = call_later(10, time_source_units_seconds, _create_enemy, true);
   </p>
-  <p>この例では、<span class="notranslate">room</span> のランダムな位置に新しい敵を作成するコールバック関数を作成しています。 この関数は、<a data-xref="{title}" href="call_later.htm">call_later</a> に渡すことで10秒ごとに実行されます。最後の引数には <span class="inline2"><span>真</span></span>に設定されているので、この関数は10秒ごとに呼び出され続ける。</p>
-  <p><a data-xref="{title}" href="call_later.htm">call_laterが</a>返すハンドルで<a data-xref="{title}" href="call_cancel.htm">call_cancelを</a>使用し、<span data-keyref="Type_Resource_TimeSource">タイムソースと</span>コールバックへの呼び出しを停止します。</p>
+  <p>この例では、<span class="notranslate">room</span> のランダムな位置に新しい敵を作成するコールバック関数を作成しています。 この関数は、<a data-xref="{title}"
+      href="call_later.htm">call_later</a> に渡すことで10秒ごとに実行されます。最後の引数には <span
+      class="inline2"><span>真</span></span>に設定されているので、この関数は10秒ごとに呼び出され続ける。</p>
+  <p><a data-xref="{title}" href="call_later.htm">call_laterが</a>返すハンドルで<a data-xref="{title}"
+      href="call_cancel.htm">call_cancelを</a>使用し、<span
+      data-keyref="Type_Resource_TimeSource">タイムソースと</span>コールバックへの呼び出しを停止します。</p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
@@ -109,7 +138,8 @@
         <div>次ページ：<a data-xref="{title}" href="call_cancel.htm">call_cancel</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 call_later
@@ -118,4 +148,5 @@ call_later
 call_later
 -->
 </body>
+
 </html>

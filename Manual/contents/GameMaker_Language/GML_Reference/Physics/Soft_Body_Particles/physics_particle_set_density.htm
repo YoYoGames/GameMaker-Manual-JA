@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_particle_set_density</title>
@@ -12,35 +13,38 @@
   <meta name="rh-index-keywords" content="physics_particle_set_density" />
   <meta name="search-keywords" content="physics_particle_set_density" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_particle_set_density</span></h1>
-  <p>この機能を使うと、物理シミュレーションの粒子の密度を設定することができます。粒子の密度を設定すると、粒子の慣性の大きさや衝突時の反応に直接影響を与えるので、小さな粒子を作る場合は
-    密度が高い場合は非常に大きな質量になりますが、密度が低い大きな粒子を定義した場合は質量が非常に小さくなります。この関数は<i>グローバルな</i>もので、密度を変更するのは、その後に作られた新しいパーティクルだけではありません。
+  <p>この機能を使うと、物理シミュレーションのパーティクルの密度を設定することができます。パーティクルの密度を設定すると、パーティクルの慣性の大きさや衝突時の反応に直接影響を与えるので、小さなパーティクルを作る場合は
+    密度が高い場合は非常に大きな質量になりますが、密度が低い大きなパーティクルを定義した場合は質量が非常に小さくなります。この関数は<i>グローバルな</i>もので、密度を変更するのは、その後に作られた新しいパーティクルだけではありません。
     を変更した場合、既にシミュレーションに存在するものにも適用されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">physics_particle_set_density</span>(density)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">density</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">density</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The density of the particle fixture.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
-    <br/> physics_particle_set_damping(1);
-    <br/> physics_particle_set_gravity_scale(1);
+  <p class="code">physics_particle_set_radius(15);<br /> physics_particle_set_density(0.5);
+    <br /> physics_particle_set_damping(1);
+    <br /> physics_particle_set_gravity_scale(1);
   </p>
   <p>上記のコードでは、シミュレーション内のすべてのパーティクルの基本プロパティを設定します。</p>
   <p> </p>
@@ -49,11 +53,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Soft_Body_Particles.htm">ソフトボディーの粒子</a></div>
-        <div style="float:right">次のページ <a href="physics_particle_set_damping.htm"><span class="notranslate">physics_particle_set_damping</span></a></div>
+        <div style="float:left">前のページ：<a href="Soft_Body_Particles.htm">ソフトボディーのパーティクル</a></div>
+        <div style="float:right">次のページ：<a href="physics_particle_set_damping.htm"><span
+              class="notranslate">physics_particle_set_damping</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_density
@@ -62,4 +68,5 @@ physics_particle_set_density
 physics_particle_set_density
 -->
 </body>
+
 </html>

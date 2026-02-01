@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -13,17 +14,22 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="filters, effects, types, fx" />
 </head>
+
 <body>
   <h1>FXの種類とパラメータ</h1>
   <p>このページでは、<span data-keyref="GameMaker Name">GameMakerに</span>用意されているフィルター／エフェクトの種類と、各FXについて以下の情報を掲載しています。</p>
   <ul class="colour">
-    <li>実行時にFXを作成するために <span class="inline"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">fx_create()</a></span> に渡すことができる内部名(例：<span class="inline2">&quot;_filter_tintfilter&quot;</span>)。</li>
-    <li>商品説明</li>
+    <li>実行時にFXを作成するために <span class="inline"><a
+          href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">fx_create()</a></span>
+      に渡すことができる内部名(例：<span class="inline2">&quot;_filter_tintfilter&quot;</span>)。</li>
+    <li>説明</li>
     <li>画像例</li>
     <li><a data-xref="{title}" href="../Layer_Properties.htm">レイヤープロパティで</a>編集可能なIDEパラメータ</li>
-    <li>ランタイムパラメーターは、<span class="notranslate">runtime</span> 、<a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">フィルターやエフェクト機能を使って</a>FXを修正するために使用することができます。
+    <li>ランタイムパラメーターは、<span class="notranslate">runtime</span> 、<a data-xref="{title}"
+        href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">フィルターやエフェクト機能を使って</a>FXを修正するために使用することができます。
       <ul>
-        <li><span class="notranslate">Runtime</span> パラメーターはそのタイプについても言及しているので、どのパラメーターにどのようなタイプのデータを適用すればよいかがわかります。</li>
+        <li><span class="notranslate">Runtime</span> パラメーターはそのタイプについても言及しているので、どのパラメーターにどのようなタイプのデータを適用すればよいかがわかります。
+        </li>
       </ul>
     </li>
   </ul>
@@ -43,8 +49,8 @@
           <th colspan="5">フィルター</th>
         </tr>
         <tr>
-          <th>タイプ</th>
-          <th>商品説明</th>
+          <th>型</th>
+          <th>説明</th>
           <th>例</th>
           <th style="">IDE パラメーター</th>
           <th>ランタイムパラメーター</th>
@@ -309,7 +315,8 @@
             <br />
             &quot;_filter_outline&quot;
           </td>
-          <td style="">レイヤーの不透明なコンテンツの周りにアウトラインを作成します。<a data-xref="{text}" href="../Filters_and_Effects.htm#h">シングルレイヤーFXとして</a>使用すると、最も効果的です。</td>
+          <td style="">レイヤーの不透明なコンテンツの周りにアウトラインを作成します。<a data-xref="{text}"
+              href="../Filters_and_Effects.htm#h">シングルレイヤーFXとして</a>使用すると、最も効果的です。</td>
           <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/outline.png" /></td>
           <td style="">アウトラインカラー<br />
             半径<br />
@@ -362,7 +369,8 @@
             &quot;_filter_screenshake&quot; です。
           </td>
           <td style="">レンダリングされたコンテンツを揺らして、手ブレ効果をシミュレートします。<span class="notranslate">runtime</span> で制御すると最も効果的です。</td>
-          <td style=""><video src="../../../assets/Images/Asset_Editors/FXs/screenshake.mp4" width="480" height="320" controls=""></video></td>
+          <td style=""><video src="../../../assets/Images/Asset_Editors/FXs/screenshake.mp4" width="480" height="320"
+              controls=""></video></td>
           <td style="">マグニチュード<br />
             揺れ速度<br />
             ノイズの質感</td>
@@ -484,7 +492,8 @@
             &quot;_filter_whitenoise&quot; です。
           </td>
           <td style="">ホワイトノイズを追加します。オプションでアニメーションも可能です。</td>
-          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/whitenenoise.png" style="cursor: nwse-resize;" /></td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/whitenenoise.png"
+              style="cursor: nwse-resize;" /></td>
           <td style="">インテンシティ<br />
             アニメーション<br />
             ノイズテクスチャ</td>
@@ -528,29 +537,30 @@
           <th colspan="5" style="">エフェクト（ゲーム内のみ）</th>
         </tr>
         <tr>
-          <th>タイプ</th>
-          <th style="">商品説明</th>
+          <th>型</th>
+          <th style="">説明</th>
           <th>例</th>
           <th>IDE パラメーター</th>
           <th>ランタイムパラメーター</th>
         </tr>
         <tr>
-          <td style=""><strong>風で飛ばされた粒子</strong><br />
+          <td style=""><strong>風で飛ばされたパーティクル</strong><br />
             <br />
-            &quot;_effect_windblown_particles&quot; (効果_風切り粒子)
+            &quot;_effect_windblown_particles&quot; (効果_風切りパーティクル)
           </td>
           <td>風で吹き飛ばされたパーティクル効果を作成します。デフォルトでは、葉っぱ<span class="notranslate">sprite</span> を表示します。<br />
             <br />
             これはエフェクトであり、<span class="notranslate">Room</span> Editor でプレビューすることはできません。
           </td>
-          <td style=""><video src="../../../assets/Images/Asset_Editors/FXs/windblown_particles.mp4" width="336" height="224" controls=""></video></td>
+          <td style=""><video src="../../../assets/Images/Asset_Editors/FXs/windblown_particles.mp4" width="336"
+              height="224" controls=""></video></td>
           <td>スプライト<br />
             パーティクル数<br />
             スポーン時間<br />
             開始時にすべてをスポーンする<br />
             ウォームアップフレーム<br />
             パーティクル質量 Min<br />
-            粒子質量 最大<br />
+            パーティクル質量 最大<br />
             Particle<span class="notranslate">sprite</span> scale (Start)<br />
             パーティクル<span class="notranslate">sprite</span> スケール (終了)<br />
             パーティクルカラー1<br />
@@ -566,16 +576,16 @@
             パーティクルカラー4<br />
             パーティクルカラー4 Alt<br />
             パーティクル初速 x Min<br />
-            粒子初速 x 最大<br />
-            粒子初速度 y Min<br />
-            粒子初速度 y 最大<br />
-            粒子初期回転数 Min<br />
-            粒子初期回転数 Max<br />
-            粒子回転速度 Min<br />
-            粒子回転速度Max<br />
+            パーティクル初速 x 最大<br />
+            パーティクル初速度 y Min<br />
+            パーティクル初速度 y 最大<br />
+            パーティクル初期回転数 Min<br />
+            パーティクル初期回転数 Max<br />
+            パーティクル回転速度 Min<br />
+            パーティクル回転速度Max<br />
             パーティクルアライメントと速度<br />
-            粒子寿命 最小<br />
-            粒子寿命 最大<br />
+            パーティクル寿命 最小<br />
+            パーティクル寿命 最大<br />
             パーティクルアップデートスキップ<br />
             パーティクルスポーンボーダーマージン<br />
             パーティクルソースブレンド<br />
@@ -615,7 +625,7 @@
             フォースグリッド分解能 Y<br />
             風力X<br />
             風力Y<br />
-            粒子抗力<br />
+            パーティクル抗力<br />
             重力<br />
             デバッグモードの有効化</td>
           <td><span class="inline">param_sprite</span> ( )<span class="notranslate">Sprite</span><br />
@@ -652,8 +662,12 @@
             <span class="inline">param_particle_lifetime_max</span>(リアル)<br />
             <span class="inline">param_particle_update_skip</span>(リアル)<br />
             <span class="inline">param_particle_spawn_border_prop</span>(リアル)<br />
-            <span class="inline">param_particle_src_blend</span>(<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>)<br />
-            <span class="inline">param_particle_dest_blend</span>(<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>)<br />
+            <span class="inline">param_particle_src_blend</span>(<span
+              data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank"
+                href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>)<br />
+            <span class="inline">param_particle_dest_blend</span>(<span
+              data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank"
+                href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター定数</a></span>)<br />
             <span class="inline">param_trails_only</span>(ブール)<br />
             <span class="inline">param_trail_chance</span>(リアル)<br />
             <span class="inline">param_trail_lifetime_min</span>(リアル)<br />
@@ -673,8 +687,13 @@
             <span class="inline">param_trail_col_4</span>(配列)<br />
             <span class="inline">param_trail_col_alt_4</span>(配列)<br />
             <span class="inline">param_trail_min_segment_length</span>(Real)<br />
-            <span class="inline">param_trail_src_blend</span>(<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター 一定</a></span>)<br />
-            <span class="inline">param_trail_dest_blend</span>(<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター一定</a></span>)<br />
+            <span class="inline">param_trail_src_blend</span>(<span
+              data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank"
+                href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター
+                一定</a></span>)<br />
+            <span class="inline">param_trail_dest_blend</span>(<span
+              data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank"
+                href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">ブレンドモードファクター一定</a></span>)<br />
             <span class="inline">param_num_blowers</span>(リアル)<br />
             <span class="inline">param_blower_size_min</span>(実数)<br />
             <span class="inline">param_blower_size_max</span>(リアル)<br />
@@ -706,11 +725,13 @@
         <div>次へ<a data-xref="{title}" href="../../Scripts.htm">スクリプト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 -->
   <!-- TAGS
 -->
 </body>
+
 </html>

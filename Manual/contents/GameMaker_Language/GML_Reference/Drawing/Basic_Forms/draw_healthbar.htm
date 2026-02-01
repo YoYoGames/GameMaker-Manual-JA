@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_healthbar</title>
@@ -13,22 +14,34 @@
   <meta name="search-keywords" content="draw_healthbar" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_healthbar</span></h1>
-  <p>この機能を使うと、一定の値を示すカラーバーを描画することができます。この関数では「healthbar」という単語を使っていますが、表示される量が0から100の間のパーセント値であれば、何でも表示することができます（値のパーセントは、式<b>（CURRENT_Value / MAXIMUM_Value）*100で</b>計算できます）ので、例えば、パワー、ヘルス、マナ、時間、その他バー表示が役立つものであれば、これを使用して表示することができます。</p>
-  <p>バーの視覚的な側面を変更するさまざまな異なるものを設定することができ、これらは以下の画像に示されています（ここで使用されている色は、最大値には <span class="inline">c_green</span> 、最小値には <span class="inline">c_red</span> 、しかし、あなたが望む色を使用することができることに注意してください）。</p>
-  <p><img alt="Healthbar examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_healthbar.png" /></p>
-  <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span class="notranslate">texture</span>, 色.しかし、この関数を使用する場合、<span class="notranslate">vertex</span> とカラーデータのみが渡されるため、<span class="notranslate">shader</span> は何も描画しない（または、何か描画するが正しく描画しない）可能性があります。このように図形を描画する必要がある場合は、<span class="notranslate">shader</span> をこの点を考慮してカスタマイズする必要があります。</p>
+  <p>
+    この機能を使うと、一定の値を示すカラーバーを描画することができます。この関数では「healthbar」という単語を使っていますが、表示される量が0から100の間のパーセント値であれば、何でも表示することができます（値のパーセントは、式<b>（CURRENT_Value
+      / MAXIMUM_Value）*100で</b>計算できます）ので、例えば、パワー、ヘルス、マナ、時間、その他バー表示が役立つものであれば、これを使用して表示することができます。</p>
+  <p>バーの視覚的な側面を変更するさまざまな異なるものを設定することができ、これらは以下の画像に示されています（ここで使用されている色は、最大値には <span class="inline">c_green</span> 、最小値には
+    <span class="inline">c_red</span> 、しかし、あなたが望む色を使用することができることに注意してください）。
+  </p>
+  <p><img alt="Healthbar examples" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_healthbar.png" /></p>
+  <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span
+      class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span
+      class="notranslate">texture</span>, 色.しかし、この関数を使用する場合、<span class="notranslate">vertex</span>
+    とカラーデータのみが渡されるため、<span class="notranslate">shader</span>
+    は何も描画しない（または、何か描画するが正しく描画しない）可能性があります。このように図形を描画する必要がある場合は、<span class="notranslate">shader</span>
+    をこの点を考慮してカスタマイズする必要があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">draw_healthbar</span>(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">draw_healthbar</span>(x1, y1, x2, y2, amount, backcol,
+    mincol, maxcol, direction, showback, showborder);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x1</span></td>
@@ -73,22 +86,25 @@
       <tr>
         <td><span class="notranslate">direction</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">Where the bar is &quot;anchored&quot; (0 = left, 1 = right, 2 = top, 3 = bottom)</span></td>
+        <td><span class="notranslate">Where the bar is &quot;anchored&quot; (0 = left, 1 = right, 2 = top, 3 =
+            bottom)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">showback</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the bar&#39;s background is drawn (<span class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。false の場合、 backcol 引数は無視されます。</td>
+        <td><span class="notranslate">Whether the bar&#39;s background is drawn (<span class="inline">true</span>)
+            か、そうでないか (<span class="inline">false</span>) です。false の場合、 backcol 引数は無視されます。</td>
       </tr>
       <tr>
         <td><span class="notranslate">showborder</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the bar&#39;s elements have a 1px wide black border (<span class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
+        <td><span class="notranslate">Whether the bar&#39;s elements have a 1px wide black border (<span
+              class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -102,11 +118,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Basic_Forms.htm">基本フォーム</a></div>
-        <div style="float:right">次のページ <a href="draw_path.htm"><span class="notranslate">draw_path</span></a></div>
+        <div style="float:left">前のページ：<a href="Basic_Forms.htm">基本フォーム</a></div>
+        <div style="float:right">次のページ：<a href="draw_path.htm"><span class="notranslate">draw_path</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_healthbar
@@ -115,4 +132,5 @@ draw_healthbar
 draw_healthbar
 -->
 </body>
+
 </html>

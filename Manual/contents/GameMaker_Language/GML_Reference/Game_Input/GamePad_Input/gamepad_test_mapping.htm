@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_test_mapping</title>
@@ -13,27 +14,40 @@
   <meta name="search-keywords" content="gamepad_test_mapping" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gamepad_test_mapping</span></h1>
-  <p>この関数は、ゲームパッドマッピングを許可しているターゲットにゲームパッドマッピングを設定するために使用することができます。設定するゲームパッドの &quot;slot &quot;インデックスと、以下のフィールドを持つSDLフォーマットで作成されたマップ<span class="notranslate">string</span> を指定する。</p>
+  <p>この関数は、ゲームパッドマッピングを許可しているターゲットにゲームパッドマッピングを設定するために使用することができます。設定するゲームパッドの &quot;slot
+    &quot;インデックスと、以下のフィールドを持つSDLフォーマットで作成されたマップ<span class="notranslate">string</span> を指定する。</p>
   <p class="code">&lt;guid&gt;,&lt;description&gt;,platform:&lt;platform-name&gt;,&lt;bindings&gt;</p>
   <p>各項目に記載すべき内容は、以下の通りです。</p>
   <ul class="colour">
-    <li><span class="inline">guid</span> - デバイスの種類を一意に識別する数字と文字からなる (これは<span class="notranslate">string</span> <a href="gamepad_get_guid.htm"><span class="inline">gamepad_get_guid()</span></a>関数)</li>
-    <li><span class="inline">description</span> - デバイスのAscii説明文（これは <a href="gamepad_get_description.htm"><span class="inline">gamepad_get_description()</span></a>関数)</li>
-    <li><span class="inline">platform-name</span> - は &quot;platform:android&quot;, &quot;platform:windows&quot;, &quot;linux&quot;, または &quot;mac&quot; のいずれかです (<b>この関数を呼び出すと自動的に に追加さ<span class="notranslate">string</span> </b>れるので、独自のマッピングを作成する際に指定する必要はないことに注意してください ) 。<span class="notranslate">strings</span></li>
-    <li><span class="inline">bindings</span> - 実際の入力を特定の 定数に結合するための、',' で区切られた一連のエントリ<span class="notranslate">GML</span> </li>
+    <li><span class="inline">guid</span> - デバイスの種類を一意に識別する数字と文字からなる (これは<span class="notranslate">string</span> <a
+        href="gamepad_get_guid.htm"><span class="inline">gamepad_get_guid()</span></a>関数)</li>
+    <li><span class="inline">description</span> - デバイスのAscii説明文（これは <a href="gamepad_get_description.htm"><span
+          class="inline">gamepad_get_description()</span></a>関数)</li>
+    <li><span class="inline">platform-name</span> - は &quot;platform:android&quot;, &quot;platform:windows&quot;,
+      &quot;linux&quot;, または &quot;mac&quot; のいずれかです (<b>この関数を呼び出すと自動的に に追加さ<span class="notranslate">string</span>
+      </b>れるので、独自のマッピングを作成する際に指定する必要はないことに注意してください ) 。<span class="notranslate">strings</span></li>
+    <li><span class="inline">bindings</span> - 実際の入力を特定の 定数に結合するための、',' で区切られた一連のエントリ<span
+        class="notranslate">GML</span> </li>
   </ul>
   <p>カンマで区切られたリストは、各エントリーの特定のフォーマットに従っています。</p>
   <p class="code">&lt;abstract-gp-name&gt;:&lt;value-binding&gt;</p>
   <p>ここで、 <span class="inline">&lt;value-binding&gt;</span> （すなわち、ゲームパッドの直接入力）は、以下のいずれかになります。</p>
   <ul class="colour">
-    <li><span class="inline">a&lt;N&gt;</span> - ゲームパッドの軸を表し、&lt;N&gt;は0〜のいずれかの軸を表します。 <a href="gamepad_axis_count.htm"><span class="inline">gamepad_axis_count()</span></a>-1</li>
-    <li><span class="inline">b&lt;N&gt;</span> - ゲームパッドのボタンを表し、&lt;N&gt;は0から <a href="gamepad_button_count.htm"><span class="inline">gamepad_button_count()</span></a>-1</li>
-    <li><span class="inline">h&lt;N&gt;.&lt;mask&gt;</span> - ゲームパッドのハットを表し、&lt;N&gt;は0〜のハットを表します。 <a href="gamepad_hat_count.htm"><span class="inline">gamepad_hat_count()</span></a>-1、 <span class="inline">&lt;mask&gt;</span> は 1、2、4、8 のいずれかになります。</li>
+    <li><span class="inline">a&lt;N&gt;</span> - ゲームパッドの軸を表し、&lt;N&gt;は0〜のいずれかの軸を表します。 <a
+        href="gamepad_axis_count.htm"><span class="inline">gamepad_axis_count()</span></a>-1</li>
+    <li><span class="inline">b&lt;N&gt;</span> - ゲームパッドのボタンを表し、&lt;N&gt;は0から <a href="gamepad_button_count.htm"><span
+          class="inline">gamepad_button_count()</span></a>-1</li>
+    <li><span class="inline">h&lt;N&gt;.&lt;mask&gt;</span> - ゲームパッドのハットを表し、&lt;N&gt;は0〜のハットを表します。 <a
+        href="gamepad_hat_count.htm"><span class="inline">gamepad_hat_count()</span></a>-1、 <span
+        class="inline">&lt;mask&gt;</span> は 1、2、4、8 のいずれかになります。</li>
   </ul>
-  <p>各入力値は SDL 名にバインドされなければならない。SDL 名は <span class="inline">&lt;&gt;abstract-gp-name&gt;</span> のように表現され、さらに<span class="notranslate">GML</span> 定数にバインドされる。以下の表は、SDL名と<span data-keyref="GameMaker Name">GameMaker</span>定数の等価性を示している。</p>
+  <p>各入力値は SDL 名にバインドされなければならない。SDL 名は <span class="inline">&lt;&gt;abstract-gp-name&gt;</span> のように表現され、さらに<span
+      class="notranslate">GML</span> 定数にバインドされる。以下の表は、SDL名と<span
+      data-keyref="GameMaker Name">GameMaker</span>定数の等価性を示している。</p>
   <table>
     <tbody>
       <tr>
@@ -124,16 +138,18 @@
   </table>
   <p><br />
     マッピング<span class="notranslate">string</span> を構築すると、次のようになります。</p>
-  <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;</p>
+  <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless
+    Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gamepad_test_mapping</span>(index, mapping_string);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -148,11 +164,12 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">var mapping = gamepad_get_guid(global.padIndex) + &quot;,&quot; + gamepad_get_description(global.padIndex);<br />
+  <p class="code">var mapping = gamepad_get_guid(global.padIndex) + &quot;,&quot; +
+    gamepad_get_description(global.padIndex);<br />
     var len = array_length(global.PadInstances);<br />
     for (i = 0; i &lt; len; i += 2)<br />
     {<br />
@@ -161,18 +178,21 @@
         mapping += &quot;,&quot; + left.sdlLabel + &quot;:&quot; + right.binding;<br />
     }<br />
     gamepad_test_mapping(global.padIndex, mapping);</p>
-  <p>上記のコードは、<span class="notranslate">loop</span> 、いくつかのインスタンスを通じて、それらが含むさまざまな変数の値を使用して、マッピング<span class="notranslate">string</span> 、与えられたスロットインデックスにゲームパッド上で使用するために設定されます。</p>
+  <p>上記のコードは、<span class="notranslate">loop</span> 、いくつかのインスタンスを通じて、それらが含むさまざまな変数の値を使用して、マッピング<span
+      class="notranslate">string</span> 、与えられたスロットインデックスにゲームパッド上で使用するために設定されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
-        <div style="float:right">次のページ <a href="gamepad_remove_mapping.htm"><span class="notranslate">gamepad_remove_mapping</span></a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:right">次のページ：<a href="gamepad_remove_mapping.htm"><span
+              class="notranslate">gamepad_remove_mapping</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_test_mapping
@@ -181,4 +201,5 @@ gamepad_test_mapping
 gamepad_test_mapping
 -->
 </body>
+
 </html>

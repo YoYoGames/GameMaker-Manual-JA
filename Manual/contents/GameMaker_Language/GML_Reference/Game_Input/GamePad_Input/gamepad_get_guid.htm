@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_get_guid</title>
@@ -13,6 +14,7 @@
   <meta name="search-keywords" content="gamepad_get_guid" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gamepad_get_guid</span></h1>
@@ -20,9 +22,13 @@
   <ul class="colour">
     <li>GUIDがない場合、またはゲームパッドが接続されていない場合は、<b>&quot;none</b>&quot;となります。</li>
     <li>ゲームパッドスロットのインデックスが範囲外の場合、<b>&quot;device index out of range</b>&quot; と表示されます。</li>
-    <li>GUID<span class="notranslate">string</span>, &quot;050000005e040000fd020000ffff3f00&quot; のようなもの。もしスロットにゲームパッドが割り当てられ、その GUID を取得できる場合。</li>
+    <li>GUID<span class="notranslate">string</span>, &quot;050000005e040000fd020000ffff3f00&quot;
+      のようなもの。もしスロットにゲームパッドが割り当てられ、その GUID を取得できる場合。</li>
   </ul>
-  <p>この関数は、通常、以下の関数と組み合わせて使用されます。 <a href="gamepad_get_description.htm"><span class="inline">gamepad_get_description()</span></a>を使用して、<span class="notranslate">string</span>,<span class="notranslate">Windows</span> および<span class="notranslate">Android</span> のコントローラをリマップするために必要な SDL<span class="notranslate">macOS</span> の一部を生成します。</p>
+  <p>この関数は、通常、以下の関数と組み合わせて使用されます。 <a href="gamepad_get_description.htm"><span
+        class="inline">gamepad_get_description()</span></a>を使用して、<span class="notranslate">string</span>,<span
+      class="notranslate">Windows</span> および<span class="notranslate">Android</span> のコントローラをリマップするために必要な SDL<span
+      class="notranslate">macOS</span> の一部を生成します。</p>
   <table>
     <colgroup>
       <col style="width: 147px;" />
@@ -43,40 +49,44 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gamepad_get_guid</span>(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">Which gamepad &quot;slot&quot; index to check</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _guid = gamepad_get_guid(global.PadIndex);<br />
     var _desc = gamepad_get_description(global.PadIndex);<br />
     global.GamepadID = _guid + &quot;,&quot; + _desc;</p>
-  <p>上記のコードでは、GUID と名前の記述<span class="notranslate">strings</span> を取得し、それらを連結して、最終的な<span class="notranslate">string</span> を将来の参照用にグローバル変数に格納しています。</p>
+  <p>上記のコードでは、GUID と名前の記述<span class="notranslate">strings</span> を取得し、それらを連結して、最終的な<span
+      class="notranslate">string</span> を将来の参照用にグローバル変数に格納しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
         <div style="float:right">次ページ:<a href="gamepad_get_device_count.htm"> GamePad_get_device_count </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_guid
@@ -85,4 +95,5 @@ gamepad_get_guid
 gamepad_get_guid
 -->
 </body>
+
 </html>

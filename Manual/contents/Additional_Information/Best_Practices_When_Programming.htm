@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>プログラミングのベストプラクティス</title>
@@ -12,43 +13,71 @@
   <meta name="rh-index-keywords" content="Best Practices When Programming" />
   <meta name="search-keywords" content="best practices" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>プログラミングのベストプラクティス</h1>
-  <p>このページでは、ゲームをプログラミングする際の「ベストプラクティス」をいくつか紹介し、同時に<span data-keyref="GameMaker Name">GameMakerの</span>内部動作についても少し説明します。ただし、その前に2つの重要なポイントを押さえておきましょう。</p>
+  <p>このページでは、ゲームをプログラミングする際の「ベストプラクティス」をいくつか紹介し、同時に<span
+      data-keyref="GameMaker Name">GameMakerの</span>内部動作についても少し説明します。ただし、その前に2つの重要なポイントを押さえておきましょう。</p>
   <ul class="colour">
-    <li>これは<em>ガイド</em>であり、ゲームを書くための万能で決定的な100%完璧な方法というわけではありません!ここに書かれていることは、一般的に組織的でミクロな最適化の規模が大きく、<span class="notranslate">GML</span> に慣れて、それが適切だと思ったときに、あなたのプログラミング習慣に取り入れるべきものです。</li>
-    <li>もし、あなたのゲームがうまく動作し、現状に満足しているのであれば、<em>数FPS向上させるために急いですべてを変更</em>する必要はありません。読みやすく、柔軟で、モジュール化されたコードと、変更に必要な時間やエネルギー、そして最終的に得られる全体的な利益のバランスを取る必要があるのです。基本的に、壊れていないなら直さず、ここで学んだことを次のプロジェクトに活かしてください。</li>
+    <li>これは<em>ガイド</em>であり、ゲームを書くための万能で決定的な100%完璧な方法というわけではありません!ここに書かれていることは、一般的に組織的でミクロな最適化の規模が大きく、<span
+        class="notranslate">GML</span> に慣れて、それが適切だと思ったときに、あなたのプログラミング習慣に取り入れるべきものです。</li>
+    <li>
+      もし、あなたのゲームがうまく動作し、現状に満足しているのであれば、<em>数FPS向上させるために急いですべてを変更</em>する必要はありません。読みやすく、柔軟で、モジュール化されたコードと、変更に必要な時間やエネルギー、そして最終的に得られる全体的な利益のバランスを取る必要があるのです。基本的に、壊れていないなら直さず、ここで学んだことを次のプロジェクトに活かしてください。
+    </li>
   </ul>
   <p>ということで、次に、いつでも適用できる、良い<span class="notranslate">GML</span> コードを書くための一般的なヒントをいくつか見てみましょう...</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">プログラミングスタイル</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">コードを書くとなると、誰にでも<em>スタイルが</em>あります。そのスタイルとは、括弧の付け方、行のインデントの仕方、変数の宣言や名前の付け方などであり、あなたのコードを他の人に（そして、他のことに時間をかけた後にこのプロジェクトに戻ってくることになった将来の自分にも）明確で読みやすいものにするために不可欠なものです。</p>
-    <p class="dropspot"><a href="http://en.wikipedia.org/wiki/Programming_style">プログラミングのスタイルは</a>たくさんあり、自分のスタイルがベストだと主張する人もいますが、実際には、<strong>一貫性を持って </strong>使用し、すべてのものが何であり、何をしているかが<em>明確 </em>であれば、ほぼすべてのスタイルで問題ありません。</p>
-    <p class="dropspot"><img>上の画像は、上記の点を説明するための<span class="notranslate">script</span> の関数宣言の例です。JSDoc スタイルのコメントを使って、何をするのかが明確に説明されていることがわかります。また、4 スペースでのインデント、ローカル変数に使用するアンダースコア、ログ出力など、コーディングスタイルが一貫していることもわかります。</p>
-    <p class="dropspot">また、<span class="notranslate">script</span> エディターでは、開閉ブラケットごとにコードを折りたたむことができますが、 <span class="inline">#region</span> と <span class="inline">#endregion</span> タグを使ってコードの一部を区切り、特に複数の関数を含む大きな<span class="notranslate">scripts</span> を処理するときに、可読性を大幅に高めることができることに注意してください。リージョンはコメントも可能です。マニュアルのこのページの編集のセクションを参照してください）。</p>
-    <p class="dropspot"><img>コードを書くときに注意しなければならないのは、<span data-keyref="GameMaker Name">GameMakerは</span>コンパイル時にコメントを削除し、不要な改行や空白を取り除き、定数/マクロ/enum値を代入し、一般的にコードを圧縮していることです。つまり、コードの周りに必要なだけ空白を追加することができ、コメントを短くしたり、控えめにしたりすることを気にする必要がないのです。</p>
+    <p class="dropspot">
+      コードを書くとなると、誰にでも<em>スタイルが</em>あります。そのスタイルとは、括弧の付け方、行のインデントの仕方、変数の宣言や名前の付け方などであり、あなたのコードを他の人に（そして、他のことに時間をかけた後にこのプロジェクトに戻ってくることになった将来の自分にも）明確で読みやすいものにするために不可欠なものです。
+    </p>
+    <p class="dropspot"><a
+        href="http://en.wikipedia.org/wiki/Programming_style">プログラミングのスタイルは</a>たくさんあり、自分のスタイルがベストだと主張する人もいますが、実際には、<strong>一貫性を持って
+      </strong>使用し、すべてのものが何であり、何をしているかが<em>明確 </em>であれば、ほぼすべてのスタイルで問題ありません。</p>
+    <p class="dropspot"><img>上の画像は、上記の点を説明するための<span class="notranslate">script</span> の関数宣言の例です。JSDoc
+      スタイルのコメントを使って、何をするのかが明確に説明されていることがわかります。また、4 スペースでのインデント、ローカル変数に使用するアンダースコア、ログ出力など、コーディングスタイルが一貫していることもわかります。</p>
+    <p class="dropspot">また、<span class="notranslate">script</span> エディタでは、開閉ブラケットごとにコードを折りたたむことができますが、 <span
+        class="inline">#region</span> と <span class="inline">#endregion</span> タグを使ってコードの一部を区切り、特に複数の関数を含む大きな<span
+        class="notranslate">scripts</span>
+      を処理するときに、可読性を大幅に高めることができることに注意してください。リージョンはコメントも可能です。マニュアルのこのページの編集のセクションを参照してください）。</p>
+    <p class="dropspot"><img>コードを書くときに注意しなければならないのは、<span
+        data-keyref="GameMaker Name">GameMakerは</span>コンパイル時にコメントを削除し、不要な改行や空白を取り除き、定数/マクロ/enum値を代入し、一般的にコードを圧縮していることです。つまり、コードの周りに必要なだけ空白を追加することができ、コメントを短くしたり、控えめにしたりすることを気にする必要がないのです。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">ローカル変数の使用</a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p class="dropspot">続けて、プログラミングのスタイルについてですが、多くの初心者がやってしまうことの一つに、1行のコードにできるだけ多くのことを詰め込むということがあります。例えば</p>
-    <p class="code">draw_sprite(sprite_index, image_index, x + lengthdir_x(100, point_direction(x, y, mouse_x, mouse_y)), y + lengthdir_y(100, point_direction(x, y, mouse_x, mouse_y)));</p>
-    <p class="dropspot">全く読めないわけではありませんが、非効率的であり（例えば <span class="inline">point_direction()</span> 関数が2回呼び出されています）、見た目もゴチャゴチャしていますし、厄介です。次のように表現した方がはるかに良いだろう。</p>
+    <p class="code">draw_sprite(sprite_index, image_index, x + lengthdir_x(100, point_direction(x, y, mouse_x,
+      mouse_y)), y + lengthdir_y(100, point_direction(x, y, mouse_x, mouse_y)));</p>
+    <p class="dropspot">全く読めないわけではありませんが、非効率的であり（例えば <span class="inline">point_direction()</span>
+      関数が2回呼び出されています）、見た目もゴチャゴチャしていますし、厄介です。次のように表現した方がはるかに良いだろう。</p>
     <p class="code">var p_dir = point_direction(x, y, mouse_x, mouse_y);<br />
       var local_x = x + lengthdir_x(100, p_dir);<br />
       var local_y = y + lengthdir_y(100, p_dir);<br />
       draw_sprite(sprite_index, image_index, local_x, local_y);</p>
-    <p class="dropspot">ローカル変数を作成するために必要なメモリやリソースはごくわずかであり、その明快さによってあなた（あるいは後でコードを読む人）が即座に得られる利益よりもはるかに大きいのです。関数でも同じことが言えます。入力変数に適切な名前を付け、必要な箇所には明確な書式設定と局所変数を使用して、可能な限り読みやすいコードにする必要があります。</p>
-    <p class="dropspot">ローカル変数はゲーム内の処理が速いので、有効に活用しましょう。また、コードブロックや<span class="notranslate">script</span> 、ある式が2回以上登場する場合は、その式のローカル変数を作成することを考えましょう。<a class="glossterm" data-glossterm="ヨーヨーコンパイラ(YYC)" href="#">YoYo Compiler (YYC)</a>ターゲットを使用する場合、関数やコードブロックの中で <span class="inline">global</span> やインスタンス変数を何度も参照する場合は、コードの先頭でローカル変数に代入し、そのローカル変数を参照すると、特にパフォーマンスが良くなります。</p>
+    <p class="dropspot">
+      ローカル変数を作成するために必要なメモリやリソースはごくわずかであり、その明快さによってあなた（あるいは後でコードを読む人）が即座に得られる利益よりもはるかに大きいのです。関数でも同じことが言えます。入力変数に適切な名前を付け、必要な箇所には明確な書式設定と局所変数を使用して、可能な限り読みやすいコードにする必要があります。
+    </p>
+    <p class="dropspot">ローカル変数はゲーム内の処理が速いので、有効に活用しましょう。また、コードブロックや<span class="notranslate">script</span>
+      、ある式が2回以上登場する場合は、その式のローカル変数を作成することを考えましょう。<a class="glossterm" data-glossterm="ヨーヨーコンパイラ(YYC)" href="#">YoYo
+        Compiler (YYC)</a>ターゲットを使用する場合、関数やコードブロックの中で <span class="inline">global</span>
+      やインスタンス変数を何度も参照する場合は、コードの先頭でローカル変数に代入し、そのローカル変数を参照すると、特にパフォーマンスが良くなります。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">アレイ（配列</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><a href="../GameMaker_Language/GML_Overview/Arrays.htm">配列は</a>データ構造よりも高速で、必要なメモリ量も少なくて済みますが、さらに最適化することも可能です。配列を作成すると、そのサイズに応じてメモリが割り当てられます。したがって、たとえ後で値を入れる予定がなくても、まずは最大サイズまで配列を初期化するようにしましょう。たとえば、最大 100 個の値を格納する配列が必要だとわかっている場合は、すぐに 100 スロットに初期化します。 <a href="../GameMaker_Language/GML_Reference/Variable_Functions/array_create.htm"><span class="inline">array_create()</span></a>関数で初期化します。</p>
+    <p class="dropspot"><a
+        href="../GameMaker_Language/GML_Overview/Arrays.htm">配列は</a>データ構造よりも高速で、必要なメモリ量も少なくて済みますが、さらに最適化することも可能です。配列を作成すると、そのサイズに応じてメモリが割り当てられます。したがって、たとえ後で値を入れる予定がなくても、まずは最大サイズまで配列を初期化するようにしましょう。たとえば、最大
+      100 個の値を格納する配列が必要だとわかっている場合は、すぐに 100 スロットに初期化します。 <a
+        href="../GameMaker_Language/GML_Reference/Variable_Functions/array_create.htm"><span
+          class="inline">array_create()</span></a>関数で初期化します。</p>
     <p class="code">array = array_create(100, 0);</p>
     <p class="dropspot">そうしないと、配列に新しい値を追加するたびに、メモリ全体を再割り当てしなければならないからです。</p>
-    <p class="note"><span class="note">注意</span>HTML5ターゲットでは、このような配列の代入は適用されず、配列は0から初期化される必要があります。例えば、os_browser変数をチェックすることで、簡単に処理することができます。</p>
+    <p class="note"><span
+        class="note">注意</span>HTML5ターゲットでは、このような配列の代入は適用されず、配列は0から初期化される必要があります。例えば、os_browser変数をチェックすることで、簡単に処理することができます。
+    </p>
     <p class="code"><span style="padding-left:1px;">if (os_browser == browser_not_a_browser)<br />
         {<br />
             array_create(100, 0);<br />
@@ -62,8 +91,11 @@
         }</span></p>
     <p class="dropspot">また、配列に関連するメモリを解放するには、使用する変数に0を設定します。したがって、上記のコード例で配列をクリアするには、単に</p>
     <p class="code">array = 0;</p>
-    <p class="dropspot">また、配列は<strong>参照渡し</strong>ですが、変更があったときに全体をコピーすることに注意してください（この動作を<strong>copy on write</strong> と呼びます）。つまり、配列を関数に渡す場合は元の配列への<em>参照を </em>渡すことになり、そこから読み込まれる値はすべて元の配列から取得されることになります。しかし、配列の値を変更する必要がある場合は、 書き込みの時点で配列が複製されてしまうので、<strong>関数から値を返さなければ</strong>変更した内容が失われてしまいます。そのため、関数内での配列の使用には注意が必要です。</p>
-    <p class="dropspot">しかし、特殊な配列<a href="../GameMaker_Language/GML_Overview/Accessors.htm">アクセッサ</a> <span class="inline">@</span> を使用することで、書き込み時のコピー動作を回避することができます。例えば</p>
+    <p class="dropspot">また、配列は<strong>参照渡し</strong>ですが、変更があったときに全体をコピーすることに注意してください（この動作を<strong>copy on write</strong>
+      と呼びます）。つまり、配列を関数に渡す場合は元の配列への<em>参照を </em>渡すことになり、そこから読み込まれる値はすべて元の配列から取得されることになります。しかし、配列の値を変更する必要がある場合は、
+      書き込みの時点で配列が複製されてしまうので、<strong>関数から値を返さなければ</strong>変更した内容が失われてしまいます。そのため、関数内での配列の使用には注意が必要です。</p>
+    <p class="dropspot">しかし、特殊な配列<a href="../GameMaker_Language/GML_Overview/Accessors.htm">アクセッサ</a> <span
+        class="inline">@</span> を使用することで、書き込み時のコピー動作を回避することができます。例えば</p>
     <p class="code">// Call a function, passing our array<br />
       my_function(my_array);</p>
     <p class="code">// The function looks like this:<br />
@@ -83,30 +115,68 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">データ構造</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerの</span> <a href="../GameMaker_Language/GML_Reference/Data_Structures/Data_Structures.htm">データ構造は</a>、以前のバージョン（<span class="notranslate">GameMaker</span> ）よりもずっと高速になるように最適化されています。しかし、データ構造の使いやすさと、データを扱うための追加機能は、最小限の速度差に勝ることが多いので、恐れずにゲームに使ってください。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerの</span> <a
+        href="../GameMaker_Language/GML_Reference/Data_Structures/Data_Structures.htm">データ構造は</a>、以前のバージョン（<span
+        class="notranslate">GameMaker</span>
+      ）よりもずっと高速になるように最適化されています。しかし、データ構造の使いやすさと、データを扱うための追加機能は、最小限の速度差に勝ることが多いので、恐れずにゲームに使ってください。</p>
     <p class="dropspot">すべてのデータ構造の中で、特にDS Mapsは読み込みも書き込みも高速で、あらゆるタイプのタスクに最適な選択肢となることに注目すべきだろう。</p>
-    <p class="dropspot">前回は配列に対する<a href="../GameMaker_Language/GML_Overview/Accessors.htm">アクセサを</a>紹介しましたが、データ構造に対しても利用可能で、コードをすっきりさせて読みやすくすることができます。</p>
+    <p class="dropspot">前回は配列に対する<a
+        href="../GameMaker_Language/GML_Overview/Accessors.htm">アクセサを</a>紹介しましたが、データ構造に対しても利用可能で、コードをすっきりさせて読みやすくすることができます。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">衝突</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> には<a href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collisions.htm">衝突を処理する方法が複数</a>ありますが、そのほとんどは CPU のオー バーヘッドを少し余分に必要とします。 <span class="inline">collision_</span> と <span class="inline">point_</span> 関数、 <span class="inline">place_</span> 関数、 <span class="inline">instance_</span> 関数はすべて、<span class="notranslate">room</span> 内の与えられたタイプのすべてのインスタンスとの<a class="glossterm" data-glossterm="バウンディングボックス" href="#">バウンディングボックス</a>チェックに依存しています。これらのチェックを制限するために、エンジンにいくつかの最適化が組み込まれていますが、衝突は決して最も効率的に処理されるものではあり ません。正確なコリジョンを使用し始めると、パフォーマンスが著しく悪化します。バウンディングボックスチェックだけでなく、ピクセル単位のチェックも行うことになり、これは実に遅いのです。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> には<a
+        href="../GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/Collisions.htm">衝突を処理する方法が複数</a>ありますが、そのほとんどは
+      CPU のオー バーヘッドを少し余分に必要とします。 <span class="inline">collision_</span> と <span class="inline">point_</span> 関数、 <span
+        class="inline">place_</span> 関数、 <span class="inline">instance_</span> 関数はすべて、<span
+        class="notranslate">room</span> 内の与えられたタイプのすべてのインスタンスとの<a class="glossterm" data-glossterm="バウンディングボックス"
+        href="#">バウンディングボックス</a>チェックに依存しています。これらのチェックを制限するために、エンジンにいくつかの最適化が組み込まれていますが、衝突は決して最も効率的に処理されるものではあり
+      ません。正確なコリジョンを使用し始めると、パフォーマンスが著しく悪化します。バウンディングボックスチェックだけでなく、ピクセル単位のチェックも行うことになり、これは実に遅いのです。</p>
     <ul class="dropspotlist">
     </ul>
-    <p class="dropspot">これらの機能はとても便利なので、使ってはいけないというわけではありません。しかし、どの関数をいつ使うかは知っておく必要があります。というのも、これらの関数はそれぞれ微妙に動作が異なり、速度も異なるからです。大まかな目安としては、 <span class="inline">place_</span> 関数は <span class="inline">instance_</span> 関数より速く、 <span class="inline">collision_</span> および <span class="inline">point_</span> 関数より速くなります。マニュアルのそれぞれのタイプの関数のページを読み、あらゆる状況に最も適したものを選択するようにしてください。</p>
-    <p class="dropspot">タイル<strong> ベースのコリジョンシステムは</strong>、<a href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">タイルマップ関数や</a>カスタム2D配列、DSグリッドを使用して作成することも可能です。これらは非常に高速で、ゲームの速度を向上させるのに役立ちます。ただし、不規則な地形や壁、<span class="notranslate">objects</span> を使用していて、グリッドに整列していない場合は、適切でない可能性があります。タイルマップの衝突に関する非常に簡単なチュートリアルは、次のビデオリンクから参照できます。</p>
+    <p class="dropspot">
+      これらの関数はとても便利なので、使ってはいけないというわけではありません。しかし、どの関数をいつ使うかは知っておく必要があります。というのも、これらの関数はそれぞれ微妙に動作が異なり、速度も異なるからです。大まかな目安としては、
+      <span class="inline">place_</span> 関数は <span class="inline">instance_</span> 関数より速く、 <span
+        class="inline">collision_</span> および <span class="inline">point_</span>
+      関数より速くなります。マニュアルのそれぞれのタイプの関数のページを読み、あらゆる状況に最も適したものを選択するようにしてください。
+    </p>
+    <p class="dropspot">タイル<strong> ベースのコリジョンシステムは</strong>、<a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">タイルマップ関数や</a>カスタム2D配列、DSグリッドを使用して作成することも可能です。これらは非常に高速で、ゲームの速度を向上させるのに役立ちます。ただし、不規則な地形や壁、<span
+        class="notranslate">objects</span>
+      を使用していて、グリッドに整列していない場合は、適切でない可能性があります。タイルマップの衝突に関する非常に簡単なチュートリアルは、次のビデオリンクから参照できます。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="https://youtu.be/UyKdQQ3UR_0"><span data-keyref="GameMaker Name">GameMakerの</span>タイルコリジョン</a></li>
+      <li class="dropspot"><a href="https://youtu.be/UyKdQQ3UR_0"><span
+            data-keyref="GameMaker Name">GameMakerの</span>タイルコリジョン</a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">テクスチャスワップとバーテックスバッチ</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">を<span class="notranslate">switch</span> 。 <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_overlay.htm"><strong>デバッグオーバーレイ</strong></a>をクリックすると、テスト時に画面の上部に括弧で囲まれた2つの数値が表示されるのがわかると思います。1 つは実行中の<strong>テクスチャスワップの </strong>数で、もう 1 つは<strong>頂点バッチの</strong>数です。これらの数値にはさまざまな要因が影響し、エンジンはすべてのステップでそれぞれ1つか2つを必要とするので、これらを (0) (0) にすることはできませんが、これらの値をできる限り低くすることを目指す必要があります。</p>
-    <p class="dropspot"><img> <span class="notranslate">texture</span> のスワップでは、 と背景が ページに保存される方法を最適化するのが、最も効率的な方法です。これは<span class="notranslate">sprites</span> <span class="notranslate">texture</span> <a href="../The_Asset_Editors/Sprites.htm">スプライトプロパティから</a>行います。また、<a href="../Settings/Texture_Groups.htm">テクスチャグループエディタで</a> <span class="notranslate">texture</span> ページを作成することができます。例えば、メインメニューにしか使わない画像が多数ある場合、それらを別の<a href="../Settings/Texture_Information/Texture_Pages.htm">テクスチャ</a>ページにまとめます。レベル固有の画像や、プレイヤーと敵などの画像がある場合も同じです。基本的には用途別にまとめて、なるべくスワップを減らしたいところです。さらに、<a class="glossterm" data-glossterm="ブイラム" href="#">VRAM を</a>最適化するために、異なる<a href="../GameMaker_Language/GML_Reference/Drawing/Textures/Textures.htm">プリフェッチとフラッシュ</a>機能 を使って、必要に応じてメモリから をロードしたり、 削除したりすることができます。<span class="notranslate">textures</span> </p>
-    <p class="note"><span class="note">注意</span>このページの冒頭で述べたように、ゲームが適切な FPS で問題なく動作するのであれば、<span class="notranslate">texture</span> の交換についてあまり気にする必要はありません... 特にデスクトップターゲットでプロジェクトを作成する場合は。これらの最適化は、大規模なゲームやローエンドモバイルデバイスで使用する場合に最適で、間違った使い方をすると、実際にパフォーマンスに悪影響を与える可能性があります。</p>
-    <p class="dropspot">頂点情報は描画のために GPU に「バッチ」で送られ、一般にバッチは大き い方が良い。したがって、描画時にバッチを「壊す」ことは避けるべきで、そうす ると GPU に送られる頂点のバッチの数が増えるからです。バッチを壊すものはいくつかあり、主なものは、<strong>ブレンドモード</strong>、<strong>シェー ダの</strong>変更、何かを描く前に<span class="notranslate">shader</span> のユニフォームを変更する、内蔵のシェイプ とプリミティブを使用して描く、などです。</p>
-    <p class="dropspot">ですから、例えば、 <span class="inline">bm_add</span> のブレンドモードを使って描画する弾丸インスタンスが多数ある場合、それぞれの弾丸に対して新しい<span class="notranslate">vertex batch</span> を作成することになり、これは間違いなく悪いことです!代わりに、ゲーム内で、すべての弾丸を描画するコントローラ<span class="notranslate">object</span> を、次のように用意します。</p>
+    <p class="dropspot">を<span class="notranslate">switch</span> 。 <a
+        href="../GameMaker_Language/GML_Reference/Debugging/show_debug_overlay.htm"><strong>デバッグオーバーレイ</strong></a>をクリックすると、テスト時に画面の上部に括弧で囲まれた2つの数値が表示されるのがわかると思います。1
+      つは実行中の<strong>テクスチャスワップの </strong>数で、もう 1
+      つは<strong>頂点バッチの</strong>数です。これらの数値にはさまざまな要因が影響し、エンジンはすべてのステップでそれぞれ1つか2つを必要とするので、これらを (0) (0)
+      にすることはできませんが、これらの値をできる限り低くすることを目指す必要があります。</p>
+    <p class="dropspot"><img> <span class="notranslate">texture</span> のスワップでは、 と背景が
+      ページに保存される方法を最適化するのが、最も効率的な方法です。これは<span class="notranslate">sprites</span> <span
+        class="notranslate">texture</span> <a href="../The_Asset_Editors/Sprites.htm">スプライトプロパティから</a>行います。また、<a
+        href="../Settings/Texture_Groups.htm">テクスチャグループエディタで</a> <span class="notranslate">texture</span>
+      ページを作成することができます。例えば、メインメニューにしか使わない画像が多数ある場合、それらを別の<a
+        href="../Settings/Texture_Information/Texture_Pages.htm">テクスチャ</a>ページにまとめます。レベル固有の画像や、プレイヤーと敵などの画像がある場合も同じです。基本的には用途別にまとめて、なるべくスワップを減らしたいところです。さらに、<a
+        class="glossterm" data-glossterm="ブイラム" href="#">VRAM を</a>最適化するために、異なる<a
+        href="../GameMaker_Language/GML_Reference/Drawing/Textures/Textures.htm">プリフェッチとフラッシュ</a>機能 を使って、必要に応じてメモリから
+      をロードしたり、 削除したりすることができます。<span class="notranslate">textures</span> </p>
+    <p class="note"><span class="note">注意</span>このページの冒頭で述べたように、ゲームが適切な FPS で問題なく動作するのであれば、<span
+        class="notranslate">texture</span> の交換についてあまり気にする必要はありません...
+      特にデスクトップターゲットでプロジェクトを作成する場合は。これらの最適化は、大規模なゲームやローエンドモバイルデバイスで使用する場合に最適で、間違った使い方をすると、実際にパフォーマンスに悪影響を与える可能性があります。</p>
+    <p class="dropspot">頂点情報は描画のために GPU に「バッチ」で送られ、一般にバッチは大き い方が良い。したがって、描画時にバッチを「壊す」ことは避けるべきで、そうす ると GPU
+      に送られる頂点のバッチの数が増えるからです。バッチを壊すものはいくつかあり、主なものは、<strong>ブレンドモード</strong>、<strong>シェー ダの</strong>変更、何かを描く前に<span
+        class="notranslate">shader</span> のユニフォームを変更する、内蔵のシェイプ とプリミティブを使用して描く、などです。</p>
+    <p class="dropspot">ですから、例えば、 <span class="inline">bm_add</span> のブレンドモードを使って描画する弾丸インスタンスが多数ある場合、それぞれの弾丸に対して新しい<span
+        class="notranslate">vertex batch</span> を作成することになり、これは間違いなく悪いことです!代わりに、ゲーム内で、すべての弾丸を描画するコントローラ<span
+        class="notranslate">object</span> を、次のように用意します。</p>
     <p class="code">gpu_set_blendmode(bm_add);<br />
       <br />
       with (obj_BULLET)<br />
@@ -116,25 +186,60 @@
       <br />
       gpu_set_blendmode(bm_normal);
     </p>
-    <p class="note"><span class="note">注</span>：これは<span class="inline" style="font-size: 14px">bm_addを</span>使用する場合にのみ適用されるわけではありません - ブレンドを変更するとバッチが壊れ、パフォーマンスが低下します。</p>
-    <p class="dropspot">こうすることで、すべての弾が一括で描画されるようになります。関数をうまく使う <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendenable.htm"><span class="inline">gpu_set_blendenable()</span></a>, <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a>と <a href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>をうまく使えば、パフォーマンスが大幅に向上し、プロジェクトコード全体で必要に応じて有効/無効を切り替えることができます。ただし、すべての種類のグラフィックスやプロジェクトに適しているわけではありません。</p>
-    <p class="note"><span class="note">注意</span>この方法でコントローラを使用する際に、インスタンス自体の描画を必要としない場合は、単に描画イベントにコメントを追加してデフォルトの描画を抑制するか、インスタンスを不可視にします (ただし、これによりすべての描画イベントでインスタンスに対して実行されるすべてのコードが無効になります)。</p>
-    <p class="dropspot">これらの数を減らすもう一つの方法は、絶対に必要でない限り、<span class="notranslate">Texture</span> の「<strong>Separate<span class="notranslate">sprites</span> Page</strong>」オプションを無効にすることです。この方法で保存された各画像は独自の<span class="notranslate">texture</span> ページに送られ、異なるバッチ処理が行われるため、これらの画像を通常の<span class="notranslate">texture</span> ページに置く方がよいのです。次に、UVS 座標を <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="inline">sprite_get_uvs()</span></a>関数を使って UVS 座標を取得し、変数に保存して後で使用することができます。わずかな追加コードかもしれませんが、得られるブーストはそれに見合うものです。この方法は<span class="notranslate">texture</span> の繰り返しを許可しないことに注意してください!</p>
+    <p class="note"><span class="note">注</span>：これは<span class="inline"
+        style="font-size: 14px">bm_addを</span>使用する場合にのみ適用されるわけではありません - ブレンドを変更するとバッチが壊れ、パフォーマンスが低下します。</p>
+    <p class="dropspot">こうすることで、すべての弾が一括で描画されるようになります。関数をうまく使う <a
+        href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_blendenable.htm"><span
+          class="inline">gpu_set_blendenable()</span></a>, <a
+        href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestref.htm"><span
+          class="inline">gpu_set_alphatestref()</span></a>と <a
+        href="../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span
+          class="inline">gpu_set_alphatestenable()</span></a>をうまく使えば、パフォーマンスが大幅に向上し、プロジェクトコード全体で必要に応じて有効/無効を切り替えることができます。ただし、すべての種類のグラフィックスやプロジェクトに適しているわけではありません。
+    </p>
+    <p class="note"><span
+        class="note">注意</span>この方法でコントローラを使用する際に、インスタンス自体の描画を必要としない場合は、単に描画イベントにコメントを追加してデフォルトの描画を抑制するか、インスタンスを不可視にします
+      (ただし、これによりすべての描画イベントでインスタンスに対して実行されるすべてのコードが無効になります)。</p>
+    <p class="dropspot">これらの数を減らすもう一つの方法は、絶対に必要でない限り、<span class="notranslate">Texture</span> の「<strong>Separate<span
+          class="notranslate">sprites</span> Page</strong>」オプションを無効にすることです。この方法で保存された各画像は独自の<span
+        class="notranslate">texture</span> ページに送られ、異なるバッチ処理が行われるため、これらの画像を通常の<span class="notranslate">texture</span>
+      ページに置く方がよいのです。次に、UVS 座標を <a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm"><span
+          class="inline">sprite_get_uvs()</span></a>関数を使って UVS
+      座標を取得し、変数に保存して後で使用することができます。わずかな追加コードかもしれませんが、得られるブーストはそれに見合うものです。この方法は<span class="notranslate">texture</span>
+      の繰り返しを許可しないことに注意してください!</p>
     <p class="dropspot">これらのヒントと同様に、変更することで生活が苦しくなり、ゲームが正常に動作するのであれば、あまり気にする必要はありません...。</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">粒子</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">パーティクル</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">パーティクルは</a>、ゲーム内でダイナミックなエフェクトを作成するための非常に迅速かつ効率的な方法を提供し、一般的に良好なパフォーマンスを発揮します。しかし、パーティクル上で加算ブレンディング、アルファブレンディング、カラーブレンディングを使用すると、特にモバイルターゲットではパフォーマンスが低下することがあるので、必要ない場合は使用しないでください。特に、アディティブブレンディングは、頂点バッチを大幅に増加させる可能性があるので、注意して使用する必要があります。</p>
-    <p class="dropspot">非 WebGL の HTML5 ターゲットでは、マルチカラーでフェードするパーティクルを使用すると、多くの画像キャッシュが必要となり、非常に遅くなることに注意してください。しかし、パーティクル<span class="notranslate">sprites</span> はアニメーションさせることができるので、色が変化するサブ画像を持つアニメーション<span class="notranslate">sprite</span> を作成し、それをパーティクルに使用することができます。この場合でも、色が徐々に変化するように見えますが、<span class="notranslate">cache</span> の画像を常に作成する必要はありません。</p>
-    <p class="dropspot">パーティクルについては、<a href="Guide_To_Using_Particles.htm">Guide To Using Particlesの</a>ページで詳しく説明されています。</p>
+    <p class="dropspot"><a
+        href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">パーティクルは</a>、ゲーム内でダイナミックなエフェクトを作成するための非常に迅速かつ効率的な方法を提供し、一般的に良好なパフォーマンスを発揮します。しかし、パーティクル上で加算ブレンディング、アルファブレンディング、カラーブレンディングを使用すると、特にモバイルターゲットではパフォーマンスが低下することがあるので、必要ない場合は使用しないでください。特に、アディティブブレンディングは、頂点バッチを大幅に増加させる可能性があるので、注意して使用する必要があります。
+    </p>
+    <p class="dropspot">非 WebGL の HTML5
+      ターゲットでは、マルチカラーでフェードするパーティクルを使用すると、多くの画像キャッシュが必要となり、非常に遅くなることに注意してください。しかし、パーティクル<span
+        class="notranslate">sprites</span> はアニメーションさせることができるので、色が変化するサブ画像を持つアニメーション<span
+        class="notranslate">sprite</span> を作成し、それをパーティクルに使用することができます。この場合でも、色が徐々に変化するように見えますが、<span
+        class="notranslate">cache</span> の画像を常に作成する必要はありません。</p>
+    <p class="dropspot">パーティクルについては、<a href="Guide_To_Using_Particles.htm">Guide To Using Particlesの</a>ページで詳しく説明されています。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">サーフェス</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">最後に、<a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/Surfaces.htm">サーフェスの</a>使用について簡単に触れます。<span data-keyref="GameMaker Name">GameMaker</span>では、サーフェスをゲームに使用する際にかなり重要な最適化が行われています。<span class="notranslate">switch</span> <strong>深度バッファの</strong>オンとオフが可能です。</p>
-    <p class="dropspot">サーフェスを普通に使うと、<span data-keyref="GameMaker Name">GameMaker</span>はサーフェスとそれに付随する深度<span class="notranslate">buffer</span> を実際に作成し、3D で何かを描くときに適切な深度ソートを確保します。しかし、ほとんどの2Dゲームでは、この余分な深度<span class="notranslate">buffer</span> は必要ないため、他のことに使えるはずのメモリスペースと処理時間を余計に消費しています。そこで、この関数 <a href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_depth_disable.htm"><span class="inline">surface_depth_disable()</span></a>が登場するのです...</p>
-    <p class="dropspot">この関数は、サーフェスを作成する前に呼び出すと、深度<span class="notranslate">buffer</span> の生成を無効にすることができ、その後に作成されたすべてのサーフェスには、深度<span class="notranslate">buffer</span> が作成されません。この関数は必要に応じて有効/無効にでき、ゲームの開始時に一度だけ呼び出して、それ以降のすべてのサーフェス呼び出しで深度<span class="notranslate">buffers</span> を無効にすることもできます（そしてほとんどの2Dゲームではこれで問題ありません）。この機能によってパフォーマンスが大幅に向上することはありませんが、サーフェスを多用するゲームでは覚えておくとよいでしょう。また、低スペックのデバイスでゲームがメモリ不足になるのを防ぐことができるかもしれません。</p>
+    <p class="dropspot">最後に、<a
+        href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/Surfaces.htm">サーフェスの</a>使用について簡単に触れます。<span
+        data-keyref="GameMaker Name">GameMaker</span>では、サーフェスをゲームに使用する際にかなり重要な最適化が行われています。<span
+        class="notranslate">switch</span> <strong>深度バッファの</strong>オンとオフが可能です。</p>
+    <p class="dropspot">サーフェスを普通に使うと、<span data-keyref="GameMaker Name">GameMaker</span>はサーフェスとそれに付随する深度<span
+        class="notranslate">buffer</span> を実際に作成し、3D で何かを描くときに適切な深度ソートを確保します。しかし、ほとんどの2Dゲームでは、この余分な深度<span
+        class="notranslate">buffer</span> は必要ないため、他のことに使えるはずのメモリスペースと処理時間を余計に消費しています。そこで、この関数 <a
+        href="../GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_depth_disable.htm"><span
+          class="inline">surface_depth_disable()</span></a>が登場するのです...</p>
+    <p class="dropspot">この関数は、サーフェスを作成する前に呼び出すと、深度<span class="notranslate">buffer</span>
+      の生成を無効にすることができ、その後に作成されたすべてのサーフェスには、深度<span class="notranslate">buffer</span>
+      が作成されません。この関数は必要に応じて有効/無効にでき、ゲームの開始時に一度だけ呼び出して、それ以降のすべてのサーフェス呼び出しで深度<span class="notranslate">buffers</span>
+      を無効にすることもできます（そしてほとんどの2Dゲームではこれで問題ありません）。この機能によってパフォーマンスが大幅に向上することはありませんが、サーフェスを多用するゲームでは覚えておくとよいでしょう。また、低スペックのデバイスでゲームがメモリ不足になるのを防ぐことができるかもしれません。
+    </p>
   </div>
   <p> </p>
   <p>上記の主なものとは別に、パフォーマンスを向上させる、より一般的なものもあり、それも「グッドプラクティス」とされています。</p>
@@ -143,18 +248,20 @@
     <li>Drawイベントに描画以外のコードを書かない</li>
     <li>アラームを使用して、毎ステップ呼び出される必要のないコードを呼び出す（むしろ、これをステップイベントに追加する）。</li>
   </ul>
-  <p>しかし、このページの冒頭で述べたように、これらの最適化はすべてオプションであり、もしあなたのゲームが60頂点バッチ、80<span class="notranslate">texture</span> スワップ、加算ブレンディングなどでうまく動くなら、あまり気にする必要はありません!次のゲームをプログラミングするときに、これらのことを心に留めておいてください...</p>
+  <p>しかし、このページの冒頭で述べたように、これらの最適化はすべてオプションであり、もしあなたのゲームが60頂点バッチ、80<span class="notranslate">texture</span>
+    スワップ、加算ブレンディングなどでうまく動くなら、あまり気にする必要はありません!次のゲームをプログラミングするときに、これらのことを心に留めておいてください...</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
-        <div style="float:right">次へ<a href="The_File_System.htm">ファイルシステム</a></div>
+        <div style="float:left">前のページ：<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次のページ：<a href="The_File_System.htm">ファイルシステム</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Nest Practices
@@ -163,4 +270,5 @@ Nest Practices
 best_practices
 -->
 </body>
+
 </html>

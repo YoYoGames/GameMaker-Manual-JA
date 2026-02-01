@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_set_rich_presence (リッチプレゼンス)</title>
@@ -12,20 +13,28 @@
   <meta name="rh-index-keywords" content="xboxlive_set_rich_presence" />
   <meta name="search-keywords" content="xboxlive_set_rich_presence" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_set_rich_presence (リッチプレゼンス)</h1>
-  <p>この関数は、指定されたユーザーのリッチプレゼンス<span class="notranslate">string</span> を設定します。リッチプレゼンス<span class="notranslate">string</span> は、ユーザーがプレイしているゲーム名の後にハイフンで区切って、ユーザーのゲーム内アクティビティを表示します。この<span class="notranslate">string</span> は、&quot;Friends &amp; Clubs&quot; リストのプレイヤーのゲーマータグの下に表示され、プレイヤーの Xbox Live ユーザープロファイルにも表示されます。</p>
-  <p>この関数を使用する場合、ユーザーのユーザーIDポインターを提供する必要があります。そして、そのユーザーが現在ゲーム内でアクティブかどうか（ <span class="inline">true</span>/<span class="inline">false</span> を使用）を<span class="notranslate">flag</span> で指定します。 <span class="inline">false</span> を指定すると、リッチプレゼンス<span class="notranslate">string</span> に &quot;/afk&quot; などの適切な文字が付加されます。次の引数は表示するリッチプレゼンス<span class="notranslate">string</span> ID で、最後に (オプションで) <span class="inline">service_config_id</span> <span class="notranslate">string</span> を指定できます。 この引数はオプションで、指定しない場合は Xbox ゲームオプションで指定した SCID を使用します。</p>
+  <p>この関数は、指定されたユーザーのリッチプレゼンス<span class="notranslate">string</span> を設定します。リッチプレゼンス<span
+      class="notranslate">string</span> は、ユーザーがプレイしているゲーム名の後にハイフンで区切って、ユーザーのゲーム内アクティビティを表示します。この<span
+      class="notranslate">string</span> は、&quot;Friends &amp; Clubs&quot; リストのプレイヤーのゲーマータグの下に表示され、プレイヤーの Xbox Live
+    ユーザープロファイルにも表示されます。</p>
+  <p>この関数を使用する場合、ユーザーのユーザーIDポインターを提供する必要があります。そして、そのユーザーが現在ゲーム内でアクティブかどうか（ <span class="inline">true</span>/<span
+      class="inline">false</span> を使用）を<span class="notranslate">flag</span> で指定します。 <span class="inline">false</span>
+    を指定すると、リッチプレゼンス<span class="notranslate">string</span> に &quot;/afk&quot; などの適切な文字が付加されます。次の引数は表示するリッチプレゼンス<span
+      class="notranslate">string</span> ID で、最後に (オプションで) <span class="inline">service_config_id</span> <span
+      class="notranslate">string</span> を指定できます。 この引数はオプションで、指定しない場合は Xbox ゲームオプションで指定した SCID を使用します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_set_rich_presence(user_id, is_user_active, rich_presence_string, [service_config_id]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">user_id</span></td>
@@ -40,34 +49,39 @@
       <tr>
         <td><span class="notranslate">rich_presence_string</span></td>
         <td><span data-keyref="Type_String">文字列</span></td>
-        <td><span class="notranslate">The rich presence string ID to use (as defined in the Partner Center - max 50 characters)</span></td>
+        <td><span class="notranslate">The rich presence string ID to use (as defined in the Partner Center - max 50
+            characters)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">service_config_id</span></td>
         <td><span data-keyref="Type_String">文字列</span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> これは、ゲーム用のconfig_id です。<span class="notranslate">string</span> </td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> これは、ゲーム用のconfig_id です。<span
+              class="notranslate">string</span> </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var pad_uid = xboxlive_user_for_pad(0);<br />
     xboxlive_set_rich_presence(pad_uid, true, &quot;Playing_Challenge&quot;);</p>
-  <p>上記のコードでは、ゲームパッド[0]スロットに割り当てられたユーザーのユーザーIDポインターを取得し、そのユーザーのリッチプレゼンス<span class="notranslate">string</span> を設定しています。</p>
+  <p>上記のコードでは、ゲームパッド[0]スロットに割り当てられたユーザーのユーザーIDポインターを取得し、そのユーザーのリッチプレゼンス<span class="notranslate">string</span> を設定しています。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Users_And_Accounts.htm">ユーザーとアカウント</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_gamedisplayname_for_user.htm"><span class="notranslate">xboxlive_gamedisplayname_for_user</span></a></div>
+        <div style="float:left">前のページ：<a href="Users_And_Accounts.htm">ユーザーとアカウント</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_gamedisplayname_for_user.htm"><span
+              class="notranslate">xboxlive_gamedisplayname_for_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_set_rich_presence
@@ -76,4 +90,5 @@ xboxlive_set_rich_presence
 xboxlive_set_rich_presence
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ソース管理</title>
@@ -13,13 +14,21 @@
   <meta name="rh-index-keywords" content="Source Control" />
   <meta name="search-keywords" content="Source Control,SCM,Git" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ソース管理</h1>
-  <p><strong>SCM（Source Control Management</strong>）とは、リポジトリとローカルソースを介して、プロジェクトの<strong>サブバージョンや</strong>バックアップを扱う手法に付けられた名称です。基本的に、SCM ソリューションは独立したソフトウェアパッケージであり、作業中にプロジェクトのバージョンを維持、変更、比較するためのあらゆる側面を制御します。これは、特にチームで作業する場合に便利で、誰が何をするかを管理でき、データの損失や後日取り消す必要のある変更を心配する必要がありません。</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>は<a href="https://git-scm.com/" title="Git">Git を</a>SCM として利用しています。SCM を<span class="notranslate">GameMaker</span> で利用するためには、Git を別途インストールし設定する必要があります。<span class="notranslate">Git</span> に関するより具体的な情報は<a href="https://git-scm.com/doc" title="Git Documentation">Git Documentation</a>を参照してください。</p>
+  <p><strong>SCM（Source Control
+      Management</strong>）とは、リポジトリとローカルソースを介して、プロジェクトの<strong>サブバージョンや</strong>バックアップを扱う手法に付けられた名称です。基本的に、SCM
+    ソリューションは独立したソフトウェアパッケージであり、作業中にプロジェクトのバージョンを維持、変更、比較するためのあらゆる側面を制御します。これは、特にチームで作業する場合に便利で、誰が何をするかを管理でき、データの損失や後日取り消す必要のある変更を心配する必要がありません。
+  </p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>は<a href="https://git-scm.com/" title="Git">Git を</a>SCM
+    として利用しています。SCM を<span class="notranslate">GameMaker</span> で利用するためには、Git を別途インストールし設定する必要があります。<span
+      class="notranslate">Git</span> に関するより具体的な情報は<a href="https://git-scm.com/doc" title="Git Documentation">Git
+      Documentation</a>を参照してください。</p>
   <p>以下に、このプラグインを設定し、プロジェクトでSCMツールを使用する方法についての小さなチュートリアルへのリンクがあります。</p>
-  <p class="note"><strong>重要!</strong> <span data-keyref="GameMaker Name">GameMaker</span> で<span class="notranslate">source control</span> を使用する前に、その仕組みについてある程度知っておくことをお勧めします。</p>
+  <p class="note"><strong>重要!</strong> <span data-keyref="GameMaker Name">GameMaker</span> で<span
+      class="notranslate">source control</span> を使用する前に、その仕組みについてある程度知っておくことをお勧めします。</p>
   <ul class="colour">
     <li><a href="Source_Control/Setting_Up_Git_Plugin.htm"><span class="notranslate">Git</span> プラグインを設定する</a></li>
     <li><a href="Source_Control/Repository_Options.htm">リポジトリオプション</a></li>
@@ -30,7 +39,10 @@
     <li><a href="Source_Control/External_Merge_Diff_Tools.htm">外部Merge/Diffツールのセットアップ</a></li>
   </ul>
   <p> </p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>は、<span class="notranslate">Source Control</span> をプロジェクトで有効にすると、メニューバーに<span class="notranslate">Source Control</span> のドロップダウンメニューが表示され、以下のオプションが入力されます（詳細は上記の「<a href="Source_Control/Setting_Up_Git_Plugin.htm"> <span class="notranslate">Git</span> </a>プラグインのセットアップ」のセクションを参照してください）。</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>は、<span class="notranslate">Source Control</span>
+    をプロジェクトで有効にすると、メニューバーに<span class="notranslate">Source Control</span> のドロップダウンメニューが表示され、以下のオプションが入力されます（詳細は上記の「<a
+      href="Source_Control/Setting_Up_Git_Plugin.htm"> <span class="notranslate">Git</span>
+    </a>プラグインのセットアップ」のセクションを参照してください）。</p>
   <p><img>ここでは、利用可能な各オプションの概要を説明します（ほとんどのオプションは、上記のチュートリアルのセクションでより深く説明されています）。</p>
   <ul class="colour">
     <li><strong>プロジェクトリポジトリを作成</strong>する。このオプションは、プロジェクトファイルと同じディレクトリにローカルリポジトリを作成することを許可します。</li>
@@ -38,19 +50,26 @@
     <li><strong>変更をコミット</strong>する。このオプションでは、プロジェクト内で変更されたファイルをステージングし、リポジトリにコミットすることができます。</li>
     <li><strong>変更をプッシュ</strong>します。コミットまたはマージを行った後、このオプションは変更をマスターリポジトリにプッシュするために使用されます。</li>
     <li><strong>変更のプル</strong>。このオプションを使用すると、マスターリポジトリから変更されたファイルをプルすることによって、ローカルリポジトリを更新することができます。</li>
-    <li>履歴を<strong>見る</strong>。このウィンドウでは、プロジェクトのすべてのバージョン履歴を見ることができ、特定のファイル<span class="notranslate">paths</span> またはリビジョン全体をロールバックすることを選択できます。</li>
-    <li><strong>コンフリクトを表示</strong>する。コンフリクトウィンドウを開き、プロジェクト内に存在するコンフリクトファイルをリストアップし、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> または特定の Merge Tool を使って対処することができます。</li>
+    <li>履歴を<strong>見る</strong>。このウィンドウでは、プロジェクトのすべてのバージョン履歴を見ることができ、特定のファイル<span class="notranslate">paths</span>
+      またはリビジョン全体をロールバックすることを選択できます。</li>
+    <li><strong>コンフリクトを表示</strong>する。コンフリクトウィンドウを開き、プロジェクト内に存在するコンフリクトファイルをリストアップし、<span
+        data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> または特定の Merge Tool
+      を使って対処することができます。</li>
   </ul>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span> </a>その他のツール</div>
-        <div style="float:right">次へ<a href="Source_Control/Setting_Up_Git_Plugin.htm"> <span class="notranslate">Git</span> </a>プラグインを設定する</div>
+        <div style="float:left">前のページ：<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span>
+          </a>その他のツール
+        </div>
+        <div style="float:right">次のページ：<a href="Source_Control/Setting_Up_Git_Plugin.htm"> <span
+              class="notranslate">Git</span> </a>プラグインを設定する</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control
@@ -61,4 +80,5 @@ Git
 source_control
 -->
 </body>
+
 </html>

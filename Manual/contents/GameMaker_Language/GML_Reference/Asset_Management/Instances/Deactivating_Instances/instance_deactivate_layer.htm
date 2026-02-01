@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instance_deactivate_layer</title>
@@ -13,21 +14,35 @@
   <meta name="search-keywords" content="instance_deactivate_layer" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">instance_deactivate_layer</span></h1>
-  <p>この関数を使うと、特定のレイヤーに割り当てられたすべてのインスタンスを非アクティブにすることができます。<b>レイヤー ID</b> は、コードエディターで書かれたレイヤー名（<span class="notranslate">string</span> ）か、あるいは <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>また、この関数では<i>インスタンスレイヤーのみを</i>非アクティブにすることができることに注意してください。もし、<span class="notranslate">objects</span> のインスタンスが<b>永続</b>化されているレイヤーを非アクティブにした場合、そのレイヤーを関数 <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a><span class="notranslate">room</span>さもなければ、レイヤー上の永続的なインスタンスは持ち越さ<i>れず</i>、破棄されます。また、非アクティブ化は即座には行われず、この方法で非アクティブ化されたインスタンスは、この関数が呼ばれたイベントが終了するまで非アクティブとみなされないことに注意してください。</p>
-  <p class="note"><b>注</b>：<span class="notranslate">room</span> の開始時にインスタンスを非アクティブにした場合（つまり、<span class="notranslate">room</span> の作成コード、または<span class="notranslate">room</span> 内のインスタンスの作成イベントから）、<span class="notranslate">room</span> エディタから<span class="notranslate">room</span> 内に配置されたすべてのインスタンスは、非アクティブになる前に<b>作成イベントをまだ実行</b>することになります。</p>
-  <p class="note"><b></b><b>警告</b>：物理が有効になっているインスタンスを無効化しても、そのフィクスチャーが物理シミュレーションの中で相互作用することを<b>止めません</b>。そのためには、インスタンスの <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span>変数を <span class="inline">true</span> または <span class="inline">false</span> に設定し、インスタンスをアクティブ/非アクティブにします。</p>
+  <p>この関数を使うと、特定のレイヤーに割り当てられたすべてのインスタンスを非アクティブにすることができます。<b>レイヤー ID</b> は、コードエディタで書かれたレイヤー名（<span
+      class="notranslate">string</span> ）か、あるいは <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span
+        class="inline">layer_create()</span></a>また、この関数では<i>インスタンスレイヤーのみを</i>非アクティブにすることができることに注意してください。もし、<span
+      class="notranslate">objects</span> のインスタンスが<b>永続</b>化されているレイヤーを非アクティブにした場合、そのレイヤーを関数 <a
+      href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a><span
+      class="notranslate">room</span>さもなければ、レイヤー上の永続的なインスタンスは持ち越さ<i>れず</i>、破棄されます。また、非アクティブ化は即座には行われず、この方法で非アクティブ化されたインスタンスは、この関数が呼ばれたイベントが終了するまで非アクティブとみなされないことに注意してください。
+  </p>
+  <p class="note"><b>注</b>：<span class="notranslate">room</span> の開始時にインスタンスを非アクティブにした場合（つまり、<span
+      class="notranslate">room</span> の作成コード、または<span class="notranslate">room</span> 内のインスタンスの作成イベントから）、<span
+      class="notranslate">room</span> エディタから<span class="notranslate">room</span>
+    内に配置されたすべてのインスタンスは、非アクティブになる前に<b>作成イベントをまだ実行</b>することになります。</p>
+  <p class="note"><b></b><b>警告</b>：物理が有効になっているインスタンスを無効化しても、そのフィクスチャーが物理シミュレーションの中で相互作用することを<b>止めません</b>。そのためには、インスタンスの
+    <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span
+          class="inline">phy_active</span></a></span>変数を <span class="inline">true</span> または <span
+      class="inline">false</span> に設定し、インスタンスをアクティブ/非アクティブにします。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer</span></td>
@@ -37,7 +52,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -54,11 +69,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Deactivating_Instances.htm">インスタンスの非活性化</a></div>
-        <div style="float:right">次のページ <a href="instance_activate_all.htm"><span class="notranslate">instance_activate_all</span></a></div>
+        <div style="float:left">前のページ：<a href="Deactivating_Instances.htm">インスタンスの非活性化</a></div>
+        <div style="float:right">次のページ：<a href="instance_activate_all.htm"><span
+              class="notranslate">instance_activate_all</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_deactivate_layer
@@ -67,4 +84,5 @@ instance_deactivate_layer
 instance_deactivate_layer
 -->
 </body>
+
 </html>

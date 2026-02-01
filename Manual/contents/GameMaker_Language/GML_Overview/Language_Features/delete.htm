@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>消す</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,22 +13,30 @@
   <meta name="rh-index-keywords" content="delete" />
   <meta name="search-keywords" content="delete" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>消す</h1>
-  <p> <span class="inline">delete</span> 演算子は、<a href="../Structs.htm">構造</a>体の<strong>参照を解除</strong>するために使用され、次のような構文になります。</p>
+  <p> <span class="inline">delete</span> 演算子は、<a
+      href="../Structs.htm">構造</a>体の<strong>参照を解除</strong>するために使用され、次のような構文になります。</p>
   <p class="code">delete &lt;variable&gt;;</p>
-  <p>つまり、<span class="notranslate">struct</span> を保持する変数と一緒に delete 演算子を呼び出すと、与えられた変数に格納されている<span class="notranslate">struct</span> への特定の<em>参照が </em>削除されます（参照とは、単にメモリ領域を指す値です）。
-   <span class="notranslate">struct</span> とその内容を保存している)。この参照がゲーム内の<span class="notranslate">struct</span> への最後の参照であった場合、<a class="glossterm" data-glossterm="せいそういん" href="#">ガベージコレクタは</a> <span class="notranslate">struct</span> をメモリから削除します。
-    次の<a class="glossterm" data-glossterm="くりかえし" href="#">反復</a>処理（通常は次のステップの開始時）。</p>
+  <p>つまり、<span class="notranslate">struct</span> を保持する変数と一緒に delete 演算子を呼び出すと、与えられた変数に格納されている<span
+      class="notranslate">struct</span> への特定の<em>参照が </em>削除されます（参照とは、単にメモリ領域を指す値です）。
+    <span class="notranslate">struct</span> とその内容を保存している)。この参照がゲーム内の<span class="notranslate">struct</span>
+    への最後の参照であった場合、<a class="glossterm" data-glossterm="せいそういん" href="#">ガベージコレクタは</a> <span
+      class="notranslate">struct</span> をメモリから削除します。
+    次の<a class="glossterm" data-glossterm="くりかえし" href="#">反復</a>処理（通常は次のステップの開始時）。
+  </p>
   <p class="note"><strong>注：</strong> <span class="inline">delete</span> は変数と共にのみ使用可能で、式は使用<i>できません</i>。</p>
-  <p>デフォルトでは、コード内でそれ以上参照されない<span class="notranslate">structs</span> は、その使用に続くステップで自動的にガベージコレクションされますが、この演算子を使用して<span class="notranslate">flag</span> を明示的にガベージコレクタにメモリから削除させるのは良い習慣です。
+  <p>デフォルトでは、コード内でそれ以上参照されない<span class="notranslate">structs</span> は、その使用に続くステップで自動的にガベージコレクションされますが、この演算子を使用して<span
+      class="notranslate">flag</span> を明示的にガベージコレクタにメモリから削除させるのは良い習慣です。
     次のステップの開始時にメモリを解放することで、より速く、より効率的にメモリを解放することができます。</p>
   <p>次の例は、<span class="notranslate">struct</span> が作成される様子を示しています - たとえば、インスタンスの Create Event で。</p>
-  <p class="code">mystruct =<br/> {
-    <br/>     a : 0,<br/>     b : 100,<br/>     c : &quot;Hello World&quot;<br/> }
+  <p class="code">mystruct =<br /> {
+    <br />     a : 0,<br />     b : 100,<br />     c : &quot;Hello World&quot;<br /> }
   </p>
-  <p>この<span class="notranslate">struct</span> は、通常通りインスタンスイベントで使用され、最終的に以下のように<a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">クリーンアップ</a>イベントでガベージコレクションのフラグが立てられる。</p>
+  <p>この<span class="notranslate">struct</span> は、通常通りインスタンスイベントで使用され、最終的に以下のように<a
+      href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">クリーンアップ</a>イベントでガベージコレクションのフラグが立てられる。</p>
   <p class="code">delete mystruct;</p>
   <p> </p>
   <p> </p>
@@ -34,11 +44,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:left">前のページ：<a href="../Language_Features.htm">言語機能</a></div>
         <div style="float:right">次ページ：<a href="If_Else_and_Conditional_Operators.htm">if / else と条件付き演算子</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 delete
@@ -47,4 +58,6 @@ delete
 delete
 -->
 
-</body></html>
+</body>
+
+</html>

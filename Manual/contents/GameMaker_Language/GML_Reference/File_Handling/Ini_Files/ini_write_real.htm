@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ini_write_real</title>
@@ -12,43 +13,53 @@
   <meta name="rh-index-keywords" content="ini_write_real" />
   <meta name="search-keywords" content="ini_write_real" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ini_write_real</span></h1>
-  <p>iniデータファイルに値（数値）を書き込むときに使用します。Iniファイルは<b>セクションに</b>分割され、その後、各セクションは<b>キーと</b> <b>値の</b>ペアに分割されます。ですから、典型的なiniファイルは、次のようなものです。</p>
-  <p><img alt="Ini file contents example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png" /></p>
+  <p>iniデータファイルに値（数値）を書き込むときに使用します。Iniファイルは<b>セクションに</b>分割され、その後、各セクションは<b>キーと</b>
+    <b>値の</b>ペアに分割されます。ですから、典型的なiniファイルは、次のようなものです。
+  </p>
+  <p><img alt="Ini file contents example" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Files/IniExample.png" /></p>
   <p> </p>
   <h4><b>構文です。</b></h4>
   <p class="code">ini_write_real(section, key, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">section</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">section</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The section of the .ini to write to.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">key</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">key</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The key within the relevant section of the .ini to write to.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">value</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The real value to write to the relevant destination.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">score = 1000;<br/> ini_open(&quot;savedata.ini&quot;);
-    <br/> ini_write_real(&quot;save1&quot;, &quot;Score&quot;, score );<br/> score2 = ini_read_real(&quot;save1&quot;, &quot;Score&quot;, 0 );<br/> ini_close();
+  <p class="code">score = 1000;<br /> ini_open(&quot;savedata.ini&quot;);
+    <br /> ini_write_real(&quot;save1&quot;, &quot;Score&quot;, score );<br /> score2 = ini_read_real(&quot;save1&quot;,
+    &quot;Score&quot;, 0 );<br /> ini_close();
   </p>
-  <p>これは、scoreを1000に設定し、savedata.iniを開いて、この値をsave1 &gt; Scoreに書き込むというものです。そして、score2をその中の「save1」&gt;「score」に実際の値である1000に設定し、.iniを閉じます。
+  <p>これは、scoreを1000に設定し、savedata.iniを開いて、この値をsave1 &gt;
+    Scoreに書き込むというものです。そして、score2をその中の「save1」&gt;「score」に実際の値である1000に設定し、.iniを閉じます。
     を再度実行します。この値が見つからなければ、score2は0に設定されたまま終わっていたでしょう。</p>
   <p> </p>
   <p> </p>
@@ -56,11 +67,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Ini_Files.htm">Iniファイル</a></div>
-        <div style="float:right">次のページ <a href="ini_write_string.htm"><span class="notranslate">ini_write_string</span></a></div>
+        <div style="float:left">前のページ：<a href="Ini_Files.htm">Iniファイル</a></div>
+        <div style="float:right">次のページ：<a href="ini_write_string.htm"><span
+              class="notranslate">ini_write_string</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ini_write_real
@@ -69,4 +82,5 @@ ini_write_real
 ini_write_real
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>If Collision Shape</title>
@@ -12,41 +13,68 @@
   <meta name="rh-index-keywords" content="GML Visual Action - If Collision Shape" />
   <meta name="search-keywords" content="If Collision Shape" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> If Collision Shape</h1>
-  <p>このアクションは、指定された形状の領域内または線上に、指定された<span class="notranslate">object</span> のインスタンスとの衝突があるかどうかを確認するために使用されます。形状 (矩形、楕円、直線) と、チェックする<span class="notranslate">object</span> を指定し、その座標を指定します。
-    使用する図形の左上と右下の角、線の場合は始点と終点の位置。これらの位置は、ゲーム内の絶対位置（<span class="notranslate">room</span> ）でも、アクションを実行するインスタンスからの相対位置でもかまいません。どのように
+  <p>このアクションは、指定された形状の領域内または線上に、指定された<span class="notranslate">object</span> のインスタンスとの衝突があるかどうかを確認するために使用されます。形状
+    (矩形、楕円、直線) と、チェックする<span class="notranslate">object</span> を指定し、その座標を指定します。
+    使用する図形の左上と右下の角、線の場合は始点と終点の位置。これらの位置は、ゲーム内の絶対位置（<span class="notranslate">room</span>
+    ）でも、アクションを実行するインスタンスからの相対位置でもかまいません。どのように
     これは、以下の画像で動作しています。</p>
   <p><img>ご覧のように、結果はインスタンスのコリジョンマスクに依存します。
-    つまり、<span class="notranslate">object</span> のインスタンスには、 <span class="inline">sprite_index</span> に割り当てられた<span class="notranslate">sprite</span> か、<span class="notranslate">sprite</span> に割り当てられた <span class="inline">mask_index</span> が<i>必要</i>です。そうでない場合は、これらの関数では検出されません。
-    <span class="notranslate">sprite</span> を描画しているか否かにかかわらず。楕円や矩形の形状に設定された境界内に完全に収まるインスタンスは、衝突を返すことにも注目すべきです。このアクションは、以下の場合に <span class="inline">true</span> と評価されます。
-    衝突が検出された場合は <span class="inline">false</span> 、そうでない場合は<span class="notranslate">flag</span> <b>を</b>チェックして、指定されたシェイプの領域に衝突が<i>ないか</i>どうかを確認することもできますし、アクションは衝突が<i>ない</i>場合のみ <span class="inline">true</span> として評価されます。
-    と評価され、それ以外の場合は <span class="inline">false</span> と評価されます。また、<b>Exclude Self</b>オプションを設定すると、呼び出し元のインスタンスを衝突チェックから除外することができます。</p>
-  <p>次に、<b>リストを</b>返すというオプションにチェックを入れるか入れないかを選択します。これをチェックすると、アクションは衝突している<i>すべてのインスタンスで</i> <a href="../Data_Structures/Data_Structure_Actions.htm">リスト</a><span> </span>データ構造を作成し、入力します。
-    を設定し、<b>Target</b>変数に DS のリスト ID を設定します。チェックを外すと、衝突が検出されなかった場合のみ<b>Target</b>変数に 0 より小さい値を設定し、衝突したインスタンスの<i>一意の</i>ID 値を設定する。
+    つまり、<span class="notranslate">object</span> のインスタンスには、 <span class="inline">sprite_index</span> に割り当てられた<span
+      class="notranslate">sprite</span> か、<span class="notranslate">sprite</span> に割り当てられた <span
+      class="inline">mask_index</span> が<i>必要</i>です。そうでない場合は、これらの関数では検出されません。
+    <span class="notranslate">sprite</span>
+    を描画しているか否かにかかわらず。楕円や矩形の形状に設定された境界内に完全に収まるインスタンスは、衝突を返すことにも注目すべきです。このアクションは、以下の場合に <span class="inline">true</span>
+    と評価されます。
+    衝突が検出された場合は <span class="inline">false</span> 、そうでない場合は<span class="notranslate">flag</span>
+    <b>を</b>チェックして、指定されたシェイプの領域に衝突が<i>ないか</i>どうかを確認することもできますし、アクションは衝突が<i>ない</i>場合のみ <span class="inline">true</span>
+    として評価されます。
+    と評価され、それ以外の場合は <span class="inline">false</span> と評価されます。また、<b>Exclude
+      Self</b>オプションを設定すると、呼び出し元のインスタンスを衝突チェックから除外することができます。
+  </p>
+  <p>次に、<b>リストを</b>返すというオプションにチェックを入れるか入れないかを選択します。これをチェックすると、アクションは衝突している<i>すべてのインスタンスで</i> <a
+      href="../Data_Structures/Data_Structure_Actions.htm">リスト</a><span> </span>データ構造を作成し、入力します。
+    を設定し、<b>Target</b>変数に DS のリスト ID を設定します。チェックを外すと、衝突が検出されなかった場合のみ<b>Target</b>変数に 0
+    より小さい値を設定し、衝突したインスタンスの<i>一意の</i>ID 値を設定する。
     (複数のインスタンスが衝突している場合、リストを使用しない場合、どのインスタンスIDが返されるかを知る方法がないことに注意してください)。</p>
-  <p>リストを返すことを選択した場合 - Target変数が<b>Tempに</b>設定されて<i>いない</i>場合 -<b>Free Target</b>オプションを選択することも可能です。 <span class="inline">true</span> に設定すると、ターゲット変数に含まれるリストが破壊され、ターゲット変数に含まれるリストが破壊されます。
+  <p>リストを返すことを選択した場合 - Target変数が<b>Tempに</b>設定されて<i>いない</i>場合 -<b>Free Target</b>オプションを選択することも可能です。 <span
+      class="inline">true</span> に設定すると、ターゲット変数に含まれるリストが破壊され、ターゲット変数に含まれるリストが破壊されます。
     アクションを呼び出すたびに、新しいリストが作成されます（そしてターゲット変数に返されます）。この方法では、メモリリークを心配することなく同じ変数を再利用することができます。
-    を破棄してから、その変数を再びアクションで使用します。このオプションがチェックされているかどうかに<i>かかわらず</i>、アクションを<b>Return List</b> に設定した場合、ターゲット<i>変数には常にリスト ID が含ま</i>れることに注意してください。
-    インスタンスが破棄されるか、<span class="notranslate">room</span> が終了すると、これを解放する必要があります。 <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><b>クリーンアップ</b></a>イベントと<a href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a>（<span> </span>）アクションを使用します。
-   <b>Free Target</b>オプションを設定して、あらかじめ定義された変数または式を使用し、変数を別の場所に設定することによって、リストデータ構造がいつ解放されるかを制御できることは注目に値します（または式の結果が異なる場合もあります）。
-    と評価される限り、 <span class="inline">true</span>/<span class="inline">false</span>.</p>
-  <p>最後に、戻り値またはリストIDを格納したい<b>Target</b>変数を指定します。もし、<b>Temp</b>（ローカル）変数として戻り値を保持するTarget変数を<span class="notranslate">flag</span> した場合、アクションはこの変数を作成し、戻り値を保持します。
-    この場合、Free Target オプションは何もせず、このオプションがチェックされている場合は、DS リストを破棄する責任があります。ターゲット変数が与えられておらず、<b>Return List</b>オプションがチェックされている場合、リストは作成されません。</p>
-  <p class="note"><b>重要!</b> <span class="notranslate">sprite</span> 衝突は、有効なコリジョン マスクを持つインスタンスにのみ登録されます。つまり、<span class="notranslate">sprite</span> が <span class="inline">sprite_index</span> に、または<span class="notranslate">object</span> が <span class="inline">mask_index</span> に割り当てられている場合です。
+    を破棄してから、その変数を再びアクションで使用します。このオプションがチェックされているかどうかに<i>かかわらず</i>、アクションを<b>Return List</b> に設定した場合、ターゲット<i>変数には常にリスト ID
+      が含ま</i>れることに注意してください。
+    インスタンスが破棄されるか、<span class="notranslate">room</span> が終了すると、これを解放する必要があります。 <a
+      href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><b>クリーンアップ</b></a>イベントと<a
+      href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a>（<span> </span>）アクションを使用します。
+    <b>Free
+      Target</b>オプションを設定して、あらかじめ定義された変数または式を使用し、変数を別の場所に設定することによって、リストデータ構造がいつ解放されるかを制御できることは注目に値します（または式の結果が異なる場合もあります）。
+    と評価される限り、 <span class="inline">true</span>/<span class="inline">false</span>.
+  </p>
+  <p>最後に、戻り値またはリストIDを格納したい<b>Target</b>変数を指定します。もし、<b>Temp</b>（ローカル）変数として戻り値を保持するTarget変数を<span
+      class="notranslate">flag</span> した場合、アクションはこの変数を作成し、戻り値を保持します。
+    この場合、Free Target オプションは何もせず、このオプションがチェックされている場合は、DS リストを破棄する責任があります。ターゲット変数が与えられておらず、<b>Return
+      List</b>オプションがチェックされている場合、リストは作成されません。</p>
+  <p class="note"><b>重要!</b> <span class="notranslate">sprite</span> 衝突は、有効なコリジョン マスクを持つインスタンスにのみ登録されます。つまり、<span
+      class="notranslate">sprite</span> が <span class="inline">sprite_index</span> に、または<span
+      class="notranslate">object</span> が <span class="inline">mask_index</span> に割り当てられている場合です。
     このアクションでチェックされたインスタンスにコリジョンマスクがない場合、そのインスタンスがその時点で何を描画しているかにかかわらず、コリジョンは検出されません。</p>
   <p>なお、「<span class="inline">if</span> 」ブロックにアクションを追加する場合は、下の画像のように、アクションの<i>横に</i>ドロップする必要があります。</p>
-  <p><img alt="If Collision Shape Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Shape.png" width="32" /></p>
+  <p><img alt="If Collision Shape Icon" class="icon" height="32"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Shape.png"
+      width="32" /></p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Example of different collision shapes" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/collision_shape_example.png" /></p>
+  <p><img alt="Example of different collision shapes" class="center"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/collision_shape_example.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Shape</span></td>
@@ -74,7 +102,8 @@
       </tr>
       <tr>
         <td><span class="notranslate">Free Target</span></td>
-        <td>変数や式に設定したり、 <span class="inline">true</span>/<span class="inline">false</span> に設定して、リスト変数の再利用時にリストメモリの解放を制御することが可能です。</td>
+        <td>変数や式に設定したり、 <span class="inline">true</span>/<span class="inline">false</span>
+          に設定して、リスト変数の再利用時にリストメモリの解放を制御することが可能です。</td>
       </tr>
       <tr>
         <td><span class="notranslate">Target</span></td>
@@ -85,19 +114,23 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、<span class="notranslate">object</span> &quot; のインスタンスとの衝突をチェックします。
-   <span class="inline">obj_Enemy</span>&quot; を呼び出したインスタンスの位置を中心に100pxの円内にある。アクションは、衝突が見つかったすべてのインスタンスのリストを生成し、そのリストIDをTarget変数に格納します。アクションの評価値が
-    <span class="inline">true</span> がループされ、ID がリストに格納されている各インスタンスの &quot;<span class="inline">hp</span>&quot; 変数が 1 減らされます。</p>
+    <span class="inline">obj_Enemy</span>&quot;
+    を呼び出したインスタンスの位置を中心に100pxの円内にある。アクションは、衝突が見つかったすべてのインスタンスのリストを生成し、そのリストIDをTarget変数に格納します。アクションの評価値が
+    <span class="inline">true</span> がループされ、ID がリストに格納されている各インスタンスの &quot;<span class="inline">hp</span>&quot; 変数が 1
+    減らされます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Collision_Actions.htm">コリジョンアクション</a></div>
-        <div style="float:right">次へ<a href="If_Collision_Point.htm">イフ・コリジョン・ポイント</a></div>
+        <div style="float:left">前のページ：<a href="Collision_Actions.htm">コリジョンアクション</a></div>
+        <div style="float:right">次のページ：<a href="If_Collision_Point.htm">イフ・コリジョン・ポイント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Collision Shape
@@ -106,4 +139,5 @@ Action - If Collision Shape
 action_if_collision_shape
 -->
 </body>
+
 </html>

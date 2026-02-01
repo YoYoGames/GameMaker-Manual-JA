@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ネットワーキング</title>
@@ -8,20 +9,29 @@
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Networking async event." />
   <meta name="rh-index-keywords" content="Objects - Async Networking Event" />
-  <meta name="search-keywords" content="networking,network_type_connect,network_type_disconnect,network_type_data,network_type_non_blocking_connect,ev_web_networking" />
+  <meta name="search-keywords"
+    content="networking,network_type_connect,network_type_disconnect,network_type_data,network_type_non_blocking_connect,ev_web_networking" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
   <script src="../../../assets/scripts/main_script.js"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ネットワーキング</h1>
   <p><img alt="Networking Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Networking.png" /></p>
-  <p>Networking イベントは、ネットワークトラフィックの着信によってトリガーされるもので、<a href="../../../GameMaker_Language/GML_Reference/Networking/Networking.htm">Network Functions</a> にリンクしています。このイベントはこのイベント専用の特別な<a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DSマップを</a>生成し、特別な変数である <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="notranslate">async_load</span></a>.このDSマップは、生成したネットワークイベントの種類によって異なる情報を含んでいます。</p>
+  <p>Networking イベントは、ネットワークトラフィックの着信によってトリガーされるもので、<a
+      href="../../../GameMaker_Language/GML_Reference/Networking/Networking.htm">Network Functions</a>
+    にリンクしています。このイベントはこのイベント専用の特別な<a
+      href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DSマップを</a>生成し、特別な変数である <a
+      href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="notranslate">async_load</span></a>.このDSマップは、生成したネットワークイベントの種類によって異なる情報を含んでいます。</p>
   <h2>一般的なネットワーキングイベント</h2>
   <p>以下のキーは、受信したすべてのネットワーク機能に共通で、 <span class="inline">async_load</span> マップに常に存在します。</p>
   <ul class="colour">
     <li>&quot;<strong>type</strong>&quot; を指定します。以下の表に示す定数のいずれかを戻り値として持ち、ネットワーク・イベン トの種類を指定します。</li>
-    <li>&quot;<strong>id</strong>&quot;:イベントを受信したソケット ID (network_create_server または network_create_socket 関数が返す実数)。ほとんどの場合、返されるソケットIDはイベントをトリガーしたTCPまたはUDPソケットのIDであるが、イベントが<span class="notranslate">server</span> でトリガーされ、それがデータイベント（下記参照）である場合、ソケットIDはデータを送信したクライアントのものである。</li>
+    <li>&quot;<strong>id</strong>&quot;:イベントを受信したソケット ID (network_create_server または network_create_socket
+      関数が返す実数)。ほとんどの場合、返されるソケットIDはイベントをトリガーしたTCPまたはUDPソケットのIDであるが、イベントが<span class="notranslate">server</span>
+      でトリガーされ、それがデータイベント（下記参照）である場合、ソケットIDはデータを送信したクライアントのものである。</li>
     <li>&quot;<strong>ip</strong>&quot;:ソケットのIPアドレス（<span class="notranslate">string</span> ）。</li>
     <li>&quot;<strong>ポート</strong>&quot;:IP アドレスに関連付けられたポート (UDP を使用する場合に有効)。</li>
   </ul>
@@ -30,7 +40,7 @@
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">network_type_connect</span></td>
@@ -46,13 +56,20 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">network_type_non_blocking_connect</span></td>
-        <td>イベントは、ノンブロッキングとして設定された接続によってトリガーされました（関数 <a href="../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm"><span class="inline">network_set_config()</span></a>を使用して接続するか、または <a href="../../../GameMaker_Language/GML_Reference/Networking/network_connect_async.htm"><span class="inline">network_connect_async()</span></a>または <a href="../../../GameMaker_Language/GML_Reference/Networking/network_connect_raw_async.htm"><span class="inline">network_connect_async_raw()</span></a>).</td>
+        <td>イベントは、ノンブロッキングとして設定された接続によってトリガーされました（関数 <a
+            href="../../../GameMaker_Language/GML_Reference/Networking/network_set_config.htm"><span
+              class="inline">network_set_config()</span></a>を使用して接続するか、または <a
+            href="../../../GameMaker_Language/GML_Reference/Networking/network_connect_async.htm"><span
+              class="inline">network_connect_async()</span></a>または <a
+            href="../../../GameMaker_Language/GML_Reference/Networking/network_connect_raw_async.htm"><span
+              class="inline">network_connect_async_raw()</span></a>).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h2>接続／切断</h2>
-  <p> <span class="inline">network_type_connect</span> または <span class="inline">network_type_disconnect</span> のタイプのイベントがある場合、 <span class="inline">async_load </span>のマップは以下の追加キーを持ちます。</p>
+  <p> <span class="inline">network_type_connect</span> または <span class="inline">network_type_disconnect</span>
+    のタイプのイベントがある場合、 <span class="inline">async_load </span>のマップは以下の追加キーを持ちます。</p>
   <ul class="colour">
     <li>&quot;<strong>ソケット</strong>&quot;を指定します。接続/切断するソケットの ID を保持するキーです。</li>
   </ul>
@@ -60,26 +77,37 @@
   <ul class="colour">
     <li>&quot;<strong>成功した</strong>&quot; となります。このキーは 0 か 1 で、0 は接続がタイムアウトしたことを、1 は成功し、ソケットが使用できる状態になったことを意味します。</li>
   </ul>
-  <p><span class="notranslate">server</span> <span class="inline">network_type_*</span> が切断されると、クライアントではネットワーキングイベントがトリガーされないこと、また、TCPベースの接続であっても、接続している が切断されると、クライアントではどちらのイベントもトリガーされないことは、注目に値する。<span class="notranslate">server</span> </p>
+  <p><span class="notranslate">server</span> <span class="inline">network_type_*</span>
+    が切断されると、クライアントではネットワーキングイベントがトリガーされないこと、また、TCPベースの接続であっても、接続している が切断されると、クライアントではどちらのイベントもトリガーされないことは、注目に値する。<span
+      class="notranslate">server</span> </p>
   <h2>受信データ</h2>
   <p>ネットワークがデータを受信したことを示す <span class="inline">network_type_data</span> 型のイベントが発生した場合、作成されるマップは以下のキーを持ちます。</p>
   <ul class="colour">
-    <li>&quot;<strong>バッファ</strong>&quot; です。イベントによって生成される一意の &quot;buffer ID&quot; である。1にバイトアラインされた &quot;grow &quot;タイプ<span class="notranslate">buffer</span> が作成され、このIDは変数に格納され、このイベント内の<span class="notranslate">buffer</span> に対する以降のすべての関数呼び出しに使用される必要がある。 <span class="inline">async_load</span> マップと同様に、作成された<span class="notranslate">buffer</span> は、このイベントの終了時にメモリから自動的に削除されます。<span class="notranslate">buffers</span> の詳細については、<a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">リファレンス - バッファを</a>参照してください。</li>
+    <li>&quot;<strong>バッファ</strong>&quot; です。イベントによって生成される一意の &quot;buffer ID&quot; である。1にバイトアラインされた &quot;grow
+      &quot;タイプ<span class="notranslate">buffer</span> が作成され、このIDは変数に格納され、このイベント内の<span
+        class="notranslate">buffer</span> に対する以降のすべての関数呼び出しに使用される必要がある。 <span class="inline">async_load</span>
+      マップと同様に、作成された<span class="notranslate">buffer</span> は、このイベントの終了時にメモリから自動的に削除されます。<span
+        class="notranslate">buffers</span> の詳細については、<a
+        href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">リファレンス - バッファを</a>参照してください。</li>
     <li>&quot;<strong>サイズ</strong>&quot;。受信している<span class="notranslate">buffer</span> データのサイズ（バイト数）です。</li>
-    <li>&quot;<strong>message_type</strong>&quot;:<em> (WebSockets のみ)</em>- 受信したメッセージがバイナリ形式の場合は<span class="inline2">network_send_binary</span>となり、テキスト形式の場合は<span class="inline2">network_send_text</span>となります。</li>
+    <li>&quot;<strong>message_type</strong>&quot;:<em> (WebSockets のみ)</em>- 受信したメッセージがバイナリ形式の場合は<span
+        class="inline2">network_send_binary</span>となり、テキスト形式の場合は<span class="inline2">network_send_text</span>となります。
+    </li>
   </ul>
-  <p class="note"><span class="note">注</span>作成された<span class="notranslate">buffer</span> は、これらのイベントでのみ有効で、イベントが終了すると自動的に解放されます。</p>
+  <p class="note"><span class="note">注</span>作成された<span class="notranslate">buffer</span>
+    は、これらのイベントでのみ有効で、イベントが終了すると自動的に解放されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Async_Events.htm">非同期イベント</a></div>
-        <div style="float:right">次へ<a href="Push_Notifications.htm">プッシュ通知</a></div>
+        <div style="float:left">前のページ：<a href="../Async_Events.htm">非同期イベント</a></div>
+        <div style="float:right">次のページ：<a href="Push_Notifications.htm">プッシュ通知</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Networking Event
@@ -93,4 +121,5 @@ ev_web_networking
 ev_web_networking
 -->
 </body>
+
 </html>

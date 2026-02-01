@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ピクセルでタイルインデックスを取得</title>
@@ -12,57 +13,66 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Get Tile Index At Pixel" />
   <meta name="search-keywords" content="Get Tile Index At Pixel" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> <span class="notranslate">Tile</span> Pixelでインデックスを取得</h1>
-  <p>このアクションは、指定されたレイヤー上の<span class="notranslate">tile</span> インデックスを取得するために使用します。レイヤーは、与えられたレイヤー名（<span class="notranslate">string</span> 、<span class="notranslate">Room</span> エディターでレイヤー名を付けるのに使用）から指定し、次にインデックスを取得する<span class="notranslate">tile</span> を見つけるための x と y 位置を指定します。タイル
-    は、指定された位置が<span class="notranslate">room</span> に含まれるものとなり、インデックスがターゲット変数に返されます。0 は<span class="notranslate">tile</span> がなく、正の整数が<span class="notranslate">tile</span> のインデックスとなります。
+  <p>このアクションは、指定されたレイヤー上の<span class="notranslate">tile</span> インデックスを取得するために使用します。レイヤーは、与えられたレイヤー名（<span
+      class="notranslate">string</span> 、<span class="notranslate">Room</span>
+    エディタでレイヤー名を付けるのに使用）から指定し、次にインデックスを取得する<span class="notranslate">tile</span> を見つけるための x と y 位置を指定します。タイル
+    は、指定された位置が<span class="notranslate">room</span> に含まれるものとなり、インデックスがターゲット変数に返されます。0 は<span
+      class="notranslate">tile</span> がなく、正の整数が<span class="notranslate">tile</span> のインデックスとなります。
     また、ターゲット変数には、イベントの終了まで使用できる一時的な（ローカル）変数としてのフラグを付けることができる。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Get Tile Index At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_At_Pixel.png" /></p>
+  <p><img alt="Get Tile Index At Pixel Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_At_Pixel.png" />
+  </p>
   <h4>論拠となる。</h4>
-  
-    <table>
-      <tbody>
-        <tr>
-          <th>論証</th>
-          <th>商品説明</th>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Layer</span></td>
-          <td><span class="notranslate">tile</span> を設定するレイヤー</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">x</span></td>
-          <td>チェックするxの位置</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">y</span></td>
-          <td>チェックするY位置</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Target</span></td>
-          <td><span class="notranslate">tile</span> のインデックスを格納するターゲット変数</td>
-        </tr>
-      </tbody>
-    </table>
-  
+
+  <table>
+    <tbody>
+      <tr>
+        <th>引数</th>
+        <th>説明</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Layer</span></td>
+        <td><span class="notranslate">tile</span> を設定するレイヤー</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">x</span></td>
+        <td>チェックするxの位置</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">y</span></td>
+        <td>チェックするY位置</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Target</span></td>
+        <td><span class="notranslate">tile</span> のインデックスを格納するターゲット変数</td>
+      </tr>
+    </tbody>
+  </table>
+
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、マウスの左ボタンをチェックします。
-    を押して、検出されたら、マウスの位置が該当する<span class="notranslate">tile</span> セルのインデックスを取得します。この<span class="notranslate">tile</span> のインデックスをチェックし、0でない場合は0に設定する。</p>
+    を押して、検出されたら、マウスの位置が該当する<span class="notranslate">tile</span> セルのインデックスを取得します。この<span class="notranslate">tile</span>
+    のインデックスをチェックし、0でない場合は0に設定する。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Actions.htm">タイルアクション</a></div>
-        <div style="float:right">次へ<a href="Set_Tile_Index_In_Cell.htm"> <span class="notranslate">Tile</span> </a>セルにインデックスを設定する</div>
+        <div style="float:left">前のページ：<a href="Tile_Actions.htm">タイルアクション</a></div>
+        <div style="float:right">次のページ：<a href="Set_Tile_Index_In_Cell.htm"> <span class="notranslate">Tile</span>
+          </a>セルにインデックスを設定する</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get <span class="notranslate">Tile</span> Index At Pixel
@@ -71,4 +81,5 @@ Action - Get <span class="notranslate">Tile</span> Index At Pixel
 action_tile_get_at_pixel
 -->
 </body>
+
 </html>

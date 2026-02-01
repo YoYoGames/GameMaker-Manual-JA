@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -15,14 +16,17 @@
   <meta name="rh-index-keywords" content="rollback_get_input" />
   <meta name="search-keywords" content="rollback_get_input" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_get_input</span></h1>
   <p>この関数は、あるプレーヤーの入力値を含む<span class="notranslate">struct</span> を返します。オプションの引数には、入力値が返されるプレーヤーのIDを指定します。</p>
-  <p>で生成されたプレイヤーインスタンスで使用する場合、プレイヤーIDを指定する必要はありません。 <a href="rollback_define_input.htm"><span class="inline">rollback_define_player()</span></a>で作成されたプレイヤーインスタンスで使用する場合、プレイヤーIDを指定する必要がないため、引数なしでこの関数を呼び出すことができます。</p>
+  <p>で生成されたプレイヤーインスタンスで使用する場合、プレイヤーIDを指定する必要はありません。 <a href="rollback_define_input.htm"><span
+        class="inline">rollback_define_player()</span></a>で作成されたプレイヤーインスタンスで使用する場合、プレイヤーIDを指定する必要がないため、引数なしでこの関数を呼び出すことができます。
+  </p>
   <p>それ以外のインスタンス、または手動で作成したプレイヤーインスタンスで使用する場合は、プレイヤーIDを指定する必要があります。</p>
   <p>どのような入力が返され、どのように変更できるかは、「<a data-xref="{title}" href="../Defining_Inputs.htm">入力の定義</a>」を参照してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_get_input</span>(player_id);</p>
   <table>
     <colgroup>
@@ -32,20 +36,22 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">player_id</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate"><span class="optional">OPTIONAL</span> 入力を返すプレーヤーのID。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm"
+        target="_blank">Struct</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _input = rollback_get_input();<br />
@@ -55,7 +61,8 @@
     if (_input.up) y -= 2;<br />
     if (_input.down) y += 2;
   </p>
-  <p>上記のコードでは、Rollback システムによって自動的に作成されたプレーヤー インスタンスで入力<span class="notranslate">struct</span> を取得します。返された値に基づいて、インスタンスを各方向に 2 ピクセルずつ移動します。</p>
+  <p>上記のコードでは、Rollback システムによって自動的に作成されたプレーヤー インスタンスで入力<span class="notranslate">struct</span>
+    を取得します。返された値に基づいて、インスタンスを各方向に 2 ピクセルずつ移動します。</p>
   <p>拡張例は、<a data-xref="{title}" href="../Creating_Multiplayer.htm">マルチプレイヤーゲームを作成</a>するを参照してください。</p>
   <p> </p>
   <p> </p>
@@ -63,10 +70,12 @@
     <div class="buttons">
       <div class="clear">
         <div>戻る<a data-xref="{title}" href="Rollback_Functions.htm">ロールバック機能</a></div>
-        <div>次ページ：<a data-xref="{title}" href="rollback_sync_on_frame.htm">Rollback_Sync_on_frame</a><a href="rollback_sync_on_frame.htm"></a></div>
+        <div>次ページ：<a data-xref="{title}" href="rollback_sync_on_frame.htm">Rollback_Sync_on_frame</a><a
+            href="rollback_sync_on_frame.htm"></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_get_input
@@ -75,4 +84,5 @@ rollback_get_input
 rollback_get_input
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_joint_wheel_create</title>
@@ -13,21 +14,29 @@
   <meta name="search-keywords" content="physics_joint_wheel_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_joint_wheel_create</span></h1>
-  <p>ホイールジョイントは、ピストンとリボルートジョイントを組み合わせたもので、自動車のショックアブソーバーにホイールを取り付けるようなものです。最初のインスタンスはジョイントの「ボディ」として機能し、2番目のインスタンスは「ホイール」として機能し、ジョイント軸の周りに自由に動くことができます。軸ベクトルも設定できます。この軸ベクトルは、ジョイントが「バネ」として機能する仮想線で、車輪が障害物に遭遇すると、この軸に沿って上下にバウンドします（ピストンジョイントのようなものです）。次の画像は、これを示しています。</p>
-  <p><img>モーターを有効にすると、2番目のインスタンスがアンカー位置の周りを回転します。希望のモーター速度を達成するために使用する最大モータートルク（N/m）と、モーターが回転する速度を設定することができます。ホイールジョイントにも軸があるので、ジョイントの振動数（Hz）と減衰比を設定できます。これらの値を微調整する必要があるかもしれませんが、最初は小さな値から始めて、望む効果が得られるまで値を増やしていくことをお勧めします。</p>
-  <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
+  <p>
+    ホイールジョイントは、ピストンとリボルートジョイントを組み合わせたもので、自動車のショックアブソーバーにホイールを取り付けるようなものです。最初のインスタンスはジョイントの「ボディ」として機能し、2番目のインスタンスは「ホイール」として機能し、ジョイント軸の周りに自由に動くことができます。軸ベクトルも設定できます。この軸ベクトルは、ジョイントが「バネ」として機能する仮想線で、車輪が障害物に遭遇すると、この軸に沿って上下にバウンドします（ピストンジョイントのようなものです）。次の画像は、これを示しています。
+  </p>
+  <p>
+    <img>モーターを有効にすると、2番目のインスタンスがアンカー位置の周りを回転します。希望のモーター速度を達成するために使用する最大モータートルク（N/m）と、モーターが回転する速度を設定することができます。ホイールジョイントにも軸があるので、ジョイントの振動数（Hz）と減衰比を設定できます。これらの値を微調整する必要があるかもしれませんが、最初は小さな値から始めて、望む効果が得られるまで値を増やしていくことをお勧めします。
+  </p>
+  <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span>
+    に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span>
+    に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2,
+    anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">inst1</span></td>
@@ -67,7 +76,8 @@
       <tr>
         <td><span class="notranslate">max_motor_torque</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</span></td>
+        <td><span class="notranslate">Sets the maximum motor torque used to achieve the desired motor speed (in Newtons
+            per meter)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">motor_speed</span></td>
@@ -92,7 +102,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -106,18 +116,22 @@
     physics_joint_wheel_create(id, o_id, o_id.x, o_id.y, 0, 1, true, 10, 1, 15, 6, false);<br />
     physics_fixture_delete(mainFixture);<br />
     physics_fixture_delete(wheelFixture);</p>
-  <p>上記のコードでは、2つの新しいフィクスチャを作成し定義しています。これらは、呼び出し元のインスタンスと、それらをつなぐホイールジョイントが適用される前に作成された新しいインスタンスにバインドされ、その後フィクスチャはメモリから削除されます。</p>
+  <p>
+    上記のコードでは、2つの新しいフィクスチャを作成し定義しています。これらは、呼び出し元のインスタンスと、それらをつなぐホイールジョイントが適用される前に作成された新しいインスタンスにバインドされ、その後フィクスチャはメモリから削除されます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Joints.htm">関節</a></div>
-        <div style="float:right">次のページ <a href="physics_joint_weld_create.htm"><span class="notranslate">physics_joint_weld_create</span></a></div>
+        <div style="float:left">前のページ：<a href="Joints.htm">関節</a></div>
+        <div style="float:right">次のページ：<a href="physics_joint_weld_create.htm"><span
+              class="notranslate">physics_joint_weld_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_wheel_create
@@ -126,4 +140,5 @@ physics_joint_wheel_create
 physics_joint_wheel_create
 -->
 </body>
+
 </html>

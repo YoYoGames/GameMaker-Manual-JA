@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ファイルメニュー</title>
@@ -12,37 +13,79 @@
   <meta name="rh-index-keywords" content="Menu - File" />
   <meta name="search-keywords" content="load,save,export,import,file menu,preferences,logout" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ファイルメニュー</h1>
   <p><img alt="The File Menu" class="center" src="../../assets/Images/IDE_Input/File_Menu.png" /></p>
-  <p><span class="notranslate">file menu</span> では、プロジェクトの変更、保存、インポートのほか、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> の環境設定を行うことができます。利用可能なオプションは以下の通りです。</p>
+  <p><span class="notranslate">file menu</span> では、プロジェクトの変更、保存、インポートのほか、<span
+      data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span>
+    の環境設定を行うことができます。利用可能なオプションは以下の通りです。</p>
   <ul class="colour">
-    <li><strong>新規プロジェクト - </strong> <span data-keyref="GameMaker Name">GameMakerで</span>ゼロから新しいプロジェクトを作成するためのものです。Save &quot;ダイアログが表示され、新しいプロジェクトを保存する場所を選択するよう促されます。プロジェクト名と保存場所を決めると、新しい空の<a href="../../Introduction/Workspaces.htm">ワークスペース</a>に移動し、作業を開始します。プロジェクトファイルは、 <span class="inline">*.yyp</span> ファイル<span class="notranslate">extension</span> で保存されます。</li>
-    <li><strong>Open Project</strong>- ファイルエクスプローラを開いて、以前に作成した <span class="inline">*.yyz</span> プロジェクトファイルを選択し、読み込むことができます。プロジェクトが2.3.0より低いバージョンで作成された場合、インポート時に次のような警告メッセージが表示されますのでご注意ください。 <img> 続行を選択すると、ファイルエクスプローラが開き、プロジェクトに最新の名前と保存場所を与えることができるので、元のプロジェクトが上書きされることはありません。プロジェクトが新しい2.3.0+フォーマットに変換されると、<span class="notranslate">IDE</span> で開き、変換に成功した旨のメッセージが表示されます。変換処理によって生成された互換性レポートを確認し、プロジェクトを実行またはコンパイルする前に修正する必要があるものがあるかどうかを確認するために進みます。2.3.0 以前のバージョンで作成されたプロジェクトを開こうとして何度もエラーが発生する場合は、変換しようとしている元の <span class="inline">*.yyp</span> ファイルを提示して<span class="notranslate">YoYo Games</span> に連絡してください（<a href="The_Help_Menu.htm">ヘルプ メニューの</a>「バグを報告する」オプションを使用します）。</li>
-    <li><strong>プロジェクトのインポート</strong>- <span class="inline">*.yyz</span> アーカイブとしてエクスポートされたプロジェクトをインポートすることができます（下記「プロジェクトのエクスポート」参照）。Studio 1.4で作成したプロジェクトの場合、このオプションを選択すると、その製品ラインの <span class="inline">*.gmx</span> または <span class="inline">*.gmz</span> ファイルのいずれかをインポートできます。プロジェクトを開くときと同様に、 <span class="inline">*.yyz</span> が 2.3.0 アップデート以前の<span data-keyref="GameMaker Name">GameMaker</span>で作成されたものであれば、そのアップデートでプロジェクトファイルのフォーマットが変更されたため、変換する必要があります。</li>
+    <li><strong>新規プロジェクト - </strong> <span data-keyref="GameMaker Name">GameMakerで</span>ゼロから新しいプロジェクトを作成するためのものです。Save
+      &quot;ダイアログが表示され、新しいプロジェクトを保存する場所を選択するよう促されます。プロジェクト名と保存場所を決めると、新しい空の<a
+        href="../../Introduction/Workspaces.htm">ワークスペース</a>に移動し、作業を開始します。プロジェクトファイルは、 <span class="inline">*.yyp</span>
+      ファイル<span class="notranslate">extension</span> で保存されます。</li>
+    <li><strong>Open Project</strong>- ファイルエクスプローラを開いて、以前に作成した <span class="inline">*.yyz</span>
+      プロジェクトファイルを選択し、読み込むことができます。プロジェクトが2.3.0より低いバージョンで作成された場合、インポート時に次のような警告メッセージが表示されますのでご注意ください。 <img>
+      続行を選択すると、ファイルエクスプローラが開き、プロジェクトに最新の名前と保存場所を与えることができるので、元のプロジェクトが上書きされることはありません。プロジェクトが新しい2.3.0+フォーマットに変換されると、<span
+        class="notranslate">IDE</span>
+      で開き、変換に成功した旨のメッセージが表示されます。変換処理によって生成された互換性レポートを確認し、プロジェクトを実行またはコンパイルする前に修正する必要があるものがあるかどうかを確認するために進みます。2.3.0
+      以前のバージョンで作成されたプロジェクトを開こうとして何度もエラーが発生する場合は、変換しようとしている元の <span class="inline">*.yyp</span> ファイルを提示して<span
+        class="notranslate">YoYo Games</span> に連絡してください（<a href="The_Help_Menu.htm">ヘルプ メニューの</a>「バグを報告する」オプションを使用します）。
+    </li>
+    <li><strong>プロジェクトのインポート</strong>- <span class="inline">*.yyz</span>
+      アーカイブとしてエクスポートされたプロジェクトをインポートすることができます（下記「プロジェクトのエクスポート」参照）。Studio 1.4で作成したプロジェクトの場合、このオプションを選択すると、その製品ラインの <span
+        class="inline">*.gmx</span> または <span class="inline">*.gmz</span> ファイルのいずれかをインポートできます。プロジェクトを開くときと同様に、 <span
+        class="inline">*.yyz</span> が 2.3.0 アップデート以前の<span
+        data-keyref="GameMaker Name">GameMaker</span>で作成されたものであれば、そのアップデートでプロジェクトファイルのフォーマットが変更されたため、変換する必要があります。</li>
   </ul>
-  <p class="note"><strong>注意</strong>：以前の<span class="notranslate">GameMaker</span> プロジェクトを<span data-keyref="GameMaker Name">GameMaker</span>にインポートするには、1.4 バージョンで作成されている必要があり、その場合でもインポート時に直接動作しない場合があります。<span data-keyref="GameMaker Name">GameMakerと</span>GameMaker Studio 1.4では、非常に多くのことが異なっています。GameMakerとGameMaker: Studio 1.4では多くの点が異なるため、古いプロジェクトを動作させるには若干の調整が必要になる場合があります。GameMaker Knowledge Baseの<a href="https://help.yoyogames.com/hc/en-us/articles/231719468">Porting A GM:S 1.4 Game To<span data-keyref="GameMaker Name">GameMakerの</span></a>記事と、マニュアルのObsolete Functions and<a href="../../Additional_Information/Compatibility_Scripts.htm">Compatibility Scriptsの</a>セクションを参照してください。</p>
-  <p class="note"><strong>重要!</strong> <span class="notranslate">font</span> リソースを含む <span class="inline">*.yyz</span> プロジェクトをインポートする場合、<span class="notranslate">fonts</span> を削除/再追加するか、<span class="notranslate">font</span> エディターで<span class="notranslate">font</span> を変更し、再度設定することにより、「再生成」する必要がある場合があります。これは、エクスポート時に既存の<span class="notranslate">font</span> の情報が <span class="inline">*.yyz</span> で保持され、後でインポートするときや別のマシンでインポートするときに、プロジェクトに必要な<span class="notranslate">fonts</span> がすでにインストールされていない（または同じ名前の別の<span class="notranslate">font</span> がある）可能性があるためです。これは、インポート後の<span class="notranslate">font</span> のレンダリングに問題がある場合のみ行う必要があります。</p>
+  <p class="note"><strong>注意</strong>：以前の<span class="notranslate">GameMaker</span> プロジェクトを<span
+      data-keyref="GameMaker Name">GameMaker</span>にインポートするには、1.4 バージョンで作成されている必要があり、その場合でもインポート時に直接動作しない場合があります。<span
+      data-keyref="GameMaker Name">GameMakerと</span>GameMaker Studio 1.4では、非常に多くのことが異なっています。GameMakerとGameMaker: Studio
+    1.4では多くの点が異なるため、古いプロジェクトを動作させるには若干の調整が必要になる場合があります。GameMaker Knowledge Baseの<a
+      href="https://help.yoyogames.com/hc/en-us/articles/231719468">Porting A GM:S 1.4 Game To<span
+        data-keyref="GameMaker Name">GameMakerの</span></a>記事と、マニュアルのObsolete Functions and<a
+      href="../../Additional_Information/Compatibility_Scripts.htm">Compatibility Scriptsの</a>セクションを参照してください。</p>
+  <p class="note"><strong>重要!</strong> <span class="notranslate">font</span> リソースを含む <span class="inline">*.yyz</span>
+    プロジェクトをインポートする場合、<span class="notranslate">fonts</span> を削除/再追加するか、<span class="notranslate">font</span> エディタで<span
+      class="notranslate">font</span> を変更し、再度設定することにより、「再生成」する必要がある場合があります。これは、エクスポート時に既存の<span
+      class="notranslate">font</span> の情報が <span class="inline">*.yyz</span>
+    で保持され、後でインポートするときや別のマシンでインポートするときに、プロジェクトに必要な<span class="notranslate">fonts</span> がすでにインストールされていない（または同じ名前の別の<span
+      class="notranslate">font</span> がある）可能性があるためです。これは、インポート後の<span class="notranslate">font</span>
+    のレンダリングに問題がある場合のみ行う必要があります。</p>
   <ul class="colour">
-    <li><strong>最近使ったプロジェクト</strong>- このオプションを使って、最近使ったプロジェクトを表示できます。これを選択すると、<a href="../../Introduction/The_Start_Page.htm">スタートページ</a>が再び開き（閉じている場合）、そこにあるリストから最近使用したプロジェクトを選択することができます。</li>
+    <li><strong>最近使ったプロジェクト</strong>- このオプションを使って、最近使ったプロジェクトを表示できます。これを選択すると、<a
+        href="../../Introduction/The_Start_Page.htm">スタートページ</a>が再び開き（閉じている場合）、そこにあるリストから最近使用したプロジェクトを選択することができます。</li>
     <li><strong>Save Project</strong>- プロジェクトを作成したときに定義した場所（または開いた場所）にゲームを保存します。</li>
     <li><strong>Save Project As</strong>- 上記と同じですが、プロジェクトの場所と新しい名前を指定します。</li>
     <li id="export"><strong>プロジェクトのエクスポート - </strong> プロジェクトをファイルまたはテンプレートとしてエクスポートすることができます。<br />
       <img>
       <ul>
-        <li><strong>YYZ</strong>- これは、単一の <span class="inline">*.yyz</span> ファイルとしてプロジェクトをエクスポートし、コピーを人に送信したり、バックアップを保存するために非常に便利です。</li>
-        <li><strong>テンプレートとして</strong>- これは、あなたが後で<a href="../../Introduction/The_Start_Page.htm">スタート</a>ページの他のプロジェクトのためのベースとして使用することができ、テンプレートとしてプロジェクトをエクスポートすることができます。このオプションを選択すると、次のプロンプトが表示されます。<br />
-          <img>まず、[テンプレート情報の編集]をクリックして<a href="../../Settings/Game_Options/Template_Info.htm">テンプレート情報が</a>正しいことを確認し、2回目にこのプロンプトを開いたときに[エクスポート]を選択してテンプレートとして保存する必要があります。その後、スタート画面の「テンプレート」メニューの下に表示されます。
+        <li><strong>YYZ</strong>- これは、単一の <span class="inline">*.yyz</span>
+          ファイルとしてプロジェクトをエクスポートし、コピーを人に送信したり、バックアップを保存するために非常に便利です。</li>
+        <li><strong>テンプレートとして</strong>- これは、あなたが後で<a
+            href="../../Introduction/The_Start_Page.htm">スタート</a>ページの他のプロジェクトのためのベースとして使用することができ、テンプレートとしてプロジェクトをエクスポートすることができます。このオプションを選択すると、次のプロンプトが表示されます。<br />
+          <img>まず、[テンプレート情報の編集]をクリックして<a
+            href="../../Settings/Game_Options/Template_Info.htm">テンプレート情報が</a>正しいことを確認し、2回目にこのプロンプトを開いたときに[エクスポート]を選択してテンプレートとして保存する必要があります。その後、スタート画面の「テンプレート」メニューの下に表示されます。
         </li>
       </ul>
     </li>
-    <li><strong>環境設定 - </strong> これを選択すると、<a href="../../Setting_Up_And_Version_Information/IDE_Preferences.htm">環境設定ウィンドウが</a>表示され、<span data-keyref="GameMaker Name">GameMakerの</span>外観や使用感を設定することができます。</li>
-    <li><strong>New IDE</strong>- これを選択すると、<span class="notranslate">IDE</span> の新しいインスタンスが開かれ、使用することができます（スタートページに開かれます）。</li>
-    <li><strong>マイアカウント</strong>- このオプションを選択すると、デフォルトのウェブブラウザが開き、<span class="notranslate">YoYo</span> アカウントページが表示されます。</li>
-    <li><strong>ログアウト</strong>- これを選択すると、<span data-keyref="GameMaker Name">GameMakerから</span>ログアウトします。後で製品を使用するためには、同じライセンス（または他のライセンス）で再度ログインする必要があります。</li>
+    <li><strong>環境設定 - </strong> これを選択すると、<a
+        href="../../Setting_Up_And_Version_Information/IDE_Preferences.htm">環境設定ウィンドウが</a>表示され、<span
+        data-keyref="GameMaker Name">GameMakerの</span>外観や使用感を設定することができます。</li>
+    <li><strong>New IDE</strong>- これを選択すると、<span class="notranslate">IDE</span>
+      の新しいインスタンスが開かれ、使用することができます（スタートページに開かれます）。</li>
+    <li><strong>マイアカウント</strong>- このオプションを選択すると、デフォルトのウェブブラウザが開き、<span class="notranslate">YoYo</span> アカウントページが表示されます。
+    </li>
+    <li><strong>ログアウト</strong>- これを選択すると、<span
+        data-keyref="GameMaker Name">GameMakerから</span>ログアウトします。後で製品を使用するためには、同じライセンス（または他のライセンス）で再度ログインする必要があります。</li>
   </ul>
-  <p class="note"><strong>重要!</strong> <span data-keyref="GameMaker Name">GameMakerの</span>Freeライセンスを使用していて、他のライセンスを購入した場合、新しいライセンスが正しく適用されているか確認するために、<span class="notranslate">IDE</span> からログアウトし、<span data-keyref="GameMaker Name">GameMakerを</span>再起動して<a href="../../Setting_Up_And_Version_Information/Licencing_Information.htm">再度ログイン</a>する必要があるかもしれません（自動的に行われるはずですが）。</p>
+  <p class="note"><strong>重要!</strong> <span
+      data-keyref="GameMaker Name">GameMakerの</span>Freeライセンスを使用していて、他のライセンスを購入した場合、新しいライセンスが正しく適用されているか確認するために、<span
+      class="notranslate">IDE</span> からログアウトし、<span data-keyref="GameMaker Name">GameMakerを</span>再起動して<a
+      href="../../Setting_Up_And_Version_Information/Licencing_Information.htm">再度ログイン</a>する必要があるかもしれません（自動的に行われるはずですが）。
+  </p>
   <ul class="colour">
     <li><strong>Exit - </strong> <span data-keyref="GameMaker Name">GameMakerを</span>デスクトップに終了させます。</li>
   </ul>
@@ -52,11 +95,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Menus.htm">メニュー</a></div>
-        <div style="float:right">次へ<a href="The_Edit_Menu.htm">編集メニュー</a></div>
+        <div style="float:left">前のページ：<a href="../Menus.htm">メニュー</a></div>
+        <div style="float:right">次のページ：<a href="The_Edit_Menu.htm">編集メニュー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The File Menu
@@ -65,4 +109,5 @@ The File Menu
 file_menu
 -->
 </body>
+
 </html>

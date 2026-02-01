@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>room_add</title>
@@ -12,16 +13,23 @@
   <meta name="rh-index-keywords" content="room_add" />
   <meta name="search-keywords" content="room_add" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">room_add</span></h1>
-  <p>この関数は、新しい空の<span class="notranslate">room</span> を作成してゲームに追加し、そのインデックスを返します。このインデックスは、この<span class="notranslate">room</span> を処理する以降のすべてのコードのために変数に格納されます。<span class="notranslate">room</span> は、実行ファイルを閉じるまで、ゲームに永久に追加されることに注意してください。このことは、メモリの使用に関して重要な意味を持つので、この関数は注意して使用する必要があります。</p>
-  <p class="note"><b>注</b>：新しい<span class="notranslate">rooms</span> は通常の<span class="notranslate">room</span> の順序には含まれないので、「前の」「次の」<span class="notranslate">room</span> はありません（つまり、関数 <span style="font-size:1px;"><a href="room_next.htm"><span class="inline">room_next()</span></a></span>と <span style="font-size:1px;"><a href="room_previous.htm"><span class="inline">room_previous()</span></a></span>は機能しません)。追加された<span class="notranslate">room</span> から別のものにジャンプするには、<span class="notranslate">room</span> 自体のインデックスを使用する必要があります。</p>
+  <p>この関数は、新しい空の<span class="notranslate">room</span> を作成してゲームに追加し、そのインデックスを返します。このインデックスは、この<span
+      class="notranslate">room</span> を処理する以降のすべてのコードのために変数に格納されます。<span class="notranslate">room</span>
+    は、実行ファイルを閉じるまで、ゲームに永久に追加されることに注意してください。このことは、メモリの使用に関して重要な意味を持つので、この関数は注意して使用する必要があります。</p>
+  <p class="note"><b>注</b>：新しい<span class="notranslate">rooms</span> は通常の<span class="notranslate">room</span>
+    の順序には含まれないので、「前の」「次の」<span class="notranslate">room</span> はありません（つまり、関数 <span style="font-size:1px;"><a
+        href="room_next.htm"><span class="inline">room_next()</span></a></span>と <span style="font-size:1px;"><a
+        href="room_previous.htm"><span class="inline">room_previous()</span></a></span>は機能しません)。追加された<span
+      class="notranslate">room</span> から別のものにジャンプするには、<span class="notranslate">room</span> 自体のインデックスを使用する必要があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">room_add</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p>
   <p> </p>
   <h4>例</h4>
@@ -29,18 +37,21 @@
     room_set_width(global.myroom, 1280);<br />
     room_set_height(global.myroom, 720);<br />
     room_set_persistent(global.myroom, false);</p>
-  <p>これは、新しい<span class="notranslate">room</span> を作成し、そのインデックスを変数 &quot;global.myroom&quot; に格納します。そして、幅を640ピクセルに、高さを480ピクセルに、永続性を <span class="inline">false</span> に設定します。</p>
+  <p>これは、新しい<span class="notranslate">room</span> を作成し、そのインデックスを変数 &quot;global.myroom&quot;
+    に格納します。そして、幅を640ピクセルに、高さを480ピクセルに、永続性を <span class="inline">false</span> に設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Rooms.htm">部屋</a></div>
-        <div style="float:right">次のページ <a href="room_duplicate.htm"><span class="notranslate">room_duplicate</span></a></div>
+        <div style="float:left">前のページ：<a href="Rooms.htm">部屋</a></div>
+        <div style="float:right">次のページ：<a href="room_duplicate.htm"><span class="notranslate">room_duplicate</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 room_add
@@ -49,4 +60,5 @@ room_add
 room_add
 -->
 </body>
+
 </html>

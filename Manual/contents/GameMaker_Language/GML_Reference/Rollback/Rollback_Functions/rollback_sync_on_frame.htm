@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -15,19 +16,24 @@
   <meta name="rh-index-keywords" content="rollback_sync_on_frame" />
   <meta name="search-keywords" content="rollback_sync_on_frame" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_sync_on_frame</span></h1>
-  <p>この関数は、すべてのプレイヤーが現在のフレームで同期しているかどうかをチェックします。つまり、プレイヤーの状態は予測に基づくのではなく、プレイヤーから受け取った実際のデータに基づいています。そのような場合、<span class="inline2">true</span> を返す。</p>
+  <p>この関数は、すべてのプレイヤーが現在のフレームで同期しているかどうかをチェックします。つまり、プレイヤーの状態は予測に基づくのではなく、プレイヤーから受け取った実際のデータに基づいています。そのような場合、<span
+      class="inline2">true</span> を返す。</p>
   <p>現在のフレームでプレイヤーが同期していない場合、<span class="inline2">false</span> を返し、すべてのプレイヤーの同期を試みる。</p>
   <p>この関数でプレーヤーを同期させようとすると、フリーズすることがあります。Stepイベント内でこの関数が連続的に呼び出されないようにする必要があります。</p>
   <p>代わりに、トグルとして使用します。ページの一番下にある例をご覧ください。</p>
-  <p>変数<span class="inline"><a data-xref="{title}" href="../Rollback_Variables/rollback_confirmed_frame.htm">rollback_confirmed_frame</a></span> は、すべてのプレーヤーが同期されたときに自動的に更新されます。</p>
+  <p>変数<span class="inline"><a data-xref="{title}"
+        href="../Rollback_Variables/rollback_confirmed_frame.htm">rollback_confirmed_frame</a></span>
+    は、すべてのプレーヤーが同期されたときに自動的に更新されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_sync_on_frame</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+        target="_blank">Boolean</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">if (obj_game.winning_player == -1 &amp;&amp; points &gt;= obj_game.points_required_for_win)<br />
@@ -40,7 +46,8 @@
   <p>このコードは、プレイヤーオブジェクトのStepイベント内で実行されます。</p>
   <p>勝っているプレーヤーがいないか、現在のプレーヤーが勝利に必要なポイントを持っているかどうかをチェックします。</p>
   <p>両方が真なら、そのプレイヤーは勝つべきということになる。しかし、その前に、すべてのプレイヤーが同期しているかどうかをチェックし、状態が正しいことを確認する。</p>
-  <p>すべてのプレイヤーが同期している場合、<span class="inline2">winning_player</span>変数を設定します。この結果、最初の条件が<span class="inline2">false</span> になり、<span class="inline2">rollback_sync_on_frame()</span>が再び呼ばれないことが保証されます。</p>
+  <p>すべてのプレイヤーが同期している場合、<span class="inline2">winning_player</span>変数を設定します。この結果、最初の条件が<span
+      class="inline2">false</span> になり、<span class="inline2">rollback_sync_on_frame()</span>が再び呼ばれないことが保証されます。</p>
   <p>これは、関数が毎フレーム連続的に実行されるのではなく、トグルとして使用されることを意味します。</p>
   <p> </p>
   <p> </p>
@@ -51,7 +58,8 @@
         <div>次:<a data-xref="{title}" href="rollback_use_random_input.htm">rollback_use_random_input</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_sync_on_frame
@@ -60,4 +68,5 @@ rollback_sync_on_frame
 rollback_sync_on_frame
 -->
 </body>
+
 </html>

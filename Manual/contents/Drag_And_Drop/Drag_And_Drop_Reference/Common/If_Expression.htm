@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>If Expression</title>
   <meta name="generator" content="Adobe RoboHelp 2022" />
@@ -11,27 +13,40 @@
   <meta name="rh-index-keywords" content="GML Visual Action - If Expression" />
   <meta name="search-keywords" content="If Expression" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> If Expression</h1>
-  <p>このアクションは、式が <span class="inline">true</span> または <span class="inline">false</span> のいずれかであることを確認するために使用します。ここで確認する論理式は、それがどちらかの値として評価される限り、どのような論理式でも構いません。例えば、以下の式のいずれかを使用することができます。</p>
-  <p class="code">x &lt; (room_width / 2)<br/> a == b<br/> ++val &gt;= 100</p>
-  <p>引数「Not」を<span class="notranslate">flag</span> にすると、例えば &quot;<span class="inline">==</span>&quot; が &quot;<span class="inline"><i>not</i>=</span>&quot; になるなど、上記が否定された式になります。また、<a class="glossterm" data-glossterm="顔" href="#">式は</a>数値に限らず、<span class="notranslate">strings</span> 、ポインター、リソースIDなど、関数が返したり使ったりできるものをチェックできます（詳細は<a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">データ型の</a>セクションを参照）。ただし、エラーを出さずに2つの異なるデータ型を比較することはできません。たとえば、式の中で<span class="notranslate">string</span> と整数を使用しようとすると、エラーが発生することに注意しましょう。式の詳細については、<a href="../../../GameMaker_Language/GML_Overview/Expressions_And_Operators.htm">ここを</a>参照してください。</p>
-  <p class="note"><b>重要な注意</b>：<a href="http://floating-point-gui.de/formats/fp/" target="·_blank&quot;">浮動小数点数の精度の問題</a>により、2つの値が正確に等しいかどうかを確認すると、一方が正確に1である可能性がある一方で、 <span class="inline">false</span> を返す場合があります。
-    もう一方は1.00000000000001である可能性があります。これは、チェックする前に<a href="../Data_Types/Decimal_To_Integer.htm">Decimal to Integer</a>アクションを使用するか、&quot;greater than (&gt;)&quot; または &quot;less than (&lt;)&quot; 式を使用することによって避けることができます。</p>
+  <p>このアクションは、式が <span class="inline">true</span> または <span class="inline">false</span>
+    のいずれかであることを確認するために使用します。ここで確認する論理式は、それがどちらかの値として評価される限り、どのような論理式でも構いません。例えば、以下の式のいずれかを使用することができます。</p>
+  <p class="code">x &lt; (room_width / 2)<br /> a == b<br /> ++val &gt;= 100</p>
+  <p>引数「Not」を<span class="notranslate">flag</span> にすると、例えば &quot;<span class="inline">==</span>&quot; が &quot;<span
+      class="inline"><i>not</i>=</span>&quot; になるなど、上記が否定された式になります。また、<a class="glossterm" data-glossterm="顔"
+      href="#">式は</a>数値に限らず、<span class="notranslate">strings</span> 、ポインター、リソースIDなど、関数が返したり使ったりできるものをチェックできます（詳細は<a
+      href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">データ型の</a>セクションを参照）。ただし、エラーを出さずに2つの異なるデータ型を比較することはできません。たとえば、式の中で<span
+      class="notranslate">string</span> と整数を使用しようとすると、エラーが発生することに注意しましょう。式の詳細については、<a
+      href="../../../GameMaker_Language/GML_Overview/Expressions_And_Operators.htm">ここを</a>参照してください。</p>
+  <p class="note"><b>重要な注意</b>：<a href="http://floating-point-gui.de/formats/fp/"
+      target="·_blank&quot;">浮動小数点数の精度の問題</a>により、2つの値が正確に等しいかどうかを確認すると、一方が正確に1である可能性がある一方で、 <span
+      class="inline">false</span> を返す場合があります。
+    もう一方は1.00000000000001である可能性があります。これは、チェックする前に<a href="../Data_Types/Decimal_To_Integer.htm">Decimal to
+      Integer</a>アクションを使用するか、&quot;greater than (&gt;)&quot; または &quot;less than (&lt;)&quot; 式を使用することによって避けることができます。
+  </p>
   <p>なお、「<span class="inline">if</span> 」ブロックにアクションを追加する場合は、下の画像のように、アクションの横にドロップする必要があります。</p>
   <p><img>これらのアクションは、&quot;if&quot; の評価値が <span class="inline">true</span> であった場合に実行されます。
     は、&quot;if &quot;ブロックの後に実行されます。同じアクションの中で式を「重ねる」ことができるのは、プラスアイコン <span><img> </span>の横にある
-    を指定し、別の式を指定してチェックします。これにより、指定した<i>すべての</i>式が一度に <span class="inline">true</span> を返すかどうかをチェックし、返す場合にのみ追加したアクションコードを実行します (以下の例を参照してください)。</p>
+    を指定し、別の式を指定してチェックします。これにより、指定した<i>すべての</i>式が一度に <span class="inline">true</span>
+    を返すかどうかをチェックし、返す場合にのみ追加したアクションコードを実行します (以下の例を参照してください)。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="If Expression Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_If_Expression.png"/></p>
+  <p><img alt="If Expression Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_If_Expression.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Expression</span></td>
@@ -46,18 +61,20 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、インスタンス変数 &quot;<span class="inline">player_score</span>&quot; を確認します。
-    が 1000 より大きく<i>、</i>インスタンス変数 &quot;<span class="inline">player_level</span>&quot; が 10 より小さいことを確認します。両方のチェックで <span class="inline">true</span> が返ってきたら、アクションコードはこれらの変数に新しい値を代入するために進みます。</p>
+    が 1000 より大きく<i>、</i>インスタンス変数 &quot;<span class="inline">player_level</span>&quot; が 10 より小さいことを確認します。両方のチェックで <span
+      class="inline">true</span> が返ってきたら、アクションコードはこれらの変数に新しい値を代入するために進みます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Common_Actions_Library.htm">共通アクション</a></div>
-        <div style="float:right">次へ<a href="If_Undefined.htm">未定義の場合</a></div>
+        <div style="float:left">前のページ：<a href="Common_Actions_Library.htm">共通アクション</a></div>
+        <div style="float:right">次のページ：<a href="If_Undefined.htm">未定義の場合</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Expression
@@ -66,4 +83,6 @@ Action - If Expression
 action_if_expression
 -->
 
-</body></html>
+</body>
+
+</html>

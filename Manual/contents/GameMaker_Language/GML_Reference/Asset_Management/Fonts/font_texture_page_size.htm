@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>font_texture_page_size</title>
@@ -12,38 +13,56 @@
   <meta name="rh-index-keywords" content="font_texture_page_size" />
   <meta name="search-keywords" content="font_texture_page_size" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">font_texture_page_size</span></h1>
-  <p><span class="notranslate">texture</span> この<b>組み込み変数を用いて</b>，関数 <a href="font_add.htm"><span class="inline">font_add()</span></a>.その関数を使って<span class="notranslate">font</span> を追加すると、<span data-keyref="GameMaker Name">GameMaker</span>はこの変数で定義されたサイズまで、必要なグリフの<span class="notranslate">texture</span> ページ<span class="notranslate">cache</span> を作成する。その流れは以下の通り。</p>
+  <p><span class="notranslate">texture</span> この<b>組み込み変数を用いて</b>，関数 <a href="font_add.htm"><span
+        class="inline">font_add()</span></a>.その関数を使って<span class="notranslate">font</span> を追加すると、<span
+      data-keyref="GameMaker Name">GameMaker</span>はこの変数で定義されたサイズまで、必要なグリフの<span class="notranslate">texture</span>
+    ページ<span class="notranslate">cache</span> を作成する。その流れは以下の通り。</p>
   <ul class="colour">
     <li>使用する各文字は、<span class="notranslate">font</span> から<span class="notranslate">texture</span> ページにキャッシュされます。</li>
-    <li><span class="notranslate">texture</span> のページがいっぱいになると (大きなキャラクターやたくさんの種類のキャラクターを使うため)<span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">cache</span> からキャラクターを削除し、必要な新しいキャラクターと置き換えます。</li>
-    <li><span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">texture</span> を大きくしすぎないようにしています。これは、すべてのデバイスが大きな<span class="notranslate">textures</span> に対応できるわけではないからです。また、<span class="notranslate">texture</span> を小さくしすぎないようにしています。これは<span class="notranslate">texture</span> への文字の削除と再追加に CPU 時間がかかり、ゲームの実行速度が遅くなるからです。</li>
+    <li><span class="notranslate">texture</span> のページがいっぱいになると (大きなキャラクターやたくさんの種類のキャラクターを使うため)<span
+        data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">cache</span>
+      からキャラクターを削除し、必要な新しいキャラクターと置き換えます。</li>
+    <li><span data-keyref="GameMaker Name">GameMaker</span>は<span class="notranslate">texture</span>
+      を大きくしすぎないようにしています。これは、すべてのデバイスが大きな<span class="notranslate">textures</span> に対応できるわけではないからです。また、<span
+        class="notranslate">texture</span> を小さくしすぎないようにしています。これは<span class="notranslate">texture</span> への文字の削除と再追加に
+      CPU 時間がかかり、ゲームの実行速度が遅くなるからです。</li>
   </ul>
-  <p><span class="notranslate">texture</span> もし、<span data-keyref="GameMaker Name">GameMakerが</span>使うデフォルトの1024pxより大きい、または小さいページサイズが必要な場合は、この組み込み変数を使って値を設定することができる。 <span class="inline">font_add()</span> 機能を使っていない場合、この設定はゲームのパフォーマンスに影響を与えない。<span class="notranslate">fonts</span> で追加された<span class="notranslate">IDE</span> は通常の<span class="notranslate">texture</span> ページにキャッシュされるからである（これは<a href="../../../../The_Asset_Editors/Fonts.htm">Font Editor</a>とターゲットプラットフォームの<a href="../../../../Settings/Game_Options.htm">Game Options</a>から制御できる）。</p>
+  <p><span class="notranslate">texture</span> もし、<span
+      data-keyref="GameMaker Name">GameMakerが</span>使うデフォルトの1024pxより大きい、または小さいページサイズが必要な場合は、この組み込み変数を使って値を設定することができる。
+    <span class="inline">font_add()</span> 機能を使っていない場合、この設定はゲームのパフォーマンスに影響を与えない。<span class="notranslate">fonts</span>
+    で追加された<span class="notranslate">IDE</span> は通常の<span class="notranslate">texture</span> ページにキャッシュされるからである（これは<a
+      href="../../../../The_Asset_Editors/Fonts.htm">Font Editor</a>とターゲットプラットフォームの<a
+      href="../../../../Settings/Game_Options.htm">Game Options</a>から制御できる）。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">font_texture_page_size</span></p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span> (maximum width/height in pixels)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">font_texture_page_size = 512;<br />
     newfont = font_add(&quot;Arial&quot;, 24, true, true, 32, 128);</p>
-  <p>上記のコードでは、<span class="notranslate">font</span> <span class="notranslate">cache</span> <span class="notranslate">texture</span> のページを最大サイズ512pxに設定し、新たに<span class="notranslate">font</span> を追加しています。</p>
+  <p>上記のコードでは、<span class="notranslate">font</span> <span class="notranslate">cache</span> <span
+      class="notranslate">texture</span> のページを最大サイズ512pxに設定し、新たに<span class="notranslate">font</span> を追加しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Fonts.htm">フォント</a></div>
-        <div style="float:right">次のページ <a href="font_get_name.htm"><span class="notranslate">font_get_name</span></a></div>
+        <div style="float:left">前のページ：<a href="Fonts.htm">フォント</a></div>
+        <div style="float:right">次のページ：<a href="font_get_name.htm"><span class="notranslate">font_get_name</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_texture_page_size
@@ -52,4 +71,5 @@ font_texture_page_size
 font_texture_page_size
 -->
 </body>
+
 </html>

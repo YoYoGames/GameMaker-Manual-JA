@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>インスタンススケールの設定</title>
@@ -12,24 +13,35 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Instance Scale" />
   <meta name="search-keywords" content="Set Instance Scale" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> インスタンススケールの設定</h1>
-  <p>このアクションブロックは、インスタンスの <span class="inline">image_xscale</span> と <span class="inline">image_yscale</span> の値を設定します。ここでの入力値は、インスタンスに割り当てられた<span class="notranslate">sprite</span> に適用されるモディファイアで、1 (デフォルト値) はスケールなしを表します。
-    の拡大縮小（1:1）、小さい値では縮小（例えば0.5では<span class="notranslate">sprite</span> の幅の半分）、大きい値では拡大縮小となります。負の値を使用すると、<span class="notranslate">sprite</span> を反転して拡大縮小することができますが、使用する値が正確に -1 である場合（その場合は
-    <span class="notranslate">sprite</span> は、原点を中心に反転またはミラーリングされるだけで、スケーリングは行われません)。水平または垂直方向のスケールを現在の値から相対的に設定することができ、その場合、現在のスケール値から新しい値を加算または減算することになります。</p>
-  <p>これらの値を変更すると、<a href="../../../The_Asset_Editors/Objects.htm">オブジェクトエディタで</a>別の <span class="inline">mask_index</span> (collision mask) を指定しない限り、インスタンスが衝突を検出する方法も変更されることに注意してください。以下の点に注意してください。
-    この変数の変更が見えるようにするには、インスタンスに描画<i>イベントが</i>ないか（つまり<span data-keyref="GameMaker Name">GameMakerが</span>デフォルトで<span class="notranslate">sprite</span> を描画する）、<a href="../Drawing/Draw_Self.htm">Draw Self</a>アクションを使って描画される必要があります。</p>
-  <p><img alt="Set Instance Scale Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Scale.png" width="32" /></p>
+  <p>このアクションブロックは、インスタンスの <span class="inline">image_xscale</span> と <span class="inline">image_yscale</span>
+    の値を設定します。ここでの入力値は、インスタンスに割り当てられた<span class="notranslate">sprite</span> に適用されるモディファイアで、1 (デフォルト値) はスケールなしを表します。
+    の拡大縮小（1:1）、小さい値では縮小（例えば0.5では<span class="notranslate">sprite</span> の幅の半分）、大きい値では拡大縮小となります。負の値を使用すると、<span
+      class="notranslate">sprite</span> を反転して拡大縮小することができますが、使用する値が正確に -1 である場合（その場合は
+    <span class="notranslate">sprite</span>
+    は、原点を中心に反転またはミラーリングされるだけで、スケーリングは行われません)。水平または垂直方向のスケールを現在の値から相対的に設定することができ、その場合、現在のスケール値から新しい値を加算または減算することになります。
+  </p>
+  <p>これらの値を変更すると、<a href="../../../The_Asset_Editors/Objects.htm">オブジェクトエディタで</a>別の <span
+      class="inline">mask_index</span> (collision mask) を指定しない限り、インスタンスが衝突を検出する方法も変更されることに注意してください。以下の点に注意してください。
+    この変数の変更が見えるようにするには、インスタンスに描画<i>イベントが</i>ないか（つまり<span data-keyref="GameMaker Name">GameMakerが</span>デフォルトで<span
+      class="notranslate">sprite</span> を描画する）、<a href="../Drawing/Draw_Self.htm">Draw Self</a>アクションを使って描画される必要があります。
+  </p>
+  <p><img alt="Set Instance Scale Icon" class="icon" height="32"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Scale.png"
+      width="32" /></p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Examples of scaled sprites" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_scale.png" /></p>
+  <p><img alt="Examples of scaled sprites" class="center"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_scale.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Horizontal</span></td>
@@ -51,11 +63,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
-        <div style="float:right">次へ<a href="Set_Instance_Alpha.htm">インスタンス・アルファの設定</a></div>
+        <div style="float:left">前のページ：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
+        <div style="float:right">次のページ：<a href="Set_Instance_Alpha.htm">インスタンス・アルファの設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Instance Scale
@@ -64,4 +77,5 @@ Action - Set Instance Scale
 action_sprite_scale
 -->
 </body>
+
 </html>

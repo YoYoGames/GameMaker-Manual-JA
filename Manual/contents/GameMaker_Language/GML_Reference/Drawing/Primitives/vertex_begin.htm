@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>vertex_begin</title>
@@ -12,19 +13,23 @@
   <meta name="rh-index-keywords" content="vertex_begin" />
   <meta name="search-keywords" content="vertex_begin" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">vertex_begin</span></h1>
-  <p>この関数でカスタムプリミティブの定義を開始します。プリミティブを書き込む<span class="notranslate">buffer</span> と、使用する<span class="notranslate">vertex</span> フォーマット (<span class="notranslate">vertex</span> フォーマット関数を使用して事前に定義) を割り当てます。次に、プリミティブの各<span class="notranslate">vertex</span> に必要な点を定義してから、次の関数を呼び出します。 <a href="vertex_end.htm"><span class="inline">vertex_end()</span></a>を実行して、プリミティブの作成を終了します。</p>
+  <p>この関数でカスタムプリミティブの定義を開始します。プリミティブを書き込む<span class="notranslate">buffer</span> と、使用する<span
+      class="notranslate">vertex</span> フォーマット (<span class="notranslate">vertex</span> フォーマット関数を使用して事前に定義)
+    を割り当てます。次に、プリミティブの各<span class="notranslate">vertex</span> に必要な点を定義してから、次の関数を呼び出します。 <a href="vertex_end.htm"><span
+        class="inline">vertex_end()</span></a>を実行して、プリミティブの作成を終了します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">vertex_begin</span>(buffer, format);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td>
@@ -39,7 +44,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -50,18 +55,22 @@
     v_format = vertex_format_end();<br />
     v_buff = vertex_create_buffer();<br />
     vertex_begin(v_buff, v_format);</p>
-  <p>上記のコードでは、新しい<span class="notranslate">vertex</span> フォーマットを定義し、新しい<span class="notranslate">buffer</span> を作成し、新しいプリミティブの定義処理を開始します。</p>
+  <p>上記のコードでは、新しい<span class="notranslate">vertex</span> フォーマットを定義し、新しい<span class="notranslate">buffer</span>
+    を作成し、新しいプリミティブの定義処理を開始します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></div>
-        <div style="float:right">次のページ <a href="vertex_colour.htm"><span class="notranslate">vertex_colour</span></a></div>
+        <div style="float:left">前のページ：<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span
+              class="notranslate">Vertex</span> フォーマット</a></div>
+        <div style="float:right">次のページ：<a href="vertex_colour.htm"><span class="notranslate">vertex_colour</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_begin
@@ -70,4 +79,5 @@ vertex_begin
 vertex_begin
 -->
 </body>
+
 </html>

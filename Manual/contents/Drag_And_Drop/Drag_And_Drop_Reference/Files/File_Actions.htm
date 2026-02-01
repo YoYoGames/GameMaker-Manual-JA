@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ファイル操作</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
@@ -12,62 +14,94 @@
   <meta name="rh-index-keywords" content="GML Visual Overview - File Actions Library" />
   <meta name="search-keywords" content="File Actions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ファイル アクション ライブラリ</h1>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Lib_Files.png"/></p>
-  <p><b>ファイルアクションは</b>、<span class="notranslate">Buffer</span> ファイルと Ini ファイルの 2 種類のファイルを扱います。また、既存のファイルの名前を変更したり、コピーしたりする一般的なファイルアクションもあります。<b></b></p>
-  <p><b>バッファ</b>ファイルは、以前に作成した<span class="notranslate">buffer</span> からデータを保存して作成し、このデータを将来いつでも再び<span class="notranslate">buffer</span> に読み込むことができます。<span class="notranslate">buffers</span> の詳細については、こちらをご覧ください。<a href="../Buffers/Buffer_Actions.htm">バッファーアクション</a><b></b></p>
-  <p><b>Iniファイルは</b>、ほとんどのプラットフォームと互換性のある、小型で軽量なファイルです。インターフェイスの設定、ローカルハイスコア、レベルデータなど、小さな情報を保存するのに理想的で、非常に使いやすいファイルです。Iniファイルは
+  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Lib_Files.png" />
+  </p>
+  <p><b>ファイルアクションは</b>、<span class="notranslate">Buffer</span> ファイルと Ini ファイルの 2
+    種類のファイルを扱います。また、既存のファイルの名前を変更したり、コピーしたりする一般的なファイルアクションもあります。<b></b></p>
+  <p><b>バッファ</b>ファイルは、以前に作成した<span class="notranslate">buffer</span> からデータを保存して作成し、このデータを将来いつでも再び<span
+      class="notranslate">buffer</span> に読み込むことができます。<span class="notranslate">buffers</span> の詳細については、こちらをご覧ください。<a
+      href="../Buffers/Buffer_Actions.htm">バッファーアクション</a><b></b></p>
+  <p>
+    <b>Iniファイルは</b>、ほとんどのプラットフォームと互換性のある、小型で軽量なファイルです。インターフェイスの設定、ローカルハイスコア、レベルデータなど、小さな情報を保存するのに理想的で、非常に使いやすいファイルです。Iniファイルは
     また、存在しないIniファイルから読み込んでも、単に <span class="inline">default</span> （あなたが指定したもの）の返り値が返されます。
-    iniファイルを開き、アクションを使用する前に修正することができます。このベースとなるiniファイルは、<a a="" href="Open_Ini_File.htm">Open Ini File</a>アクションを呼び出した後、<a href="Close_Ini_File.htm">Close Ini File</a>アクションを呼び出すことで作成することができます。
-    または、<span class="notranslate">Asset</span> Browserの<a href="../../../Settings/Included_Files.htm">Included Filesに</a>含めることができます。<span class="notranslate">Asset</span> Browserに含まれるファイルをベースIniとして使用する場合は、以下の情報もお読みください。
-    は、<a href="../../../Additional_Information/The_File_System.htm">ファイル</a>システムの仕組みに関するマニュアルのセクションを参照してください。</p>
-  <p class="note"><b>注</b>：ローカライゼーションのあるゲームでは、アクセント付きの文字が外部ファイルから読み取れることが非常に重要です。つまり、まず<b>UTF8形式の</b>iniファイルを作成し、それを<span data-keyref="GameMaker Name">GameMakerに</span>インクルードファイルとして追加する必要があります。
-    このファイルは、ゲーム実行時にエクスポートされ、ini 関数で作成されるデフォルトの ANSI 形式の ini ファイル（事前に何も指定されていない場合）の代わりとして使用されるようになります。このようにすると、アクセント記号や非ロマン文字を正しく読み書きができるようになります。
-    文字が維持されます。</p>
+    iniファイルを開き、アクションを使用する前に修正することができます。このベースとなるiniファイルは、<a a="" href="Open_Ini_File.htm">Open Ini
+      File</a>アクションを呼び出した後、<a href="Close_Ini_File.htm">Close Ini File</a>アクションを呼び出すことで作成することができます。
+    または、<span class="notranslate">Asset</span> Browserの<a href="../../../Settings/Included_Files.htm">Included
+      Filesに</a>含めることができます。<span class="notranslate">Asset</span> Browserに含まれるファイルをベースIniとして使用する場合は、以下の情報もお読みください。
+    は、<a href="../../../Additional_Information/The_File_System.htm">ファイル</a>システムの仕組みに関するマニュアルのセクションを参照してください。
+  </p>
+  <p class="note">
+    <b>注</b>：ローカライゼーションのあるゲームでは、アクセント付きの文字が外部ファイルから読み取れることが非常に重要です。つまり、まず<b>UTF8形式の</b>iniファイルを作成し、それを<span
+      data-keyref="GameMaker Name">GameMakerに</span>インクルードファイルとして追加する必要があります。
+    このファイルは、ゲーム実行時にエクスポートされ、ini 関数で作成されるデフォルトの ANSI 形式の ini
+    ファイル（事前に何も指定されていない場合）の代わりとして使用されるようになります。このようにすると、アクセント記号や非ロマン文字を正しく読み書きができるようになります。
+    文字が維持されます。
+  </p>
   <p>ファイルを操作するためのアクションには、次のようなものがあります。</p>
   <p> </p>
   <table class="dnd" style="text-align: left;margin-left:">
     <tbody>
       <tr style="height: 1px;">
-        <td class="icons" style="margin-left: 16px;"><img alt="Load Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" width="32"/></td>
+        <td class="icons" style="margin-left: 16px;"><img alt="Load Buffer Icon" class="icon" height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png"
+            width="32" /></td>
         <td class="dnd" style=""><a href="Load_Buffer.htm">ロードバッファー</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Save Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Save_Buffer.png" width="32"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Save Buffer Icon" class="icon" height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Save_Buffer.png"
+            width="32" /></td>
         <td class="dnd" style=""><a href="Save_Buffer.htm">バッファの保存</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Rename File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Rename File Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png" />
+        </td>
         <td class="dnd" style=""><a href="Rename_File.htm">ファイル名の変更</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Copy_File.png"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Copy File Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Copy_File.png" /></td>
         <td class="dnd" style=""><a href="Copy_File.htm">コピーファイル</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Delete_File.png"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Delete File Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Delete_File.png" />
+        </td>
         <td class="dnd" style=""><a href="Delete_File.htm">ファイルの削除</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Open Ini File Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png" />
+        </td>
         <td class="dnd" style=""><a href="Open_Ini_File.htm">Iniファイルを開く</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Close Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Close_Ini_File.png" width="32"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Close Ini File Icon" class="icon" height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Close_Ini_File.png"
+            width="32" /></td>
         <td class="dnd" style=""><a href="Close_Ini_File.htm">Iniファイルを閉じる</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Write To Ini File Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png" />
+        </td>
         <td class="dnd" style=""><a href="Write_To_Ini_File.htm">Iniファイルへの書き込み</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Read Ini File Icon" class="icon" height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png"
+            width="32" /></td>
         <td class="dnd" style=""><a href="Read_Ini_File.htm">Iniファイルの読み込み</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If File Exists Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_If_File_Exists.png"/></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If File Exists Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_If_File_Exists.png" />
+        </td>
         <td class="dnd" style=""><a href="If_File_Exists.htm">ファイルが存在する場合</a></td>
       </tr>
     </tbody>
@@ -92,11 +126,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../DnD_Reference.htm">インデックス</a></div>
-        <div style="float:right">次へ<a href="../Data_Types/Data_Type_Actions.htm">データ型アクション</a></div>
+        <div style="float:left">前のページ：<a href="../DnD_Reference.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="../Data_Types/Data_Type_Actions.htm">データ型アクション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual File Actions
@@ -106,4 +141,6 @@ File Actions
 dnd_files
 -->
 
-</body></html>
+</body>
+
+</html>

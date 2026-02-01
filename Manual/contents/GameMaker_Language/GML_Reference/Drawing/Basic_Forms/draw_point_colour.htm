@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_point_colour</title>
@@ -13,37 +14,47 @@
   <meta name="search-keywords" content="draw_point_colour,draw_point_color" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_point_colour</span></h1>
-  <p>この機能を使うと、画面上の任意の場所に1ピクセルを定義した色で描画することができます。この色設定は、関数 <a href="../Colour_And_Alpha/draw_set_colour.htm"><span class="inline">draw_set_colour()</span></a>.</p>
-  <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span class="notranslate">texture</span>, 色.しかし、この関数を使う場合、<span class="notranslate">vertex</span> と色のデータだけが渡されます。
-    <span class="notranslate">shader</span> は何も描画しない（あるいは、描画はするが正しく表示されない）かもしれません。このように図形を描画する必要がある場合は、<span class="notranslate">shader</span> をこの点を考慮してカスタマイズする必要があります。</p>
+  <p>この機能を使うと、画面上の任意の場所に1ピクセルを定義した色で描画することができます。この色設定は、関数 <a href="../Colour_And_Alpha/draw_set_colour.htm"><span
+        class="inline">draw_set_colour()</span></a>.</p>
+  <p class="note"><b>注</b>：<span class="notranslate">shader</span> を使って図形を描く場合、ほとんどの<span
+      class="notranslate">shaders</span> は次のような入力を期待していることに注意する必要があります。<span class="notranslate">vertex</span> <span
+      class="notranslate">texture</span>, 色.しかし、この関数を使う場合、<span class="notranslate">vertex</span> と色のデータだけが渡されます。
+    <span class="notranslate">shader</span> は何も描画しない（あるいは、描画はするが正しく表示されない）かもしれません。このように図形を描画する必要がある場合は、<span
+      class="notranslate">shader</span> をこの点を考慮してカスタマイズする必要があります。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">draw_point_colour</span>(x, y, col1);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the point.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the point.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">col1</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">col1</span></td>
+        <td><span data-keyref="Type_Constant_Colour"></span></td>
         <td><span class="notranslate">The colour of the point.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -55,11 +66,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Basic_Forms.htm">基本フォーム</a></div>
-        <div style="float:right">次のページ <a href="draw_rectangle.htm"><span class="notranslate">draw_rectangle</span></a></div>
+        <div style="float:left">前のページ：<a href="Basic_Forms.htm">基本フォーム</a></div>
+        <div style="float:right">次のページ：<a href="draw_rectangle.htm"><span class="notranslate">draw_rectangle</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_point_colour
@@ -69,4 +82,5 @@ draw_point_color
 draw_point_colour
 -->
 </body>
+
 </html>

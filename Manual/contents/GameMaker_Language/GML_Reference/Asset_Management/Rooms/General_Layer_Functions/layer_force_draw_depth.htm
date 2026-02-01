@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_force_draw_depth</title>
@@ -12,24 +13,30 @@
   <meta name="rh-index-keywords" content="layer_force_draw_depth" />
   <meta name="search-keywords" content="layer_force_draw_depth" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_force_draw_depth</span></h1>
-  <p>この関数は、<i>すべての</i>レイヤーを指定されたz深度で描画するように強制します。これは<b>レイヤーの描画順を変更</b>するものではなく、深度順に描画されることに変わりはありません。一般的には、これを気にする必要はありませんが、レイヤーの深さが法定範囲外 (-16000 から 16000) にある場合、レンダリングされないので、Z 深度を妥当な値 - 例えば 0 - に強制すると、すべてうまくレンダリングされるようになります。これは一般的に、以前のバージョンの<i>GameMakerの</i>レガシーなプロジェクトで、許容されるレイヤー範囲よりも高いまたは低い描画深度を持つことができる場合にのみ使用されることに留意してください。</p>
+  <p>
+    この関数は、<i>すべての</i>レイヤーを指定されたz深度で描画するように強制します。これは<b>レイヤーの描画順を変更</b>するものではなく、深度順に描画されることに変わりはありません。一般的には、これを気にする必要はありませんが、レイヤーの深さが法定範囲外
+    (-16000 から 16000) にある場合、レンダリングされないので、Z 深度を妥当な値 - 例えば 0 -
+    に強制すると、すべてうまくレンダリングされるようになります。これは一般的に、以前のバージョンの<i>GameMakerの</i>古いプロジェクトで、許容されるレイヤー範囲よりも高いまたは低い描画深度を持つことができる場合にのみ使用されることに留意してください。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_force_draw_depth</span>(force, depth)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">force</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether to enable (set to <span class="inline">true</span> または無効（ に設定） Zデプスフォースメント <span class="inline">false</span></td>
+        <td><span class="notranslate">Whether to enable (set to <span class="inline">true</span> または無効（ に設定） Zデプスフォースメント
+            <span class="inline">false</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">depth</span></td>
@@ -39,7 +46,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -54,11 +61,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
-        <div style="float:right">次のページ <a href="layer_is_draw_depth_forced.htm"><span class="notranslate">layer_is_draw_depth_forced</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ：<a href="layer_is_draw_depth_forced.htm"><span
+              class="notranslate">layer_is_draw_depth_forced</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_force_draw_depth
@@ -67,4 +76,5 @@ layer_force_draw_depth
 layer_force_draw_depth
 -->
 </body>
+
 </html>

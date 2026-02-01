@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>network_send_udp_raw</title>
@@ -12,60 +13,78 @@
   <meta name="rh-index-keywords" content="network_send_udp_raw" />
   <meta name="search-keywords" content="network_send_udp_raw" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">network_send_udp_raw</span></h1>
-  <p>この関数は、UDPを使用してネットワーク経由でデータを<span class="notranslate">server</span> に送信します。 この関数は、接続する<i>ソケットID</i>、接続先URL、使用するポートを受け取ります。次に、送信するデータを格納する<i>バッファID</i>（<span class="notranslate">buffers</span> の詳細については、<a href="../Buffers/Buffers.htm">リファレンス - バッファを</a>参照してください）と、最後にデータのサイズ（バイト単位）を指定する必要があります。UDP は「コネクションレス型」で、実際には接続を行わず、IP に直接パケットを送信します。<span class="notranslate">server</span> は IP アドレスから受信データを受け取り、それを「そのまま」扱わなければなりません。送信されたデータは<span data-keyref="GameMaker Name">GameMakerでは</span>一切フォーマットされず、受信側のデバイスはデータをストリームとして取得するため、自分で処理する必要がある。この関数は送信されたデータのバイト数を返すが、送信に失敗した場合は0より小さい値を返す。</p>
-  <p class="note"><span class="note">注</span>）この機能は、HTML5ターゲット上で動作するプロジェクトで使用した場合は動作しません。また、HTML5プロジェクトでもUDPを受信することはできません。</p>
+  <p>この関数は、UDPを使用してネットワーク経由でデータを<span class="notranslate">server</span> に送信します。
+    この関数は、接続する<i>ソケットID</i>、接続先URL、使用するポートを受け取ります。次に、送信するデータを格納する<i>バッファID</i>（<span class="notranslate">buffers</span>
+    の詳細については、<a href="../Buffers/Buffers.htm">リファレンス - バッファを</a>参照してください）と、最後にデータのサイズ（バイト単位）を指定する必要があります。UDP
+    は「コネクションレス型」で、実際には接続を行わず、IP に直接パケットを送信します。<span class="notranslate">server</span> は IP
+    アドレスから受信データを受け取り、それを「そのまま」扱わなければなりません。送信されたデータは<span
+      data-keyref="GameMaker Name">GameMakerでは</span>一切フォーマットされず、受信側のデバイスはデータをストリームとして取得するため、自分で処理する必要がある。この関数は送信されたデータのバイト数を返すが、送信に失敗した場合は0より小さい値を返す。
+  </p>
+  <p class="note"><span
+      class="note">注</span>）この機能は、HTML5ターゲット上で動作するプロジェクトで使用した場合は動作しません。また、HTML5プロジェクトでもUDPを受信することはできません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">network_send_udp_raw</span>(socket, url, port, bufferid, size);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">network_send_udp_raw</span>(socket, url, port,
+    bufferid, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">socket</span></td><td><span data-keyref="Type_ID_Network_Socket"></span></td>
+        <td><span class="notranslate">socket</span></td>
+        <td><span data-keyref="Type_ID_Network_Socket"></span></td>
         <td><span class="notranslate">The id of the socket to use.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">url</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The url or IP to connect to (a string).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">port</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">port</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The port to connect to.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">bufferid</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">bufferid</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The id of the buffer to get the data from.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The size (in bytes) of the data.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">network_send_udp_raw(sock, &quot;www.macsweeneygames.com&quot;, 6510, buff, buffer_tell(buff));</p>
-  <p>上記のコードは、URLで定義された<span class="notranslate">server</span> に、ポート6510で生のUDPパケットを送信します。データは変数 &quot;buff &quot;にインデックスされた<span class="notranslate">buffer</span> から取得される。</p>
+  <p>上記のコードは、URLで定義された<span class="notranslate">server</span> に、ポート6510で生のUDPパケットを送信します。データは変数 &quot;buff
+    &quot;にインデックスされた<span class="notranslate">buffer</span> から取得される。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Networking.htm">ネットワーク</a></div>
-        <div style="float:right">次のページ <a href="network_destroy.htm"><span class="notranslate">network_destroy</span></a></div>
+        <div style="float:left">前のページ：<a href="Networking.htm">ネットワーク</a></div>
+        <div style="float:right">次のページ：<a href="network_destroy.htm"><span
+              class="notranslate">network_destroy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_send_udp_raw
@@ -74,4 +93,5 @@ network_send_udp_raw
 network_send_udp_raw
 -->
 </body>
+
 </html>

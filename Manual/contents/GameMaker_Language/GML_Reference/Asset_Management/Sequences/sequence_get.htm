@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sequence_get</title>
@@ -13,19 +14,26 @@
   <meta name="search-keywords" content="sequence_get" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">sequence_get</span></h1>
-  <p>この関数を使用すると、<span class="notranslate">Object</span> <span class="notranslate">sequence</span> のインデックスから<a href="Sequence_Structs/The_Sequence_Object_Struct.htm">Sequence<span class="notranslate">asset</span> Struct</a>を取得することができます。<span class="notranslate">asset</span> ブラウザで定義されている<span class="notranslate">sequence</span> の<span class="notranslate">asset</span> インデックスを指定すると、この関数はアクセス可能な<span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> を返します。<span class="notranslate">sequence</span> が存在しない場合や指定した<span class="notranslate">asset</span> インデックスが<span class="notranslate">sequence</span> でない場合は -1 を返します。</p>
+  <p>この関数を使用すると、<span class="notranslate">Object</span> <span class="notranslate">sequence</span> のインデックスから<a
+      href="Sequence_Structs/The_Sequence_Object_Struct.htm">Sequence<span class="notranslate">asset</span>
+      Struct</a>を取得することができます。<span class="notranslate">asset</span> ブラウザで定義されている<span
+      class="notranslate">sequence</span> の<span class="notranslate">asset</span> インデックスを指定すると、この関数はアクセス可能な<span
+      class="notranslate">sequence</span> <span class="notranslate">object</span> <span
+      class="notranslate">struct</span> を返します。<span class="notranslate">sequence</span> が存在しない場合や指定した<span
+      class="notranslate">asset</span> インデックスが<span class="notranslate">sequence</span> でない場合は -1 を返します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">sequence_get</span>(sequence_index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">sequence_index</span></td>
@@ -35,24 +43,30 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Struct_Sequence_Object">Sequence Object Struct</span> or -1</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _seq = sequence_get(seq_Logo);<br />
     seq.loopmode = seqplay_pingpong;</p>
-  <p>上記のコードは<span class="notranslate">sequence</span> <span class="notranslate">object</span> &quot;seq_Loop&quot; から<span class="notranslate">struct</span> <span class="notranslate">sequence</span> <span class="notranslate">object</span> を取得し、<span class="notranslate">loop</span> の<span class="notranslate">sequence</span> モードを設定します（以降に作成されるすべての<span class="notranslate">sequence</span> インスタンスはこの<span class="notranslate">loop</span> モードを使用するようになります）。</p>
+  <p>上記のコードは<span class="notranslate">sequence</span> <span class="notranslate">object</span> &quot;seq_Loop&quot;
+    から<span class="notranslate">struct</span> <span class="notranslate">sequence</span> <span
+      class="notranslate">object</span> を取得し、<span class="notranslate">loop</span> の<span
+      class="notranslate">sequence</span> モードを設定します（以降に作成されるすべての<span class="notranslate">sequence</span> インスタンスはこの<span
+      class="notranslate">loop</span> モードを使用するようになります）。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sequences.htm">シークエンス</a></div>
-        <div style="float:right">次のページ <a href="sequence_track_new.htm"><span class="notranslate">sequence_track_new</span></a></div>
+        <div style="float:left">前のページ：<a href="Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次のページ：<a href="sequence_track_new.htm"><span
+              class="notranslate">sequence_track_new</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_get
@@ -61,4 +75,5 @@ sequence_get
 sequence_get
 -->
 </body>
+
 </html>

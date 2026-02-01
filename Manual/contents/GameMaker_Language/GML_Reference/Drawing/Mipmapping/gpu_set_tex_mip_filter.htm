@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_tex_mip_filter</title>
@@ -12,50 +13,59 @@
   <meta name="rh-index-keywords" content="gpu_set_tex_mip_filter,tf_point,tf_linear,tf_anisotropic" />
   <meta name="search-keywords" content="gpu_set_tex_mip_filter,tf_point,tf_linear,tf_anisotropic" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_tex_mip_filter</span></h1>
-  <p>この関数では、現在のミップフィルタモードを、サポートされている3種類のうちの1つに設定することができます。必要な mip フィルタリングモードを示す定数を与え、<b>ポイント</b>フィルタリング（デフォルト設定、つまりフィルタリングなし）、<b>線形</b>フィルタリング（これは<i>トリリニアフィルタリングとしても</i>知られています）、<b>異方性</b>フィルタリングから選択できます（下の定数表を参照してください）。</p>
+  <p>この関数では、現在のミップフィルタモードを、サポートされている3種類のうちの1つに設定することができます。必要な mip
+    フィルタリングモードを示す定数を与え、<b>ポイント</b>フィルタリング（デフォルト設定、つまりフィルタリングなし）、<b>線形</b>フィルタリング（これは<i>トリリニアフィルタリングとしても</i>知られています）、<b>異方性</b>フィルタリングから選択できます（下の定数表を参照してください）。
+  </p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">tf_point</span></td>
-        <td>これにより、ミップマップレベル間のフィルタリングが無効になり、<span class="notranslate">texture</span> の遷移が見えることがありますが、最高のパフォーマンスを得ることができます。</td>
+        <td>これにより、ミップマップレベル間のフィルタリングが無効になり、<span class="notranslate">texture</span>
+          の遷移が見えることがありますが、最高のパフォーマンスを得ることができます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">tf_linear</span></td>
-        <td>これにより、ミップマップレベル間の線形フィルタリング（これは<i>トリリニアフィルタリングとしても</i>知られています）が有効になり、<span class="notranslate">texture</span> の遷移が滑らかになりますが、性能に若干の影響が出ます。</td>
+        <td>これにより、ミップマップレベル間の線形フィルタリング（これは<i>トリリニアフィルタリングとしても</i>知られています）が有効になり、<span class="notranslate">texture</span>
+          の遷移が滑らかになりますが、性能に若干の影響が出ます。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">tf_anisotropic</span></td>
-        <td>これはミップマップレベル間の異方性フィルタリングを有効にし、<span class="notranslate">texture</span> の遷移品質を大幅に向上させ、他のフィルタリングモードで見えるぼやけを減らすことができますが、パフォーマンスへの影響が最も大きいです。</td>
+        <td>これはミップマップレベル間の異方性フィルタリングを有効にし、<span class="notranslate">texture</span>
+          の遷移品質を大幅に向上させ、他のフィルタリングモードで見えるぼやけを減らすことができますが、パフォーマンスへの影響が最も大きいです。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_tex_mip_filter</span>(filter);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">filter</span></td>
-        <td><span data-keyref="Type_Constant_Mipmapping_Filter"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">ミップマッピングフィルタ定数</a></span></td>
-        <td><span class="notranslate">The mip filter mode to use (a constant, default: <span class="inline">tf_point</span>).</td>
+        <td><span data-keyref="Type_Constant_Mipmapping_Filter"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../LINKGOESHERE">ミップマッピングフィルタ定数</a></span></td>
+        <td><span class="notranslate">The mip filter mode to use (a constant, default: <span
+              class="inline">tf_point</span>).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../../LINKGOESHERE">N/A</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">if keyboard_check(vk_enter)<br />
@@ -74,11 +84,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Mipmapping.htm">ミップマッピング</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_tex_mip_filter_ext.htm"><span class="notranslate">gpu_set_tex_mip_filter_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="Mipmapping.htm">ミップマッピング</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_tex_mip_filter_ext.htm"><span
+              class="notranslate">gpu_set_tex_mip_filter_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_tex_mip_filter
@@ -90,4 +102,5 @@ tf_anisotropic
 gpu_set_tex_mip_filter
 -->
 </body>
+
 </html>

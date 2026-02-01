@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_potential_settings</title>
@@ -13,61 +14,80 @@
   <meta name="search-keywords" content="mp_potential_settings" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">mp_potential_settings</span></h1>
-  <p> <span class="inline">mp_potential_</span> 関数は、この関数で変更可能ないくつかのパラメータを使用して動作します。全体として、このメソッドは次のように動作する。まず、ゴールに向かってまっすぐ進もうとし、パラメータ &quot;ahead&quot; で設定可能なステップ数だけ先を見る（デフォルト値は 3）。この値を小さくすると、前方が見えにくくなるため方向転換が遅くなり、大きくすると方向転換が早くなります。このチェックが衝突につながる場合は、理想的な直進方向からさらに左と右の方向を見るようになります。これはサイズ &quot;rotstep &quot;のステップで行われ（デフォルト値は10）、これを減らすとインスタンスはより多くの動きの可能性を得ますが、より多くの処理能力を必要とするのでより遅くなります。</p>
-  <p>パラメータ &quot;maxrot &quot;は、少し説明が難しいです。インスタンスは現在の移動方向を持ち、maxrot（デフォルト値は30）は、1ステップでその現在の方向から左右にどれだけ方向を変えることができるかを示します。つまり、例えばゴールに向かってまっすぐ進むことができても、この最大方向転換量に違反しない限り、そうすることができる。maxrot を大きな値にすると、インスタンスは各ステップで大きく方向を変えることができ、短い<span class="notranslate">path</span> を見つけるのが容易になりますが、<span class="notranslate">path</span> はより醜く、自然でなくなります。この値を小さくすると、<span class="notranslate">path</span> は滑らかになりますが、より長い回り道をする可能性があります（時にはゴールを見つけるのに失敗することもあります）。最後に、ステップを作れないときの動作は、パラメータ「onspot」の値に依存する。onspotがtrue（デフォルト値）の場合、インスタンスはそのスポットで &quot;maxrot &quot;で示される量だけ回転し、falseの場合は全く動きません。falseに設定すると、車などの場合に便利ですが、インスタンスが<span class="notranslate">path</span> を見つける可能性が低くなります。</p>
+  <p> <span class="inline">mp_potential_</span>
+    関数は、この関数で変更可能ないくつかのパラメータを使用して動作します。全体として、このメソッドは次のように動作する。まず、ゴールに向かってまっすぐ進もうとし、パラメータ &quot;ahead&quot;
+    で設定可能なステップ数だけ先を見る（デフォルト値は
+    3）。この値を小さくすると、前方が見えにくくなるため方向転換が遅くなり、大きくすると方向転換が早くなります。このチェックが衝突につながる場合は、理想的な直進方向からさらに左と右の方向を見るようになります。これはサイズ
+    &quot;rotstep &quot;のステップで行われ（デフォルト値は10）、これを減らすとインスタンスはより多くの動きの可能性を得ますが、より多くの処理能力を必要とするのでより遅くなります。</p>
+  <p>パラメータ &quot;maxrot
+    &quot;は、少し説明が難しいです。インスタンスは現在の移動方向を持ち、maxrot（デフォルト値は30）は、1ステップでその現在の方向から左右にどれだけ方向を変えることができるかを示します。つまり、例えばゴールに向かってまっすぐ進むことができても、この最大方向転換量に違反しない限り、そうすることができる。maxrot
+    を大きな値にすると、インスタンスは各ステップで大きく方向を変えることができ、短い<span class="notranslate">path</span> を見つけるのが容易になりますが、<span
+      class="notranslate">path</span> はより醜く、自然でなくなります。この値を小さくすると、<span class="notranslate">path</span>
+    は滑らかになりますが、より長い回り道をする可能性があります（時にはゴールを見つけるのに失敗することもあります）。最後に、ステップを作れないときの動作は、パラメータ「onspot」の値に依存する。onspotがtrue（デフォルト値）の場合、インスタンスはそのスポットで
+    &quot;maxrot &quot;で示される量だけ回転し、falseの場合は全く動きません。falseに設定すると、車などの場合に便利ですが、インスタンスが<span
+      class="notranslate">path</span> を見つける可能性が低くなります。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">mp_potential_settings</span>(maxrot, rotstep, ahead, onspot)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">mp_potential_settings</span>(maxrot, rotstep, ahead,
+    onspot)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">maxrot</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The number of degrees either side of the current direction that the instance can rotate in a step</span></td>
+        <td><span class="notranslate">The number of degrees either side of the current direction that the instance can
+            rotate in a step</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">rotstep</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The number of degrees either side of the current direction that the instance can check for a collision</span></td>
+        <td><span class="notranslate">The number of degrees either side of the current direction that the instance can
+            check for a collision</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">ahead</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The number of steps ahead that the instance can check for a collision. Larger values are slower than lower ones.</span></td>
+        <td><span class="notranslate">The number of steps ahead that the instance can check for a collision. Larger
+            values are slower than lower ones.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">onspot</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Use this to allow the instance to rotate on the spot when no path is found (true) or not (false)</span></td>
+        <td><span class="notranslate">Use this to allow the instance to rotate on the spot when no path is found (true)
+            or not (false)</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">mp_potential_settings(45, 5, 5, 0);</p>
-  <p>上記のコードでは、 <span class="inline">mp_potential_</span> 関数で、インスタンスが 5 歩先を見て、1 歩ごとに 45 度方向を変え、障害物がある場合は現在の方向から左右に 5 度見て、衝突があった場合はその場で回転しない、という設定を使用するようにしました。</p>
+  <p>上記のコードでは、 <span class="inline">mp_potential_</span> 関数で、インスタンスが 5 歩先を見て、1 歩ごとに 45 度方向を変え、障害物がある場合は現在の方向から左右に 5
+    度見て、衝突があった場合はその場で回転しない、という設定を使用するようにしました。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
-        <div style="float:right">次のページ <a href="mp_potential_step.htm"><span class="notranslate">mp_potential_step</span></a></div>
+        <div style="float:left">前のページ：<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ：<a href="mp_potential_step.htm"><span
+              class="notranslate">mp_potential_step</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_potential_settings
@@ -76,4 +96,5 @@ mp_potential_settings
 mp_potential_settings
 -->
 </body>
+
 </html>

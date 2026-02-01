@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ザ・インスペクター</title>
@@ -12,49 +13,69 @@
   <meta name="rh-index-keywords" content="Inspector" />
   <meta name="search-keywords" content="inspector" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ザ・インスペクター</h1>
   <p><strong>インスペクタ」 </strong>ウィンドウには、選択した要素に関連するすべてのプロパティが、<span class="notranslate">IDE</span> に表示されます。</p>
   <p>どのエディタでも、1つまたは複数の要素を選択し、そのさまざまなプロパティを表示したり変更したりすることができます。</p>
   <div class="image_columns">
-    <figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector.png" style="cursor: nwse-resize;" />
+    <figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector.png"
+        style="cursor: nwse-resize;" />
       <figcaption><span class="notranslate">Sequence</span> トラックの点検</figcaption>
     </figure>
-    <figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Sound.png" style="cursor: nwse-resize;" />
+    <figure><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Sound.png"
+        style="cursor: nwse-resize;" />
       <figcaption>サウンドアセットの検査</figcaption>
     </figure>
   </div>
-  <p>インスペクタは、<span class="notranslate">Windows</span> ウィンドウの上部にある<a data-xref="{title}" href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The<span class="notranslate">GameMaker</span> Menu</a>から開くことができます。</p>
+  <p>インスペクタは、<span class="notranslate">Windows</span> ウィンドウの上部にある<a data-xref="{title}"
+      href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The<span class="notranslate">GameMaker</span>
+      Menu</a>から開くことができます。</p>
   <p><img>このオプションを選択すると、新しいインスペクター・ウインドウが開かれます。</p>
   <p>インスペクタウィンドウを開いた後、<span class="notranslate">IDE</span> の任意の場所にドッキングさせるか、フローティングウィンドウとして使用することができます。</p>
   <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Opening_Windows.png" /></p>
   <h2>インスペクターの使用</h2>
-  <p>インスペクタを使えば、<a data-xref="{title}" href="../Introduction/Workspaces.htm">ワークスペースだけに</a>頼らず、<span class="notranslate">assets</span> を表示、編集することができます。</p>
+  <p>インスペクタを使えば、<a data-xref="{title}" href="../Introduction/Workspaces.htm">ワークスペースだけに</a>頼らず、<span
+      class="notranslate">assets</span> を表示、編集することができます。</p>
   <p>例えば、通常はフルスクリーンでイベントコードを編集し、頻繁に<span class="notranslate">Workspace</span> に戻ってそのオブジェクトのプロパティを編集することがあります。</p>
   <p>インスペクタを使えば、フルスクリーン表示のまま、オブジェクトの詳細を見ることができます。</p>
   <p><img>これにより、フルスクリーンでコードを編集しながら、オブジェクトのプロパティや削除・変更イベントを修正したり、ParentingやVariable Definitionなどを設定することが可能になります。</p>
-  <p>この例では<span class="notranslate">objects</span> のみを取り上げていますが、「インスペクタ」ではさらに多くのことができ、さまざまな種類の<span class="notranslate">assets</span> （<span class="notranslate">Sprites</span> 、<span class="notranslate">Fonts</span> 、アニメーションカーブなど）を編集することができます。</p>
-  <h2>エディターエレメント</h2>
-  <p><span class="notranslate">assets</span> 以外にも、<span class="notranslate">room</span> のレイヤー、<span class="notranslate">Sequence</span> のトラックなど、エディタ内の要素を検査することができます。</p>
-  <p>インスペクタでは、<span class="notranslate">room</span> のレイヤーにフィルタやエフェクトを適用することができます。これは、<span class="notranslate">Room</span> Editor 自体から行うことはできません。</p>
+  <p>この例では<span class="notranslate">objects</span> のみを取り上げていますが、「インスペクタ」ではさらに多くのことができ、さまざまな種類の<span
+      class="notranslate">assets</span> （<span class="notranslate">Sprites</span> 、<span
+      class="notranslate">Fonts</span> 、アニメーションカーブなど）を編集することができます。</p>
+  <h2>エディタエレメント</h2>
+  <p><span class="notranslate">assets</span> 以外にも、<span class="notranslate">room</span> のレイヤー、<span
+      class="notranslate">Sequence</span> のトラックなど、エディタ内の要素を検査することができます。</p>
+  <p>インスペクタでは、<span class="notranslate">room</span> のレイヤーにフィルタやエフェクトを適用することができます。これは、<span
+      class="notranslate">Room</span> Editor 自体から行うことはできません。</p>
   <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Docking.gif" /></p>
-  <p class="note"><span class="note">注</span>：インスペクタを使って非FXレイヤーにフィルタ／エフェクトを適用する場合、それは常に「シングルレイヤー」エフェクトとして適用されます、つまり、その効果はその特定のレイヤーにのみ適用され、その下の他のレイヤーには適用されません。</p>
-  <h2>エディターを開く」ボタン</h2>
-  <p><span class="notranslate">asset</span> を選択している場合、インスペクタの「エディタを開く」をクリックすると、その<span class="notranslate">asset</span> エディタを開くことができます。</p>
-  <p>例えば、<span class="notranslate">object</span> でこの操作を行うと、<span class="notranslate">Object</span> エディターが開き、プロパティの変更、イベントの追加などを行うことができます。</p>
-  <p>ただし、インスタンスやレイヤーなど、<span class="notranslate">room</span> 内部の何かを編集する場合、Inspector は<span class="notranslate">Room</span> Editor 内部のエディタにのみフォーカスされます。</p>
+  <p class="note"><span
+      class="note">注</span>：インスペクタを使って非FXレイヤーにフィルタ／エフェクトを適用する場合、それは常に「シングルレイヤー」エフェクトとして適用されます、つまり、その効果はその特定のレイヤーにのみ適用され、その下の他のレイヤーには適用されません。
+  </p>
+  <h2>エディタを開く」ボタン</h2>
+  <p><span class="notranslate">asset</span> を選択している場合、インスペクタの「エディタを開く」をクリックすると、その<span class="notranslate">asset</span>
+    エディタを開くことができます。</p>
+  <p>例えば、<span class="notranslate">object</span> でこの操作を行うと、<span class="notranslate">Object</span>
+    エディタが開き、プロパティの変更、イベントの追加などを行うことができます。</p>
+  <p>ただし、インスタンスやレイヤーなど、<span class="notranslate">room</span> 内部の何かを編集する場合、Inspector は<span
+      class="notranslate">Room</span> Editor 内部のエディタにのみフォーカスされます。</p>
   <figure><img class="center" src="../assets/Images/IDE Tools/Inspector_Object_Editing.png" />
-    <figcaption>インスタンスの &quot;Open Editor &quot;を選択すると、<span class="notranslate">object</span> エディタではなく、インスタンスエディタが開きます。</figcaption>
+    <figcaption>インスタンスの &quot;Open Editor &quot;を選択すると、<span class="notranslate">object</span> エディタではなく、インスタンスエディタが開きます。
+    </figcaption>
   </figure>
   <p>上図のように、<span class="notranslate">room</span> でインスタンスを選択し、インスペクタの「Open Editor」をクリックすると、そのインスタンスエディタが開きます。</p>
-  <p>同様に、<span class="notranslate">Path</span> レイヤーを選択して「エディターを開く」をクリックすると、<span class="notranslate">Path</span> <span class="notranslate">asset</span> エディターを開く代わりに、レイヤーのプロパティを編集できるレイヤーパネルにフォーカスが移動します。</p>
+  <p>同様に、<span class="notranslate">Path</span> レイヤーを選択して「エディタを開く」をクリックすると、<span class="notranslate">Path</span> <span
+      class="notranslate">asset</span> エディタを開く代わりに、レイヤーのプロパティを編集できるレイヤーパネルにフォーカスが移動します。</p>
   <figure><img class="center" src="../assets/Images/IDE Tools/Inspector_Room_Layers.png" style="cursor: nwse-resize;" />
-    <figcaption><span class="notranslate">Path</span> レイヤーの &quot;Open Editor &quot;を選択すると、そのレイヤーのエディターがフォーカスされます。</figcaption>
+    <figcaption><span class="notranslate">Path</span> レイヤーの &quot;Open Editor &quot;を選択すると、そのレイヤーのエディタがフォーカスされます。
+    </figcaption>
   </figure>
   <h2 id="h">マルチセレクト</h2>
-  <p>インスペクタでは、複数の<span class="notranslate">assets</span> とエレメント（<span class="notranslate">room</span> レイヤーや<span class="notranslate">sequence</span> トラックなど）のプロパティを同時に表示、編集することができます。</p>
-  <p><strong>CTRL</strong>/<strong>CMD</strong>を押しながらマウスの左ボタンでクリックし、希望の<span class="notranslate">assets</span> または要素を選択します。選択した項目は、インスペクタの「複数選択」リストで表示されます。</p>
+  <p>インスペクタでは、複数の<span class="notranslate">assets</span> とエレメント（<span class="notranslate">room</span> レイヤーや<span
+      class="notranslate">sequence</span> トラックなど）のプロパティを同時に表示、編集することができます。</p>
+  <p><strong>CTRL</strong>/<strong>CMD</strong>を押しながらマウスの左ボタンでクリックし、希望の<span class="notranslate">assets</span>
+    または要素を選択します。選択した項目は、インスペクタの「複数選択」リストで表示されます。</p>
   <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Edit_Instance.png" />
     <figcaption><span class="notranslate">Sprite</span> で選択した3曲の<span class="notranslate">Sequence</span> 。</figcaption>
   </figure>
@@ -76,14 +97,20 @@
   <h3>セレクション・ハイライト</h3>
   <p>マルチセレクトリスト内で項目が選択されている場合、エディタ内に赤いアウトラインで表示されます。</p>
   <figure><img class="center" src="../assets/Images/IDE_Input/Inspector_Shared_Values.png" />
-    <figcaption>マルチセレクトリストで選択された<strong>spr_player</strong>トラックは、<span class="notranslate">Sequence</span> エディタに赤い輪郭で表示されます。</figcaption>
+    <figcaption>マルチセレクトリストで選択された<strong>spr_player</strong>トラックは、<span class="notranslate">Sequence</span>
+      エディタに赤い輪郭で表示されます。</figcaption>
   </figure>
-  <p>このアウトラインの色は、[<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">ルーム設定</a>]と[<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">シーケンス設定</a>]で変更することができます。</p>
+  <p>このアウトラインの色は、[<a
+      href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">ルーム設定</a>]と[<a
+      href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">シーケンス設定</a>]で変更することができます。
+  </p>
   <h2>複数のインスペクター</h2>
   <p>複数のインスペクターウィンドウを同時に開くことができ、それぞれのウィンドウは<span class="notranslate">IDE</span> の特定の要素にリンクさせることができます。</p>
   <p>要素をクリックするたびに、開いているすべてのインスペクタが新しい選択項目を表示するように変更されないようにするには、まず各インスペクタウィンドウを1つずつ<strong>ロック </strong>する必要があります。</p>
-  <p>これを行うには、インスペクタを開き、検査する<span class="notranslate">IDE</span> 要素を選択し、インスペクタの<img> ロックボタンをクリックして要素にロックします（下の画像に示されています）。一度インスペクタをロックしたら、別のインスペクタを開いて、この作業を繰り返すことができます。</p>
-  <p><img>ロックされたインスペクタウィンドウは、インスペクション中の要素の値の編集をロックするものではないことに注意してください。これは単にインスペクタを選択した要素にロックするだけで、元の要素が<span class="notranslate">IDE</span> のメインフォーカスでないときでも、いつでもその要素の編集を続けることができます。</p>
+  <p>これを行うには、インスペクタを開き、検査する<span class="notranslate">IDE</span> 要素を選択し、インスペクタの<img>
+    ロックボタンをクリックして要素にロックします（下の画像に示されています）。一度インスペクタをロックしたら、別のインスペクタを開いて、この作業を繰り返すことができます。</p>
+  <p><img>ロックされたインスペクタウィンドウは、インスペクション中の要素の値の編集をロックするものではないことに注意してください。これは単にインスペクタを選択した要素にロックするだけで、元の要素が<span
+      class="notranslate">IDE</span> のメインフォーカスでないときでも、いつでもその要素の編集を続けることができます。</p>
   <p>ロック機能を使用すると、以下の例に示すように、複数のインスペクタを同時に開き、それぞれを特定の<span class="notranslate">asset</span> にロックすることができます。</p>
   <p><img class="center" src="../assets/Images/IDE_Input/Inspector_Select_Within_Multi_Select.gif" /></p>
   <p> </p>
@@ -92,11 +119,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a data-xref="{title}" href="../IDE_Navigation/IDE_Input.htm">IDE入力とナビゲーション</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="../IDE_Navigation/Menus.htm">メニュー</a></div>
+        <div style="float:left">前のページ：<a data-xref="{title}" href="../IDE_Navigation/IDE_Input.htm">IDE入力とナビゲーション</a>
+        </div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="../IDE_Navigation/Menus.htm">メニュー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Micro Web Server
@@ -107,4 +136,5 @@ HTML5 Server
 web_server
 -->
 </body>
+
 </html>

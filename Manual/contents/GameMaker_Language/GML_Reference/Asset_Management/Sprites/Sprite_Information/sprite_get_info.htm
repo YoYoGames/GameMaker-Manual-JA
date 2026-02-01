@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_get_info</title>
@@ -13,10 +14,15 @@
   <meta name="search-keywords" content="sprite_get_info" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">sprite_get_info</span></h1>
-  <p>この関数は、指定された<span class="notranslate">sprite</span> の情報を取得するために使用されます。<span class="notranslate">sprite</span> のインデックス（<a href="../../../../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>追加した<span class="notranslate">asset</span> や<span class="notranslate">runtime</span> で<a href="../Sprite_Manipulation/sprite_add.htm">追加した</a>スプライトでも可）を指定すると、この関数は以下の変数を持つ<a href="../../../../GML_Overview/Structs.htm">構造</a>体を返します。</p>
+  <p>この関数は、指定された<span class="notranslate">sprite</span> の情報を取得するために使用されます。<span class="notranslate">sprite</span>
+    のインデックス（<a href="../../../../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>追加した<span
+      class="notranslate">asset</span> や<span class="notranslate">runtime</span> で<a
+      href="../Sprite_Manipulation/sprite_add.htm">追加した</a>スプライトでも可）を指定すると、この関数は以下の変数を持つ<a
+      href="../../../../GML_Overview/Structs.htm">構造</a>体を返します。</p>
   <table>
     <colgroup>
       <col />
@@ -25,12 +31,14 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3" style=""><span data-keyref="Type_Struct_Sprite_Info"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm" target="_blank">スプライト情報構造体</a></span></th>
+        <th colspan="3" style=""><span data-keyref="Type_Struct_Sprite_Info"><a
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm"
+              target="_blank">スプライト情報構造体</a></span></th>
       </tr>
       <tr>
         <th style="">バリアブル</th>
-        <th>タイプ</th>
-        <th style="">商品説明</th>
+        <th>型</th>
+        <th style="">説明</th>
       </tr>
       <tr>
         <td style=""><strong>幅</strong></td>
@@ -55,15 +63,22 @@
       <tr>
         <td style=""><strong>トランスペアレント</strong></td>
         <td>ブーリアン</td>
-        <td style=""><span class="inline">true</span> が透明とマークされている場合は、 、そうでない場合は 
-         <span class="notranslate">sprite</span> <span class="inline">false</span><br /><span>(これは または同様の関数を通してのみ指定可能で、 で作成された に対しては となります ) <span class="inline"><a href="../Sprite_Manipulation/sprite_add.htm">sprite_add()</a></span> <span class="notranslate">sprites</span> <span class="notranslate">IDE</span> <span class="inline">false</span> </span>
+        <td style=""><span class="inline">true</span> が透明とマークされている場合は、 、そうでない場合は
+          <span class="notranslate">sprite</span> <span class="inline">false</span><br /><span>(これは または同様の関数を通してのみ指定可能で、
+            で作成された に対しては となります ) <span class="inline"><a
+                href="../Sprite_Manipulation/sprite_add.htm">sprite_add()</a></span> <span
+              class="notranslate">sprites</span> <span class="notranslate">IDE</span> <span class="inline">false</span>
+          </span>
         </td>
       </tr>
       <tr>
         <td style=""><strong>平滑</strong></td>
         <td>ブーリアン</td>
-        <td style=""><span class="inline">true</span> がスムースとマークされている場合、 、そうでない場合は 
-         <span class="notranslate">sprite</span> <span class="inline">false</span><br /><span><span>(これは <span class="inline"><a href="../Sprite_Manipulation/sprite_add.htm">sprite_add()</a></span> または同様の関数を通してのみ指定可能で、<span class="notranslate">sprites</span> で作成された<span class="notranslate">IDE</span> に対しては <span class="inline">false</span> となります)</span><span></span></span>
+        <td style=""><span class="inline">true</span> がスムースとマークされている場合、 、そうでない場合は
+          <span class="notranslate">sprite</span> <span class="inline">false</span><br /><span><span>(これは <span
+                class="inline"><a href="../Sprite_Manipulation/sprite_add.htm">sprite_add()</a></span>
+              または同様の関数を通してのみ指定可能で、<span class="notranslate">sprites</span> で作成された<span class="notranslate">IDE</span>
+              に対しては <span class="inline">false</span> となります)</span><span></span></span>
         </td>
       </tr>
       <tr>
@@ -108,27 +123,34 @@
       <tr>
         <td style=""><strong>use_mask</strong></td>
         <td>ブーリアン</td>
-        <td style=""><span class="inline">true</span> この がコリジョンマスクを使用している場合、それ以外の場合<span class="notranslate">sprite</span> <span class="inline">false</span></td>
+        <td style=""><span class="inline">true</span> この がコリジョンマスクを使用している場合、それ以外の場合<span
+            class="notranslate">sprite</span> <span class="inline">false</span></td>
       </tr>
       <tr>
         <td style=""><strong>num_masks</strong></td>
         <td>じっさいにある</td>
-        <td style="">この<span class="notranslate">sprite</span> のマスクの数（<span class="notranslate">sprite</span> がフレームごとのマスクを使用する場合、1 より大きくなる）。</td>
+        <td style="">この<span class="notranslate">sprite</span> のマスクの数（<span class="notranslate">sprite</span>
+          がフレームごとのマスクを使用する場合、1 より大きくなる）。</td>
       </tr>
       <tr>
         <td style=""><strong>九つ子</strong><strong></strong></td>
         <td>構造体</td>
-        <td style="">この<span class="notranslate">sprite</span> の<a href="../Nine_Slice_Struct.htm">ナインスライスストラクチャ</a>、またはナインスライスデータがない場合は <span class="inline">undefined</span> 。</td>
+        <td style="">この<span class="notranslate">sprite</span> の<a
+            href="../Nine_Slice_Struct.htm">ナインスライスストラクチャ</a>、またはナインスライスデータがない場合は <span class="inline">undefined</span>
+          。</td>
       </tr>
       <tr>
         <td style=""><strong>メッセージ</strong></td>
         <td>勢揃い</td>
-        <td style="">この<span class="notranslate">sprite</span> の放送メッセージの配列。各放送メッセージは、メッセージに関する情報を含む<span class="notranslate">struct</span> である（詳細は「一般的な<span class="notranslate">Sprite</span> データ」の項を参照）。</td>
+        <td style="">この<span class="notranslate">sprite</span> の放送メッセージの配列。各放送メッセージは、メッセージに関する情報を含む<span
+            class="notranslate">struct</span> である（詳細は「一般的な<span class="notranslate">Sprite</span> データ」の項を参照）。</td>
       </tr>
       <tr>
         <td style=""><strong>フレーム情報</strong></td>
         <td>勢揃い</td>
-        <td style="">この<span class="notranslate">sprite</span> のフレームの配列。各フレームはタイミングに関する情報を含む<span class="notranslate">struct</span> である（詳細は &quot;一般的な<span class="notranslate">Sprite</span> データ&quot; を参照）。</td>
+        <td style="">この<span class="notranslate">sprite</span> のフレームの配列。各フレームはタイミングに関する情報を含む<span
+            class="notranslate">struct</span> である（詳細は &quot;一般的な<span class="notranslate">Sprite</span> データ&quot; を参照）。
+        </td>
       </tr>
     </tbody>
   </table>
@@ -141,17 +163,21 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sprite_Info"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm" target="_blank">スプライト情報構造体</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sprite_Info"><a
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm"
+              target="_blank">スプライト情報構造体</a></span></th>
       </tr>
       <tr>
         <th>バリアブル</th>
         <th style="">タイプ</th>
-        <th style="">商品説明</th>
+        <th style="">説明</th>
       </tr>
       <tr>
         <td><strong>フレーム</strong></td>
         <td style="">勢揃い</td>
-        <td style="">この<span class="notranslate">sprite</span> のフレームの配列。各フレームは、テクスチャに関する情報を含む<span class="notranslate">struct</span> です（詳細は、「ビットマップ<span class="notranslate">Sprite</span> データ」の項を参照してください）。</td>
+        <td style="">この<span class="notranslate">sprite</span> のフレームの配列。各フレームは、テクスチャに関する情報を含む<span
+            class="notranslate">struct</span> です（詳細は、「ビットマップ<span class="notranslate">Sprite</span> データ」の項を参照してください）。
+        </td>
       </tr>
     </tbody>
   </table>
@@ -164,12 +190,14 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3" style=""><span data-keyref="Type_Struct_Sprite_Info"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm" target="_blank">スプライト情報構造体</a></span></th>
+        <th colspan="3" style=""><span data-keyref="Type_Struct_Sprite_Info"><a
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm"
+              target="_blank">スプライト情報構造体</a></span></th>
       </tr>
       <tr>
         <th style="">バリアブル</th>
-        <th>タイプ</th>
-        <th style="">商品説明</th>
+        <th>型</th>
+        <th style="">説明</th>
       </tr>
       <tr>
         <td style=""><strong>ヌムアトラス</strong></td>
@@ -184,7 +212,8 @@
       <tr>
         <td style=""><strong>じょうよわ</strong></td>
         <td>ブーリアン</td>
-        <td style=""><span class="inline">true</span> この がプリマルチプライドとしてマークされている場合、そうでない場合<span class="notranslate">sprite</span> <span class="inline">false</span></td>
+        <td style=""><span class="inline">true</span> この がプリマルチプライドとしてマークされている場合、そうでない場合<span
+            class="notranslate">sprite</span> <span class="inline">false</span></td>
       </tr>
       <tr>
         <td style=""><strong>animation_names</strong></td>
@@ -199,28 +228,35 @@
       <tr>
         <td style=""><strong>骨子</strong></td>
         <td>勢揃い</td>
-        <td style="">このスプライトの各骨の<span class="notranslate">structs</span> を含む配列（詳細は &quot;Spine<span class="notranslate">Sprite</span> Data&quot; を参照）。</td>
+        <td style="">このスプライトの各骨の<span class="notranslate">structs</span> を含む配列（詳細は &quot;Spine<span
+            class="notranslate">Sprite</span> Data&quot; を参照）。</td>
       </tr>
       <tr>
         <td style=""><strong>スロット</strong></td>
         <td>勢揃い</td>
-        <td style="">このスプライトの各スロットに対応する<span class="notranslate">structs</span> を含む配列 (詳細は &quot;Spine<span class="notranslate">Sprite</span> Data&quot; を参照)。</td>
+        <td style="">このスプライトの各スロットに対応する<span class="notranslate">structs</span> を含む配列 (詳細は &quot;Spine<span
+            class="notranslate">Sprite</span> Data&quot; を参照)。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>この関数は、与えられた<span class="notranslate">sprite</span> が存在しない場合、 <span class="inline">undefined</span> を返します。また，この<span class="notranslate">struct</span> で返される情報は，<strong>読み取り専用と</strong>考えるべきで，これらの変数を変更しても<span class="notranslate">sprite</span> には影響がないことに注意してください。</p>
-  <p>以下のセクションは、<span class="notranslate">structs</span> のタイプに基づき、返される<span class="notranslate">struct</span> に含まれる配列と<span class="notranslate">sprite</span> に関する情報を含んでいる。</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">一般的な<span class="notranslate">Sprite</span> データ</a></p>
+  <p>この関数は、与えられた<span class="notranslate">sprite</span> が存在しない場合、 <span class="inline">undefined</span> を返します。また，この<span
+      class="notranslate">struct</span> で返される情報は，<strong>読み取り専用と</strong>考えるべきで，これらの変数を変更しても<span
+      class="notranslate">sprite</span> には影響がないことに注意してください。</p>
+  <p>以下のセクションは、<span class="notranslate">structs</span> のタイプに基づき、返される<span class="notranslate">struct</span>
+    に含まれる配列と<span class="notranslate">sprite</span> に関する情報を含んでいる。</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">一般的な<span
+        class="notranslate">Sprite</span> データ</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p>このセクションでは、あらゆる種類のスプライトのために<span class="notranslate">struct</span> に含まれる変数に関する情報が記載されています。</p>
-    <p>変数 <span class="inline">messages</span> は、与えられた<span class="notranslate">sprite</span> に存在する放送メッセージの情報を格納する配列である。この配列の各放送メッセージは、以下の変数を含む<span class="notranslate">struct</span> である。</p>
+    <p>変数 <span class="inline">messages</span> は、与えられた<span class="notranslate">sprite</span>
+      に存在する放送メッセージの情報を格納する配列である。この配列の各放送メッセージは、以下の変数を含む<span class="notranslate">struct</span> である。</p>
     <table>
       <tbody>
         <tr>
           <th style="">変数名</th>
           <th>データ型</th>
-          <th style="">商品説明</th>
+          <th style="">説明</th>
         </tr>
         <tr>
           <td style=""><strong>フレーム</strong></td>
@@ -235,13 +271,14 @@
       </tbody>
     </table>
     <p> </p>
-    <p> <span class="inline">frame_info</span> 変数は、スプライトのフレームのタイミングに関する情報を格納する配列です。この配列の各フレームは、以下の変数を含む<span class="notranslate">struct</span> です。</p>
+    <p> <span class="inline">frame_info</span> 変数は、スプライトのフレームのタイミングに関する情報を格納する配列です。この配列の各フレームは、以下の変数を含む<span
+        class="notranslate">struct</span> です。</p>
     <table>
       <tbody>
         <tr>
           <th style="">変数名</th>
           <th>データ型</th>
-          <th style="">商品説明</th>
+          <th style="">説明</th>
         </tr>
         <tr>
           <td style=""><strong>フレーム</strong></td>
@@ -262,16 +299,20 @@
     </table>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">ビットマップ<span class="notranslate">Sprite</span> データ</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">ビットマップ<span
+        class="notranslate">Sprite</span> データ</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p>ビットマップ用<span class="notranslate">struct</span> <span class="notranslate">sprites</span> (<span class="notranslate">sprites</span> で<span class="notranslate">Spine</span> や SWF 型<span class="notranslate">sprites</span> でないもの ) に含まれる変数に関する情報を記載します。</p>
-    <p> <span class="inline">frames</span> 変数は、スプライトのフレーム<span class="notranslate">textures</span> の情報を格納する配列です。この配列の各フレームは、以下の変数を含む<span class="notranslate">struct</span> です。</p>
+    <p>ビットマップ用<span class="notranslate">struct</span> <span class="notranslate">sprites</span> (<span
+        class="notranslate">sprites</span> で<span class="notranslate">Spine</span> や SWF 型<span
+        class="notranslate">sprites</span> でないもの ) に含まれる変数に関する情報を記載します。</p>
+    <p> <span class="inline">frames</span> 変数は、スプライトのフレーム<span class="notranslate">textures</span>
+      の情報を格納する配列です。この配列の各フレームは、以下の変数を含む<span class="notranslate">struct</span> です。</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th style="">変数名</th>
           <th>データ型</th>
-          <th style="">商品説明</th>
+          <th style="">説明</th>
         </tr>
         <tr>
           <td style=""><strong>x</strong></td>
@@ -311,7 +352,8 @@
         <tr>
           <td style=""><strong>クロップ幅</strong></td>
           <td>じっさいにある</td>
-          <td style=""><span class="notranslate">texture</span> のページで、トリミングと拡大縮小を行った後の実際の枠の幅（<span data-keyref="GameMaker Name">GameMaker は</span>画像の周りの空きスペースを自動的にトリミングし、またサイズが合わない場合は縮小するため）。</td>
+          <td style=""><span class="notranslate">texture</span> のページで、トリミングと拡大縮小を行った後の実際の枠の幅（<span
+              data-keyref="GameMaker Name">GameMaker は</span>画像の周りの空きスペースを自動的にトリミングし、またサイズが合わない場合は縮小するため）。</td>
         </tr>
         <tr>
           <td style=""><strong>クロップハイト</strong></td>
@@ -332,16 +374,20 @@
     </table>
     <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">背骨<span class="notranslate">Sprite</span> データ</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">背骨<span
+        class="notranslate">Sprite</span> データ</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p>このセクションは、<span class="notranslate">struct</span> for<span class="notranslate">Spine</span> <span class="notranslate">sprites</span> に含まれる変数に関する情報を含んでいます。</p>
-    <p> <span class="inline">bones</span> 変数は、与えられた<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> のすべての骨に関する情報を含む配列です。この配列の各骨は、以下の変数を含む<span class="notranslate">struct</span> です。</p>
+    <p>このセクションは、<span class="notranslate">struct</span> for<span class="notranslate">Spine</span> <span
+        class="notranslate">sprites</span> に含まれる変数に関する情報を含んでいます。</p>
+    <p> <span class="inline">bones</span> 変数は、与えられた<span class="notranslate">Spine</span> <span
+        class="notranslate">sprite</span> のすべての骨に関する情報を含む配列です。この配列の各骨は、以下の変数を含む<span class="notranslate">struct</span>
+      です。</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th style="">変数名</th>
           <th>データ型</th>
-          <th style="">商品説明</th>
+          <th style="">説明</th>
         </tr>
         <tr>
           <td style=""><strong>親</strong></td>
@@ -405,14 +451,17 @@
         </tr>
       </tbody>
     </table>
-    <p class="note"><strong>注</strong>：Spineの内部変数に関する詳細は、<a href="http://en.esotericsoftware.com/spine-documentation" title="Spine Documentation">Spineのドキュメントを</a>参照してください。</p>
-    <p> <span class="inline">slots</span> 変数は、与えられた<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> のすべてのスロットの情報を含む配列である。この配列の各スロットは、以下の変数を含む<span class="notranslate">struct</span> です。</p>
+    <p class="note"><strong>注</strong>：Spineの内部変数に関する詳細は、<a href="http://en.esotericsoftware.com/spine-documentation"
+        title="Spine Documentation">Spineのドキュメントを</a>参照してください。</p>
+    <p> <span class="inline">slots</span> 変数は、与えられた<span class="notranslate">Spine</span> <span
+        class="notranslate">sprite</span> のすべてのスロットの情報を含む配列である。この配列の各スロットは、以下の変数を含む<span
+        class="notranslate">struct</span> です。</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th style="">変数名</th>
           <th>データ型</th>
-          <th style="">商品説明</th>
+          <th style="">説明</th>
         </tr>
         <tr>
           <td style=""><strong>名前</strong></td>
@@ -481,30 +530,36 @@
         </tr>
       </tbody>
     </table>
-    <p class="note"><strong>* 注</strong>：ダークカラーの変数は、スロットが<a href="http://en.esotericsoftware.com/spine-slots#Tint-black" title="Tint Black">Tint Blackを</a>有効にしている場合のみ利用可能です。</p>
+    <p class="note"><strong>* 注</strong>：ダークカラーの変数は、スロットが<a href="http://en.esotericsoftware.com/spine-slots#Tint-black"
+        title="Tint Black">Tint Blackを</a>有効にしている場合のみ利用可能です。</p>
     <p> </p>
   </div>
   <p> </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">sprite_get_info</span>(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../../The_Asset_Editors/Sprites.htm" target="_blank">スプライトアセット</a></span></td>
+        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../../The_Asset_Editors/Sprites.htm"
+              target="_blank">スプライトアセット</a></span></td>
         <td><span class="notranslate">The index of the sprite to get the information for.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h4>リターンズ</h4>
-  <p class="code"><span data-keyref="Type_Struct_Sprite_Info"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm" target="_blank">Sprite Info Struct</a></span> (or <span data-keyref="Type_Undefined"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">undefined</a></span>)</p>
+  <p class="code"><span data-keyref="Type_Struct_Sprite_Info"><a
+        href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_info.htm"
+        target="_blank">Sprite Info Struct</a></span> (or <span data-keyref="Type_Undefined"><a
+        href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">undefined</a></span>)
+  </p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _info = sprite_get_info(sprite_index);<br />
@@ -517,21 +572,27 @@
         for (var i = 0; i &lt; _messageCount; i ++)<br />
         {<br />
             var _message = _messages[i];<br />
-            show_debug_message(&quot;Message at frame &quot; + string(_message.frame) + &quot;: &quot; + _message.message);<br />
+            show_debug_message(&quot;Message at frame &quot; + string(_message.frame) + &quot;: &quot; +
+    _message.message);<br />
         }<br />
     }
   </p>
-  <p><span class="notranslate">struct</span>上記のコードは、インスタンスの情報<span class="notranslate">sprite</span> を取得し、それが <span class="inline">undefined</span> でなく、そのタイプが 0（ビットマップであることを意味します<span class="notranslate">sprite</span> ）であるかどうかをチェックします。この場合、その<span class="notranslate">sprite</span> のブロードキャストメッセージの配列を取得し、for<span class="notranslate">loop</span> を実行して各ブロードキャストメッセージを（そのフレームとともに）出力ログに表示します。</p>
+  <p><span class="notranslate">struct</span>上記のコードは、インスタンスの情報<span class="notranslate">sprite</span> を取得し、それが <span
+      class="inline">undefined</span> でなく、そのタイプが 0（ビットマップであることを意味します<span class="notranslate">sprite</span>
+    ）であるかどうかをチェックします。この場合、その<span class="notranslate">sprite</span> のブロードキャストメッセージの配列を取得し、for<span
+      class="notranslate">loop</span> を実行して各ブロードキャストメッセージを（そのフレームとともに）出力ログに表示します。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sprite_Information.htm">スプライト情報</a></div>
-        <div style="float:right">次のページ <a href="../Sprite_Manipulation/sprite_exists.htm"><span class="notranslate">sprite_exists</span></a></div>
+        <div style="float:left">前のページ：<a href="Sprite_Information.htm">スプライト情報</a></div>
+        <div style="float:right">次のページ：<a href="../Sprite_Manipulation/sprite_exists.htm"><span
+              class="notranslate">sprite_exists</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_info
@@ -540,4 +601,5 @@ sprite_get_info
 sprite_get_info
 -->
 </body>
+
 </html>

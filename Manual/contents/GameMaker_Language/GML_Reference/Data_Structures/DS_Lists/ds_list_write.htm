@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_list_write</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
@@ -17,43 +19,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_list_write</span></h1>
-  <p>この関数は，<span class="notranslate">string</span> を返します。 <a href="ds_list_read.htm"><span class="inline">ds_list_read()</span></a>関数を使用します。</p>
-  <p class="note"><b>注</b>：返される<span class="notranslate">string</span> は，人間が読めるものではなく，データ構造の内容のダンプである<span class="notranslate">string</span> 。</p>
+  <p>この関数は，<span class="notranslate">string</span> を返します。 <a href="ds_list_read.htm"><span
+        class="inline">ds_list_read()</span></a>関数を使用します。</p>
+  <p class="note"><b>注</b>：返される<span class="notranslate">string</span> は，人間が読めるものではなく，データ構造の内容のダンプである<span
+      class="notranslate">string</span> 。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_list_write</span>(id);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_DS_List"></span></td>
         <td><span class="notranslate">The id of the data structure to write.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">ini_open(&quot;save.ini&quot;);<br/> var str = ds_list_write(list);<br/> ini_write_string(&quot;Lists&quot;, &quot;0&quot;, str);<br/> ds_list_clear(list);
-    <br/> ini_close();
+  <p class="code">ini_open(&quot;save.ini&quot;);<br /> var str = ds_list_write(list);<br />
+    ini_write_string(&quot;Lists&quot;, &quot;0&quot;, str);<br /> ds_list_clear(list);
+    <br /> ini_close();
   </p>
-  <p>上記のコードでは、iniファイルを開き、変数 &quot;list &quot;にインデックスされたDSリストに格納されている情報を含む<span class="notranslate">string</span> を書き込んでいます。その後、リストがクリアされ、ini ファイルが閉じられる。</p>
+  <p>上記のコードでは、iniファイルを開き、変数 &quot;list &quot;にインデックスされたDSリストに格納されている情報を含む<span class="notranslate">string</span>
+    を書き込んでいます。その後、リストがクリアされ、ini ファイルが閉じられる。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Lists.htm">DS一覧</a></div>
-        <div style="float:right">次のページ <a href="ds_list_mark_as_list.htm"><span class="notranslate">ds_list_mark_as_list</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Lists.htm">DS一覧</a></div>
+        <div style="float:right">次のページ：<a href="ds_list_mark_as_list.htm"><span
+              class="notranslate">ds_list_mark_as_list</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_write
@@ -62,4 +72,6 @@ ds_list_write
 ds_list_write
 -->
 
-</body></html>
+</body>
+
+</html>

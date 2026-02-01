@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_destroy</title>
@@ -12,29 +13,38 @@
   <meta name="rh-index-keywords" content="layer_destroy" />
   <meta name="search-keywords" content="layer_destroy" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_destroy</span></h1>
-  <p>この関数は、指定されたレイヤーを破壊します。レイヤー ID (レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> - これはパフォーマンスに影響します) を入力すると、現在の<span class="notranslate">room</span> から削除されます。レイヤーが<span class="notranslate">room</span> エディタでデザインされたものである場合、次に<span class="notranslate">room</span> を離れて戻ったとき、レイヤーは元の内容で再び作成されます。しかし、<span class="notranslate">room</span> が永続化されている場合、<span class="notranslate">room</span> の永続化を再度オフにしないと、レイヤーは除去されます。この方法でレイヤーを破壊すると、そのコンテンツもすべて削除されます。したがって、背景や<span class="notranslate">tile</span> マップなどの参照 ID は無効となり、レイヤーに割り当てられたインスタンスはすべて破壊されます（そのインスタンスがある場合は、同時に<strong>破棄イベントと</strong> <strong>クリーンアップ イベントを</strong>実行します）。</p>
+  <p>この関数は、指定されたレイヤーを破壊します。レイヤー ID (レイヤーを作成するときに <a href="layer_create.htm"><span
+        class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> - これはパフォーマンスに影響します)
+    を入力すると、現在の<span class="notranslate">room</span> から削除されます。レイヤーが<span class="notranslate">room</span>
+    エディタでデザインされたものである場合、次に<span class="notranslate">room</span> を離れて戻ったとき、レイヤーは元の内容で再び作成されます。しかし、<span
+      class="notranslate">room</span> が永続化されている場合、<span class="notranslate">room</span>
+    の永続化を再度オフにしないと、レイヤーは除去されます。この方法でレイヤーを破壊すると、そのコンテンツもすべて削除されます。したがって、背景や<span class="notranslate">tile</span> マップなどの参照
+    ID は無効となり、レイヤーに割り当てられたインスタンスはすべて破壊されます（そのインスタンスがある場合は、同時に<strong>破棄イベントと</strong> <strong>クリーンアップ
+      イベントを</strong>実行します）。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_destroy</span>(layer_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer_id</span></td>
         <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
-        <td><span class="notranslate">The unique ID value of the layer to destroy (or the layer name as a string)</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to destroy (or the layer name as a string)</span>
+        </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -42,18 +52,20 @@
     {<br />
         layer_destroy(global.Bullet_Layer);<br />
     }</p>
-  <p>上記のコードは、<span class="notranslate">object</span> &quot;obj_Bullet_Parent&quot; のインスタンスが存在するかどうかをチェックし、存在しない場合は、グローバル変数に格納されているIDでレイヤーを破壊します。</p>
+  <p>上記のコードは、<span class="notranslate">object</span> &quot;obj_Bullet_Parent&quot;
+    のインスタンスが存在するかどうかをチェックし、存在しない場合は、グローバル変数に格納されているIDでレイヤーを破壊します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
-        <div style="float:right">次のページ <a href="layer_x.htm"><span class="notranslate">layer_x</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ：<a href="layer_x.htm"><span class="notranslate">layer_x</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_destroy
@@ -62,4 +74,5 @@ layer_destroy
 layer_destroy
 -->
 </body>
+
 </html>

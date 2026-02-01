@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_seek</title>
@@ -12,14 +13,19 @@
   <meta name="rh-index-keywords" content="buffer_seek,buffer_seek_start,buffer_seek_relative,buffer_seek_end" />
   <meta name="search-keywords" content="buffer_seek,buffer_seek_start,buffer_seek_relative,buffer_seek_end" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_seek</span></h1>
-  <p>この関数は<span class="notranslate">buffer</span> の中を移動し、開始、終了、またはデータの読み書きの際に最後に使用した位置からの相対的な位置を見つけるために使用します。たとえば、ベースが相対でオフセットが4であれば、<span class="notranslate">buffer</span> の位置は現在の位置から4バイト移動します。以下の点に注意してください。</p>
+  <p>この関数は<span class="notranslate">buffer</span>
+    の中を移動し、開始、終了、またはデータの読み書きの際に最後に使用した位置からの相対的な位置を見つけるために使用します。たとえば、ベースが相対でオフセットが4であれば、<span
+      class="notranslate">buffer</span> の位置は現在の位置から4バイト移動します。以下の点に注意してください。</p>
   <ul class="colour">
     <li><span class="notranslate">buffer</span> を通してシークバックするオフセットには、正の値だけでなく、負の値を使用することもできます。</li>
-    <li><span class="notranslate">buffer</span> がラップタイプで、<span class="notranslate">buffer</span> の終端を過ぎてオフセットした場合、シーク位置もラップされます。</li>
-    <li><span class="notranslate">buffer</span> が「wrap」タイプでない場合、オフセットによってシークが<span class="notranslate">buffer</span> の制限外になる場合でも、シークは<span class="notranslate">buffer</span> の先頭または末尾にクランプされます。</li>
+    <li><span class="notranslate">buffer</span> がラップタイプで、<span class="notranslate">buffer</span>
+      の終端を過ぎてオフセットした場合、シーク位置もラップされます。</li>
+    <li><span class="notranslate">buffer</span> が「wrap」タイプでない場合、オフセットによってシークが<span class="notranslate">buffer</span>
+      の制限外になる場合でも、シークは<span class="notranslate">buffer</span> の先頭または末尾にクランプされます。</li>
   </ul>
   <p>以下の定数は、シークトゥの「ベース」引数として受け入れられる。</p>
   <table>
@@ -29,11 +35,12 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Buffer_Seek"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_seek.htm">バッファシーク定数</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Buffer_Seek"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_seek.htm">バッファシーク定数</a></span></th>
       </tr>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_seek_start</span></td>
@@ -50,53 +57,59 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">buffer_seek</span>(buffer, base, offset);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td>
-        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">バッファID</a></span></td>
+        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../LINKGOESHERE">バッファID</a></span></td>
         <td><span class="notranslate">The index of the buffer to use.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">base</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../LINKGOESHERE">リアル</a></span></td>
         <td><span class="notranslate">The base position to seek.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">offset</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../LINKGOESHERE">リアル</a></span></td>
         <td><span class="notranslate">The data offset value.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">N/A</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../LINKGOESHERE">N/A</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">buffer_seek(buff, buffer_seek_start, 0);<br />
     buffer_write(buff, buffer_s16, 0);<br />
     buffer_write(buff, buffer_s16, x);<br />
     buffer_write(buff, buffer_s16, y);</p>
-  <p>上記のコードは、変数 &quot;buff &quot;に格納されたidを持つ<span class="notranslate">buffer</span> の開始点を見つけ、そこに一連の符号付き16ビット整数値を書き込んでいます。</p>
+  <p>上記のコードは、変数 &quot;buff &quot;に格納されたidを持つ<span class="notranslate">buffer</span>
+    の開始点を見つけ、そこに一連の符号付き16ビット整数値を書き込んでいます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_tell.htm"><span class="notranslate">buffer_tell</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_tell.htm"><span class="notranslate">buffer_tell</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_seek
@@ -108,4 +121,5 @@ buffer_seek_end
 buffer_seek
 -->
 </body>
+
 </html>

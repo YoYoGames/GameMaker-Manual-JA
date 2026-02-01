@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>スプライトの作成</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -12,52 +14,88 @@
   <meta name="search-keywords" content="sprites" />
   <meta name="robots" content="NOODP" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>スプライトの作成</h1>
-  <p>さて、<a href="What_Is_Programming_.htm">プログラムとは何か</a>ということがわかったところで、いよいよ<span data-keyref="GameMaker Name">GameMakerで</span>ゲームを作るための様々な<strong>アセットについて見て </strong>いきましょう。まず、<strong>スプライトについて</strong>説明します。
-    これは一般的に、どんなプロジェクトでも最初に必要になるものの一つです。<a href="../Introduction/The_Asset_Browser.htm"> <span class="notranslate">Asset</span> </a> ブラウザのセクションで説明したように、<span class="notranslate">sprite</span> はアニメーションが可能な画像です（ただし、アニメーションが可能である必要はありません）。
-    を作成し、画面に描画します。一般に、<span class="notranslate">sprite</span> は<span class="notranslate">object</span> に関連付けられますが、コードから、または<span class="notranslate">sprites</span> エディタの<strong>アセットレイヤーで</strong>、<span class="notranslate">room</span> を単独で描くことができます（これについては、後で詳しく説明します。
-   <a href="Rooms.htm">ルームの</a>セクションで説明します）。また、<span class="notranslate">sprite</span> を作成して<a class="glossterm" data-glossterm="かわらばん" href="#">タイルセットとして</a>使用することもできますが、このオプションについても、後のセクションで検討します。</p>
-  <p><a href="../Introduction/The_Start_Page.htm">スタート</a> <img> <a href="../Introduction/The_Start_Page.htm"></a>ページから新しいプロジェクトを作成すると、<span class="notranslate">asset</span> ブラウザには必要なリソース用の空のフォルダしかないので、<span class="notranslate">sprite</span> <span class="notranslate">asset</span> フォルダ上で右クリックし、<strong>作成</strong>オプションを選択する必要があります（<span class="notranslate">sprite</span> <span class="notranslate">asset</span> フォルダがない場合は、右クリックメニューから作成し、<span class="notranslate">sprite</span> を作成するか、単にアセットの任意の場所で右クリックすることもできます）。
-    ブラウザで作成します）。これにより、新しい<span class="notranslate">sprite</span> <span class="notranslate">asset</span> が作成されて <a href="../The_Asset_Editors/Sprites.htm"><strong>スプライトエディタ</strong></a>をダブルクリックしてください（<span class="notranslate">sprite</span> エディタが開かない場合は、新しい<span class="notranslate">asset</span> で<img> をダブルクリックしてください）。</p>
-  <p><img>ご覧のように、ウィンドウの左上には<span class="notranslate">sprite</span> の<strong>名前を </strong>入力する欄があります。 すべての<span class="notranslate">sprites</span> （および他のすべての<span class="notranslate">assets</span> ）には、その名前を入力する必要があります。
-    という名前をつけて、ユーザー（と<span data-keyref="GameMaker Name">GameMaker</span>）が簡単に識別できるようにする必要があります。 <strong> <a class="glossterm" data-glossterm="変数" href="#">変数</a></strong>を保持するID値
-    リソース、この場合は<span class="notranslate">sprite</span> を「指し示す」ものです。特定の<span class="notranslate">sprite</span> が<span class="notranslate">asset</span> なのか<span class="notranslate">sprite</span> なのか、それとも別のものなのかを一目で識別できるように、各<span class="notranslate">object</span> に説明的な名前を付けるのがベストです。
-    のように、リソースに &quot; <span class="inline">spr</span>&quot; という文字をプレフィックスまたはサフィックスとして付けることで、 &quot; <span class="inline">spr_Ball</span>&quot; のような表現になります。リソース名の使用は、文字、数字、アンダースコアのみに制限されています。
+  <p>さて、<a href="What_Is_Programming_.htm">プログラムとは何か</a>ということがわかったところで、いよいよ<span
+      data-keyref="GameMaker Name">GameMakerで</span>ゲームを作るための様々な<strong>アセットについて見て
+    </strong>いきましょう。まず、<strong>スプライトについて</strong>説明します。
+    これは一般的に、どんなプロジェクトでも最初に必要になるものの一つです。<a href="../Introduction/The_Asset_Browser.htm"> <span
+        class="notranslate">Asset</span> </a> ブラウザのセクションで説明したように、<span class="notranslate">sprite</span>
+    はアニメーションが可能な画像です（ただし、アニメーションが可能である必要はありません）。
+    を作成し、画面に描画します。一般に、<span class="notranslate">sprite</span> は<span class="notranslate">object</span>
+    に関連付けられますが、コードから、または<span class="notranslate">sprites</span> エディタの<strong>アセットレイヤーで</strong>、<span
+      class="notranslate">room</span> を単独で描くことができます（これについては、後で詳しく説明します。
+    <a href="Rooms.htm">ルームの</a>セクションで説明します）。また、<span class="notranslate">sprite</span> を作成して<a class="glossterm"
+      data-glossterm="かわらばん" href="#">タイルセットとして</a>使用することもできますが、このオプションについても、後のセクションで検討します。
+  </p>
+  <p><a href="../Introduction/The_Start_Page.htm">スタート</a> <img> <a
+      href="../Introduction/The_Start_Page.htm"></a>ページから新しいプロジェクトを作成すると、<span class="notranslate">asset</span>
+    ブラウザには必要なリソース用の空のフォルダしかないので、<span class="notranslate">sprite</span> <span class="notranslate">asset</span>
+    フォルダ上で右クリックし、<strong>作成</strong>オプションを選択する必要があります（<span class="notranslate">sprite</span> <span
+      class="notranslate">asset</span> フォルダがない場合は、右クリックメニューから作成し、<span class="notranslate">sprite</span>
+    を作成するか、単にアセットの任意の場所で右クリックすることもできます）。
+    ブラウザで作成します）。これにより、新しい<span class="notranslate">sprite</span> <span class="notranslate">asset</span> が作成されて <a
+      href="../The_Asset_Editors/Sprites.htm"><strong>スプライトエディタ</strong></a>をダブルクリックしてください（<span
+      class="notranslate">sprite</span> エディタが開かない場合は、新しい<span class="notranslate">asset</span> で<img> をダブルクリックしてください）。
+  </p>
+  <p><img>ご覧のように、ウィンドウの左上には<span class="notranslate">sprite</span> の<strong>名前を </strong>入力する欄があります。 すべての<span
+      class="notranslate">sprites</span> （および他のすべての<span class="notranslate">assets</span> ）には、その名前を入力する必要があります。
+    という名前をつけて、ユーザー（と<span data-keyref="GameMaker Name">GameMaker</span>）が簡単に識別できるようにする必要があります。 <strong> <a
+        class="glossterm" data-glossterm="変数" href="#">変数</a></strong>を保持するID値
+    リソース、この場合は<span class="notranslate">sprite</span> を「指し示す」ものです。特定の<span class="notranslate">sprite</span> が<span
+      class="notranslate">asset</span> なのか<span class="notranslate">sprite</span> なのか、それとも別のものなのかを一目で識別できるように、各<span
+      class="notranslate">object</span> に説明的な名前を付けるのがベストです。
+    のように、リソースに &quot; <span class="inline">spr</span>&quot; という文字をプレフィックスまたはサフィックスとして付けることで、 &quot; <span
+      class="inline">spr_Ball</span>&quot; のような表現になります。リソース名の使用は、文字、数字、アンダースコアのみに制限されています。
     記号 &quot;_&quot; で始まる必要があります。また、すべての<span class="notranslate">assets</span> の名前は、数字ではなく文字で始まる必要があります。</p>
-  <p><span class="notranslate">sprite</span> エディタの他の機能については、このセクションの最後で説明しますが、まず、<span class="notranslate">sprite</span> の描き方を説明する必要があります。 これは <a href="../The_Asset_Editors/Image_Editor.htm"><strong>画像エディタ</strong></a>.画像
+  <p><span class="notranslate">sprite</span> エディタの他の機能については、このセクションの最後で説明しますが、まず、<span class="notranslate">sprite</span>
+    の描き方を説明する必要があります。 これは <a href="../The_Asset_Editors/Image_Editor.htm"><strong>画像エディタ</strong></a>.画像
     エディタは、ゲームのグラフィックを作成するための非常に強力なツールで、<em>Edit Image </em>ボタンをクリックすることで開きます。</p>
-  <p><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/></p>
+  <p><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
   <p>ここで使用できるツールについては、マニュアルの「画像編集」のセクションを参照してください。</p>
   <ul class="colour">
-    <li>左上の<strong>フレームビューには</strong>、<span class="notranslate">sprite</span> のフレームが表示され、虫眼鏡アイコンを使ってサイズを変更することができます。</li>
+    <li>左上の<strong>フレームビューには</strong>、<span class="notranslate">sprite</span> のフレームが表示され、虫眼鏡アイコンを使ってサイズを変更することができます。
+    </li>
     <li>中央には描画用の<strong>キャンバスが</strong>あり、現在選択されているフレームが表示されています。マウスの中ボタン<img> で移動し、マウスホイール<img> で拡大・縮小することが可能です。</li>
     <li>右上には基本的な<strong>ブラシが</strong>あり、ここで描画用のブラシを選択することができます。</li>
     <li>右の真ん中には、<strong>カラーピッカーが</strong>あります。ここでは、マウスの左ボタンと右ボタンに使う色を選択できます。</li>
-    <li>カラーピッカーのすぐ下には<strong>ツールが </strong>あります。ブラシ、フラッドフィル、マスキング、シェイプツールなど、さまざまな描画ツールです。いくつかのツールは斜めに分割されており、輪郭を描いたり塗りつぶしたりすることができます。
+    <li>カラーピッカーのすぐ下には<strong>ツールが
+      </strong>あります。ブラシ、フラッドフィル、マスキング、シェイプツールなど、さまざまな描画ツールです。いくつかのツールは斜めに分割されており、輪郭を描いたり塗りつぶしたりすることができます。
       の形状は、どちらをクリックして選択するかによって異なります。</li>
     <li>他の多くの描画ツールと同様、<strong>レイヤーを</strong>作成してその上に描画することで、位置や色などを試すことができます。
       の下にあるもの。</li>
   </ul>
-  <p>イメージエディタに何かを描き、時間をかけてオプションで遊びます。準備ができたら、イメージエディタ<span class="notranslate">workspace</span> を閉じると（画像が保存されます）、<span class="notranslate">workspace</span> エディタのあるメイン<span class="notranslate">sprite</span> に戻ります。ここで
-    <span class="notranslate">sprite</span> エディタの他の機能で、使い始めの頃に知っておくと便利なもの...</p>
-  <p>最初に知っておくべきことは、<span class="notranslate">sprite</span> の<strong>原点を </strong>設定する方法です。原点は、<span class="notranslate">sprite</span> の中で<span class="notranslate">room</span> を「固定」するために使われる点で、この場合、中心に設定します。</p>
+  <p>イメージエディタに何かを描き、時間をかけてオプションで遊びます。準備ができたら、イメージエディタ<span class="notranslate">workspace</span> を閉じると（画像が保存されます）、<span
+      class="notranslate">workspace</span> エディタのあるメイン<span class="notranslate">sprite</span> に戻ります。ここで
+    <span class="notranslate">sprite</span> エディタの他の機能で、使い始めの頃に知っておくと便利なもの...
+  </p>
+  <p>最初に知っておくべきことは、<span class="notranslate">sprite</span> の<strong>原点を </strong>設定する方法です。原点は、<span
+      class="notranslate">sprite</span> の中で<span class="notranslate">room</span> を「固定」するために使われる点で、この場合、中心に設定します。</p>
   <p>そこで、原点設定用のフロムダウンメニューから<img> 、「middle center」を選択します。</p>
-  <p><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/></p>
+  <p><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></p>
   <p>プレビュー画像の青い原点マーカーが<span class="notranslate">sprite</span> の中心に移動するのがわかります。なお、原点は<img> をクリックすることで、好きな場所に配置できます。
     また、上部のx/yフィールドに値を追加することで、原点位置を手動で入力することもできます。</p>
-  <p>もうひとつ重要なのは、<span class="notranslate">sprite</span> の<strong>コリジョンマスクを</strong>設定する方法です。コリジョンマスクとは、<span data-keyref="GameMaker Name">ゲーム</span>内で他のインスタンス（<span class="notranslate">object</span> ）と衝突があったかどうかを<span data-keyref="GameMaker Name">GameMaker が</span>確認するための領域です。
-    デフォルトでは矩形に設定されています（解決するのも一番早い）。の検出モードを設定できることに注意してください。 <strong> <a class="glossterm" data-glossterm="バウンディングボックス" href="#">バウンディングボックス</a></strong>を自動にすることができます。
+  <p>もうひとつ重要なのは、<span class="notranslate">sprite</span> の<strong>コリジョンマスクを</strong>設定する方法です。コリジョンマスクとは、<span
+      data-keyref="GameMaker Name">ゲーム</span>内で他のインスタンス（<span class="notranslate">object</span> ）と衝突があったかどうかを<span
+      data-keyref="GameMaker Name">GameMaker が</span>確認するための領域です。
+    デフォルトでは矩形に設定されています（解決するのも一番早い）。の検出モードを設定できることに注意してください。 <strong> <a class="glossterm" data-glossterm="バウンディングボックス"
+        href="#">バウンディングボックス</a></strong>を自動にすることができます。
     (デフォルト値)または手動です。マニュアルを選択した場合、バウンディングボックスの値を左、右、上、下と設定することができるようになります。</p>
-  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteEditor.png"/></p>
-  <p>矩形以外のコリジョンマスクの場合、解決に時間がかかりますが、小規模でシンプルなゲームを作る場合は、通常問題にはなりません。なお、他のソフトで作った<span class="notranslate">sprites</span> をインポートすることもできます。
-    <span class="notranslate">sprite</span> また、画像ファイルを<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> にドラッグして、<span class="notranslate">sprites</span> として<span class="notranslate">Asset</span> Browser に追加することもできます。また、<span class="notranslate">sprites</span> Browserから<span class="notranslate">Asset</span> をドラッグして直接追加することもできます。この場合、<span class="notranslate">IDE</span> がハイライト表示されます。
-    <span class="notranslate">sprite</span> に追加できる場所です。</p>
+  <p><img alt="The Sprite Editor" class="center" src="../assets/Images/QS_Guide/QS_Sprites_SpriteEditor.png" /></p>
+  <p>矩形以外のコリジョンマスクの場合、解決に時間がかかりますが、小規模でシンプルなゲームを作る場合は、通常問題にはなりません。なお、他のソフトで作った<span class="notranslate">sprites</span>
+    をインポートすることもできます。
+    <span class="notranslate">sprite</span> また、画像ファイルを<span data-keyref="GameMaker Name">GameMaker</span> <span
+      class="notranslate">IDE</span> にドラッグして、<span class="notranslate">sprites</span> として<span
+      class="notranslate">Asset</span> Browser に追加することもできます。また、<span class="notranslate">sprites</span> Browserから<span
+      class="notranslate">Asset</span> をドラッグして直接追加することもできます。この場合、<span class="notranslate">IDE</span> がハイライト表示されます。
+    <span class="notranslate">sprite</span> に追加できる場所です。
+  </p>
   <p><img> <span class="notranslate">Sprite</span> EditorやImage Editorの詳細情報をご希望の方は、マニュアルの以下のセクションをご覧ください。</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sprites.htm">編集部<span class="notranslate">Sprite</span> 編集部</a></li>
-    <li><a href="../The_Asset_Editors/Image_Editor.htm">エディターイメージエディター</a></li>
+    <li><a href="../The_Asset_Editors/Sprites.htm">エディタ<span class="notranslate">Sprite</span> エディタ</a></li>
+    <li><a href="../The_Asset_Editors/Image_Editor.htm">エディタイメージエディタ</a></li>
   </ul>
   <p><strong> タイルセットの</strong>説明に移るので、<span class="notranslate">sprite</span> エディタを終了してもかまいません。</p>
   <p> </p>
@@ -65,11 +103,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../Content.htm">インデックス</a></div>
-        <div style="float:right">次へ<a href="Creating_Tile_Sets.htm">タイルセットの作成</a></div>
+        <div style="float:left">前のページ：<a href="../Content.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="Creating_Tile_Sets.htm">タイルセットの作成</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Creating Sprites
@@ -79,4 +118,6 @@ Quick Start: Creating Sprites
 qs_sprites
 -->
 
-</body></html>
+</body>
+
+</html>

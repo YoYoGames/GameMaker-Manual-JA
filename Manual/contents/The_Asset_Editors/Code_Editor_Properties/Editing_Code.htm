@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>編集コード</title>
@@ -13,17 +14,37 @@
   <meta name="rh-index-keywords" content="Code Editor - Editing" />
   <meta name="search-keywords" content="edit code,code editor,autocomplete" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>編集コード</h1>
-  <p><span class="notranslate">script</span> エディタを使い始めると、<span class="notranslate">script</span> <span class="notranslate">asset</span> やイベントのコードを、正しい GML<a class="glossterm" data-glossterm="シンタックス" href="#">シンタックスに従って</a>入力するだけでよいのです。入力中は、<strong>オートコンプリートウィンドウで</strong>ヘルプが表示されます。</p>
-  <p><img>このウィンドウは、コードを書いている最中にポップアップ表示され（通常は少し間をおいて表示されますが、<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Text_Editor_Preferences.htm">環境</a>設定で設定できます）、アルファベット順に「最適な」答えが選択できるようになっています。</p>
-  <p>コードエディタを使用中に、<img> をクリックし、マウスをドラッグしてコードの行を選択したり、<img> を押しながら、<img> をクリックし、ドラッグしてコードの列を選択することができます。このようにして選択したものは、標準的なキーボードショートカットの<img> /<img> + &quot; <span class="inline">C</span>&quot;,<img> /<img> + &quot;<span class="inline">X</span>&quot;,<img> /<img> + &quot;<span class="inline">V</span>&quot; を使って<em>コピー</em>、<em>カット </em>、<em>ペーストする </em>ことが可能です。</p>
-  <p>コードには様々な方法で<strong>コメントを </strong>付けることができます。コメントすることで、物事を明確にし、コードのセクションを分離し、それぞれの部分が何をするのか、なぜそこにあるのかを明白にすることができるからです。また、チームで作業している場合、他のメンバーにメモを残すことができ、自分が何をしたのか、コードの特定の部分が何のためにあるのかを正確に把握することができるようになります。たとえあなたが一人で開発をしていても、コードにコメントを残すことは重要です。特に、一旦プロジェクトから離れ、後日またプロジェクトに戻る必要がある場合には。</p>
-  <p>行の前に &quot;<span class="inline">//</span>&quot; を置くだけで、簡単にコメントできます。また、&quot;<span class="inline">/* text here */</span>&quot; を使えば、段落全体をコメントアウトすることもできます。また、選択した行をコメントアウトしたり、コメントアウトを解除するためのキーボードショートカットも用意されています。 <img> /<img> + &quot;<span class="inline">K</span>&quot; でコメント、<img> /<img> +<img> + &quot;<span class="inline">K</span>&quot; でコメント解除です。次の画像は、これらの方法と、<strong>JS Docの</strong>コメント（以下で詳しく説明します）を使って書かれたコードです。</p>
-  <p><img>また、スクリプトには特定の JSDoc スタイルのコメントを追加して、含まれる関数のプロパティを定義し、コード内で関数を使用するときに、引数やその他の詳細とともにオートコンプリートに表示されるようにすることができます。これについては、<a href="JSDoc_Script_Comments.htm">JSDoc<span class="notranslate">Script</span> コメントの</a>セクションで詳しく説明されています。</p>
-  <p>デフォルトでは、記述されたすべてのコードには、一致する中括弧の各セットの横に、<strong>コードの折りたたみ</strong>アイコン <span class="inline">{}</span> が表示されます。これは、小さなプラス <span class="inline">+</span> またはマイナス <span class="inline">-</span> のアイコンの形をしており、これをクリックすると、一致する中括弧の中でコードが「折りたたみ」られ、より少ないスペースで表示されるようになります。</p>
-  <p>また、コードのセクションをマークするための特別な <span class="inline">#region</span> タグを使用して、手動でコードの折りたたみ領域を設定することもできます。この機能は、コードのセクションの先頭に <span class="inline">#region</span> タグ（任意のコメントテキストと一緒に）を追加し、セクションの下部に対応する <span class="inline">#endregion</span> タグを追加すると、コードを「折りたたむ」、つまり、エディタで一度に表示できるコードの行数を減らすためにコードを隠すことができます。</p>
+  <p><span class="notranslate">script</span> エディタを使い始めると、<span class="notranslate">script</span> <span
+      class="notranslate">asset</span> やイベントのコードを、正しい GML<a class="glossterm" data-glossterm="シンタックス"
+      href="#">シンタックスに従って</a>入力するだけでよいのです。入力中は、<strong>オートコンプリートウィンドウで</strong>ヘルプが表示されます。</p>
+  <p><img>このウィンドウは、コードを書いている最中にポップアップ表示され（通常は少し間をおいて表示されますが、<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Text_Editor_Preferences.htm">環境</a>設定で設定できます）、アルファベット順に「最適な」答えが選択できるようになっています。
+  </p>
+  <p>コードエディタを使用中に、<img> をクリックし、マウスをドラッグしてコードの行を選択したり、<img> を押しながら、<img>
+    をクリックし、ドラッグしてコードの列を選択することができます。このようにして選択したものは、標準的なキーボードショートカットの<img> /<img> + &quot; <span
+      class="inline">C</span>&quot;,<img> /<img> + &quot;<span class="inline">X</span>&quot;,<img> /<img> + &quot;<span
+      class="inline">V</span>&quot; を使って<em>コピー</em>、<em>カット </em>、<em>ペーストする </em>ことが可能です。</p>
+  <p>コードには様々な方法で<strong>コメントを
+    </strong>付けることができます。コメントすることで、物事を明確にし、コードのセクションを分離し、それぞれの部分が何をするのか、なぜそこにあるのかを明白にすることができるからです。また、チームで作業している場合、他のメンバーにメモを残すことができ、自分が何をしたのか、コードの特定の部分が何のためにあるのかを正確に把握することができるようになります。たとえあなたが一人で開発をしていても、コードにコメントを残すことは重要です。特に、一旦プロジェクトから離れ、後日またプロジェクトに戻る必要がある場合には。
+  </p>
+  <p>行の前に &quot;<span class="inline">//</span>&quot; を置くだけで、簡単にコメントできます。また、&quot;<span class="inline">/* text here
+      */</span>&quot; を使えば、段落全体をコメントアウトすることもできます。また、選択した行をコメントアウトしたり、コメントアウトを解除するためのキーボードショートカットも用意されています。 <img> /<img>
+    + &quot;<span class="inline">K</span>&quot; でコメント、<img> /<img> +<img> + &quot;<span class="inline">K</span>&quot;
+    でコメント解除です。次の画像は、これらの方法と、<strong>JS Docの</strong>コメント（以下で詳しく説明します）を使って書かれたコードです。</p>
+  <p><img>また、スクリプトには特定の JSDoc
+    スタイルのコメントを追加して、含まれる関数のプロパティを定義し、コード内で関数を使用するときに、引数やその他の詳細とともにオートコンプリートに表示されるようにすることができます。これについては、<a
+      href="JSDoc_Script_Comments.htm">JSDoc<span class="notranslate">Script</span> コメントの</a>セクションで詳しく説明されています。</p>
+  <p>デフォルトでは、記述されたすべてのコードには、一致する中括弧の各セットの横に、<strong>コードの折りたたみ</strong>アイコン <span class="inline">{}</span>
+    が表示されます。これは、小さなプラス <span class="inline">+</span> またはマイナス <span class="inline">-</span>
+    のアイコンの形をしており、これをクリックすると、一致する中括弧の中でコードが「折りたたみ」られ、より少ないスペースで表示されるようになります。</p>
+  <p>また、コードのセクションをマークするための特別な <span class="inline">#region</span> タグを使用して、手動でコードの折りたたみ領域を設定することもできます。この機能は、コードのセクションの先頭に
+    <span class="inline">#region</span> タグ（任意のコメントテキストと一緒に）を追加し、セクションの下部に対応する <span class="inline">#endregion</span>
+    タグを追加すると、コードを「折りたたむ」、つまり、エディタで一度に表示できるコードの行数を減らすためにコードを隠すことができます。
+  </p>
   <p><img>実際のコードは次のようなものです。</p>
   <p class="code">#region This is an example region<br />
     <br />
@@ -34,23 +55,38 @@
     <br />
     #endregion Further comment here if required
   </p>
-  <p>お気づきのように、<span class="notranslate">script</span> のテキストの一部には色が付いています。<span class="notranslate">script</span> エディタは、既存の<span class="notranslate">objects</span> 、組み込み変数や関数などを「知って」いて、それに応じて色分けしています。色分けは、名前のスペルを間違えたり、キーワードを変数として使ったり、構文エラーを起こしたときに、すぐにわかるので、間違いを防ぐのにとても役立ちます。しかし、色分けが気に入らない場合は、<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Text_Editor_Preferences.htm">環境</a>設定で<span class="notranslate">switch</span> 、オンとオフを切り替えることができます（エディタで <span class="inline">F10</span> 、オンとオフを切り替えることもできます）。また、使用される色もカスタマイズすることができます。</p>
+  <p>お気づきのように、<span class="notranslate">script</span> のテキストの一部には色が付いています。<span class="notranslate">script</span>
+    エディタは、既存の<span class="notranslate">objects</span>
+    、組み込み変数や関数などを「知って」いて、それに応じて色分けしています。色分けは、名前のスペルを間違えたり、キーワードを変数として使ったり、構文エラーを起こしたときに、すぐにわかるので、間違いを防ぐのにとても役立ちます。しかし、色分けが気に入らない場合は、<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Text_Editor_Preferences.htm">環境</a>設定で<span
+      class="notranslate">switch</span> 、オンとオフを切り替えることができます（エディタで <span class="inline">F10</span>
+    、オンとオフを切り替えることもできます）。また、使用される色もカスタマイズすることができます。</p>
   <p>エディタ内の任意の場所で右クリック（<img> ）しても、以下のメニューが表示されます。</p>
-  <p><img>コード行の切り取り、コピー、貼り付けなどの通常の機能の他に、選択したテキストのコメント化、インデントの追加、削除、コードウィンドウを1、2、3個のペインに分割するオプションがあります（編集中のコードでインデントを定義していない場合、 <span class="inline">#regions</span> に関するオプションは使用できませんのでご注意ください）。</p>
-  <p>ペインに分割する最後のオプションは、実際のウィンドウを異なる部分に分割し、<span class="notranslate">script</span> またはイベントをドラッグして他のものと一緒に表示し、比較や編集を行うことができます。</p>
-  <p><img>これは、2つの<span class="notranslate">scripts</span> を比較したり、接続された<span class="notranslate">scripts</span> を同時に表示したりする場合に、別のウィンドウを必要としたり、常にタブ間で<span class="notranslate">switch</span> する必要がなく、非常に便利です。</p>
-  <p>このメニューの他のオプションは、<a href="../../IDE_Tools/The_Debugger.htm">デバッガで</a>使用するために<span class="notranslate">breakpoint</span> を切り替えることと、<span class="notranslate">GML</span> コードを<span class="notranslate">GML</span> Visual に変換すること、またはその逆を行うことです。コードを<span class="notranslate">GML</span> Visual に変換する場合、コードの各行に個別のアクションを作成する<em>のではなく </em>、1 つのコードアクションを使用して、それまでイベントまたは<span class="notranslate">script</span> にあったものすべてを保持することに注意してください。</p>
+  <p>
+    <img>コード行の切り取り、コピー、貼り付けなどの通常の機能の他に、選択したテキストのコメント化、インデントの追加、削除、コードウィンドウを1、2、3個のペインに分割するオプションがあります（編集中のコードでインデントを定義していない場合、
+    <span class="inline">#regions</span> に関するオプションは使用できませんのでご注意ください）。
+  </p>
+  <p>ペインに分割する最後のオプションは、実際のウィンドウを異なる部分に分割し、<span class="notranslate">script</span>
+    またはイベントをドラッグして他のものと一緒に表示し、比較や編集を行うことができます。</p>
+  <p><img>これは、2つの<span class="notranslate">scripts</span> を比較したり、接続された<span class="notranslate">scripts</span>
+    を同時に表示したりする場合に、別のウィンドウを必要としたり、常にタブ間で<span class="notranslate">switch</span> する必要がなく、非常に便利です。</p>
+  <p>このメニューの他のオプションは、<a href="../../IDE_Tools/The_Debugger.htm">デバッガで</a>使用するために<span
+      class="notranslate">breakpoint</span> を切り替えることと、<span class="notranslate">GML</span> コードを<span
+      class="notranslate">GML</span> Visual に変換すること、またはその逆を行うことです。コードを<span class="notranslate">GML</span> Visual
+    に変換する場合、コードの各行に個別のアクションを作成する<em>のではなく </em>、1 つのコードアクションを使用して、それまでイベントまたは<span class="notranslate">script</span>
+    にあったものすべてを保持することに注意してください。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Scripts.htm"> <span class="notranslate">Script</span> 編集部</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Feather_Features.htm">フェザーの特徴</a></div>
+        <div style="float:left">前のページ：<a href="../Scripts.htm"> <span class="notranslate">Script</span> エディタ</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Feather_Features.htm">フェザーの特徴</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Editing Code
@@ -65,4 +101,5 @@ Regions
 code_editor
 -->
 </body>
+
 </html>

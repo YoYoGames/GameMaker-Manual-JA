@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>フリーデータ構造</title>
@@ -12,23 +13,30 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Free Data Structure" />
   <meta name="search-keywords" content="Free Data Structure" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> フリーデータ構造</h1>
-  <p>このアクションはデータ構造をメモリから解放し、データ構造が不要になったときにいつでも呼び出す必要があります。例えば、インスタンスのDestroyや<span class="notranslate">Room</span> Endイベントなどです。データ構造を解放するということは、それ以上のアクションがないことを意味します。
-    は、もはや存在しないので、それを参照するために使用することはできませんが、<a href="If_Data_Structure_Exists.htm">If Data Structure Exists</a>アクションを使用してこれを確認することもできます。</p>
-  <p>データ構造のインデックスがグローバルスコープの変数に割り当てられていない限り、<span class="notranslate">room</span> から別のものに引き継がれないことに注意してください。たとえば、プレーヤーのインスタンスを作成し、リストのデータ構造がそのインスタンスの変数に割り当てられている場合。
-    プレーヤーが破壊された場合<i>、または</i>プレーヤーインスタンスを含む<span class="notranslate">room</span> が変更された場合、リストを解放する必要があります (プレーヤーインスタンスが永続的であるとフラグ付けされていない限り)。
+  <p>このアクションはデータ構造をメモリから解放し、データ構造が不要になったときにいつでも呼び出す必要があります。例えば、インスタンスのDestroyや<span class="notranslate">Room</span>
+    Endイベントなどです。データ構造を解放するということは、それ以上のアクションがないことを意味します。
+    は、もはや存在しないので、それを参照するために使用することはできませんが、<a href="If_Data_Structure_Exists.htm">If Data Structure
+      Exists</a>アクションを使用してこれを確認することもできます。</p>
+  <p>データ構造のインデックスがグローバルスコープの変数に割り当てられていない限り、<span class="notranslate">room</span>
+    から別のものに引き継がれないことに注意してください。たとえば、プレーヤーのインスタンスを作成し、リストのデータ構造がそのインスタンスの変数に割り当てられている場合。
+    プレーヤーが破壊された場合<i>、または</i>プレーヤーインスタンスを含む<span class="notranslate">room</span> が変更された場合、リストを解放する必要があります
+    (プレーヤーインスタンスが永続的であるとフラグ付けされていない限り)。
     の両方が発生します。メモリリークによるパフォーマンスの低下やゲームのクラッシュを防ぐため、作成したデータ構造は不要になった時点でこの方法で破棄することが重要です。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Free Data Structure Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Free_Data_Structure.png" /></p>
+  <p><img alt="Free Data Structure Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Free_Data_Structure.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Type</span></td>
@@ -43,18 +51,20 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、グローバルで参照されるリストのサイズを取得します。
-    変数に格納され、for<span class="notranslate">loop</span> を使って<span class="notranslate">loop</span> を通して、リストに格納された ID を持つインスタンスを破棄します。<span class="notranslate">loop</span> が終了すると、リストはメモリから解放されます。</p>
+    変数に格納され、for<span class="notranslate">loop</span> を使って<span class="notranslate">loop</span> を通して、リストに格納された ID
+    を持つインスタンスを破棄します。<span class="notranslate">loop</span> が終了すると、リストはメモリから解放されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Data_Structure_Actions.htm">データ構造アクション</a></div>
-        <div style="float:right">次へ<a href="Add_To_List.htm">リストに追加する</a></div>
+        <div style="float:left">前のページ：<a href="Data_Structure_Actions.htm">データ構造アクション</a></div>
+        <div style="float:right">次のページ：<a href="Add_To_List.htm">リストに追加する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Free Data Structure
@@ -63,4 +73,5 @@ Action - Free Data Structure
 action_ds_free
 -->
 </body>
+
 </html>

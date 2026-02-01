@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>file_find_first</title>
@@ -9,15 +10,19 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for file_find_first" />
-  <meta name="rh-index-keywords" content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
-  <meta name="search-keywords" content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
+  <meta name="rh-index-keywords"
+    content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
+  <meta name="search-keywords"
+    content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">file_find_first</span></h1>
   <p>この関数は，マスクと属性を満足する最初のファイルの名前を返す。そのようなファイルが存在しない場合，空の<span class="notranslate">string</span> が返される。</p>
   <p>マスクには、<span class="notranslate">path</span> 、<span class="inline2">C: \temp*.doc</span> のようなワイルドカードを使用できます。</p>
-  <p>属性は見たい追加ファイルを与えるので、通常のファイルはマスクを満たせば必ず返されます。以下の定数を足すことで、見たいファイルの種類を見ることができます（<span class="inline2">｜を</span>使用）。属性を追加したくない場合は、0を使用します。</p>
+  <p>属性は見たい追加ファイルを与えるので、通常のファイルはマスクを満たせば必ず返されます。以下の定数を足すことで、見たいファイルの種類を見ることができます（<span
+      class="inline2">｜を</span>使用）。属性を追加したくない場合は、0を使用します。</p>
   <table>
     <colgroup>
       <col />
@@ -25,11 +30,13 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_File_Attribute"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm">ファイル属性定数</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_File_Attribute"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm">ファイル属性定数</a></span>
+        </th>
       </tr>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">fa_readonly</span></td>
@@ -58,33 +65,39 @@
     </tbody>
   </table>
   <p>属性は<span class="notranslate">Windows</span> でのみ使用可能です。その他のプラットフォームでは、0を使用してください。</p>
-  <p class="note"><b></b><span class="warning">警告</span> <span data-keyref="GameMaker Name">GameMakerは</span>サンドボックス化されているため、この機能は期待通りに動作しない可能性があります!詳しくは「<a href="../../../../Additional_Information/The_File_System.htm">ファイルシステム</a>」の項をご覧ください。</p>
+  <p class="note"><b></b><span class="warning">警告</span> <span
+      data-keyref="GameMaker Name">GameMakerは</span>サンドボックス化されているため、この機能は期待通りに動作しない可能性があります!詳しくは「<a
+      href="../../../../Additional_Information/The_File_System.htm">ファイルシステム</a>」の項をご覧ください。</p>
   <p class="note"><span class="note">注</span>）この機能は、HTML5ターゲットでは全く機能しません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">file_find_first</span>(mask, attr);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">mask</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../LINKGOESHERE">文字列</a></span></td>
         <td><span class="notranslate">The mask to use for searching.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">attr</span></td>
-        <td><span data-keyref="Type_Constant_File_Attribute"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm">ファイル属性定数</a></span>(s)</td>
+        <td><span data-keyref="Type_Constant_File_Attribute"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/File_Handling/File_System/file_find_first.htm">ファイル属性定数</a></span>(s)
+        </td>
         <td><span class="notranslate">The specific file attribute to look for.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">String</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../../LINKGOESHERE">String</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">if directory_exists(&quot;\User Content&quot;)<br />
@@ -94,8 +107,10 @@
         fileC = file_find_next();<br />
         file_find_close();<br />
     }</p>
-  <p>このコードは、指定されたディレクトリが存在するかどうかをチェックし、存在する場合はそこに行き、最初に見つかった「読み取り専用」 <span class="inline">.doc</span> ファイルを返します。その後、さらに2つのファイルを探し、ファイルファインダーを閉じます。</p>
-  <p>を使用すると、任意の数のファイルを検索することができます。 <a href="../../../GML_Overview/Language_Features/while.htm"><span class="notranslate">while</span></a>をループさせる。</p>
+  <p>このコードは、指定されたディレクトリが存在するかどうかをチェックし、存在する場合はそこに行き、最初に見つかった「読み取り専用」 <span class="inline">.doc</span>
+    ファイルを返します。その後、さらに2つのファイルを探し、ファイルファインダーを閉じます。</p>
+  <p>を使用すると、任意の数のファイルを検索することができます。 <a href="../../../GML_Overview/Language_Features/while.htm"><span
+        class="notranslate">while</span></a>をループさせる。</p>
   <p class="code">var files = [];<br />
     var file_name = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
     <br />
@@ -108,17 +123,22 @@
     <br />
     file_find_close();
   </p>
-  <p>上記のコードでは、見つかったすべてのファイル名を格納する空の配列を作成し、読み取り専用のファイル（ <span class="inline">.doc</span> ）の検索を開始します。そのファイル名が空の<span class="notranslate">string</span> でない場合、それを <span class="inline">files</span> 配列にプッシュし、次のファイルを探そうとします。<span class="notranslate">loop</span> は、空の<span class="notranslate">string</span> が見つかる（一致するファイルがもうないことを意味する） まで繰り返され、その時点で<span class="notranslate">loop</span> が終了し、最後にファイルファインダーが閉じられる。</p>
+  <p>上記のコードでは、見つかったすべてのファイル名を格納する空の配列を作成し、読み取り専用のファイル（ <span class="inline">.doc</span> ）の検索を開始します。そのファイル名が空の<span
+      class="notranslate">string</span> でない場合、それを <span class="inline">files</span> 配列にプッシュし、次のファイルを探そうとします。<span
+      class="notranslate">loop</span> は、空の<span class="notranslate">string</span> が見つかる（一致するファイルがもうないことを意味する）
+    まで繰り返され、その時点で<span class="notranslate">loop</span> が終了し、最後にファイルファインダーが閉じられる。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="File_System.htm">ファイルシステム</a></div>
-        <div style="float:right">次のページ <a href="file_find_next.htm"><span class="notranslate">file_find_next</span></a></div>
+        <div style="float:left">前のページ：<a href="File_System.htm">ファイルシステム</a></div>
+        <div style="float:right">次のページ：<a href="file_find_next.htm"><span class="notranslate">file_find_next</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_find_first
@@ -133,4 +153,5 @@ fa_archive
 file_find_first
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>データの種類</title>
@@ -12,61 +13,97 @@
   <meta name="rh-index-keywords" content="Data Types" />
   <meta name="search-keywords" content="Data Types" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>データの種類</h1>
-  <p>前のセクションでは、<a href="Variables_And_Variable_Scope.htm">変数とそのスコープルール</a>について説明しましたが、変数が格納できるさまざまな<b>データ型については</b>ほとんど説明されていません。そこで、このセクションでは、さまざまな型とその用途について説明します。</p>
-  <p>その前に、「データ型」の意味を簡単に説明しておきましょう。変数を作成すると、その変数に情報を格納することができます。また、関数を呼び出すと、その変数に返される情報を格納することができます。しかし、この情報は<em>実数</em>であったり<em>文字列</em>であったりと、さまざまな「味」があります。これらの異なるタイプの値を<b>データ型と</b>呼びます。<span class="notranslate">GameMaker Language</span> を使用する場合、以下のいずれかになります。</p>
+  <p>前のセクションでは、<a
+      href="Variables_And_Variable_Scope.htm">変数とそのスコープルール</a>について説明しましたが、変数が格納できるさまざまな<b>データ型については</b>ほとんど説明されていません。そこで、このセクションでは、さまざまな型とその用途について説明します。
+  </p>
+  <p>
+    その前に、「データ型」の意味を簡単に説明しておきましょう。変数を作成すると、その変数に情報を格納することができます。また、関数を呼び出すと、その変数に返される情報を格納することができます。しかし、この情報は<em>実数</em>であったり<em>文字列</em>であったりと、さまざまな「味」があります。これらの異なるタイプの値を<b>データ型と</b>呼びます。<span
+      class="notranslate">GameMaker Language</span> を使用する場合、以下のいずれかになります。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">実数</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">実数とは、<span class="notranslate">string</span> 、その他のデータ型でもない値のことです。つまり、124, 45639.566546456, 0, -45.5 などはすべて実数の例です。すべての実数は64ビット倍精度浮動小数点数（または整数値）として格納され、コンパイラは可能な限り最適化します（例えば、0.0は整数値0に最適化されます）。</p>
-    <p class="dropspot">整数以外の値を扱う場合、浮動小数点演算の性質上、若干の丸め誤差が発生する場合があります。この関数やその他の数値関連関数についての詳細は、以下を参照してください。<a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number Functions</a> を参照してください。</p>
+    <p class="dropspot">実数とは、<span class="notranslate">string</span> 、その他のデータ型でもない値のことです。つまり、124, 45639.566546456, 0,
+      -45.5 などはすべて実数の例です。すべての実数は64ビット倍精度浮動小数点数（または整数値）として格納され、コンパイラは可能な限り最適化します（例えば、0.0は整数値0に最適化されます）。</p>
+    <p class="dropspot">整数以外の値を扱う場合、浮動小数点演算の性質上、若干の丸め誤差が発生する場合があります。この関数やその他の数値関連関数についての詳細は、以下を参照してください。<a
+        href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number
+        Functions</a> を参照してください。</p>
     <p class="note"><span class="note">注</span>）<b>HTML5</b>ターゲットでは、実数はすべて2倍です。</p>
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>作成された変数はすべて倍精度浮動小数点数または整数として格納されますが、<span class="notranslate">extensions</span> を扱う際には他の形式も使用できることに注意してください。これらは<span class="notranslate">extension</span> から<span data-keyref="GameMaker Name">GameMaker</span>に渡され、適切な<span class="inline">is_*()</span> 関数を使ってチェックすることができます<a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">。</a></p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>作成された変数はすべて倍精度浮動小数点数または整数として格納されますが、<span
+        class="notranslate">extensions</span> を扱う際には他の形式も使用できることに注意してください。これらは<span class="notranslate">extension</span>
+      から<span data-keyref="GameMaker Name">GameMaker</span>に渡され、適切な<span class="inline">is_*()</span>
+      関数を使ってチェックすることができます<a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">。</a></p>
     <p> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ブーリアン</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">ブーリアンとは、単純に<span class="inline">true</span> か<span class="inline">false</span> のどちらかの値です。 なお、現在<span data-keyref="GameMaker Name">GameMaker</span>は 0.5 以下の実数を<span class="inline">false</span> の値として解釈し、 0.5 より大きい実数は<span class="inline">true</span> の値として解釈します。
-      ただし、1 と 0 (または他の実数) を真と偽でチェックする必要は<i>ありません</i>。また、<b>定数</b> <span class="inline">true</span> と<span class="inline">false</span> も用意されており、コード内で常に使用する必要があります。
+    <p class="dropspot">ブーリアンとは、単純に<span class="inline">true</span> か<span class="inline">false</span> のどちらかの値です。
+      なお、現在<span data-keyref="GameMaker Name">GameMaker</span>は 0.5 以下の実数を<span class="inline">false</span> の値として解釈し、
+      0.5 より大きい実数は<span class="inline">true</span> の値として解釈します。
+      ただし、1 と 0 (または他の実数) を真と偽でチェックする必要は<i>ありません</i>。また、<b>定数</b> <span class="inline">true</span> と<span
+        class="inline">false</span> も用意されており、コード内で常に使用する必要があります。
       将来のアップデートで本当のブーリアンデータ型が追加された場合にも問題が起きないように、常にコードで使用する必要があります。</p>
     <p class="dropspot">以下の関数を用いて、任意の実数を暗黙のうちにブーリアン値に変換することができます。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/bool.htm"><span class="notranslate">bool</span></a></li>
+      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/bool.htm"><span
+            class="notranslate">bool</span></a></li>
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">ストリングス</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><label for="one"><span class="notranslate">string</span> は、単に引用符 &quot;...&quot; で囲まれた任意のテキストです。<span class="notranslate">strings</span> に対して特定の操作を行うことができます。例えば、2つの<span class="notranslate">strings</span> を足し合わせてより長い<span class="notranslate">string</span> を作成したり（連結）、<span class="notranslate">string</span> のプロパティを変更したり、そこから実数を抽出したりすることもできます。<span class="notranslate">strings</span> と<span class="notranslate">string</span> 関数の詳細については、GML Reference - Strings を参照。<a href="../GML_Reference/Strings/Strings.htm">GMLリファレンス - 文字列</a>。</label></p>
+    <p class="dropspot"><label for="one"><span class="notranslate">string</span> は、単に引用符 &quot;...&quot;
+        で囲まれた任意のテキストです。<span class="notranslate">strings</span> に対して特定の操作を行うことができます。例えば、2つの<span
+          class="notranslate">strings</span> を足し合わせてより長い<span class="notranslate">string</span> を作成したり（連結）、<span
+          class="notranslate">string</span> のプロパティを変更したり、そこから実数を抽出したりすることもできます。<span class="notranslate">strings</span>
+        と<span class="notranslate">string</span> 関数の詳細については、GML Reference - Strings を参照。<a
+          href="../GML_Reference/Strings/Strings.htm">GMLリファレンス - 文字列</a>。</label></p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">アレイ（配列</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><label for="three">配列は、複数の値を保持するために使用できる特殊なデータ型です。この配列を変数に代入し、配列のさまざまなインデックスを値で「埋める」のです。この配列は、参照ごとに<span class="notranslate">scripts</span> や関数に渡すことができます。しかし、渡された配列を変更すると、元の配列のコピーになるので、配列を更新するために元の変数に戻す必要があります。配列に関するより詳しい情報は、以下を参照してください。<a href="Arrays.htm">GMLの概要 - 配列を</a>参照してください。</label></p>
+    <p class="dropspot"><label
+        for="three">配列は、複数の値を保持するために使用できる特殊なデータ型です。この配列を変数に代入し、配列のさまざまなインデックスを値で「埋める」のです。この配列は、参照ごとに<span
+          class="notranslate">scripts</span>
+        や関数に渡すことができます。しかし、渡された配列を変更すると、元の配列のコピーになるので、配列を更新するために元の変数に戻す必要があります。配列に関するより詳しい情報は、以下を参照してください。<a
+          href="Arrays.htm">GMLの概要 - 配列を</a>参照してください。</label></p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">構造物</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><label for="eleven"><span class="notranslate">struct</span> (「軽量オブジェクト」と呼ばれることもあります) は生のデータ構造で、あらゆるデータ型の変数を格納するコンテナとして機能します。<span class="notranslate">struct</span> を変数に代入し、<span class="notranslate">struct</span> でさらに変数を定義し、必要に応じてそれらの変数の読み書きを行うことができます。<span class="notranslate">structs</span> の詳細については、<a href="Structs.htm">GML概要 - 構造体の</a>項を参照してください。</label></p>
+    <p class="dropspot"><label for="eleven"><span class="notranslate">struct</span> (「軽量オブジェクト」と呼ばれることもあります)
+        は生のデータ構造で、あらゆるデータ型の変数を格納するコンテナとして機能します。<span class="notranslate">struct</span> を変数に代入し、<span
+          class="notranslate">struct</span> でさらに変数を定義し、必要に応じてそれらの変数の読み書きを行うことができます。<span
+          class="notranslate">structs</span> の詳細については、<a href="Structs.htm">GML概要 - 構造体の</a>項を参照してください。</label></p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">メソッド変数</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><label for="twelve">メソッド変数とは、関数が割り当てられた変数のことで、<span class="notranslate">GML</span> <span class="notranslate">runtime</span> 関数を使うのと全く同じように使うことができます。より詳細な情報については、「<a href="Method_Variables.htm">メソッド変数</a>」のセクションを参照してください。</label></p>
+    <p class="dropspot"><label for="twelve">メソッド変数とは、関数が割り当てられた変数のことで、<span class="notranslate">GML</span> <span
+          class="notranslate">runtime</span> 関数を使うのと全く同じように使うことができます。より詳細な情報については、「<a
+          href="Method_Variables.htm">メソッド変数</a>」のセクションを参照してください。</label></p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">イントネーション64</a></p>
   <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">int64 &quot;は、 <span class="inline"><a href="../GML_Reference/Variable_Functions/int64.htm">int64()</a></span> （64ビット以外の実数を渡す）、または<a href="../GML_Reference/Buffers/buffer_read.htm">バッファから</a> <span class="inline">buffer_u64</span> の値を読み取る際に作成できる64ビット整数である。</p>
-    <p class="dropspot">これは、64ビット整数が厳密に要求される場所や、<a href="../../Additional_Information/Bitwise_Operators.htm">ビットシフトを</a>行いたい場合に、その64ビット位置が必要な場合に使用することができます。</p>
+    <p class="dropspot">int64 &quot;は、 <span class="inline"><a
+          href="../GML_Reference/Variable_Functions/int64.htm">int64()</a></span> （64ビット以外の実数を渡す）、または<a
+        href="../GML_Reference/Buffers/buffer_read.htm">バッファから</a> <span class="inline">buffer_u64</span>
+      の値を読み取る際に作成できる64ビット整数である。</p>
+    <p class="dropspot">これは、64ビット整数が厳密に要求される場所や、<a
+        href="../../Additional_Information/Bitwise_Operators.htm">ビットシフトを</a>行いたい場合に、その64ビット位置が必要な場合に使用することができます。</p>
     <p class="dropspot">ビット演算は、64ビット以外の値で実行しても、必ず64ビット整数が返されます。</p>
     <p class="dropspot">int64の値に対する割り算も整数を返します（例：<span class="inline2">int64(5) / int64(2) = 2</span>）。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">16進数値</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerは</span> <b>16進数リテラルを</b>正当な値として受け入れます。16進数は特に色を扱うときによく使われますが、正の整数値が必要な場合はどこでも使えます。16進数値は次の2つの方法でフォーマットすることができます。 <span class="inline"><em>abcd</em></span> は実際の16進数値です。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerは</span>
+      <b>16進数リテラルを</b>正当な値として受け入れます。16進数は特に色を扱うときによく使われますが、正の整数値が必要な場合はどこでも使えます。16進数値は次の2つの方法でフォーマットすることができます。 <span
+        class="inline"><em>abcd</em></span> は実際の16進数値です。
+    </p>
     <p class="code"><span style="background-color: transparent;"><strong>$</strong><em>abcd</em></span><br />
       <strong>0x</strong><em>abcd</em>
     </p>
@@ -75,7 +112,11 @@
       <strong>16777215</strong> -&gt; $ffffff, 0xffffff
     </p>
     <hr />
-    <p class="dropspot">16進数値はハッシュ/パウンド記号<span class="inline2">(#</span>)で始めることもできますが、この方法で書かれた場合、その値は以前に示された形式<span class="inline2">($</span>または<span class="inline2">0x</span>)で書かれた同様の16進数値と等しくはなりません。これは、<span class="notranslate">GML</span> における色の解釈方法によるもので、CSS の色を<span class="inline2">#RRGGBB</span>形式で記述できるように、ハッシュ/パウンド 16 進値の形式を変更する必要がありました。詳しくは、<a data-xref="{text}" href="../GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm#h">Hex Coloursを</a>読んでください。</p>
+    <p class="dropspot">16進数値はハッシュ/パウンド記号<span class="inline2">(#</span>)で始めることもできますが、この方法で書かれた場合、その値は以前に示された形式<span
+        class="inline2">($</span>または<span class="inline2">0x</span>)で書かれた同様の16進数値と等しくはなりません。これは、<span
+        class="notranslate">GML</span> における色の解釈方法によるもので、CSS の色を<span class="inline2">#RRGGBB</span>形式で記述できるように、ハッシュ/パウンド
+      16 進値の形式を変更する必要がありました。詳しくは、<a data-xref="{text}"
+        href="../GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm#h">Hex Coloursを</a>読んでください。</p>
     <p class="dropspot">例えば、次の二つは等しくない。</p>
     <p class="code">$2c8edd <strong>!=</strong> #2c8edd</p>
     <p class="dropspot">同じ10進数値を参照するためには、最初の2文字と最後の2文字を入れ替えなければなりません。</p>
@@ -84,21 +125,29 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">ポインタ</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">ポインターは、メモリの場所を「指し示す」データ型です。ポインターに対して操作を行うことはできません。ポインターは、他の関数のためにメモリから<span class="notranslate">texture</span> または<span class="notranslate">buffer</span> アドレスを取得するような、いくつかの非常に特殊な関数のためにのみ使用されます。ポインタを返す関数の例として、次のようなものがあります。 <a href="../GML_Reference/Buffers/buffer_get_address.htm"><span class="inline">buffer_get_address()</span></a>または <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><span class="inline">sprite_get_texture()</span></a>.</p>
+    <p class="dropspot">ポインターは、メモリの場所を「指し示す」データ型です。ポインターに対して操作を行うことはできません。ポインターは、他の関数のためにメモリから<span
+        class="notranslate">texture</span> または<span class="notranslate">buffer</span>
+      アドレスを取得するような、いくつかの非常に特殊な関数のためにのみ使用されます。ポインタを返す関数の例として、次のようなものがあります。 <a
+        href="../GML_Reference/Buffers/buffer_get_address.htm"><span class="inline">buffer_get_address()</span></a>または
+      <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><span
+          class="inline">sprite_get_texture()</span></a>.
+    </p>
     <p class="dropspot">また、値がポインタであるかどうかをチェックする関数（後述の「<b>データ型のチェック</b>」参照）や、値をポインタに変換する関数もあります。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/ptr.htm" style="background-color: transparent;"><span class="notranslate">ptr</span></a></li>
+      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/ptr.htm"
+          style="background-color: transparent;"><span class="notranslate">ptr</span></a></li>
     </ul>
     <p class="dropspot">また、ポインターを使用する場合、以下の組み込み定数を使用することができます（そして、返されます）。</p>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th>定数</th>
-          <th>商品説明</th>
+          <th>説明</th>
         </tr>
         <tr>
           <td><span class="notranslate"><span class="inline">pointer_null</span></td>
-          <td>この定数は、ポインタが意味のあるものを指していないことを示す（C++の <span class="inline">NULL</span> 、C#の <span class="inline">null</span> と同じ）。この値は<a class="glossterm" data-glossterm="まがまがしい" href="#">falsy</a>である。</td>
+          <td>この定数は、ポインタが意味のあるものを指していないことを示す（C++の <span class="inline">NULL</span> 、C#の <span class="inline">null</span>
+            と同じ）。この値は<a class="glossterm" data-glossterm="まがまがしい" href="#">falsy</a>である。</td>
         </tr>
         <tr>
           <td><span class="notranslate"><span class="inline">pointer_invalid</span></td>
@@ -110,19 +159,31 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">列挙</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">enum は「列挙子」であり、本質的に定数値のリストを持つ独自の限定的なデータ型を作成することを許可します。列挙型については、「<a href="Variables/Constants.htm">定数</a>」のページで詳しく説明しています。</p>
+    <p class="dropspot">enum は「列挙子」であり、本質的に定数値のリストを持つ独自の限定的なデータ型を作成することを許可します。列挙型については、「<a
+        href="Variables/Constants.htm">定数</a>」のページで詳しく説明しています。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">未定義</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><label for="seven"><span class="notranslate">undefined</span> 値（「ヌル」値とも呼ばれる）とは、構文的には正しいが、式が正しい値を持たないため、<i>何かを</i>返さなければならないものである。たとえば、<a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS マップが</a>あり、関数 <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><span class="inline">ds_map_find_value()</span></a>.さて、マップが探している値を持っていない場合はどうなるでしょうか？さて、この関数は正しくフォーマットされており、問題はそのような値が存在しないことなので、定数<span class="inline">undefined</span> を返すでしょう。この定数については、<span class="inline">true</span> や他の値をチェックするのと同じようにチェックできます。<br /></label></p>
-    <p class="code"><label for="seven">var _value = ds_map_find_value(my_map, &quot;key&quot;);<br /><br />if (<a href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a>(value)) {<br />    show_debug_message(&quot;The key does not exist!&quot;);<br />}</label><br /></p>
+    <p class="dropspot"><label for="seven"><span class="notranslate">undefined</span>
+        値（「ヌル」値とも呼ばれる）とは、構文的には正しいが、式が正しい値を持たないため、<i>何かを</i>返さなければならないものである。たとえば、<a
+          href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS マップが</a>あり、関数 <a
+          href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><span
+            class="inline">ds_map_find_value()</span></a>.さて、マップが探している値を持っていない場合はどうなるでしょうか？さて、この関数は正しくフォーマットされており、問題はそのような値が存在しないことなので、定数<span
+          class="inline">undefined</span> を返すでしょう。この定数については、<span class="inline">true</span>
+        や他の値をチェックするのと同じようにチェックできます。<br /></label></p>
+    <p class="code"><label for="seven">var _value = ds_map_find_value(my_map, &quot;key&quot;);<br /><br />if (<a
+          href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a>(value)) {<br />   
+        show_debug_message(&quot;The key does not exist!&quot;);<br />}</label><br /></p>
     <p class="dropspot"> <br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">NaN</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot"><label for="nine"><span class="inline">NaN</span> は「not a number」の略で、コンパイラが演算結果を数値として評価できない場合に返すことができる定数である。例えば、0/0は実数として定義できないので、 、あるいは「虚数」とみなされる負の数の平方根は実数として表現できないので、 で表現される。<span class="inline">NaN</span> <span class="inline">NaN</span></label></p>
-    <p class="dropspot"> <span class="inline">NaN</span> は数字ではないので、それ自身と比較することはできません。したがって、 <span class="inline">NaN == NaN</span> のような比較は <span class="inline">false</span> を返します。このような配列の比較でも同じことが言えます。</p>
+    <p class="dropspot"><label for="nine"><span class="inline">NaN</span> は「not a
+        number」の略で、コンパイラが演算結果を数値として評価できない場合に返すことができる定数である。例えば、0/0は実数として定義できないので、 、あるいは「虚数」とみなされる負の数の平方根は実数として表現できないので、
+        で表現される。<span class="inline">NaN</span> <span class="inline">NaN</span></label></p>
+    <p class="dropspot"> <span class="inline">NaN</span> は数字ではないので、それ自身と比較することはできません。したがって、 <span class="inline">NaN ==
+        NaN</span> のような比較は <span class="inline">false</span> を返します。このような配列の比較でも同じことが言えます。</p>
     <p class="code">show_debug_message(array_equals([NaN], [NaN]));<br />
       <br />
       // Output: 0 (false)
@@ -131,12 +192,17 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">インフィニティ</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">定数<span class="inline">infinity</span> は、無限とみなされる数を指し、例えば、浮動小数点値をゼロで割ったときに得られる結果、1.0/0 のようなものを指します。</p>
-    <p class="dropspot">なお、定数 <span class="inline">infinity</span> はそれ自身と等しいので、 <span class="inline">infinity == infinity</span> は <span class="inline">true</span> を返します。</p>
+    <p class="dropspot">定数<span class="inline">infinity</span> は、無限とみなされる数を指し、例えば、浮動小数点値をゼロで割ったときに得られる結果、1.0/0
+      のようなものを指します。</p>
+    <p class="dropspot">なお、定数 <span class="inline">infinity</span> はそれ自身と等しいので、 <span class="inline">infinity ==
+        infinity</span> は <span class="inline">true</span> を返します。</p>
   </div>
   <p id="variable"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">任意の</a></p>
   <div class="droptext" data-targetname="drop-down12">
-    <p class="dropspot"><strong>Any</strong>&quot; データ型は、マニュアルの多くのページで、例えば<a href="../GML_Reference/Variable_Functions/is_string.htm">引数や</a> <a href="../GML_Reference/Variable_Functions/array_get.htm">戻り値として</a>見ることができます。これは、<em>どのような型の値でも</em>受け入れる、あるいは返すことができることを示します。</p>
+    <p class="dropspot"><strong>Any</strong>&quot; データ型は、マニュアルの多くのページで、例えば<a
+        href="../GML_Reference/Variable_Functions/is_string.htm">引数や</a> <a
+        href="../GML_Reference/Variable_Functions/array_get.htm">戻り値として</a>見ることができます。これは、<em>どのような型の値でも</em>受け入れる、あるいは返すことができることを示します。
+    </p>
   </div>
   <p> </p>
   <p>変数のデータ型は、以下のページで紹介する関数で確認することができます。</p>
@@ -153,11 +219,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次ページ：<a data-xref="{title}" href="Language_Features/If_Else_and_Conditional_Operators.htm">if / elseと条件演算子</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次ページ：<a data-xref="{title}"
+            href="Language_Features/If_Else_and_Conditional_Operators.htm">if / elseと条件演算子</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Data Type - Real
@@ -205,4 +273,5 @@ pointer_null
 pointer_invalid
 -->
 </body>
+
 </html>

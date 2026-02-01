@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_joint_friction_create</title>
@@ -13,20 +14,27 @@
   <meta name="search-keywords" content="physics_joint_friction_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_joint_friction_create</span></h1>
-  <p>摩擦ジョイントは、物理シミュレーションの他のジョイントとは少し異なり、作成された接続がインスタンスの位置や動きを拘束するのではなく、その速度と回転を拘束するものです。これは、力とトルクの最大入力値を取り、それを2番目の固定具に適用して、速度と角運動量を最初のインスタンスのものと同じ値にすることで機能します。つまり、静止しているインスタンスと動いているインスタンスがあり、それらを摩擦ジョイントで接続すると、動いているインスタンスは徐々に減速し、自分も静止することになります。両方のインスタンスが動いている場合、2番目のインスタンスの移動速度は1番目のインスタンスの移動速度に一致するように変更されます。</p>
-  <p><img>他のほとんどのジョイントと同様に、結合するインスタンスと、ジョイントを作成する位置を<span class="notranslate">room</span> 内で指定します。次に、最大力と最大トルク（方向と回転の摩擦）を指定します。「col」値を <span class="inline">true</span> に設定すると、2 つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
+  <p>
+    摩擦ジョイントは、物理シミュレーションの他のジョイントとは少し異なり、作成された接続がインスタンスの位置や動きを拘束するのではなく、その速度と回転を拘束するものです。これは、力とトルクの最大入力値を取り、それを2番目の固定具に適用して、速度と角運動量を最初のインスタンスのものと同じ値にすることで機能します。つまり、静止しているインスタンスと動いているインスタンスがあり、それらを摩擦ジョイントで接続すると、動いているインスタンスは徐々に減速し、自分も静止することになります。両方のインスタンスが動いている場合、2番目のインスタンスの移動速度は1番目のインスタンスの移動速度に一致するように変更されます。
+  </p>
+  <p><img>他のほとんどのジョイントと同様に、結合するインスタンスと、ジョイントを作成する位置を<span class="notranslate">room</span>
+    内で指定します。次に、最大力と最大トルク（方向と回転の摩擦）を指定します。「col」値を <span class="inline">true</span> に設定すると、2
+    つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし <span class="inline">false</span> に設定すると、何があっても衝突することはありません。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_joint_friction_create</span>(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_friction_create</span>(inst1, inst2,
+    anchor_x, anchor_y, max_force, max_torque, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">inst1</span></td>
@@ -66,7 +74,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -85,11 +93,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Joints.htm">関節</a></div>
-        <div style="float:right">次のページ <a href="physics_joint_delete.htm"><span class="notranslate">physics_joint_delete</span></a></div>
+        <div style="float:left">前のページ：<a href="Joints.htm">関節</a></div>
+        <div style="float:right">次のページ：<a href="physics_joint_delete.htm"><span
+              class="notranslate">physics_joint_delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_friction_create
@@ -98,4 +108,5 @@ physics_joint_friction_create
 physics_joint_friction_create
 -->
 </body>
+
 </html>

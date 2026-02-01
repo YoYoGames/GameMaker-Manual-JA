@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ゲームパッドボタンを離した場合</title>
@@ -12,24 +13,31 @@
   <meta name="rh-index-keywords" content="GML Visual Action - If Gamepad Button Released" />
   <meta name="search-keywords" content="If Gamepad Button Released" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> ゲームパッドボタンを離した場合</h1>
-  <p>このアクションは、指定されたゲームパッド・インデックスのゲームパッド・ボタンがいつリリースされたかをチェックするものである。ボタンが離された1回のゲームティックで <span class="inline">true</span> を返し、それ以外の時は <span class="inline">false</span> を返します。 <span class="inline">not</span> モディファイアを有効にした場合。
-    この動作は逆で、ボタンが解放<i>されて</i>いないかどうかをチェックし、解放されているゲームティックでは <span class="inline">false</span> を返し、それ以外では <span class="inline">true</span> を返します。</p>
-  <p>チェック対象のボタンがアナログボタンの場合、<a href="Set_Gamepad_Button_Threshold.htm">Set Gamepad Button Threshold</a>アクションで設定した閾値を下回るまで、リリースは検出されません。</p>
+  <p>このアクションは、指定されたゲームパッド・インデックスのゲームパッド・ボタンがいつリリースされたかをチェックするものである。ボタンが離された1回のゲームティックで <span class="inline">true</span>
+    を返し、それ以外の時は <span class="inline">false</span> を返します。 <span class="inline">not</span> モディファイアを有効にした場合。
+    この動作は逆で、ボタンが解放<i>されて</i>いないかどうかをチェックし、解放されているゲームティックでは <span class="inline">false</span> を返し、それ以外では <span
+      class="inline">true</span> を返します。</p>
+  <p>チェック対象のボタンがアナログボタンの場合、<a href="Set_Gamepad_Button_Threshold.htm">Set Gamepad Button
+      Threshold</a>アクションで設定した閾値を下回るまで、リリースは検出されません。</p>
   <p>なお、「if」ブロックにアクションを追加するには、下の画像のように、アクションの横にドロップする必要があります。</p>
   <p><img>これらのアクションは、&quot;if&quot; の評価値が次のとおりであれば実行されます。
-   <span class="inline">true</span> 一方、他の場所でドロップされたアクションは &quot;if&quot; ブロックの後で実行されます。</p>
+    <span class="inline">true</span> 一方、他の場所でドロップされたアクションは &quot;if&quot; ブロックの後で実行されます。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="If Gamepad Button Released Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Released.png" /></p>
+  <p><img alt="If Gamepad Button Released Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_If_Button_Released.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Gamepad</span></td>
@@ -48,7 +56,8 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、ゲームパッド0のボタンの状態を1ステップごとにポーリングし
-    ボタンが押されている場合、ボタンが最初に押されたかどうかをチェックする。チェックが <span class="inline">true</span> であった場合、音が鳴り、ボタンが押されている間、インスタンスの速度が10に設定されます。ボタンが押されていない場合
+    ボタンが押されている場合、ボタンが最初に押されたかどうかをチェックする。チェックが <span class="inline">true</span>
+    であった場合、音が鳴り、ボタンが押されている間、インスタンスの速度が10に設定されます。ボタンが押されていない場合
     ボタンを離すと、再び速度が0になるようにチェックが行われます。</p>
   <p> </p>
   <p> </p>
@@ -56,11 +65,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Actions.htm">ゲームパッドアクション</a></div>
-        <div style="float:right">次のページ<a href="Get_Gamepad_Axis.htm">ゲームパッド ゲットアクシス</a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Actions.htm">ゲームパッドアクション</a></div>
+        <div style="float:right">次のページ：<a href="Get_Gamepad_Axis.htm">ゲームパッド ゲットアクシス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Gamepad Button Released
@@ -69,4 +79,5 @@ Action - If Gamepad Button Released
 action_if_gamepad_button_released
 -->
 </body>
+
 </html>

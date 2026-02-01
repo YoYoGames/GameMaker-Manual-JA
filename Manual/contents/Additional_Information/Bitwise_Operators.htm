@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ビット演算子</title>
@@ -12,18 +13,26 @@
   <meta name="rh-index-keywords" content="Bitwise Operators" />
   <meta name="search-keywords" content="bitwise,bitwise operators" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ビット演算子と二項演算子</h1>
-  <p>コンピュータ時代の初期には、<strong>2進数や</strong> <strong>16進数</strong>（hexadecimal）が主流であった。おそらく、高レベル言語（BASICなど）の実行速度が単に遅かったからであろう。例えば、32×32の掛け算は、BASICではCPUサイクルを何回もかけて実現していたかもしれないが、2進数では1CPUサイクルで1つの演算として行われる。</p>
-  <p>なぜなら、マシンのスピードと、より複雑なCPU構造が、このアプローチの欠点を補ってくれるからです。もちろん、これはあなたが書くコードのすべての行を最適化する必要がないことを意味するので、素晴らしいニュースですが、これが事実であれば - あなたは本当に全くバイナリについて気にする必要がありますか？</p>
-  <p>答えは間違いなく「イエス、そうすべき」です。バイナリやヘックスを使うことで、CPUがどのように動作しているかをより深く理解することができ、より良いコードを書いたり、データをうまくパックしたり、いくつかの作業をよりシンプルにしたりすることができます。このページでは、バイナリとは何か、そしてゲームを作るときにどのように使うことができるのかについて、少し説明します。</p>
+  <p>コンピュータ時代の初期には、<strong>2進数や</strong>
+    <strong>16進数</strong>（hexadecimal）が主流であった。おそらく、高レベル言語（BASICなど）の実行速度が単に遅かったからであろう。例えば、32×32の掛け算は、BASICではCPUサイクルを何回もかけて実現していたかもしれないが、2進数では1CPUサイクルで1つの演算として行われる。
+  </p>
+  <p>なぜなら、マシンのスピードと、より複雑なCPU構造が、このアプローチの欠点を補ってくれるからです。もちろん、これはあなたが書くコードのすべての行を最適化する必要がないことを意味するので、素晴らしいニュースですが、これが事実であれば
+    - あなたは本当に全くバイナリについて気にする必要がありますか？</p>
+  <p>
+    答えは間違いなく「イエス、そうすべき」です。バイナリやヘックスを使うことで、CPUがどのように動作しているかをより深く理解することができ、より良いコードを書いたり、データをうまくパックしたり、いくつかの作業をよりシンプルにしたりすることができます。このページでは、バイナリとは何か、そしてゲームを作るときにどのように使うことができるのかについて、少し説明します。
+  </p>
   <p>そこで、まず最も基本的な二進法の理論、つまり数字がどのように作られるかを見てみましょう。この表を見てください。</p>
   <p class="code">000 = 0<br />
     001 = 1<br />
     010 = 2<br />
     100 = 4</p>
-  <p>それぞれの1または0はデータの1<a class="glossterm" data-glossterm="ビット" href="#">ビットを</a>表し、これはご覧の通り、2進数では10が2に相当することを意味します！（※1）。つまり、ビット2＝2、ビット3＝4、ビット4＝8といった具合です（この<a class="glossterm" data-glossterm="バイト" href="#">バイト</a>表は下図に示すとおり）。</p>
+  <p>それぞれの1または0はデータの1<a class="glossterm" data-glossterm="ビット"
+      href="#">ビットを</a>表し、これはご覧の通り、2進数では10が2に相当することを意味します！（※1）。つまり、ビット2＝2、ビット3＝4、ビット4＝8といった具合です（この<a class="glossterm"
+      data-glossterm="バイト" href="#">バイト</a>表は下図に示すとおり）。</p>
   <p class="code">00000001 = 1<br />
     00000010 = 2<br />
     00000100 = 4<br />
@@ -32,18 +41,34 @@
     00100000 = 32<br />
     01000000 = 64<br />
     10000000 = 128</p>
-  <p>2の累乗の数字ならそれでもいいが、もっと複雑な数字を作るにはどうしたらいいのだろう。2進数には0か1しか格納できないので、より複雑な数を作るには、ビットを足し合わせる必要があります。例えば6を作りたい場合、4と2を足すとこうなります。</p>
+  <p>
+    2の累乗の数字ならそれでもいいが、もっと複雑な数字を作るにはどうしたらいいのだろう。2進数には0か1しか格納できないので、より複雑な数を作るには、ビットを足し合わせる必要があります。例えば6を作りたい場合、4と2を足すとこうなります。
+  </p>
   <p class="code">00000010 = 2<br />
     00000100 = 4<br />
     00000110 = 6</p>
-  <p>これは、<strong>すべての </strong>2進数について言えることで、コンピュータが内部でどのように数字を構成しているかということである。もう少し複雑な数字、23を例にとってみよう。23という数字は、実際には、 <span class="inline">1+2+4+16</span> または <span class="inline">00010111</span> で構成されています。もっと複雑な例として、196はどうでしょうか？これは、 <span class="inline">128+64+4</span> または <span class="inline">11000100</span> で構成されています。</p>
-  <p>しかし、1バイトの範囲外の値（0から255までの数値を格納可能）を扱うようになると、追跡が少し難しくなってきます。例えば、217,361は2進数で <span class="inline">110101000100010001</span> 。あるいは、 <span class="inline">1+16+256+etc...</span> どのような値を表現する場合でもルールは同じで、各数値は複数のビットを加算して作られます。</p>
-  <p>さて、これらの値に対して、どのように数学的な演算を行うのでしょうか。例えば、 <span class="inline">true</span> または <span class="inline">false</span> を値として格納したいとします。通常、コンパイラは <span class="inline">INT</span> ( <span class="inline">INT</span> は通常符号付き 32 ビット数として定義されます。符号付きとは正負の値を取れるということで、符号なしとは正しか取れないということです) を使って、単純に <span class="inline">0</span> または <span class="inline">1</span> に代入します。2つの状態しか持たない <span class="inline">true</span> / <span class="inline">false</span> の値はビットに格納するのに最適です。そうすれば <span class="inline">INT</span> それぞれに対して 1 ビットだけではなく 32 <span class="inline">true</span> / <span class="inline">false</span> ビットを格納できます。これは、1 <span class="inline">INT</span> が 32 ビットからできていることと同じです。</p>
+  <p>これは、<strong>すべての </strong>2進数について言えることで、コンピュータが内部でどのように数字を構成しているかということである。もう少し複雑な数字、23を例にとってみよう。23という数字は、実際には、
+    <span class="inline">1+2+4+16</span> または <span class="inline">00010111</span> で構成されています。もっと複雑な例として、196はどうでしょうか？これは、
+    <span class="inline">128+64+4</span> または <span class="inline">11000100</span> で構成されています。
+  </p>
+  <p>しかし、1バイトの範囲外の値（0から255までの数値を格納可能）を扱うようになると、追跡が少し難しくなってきます。例えば、217,361は2進数で <span
+      class="inline">110101000100010001</span> 。あるいは、 <span class="inline">1+16+256+etc...</span>
+    どのような値を表現する場合でもルールは同じで、各数値は複数のビットを加算して作られます。</p>
+  <p>さて、これらの値に対して、どのように数学的な演算を行うのでしょうか。例えば、 <span class="inline">true</span> または <span class="inline">false</span>
+    を値として格納したいとします。通常、コンパイラは <span class="inline">INT</span> ( <span class="inline">INT</span> は通常符号付き 32
+    ビット数として定義されます。符号付きとは正負の値を取れるということで、符号なしとは正しか取れないということです) を使って、単純に <span class="inline">0</span> または <span
+      class="inline">1</span> に代入します。2つの状態しか持たない <span class="inline">true</span> / <span class="inline">false</span>
+    の値はビットに格納するのに最適です。そうすれば <span class="inline">INT</span> それぞれに対して 1 ビットだけではなく 32 <span class="inline">true</span> /
+    <span class="inline">false</span> ビットを格納できます。これは、1 <span class="inline">INT</span> が 32 ビットからできていることと同じです。
+  </p>
   <p>どうすればいいのか？それは、とても簡単なことです。</p>
   <p class="code">flags = flags | 1;</p>
-  <p><span class="inline">|</span>&quot; 演算子はビット演算です。 <span class="inline">OR</span> 、これは上記の命令 <span class="inline">ORs</span> 1 を変数 <span class="inline">flags</span> に保持されている値に変換することを意味します。先ほどから覚えているように、1を使うと最初のビットが設定されます。もし2番目のビットを設定したい場合は、次のようにします。</p>
+  <p><span class="inline">|</span>&quot; 演算子はビット演算です。 <span class="inline">OR</span> 、これは上記の命令 <span
+      class="inline">ORs</span> 1 を変数 <span class="inline">flags</span>
+    に保持されている値に変換することを意味します。先ほどから覚えているように、1を使うと最初のビットが設定されます。もし2番目のビットを設定したい場合は、次のようにします。</p>
   <p class="code">flags = flags | 2;</p>
-  <p>ビットパターン <span class="inline">00000010</span> は 2 に等しいので、2 で <span class="inline">OR</span> となります。では、二項演算子 <span class="inline">OR</span> はいったい何をするのでしょうか？このように、すべてのビットを1つの値に統合するのです。</p>
+  <p>ビットパターン <span class="inline">00000010</span> は 2 に等しいので、2 で <span class="inline">OR</span> となります。では、二項演算子 <span
+      class="inline">OR</span> はいったい何をするのでしょうか？このように、すべてのビットを1つの値に統合するのです。</p>
   <p class="code">010110100 // Value 1<br />
     110011001 // value 2<br />
     110111101 // Value 1 OR Value 2</p>
@@ -52,10 +77,15 @@
     00 | 01 = 01<br />
     01 | 01 = 01<br />
     01 | 00 = 01</p>
-  <p>つまり、ゼロが2つある値では、ゼロのままです。このようなビットを <span class="inline">true</span>/<span class="inline">false</span> の状態として使用する利点は、一度の操作で複数のビットを「フラグ」として設定できることです。例えば、ビット1が「active」<span class="notranslate">flag</span> で、ビット3が「visible」<span class="notranslate">flag</span> であるとする。このようにすることで、両方を設定することができます。</p>
+  <p>つまり、ゼロが2つある値では、ゼロのままです。このようなビットを <span class="inline">true</span>/<span class="inline">false</span>
+    の状態として使用する利点は、一度の操作で複数のビットを「フラグ」として設定できることです。例えば、ビット1が「active」<span class="notranslate">flag</span>
+    で、ビット3が「visible」<span class="notranslate">flag</span> であるとする。このようにすることで、両方を設定することができます。</p>
   <p class="code">flags = flags | 5<span class="inline"></span>;</p>
-  <p>これは、5が2進数で <span class="inline">00000101</span> 、上記のルールに従って、変数 &quot;flags &quot;はこれら2つのビットを自分のものと統合されるからです。したがって、ビット1がすでにセットされていたとしても、この操作は有効で、ビット3もセットされることになる。</p>
-  <p><span class="notranslate">flags</span> をクリアするのは？ここで、ビット単位の &quot;<span class="inline">&amp;</span>&quot;<span class="inline">AND</span> オペレーションが登場するわけです。 <span class="inline">AND</span> の場合、マスクで設定されたビットは保持され、マスクでクリアされたビットは削除されます - このように。</p>
+  <p>これは、5が2進数で <span class="inline">00000101</span> 、上記のルールに従って、変数 &quot;flags
+    &quot;はこれら2つのビットを自分のものと統合されるからです。したがって、ビット1がすでにセットされていたとしても、この操作は有効で、ビット3もセットされることになる。</p>
+  <p><span class="notranslate">flags</span> をクリアするのは？ここで、ビット単位の &quot;<span class="inline">&amp;</span>&quot;<span
+      class="inline">AND</span> オペレーションが登場するわけです。 <span class="inline">AND</span>
+    の場合、マスクで設定されたビットは保持され、マスクでクリアされたビットは削除されます - このように。</p>
   <p class="code">01110010101 // Value 1<br />
     00110000100 // Value 2<br />
     00110000100 // Value 1 AND value 2</p>
@@ -64,42 +94,70 @@
     01 &amp; 00 = 00<br />
     00 &amp; 01 = 00<br />
     01 &amp; 01 = 01</p>
-  <p>だから、それぞれの場所にビットがあるときだけ、キープされる。これはどういうことかというと、複数の<span class="notranslate">flags</span> を一度に設定できるのと同じように、複数の<span class="notranslate">flags</span> を一度にクリアすることもできるのです。例えば、上のようなケースで、今度はクリアしてみましょう。ビット1と3をクリア（値5を与える）したいのですが、上の真理値表を思い出すと、やりたいことは、他のビットを全部残して、ビット1と3をクリアすることです。これは1111111111111111111111010（32ビット）のバイナリ「マスク」になります。このマスクは、現在設定されているすべてのビットを保持し、実際にクリアしたい2つのビットをクリアします。つまり、1000111011という値があって、上記のマスクを使ってビット1と3をクリアしたい場合、以下のようになります。</p>
+  <p>だから、それぞれの場所にビットがあるときだけ、キープされる。これはどういうことかというと、複数の<span class="notranslate">flags</span> を一度に設定できるのと同じように、複数の<span
+      class="notranslate">flags</span>
+    を一度にクリアすることもできるのです。例えば、上のようなケースで、今度はクリアしてみましょう。ビット1と3をクリア（値5を与える）したいのですが、上の真理値表を思い出すと、やりたいことは、他のビットを全部残して、ビット1と3をクリアすることです。これは1111111111111111111111010（32ビット）のバイナリ「マスク」になります。このマスクは、現在設定されているすべてのビットを保持し、実際にクリアしたい2つのビットをクリアします。つまり、1000111011という値があって、上記のマスクを使ってビット1と3をクリアしたい場合、以下のようになります。
+  </p>
   <p class="code">00000000000000000000001000111011 // Value<br />
     11111111111111111111111111111010 // Mask<br />
     00000000000000000000001000111010 // Value AND Mask</p>
-  <p>これは素晴らしいことですが、<span class="notranslate">flags</span> をクリアする必要があるたびにこの作業をしなければならないとしたら、うんざりしてしまうでしょう。必要なのは、ビットを簡単に（できればCPUコストをかけずに）反転させる方法です。幸いなことに、&quot; <span class="inline">~</span>&quot; <span class="inline">NOT</span> 演算子を使えば、簡単にこれを行う方法がある。</p>
-  <p> <span class="inline">NOT</span> 演算子はその名の通り、これらのビットでは<em>ありません</em>。以下は、 <span class="inline">NOT</span> の真理値表です。</p>
+  <p>これは素晴らしいことですが、<span class="notranslate">flags</span>
+    をクリアする必要があるたびにこの作業をしなければならないとしたら、うんざりしてしまうでしょう。必要なのは、ビットを簡単に（できればCPUコストをかけずに）反転させる方法です。幸いなことに、&quot; <span
+      class="inline">~</span>&quot; <span class="inline">NOT</span> 演算子を使えば、簡単にこれを行う方法がある。</p>
+  <p> <span class="inline">NOT</span> 演算子はその名の通り、これらのビットでは<em>ありません</em>。以下は、 <span class="inline">NOT</span> の真理値表です。
+  </p>
   <p class="code">~00 = 11<br />
     ~01 = 10<br />
     ~10 = 01<br />
     ~11 = 00</p>
-  <p>この演算子を使うと、<span class="notranslate">flags</span> の削除が非常に簡単になります。さらに、通常はコンパイル時の最適化で、定数（つまり変数ではない）を使っている場合は、コンパイラが自動的にビットを反転させるようになっているのです。この例では、ビット1と3を再びクリアします。</p>
+  <p>この演算子を使うと、<span class="notranslate">flags</span>
+    の削除が非常に簡単になります。さらに、通常はコンパイル時の最適化で、定数（つまり変数ではない）を使っている場合は、コンパイラが自動的にビットを反転させるようになっているのです。この例では、ビット1と3を再びクリアします。</p>
   <p class="code">a = a &amp; ~5;</p>
-  <p>この場合、実際には&quot;<span class="inline">a &amp; 11111111111111111111111111111010</span>&quot;だけにコンパイルされます。これによって、<span class="notranslate">flags</span> をクリアするという点では、かなりシンプルになります。</p>
-  <p>最後に見ておきたい演算子は &quot;<span class="inline">^</span>&quot; <span class="inline">EOR</span> (<span class="inline">Exclusive OR</span>, 時には <span class="inline">XOR</span>) です。この演算子は両方の値に設定されているビットを反転させます。以下は、 <span class="inline">EOR</span> の真理値表です。</p>
+  <p>この場合、実際には&quot;<span class="inline">a &amp; 11111111111111111111111111111010</span>&quot;だけにコンパイルされます。これによって、<span
+      class="notranslate">flags</span> をクリアするという点では、かなりシンプルになります。</p>
+  <p>最後に見ておきたい演算子は &quot;<span class="inline">^</span>&quot; <span class="inline">EOR</span> (<span
+      class="inline">Exclusive OR</span>, 時には <span class="inline">XOR</span>) です。この演算子は両方の値に設定されているビットを反転させます。以下は、
+    <span class="inline">EOR</span> の真理値表です。
+  </p>
   <p class="code">0 ^ 0 = 0<br />
     0 ^ 1 = 1<br />
     1 ^ 0 = 1<br />
     1 ^ 1 = 0</p>
-  <p>これは不思議なことですが、信じられないほど便利です。例えば、単純に0から1にカウントして0に戻る(0と1の間をトグルする)カウンターが欲しいとします。1つ追加して、 <span class="inline">IF</span> 、2になったかどうかを確認し、リセットして1に戻すということができます。あるいは...1個追加して、1個で <span class="inline">AND</span> ( <span class="inline">01+01 = 10</span>, and <span class="inline">10 &amp; 01 = 0</span> 以降)、あるいはこうすることもできますね。</p>
+  <p>これは不思議なことですが、信じられないほど便利です。例えば、単純に0から1にカウントして0に戻る(0と1の間をトグルする)カウンターが欲しいとします。1つ追加して、 <span class="inline">IF</span>
+    、2になったかどうかを確認し、リセットして1に戻すということができます。あるいは...1個追加して、1個で <span class="inline">AND</span> ( <span class="inline">01+01 =
+      10</span>, and <span class="inline">10 &amp; 01 = 0</span> 以降)、あるいはこうすることもできますね。</p>
   <p class="code">a = a ^ 1;</p>
-  <p>これは、1回目の実行時に <span class="inline">0 ^ 1 = 1</span> 、2回目に <span class="inline">1 ^ 1 = 0</span> 、それによって0から1へトグルで切り替わります。</p>
-  <p> <span class="inline">OR</span> (<span class="inline">|</span>)、 <span class="inline">AND</span>(<span class="inline">&amp;</span>)、 <span class="inline">NOT</span>(<span class="inline">~</span>)、 <span class="inline">EOR</span>(<span class="inline">^</span>) では、比較的簡単にビットを操作でき、最も単純なレベルでは、複数のビットを一度に制御することが可能です。<span class="notranslate">sprites</span> のマスク、 <span class="inline">MOD</span> の整数演算（ <span class="inline">AND</span> を使用）、ループカウンタなど、ゲームを開発する際にこれらの演算を使用できることは明らかです。</p>
-  <p>では、単純なビット演算はできるのですが、もっと複雑なものを見てみましょう。まず、「コンピュータの足し算はどうなっているのか」という疑問からです。非常に簡単な例を見てみましょう。 <span class="inline">1+1</span>.</p>
+  <p>これは、1回目の実行時に <span class="inline">0 ^ 1 = 1</span> 、2回目に <span class="inline">1 ^ 1 = 0</span>
+    、それによって0から1へトグルで切り替わります。</p>
+  <p> <span class="inline">OR</span> (<span class="inline">|</span>)、 <span class="inline">AND</span>(<span
+      class="inline">&amp;</span>)、 <span class="inline">NOT</span>(<span class="inline">~</span>)、 <span
+      class="inline">EOR</span>(<span class="inline">^</span>) では、比較的簡単にビットを操作でき、最も単純なレベルでは、複数のビットを一度に制御することが可能です。<span
+      class="notranslate">sprites</span> のマスク、 <span class="inline">MOD</span> の整数演算（ <span class="inline">AND</span>
+    を使用）、ループカウンタなど、ゲームを開発する際にこれらの演算を使用できることは明らかです。</p>
+  <p>では、単純なビット演算はできるのですが、もっと複雑なものを見てみましょう。まず、「コンピュータの足し算はどうなっているのか」という疑問からです。非常に簡単な例を見てみましょう。 <span
+      class="inline">1+1</span>.</p>
   <p class="code">00000001<br />
     00000001<br />
     00000010</p>
-  <p>普通の足し算と同じように、数字を足し合わせて、次の列にオーバーフローさせるのですが、普通の10進数の足し算と違って、0から1までしかできず、0から9まではできないのです。つまり、 <span class="inline">1+1</span> を足すと、オーバーフローして <span class="inline">10</span> になります。では、もっと複雑な例を見てみましょう。</p>
+  <p>普通の足し算と同じように、数字を足し合わせて、次の列にオーバーフローさせるのですが、普通の10進数の足し算と違って、0から1までしかできず、0から9まではできないのです。つまり、 <span
+      class="inline">1+1</span> を足すと、オーバーフローして <span class="inline">10</span> になります。では、もっと複雑な例を見てみましょう。</p>
   <p class="code">01011011 = 91<br />
     00101101 = 45<br />
     10001000 = 136</p>
-  <p>ここでは明らかに見づらいですが、オーバーフローは列の中に1がなくなるまで波及します。注目すべきは、コンピュータは一度に2つの数しか加算（または減算、乗算、除算）できないことです。例えば <span class="inline">19 + 19 + 19</span> 。人間であれば、9を全部足して、2を足し、さらに続けることができます。しかし、コンピュータにはそれができません。コンピュータにできるのは、次のようなことです：<span class="inline"> (19 + 19) + 19</span>.だから、コンピュータは2つのブロックに分かれて計算をするのです。</p>
-  <p>プログラマーとして最も関心のある2進数の計算は、掛け算と割り算です。コンピュータは2進数の掛け算しかしませんし、それ以上のことをするには、数字をバラバラにして、その結果をすべて足し算します。まず、非常に簡単な例を挙げてみよう。 <span class="inline">4 * 2 = 8</span>.さて、2進数で2を掛けるには、すべてのビットを1つ左に<em>シフト </em>します。こんな感じです。</p>
+  <p>ここでは明らかに見づらいですが、オーバーフローは列の中に1がなくなるまで波及します。注目すべきは、コンピュータは一度に2つの数しか加算（または減算、乗算、除算）できないことです。例えば <span
+      class="inline">19 + 19 + 19</span>
+    。人間であれば、9を全部足して、2を足し、さらに続けることができます。しかし、コンピュータにはそれができません。コンピュータにできるのは、次のようなことです：<span class="inline"> (19 + 19) +
+      19</span>.だから、コンピュータは2つのブロックに分かれて計算をするのです。</p>
+  <p>プログラマーとして最も関心のある2進数の計算は、掛け算と割り算です。コンピュータは2進数の掛け算しかしませんし、それ以上のことをするには、数字をバラバラにして、その結果をすべて足し算します。まず、非常に簡単な例を挙げてみよう。
+    <span class="inline">4 * 2 = 8</span>.さて、2進数で2を掛けるには、すべてのビットを1つ左に<em>シフト </em>します。こんな感じです。
+  </p>
   <p class="code">00000100 * 2 = 00001000 = 8</p>
   <p>この場合、すべてのビットが1つ左に移動し、3ビット目から4ビット目に移動し、値が4から8に変化しているのです。もっと大きな数字ではどうでしょう？</p>
   <p class="code">101 = 01100101 * 2 = 11001010 = 202</p>
-  <p>ここでも、すべてのビットが1つずつ移動し、2の倍数になります。では、4の倍数はどうでしょうか。簡単です。すべてのビットを1つずつではなく、2つずつ左に移動させるのです。では、16倍、つまり128倍はどうでしょう？この場合、それぞれ4ビット、7ビットの左シフトが必要です。これは非常に便利なことで、ビットを移動させるだけで簡単な乗算ができるようになります。これを実現するために、<strong>左シフト</strong>演算子 <span class="inline">&lt;&lt;</span> を使用します。以下はその例です。</p>
+  <p>
+    ここでも、すべてのビットが1つずつ移動し、2の倍数になります。では、4の倍数はどうでしょうか。簡単です。すべてのビットを1つずつではなく、2つずつ左に移動させるのです。では、16倍、つまり128倍はどうでしょう？この場合、それぞれ4ビット、7ビットの左シフトが必要です。これは非常に便利なことで、ビットを移動させるだけで簡単な乗算ができるようになります。これを実現するために、<strong>左シフト</strong>演算子
+    <span class="inline">&lt;&lt;</span> を使用します。以下はその例です。
+  </p>
   <p class="code">00000001 &lt;&lt; 1 = 000000010 = 2<br />
     00000001 &lt;&lt; 2 = 000000100 = 4<br />
     00000001 &lt;&lt; 3 = 000001000 = 8<br />
@@ -108,10 +166,15 @@
     00000001 &lt;&lt; 6 = 001000000 = 64<br />
     00000001 &lt;&lt; 7 = 010000000 = 128<br />
     00000001 &lt;&lt; 8 = 100000000 = 256</p>
-  <p>さて、高速・単純な乗算に非常に便利なのはもちろんですが、ビット値を把握することなく、特定のビットを設定するのにも非常に便利です。例えば、ビット27を設定したい場合、それは何番でしょうか？(ちなみに67108864です!)。上の構文を使って、<span class="notranslate">flags</span> を簡単に設定することができます。</p>
+  <p>
+    さて、高速・単純な乗算に非常に便利なのはもちろんですが、ビット値を把握することなく、特定のビットを設定するのにも非常に便利です。例えば、ビット27を設定したい場合、それは何番でしょうか？(ちなみに67108864です!)。上の構文を使って、<span
+      class="notranslate">flags</span> を簡単に設定することができます。</p>
   <p class="code">a = a | (1 &lt;&lt; 27)</p>
-  <p>なるほど...今までの説明では（ビットが1から始まっているので）これはビット26になりますが、実は...ビットはビット1からではなく、ビット0から始まり、上に向かっていきます。つまり、INTEGERには32ビットがありますが、ビットの範囲は0から31までで、1から32までではありません。これは、ビット数に対する定数を設定することができるため、実際にはかなり便利です。</p>
-  <p>そこで、Bit27がactive<span class="notranslate">flag</span> 、bit0がexploding<span class="notranslate">flag</span> だとします。どうすれば両方を設定できるのでしょうか？</p>
+  <p>
+    なるほど...今までの説明では（ビットが1から始まっているので）これはビット26になりますが、実は...ビットはビット1からではなく、ビット0から始まり、上に向かっていきます。つまり、INTEGERには32ビットがありますが、ビットの範囲は0から31までで、1から32までではありません。これは、ビット数に対する定数を設定することができるため、実際にはかなり便利です。
+  </p>
+  <p>そこで、Bit27がactive<span class="notranslate">flag</span> 、bit0がexploding<span class="notranslate">flag</span>
+    だとします。どうすれば両方を設定できるのでしょうか？</p>
   <p class="code">ACTIVE = 27;<br />
     BOOM = 0;<br />
     A = A | (1 &lt;&lt; ACTIVE) | (1 &lt;&lt; BOOM);</p>
@@ -119,44 +182,70 @@
   <p class="code">A = A | 13421772;</p>
   <p>これらのビットをクリアするには（上で見たように）、次のようにNOT修飾子を使えばよいのです。</p>
   <p class="code">A = A &amp; ~((1 &lt;&lt; ACTIVE) | (1 &lt;&lt; BOOM));</p>
-  <p>このように、ビットの設定やクリアを自由に行えるので、データ構造を大幅に圧縮することができます。データ構造を圧縮することは良いことです。なぜなら、使用するメモリが少なければ、<span class="notranslate">cache</span> のミスが減り、コードの実行速度が速くなるからです。32MBのデータをコピーするのと、4MBのデータをコピーするのと、どちらが速いでしょうか？明らかに4MBの方が速いですよね。ですから、もしあなたが<span class="notranslate">flags</span> をすべて1回のメモリアクセスにまとめることができれば、これは良いことです!</p>
-  <p>では、除算をどのように行うのか、なぜ除算が便利になるのか、簡単に説明しましょう。除算は、<strong>右シフト</strong>演算子（ <span class="inline">&gt;&gt;</span> ）を使ってビットを<em>右に</em>シフトすることで行われます。64という単純な数を32で割ってみましょう。</p>
+  <p>このように、ビットの設定やクリアを自由に行えるので、データ構造を大幅に圧縮することができます。データ構造を圧縮することは良いことです。なぜなら、使用するメモリが少なければ、<span
+      class="notranslate">cache</span>
+    のミスが減り、コードの実行速度が速くなるからです。32MBのデータをコピーするのと、4MBのデータをコピーするのと、どちらが速いでしょうか？明らかに4MBの方が速いですよね。ですから、もしあなたが<span
+      class="notranslate">flags</span> をすべて1回のメモリアクセスにまとめることができれば、これは良いことです!</p>
+  <p>では、除算をどのように行うのか、なぜ除算が便利になるのか、簡単に説明しましょう。除算は、<strong>右シフト</strong>演算子（ <span class="inline">&gt;&gt;</span>
+    ）を使ってビットを<em>右に</em>シフトすることで行われます。64という単純な数を32で割ってみましょう。</p>
   <p class="code">64 / 32 = 01000000 &gt;&gt; 5 = 00000010</p>
   <p>そこで、1ビットを5だけシフトダウンして（これは32に必要なシフト数です - 上記を参照）、2を得ます。しかし、そこに他のビットがあるとどうなるでしょうか？さて、見てみましょう。</p>
   <p class="code">68 / 32 = 01000100 &gt;&gt; 5 = 00000010</p>
-  <p>そうそう...。まったく同じです。シフトダウンしたビットは単に失われるだけです。これは実に便利なことです。なぜなら、割り算をするときに余りが必要なら、もっと簡単に余りを求める方法があるからです。その前に、実際の例を見てみましょう。XとYの位置があり、これが32x32の大きさのグリッドのどのセルに入るかを取得したい。この方法によって、<span class="notranslate">objects</span> 、衝突、<span class="notranslate">flags</span> など、あらゆるものを保存し、素早くアクセスすることができます。それでは、ご覧ください。</p>
+  <p>
+    そうそう...。まったく同じです。シフトダウンしたビットは単に失われるだけです。これは実に便利なことです。なぜなら、割り算をするときに余りが必要なら、もっと簡単に余りを求める方法があるからです。その前に、実際の例を見てみましょう。XとYの位置があり、これが32x32の大きさのグリッドのどのセルに入るかを取得したい。この方法によって、<span
+      class="notranslate">objects</span> 、衝突、<span class="notranslate">flags</span>
+    など、あらゆるものを保存し、素早くアクセスすることができます。それでは、ご覧ください。</p>
   <p class="code">var X_index = x &gt;&gt; 5;<br />
     var Y_index = y &gt;&gt; 5;<br />
     cell_data = mygrid[# X_index,Y_index];</p>
-  <p>では、余りを求めるとしたらどうだろう。もしかしたら、この余りは、ある種のオーダー<span class="notranslate">flag</span> として使われるのかもしれない。どんな理由であれ、余りを得るのは <span class="inline">AND</span> を実行するのと同じくらい簡単です。</p>
+  <p>では、余りを求めるとしたらどうだろう。もしかしたら、この余りは、ある種のオーダー<span class="notranslate">flag</span> として使われるのかもしれない。どんな理由であれ、余りを得るのは <span
+      class="inline">AND</span> を実行するのと同じくらい簡単です。</p>
   <p class="code">var remainder = x &amp; 31<br />
     var X_Index = x &gt;&gt; 5;</p>
-  <p>さて、ここで何行ものコードを使ったことにお気づきかもしれませんが（よくあることです）、これはまだ非常に高速な命令を2つ並べただけなのです。しかし、なぜ31なのでしょうか？ビット5が32なので、その下のビットはすべて31になり、これが最大の余りなので、 <span class="inline">AND</span> 。（ <span class="inline">(1 &lt;&lt; 5) - 1</span> も使えるので、 <span class="inline">32 - 1 = 31</span> になります）。さて、もし私が2進法を理解せずにこれをやるとしたら、次のようになります。</p>
+  <p>
+    さて、ここで何行ものコードを使ったことにお気づきかもしれませんが（よくあることです）、これはまだ非常に高速な命令を2つ並べただけなのです。しかし、なぜ31なのでしょうか？ビット5が32なので、その下のビットはすべて31になり、これが最大の余りなので、
+    <span class="inline">AND</span> 。（ <span class="inline">(1 &lt;&lt; 5) - 1</span> も使えるので、 <span class="inline">32 -
+      1 = 31</span> になります）。さて、もし私が2進法を理解せずにこれをやるとしたら、次のようになります。
+  </p>
   <p class="code">var r = x mod 32;<br />
     var X_Index = floor(x / 32);</p>
-  <p>では、なぜこれほどまでに悪いのだろうか。32で割るためには、浮動小数点数の除算を実行しなければなりません。これは明らかに時間がかかりますが、 <span class="inline">mod 32</span> を実行するために、実際にはもう1回実行しなければならないのですアセンブラでこれを行う場合、実際には1回の除算で2つの値が得られますが、高級言語ではこれができないので（まあ、あまりないことですが）、すべての作業を2回行わなければならないのです。特に、このような計算がたくさんあるタイトな<span class="notranslate">loop</span> を行っている場合は、これが積み重なります。上記のようなビットシフトを使った整数の割り算は、ゲームの最適化にとても役立ちます。</p>
-  <p>この概念は、実際のプログラミングに適用するにはかなり複雑なため、以下に<span data-keyref="GameMaker Name">GameMakerで</span>作成したゲームに適用できる短い例をいくつか示します。</p>
+  <p>では、なぜこれほどまでに悪いのだろうか。32で割るためには、浮動小数点数の除算を実行しなければなりません。これは明らかに時間がかかりますが、 <span class="inline">mod 32</span>
+    を実行するために、実際にはもう1回実行しなければならないのですアセンブラでこれを行う場合、実際には1回の除算で2つの値が得られますが、高級言語ではこれができないので（まあ、あまりないことですが）、すべての作業を2回行わなければならないのです。特に、このような計算がたくさんあるタイトな<span
+      class="notranslate">loop</span> を行っている場合は、これが積み重なります。上記のようなビットシフトを使った整数の割り算は、ゲームの最適化にとても役立ちます。</p>
+  <p>この概念は、実際のプログラミングに適用するにはかなり複雑なため、以下に<span data-keyref="GameMaker Name">GameMakerで</span>作成したゲームに適用できる短い例をいくつか示します。
+  </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">タイルアライメント</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerの</span>開発者は、よく関数 <span class="inline">place_free()</span> を使い、衝突が見つかったら、その関数を実行し続けながら <span class="inline">x</span> や <span class="inline">y</span> の位置をループするか、関数 <span class="inline">move_outside_all()</span> を使って<span class="notranslate">object</span> をゆっくりと移動させようとします。</p>
-    <p class="dropspot">では、より高速に行うにはどうしたらよいのでしょうか。さて、適切なpower-of-2<span class="notranslate">tiles</span> を使えば、非常にシンプルな方法で、しかも電光石火の速さで処理することができます。右方向に動いていて、衝突ブロックに移動した場合、ご存知のようにすべてが 32 に整列されているので、<span class="notranslate">sprite</span> も 32 ピクセルの境界線（できれば左側の境界線）に整列する必要があり、<span class="notranslate">sprite</span> は衝突の外に移動します。これは本当に簡単で、上で余りを求めるのに使ったルールと、ビットの逆数を求める方法を知っていれば、単にこうすればいいのです。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerの</span>開発者は、よく関数 <span
+        class="inline">place_free()</span> を使い、衝突が見つかったら、その関数を実行し続けながら <span class="inline">x</span> や <span
+        class="inline">y</span> の位置をループするか、関数 <span class="inline">move_outside_all()</span> を使って<span
+        class="notranslate">object</span> をゆっくりと移動させようとします。</p>
+    <p class="dropspot">では、より高速に行うにはどうしたらよいのでしょうか。さて、適切なpower-of-2<span class="notranslate">tiles</span>
+      を使えば、非常にシンプルな方法で、しかも電光石火の速さで処理することができます。右方向に動いていて、衝突ブロックに移動した場合、ご存知のようにすべてが 32 に整列されているので、<span
+        class="notranslate">sprite</span> も 32 ピクセルの境界線（できれば左側の境界線）に整列する必要があり、<span class="notranslate">sprite</span>
+      は衝突の外に移動します。これは本当に簡単で、上で余りを求めるのに使ったルールと、ビットの逆数を求める方法を知っていれば、単にこうすればいいのです。</p>
     <p class="code">x = x &amp; ~31;</p>
-    <p class="dropspot">そうです、これだけで、32ピクセルの境界線にアライメントすることができるのです。31を変更することで、2の累乗であれば、どのような位置にも合わせることができます（これは、32で割ってから32を掛けることで、下位ビットを削除することに相当します）。</p>
-    <p class="dropspot">もし、右寄せにしたいのであれば、上記のようにしますが、次の<span class="notranslate">tile</span> に移動するために32を追加します。簡単ですね。このようにすることで、コリジョンコード全体が非常に速くなり、CPU時間を本当に必要なところに使うことができるようになります。</p>
+    <p class="dropspot">
+      そうです、これだけで、32ピクセルの境界線にアライメントすることができるのです。31を変更することで、2の累乗であれば、どのような位置にも合わせることができます（これは、32で割ってから32を掛けることで、下位ビットを削除することに相当します）。
+    </p>
+    <p class="dropspot">もし、右寄せにしたいのであれば、上記のようにしますが、次の<span class="notranslate">tile</span>
+      に移動するために32を追加します。簡単ですね。このようにすることで、コリジョンコード全体が非常に速くなり、CPU時間を本当に必要なところに使うことができるようになります。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">キーとドア</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">例えば、いくつかのドアがあり、それぞれに鍵があるレベルがあるとします。特定のドアのためのキーを簡単にマークするにはどうしたらいいでしょうか？通常、キーとドアにIDを割り当てるでしょう。では、1つのキーで2つ、3つのドアを開けたい場合はどうすればいいでしょうか？簡単です。MASKを使えばいいのです。ドアには、このように1ビットを割り当てます。<br />
-       </p>
+    <p class="dropspot">
+      例えば、いくつかのドアがあり、それぞれに鍵があるレベルがあるとします。特定のドアのためのキーを簡単にマークするにはどうしたらいいでしょうか？通常、キーとドアにIDを割り当てるでしょう。では、1つのキーで2つ、3つのドアを開けたい場合はどうすればいいでしょうか？簡単です。MASKを使えばいいのです。ドアには、このように1ビットを割り当てます。<br />
+    </p>
     <p class="code">door_id = 1; // 0001</p>
     <p class="dropspot">他はこんな感じでしょうか。<br />
-       </p>
+    </p>
     <p class="code">door_id=2; // 0010<br />
       door_id=4; // 0100<br />
       door_id=8; // 1000<br />
       etc...</p>
-    <p class="dropspot">1と3の扉を開ける鍵にしたい場合、鍵のMASK値は5（2進数で101）です。これを <span class="inline">AND</span> 、「0でない」と出れば、その鍵はドアを開けられることが分かります。MASKが0であれば、何も開かない鍵もあります。実際のチェックは以下のコードを見てください。</p>
+    <p class="dropspot">1と3の扉を開ける鍵にしたい場合、鍵のMASK値は5（2進数で101）です。これを <span class="inline">AND</span>
+      、「0でない」と出れば、その鍵はドアを開けられることが分かります。MASKが0であれば、何も開かない鍵もあります。実際のチェックは以下のコードを見てください。</p>
     <p class="code">if ((key_id &amp; door_id) ! = 0)<br />
       {<br />
           opendoor();<br />
@@ -165,24 +254,34 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">ループするカウンタ</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">例えば、0から15までの単純なアニメーションカウンターを作りたいとします（16フレームのアニメーションがあるため）。通常は、インクリメントを行い、 <span class="inline">if</span> チェックを行い、数値を折り返しますが、この例では、 <span class="inline">AND(&amp;)</span> 演算子を使用してみましょう。</p>
+    <p class="dropspot">例えば、0から15までの単純なアニメーションカウンターを作りたいとします（16フレームのアニメーションがあるため）。通常は、インクリメントを行い、 <span
+        class="inline">if</span> チェックを行い、数値を折り返しますが、この例では、 <span class="inline">AND(&amp;)</span> 演算子を使用してみましょう。</p>
     <p class="code">counter = (counter + 1) &amp; 15;</p>
-    <p class="dropspot">16は2の累乗なので、その数を1減らしてマスクとし、それを使ってカウンタ値をラップすることができるのです。カウンタが15から16に上がると、ビットパターン <span class="inline">10000</span> 、それを15（ビットパターン <span class="inline">01111</span> ）で <span class="inline">AND</span> 、 <span class="inline">00000</span> （単に0）で終わります。つまり、上記のコードは2のべき乗の範囲内で値をラップするのに有効です。</p>
+    <p class="dropspot">16は2の累乗なので、その数を1減らしてマスクとし、それを使ってカウンタ値をラップすることができるのです。カウンタが15から16に上がると、ビットパターン <span
+        class="inline">10000</span> 、それを15（ビットパターン <span class="inline">01111</span> ）で <span class="inline">AND</span>
+      、 <span class="inline">00000</span> （単に0）で終わります。つまり、上記のコードは2のべき乗の範囲内で値をラップするのに有効です。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Power Of 2 チェック</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">何かが2のべき乗であるかどうかを確認したい場合はどうすればよいのでしょうか。ここでちょっとしたトリックを紹介しよう。これは、与えられた値が2のべき乗であれば、 <span class="inline">true</span> を返します。</p>
+    <p class="dropspot">何かが2のべき乗であるかどうかを確認したい場合はどうすればよいのでしょうか。ここでちょっとしたトリックを紹介しよう。これは、与えられた値が2のべき乗であれば、 <span
+        class="inline">true</span> を返します。</p>
     <p class="code">function is_pow2(_val)<br />
       {<br />
           return _val &amp; (_val - 1)) == 0;<br />
       }</p>
-    <p class="dropspot">では、51という数字があったとしたら（<span class="inline">110011</span> ）、これはどうなるのでしょうか。さて、こうなります。 <span class="inline">110011 &amp; 110010</span>これは明らかに、 <span class="inline">AND</span> の後にたくさんのビットが残っているので、 <span class="inline">false</span> となります。 64 (<span class="inline">1000000</span>) なら、こうなります... <span class="inline">1000000 &amp; 0111111</span> <em>これは</em>0を残しているので、 <span class="inline">true</span> となります。</p>
+    <p class="dropspot">では、51という数字があったとしたら（<span class="inline">110011</span> ）、これはどうなるのでしょうか。さて、こうなります。 <span
+        class="inline">110011 &amp; 110010</span>これは明らかに、 <span class="inline">AND</span> の後にたくさんのビットが残っているので、 <span
+        class="inline">false</span> となります。 64 (<span class="inline">1000000</span>) なら、こうなります... <span
+        class="inline">1000000 &amp; 0111111</span> <em>これは</em>0を残しているので、 <span class="inline">true</span> となります。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">インデックスアライメント</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">2の累乗に揃えるための簡単なコードを紹介します。(1,2,4,8,16など)です。これは、メモリの割り当てや、データを適切な境界に書き込むことを確認するのに非常に便利です。この例では、 <span class="inline">_val1</span> は <span class="inline">_val2</span> バイトにアラインする必要があり、 <span class="inline">_val2</span> は 2 の累乗の数字です。この小さな関数は、希望する数値の次の境界に丸めるのです。</p>
+    <p class="dropspot">2の累乗に揃えるための簡単なコードを紹介します。(1,2,4,8,16など)です。これは、メモリの割り当てや、データを適切な境界に書き込むことを確認するのに非常に便利です。この例では、
+      <span class="inline">_val1</span> は <span class="inline">_val2</span> バイトにアラインする必要があり、 <span
+        class="inline">_val2</span> は 2 の累乗の数字です。この小さな関数は、希望する数値の次の境界に丸めるのです。
+    </p>
     <p class="code">function align_pow2(_val1, _val2)<br />
       {<br />
           return _val1 + (_val2 - 1)) &amp; ~(_val2 - 1);<br />
@@ -196,11 +295,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
-        <div style="float:right">次へ<a href="Type_Tables.htm">タイプテーブル</a></div>
+        <div style="float:left">前のページ：<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次のページ：<a href="Type_Tables.htm">タイプテーブル</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Bitwise Operators
@@ -209,4 +309,5 @@ Bitwise Operators
 bitwise_operators
 -->
 </body>
+
 </html>

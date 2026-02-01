@@ -1,75 +1,98 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ムーブメント</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Reference section for Movement functions and variables" />
-  <meta name="rh-index-keywords" content="" />
-  <meta name="search-keywords" content="movement functions,Movement" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>ムーブメント</title>
+      <meta name="generator" content="Adobe RoboHelp 2020" />
+      <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+      <script src="../../../../assets/scripts/main_script.js"></script>
+      <meta name="rh-authors" content="Mark Alexander" />
+      <meta name="topic-comment" content="Reference section for Movement functions and variables" />
+      <meta name="rh-index-keywords" content="" />
+      <meta name="search-keywords" content="movement functions,Movement" />
 </head>
+
 <body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ムーブメント</h1>
-  <p>どのようなゲームでも、移動と位置は最も重要であるため、<span data-keyref="GameMaker Name">GameMakerは</span>あらゆる状況に対応できるような関数を取り揃えています。インスタンスを移動させる主な方法は、実際の位置を設定するか、速度・方向ベクトルを設定するかの2つで、これはビルトインされた変数インスタンス変数を使用するか、特定の移動関数を使用するかのどちらかで行うことが可能です。これらのオプションについては、以下のセクションで説明します。</p>
-  <p>以下の変数はすべてすべてのインスタンスに「組み込まれて」含まれており、インスタンスが移動しているときに異なる動作を変更するために読み込んで変更することができます（これらは速度と方向ベクトルに影響します）。</p>
-  <ul class="colour">
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/direction.htm"><span class="notranslate">direction</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/friction.htm"><span class="notranslate">friction</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/gravity.htm"><span class="notranslate">gravity</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/gravity_direction.htm"><span class="notranslate">gravity_direction</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/hspeed.htm"><span class="notranslate">hspeed</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/vspeed.htm"><span class="notranslate">vspeed</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/speed.htm"><span class="notranslate">speed</span></a></li>
-  </ul>
-  <p> </p>
-  <p>上記の変数以外に、以下のように直接インスタンス位置を設定することもできます。</p>
-  <ul class="colour">
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/x.htm"><span class="notranslate">x</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/y.htm"><span class="notranslate">y</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/xprevious.htm"><span class="notranslate">xprevious</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/yprevious.htm"><span class="notranslate">yprevious</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/xstart.htm"><span class="notranslate">xstart</span></a></li>
-    <li><a href="../../Asset_Management/Instances/Instance_Variables/ystart.htm"><span class="notranslate">ystart</span></a></li>
-  </ul>
-  <p> </p>
-  <p>以下の関数はすべて、何らかの方法でインスタンスを移動するために使用することができます。あるものは速度/方向ベクトルに影響を与え、他のものは<span class="notranslate">room</span> 内の実際の x/y 位置に直接影響を与えます。</p>
-  <ul class="colour">
-    <li><a href="motion_add.htm"><span class="notranslate">motion_add</span></a></li>
-    <li><a href="motion_set.htm"><span class="notranslate">motion_set</span></a></li>
-    <li><a href="move_towards_point.htm"><span class="notranslate">move_towards_point</span></a></li>
-    <li><a href="move_bounce_all.htm"><span class="notranslate">move_bounce_all</span></a></li>
-    <li><a href="move_bounce_solid.htm"><span class="notranslate">move_bounce_solid</span></a></li>
-    <li><a href="move_contact_all.htm"><span class="notranslate">move_contact_all</span></a></li>
-    <li><a href="move_contact_solid.htm"><span class="notranslate">move_contact_solid</span></a></li>
-    <li><a href="move_outside_all.htm"><span class="notranslate">move_outside_all</span></a></li>
-    <li><a href="move_outside_solid.htm"><span class="notranslate">move_outside_solid</span></a></li>
-    <li><a href="move_random.htm"><span class="notranslate">move_random</span></a></li>
-    <li><a href="move_snap.htm"><span class="notranslate">move_snap</span></a></li>
-    <li><a href="move_wrap.htm"><span class="notranslate">move_wrap</span></a></li>
-    <li><a href="place_snapped.htm"><span class="notranslate">place_snapped</span></a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">背中<a href="../Movement_And_Collisions.htm">移動と衝突</a></div>
-        <div style="float:right">次へ<a href="../Motion_Planning/Motion_Planning.htm">モーションプランニング</a></div>
+      <!--<div class="body-scroll" style="top: 150px;">-->
+      <h1>ムーブメント</h1>
+      <p>どのようなゲームでも、移動と位置は最も重要であるため、<span
+                  data-keyref="GameMaker Name">GameMakerは</span>あらゆる状況に対応できるような関数を取り揃えています。インスタンスを移動させる主な方法は、実際の位置を設定するか、速度・方向ベクトルを設定するかの2つで、これはビルトインされた変数インスタンス変数を使用するか、特定の移動関数を使用するかのどちらかで行うことが可能です。これらのオプションについては、以下のセクションで説明します。
+      </p>
+      <p>以下の変数はすべてすべてのインスタンスに「組み込まれて」含まれており、インスタンスが移動しているときに異なる動作を変更するために読み込んで変更することができます（これらは速度と方向ベクトルに影響します）。</p>
+      <ul class="colour">
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/direction.htm"><span
+                              class="notranslate">direction</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/friction.htm"><span
+                              class="notranslate">friction</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/gravity.htm"><span
+                              class="notranslate">gravity</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/gravity_direction.htm"><span
+                              class="notranslate">gravity_direction</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/hspeed.htm"><span
+                              class="notranslate">hspeed</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/vspeed.htm"><span
+                              class="notranslate">vspeed</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/speed.htm"><span
+                              class="notranslate">speed</span></a></li>
+      </ul>
+      <p> </p>
+      <p>上記の変数以外に、以下のように直接インスタンス位置を設定することもできます。</p>
+      <ul class="colour">
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/x.htm"><span
+                              class="notranslate">x</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/y.htm"><span
+                              class="notranslate">y</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/xprevious.htm"><span
+                              class="notranslate">xprevious</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/yprevious.htm"><span
+                              class="notranslate">yprevious</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/xstart.htm"><span
+                              class="notranslate">xstart</span></a></li>
+            <li><a href="../../Asset_Management/Instances/Instance_Variables/ystart.htm"><span
+                              class="notranslate">ystart</span></a></li>
+      </ul>
+      <p> </p>
+      <p>以下の関数はすべて、何らかの方法でインスタンスを移動するために使用することができます。あるものは速度/方向ベクトルに影響を与え、他のものは<span class="notranslate">room</span>
+            内の実際の
+            x/y 位置に直接影響を与えます。</p>
+      <ul class="colour">
+            <li><a href="motion_add.htm"><span class="notranslate">motion_add</span></a></li>
+            <li><a href="motion_set.htm"><span class="notranslate">motion_set</span></a></li>
+            <li><a href="move_towards_point.htm"><span class="notranslate">move_towards_point</span></a></li>
+            <li><a href="move_bounce_all.htm"><span class="notranslate">move_bounce_all</span></a></li>
+            <li><a href="move_bounce_solid.htm"><span class="notranslate">move_bounce_solid</span></a></li>
+            <li><a href="move_contact_all.htm"><span class="notranslate">move_contact_all</span></a></li>
+            <li><a href="move_contact_solid.htm"><span class="notranslate">move_contact_solid</span></a></li>
+            <li><a href="move_outside_all.htm"><span class="notranslate">move_outside_all</span></a></li>
+            <li><a href="move_outside_solid.htm"><span class="notranslate">move_outside_solid</span></a></li>
+            <li><a href="move_random.htm"><span class="notranslate">move_random</span></a></li>
+            <li><a href="move_snap.htm"><span class="notranslate">move_snap</span></a></li>
+            <li><a href="move_wrap.htm"><span class="notranslate">move_wrap</span></a></li>
+            <li><a href="place_snapped.htm"><span class="notranslate">place_snapped</span></a></li>
+      </ul>
+      <p> </p>
+      <p> </p>
+      <p> </p>
+      <div class="footer">
+            <div class="buttons">
+                  <div class="clear">
+                        <div style="float:left">前のページ：<a href="../Movement_And_Collisions.htm">移動と衝突</a></div>
+                        <div style="float:right">次のページ：<a href="../Motion_Planning/Motion_Planning.htm">モーションプランニング</a>
+                        </div>
+                  </div>
+            </div>
+            <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021
+                        All Rights
+                        Reserved</span></h5>
       </div>
-    </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
-  </div>
-  <!-- KEYWORDS
+      <!-- KEYWORDS
 Movement
 -->
-  <!-- TAGS
+      <!-- TAGS
 movement_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>リスト作成</title>
@@ -12,26 +13,34 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Create List" />
   <meta name="search-keywords" content="Create List" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> リスト作成</h1>
   <p>このアクションは新しい<b>リスト</b>データ構造を作成し、インデックス値を返すので、後で他のデータ構造アクションでリストにアクセスすることができます。リストのインデックスは、指定されたターゲット変数に返されます。
-   <a href="../Common/Assign_Variable.htm">Assign Variable</a>または<a href="../Common/Declare_Temporary_Variable.htm">Declare Tempを</a>使用して作成するか、<span class="notranslate">flag</span> &quot;Temp&quot; チェックボックスを使用して、一時的なローカル変数に名前を付けて作成することができます。
-    を使用して、<span class="notranslate">script</span> またはイベントの終了まで値を保存します。新しく作成されたリストデータ構造は、「空」、つまりリスト項目を含んでいないとみなされます。プラスアイコンをクリックすると、さらにDSリストを作成することができます。<span> <span><img></span></span>
-    アクションの横にある別の変数を選択し、リストIDを格納します。</p>
+    <a href="../Common/Assign_Variable.htm">Assign Variable</a>または<a
+      href="../Common/Declare_Temporary_Variable.htm">Declare Tempを</a>使用して作成するか、<span class="notranslate">flag</span>
+    &quot;Temp&quot; チェックボックスを使用して、一時的なローカル変数に名前を付けて作成することができます。
+    を使用して、<span class="notranslate">script</span>
+    またはイベントの終了まで値を保存します。新しく作成されたリストデータ構造は、「空」、つまりリスト項目を含んでいないとみなされます。プラスアイコンをクリックすると、さらにDSリストを作成することができます。<span>
+      <span><img></span></span>
+    アクションの横にある別の変数を選択し、リストIDを格納します。
+  </p>
   <p class="note"><b>重要!デ</b>ータ構造を作成すると、ターゲット・プラットフォームのメモリを消費します。
     メモリリークにより、ゲームのパフォーマンスが低下したり、クラッシュしたりする可能性があります。これは、データ構造のインデックスを格納するために一時的なローカル変数を使用している場合に特に関連します。
     だからといって、データ構造が削除されるわけではありません。データ構造はまだ存在しますが、それを参照する方法がないため、インスタンス変数を使用して後で構造体を解放するか、または
     イベントや関数のインデックスが一時変数に格納されている場合。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Create List Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_List.png" /></p>
+  <p><img alt="Create List Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_List.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Target</span></td>
@@ -42,18 +51,20 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、グローバルスコープ変数を作成し、新しいリストデータ
-    構造体を作成し、そのインデックス値をグローバル変数に代入しています。その後、<span class="notranslate">object</span> &quot;obj_Enemy_Parent&quot; のすべてのインスタンスが、その固有のインスタンス ID 値をリストに追加するように、スコープが変更されます。</p>
+    構造体を作成し、そのインデックス値をグローバル変数に代入しています。その後、<span class="notranslate">object</span> &quot;obj_Enemy_Parent&quot;
+    のすべてのインスタンスが、その固有のインスタンス ID 値をリストに追加するように、スコープが変更されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Data_Structure_Actions.htm">データ構造アクション</a></div>
-        <div style="float:right">次へ<a href="Create_Map.htm">マップの作成</a></div>
+        <div style="float:left">前のページ：<a href="Data_Structure_Actions.htm">データ構造アクション</a></div>
+        <div style="float:right">次のページ：<a href="Create_Map.htm">マップの作成</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create List
@@ -62,4 +73,5 @@ Action - Create List
 action_create_list
 -->
 </body>
+
 </html>

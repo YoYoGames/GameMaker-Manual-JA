@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>アクションブロックスクリプト機能</title>
@@ -12,36 +13,75 @@
   <meta name="rh-index-keywords" content="GML Visual Overview - Action Block Script Functions" />
   <meta name="search-keywords" content="GML Visual Scripts" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>アクションブロックスクリプト機能</h1>
-  <p><span class="notranslate">assets</span> <a href="../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>最も重要なものの1つが<a href="../../The_Asset_Editors/Scripts.htm">スクリプト</a> <span class="notranslate">asset</span> です。<span class="notranslate">Scripts</span> は特殊で、基本的にユーザー定義関数の「コンテナ」であり、それ自体は実際にゲーム内で直接呼び出されることはありません<span class="notranslate">assets</span> 。<span class="notranslate">scripts</span> はすべて<strong>グローバルな</strong>スコープで、ゲーム開始時に<span class="notranslate">GameMaker</span> によって自動的に実行されます。したがって、これらを使用して、ゲーム全体で使用したいグローバル変数や関数を定義することができます。</p>
-  <p>各<span class="notranslate">GML</span> Visual<span class="notranslate">script</span> には、1つ以上のユーザー定義関数を追加することができます。これらの関数は、<a href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a> というアクションを使用して作成されます。</p>
-  <p><img>ここで定義した関数は、グローバルなスコープで、組み込みの<span class="notranslate">GML</span> Visual アクションと同様に動作します。つまり、<span class="glossextra">引数</span>（またはパラメータ）と呼ばれる異なる値（または全くない値）を取り、タスクを実行し、必要に応じて値を返すか何も返しません。そして、<a href="../Drag_And_Drop_Reference/Common/Function_Call.htm">関数呼び出し</a> <img> アクションを使用して、ゲーム内で関数を呼び出します。</p>
-  <p><img> <span class="notranslate">GML</span> Visual を作成するには、 ブラウザの任意の場所でマウスの右ボタン を使い、<span class="notranslate">script</span> <span class="notranslate">Asset</span> <img> <strong>Create </strong>→<strong>Script</strong> を選択するだけです。これにより、新しい Visual が作成され、エディタ・ウィンドウが開きます。<span class="notranslate">GML</span> <span class="notranslate">script</span> </p>
-  <p><img> <span class="notranslate">script</span> の名前は、 ブラウザで を右クリックし、<span class="notranslate">Asset</span> <img> <strong>Rename </strong> を選択（またはゆっくり左ダブルクリック ）します。ただし、 の名前は の一般規則に従わなければならないので、文字から始まり、文字、数字またはアンダーバー記号 「_」のみを含まなければならないことに注意してください。また、 には、<img> <span class="notranslate">script</span> <span class="notranslate">assets</span> <span class="notranslate">script</span> <strong>Declare A New Function</strong>アクションがあらかじめ入力されており、必要事項を記入することができます。必要に応じて、さらに関数宣言を追加することができます（1つの に複数の関数を格納することができるので、類似した、または関連した用途の関数をグループ化する際に便利です）。<span class="notranslate">script</span> </p>
-  <p>前述したように、関数にはいくつかの引数を渡すことができ、関数はそれらを使ってあなたが書いたタスクを実行します。このことをよりよく理解するために、たとえば組み込みのアクションを例にとり、それがどのように動作するかを考えてみましょう。ユーザー定義関数もこれと全く同じで、唯一の違いは、<em>あなたが </em>書くということです。</p>
-  <p>新しい関数を定義する際には、関数名を付けると同時に、引数を取る場合にはその名前も定義します（関数は、要求に応じて、引数を取らないことも、複数の引数を取ることもできます）。引数名を指定した場合、その引数は関数が呼び出すアクションの中で、関数の入力値を保持する<strong>ローカル </strong>変数として使用されます。</p>
-  <p>また、<a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JS Docのルール</a>に従って、そのアクションが何をするものかを説明するコメントを追加するのも良い方法です。例えば、この関数 <span class="inline">set_vec()</span> を考えてみましょう。</p>
+  <p><span class="notranslate">assets</span> <a
+      href="../../Introduction/The_Asset_Browser.htm">アセットブラウザで</a>最も重要なものの1つが<a
+      href="../../The_Asset_Editors/Scripts.htm">スクリプト</a> <span class="notranslate">asset</span> です。<span
+      class="notranslate">Scripts</span> は特殊で、基本的にユーザー定義関数の「コンテナ」であり、それ自体は実際にゲーム内で直接呼び出されることはありません<span
+      class="notranslate">assets</span> 。<span class="notranslate">scripts</span>
+    はすべて<strong>グローバルな</strong>スコープで、ゲーム開始時に<span class="notranslate">GameMaker</span>
+    によって自動的に実行されます。したがって、これらを使用して、ゲーム全体で使用したいグローバル変数や関数を定義することができます。</p>
+  <p>各<span class="notranslate">GML</span> Visual<span class="notranslate">script</span>
+    には、1つ以上のユーザー定義関数を追加することができます。これらの関数は、<a href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare
+      A New Function</a> というアクションを使用して作成されます。</p>
+  <p><img>ここで定義した関数は、グローバルなスコープで、組み込みの<span class="notranslate">GML</span> Visual アクションと同様に動作します。つまり、<span
+      class="glossextra">引数</span>（またはパラメータ）と呼ばれる異なる値（または全くない値）を取り、タスクを実行し、必要に応じて値を返すか何も返しません。そして、<a
+      href="../Drag_And_Drop_Reference/Common/Function_Call.htm">関数呼び出し</a> <img> アクションを使用して、ゲーム内で関数を呼び出します。</p>
+  <p><img> <span class="notranslate">GML</span> Visual を作成するには、 ブラウザの任意の場所でマウスの右ボタン を使い、<span
+      class="notranslate">script</span> <span class="notranslate">Asset</span> <img> <strong>Create
+    </strong>→<strong>Script</strong> を選択するだけです。これにより、新しい Visual が作成され、エディタ・ウィンドウが開きます。<span
+      class="notranslate">GML</span> <span class="notranslate">script</span> </p>
+  <p><img> <span class="notranslate">script</span> の名前は、 ブラウザで を右クリックし、<span class="notranslate">Asset</span> <img>
+    <strong>Rename </strong> を選択（またはゆっくり左ダブルクリック ）します。ただし、 の名前は の一般規則に従わなければならないので、文字から始まり、文字、数字またはアンダーバー記号
+    「_」のみを含まなければならないことに注意してください。また、 には、<img> <span class="notranslate">script</span> <span
+      class="notranslate">assets</span> <span class="notranslate">script</span> <strong>Declare A New
+      Function</strong>アクションがあらかじめ入力されており、必要事項を記入することができます。必要に応じて、さらに関数宣言を追加することができます（1つの
+    に複数の関数を格納することができるので、類似した、または関連した用途の関数をグループ化する際に便利です）。<span class="notranslate">script</span>
+  </p>
+  <p>
+    前述したように、関数にはいくつかの引数を渡すことができ、関数はそれらを使ってあなたが書いたタスクを実行します。このことをよりよく理解するために、たとえば組み込みのアクションを例にとり、それがどのように動作するかを考えてみましょう。ユーザー定義関数もこれと全く同じで、唯一の違いは、<em>あなたが
+    </em>書くということです。</p>
+  <p>
+    新しい関数を定義する際には、関数名を付けると同時に、引数を取る場合にはその名前も定義します（関数は、要求に応じて、引数を取らないことも、複数の引数を取ることもできます）。引数名を指定した場合、その引数は関数が呼び出すアクションの中で、関数の入力値を保持する<strong>ローカル
+    </strong>変数として使用されます。</p>
+  <p>また、<a href="../../The_Asset_Editors/Code_Editor_Properties/JSDoc_Script_Comments.htm">JS
+      Docのルール</a>に従って、そのアクションが何をするものかを説明するコメントを追加するのも良い方法です。例えば、この関数 <span class="inline">set_vec()</span> を考えてみましょう。
+  </p>
   <p><img>上記の<span class="notranslate">script</span> を呼び出すには、以下のように<strong>Call Function</strong>アクションを使用するだけです。</p>
-  <p><img>関数に引数を渡すだけでなく、関数に値を返してもらうこともできます（<a href="../Drag_And_Drop_Reference/Common/Return.htm">Return</a> <img> アクションを使用）ので、例えば計算方法を構築したり、複雑な衝突判定後にインスタンスIDを返したり、様々なことに使用することができます。ただし、returnを使うと<strong>関数が終了して</strong>しまうので、returnを使った後のアクションは一切実行されませんので、関数の構成にはそれなりの工夫が必要です。</p>
+  <p><img>関数に引数を渡すだけでなく、関数に値を返してもらうこともできます（<a href="../Drag_And_Drop_Reference/Common/Return.htm">Return</a> <img>
+    アクションを使用）ので、例えば計算方法を構築したり、複雑な衝突判定後にインスタンスIDを返したり、様々なことに使用することができます。ただし、returnを使うと<strong>関数が終了して</strong>しまうので、returnを使った後のアクションは一切実行されませんので、関数の構成にはそれなりの工夫が必要です。
+  </p>
   <p>以下は、値を返す<span class="notranslate">GML</span> Visual 関数です。</p>
-  <p><img alt="Declare A New Function Syntax" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Function.png" /></p>
-  <p>上記の関数は、単に<span class="notranslate">room</span> のすべてのインスタンスをチェックして、その <span class="inline">object_index</span> が何であるかを確認し、そのうちの 1 つがプレーヤー<span class="notranslate">object</span> であれば、この関数は <span class="inline">true</span> （関数呼び出しの終了）または <span class="inline">false</span> を返します。この関数を次のように呼び出します。</p>
-  <p><img>そこで、関数を呼び出して、戻り値（この場合、 <span class="inline">true</span> または <span class="inline">false</span> ）を格納する一時的な（ローカル）変数を作成させ、この変数をチェックしてアクションを実行させるのです。</p>
-  <p>また、引数をオプションにしてデフォルト値を定義すると、関数呼び出しの際に引数が提供されない場合に、代わりにデフォルト値が使用されるようになります。詳細は、アクションの<a data-xref="{text}" href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm#h">拡張例 2</a>を参照ください。</p>
-  <p><span class="notranslate">GML</span> Visual<span class="notranslate">scripts</span> の関数を作成する場合、<span class="notranslate">object</span> イベントにアクションを追加するときと同じアクションをすべて使用できます。また、関数の中から関数を呼び出すこともでき、このようにしてより「モジュラー」なアクションコードを作成できます。このように関数を使って<span class="notranslate">scripts</span> を構築すると、同じアクション<span class="notranslate">sequences</span> を作成する時間を大幅に短縮でき、また、アクション<span class="notranslate">sequences</span> を読みやすく、デバッグしやすくすることができます。</p>
+  <p><img alt="Declare A New Function Syntax" class="center"
+      src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Function.png" /></p>
+  <p>上記の関数は、単に<span class="notranslate">room</span> のすべてのインスタンスをチェックして、その <span class="inline">object_index</span>
+    が何であるかを確認し、そのうちの 1 つがプレーヤー<span class="notranslate">object</span> であれば、この関数は <span class="inline">true</span>
+    （関数呼び出しの終了）または <span class="inline">false</span> を返します。この関数を次のように呼び出します。</p>
+  <p><img>そこで、関数を呼び出して、戻り値（この場合、 <span class="inline">true</span> または <span class="inline">false</span>
+    ）を格納する一時的な（ローカル）変数を作成させ、この変数をチェックしてアクションを実行させるのです。</p>
+  <p>また、引数をオプションにしてデフォルト値を定義すると、関数呼び出しの際に引数が提供されない場合に、代わりにデフォルト値が使用されるようになります。詳細は、アクションの<a data-xref="{text}"
+      href="../Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm#h">拡張例 2</a>を参照ください。</p>
+  <p><span class="notranslate">GML</span> Visual<span class="notranslate">scripts</span> の関数を作成する場合、<span
+      class="notranslate">object</span>
+    イベントにアクションを追加するときと同じアクションをすべて使用できます。また、関数の中から関数を呼び出すこともでき、このようにしてより「モジュラー」なアクションコードを作成できます。このように関数を使って<span
+      class="notranslate">scripts</span> を構築すると、同じアクション<span class="notranslate">sequences</span>
+    を作成する時間を大幅に短縮でき、また、アクション<span class="notranslate">sequences</span> を読みやすく、デバッグしやすくすることができます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../../Content.htm">インデックス</a></div>
-        <div style="float:right">次へ<a href="Changing_DnD_To_Code.htm"> <span class="notranslate">GML</span> </a>ビジュアルをコードに変更</div>
+        <div style="float:left">前のページ：<a href="../../Content.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="Changing_DnD_To_Code.htm"> <span class="notranslate">GML</span>
+          </a>ビジュアルをコードに変更</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Scripts
@@ -50,4 +90,5 @@ GML Visual Scripts
 drag_and_drop_scripts
 -->
 </body>
+
 </html>

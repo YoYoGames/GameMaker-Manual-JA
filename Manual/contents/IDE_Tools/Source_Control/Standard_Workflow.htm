@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>標準的なワークフロー</title>
@@ -13,20 +14,32 @@
   <meta name="rh-index-keywords" content="Source Control - Workflow" />
   <meta name="search-keywords" content="using source control,source control workflow" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>標準的なワークフロー</h1>
-  <p>プロジェクトに取り組んでいるうちに、自然に<span class="notranslate">sprites</span> を作成したり、<span class="notranslate">scripts</span> を編集したり、<span class="notranslate">timelines</span> を削除したり、プロジェクトが時間とともに発展するのに必要なことは何でもするようになります。これらはすべて、何か問題が発生したときに追跡し、元に戻したいと思うような行動です。これが、<span class="notranslate">Source Control</span> を使用する主な理由です。事故があっても元に戻せるように、基本的なワークフローを最初から手早く説明し、この仕組みを理解していただきます。</p>
-  <p>最初から、新しい<span class="notranslate">GML</span> プロジェクトを作成し、<a href="../../Settings/Game_Options.htm">メインオプションから</a> <span class="notranslate">source control</span> を有効にします。これで上部の<span class="notranslate">Source Control</span> メニューにアクセスできるようになりましたので、早速「<strong>プロジェクトリポジトリを作成</strong>」を選択します。<span class="notranslate">room</span> のリソースを見てみると、デフォルトの<span class="notranslate">room</span> に赤いエクスクラメーション<img> がついています。もし、プロジェクトに他のリソースがあれば、下の画像のようにすべて同じアイコンになっているのがわかると思います。</p>
-  <p><img>ここで、空白のプロジェクトをそのままコミットするか、ベースとなる状態にするか、どちらかを選択することになります。とりあえず、最初のコミットを行うので、<strong>Source Control</strong>&gt;<strong>Commit Changes</strong> をクリックします。すると、3つのエリアに分かれた新しいウィンドウが表示されます。</p>
+  <p>プロジェクトに取り組んでいるうちに、自然に<span class="notranslate">sprites</span> を作成したり、<span class="notranslate">scripts</span>
+    を編集したり、<span class="notranslate">timelines</span>
+    を削除したり、プロジェクトが時間とともに発展するのに必要なことは何でもするようになります。これらはすべて、何か問題が発生したときに追跡し、元に戻したいと思うような行動です。これが、<span
+      class="notranslate">Source Control</span> を使用する主な理由です。事故があっても元に戻せるように、基本的なワークフローを最初から手早く説明し、この仕組みを理解していただきます。</p>
+  <p>最初から、新しい<span class="notranslate">GML</span> プロジェクトを作成し、<a href="../../Settings/Game_Options.htm">メインオプションから</a>
+    <span class="notranslate">source control</span> を有効にします。これで上部の<span class="notranslate">Source Control</span>
+    メニューにアクセスできるようになりましたので、早速「<strong>プロジェクトリポジトリを作成</strong>」を選択します。<span class="notranslate">room</span>
+    のリソースを見てみると、デフォルトの<span class="notranslate">room</span> に赤いエクスクラメーション<img>
+    がついています。もし、プロジェクトに他のリソースがあれば、下の画像のようにすべて同じアイコンになっているのがわかると思います。
+  </p>
+  <p><img>ここで、空白のプロジェクトをそのままコミットするか、ベースとなる状態にするか、どちらかを選択することになります。とりあえず、最初のコミットを行うので、<strong>Source
+      Control</strong>&gt;<strong>Commit Changes</strong> をクリックします。すると、3つのエリアに分かれた新しいウィンドウが表示されます。</p>
   <p><img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /></p>
   <ul class="colour">
     <li><strong>段階的な変更</strong>。これは、ソースにコミットされる変更を表します。これはおそらく空白ですが、メインオプションの変更が表示されるかもしれませんので、それでも構いません。</li>
     <li><strong>未段階の変更</strong>。<span class="notranslate">Git</span> にコミットすることを伝えていない、「保留」になっている変更点が表示されます。</li>
     <li><strong>コミットメッセージ</strong>。これは、変更が何であるかを説明するために追加できるメモです。</li>
   </ul>
-  <p>とりあえず、すべての変更をコミットしたいので、<strong>Stage All</strong>ボタンをクリックし、Commit Message に &quot;First Commit!&quot; などと入力し、<strong>Commit を</strong>クリックします。これで、すべてのリソースに緑のチェックマーク（<img> ）がつきました。これは、変更が見つからなかったことを意味します。</p>
-  <p>このウィンドウで作業する際、様々な<strong>Stagedと </strong> <strong>Unstagedの </strong>メッセージの前に記号が表示されることに注意してください。使用される記号は操作やファイルによって異なり、次のようなものが使用されます。</p>
+  <p>とりあえず、すべての変更をコミットしたいので、<strong>Stage All</strong>ボタンをクリックし、Commit Message に &quot;First Commit!&quot;
+    などと入力し、<strong>Commit を</strong>クリックします。これで、すべてのリソースに緑のチェックマーク（<img> ）がつきました。これは、変更が見つからなかったことを意味します。</p>
+  <p>このウィンドウで作業する際、様々な<strong>Stagedと </strong> <strong>Unstagedの
+    </strong>メッセージの前に記号が表示されることに注意してください。使用される記号は操作やファイルによって異なり、次のようなものが使用されます。</p>
   <ul class="colour">
     <li><span class="inline">[...]</span> - ステージチェンジ（従来は[A]）。</li>
     <li><span class="inline">[+]</span> - 新たに追加されたもの</li>
@@ -37,18 +50,22 @@
     <li><span class="inline">[!]</span> - 欠落ファイル</li>
   </ul>
   <p>これで私たちの作業プロセスは開始できます。上の段落で行ったのと同じように、プロジェクトを構築し、変更を保存してコミットすることができるのです。</p>
-  <p>しばらく作業をしていると、その時々にコミットした内容を確認したくなることがあります。そのような場合には、<strong>コミット履歴を</strong>開くとよいでしょう。履歴ウィンドウを開くには、<strong>Source Control</strong>&gt;<strong>View History</strong>と進むと、3つのペインからなる別のウィンドウが表示されます。</p>
-  <p><img>上のペインにはコミット、中央のペインには選択したコミットに付けられたコメント、下のペインにはこのコミットで変更されたファイルが表示されます。<a href="External_Merge_Diff_Tools.htm">Diff Tool</a> を設定している場合は、このウィンドウ内の任意のファイルをダブルクリックすると diff ツールが起動し、ファイル間の変更点を見ることができることに注意してください。</p>
+  <p>しばらく作業をしていると、その時々にコミットした内容を確認したくなることがあります。そのような場合には、<strong>コミット履歴を</strong>開くとよいでしょう。履歴ウィンドウを開くには、<strong>Source
+      Control</strong>&gt;<strong>View History</strong>と進むと、3つのペインからなる別のウィンドウが表示されます。</p>
+  <p><img>上のペインにはコミット、中央のペインには選択したコミットに付けられたコメント、下のペインにはこのコミットで変更されたファイルが表示されます。<a
+      href="External_Merge_Diff_Tools.htm">Diff Tool</a> を設定している場合は、このウィンドウ内の任意のファイルをダブルクリックすると diff
+    ツールが起動し、ファイル間の変更点を見ることができることに注意してください。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Source_Control.htm">ソースコントロール</a></div>
-        <div style="float:right">次へ<a href="Reverting_Files.htm">ファイルを元に戻す</a></div>
+        <div style="float:left">前のページ：<a href="../Source_Control.htm">ソースコントロール</a></div>
+        <div style="float:right">次のページ：<a href="Reverting_Files.htm">ファイルを元に戻す</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Workflow
@@ -57,4 +74,5 @@ Source Control Workflow
 source_control_workflow
 -->
 </body>
+
 </html>

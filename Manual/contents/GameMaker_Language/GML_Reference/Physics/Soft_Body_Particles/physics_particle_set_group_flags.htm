@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_particle_set_group_flags</title>
@@ -9,22 +10,28 @@
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_group_flags" />
-  <meta name="rh-index-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
-  <meta name="search-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
+  <meta name="rh-index-keywords"
+    content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
+  <meta name="search-keywords"
+    content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_particle_set_group_flags</span></h1>
-  <p>この関数を使用すると、パーティクルグループのグループ<span class="notranslate">flags</span> を変更することができます。 <span class="inline">group</span> の値は、関数 <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>であり、<span class="notranslate">flags</span> は以下の<b>定数の</b>組み合わせの戻り値である。</p>
+  <p>この関数を使用すると、パーティクルグループのグループ<span class="notranslate">flags</span> を変更することができます。 <span class="inline">group</span>
+    の値は、関数 <a href="physics_particle_group_end.htm"><span
+        class="inline">physics_particle_group_end()</span></a>であり、<span class="notranslate">flags</span>
+    は以下の<b>定数の</b>組み合わせの戻り値である。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">phy_particle_group_flag_solid</span></td>
-        <td>固体粒子群は、他の什器がその内部に留まることを防ぐ。万が一、貫通した場合でも、固体粒子群がその表面へ押し戻すため、固体粒子群は特に強い反発力を持っています。</td>
+        <td>固体パーティクル群は、他の什器がその内部に留まることを防ぐ。万が一、貫通した場合でも、固体パーティクル群がその表面へ押し戻すため、固体パーティクル群は特に強い反発力を持っています。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">phy_particle_group_flag_rigid</span></td>
@@ -32,48 +39,56 @@
       </tr>
     </tbody>
   </table>
-  <p>これらのグループ<span class="notranslate">flags</span> はビットマスキングを使用して最終的な出力値を作成し、それをチェックして、パーティクル<span class="notranslate">flags</span> によって設定されるものとは別に、グループのさまざまな基本的なプロパティを設定するのです。<a href="../../../../Additional_Information/Bitwise_Operators.htm">ビットワイズ<i>または&quot;</i></a>|&quot;を使用して適切なビットをマスクすることで、これらの定数のどれも、一方または両方を使用できます（以下の例で示すように）。</p>
+  <p>これらのグループ<span class="notranslate">flags</span> はビットマスキングを使用して最終的な出力値を作成し、それをチェックして、パーティクル<span
+      class="notranslate">flags</span> によって設定されるものとは別に、グループのさまざまな基本的なプロパティを設定するのです。<a
+      href="../../../../Additional_Information/Bitwise_Operators.htm">ビットワイズ<i>または&quot;</i></a>|&quot;を使用して適切なビットをマスクすることで、これらの定数のどれも、一方または両方を使用できます（以下の例で示すように）。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_particle_set_group_flags</span>(group, flags)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_set_group_flags</span>(group, flags)
+  </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">group</span></td>
-        <td><span data-keyref="Type_ID_Phy_Particle_Group">物理粒子グループID</span></td>
+        <td><span data-keyref="Type_ID_Phy_Particle_Group">物理パーティクルグループID</span></td>
         <td><span class="notranslate">The particle group to set.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">flags</span></td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag">物理学 粒子群<span class="notranslate">Flag</span> 定数</span>(s)</td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag">物理学 パーティクル群<span class="notranslate">Flag</span>
+            定数</span>(s)</td>
         <td><span class="notranslate">The flags to set on the particle group.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br />
     physics_particle_set_group_flags(group, flags);</p>
-  <p>上記のコードでは、<span class="notranslate">flags</span> の値を格納する変数を作成し、それを使って変数 &quot;group&quot; でインデックスされたグループ内で作成されたすべてのパーティクルの<span class="notranslate">flags</span> を設定することになります。</p>
+  <p>上記のコードでは、<span class="notranslate">flags</span> の値を格納する変数を作成し、それを使って変数 &quot;group&quot;
+    でインデックスされたグループ内で作成されたすべてのパーティクルの<span class="notranslate">flags</span> を設定することになります。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Soft_Body_Particles.htm">ソフトボディーの粒子</a></div>
-        <div style="float:right">次のページ <a href="physics_particle_get_group_flags.htm"><span class="notranslate">physics_particle_get_group_flags</span></a></div>
+        <div style="float:left">前のページ：<a href="Soft_Body_Particles.htm">ソフトボディーのパーティクル</a></div>
+        <div style="float:right">次のページ：<a href="physics_particle_get_group_flags.htm"><span
+              class="notranslate">physics_particle_get_group_flags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_group_flags
@@ -84,4 +99,5 @@ phy_particle_group_flag_rigid
 physics_particle_set_group_flags
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>フィルター・エフェクト機能</title>
@@ -8,17 +9,22 @@
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Filter/Effect Layers" />
+  <meta name="topic-comment"
+    content="Page outlining the different functions and variables associated with Filter/Effect Layers" />
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Filter and Effect Functions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>フィルター・エフェクト機能</h1>
   <h2>概要</h2>
-  <p><span class="notranslate">GML</span> 内のレイヤーにフィルター/エフェクトを作成、変更、削除するために使用できる様々な<span class="notranslate">room</span> 関数があり、リアルタイムで簡単にエフェクトを管理し、リアルでダイナミックなフィルター/エフェクトを作成することができ ます。</p>
+  <p><span class="notranslate">GML</span> 内のレイヤーにフィルター/エフェクトを作成、変更、削除するために使用できる様々な<span class="notranslate">room</span>
+    関数があり、リアルタイムで簡単にエフェクトを管理し、リアルでダイナミックなフィルター/エフェクトを作成することができ ます。</p>
   <div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"> </div>
-  <p>後者の方法（コードの中でフィルタや効果を指定する方法）は、関数の引数で直接指定された文字列<a class="glossterm" data-glossterm="リテラル" href="#">リテラルに対してのみ</a>機能します。つまり、変数や何らかのロジックを使ってフィルタや効果の名前<span class="notranslate">string</span> を考えた場合、<span class="notranslate">asset</span> コンパイラはそれを検出できず、フィルタや効果はロードされないということです。</p>
+  <p>後者の方法（コードの中でフィルタや効果を指定する方法）は、関数の引数で直接指定された文字列<a class="glossterm" data-glossterm="リテラル"
+      href="#">リテラルに対してのみ</a>機能します。つまり、変数や何らかのロジックを使ってフィルタや効果の名前<span class="notranslate">string</span> を考えた場合、<span
+      class="notranslate">asset</span> コンパイラはそれを検出できず、フィルタや効果はロードされないということです。</p>
   <p>次のような例を考えてみましょう。</p>
   <p class="code">// This will work on its own<br />
     var _fxshake = fx_create(&quot;_filter_screenshake&quot;);<br />
@@ -28,7 +34,9 @@
     var _filter_to_use = &quot;_filter&quot; + _myfilters.screenshake;<br />
     var _fxshake = fx_create(_filter_to_use);
   </p>
-  <p>後者の方法がうまくいくようにするには、単純に、プロジェクト内の少なくとも1つの<span class="notranslate">room</span> にフィルタを追加するか、 <span class="inline"><a href="fx_create.htm">fx_create()</a></span> が、フィルタ名を<span class="notranslate">string</span> 定数として（変数ではなく）、プロジェクト内のどこかで呼び出されるようにすればよい。</p>
+  <p>後者の方法がうまくいくようにするには、単純に、プロジェクト内の少なくとも1つの<span class="notranslate">room</span> にフィルタを追加するか、 <span class="inline"><a
+        href="fx_create.htm">fx_create()</a></span> が、フィルタ名を<span class="notranslate">string</span>
+    定数として（変数ではなく）、プロジェクト内のどこかで呼び出されるようにすればよい。</p>
   <h2>機能一覧</h2>
   <p>エフェクトデータを含む「FX Struct」の作成・管理には、以下の関数を使用します。</p>
   <ul class="colour">
@@ -53,20 +61,28 @@
   <h2>ランタイムでFXを修正する</h2>
   <p>以下の方法で、<span class="notranslate">runtime</span> 、フィルター／エフェクトを変更することができます。</p>
   <ul class="colour">
-    <li>を呼び出して、変更したいレイヤーから<strong>FX構造体を取得</strong>します。 <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>
+    <li>を呼び出して、変更したいレイヤーから<strong>FX構造体を取得</strong>します。 <span class="inline"><a
+          href="layer_get_fx.htm">layer_get_fx()</a></span>
       <ul>
-        <li><em>または、 <span class="inline"><a href="fx_create.htm">fx_create()</a></span> を呼び出して新しい FX<span class="notranslate">struct</span> を作成し、それを以下の方法でレイヤーに適用します。 <span class="inline"><a href="layer_set_fx.htm">layer_set_fx()</a></span></em></li>
+        <li><em>または、 <span class="inline"><a href="fx_create.htm">fx_create()</a></span> を呼び出して新しい FX<span
+              class="notranslate">struct</span> を作成し、それを以下の方法でレイヤーに適用します。 <span class="inline"><a
+                href="layer_set_fx.htm">layer_set_fx()</a></span></em></li>
       </ul>
     </li>
-    <li>を呼び出して、<strong>そのパラメータ構造体を取得</strong>します。 <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span><span class="inline"></span></li>
+    <li>を呼び出して、<strong>そのパラメータ構造体を取得</strong>します。 <span class="inline"><a
+          href="fx_get_parameters.htm">fx_get_parameters()</a></span><span class="inline"></span></li>
     <li><span class="notranslate">struct</span> の変数に値を代入して、必要に応じて<strong>パラメータを</strong>変更します。
       <ul>
-        <li><em>パラメータ名はここから取得してください。<a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FXの種類とパラメータ</a></em></li>
+        <li><em>パラメータ名はここから取得してください。<a data-xref="{title}"
+              href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FXの種類とパラメータ</a></em>
+        </li>
       </ul>
     </li>
-    <li>を呼び出して、<strong>変更した構造体を</strong>FX<span class="notranslate">struct</span> に<strong>適用</strong>します。 <span class="inline"><a href="fx_set_parameters.htm">fx_set_parameters()</a></span>
+    <li>を呼び出して、<strong>変更した構造体を</strong>FX<span class="notranslate">struct</span> に<strong>適用</strong>します。 <span
+        class="inline"><a href="fx_set_parameters.htm">fx_set_parameters()</a></span>
       <ul>
-        <li><em>を呼び出す必要はありません。 <a href="layer_set_fx.htm"><span class="inline">layer_set_fx()</span></a>FX<span class="notranslate">struct</span> を変更すると、すでに割り当てられているレイヤーに直接影響するため、ここで変更します。</em></li>
+        <li><em>を呼び出す必要はありません。 <a href="layer_set_fx.htm"><span class="inline">layer_set_fx()</span></a>FX<span
+              class="notranslate">struct</span> を変更すると、すでに割り当てられているレイヤーに直接影響するため、ここで変更します。</em></li>
       </ul>
     </li>
   </ul>
@@ -86,39 +102,57 @@
     fx_set_parameters(pixelate_fx, pixelate_fx_params);
   </p>
   <h2>FX<span class="notranslate">Runtime</span> パラメータ</h2>
-  <p><a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FXタイプ＆パラメータ」</a>ページには、すべてのフィルター／エフェクトとその<strong>ランタイムパラメータが</strong>リストアップされています。</p>
-  <p><span class="notranslate">Runtime</span> パラメータ名の使い方は以下の3通りです（パラメータ<span class="inline2">&quot;g_CellSize &quot;</span>を例とする）。</p>
+  <p><a data-xref="{title}"
+      href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FXタイプ＆パラメータ」</a>ページには、すべてのフィルター／エフェクトとその<strong>ランタイムパラメータが</strong>リストアップされています。
+  </p>
+  <p><span class="notranslate">Runtime</span> パラメータ名の使い方は以下の3通りです（パラメータ<span class="inline2">&quot;g_CellSize
+      &quot;</span>を例とする）。</p>
   <ul class="colour">
-    <li><span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter()</a></span>:<span class="inline2">fx_set_parameter(fx_struct,<strong>&quot;g_CellSize&quot;</strong></span>, 8) を呼び出してFX<span class="notranslate">struct</span> のパラメータを修正します。</li>
+    <li><span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter()</a></span>:<span
+        class="inline2">fx_set_parameter(fx_struct,<strong>&quot;g_CellSize&quot;</strong></span>, 8) を呼び出してFX<span
+        class="notranslate">struct</span> のパラメータを修正します。</li>
     <li>パラメータ構造体の変数を変更する:<span class="inline2">params_struct;</span>
       <ul>
-        <li><span class="note">注</span> <em> <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span> を呼び出し、パラメータ<span class="notranslate">struct</span> を最初に取得することを確認してください。</em></li>
+        <li><span class="note">注</span> <em> <span class="inline"><a
+                href="fx_get_parameters.htm">fx_get_parameters()</a></span> を呼び出し、パラメータ<span
+              class="notranslate">struct</span> を最初に取得することを確認してください。</em></li>
       </ul>
     </li>
-    <li>パラメータ<span class="notranslate">struct</span> の変数を<span class="inline2">$</span>アクセッサと文字列で変更します：<span class="inline2">params_struct[$<strong>&quot;g_CellSize&quot;</strong></span>] = 8;</li>
+    <li>パラメータ<span class="notranslate">struct</span> の変数を<span class="inline2">$</span>アクセッサと文字列で変更します：<span
+        class="inline2">params_struct[$<strong>&quot;g_CellSize&quot;</strong></span>] = 8;</li>
   </ul>
   <h2>シングルレイヤーモード</h2>
-  <p>デフォルトでは、フィルター/エフェクトは、<a href="layer_set_fx.htm">それが割り当てられて</a>いるレイヤーとその下のすべてのレイヤーに適用されます。 <a href="fx_set_single_layer.htm"><span class="inline">fx_set_single_layer()</span></a>をクリックして、フィルタ/エフェクトの<strong>シングルレイヤーモードを</strong>有効にすると、割り当てられたレイヤーにのみ適用されるようになります。</p>
+  <p>デフォルトでは、フィルター/エフェクトは、<a href="layer_set_fx.htm">それが割り当てられて</a>いるレイヤーとその下のすべてのレイヤーに適用されます。 <a
+      href="fx_set_single_layer.htm"><span
+        class="inline">fx_set_single_layer()</span></a>をクリックして、フィルタ/エフェクトの<strong>シングルレイヤーモードを</strong>有効にすると、割り当てられたレイヤーにのみ適用されるようになります。
+  </p>
   <p>次のビジュアルは、フィルターが複数のレイヤーに適用され（これはすべてのFXレイヤーのデフォルト動作です）、次に同じフィルターがシングルレイヤーモードを有効にして非FXレイヤーに適用されている様子を示しています。</p>
   <div class="image_columns">
-    <figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png" title="Fire Jump man is woozy with the universe" />
+    <figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow"
+        src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png"
+        title="Fire Jump man is woozy with the universe" />
       <figcaption>シングルレイヤーモードOFF</figcaption>
     </figure>
-    <figure><img alt="Fire Jump man is woozy... alone" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png" style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" />
+    <figure><img alt="Fire Jump man is woozy... alone" class="center_shadow"
+        src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png"
+        style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" />
       <figcaption>シングルレイヤーモードON</figcaption>
     </figure>
   </div>
-  <p>また、<a href="../../../../../IDE_Tools/The_Inspector.htm">インスペクタを</a>使用して、<span class="notranslate">Room</span> エディタで Single-Layer エフェクトを利用することができます。</p>
+  <p>また、<a href="../../../../../IDE_Tools/The_Inspector.htm">インスペクタを</a>使用して、<span class="notranslate">Room</span> エディタで
+    Single-Layer エフェクトを利用することができます。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Rooms.htm">部屋</a></div>
-        <div style="float:right">次へ<a href="../General_Layer_Functions/General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:left">前のページ：<a href="../Rooms.htm">部屋</a></div>
+        <div style="float:right">次のページ：<a href="../General_Layer_Functions/General_Layer_Functions.htm">一般的なレイヤーの機能</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Filter and Effect Functions
@@ -128,4 +162,5 @@ Filter/Effect Layers
 fx_layer_functions
 -->
 </body>
+
 </html>

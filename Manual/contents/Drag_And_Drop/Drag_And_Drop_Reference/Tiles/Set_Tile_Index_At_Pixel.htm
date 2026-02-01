@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ピクセルでタイルのインデックスを設定する</title>
@@ -12,60 +13,72 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Tile At Pixel" />
   <meta name="search-keywords" content="Set Tile At Pixel" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> <span class="notranslate">Tile</span> インデックスを画素に設定する</h1>
   <p> </p>
-  
-    <p>このアクションでは、指定されたレイヤーの<span class="notranslate">tile</span> を新しいインデックスに設定することができます。レイヤーは、与えられたレイヤー名（<span class="notranslate">string</span> 、<span class="notranslate">Room</span> エディターでレイヤー名をつけるのに使われる）から指定し、次に、設定する<span class="notranslate">tile</span> を得るための x と y 位置を指定します。このxと
-      y 位置は、呼び出したインスタンスの位置からの相対的なものとしてフラグを立てることができ、設定される<span class="notranslate">tile</span> は、与えられた位置が<span class="notranslate">room</span> の中に入るものとなり、使用される<span class="notranslate">tile set</span> は、部屋内のレイヤーに割り当てられたものとなります。
-      エディタを使用します。最後に、<span class="notranslate">tile</span> に設定する<span class="notranslate">tile</span> インデックスを指定します（<span class="notranslate">tiles</span> は左から右、上から下へのインデックスで、0 は左上です）。なお、<span class="notranslate">tile</span> のインデックスを0に設定すれば、いつでも<span class="notranslate">tile</span> をクリアすることができます。</p>
-  
+
+  <p>このアクションでは、指定されたレイヤーの<span class="notranslate">tile</span> を新しいインデックスに設定することができます。レイヤーは、与えられたレイヤー名（<span
+      class="notranslate">string</span> 、<span class="notranslate">Room</span> エディタでレイヤー名をつけるのに使われる）から指定し、次に、設定する<span
+      class="notranslate">tile</span> を得るための x と y 位置を指定します。このxと
+    y 位置は、呼び出したインスタンスの位置からの相対的なものとしてフラグを立てることができ、設定される<span class="notranslate">tile</span> は、与えられた位置が<span
+      class="notranslate">room</span> の中に入るものとなり、使用される<span class="notranslate">tile set</span>
+    は、部屋内のレイヤーに割り当てられたものとなります。
+    エディタを使用します。最後に、<span class="notranslate">tile</span> に設定する<span class="notranslate">tile</span> インデックスを指定します（<span
+      class="notranslate">tiles</span> は左から右、上から下へのインデックスで、0 は左上です）。なお、<span class="notranslate">tile</span>
+    のインデックスを0に設定すれば、いつでも<span class="notranslate">tile</span> をクリアすることができます。</p>
+
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Tile Index At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_At_Pixel.png" /></p>
+  <p><img alt="Set Tile Index At Pixel Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_At_Pixel.png" />
+  </p>
   <h4>論拠となる。</h4>
-  
-    <table>
-      <tbody>
-        <tr>
-          <th>論証</th>
-          <th>商品説明</th>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Layer</span></td>
-          <td><span class="notranslate">tile</span> を設定するレイヤー</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">x</span></td>
-          <td>チェックするxの位置</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">y</span></td>
-          <td>チェックするY位置</td>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Tile</span></td>
-          <td>使用する<span class="notranslate">tile</span> の新しいインデックス</td>
-        </tr>
-      </tbody>
-    </table>
-  
+
+  <table>
+    <tbody>
+      <tr>
+        <th>引数</th>
+        <th>説明</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Layer</span></td>
+        <td><span class="notranslate">tile</span> を設定するレイヤー</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">x</span></td>
+        <td>チェックするxの位置</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">y</span></td>
+        <td>チェックするY位置</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Tile</span></td>
+        <td>使用する<span class="notranslate">tile</span> の新しいインデックス</td>
+      </tr>
+    </tbody>
+  </table>
+
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、マウスの左ボタンが押されたかどうかをチェックし
-    が検出された場合、マウスの位置が該当する<span class="notranslate">tile</span> セルのインデックスを取得します。この<span class="notranslate">tile</span> のインデックスをチェックし、0でない場合は0に設定する。</p>
+    が検出された場合、マウスの位置が該当する<span class="notranslate">tile</span> セルのインデックスを取得します。この<span class="notranslate">tile</span>
+    のインデックスをチェックし、0でない場合は0に設定する。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Actions.htm">タイルアクション</a></div>
-        <div style="float:right">次へ<a href="Get_Tile_Index_At_Pixel.htm"> <span class="notranslate">Tile</span> </a>ピクセルのインデックスを取得</div>
+        <div style="float:left">前のページ：<a href="Tile_Actions.htm">タイルアクション</a></div>
+        <div style="float:right">次のページ：<a href="Get_Tile_Index_At_Pixel.htm"> <span class="notranslate">Tile</span>
+          </a>ピクセルのインデックスを取得</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set <span class="notranslate">Tile</span> Index At Pixel
@@ -74,4 +87,5 @@ Action - Set <span class="notranslate">Tile</span> Index At Pixel
 action_tile_set_at_pixel
 -->
 </body>
+
 </html>

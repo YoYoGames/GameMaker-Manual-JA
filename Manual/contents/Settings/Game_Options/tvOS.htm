@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ティーブイオーエス</title>
@@ -12,14 +13,27 @@
   <meta name="rh-index-keywords" content="Game Options - tvOS" />
   <meta name="search-keywords" content="tvOS Game Options" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>tvOSゲームオプション</h1>
   <p>このセクションでは、<span class="notranslate">tvOS</span> ゲームプロジェクトのコンパイル方法を制御するさまざまなオプションの概要を説明します。各セクションの内容は以下の通りです。</p>
   <p> </p>
   <h2>一般</h2>
-  <p><img>ここでは、<strong>表示名</strong>、<strong>バンドルID</strong>、<strong>バージョン </strong>情報など、ゲームの<strong>製品</strong>情報を入力することができます。バンドルIDは、ゲームの最終ビルドが正しく動作するように正しい逆URL形式である必要があることに注意してください（例： <span class="inline">com.[Company].[GameName]</span> ）。また、ビルドMac上の<strong>App Output</strong>locationを設定し、<span data-keyref="GameMaker Name">GameMakerが</span>作成する最終アプリケーションの署名に使用するTeam Identifierを設定することができます。ここで設定すると、<a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">tvOS Preferencesで</a>指定したTeam IDが上書きされます。</p>
-  <p>ここでは、<strong>Podfileと</strong> <strong>Podfile.lockを</strong>生成するオプションもあります。これらのファイルは、<a href="../../The_Asset_Editors/Extensions.htm">Extension Editorを</a>使用して<a href="../../The_Asset_Editors/Extension_Creation/iOS_Extensions.htm">tvOSエクステンションに</a> <span class="notranslate">CocoaPods</span> を追加する場合に必要です。これらのファイルには、ゲームをビルドする際に<span data-keyref="GameMaker Name">GameMakerが</span>リストアップされた<span class="notranslate">CocaoPods</span> をセットアップするために必要な特定のマクロが含まれています。ボタンをクリックすると、マクロがあらかじめ生成されたファイルが作成されます。また、手動で編集したい場合は、ファイルのある場所でファイルエクスプローラーを開きます。また、ボタンをクリックすると、次のガイドが表示されます。</p>
+  <p><img>ここでは、<strong>表示名</strong>、<strong>バンドルID</strong>、<strong>バージョン
+    </strong>情報など、ゲームの<strong>製品</strong>情報を入力することができます。バンドルIDは、ゲームの最終ビルドが正しく動作するように正しい逆URL形式である必要があることに注意してください（例：
+    <span class="inline">com.[Company].[GameName]</span> ）。また、ビルドMac上の<strong>App Output</strong>locationを設定し、<span
+      data-keyref="GameMaker Name">GameMakerが</span>作成する最終アプリケーションの署名に使用するTeam Identifierを設定することができます。ここで設定すると、<a
+      href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">tvOS Preferencesで</a>指定したTeam
+    IDが上書きされます。
+  </p>
+  <p>ここでは、<strong>Podfileと</strong> <strong>Podfile.lockを</strong>生成するオプションもあります。これらのファイルは、<a
+      href="../../The_Asset_Editors/Extensions.htm">Extension Editorを</a>使用して<a
+      href="../../The_Asset_Editors/Extension_Creation/iOS_Extensions.htm">tvOSエクステンションに</a> <span
+      class="notranslate">CocoaPods</span> を追加する場合に必要です。これらのファイルには、ゲームをビルドする際に<span
+      data-keyref="GameMaker Name">GameMakerが</span>リストアップされた<span class="notranslate">CocaoPods</span>
+    をセットアップするために必要な特定のマクロが含まれています。ボタンをクリックすると、マクロがあらかじめ生成されたファイルが作成されます。また、手動で編集したい場合は、ファイルのある場所でファイルエクスプローラーを開きます。また、ボタンをクリックすると、次のガイドが表示されます。
+  </p>
   <ul class="colour">
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOSとtvOS：Cocoa Podsを使用する</a></li>
   </ul>
@@ -27,19 +41,38 @@
   <h2>グラフィック</h2>
   <p><img>ここでは、ゲームの表示方法に関する以下の詳細を変更することができます。</p>
   <ul class="colour">
-    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん" href="macOS.htm#">線形補間を</a>オンにし、基本的にピクセルを「平滑化」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。デフォルトではオフになっています。</li>
-    <li><strong>拡大縮小</strong>。ここで、描画キャンバスをデバイスの画面内のアスペクト比を維持して拡大縮小する（画面に合わせて縁に「パディング」を追加する）か、描画キャンバスをデバイスの画面に合わせて引き伸ばすかを選択できます。</li>
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん"
+        href="macOS.htm#">線形補間を</a>オンにし、基本的にピクセルを「平滑化」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。デフォルトではオフになっています。
+    </li>
+    <li>
+      <strong>拡大縮小</strong>。ここで、描画キャンバスをデバイスの画面内のアスペクト比を維持して拡大縮小する（画面に合わせて縁に「パディング」を追加する）か、描画キャンバスをデバイスの画面に合わせて引き伸ばすかを選択できます。
+    </li>
   </ul>
-  <p>次に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトの（そして最も互換性のある）サイズは 2048x2048 ですが、256x256 から 8192x8192 までの間で選択できます。<strong>Preview </strong>と書かれたボタンがあり、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成して、ウィンドウを開き、どのように見えるかを確認することができます。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なるのを防ぎたい場合に、非常に便利な機能です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
-  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、ブラウザやデバイスによってゲームの互換性が失われることに注意してください。</p>
-  <p>最後に、<strong>カーソルを表示</strong>するかしないかを選択します。チェックした場合、OSはマウスを動かすたびに（マウスの位置で）カーソルを表示し、一定時間マウスを動かさないとカーソルがフェードアウトして消えます。チェックをはずすと、カーソルは表示されません。</p>
+  <p>次に、<a class="glossterm" data-glossterm="テクスチャページ"
+      href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトの（そして最も互換性のある）サイズは 2048x2048 ですが、256x256 から 8192x8192
+    までの間で選択できます。<strong>Preview </strong>と書かれたボタンがあり、このプラットフォーム用の<span class="notranslate">texture</span>
+    ページを生成して、ウィンドウを開き、どのように見えるかを確認することができます。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span
+      class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なるのを防ぎたい場合に、非常に便利な機能です。<span
+      class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。
+  </p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span>
+    のページサイズが大きくなると、ブラウザやデバイスによってゲームの互換性が失われることに注意してください。</p>
+  <p>
+    最後に、<strong>カーソルを表示</strong>するかしないかを選択します。チェックした場合、OSはマウスを動かすたびに（マウスの位置で）カーソルを表示し、一定時間マウスを動かさないとカーソルがフェードアウトして消えます。チェックをはずすと、カーソルは表示されません。
+  </p>
   <p> </p>
   <h2>アイコンについて</h2>
-  <p><img>このセクションでは、様々なデバイスやApp Storeの様々な部分で必要とされる様々な異なる<strong>アイコンを </strong>追加することができます。これらのアイコンは、それぞれ指定されたサイズの24bit <span class="inline">*.png</span> 画像としてオーサリングされる必要があります。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うとゲームをコンパイルする様々なターゲットプラットフォームに必要なイメージをすべて自動的に作成することができますので、覚えておくとよいでしょう。このツールを使用する場合、作成された画像が必要なものであることを確認し、特にこのプラットフォームで必要とされるアイコンが正方形ではなく長方形であることを確認するために修正する必要があります。このツールは、アイコンだけでなく、画像も生成します（以下で説明）。</p>
+  <p><img>このセクションでは、様々なデバイスやApp Storeの様々な部分で必要とされる様々な異なる<strong>アイコンを </strong>追加することができます。これらのアイコンは、それぞれ指定されたサイズの24bit
+    <span class="inline">*.png</span> 画像としてオーサリングされる必要があります。
+  </p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a
+      href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うとゲームをコンパイルする様々なターゲットプラットフォームに必要なイメージをすべて自動的に作成することができますので、覚えておくとよいでしょう。このツールを使用する場合、作成された画像が必要なものであることを確認し、特にこのプラットフォームで必要とされるアイコンが正方形ではなく長方形であることを確認するために修正する必要があります。このツールは、アイコンだけでなく、画像も生成します（以下で説明）。
+  </p>
   <p> </p>
   <h2>画像</h2>
-  <p><img>このセクションでは、異なる<span class="notranslate">tvOS</span> ターゲットサイズごとに、「トップシェルフ」イメージとスプラッシュスクリーンとして個別のグラフィックを追加することができます。これらの画像は、透過性のない24bit <span class="inline">*.png</span> の画像として、適切なサイズでオーサリングする必要があります。また、下部のドロップダウンメニューから、スプラッシュスクリーンを表示する最小時間を設定できます（0〜10秒）。</p>
+  <p><img>このセクションでは、異なる<span class="notranslate">tvOS</span>
+    ターゲットサイズごとに、「トップシェルフ」イメージとスプラッシュスクリーンとして個別のグラフィックを追加することができます。これらの画像は、透過性のない24bit <span class="inline">*.png</span>
+    の画像として、適切なサイズでオーサリングする必要があります。また、下部のドロップダウンメニューから、スプラッシュスクリーンを表示する最小時間を設定できます（0〜10秒）。</p>
   <p>アイコンの項で述べたように、これらの画像を作成するには、<strong>プロジェクト画像ジェネレータを</strong>使用することができます。</p>
   <p> </p>
   <p> </p>
@@ -47,11 +80,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
-        <div style="float:right">次へ<a href="Windows.htm">ウィンドウズ</a></div>
+        <div style="float:left">前のページ：<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次のページ：<a href="Windows.htm">ウィンドウズ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tvOS Game Options
@@ -60,4 +94,5 @@ tvOS Game Options
 tvos_options
 -->
 </body>
+
 </html>

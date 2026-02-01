@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>JSDocスクリプトコメント</title>
@@ -12,11 +13,16 @@
   <meta name="rh-index-keywords" content="Code Editor - JSDoc Comments,JSDoc" />
   <meta name="search-keywords" content="JSDoc,JSDoc Comments" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>JSDoc<span class="notranslate">Script</span> コメント</h1>
-  <p>カスタム関数にコード補完機能を持たせ、コードエディタに必要な引数を特定の方法で表示させたい場合は、<a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDocスタイルの</a>コメントを追加する必要があります。これらのコメントは、<a href="../Scripts.htm">スクリプトエディタで</a>関数をどのように使用し、記入すべきかをオートコンプリート機能に伝えるために使用されます。</p>
-  <p>典型的な関数ヘッダのフォーマットは、関数名、関数の説明、関数が受け取るさまざまな引数（パラメータ）のリストで、各行の最初にトリプルバックスラッシュ &quot;<span class="inline">///</span>&quot; を付けることを忘れないようにすることです。JSDoc コメントを <span class="inline">/**</span>... で囲むこともできます。<span class="inline">*/</span>で囲むこともできます。その場合、 <span class="inline">/**</span> は独立した行になります。</p>
+  <p>カスタム関数にコード補完機能を持たせ、コードエディタに必要な引数を特定の方法で表示させたい場合は、<a
+      href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDocスタイルの</a>コメントを追加する必要があります。これらのコメントは、<a
+      href="../Scripts.htm">スクリプトエディタで</a>関数をどのように使用し、記入すべきかをオートコンプリート機能に伝えるために使用されます。</p>
+  <p>典型的な関数ヘッダのフォーマットは、関数名、関数の説明、関数が受け取るさまざまな引数（パラメータ）のリストで、各行の最初にトリプルバックスラッシュ &quot;<span
+      class="inline">///</span>&quot; を付けることを忘れないようにすることです。JSDoc コメントを <span class="inline">/**</span>...
+    で囲むこともできます。<span class="inline">*/</span>で囲むこともできます。その場合、 <span class="inline">/**</span> は独立した行になります。</p>
   <p>コメント自体には識別子（先頭に&quot;<span class="inline">@</span>&quot;）と内容を付与する必要があり、利用可能な識別子は以下の通りである。</p>
   <table>
     <colgroup>
@@ -41,7 +47,9 @@
         <td><span class="inline">@desc &lt;Description goes&gt;</span></td>
       </tr>
       <tr>
-        <td><span class="inline">@param</span> / / / <span class="inline">@</span><span class="inline">parameter</span> <span class="inline">@arg</span> <span class="inline">@argument</span></td>
+        <td><span class="inline">@param</span> / / / <span class="inline">@</span><span class="inline">parameter</span>
+          <span class="inline">@arg</span> <span class="inline">@argument</span>
+        </td>
         <td>引数の情報、オプションで <a href="Feather_Data_Types.htm"><span class="notranslate">type</span></a></td>
         <td><span class="inline">@param <em>{type}</em> name &lt;Parameter description&gt;</span></td>
       </tr>
@@ -51,11 +59,14 @@
         <td><span class="inline">@return {type} &lt;Return description&gt;</span></td>
       </tr>
       <tr>
-        <th colspan="3"><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">フェザーのみ</a></th>
+        <th colspan="3"><a
+            href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">フェザーのみ</a></th>
       </tr>
       <tr>
         <td><span class="inline">@url</span></td>
-        <td>URL for the function, opens when you press <span class="shortcut">F1</span> on the function name or use the <strong>RMB -&gt; Go To Declaration</strong> option.</td>
+        <td>URL for the function, opens when you press <span class="shortcut">F1</span> on the function name or use the
+          <strong>RMB -&gt; Go To Declaration</strong> option.
+        </td>
         <td><span class="inline">@url https://...</span></td>
       </tr>
       <tr>
@@ -75,7 +86,8 @@
       </tr>
       <tr>
         <td style=""><span class="inline">@context / @self</span></td>
-        <td style="">関数のコンテキストを設定します。Feather オートコンプリートは、コンテキスト情報を提供するためにこれを使用します。<span class="notranslate">object</span> またはコンストラクタを指定します。</td>
+        <td style="">関数のコンテキストを設定します。Feather オートコンプリートは、コンテキスト情報を提供するためにこれを使用します。<span class="notranslate">object</span>
+          またはコンストラクタを指定します。</td>
         <td><span class="inline">@self &lt;object&gt;</span></td>
       </tr>
       <tr>
@@ -88,8 +100,11 @@
       </tr>
     </tbody>
   </table>
-  <p>引数や戻り値のデータ型を指定せずに<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Featherを</a>使用した場合、関数本体から自動的にそれらのデータ型を想定します。</p>
-  <p><a href="Feather_Data_Types.htm">Feather Data Types</a> の <span class="inline">@param</span> および <span class="inline">@return</span> のデータ型に関する情報を参照してください。</p>
+  <p>引数や戻り値のデータ型を指定せずに<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Featherを</a>使用した場合、関数本体から自動的にそれらのデータ型を想定します。
+  </p>
+  <p><a href="Feather_Data_Types.htm">Feather Data Types</a> の <span class="inline">@param</span> および <span
+      class="inline">@return</span> のデータ型に関する情報を参照してください。</p>
   <h2>事例紹介</h2>
   <p>独自の関数を書くときにどのように機能するかを知るために、この基本的な例を見てみましょう。</p>
   <p class="code">function is_same_object(_id, _obj)<br />
@@ -100,12 +115,14 @@
         }<br />
         else return false;<br />
     }</p>
-  <p>この<span class="notranslate">script</span> がすることは、インスタンスが与えられた<span class="notranslate">object</span> と同じ <span class="inline">object_index</span> を持っているかどうかをチェックするだけであり、単に as と呼ばれるだけであろう。</p>
+  <p>この<span class="notranslate">script</span> がすることは、インスタンスが与えられた<span class="notranslate">object</span> と同じ <span
+      class="inline">object_index</span> を持っているかどうかをチェックするだけであり、単に as と呼ばれるだけであろう。</p>
   <p class="code">if is_same_object(id, obj_Player)<br />
     {<br />
         instance_destroy()<br />
     }</p>
-  <p>しかし、これをコードエディタに書き込むと、引数の変数名が直接表示されます (<span class="inline">_id</span> と <span class="inline">_obj</span>)。これは、ほとんどの場合、あまり説明的ではありません。JSDocを使えば、関数の情報とともに、カスタムの引数名と説明を定義することができます。</p>
+  <p>しかし、これをコードエディタに書き込むと、引数の変数名が直接表示されます (<span class="inline">_id</span> と <span
+      class="inline">_obj</span>)。これは、ほとんどの場合、あまり説明的ではありません。JSDocを使えば、関数の情報とともに、カスタムの引数名と説明を定義することができます。</p>
   <p class="code">/// @function                is_same_object(inst_id, object_id)<br />
     /// @description             Check if the given instance belongs to the given object.<br />
     /// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.<br />
@@ -118,9 +135,16 @@
     }
   </p>
   <p>これで、プロジェクトのどこかでこの関数を呼び出すと、JSDocのコメントで入力された新しい引数名が表示されます。</p>
-  <p><img>上の画像では、上部がオートコンプリートでの関数の表示、下部が下部の引数ヘルパーの動作を示しています。なお、 <span class="inline">@param</span> のオプションの &quot;type&quot; と義務の &quot;description&quot; の両部分は、デフォルトでは<span class="notranslate">IDE</span> コード・コンプリートに表示されず、表示するには<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/GML_Code_Preferences.htm">GML Preferences</a> でオプションを有効にする必要があります。</p>
-  <p><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Featherを</a>使用する際、機能の上にマウスを乗せると、その機能の詳細情報が表示されます。</p>
-  <p><img>引数名を <span class="inline">[]</span> 大括弧で囲むと、それがオプションであることを示すことができます。そうすると、コードエディターは必要最小限の引数と総引数の間の任意の数の引数を期待するようになります。</p>
+  <p><img>上の画像では、上部がオートコンプリートでの関数の表示、下部が下部の引数ヘルパーの動作を示しています。なお、 <span class="inline">@param</span> のオプションの
+    &quot;type&quot; と義務の &quot;description&quot; の両部分は、デフォルトでは<span class="notranslate">IDE</span>
+    コード・コンプリートに表示されず、表示するには<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/GML_Code_Preferences.htm">GML Preferences</a>
+    でオプションを有効にする必要があります。</p>
+  <p><a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Featherを</a>使用する際、機能の上にマウスを乗せると、その機能の詳細情報が表示されます。
+  </p>
+  <p><img>引数名を <span class="inline">[]</span>
+    大括弧で囲むと、それがオプションであることを示すことができます。そうすると、コードエディタは必要最小限の引数と総引数の間の任意の数の引数を期待するようになります。</p>
   <p>例えば、次のような機能をご覧ください。</p>
   <p class="code">/// @function    animate_position(end_x, end_y, start_x, start_y)<br />
     /// @desc        Animates the instance to ending point, from optional starting point<br />
@@ -134,9 +158,12 @@
         // Function code<br />
     }
   </p>
-  <p> <span class="inline">start_x</span> と <span class="inline">start_y</span> の引数はオプションとしてマークされています。これは、警告メッセージに見られるように、コードエディターが2～4個の引数を期待するようになったことを意味します。</p>
-  <p><img alt="JSDoc Example" class="center" height="652" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" /></p>
-  <p class="note"><span class="note">注</span>関数宣言でオプションの引数を使用した場合でも、同じ動作になります。詳しくは、<a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト関数を</a>参照してください。</p>
+  <p> <span class="inline">start_x</span> と <span class="inline">start_y</span>
+    の引数はオプションとしてマークされています。これは、警告メッセージに見られるように、コードエディタが2～4個の引数を期待するようになったことを意味します。</p>
+  <p><img alt="JSDoc Example" class="center" height="652"
+      src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" /></p>
+  <p class="note"><span class="note">注</span>関数宣言でオプションの引数を使用した場合でも、同じ動作になります。詳しくは、<a
+      href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト関数を</a>参照してください。</p>
   <p><span class="notranslate">scripts</span> 、その中に複数の関数を持つことができるので、その宣言の前に、それぞれの関数に対するJSDocコメントを追加します。</p>
   <p><img class="center" src="../../assets/Images/Asset_Editors/JSDoc_Feather_Info.png" /></p>
   <p> </p>
@@ -144,11 +171,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Scripts.htm"> <span class="notranslate">Script</span> 編集部</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Feather_Data_Types.htm">フェザーのデータ型</a></div>
+        <div style="float:left">前のページ：<a href="../Scripts.htm"> <span class="notranslate">Script</span> エディタ</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Feather_Data_Types.htm">フェザーのデータ型</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 JSDoc <span class="notranslate">Script</span> Comments
@@ -157,4 +185,5 @@ JSDoc <span class="notranslate">Script</span> Comments
 jsdoc_comments
 -->
 </body>
+
 </html>

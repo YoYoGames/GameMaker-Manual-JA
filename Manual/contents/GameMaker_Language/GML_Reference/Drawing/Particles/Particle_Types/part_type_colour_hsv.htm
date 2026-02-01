@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>part_type_colour_hsv</title>
@@ -12,23 +13,27 @@
   <meta name="rh-index-keywords" content="part_type_colour_hsv,part_type_color_hsv" />
   <meta name="search-keywords" content="part_type_colour_hsv,part_type_color_hsv" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">part_type_colour_hsv</span></h1>
-  <p>この関数では、指定されたタイプのすべてのパーティクルに対して、色相、彩度、値の範囲を設定することができます。3つの要素それぞれに最小値と最大値を与えると、作成されるパーティクルは、指定されたパラメータの範囲に基づいてランダムな色になります。この方法で、同じ色相で異なる彩度のパーティクルや、異なる色相で同じ値（輝度）のパーティクルを作成することができます...すべての値は0から255の間でなければなりません。</p>
+  <p>
+    この関数では、指定されたタイプのすべてのパーティクルに対して、色相、彩度、値の範囲を設定することができます。3つの要素それぞれに最小値と最大値を与えると、作成されるパーティクルは、指定されたパラメータの範囲に基づいてランダムな色になります。この方法で、同じ色相で異なる彩度のパーティクルや、異なる色相で同じ値（輝度）のパーティクルを作成することができます...すべての値は0から255の間でなければなりません。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">part_type_colour_hsv</span>(ind, hmin, hmax, smin, smax, vmin, vmax);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">part_type_colour_hsv</span>(ind, hmin, hmax, smin,
+    smax, vmin, vmax);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">ind</span></td>
-        <td><span data-keyref="Type_ID_PartType">粒子タイプID</span></td>
+        <td><span data-keyref="Type_ID_PartType">パーティクルタイプID</span></td>
         <td><span class="notranslate">The index of the particle type to change.</span></td>
       </tr>
       <tr>
@@ -64,23 +69,25 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">part_type_hsv(global.Stars, 0, 255, 0, 255, 255, 255 );</p>
-  <p>上記のコードでは、グローバル変数 &quot;Stars &quot;でインデックスされたパーティクルタイプの各発光粒子が、異なる色と彩度を持ち、同じ値（光度）を持つように設定されています。</p>
+  <p>上記のコードでは、グローバル変数 &quot;Stars &quot;でインデックスされたパーティクルタイプの各発光パーティクルが、異なる色と彩度を持ち、同じ値（光度）を持つように設定されています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Particle_Types.htm">パーティクルの種類</a></div>
-        <div style="float:right">次のページ <a href="part_type_colour1.htm"><span class="notranslate">part_type_colour1</span></a></div>
+        <div style="float:left">前のページ：<a href="Particle_Types.htm">パーティクルの種類</a></div>
+        <div style="float:right">次のページ：<a href="part_type_colour1.htm"><span
+              class="notranslate">part_type_colour1</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_colour_hsv
@@ -90,4 +97,5 @@ part_type_color_hsv
 part_type_colour_hsv
 -->
 </body>
+
 </html>

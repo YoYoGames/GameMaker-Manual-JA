@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>粒子</title>
+  <title>パーティクル</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -12,28 +13,52 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Particles" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>粒子</h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">object</span><span data-keyref="GameMaker Name"></span>で複雑なことをする場合、通常は<a href="../../../../The_Asset_Editors/Objects.htm">オブジェクトを</a>用意して、その<a href="../../Asset_Management/Instances/Instances.htm">インスタンスを</a> <span class="notranslate">room</span> の周りに作成します。 しかし、グラフィックのエフェクトの場合、インスタンスが含む変数や異なるイベントに含まれるコードのために、すべてのインスタンスが処理に「コスト」を伴うので、これは高価になることがあります。このコストを削減するには、グラフィックの描画に<a href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">タイルマップレイヤーや</a> <a href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">アセットレイヤーを</a>使用しますが、これらは一般的に静的で、あまり変更したり移動したりすることができません。しかし、高速かつ多様なグラフィックス効果を描画するために、<i>パーティクルを</i>使用する方法があります。</p>
-  <p><strong>パーティクルは </strong>、<i>パーティクルシステム</i>内で定義された特定のプロパティを持つグラフィックリソースです。これらのプロパティは個々のパーティクルに対して直接操作することはできませんが、個々のパーティクルとそのパーティクルが属するシステムを定義するために使用されるコードを通じて変更されます。パーティクルは、爆発、デカール、雨、雪、星空、破片などの美しく派手な効果を、インスタンスのようなCPUオーバーヘッドなしにゲーム内に作り出すのに非常に便利です。</p>
+  <h1>パーティクル</h1>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">object</span><span
+      data-keyref="GameMaker Name"></span>で複雑なことをする場合、通常は<a
+      href="../../../../The_Asset_Editors/Objects.htm">オブジェクトを</a>用意して、その<a
+      href="../../Asset_Management/Instances/Instances.htm">インスタンスを</a> <span class="notranslate">room</span> の周りに作成します。
+    しかし、グラフィックのエフェクトの場合、インスタンスが含む変数や異なるイベントに含まれるコードのために、すべてのインスタンスが処理に「コスト」を伴うので、これは高価になることがあります。このコストを削減するには、グラフィックの描画に<a
+      href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">タイルマップレイヤーや</a> <a
+      href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">アセットレイヤーを</a>使用しますが、これらは一般的に静的で、あまり変更したり移動したりすることができません。しかし、高速かつ多様なグラフィックス効果を描画するために、<i>パーティクルを</i>使用する方法があります。
+  </p>
+  <p><strong>パーティクルは
+    </strong>、<i>パーティクルシステム</i>内で定義された特定のプロパティを持つグラフィックリソースです。これらのプロパティは個々のパーティクルに対して直接操作することはできませんが、個々のパーティクルとそのパーティクルが属するシステムを定義するために使用されるコードを通じて変更されます。パーティクルは、爆発、デカール、雨、雪、星空、破片などの美しく派手な効果を、インスタンスのようなCPUオーバーヘッドなしにゲーム内に作り出すのに非常に便利です。
+  </p>
   <p>パーティクルシステムの基本的なセットアップは3つのステップで行われます。3つ目のステップは、ルーム内でどのようにパーティクル効果を作りたいかによって、オプションで選択することができます。</p>
   <ul class="colour">
-    <li><b>パーティクルシステムを作成</b>します。パーティクルシステムは、さまざまな種類のパーティクルをすぐに使えるように格納するための容器のようなものです。コードを使ってパーティクルの一連のビジュアルアスペクトとビヘイビアを定義し、「コンテナ」の中に入れておけば、後でいつでもどこでも必要なときに取り出して使えます。</li>
-    <li><b>パーティクルタイプを作成</b>します。パーティクルの種類は、グラフィック効果そのものです。色、アルファベット、サイズ、動きなど、さまざまなタイプを作成できますが、<i>個々のパーティクルをコントロールする</i>ことはできないので注意が必要です。一連のパラメータを定義すると、その中からランダムに選ばれたビヘイビアを持つパーティクルが作成されます。</li>
-    <li><b>エミッターを作成</b>する。エミッターは、非常に明確に定義された範囲からパーティクルを破裂させたり、流したりするために使用することができるオプションです。これはオプションです。 <a href="Particle_Systems/part_particles_create.htm"><span class="inline">part_particles_create()</span></a>と <a href="Particle_Systems/part_particles_create_colour.htm"><span class="inline">part_particles_create_colour()</span></a>関数を使用することができますが、すべての状況において適切であるとは限りません。</li>
+    <li>
+      <b>パーティクルシステムを作成</b>します。パーティクルシステムは、さまざまな種類のパーティクルをすぐに使えるように格納するための容器のようなものです。コードを使ってパーティクルの一連のビジュアルアスペクトとビヘイビアを定義し、「コンテナ」の中に入れておけば、後でいつでもどこでも必要なときに取り出して使えます。
+    </li>
+    <li>
+      <b>パーティクルタイプを作成</b>します。パーティクルの種類は、グラフィック効果そのものです。色、アルファベット、サイズ、動きなど、さまざまなタイプを作成できますが、<i>個々のパーティクルをコントロールする</i>ことはできないので注意が必要です。一連のパラメータを定義すると、その中からランダムに選ばれたビヘイビアを持つパーティクルが作成されます。
+    </li>
+    <li><b>エミッターを作成</b>する。エミッターは、非常に明確に定義された範囲からパーティクルを破裂させたり、流したりするために使用することができるオプションです。これはオプションです。 <a
+        href="Particle_Systems/part_particles_create.htm"><span class="inline">part_particles_create()</span></a>と <a
+        href="Particle_Systems/part_particles_create_colour.htm"><span
+          class="inline">part_particles_create_colour()</span></a>関数を使用することができますが、すべての状況において適切であるとは限りません。</li>
   </ul>
   <p>パーティクルはエフェクトを作成するための優れたツールですが、ゲームパフォーマンスの低下やクラッシュの可能性がない限り、一定の制限とグッドプラクティスがあります。</p>
   <ul class="colour">
-    <li>パーティクルシステム、パーティクル、エミッターはメモリを消費するため、使い方に十分注意する必要があります。この問題に対処する一つの方法は、ゲーム開始時に定義され、終了時に削除される<i>グローバル</i>システムを持つことです。しかし、ダイナミックなシステムを作りたい場合は、それぞれのパーティクルやエミッター（およびシステム自体）を不要になった時点で破棄する必要があります。</li>
-    <li>パーティクルは高速でCPUへの負担も軽いのですが、それでも<i>ある程度の</i>処理は必要なので、一度に4万個ものパーティクルを画面上に乱舞させるべきではありません。特定の効果を得るために必要なものに限定し、それ以上は使わないようにしましょう。</li>
-    <li><span class="notranslate">sprite</span> 同梱の 14 個のパーティクル<span class="notranslate">sprites</span> を使用する代わりに、独自のパーティクルを定義する場合は、必要な効果を得るために、できる限りパーティクルを小さくする必要があります。</li>
+    <li>
+      パーティクルシステム、パーティクル、エミッターはメモリを消費するため、使い方に十分注意する必要があります。この問題に対処する一つの方法は、ゲーム開始時に定義され、終了時に削除される<i>グローバル</i>システムを持つことです。しかし、ダイナミックなシステムを作りたい場合は、それぞれのパーティクルやエミッター（およびシステム自体）を不要になった時点で破棄する必要があります。
+    </li>
+    <li>
+      パーティクルは高速でCPUへの負担も軽いのですが、それでも<i>ある程度の</i>処理は必要なので、一度に4万個ものパーティクルを画面上に乱舞させるべきではありません。特定の効果を得るために必要なものに限定し、それ以上は使わないようにしましょう。
+    </li>
+    <li><span class="notranslate">sprite</span> 同梱の 14 個のパーティクル<span class="notranslate">sprites</span>
+      を使用する代わりに、独自のパーティクルを定義する場合は、必要な効果を得るために、できる限りパーティクルを小さくする必要があります。</li>
     <li>パーティクルは何とも相互作用<i>しません</i>。ユーザーやゲーム内の他のインスタンスと何らかの相互作用が必要な場合は、パーティクルは純粋にグラフィックなので、代わりにインスタンスを使用することを検討すべきです。</li>
     <li>1つのゲームで作成できるシステム、エミッター、パーティクルの数に技術的な制限はありませんが、メモリの使用量をできるだけ少なくするために、すべてを最小限の数に制限するようにしてください。</li>
     <li>モバイル端末では、パーティクルが画面の広い範囲を占めると<i>描画が</i>遅くなることがあるので注意が必要です（モバイル端末での過剰描画は速度低下の主な原因の1つです）。</li>
     <li>HTML5では、加法混色はできませんし、WebGLを有効にしない限り、カラーブレンディングもできません。</li>
   </ul>
-  <p><span data-keyref="GameMaker Name">GameMakerで</span>ゲーム中にパーティクルを作成する最も簡単な方法は、内蔵のエフェクト機構を利用することです。このエフェクトは内部のパーティクルシステムを使用して作成されます。基本的にグラフィックエフェクトのみを描画するための非常に高速な方法なので、これらの機能を使用する際に細かい点（メモリ管理など）を気にする必要はありません。エフェクトの種類、作成する位置、大きさ、色を指定するだけで、あとは<span data-keyref="GameMaker Name">GameMakerに</span>全てお任せです。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerで</span>ゲーム中にパーティクルを作成する最も簡単な方法は、内蔵のエフェクト機構を利用することです。このエフェクトは内部のパーティクルシステムを使用して作成されます。基本的にグラフィックエフェクトのみを描画するための非常に高速な方法なので、これらの機能を使用する際に細かい点（メモリ管理など）を気にする必要はありません。エフェクトの種類、作成する位置、大きさ、色を指定するだけで、あとは<span
+      data-keyref="GameMaker Name">GameMakerに</span>全てお任せです。</p>
   <p>ビルトインされたパーティクルエフェクトを作成するために、以下の機能があります。</p>
   <ul class="colour">
     <li><a href="effect_create_below.htm"><span class="notranslate">effect_create_below</span></a></li>
@@ -41,11 +66,14 @@
     <li><a href="effect_clear.htm"><span class="notranslate">effect_clear</span></a></li>
   </ul>
   <p> </p>
-  <p>これらのエフェクトは範囲やカスタマイズに制限があるとはいえ、わずかな労力でシンプルで素晴らしいエフェクトを作成することができます。例えば、移動するミサイルの下に小さな灰色の煙を各ステップで作成することで、かなり説得力のある煙の軌跡が作成できます。</p>
-  <p>しかし、パーティクルの真の可能性は、<span class="notranslate">GameMaker Language</span> が提供する強力な機能を使って、独自のエフェクトを設計・作成することにあります。以下の各項目から詳細を確認できます。</p>
+  <p>
+    これらのエフェクトは範囲やカスタマイズに制限があるとはいえ、わずかな労力でシンプルで素晴らしいエフェクトを作成することができます。例えば、移動するミサイルの下に小さな灰色の煙を各ステップで作成することで、かなり説得力のある煙の軌跡が作成できます。
+  </p>
+  <p>しかし、パーティクルの真の可能性は、<span class="notranslate">GameMaker Language</span>
+    が提供する強力な機能を使って、独自のエフェクトを設計・作成することにあります。以下の各項目から詳細を確認できます。</p>
   <ul class="colour">
     <li><a href="Particle_Systems/Particle_Systems.htm"><label for="two">パーティクルシステム</label></a></li>
-    <li><a href="Particle_Types/Particle_Types.htm"><label for="three">粒子の種類</label></a></li>
+    <li><a href="Particle_Types/Particle_Types.htm"><label for="three">パーティクルの種類</label></a></li>
     <li><a href="Particle_Emitters/Particle_Emitters.htm"><label for="four">パーティクルエミッター</label></a></li>
   </ul>
   <p> </p>
@@ -59,11 +87,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Drawing.htm">ドローイング</a></div>
-        <div style="float:right">次へ<a href="../Textures/Textures.htm">テクスチャ</a></div>
+        <div style="float:left">前のページ：<a href="../Drawing.htm">ドローイング</a></div>
+        <div style="float:right">次のページ：<a href="../Textures/Textures.htm">テクスチャ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Particles
@@ -72,4 +101,5 @@ Particles
 particle_functions
 -->
 </body>
+
 </html>

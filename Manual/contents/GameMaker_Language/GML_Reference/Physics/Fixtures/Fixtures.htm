@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>備品</title>
@@ -12,52 +13,81 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Fixtures,Density,Friction,Linear Damping,Angular Damping,Restitution" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>備品</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>インスタンスに物理特性を持たせる前に、フィクスチャを割り当てる必要があります。フィクスチャは形状やフォームをインスタンスにバインドし、密度、摩擦、復元力などのマテリアルプロパティを追加します。フィクスチャはボックス、円、多角形など、どんな単純な形でも構いません。<span data-keyref="GameMaker Name">GameMakerには</span>、一点一点、自分の形を定義できる機能があり、形が決まれば、その物理特性も定義することができます。これらのプロパティは、固定具がアサインされたインスタンスが物理世界の他のインスタンスとどのように反応するかを支配するもので、以下のリストがあります。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerの</span>インスタンスに物理特性を持たせる前に、フィクスチャを割り当てる必要があります。フィクスチャは形状やフォームをインスタンスにバインドし、密度、摩擦、復元力などのマテリアルプロパティを追加します。フィクスチャはボックス、円、多角形など、どんな単純な形でも構いません。<span
+      data-keyref="GameMaker Name">GameMakerには</span>、一点一点、自分の形を定義できる機能があり、形が決まれば、その物理特性も定義することができます。これらのプロパティは、固定具がアサインされたインスタンスが物理世界の他のインスタンスとどのように反応するかを支配するもので、以下のリストがあります。
+  </p>
   <ul class="colour">
-    <li><b>密度。</b>物質の密度は、単位体積あたりの質量として定義される。本質的には、物質がどれだけきつく詰め込まれているかを測定するものです。もし、フィクスチャが<i>静的</i>であることを望むなら（つまり、不動）、密度は0に設定されるべきで、本質的に無限に密になります。一定の速度で動き、衝突によって物理的に影響を受けない<i>Kinematic</i> <span class="notranslate">objects</span> 、密度0を使用して定義されます。</li>
+    <li>
+      <b>密度。</b>物質の密度は、単位体積あたりの質量として定義される。本質的には、物質がどれだけきつく詰め込まれているかを測定するものです。もし、フィクスチャが<i>静的</i>であることを望むなら（つまり、不動）、密度は0に設定されるべきで、本質的に無限に密になります。一定の速度で動き、衝突によって物理的に影響を受けない<i>Kinematic</i>
+      <span class="notranslate">objects</span> 、密度0を使用して定義されます。
+    </li>
     <li><b>摩擦。</b>摩擦とは、固体表面、流体層、および物質要素が互いに滑り合う相対的な運動に抵抗する力である。</li>
-    <li><b>リニア・ダンピング。</b>これは、動いている<span class="notranslate">object</span> の勢いを失わせる一般的な力である。現実の世界」では、一般的に物事は永遠に続くわけではありません。例えば、紙飛行機はしばらくは飛びますが、やがて空気の摩擦によって減速し、落下します。私たちが作る物理の世界では、このようなことをモデル化するのは難しいので、このような「一般化された摩擦」をシミュレーションするために、それぞれの固定具に独自の線形減衰を与えているのです。</li>
+    <li><b>リニア・ダンピング。</b>これは、動いている<span class="notranslate">object</span>
+      の勢いを失わせる一般的な力である。現実の世界」では、一般的に物事は永遠に続くわけではありません。例えば、紙飛行機はしばらくは飛びますが、やがて空気の摩擦によって減速し、落下します。私たちが作る物理の世界では、このようなことをモデル化するのは難しいので、このような「一般化された摩擦」をシミュレーションするために、それぞれの固定具に独自の線形減衰を与えているのです。
+    </li>
     <li><b>アンギュラー・ダンピング。</b>上記のように、これは一般的な力で、<span class="notranslate">object</span> が永遠に回転するのを止めるために適用されます。</li>
-    <li><b>返還。物</b>理学では、返還は「<span class="notranslate">object</span> またはシステムが弾性変形後に元の状態に戻ること」と定義されていますが、<span data-keyref="GameMaker Name">GameMakerの</span>フィクスチャは本当に剛体で変形できないので、これは基本的にフィクスチャがどれだけ「弾む」かと考えてください。</li>
+    <li><b>返還。物</b>理学では、返還は「<span class="notranslate">object</span> またはシステムが弾性変形後に元の状態に戻ること」と定義されていますが、<span
+        data-keyref="GameMaker Name">GameMakerの</span>フィクスチャは本当に剛体で変形できないので、これは基本的にフィクスチャがどれだけ「弾む」かと考えてください。</li>
   </ul>
-  <p>このように、<span data-keyref="GameMaker Name">GameMakerは</span>いくつかの簡単な機能を使うだけで、複雑なシステムやインタラクションを作ることができ、これまでにないリアルなゲームを実現することができます。</p>
-  <p class="note"><b><span class="note">注</span> </b>1つのフィクスチャを定義して、それを複数のインスタンスにバインドすることができます（ビリヤード台のように、すべてのボールが同じ物理的特性を持ちながら、それぞれが独立したエンティティであることを想像してください）。また、複数のフィクスチャーを一つのインスタンスにバインドして、物理的なプロパティを組み合わせることもできます（例えば、二つの三角ポリゴンフィクスチャーを使って、星を作る）。</p>
+  <p>このように、<span
+      data-keyref="GameMaker Name">GameMakerは</span>いくつかの簡単な機能を使うだけで、複雑なシステムやインタラクションを作ることができ、これまでにないリアルなゲームを実現することができます。
+  </p>
+  <p class="note"><b><span class="note">注</span>
+    </b>1つのフィクスチャを定義して、それを複数のインスタンスにバインドすることができます（ビリヤード台のように、すべてのボールが同じ物理的特性を持ちながら、それぞれが独立したエンティティであることを想像してください）。また、複数のフィクスチャーを一つのインスタンスにバインドして、物理的なプロパティを組み合わせることもできます（例えば、二つの三角ポリゴンフィクスチャーを使って、星を作る）。
+  </p>
   <p>以下の機能は、フィクスチャの作成、バインド、コリジョンの設定、そして削除を行うためのものです。</p>
   <ul class="colour">
     <li><a href="physics_fixture_create.htm"><span class="notranslate">physics_fixture_create</span></a></li>
     <li><a href="physics_fixture_bind.htm"><span class="notranslate">physics_fixture_bind</span></a></li>
     <li><a href="physics_fixture_bind_ext.htm"><span class="notranslate">physics_fixture_bind_ext</span></a></li>
-    <li><a href="physics_fixture_set_collision_group.htm"><span class="notranslate">physics_fixture_set_collision_group</span></a></li>
+    <li><a href="physics_fixture_set_collision_group.htm"><span
+          class="notranslate">physics_fixture_set_collision_group</span></a></li>
     <li><a href="physics_fixture_delete.htm"><span class="notranslate">physics_fixture_delete</span></a></li>
     <li><a href="physics_remove_fixture.htm"><span class="notranslate">physics_remove_fixture</span></a></li>
   </ul>
   <p> </p>
   <p>固定具には形状を与えなければ物理の世界では検出されないが、この形状は以下の関数で定義することができる。</p>
   <ul class="colour">
-    <li><a href="physics_fixture_set_box_shape.htm"><span class="notranslate">physics_fixture_set_box_shape</span></a></li>
-    <li><a href="physics_fixture_set_circle_shape.htm"><span class="notranslate">physics_fixture_set_circle_shape</span></a></li>
-    <li><a href="physics_fixture_set_edge_shape.htm"><span class="notranslate">physics_fixture_set_edge_shape</span></a></li>
-    <li><a href="physics_fixture_set_chain_shape.htm"><span class="notranslate">physics_fixture_set_chain_shape</span></a></li>
-    <li><a href="physics_fixture_set_polygon_shape.htm"><span class="notranslate">physics_fixture_set_polygon_shape</span></a></li>
+    <li><a href="physics_fixture_set_box_shape.htm"><span class="notranslate">physics_fixture_set_box_shape</span></a>
+    </li>
+    <li><a href="physics_fixture_set_circle_shape.htm"><span
+          class="notranslate">physics_fixture_set_circle_shape</span></a></li>
+    <li><a href="physics_fixture_set_edge_shape.htm"><span class="notranslate">physics_fixture_set_edge_shape</span></a>
+    </li>
+    <li><a href="physics_fixture_set_chain_shape.htm"><span
+          class="notranslate">physics_fixture_set_chain_shape</span></a></li>
+    <li><a href="physics_fixture_set_polygon_shape.htm"><span
+          class="notranslate">physics_fixture_set_polygon_shape</span></a></li>
     <li><a href="physics_fixture_add_point.htm"><span class="notranslate">physics_fixture_add_point</span></a></li>
   </ul>
   <p> </p>
-  <p>物理を有効にしたインスタンスが周りの世界に対して適切に反応するために、使用するフィクスチャはフィクスチャにバウンス、摩擦、質量などを与える特定のプロパティを定義しておく必要があります。以下の関数は、フィクスチャのこれらのプロパティを設定するために使用されます。</p>
+  <p>
+    物理を有効にしたインスタンスが周りの世界に対して適切に反応するために、使用するフィクスチャはフィクスチャにバウンス、摩擦、質量などを与える特定のプロパティを定義しておく必要があります。以下の関数は、フィクスチャのこれらのプロパティを設定するために使用されます。
+  </p>
   <ul class="colour">
     <li><a href="physics_fixture_set_density.htm"><span class="notranslate">physics_fixture_set_density</span></a></li>
-    <li><a href="physics_fixture_set_friction.htm"><span class="notranslate">physics_fixture_set_friction</span></a></li>
-    <li><a href="physics_fixture_set_linear_damping.htm"><span class="notranslate">physics_fixture_set_linear_damping</span></a></li>
-    <li><a href="physics_fixture_set_angular_damping.htm"><span class="notranslate">physics_fixture_set_angular_damping</span></a></li>
-    <li><a href="physics_fixture_set_restitution.htm"><span class="notranslate">physics_fixture_set_restitution</span></a></li>
+    <li><a href="physics_fixture_set_friction.htm"><span class="notranslate">physics_fixture_set_friction</span></a>
+    </li>
+    <li><a href="physics_fixture_set_linear_damping.htm"><span
+          class="notranslate">physics_fixture_set_linear_damping</span></a></li>
+    <li><a href="physics_fixture_set_angular_damping.htm"><span
+          class="notranslate">physics_fixture_set_angular_damping</span></a></li>
+    <li><a href="physics_fixture_set_restitution.htm"><span
+          class="notranslate">physics_fixture_set_restitution</span></a></li>
     <li><a href="physics_fixture_set_sensor.htm"><span class="notranslate">physics_fixture_set_sensor</span></a></li>
-    <li><a href="physics_fixture_set_kinematic.htm"><span class="notranslate">physics_fixture_set_kinematic</span></a></li>
+    <li><a href="physics_fixture_set_kinematic.htm"><span class="notranslate">physics_fixture_set_kinematic</span></a>
+    </li>
     <li><a href="physics_fixture_set_awake.htm"><span class="notranslate">physics_fixture_set_awake</span></a></li>
   </ul>
   <p> </p>
-  <p>また、インスタンスにバインドされた<i>後に</i>、フィクスチャの特定のプロパティを設定することができます。ベース &quot;フィクスチャをバインドするとき、バインドされた物理的なプロパティのためのユニークなインデックスを変数に格納することを選択できます。これは、特定のプロパティを変更したり、それらの現在の値を取得したりするために、次の関数で使用することができます。</p>
+  <p>また、インスタンスにバインドされた<i>後に</i>、フィクスチャの特定のプロパティを設定することができます。ベース
+    &quot;フィクスチャをバインドするとき、バインドされた物理的なプロパティのためのユニークなインデックスを変数に格納することを選択できます。これは、特定のプロパティを変更したり、それらの現在の値を取得したりするために、次の関数で使用することができます。
+  </p>
   <ul class="colour">
     <li><a href="physics_get_friction.htm"><span class="notranslate">physics_get_friction</span></a></li>
     <li><a href="physics_get_density.htm"><span class="notranslate">physics_get_density</span></a></li>
@@ -73,11 +103,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Physics.htm">物理学</a></div>
-        <div style="float:right">次へ<a href="../Joints/Joints.htm">関節</a></div>
+        <div style="float:left">前のページ：<a href="../Physics.htm">物理学</a></div>
+        <div style="float:right">次のページ：<a href="../Joints/Joints.htm">関節</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Fixtures
@@ -86,4 +117,5 @@ Fixtures
 physics_fixture_functions
 -->
 </body>
+
 </html>

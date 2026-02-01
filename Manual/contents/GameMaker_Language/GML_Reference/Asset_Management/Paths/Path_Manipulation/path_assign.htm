@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>path_assign</title>
@@ -13,50 +14,63 @@
   <meta name="search-keywords" content="path_assign" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">path_assign</span></h1>
-  <p>この機能を使うと、<span class="notranslate">path</span> のデータを、<span class="notranslate">path</span> から別のデータへコピーすることができます。コピー<i>先の</i> <span class="notranslate">path</span> は、まずクリアされ（<span class="notranslate">path</span> のポイントがある場合）、コピー先の<span class="notranslate">path</span> で<strong>完全に上書き</strong>されます。
-    からコピーされます。<span class="notranslate">path</span> はどちらも削除されず、結果として2つのインデックスを持つ2つの<span class="notranslate">paths</span> ができますが、形とポイントは全く同じです。一般に、この関数は <span class="inline"><a href="path_add.htm">path_add()</a></span> を使って作成された<span class="notranslate">path</span> に対して使いたいものです。
-    <span class="notranslate">path</span> <span class="notranslate">asset</span> に使用すると、この関数を使用した瞬間から<strong>ゲーム終了まで、ゲーム内のすべてのインスタンスの<span class="notranslate">path</span> に永久に影響を</strong>与えるからです。</p>
+  <p>この機能を使うと、<span class="notranslate">path</span> のデータを、<span class="notranslate">path</span>
+    から別のデータへコピーすることができます。コピー<i>先の</i> <span class="notranslate">path</span> は、まずクリアされ（<span
+      class="notranslate">path</span> のポイントがある場合）、コピー先の<span class="notranslate">path</span>
+    で<strong>完全に上書き</strong>されます。
+    からコピーされます。<span class="notranslate">path</span> はどちらも削除されず、結果として2つのインデックスを持つ2つの<span
+      class="notranslate">paths</span> ができますが、形とポイントは全く同じです。一般に、この関数は <span class="inline"><a
+        href="path_add.htm">path_add()</a></span> を使って作成された<span class="notranslate">path</span> に対して使いたいものです。
+    <span class="notranslate">path</span> <span class="notranslate">asset</span>
+    に使用すると、この関数を使用した瞬間から<strong>ゲーム終了まで、ゲーム内のすべてのインスタンスの<span class="notranslate">path</span> に永久に影響を</strong>与えるからです。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">path_assign</span>(index, path);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The index of the path to be overwritten.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">path</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The index of the path that will overwrite &#39;index&#39;.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">mypath = path_add();<br/> path_assign(mypath, choose(path_1, path_2, path_3));</p>
-  <p>上記のコードは、変数 &quot;mypath &quot;にインデックスされた新しい空の<span class="notranslate">path</span> を作成し、利用可能な3つのリソース<span class="notranslate">path</span> のうちの1つから<span class="notranslate">path</span> データをコピーオーバーします。</p>
+  <p class="code">mypath = path_add();<br /> path_assign(mypath, choose(path_1, path_2, path_3));</p>
+  <p>上記のコードは、変数 &quot;mypath &quot;にインデックスされた新しい空の<span class="notranslate">path</span> を作成し、利用可能な3つのリソース<span
+      class="notranslate">path</span> のうちの1つから<span class="notranslate">path</span> データをコピーオーバーします。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
-        <div style="float:right">次のページ <a href="path_delete.htm"><span class="notranslate">path_delete</span></a></div>
-        
+        <div style="float:left">前のページ：<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ：<a href="path_delete.htm"><span class="notranslate">path_delete</span></a></div>
+
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_assign
@@ -65,4 +79,5 @@ path_assign
 path_assign
 -->
 </body>
+
 </html>

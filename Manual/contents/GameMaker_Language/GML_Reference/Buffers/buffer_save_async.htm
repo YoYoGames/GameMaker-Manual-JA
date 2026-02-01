@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_save_async</title>
@@ -12,53 +13,82 @@
   <meta name="rh-index-keywords" content="buffer_save_async" />
   <meta name="search-keywords" content="buffer_save_async" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_save_async</span></h1>
-  <p>この機能を使うと、<span class="notranslate">buffer</span> の内容の一部をファイルに保存して、メモリに読み込むことができます。 <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a>関数（あるいは<span class="notranslate">buffers</span> を読み込むための他の関数）を使用します。offset &quot;は<span class="notranslate">buffer</span> 内の保存開始位置を定義し（バイト単位）、&quot;size &quot;はそのオフセットから保存する<span class="notranslate">buffer</span> の領域の大きさ（同じくバイト単位）である。この関数は非同期で動作するため、保存中もゲームは実行され、この関数を使用して保存されたファイルはすべて「default」フォルダに置かれます。このフォルダは、<span class="notranslate">GameMaker</span> によって自動的に追加されるため、ファイル名に含める必要は<i>ありません</i>。例えば、ファイル名<span class="notranslate">path</span> &quot;<span class="inline">Data\Player_Save.sav</span>&quot; は、実際には &quot;<span class="inline">default\Data\Player_Save.sav</span>&quot; に保存されます。しかし、このファイルを関数 <a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a><span class="notranslate">path</span> の「default」部分を指定する必要はありません。（ただし、Xbox One、PS4、<span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span> を除く他のファイル機能では<i>、</i>指定が必要です。）</p>
+  <p>この機能を使うと、<span class="notranslate">buffer</span> の内容の一部をファイルに保存して、メモリに読み込むことができます。 <a href="buffer_load.htm"><span
+        class="inline">buffer_load()</span></a>関数（あるいは<span class="notranslate">buffers</span>
+    を読み込むための他の関数）を使用します。offset &quot;は<span class="notranslate">buffer</span> 内の保存開始位置を定義し（バイト単位）、&quot;size
+    &quot;はそのオフセットから保存する<span class="notranslate">buffer</span>
+    の領域の大きさ（同じくバイト単位）である。この関数は非同期で動作するため、保存中もゲームは実行され、この関数を使用して保存されたファイルはすべて「default」フォルダに置かれます。このフォルダは、<span
+      class="notranslate">GameMaker</span> によって自動的に追加されるため、ファイル名に含める必要は<i>ありません</i>。例えば、ファイル名<span
+      class="notranslate">path</span> &quot;<span class="inline">Data\Player_Save.sav</span>&quot; は、実際には &quot;<span
+      class="inline">default\Data\Player_Save.sav</span>&quot; に保存されます。しかし、このファイルを関数 <a
+      href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a><span
+      class="notranslate">path</span> の「default」部分を指定する必要はありません。（ただし、Xbox One、PS4、<span
+      class="notranslate">Nintendo</span> <span class="notranslate">Switch</span> を除く他のファイル機能では<i>、</i>指定が必要です。）</p>
   <p class="note"><b>注</b>：HTML5では、&quot;default/&quot;は自動的に追加されないので、コードでこれを考慮する必要があるかもしれません。</p>
-  <p>この関数は一意の ID 値を返し、<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">非同期保存/読み込みイベントを</a>トリガーします。このとき、以下の拡張例に示すように、返された ID を使用して <span class="inline">async_load</span> ID 値をチェックすることができます。以下の拡張例のように <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>のマップは、以下の2つのキーと値のペアを持つことになります。</p>
+  <p>この関数は一意の ID 値を返し、<a
+      href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">非同期保存/読み込みイベントを</a>トリガーします。このとき、以下の拡張例に示すように、返された
+    ID を使用して <span class="inline">async_load</span> ID 値をチェックすることができます。以下の拡張例のように <a
+      href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>のマップは、以下の2つのキーと値のペアを持つことになります。</p>
   <ul>
     <li><b>&quot;id&quot;: </b>save 関数から返される非同期関数の ID。</li>
-    <li><b>&quot;status&quot;: </b>データが正しく保存/ロードされた場合は <span class="inline">true</span> を、そうでない場合は <span class="inline">false</span> を返します。</li>
+    <li><b>&quot;status&quot;: </b>データが正しく保存/ロードされた場合は <span class="inline">true</span> を、そうでない場合は <span
+        class="inline">false</span> を返します。</li>
   </ul>
-  <p>を呼び出す間にこの関数を複数回呼び出すことで、複数の<span class="notranslate">buffers</span> を1つにまとめて保存できることに注意してください。 <a href="buffer_async_group_begin.htm"><span class="inline">buffer_async_group_begin()</span></a>と <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a>(これに関する詳細な情報はこれらの関数を参照)。</p>
-  <p class="note"><b>注</b>：HTML5では、返された結果をファイルに保存する場合、base64でエンコードされた<span class="notranslate">strings</span> として保存されます。</p>
+  <p>を呼び出す間にこの関数を複数回呼び出すことで、複数の<span class="notranslate">buffers</span> を1つにまとめて保存できることに注意してください。 <a
+      href="buffer_async_group_begin.htm"><span class="inline">buffer_async_group_begin()</span></a>と <a
+      href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a>(これに関する詳細な情報はこれらの関数を参照)。
+  </p>
+  <p class="note"><b>注</b>：HTML5では、返された結果をファイルに保存する場合、base64でエンコードされた<span class="notranslate">strings</span> として保存されます。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset, size);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset,
+    size);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The index of the buffer to save.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">filename</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">filename</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The name of the file to save as.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">offset</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The offset within the buffer to save from (in bytes).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The size of the buffer area to save (in bytes).</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
   <p> </p>
   <h4>拡張された例。</h4>
-  <p> <span class="inline">buffer_save_async()</span> 関数は任意のイベントから呼び出すことができます。非同期なので、コールバックはほとんど即座に行われることもあれば、数秒かかることもあります。この関数を呼び出すのは簡単で、次のようになります。</p>
+  <p> <span class="inline">buffer_save_async()</span>
+    関数は任意のイベントから呼び出すことができます。非同期なので、コールバックはほとんど即座に行われることもあれば、数秒かかることもあります。この関数を呼び出すのは簡単で、次のようになります。</p>
   <p class="code">saveid = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);</p>
-  <p>上記のコードは、<span class="notranslate">buffer</span> &quot;<i>buff</i>&quot;の内容を与えられた保存ファイルに保存し、関数呼び出しのIDを変数 &quot;<i>saveid</i>&quot;に格納します。保存が完了すると、非同期Save/Loadイベントが発生し、 <span class="inline">async_load</span> マップを解析して、このように関数の正しいIDを探すことができます。</p>
+  <p>上記のコードは、<span class="notranslate">buffer</span> &quot;<i>buff</i>&quot;の内容を与えられた保存ファイルに保存し、関数呼び出しのIDを変数
+    &quot;<i>saveid</i>&quot;に格納します。保存が完了すると、非同期Save/Loadイベントが発生し、 <span class="inline">async_load</span>
+    マップを解析して、このように関数の正しいIDを探すことができます。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
         if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
@@ -73,11 +103,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_load.htm"><span class="notranslate">buffer_load</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_load.htm"><span class="notranslate">buffer_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_save_async
@@ -86,4 +117,5 @@ buffer_save_async
 buffer_save_async
 -->
 </body>
+
 </html>
