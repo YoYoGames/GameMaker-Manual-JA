@@ -7,7 +7,7 @@
   <title>sprite_get_info</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page explaining the function sprite_get_info" />
   <meta name="rh-index-keywords" content="sprite_get_info" />
@@ -567,9 +567,9 @@
     if (_info != undefined &amp;&amp; _info.type == 0)<br />
     {<br />
         var _messages = _info.messages;<br />
-        var _messageCount = array_length(_messages);<br />
+        var _message_count = array_length(_messages);<br />
         <br />
-        for (var i = 0; i &lt; _messageCount; i ++)<br />
+        for (var i = 0; i &lt; _message_count; i ++)<br />
         {<br />
             var _message = _messages[i];<br />
             show_debug_message(&quot;Message at frame &quot; + string(_message.frame) + &quot;: &quot; +

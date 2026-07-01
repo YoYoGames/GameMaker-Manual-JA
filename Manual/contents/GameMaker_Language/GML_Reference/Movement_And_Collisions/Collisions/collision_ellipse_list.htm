@@ -7,7 +7,7 @@
   <title>collision_ellipse_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion collision_ellipse_list" />
   <meta name="rh-index-keywords" content="collision_ellipse_list" />
@@ -99,7 +99,7 @@
   <p> </p>
   <h4>例</h4>
   <p class="code">var _list = ds_list_create();<br />
-    var _num = collision_ellipse_list(x - 100, y - 100, x + 100, y + 100, obj_Enemy, false, true, _list, false);<br />
+    var _num = collision_ellipse_list(x - 100, y - 100, x + 100, y + 100, obj_enemy, false, true, _list, false);<br />
     if (_num &gt; 0)<br />
     {<br />
         for (var i = 0; i &lt; _num; ++i)<br />

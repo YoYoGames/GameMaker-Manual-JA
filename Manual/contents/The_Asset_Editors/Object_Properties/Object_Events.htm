@@ -11,7 +11,7 @@
   <meta name="rh-index-keywords" content="Objects - Events" />
   <meta name="search-keywords" content="events,object events,events list" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-  <script src="../../assets/scripts/main_script.js"></script>
+  <script src="../../assets/scripts/main_script.js" type="module"></script>
 </head>
 
 <body><!--<div class="body-scroll" style="top: 150px;">-->
@@ -25,14 +25,12 @@
     スピード設定によって支配され、<strong>フレームと</strong>呼ばれることもあります） 。</p>
   <p>イベントとコードによる典型的な<span class="notranslate">object</span> の設定を見てみましょう。</p>
   <p><img> <span class="notranslate">object</span> の例でわかるように、対応すべきイベントが多数リストアップされています。しかし、
-    を作成した当初はこのリストは空です。どのイベントが必要で、これらのイベントがトリガーされたときに のインスタンスが何をすべきかを決定する必要があります。 にイベントを追加するには、イベントリストの下にある「<span
-      class="notranslate">object</span> <span class="notranslate">object</span> <span
-      class="notranslate">object</span><em>Add Event</em>」ボタンを押すと、次のウィンドウが表示されます。</p>
+    を作成した当初はこのリストは空です。どのイベントが必要で、これらのイベントがトリガーされたときに のインスタンスが何をすべきかを決定する必要があります。 にイベントを追加するには、イベントリストの下にある「<em>Add Event</em>」ボタンを押すと、次のウィンドウが表示されます。</p>
   <p><img>これは、<span class="notranslate">object</span>
     が反応できるすべての基本イベントとイベントカテゴリーのリストで、各カテゴリー内には、動作をさらに細かく設定するためのサブイベントがあります。例えば、<strong>Key Press</strong> <img>
     イベントカテゴリーをクリックすると、<span class="notranslate">object</span> が<em>どの </em>キーに反応するかを選択するためのイベントが表示されたウィンドウがポップアップ表示されます。
   </p>
-  <p>イベントを選択すると、イベントのエディタウィンドウが連鎖して右側に開きます。</p>
+  <p>イベントを選択すると、イベントのエディターウィンドウが連鎖して右側に開きます。</p>
   <div data-conref="../../assets/snippets/Visual_Code_Choice.hts"> </div>
   <p><span class="notranslate">GML</span> のコード（またはブロック）を編集して、そのイベントに対する特定の動作や反応を<span class="notranslate">object</span>
     に与えることができるようになりました。</p>
@@ -42,8 +40,7 @@
     <li><strong>イベント追加</strong>- イベントリストから新しいイベントを追加します。</li>
     <li><strong>イベントの</strong><strong>切り取り／ </strong> <strong>コピー／ </strong> <strong>貼り付け</strong>-
       選択したイベントを切り取り、コピーまたは貼り付けます。標準的なキーボードショートカットも使用できます。 <img> /<img> + <span class="inline">X</span>,<img> /<img> +
-      <span class="inline">C</span>, および<img> /<img> + <span class="inline">V</span>.
-    </li>
+      <span class="inline">C</span>, および<img> /<img> + <span class="inline">V</span>.</li>
     <li><strong>Duplicate Event</strong>- 選択したイベントを複製します。これは、選択したイベントの内容を、指定した別のイベントに複製します。</li>
     <li><strong>Change Event</strong>- イベントを変更します。選択すると、現在のイベントの内容が新しいイベントに変更されます（その過程で元のイベントが削除されます）。</li>
     <li><strong>Convert To<span class="notranslate">GML</span> Visual / Code</strong>-<span
@@ -287,11 +284,11 @@
   </div>
   <p> </p>
   <p>また、イベントには名前を付けることができ、少なくともEvent Editorでイベントの横に表示される短い説明テキストを付けることができることに留意してください。<span
-      data-keyref="GML_Code">GMLコードを</span>使用する場合）イベントのコードエディタの最初の行に次のように記述します。</p>
+      data-keyref="GML_Code">GMLコードを</span>使用する場合）イベントのコードエディターの最初の行に次のように記述します。</p>
   <p class="code">/// @description Your text here</p>
   <p>そのため、例えば<strong>Alarm </strong>イベントにはこのようなものがあります。</p>
   <p class="code">/// @description This is the AI Fight alarm</p>
-  <p>そして、イベントエディタには、このように表示されます。</p>
+  <p>そして、イベントエディターには、このように表示されます。</p>
   <p><img alt="Object Editor Events List" class="center"
       src="../../assets/Images/Asset_Editors/Editor_Objects_EventList.png" /></p>
   <p><span data-keyref="GML_Visual">GML Visual</span>の場合、コメントを追加するには、<strong>Execute
@@ -310,12 +307,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">前のページ：<a href="../Objects.htm"> <span class="notranslate">Object</span> エディタ</a></div>
-        <div style="float:right">次のページ親オブジェクト</div>
+        <div style="float:left">前のページ：<a href="../Objects.htm"> <span class="notranslate">Object エディタ</span> </a></div>
+        <div style="float:right">次のページ：<a href="Parent_Objects.htm">親オブジェクト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
-        Reserved</span></h5>
+  </div>
+  <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+      Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Object Events

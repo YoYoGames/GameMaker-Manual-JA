@@ -7,7 +7,7 @@
   <title>collision_rectangle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion collision_rectangle" />
   <meta name="rh-index-keywords" content="collision_rectangle" />
@@ -94,7 +94,7 @@
     inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true);<br />
     if (inst != noone)<br />
     {<br />
-        instance_destroy(inst);<br />
+        instance_destroy(_inst);<br />
     }</p>
   <p>この短いコードは collision_rectangle を使って<span class="notranslate">room</span> の 50x, 50y（矩形の左上）から 200x, 200y（矩形の右下）までの範囲で
     &quot;obj_ball&quot; という<span class="notranslate">object</span>

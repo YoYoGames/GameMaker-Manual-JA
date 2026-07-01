@@ -7,7 +7,7 @@
   <title>パーティクルの使い方ガイド</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how to set up and use particles" />
   <meta name="rh-index-keywords" content="Guide To Using Particles" />
@@ -63,20 +63,18 @@
         class="notranslate">GML</span> Visual を紹介します。</p>
     <ul class="dropspotlist">
       <li class="dropspot">の<strong>形状を</strong>指定します。パーティクルの形状は、内蔵の<span class="notranslate">sprite</span>
-        を使用します。デフォルトは定数で <span class="inline">pt_shape_pixel</span> です。必要であれば、カスタムパーティクルを追加する関数もあります。 <a
+        を使用します。デフォルトは定数で <span class="inline">pt_shape_pixel</span> です。必要であれば、カスタムパーティクルを追加する機能もあります。 <a
           href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm"><span
             class="inline">part_type_sprite()</span></a>- または、<a
           href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle
           Spriteという</a>アクションを実行します。</li>
       <li class="dropspot">
         <strong>サイズを</strong>指定します。パーティクルタイプのサイズパラメータを設定します。開始時の最小サイズ、開始時の最大サイズ、および各ステップでのサイズの増加量を指定します（サイズの減少には負の数を使用します）。これはスカラー値で、ベース画像の
-        x/y スケールを均等に変更します。
-      </li>
+        x/y スケールを均等に変更します。</li>
       <li class="dropspot"><strong>color</strong>:
         パーティクルの色を設定します（単色の場合）。2色または3色が提供された場合、これはカラーブレンドとなり、ライフタイム中に1色からもう1色にブレンドされます。</li>
       <li class="dropspot">
-        <strong>alpha</strong>:1つの値が渡された場合は、これがパーティクルのアルファ値になり、2つまたは3つの値が渡された場合は、パーティクルの寿命の間にこれらの間でアルファ値がブレンドされます。
-      </li>
+        <strong>alpha</strong>:1つの値が渡された場合は、これがパーティクルのアルファ値になり、2つまたは3つの値が渡された場合は、パーティクルの寿命の間にこれらの間でアルファ値がブレンドされます。</li>
       <li class="dropspot"><strong>speed</strong>: パーティクル
         タイプの速度プロパティを設定します。最低速度と最高速度を指定し、パーティクル生成時に指定した範囲内のランダムな値が選ばれます。ステップごとに速度を上げることもできますし、負の数を使ってパーティクルを遅くすることもできます（速度が0より小さくなることはありません）。
       </li>
@@ -85,8 +83,7 @@
       </li>
       <li class="dropspot">
         <strong>orientationを</strong>指定します。パーティクルタイプの方位角のプロパティを設定します。最小角度、最大角度、および各ステップでの増加量を指定します。また、指定した角度を現在の進行方向に対して相対的にするか、絶対的にするかを指定できます。例えば、すべての値を
-        0 に設定し、相対値を true にすると、パーティクルの向きはパーティクルの<span class="notranslate">path</span> に正確に追従します。
-      </li>
+        0 に設定し、相対値を true にすると、パーティクルの向きはパーティクルの<span class="notranslate">path</span> に正確に追従します。</li>
       <li class="dropspot"><strong>blendingを</strong>指定します。パーティクルの種類によって、<strong>加算 </strong>ブレンディングを使用するか、<strong>通常の
         </strong>ブレンディングを使用するかを設定します。これは、<span class="notranslate">GML</span> を使用する場合は関数で、<span
           class="notranslate">GML</span> Visual を使用する場合はパーティクル初期化の一部として設定されます。Additive Blending は、パーティクルが <span
@@ -104,8 +101,7 @@
       &quot;と揺れ、1だと遅く、20だと非常に速く揺れます。つまり、パーティクルの速度が最小値2、最大値5で、ウィグルが20の場合、作成された各パーティクルの寿命の間、最小/最大速度の間で非常に速く揺れ動くことになります。
     </p>
     <p class="note">
-      <strong>注意</strong>：他にも細かいパーティクルプロパティがありますが、ここではできるだけシンプルにするために説明しません。パーティクルプロパティの詳細については、各ページを参照してください。
-    </p>
+      <strong>注意</strong>：他にも細かいパーティクルプロパティがありますが、ここではできるだけシンプルにするために説明しません。パーティクルプロパティの詳細については、各ページを参照してください。</p>
     <p class="dropspot">では、パーティクルを定義するコードを見てみましょう。</p>
     <p class="code">// This defines the particle&#39;s shape
       <br />
@@ -160,8 +156,7 @@
     <p class="dropspot">パーティクルを作成する方法はいくつかあり、それぞれに長所と短所があります。<strong>エミッターを</strong>使用してパーティクルを<strong>はじいたり </strong>
       <strong>流したり </strong>する方法と、ポイントに<strong>直接
       </strong>パーティクルを作成する方法があります。どちらを使うかは、何を実現したいか、どんな効果を出したいかによりますが、まずは一番簡単な、パーティクルを直接作成する方法から説明します。<span
-        class="notranslate">GML</span> では、以下のような関数を使用します。
-    </p>
+        class="notranslate">GML</span> では、以下のような関数を使用します。</p>
     <p class="code">part_particles_create(global.P_System, x, y, global.Particle1, 10);</p>
     <p class="dropspot">で、<span class="notranslate">GML</span> Visualになります。</p>
     <p class="dropspot"><img>このコードとアクションで、グローバルシステムから &quot;Particle1
@@ -244,8 +239,7 @@
     </p>
     <p class="dropspot">パーティクルを流すためのコード/GML
       Visualができましたが（これらのパーティクルは、何もしなくてもゲームステップごとに放出されます）、特定の間隔でパーティクルをはじき出すための<strong>Alarm[0]</strong>
-      <strong>イベントも</strong>追加したいと思います。
-    </p>
+      <strong>イベントも</strong>追加したいと思います。</p>
     <p class="code">part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x - 10, mouse_x + 10, mouse_y
       - 10, mouse_y + 10, ps_shape_ellipse, ps_distr_gaussian);
       <br />
@@ -306,8 +300,9 @@
         <div style="float:right">次のページ：<a href="Guide_To_Using_Shaders.htm">シェーダー使用ガイド</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
-        Reserved</span></h5>
+  </div>
+  <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+      Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Vectors
