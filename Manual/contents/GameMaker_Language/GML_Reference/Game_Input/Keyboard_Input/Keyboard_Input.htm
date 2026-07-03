@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>キーボード入力</title>
@@ -9,20 +10,38 @@
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for Keyboard Input" />
-  <meta name="rh-index-keywords" content="vk_nokey,vk_anykey,vk_left,vk_right,vk_up,vk_down,vk_enter,vk_escape,vk_space,vk_shift,vk_control,vk_alt,vk_backspace,vk_tab,vk_home,vk_end,vk_delete,vk_insert,vk_pageup,vk_pagedown,vk_pause,vk_printscreen,vk_f1,vk_f2,vk_f3,vk_f4,vk_f5,vk_f6,vk_f7,vk_f8,vk_f9,vk_f10,vk_f11,vk_f12,vk_numpad0,vk_numpad1,vk_numpad2,vk_numpad3,vk_numpad4,vk_numpad5,vk_numpad6,vk_numpad7,vk_numpad8,vk_numpad9,vk_multiply,vk_divide,vk_add,vk_subtract,vk_decimal,vk_lshift,vk_lcontrol,vk_lalt,vk_rshift,vk_rcontrol,vk_ralt" />
-  <meta name="search-keywords" content="Keyboard Input,vk_nokey,vk_anykey,vk_left,vk_right,vk_up,vk_down,vk_enter,vk_escape,vk_space,vk_shift,vk_control,vk_alt,vk_backspace,vk_tab,vk_home,vk_end,vk_delete,vk_insert,vk_pageup,vk_pagedown,vk_pause,vk_printscreen,vk_f1,vk_f2,vk_f3,vk_f4,vk_f5,vk_f6,vk_f7,vk_f8,vk_f9,vk_f10,vk_f11,vk_f12,vk_numpad0,vk_numpad1,vk_numpad2,vk_numpad3,vk_numpad4,vk_numpad5,vk_numpad6,vk_numpad7,vk_numpad8,vk_numpad9,vk_multiply,vk_divide,vk_add,vk_subtract,vk_decimal,vk_lshift,vk_lcontrol,vk_lalt,vk_rshift,vk_rcontrol,vk_ralt" />
+  <meta name="rh-index-keywords"
+    content="vk_nokey,vk_anykey,vk_left,vk_right,vk_up,vk_down,vk_enter,vk_escape,vk_space,vk_shift,vk_control,vk_alt,vk_backspace,vk_tab,vk_home,vk_end,vk_delete,vk_insert,vk_pageup,vk_pagedown,vk_pause,vk_printscreen,vk_f1,vk_f2,vk_f3,vk_f4,vk_f5,vk_f6,vk_f7,vk_f8,vk_f9,vk_f10,vk_f11,vk_f12,vk_numpad0,vk_numpad1,vk_numpad2,vk_numpad3,vk_numpad4,vk_numpad5,vk_numpad6,vk_numpad7,vk_numpad8,vk_numpad9,vk_multiply,vk_divide,vk_add,vk_subtract,vk_decimal,vk_lshift,vk_lcontrol,vk_lalt,vk_rshift,vk_rcontrol,vk_ralt" />
+  <meta name="search-keywords"
+    content="Keyboard Input,vk_nokey,vk_anykey,vk_left,vk_right,vk_up,vk_down,vk_enter,vk_escape,vk_space,vk_shift,vk_control,vk_alt,vk_backspace,vk_tab,vk_home,vk_end,vk_delete,vk_insert,vk_pageup,vk_pagedown,vk_pause,vk_printscreen,vk_f1,vk_f2,vk_f3,vk_f4,vk_f5,vk_f6,vk_f7,vk_f8,vk_f9,vk_f10,vk_f11,vk_f12,vk_numpad0,vk_numpad1,vk_numpad2,vk_numpad3,vk_numpad4,vk_numpad5,vk_numpad6,vk_numpad7,vk_numpad8,vk_numpad9,vk_multiply,vk_divide,vk_add,vk_subtract,vk_decimal,vk_lshift,vk_lcontrol,vk_lalt,vk_rshift,vk_rcontrol,vk_ralt" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>キーボード入力</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerで</span>キーボードを扱う場合、押した状態や離した状態など、異なるキーボードの状態を認識するための様々な関数が用意されています。また、全てのキー入力を<span class="notranslate">string</span> として保存するものや、最後に押したキーが何であったかを知ることができるもの、キーボードの状態を完全にクリアできるものなどがあります。</p>
-  <p class="note"><b><span class="note">注意事項</span></b>これらの関数は、Windows/Mac/Ubuntuのデスクトップ・プラットフォームのみを対象として設計されています。他のプラットフォームでは、組み込みの変数や定数が有効でない場合がありますし、携帯電話では多くの関数が動作しません。</p>
-  <p>キー（または複数のキー）からの入力文字は、それぞれ<a href="https://en.wikipedia.org/wiki/UTF-8" target="_blank">UTF8</a>コードという数値で定義されています。この値は、任意の文字に対して <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>関数がありますが、<span data-keyref="GameMaker Name">GameMakerには</span>、最もよく使われるキーボードの特殊キーと特殊関数のための一連の <span class="inline">constants</span> もあります。一般的には、 <span class="inline">ord()</span> と <span class="inline">keyboard_check*()</span> の関数を組み合わせて、こんな感じで使うことになります。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerで</span>キーボードを扱う場合、押した状態や離した状態など、異なるキーボードの状態を認識するための様々な関数が用意されています。また、全てのキー入力を<span
+      class="notranslate">string</span> として保存するものや、最後に押したキーが何であったかを知ることができるもの、キーボードの状態を完全にクリアできるものなどがあります。</p>
+  <p class="note"><b><span
+        class="note">注意事項</span></b>これらの関数は、Windows/Mac/Ubuntuのデスクトップ・プラットフォームのみを対象として設計されています。他のプラットフォームでは、組み込みの変数や定数が有効でない場合がありますし、携帯電話では多くの関数が動作しません。
+  </p>
+  <p>キー（または複数のキー）からの入力文字は、それぞれ<a href="https://en.wikipedia.org/wiki/UTF-8"
+      target="_blank">UTF8</a>コードという数値で定義されています。この値は、任意の文字に対して <a href="../../Strings/ord.htm"><span
+        class="inline">ord()</span></a>関数がありますが、<span
+      data-keyref="GameMaker Name">GameMakerには</span>、最もよく使われるキーボードの特殊キーと特殊関数のための一連の <span
+      class="inline">constants</span> もあります。一般的には、 <span class="inline">ord()</span> と <span
+      class="inline">keyboard_check*()</span> の関数を組み合わせて、こんな感じで使うことになります。</p>
   <p class="code">if keyboard_check(ord(&quot;A&quot;))<br />
     {<br />
         hspeed = -5;<br />
     }</p>
-  <p>つまり、上記は「A」キーが押されているかどうかをチェックし、押されていれば<span class="notranslate">object</span> の水平速度を -5 に設定するということです。なお、この方法で <span class="inline">ord()</span> を使用すると、入力<span class="notranslate">string</span> が 1 文字だけで、0 から 9 までの数字または A から Z までの<i>大文字の</i>ローマ字である場合にのみ正しく機能します。関数 <span class="inline">ord()</span> は完全な UTF8 値を返しますが、関数 <span class="inline">keyboard_check*()</span> は<i>A から Z および 0 から 9 までしか検出</i>しません。しかし、矢印キーを使いたい場合はどうでしょうか。あるいは、「shift」キーを使ってアクションを変更したい場合はどうでしょうか。その場合、<span data-keyref="GameMaker Name">GameMakerには</span> <span class="inline">vk_</span> という定数があり、 <span class="inline">ord()</span> の代わりに使うことができます（<span class="inline">vk_</span> は<i>virtual key</i> の略）。</p>
+  <p>つまり、上記は「A」キーが押されているかどうかをチェックし、押されていれば<span class="notranslate">object</span> の水平速度を -5 に設定するということです。なお、この方法で <span
+      class="inline">ord()</span> を使用すると、入力<span class="notranslate">string</span> が 1 文字だけで、0 から 9 までの数字または A から Z
+    までの<i>大文字の</i>ローマ字である場合にのみ正しく機能します。関数 <span class="inline">ord()</span> は完全な UTF8 値を返しますが、関数 <span
+      class="inline">keyboard_check*()</span> は<i>A から Z および 0 から 9
+      までしか検出</i>しません。しかし、矢印キーを使いたい場合はどうでしょうか。あるいは、「shift」キーを使ってアクションを変更したい場合はどうでしょうか。その場合、<span
+      data-keyref="GameMaker Name">GameMakerには</span> <span class="inline">vk_</span> という定数があり、 <span
+      class="inline">ord()</span> の代わりに使うことができます（<span class="inline">vk_</span> は<i>virtual key</i> の略）。</p>
   <table>
     <colgroup>
       <col />
@@ -30,11 +49,13 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_VK"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">仮想キー定数(vk_*)</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_VK"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">仮想キー定数(vk_*)</a></span>
+        </th>
       </tr>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">vk_nokey</span></td>
@@ -163,11 +184,13 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_VK"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">仮想キー定数(vk_*)</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_VK"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm">仮想キー定数(vk_*)</a></span>
+        </th>
       </tr>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">vk_lshift</span></td>
@@ -195,13 +218,17 @@
       </tr>
     </tbody>
   </table>
-  <p><span style="text-align: justify;">を使用する際のちょっとした例です。</span><span style="text-align: justify;"> </span><span class="inline">vk_</span><span style="text-align: justify;"> </span><span style="text-align: justify;">の定数です。</span></p>
+  <p><span style="text-align: justify;">を使用する際のちょっとした例です。</span><span style="text-align: justify;"> </span><span
+      class="inline">vk_</span><span style="text-align: justify;"> </span><span
+      style="text-align: justify;">の定数です。</span></p>
   <p class="code">if keyboard_check_pressed(vk_tab)<br />
     {<br />
         instance_create_layer(x, y, &quot;Controllers&quot;, obj_Menu);<br />
     }</p>
-  <p>上記のコードは、「Tab」キーが<i>押さ</i>れたかどうかを検出し、押された場合は<span class="notranslate">object</span> &quot;obj_Menu&quot; のインスタンスを作成します。</p>
-  <p> <span class="inline">keyboard_lastchar</span> もし、0〜9、A〜Z、またはVK定数以外のキー文字をチェックする必要がある場合は、例えば <span class="inline">keyboard_*</span> 変数の1つをチェックする必要があります。</p>
+  <p>上記のコードは、「Tab」キーが<i>押さ</i>れたかどうかを検出し、押された場合は<span class="notranslate">object</span> &quot;obj_Menu&quot;
+    のインスタンスを作成します。</p>
+  <p> <span class="inline">keyboard_lastchar</span> もし、0〜9、A〜Z、またはVK定数以外のキー文字をチェックする必要がある場合は、例えば <span
+      class="inline">keyboard_*</span> 変数の1つをチェックする必要があります。</p>
   <p class="code">var _key = keyboard_lastchar;<br />
     if ord(_key) == ord(&quot;ç&quot;)<br />
     {<br />
@@ -209,7 +236,8 @@
         keyboard_lastchar = &quot;&quot;;<br />
     }</p>
   <p>キーボードでの作業時に使用できる機能は、次のとおりです。</p>
-  <p class="note"><b>注</b>：画面上の<a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">仮想キーボードを</a>使用する場合は、これらの機能は使用<i>できません</i>。</p>
+  <p class="note"><b>注</b>：画面上の<a
+      href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">仮想キーボードを</a>使用する場合は、これらの機能は使用<i>できません</i>。</p>
   <ul class="colour">
     <li><a href="io_clear.htm"><span class="notranslate">io_clear</span></a></li>
     <li><a href="keyboard_check.htm"><span class="notranslate">keyboard_check</span></a></li>
@@ -231,7 +259,9 @@
   </ul>
   <p> </p>
   <p>最後に、以下の変数は<span data-keyref="GameMaker Name">GameMakerに</span>組み込まれており、アクセスすることでキーボードの状態や入力に関する情報を取得することができます。</p>
-  <p class="note"><b>注</b>：<a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">バーチャルキーボード</a>使用時は <span style="font-size:1px;"><span class="inline">keyboard_string</span></span>変数がキーボード入力で更新されます。</p>
+  <p class="note"><b>注</b>：<a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">バーチャルキーボード</a>使用時は
+    <span style="font-size:1px;"><span class="inline">keyboard_string</span></span>変数がキーボード入力で更新されます。
+  </p>
   <ul class="colour">
     <li><a href="keyboard_key.htm"><span class="notranslate">keyboard_key</span></a></li>
     <li><a href="keyboard_lastkey.htm"><span class="notranslate">keyboard_lastkey</span></a></li>
@@ -244,11 +274,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Game_Input.htm">ゲーム入力</a></div>
-        <div style="float:right">次へ<a href="../Mouse_Input/Mouse_Input.htm">マウス入力</a></div>
+        <div style="float:left">前のページ：<a href="../Game_Input.htm">ゲーム入力</a></div>
+        <div style="float:right">次のページ：<a href="../Mouse_Input/Mouse_Input.htm">マウス入力</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Keyboard Input Functions
@@ -312,4 +343,5 @@ vk_ralt
 keyboard_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>fx_get_parameter_names</title>
@@ -12,27 +13,33 @@
   <meta name="rh-index-keywords" content="fx_get_parameter_names" />
   <meta name="search-keywords" content="fx_get_parameter_names" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">fx_get_parameter_names</span></h1>
-  <p>この関数は、あるフィルタ/エフェクトに存在するすべてのパラメータの名前を取得するために使用されます。読み込む FX<span class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返されたもの) を指定すると、この関数はフィルタのパラメータの名前を含む配列を<span class="notranslate">strings</span> として返します。</p>
+  <p>この関数は、あるフィルタ/エフェクトに存在するすべてのパラメータの名前を取得するために使用されます。読み込む FX<span class="notranslate">struct</span> ( <span
+      class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a
+        href="layer_get_fx.htm">layer_get_fx()</a></span> から返されたもの) を指定すると、この関数はフィルタのパラメータの名前を含む配列を<span
+      class="notranslate">strings</span> として返します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">fx_get_parameter_names</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td>
+        <td><span class="notranslate">filter_or_effect</span></td>
+        <td><span data-keyref="Type_Struct_FX"></span></td>
         <td><span class="notranslate">The FX struct to get the parameter names of</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Array"></span> (of Strings)</p>
   <p> </p>
   <h4>例</h4>
@@ -43,18 +50,22 @@
         show_debug_message(&quot;Parameter &quot; + string(i) + &quot;: &quot; + _param_names[i]);<br />
     }
   </p>
-  <p>上記のコードは、あるレイヤーのFX<span class="notranslate">struct</span> を取得し、そのパラメーター名を配列で取得します。そして、このコードは <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a>その配列をループし、各パラメータを出力ログに表示する。</p>
+  <p>上記のコードは、あるレイヤーのFX<span class="notranslate">struct</span> を取得し、そのパラメーター名を配列で取得します。そして、このコードは <a
+      href="../../../../GML_Overview/Language_Features/for.htm"><span
+        class="notranslate">for</span></a>その配列をループし、各パラメータを出力ログに表示する。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
-        <div style="float:right">次ページ：<a data-xref="{title}" href="fx_get_single_layer.htm">fx_get_single_layer</a></div>
+        <div style="float:left">前のページ：<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
+        <div style="float:right">次ページ：<a data-xref="{title}" href="fx_get_single_layer.htm">fx_get_single_layer</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fx_get_parameter_names
@@ -63,4 +74,5 @@ fx_get_parameter_names
 fx_get_parameter_names
 -->
 </body>
+
 </html>

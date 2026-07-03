@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>仮想キーボードを表示する</title>
@@ -12,6 +13,7 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Show Virtual Keyboard" />
   <meta name="search-keywords" content="Show Virtual Keyboard" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 仮想キーボードを表示する</h1>
@@ -140,16 +142,26 @@
       </table>
     </li>
   </ul>
-  <p>最後の引数は、予測入力の有効・無効を設定するもので、許可する場合は <span class="inline">true</span> に、許可しない場合は <span class="inline">false</span> に設定します。
-    を使用します。予測入力モードでは、仮想キーボードは通常の<span data-keyref="GameMaker Name">GameMakerの</span>キー押下イベントを発生させません。その代わり、<i>最後に</i>押された文字とキーボード<span class="notranslate">string</span> の変数のみが更新されます。これは、以下の理由によるものです。
-    キー押下を検出するために使用される内部テキストフィールドの変化が、実際の仮想キーボードキーによるものか、テキストサジェストによるものかを検出できないためです。このような場合、 <span class="inline">keyboard_string</span> の入力を読みたいと思うでしょう。
+  <p>最後の引数は、予測入力の有効・無効を設定するもので、許可する場合は <span class="inline">true</span> に、許可しない場合は <span class="inline">false</span>
+    に設定します。
+    を使用します。予測入力モードでは、仮想キーボードは通常の<span
+      data-keyref="GameMaker Name">GameMakerの</span>キー押下イベントを発生させません。その代わり、<i>最後に</i>押された文字とキーボード<span
+      class="notranslate">string</span> の変数のみが更新されます。これは、以下の理由によるものです。
+    キー押下を検出するために使用される内部テキストフィールドの変化が、実際の仮想キーボードキーによるものか、テキストサジェストによるものかを検出できないためです。このような場合、 <span
+      class="inline">keyboard_string</span> の入力を読みたいと思うでしょう。
     を読み取ることができます。</p>
   <p>プラットフォームOSによって、ユーザーが手にするキーボードは異なる機能を持つことになり、ターゲットごとに使用する場合は以下のような注意点があることも知っておく必要があります。</p>
   <ul class="colour">
-    <li><b>UWP</b>: UWPの実装では、 <span class="inline">return_key_type</span>, <span class="inline">autocapitalization_type</span>, <span class="inline">predictive_text_enabled</span> をサポートしていません。これらのパラメータを関数に渡しても、エラーにはなりません。
+    <li><b>UWP</b>: UWPの実装では、 <span class="inline">return_key_type</span>, <span
+        class="inline">autocapitalization_type</span>, <span class="inline">predictive_text_enabled</span>
+      をサポートしていません。これらのパラメータを関数に渡しても、エラーにはなりません。
       キーボードに影響を与えます。</li>
-    <li><b>Android / Amazon Fireの</b>場合。<span class="notranslate">Android</span> では、キーボードタイプ <span class="inline">kbv_type_phone_name</span> はサポートされておらず、代わりに ASCII キーボードが表示されます。また、リターンキータイプは <span class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span class="inline">kbv_returnkey_next</span> のみとなります。
-      <span class="inline">kbv_returnkey_send</span> または <span class="inline">kbv_returnkey_done</span> 。そのプラットフォームで他のリターンキーが使用されている場合、システムは以下の代替リターンキーにデフォルトで対応します。
+    <li><b>Android / Amazon Fireの</b>場合。<span class="notranslate">Android</span> では、キーボードタイプ <span
+        class="inline">kbv_type_phone_name</span> はサポートされておらず、代わりに ASCII キーボードが表示されます。また、リターンキータイプは <span
+        class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span
+        class="inline">kbv_returnkey_next</span> のみとなります。
+      <span class="inline">kbv_returnkey_send</span> または <span class="inline">kbv_returnkey_done</span>
+      。そのプラットフォームで他のリターンキーが使用されている場合、システムは以下の代替リターンキーにデフォルトで対応します。
       <table>
         <tbody>
           <tr>
@@ -158,13 +170,15 @@
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_google</span><br />
-              <span class="inline">kbv_returnkey_yahoo</span></td>
+              <span class="inline">kbv_returnkey_yahoo</span>
+            </td>
             <td><span class="inline">kbv_returnkey_search</span></td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_join</span><br />
               <span class="inline">kbv_returnkey_route</span><br />
-              <span class="inline">kbv_returnkey_emergency</span></td>
+              <span class="inline">kbv_returnkey_emergency</span>
+            </td>
             <td><span class="inline">kbv_returnkey_go</span></td>
           </tr>
           <tr>
@@ -176,10 +190,19 @@
     </li>
     <br />
     <li><b>AndroidTV / FireTVの</b>場合。ASCIIキーボードでは、カスタムリターンキータイプはサポートされて<i>いません</i>- デフォルトのリターンキーが常に表示されます。</li>
-    <li><b>tvOS</b>: Predictive text and auto-capitalization is not supported on<span class="notranslate">tvOS</span>, and the height of the keyboard returned by system events and function <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><span class="inline">keyboard_virtual_height()</span></a>      は、画面全体に広がるため、また、<span class="notranslate">tvOS</span> でキーボード長方形機能が無効になっているため、画面の高さがデフォルトとなります。また、物理キーボード（Bluetooth）のイベントは、仮想キーボードを使用しない限り、ブロードキャストされないことに注意してください。
+    <li><b>tvOS</b>: Predictive text and auto-capitalization is not supported on<span class="notranslate">tvOS</span>,
+      and the height of the keyboard returned by system events and function <a
+        href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><span
+          class="inline">keyboard_virtual_height()</span></a> は、画面全体に広がるため、また、<span class="notranslate">tvOS</span>
+      でキーボード長方形機能が無効になっているため、画面の高さがデフォルトとなります。また、物理キーボード（Bluetooth）のイベントは、仮想キーボードを使用しない限り、ブロードキャストされないことに注意してください。
       が開かれました。</li>
   </ul>
-  <p>この関数を呼び出すと、<a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">システム非同期イベントが</a>発生し、 <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span> <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS マップに</a>以下のキー/バリューペアが入力されます。</p>
+  <p>この関数を呼び出すと、<a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">システム非同期イベントが</a>発生し、 <span
+      class="inline"><a
+        href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span>
+    <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS
+      マップに</a>以下のキー/バリューペアが入力されます。
+  </p>
   <ul class="colour">
     <li>&quot;<b>event_type</b>&quot; - 仮想キーボード操作によってトリガーされた場合、これは &quot;<b>仮想キーボードの状態</b>&quot; になります。</li>
     <li>&quot;<b>screen_height</b>&quot; - 仮想キーボードの高さ (ピクセル単位)です。キーボードが見えない場合は、0 になります。</li>
@@ -194,14 +217,16 @@
   </ul>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" /></p>
+  <p><img alt="Show Virtual Keyboard Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" />
+  </p>
   <h4>論拠となる。</h4>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">keyboard_type</span></td>
@@ -231,11 +256,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Mouse_And_Keyboard_Actions.htm">マウスとキーボードの操作</a></div>
-        <div style="float:right">次へ<a href="Hide_Virtual_Keyboard.htm">仮想キーボードの非表示</a></div>
+        <div style="float:left">前のページ：<a href="Mouse_And_Keyboard_Actions.htm">マウスとキーボードの操作</a></div>
+        <div style="float:right">次のページ：<a href="Hide_Virtual_Keyboard.htm">仮想キーボードの非表示</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Show Virtual Keyboard
@@ -244,4 +270,5 @@ Action - Show Virtual Keyboard
 action_show_virtual_keyboard
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_enable_drawevent</title>
@@ -12,28 +13,38 @@
   <meta name="rh-index-keywords" content="draw_enable_drawevent" />
   <meta name="search-keywords" content="draw_enable_drawevent" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_enable_drawevent</span></h1>
-  <p>この関数を使うと、<b>ゲーム内のすべてのインスタンスの</b> draw イベントを有効 (<span class="inline">true</span>) または無効 (<span class="inline">false</span>) にすることができます。これは単にインスタンスが画面に描画しないだけでなく、draw イベントを完全に抑制することになるので、そのイベントに存在するゲームロジックも実行されないので注意が必要です。</p>
-  <p>この関数について理解しておくべき重要な点は、ゲームの開始直後、最初のフレームがレンダリングされる前（つまり、ゲームの最初の<span class="notranslate">object</span> の最初の<span class="notranslate">room</span> の Create Event）に呼び出すと、ゲーム ウィンドウが<b>レンダリングされないという</b>ことです。これは、何もレンダリングする必要のない専用の<span class="notranslate">server</span> を必要とするマルチプレイヤー プロジェクトには便利ですが、<span class="notranslate">GameMaker</span> がサポートしていないため、ヘッドレスには<strong>ならない</strong>ことに留意してください -- したがって、グラフィカル インターフェイスを持たない<span class="notranslate">server</span> では実行できません。</p>
+  <p>この関数を使うと、<b>ゲーム内のすべてのインスタンスの</b> draw イベントを有効 (<span class="inline">true</span>) または無効 (<span
+      class="inline">false</span>) にすることができます。これは単にインスタンスが画面に描画しないだけでなく、draw
+    イベントを完全に抑制することになるので、そのイベントに存在するゲームロジックも実行されないので注意が必要です。</p>
+  <p>この関数について理解しておくべき重要な点は、ゲームの開始直後、最初のフレームがレンダリングされる前（つまり、ゲームの最初の<span class="notranslate">object</span> の最初の<span
+      class="notranslate">room</span> の Create Event）に呼び出すと、ゲーム
+    ウィンドウが<b>レンダリングされないという</b>ことです。これは、何もレンダリングする必要のない専用の<span class="notranslate">server</span> を必要とするマルチプレイヤー
+    プロジェクトには便利ですが、<span class="notranslate">GameMaker</span> がサポートしていないため、ヘッドレスには<strong>ならない</strong>ことに留意してください --
+    したがって、グラフィカル インターフェイスを持たない<span class="notranslate">server</span> では実行できません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">draw_enable_drawevent</span>(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">Enable</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">Set to <span class="inline">true</span> または . <span class="inline">false</span></td>
-     </tr>
+        <td><span class="notranslate">Enable</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> または . <span class="inline">false</span>
+        </td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,11 +64,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Drawing.htm">ドローイング</a></div>
-        <div style="float:right">次のページ <a href="draw_flush.htm"><span class="notranslate">draw_flush</span></a></div>
+        <div style="float:left">前のページ：<a href="Drawing.htm">ドローイング</a></div>
+        <div style="float:right">次のページ：<a href="draw_flush.htm"><span class="notranslate">draw_flush</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_enable_drawevent
@@ -66,4 +78,5 @@ draw_enable_drawevent
 draw_enable_drawevent
 -->
 </body>
+
 </html>

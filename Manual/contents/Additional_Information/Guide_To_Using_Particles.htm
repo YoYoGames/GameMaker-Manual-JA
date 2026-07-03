@@ -1,201 +1,315 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>パーティクルの使い方ガイド</title>
-    <meta name="generator" content="Adobe RoboHelp 2020" />
-    <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-    <script src="../assets/scripts/main_script.js" type="module"></script>
-    <meta name="rh-authors" content="Mark Alexander" />
-    <meta name="topic-comment" content="Page that explains how to set up and use particles" />
-    <meta name="rh-index-keywords" content="Guide To Using Particles" />
-    <meta name="search-keywords" content="particles,particle guide,particle setup" />
-  </head>
-  <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1>パーティクルの使い方ガイド</h1>
-    <p>このガイドは、<strong>パーティクルの</strong>使い方や作り方を理解したい方のためのものです。このページでは、パーティクルの<a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">GameMaker Language関数と</a> <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Particle_Actions.htm">GML Visualアクションの</a>両方について説明します。パーティクルはとても便利で、作るのがとても楽しいので、今まで使ったことがない方は、このガイドで始めていただければと思います。</p>
-    <p>先に進む前に、パーティクルとは何かについて説明しておきましょう...。基本的にパーティクルは、<strong>パーティクルシステムによって</strong>定義された特定のプロパティを持つグラフィックリソースです。これらのプロパティは<em>個々の </em>パーティクルに対して直接操作することはできませんが、所属するシステムを定義するために使用されるコードやアクションを通じて一括して変更されます。インスタンスのようなCPUオーバーヘッドを伴わずに、美しく派手な効果や、繊細で控えめな効果をゲーム内で作り出すのに非常に有効な手段です。</p>
-    <p>パーティクルシステムについて触れましたが、続きの前にそれが何であるかを説明しましょう。パーティクルシステムは、パーティクルをすぐに使えるように入れておく容器のようなものだと考えてください。コードやアクションを使ってパーティクルのビジュアル面を定義し、それを「容器」（パーティクルシステム）に入れることで、後で必要なときにいつでもどこでも取り出して使えるようにします。</p>
-    <p>システムをセットアップしてパーティクルを作成する前に、いくつかのことを知っておくことが重要です。まず、パーティクルシステムのコードのほとんどは、<strong>ゲーム内で一度だけ呼び出さ</strong>れます。通常は、最初の<span class="notranslate">object</span> またはレベルのコントローラ<span class="notranslate">room</span> で呼び出されます。これは必ずしもそうではありませんが、簡単のために、以下の簡単なガイドではこのシナリオを使用します。これは、パーティクルを使用する最も一般的な方法だからです。パーティクルシステムは一度作成するとメモリ内に留まり、いつでも使用できる状態になるため、複数回作成するとメモリ使用量がすぐに増え、深刻なラグが発生し、ゲームがクラッシュする可能性さえあります。このガイドでは簡略化のため、ゲーム内のどのインスタンスでもいつでも使える<strong>グローバルパーティクルシステムを </strong>作成することにします。</p>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>パーティクルの使い方ガイド</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains how to set up and use particles" />
+  <meta name="rh-index-keywords" content="Guide To Using Particles" />
+  <meta name="search-keywords" content="particles,particle guide,particle setup" />
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>パーティクルの使い方ガイド</h1>
+  <p>このガイドは、<strong>パーティクルの</strong>使い方や作り方を理解したい方のためのものです。このページでは、パーティクルの<a
+      href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">GameMaker Language関数と</a> <a
+      href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Particle_Actions.htm">GML
+      Visualアクションの</a>両方について説明します。パーティクルはとても便利で、作るのがとても楽しいので、今まで使ったことがない方は、このガイドで始めていただければと思います。</p>
+  <p>
+    先に進む前に、パーティクルとは何かについて説明しておきましょう...。基本的にパーティクルは、<strong>パーティクルシステムによって</strong>定義された特定のプロパティを持つグラフィックリソースです。これらのプロパティは<em>個々の
+    </em>パーティクルに対して直接操作することはできませんが、所属するシステムを定義するために使用されるコードやアクションを通じて一括して変更されます。インスタンスのようなCPUオーバーヘッドを伴わずに、美しく派手な効果や、繊細で控えめな効果をゲーム内で作り出すのに非常に有効な手段です。
+  </p>
+  <p>
+    パーティクルシステムについて触れましたが、続きの前にそれが何であるかを説明しましょう。パーティクルシステムは、パーティクルをすぐに使えるように入れておく容器のようなものだと考えてください。コードやアクションを使ってパーティクルのビジュアル面を定義し、それを「容器」（パーティクルシステム）に入れることで、後で必要なときにいつでもどこでも取り出して使えるようにします。
+  </p>
+  <p>
+    システムをセットアップしてパーティクルを作成する前に、いくつかのことを知っておくことが重要です。まず、パーティクルシステムのコードのほとんどは、<strong>ゲーム内で一度だけ呼び出さ</strong>れます。通常は、最初の<span
+      class="notranslate">object</span> またはレベルのコントローラ<span class="notranslate">room</span>
+    で呼び出されます。これは必ずしもそうではありませんが、簡単のために、以下の簡単なガイドではこのシナリオを使用します。これは、パーティクルを使用する最も一般的な方法だからです。パーティクルシステムは一度作成するとメモリ内に留まり、いつでも使用できる状態になるため、複数回作成するとメモリ使用量がすぐに増え、深刻なラグが発生し、ゲームがクラッシュする可能性さえあります。このガイドでは簡略化のため、ゲーム内のどのインスタンスでもいつでも使える<strong>グローバルパーティクルシステムを
+    </strong>作成することにします。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">パーティクルシステムの作成</a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot">まず最初に、パーティクルシステムを定義し、名前を付けて使用できるようにする必要があります。これはグローバルなシステムで、どのような<span
+        class="notranslate">object</span> でも使用できるようにするため、コントローラ<span class="notranslate">object</span>
+      か、ゲーム開始時に実行する初期化関数で行います。<span class="notranslate">GML</span> は次のようなものです。</p>
+    <p class="code">global.P_System = part_system_create_layer(&quot;Instance_Layer&quot;, false);</p>
+    <p class="dropspot">そして、<span class="notranslate">GML</span> Visualを使用します。</p>
+    <p class="dropspot"><img>提供されたレイヤー名は、システムが使用される<span class="notranslate">room</span>
+      で有効なレイヤーでなければならないことに注意してください。そうでなければ、パーティクルは表示されません。また、&quot;persistent&quot;<span class="notranslate">flag</span>
+      (in code and in<span class="notranslate">GML</span> Visual)をfalseに設定していることに注意してください。永続的なパーティクルシステムとは、<span
+        class="notranslate">rooms</span> をまたいで「永続」するもので、<span class="notranslate">room</span>
+      ごとに破壊して再作成する必要がありません。しかし、このガイドでは、シンプルにするために、永続化を使用しません。</p>
+    <p class="dropspot">それでできたのがシステムですが、パーティクルはどうするのですか？パーティクルも定義しないと、このシステムは何の役にも立たない。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">パーティクルタイプの定義</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">パーティクルをシステムで使用するには、まずその一般的なプロパティを定義する必要があります。これは<span class="notranslate">object</span>
+      のプロパティのようなものですが、個々のパーティクルに対して<em>一般的な
+      </em>方法でのみ適用されます。つまり、パーティクルの最小移動速度を1、最大移動速度を2に設定すると、システムで作成されたパーティクルは1ステップあたり1～2ピクセルの間でランダムな速度になり、全体としては平均速度が1.5となる、ということです。最初のパーティクルに名前を付け、システムを作成したのと同じ<span
+        class="notranslate">GML</span> で次の<span class="notranslate">object</span> を使って追加してください。</p>
+    <p class="code">global.Particle1 = part_type_create();</p>
+    <p class="dropspot">そして、<span class="notranslate">GML</span> Visualをご利用の方へ。</p>
+    <p class="dropspot"><img> <span class="notranslate">GML</span> Visual を使って、<strong>ブレンド
+      </strong>オプションにもチェックを入れていることに注意してください。これによってパーティクルの<strong>加算ブレンディングが</strong>可能になりますが、これについてはもう少し後ほど説明します。</p>
+    <p class="dropspot">
+      これでシステムとそこに入れるパーティクルができましたが、優れたエフェクトを作るにはまだ準備ができていません。パーティクルのプロパティ、つまりパーティクルの見た目（速度、回転、アルファ値など）を定義する必要があります。パーティクル効果を定義するために使用できる詳細がたくさんあるので、以下に最も重要な設定の概要と、それらをすべて使用するコードのスニペットと<span
+        class="notranslate">GML</span> Visual を紹介します。</p>
+    <ul class="dropspotlist">
+      <li class="dropspot">の<strong>形状を</strong>指定します。パーティクルの形状は、内蔵の<span class="notranslate">sprite</span>
+        を使用します。デフォルトは定数で <span class="inline">pt_shape_pixel</span> です。必要であれば、カスタムパーティクルを追加する機能もあります。 <a
+          href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm"><span
+            class="inline">part_type_sprite()</span></a>- または、<a
+          href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle
+          Spriteという</a>アクションを実行します。</li>
+      <li class="dropspot">
+        <strong>サイズを</strong>指定します。パーティクルタイプのサイズパラメータを設定します。開始時の最小サイズ、開始時の最大サイズ、および各ステップでのサイズの増加量を指定します（サイズの減少には負の数を使用します）。これはスカラー値で、ベース画像の
+        x/y スケールを均等に変更します。</li>
+      <li class="dropspot"><strong>color</strong>:
+        パーティクルの色を設定します（単色の場合）。2色または3色が提供された場合、これはカラーブレンドとなり、ライフタイム中に1色からもう1色にブレンドされます。</li>
+      <li class="dropspot">
+        <strong>alpha</strong>:1つの値が渡された場合は、これがパーティクルのアルファ値になり、2つまたは3つの値が渡された場合は、パーティクルの寿命の間にこれらの間でアルファ値がブレンドされます。</li>
+      <li class="dropspot"><strong>speed</strong>: パーティクル
+        タイプの速度プロパティを設定します。最低速度と最高速度を指定し、パーティクル生成時に指定した範囲内のランダムな値が選ばれます。ステップごとに速度を上げることもできますし、負の数を使ってパーティクルを遅くすることもできます（速度が0より小さくなることはありません）。
+      </li>
+      <li class="dropspot">
+        <strong>方向</strong>です。パーティクルタイプの方向プロパティを設定します。ここでも方向の範囲を指定します（反時計回りの角度で、0は右への動き、90は上への動き、など）。例えば、パーティクルをランダムな方向に動かすには、最小値0、最大値360を指定します。また、各ステップごとに方向の増加を指定することもできます（負の値も可能です）。
+      </li>
+      <li class="dropspot">
+        <strong>orientationを</strong>指定します。パーティクルタイプの方位角のプロパティを設定します。最小角度、最大角度、および各ステップでの増加量を指定します。また、指定した角度を現在の進行方向に対して相対的にするか、絶対的にするかを指定できます。例えば、すべての値を
+        0 に設定し、相対値を true にすると、パーティクルの向きはパーティクルの<span class="notranslate">path</span> に正確に追従します。</li>
+      <li class="dropspot"><strong>blendingを</strong>指定します。パーティクルの種類によって、<strong>加算 </strong>ブレンディングを使用するか、<strong>通常の
+        </strong>ブレンディングを使用するかを設定します。これは、<span class="notranslate">GML</span> を使用する場合は関数で、<span
+          class="notranslate">GML</span> Visual を使用する場合はパーティクル初期化の一部として設定されます。Additive Blending は、パーティクルが <span
+          class="inline">bm_add</span> のブレンドモードを使用することを意味し、パーティクルが重なる部分に「光る」外観を与え、また下に描かれたもの (<span
+          class="notranslate">sprites</span>, 背景 ,<span class="notranslate">tiles</span>, etc...)
+        とブレンドします。火や魔法の効果（例えば）には非常に便利ですが、煙などの場合はオフにしたほうがよいでしょう。違いを見るために実験してください!この機能を有効にすると、パーティクル作成時の<span
+          class="notranslate">texture</span> バッチが解除されるため、パーティクルを描画するためにステップごとに多くのバッチが必要になることに注意してください。</li>
+      <li class="dropspot">
+        <strong>life</strong>:パーティクルタイプの寿命の境界を、ステップ（ゲームフレーム）単位で設定します。これまでの設定と同様、最小値と最大値があり、パーティクルはこの値の範囲内でランダムなステップ数を持続します。つまり、ライフタイムを30min、30maxにするとパーティクルはちょうど30ステップ存在することになりますが、ライフタイムを20min、60maxにすると各パーティクルは20から60の間のランダムなステップ数だけ存在することになります。
+      </li>
+    </ul>
+    <p class="dropspot">さて、パーティクルを定義するコードを紹介する前に、ちょっとだけ「<strong>wiggle</strong>」の話を...。信じられないかもしれませんが、&quot;wiggle
+      &quot;はパーティクルのプロパティで、上記の多くの設定に対して個別に設定することが可能です。パーティクル関数やアクションの引数に &quot;wiggle
+      &quot;がある場合、1～20の数字を入れるとパーティクルはそのプロパティの最小値と最大値の間で &quot;くねくね
+      &quot;と揺れ、1だと遅く、20だと非常に速く揺れます。つまり、パーティクルの速度が最小値2、最大値5で、ウィグルが20の場合、作成された各パーティクルの寿命の間、最小/最大速度の間で非常に速く揺れ動くことになります。
+    </p>
+    <p class="note">
+      <strong>注意</strong>：他にも細かいパーティクルプロパティがありますが、ここではできるだけシンプルにするために説明しません。パーティクルプロパティの詳細については、各ページを参照してください。</p>
+    <p class="dropspot">では、パーティクルを定義するコードを見てみましょう。</p>
+    <p class="code">// This defines the particle&#39;s shape
+      <br />
+      part_type_shape(global.Particle1,pt_shape_pixel);
+      <br />
+      <br />
+      // This is for the size
+      <br />
+      part_type_size(global.Particle1,1,1,0,2);
+      <br />
+      <br />
+      // This sets its colour. There are three different codes for this
+      <br />
+      part_type_color1(global.Particle1,c_white);
+      <br />
+      <br />
+      // This is its alpha. There are three different codes for this
+      <br />
+      part_type_alpha1(global.Particle1,1);
+      <br />
+      <br />
+      // The particles speed
+      <br />
+      part_type_speed(global.Particle1,0.50,2,-0.10,0);
+      <br />
+      <br />
+      // The direction
+      <br />
+      part_type_direction(global.Particle1,0,359,0,20);
+      <br />
+      <br />
+      // This changes the rotation of the particle
+      <br />
+      part_type_orientation(global.Particle1,0,0,0,0,true);
+      <br />
+      <br />
+      // This is the blend mode, either additive or normal
+      <br />
+      part_type_blend(global.Particle1,1);
+      <br />
+      <br />
+      // This is its lifespan in steps
+      <br />
+      part_type_life(global.Particle1,5,30);
+    </p>
+    <p class="dropspot">これと同じパーティクル定義を<span class="notranslate">GML</span> Visual で作成するには、以下のアクションが必要です。</p>
+    <p class="dropspot"><img>というわけで、これで終了です。これでパーティクルの定義が完了し、使用できるようになりました。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">ゲーム内で直接パーティクルを作成する</a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p class="dropspot">パーティクルを作成する方法はいくつかあり、それぞれに長所と短所があります。<strong>エミッターを</strong>使用してパーティクルを<strong>はじいたり </strong>
+      <strong>流したり </strong>する方法と、ポイントに<strong>直接
+      </strong>パーティクルを作成する方法があります。どちらを使うかは、何を実現したいか、どんな効果を出したいかによりますが、まずは一番簡単な、パーティクルを直接作成する方法から説明します。<span
+        class="notranslate">GML</span> では、以下のような関数を使用します。</p>
+    <p class="code">part_particles_create(global.P_System, x, y, global.Particle1, 10);</p>
+    <p class="dropspot">で、<span class="notranslate">GML</span> Visualになります。</p>
+    <p class="dropspot"><img>このコードとアクションで、グローバルシステムから &quot;Particle1
+      &quot;というタイプのパーティクルがx/y座標に10個作成されます。簡単ですね。このコードとアクションの素晴らしいところは、どこでも簡単に使えることです。例えば、<span
+        class="notranslate">object</span> のマウスの<strong>Global Left Pressed</strong>イベントで、mouse_x/y の位置の x/y
+      値を変更すると、ボタンを押すたびにマウスの位置にパーティクルが作成されます。また、ロケットの場合は、ステップイベントにこれを配置し、ステップごとに煙のパーティクルを発生させることができます（ただし、10回よりも1回や2回のほうがいいかもしれません！）。x/y座標をランダムに変化させることで、ある範囲にパーティクルを発生させることも可能です。
+    </p>
+    <p class="code">repeat(50)
+      <br />
+      {
+      <br />
+      var xx = x + 20 - random(40);
+      <br />
+      var yy = y + 20 - random(40);
+      <br />
+      part_particles_create(global.P_System, xx, yy, global.Particle1, 1);
+      <br />
+      }
+    </p>
+    <p class="dropspot"><img>上記のコードでは、40px四方の領域内のランダムな位置に50個のパーティクルが作成されます。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">エミッターを使ったパーティクルの作成</a></p>
+  <div class="droptext" data-targetname="drop-down3">
+    <p class="dropspot">
+      パーティクルを作る簡単な方法を説明しましたので、次は少し複雑な方法、<strong>エミッターを</strong>使う方法を説明します。エミッターもパーティクルシステムの一部で、使用する前に定義する必要があります。そこで、システムやパーティクルに対して行ったのと同じように、グローバルエミッターを作成します。また、静的（動かない）エミッターにするかどうか、パーティクルを<strong>バーストさ
+      </strong>せるか<strong>ストリームさ </strong>せるか、どの範囲にどのような分布でエミッターを使わせるかを決めなければなりません。</p>
+    <p class="dropspot">どういうことでしょうか？例えば、丸太の火を考えてみてください。これは動かず、ただ炎を出すだけなので<strong>静的
+      </strong>ですが、火の玉は<strong>動的</strong>エミッターを必要とし、画面上を移動します。バーストとストリーミングについては、バーストは1回限りのパーティクルの爆発であるのに対し、ストリームはステップごとに一定のパーティクルの流れになります。エリアと分布については、エミッターではパーティクルを放出するエリア（矩形、楕円、菱形、線）と分布曲線（ガウス、逆ガウス、線形）を定義することができます。
+    </p>
+    <p class="dropspot">以下の画像は、エミッターに利用可能なさまざまなタイプのエリアシェイプを説明したものです。</p>
+    <p class="dropspot"> </p>
+    <center><img alt="Create Particle System" class="center"
+        src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CreateSystem.png" /> <img
+        alt="Create Particle Type" class="center"
+        src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Type.png" /></center>
+    <center><img alt="Define Particle Type" class="center"
+        src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Define_Particle.png" /> <img
+        alt="Create Particles At A Position" class="center"
+        src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Burst.png" /></center>
+    <p class="dropspot">
+      <br />
+      そして、その分布曲線（線形、ガウシアン、逆ガウシアン）を図解しています。
+    </p>
+    <p><img alt="Create Particles Over A Random Area" class="center"
+        src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Particles.png" /></p>
+    <p class="dropspot">下記は、2つのエミッターを定義するために必要なコードとアクションの例です。通常、エミッターは、パーティクルシステムを定義した直後に、コントローラ（<span
+        class="notranslate">object</span> ）の<strong>Create Eventに</strong>入ります。1つは静的で、パーティクルを<span
+        class="notranslate">room</span> 全体に流します。もう1つは動的で、マウスに追従し、小さな楕円から30ステップごとにバーストさせるものです。</p>
     <p> </p>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">パーティクルシステムの作成</a></p>
-    <div class="droptext" data-targetname="drop-down">
-      <p class="dropspot">まず最初に、パーティクルシステムを定義し、名前を付けて使用できるようにする必要があります。これはグローバルなシステムで、どのような<span class="notranslate">object</span> でも使用できるようにするため、コントローラ<span class="notranslate">object</span> か、ゲーム開始時に実行する初期化関数で行います。<span class="notranslate">GML</span> は次のようなものです。</p>
-      <p class="code">global.P_System = part_system_create_layer(&quot;Instance_Layer&quot;, false);</p>
-      <p class="dropspot">そして、<span class="notranslate">GML</span> Visualを使用します。</p>
-      <p class="dropspot"><img>提供されたレイヤー名は、システムが使用される<span class="notranslate">room</span> で有効なレイヤーでなければならないことに注意してください。そうでなければ、パーティクルは表示されません。また、&quot;persistent&quot;<span class="notranslate">flag</span> (in code and in<span class="notranslate">GML</span> Visual)をfalseに設定していることに注意してください。永続的なパーティクルシステムとは、<span class="notranslate">rooms</span> をまたいで「永続」するもので、<span class="notranslate">room</span> ごとに破壊して再作成する必要がありません。しかし、このガイドでは、シンプルにするために、永続化を使用しません。</p>
-      <p class="dropspot">それでできたのがシステムですが、パーティクルはどうするのですか？粒子も定義しないと、このシステムは何の役にも立たない。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">パーティクルタイプの定義</a></p>
-    <div class="droptext" data-targetname="drop-down1">
-      <p class="dropspot">パーティクルをシステムで使用するには、まずその一般的なプロパティを定義する必要があります。これは<span class="notranslate">object</span> のプロパティのようなものですが、個々のパーティクルに対して<em>一般的な </em>方法でのみ適用されます。つまり、パーティクルの最小移動速度を1、最大移動速度を2に設定すると、システムで作成されたパーティクルは1ステップあたり1～2ピクセルの間でランダムな速度になり、全体としては平均速度が1.5となる、ということです。最初のパーティクルに名前を付け、システムを作成したのと同じ<span class="notranslate">GML</span> で次の<span class="notranslate">object</span> を使って追加してください。</p>
-      <p class="code">global.Particle1 = part_type_create();</p>
-      <p class="dropspot">そして、<span class="notranslate">GML</span> Visualをご利用の方へ。</p>
-      <p class="dropspot"><img> <span class="notranslate">GML</span> Visual を使って、<strong>ブレンド </strong>オプションにもチェックを入れていることに注意してください。これによってパーティクルの<strong>加算ブレンディングが</strong>可能になりますが、これについてはもう少し後ほど説明します。</p>
-      <p class="dropspot">これでシステムとそこに入れるパーティクルができましたが、優れたエフェクトを作るにはまだ準備ができていません。パーティクルのプロパティ、つまりパーティクルの見た目（速度、回転、アルファ値など）を定義する必要があります。パーティクル効果を定義するために使用できる詳細がたくさんあるので、以下に最も重要な設定の概要と、それらをすべて使用するコードのスニペットと<span class="notranslate">GML</span> Visual を紹介します。</p>
-      <ul class="dropspotlist">
-        <li class="dropspot">の<strong>形状を</strong>指定します。パーティクルの形状は、内蔵の<span class="notranslate">sprite</span> を使用します。デフォルトは定数で <span class="inline">pt_shape_pixel</span> です。必要であれば、カスタムパーティクルを追加する機能もあります。 <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm"><span class="inline">part_type_sprite()</span></a>- または、<a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle Spriteという</a>アクションを実行します。</li>
-        <li class="dropspot"><strong>サイズを</strong>指定します。パーティクルタイプのサイズパラメータを設定します。開始時の最小サイズ、開始時の最大サイズ、および各ステップでのサイズの増加量を指定します（サイズの減少には負の数を使用します）。これはスカラー値で、ベース画像の x/y スケールを均等に変更します。</li>
-        <li class="dropspot"><strong>color</strong>: パーティクルの色を設定します（単色の場合）。2色または3色が提供された場合、これはカラーブレンドとなり、ライフタイム中に1色からもう1色にブレンドされます。</li>
-        <li class="dropspot"><strong>alpha</strong>:1つの値が渡された場合は、これがパーティクルのアルファ値になり、2つまたは3つの値が渡された場合は、パーティクルの寿命の間にこれらの間でアルファ値がブレンドされます。</li>
-        <li class="dropspot"><strong>speed</strong>: パーティクル タイプの速度プロパティを設定します。最低速度と最高速度を指定し、パーティクル生成時に指定した範囲内のランダムな値が選ばれます。ステップごとに速度を上げることもできますし、負の数を使ってパーティクルを遅くすることもできます（速度が0より小さくなることはありません）。</li>
-        <li class="dropspot"><strong>方向</strong>です。パーティクルタイプの方向プロパティを設定します。ここでも方向の範囲を指定します（反時計回りの角度で、0は右への動き、90は上への動き、など）。例えば、パーティクルをランダムな方向に動かすには、最小値0、最大値360を指定します。また、各ステップごとに方向の増加を指定することもできます（負の値も可能です）。</li>
-        <li class="dropspot"><strong>orientationを</strong>指定します。パーティクルタイプの方位角のプロパティを設定します。最小角度、最大角度、および各ステップでの増加量を指定します。また、指定した角度を現在の進行方向に対して相対的にするか、絶対的にするかを指定できます。例えば、すべての値を 0 に設定し、相対値を true にすると、パーティクルの向きはパーティクルの<span class="notranslate">path</span> に正確に追従します。</li>
-        <li class="dropspot"><strong>blendingを</strong>指定します。パーティクルの種類によって、<strong>加算 </strong>ブレンディングを使用するか、<strong>通常の </strong>ブレンディングを使用するかを設定します。これは、<span class="notranslate">GML</span> を使用する場合は関数で、<span class="notranslate">GML</span> Visual を使用する場合はパーティクル初期化の一部として設定されます。Additive Blending は、パーティクルが <span class="inline">bm_add</span> のブレンドモードを使用することを意味し、パーティクルが重なる部分に「光る」外観を与え、また下に描かれたもの (<span class="notranslate">sprites</span>, 背景 ,<span class="notranslate">tiles</span>, etc...) とブレンドします。火や魔法の効果（例えば）には非常に便利ですが、煙などの場合はオフにしたほうがよいでしょう。違いを見るために実験してください!この機能を有効にすると、パーティクル作成時の<span class="notranslate">texture</span> バッチが解除されるため、パーティクルを描画するためにステップごとに多くのバッチが必要になることに注意してください。</li>
-        <li class="dropspot"><strong>life</strong>:パーティクルタイプの寿命の境界を、ステップ（ゲームフレーム）単位で設定します。これまでの設定と同様、最小値と最大値があり、パーティクルはこの値の範囲内でランダムなステップ数を持続します。つまり、ライフタイムを30min、30maxにするとパーティクルはちょうど30ステップ存在することになりますが、ライフタイムを20min、60maxにすると各パーティクルは20から60の間のランダムなステップ数だけ存在することになります。</li>
-      </ul>
-      <p class="dropspot">さて、パーティクルを定義するコードを紹介する前に、ちょっとだけ「<strong>wiggle</strong>」の話を...。信じられないかもしれませんが、&quot;wiggle &quot;はパーティクルのプロパティで、上記の多くの設定に対して個別に設定することが可能です。パーティクル関数やアクションの引数に &quot;wiggle &quot;がある場合、1～20の数字を入れるとパーティクルはそのプロパティの最小値と最大値の間で &quot;くねくね &quot;と揺れ、1だと遅く、20だと非常に速く揺れます。つまり、パーティクルの速度が最小値2、最大値5で、ウィグルが20の場合、作成された各パーティクルの寿命の間、最小/最大速度の間で非常に速く揺れ動くことになります。</p>
-      <p class="note"><strong>注意</strong>：他にも細かいパーティクルプロパティがありますが、ここではできるだけシンプルにするために説明しません。パーティクルプロパティの詳細については、各ページを参照してください。</p>
-      <p class="dropspot">では、パーティクルを定義するコードを見てみましょう。</p>
-      <p class="code">// This defines the particle&#39;s shape
-        <br/>
-        part_type_shape(global.Particle1,pt_shape_pixel);
-        <br/>
-        <br/>
-        // This is for the size
-        <br/>
-        part_type_size(global.Particle1,1,1,0,2);
-        <br/>
-        <br/>
-        // This sets its colour. There are three different codes for this
-        <br/>
-        part_type_color1(global.Particle1,c_white);
-        <br/>
-        <br/>
-        // This is its alpha. There are three different codes for this
-        <br/>
-        part_type_alpha1(global.Particle1,1);
-        <br/>
-        <br/>
-        // The particles speed
-        <br/>
-        part_type_speed(global.Particle1,0.50,2,-0.10,0);
-        <br/>
-        <br/>
-        // The direction
-        <br/>
-        part_type_direction(global.Particle1,0,359,0,20);
-        <br/>
-        <br/>
-        // This changes the rotation of the particle
-        <br/>
-        part_type_orientation(global.Particle1,0,0,0,0,true);
-        <br/>
-        <br/>
-        // This is the blend mode, either additive or normal
-        <br/>
-        part_type_blend(global.Particle1,1);
-        <br/>
-        <br/>
-        // This is its lifespan in steps
-        <br/>
-        part_type_life(global.Particle1,5,30); </p>
-      <p class="dropspot">これと同じパーティクル定義を<span class="notranslate">GML</span> Visual で作成するには、以下のアクションが必要です。</p>
-      <p class="dropspot"><img>というわけで、これで終了です。これでパーティクルの定義が完了し、使用できるようになりました。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">ゲーム内で直接パーティクルを作成する</a></p>
-    <div class="droptext" data-targetname="drop-down2">
-      <p class="dropspot">パーティクルを作成する方法はいくつかあり、それぞれに長所と短所があります。<strong>エミッターを</strong>使用してパーティクルを<strong>はじいたり </strong> <strong>流したり </strong>する方法と、ポイントに<strong>直接 </strong>パーティクルを作成する方法があります。どちらを使うかは、何を実現したいか、どんな効果を出したいかによりますが、まずは一番簡単な、パーティクルを直接作成する方法から説明します。<span class="notranslate">GML</span> では、以下のような関数を使用します。</p>
-      <p class="code">part_particles_create(global.P_System, x, y, global.Particle1, 10);</p>
-      <p class="dropspot">で、<span class="notranslate">GML</span> Visualになります。</p>
-      <p class="dropspot"><img>このコードとアクションで、グローバルシステムから &quot;Particle1 &quot;というタイプのパーティクルがx/y座標に10個作成されます。簡単ですね。このコードとアクションの素晴らしいところは、どこでも簡単に使えることです。例えば、<span class="notranslate">object</span> のマウスの<strong>Global Left Pressed</strong>イベントで、mouse_x/y の位置の x/y 値を変更すると、ボタンを押すたびにマウスの位置にパーティクルが作成されます。また、ロケットの場合は、ステップイベントにこれを配置し、ステップごとに煙のパーティクルを発生させることができます（ただし、10回よりも1回や2回のほうがいいかもしれません！）。x/y座標をランダムに変化させることで、ある範囲にパーティクルを発生させることも可能です。</p>
-      <p class="code">repeat(50)
-        <br/>
-        {
-        <br/>
-        var xx = x + 20 - random(40);
-        <br/>
-        var yy = y + 20 - random(40);
-        <br/>
-        part_particles_create(global.P_System, xx, yy, global.Particle1, 1);
-        <br/>
-        }</p>
-      <p class="dropspot"><img>上記のコードでは、40px四方の領域内のランダムな位置に50個のパーティクルが作成されます。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">エミッターを使ったパーティクルの作成</a></p>
-    <div class="droptext" data-targetname="drop-down3">
-      <p class="dropspot">パーティクルを作る簡単な方法を説明しましたので、次は少し複雑な方法、<strong>エミッターを</strong>使う方法を説明します。エミッターもパーティクルシステムの一部で、使用する前に定義する必要があります。そこで、システムやパーティクルに対して行ったのと同じように、グローバルエミッターを作成します。また、静的（動かない）エミッターにするかどうか、パーティクルを<strong>バーストさ </strong>せるか<strong>ストリームさ </strong>せるか、どの範囲にどのような分布でエミッターを使わせるかを決めなければなりません。</p>
-      <p class="dropspot">どういうことでしょうか？例えば、丸太の火を考えてみてください。これは動かず、ただ炎を出すだけなので<strong>静的 </strong>ですが、火の玉は<strong>動的</strong>エミッターを必要とし、画面上を移動します。バーストとストリーミングについては、バーストは1回限りのパーティクルの爆発であるのに対し、ストリームはステップごとに一定のパーティクルの流れになります。エリアと分布については、エミッターではパーティクルを放出するエリア（矩形、楕円、菱形、線）と分布曲線（ガウス、逆ガウス、線形）を定義することができます。</p>
-      <p class="dropspot">以下の画像は、エミッターに利用可能なさまざまなタイプのエリアシェイプを説明したものです。</p>
-      <p class="dropspot"> </p>
-      <center><img alt="Create Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CreateSystem.png"/> <img alt="Create Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Type.png"/></center>
-      <center><img alt="Define Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Define_Particle.png"/> <img alt="Create Particles At A Position" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Burst.png"/></center>
-      <p class="dropspot">
-        <br />
-        そして、その分布曲線（線形、ガウシアン、逆ガウシアン）を図解しています。</p>
-      <p><img alt="Create Particles Over A Random Area" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Particles.png"/></p>
-      <p class="dropspot">下記は、2つのエミッターを定義するために必要なコードとアクションの例です。通常、エミッターは、パーティクルシステムを定義した直後に、コントローラ（<span class="notranslate">object</span> ）の<strong>Create Eventに</strong>入ります。1つは静的で、パーティクルを<span class="notranslate">room</span> 全体に流します。もう1つは動的で、マウスに追従し、小さな楕円から30ステップごとにバーストさせるものです。</p>
-      <p> </p>
-      <p class="code">global.Particle1_Emitter1 = part_emitter_create(global.P_System);
-        <br/>
-        global.Particle1_Emitter2 = part_emitter_create(global.P_System);
-        <br/>
-        <br/>
-        // Set up the area that will emit particles
-        <br/>
-        part_emitter_region(global.P_System, global.Particle1_Emitter1, 0, room_width, 0, room_height, ps_shape_rectangle, ps_distr_linear);
-        <br/>
-        part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x-10, mouse_x+10, mouse_y-10, mouse_y+10, ps_shape_ellipse, ps_distr_gaussian);
-        <br/>
-        <br/>
-        // Set the first to stream 10 particles every step
-        <br/>
-        part_emitter_stream(global.P_System, global.Particle1_Emitter1, global.Particle1, 10);
-        <br/>
-        <br/>
-        // This can now be forgotten as it will function until told to stop...
-        <br/>
-        // Set the alarm[0] event to burst the emitter2 particles...
-        <br/>
-        alarm[0] = 30; </p>
-      <p class="dropspot"><img>ここでは、最初に作成したパーティクルシステムに割り当てるパーティクルエミッターを2つ作成します。これらのエミッターを作成する関数/アクションでは、パーティクルを放出する領域を<span class="notranslate">room</span> で定義し、放出するパーティクルの種類と、定義した領域内で使用する形状や分布を指定できます。関数やアクションはエミッターIDの数値を返し、これを変数に格納することで、さらにエミッター関数を使用してこれらのエミッターをターゲットにすることができます。</p>
-      <p class="dropspot">パーティクルを流すためのコード/GML Visualができましたが（これらのパーティクルは、何もしなくてもゲームステップごとに放出されます）、特定の間隔でパーティクルをはじき出すための<strong>Alarm[0]</strong> <strong>イベントも</strong>追加したいと思います。</p>
-      <p class="code">part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x - 10, mouse_x + 10, mouse_y - 10, mouse_y + 10, ps_shape_ellipse, ps_distr_gaussian);
-        <br/>
-        part_emitter_burst(global.P_System, global.Particle1_Emitter2, global.Particle1, 30);
-        <br/>
-        alarm[0] = 30;</p>
-      <p class="dropspot"><img>パーティクル・バーストは、ゲーム・ステップごとにパーティクルを一定量流すのではなく、エミッターから一度だけ爆発させるものです。</p>
-      <p class="dropspot">しかし、複数の<span class="notranslate">objects</span> でパーティクルを放出させたい場合はどうしたらよいでしょうか。グローバルエミッターは一度に一ヶ所にしか設置できないので、各<span class="notranslate">object</span> に<em>ローカルエミッターを </em>作成する必要があります。これらのエミッターは、グローバルパーティクルシステムとその中にあるパーティクルを使用しますが、異なる形や大きさにすることができ、<span class="notranslate">object</span> 、ロケットや弾丸などに最適な動きをします。使用するコードは上記と全く同じですが、エミッター名の前に「global」という接頭辞を付けません。</p>
-      <p class="dropspot">これでパーティクルの作成は完了ですが、もうひとつ大事なことがあります。使い終わった後の片付け。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">クリーンアップ</a></p>
-    <div class="droptext" data-targetname="drop-down4">
-      <p class="dropspot">冒頭で述べたように、パーティクルシステム（およびそのパーティクル、エミッターなど）は一度作成すると、すぐに使えるようにメモリに保存されます。素晴らしいことですが、ゲームを再起動したときはどうなるのでしょうか？あるいは、プレイヤーが死亡して、<span class="notranslate">room</span> を再び開始した場合はどうなるのでしょうか？ゲームを正しく管理しないと、<strong>メモリーリークが</strong>発生します。これは、何かが作成され、メモリを使用していたが、「参照解除」された、つまり、<span class="notranslate">GameMaker</span> はもうそれにアクセスできない、という場合です。このようなことが起こると、徐々にメモリが消費され、ゲームにラグが生じたり、コンピュータがブロックされてゲームがクラッシュしたりすることがあります。</p>
-      <p class="dropspot">これを避けるにはどうしたらいいのでしょうか？<span data-keyref="GameMaker Name">GameMaker</span>には<span class="notranslate">GML</span> Code 関数と<span class="notranslate">GML</span> Visual アクションがあり、パーティクルシステムとそのエミッタやパーティクルを未使用時にメモリから削除します。以下のコードやアクションを使用する際に少し計画を立てれば、この潜在的な問題を簡単に防止することができます。</p>
-      <p class="dropspot">まず、どこにシステムを作るか、どのように使うかを決める必要があります。最初の<span class="notranslate">object</span> にある<span class="notranslate">room</span> の<strong>Game Start Event</strong>でグローバルシステムを作ることもできますが（メニューやタイトル画面など）、これだと、ゲームを再起動したときに <a href="../GameMaker_Language/GML_Reference/General_Game_Control/game_restart.htm"><span class="inline">game_restart()</span></a>関数を使用すると、再作成され、メモリリークが発生します。あるいは、任意の<span class="notranslate">room</span> のインスタンスにローカルシステムを作成することもできますが、この場合も<span class="notranslate">room</span> を離れると、システムにアクセスできなくなり、メモリリークが発生します。これを避けるには、以下のようなものを <a href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>ゲーム終了イベント</strong></a>または <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm"><strong>クリーンアップイベント</strong></a>を作成します。</p>
-      <p class="code">part_type_destroy(global.Particle1);
-        <br/>
-        part_emitter_destroy(global.P_System, global.Particle1_Emitter);
-        <br/>
-        part_emitter_destroy(global.P_System, global.Particle2_Emitter);
-        <br/>
-        part_system_destroy(global.P_System);</p>
-      <p class="dropspot"><img>これにより、定義されたパーティクル、エミッタ、そしてシステムがメモリから削除され、ゲームを再起動したり、<span class="notranslate">room</span> を変更したりすることができるようになります。システムを作るのに最も適した場所がどこかを考えたら、システムを破壊するのに最も適した場所がどこかも考えてください。</p>
-      <p class="dropspot"> </p>
-    </div>
-    <p> </p>
-    <p>パーティクル、パーティクルシステム、エミッターについての基本がわかったので、次はそれらをゲームに追加してみましょうただし、パーティクルはインスタンスよりもCPUを消費しませんが、一度に何千個も使用するとラグが発生するため、すべてを解決するものではありません。最適なのは、実験して、ゲームの視覚的な「肉付け」と、やり過ぎない程度に目を楽しませるために、注意深く使用することです。</p>
-    <p> </p>
-    <p> </p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
-          <div style="float:right">次へ<a href="Guide_To_Using_Shaders.htm">シェーダー使用ガイド</a></div>
-        </div>
+    <p class="code">global.Particle1_Emitter1 = part_emitter_create(global.P_System);
+      <br />
+      global.Particle1_Emitter2 = part_emitter_create(global.P_System);
+      <br />
+      <br />
+      // Set up the area that will emit particles
+      <br />
+      part_emitter_region(global.P_System, global.Particle1_Emitter1, 0, room_width, 0, room_height, ps_shape_rectangle,
+      ps_distr_linear);
+      <br />
+      part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x-10, mouse_x+10, mouse_y-10, mouse_y+10,
+      ps_shape_ellipse, ps_distr_gaussian);
+      <br />
+      <br />
+      // Set the first to stream 10 particles every step
+      <br />
+      part_emitter_stream(global.P_System, global.Particle1_Emitter1, global.Particle1, 10);
+      <br />
+      <br />
+      // This can now be forgotten as it will function until told to stop...
+      <br />
+      // Set the alarm[0] event to burst the emitter2 particles...
+      <br />
+      alarm[0] = 30;
+    </p>
+    <p class="dropspot">
+      <img>ここでは、最初に作成したパーティクルシステムに割り当てるパーティクルエミッターを2つ作成します。これらのエミッターを作成する関数/アクションでは、パーティクルを放出する領域を<span
+        class="notranslate">room</span>
+      で定義し、放出するパーティクルの種類と、定義した領域内で使用する形状や分布を指定できます。関数やアクションはエミッターIDの数値を返し、これを変数に格納することで、さらにエミッター関数を使用してこれらのエミッターをターゲットにすることができます。
+    </p>
+    <p class="dropspot">パーティクルを流すためのコード/GML
+      Visualができましたが（これらのパーティクルは、何もしなくてもゲームステップごとに放出されます）、特定の間隔でパーティクルをはじき出すための<strong>Alarm[0]</strong>
+      <strong>イベントも</strong>追加したいと思います。</p>
+    <p class="code">part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x - 10, mouse_x + 10, mouse_y
+      - 10, mouse_y + 10, ps_shape_ellipse, ps_distr_gaussian);
+      <br />
+      part_emitter_burst(global.P_System, global.Particle1_Emitter2, global.Particle1, 30);
+      <br />
+      alarm[0] = 30;
+    </p>
+    <p class="dropspot"><img>パーティクル・バーストは、ゲーム・ステップごとにパーティクルを一定量流すのではなく、エミッターから一度だけ爆発させるものです。</p>
+    <p class="dropspot">しかし、複数の<span class="notranslate">objects</span>
+      でパーティクルを放出させたい場合はどうしたらよいでしょうか。グローバルエミッターは一度に一ヶ所にしか設置できないので、各<span class="notranslate">object</span>
+      に<em>ローカルエミッターを </em>作成する必要があります。これらのエミッターは、グローバルパーティクルシステムとその中にあるパーティクルを使用しますが、異なる形や大きさにすることができ、<span
+        class="notranslate">object</span> 、ロケットや弾丸などに最適な動きをします。使用するコードは上記と全く同じですが、エミッター名の前に「global」という接頭辞を付けません。</p>
+    <p class="dropspot">これでパーティクルの作成は完了ですが、もうひとつ大事なことがあります。使い終わった後の片付け。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">クリーンアップ</a></p>
+  <div class="droptext" data-targetname="drop-down4">
+    <p class="dropspot">
+      冒頭で述べたように、パーティクルシステム（およびそのパーティクル、エミッターなど）は一度作成すると、すぐに使えるようにメモリに保存されます。素晴らしいことですが、ゲームを再起動したときはどうなるのでしょうか？あるいは、プレイヤーが死亡して、<span
+        class="notranslate">room</span>
+      を再び開始した場合はどうなるのでしょうか？ゲームを正しく管理しないと、<strong>メモリーリークが</strong>発生します。これは、何かが作成され、メモリを使用していたが、「参照解除」された、つまり、<span
+        class="notranslate">GameMaker</span>
+      はもうそれにアクセスできない、という場合です。このようなことが起こると、徐々にメモリが消費され、ゲームにラグが生じたり、コンピュータがブロックされてゲームがクラッシュしたりすることがあります。</p>
+    <p class="dropspot">これを避けるにはどうしたらいいのでしょうか？<span data-keyref="GameMaker Name">GameMaker</span>には<span
+        class="notranslate">GML</span> Code 関数と<span class="notranslate">GML</span> Visual
+      アクションがあり、パーティクルシステムとそのエミッタやパーティクルを未使用時にメモリから削除します。以下のコードやアクションを使用する際に少し計画を立てれば、この潜在的な問題を簡単に防止することができます。</p>
+    <p class="dropspot">まず、どこにシステムを作るか、どのように使うかを決める必要があります。最初の<span class="notranslate">object</span> にある<span
+        class="notranslate">room</span> の<strong>Game Start
+        Event</strong>でグローバルシステムを作ることもできますが（メニューやタイトル画面など）、これだと、ゲームを再起動したときに <a
+        href="../GameMaker_Language/GML_Reference/General_Game_Control/game_restart.htm"><span
+          class="inline">game_restart()</span></a>関数を使用すると、再作成され、メモリリークが発生します。あるいは、任意の<span
+        class="notranslate">room</span> のインスタンスにローカルシステムを作成することもできますが、この場合も<span class="notranslate">room</span>
+      を離れると、システムにアクセスできなくなり、メモリリークが発生します。これを避けるには、以下のようなものを <a
+        href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>ゲーム終了イベント</strong></a>または <a
+        href="../The_Asset_Editors/Object_Properties/Object_Events.htm"><strong>クリーンアップイベント</strong></a>を作成します。</p>
+    <p class="code">part_type_destroy(global.Particle1);
+      <br />
+      part_emitter_destroy(global.P_System, global.Particle1_Emitter);
+      <br />
+      part_emitter_destroy(global.P_System, global.Particle2_Emitter);
+      <br />
+      part_system_destroy(global.P_System);
+    </p>
+    <p class="dropspot"><img>これにより、定義されたパーティクル、エミッタ、そしてシステムがメモリから削除され、ゲームを再起動したり、<span class="notranslate">room</span>
+      を変更したりすることができるようになります。システムを作るのに最も適した場所がどこかを考えたら、システムを破壊するのに最も適した場所がどこかも考えてください。</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p> </p>
+  <p>
+    パーティクル、パーティクルシステム、エミッターについての基本がわかったので、次はそれらをゲームに追加してみましょうただし、パーティクルはインスタンスよりもCPUを消費しませんが、一度に何千個も使用するとラグが発生するため、すべてを解決するものではありません。最適なのは、実験して、ゲームの視覚的な「肉付け」と、やり過ぎない程度に目を楽しませるために、注意深く使用することです。
+  </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">前のページ：<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次のページ：<a href="Guide_To_Using_Shaders.htm">シェーダー使用ガイド</a></div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
     </div>
-    <!-- KEYWORDS
+  </div>
+  <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+      Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
 Vectors
 Vector Maths
 --><!-- TAGS
 vector_maths
---></body>
+-->
+</body>
+
 </html>

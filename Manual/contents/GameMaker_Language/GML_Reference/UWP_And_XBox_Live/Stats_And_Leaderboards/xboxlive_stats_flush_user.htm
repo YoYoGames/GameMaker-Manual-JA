@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_stats_flush_user</title>
@@ -12,29 +13,39 @@
   <meta name="rh-index-keywords" content="xboxlive_stats_flush_user,achievement_stat_event" />
   <meta name="search-keywords" content="xboxlive_stats_flush_user,achievement_stat_event" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_flush_user</h1>
-  <p>この関数は、指定されたユーザーの統計データを統計マネージャからライブ<span class="notranslate">server</span> にフラッシュするために使用することができ、<span class="notranslate">server</span> が現在の値で最新であることを保証します。XBoxのドキュメントによると、XBoxはリクエストを制限し、XBox OSも約5分ごとに自動的に統計データをフラッシュするので、開発者はこれをあまり頻繁にコールしないように注意する必要があるとのことです。</p>
+  <p>この関数は、指定されたユーザーの統計データを統計マネージャからライブ<span class="notranslate">server</span> にフラッシュするために使用することができ、<span
+      class="notranslate">server</span> が現在の値で最新であることを保証します。XBoxのドキュメントによると、XBoxはリクエストを制限し、XBox
+    OSも約5分ごとに自動的に統計データをフラッシュするので、開発者はこれをあまり頻繁にコールしないように注意する必要があるとのことです。</p>
   <p class="note"><b>注</b>：ユーザーに設定されている統計が無効な場合（統計名にアルファベット以外の文字が含まれているなど）、ユーザーを削除するとエラーが返されることがあります。</p>
-  <p>この関数を使用するには、（例えば）関数 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>および優先度値（優先度が高い場合は1、低い場合は0となる）。この関数は，エラーが発生した場合やユーザIDが無効な場合は-1，関数が正常に呼び出された場合はその他の値を返します．また、この関数は、<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">システム非同期イベントを</a>トリガするコールバックを生成します。このイベントは、特別な DS マップ <span class="inline"><a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> を持ち、以下のキーについて解析される必要があります。</p>
+  <p>この関数を使用するには、（例えば）関数 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span
+        class="inline">xboxlive_get_user()</span></a>および優先度値（優先度が高い場合は1、低い場合は0となる）。この関数は，エラーが発生した場合やユーザIDが無効な場合は-1，関数が正常に呼び出された場合はその他の値を返します．また、この関数は、<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">システム非同期イベントを</a>トリガするコールバックを生成します。このイベントは、特別な
+    DS マップ <span class="inline"><a
+        href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>
+    を持ち、以下のキーについて解析される必要があります。</p>
   <ul class="colour">
     <li>「<b>id</b>&quot; - 定数を保持します。 <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>eventname</b>&quot; -<span class="notranslate">string</span> &quot;<i>StatisticUpdateComplete</i>&quot; を保持します。</li>
+    <li>&quot;<b>eventname</b>&quot; -<span class="notranslate">string</span> &quot;<i>StatisticUpdateComplete</i>&quot;
+      を保持します。</li>
     <li>&quot;<b>userid</b>&quot; - リクエストに関連付けられたユーザー ID。</li>
     <li>&quot;<b>error</b>&quot; - 成功した場合は0、エラーが発生した場合は他の値を指定します。</li>
     <li>&quot;<b>errormessage</b>&quot; - エラーメッセージがある場合は、<span class="notranslate">string</span> 。</li>
   </ul>
-  <p>統計は、ユーザーを統計マネージャから削除すると、自動的にフラッシュされることに注意してください。詳細は <a href="xboxlive_stats_remove_user.htm"><span class="inline">xboxlive_stats_remove_user()</span></a>をご覧ください。</p>
+  <p>統計は、ユーザーを統計マネージャから削除すると、自動的にフラッシュされることに注意してください。詳細は <a href="xboxlive_stats_remove_user.htm"><span
+        class="inline">xboxlive_stats_remove_user()</span></a>をご覧ください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_stats_flush_user(user_id, priority);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">user_id</span></td>
@@ -49,7 +60,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -64,11 +75,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_stats_set_stat_real.htm"><span class="notranslate">xboxlive_stats_set_stat_real</span></a></div>
+        <div style="float:left">前のページ：<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_stats_set_stat_real.htm"><span
+              class="notranslate">xboxlive_stats_set_stat_real</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_flush_user
@@ -79,4 +92,5 @@ xboxlive_achievement_stat_event
 xboxlive_stats_flush_user
 -->
 </body>
+
 </html>

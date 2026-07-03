@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>スプライトエディタの環境設定</title>
@@ -12,35 +13,59 @@
   <meta name="rh-index-keywords" content="Prefs - Sprites" />
   <meta name="search-keywords" content="Sprite Prefs,Sprite Editor Preferences" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>スプライトエディタの環境設定</h1>
-  <p><img alt="Sprite Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Prefs.png" /></p>
-  <p><strong>スプライトエディターの環境</strong>設定は、<a href="../../The_Asset_Editors/Sprites.htm">スプライトエディターの</a>外観や機能を定義するために使用されます。以下のオプションがあります。</p>
+  <p><img alt="Sprite Editor Preferences" class="center"
+      src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Prefs.png" /></p>
+  <p><strong>スプライトエディタの環境</strong>設定は、<a
+      href="../../The_Asset_Editors/Sprites.htm">スプライトエディタの</a>外観や機能を定義するために使用されます。以下のオプションがあります。</p>
   <ul class="colour">
-    <li><strong> <span class="notranslate">sprite</span> </strong> のデフォルトの原点です。このオプションでは、新規に作成する<span class="notranslate">sprite</span> リソースのデフォルトの原点位置を設定することができます。デフォルトは「Top Left」です。</li>
-    <li><strong>Default<span class="notranslate">sprite</span> collision mask kind</strong>:このオプションでは、新しい<span class="notranslate">sprites</span> で使用するコリジョンマスクのデフォルトの種類を設定することができます。選択肢は、<em>矩形</em>、<em>回転矩形</em>、<em>楕円</em>、<em>菱形</em>、または<em>精密</em>/<em>フレームごとの精密</em>です。デフォルトは<em>矩形</em>です。</li>
-    <li><strong> <span class="notranslate">sprite</span> </strong> デフォルトのアニメーションモード。このオプションは、<span class="notranslate">sprites</span> のデフォルトアニメーションモードを<span class="notranslate">sprite</span> エディタで設定することを許可します。<em>Frames per second</em>&quot; と &quot;<em>Frames per game frame</em>&quot; のどちらかを選択できます。
+    <li><strong> <span class="notranslate">sprite</span> </strong> のデフォルトの原点です。このオプションでは、新規に作成する<span
+        class="notranslate">sprite</span> リソースのデフォルトの原点位置を設定することができます。デフォルトは「Top Left」です。</li>
+    <li><strong>Default<span class="notranslate">sprite</span> collision mask kind</strong>:このオプションでは、新しい<span
+        class="notranslate">sprites</span>
+      で使用するコリジョンマスクのデフォルトの種類を設定することができます。選択肢は、<em>矩形</em>、<em>回転矩形</em>、<em>楕円</em>、<em>菱形</em>、または<em>精密</em>/<em>フレームごとの精密</em>です。デフォルトは<em>矩形</em>です。
+    </li>
+    <li><strong> <span class="notranslate">sprite</span> </strong> デフォルトのアニメーションモード。このオプションは、<span
+        class="notranslate">sprites</span> のデフォルトアニメーションモードを<span class="notranslate">sprite</span>
+      エディタで設定することを許可します。<em>Frames per second</em>&quot; と &quot;<em>Frames per game frame</em>&quot; のどちらかを選択できます。
       デフォルトは<em>&quot;Frames per second</em>&quot;です。</li>
-    <li><strong>Default<span class="notranslate">sprite</span> animation speed</strong>: このオプションでは、新しい<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を作成する際のデフォルトのアニメーション速度を設定することができます。この値はアニメーションモードと連動していることに注意してください。
+    <li><strong>Default<span class="notranslate">sprite</span> animation speed</strong>: このオプションでは、新しい<span
+        class="notranslate">sprite</span> <span class="notranslate">asset</span>
+      を作成する際のデフォルトのアニメーション速度を設定することができます。この値はアニメーションモードと連動していることに注意してください。
       は、1ゲームフレームあたり30フレームと同じではないので、好みのモードを参照してこの値を正しく設定するようにしてください。デフォルトは30です。</li>
-    <li><strong>Default<span class="notranslate">sprite</span> width</strong>: このオプションでは、新規に作成されるすべての<span class="notranslate">sprites</span> のデフォルトの幅を設定することができます。デフォルト値は64です。</li>
-    <li><strong> <span class="notranslate">sprite</span> </strong> のデフォルトの高さ。このオプションは、すべての新しい<span class="notranslate">sprites</span> のデフォルトの高さを設定することができます。デフォルト値は64です。</li>
-    <li><strong>リサイズとスケールを<span class="notranslate">sprite</span> の原点に適用</strong>します。このオプションをチェックすると、<span class="notranslate">sprite</span> がサイズ変更または拡大縮小されたときに<span class="notranslate">sprite</span> の原点が変更され、新しい原点は<span class="notranslate">sprite</span> の新しい値と一致するように移動/拡大縮小されます。
-      これは、<span class="notranslate">sprite</span> エディターでロックされていないカスタム<span class="notranslate">sprite</span> オリジンにのみ適用されます。原点がロックされている場合、または<span class="notranslate">sprite</span> でデフォルトの位置（例：&quot;Center&quot; や &quot;Top Left&quot; など）を使用している場合、このオプションが適用されます。
+    <li><strong>Default<span class="notranslate">sprite</span> width</strong>: このオプションでは、新規に作成されるすべての<span
+        class="notranslate">sprites</span> のデフォルトの幅を設定することができます。デフォルト値は64です。</li>
+    <li><strong> <span class="notranslate">sprite</span> </strong> のデフォルトの高さ。このオプションは、すべての新しい<span
+        class="notranslate">sprites</span> のデフォルトの高さを設定することができます。デフォルト値は64です。</li>
+    <li><strong>リサイズとスケールを<span class="notranslate">sprite</span> の原点に適用</strong>します。このオプションをチェックすると、<span
+        class="notranslate">sprite</span> がサイズ変更または拡大縮小されたときに<span class="notranslate">sprite</span>
+      の原点が変更され、新しい原点は<span class="notranslate">sprite</span> の新しい値と一致するように移動/拡大縮小されます。
+      これは、<span class="notranslate">sprite</span> エディタでロックされていないカスタム<span class="notranslate">sprite</span>
+      オリジンにのみ適用されます。原点がロックされている場合、または<span class="notranslate">sprite</span> でデフォルトの位置（例：&quot;Center&quot; や &quot;Top
+      Left&quot; など）を使用している場合、このオプションが適用されます。
       はグレーアウトしており、変更することはできません。デフォルトは有効です。</li>
   </ul>
   <p>また、<span class="notranslate">Sprite</span> Editorには以下のサブカテゴリが存在します。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">確認ダイアログ</a></p>
   <div class="droptext" data-targetname="drop-down6">
     <p>
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Confirm_Prefs.png" class="center" alt="The Sprite Editor Confirm Dialog Preferences"
-      /></p>
-    <p class="dropspot">ここで選択できるオプションは、アクションの確認が必要なときに表示されるメッセージを制御します。これらの設定を変更することで、メッセージを常に表示したり、特定のアクション（YesまたはNoのいずれか）でメッセージを解除したりすることができます。</p>
+      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Confirm_Prefs.png"
+        src="../../assets/Images/Setup_And_Version/Preferences/Sprite_Editor_Confirm_Prefs.png" class="center"
+        alt="The Sprite Editor Confirm Dialog Preferences" />
+    </p>
+    <p class="dropspot">
+      ここで選択できるオプションは、アクションの確認が必要なときに表示されるメッセージを制御します。これらの設定を変更することで、メッセージを常に表示したり、特定のアクション（YesまたはNoのいずれか）でメッセージを解除したりすることができます。
+    </p>
     <ul class="dropspotlist">
-      <li class="dropspot">ファイルインポート時の自動対応。新しい画像をインポートする際、すでに画像が存在する場合、デフォルトではインポートを続行して既存の画像を上書きするか、操作をキャンセルするかを尋ねるプロンプトが表示されます。このオプションを使うと、このメッセージを表示しないようにできます。
-        常に「いいえ」を選択してインポートをキャンセルするか、「はい」を選択して現在の<span class="notranslate">sprite</span> を上書きしてください。デフォルトは &quot;メッセージを表示 &quot;です。</li>
-      <li class="dropspot">画像読み込み失敗時の自動対応新しい画像をインポートする際、インポートに失敗すると、デフォルトでは失敗したことを知らせる警告メッセージが表示されます。このオプションで「OK」を選択すると、このメッセージが表示されないようにできます。
+      <li class="dropspot">
+        ファイルインポート時の自動対応。新しい画像をインポートする際、すでに画像が存在する場合、デフォルトではインポートを続行して既存の画像を上書きするか、操作をキャンセルするかを尋ねるプロンプトが表示されます。このオプションを使うと、このメッセージを表示しないようにできます。
+        常に「いいえ」を選択してインポートをキャンセルするか、「はい」を選択して現在の<span class="notranslate">sprite</span> を上書きしてください。デフォルトは &quot;メッセージを表示
+        &quot;です。</li>
+      <li class="dropspot">
+        画像読み込み失敗時の自動対応新しい画像をインポートする際、インポートに失敗すると、デフォルトでは失敗したことを知らせる警告メッセージが表示されます。このオプションで「OK」を選択すると、このメッセージが表示されないようにできます。
         初期値は「メッセージを表示」です。</li>
     </ul>
   </div>
@@ -49,11 +74,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
-        <div style="float:right">次へ<a href="Object_Editor_Preferences.htm">オブジェクトエディタの環境設定</a></div>
+        <div style="float:left">前のページ：<a href="../IDE_Preferences.htm">IDE環境設定</a></div>
+        <div style="float:right">次のページ：<a href="Object_Editor_Preferences.htm">オブジェクトエディタの環境設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - <span class="notranslate">Sprite</span> Editor
@@ -62,4 +88,5 @@ Preferences - <span class="notranslate">Sprite</span> Editor
 prefs_sprite_editor
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>push_cancel_local_notification（ローカル通知）。</title>
@@ -12,20 +13,25 @@
   <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="push_cancel_local_notification" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>push_cancel_local_notification（ローカル通知）。</h1>
-  <p>説明： 指定されたプッシュ通知をキャンセルします。キャンセルする通知のIDは、関数 <a href="push_get_first_local_notification.htm"><span class="inline">push_get_first_local_notification()</span></a>と <a href="push_get_next_local_notification.htm"><span class="inline">push_get_next_local_notification()</span></a>で、この関数は成功した場合は <span class="inline">true</span> を、そうでない場合は <span class="inline">false</span> を返します (たとえば、通知が存在しないか、すでにトリガーされている場合など)。</p>
+  <p>説明： 指定されたプッシュ通知をキャンセルします。キャンセルする通知のIDは、関数 <a href="push_get_first_local_notification.htm"><span
+        class="inline">push_get_first_local_notification()</span></a>と <a
+      href="push_get_next_local_notification.htm"><span
+        class="inline">push_get_next_local_notification()</span></a>で、この関数は成功した場合は <span class="inline">true</span>
+    を、そうでない場合は <span class="inline">false</span> を返します (たとえば、通知が存在しないか、すでにトリガーされている場合など)。</p>
   <p class="note"><b>注</b>：この機能は、<b>iOS</b>および<b>Androidの</b>ターゲットモジュールに限定されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">push_cancel_local_notification(ID);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">ID</span></td>
@@ -35,7 +41,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
   <p> </p>
   <h4>例:</h4>
@@ -51,18 +57,23 @@
         ntf = push_get_next_local_notification(map);<br />
     }<br />
     ds_map_destroy(map);</p>
-  <p>上記のコードは、 <span class="inline">DS Map</span> を作成し、<span class="notranslate">queue</span> で最初に利用可能な通知のデータを要求します。通知が存在する場合、マップが入力され、コードは次に特定の<span class="notranslate">string</span> のための「データ」キーをチェックします。<span class="notranslate">string</span> が見つかった場合、通知はキャンセルされ、<span class="notranslate">queue</span> のすべてがチェックされるまで、次の通知をチェックするために移動します。</p>
+  <p>上記のコードは、 <span class="inline">DS Map</span> を作成し、<span class="notranslate">queue</span>
+    で最初に利用可能な通知のデータを要求します。通知が存在する場合、マップが入力され、コードは次に特定の<span class="notranslate">string</span> のための「データ」キーをチェックします。<span
+      class="notranslate">string</span> が見つかった場合、通知はキャンセルされ、<span class="notranslate">queue</span>
+    のすべてがチェックされるまで、次の通知をチェックするために移動します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Push_Notifications.htm">プッシュ通知</a></div>
-        <div style="float:right">次のページ <a href="push_local_notification.htm"><span class="notranslate">push_local_notification</span></a></div>
+        <div style="float:left">前のページ：<a href="Push_Notifications.htm">プッシュ通知</a></div>
+        <div style="float:right">次のページ：<a href="push_local_notification.htm"><span
+              class="notranslate">push_local_notification</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 push_cancel_local_notification
@@ -71,4 +82,5 @@ push_cancel_local_notification
 push_cancel_local_notification
 -->
 </body>
+
 </html>

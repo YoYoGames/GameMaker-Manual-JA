@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_get_bounds</title>
@@ -13,10 +14,14 @@
   <meta name="search-keywords" content="skeleton_get_bounds" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_get_bounds</span></h1>
-  <p>この関数は、現在割り当てられているスケルトンアニメーション<span class="notranslate">sprite</span> の、任意のバウンディングボックスに関連する値の配列を返します。詳細を取得したいバウンディング ボックスのインデックス番号を指定します（<span class="notranslate">sprite</span> のバウンディング ボックスの総数を取得する場合は、関数 <a href="skeleton_get_num_bounds.htm"><span class="inline">skeleton_get_num_bounds()</span></a>) で、この関数は以下の要素を持つ配列を返します。</p>
+  <p>この関数は、現在割り当てられているスケルトンアニメーション<span class="notranslate">sprite</span> の、任意のバウンディングボックスに関連する値の配列を返します。詳細を取得したいバウンディング
+    ボックスのインデックス番号を指定します（<span class="notranslate">sprite</span> のバウンディング ボックスの総数を取得する場合は、関数 <a
+      href="skeleton_get_num_bounds.htm"><span class="inline">skeleton_get_num_bounds()</span></a>)
+    で、この関数は以下の要素を持つ配列を返します。</p>
   <ul class="colour">
     <li>[0] - 外接箱上の点の数（実数）．</li>
     <li>[1] - バウンディングボックスの名前（<span class="notranslate">string</span> ）．</li>
@@ -26,14 +31,14 @@
   </ul>
   <div data-conref="../../../../../../assets/snippets/Spine_bounding_box_note.hts"> </div>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_get_bounds</span>(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -43,8 +48,9 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Array">Array</span> (minimum 2 elements: numPoints, name [, xPos, yPos, etc...])</p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Array">Array</span> (minimum 2 elements: numPoints, name [, xPos, yPos,
+    etc...])</p>
   <p> </p>
   <h4>例</h4>
   <p> </p>
@@ -58,24 +64,28 @@
             var data = b_info[1] + &quot;:&quot;;<br />
             for(var j = 0; j &lt; b_info[0]; j++)<br />
             {<br />
-                data += &quot; (&quot; + string(b_info[(j * 2) + 2]) + &quot;, &quot; + string(b_info[(j * 2) + 2 + 1]) + &quot;)&quot;;<br />
+                data += &quot; (&quot; + string(b_info[(j * 2) + 2]) + &quot;, &quot; + string(b_info[(j * 2) + 2 + 1])
+    + &quot;)&quot;;<br />
             }<br />
             draw_text(20, yy, data);<br />
             yy += 20;<br />
         }<br />
     }</p>
-  <p>上記のコードは、現在割り当てられている<span class="notranslate">loop</span> に関連する各バウンディングボックスを<span class="notranslate">sprite</span> 通過し、そのデータを<span class="notranslate">string</span> として画面に描画します。</p>
+  <p>上記のコードは、現在割り当てられている<span class="notranslate">loop</span> に関連する各バウンディングボックスを<span class="notranslate">sprite</span>
+    通過し、そのデータを<span class="notranslate">string</span> として画面に描画します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Drawing_And_Miscellaneous.htm">図面・雑記</a></div>
-        <div style="float:right">次のページ <a href="skeleton_collision_draw_set.htm"><span class="notranslate">skeleton_collision_draw_set</span></a></div>
+        <div style="float:left">前のページ：<a href="Drawing_And_Miscellaneous.htm">描画・雑記</a></div>
+        <div style="float:right">次のページ：<a href="skeleton_collision_draw_set.htm"><span
+              class="notranslate">skeleton_collision_draw_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_get_bounds
@@ -84,4 +94,5 @@ skeleton_get_bounds
 skeleton_get_bounds
 -->
 </body>
+
 </html>

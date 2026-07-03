@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>surface_copy_part</title>
@@ -12,20 +13,26 @@
   <meta name="rh-index-keywords" content="surface_copy_part" />
   <meta name="search-keywords" content="surface_copy_part" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">surface_copy_part</span></h1>
-  <p>この関数は、あるサーフェスから画像を取り出し、そのサーフェス内の指定されたローカル位置（ここで、(0,0)の位置はコピー先のサーフェスの左上隅です）の別のサーフェスにコピーするだけです。コピー元のローカル x、y 位置と、セクションの幅と高さを指定できます。これらは<i>サーフェスのサイズに</i>基づいた座標であり、サーフェスが<span class="notranslate">room</span> に描かれている位置ではないことに注意してください。コピー先のサーフェスにすでに情報がある場合、コピーによって上書きされ、この関数によってコピー元のサーフェスが変更される<i>ことは</i>一切ありません。</p>
-  <p class="note"><b></b><b>注</b>：サーフェスを使用する場合、<span class="notranslate">texture</span> のメモリーに保存されているため、サーフェスがいつでも存在しなくなる可能性があります。を使用して、サーフェスが存在するかどうかを<b>常に</b>確認する必要があります。 <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>直接参照する前に</p>
+  <p>この関数は、あるサーフェスから画像を取り出し、そのサーフェス内の指定されたローカル位置（ここで、(0,0)の位置はコピー先のサーフェスの左上隅です）の別のサーフェスにコピーするだけです。コピー元のローカル x、y
+    位置と、セクションの幅と高さを指定できます。これらは<i>サーフェスのサイズに</i>基づいた座標であり、サーフェスが<span class="notranslate">room</span>
+    に描かれている位置ではないことに注意してください。コピー先のサーフェスにすでに情報がある場合、コピーによって上書きされ、この関数によってコピー元のサーフェスが変更される<i>ことは</i>一切ありません。</p>
+  <p class="note"><b></b><b>注</b>：サーフェスを使用する場合、<span class="notranslate">texture</span>
+    のメモリーに保存されているため、サーフェスがいつでも存在しなくなる可能性があります。を使用して、サーフェスが存在するかどうかを<b>常に</b>確認する必要があります。 <span style="font-size:1px;"><a
+        href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>直接参照する前に</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">surface_copy_part</span>(destination, x, y, source, xs, ys, ws, hs);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">surface_copy_part</span>(destination, x, y, source, xs,
+    ys, ws, hs);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">destination</span></td>
@@ -70,7 +77,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -84,19 +91,24 @@
     else<br />
     {<br />
         draw_surface(surf, 0, 0);<br />
-    }</p>
-  <p>上記のコードは、現在描画されているビューをチェックし、それがview[0]の場合、変数temp_surfで指定されたサーフェイスを変数surfで指定されたサーフェイスにコピーしています。コピーされる領域は、view[1]で描画されるサーフェス内のマウスの相対位置で形成される矩形に相当します。現在のビューがview[0]以外の場合は、サーフェス &quot;surf &quot;がスクリーンに描画される。</p>
+    }
+  </p>
+  <p>
+    上記のコードは、現在描画されているビューをチェックし、それがview[0]の場合、変数temp_surfで指定されたサーフェイスを変数surfで指定されたサーフェイスにコピーしています。コピーされる領域は、view[1]で描画されるサーフェス内のマウスの相対位置で形成される矩形に相当します。現在のビューがview[0]以外の場合は、サーフェス
+    &quot;surf &quot;がスクリーンに描画される。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
-        <div style="float:right">次のページ <a href="surface_depth_disable.htm"><span class="notranslate">surface_depth_disable</span></a></div>
+        <div style="float:left">前のページ：<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ：<a href="surface_depth_disable.htm"><span
+              class="notranslate">surface_depth_disable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 surface_copy_part
@@ -105,4 +117,5 @@ surface_copy_part
 surface_copy_part
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>もどる</title>
@@ -12,12 +13,17 @@
   <meta name="rh-index-keywords" content="return" />
   <meta name="search-keywords" content="return" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>もどる</h1>
   <p> <span class="inline">return</span> 文は次のような構文です。</p>
   <p class="code">return (&lt;expression&gt;)</p>
-  <p> <span class="inline">return</span> ステートメントは<span> <a href="../Script_Functions.htm">スクリプトの関数と</a> <a href="../Method_Variables.htm">メソッドでのみ</a></span>使用し、関数から値を返して、次のコードや関数の呼び出しで使用するために使用します。<i>関数の実行は <span class="inline">return</span> ステートメントで終了</i>します。つまり、 <span class="inline">return</span> が呼び出された後に来るコードは実行されないということに注意してください。<span class="notranslate">script</span> 以下は <span class="inline">sqr_calc</span> という短い例です。この関数は渡された値の2乗を計算し、渡されたパラメータが実数でない場合のエラー処理も含まれています。</p>
+  <p> <span class="inline">return</span> ステートメントは<span> <a href="../Script_Functions.htm">スクリプトの関数と</a> <a
+        href="../Method_Variables.htm">メソッドでのみ</a></span>使用し、関数から値を返して、次のコードや関数の呼び出しで使用するために使用します。<i>関数の実行は <span
+        class="inline">return</span> ステートメントで終了</i>します。つまり、 <span class="inline">return</span>
+    が呼び出された後に来るコードは実行されないということに注意してください。<span class="notranslate">script</span> 以下は <span class="inline">sqr_calc</span>
+    という短い例です。この関数は渡された値の2乗を計算し、渡されたパラメータが実数でない場合のエラー処理も含まれています。</p>
   <p class="code">/// @function            sqr_calc(val);<br />
     /// @param {real}  val   The value to calculate the square of<br />
     /// @description         Calculate the square of the given value<br />
@@ -34,23 +40,26 @@
         }<br />
     }
   </p>
-  <p>コードの一部から関数を呼び出すには、<span class="notranslate">runtime</span> 関数を呼び出すときと同じように使用します。つまり、関数名を書き、パラメータの値を括弧で囲んでください。つまり、上記の関数は次のように呼び出すことになります。</p>
+  <p>コードの一部から関数を呼び出すには、<span class="notranslate">runtime</span>
+    関数を呼び出すときと同じように使用します。つまり、関数名を書き、パラメータの値を括弧で囲んでください。つまり、上記の関数は次のように呼び出すことになります。</p>
   <p class="code">if keyboard_check_pressed(vk_enter)<br />
     {<br />
         val = scr_sqr(amount);<br />
     }</p>
-  <p>ここで、変数 <span class="inline">val</span> は0（変数 <span class="inline">amount</span> が実数でないため）か、 <span class="inline">value * value</span> の合計のどちらかになります。</p>
+  <p>ここで、変数 <span class="inline">val</span> は0（変数 <span class="inline">amount</span> が実数でないため）か、 <span
+      class="inline">value * value</span> の合計のどちらかになります。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
-        <div style="float:right">次のページ <a href="begin_end.htm"><span class="notranslate">begin / end</span></a></div>
+        <div style="float:left">前のページ：<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:right">次のページ：<a href="begin_end.htm"><span class="notranslate">begin / end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 return
@@ -59,4 +68,5 @@ return
 return
 -->
 </body>
+
 </html>

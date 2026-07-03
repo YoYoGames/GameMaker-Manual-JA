@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>event_perform</title>
@@ -9,15 +10,26 @@
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function event_perform" />
-  <meta name="rh-index-keywords" content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end" />
-  <meta name="search-keywords" content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end" />
+  <meta name="rh-index-keywords"
+    content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end" />
+  <meta name="search-keywords"
+    content="event_perform,ev_create,ev_destroy,ev_cleanup,ev_step,ev_step_normal,ev_step_begin,ev_step_end,ev_alarm,ev_keyboard,ev_keypress,ev_keyrelease,ev_mouse,ev_left_button,ev_right_button,ev_middle_button,ev_no_button,ev_left_press,ev_right_press,ev_middle_press,ev_left_release,ev_right_release,ev_middle_release,ev_mouse_enter,ev_mouse_leave,ev_mouse_wheel_up,ev_mouse_wheel_down,ev_global_left_button,ev_global_right_button,ev_global_middle_button,ev_global_left_press,ev_global_right_press,ev_global_middle_press,ev_global_left_release,ev_global_right_release,ev_global_middle_release,ev_gesture,ev_gesture_tap,ev_gesture_double_tap,ev_gesture_drag_start,ev_gesture_dragging,ev_gesture_drag_end,ev_gesture_flick,ev_gesture_pinch_start,ev_gesture_pinch_in,ev_gesture_pinch_out,ev_gesture_pinch_end,ev_gesture_rotate_start,ev_gesture_rotating,ev_gesture_rotate_end,ev_global_gesture_tap,ev_global_gesture_double_tap,ev_global_gesture_drag_start,ev_global_gesture_dragging,ev_global_gesture_drag_end,ev_global_gesture_flick,ev_global_gesture_pinch_start,ev_global_gesture_pinch_in,ev_global_gesture_pinch_out,ev_global_gesture_pinch_end,ev_global_gesture_rotate_start,ev_global_gesture_rotating,ev_global_gesture_rotate_end,ev_collision,ev_other,ev_outside,ev_boundary,ev_game_start,ev_game_end,ev_room_start,ev_room_end,ev_no_more_lives,ev_no_more_health,ev_animation_end,ev_end_of_path,ev_close_button,ev_user,ev_draw,ev_draw_begin,ev_draw_end,ev_draw_pre,ev_draw_post,ev_gui,ev_gui_begin,ev_gui_end" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">event_perform</span></h1>
-  <p>この関数は、コードを実行しているインスタンスに対して、指定されたイベントを指定された引数で実行します。この関数には多くのオプションがあり、あらゆるイベントの完全なシミュレーションが可能ですが、これは文字通りイベント内のすべてのコードを実行するだけで、ゲームが手動でトリガーするために何かを変更することはないことに注意してください。また、アラームイベントを実行した場合、アラームカウンターは-1にはならず、カウントダウンが継続されます。</p>
-  <p>非同期イベントは、以下の方法で呼び出すことができます。 <a href="event_perform_async.htm"><span class="inline">event_perform_async()</span></a>.</p>
-  <p>下の表は、<span data-keyref="GameMaker Name">GameMakerに</span>含まれるイベントタイプを参照するためのすべての定数と、その数値の概要を示しています。イベントそのものは<b>太字で</b>表示され、その戻り値として <a href="event_type.htm"><span class="inline">event_type</span></a>変数（この関数の第一引数に渡される）の戻り値と同じであることを示す。また、その数値は<i>イタリック</i>体で示され <a href="event_number.htm"><span class="inline">event_number</span></a>変数（この関数の第2引数に渡される）に渡される。</p>
+  <p>
+    この関数は、コードを実行しているインスタンスに対して、指定されたイベントを指定された引数で実行します。この関数には多くのオプションがあり、あらゆるイベントの完全なシミュレーションが可能ですが、これは文字通りイベント内のすべてのコードを実行するだけで、ゲームが手動でトリガーするために何かを変更することはないことに注意してください。また、アラームイベントを実行した場合、アラームカウンターは-1にはならず、カウントダウンが継続されます。
+  </p>
+  <p>非同期イベントは、以下の方法で呼び出すことができます。 <a href="event_perform_async.htm"><span
+        class="inline">event_perform_async()</span></a>.</p>
+  <p>下の表は、<span
+      data-keyref="GameMaker Name">GameMakerに</span>含まれるイベントタイプを参照するためのすべての定数と、その数値の概要を示しています。イベントそのものは<b>太字で</b>表示され、その戻り値として
+    <a href="event_type.htm"><span
+        class="inline">event_type</span></a>変数（この関数の第一引数に渡される）の戻り値と同じであることを示す。また、その数値は<i>イタリック</i>体で示され <a
+      href="event_number.htm"><span class="inline">event_number</span></a>変数（この関数の第2引数に渡される）に渡される。
+  </p>
   <table>
     <colgroup>
       <col />
@@ -25,11 +37,15 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2" width="40%"><span data-keyref="Type_Constant_Event_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベントタイプ定数</a></span>&amp; <span data-keyref="Type_Constant_Event_Number"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベント番号定数</a></span></th>
+        <th colspan="2" width="40%"><span data-keyref="Type_Constant_Event_Type"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベントタイプ定数</a></span>&amp;
+          <span data-keyref="Type_Constant_Event_Number"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベント番号定数</a></span>
+        </th>
       </tr>
       <tr>
         <th width="40%">定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><b>ev_create</b></td>
@@ -48,15 +64,15 @@
         <td>ステップイベント</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_step_normal</i></td>
+        <td><i> ---- ev_step_normal</i></td>
         <td>ステップ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_step_begin</i></td>
+        <td><i> ---- ev_step_begin</i></td>
         <td>ステップ開始</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_step_end</i></td>
+        <td><i> ---- ev_step_end</i></td>
         <td>エンドステップ</td>
       </tr>
       <tr>
@@ -64,7 +80,7 @@
         <td>アラームイベント</td>
       </tr>
       <tr>
-        <td><i>   ---- 0 ...11</i></td>
+        <td><i> ---- 0 ...11</i></td>
         <td>12個のアラームのうち、どのアラームのイベントをトリガーしたいかに関連する番号です。</td>
       </tr>
       <tr>
@@ -72,7 +88,7 @@
         <td>キーボード/キーボードを押した状態/キーボードを離した状態</td>
       </tr>
       <tr>
-        <td><i>   ----任意のキーコード</i></td>
+        <td><i> ----任意のキーコード</i></td>
         <td>vk_spaceやord(&quot;W&quot;)などのように。</td>
       </tr>
       <tr>
@@ -80,95 +96,95 @@
         <td>マウスイベント</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_left_button</i></td>
+        <td><i> ---- ev_left_button</i></td>
         <td>オブジェクト上で左ボタンを押したまま</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_right_button</i></td>
+        <td><i> ---- ev_right_button</i></td>
         <td>オブジェクト上で右ボタン長押し</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_middle_button</i></td>
+        <td><i> ---- ev_middle_button</i></td>
         <td>オブジェクト上で中ボタン（またはクリッカブルホイール）を押し続けた状態</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_no_button</i></td>
+        <td><i> ---- ev_no_button</i></td>
         <td>ボタンを押しっぱなしにしない</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_left_press</i></td>
+        <td><i> ---- ev_left_press</i></td>
         <td>オブジェクト上で左ボタンが押されただけ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_right_press</i></td>
+        <td><i> ---- ev_right_press</i></td>
         <td>オブジェクト上で右ボタンが押されただけ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_middle_press</i></td>
+        <td><i> ---- ev_middle_press</i></td>
         <td>オブジェクト上で中ボタン（またはクリッカブルホイール）が押されたところ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_left_release</i></td>
+        <td><i> ---- ev_left_release</i></td>
         <td>オブジェクト上で左ボタンを離したところ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_right_release</i></td>
+        <td><i> ---- ev_right_release</i></td>
         <td>オブジェクト上で右ボタンを離したところ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_middle_release</i></td>
+        <td><i> ---- ev_middle_release</i></td>
         <td>オブジェクト上で中ボタンを離したところ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_enter</i></td>
+        <td><i> ---- ev_mouse_enter</i></td>
         <td>マウスがオブジェクトのバウンディングボックスに入ったところです。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_leave</i></td>
+        <td><i> ---- ev_mouse_leave</i></td>
         <td>マウスがオブジェクトのバウンディングボックスを出たところ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_wheel_up</i></td>
+        <td><i> ---- ev_mouse_wheel_up</i></td>
         <td>マウスホイールが上方向にスクロールする</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_mouse_wheel_down</i></td>
+        <td><i> ---- ev_mouse_wheel_down</i></td>
         <td>マウスホイールによる下方向へのスクロール</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_left_button（グローバル・レフト・ボタン</i></td>
+        <td><i> ---- ev_global_left_button（グローバル・レフト・ボタン</i></td>
         <td>左ボタン押しっぱなしでどこでもOK</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_right_button。</i></td>
+        <td><i> ---- ev_global_right_button。</i></td>
         <td>右ボタン長押しでどこでもOK</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_middle_button</i></td>
+        <td><i> ---- ev_global_middle_button</i></td>
         <td>中ボタン（またはクリッカブルホイール）を任意の位置で押し続けた状態</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_left_press</i></td>
+        <td><i> ---- ev_global_left_press</i></td>
         <td>左ボタンがどこでもいいから押されただけ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_right_press</i></td>
+        <td><i> ---- ev_global_right_press</i></td>
         <td>右ボタンがどこでもいいから押されただけ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_middle_press</i></td>
+        <td><i> ---- ev_global_middle_press</i></td>
         <td>中ボタン（またはクリッカブルホイール）を任意の場所で押したところ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_left_release</i></td>
+        <td><i> ---- ev_global_left_release</i></td>
         <td>左ボタンがどこでもいいから離しただけ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_right_release</i></td>
+        <td><i> ---- ev_global_right_release</i></td>
         <td>右ボタンがどこでも解除されただけ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_middle_release</i></td>
+        <td><i> ---- ev_global_middle_release</i></td>
         <td>中ボタンがどこでもいいから解除されただけ</td>
       </tr>
       <tr>
@@ -176,107 +192,107 @@
         <td>ジェスチャーイベント（タップ、ドラッグ、フリック、ピンチ、ローテート）</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_tap</i></td>
+        <td><i> ---- ev_gesture_tap</i></td>
         <td><i>インスタンスの</i>シングルクリック/タッチ＆リリースが検出されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_double_tap</i></td>
+        <td><i> ---- ev_gesture_double_tap</i></td>
         <td>2回の素早いタッチ/クリックとリリースが検出された<i>例</i></td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_drag_start</i></td>
+        <td><i> ---- ev_gesture_drag_start</i></td>
         <td><i>インスタンスに対して</i>ドラッグジェスチャーの開始が検出された</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_dragging</i></td>
+        <td><i> ---- ev_gesture_dragging</i></td>
         <td>タッチ/クリックが保持され、<i>インスタンスの</i>ために移動されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_drag_end</i></td>
+        <td><i> ---- ev_gesture_drag_end</i></td>
         <td>ドラッグからのタッチ／クリックの解除が検知された<i>インスタンス</i></td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_flick</i></td>
+        <td><i> ---- ev_gesture_flick</i></td>
         <td>ドラッグからのタッチ/クリックの解除は、<i>インスタンスの</i>フリックイベントが検出されるのに十分な動きがありました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_start</i></td>
+        <td><i> ---- ev_gesture_pinch_start</i></td>
         <td><i>インスタンスに対して</i>、2つのタッチおよび直線的な動きが検出されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_in</i></td>
+        <td><i> ---- ev_gesture_pinch_in</i></td>
         <td><i>インスタンスの</i>2つのタッチ間の移動が内向きと検出されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_out</i></td>
+        <td><i> ---- ev_gesture_pinch_out</i></td>
         <td><i>インスタンスの</i>2つのタッチ間の移動が外向きと検出されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_pinch_end</i></td>
+        <td><i> ---- ev_gesture_pinch_end</i></td>
         <td><i>インスタンスで</i>ピンチの片方（または両方）のタッチが解除されたことが検出された</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_rotate_start</i></td>
+        <td><i> ---- ev_gesture_rotate_start</i></td>
         <td><i>インスタンスの</i>2つのタッチ間の移動が回転として検出されました</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_rotating</i></td>
+        <td><i> ---- ev_gesture_rotating</i></td>
         <td><i>インスタンスの</i>2つのタッチ間の移動が回転として検出されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gesture_rotate_end</i></td>
+        <td><i> ---- ev_gesture_rotate_end</i></td>
         <td><i>インスタンスで</i>回転のための片方（または両方）のタッチの解除が検出されました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_tap</i></td>
+        <td><i> ---- ev_global_gesture_tap</i></td>
         <td>部屋の<i>どこでも</i>クリック／タッチ＆リリースを1回で検知している</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_double_tap</i></td>
+        <td><i> ---- ev_global_gesture_double_tap</i></td>
         <td>2回の素早いタッチ/クリックとリリースが部屋の<i>どこででも</i>検出されるようになった</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_drag_start</i></td>
+        <td><i> ---- ev_global_gesture_drag_start</i></td>
         <td>ドラッグジェスチャーの開始が部屋の<i>どこかで</i>検出された場合</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_dragging</i></td>
+        <td><i> ---- ev_global_gesture_dragging</i></td>
         <td>タッチ/クリックが保持され、室内の<i>任意の場所に</i>移動したこと</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_drag_end</i></td>
+        <td><i> ---- ev_global_gesture_drag_end</i></td>
         <td>ドラッグからのタッチ/クリックの解除が室内の<i>どこかで</i>検知された場合</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_flick</i></td>
+        <td><i> ---- ev_global_gesture_flick</i></td>
         <td>ドラッグからのタッチ/クリックの解除は、部屋の<i>どこでも</i>フリックイベントが検出できる程度の動きがあった</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_start</i></td>
+        <td><i> ---- ev_global_gesture_pinch_start</i></td>
         <td>室内の<i>任意の場所で</i>、2回のタッチと直線的な動きを検知した場合</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_in</i></td>
+        <td><i> ---- ev_global_gesture_pinch_in</i></td>
         <td><span class="notranslate">room</span> の<i>任意の場所で</i>2回タッチする間の動きを内向きとして検出しました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_out</i></td>
+        <td><i> ---- ev_global_gesture_pinch_out</i></td>
         <td><span class="notranslate">room</span> の<i>任意の場所で</i>2回タッチする間の動きを外向きとして検出しました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_pinch_end</i></td>
+        <td><i> ---- ev_global_gesture_pinch_end</i></td>
         <td>ピンチのための片方のタッチ（または両方のタッチ）の解除が部屋の<i>どこかで</i>検出された場合</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_rotate_start</i></td>
+        <td><i> ---- ev_global_gesture_rotate_start</i></td>
         <td><span class="notranslate">room</span> の<i>任意の場所で</i>2つのタッチの間の動きを回転として検出しました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_rotating</i></td>
+        <td><i> ---- ev_global_gesture_rotating</i></td>
         <td><span class="notranslate">room</span> の<i>任意の場所で</i>2つのタッチの間の動きを回転として検出しました。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_global_gesture_rotate_end</i></td>
+        <td><i> ---- ev_global_gesture_rotate_end</i></td>
         <td>回転のための片方（または両方）のタッチの解除が部屋の<i>どこかで</i>検出された場合</td>
       </tr>
       <tr>
@@ -284,7 +300,7 @@
         <td>物体との衝突</td>
       </tr>
       <tr>
-        <td><i>   ---- チェックする<span class="notranslate">object</span> のインデックス。</i></td>
+        <td><i> ---- チェックする<span class="notranslate">object</span> のインデックス。</i></td>
         <td><span class="inline">obj_enemy</span> 例えば</td>
       </tr>
       <tr>
@@ -292,119 +308,127 @@
         <td>その他」に記載されているアクションの1つ</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_outside</i></td>
+        <td><i> ---- ev_outside</i></td>
         <td>インスタンスが室外にあるかどうか</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_boundary</i></td>
+        <td><i> ---- ev_boundary</i></td>
         <td>インスタンスが境界線と交差しているかどうか</td>
       </tr>
       <tr>
-        <td><em>   ---- ev_outside_view0...7</em></td>
+        <td><em> ---- ev_outside_view0...7</em></td>
         <td>インスタンスが与えられたビューの外にあるかどうか（0〜7）</td>
       </tr>
       <tr>
-        <td><em>   ---- ev_boundary_view0...7</em></td>
+        <td><em> ---- ev_boundary_view0...7</em></td>
         <td>インスタンスが与えられたビューの境界と交差しているかどうか (0 から 7)</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_game_start（ゲームスタート</i></td>
+        <td><i> ---- ev_game_start（ゲームスタート</i></td>
         <td>ゲーム開始時のみ発動</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_game_end</i></td>
+        <td><i> ---- ev_game_end</i></td>
         <td>ゲーム終了時のみ発動</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_room_start</i></td>
+        <td><i> ---- ev_room_start</i></td>
         <td>ルーム開始時のみ発動</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_room_end</i></td>
+        <td><i> ---- ev_room_end</i></td>
         <td>部屋の端でのみトリガーされる</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_animation_end</i></td>
+        <td><i> ---- ev_animation_end</i></td>
         <td>オブジェクトの<span class="notranslate">sprite</span> のアニメーションが終了した場合</td>
       </tr>
       <tr>
-        <td><em><i>   ---- ev_animation_update</i></em></td>
+        <td><em><i> ---- ev_animation_update</i></em></td>
         <td>スケルトン・アニメーションを使用する<span class="notranslate">objects</span> のために、ステップごとに実行されるアニメーション・イベント</td>
       </tr>
       <tr>
-        <td><em><i>   ---- ev_animation_event</i></em></td>
+        <td><em><i> ---- ev_animation_event</i></em></td>
         <td>スケルトン・アニメーション・ツールで割り当てられたスケルトン・アニメーションのために実行されるアニメーション・イベント</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_end_of_path</i></td>
+        <td><i> ---- ev_end_of_path</i></td>
         <td><span class="notranslate">object</span> が<span class="notranslate">path</span> の最後に到達している場合は、次のようになります。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_user0... ev_user15</i></td>
+        <td><i> ---- ev_user0... ev_user15</i></td>
         <td>16種類あるユーザーイベントのうちの1つです。</td>
       </tr>
       <tr>
-        <td><em>   ---- ev_broadcast_message</em></td>
+        <td><em> ---- ev_broadcast_message</em></td>
         <td><span class="notranslate">sprites</span> とシーケンスに使用されるブロードキャストメッセージイベント</td>
       </tr>
       <tr>
         <td><b>ev_draw</b></td>
-        <td>Drawイベント。<i><b><span class="note">NOTE</span> </b></i>このイベントは、描画イベント以外では強制的に実行することはできず、定数はこれらの場合に実行されるイベントを識別するためのものでしかありません。</td>
+        <td>Drawイベント。<i><b><span class="note">NOTE</span>
+            </b></i>このイベントは、描画イベント以外では強制的に実行することはできず、定数はこれらの場合に実行されるイベントを識別するためのものでしかありません。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_begin</i></td>
+        <td><i> ---- ev_draw_begin</i></td>
         <td>ドロー開始イベント。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_end</i></td>
+        <td><i> ---- ev_draw_end</i></td>
         <td>ドローエンドイベントの様子。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_pre</i></td>
+        <td><i> ---- ev_draw_pre</i></td>
         <td>抽選会前のイベント。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_draw_post</i></td>
+        <td><i> ---- ev_draw_post</i></td>
         <td>ポストドローイベントの様子。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gui</i></td>
+        <td><i> ---- ev_gui</i></td>
         <td>draw guiイベント。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gui_begin</i></td>
+        <td><i> ---- ev_gui_begin</i></td>
         <td>ドローグイ開始イベント。</td>
       </tr>
       <tr>
-        <td><i>   ---- ev_gui_end</i></td>
+        <td><i> ---- ev_gui_end</i></td>
         <td>ドローグイ終了イベント。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">event_perform</span>(type, numb);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">type</span></td>
-        <td><span data-keyref="Type_Constant_Event_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベントタイプ定数</a></span></td>
+        <td><span data-keyref="Type_Constant_Event_Type"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベントタイプ定数</a></span>
+        </td>
         <td><span class="notranslate">The type of event to perform (see the table above).</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">numb</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>または <span data-keyref="Type_Constant_Event_Number"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベント番号 定数</a></span></td>
-        <td><span class="notranslate">The specific event constant or value, if one is necessary (otherwise, just use 0).</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">リアル</a></span>または <span
+            data-keyref="Type_Constant_Event_Number"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">イベント番号
+              定数</a></span></td>
+        <td><span class="notranslate">The specific event constant or value, if one is necessary (otherwise, just use
+            0).</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>拡張例</h4>
@@ -421,11 +445,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Generating_Object_Events.htm"> <span class="notranslate">Object</span> </a>イベントを発生させる</div>
+        <div style="float:left">前のページ：<a href="Generating_Object_Events.htm"> <span class="notranslate">Object</span>
+          </a>イベントを発生させる</div>
         <div style="float:right">次ページ：<a href="event_perform_async.htm">event_perform_async</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 event_perform
@@ -534,4 +560,5 @@ ev_global_gesture_rotate_end
 event_perform
 -->
 </body>
+
 </html>

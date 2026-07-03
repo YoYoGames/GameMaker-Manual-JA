@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_matchmaking_join_session</title>
@@ -12,18 +13,32 @@
   <meta name="rh-index-keywords" content="xboxlive_matchmaking_join_session,MATCHMAKING_SESSION" />
   <meta name="search-keywords" content="xboxlive_matchmaking_join_session,MATCHMAKING_SESSION" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_matchmaking_join_session</h1>
-  <p>セッションハンドルから特定のセッションに参加することができる機能です。これはセッションの招待に参加するのと似ていますが、xbox liveのマッチメイキングに頼るのではなく、独自の<span class="notranslate">server</span> 、マッチメイキングを実行する場合に便利です。</p>
-  <p>この関数では、ユーザーID（特定のゲームパッドについて、この関数を呼び出すことで取得できます）を入力する必要があります。 <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><span class="inline">xboxlive_user_for_pad()</span></a>関数と、XDPダッシュボードで事前に作成しておいたSecure Device Associationテンプレートが必要です。</p>
-  <p>セッションハンドルは、まず参加したいセッションから「相関ID」を取得する必要があります。オリジナルのセッションが作成されるとき、Asynchronous Social イベントは &quot;<span class="inline">session_created</span>&quot; となり、返されるマップに &quot;<b>correlationid</b>&quot; というエントリーが含まれます ( <a href="xboxlive_matchmaking_create.htm"><span class="inline">xboxlive_matchmaking_create()</span></a>).このIDを<span class="notranslate">server</span> 、マッチメイキングリクエストを受ける際に渡す必要があります。参加するゲームが<span class="notranslate">server</span> から「相関ID」を受け取ったら、セッションハンドルの引数として相関IDを渡してこの関数を呼び出すことができます。</p>
-  <p>この関数は、エラーが発生した場合は -1 を返し (この場合、問題の詳細を示すコンソール出力があるはずです)、それ以外の場合はリクエスト ID 値を返します。リクエストIDの値は、この関数の正しい<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">ソーシャル非同期</a>イベントを特定するために使用することができます。このイベントはセッションが作成されたときにトリガーされ、DS Mapを変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>には、以下のキーと値のペアが含まれます。</p>
+  <p>セッションハンドルから特定のセッションに参加することができる機能です。これはセッションの招待に参加するのと似ていますが、xbox liveのマッチメイキングに頼るのではなく、独自の<span
+      class="notranslate">server</span> 、マッチメイキングを実行する場合に便利です。</p>
+  <p>この関数では、ユーザーID（特定のゲームパッドについて、この関数を呼び出すことで取得できます）を入力する必要があります。 <a
+      href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><span
+        class="inline">xboxlive_user_for_pad()</span></a>関数と、XDPダッシュボードで事前に作成しておいたSecure Device Associationテンプレートが必要です。
+  </p>
+  <p>セッションハンドルは、まず参加したいセッションから「相関ID」を取得する必要があります。オリジナルのセッションが作成されるとき、Asynchronous Social イベントは &quot;<span
+      class="inline">session_created</span>&quot; となり、返されるマップに &quot;<b>correlationid</b>&quot; というエントリーが含まれます ( <a
+      href="xboxlive_matchmaking_create.htm"><span class="inline">xboxlive_matchmaking_create()</span></a>).このIDを<span
+      class="notranslate">server</span> 、マッチメイキングリクエストを受ける際に渡す必要があります。参加するゲームが<span class="notranslate">server</span>
+    から「相関ID」を受け取ったら、セッションハンドルの引数として相関IDを渡してこの関数を呼び出すことができます。</p>
+  <p>この関数は、エラーが発生した場合は -1 を返し (この場合、問題の詳細を示すコンソール出力があるはずです)、それ以外の場合はリクエスト ID 値を返します。リクエストIDの値は、この関数の正しい<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">ソーシャル非同期</a>イベントを特定するために使用することができます。このイベントはセッションが作成されたときにトリガーされ、DS
+    Mapを変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>には、以下のキーと値のペアが含まれます。</p>
   <ul class="colour">
     <li>&quot;<b>requestid</b>&quot; - 呼び出した関数が返すリクエストIDを含みます。</li>
-    <li>&quot;<b>status</b>&quot; -<span class="notranslate">string</span> &quot;session_player_joined&quot; を含み、どのような種類のイベントが発生したかを通知します。</li>
+    <li>&quot;<b>status</b>&quot; -<span class="notranslate">string</span> &quot;session_player_joined&quot;
+      を含み、どのような種類のイベントが発生したかを通知します。</li>
     <li>&quot;<b>sessionid</b>&quot; - セッションIDを含み、失敗した場合は-1。</li>
-    <li>&quot;<b>sessionOwner&lt;<i>index&gt;</i></b>&quot; - セッションが見つかった場合、セッションホストのIDを含みます (&lt;<i>index&gt;</i> は 0 から &quot;num_results&quot; - 1 までの値です)</li>
+    <li>&quot;<b>sessionOwner&lt;<i>index&gt;</i></b>&quot; - セッションが見つかった場合、セッションホストのIDを含みます (&lt;<i>index&gt;</i> は 0
+      から &quot;num_results&quot; - 1 までの値です)</li>
     <li>「<b>id</b>&quot; - 定数が格納されています。 <span class="inline">MATCHMAKING_SESSION</span></li>
     <li>&quot;<b>error</b>&quot; - 全てが正常な場合は 0、何か失敗した場合は -1 となります。</li>
   </ul>
@@ -31,38 +46,45 @@
   <ul class="colour">
     <li>「<b>id</b>&quot; - 定数が格納されています。 <span class="inline">MATCHMAKING_SESSION</span></li>
     <li>&quot;<b>sessionid</b>&quot; - セッションIDが格納されます。</li>
-    <li>&quot;<b>status</b>&quot; -<span class="notranslate">string</span> &quot;session_player_joined &quot;が含まれます。</li>
+    <li>&quot;<b>status</b>&quot; -<span class="notranslate">string</span> &quot;session_player_joined &quot;が含まれます。
+    </li>
     <li>&quot;<b>requestid</b>&quot; - リクエストを作成した関数が返した ID 値です。</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_matchmaking_join_session(user_id, session_handle, sdatemplate);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"></span></td>
         <td><span class="notranslate">The User ID pointer to use</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">session_handle</span></td><td><span data-keyref="Type_Real"></span></td>
-        <td><span class="notranslate">The &quot;correlation id&quot; to use for the session ID (see description, above)</span></td>
-     </tr>
+        <td><span class="notranslate">session_handle</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The &quot;correlation id&quot; to use for the session ID (see description,
+            above)</span></td>
+      </tr>
       <tr>
-        <td><span class="notranslate">sdatemplate</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">sdatemplate</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The name of the secure device association template to use</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">Request_ID = xboxlive_matchmaking_join_session(global.UserID, global.SessionID, &quot;PeerServerTraffic&quot;);</p>
+  <p class="code">Request_ID = xboxlive_matchmaking_join_session(global.UserID, global.SessionID,
+    &quot;PeerServerTraffic&quot;);</p>
   <p>上記は、与えられたマルチプレイヤーセッションに参加するためのリクエストを送信し、リクエストIDの値を変数に格納して、非同期イベントでチェックできるようにします。</p>
   <p> </p>
   <p> </p>
@@ -70,11 +92,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Match_Making.htm">マッチメイキング</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_matchmaking_session_leave.htm"><span class="notranslate">xboxlive_matchmaking_session_leave</span></a></div>
+        <div style="float:left">前のページ：<a href="Match_Making.htm">マッチメイキング</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_matchmaking_session_leave.htm"><span
+              class="notranslate">xboxlive_matchmaking_session_leave</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_matchmaking_join_session
@@ -84,4 +108,5 @@ MATCHMAKING_SESSION
 xboxlive_matchmaking_join_session
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_shader</title>
@@ -12,25 +13,36 @@
   <meta name="rh-index-keywords" content="layer_shader" />
   <meta name="search-keywords" content="layer_shader" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_shader</span></h1>
-  <p>この関数を使用すると、任意のレイヤーに<span class="notranslate">shader</span> リソースを割り当てることができ、そのレイヤーは<span class="notranslate">shader</span> を使用してレンダリングされます。レイヤーのユニーク ID 値またはレイヤー名（<span class="notranslate">string</span> - これはパフォーマンスに影響します）を、使用する<span class="notranslate">shader</span> の ID と共に指定します。<span class="notranslate">shader</span> は<span class="notranslate">Asset</span> Browser で以前に作成されている必要があり、<span class="notranslate">shader</span> インデックス (<span class="notranslate">shader</span> リソースの名前) がこの関数に渡されます。割り当てられたレイヤーにインスタンスが追加されている場合、<span class="notranslate">shader</span> はそのインスタンスが使用する<i>すべての</i>描画イベントに適用されます。たとえば、インスタンスが Draw GUI Begin イベントを持っている場合、<span class="notranslate">shader</span> は自動的に適用されます。<span class="notranslate">shader</span> は、<span class="notranslate">sprite</span> <span class="notranslate">assets</span> や<span class="notranslate">tile</span> マップのように、そのレイヤーに描画される他のグラフィック要素にも影響します。</p>
-  <p>なお、この関数は描画イベントやステップイベントで呼ばれる<i>ものではなく</i>、<b>ルーム作成コードや</b>インスタンスの<b>作成イベント／ </b> <b>ルーム開始</b>イベントで<span class="notranslate">room</span> の開始時に呼ばれるだけでよいことに注意してください。</p>
+  <p>この関数を使用すると、任意のレイヤーに<span class="notranslate">shader</span> リソースを割り当てることができ、そのレイヤーは<span
+      class="notranslate">shader</span> を使用してレンダリングされます。レイヤーのユニーク ID 値またはレイヤー名（<span class="notranslate">string</span> -
+    これはパフォーマンスに影響します）を、使用する<span class="notranslate">shader</span> の ID と共に指定します。<span class="notranslate">shader</span>
+    は<span class="notranslate">Asset</span> Browser で以前に作成されている必要があり、<span class="notranslate">shader</span> インデックス
+    (<span class="notranslate">shader</span> リソースの名前) がこの関数に渡されます。割り当てられたレイヤーにインスタンスが追加されている場合、<span
+      class="notranslate">shader</span> はそのインスタンスが使用する<i>すべての</i>描画イベントに適用されます。たとえば、インスタンスが Draw GUI Begin
+    イベントを持っている場合、<span class="notranslate">shader</span> は自動的に適用されます。<span class="notranslate">shader</span> は、<span
+      class="notranslate">sprite</span> <span class="notranslate">assets</span> や<span class="notranslate">tile</span>
+    マップのように、そのレイヤーに描画される他のグラフィック要素にも影響します。</p>
+  <p>なお、この関数は描画イベントやステップイベントで呼ばれる<i>ものではなく</i>、<b>ルーム作成コードや</b>インスタンスの<b>作成イベント／ </b> <b>ルーム開始</b>イベントで<span
+      class="notranslate">room</span> の開始時に呼ばれるだけでよいことに注意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_shader</span>(layer_id, shader)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer_id</span></td>
         <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
-        <td><span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span>
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">shader</span></td>
@@ -40,7 +52,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,11 +65,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
-        <div style="float:right">次のページ <a href="layer_get_script_begin.htm"><span class="notranslate">layer_get_script_begin</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ：<a href="layer_get_script_begin.htm"><span
+              class="notranslate">layer_get_script_begin</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_shader
@@ -66,4 +80,5 @@ layer_shader
 layer_shader
 -->
 </body>
+
 </html>

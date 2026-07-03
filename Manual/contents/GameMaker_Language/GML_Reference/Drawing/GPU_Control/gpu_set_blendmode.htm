@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_blendmode</title>
@@ -9,57 +10,67 @@
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_blendmode" />
-  <meta name="rh-index-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_reverse_subtract,bm_min,bm_max" />
-  <meta name="search-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_reverse_subtract,bm_min,bm_max" />
+  <meta name="rh-index-keywords"
+    content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_reverse_subtract,bm_min,bm_max" />
+  <meta name="search-keywords"
+    content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_reverse_subtract,bm_min,bm_max" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_blendmode</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMakerが</span>ピクセルを描画しようとするとき、ソースカラー（描画しようとするピクセルの色）とデスティネーションカラー（描画先のピクセルにすでにある色）があります。したがって、ピクセルの新しい色を決定するとき、ソースカラーとデスティネーションの色は選択したブレンドモードに従って計算されます。色の各要素は0から1の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に何らかの係数を掛けて、その結果を要素ごとに加算することによって計算されます。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerが</span>ピクセルを描画しようとするとき、ソースカラー（描画しようとするピクセルの色）とデスティネーションカラー（描画先のピクセルにすでにある色）があります。したがって、ピクセルの新しい色を決定するとき、ソースカラーとデスティネーションの色は選択したブレンドモードに従って計算されます。色の各要素は0から1の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に何らかの係数を掛けて、その結果を要素ごとに加算することによって計算されます。
+  </p>
   <p>この機能は、以下の定数を用いて、4つの基本的な方法でブレンドモードを設定することができます。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
         <th>拡張ブレンドモード</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">bm_normal</span></td>
         <td>通常のブレンド（デフォルトのブレンドモード）。</td>
-        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_alpha</span>)</td>
+        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span
+              class="inline">bm_inv_src_alpha</span>)</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">bm_add</span></td>
         <td>加法混色。明るい部分の輝度値が加算されます。</td>
-        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)</td>
+        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">bm_subtract</span></td>
         <td>減算式ブレンディング。明るい部分の輝度値が減算される。</td>
-        <td><span class="notranslate">(<span class="inline">bm_zero</span>, <span class="inline">bm_inv_src_colour</span>)</td>
+        <td><span class="notranslate">(<span class="inline">bm_zero</span>, <span
+              class="inline">bm_inv_src_colour</span>)</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">bm_max</span></td>
         <td>マックスブレンディング加算ブレンディングに似ている。</td>
-        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_colour</span>)</td>
+        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span
+              class="inline">bm_inv_src_colour</span>)</td>
       </tr>
     </tbody>
   </table>
-  <p>上の表からわかるように、この4つのブレンドモードは、実際には、以下のページで紹介されている<i>拡張</i>ブレンドモードを合成したものです。 <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>.</p>
+  <p>上の表からわかるように、この4つのブレンドモードは、実際には、以下のページで紹介されている<i>拡張</i>ブレンドモードを合成したものです。 <a href="gpu_set_blendmode_ext.htm"><span
+        class="inline">gpu_set_blendmode_ext()</span></a>.</p>
   <p>ブレンドモードを最大限に活用し、その仕組みと画面に描画される最終画像への影響を理解するために、以下のガイドをお読みになることをお勧めします。</p>
   <ul class="colour">
     <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Blendmodesの使い方ガイド</a></li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode</span>(mode);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">mode</span></td>
@@ -69,7 +80,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -83,11 +94,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_blendmode_ext.htm"><span class="notranslate">gpu_set_blendmode_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_blendmode_ext.htm"><span
+              class="notranslate">gpu_set_blendmode_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode
@@ -102,4 +115,5 @@ bm_min
 gpu_set_blendmode
 -->
 </body>
+
 </html>

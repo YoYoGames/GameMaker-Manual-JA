@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>新構造</title>
@@ -12,19 +13,26 @@
   <meta name="rh-index-keywords" content="GML Visual Action - New" />
   <meta name="search-keywords" content="New" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 新構造</h1>
-  <p><strong><em> </em>このアクションは、</strong> <strong>コンストラクタ</strong>関数としてフラグが立てられた関数を使用して<span class="notranslate">structs</span> を作成する<strong>場合にのみ</strong>使用されます (詳細については、「<a href="Declare_A_New_Function.htm">新しい関数の宣言</a>」を参照してください)。このアクションは、以前に定義した関数のメソッドと、いくつかの引数を受け取ります。必要であれば、左側のアイコン<img> を使って、さらに引数を追加することができます。これらの引数は、関数が必要とする入力に対応する必要があり、作成される<span class="notranslate">struct</span> に入力するために使用されます。<span class="notranslate">struct</span> はターゲット変数に返されます。ターゲット変数は、一時的なローカル変数としてフラグを立てることもできますし、立てないこともできます。<strong></strong></p>
+  <p><strong><em> </em>このアクションは、</strong> <strong>コンストラクタ</strong>関数としてフラグが立てられた関数を使用して<span
+      class="notranslate">structs</span> を作成する<strong>場合にのみ</strong>使用されます (詳細については、「<a
+      href="Declare_A_New_Function.htm">新しい関数の宣言</a>」を参照してください)。このアクションは、以前に定義した関数のメソッドと、いくつかの引数を受け取ります。必要であれば、左側のアイコン<img>
+    を使って、さらに引数を追加することができます。これらの引数は、関数が必要とする入力に対応する必要があり、作成される<span class="notranslate">struct</span>
+    に入力するために使用されます。<span class="notranslate">struct</span>
+    はターゲット変数に返されます。ターゲット変数は、一時的なローカル変数としてフラグを立てることもできますし、立てないこともできます。<strong></strong></p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="New Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_New.png" width="32" /></p>
+  <p><img alt="New Icon" class="icon" height="32"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_New.png" width="32" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Function</span></td>
@@ -42,19 +50,26 @@
   </table>
   <p> </p>
   <h4>拡張された例。</h4>
-  <p><img>上記のアクションブロックのコードは、おそらくインスタンスの<b>Create Eventに</b>入り、4つの引数を持つ新しいコンストラクタ関数 <span class="inline">init_char_struct</span> を宣言しています。 <span class="inline">_str1</span> <span class="inline">_str2</span>, <span class="inline">_val1</span>, <span class="inline">_val2</span> 。これらの引数は、この関数が作成する<span class="notranslate">struct</span> 内で、指定された変数に代入するために使用されます。そして、この関数は、次のように、後続のイベントで<a href="New.htm">New</a>アクションを使用して呼び出されます。</p>
-  <p><img>この関数が呼ばれると、配列 &quot;char&quot; に新しい<span class="notranslate">struct</span> が返されます。<span class="notranslate">struct</span> には変数 &quot;name&quot;, &quot;location&quot;, &quot;hp&quot;, &quot;mana&quot; が入力され、関数内で対応する引数に使用される値が設定されます。</p>
+  <p><img>上記のアクションブロックのコードは、おそらくインスタンスの<b>Create Eventに</b>入り、4つの引数を持つ新しいコンストラクタ関数 <span
+      class="inline">init_char_struct</span> を宣言しています。 <span class="inline">_str1</span> <span
+      class="inline">_str2</span>, <span class="inline">_val1</span>, <span class="inline">_val2</span>
+    。これらの引数は、この関数が作成する<span class="notranslate">struct</span> 内で、指定された変数に代入するために使用されます。そして、この関数は、次のように、後続のイベントで<a
+      href="New.htm">New</a>アクションを使用して呼び出されます。</p>
+  <p><img>この関数が呼ばれると、配列 &quot;char&quot; に新しい<span class="notranslate">struct</span> が返されます。<span
+      class="notranslate">struct</span> には変数 &quot;name&quot;, &quot;location&quot;, &quot;hp&quot;, &quot;mana&quot;
+    が入力され、関数内で対応する引数に使用される値が設定されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Common_Actions_Library.htm">共通アクション</a></div>
-        <div style="float:right">次へ<a href="Function_Call.htm">関数呼び出し</a></div>
+        <div style="float:left">前のページ：<a href="Common_Actions_Library.htm">共通アクション</a></div>
+        <div style="float:right">次のページ：<a href="Function_Call.htm">関数呼び出し</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Execute Script
@@ -63,4 +78,5 @@ Action - Execute Script
 action_execute_script
 -->
 </body>
+
 </html>

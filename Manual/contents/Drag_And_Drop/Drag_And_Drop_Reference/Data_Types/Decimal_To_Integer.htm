@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>10進数から整数へ</title>
@@ -12,6 +13,7 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Decimal To Integer" />
   <meta name="search-keywords" content="Decimal To Integer" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 10進数から整数へ</h1>
@@ -21,7 +23,8 @@
       例えば、2.5は2に、3.5は4に丸められます。この種の丸めは<i>バンカーズ丸めと</i>呼ばれ、多数の反復計算や浮動小数点演算を使用する場合、統計的に最も近い値を与えます。
       従来の「0.5を超えたら切り上げ、それ以外は切り捨て」よりも良い丸め方ができます。</li>
     <li><b>Ceil</b>: 10進数の値を、最も近い整数に<i>切り上げます</i>。round（上記）とは異なり、これは値の小数部分を考慮しないので、5.0000001のような数値はやはり6に切り上げられます。これは
-      Random アクションの<a href="../Random/Get_Random_Number.htm">Get Random Number</a>を使ってランダムな小数の値を生成し、それを丸めるためにこのアクションを呼び出した場合、予期しない結果が得られる<i>可能性が</i>あることに注意してください。ランダム
+      Random アクションの<a href="../Random/Get_Random_Number.htm">Get Random
+        Number</a>を使ってランダムな小数の値を生成し、それを丸めるためにこのアクションを呼び出した場合、予期しない結果が得られる<i>可能性が</i>あることに注意してください。ランダム
       アクションは0を返す可能性があり、それに対して「Ceil」を使用すると1ではなく0を返すので、0から9までのランダムな小数を取得してこの関数を使用すると、1から10までの整数を取得できると期待するかもしれませんが、実際には、1から10までの整数を取得できる可能性があります。
       0から10まで。この可能性は低いですが、このアクションを使用する際には考慮する必要があります。</li>
     <li><b>階</b>です。10進数の値を、最も近い整数値に<i>切り捨てます</i>。round（上記）とは異なり、これは値の小数部分を考慮しないので、5.9999999のような数値は、やはり床に落とされます。
@@ -30,13 +33,15 @@
   <p>丸めの種類を選択したら、丸める数値を与え（これは変数でもよい）、新しい整数値を返すターゲット変数を与えなければなりません（これは一時的なローカル変数としてフラグを立てることができます）。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /></p>
+  <p><img alt="Decimal To Integer Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Rounding</span></td>
@@ -62,11 +67,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Data_Type_Actions.htm">データ型アクション</a></div>
-        <div style="float:right">次へ<a href="String_To_Number.htm">文字列から数値へ</a></div>
+        <div style="float:left">前のページ：<a href="Data_Type_Actions.htm">データ型アクション</a></div>
+        <div style="float:right">次のページ：<a href="String_To_Number.htm">文字列から数値へ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Decimal To Integer
@@ -75,4 +81,5 @@ Action - Decimal To Integer
 action_decimal_to_integer
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_poke</title>
@@ -9,22 +10,28 @@
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_poke" />
-  <meta name="rh-index-keywords" content="buffer_poke,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
+  <meta name="rh-index-keywords"
+    content="buffer_poke,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
   <meta name="search-keywords" content="buffer_poke" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_poke</span></h1>
-  <p>を使えば <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>関数を使うと、与えられた<span class="notranslate">buffer</span> の現在のシーク位置にデータを書き込むことができ、データを書き込んだり読み込んだりするたびに、この位置がバイト単位で進んでいきます。しかし、現在のシーク位置を変更せずに、あるデータを変更する必要がある場合があります。この関数には、<span class="notranslate">buffer</span> インデックスと、その<span class="notranslate">buffer</span> 内の<span class="notranslate">buffer</span> 開始位置からのオフセット位置（バイト単位）、およびデータ型と書き込む値を指定するだけです。</p>
+  <p>を使えば <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>関数を使うと、与えられた<span
+      class="notranslate">buffer</span>
+    の現在のシーク位置にデータを書き込むことができ、データを書き込んだり読み込んだりするたびに、この位置がバイト単位で進んでいきます。しかし、現在のシーク位置を変更せずに、あるデータを変更する必要がある場合があります。この関数には、<span
+      class="notranslate">buffer</span> インデックスと、その<span class="notranslate">buffer</span> 内の<span
+      class="notranslate">buffer</span> 開始位置からのオフセット位置（バイト単位）、およびデータ型と書き込む値を指定するだけです。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">buffer_poke</span>(buffer, offset, type, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td>
@@ -34,12 +41,14 @@
       <tr>
         <td><span class="notranslate">offset</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The offset position (in bytes) within the buffer to write the given data to.</span></td>
+        <td><span class="notranslate">The offset position (in bytes) within the buffer to write the given data
+            to.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">type</span></td>
         <td><span data-keyref="Type_Constant_Buffer_Data_Type">バッファデータ型定数</span></td>
-        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</span></td>
+        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a
+              href="buffer_write.htm">here</a>).</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">value</span></td>
@@ -49,23 +58,25 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">buffer_poke(buff, 3, buffer_u8, colour_get_blue(image_blend));</p>
-  <p>上記のコードは、画像ブレンドに使用した色の青成分の値を、変数 &quot;buff &quot;でインデックスされた<span class="notranslate">buffer</span> 、<span class="notranslate">buffer</span> の3番目の位置、符号なし8ビット値として追加します。</p>
+  <p>上記のコードは、画像ブレンドに使用した色の青成分の値を、変数 &quot;buff &quot;でインデックスされた<span class="notranslate">buffer</span> 、<span
+      class="notranslate">buffer</span> の3番目の位置、符号なし8ビット値として追加します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_save.htm"><span class="notranslate">buffer_save</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_save.htm"><span class="notranslate">buffer_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_poke
@@ -74,4 +85,5 @@ buffer_poke
 buffer_poke
 -->
 </body>
+
 </html>

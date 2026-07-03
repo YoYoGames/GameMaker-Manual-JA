@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>インスタンスが存在する場合</title>
@@ -12,24 +13,37 @@
   <meta name="rh-index-keywords" content="GML Visual Action - If Instance Exists" />
   <meta name="search-keywords" content="If Instance Exists" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> インスタンスが存在する場合</h1>
-  <p>このアクションは、特定の<span class="notranslate">object</span> のインスタンスがゲーム内に存在するかどうか<span class="notranslate">room</span> 、または特定のインスタンス自体が存在するかどうかを確認するために使用することができます。<span class="notranslate">object</span> エクスプローラーから<span class="notranslate">asset</span> を渡し、<span class="notranslate">room</span> にインスタンスが存在すれば、このアクションは <span class="inline">true</span> を返し、そうでなければ <span class="inline">false</span> を返します。ここで、特定のインスタンスのユニークな ID (たとえば、<a href="Create_Object_Instance.htm">Create<span class="notranslate">Object</span> Instance</a> というアクションで返されるもの) を変数として使うこともできますし、インスタンス ID を使うこともできます。
+  <p>このアクションは、特定の<span class="notranslate">object</span> のインスタンスがゲーム内に存在するかどうか<span class="notranslate">room</span>
+    、または特定のインスタンス自体が存在するかどうかを確認するために使用することができます。<span class="notranslate">object</span> エクスプローラーから<span
+      class="notranslate">asset</span> を渡し、<span class="notranslate">room</span> にインスタンスが存在すれば、このアクションは <span
+      class="inline">true</span> を返し、そうでなければ <span class="inline">false</span> を返します。ここで、特定のインスタンスのユニークな ID (たとえば、<a
+      href="Create_Object_Instance.htm">Create<span class="notranslate">Object</span> Instance</a> というアクションで返されるもの)
+    を変数として使うこともできますし、インスタンス ID を使うこともできます。
     の値は、インスタンスを追加したときに<span class="notranslate">room</span> エディタから返されたものです。</p>
-  <p>引数 &quot;Not &quot;を<span class="notranslate">flag</span> にすると、アクションはインスタンスが存在<i>しないか</i>どうかをチェックし、1つも存在しない場合は <span class="inline">true</span> を、1つでも存在する場合は <span class="inline">false</span> を返します。</p>
+  <p>引数 &quot;Not &quot;を<span class="notranslate">flag</span> にすると、アクションはインスタンスが存在<i>しないか</i>どうかをチェックし、1つも存在しない場合は
+    <span class="inline">true</span> を、1つでも存在する場合は <span class="inline">false</span> を返します。
+  </p>
   <p>なお、「if」ブロックにアクションを追加するには、下の画像のように、アクションの横にドロップする必要があります。</p>
-  <p><img alt="If Instance Exists Icon" class="icon" height="31" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png" width="31" /></p>
-  <p>これらのアクションは、&quot;if &quot;の評価値が <span class="inline">true</span> である場合に実行され、他の場所にドロップされたアクションは、&quot;if &quot;ブロックの後に実行されます。</p>
+  <p><img alt="If Instance Exists Icon" class="icon" height="31"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png"
+      width="31" /></p>
+  <p>これらのアクションは、&quot;if &quot;の評価値が <span class="inline">true</span> である場合に実行され、他の場所にドロップされたアクションは、&quot;if
+    &quot;ブロックの後に実行されます。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Instance Exists drop example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists_Drop.png" /></p>
+  <p><img alt="Instance Exists drop example" class="center"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists_Drop.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Object</span></td>
@@ -40,7 +54,8 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックコードは、衝突をチェックし、インスタンスのユニークなID値
-    と衝突している。この値は一時変数に格納され、その値が現在<span class="notranslate">room</span> 内にあるインスタンスに対応するかどうかチェックされます（衝突が見つからなかった場合、この変数にはキーワード &quot;<span class="inline">noone</span>&quot; が保持されます）。
+    と衝突している。この値は一時変数に格納され、その値が現在<span class="notranslate">room</span>
+    内にあるインスタンスに対応するかどうかチェックされます（衝突が見つからなかった場合、この変数にはキーワード &quot;<span class="inline">noone</span>&quot; が保持されます）。
     という変数が設定され、それが衝突している場合は、衝突しているインスタンスに変数が設定される。</p>
   <p> </p>
   <p> </p>
@@ -48,11 +63,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
-        <div style="float:right">次へ<a href="Call_Parent_Event.htm">親イベントを呼び出す</a></div>
+        <div style="float:left">前のページ：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
+        <div style="float:right">次のページ：<a href="Call_Parent_Event.htm">親イベントを呼び出す</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Instance Exists
@@ -61,4 +77,5 @@ Action - If Instance Exists
 action_if_instance_exists
 -->
 </body>
+
 </html>

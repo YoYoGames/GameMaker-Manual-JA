@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>tileset_get_texture</title>
@@ -13,31 +14,40 @@
   <meta name="search-keywords" content="tileset_get_texture" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">tileset_get_texture</span></h1>
-  <p>この関数は<span class="notranslate">tile set</span> <span class="notranslate">texture</span> ページへの特別な<i>ポインタを</i>返します。この値は、他の描画関数、特に<a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">2D プリミティブ</a>関数、および<a href="../Shaders/Shaders.htm">シェーダ</a>関数で使用することができます。返された<span class="notranslate">texture</span> ページに関する詳細な情報は、<a href="../../Drawing/Textures/Textures.htm">ここに</a>あるさまざまな <span class="inline">texture_</span> 関数を使用して得ることができます。</p>
+  <p>この関数は<span class="notranslate">tile set</span> <span class="notranslate">texture</span>
+    ページへの特別な<i>ポインタを</i>返します。この値は、他の描画関数、特に<a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">2D
+      プリミティブ</a>関数、および<a href="../Shaders/Shaders.htm">シェーダ</a>関数で使用することができます。返された<span
+      class="notranslate">texture</span> ページに関する詳細な情報は、<a href="../../Drawing/Textures/Textures.htm">ここに</a>あるさまざまな
+    <span class="inline">texture_</span> 関数を使用して得ることができます。
+  </p>
   <div data-conref="../../../../assets/snippets/Texture_Data_Is_Struct_On_HTML5.hts"> </div>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">tileset_get_texture</span>(tileset);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">tileset</span></td>
-        <td><span data-keyref="Type_Asset_Tile_Set"><a href="../../../../../The_Asset_Editors/Tile_Sets.htm" target="_blank">タイルセットアセット</a></span></td>
+        <td><span data-keyref="Type_Asset_Tile_Set"><a href="../../../../../The_Asset_Editors/Tile_Sets.htm"
+              target="_blank">タイルセットアセット</a></span></td>
         <td><span class="notranslate">The index of the tile set to use.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h4>リターンズ</h4>
-  <p class="code"><span data-keyref="Type_Pointer_Texture"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm" target="_blank">Texture</a></span></p>
+  <p class="code"><span data-keyref="Type_Pointer_Texture"><a
+        href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"
+        target="_blank">Texture</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var tex;<br />
@@ -48,18 +58,21 @@
     draw_vertex_texture(480, 640, 1, 1);<br />
     draw_vertex_texture(0, 640, 0, 1);<br />
     draw_primitive_end();</p>
-  <p>上記のコードは、変数 &quot;tex&quot; に保持された<span class="notranslate">vertex</span> でテクスチャされた 4<span class="notranslate">texture</span> の三角形の帯を描画します。</p>
+  <p>上記のコードは、変数 &quot;tex&quot; に保持された<span class="notranslate">vertex</span> でテクスチャされた 4<span
+      class="notranslate">texture</span> の三角形の帯を描画します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Sets.htm">タイルセット</a></div>
-        <div style="float:right">次のページ <a href="tileset_get_uvs.htm"><span class="notranslate">tileset_get_uvs</span></a></div>
+        <div style="float:left">前のページ：<a href="Tile_Sets.htm">タイルセット</a></div>
+        <div style="float:right">次のページ：<a href="tileset_get_uvs.htm"><span
+              class="notranslate">tileset_get_uvs</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tileset_get_texture
@@ -68,4 +81,5 @@ tileset_get_texture
 tileset_get_texture
 -->
 </body>
+
 </html>

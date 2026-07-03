@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -15,21 +16,27 @@
   <meta name="rh-index-keywords" content="rollback_leave_game" />
   <meta name="search-keywords" content="rollback_leave_game" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_leave_game</span></h1>
   <p>この関数は、現在のマルチプレイヤーセッションを終了し、プレーヤーが再び新しいゲームに参加または作成することを可能にします。</p>
-  <p><span class="notranslate">room</span> のホストが退出すると、その<span class="notranslate">room</span> の所有権は他のプレイヤーに移るので、ゲームを続行することができる。すべてのプレーヤーが退出したときのみ、ゲームは終了する。</p>
+  <p><span class="notranslate">room</span> のホストが退出すると、その<span class="notranslate">room</span>
+    の所有権は他のプレイヤーに移るので、ゲームを続行することができる。すべてのプレーヤーが退出したときのみ、ゲームは終了する。</p>
   <h3>エラーを回避する</h3>
-  <p>プレイヤーがマルチプレイヤーセッションを離れた後も、<span class="notranslate">GameMaker</span> はすべてのゲームコードを実行し続けますが、マネージドインスタンスを作成または変更できない「開始前」の状態に戻ります。</p>
-  <p>つまり、ゲーム終了時に手動でプレイヤーインスタンスを破棄し、他のゲームロジックは条件内で<a data-xref="{title}" href="../Rollback_Variables/rollback_game_running.htm">rollback_game_runningを</a>使用して一時停止する必要があり、エラーを回避するために必要です。</p>
+  <p>プレイヤーがマルチプレイヤーセッションを離れた後も、<span class="notranslate">GameMaker</span>
+    はすべてのゲームコードを実行し続けますが、マネージドインスタンスを作成または変更できない「開始前」の状態に戻ります。</p>
+  <p>つまり、ゲーム終了時に手動でプレイヤーインスタンスを破棄し、他のゲームロジックは条件内で<a data-xref="{title}"
+      href="../Rollback_Variables/rollback_game_running.htm">rollback_game_runningを</a>使用して一時停止する必要があり、エラーを回避するために必要です。
+  </p>
   <p>ご覧ください。<a data-xref="{text}" href="../Rollback_Constraints.htm#h1">ロールバック開始前の状態</a></p>
   <h3>トリガーされたイベント</h3>
-  <p>自分が参加しているゲームからプレイヤーが抜けると、<strong>ロールバックイベントが</strong>発生します。詳しくは、「<a data-xref="{title}" href="../Rollback_Events.htm">ロールバックイベント</a>」を参照してください。</p>
+  <p>自分が参加しているゲームからプレイヤーが抜けると、<strong>ロールバックイベントが</strong>発生します。詳しくは、「<a data-xref="{title}"
+      href="../Rollback_Events.htm">ロールバックイベント</a>」を参照してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_leave_game</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -47,7 +54,8 @@
         <div>次ページ：<a data-xref="{title}" href="rollback_define_input.htm">Rollback_Define_Input</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_leave_game
@@ -56,4 +64,5 @@ rollback_leave_game
 rollback_leave_game
 -->
 </body>
+
 </html>

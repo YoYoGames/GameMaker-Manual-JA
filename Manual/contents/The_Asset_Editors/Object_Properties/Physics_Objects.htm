@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>物理オブジェクト</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing object physics" />
   <meta name="rh-index-keywords" content="Objects - Physics" />
-  <meta name="search-keywords" content="Object Physics,Physics,fixtures,binding,physics shape editor,shape editor,physics properties" />
+  <meta name="search-keywords"
+    content="Object Physics,Physics,fixtures,binding,physics shape editor,shape editor,physics properties" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <script src="../../assets/scripts/main_script.js" type="module"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>物理オブジェクト</h1>
-  <p><span class="notranslate">object</span> リソースを新規に作成する際、<strong>Uses Physics</strong> と書かれたチェックボックスがありますが、デフォルトではチェックされて<em>いません </em>。このオプションを選択すると、<span class="notranslate">object</span> のインスタンスが配置されたときの動作が根本的に変わります。
-   <span class="notranslate">room</span> これは、オブジェクトの物理的なプロパティをオンにし、その「従来の」移動と衝突の機能が無効になることを意味します（ただし、配置される<span class="notranslate">room</span> が物理<span class="notranslate">room</span> であるとしてマークされている場合のみ）。参照
-   <a href="../Room_Properties/Room_Properties.htm">ルームエディタのプロパティの</a>セクションを参照してください)。これをチェックすると、<span class="notranslate">object</span> リソースウィンドウが物理エディタ用の新しい連鎖したウィンドウを開くようになります。</p>
+  <p><span class="notranslate">object</span> リソースを新規に作成する際、<strong>Uses Physics</strong>
+    と書かれたチェックボックスがありますが、デフォルトではチェックされて<em>いません </em>。このオプションを選択すると、<span class="notranslate">object</span>
+    のインスタンスが配置されたときの動作が根本的に変わります。
+    <span class="notranslate">room</span> これは、オブジェクトの物理的なプロパティをオンにし、その「従来の」移動と衝突の機能が無効になることを意味します（ただし、配置される<span
+      class="notranslate">room</span> が物理<span class="notranslate">room</span> であるとしてマークされている場合のみ）。参照
+    <a href="../Room_Properties/Room_Properties.htm">ルームエディタのプロパティの</a>セクションを参照してください)。これをチェックすると、<span
+      class="notranslate">object</span> リソースウィンドウが物理エディタ用の新しい連鎖したウィンドウを開くようになります。
+  </p>
   <p><img>物理ビヘイビア用の値を編集し始める前に、まず<strong>コリジョンシェイプを</strong>設定することをお勧めします。
-    通常の」コリジョンシステムでは、コリジョンは<span class="notranslate">sprite</span> に割り当てられた<span class="notranslate">object</span> のマスクに基づいていますが、物理を有効にすると、<strong>これはもはや当てはまらなく</strong>なります。私たちは、<strong>衝突の形状を</strong>自分自身で<span class="notranslate">object</span> に割り当てる必要があります（これは正しくは<strong>フィクスチャと</strong>呼ばれ、詳しくは<a href="../../GameMaker_Language/GML_Reference/Physics/Physics.htm">物理関数を</a>参照してください）。
+    通常の」コリジョンシステムでは、コリジョンは<span class="notranslate">sprite</span> に割り当てられた<span class="notranslate">object</span>
+    のマスクに基づいていますが、物理を有効にすると、<strong>これはもはや当てはまらなく</strong>なります。私たちは、<strong>衝突の形状を</strong>自分自身で<span
+      class="notranslate">object</span> に割り当てる必要があります（これは正しくは<strong>フィクスチャと</strong>呼ばれ、詳しくは<a
+      href="../../GameMaker_Language/GML_Reference/Physics/Physics.htm">物理関数を</a>参照してください）。
     の形状を自分で定義します。<strong>Modify Collision Shape</strong>ボタンをクリックすると、以下のような連鎖したウィンドウが表示され、形状を編集することができます。</p>
-  <p><img><a href="../Paths.htm">パスエディターと</a>同じような外観で、機能もほぼ同じです。ただし
+  <p><img><a href="../Paths.htm">パスエディタと</a>同じような外観で、機能もほぼ同じです。ただし
     は、選択したマスクによって、より制限されることがあります。</p>
   <ul class="colour">
     <li><strong>円形の </strong>マスクがある場合、<span class="notranslate">path</span> ポイントのいずれかを引っ張って、円の直径を大きくしたり小さくしたりするだけです</li>
@@ -33,7 +45,8 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">密度</a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">密度とは、単位体積あたりの質量のことで、基本的には、世界の中で占める空間にどれだけの質量が詰め込まれているかを意味します。つまり、風船は小さな質量で大きな空間を占めているので密度が低く、一方
-      鉛の棒は、質量が大きいのに空間が狭いので、密度が高くなります。<span data-keyref="GameMaker Name">GameMakerの</span>2D物理の世界では、密度を入力すると、その値から自動的に質量が計算され、さらに、表面積から質量が計算されます。
+      鉛の棒は、質量が大きいのに空間が狭いので、密度が高くなります。<span
+        data-keyref="GameMaker Name">GameMakerの</span>2D物理の世界では、密度を入力すると、その値から自動的に質量が計算され、さらに、表面積から質量が計算されます。
       形状を定義します。これは固定具がどれだけの慣性を持つかと同様に、衝突と力に対してどのように反応するかに直接影響を与えます。
       しかし、密度の低い大きな形状を定義すると、質量はかなり小さくなります（風船のようなもの）。</p>
     <p class="dropspot">密度を0に設定すると、本質的に無限に密度が高く、外力や衝突の影響を受けない「静的」なフィクスチャが作成されることに注意してください。
@@ -42,55 +55,80 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">返還について</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">物理学では、「弾性変形後に<span class="notranslate">object</span> やシステムが元の状態に戻ること」と定義されていますが、<span data-keyref="GameMaker Name">GameMakerの</span>什器は本当に剛体で変形できないので、復元は本当に「弾性変形後に元の状態に戻ること」なのです。
-      は、フィクスチャがどれだけ「弾む」かを示す方法です。この設定は、<span class="notranslate">object</span> が他の<span class="notranslate">objects</span> と衝突したときにどれくらい「跳ねる」かに影響し、重力や摩擦など、インスタンスに作用する他の力にも依存します。</p>
+    <p class="dropspot">物理学では、「弾性変形後に<span class="notranslate">object</span> やシステムが元の状態に戻ること」と定義されていますが、<span
+        data-keyref="GameMaker Name">GameMakerの</span>什器は本当に剛体で変形できないので、復元は本当に「弾性変形後に元の状態に戻ること」なのです。
+      は、フィクスチャがどれだけ「弾む」かを示す方法です。この設定は、<span class="notranslate">object</span> が他の<span
+        class="notranslate">objects</span> と衝突したときにどれくらい「跳ねる」かに影響し、重力や摩擦など、インスタンスに作用する他の力にも依存します。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">コリジョングループ</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><span class="notranslate">objects</span> デフォルトでは、すべての物理学の衝突グループは0です。これは、通常通り相互作用することを意味します。つまり、<strong>相互作用するには衝突イベントが必要</strong>です（衝突を引き起こすには、単純なコメントが必要です）。
-      は衝突を登録しない。しかし、<span class="notranslate">object</span> が特定の、番号のついた、<strong>衝突</strong>グループに属するように指定することもできます。<span class="notranslate">objects</span> を<em>正の </em>衝突グループに割り当てることで、（たとえば、3つの<span class="notranslate">objects</span> がすべてグループ
-      &quot;<strong>2</strong>&quot;) は、これらの<span class="notranslate">objects</span> のインスタンスが、たとえ衝突イベントに何もなくても、あなたが割り当てた物理特性に従って<em>常に </em>衝突するように<span data-keyref="GameMaker Name">GameMaker に</span>伝えています。
-      <span class="notranslate">room</span> の中にあります。逆に、<span class="notranslate">objects</span> に<em>負の </em>衝突グループ（つまり、4つの<span class="notranslate">objects</span> に &quot;<strong>-1</strong>&quot; を割り当てた場合、これらは<em>決して </em>衝突してはいけないと<span data-keyref="GameMaker Name">GameMaker</span>に伝えていることになり、いかなる衝突も起こらないことになります。
-      のイベントは無視されます。</p>
-    <p class="note"><strong>注</strong>：コリジョン グループを使用すると、物理システムが必要とする処理が劇的に増加するため、絶対に必要な場合にのみ使用し、グループの数はできるだけ少なくすべきです。</p>
+    <p class="dropspot"><span class="notranslate">objects</span>
+      デフォルトでは、すべての物理学の衝突グループは0です。これは、通常通り相互作用することを意味します。つまり、<strong>相互作用するには衝突イベントが必要</strong>です（衝突を引き起こすには、単純なコメントが必要です）。
+      は衝突を登録しない。しかし、<span class="notranslate">object</span> が特定の、番号のついた、<strong>衝突</strong>グループに属するように指定することもできます。<span
+        class="notranslate">objects</span> を<em>正の </em>衝突グループに割り当てることで、（たとえば、3つの<span
+        class="notranslate">objects</span> がすべてグループ
+      &quot;<strong>2</strong>&quot;) は、これらの<span class="notranslate">objects</span>
+      のインスタンスが、たとえ衝突イベントに何もなくても、あなたが割り当てた物理特性に従って<em>常に </em>衝突するように<span data-keyref="GameMaker Name">GameMaker
+        に</span>伝えています。
+      <span class="notranslate">room</span> の中にあります。逆に、<span class="notranslate">objects</span> に<em>負の
+      </em>衝突グループ（つまり、4つの<span class="notranslate">objects</span> に &quot;<strong>-1</strong>&quot; を割り当てた場合、これらは<em>決して
+      </em>衝突してはいけないと<span data-keyref="GameMaker Name">GameMaker</span>に伝えていることになり、いかなる衝突も起こらないことになります。
+      のイベントは無視されます。
+    </p>
+    <p class="note"><strong>注</strong>：コリジョン グループを使用すると、物理システムが必要とする処理が劇的に増加するため、絶対に必要な場合にのみ使用し、グループの数はできるだけ少なくすべきです。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">リニアダンピング</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">ダンピングは、インスタンスが<span class="notranslate">room</span> を移動するときに、物理世界の速度を下げるために使われます。原理的には、これは「現実」の世界の表面に対する摩擦のようなものですが、<span data-keyref="GameMaker Name">GameMaker の</span>物理システムでは、実際には摩擦は、「現実」の世界の表面に対する摩擦のようなものです。
+    <p class="dropspot">ダンピングは、インスタンスが<span class="notranslate">room</span>
+      を移動するときに、物理世界の速度を下げるために使われます。原理的には、これは「現実」の世界の表面に対する摩擦のようなものですが、<span data-keyref="GameMaker Name">GameMaker
+        の</span>物理システムでは、実際には摩擦は、「現実」の世界の表面に対する摩擦のようなものです。
       は、コリジョンシェイプ（フィクスチャ）を持つ2つのインスタンスが接触しているときのみ適用されます。つまり、リニアダンピングは「空気摩擦」のようなもので、動いている物理インスタンスを徐々に減速させるものだと考えることができます。
       他の物理インスタンス</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">角型ダンピング</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">現実世界」の回転体（<span class="notranslate">object</span> ）について考えてみると、モーターがあるか宇宙空間でない限り、外力（機械摩擦、空気や水との摩擦など）の影響で、時間とともに回転が遅くなる。
+    <p class="dropspot">現実世界」の回転体（<span class="notranslate">object</span>
+      ）について考えてみると、モーターがあるか宇宙空間でない限り、外力（機械摩擦、空気や水との摩擦など）の影響で、時間とともに回転が遅くなる。
       を囲んでいる)。この効果をシミュレートし、物理世界のインスタンスの回転速度を減少させるために、角度ダンピングオプションを使用することができます。これがなければ、回転するインスタンスは無限に回転し続けることになるからです。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">摩擦</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">摩擦とは、物質が互いに滑りあう相対運動に抵抗する力のことで、<span data-keyref="GameMaker Name">GameMakerの</span>物理の世界では、2つのインスタンスが物理冶具で衝突することで失われる運動量と訳されている。
+    <p class="dropspot">摩擦とは、物質が互いに滑りあう相対運動に抵抗する力のことで、<span
+        data-keyref="GameMaker Name">GameMakerの</span>物理の世界では、2つのインスタンスが物理冶具で衝突することで失われる運動量と訳されている。
       つまり、2つのインスタンスが衝突したとき、その動きはこの値の影響を受け、摩擦が高いほど低い値よりも大きな運動量の損失が生じます。</p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
-  <p>最後に、フィクスチャのオン/オフとしてフラグを立てることができる3つの追加オプション、<strong>Sensor</strong>、<strong>Start Awake</strong>、<strong>Kinematicが</strong>あります。これらの<span class="notranslate">flags</span> はそれぞれ、フィクスチャーの挙動を以下のように変更します。
+  <p>最後に、フィクスチャのオン/オフとしてフラグを立てることができる3つの追加オプション、<strong>Sensor</strong>、<strong>Start
+      Awake</strong>、<strong>Kinematicが</strong>あります。これらの<span class="notranslate">flags</span>
+    はそれぞれ、フィクスチャーの挙動を以下のように変更します。
     の方法があります。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">センサー</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">このボックスをチェックすると、<span data-keyref="GameMaker Name">GameMaker</span>に<span class="notranslate">object</span> の物理的なプロパティを基本的に「無視」して、周囲の<span class="notranslate">objects</span> との衝突イベントを返すように指示することになります。このようにして、物理的な存在感のないインスタンスを持つことができます。
-     <span class="notranslate">room</span> が、プレイヤーなどの他のインスタンスの衝突に反応し、ドアを開けたり、<span class="notranslate">room</span> の別の場所で何らかのアクションを起こしたりすることができます。</p>
-    <p class="note"><strong>注意</strong>：センサーフィクスチャは、<strong>最初に</strong>衝突が起こった<strong>ときだけ</strong>衝突イベントを発生させます。つまり、2つのボディが重なり続けても、衝突イベントのストリームを得ることはありません（これは伝統的なものです
-      が発生します）。重なりが止まり、その後に重なると、また衝突イベントが発生します。</p>
+    <p class="dropspot">このボックスをチェックすると、<span data-keyref="GameMaker Name">GameMaker</span>に<span
+        class="notranslate">object</span> の物理的なプロパティを基本的に「無視」して、周囲の<span class="notranslate">objects</span>
+      との衝突イベントを返すように指示することになります。このようにして、物理的な存在感のないインスタンスを持つことができます。
+      <span class="notranslate">room</span> が、プレイヤーなどの他のインスタンスの衝突に反応し、ドアを開けたり、<span class="notranslate">room</span>
+      の別の場所で何らかのアクションを起こしたりすることができます。
+    </p>
+    <p class="note">
+      <strong>注意</strong>：センサーフィクスチャは、<strong>最初に</strong>衝突が起こった<strong>ときだけ</strong>衝突イベントを発生させます。つまり、2つのボディが重なり続けても、衝突イベントのストリームを得ることはありません（これは伝統的なものです
+      が発生します）。重なりが止まり、その後に重なると、また衝突イベントが発生します。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">スタートアウェイク</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">これはデフォルトでチェックされており、<span class="notranslate">room</span> に配置されたフィクスチャーの開始時の &quot;state&quot;（状態）を表わします。通常、最初から起きている状態（つまり、物理の世界に参加している状態）にしたいのですが、時々、これは
-      は、物理シミュレーションの突然の開始により、ある種の不安定性や望ましくない効果をもたらす可能性があります。これらの効果を避けるために、この<span class="notranslate">flag</span> のチェックを外すと、インスタンスはフィクスチャがスリープした状態で作成され、それは
+    <p class="dropspot">これはデフォルトでチェックされており、<span class="notranslate">room</span> に配置されたフィクスチャーの開始時の
+      &quot;state&quot;（状態）を表わします。通常、最初から起きている状態（つまり、物理の世界に参加している状態）にしたいのですが、時々、これは
+      は、物理シミュレーションの突然の開始により、ある種の不安定性や望ましくない効果をもたらす可能性があります。これらの効果を避けるために、この<span class="notranslate">flag</span>
+      のチェックを外すと、インスタンスはフィクスチャがスリープした状態で作成され、それは
       物理シミュレーションを行うことができます。</p>
     <p class="dropspot">物理インスタンスは、もはやいかなる動きもなく、他の物理インスタンスとの相互作用もないとき、「スリープ」フラグが立てられることに注意してください。
       物理シミュレーションによって処理されます（<a class="glossterm" data-glossterm="CPUオーバーヘッド" href="#">CPUのオーバーヘッドを</a>節約できます）。</p>
@@ -98,10 +136,18 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">キネマティック</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">物理ベースのゲームでは、動き回りたいけれども、重力のような力や、動的な<span class="notranslate">objects</span> との衝突によって発生する力を受けたくない場合があります（例えば、プラットフォームゲームでの移動プラットフォームを考えてみてください）。
-      など）。そのような<span class="notranslate">objects</span> に対して、単に固定具の密度を0に設定することは、物理が<span class="notranslate">object</span> は<strong>静的で </strong>あることが意図されていると仮定し、何に対してもまったく反応しないことを意味します。しかし、このボックスをチェックすると
-      静的な<span class="notranslate">object</span> を<strong>キネマティックに </strong>し、衝突や重力などの力の影響を受けなくなりますが、適切な変数を使って移動したり回転させたりできるようになります ( <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_x.htm"><span class="inline">phy_position_x</span></a>と
-      <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_y.htm"><span class="inline">phy_position_y</span></a>など）。</p>
+    <p class="dropspot">物理ベースのゲームでは、動き回りたいけれども、重力のような力や、動的な<span class="notranslate">objects</span>
+      との衝突によって発生する力を受けたくない場合があります（例えば、プラットフォームゲームでの移動プラットフォームを考えてみてください）。
+      など）。そのような<span class="notranslate">objects</span> に対して、単に固定具の密度を0に設定することは、物理が<span
+        class="notranslate">object</span> は<strong>静的で
+      </strong>あることが意図されていると仮定し、何に対してもまったく反応しないことを意味します。しかし、このボックスをチェックすると
+      静的な<span class="notranslate">object</span> を<strong>キネマティックに
+      </strong>し、衝突や重力などの力の影響を受けなくなりますが、適切な変数を使って移動したり回転させたりできるようになります ( <a
+        href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_x.htm"><span
+          class="inline">phy_position_x</span></a>と
+      <a href="../../GameMaker_Language/GML_Reference/Physics/Physics_Variables/phy_position_y.htm"><span
+          class="inline">phy_position_y</span></a>など）。
+    </p>
     <p> </p>
   </div>
   <p> </p>
@@ -110,11 +156,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Objects.htm"> <span class="notranslate">Object</span> 編集部</a></div>
-        <div style="float:right">次へ<a href="Object_Variables.htm">オブジェクト変数</a></div>
+        <div style="float:left">前のページ：<a href="../Objects.htm"> <span class="notranslate">Object</span> エディタ</a></div>
+        <div style="float:right">次のページ：<a href="Object_Variables.htm">オブジェクト変数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Physics Objects
@@ -123,4 +170,6 @@ Physics Objects
 objects_physics
 -->
 
-</body></html>
+</body>
+
+</html>

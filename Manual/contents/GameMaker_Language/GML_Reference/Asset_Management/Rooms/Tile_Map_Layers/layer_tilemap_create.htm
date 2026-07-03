@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_tilemap_create</title>
@@ -13,24 +14,35 @@
   <meta name="search-keywords" content="layer_tilemap_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_tilemap_create</span></h1>
-  <p>この関数を使うと、プロジェクトで<span class="notranslate">tile</span> マップとして使用するレイヤにタイルセットリソースを割り当てることができます。レイヤー ID (これは <a href="../General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> として - これはパフォーマンスに影響します)、そして<span class="notranslate">tile</span> マップを<span class="notranslate">room</span> に追加する初期 (x, y) 位置、使用する<span class="notranslate">tile set</span> リソース、そして<span class="notranslate">tile</span> マップの幅と高さを<i>セルで</i>指定します (たとえば、幅 20、高さ 10 とすると、幅 20 セル、高さ 10 セルの 200 セルの<span class="notranslate">tile</span> マップを作成します)、セルのサイズ自体は<span class="notranslate">tile set</span> で定義されているものを使用します。<span class="notranslate">tiles</span> マップ内の負の位置に<span class="notranslate">tile</span> を配置することはできないので、すべての<span class="notranslate">tiles</span> はセルスペース 0 から幅 - 1、0 から高さ - 1 の範囲に配置しなければならないことに注意してください。</p>
+  <p>この関数を使うと、プロジェクトで<span class="notranslate">tile</span> マップとして使用するレイヤにタイルセットリソースを割り当てることができます。レイヤー ID (これは <a
+      href="../General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span
+      class="notranslate">string</span> として - これはパフォーマンスに影響します)、そして<span class="notranslate">tile</span> マップを<span
+      class="notranslate">room</span> に追加する初期 (x, y) 位置、使用する<span class="notranslate">tile set</span> リソース、そして<span
+      class="notranslate">tile</span> マップの幅と高さを<i>セルで</i>指定します (たとえば、幅 20、高さ 10 とすると、幅 20 セル、高さ 10 セルの 200 セルの<span
+      class="notranslate">tile</span> マップを作成します)、セルのサイズ自体は<span class="notranslate">tile set</span>
+    で定義されているものを使用します。<span class="notranslate">tiles</span> マップ内の負の位置に<span class="notranslate">tile</span>
+    を配置することはできないので、すべての<span class="notranslate">tiles</span> はセルスペース 0 から幅 - 1、0 から高さ - 1 の範囲に配置しなければならないことに注意してください。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_tilemap_create</span>(layer_id, x, y, tileset, width, height)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">layer_tilemap_create</span>(layer_id, x, y, tileset,
+    width, height)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer_id</span></td>
         <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
-        <td><span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span>
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">x</span></td>
@@ -60,29 +72,35 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Element_Tilemap">Tile Map Element ID</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">global.back_layer = layer_create(10000);<br />
     global.back_tiles = layer_tilemap_create(global.back_layer, 0, 0, tmap_Trees, 16, 32);</p>
-  <p>上記のコードでは、新しいレイヤーを作成し、そこに新しい<span class="notranslate">tile</span> マップ要素を追加します。<span class="notranslate">tile</span> マップの位置を (0,0) に設定するとともに、使用する<span class="notranslate">tile set</span> と<span class="notranslate">tile</span> マップの幅と高さを設定します。</p>
+  <p>上記のコードでは、新しいレイヤーを作成し、そこに新しい<span class="notranslate">tile</span> マップ要素を追加します。<span class="notranslate">tile</span>
+    マップの位置を (0,0) に設定するとともに、使用する<span class="notranslate">tile set</span> と<span class="notranslate">tile</span>
+    マップの幅と高さを設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
-        <div style="float:right">次のページ <a href="layer_tilemap_destroy.htm"><span class="notranslate">layer_tilemap_destroy</span></a></div>
+        <div style="float:left">前のページ：<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
+        <div style="float:right">次のページ：<a href="layer_tilemap_destroy.htm"><span
+              class="notranslate">layer_tilemap_destroy</span></a></div>
       </div>
       <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_tilemap_create
 --><!-- TAGS
 layer_tilemap_create
---></body>
+-->
+</body>
+
 </html>

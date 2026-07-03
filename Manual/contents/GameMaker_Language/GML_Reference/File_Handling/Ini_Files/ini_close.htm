@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ini_close</title>
@@ -12,34 +13,43 @@
   <meta name="rh-index-keywords" content="ini_close" />
   <meta name="search-keywords" content="ini_close" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ini_close</span></h1>
-  <p>この関数は、開いているiniファイルの読み書きを終了した時点で呼び出す必要があります。iniの書き込み関数を使った後にこの関数を使わないと、この関数が呼ばれて書き込みが行われるまで、ファイル情報がメモリに保持されるため、ディスクには何も書き込まれません。別のini（または同じもの）を閉じた後でiniを開こうとすると、これもエラーになります。</p>
-  <p>また、この関数は ini ファイルをエンコードした<span class="notranslate">string</span> を返します。この<span class="notranslate">string</span> は<span class="notranslate">server</span> に保存することができます。 <a href="ini_open_from_string.htm"><span class="inline">ini_open_from_string()</span></a>を使って、ini を再作成することができます。</p>
+  <p>
+    この関数は、開いているiniファイルの読み書きを終了した時点で呼び出す必要があります。iniの書き込み関数を使った後にこの関数を使わないと、この関数が呼ばれて書き込みが行われるまで、ファイル情報がメモリに保持されるため、ディスクには何も書き込まれません。別のini（または同じもの）を閉じた後でiniを開こうとすると、これもエラーになります。
+  </p>
+  <p>また、この関数は ini ファイルをエンコードした<span class="notranslate">string</span> を返します。この<span class="notranslate">string</span>
+    は<span class="notranslate">server</span> に保存することができます。 <a href="ini_open_from_string.htm"><span
+        class="inline">ini_open_from_string()</span></a>を使って、ini を再作成することができます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ini_close</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover"
+        href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">ini_open(&quot;savedata.ini&quot;);<br />
     score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0);<br />
     ini_close();</p>
-  <p>savedata.iniを開き、save1というセクションからscoreというキーを持つ値を読み込んでiniファイルを閉じます。save1 &quot;の下に &quot;score &quot;という値がない場合、または &quot;savedata.ini &quot;が存在しない場合は0が返され、新しいiniファイルが作成されます。</p>
+  <p>savedata.iniを開き、save1というセクションからscoreというキーを持つ値を読み込んでiniファイルを閉じます。save1 &quot;の下に &quot;score &quot;という値がない場合、または
+    &quot;savedata.ini &quot;が存在しない場合は0が返され、新しいiniファイルが作成されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Ini_Files.htm">Iniファイル</a></div>
-        <div style="float:right">次のページ <a href="ini_write_real.htm"><span class="notranslate">ini_write_real</span></a></div>
+        <div style="float:left">前のページ：<a href="Ini_Files.htm">Iniファイル</a></div>
+        <div style="float:right">次のページ：<a href="ini_write_real.htm"><span class="notranslate">ini_write_real</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ini_close
@@ -48,4 +58,5 @@ ini_close
 ini_close
 -->
 </body>
+
 </html>

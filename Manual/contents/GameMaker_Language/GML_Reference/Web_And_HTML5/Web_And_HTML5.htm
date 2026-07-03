@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ウェブとHTML5</title>
@@ -12,10 +13,12 @@
   <meta name="rh-index-keywords" content="Web And HTML5" />
   <meta name="search-keywords" content="Web" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ウェブとHTML5</h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>は、インターネットや<span class="notranslate">server</span> と連携するための様々な機能を提供し、利用可能なすべてのターゲットプラットフォームで使用することができます。これらの関数は</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>は、インターネットや<span class="notranslate">server</span>
+    と連携するための様々な機能を提供し、利用可能なすべてのターゲットプラットフォームで使用することができます。これらの関数は</p>
   <ul class="colour">
     <li><a href="url_open.htm"><span class="notranslate">url_open</span></a></li>
     <li><a href="url_open_ext.htm"><span class="notranslate">url_open_ext</span></a></li>
@@ -23,8 +26,10 @@
     <li><a href="url_get_domain.htm"><span class="notranslate">url_get_domain</span></a></li>
     <li><a href="../Asynchronous_Functions/HTTP/http_request.htm"><span class="notranslate">http_request</span></a></li>
     <li><a href="../Asynchronous_Functions/HTTP/http_get.htm"><span class="notranslate">http_get</span></a></li>
-    <li><a href="../Asynchronous_Functions/HTTP/http_get_file.htm"><span class="notranslate">http_get_file</span></a></li>
-    <li><a href="../Asynchronous_Functions/HTTP/http_post_string.htm"><span class="notranslate">http_post_string</span></a></li>
+    <li><a href="../Asynchronous_Functions/HTTP/http_get_file.htm"><span class="notranslate">http_get_file</span></a>
+    </li>
+    <li><a href="../Asynchronous_Functions/HTTP/http_post_string.htm"><span
+          class="notranslate">http_post_string</span></a></li>
   </ul>
   <p> </p>
   <p><b>HTML5ターゲットには</b>、上記の一般的な機能とは別に、ターゲットとするゲームで使用するために特別に設計されたWeb機能がいくつかあります。</p>
@@ -43,24 +48,35 @@
     <li><a href="analytics_event.htm"><span class="notranslate">analytics_event</span></a></li>
     <li><a href="analytics_event_ext.htm"><span class="notranslate">analytics_event_ext</span></a></li>
     <li><a href="../OS_And_Compiler/os_browser.htm"><span class="notranslate">os_browser</span></a></li>
-    <li><a href="../Asynchronous_Functions/HTTP/http_get_request_crossorigin.htm"><span class="notranslate">http_get_request_crossorigin</span></a></li>
-    <li><a href="../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="notranslate">http_set_request_crossorigin</span></a></li>
+    <li><a href="../Asynchronous_Functions/HTTP/http_get_request_crossorigin.htm"><span
+          class="notranslate">http_get_request_crossorigin</span></a></li>
+    <li><a href="../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span
+          class="notranslate">http_set_request_crossorigin</span></a></li>
   </ul>
   <p> </p>
-  <p>これらのHTML5ターゲットモジュールの機能とは別に、稀にhtml5gameフォルダーの中身が全く別の場所（URL）に格納されている場合に使用できる特別な<strong>JavaScript変数が</strong>あります。通常、この<span class="notranslate">path</span> は JavaScript ファイルにハードコードされており、JavaScript が呼び出された場所からの相対パスとなります。しかし、ゲーム<span class="notranslate">script</span> を呼び出す前に変数 <span class="inline"><b>g_GameMakerHTML5Dir</b></span> を設定すれば、ゲームは新たに定義された場所から実行されます。例えば</p>
-  <p class="code">&lt;script&gt;var g_GameMakerHTML5Dir = &quot;http://mygamealternatedirectory.com/&quot;;&lt;/script&gt;</p>
-  <p>また、<span class="inline">gmcallback_</span> という接頭辞を使って<span class="notranslate">flag</span> <span class="notranslate">script</span> 関数を作成すると、HTML5 用にプロジェクトをコンパイルするときに難読化されなくなることも特筆すべき点です。これは、上記の <span class="inline">clickable_*</span> 関数を使用する場合に非常に便利です (詳細については、<a href="../../GML_Overview/Script_Functions.htm">こちらを</a>参照してください)。</p>
+  <p>
+    これらのHTML5ターゲットモジュールの機能とは別に、稀にhtml5gameフォルダーの中身が全く別の場所（URL）に格納されている場合に使用できる特別な<strong>JavaScript変数が</strong>あります。通常、この<span
+      class="notranslate">path</span> は JavaScript ファイルにハードコードされており、JavaScript が呼び出された場所からの相対パスとなります。しかし、ゲーム<span
+      class="notranslate">script</span> を呼び出す前に変数 <span class="inline"><b>g_GameMakerHTML5Dir</b></span>
+    を設定すれば、ゲームは新たに定義された場所から実行されます。例えば</p>
+  <p class="code">&lt;script&gt;var g_GameMakerHTML5Dir =
+    &quot;http://mygamealternatedirectory.com/&quot;;&lt;/script&gt;</p>
+  <p>また、<span class="inline">gmcallback_</span> という接頭辞を使って<span class="notranslate">flag</span> <span
+      class="notranslate">script</span> 関数を作成すると、HTML5 用にプロジェクトをコンパイルするときに難読化されなくなることも特筆すべき点です。これは、上記の <span
+      class="inline">clickable_*</span> 関数を使用する場合に非常に便利です (詳細については、<a
+      href="../../GML_Overview/Script_Functions.htm">こちらを</a>参照してください)。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a href="../Steam/Steam.htm">スチーム</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a href="../Steam/Steam.htm">スチーム</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Web And HTML5
@@ -69,4 +85,5 @@ Web And HTML5
 web_functions
 -->
 </body>
+
 </html>

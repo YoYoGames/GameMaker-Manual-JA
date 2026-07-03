@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>非同期イベント</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the async events." />
   <meta name="rh-index-keywords" content="Objects - Async Events" />
-  <meta name="search-keywords" content="Async Events,asynchronous,image loaded,audio playback,audio recording,cloud,dialog,http,in-app-purchase,networking,push notification,save/load,social,steam,system" />
+  <meta name="search-keywords"
+    content="Async Events,asynchronous,image loaded,audio playback,audio recording,cloud,dialog,http,in-app-purchase,networking,push notification,save/load,social,steam,system" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <script src="../../assets/scripts/main_script.js" type="module"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>非同期イベント</h1>
-  <p><img alt="The Async Event" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Async.png"/></p>
-  <p>非同期イベントとは、<span data-keyref="GameMaker Name">GameMakerが</span>外部から<a class="glossterm" data-glossterm="コールバック" href="#">コールバックを</a>受け取った際に発生するイベントのことで、Webやゲームを実行しているデバイスから発生することがあります。基本的には
-   <span data-keyref="GameMaker Name">GameMakerに</span>何かをするように指示すると、画像を読み込むなどの処理を開始しますが、その間も他の処理を続けます。そして、リクエストが完了すると、コールバックがGameMakerに送られます。
-    Studio 2では、このタイプのコールバックに対して定義された非同期イベントが発生します。</p>
-  <p> <span class="inline">http_get()</span> <strong>非同期</strong>イベントは、キーボードイベントのように、そのイベントを持つ<em>すべての </em>インスタンスに対して発生することに注意してください。</p>
-  <p class="note"><strong>注</strong>：ブラウザのXSS保護により、以下のイベントのいずれかを使用する場合、ドメインをまたがるリソースへのリクエストやロードの試みはブロックされ、空白の結果を返すように見えることがあることを認識しておく必要があります。</p>
+  <p><img alt="The Async Event" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Async.png" /></p>
+  <p>非同期イベントとは、<span data-keyref="GameMaker Name">GameMakerが</span>外部から<a class="glossterm" data-glossterm="コールバック"
+      href="#">コールバックを</a>受け取った際に発生するイベントのことで、Webやゲームを実行しているデバイスから発生することがあります。基本的には
+    <span
+      data-keyref="GameMaker Name">GameMakerに</span>何かをするように指示すると、画像を読み込むなどの処理を開始しますが、その間も他の処理を続けます。そして、リクエストが完了すると、コールバックがGameMakerに送られます。
+    Studio 2では、このタイプのコールバックに対して定義された非同期イベントが発生します。
+  </p>
+  <p> <span class="inline">http_get()</span> <strong>非同期</strong>イベントは、キーボードイベントのように、そのイベントを持つ<em>すべての
+    </em>インスタンスに対して発生することに注意してください。</p>
+  <p class="note">
+    <strong>注</strong>：ブラウザのXSS保護により、以下のイベントのいずれかを使用する場合、ドメインをまたがるリソースへのリクエストやロードの試みはブロックされ、空白の結果を返すように見えることがあることを認識しておく必要があります。
+  </p>
   <p>非同期イベントカテゴリに関連するイベントには様々な種類があり、それらはすべて以下のセクションで説明されています。</p>
-  <p class="note"><strong>注</strong>：変数 <a href="../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span style="font-size:14px;"><span class="inline" style="font-size: 14px">非同期ロード</span></span></a>  というのは
+  <p class="note"><strong>注</strong>：変数 <a
+      href="../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        style="font-size:14px;"><span class="inline" style="font-size: 14px">非同期ロード</span></span></a> というのは
     なぜなら、この変数が指す DS マップは<strong>イベントの</strong>開始時に作成され、終了時に再び削除され、それ以外のときはこの変数の値は -1 にリセットされるからです。</p>
   <ul class="colour">
     <li><a href="Async_Events/Audio_Playback.htm">オーディオ再生</a></li>
@@ -39,7 +51,8 @@
     <li><a href="Async_Events/System.htm">システム</a></li>
   </ul>
   <p> </p>
-  <p>異なるプラットフォーム向けに<span class="notranslate">extensions</span> を作成する場合、これらの非同期イベントをターゲットにして、<span class="notranslate">extension</span> 関数からコールバックさせたいと思うことがあるかもしれません。そのために、以下の表で内部イベントの概要を説明します。
+  <p>異なるプラットフォーム向けに<span class="notranslate">extensions</span> を作成する場合、これらの非同期イベントをターゲットにして、<span
+      class="notranslate">extension</span> 関数からコールバックさせたいと思うことがあるかもしれません。そのために、以下の表で内部イベントの概要を説明します。
     イベント名定数とそれに対応するID値。これらのイベント定数は、<span class="notranslate">extensions</span><b>でしか</b>使用できないことに注意してください !</p>
   <p> </p>
   <table>
@@ -117,11 +130,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Object_Events.htm">オブジェクトのイベント</a></div>
-        <div style="float:right">次へ<a href="Gesture_Events.htm">ジェスチャーイベント</a></div>
+        <div style="float:left">前のページ：<a href="Object_Events.htm">オブジェクトのイベント</a></div>
+        <div style="float:right">次のページ：<a href="Gesture_Events.htm">ジェスチャーイベント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Events
@@ -169,4 +183,6 @@ ev_broadcast_message
 aync_events
 -->
 
-</body></html>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>パーティクルの方向を設定する</title>
@@ -12,25 +13,30 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Particler Direction" />
   <meta name="search-keywords" content="Set Particle Direction" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> パーティクルの方向を設定する</h1>
-  <p>このアクションは、パーティクルの方向を設定するために使用され、静的または時間と共に増加/減少するように設定できます。サイズを設定するタイプのユニークなID値を与えます（<a href="Create_Particle_Type.htm">Create Particle Type</a>アクションでタイプを作成したときに返されます）。
+  <p>このアクションは、パーティクルの方向を設定するために使用され、静的または時間と共に増加/減少するように設定できます。サイズを設定するタイプのユニークなID値を与えます（<a
+      href="Create_Particle_Type.htm">Create Particle Type</a>アクションでタイプを作成したときに返されます）。
     を指定し、最初に開始方向を指定し、次に増加量を指定し、最後に &quot;wiggle &quot;を指定します。パーティクルの生成方向は、0が右、90が上、180が左、270が下となるように計算されるので、最小値として
     を-45、最大を45に設定すると、例えば右方向にしか動かないパーティクルを放出します。</p>
   <p>パーティクルの方向を増加させるオプションは、パーティクルが生きている間、各ゲームフレームで基本方向値に追加される値を入力することができます。例えばこの値を0.1に設定すると、各ゲームで0.1ずつ方向が追加されます。
     フレームになります。正の値は反時計回りに、負の値は時計回りにパーティクルを螺旋状に動かすことができます。なお、方向の<i>減少の</i>最小値は-0.01、<i>増加の</i>最小値は0.01です。</p>
-  <p>最後に &quot;wiggle &quot;オプションを設定することができます。この値は0から指定した値の間でランダムに生成され、パーティクルの寿命の各ステップごとに方向に加算または減算されるため、描画された画像は変動することになります
+  <p>最後に &quot;wiggle
+    &quot;オプションを設定することができます。この値は0から指定した値の間でランダムに生成され、パーティクルの寿命の各ステップごとに方向に加算または減算されるため、描画された画像は変動することになります
     の方向を指定します。明らかに小さい値より大きい値の方が顕著で、この値はマイナスにもでき、最大範囲は-20から20です。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Particle Direction Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Direction.png" /></p>
+  <p><img alt="Set Particle Direction Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Direction.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Type</span></td>
@@ -50,7 +56,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Wiggle</span></td>
-        <td>粒子方向に1ステップごとにランダムに加算・減算する最大値（±20）。</td>
+        <td>パーティクル方向に1ステップごとにランダムに加算・減算する最大値（±20）。</td>
       </tr>
     </tbody>
   </table>
@@ -64,11 +70,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Particle_Actions.htm">パーティクルアクション</a></div>
-        <div style="float:right">次へ<a href="Set_Particle_Orientation.htm">粒子の向きを設定する</a></div>
+        <div style="float:left">前のページ：<a href="Particle_Actions.htm">パーティクルアクション</a></div>
+        <div style="float:right">次のページ：<a href="Set_Particle_Orientation.htm">パーティクルの向きを設定する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Direction
@@ -77,4 +84,5 @@ Action - Set Particle Direction
 action_part_type_direction
 -->
 </body>
+
 </html>

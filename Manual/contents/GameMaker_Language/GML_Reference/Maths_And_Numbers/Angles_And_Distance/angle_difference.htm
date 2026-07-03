@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>angle_difference</title>
@@ -14,39 +15,48 @@
   <meta name="search-keywords" content="angle_difference" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">angle_difference</span></h1>
   <p>この関数は、指定された2つの角度の最小の差を返します。差は、元の角度から先の角度に向かって計算されます。返される値は -180 から 180 度の間です（正の角度は反時計回り、負の角度は時計回りとなります）。</p>
-  <p>source&quot; と &quot;destination&quot; の角度の関係は、<span class="inline2">∠difference(dest, src)</span> を呼んで得られた差を<span class="inline2">src の</span>値に足し戻すと<span class="inline2">dest の</span>角度になる（正確な数値は異なるかもしれないが）、というものである。同様の手法で、ステップごとに元の角度を徐々に先の角度に近づけていくことができます。例えば、返された差分の10％を<span class="inline2">src</span>に足し戻して、少しずつ<span class="inline2">dest の</span>方に移動させます（以下の例で説明します）。</p>
+  <p>source&quot; と &quot;destination&quot; の角度の関係は、<span class="inline2">∠difference(dest, src)</span> を呼んで得られた差を<span
+      class="inline2">src の</span>値に足し戻すと<span class="inline2">dest
+      の</span>角度になる（正確な数値は異なるかもしれないが）、というものである。同様の手法で、ステップごとに元の角度を徐々に先の角度に近づけていくことができます。例えば、返された差分の10％を<span
+      class="inline2">src</span>に足し戻して、少しずつ<span class="inline2">dest の</span>方に移動させます（以下の例で説明します）。</p>
   <p> </p>
   <h4><b>構文です。</b></h4>
   <p class="code">angle_difference(dest, src)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">dest</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">dest</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The destination or target angle</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">src</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">src</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The source angle</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var _dir = point_direction(x, y, mouse_x, mouse_y);<br />
     var _diff = angle_difference(_dir, image_angle);<br />
     image_angle += _diff * 0.1;</p>
-  <p>上記のコードでは、インスタンスからマウスカーソルまでの方向を取得し、その角度と現在の角度の差を取得します。 <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><span class="inline">image_angle</span></a>この値を用いて、インスタンスをマウスの方向に徐々に回転させる。</p>
+  <p>上記のコードでは、インスタンスからマウスカーソルまでの方向を取得し、その角度と現在の角度の差を取得します。 <a
+      href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><span
+        class="inline">image_angle</span></a>この値を用いて、インスタンスをマウスの方向に徐々に回転させる。</p>
   <p><img class="invisible" src="../../../../assets/Images/InteractiveExamples/DirectionalSprite.png" /></p>
   <p><canvas class="gml_reference_example" height="128" id="angle_difference_example" width="128"> </canvas></p>
   <p class="canvas_subtitle">インタラクティブな例</p>
@@ -80,11 +90,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Angles_And_Distance.htm">角度と距離</a></div>
-        <div style="float:right">次のページ <a href="lengthdir_x.htm"><span class="notranslate">lengthdir_x</span></a></div>
+        <div style="float:left">前のページ：<a href="Angles_And_Distance.htm">角度と距離</a></div>
+        <div style="float:right">次のページ：<a href="lengthdir_x.htm"><span class="notranslate">lengthdir_x</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 angle_difference
@@ -93,4 +104,5 @@ angle_difference
 angle_difference
 -->
 </body>
+
 </html>

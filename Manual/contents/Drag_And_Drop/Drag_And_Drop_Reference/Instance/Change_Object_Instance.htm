@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オブジェクトインスタンスの変更</title>
@@ -12,33 +13,39 @@
   <meta name="rh-index-keywords" content="Change Object Instance" />
   <meta name="search-keywords" content="Change Object Instance" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 変更 インスタンス<span class="notranslate">Object</span> </h1>
-  <p>このアクションを使うと、あるインスタンスを別のインスタンスに変更することができます。インスタンスを別のインスタンスに変更するには、<span class="notranslate">object</span> を指定する必要があります。このアクションはインスタンスを変更し、Destroy イベントと Clean Up イベントを実行します。
-    を実行し、新しいインスタンスの作成イベントを実行します。方向や速度などを指定しない場合、新しいインスタンスはこれらの値を「継承」することに注意してください。たとえば、最初のインスタンスが <span class="inline">image_angle</span> (回転) を持つ場合
-    は180、移動速度は1ゲームティックあたり2px、 <span class="inline">image_speed</span> （アニメーション速度）は0.5で、新しいインスタンスのCreateイベントで明示的に設定しない限り、この値が維持されます。</p>
+  <p>このアクションを使うと、あるインスタンスを別のインスタンスに変更することができます。インスタンスを別のインスタンスに変更するには、<span class="notranslate">object</span>
+    を指定する必要があります。このアクションはインスタンスを変更し、Destroy イベントと Clean Up イベントを実行します。
+    を実行し、新しいインスタンスの作成イベントを実行します。方向や速度などを指定しない場合、新しいインスタンスはこれらの値を「継承」することに注意してください。たとえば、最初のインスタンスが <span
+      class="inline">image_angle</span> (回転) を持つ場合
+    は180、移動速度は1ゲームティックあたり2px、 <span class="inline">image_speed</span>
+    （アニメーション速度）は0.5で、新しいインスタンスのCreateイベントで明示的に設定しない限り、この値が維持されます。</p>
   <p>インスタンスを変更すると、<i>次のゲームティックまでそのインスタンスを使ったアクションが</i>できなくなることに注意してください。基本的に、あなたは
-    インスタンスを変更しても、現在のステップが終了するまで実際には使用できないため、インスタンスが含む変数に直接アクセスすることはできません（たとえば、 <span class="inline">inst_changed.x</span> を呼び出すなど）。</p>
+    インスタンスを変更しても、現在のステップが終了するまで実際には使用できないため、インスタンスが含む変数に直接アクセスすることはできません（たとえば、 <span
+      class="inline">inst_changed.x</span> を呼び出すなど）。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /></p>
+  <p><img alt="Change Object INstance Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /></p>
   <h4>論拠となる。</h4>
   <p></p>
-  
-    <table>
-      <tbody>
-        <tr>
-          <th>論証</th>
-          <th>商品説明</th>
-        </tr>
-        <tr>
-          <td><span class="notranslate">Object</span></td>
-          <td>のインスタンスに変更するための<span class="notranslate">object</span> の名前。</td>
-        </tr>
-      </tbody>
-    </table>
-  
+
+  <table>
+    <tbody>
+      <tr>
+        <th>引数</th>
+        <th>説明</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">Object</span></td>
+        <td>のインスタンスに変更するための<span class="notranslate">object</span> の名前。</td>
+      </tr>
+    </tbody>
+  </table>
+
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、マウスが押されたかどうかをチェックし、押されたことが検出された場合
@@ -49,11 +56,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
-        <div style="float:right">次へ<a href="Set_Alarm.htm">アラームカウントダウンを設定する</a></div>
+        <div style="float:left">前のページ：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
+        <div style="float:right">次のページ：<a href="Set_Alarm.htm">アラームカウントダウンを設定する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Change <span class="notranslate">Object</span> Instance
@@ -62,4 +70,5 @@ Action - Change <span class="notranslate">Object</span> Instance
 action_change_instance
 -->
 </body>
+
 </html>

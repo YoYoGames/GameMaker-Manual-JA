@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>エクステンション</title>
@@ -12,42 +13,105 @@
   <meta name="rh-index-keywords" content="Extension Editor" />
   <meta name="search-keywords" content="extensions,extension editor" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span class="notranslate">Extension</span> 編集部</h1>
-  <p><strong>拡張パッケージは</strong>、<span class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>) に多数の追加関数や<a class="glossterm" data-glossterm="常数" href="#">定数を</a>追加し、プロジェクト間で簡単に転送するために使用できます。<span class="notranslate">Extension</span> 関数は、外部<a class="glossterm" data-glossterm="エスディーケー" href="#">SDK</a>や他の言語 (<span class="notranslate">Android</span> の Java 、<span class="notranslate">iOS</span> の Objective-C など ) で書かれた<a class="glossterm" data-glossterm="ソースコード" href="#">ソースコードにも</a>リンクでき、ゲームの機能拡張に使用できます ( 通常、広告やアプリ内購入など、サードパーティ API の実装に使用します)。</p>
+  <h1><span class="notranslate">Extension</span> エディタ</h1>
+  <p><strong>拡張パッケージは</strong>、<span class="notranslate">GameMaker Language</span> (<span
+      class="notranslate">GML</span>) に多数の追加関数や<a class="glossterm" data-glossterm="常数"
+      href="#">定数を</a>追加し、プロジェクト間で簡単に転送するために使用できます。<span class="notranslate">Extension</span> 関数は、外部<a class="glossterm"
+      data-glossterm="エスディーケー" href="#">SDK</a>や他の言語 (<span class="notranslate">Android</span> の Java 、<span
+      class="notranslate">iOS</span> の Objective-C など ) で書かれた<a class="glossterm" data-glossterm="ソースコード"
+      href="#">ソースコードにも</a>リンクでき、ゲームの機能拡張に使用できます ( 通常、広告やアプリ内購入など、サードパーティ API の実装に使用します)。</p>
   <p><img alt="Extensions Properties" class="center" src="../assets/Images/Asset_Editors/Editor_Extensions.png" /></p>
-  <p>拡張機能は、すべてのプロジェクトで頻繁に使用する関数のライブラリを作成するために使用できます。そのため、すべてのプロジェクトに同じ<span class="notranslate">scripts</span> をインポートする代わりに、お気に入りの関数や定数のコレクションを保持する<span class="notranslate">extension</span> <span class="notranslate">asset</span> を追加するだけでよいのです。このような関数は、特定のプラットフォームに特化することもでき、<span class="notranslate">extension</span> がどのプラットフォームで使用できるかを簡単に選択することができます。</p>
-  <p><span class="notranslate">extension</span> を作成するステップバイステップの例については、以下を参照してください。<a href="Extension_Creation/Creating_An_Extension.htm">エクステンションの作成</a></p>
-  <p>ターゲットプラットフォームに応じて<span class="notranslate">extensions</span> を無効化するには、以下を参照してください。<a data-xref="{title}" href="Extension_Creation/Disabling_Extensions.htm"> <span class="notranslate">Extensions</span></a>を無効にするには？</p>
+  <p>拡張機能は、すべてのプロジェクトで頻繁に使用する関数のライブラリを作成するために使用できます。そのため、すべてのプロジェクトに同じ<span class="notranslate">scripts</span>
+    をインポートする代わりに、お気に入りの関数や定数のコレクションを保持する<span class="notranslate">extension</span> <span
+      class="notranslate">asset</span> を追加するだけでよいのです。このような関数は、特定のプラットフォームに特化することもでき、<span
+      class="notranslate">extension</span> がどのプラットフォームで使用できるかを簡単に選択することができます。</p>
+  <p><span class="notranslate">extension</span> を作成するステップバイステップの例については、以下を参照してください。<a
+      href="Extension_Creation/Creating_An_Extension.htm">エクステンションの作成</a></p>
+  <p>ターゲットプラットフォームに応じて<span class="notranslate">extensions</span> を無効化するには、以下を参照してください。<a data-xref="{title}"
+      href="Extension_Creation/Disabling_Extensions.htm"> <span class="notranslate">Extensions</span></a>を無効にするには？</p>
   <h2>拡張機能のインポート</h2>
-  <p>通常、サードパーティの<span class="notranslate">extensions</span> は<a href="https://marketplace.yoyogames.com/">GameMaker Marketplace</a> にあり、購読しているものは<a href="../Introduction/The_Marketplace.htm">Marketplace Library</a>ウィンドウにリストアップされ、そこからインストールすることができます。<span class="notranslate">extension</span> パッケージを<span class="notranslate">Marketplace</span> から入手しなかった場合でも、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザの</a> <img> を右クリックして「<em>既存のものを追加</em>」を選択し、拡張機能のある場所をブラウズして選択すれば、プロジェクトに追加することができます。</p>
-  <p class="note"><span class="note">NOTE</span> <span class="inline">.yymps</span>/<span class="inline">.yymp</span>/<span class="inline">.gmez</span> のパッケージがある場合、それを<span class="notranslate">IDE</span> にドラッグしてインポートするか、「ツール」メニューから「ローカルパッケージのインポート」を選択してください。</p>
+  <p>通常、サードパーティの<span class="notranslate">extensions</span> は<a href="https://marketplace.yoyogames.com/">GameMaker
+      Marketplace</a> にあり、購読しているものは<a href="../Introduction/The_Marketplace.htm">Marketplace
+      Library</a>ウィンドウにリストアップされ、そこからインストールすることができます。<span class="notranslate">extension</span> パッケージを<span
+      class="notranslate">Marketplace</span> から入手しなかった場合でも、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザの</a>
+    <img> を右クリックして「<em>既存のものを追加</em>」を選択し、拡張機能のある場所をブラウズして選択すれば、プロジェクトに追加することができます。
+  </p>
+  <p class="note"><span class="note">NOTE</span> <span class="inline">.yymps</span>/<span
+      class="inline">.yymp</span>/<span class="inline">.gmez</span> のパッケージがある場合、それを<span class="notranslate">IDE</span>
+    にドラッグしてインポートするか、「ツール」メニューから「ローカルパッケージのインポート」を選択してください。</p>
   <h2>対象プラットフォーム</h2>
-  <p><span class="notranslate">extension</span> を<span class="notranslate">Asset</span> Browser に追加したら、名前とバージョン番号をつけ、どのプラットフォームにエクスポートするか設定する必要があります。選択したプラットフォームのチェックを外すことで、そのプラットフォーム用の実行ファイルの一部として<span class="notranslate">extension</span> をエクスポートしないように<span data-keyref="GameMaker Name">GameMakerに</span>指示することができる。また、<span class="notranslate">extension</span> のプロパティが、選択したターゲットプラットフォームと一致していることを確認し、<span class="notranslate">extension</span> のファイルについて、以下に基づいて互換性のあるエクスポートターゲットを選択する必要があります。</p>
+  <p><span class="notranslate">extension</span> を<span class="notranslate">Asset</span> Browser
+    に追加したら、名前とバージョン番号をつけ、どのプラットフォームにエクスポートするか設定する必要があります。選択したプラットフォームのチェックを外すことで、そのプラットフォーム用の実行ファイルの一部として<span
+      class="notranslate">extension</span> をエクスポートしないように<span
+      data-keyref="GameMaker Name">GameMakerに</span>指示することができる。また、<span class="notranslate">extension</span>
+    のプロパティが、選択したターゲットプラットフォームと一致していることを確認し、<span class="notranslate">extension</span>
+    のファイルについて、以下に基づいて互換性のあるエクスポートターゲットを選択する必要があります。</p>
   <ul class="colour">
-    <li class="dropspot"><strong>すべてのターゲット</strong>：<span class="notranslate">GML</span> <span class="notranslate">extensions</span>.<span class="notranslate">extensions</span> これらは、<span class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>) を使って作られたもので、すべてのターゲット・プラットフォームに対応しています。(<em></em><em>なお、Opera GXターゲットが現在サポートしているのは、この<span class="notranslate">extension</span> タイプだけ</em>です。)</li>
-    <li class="dropspot"><strong>Windows（Standard、UWP、Xbox）</strong>です。<span class="notranslate">Windows</span> <span class="inline">DLL</span> ファイル（Dynamic Link Libraries）を使用することができます。<a href="../Settings/Game_Options/Windows.htm">Windowsゲームオプションで</a>「x64<span class="notranslate">Windows</span> ランタイムを使用する」をチェックした場合、プロジェクトのDLLはすべて<strong>64ビット対応である必要が</strong>ありますので、ご注意ください。32ビットのDLLは、64ビットの実行ファイルでは動作しません。</li>
-    <li class="dropspot"><strong>macOS</strong>:<span class="notranslate">macOS</span> ターゲットは、標準の <span class="inline">DyLib</span> ファイルを<span class="notranslate">extensions</span> に使用することができます。</li>
-    <li class="dropspot"><strong>Ubuntu (<span class="notranslate">Linux</span>)</strong>。<span class="notranslate">Ubuntu</span> ターゲットでは、<span class="notranslate">extension</span> が <span class="inline">.so</span> ファイルを使用していることを確認する必要があります。</li>
-    <li class="dropspot"><strong>HTML5</strong>です。これらのプラットフォームでは、 <span class="inline">JavaScript</span> <span class="notranslate">extensions</span> を使用することができます。</li>
-    <li class="dropspot"><strong>Android</strong>です。このプラットフォームでは、<span class="notranslate">extension</span> が <span class="inline">Java</span> で書かれていること、または <span class="inline">Android Framework SDK</span> が必要です。</li>
-    <li class="dropspot"><strong>iOS</strong>/<strong> tvOS</strong>: このプラットフォーム用の<span class="notranslate">Extensions</span> は Objective C で書かれており、<span class="inline">*.mm</span> と<span class="inline">*.h</span> ファイル、または何らかのフレームワークを使用している場合はプリコンパイルされたネイティブ<span class="inline">*.a</span> ファイルが必要です。</li>
-    <li class="dropspot"><strong>PlayStation</strong>。PlayStation の場合、<span class="notranslate">extensions</span> は <span class="inline">PRX</span> ファイルとし、ターゲット（PS3、PS4、PS5）の仕様に合わせ、ターゲットごとに異なる <span class="inline">PRX</span> を使用する必要があります。PSVitaで作業する場合は、<span class="notranslate">extension</span> の代わりに <span class="inline">SUPRX</span> を指定してください。</li>
+    <li class="dropspot"><strong>すべてのターゲット</strong>：<span class="notranslate">GML</span> <span
+        class="notranslate">extensions</span>.<span class="notranslate">extensions</span> これらは、<span
+        class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>)
+      を使って作られたもので、すべてのターゲット・プラットフォームに対応しています。(<em></em><em>なお、Opera GXターゲットが現在サポートしているのは、この<span
+          class="notranslate">extension</span> タイプだけ</em>です。)</li>
+    <li class="dropspot"><strong>Windows（Standard、UWP、Xbox）</strong>です。<span class="notranslate">Windows</span> <span
+        class="inline">DLL</span> ファイル（Dynamic Link Libraries）を使用することができます。<a
+        href="../Settings/Game_Options/Windows.htm">Windowsゲームオプションで</a>「x64<span class="notranslate">Windows</span>
+      ランタイムを使用する」をチェックした場合、プロジェクトのDLLはすべて<strong>64ビット対応である必要が</strong>ありますので、ご注意ください。32ビットのDLLは、64ビットの実行ファイルでは動作しません。
+    </li>
+    <li class="dropspot"><strong>macOS</strong>:<span class="notranslate">macOS</span> ターゲットは、標準の <span
+        class="inline">DyLib</span> ファイルを<span class="notranslate">extensions</span> に使用することができます。</li>
+    <li class="dropspot"><strong>Ubuntu (<span class="notranslate">Linux</span>)</strong>。<span
+        class="notranslate">Ubuntu</span> ターゲットでは、<span class="notranslate">extension</span> が <span
+        class="inline">.so</span> ファイルを使用していることを確認する必要があります。</li>
+    <li class="dropspot"><strong>HTML5</strong>です。これらのプラットフォームでは、 <span class="inline">JavaScript</span> <span
+        class="notranslate">extensions</span> を使用することができます。</li>
+    <li class="dropspot"><strong>Android</strong>です。このプラットフォームでは、<span class="notranslate">extension</span> が <span
+        class="inline">Java</span> で書かれていること、または <span class="inline">Android Framework SDK</span> が必要です。</li>
+    <li class="dropspot"><strong>iOS</strong>/<strong> tvOS</strong>: このプラットフォーム用の<span
+        class="notranslate">Extensions</span> は Objective C で書かれており、<span class="inline">*.mm</span> と<span
+        class="inline">*.h</span> ファイル、または何らかのフレームワークを使用している場合はプリコンパイルされたネイティブ<span class="inline">*.a</span> ファイルが必要です。
+    </li>
+    <li class="dropspot"><strong>PlayStation</strong>。PlayStation の場合、<span class="notranslate">extensions</span> は
+      <span class="inline">PRX</span> ファイルとし、ターゲット（PS3、PS4、PS5）の仕様に合わせ、ターゲットごとに異なる <span class="inline">PRX</span>
+      を使用する必要があります。PSVitaで作業する場合は、<span class="notranslate">extension</span> の代わりに <span class="inline">SUPRX</span>
+      を指定してください。
+    </li>
   </ul>
-  <p class="note"><span class="note">注</span> <span class="notranslate">extensions</span> の中には、設計されたプラットフォームと CPU アーキテクチャを正しく識別するために、<span class="notranslate">GameMaker</span> の特定の命名規則に従う必要があるものがあります。詳細については、<a data-xref="{text}" href="Extension_Creation/Creating_An_Extension.htm#h">命名</a>規則を参照してください。</p>
-  <p><span class="notranslate">extension</span> <span class="notranslate">extension</span> この場合、メインの<span class="notranslate">extension</span> エディタで互換性のあるプラットフォームを<em>すべて </em>指定し（つまり、それらの横にあるチェックボックスをオンにします）、次に<span class="notranslate">extension</span> の各部分の個々のファイルのプロパティで、それらのファイルがエクスポートされるべきプラットフォームを設定します。</p>
-  <p>特定の<span class="notranslate">extension</span> ファイルやプレースホルダーのターゲットプラットフォームを変更するには、まず<span class="notranslate">extension</span> プロパティを開き（<img> をダブルクリック、<span class="notranslate">extension</span> ブラウザで<span class="notranslate">Asset</span> をクリック）、<span class="notranslate">extension</span> プロパティで、編集したいリソースファイルを右から選択する必要があります。開いたウィンドウで、そのファイルがエクスポートされるプラットフォームを選択することができます。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">extensions</span> の中には、設計されたプラットフォームと CPU
+    アーキテクチャを正しく識別するために、<span class="notranslate">GameMaker</span> の特定の命名規則に従う必要があるものがあります。詳細については、<a data-xref="{text}"
+      href="Extension_Creation/Creating_An_Extension.htm#h">命名</a>規則を参照してください。</p>
+  <p><span class="notranslate">extension</span> <span class="notranslate">extension</span> この場合、メインの<span
+      class="notranslate">extension</span> エディタで互換性のあるプラットフォームを<em>すべて </em>指定し（つまり、それらの横にあるチェックボックスをオンにします）、次に<span
+      class="notranslate">extension</span> の各部分の個々のファイルのプロパティで、それらのファイルがエクスポートされるべきプラットフォームを設定します。</p>
+  <p>特定の<span class="notranslate">extension</span> ファイルやプレースホルダーのターゲットプラットフォームを変更するには、まず<span
+      class="notranslate">extension</span> プロパティを開き（<img> をダブルクリック、<span class="notranslate">extension</span> ブラウザで<span
+      class="notranslate">Asset</span> をクリック）、<span class="notranslate">extension</span>
+    プロパティで、編集したいリソースファイルを右から選択する必要があります。開いたウィンドウで、そのファイルがエクスポートされるプラットフォームを選択することができます。</p>
   <p class="dropspot"><img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
   <h2>拡張オプション</h2>
-  <p>使用中の<span class="notranslate">extension</span> にはオプションがあり、<span class="notranslate">Extension</span> Editor ウィンドウの下部に表示されます。</p>
-  <p><img>これらは、<span class="notranslate">extension</span> によって異なり、また、すべてのものがオプショ ンを持っているとは限りません。そのオプションに関する情報は、あなたが使っている<span class="notranslate">extension</span> のドキュメントをご覧ください。</p>
-  <p><span class="notranslate">extension</span> のオプションを設定するには、以下を参照してください。<a data-xref="{text}" href="Extension_Creation/Creating_An_Extension.htm#h1"> <span class="notranslate">Extension</span> </a>オプションの<a data-xref="{text}" href="Extension_Creation/Creating_An_Extension.htm#h1">作成</a></p>
+  <p>使用中の<span class="notranslate">extension</span> にはオプションがあり、<span class="notranslate">Extension</span> Editor
+    ウィンドウの下部に表示されます。</p>
+  <p><img>これらは、<span class="notranslate">extension</span> によって異なり、また、すべてのものがオプショ
+    ンを持っているとは限りません。そのオプションに関する情報は、あなたが使っている<span class="notranslate">extension</span> のドキュメントをご覧ください。</p>
+  <p><span class="notranslate">extension</span> のオプションを設定するには、以下を参照してください。<a data-xref="{text}"
+      href="Extension_Creation/Creating_An_Extension.htm#h1"> <span class="notranslate">Extension</span> </a>オプションの<a
+      data-xref="{text}" href="Extension_Creation/Creating_An_Extension.htm#h1">作成</a></p>
   <h2>ビルド時の解凍</h2>
-  <p>Uncompress on build&quot; オプションは、特定のターゲットプラットフォーム向けの圧縮された アーカイブファイルに使用できます。このオプションを有効にすると、アーカイブのコンテンツはビルドされたパッケージのIncluded Filesディレクトリに展開されますが、ターゲットプラットフォームにコピーされた後に展開されます。</p>
-  <p>たとえば、<span class="notranslate">extension</span> の <span class="inline">.zip</span> ファイルに対してこの機能を有効にし、<span class="notranslate">Windows</span> から<strong>macOS の </strong>ビルドを開始すると、 <span class="inline">.zip</span> アーカイブは<span class="notranslate">Windows</span> から<span class="notranslate">macOS</span> にそのままコピーされ、ターゲットプラットフォーム（この文脈では<span class="notranslate">macOS</span> ）でのコンパイル時に圧縮が解除されることになります。</p>
+  <p>Uncompress on build&quot; オプションは、特定のターゲットプラットフォーム向けの圧縮された
+    アーカイブファイルに使用できます。このオプションを有効にすると、アーカイブのコンテンツはビルドされたパッケージのIncluded Filesディレクトリに展開されますが、ターゲットプラットフォームにコピーされた後に展開されます。
+  </p>
+  <p>たとえば、<span class="notranslate">extension</span> の <span class="inline">.zip</span> ファイルに対してこの機能を有効にし、<span
+      class="notranslate">Windows</span> から<strong>macOS の </strong>ビルドを開始すると、 <span class="inline">.zip</span>
+    アーカイブは<span class="notranslate">Windows</span> から<span class="notranslate">macOS</span>
+    にそのままコピーされ、ターゲットプラットフォーム（この文脈では<span class="notranslate">macOS</span> ）でのコンパイル時に圧縮が解除されることになります。</p>
   <h2><span class="notranslate">Extension</span> 関数の呼び出し</h2>
-  <p><span class="notranslate">extension</span> を設定したら、<span class="notranslate">GameMaker Language</span> で使用する組み込み関数や定数と同じように、その関数や定数を使用することができます。 もし、あなたのゲームがクロスプラットフォーム（例えば、Windows と<span class="notranslate">Android</span> ターゲットで動作するように設計されている）なら、問題を防ぐために<span class="notranslate">extension</span> 固有の関数を呼ぶ前に<a href="../GameMaker_Language/GML_Reference/OS_And_Compiler/OS_And_Compiler.htm">OS 定数や関数を使って</a>現在のプラットフォームをチェックすべきなんですね。</p>
+  <p><span class="notranslate">extension</span> を設定したら、<span class="notranslate">GameMaker Language</span>
+    で使用する組み込み関数や定数と同じように、その関数や定数を使用することができます。 もし、あなたのゲームがクロスプラットフォーム（例えば、Windows と<span
+      class="notranslate">Android</span> ターゲットで動作するように設計されている）なら、問題を防ぐために<span class="notranslate">extension</span>
+    固有の関数を呼ぶ前に<a href="../GameMaker_Language/GML_Reference/OS_And_Compiler/OS_And_Compiler.htm">OS
+      定数や関数を使って</a>現在のプラットフォームをチェックすべきなんですね。</p>
   <p class="code">switch(os_type)<br />
     {<br />
         case os_android:<br />
@@ -59,7 +123,10 @@
         break;<br />
     }
   </p>
-  <p>異なるプラットフォームでは、<span class="notranslate">extensions</span> は関数名を共有することができますので、（例えば）<span class="notranslate">extension</span> と<span class="notranslate">Windows</span> でメッセージをポップアップするための個別のファイルを持つ<span class="notranslate">Android</span> がある場合、両方の<span class="notranslate">extension</span> ファイルは、それぞれのプラットフォームにのみエクスポートするように設定されている限り、同じ関数名を共有することができることに注意してください。</p>
+  <p>異なるプラットフォームでは、<span class="notranslate">extensions</span> は関数名を共有することができますので、（例えば）<span
+      class="notranslate">extension</span> と<span class="notranslate">Windows</span> でメッセージをポップアップするための個別のファイルを持つ<span
+      class="notranslate">Android</span> がある場合、両方の<span class="notranslate">extension</span>
+    ファイルは、それぞれのプラットフォームにのみエクスポートするように設定されている限り、同じ関数名を共有することができることに注意してください。</p>
   <p><span class="notranslate">extensions</span> を作成する場合、基本的な必要情報は以下のページから確認できます。</p>
   <ul class="colour">
     <li><a href="Extension_Creation/Creating_An_Extension.htm">エクステンションの作成</a></li>
@@ -69,26 +136,37 @@
   </ul>
   <p> </p>
   <h1>サードパーティ製公式拡張機能</h1>
-  <p><span class="notranslate">GameMaker</span> のレガシーバージョンでは、多くのサードパーティ機能が組み込まれていましたが、サードパーティによって特定の機能が変更されると、<span class="notranslate">GameMaker</span> <a class="glossterm" data-glossterm="アイディーイー" href="#">IDE</a>と<a class="glossterm" data-glossterm="ランタイム" href="#">ランタイム</a>全体を更新しなければならないため、非効率で保守が困難な状態になっていました。そこで、現在のバージョンでは、サードパーティのサポートをゲームに追加するために、<span class="notranslate">extensions</span> パッケージを使用することを採用しています。これにより、必要な機能のみを追加することができ、また、特定のニーズに合わせて変更・編集することも可能です。</p>
-  <p>これらの<span class="notranslate">extensions</span> のほとんどは、特定の<a href="../Settings/Game_Options.htm">ゲームオプション</a>（例えば、FacebookやGoogle Mobile Adsなど）を選択すると、ダウンロードされインストールされます。これらの詳細については、GameMaker Knowledge Baseの各プラットフォームの該当セクションから確認することができます。</p>
+  <p><span class="notranslate">GameMaker</span> のレガシーバージョンでは、多くのサードパーティ機能が組み込まれていましたが、サードパーティによって特定の機能が変更されると、<span
+      class="notranslate">GameMaker</span> <a class="glossterm" data-glossterm="アイディーイー" href="#">IDE</a>と<a
+      class="glossterm" data-glossterm="ランタイム"
+      href="#">ランタイム</a>全体を更新しなければならないため、非効率で保守が困難な状態になっていました。そこで、現在のバージョンでは、サードパーティのサポートをゲームに追加するために、<span
+      class="notranslate">extensions</span> パッケージを使用することを採用しています。これにより、必要な機能のみを追加することができ、また、特定のニーズに合わせて変更・編集することも可能です。
+  </p>
+  <p>これらの<span class="notranslate">extensions</span> のほとんどは、特定の<a
+      href="../Settings/Game_Options.htm">ゲームオプション</a>（例えば、FacebookやGoogle Mobile
+    Adsなど）を選択すると、ダウンロードされインストールされます。これらの詳細については、GameMaker Knowledge Baseの各プラットフォームの該当セクションから確認することができます。</p>
   <ul class="colour">
-    <li><a href="https://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker"><span data-keyref="GameMaker Name">GameMakerの</span>プラットフォームとセットアップ</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker"><span
+          data-keyref="GameMaker Name">GameMakerの</span>プラットフォームとセットアップ</a></li>
   </ul>
   <p><span class="notranslate">extensions</span> 自体は、以下の<span class="notranslate">Marketplace</span> のページよりご覧いただけます。</p>
   <ul class="colour">
-    <li><a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">公式<span class="notranslate">Marketplace</span> 資産</a></li>
+    <li><a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">公式<span
+          class="notranslate">Marketplace</span> 資産</a></li>
   </ul>
-  <p>なお、これらの<span class="notranslate">extensions</span> には、使い方を説明するデモとヘルプファイル（ <span class="inline">*.pdf</span> 形式）が付属しています。そのため、本マニュアルではこれらの機能を説明していませんのでご注意ください。</p>
+  <p>なお、これらの<span class="notranslate">extensions</span> には、使い方を説明するデモとヘルプファイル（ <span class="inline">*.pdf</span>
+    形式）が付属しています。そのため、本マニュアルではこれらの機能を説明していませんのでご注意ください。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Fonts.htm">フォント</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Fonts.htm">フォント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Extensions
@@ -100,4 +178,5 @@ iOS Extensions
 extension_editor
 -->
 </body>
+
 </html>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>デバッガ</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,133 +13,196 @@
   <meta name="rh-index-keywords" content="Debugger,The Debugger,Debugging" />
   <meta name="search-keywords" content="debugging,the debugger,debug module,debug mode,debug" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>デバッガ</h1>
-  <p><strong>デバッガは </strong>ゲームをチェックするための強力なツールで、特にコードのエラーやバグを追跡するのに便利です。また、<span class="notranslate">scripts</span> が必要なときに実行されているか、変数や配列に何が含まれているかをチェックすることもできます。
-    期待する値など...<span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="アイディーイー" href="The_Debugger/The_Profiler.htm#">IDE</a>から<span class="notranslate">Debugger</span> の上部にある Debug ボタン<img> を使ってゲームを実行するか、<a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Build メニューから</a>&quot;<em>Debug</em>&quot; を選択すると、<span class="notranslate">IDE</span> を起動することができます。</p>
-  <p class="note"><strong>注</strong>：<span class="notranslate">Windows</span> Firewall（または実行する他のファイアウォール・プログラム）により、このモジュールのセキュリティ例外を作成するよう促される場合があります。<strong>これを行わないと、正しく動作</strong>しません。これは
-    <span class="notranslate">Debugger</span> が動作し、<span class="notranslate">debugging</span> モバイル・プラットフォームでは必須です。</p>
+  <p><strong>デバッガは </strong>ゲームをチェックするための強力なツールで、特にコードのエラーやバグを追跡するのに便利です。また、<span class="notranslate">scripts</span>
+    が必要なときに実行されているか、変数や配列に何が含まれているかをチェックすることもできます。
+    期待する値など...<span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="アイディーイー"
+      href="The_Debugger/The_Profiler.htm#">IDE</a>から<span class="notranslate">Debugger</span> の上部にある Debug ボタン<img>
+    を使ってゲームを実行するか、<a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Build メニューから</a>&quot;<em>Debug</em>&quot;
+    を選択すると、<span class="notranslate">IDE</span> を起動することができます。</p>
+  <p class="note"><strong>注</strong>：<span class="notranslate">Windows</span>
+    Firewall（または実行する他のファイアウォール・プログラム）により、このモジュールのセキュリティ例外を作成するよう促される場合があります。<strong>これを行わないと、正しく動作</strong>しません。これは
+    <span class="notranslate">Debugger</span> が動作し、<span class="notranslate">debugging</span> モバイル・プラットフォームでは必須です。
+  </p>
   <p>デバッグモードでゲームを実行すると、<span class="notranslate">IDE</span> 、デバッガで利用可能なさまざまなツールが表示されます。</p>
-  <p><img>上の図は、<span class="notranslate">debugger</span> のデフォルトのレイアウトですが、<span class="notranslate">IDE</span> の他の部分と同様に、必要に応じてこれをカスタマイズすることができます。
-    不要なウィンドウを表示したり、必要なドキュメントやウィンドウの大きさを変更したりすることができます。IDE の上部にある<span class="notranslate">debugger</span> のコンテキストメニューから、いつでも<span class="notranslate">Debugger</span> のレイアウトをリセットしたり、閉じたウィンドウを再び開いたりすることができます。</p>
+  <p><img>上の図は、<span class="notranslate">debugger</span> のデフォルトのレイアウトですが、<span class="notranslate">IDE</span>
+    の他の部分と同様に、必要に応じてこれをカスタマイズすることができます。
+    不要なウィンドウを表示したり、必要なドキュメントやウィンドウの大きさを変更したりすることができます。IDE の上部にある<span class="notranslate">debugger</span>
+    のコンテキストメニューから、いつでも<span class="notranslate">Debugger</span> のレイアウトをリセットしたり、閉じたウィンドウを再び開いたりすることができます。</p>
   <p><img>以下では、<span class="notranslate">debugger</span> の各セクションが何のためにあるのかを説明します。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">グラフ表示</a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">グラフ表示では、プロジェクトのメモリ使用状況やフレームレートを時系列でグラフィック表示します。</p>
-    <p class="dropspot"><img>グラフには、現在と平均のメモリ使用量、および現在と平均の FPS が時系列で表示され、マウスホイール<img> とともに<img> /<img> を使って拡大・縮小できます。また、マウスカーソルをいずれかのグラフ要素に合わせると、その要素の選択ポイントでの値が表示されます。</p>
-    <p class="dropspot">グラフ表示では、特定のデバッグイベントもグラフの長さに沿って点として表示されます。これらのイベントは、ゲームの実行中に特定の重要なイベントを表示するために、<span data-keyref="GameMaker Name">GameMakerが</span>自動的に生成します。
-      を使用して、独自のグラフ要素を追加することができます。 <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message()</span></a>と <a href="../GameMaker_Language/GML_Reference/Debugging/debug_event.htm"><span class="inline">debug_event()</span></a>.
+    <p class="dropspot"><img>グラフには、現在と平均のメモリ使用量、および現在と平均の FPS が時系列で表示され、マウスホイール<img> とともに<img> /<img>
+      を使って拡大・縮小できます。また、マウスカーソルをいずれかのグラフ要素に合わせると、その要素の選択ポイントでの値が表示されます。</p>
+    <p class="dropspot">グラフ表示では、特定のデバッグイベントもグラフの長さに沿って点として表示されます。これらのイベントは、ゲームの実行中に特定の重要なイベントを表示するために、<span
+        data-keyref="GameMaker Name">GameMakerが</span>自動的に生成します。
+      を使用して、独自のグラフ要素を追加することができます。 <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span
+          class="inline">show_debug_message()</span></a>と <a
+        href="../GameMaker_Language/GML_Reference/Debugging/debug_event.htm"><span
+          class="inline">debug_event()</span></a>.
       システムイベントは、コードによってトリガーされるイベントとは異なる色でフラグが立てられます。</p>
     <p class="dropspot"><img>デバッグでゲームを実行し、これらのイベントにマウスオーバーすると、ゲーム内のその時点で発生したすべてのイベントのリストが表示されます。
-     <strong>クリックすると新しいウィンドウで</strong>開きます&quot; をクリックすると、リストを別ウィンドウで表示して修正することができます。</p>
-    <p class="dropspot"><img alt="Debug Icon" class="icon" src="../assets/Images/Icons/Icon_Debug.png"/></p>
+      <strong>クリックすると新しいウィンドウで</strong>開きます&quot; をクリックすると、リストを別ウィンドウで表示して修正することができます。
+    </p>
+    <p class="dropspot"><img alt="Debug Icon" class="icon" src="../assets/Images/Icons/Icon_Debug.png" /></p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">リソースビュー</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">リソースビューには、コードまたは<span class="notranslate">GML</span> Visual アクションを含むことができる、プロジェクトで使用されているすべてのリソースのリストが表示されます。このセクションは、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザと</a>同じように機能し、アイテムを展開することができます。
-      をクリックすると、より詳細な情報、たとえば、特定の<span class="notranslate">object</span> のさまざまなイベントが表示されます。次に、任意のリソースをダブルクリック（<img> ）すると、そのリソースを開くことができます。
+    <p class="dropspot">リソースビューには、コードまたは<span class="notranslate">GML</span> Visual
+      アクションを含むことができる、プロジェクトで使用されているすべてのリソースのリストが表示されます。このセクションは、<a
+        href="../Introduction/The_Asset_Browser.htm">アセットブラウザと</a>同じように機能し、アイテムを展開することができます。
+      をクリックすると、より詳細な情報、たとえば、特定の<span class="notranslate">object</span> のさまざまなイベントが表示されます。次に、任意のリソースをダブルクリック（<img>
+      ）すると、そのリソースを開くことができます。
       そこで値をチェックしたり、<strong>ブレークポイントを</strong>追加・削除することができます。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">コールスタック</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">このウィンドウには、イベントの現在のコールスタックと、ステップスルーされるコードの行番号が表示されます。コールスタックは、基本的に「後入れ先出し」のデータ構造で、すべてのゲームの実行順序を表示します。
-      <span class="notranslate">debugging</span> は<a class="glossterm" data-glossterm="仮想マシン(VM)" href="#">仮想マシン（VM</a>）を使って実行されるので、<span data-keyref="GameMaker Name">GameMaker</span>ランナーからのコードと、あなたがゲーム用に書いたコードの両方が使用されます。<span class="notranslate">debugger</span> は
-      は、ここに情報が表示される前に、<em>一時停止して </em>います。</p>
+    <p class="dropspot">
+      このウィンドウには、イベントの現在のコールスタックと、ステップスルーされるコードの行番号が表示されます。コールスタックは、基本的に「後入れ先出し」のデータ構造で、すべてのゲームの実行順序を表示します。
+      <span class="notranslate">debugging</span> は<a class="glossterm" data-glossterm="仮想マシン(VM)"
+        href="#">仮想マシン（VM</a>）を使って実行されるので、<span
+        data-keyref="GameMaker Name">GameMaker</span>ランナーからのコードと、あなたがゲーム用に書いたコードの両方が使用されます。<span
+        class="notranslate">debugger</span> は
+      は、ここに情報が表示される前に、<em>一時停止して </em>います。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">ツールバー</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">ツールバーには、<span class="notranslate">debugger</span> のコントロールと、メモリ使用量、ゲームの現在の（実際の）FPSなどの基本情報、<span class="notranslate">debugger</span> が現在接続されているかどうかを示すインジケーターがあります（インジケーターは、接続されていると緑になります）。
+    <p class="dropspot">ツールバーには、<span class="notranslate">debugger</span> のコントロールと、メモリ使用量、ゲームの現在の（実際の）FPSなどの基本情報、<span
+        class="notranslate">debugger</span> が現在接続されているかどうかを示すインジケーターがあります（インジケーターは、接続されていると緑になります）。
       のインスタンスが動作している場合は赤で表示されます)。利用可能なコントロールは以下の通りです。</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="The Debugger Windows" class="center" src="../assets/Images/IDE Tools/Debug_Module.png"/></td>
+          <td class="icons"><img alt="The Debugger Windows" class="center"
+              src="../assets/Images/IDE Tools/Debug_Module.png" /></td>
           <td class="text">一時停止したゲームを再び開始します（キーボードショートカット &quot;<span class="inline">f5</span>&quot; ）。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Debugger Context Menu" class="center" src="../assets/Images/IDE Tools/Debug_Module_Context_Menu.png"/></td>
+          <td class="icons"><img alt="Debugger Context Menu" class="center"
+              src="../assets/Images/IDE Tools/Debug_Module_Context_Menu.png" /></td>
           <td class="text">これでゲームが一時停止（ブレーク）します。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Debug Graph" class="center" src="../assets/Images/IDE Tools/Debug_Graph.png"/></td>
+          <td class="icons"><img alt="Debug Graph" class="center" src="../assets/Images/IDE Tools/Debug_Graph.png" />
+          </td>
           <td class="text">ゲームを再開する。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/></td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png"
+              width="55" /></td>
           <td class="text">ゲームを停止させる。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/></td>
-          <td class="text">コードブロックまたは<span class="notranslate">script</span> (キーボードショートカット &quot;<span class="inline">f11</span>&quot;) に足を踏み入れます。</td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png"
+              width="55" /></td>
+          <td class="text">コードブロックまたは<span class="notranslate">script</span> (キーボードショートカット &quot;<span
+              class="inline">f11</span>&quot;) に足を踏み入れます。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/></td>
-          <td class="text">コードブロックまたは<span class="notranslate">script</span> (キーボードショートカット &quot;<span class="inline">f10</span>&quot;) の上にステップします。</td>
+          <td class="icons"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /></td>
+          <td class="text">コードブロックまたは<span class="notranslate">script</span> (キーボードショートカット &quot;<span
+              class="inline">f10</span>&quot;) の上にステップします。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Debug Graph Events" class="center" src="../assets/Images/IDE Tools/Debug_Graph_Events.png"/></td>
-          <td class="text">コードブロックまたは<span class="notranslate">script</span> (キーボードショートカット<img> + &quot;<span class="inline">f11</span>&quot;) からステップアウトします。</td>
+          <td class="icons"><img alt="Debug Graph Events" class="center"
+              src="../assets/Images/IDE Tools/Debug_Graph_Events.png" /></td>
+          <td class="text">コードブロックまたは<span class="notranslate">script</span> (キーボードショートカット<img> + &quot;<span
+              class="inline">f11</span>&quot;) からステップアウトします。</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Debug Events" class="center" src="../assets/Images/IDE Tools/Debug_Events.png"/></td>
+          <td class="icons"><img alt="Debug Events" class="center" src="../assets/Images/IDE Tools/Debug_Events.png" />
+          </td>
           <td class="text">デバッグ情報のリアルタイム更新のオン・オフを設定します（デフォルトではオフになっています）。</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">最初の3つのボタンは、ゲームの<strong>開始</strong>、<strong>一時停止</strong>、<strong>再開 </strong>、<strong>停止を </strong>コントロールするためのものです。ゲームが一時停止されると、（一時停止ボタン
+    <p class="dropspot">最初の3つのボタンは、ゲームの<strong>開始</strong>、<strong>一時停止</strong>、<strong>再開 </strong>、<strong>停止を
+      </strong>コントロールするためのものです。ゲームが一時停止されると、（一時停止ボタン
       または<strong>ブレークポイント</strong>から）3つの<strong>ステップ</strong>ボタンを使って、コードをステップ実行することができます。</p>
     <p class="dropspot">コードを「ステップ」するというのは、現在のコード行を実行してから次のコード行に「ステップ」することで、ゲーム全体を一度に1行ずつ実行することができるという意味です。
-      ということです。通常は「<strong>ステップイン</strong>」ボタンで行いますが、「ステップ<strong>オーバー </strong>」ボタンと「ステップ<strong>アウト </strong>」ボタンも用意されています。ステップオーバーは次のような場合に便利です。
-      大きな<span class="notranslate">scripts</span> がある場合、これをクリックすると、<span class="notranslate">script</span> またはコードブロック全体が一度に実行され、次の行で停止します。一方、ステップアウトすると<span class="notranslate">script</span> の外に出て（実行はされますが、一度に停止します）、次の行で停止します。
+      ということです。通常は「<strong>ステップイン</strong>」ボタンで行いますが、「ステップ<strong>オーバー </strong>」ボタンと「ステップ<strong>アウト
+      </strong>」ボタンも用意されています。ステップオーバーは次のような場合に便利です。
+      大きな<span class="notranslate">scripts</span> がある場合、これをクリックすると、<span class="notranslate">script</span>
+      またはコードブロック全体が一度に実行され、次の行で停止します。一方、ステップアウトすると<span class="notranslate">script</span>
+      の外に出て（実行はされますが、一度に停止します）、次の行で停止します。
       スコープが変わると、その次のステップに進みます。</p>
-    <p class="dropspot">最後の<strong>リアルタイム更新</strong>のアイコンは、デバッグウィンドウのデータをリアルタイムに更新することを許可するもので、変数の変化やインスタンスの作成・破棄をその場で確認できます。ただし、これはゲームのパフォーマンスに影響を与える可能性があります。
-      また、すべての情報がリアルタイムで利用可能なわけではありません。例えば、<strong>Render State</strong>ウォッチ（「<a href="The_Debugger/Watches.htm">ウォッチ</a>」のセクションを参照）はリアルタイムで見ることができません。</p>
+    <p class="dropspot">
+      最後の<strong>リアルタイム更新</strong>のアイコンは、デバッグウィンドウのデータをリアルタイムに更新することを許可するもので、変数の変化やインスタンスの作成・破棄をその場で確認できます。ただし、これはゲームのパフォーマンスに影響を与える可能性があります。
+      また、すべての情報がリアルタイムで利用可能なわけではありません。例えば、<strong>Render State</strong>ウォッチ（「<a
+        href="The_Debugger/Watches.htm">ウォッチ</a>」のセクションを参照）はリアルタイムで見ることができません。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">コード表示</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">コードビューでは、プロジェクトの実行中に、異なる<span class="notranslate">scripts</span> やイベントコードを確認することができます。<img> デフォルトでは空の状態で始まりますが、<strong>リソースビューから </strong>任意の<span class="notranslate">asset</span> をダブルクリックすると、ここでそのコードを開くことができます。複数の異なるイベントや<span class="notranslate">scripts</span> を開くこともでき、それらはコードビュー<span class="notranslate">workspace</span> の上部にタブとして追加されます。</p>
-    <p class="dropspot">コードビューでコードウィンドウを開いているときに、ガター（行番号のある場所）で<img> を左クリックすると、<strong>ブレークポイントを </strong>追加したり削除したりすることができます（詳しくは
-      <span class="notranslate">breakpoints</span> ）については、このページのさらに下を参照してください。</p>
-    <p class="dropspot">マウスの右ボタン（<img> ）で<strong>コンテキストメニューを</strong>開き、<span class="notranslate">breakpoints</span> の追加や削除、任意のコピーも可能です。
+    <p class="dropspot">コードビューでは、プロジェクトの実行中に、異なる<span class="notranslate">scripts</span> やイベントコードを確認することができます。<img>
+      デフォルトでは空の状態で始まりますが、<strong>リソースビューから </strong>任意の<span class="notranslate">asset</span>
+      をダブルクリックすると、ここでそのコードを開くことができます。複数の異なるイベントや<span class="notranslate">scripts</span> を開くこともでき、それらはコードビュー<span
+        class="notranslate">workspace</span> の上部にタブとして追加されます。</p>
+    <p class="dropspot">コードビューでコードウィンドウを開いているときに、ガター（行番号のある場所）で<img> を左クリックすると、<strong>ブレークポイントを
+      </strong>追加したり削除したりすることができます（詳しくは
+      <span class="notranslate">breakpoints</span> ）については、このページのさらに下を参照してください。
+    </p>
+    <p class="dropspot">マウスの右ボタン（<img> ）で<strong>コンテキストメニューを</strong>開き、<span class="notranslate">breakpoints</span>
+      の追加や削除、任意のコピーも可能です。
       選択したコードをクリップボードにコピーします。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">時計</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">このセクションでは、ゲームのさまざまな側面を「見る」ことで、より深く、より詳細な<span class="notranslate">debugging</span> を可能にすることに特化しています。これについては、次のページで詳しく説明します。</p>
+    <p class="dropspot">このセクションでは、ゲームのさまざまな側面を「見る」ことで、より深く、より詳細な<span class="notranslate">debugging</span>
+      を可能にすることに特化しています。これについては、次のページで詳しく説明します。</p>
     <ul class="dropspotlist">
       <li class="dropspot"><a href="The_Debugger/Watches.htm">時計</a></li>
     </ul>
   </div>
-  <p><br /><img> ゲーム実行中は、デフォルトではデバッグウィンドウに変数の値やその他の詳細が更新されないので、まず<span class="notranslate">Debugger</span> の Pause ボタンを使ってゲームを一時停止してから Locals や Globals などのデータを利用するか、上部<img> のアイコンからリアルタイム更新を有効にする必要があることに注意します。ただし
-    このルールの唯一の例外は<strong>Profile </strong>ビューで、これは独自のオン/オフボタンがあるため、リアルタイム<span class="notranslate">switch</span> と独立して有効にするとリアルタイムで更新されます。このビューの詳細については、次のページを参照してください。</p>
+  <p><br /><img> ゲーム実行中は、デフォルトではデバッグウィンドウに変数の値やその他の詳細が更新されないので、まず<span class="notranslate">Debugger</span> の Pause
+    ボタンを使ってゲームを一時停止してから Locals や Globals などのデータを利用するか、上部<img> のアイコンからリアルタイム更新を有効にする必要があることに注意します。ただし
+    このルールの唯一の例外は<strong>Profile </strong>ビューで、これは独自のオン/オフボタンがあるため、リアルタイム<span class="notranslate">switch</span>
+    と独立して有効にするとリアルタイムで更新されます。このビューの詳細については、次のページを参照してください。</p>
   <ul class="colour">
     <li><a href="The_Debugger/The_Profiler.htm">プロファイラー</a></li>
   </ul>
-  <p><span class="notranslate">debugging</span> ゲームでもうひとつ重要なのは、<strong>ブレイクポイントの</strong>使用です。<span class="notranslate">breakpoint</span> は、プロジェクトのコードの中で、何が起こっているかを確認できるように、停止させたい場所です。<span class="notranslate">Debugger</span> を実行すると、ブレークポイントを追加したり削除したりすることができます。
-   <img> を左クリックすることで、いつでも、どのコードまたは<span class="notranslate">script</span> ブロックでも、行番号のあるガターで、またはマウスの右ボタンで <strong><img></strong>をクリックします。
-   <strong>コンテキスト</strong>メニューを開き、ブレークポイントの追加と削除を行うことができます。</p>
-  <p><img>ブレークポイントは、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> からも設定することができます。プロジェクト作成中、いつでも追加・削除できます。
-    <span class="inline">f9</span> (または、マウスの右ボタン<img> で、&quot;<strong>toggle breakpoint</strong>&quot; を選択)、<span class="notranslate">object</span> ウィンドウのアクションで行います。
-      (<span class="notranslate">GML</span> Visual ユーザーの場合)、またはコード・エディター・ウィンドウの行の上。これで、デバッグモードでゲームを実行すると、定義したポイント（または複数のポイント）で一時停止します。</p>
-  <p><span class="notranslate">IDE</span> で設定したブレークポイントはプロジェクトと一緒に保存され、再度削除されるまでは様々な実行に対応します。しかし、<span class="notranslate">breakpoint</span> でコードに<span class="notranslate">Debugger</span> を追加すると、モジュールを閉じたり、新しいテスト実行を開始すると、このブレークポイントは失われます。
-    すべての<span class="notranslate">breakpoints</span> は、<a href="../Introduction/The_Output_Window.htm">Output Window</a>に表示され、有効化、無効化、または削除することができることに注意してください。</p>
+  <p><span class="notranslate">debugging</span> ゲームでもうひとつ重要なのは、<strong>ブレイクポイントの</strong>使用です。<span
+      class="notranslate">breakpoint</span> は、プロジェクトのコードの中で、何が起こっているかを確認できるように、停止させたい場所です。<span
+      class="notranslate">Debugger</span> を実行すると、ブレークポイントを追加したり削除したりすることができます。
+    <img> を左クリックすることで、いつでも、どのコードまたは<span class="notranslate">script</span> ブロックでも、行番号のあるガターで、またはマウスの右ボタンで
+    <strong><img></strong>をクリックします。
+    <strong>コンテキスト</strong>メニューを開き、ブレークポイントの追加と削除を行うことができます。
+  </p>
+  <p><img>ブレークポイントは、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span>
+    からも設定することができます。プロジェクト作成中、いつでも追加・削除できます。
+    <span class="inline">f9</span> (または、マウスの右ボタン<img> で、&quot;<strong>toggle breakpoint</strong>&quot; を選択)、<span
+      class="notranslate">object</span> ウィンドウのアクションで行います。
+    (<span class="notranslate">GML</span> Visual
+    ユーザーの場合)、またはコード・エディタ・ウィンドウの行の上。これで、デバッグモードでゲームを実行すると、定義したポイント（または複数のポイント）で一時停止します。
+  </p>
+  <p><span class="notranslate">IDE</span> で設定したブレークポイントはプロジェクトと一緒に保存され、再度削除されるまでは様々な実行に対応します。しかし、<span
+      class="notranslate">breakpoint</span> でコードに<span class="notranslate">Debugger</span>
+    を追加すると、モジュールを閉じたり、新しいテスト実行を開始すると、このブレークポイントは失われます。
+    すべての<span class="notranslate">breakpoints</span> は、<a href="../Introduction/The_Output_Window.htm">Output
+      Window</a>に表示され、有効化、無効化、または削除することができることに注意してください。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span> </a>その他のツール</div>
-        <div style="float:right">次へ<a href="The_Micro_Web_Server.htm">マイクロウェブサーバー</a></div>
+        <div style="float:left">前のページ：<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span>
+          </a>その他のツール
+        </div>
+        <div style="float:right">次のページ：<a href="The_Micro_Web_Server.htm">マイクロウェブサーバー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Debugger
@@ -150,4 +215,6 @@ Debug
 debug_mode
 -->
 
-</body></html>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>デバイス入力</title>
@@ -12,15 +13,17 @@
   <meta name="rh-index-keywords" content="Device Input" />
   <meta name="search-keywords" content="Device Input,mb_left,mb_middle,mb_right,mb_none,mb_any" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>デバイス入力</h1>
-  <p>マルチタッチが可能なプラットフォームをターゲットにする場合、これらの機能を使用する必要があります。PCに複数のマウスが接続されている場合と同じように動作し、チェックされる定数は<a href="../Mouse_Input/Mouse_Input.htm">標準のマウス関数に</a>使用されているものと同じです。</p>
+  <p>マルチタッチが可能なプラットフォームをターゲットにする場合、これらの機能を使用する必要があります。PCに複数のマウスが接続されている場合と同じように動作し、チェックされる定数は<a
+      href="../Mouse_Input/Mouse_Input.htm">標準のマウス関数に</a>使用されているものと同じです。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">mb_left</span></td>
@@ -52,13 +55,22 @@
       </tr>
     </tbody>
   </table>
-  <p class="note"><span class="note"><strong>注意</strong></span>*<strong>mb_side1</strong>および<strong>mb_side2 </strong>ボタンは、<span class="notranslate">Windows</span>,<span class="notranslate">macOS</span>,<span class="notranslate">Ubuntu</span> および HTML5 でのみ使用可能です。</p>
-  <p>この関数はすべて、デバイスのディスプレイへのタッチに対応する「タッチ」値を取ることができますが、検出できるタッチの最大数は、デバイスと実行中のOSに大きく依存します。たとえば、ローエンドの<span class="notranslate">Android</span> デバイスでは、同時に 2 つか 3 つのタッチしか検出できない場合がありますが、UWP デバイスでは最大 10 のタッチを検出できる場合があります。また、タッチスクリーンデバイスでは、ダブルタップは<b>マウスの右ボタンと</b>同等のイベントとして返されることに注意してください。したがって、たとえば、複数のタップを連続して検出する必要がある場合、 <span class="inline">mb_left</span> と <span class="inline">mb_right</span> の<b>両方を</b>チェックする必要があります。この機能のオン・オフは <a href="device_mouse_dbclick_enable.htm"><span class="inline">device_mouse_dbclick_enable()</span></a>.</p>
+  <p class="note"><span class="note"><strong>注意</strong></span>*<strong>mb_side1</strong>および<strong>mb_side2
+    </strong>ボタンは、<span class="notranslate">Windows</span>,<span class="notranslate">macOS</span>,<span
+      class="notranslate">Ubuntu</span> および HTML5 でのみ使用可能です。</p>
+  <p>この関数はすべて、デバイスのディスプレイへのタッチに対応する「タッチ」値を取ることができますが、検出できるタッチの最大数は、デバイスと実行中のOSに大きく依存します。たとえば、ローエンドの<span
+      class="notranslate">Android</span> デバイスでは、同時に 2 つか 3 つのタッチしか検出できない場合がありますが、UWP デバイスでは最大 10
+    のタッチを検出できる場合があります。また、タッチスクリーンデバイスでは、ダブルタップは<b>マウスの右ボタンと</b>同等のイベントとして返されることに注意してください。したがって、たとえば、複数のタップを連続して検出する必要がある場合、
+    <span class="inline">mb_left</span> と <span class="inline">mb_right</span> の<b>両方を</b>チェックする必要があります。この機能のオン・オフは <a
+      href="device_mouse_dbclick_enable.htm"><span class="inline">device_mouse_dbclick_enable()</span></a>.
+  </p>
   <p>以下は、デバイス固有の制御機能の一覧です。</p>
   <ul class="colour">
     <li><a href="device_mouse_check_button.htm"><span class="notranslate">device_mouse_check_button</span></a></li>
-    <li><a href="device_mouse_check_button_pressed.htm"><span class="notranslate">device_mouse_check_button_pressed</span></a></li>
-    <li><a href="device_mouse_check_button_released.htm"><span class="notranslate">device_mouse_check_button_released</span></a></li>
+    <li><a href="device_mouse_check_button_pressed.htm"><span
+          class="notranslate">device_mouse_check_button_pressed</span></a></li>
+    <li><a href="device_mouse_check_button_released.htm"><span
+          class="notranslate">device_mouse_check_button_released</span></a></li>
     <li><a href="device_mouse_dbclick_enable.htm"><span class="notranslate">device_mouse_dbclick_enable</span></a></li>
     <li><a href="device_mouse_x.htm"><span class="notranslate">device_mouse_x</span></a></li>
     <li><a href="device_mouse_y.htm"><span class="notranslate">device_mouse_y</span></a></li>
@@ -72,17 +84,22 @@
     <li><a href="device_get_tilt_z.htm"><span class="notranslate">device_get_tilt_z</span></a></li>
   </ul>
   <p> </p>
-  <p>モバイルデバイス(<span class="notranslate">Android</span>,<span class="notranslate">iOS</span> and<span class="notranslate">Windows Phone</span>)では、いつでも戻るボタンが使えます。これは、<span data-keyref="GameMaker Name">GameMaker</span> <a href="../Keyboard_Input/Keyboard_Input.htm">キーボード定数</a> <span class="inline">vk_backspace</span> であるキーボード<b>backspaceに</b>マッピングされているので、これらのデバイスでは、そのキーに対するチェックを行い、戻るボタンを使用したかのような動作を実行することができます。</p>
+  <p>モバイルデバイス(<span class="notranslate">Android</span>,<span class="notranslate">iOS</span> and<span
+      class="notranslate">Windows Phone</span>)では、いつでも戻るボタンが使えます。これは、<span data-keyref="GameMaker Name">GameMaker</span>
+    <a href="../Keyboard_Input/Keyboard_Input.htm">キーボード定数</a> <span class="inline">vk_backspace</span>
+    であるキーボード<b>backspaceに</b>マッピングされているので、これらのデバイスでは、そのキーに対するチェックを行い、戻るボタンを使用したかのような動作を実行することができます。
+  </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Game_Input.htm">ゲーム入力</a></div>
-        <div style="float:right">次へ<a href="../Gesture_Input/Gesture_Input.htm">ジェスチャー入力</a></div>
+        <div style="float:left">前のページ：<a href="../Game_Input.htm">ゲーム入力</a></div>
+        <div style="float:right">次のページ：<a href="../Gesture_Input/Gesture_Input.htm">ジェスチャー入力</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Device Input Functions
@@ -96,4 +113,5 @@ mb_any
 device_functions
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>point_direction</title>
@@ -13,40 +14,48 @@
   <meta name="search-keywords" content="point_direction" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">point_direction</span></h1>
-  <p>この関数は、指定された成分 [x1,y1] と [x2,y2] で形成されるベクトルの方向を、固定された x/y 座標に対して返します<span class="notranslate">room</span> 。例えば、下の画像で、敵に向かってミサイルを発射できるように、プレイヤー船の位置から敵位置までの方向を取得したい場合は、この関数を使います（正確なコードは画像の下の例で説明します）。</p>
-  <p><img alt="Point direction example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_direction.png" /></p>
+  <p>この関数は、指定された成分 [x1,y1] と [x2,y2] で形成されるベクトルの方向を、固定された x/y 座標に対して返します<span class="notranslate">room</span>
+    。例えば、下の画像で、敵に向かってミサイルを発射できるように、プレイヤー船の位置から敵位置までの方向を取得したい場合は、この関数を使います（正確なコードは画像の下の例で説明します）。</p>
+  <p><img alt="Point direction example" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_direction.png" /></p>
   <p> </p>
   <h4><b>構文です。</b></h4>
   <p class="code">point_direction(x1, y1, x2, y2)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the first component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the first component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the second component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the second component of the vector</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,18 +66,21 @@
     {<br />
         direction = point_direction(x, y, _ex, _ey);<br />
     }</p>
-  <p>上記のコードは、最も近い敵のxとyの座標を取得し、それを弾丸<span class="notranslate">object</span> に渡して、point_direction関数で使用し、その進行方向を正しく設定します。</p>
+  <p>上記のコードは、最も近い敵のxとyの座標を取得し、それを弾丸<span class="notranslate">object</span> に渡して、point_direction関数で使用し、その進行方向を正しく設定します。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Angles_And_Distance.htm">角度と距離</a></div>
-        <div style="float:right">次のページ <a href="point_distance.htm"><span class="notranslate">point_distance</span></a></div>
+        <div style="float:left">前のページ：<a href="Angles_And_Distance.htm">角度と距離</a></div>
+        <div style="float:right">次のページ：<a href="point_distance.htm"><span class="notranslate">point_distance</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 point_direction
@@ -77,4 +89,5 @@ point_direction
 point_direction
 -->
 </body>
+
 </html>

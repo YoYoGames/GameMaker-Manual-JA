@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_achievement_load_friends</title>
@@ -24,10 +25,16 @@
   </script>
   <meta name="topic-comment" content="Page outlining the function xboxlive_achievement_load_friends." />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_achievement_load_friends</h1>
-  <p>この関数は、ログインしているすべてのユーザーの友人に関する情報を<span class="notranslate">server</span> にリクエストし、コールバック<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a>をトリガーします。 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>マップに関連するキーと値のペアを入力します。この <span class="inline">DS Map</span> の<i>id</i>キーは、正しいコールバックを識別するために使用されます（任意の非同期イベントに対して複数のトリガー関数が存在する可能性があります）。また、<b>定数</b> <span class="inline">xboxlive_achievement_friends_info</span> と、各友人の他の多くのキー/値のペアが対になっています。マップの正確な内容は以下の通りです。</p>
+  <p>この関数は、ログインしているすべてのユーザーの友人に関する情報を<span class="notranslate">server</span> にリクエストし、コールバック<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous
+      Event</a>をトリガーします。 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>マップに関連するキーと値のペアを入力します。この <span class="inline">DS Map</span>
+    の<i>id</i>キーは、正しいコールバックを識別するために使用されます（任意の非同期イベントに対して複数のトリガー関数が存在する可能性があります）。また、<b>定数</b> <span
+      class="inline">xboxlive_achievement_friends_info</span> と、各友人の他の多くのキー/値のペアが対になっています。マップの正確な内容は以下の通りです。</p>
   <ul class="colour">
     <li>「<b>id</b>&quot; - この関数の場合、以下のようになります。 <span class="inline">xboxlive_achievement_friends_info</span></li>
     <li>「<b>FriendN</b>&quot; - 友人の名前。&quot;N&quot; は友人リスト内での位置を表す整数値です。</li>
@@ -37,7 +44,7 @@
   <h4><b>構文です。</b></h4>
   <p class="code">xboxlive_achievement_load_friends();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>拡張された例。</h4>
@@ -55,18 +62,21 @@
             global.friendid[i] = ds_map_find_value(async_load, &quot;Friendid&quot; + string(i));<br />
         }<br />
     }</p>
-  <p>上記のコードは、<b>ソーシャル非同期</b>イベントで返された <span class="inline">DS Map</span> をチェックし、その「id」がチェック対象の定数と一致した場合、<span class="notranslate">loops</span> 、マップを介して複数の配列にすべての異なる値を格納します。</p>
+  <p>上記のコードは、<b>ソーシャル非同期</b>イベントで返された <span class="inline">DS Map</span> をチェックし、その「id」がチェック対象の定数と一致した場合、<span
+      class="notranslate">loops</span> 、マップを介して複数の配列にすべての異なる値を格納します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a data-xref="{title}" href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
-        <div style="float:right">次ページ：<a data-xref="{title}" href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></div>
+        <div style="float:left">前のページ：<a data-xref="{title}" href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次ページ：<a data-xref="{title}"
+            href="xboxlive_achievement_load_leaderboard.htm">xboxlive_achievement_load_leaderboard</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 achievement_load_friends
@@ -78,4 +88,5 @@ xboxlive_achievement_load_friends
 achievement_load_friends
 -->
 </body>
+
 </html>

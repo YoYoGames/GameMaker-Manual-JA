@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>パーティクルエミッター</title>
@@ -12,12 +13,19 @@
   <meta name="rh-index-keywords" content="Particle Emitters, Particles" />
   <meta name="search-keywords" content="Particle Emitters" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>パーティクルエミッター</h1>
-  <p><strong>パーティクルエミッターは </strong>、<span data-keyref="GameMaker Name">GameMakerで</span>画面上に様々な形状や分布を持つ粒子を放出するために使用されます。また、パーティクルは連続的に発生させることも、一度に大量に発生させることも可能で、機能の使い分けができます。</p>
-  <p>パーティクルエミッターは動的に作成されるリソースなので、作成し、返されたインデックスを変数に格納して、以降のすべての関数呼び出しでエミッターを参照する必要があります。また、不要になったらエミッターを破棄することが非常に重要で、破棄しないとメモリリークが発生してゲームの動作が遅くなり、最終的にはクラッシュします。また、パーティクルエミッターは作成された後、インデックスが保存されなくなったとしても、永遠に生き続けることも知っておくとよいでしょう。そのため、<span class="notranslate">room</span> を変更したり、ゲームを再起動しても、システムとパーティクルは残り、以降のすべての<span class="notranslate">rooms</span> で表示されます。したがって、不要になったら、確実に破棄する必要があります。</p>
-  <p>エミッタを設定したり、パーティクルを生成させたりするために、以下の関数が用意されています。なお、各関数は第一引数として所属する<a href="../Particle_Systems/Particle_Systems.htm">パーティクルシステムの</a>インデックスを取得します。</p>
+  <p><strong>パーティクルエミッターは </strong>、<span
+      data-keyref="GameMaker Name">GameMakerで</span>画面上に様々な形状や分布を持つパーティクルを放出するために使用されます。また、パーティクルは連続的に発生させることも、一度に大量に発生させることも可能で、機能の使い分けができます。
+  </p>
+  <p>
+    パーティクルエミッターは動的に作成されるリソースなので、作成し、返されたインデックスを変数に格納して、以降のすべての関数呼び出しでエミッターを参照する必要があります。また、不要になったらエミッターを破棄することが非常に重要で、破棄しないとメモリリークが発生してゲームの動作が遅くなり、最終的にはクラッシュします。また、パーティクルエミッターは作成された後、インデックスが保存されなくなったとしても、永遠に生き続けることも知っておくとよいでしょう。そのため、<span
+      class="notranslate">room</span> を変更したり、ゲームを再起動しても、システムとパーティクルは残り、以降のすべての<span class="notranslate">rooms</span>
+    で表示されます。したがって、不要になったら、確実に破棄する必要があります。</p>
+  <p>エミッタを設定したり、パーティクルを生成させたりするために、以下の関数が用意されています。なお、各関数は第一引数として所属する<a
+      href="../Particle_Systems/Particle_Systems.htm">パーティクルシステムの</a>インデックスを取得します。</p>
   <ul class="colour">
     <li><a href="part_emitter_exists.htm"><span class="notranslate">part_emitter_exists</span></a></li>
     <li><a href="part_emitter_create.htm"><span class="notranslate">part_emitter_create</span></a></li>
@@ -33,11 +41,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Particles.htm">粒子</a></div>
-        <div style="float:right">次へ<a href="../Particle_Systems/Particle_Systems.htm">パーティクルシステム</a></div>
+        <div style="float:left">前のページ：<a href="../Particles.htm">パーティクル</a></div>
+        <div style="float:right">次のページ：<a href="../Particle_Systems/Particle_Systems.htm">パーティクルシステム</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Particle Emitters
@@ -46,4 +55,5 @@ Particle Emitters
 particle_emitter_functions
 -->
 </body>
+
 </html>

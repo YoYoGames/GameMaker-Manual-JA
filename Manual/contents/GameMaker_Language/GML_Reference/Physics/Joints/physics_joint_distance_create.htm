@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_joint_distance_create</title>
@@ -13,20 +14,30 @@
   <meta name="search-keywords" content="physics_joint_distance_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_joint_distance_create</span></h1>
-  <p>最も単純なジョイントのひとつが距離ジョイントで、2つのインスタンス上の2点間の距離が一定でなければならないというものです。距離ジョイントを指定する場合、2つのインスタンスはすでに作成され、フィクスチャが割り当てられているはずです。それから、2つのアンカーポイントを<span class="notranslate">room</span> の座標で定義します。最初のアンカーポイントはインスタンス1に、2番目のアンカーポイントはインスタンス2に接続され、これらの点間の距離は距離拘束の長さを意味します。下の画像は、この仕組みを示しています。</p>
-  <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span> に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span> エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span> のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。したがって、距離ジョイントをインスタンスの原点以外の場所に作成しても、それはまだ有効であり、それが作成された位置に対して2つのインスタンスを相対的に拘束することになります。col&quot; の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、それは衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
+  <p>
+    最も単純なジョイントのひとつが距離ジョイントで、2つのインスタンス上の2点間の距離が一定でなければならないというものです。距離ジョイントを指定する場合、2つのインスタンスはすでに作成され、フィクスチャが割り当てられているはずです。それから、2つのアンカーポイントを<span
+      class="notranslate">room</span>
+    の座標で定義します。最初のアンカーポイントはインスタンス1に、2番目のアンカーポイントはインスタンス2に接続され、これらの点間の距離は距離拘束の長さを意味します。下の画像は、この仕組みを示しています。</p>
+  <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span>
+    に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span>
+    エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span>
+    のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。したがって、距離ジョイントをインスタンスの原点以外の場所に作成しても、それはまだ有効であり、それが作成された位置に対して2つのインスタンスを相対的に拘束することになります。col&quot;
+    の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、それは衝突イベントがある<i>場合のみ</i>です。しかし、 <span
+      class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2,
+    w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">inst1</span></td>
@@ -66,7 +77,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -78,18 +89,22 @@
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_distance_create(id, o_id, x + 50, y, o_id.x - 50, o_id.y, 0);<br />
     physics_fixture_delete(mainFixture);</p>
-  <p>上記のコードでは、新しいフィクスチャを作成・定義し、&quot;obj_Rudder &quot;のインスタンスを作成しています。そして、フィクスチャはコードを実行しているインスタンスと新しく作成されたインスタンスに割り当てられ、それらの間にジョイントが作成されます。最後に、フィクスチャは不要になったので削除されます。</p>
+  <p>上記のコードでは、新しいフィクスチャを作成・定義し、&quot;obj_Rudder
+    &quot;のインスタンスを作成しています。そして、フィクスチャはコードを実行しているインスタンスと新しく作成されたインスタンスに割り当てられ、それらの間にジョイントが作成されます。最後に、フィクスチャは不要になったので削除されます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Joints.htm">関節</a></div>
-        <div style="float:right">次のページ <a href="physics_joint_revolute_create.htm"><span class="notranslate">physics_joint_revolute_create</span></a></div>
+        <div style="float:left">前のページ：<a href="Joints.htm">関節</a></div>
+        <div style="float:right">次のページ：<a href="physics_joint_revolute_create.htm"><span
+              class="notranslate">physics_joint_revolute_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_distance_create
@@ -98,4 +113,5 @@ physics_joint_distance_create
 physics_joint_distance_create
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>path_add_point</title>
@@ -12,20 +13,32 @@
   <meta name="rh-index-keywords" content="path_add_point" />
   <meta name="search-keywords" content="path_add_point" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">path_add_point</span></h1>
-  <p>この機能により、指定した<span class="notranslate">path</span> にポイントを追加し、その速度係数を設定することができます。この点は、点の位置に関係なく、<span class="notranslate">path</span> の末尾に追加されます。 <a href="../Path_Variables/path_speed.htm"><span class="inline">path_speed</span></a><span class="notranslate">path</span>のこの点に到達したとき、後続のインスタンスが実際に進むことを示します。<span class="notranslate">path</span> の点を末端ではない他の位置に配置したい場合は、次のようにします。 <a href="path_insert_point.htm"><span class="inline">path_insert_point()</span></a>.</p>
-  <p><span class="notranslate">path</span> ブラウザから<span class="notranslate">Asset</span> に使用する場合、<strong>この関数は実際のアセットを変更</strong>するため、関数を使用した瞬間からゲーム終了まで、ゲーム内のすべてのインスタンスが<span class="notranslate">path</span> を使用する方法に永続的に影響を与えることに注意してください。これが必要でない場合は、 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すのを忘れないでください）。</p>
+  <p>この機能により、指定した<span class="notranslate">path</span> にポイントを追加し、その速度係数を設定することができます。この点は、点の位置に関係なく、<span
+      class="notranslate">path</span> の末尾に追加されます。 <a href="../Path_Variables/path_speed.htm"><span
+        class="inline">path_speed</span></a><span
+      class="notranslate">path</span>のこの点に到達したとき、後続のインスタンスが実際に進むことを示します。<span class="notranslate">path</span>
+    の点を末端ではない他の位置に配置したい場合は、次のようにします。 <a href="path_insert_point.htm"><span
+        class="inline">path_insert_point()</span></a>.</p>
+  <p><span class="notranslate">path</span> ブラウザから<span class="notranslate">Asset</span>
+    に使用する場合、<strong>この関数は実際のアセットを変更</strong>するため、関数を使用した瞬間からゲーム終了まで、ゲーム内のすべてのインスタンスが<span
+      class="notranslate">path</span> を使用する方法に永続的に影響を与えることに注意してください。これが必要でない場合は、 <span class="inline"><a
+        href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span>
+    のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a
+        href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すのを忘れないでください）。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">path_add_point</span>(index, x, y, speed);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -50,7 +63,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -66,11 +79,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
-        <div style="float:right">次のページ <a href="path_change_point.htm"><span class="notranslate">path_change_point</span></a></div>
+        <div style="float:left">前のページ：<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ：<a href="path_change_point.htm"><span
+              class="notranslate">path_change_point</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_add_point
@@ -79,4 +94,5 @@ path_add_point
 path_add_point
 -->
 </body>
+
 </html>

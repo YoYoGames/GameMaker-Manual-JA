@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_set_button_threshold</title>
@@ -12,36 +13,42 @@
   <meta name="rh-index-keywords" content="gamepad_set_button_threshold" />
   <meta name="search-keywords" content="gamepad_set_button_threshold" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gamepad_set_button_threshold</span></h1>
   <p>この機能は、指定されたデバイスのアナログボタンの現在の閾値設定を設定するために使用することができます。すべてのアナログボタンのデフォルトの閾値は0.5で、範囲は0から1です。</p>
   <p>デジタルボタンとしての機能を必要とするゲームでは、どの時点でボタンが「押された」と判断するかを閾値で定義しています。</p>
-  <p>この関数は、アナログボタンの<a href="gamepad_button_check.htm">チェック</a>、<a href="gamepad_button_check_pressed.htm">押された</a>状態、<a href="gamepad_button_check_released.htm">離された</a>状態に影響を与えますが<em>、</em>関数 <a href="gamepad_button_value.htm"><span class="inline">gamepad_button_value()</span></a>が返す値には影響しません。</p>
+  <p>この関数は、アナログボタンの<a href="gamepad_button_check.htm">チェック</a>、<a href="gamepad_button_check_pressed.htm">押された</a>状態、<a
+      href="gamepad_button_check_released.htm">離された</a>状態に影響を与えますが<em>、</em>関数 <a href="gamepad_button_value.htm"><span
+        class="inline">gamepad_button_value()</span></a>が返す値には影響しません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">gamepad_set_button_threshold</span>(device, threshold);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">gamepad_set_button_threshold</span>(device, threshold);
+  </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">device</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">threshold</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The new threshold value (from 0 - 1, default 0.5).</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -56,11 +63,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
         <div style="float:right">次ページ：<a href="gamepad_set_axis_deadzone.htm"> ゲームパッド_セット_軸_デッドゾーン </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_button_threshold
@@ -69,4 +77,5 @@ gamepad_set_button_threshold
 gamepad_set_button_threshold
 -->
 </body>
+
 </html>

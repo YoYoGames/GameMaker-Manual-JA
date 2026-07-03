@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オブジェクトとインスタンス</title>
@@ -8,71 +9,145 @@
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
   <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Overview of what objects and instances are and the role they play in making a game." />
+  <meta name="topic-comment"
+    content="Overview of what objects and instances are and the role they play in making a game." />
   <meta name="rh-index-keywords" content="Quick Start - Objects And Instances" />
   <meta name="search-keywords" content="objects,instances" />
   <meta name="robots" content="NOODP" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>オブジェクトとインスタンス</h1>
-  <p>これまで見てきた<span class="notranslate">assets</span> を使って、ゲーム<span class="notranslate">asset</span> ブラウザに素敵な画像やサウンドを追加することができますが、ゲーム自体ではまだ何もできません！このような画像やサウンドは、ゲーム内でどのような役割を果たすのでしょうか？そのためには、<span data-keyref="GameMaker Name">GameMaker</span> で最も重要な<span class="notranslate">assets</span> <strong>オブジェクトアセットが </strong>必要です。<span class="notranslate">Objects</span> は特別な<span class="notranslate">asset</span> で、ゲームの側面を制御したり、特定のことを行うために使用します。ほとんどの場合、<span class="notranslate">sprite</span> に関連付けられ、ゲーム内で見ることができます。<span class="notranslate">rooms</span> しかし、時には、統計情報を追跡したり、カットシーンのタイミングを設定したりと、「裏方」の<strong>コントローラー </strong>オブジェクトとして使われることもあります。<span class="notranslate">Objects</span> には動作を設定でき、特定のイベントやお互いに反応できます。ゲームで見られるほとんどのものは、<span class="notranslate">objects</span> とユーザーやお互いとの相互作用に基づくものです。</p>
-  <p>さて、<strong>インスタンスについて</strong>語らずして、<span class="notranslate">Objects</span> は語れません。<span data-keyref="GameMaker Name">GameMakerで</span>作るゲームでは、ゲーム中に出てくるキャラクター、モンスター、ボール、壁などなど、実はすべて<strong>インスタンスと</strong>みなされているのです。インスタンスとは本来、<span class="notranslate">object</span> の「コピー」であり、<span class="notranslate">Asset</span> Browser で見つけて、<span class="notranslate">room</span> に配置します（<span class="notranslate">objects</span> はインスタンスの<strong>テンプレートと考えて </strong>ください）。したがって、何かがインスタンスに影響を与えたり変更したりするというのは、<span class="notranslate">object</span> の<span class="notranslate">room</span> の特定のコピーが影響を受け、残りのすべては影響を受けないということです。しかし、<span class="notranslate">object</span> に影響を与えたり変更したりするというのは、それに対して行ったことが、その時点から作成されるすべてのインスタンスに反映されるということなのです。つまり、<strong> <span class="notranslate">object</span> はインスタンスのテンプレートであり、インスタンスは<span class="notranslate">room</span> に配置してゲームを</strong>作るものなのです。</p>
-  <p>新しい<span class="notranslate">object</span> <span class="notranslate">asset</span> を作成するには、他の<span class="notranslate">asset</span> と同じように、<span class="notranslate">Objects</span> <span class="notranslate">asset</span> フォルダ上で<img> を右クリックし、「<em>作成」</em>（または<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザの</a>任意の場所で右クリックし、「<em>オブジェクトの作成</em>」）を選択するだけです。</p>
+  <p>これまで見てきた<span class="notranslate">assets</span> を使って、ゲーム<span class="notranslate">asset</span>
+    ブラウザに素敵な画像やサウンドを追加することができますが、ゲーム自体ではまだ何もできません！このような画像やサウンドは、ゲーム内でどのような役割を果たすのでしょうか？そのためには、<span
+      data-keyref="GameMaker Name">GameMaker</span> で最も重要な<span class="notranslate">assets</span> <strong>オブジェクトアセットが
+    </strong>必要です。<span class="notranslate">Objects</span> は特別な<span class="notranslate">asset</span>
+    で、ゲームの側面を制御したり、特定のことを行うために使用します。ほとんどの場合、<span class="notranslate">sprite</span> に関連付けられ、ゲーム内で見ることができます。<span
+      class="notranslate">rooms</span> しかし、時には、統計情報を追跡したり、カットシーンのタイミングを設定したりと、「裏方」の<strong>コントローラー
+    </strong>オブジェクトとして使われることもあります。<span class="notranslate">Objects</span>
+    には動作を設定でき、特定のイベントやお互いに反応できます。ゲームで見られるほとんどのものは、<span class="notranslate">objects</span> とユーザーやお互いとの相互作用に基づくものです。</p>
+  <p>さて、<strong>インスタンスについて</strong>語らずして、<span class="notranslate">Objects</span> は語れません。<span
+      data-keyref="GameMaker Name">GameMakerで</span>作るゲームでは、ゲーム中に出てくるキャラクター、モンスター、ボール、壁などなど、実はすべて<strong>インスタンスと</strong>みなされているのです。インスタンスとは本来、<span
+      class="notranslate">object</span> の「コピー」であり、<span class="notranslate">Asset</span> Browser で見つけて、<span
+      class="notranslate">room</span> に配置します（<span class="notranslate">objects</span> はインスタンスの<strong>テンプレートと考えて
+    </strong>ください）。したがって、何かがインスタンスに影響を与えたり変更したりするというのは、<span class="notranslate">object</span> の<span
+      class="notranslate">room</span> の特定のコピーが影響を受け、残りのすべては影響を受けないということです。しかし、<span class="notranslate">object</span>
+    に影響を与えたり変更したりするというのは、それに対して行ったことが、その時点から作成されるすべてのインスタンスに反映されるということなのです。つまり、<strong> <span
+        class="notranslate">object</span> はインスタンスのテンプレートであり、インスタンスは<span class="notranslate">room</span>
+      に配置してゲームを</strong>作るものなのです。</p>
+  <p>新しい<span class="notranslate">object</span> <span class="notranslate">asset</span> を作成するには、他の<span
+      class="notranslate">asset</span> と同じように、<span class="notranslate">Objects</span> <span
+      class="notranslate">asset</span> フォルダ上で<img> を右クリックし、「<em>作成」</em>（または<a
+      href="../Introduction/The_Asset_Browser.htm">アセットブラウザの</a>任意の場所で右クリックし、「<em>オブジェクトの作成</em>」）を選択するだけです。</p>
   <p><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
-  <p>これは<a href="../The_Asset_Editors/Objects.htm">Object Editor</a>ウィンドウで、現在の<span class="notranslate">object</span> のプロパティを表示しています。最初にすべきことは、<span class="notranslate">object</span> に名前をつけることです。ここでも &quot; <span class="inline">obj_</span>&quot; などのプレフィックスや他の識別子を使用します。一般的に、<span class="notranslate">object</span> が何かを描いたり、他の<span class="notranslate">objects</span> のインスタンスとの衝突を登録するには、それに割り当てられた<span class="notranslate">sprite</span> が必要です。これは<img> ボタンを使って追加されます。このボタンを押すと<strong>Asset Explorerが</strong>開き、使用する<span class="notranslate">sprite</span> を選択できます（<span class="notranslate">sprites</span> Browserから<span class="notranslate">Asset</span> をドラッグし、<span class="notranslate">Object</span> Editorにドロップして割り当てることもできます）。</p>
+  <p>これは<a href="../The_Asset_Editors/Objects.htm">Object Editor</a>ウィンドウで、現在の<span class="notranslate">object</span>
+    のプロパティを表示しています。最初にすべきことは、<span class="notranslate">object</span> に名前をつけることです。ここでも &quot; <span
+      class="inline">obj_</span>&quot; などのプレフィックスや他の識別子を使用します。一般的に、<span class="notranslate">object</span>
+    が何かを描いたり、他の<span class="notranslate">objects</span> のインスタンスとの衝突を登録するには、それに割り当てられた<span
+      class="notranslate">sprite</span> が必要です。これは<img> ボタンを使って追加されます。このボタンを押すと<strong>Asset
+      Explorerが</strong>開き、使用する<span class="notranslate">sprite</span> を選択できます（<span class="notranslate">sprites</span>
+    Browserから<span class="notranslate">Asset</span> をドラッグし、<span class="notranslate">Object</span>
+    Editorにドロップして割り当てることもできます）。</p>
   <p><img alt="The Object Editor" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor.png" /></p>
-  <p><span class="notranslate">sprite</span> <span class="notranslate">sprite</span> <span class="notranslate">asset</span> まだ適切な<span class="notranslate">asset</span> がない場合は、<em>新規スプライトボタン</em> <img> をクリックして<img> を作成し、標準の<span class="notranslate">sprite</span> 作成オプションで<span class="notranslate">object</span> を作成したように、好きなように編集することができます。<span class="notranslate">sprite</span> を選択したら、<img> の「<em>スプライトの編集</em>」<img> や「<em>画像の編集</em>」<img> ボタンをクリックして、<span class="notranslate">sprite</span> 自体の画像や<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を編集することもできます。この方法は、<span class="notranslate">sprite</span> ブラウザで<span class="notranslate">Asset</span> を見つけてから、編集することを指定するより早い場合があります。</p>
-  <p><span class="notranslate">sprite</span> を追加または作成したら、他のいくつかの<span class="notranslate">object</span> プロパティを変更できます。たとえば、<strong>表示 </strong>するかどうかや、どのような<strong>コリジョンマスクを</strong>持つかなどがあります。シンプルなゲームでは、ここで何も変更する必要はないでしょう。次に、<span class="notranslate">object</span> に<strong>イベントを </strong>追加します。</p>
-  <p>イベントとは、ゲームの中で、<span class="notranslate">loop</span> 、あなたがプログラムした内容に基づいて物事が起こるようにする、目立たない瞬間のことです。<span data-keyref="GameMaker Name">GameMaker</span>はこのイベントのサイクルで動作します。<span class="notranslate">room</span> が開始された瞬間から終了する瞬間まで、ゲーム<span class="notranslate">loop</span> が動作しており、各ステップで一連のイベントが実行されます。これらのイベントに対応する<span class="notranslate">GML</span> コードまたは<span class="notranslate">GML</span> Visual アクションをインスタンスに配置できます（1<strong>ステップは </strong>ゲーム時間の一瞬で、ゲームスピード設定により支配され「フレーム」とも呼ばれま す）。</p>
+  <p><span class="notranslate">sprite</span> <span class="notranslate">sprite</span> <span
+      class="notranslate">asset</span> まだ適切な<span class="notranslate">asset</span> がない場合は、<em>新規スプライトボタン</em> <img>
+    をクリックして<img> を作成し、標準の<span class="notranslate">sprite</span> 作成オプションで<span class="notranslate">object</span>
+    を作成したように、好きなように編集することができます。<span class="notranslate">sprite</span> を選択したら、<img> の「<em>スプライトの編集</em>」<img>
+    や「<em>画像の編集</em>」<img> ボタンをクリックして、<span class="notranslate">sprite</span> 自体の画像や<span
+      class="notranslate">sprite</span> <span class="notranslate">asset</span> を編集することもできます。この方法は、<span
+      class="notranslate">sprite</span> ブラウザで<span class="notranslate">Asset</span> を見つけてから、編集することを指定するより早い場合があります。</p>
+  <p><span class="notranslate">sprite</span> を追加または作成したら、他のいくつかの<span class="notranslate">object</span>
+    プロパティを変更できます。たとえば、<strong>表示
+    </strong>するかどうかや、どのような<strong>コリジョンマスクを</strong>持つかなどがあります。シンプルなゲームでは、ここで何も変更する必要はないでしょう。次に、<span
+      class="notranslate">object</span> に<strong>イベントを </strong>追加します。</p>
+  <p>イベントとは、ゲームの中で、<span class="notranslate">loop</span> 、あなたがプログラムした内容に基づいて物事が起こるようにする、目立たない瞬間のことです。<span
+      data-keyref="GameMaker Name">GameMaker</span>はこのイベントのサイクルで動作します。<span class="notranslate">room</span>
+    が開始された瞬間から終了する瞬間まで、ゲーム<span class="notranslate">loop</span> が動作しており、各ステップで一連のイベントが実行されます。これらのイベントに対応する<span
+      class="notranslate">GML</span> コードまたは<span class="notranslate">GML</span> Visual
+    アクションをインスタンスに配置できます（1<strong>ステップは </strong>ゲーム時間の一瞬で、ゲームスピード設定により支配され「フレーム」とも呼ばれま す）。</p>
   <p>イベントを追加するには、「Add Event」ボタン（<img> ）をクリックします。</p>
-  <p><img alt="Add Sprite Icon " class="icon" height="24" src="../assets/Images/Icons/Icon_AddSound.png" width="31" /></p>
-  <p>上に表示されているのは、さまざまな<strong>イベントカテゴリーで</strong>、その中には他のサブカテゴリーが含まれています。ここでは、すべてのイベントを紹介するのではなく、最も重要な5つのイベントを簡単に説明します。</p>
+  <p><img alt="Add Sprite Icon " class="icon" height="24" src="../assets/Images/Icons/Icon_AddSound.png" width="31" />
+  </p>
+  <p>上に表示されているのは、さまざまな<strong>イベントカテゴリーで</strong>、その中には他のサブカテゴリーが含まれています。ここでは、すべてのイベントを紹介するのではなく、最も重要な5つのイベントを簡単に説明します。
+  </p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img alt="The Asset Explorer" class="center" src="../assets/Images/QS_Guide/QS_AssetExplorer.png" /></td>
+        <td class="icons"><img alt="The Asset Explorer" class="center"
+            src="../assets/Images/QS_Guide/QS_AssetExplorer.png" /></td>
         <td class="icons"><strong>イベント作成</strong></td>
-        <td class="text">このイベントは、<span class="notranslate">object</span> のインスタンスが最初に作成されたときに発生し、<span class="notranslate">room</span> エディタを通じて<span class="notranslate">room</span> に配置されたインスタンスで、<span class="notranslate">room</span> が入力されたときに最初に発生するものである。つまり、このイベントは変数の初期化、<span class="notranslate">Timelines</span> の開始、<span class="notranslate">paths</span> の設定など、一般的に一度だけ、あるいは<span class="notranslate">room</span> に初めてインスタンスが現れたときだけ行う必要があることを行うのに理想的な場所なのです。</td>
+        <td class="text">このイベントは、<span class="notranslate">object</span> のインスタンスが最初に作成されたときに発生し、<span
+            class="notranslate">room</span> エディタを通じて<span class="notranslate">room</span> に配置されたインスタンスで、<span
+            class="notranslate">room</span> が入力されたときに最初に発生するものである。つまり、このイベントは変数の初期化、<span
+            class="notranslate">Timelines</span> の開始、<span class="notranslate">paths</span> の設定など、一般的に一度だけ、あるいは<span
+            class="notranslate">room</span> に初めてインスタンスが現れたときだけ行う必要があることを行うのに理想的な場所なのです。</td>
       </tr>
       <tr>
         <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></td>
         <td class="icons"><strong>ステップイベント</strong></td>
-        <td class="text"><span data-keyref="GameMaker Name">GameMakerでは</span>、ゲーム時間をステップに分割し、ゲームスピードで1秒間にいくつのステップがあるのかを定義しています。ステップとは、基本的に<span class="notranslate">loop</span> のことで、ゲームが動いている間、全てのイベントがチェックされ、必要に応じてトリガーされます。したがって、ステップイベントは、インスタンスが存在する間、ゲームの全てのステップをチェックするイベントであると想像できます。ステップ イベント &quot;カテゴリには、インスタンス内のタイミングを &quot;微調整 &quot;するための3つのサブカテゴリがありますが、一般的にはメインのステップ イベントを最も使用することになります。</td>
+        <td class="text"><span
+            data-keyref="GameMaker Name">GameMakerでは</span>、ゲーム時間をステップに分割し、ゲームスピードで1秒間にいくつのステップがあるのかを定義しています。ステップとは、基本的に<span
+            class="notranslate">loop</span>
+          のことで、ゲームが動いている間、全てのイベントがチェックされ、必要に応じてトリガーされます。したがって、ステップイベントは、インスタンスが存在する間、ゲームの全てのステップをチェックするイベントであると想像できます。ステップ
+          イベント &quot;カテゴリには、インスタンス内のタイミングを &quot;微調整 &quot;するための3つのサブカテゴリがありますが、一般的にはメインのステップ イベントを最も使用することになります。</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="New Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_NewSprite.png" /></td>
+        <td class="icons"><img alt="New Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_NewSprite.png" />
+        </td>
         <td class="icons"><strong>衝突イベント</strong></td>
-        <td class="text">もちろん、ゲームを作るときには、2つ（またはそれ以上）の<span class="notranslate">object</span> のインスタンスが衝突したことを知ることが非常に重要です。そのために、衝突イベントがあります。これは<span class="notranslate">object</span> に配置し、他のどの<span class="notranslate">object</span> に対して衝突をチェックするかを指定するイベントです。イベントを追加し、チェックする<span class="notranslate">object</span> を選択したら、<span class="notranslate">GML</span> コードまたは<span class="notranslate">GML</span> Visual を追加して、衝突を解決することができます。</td>
+        <td class="text">もちろん、ゲームを作るときには、2つ（またはそれ以上）の<span class="notranslate">object</span>
+          のインスタンスが衝突したことを知ることが非常に重要です。そのために、衝突イベントがあります。これは<span class="notranslate">object</span> に配置し、他のどの<span
+            class="notranslate">object</span> に対して衝突をチェックするかを指定するイベントです。イベントを追加し、チェックする<span
+            class="notranslate">object</span> を選択したら、<span class="notranslate">GML</span> コードまたは<span
+            class="notranslate">GML</span> Visual を追加して、衝突を解決することができます。</td>
       </tr>
       <tr>
         <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></td>
         <td class="icons"><strong>ドローイベント</strong></td>
-        <td class="text">ドローイベントのカテゴリには複数の異なるドローイベントがありますが、最もよく使うのは一番上にある単に「ドロー」と呼ばれるイベントです。この一般的なドローイベントは、ステップイベントと同様にゲームフレームごとに呼び出されますが、2つの異なる方法で機能します。1つ目は、このイベントを<span class="notranslate">object</span> に追加していない場合です ...<em>指定された </em>Draw Event がない場合、<span data-keyref="GameMaker Name">GameMaker</span>はデフォルトで<span class="notranslate">sprite</span> に割り当てられた<span class="notranslate">object</span> を描画し、<span class="notranslate">object</span> の他の場所で適用されたトランスフォーム（サイズ変更、アルファブレンディングなど）を使用します。したがって、Event list に Draw Event が表示されていない場合でも、インスタンスが<span class="notranslate">room</span> に配置されると実行されて、画面に描画します。 2 番目の動作方法は、イベント自体を追加して<span class="notranslate">GML</span> または<span class="notranslate">GML</span> Visual をその中に含める場合です。イベントに何かを追加することで、<span data-keyref="GameMaker Name">GameMaker</span>に「<em>このオブジェクトのインスタンスに対する描画をコントロールしたい</em>」と伝え、デフォルトの描画を完全にオーバーライドします。つまり、<span class="notranslate">object</span> に<span class="notranslate">sprite</span> を割り当て、 draw イベントで text を描画するように設定すると、<span class="notranslate">sprite</span> は描画されません。</td>
+        <td class="text">
+          ドローイベントのカテゴリには複数の異なるドローイベントがありますが、最もよく使うのは一番上にある単に「ドロー」と呼ばれるイベントです。この一般的なドローイベントは、ステップイベントと同様にゲームフレームごとに呼び出されますが、2つの異なる方法で機能します。1つ目は、このイベントを<span
+            class="notranslate">object</span> に追加していない場合です ...<em>指定された </em>Draw Event がない場合、<span
+            data-keyref="GameMaker Name">GameMaker</span>はデフォルトで<span class="notranslate">sprite</span> に割り当てられた<span
+            class="notranslate">object</span> を描画し、<span class="notranslate">object</span>
+          の他の場所で適用されたトランスフォーム（サイズ変更、アルファブレンディングなど）を使用します。したがって、Event list に Draw Event が表示されていない場合でも、インスタンスが<span
+            class="notranslate">room</span> に配置されると実行されて、画面に描画します。 2 番目の動作方法は、イベント自体を追加して<span
+            class="notranslate">GML</span> または<span class="notranslate">GML</span> Visual
+          をその中に含める場合です。イベントに何かを追加することで、<span
+            data-keyref="GameMaker Name">GameMaker</span>に「<em>このオブジェクトのインスタンスに対する描画をコントロールしたい</em>」と伝え、デフォルトの描画を完全にオーバーライドします。つまり、<span
+            class="notranslate">object</span> に<span class="notranslate">sprite</span> を割り当て、 draw イベントで text
+          を描画するように設定すると、<span class="notranslate">sprite</span> は描画されません。</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png" /></td>
+        <td class="icons"><img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png" />
+        </td>
         <td class="icons"><strong>デストロイイベント</strong></td>
-        <td class="text">このイベントは、インスタンスが破壊されたときに実行される最後のイベントです。<span class="notranslate">objects</span> <span class="notranslate">object</span> にビヘイビアを追加するときに見落とされがちですが、非常に便利です。たとえば、敵が殺されたときに爆発やパーティクル効果を作成したり、<span class="notranslate">room</span> の別の場所で新しいインスタンスを再スポーニングしたり、あるいはスコアにポイントを追加したりすることが可能です。</td>
+        <td class="text">このイベントは、インスタンスが破壊されたときに実行される最後のイベントです。<span class="notranslate">objects</span> <span
+            class="notranslate">object</span> にビヘイビアを追加するときに見落とされがちですが、非常に便利です。たとえば、敵が殺されたときに爆発やパーティクル効果を作成したり、<span
+            class="notranslate">room</span> の別の場所で新しいインスタンスを再スポーニングしたり、あるいはスコアにポイントを追加したりすることが可能です。</td>
       </tr>
     </tbody>
   </table>
   <p>
-    <!--</div>-->For further information on all the different events, please see <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">here</a>.
+    <!--</div>-->For further information on all the different events, please see <a
+      href="../The_Asset_Editors/Object_Properties/Object_Events.htm">here</a>.
   </p>
   <p>各イベントの詳細については、<a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">こちらを</a>ご覧ください。</p>
   <p>その後、リスト内のイベントをクリックして、<span class="notranslate">object</span> に追加することができます。</p>
   <div data-conref="../assets/snippets/Visual_Code_Choice.hts"> </div>
-  <p>イベントを追加すると、作成するイベントの種類に応じて、<span data-keyref="GML_Code">GMLコード</span>エディタまたは<span data-keyref="GML_Visual">GMLビジュアルエディタが</span>起動します。このウィンドウで、ゲーム内でイベントが発生するたびに実行させたいコードやアクションを追加します。<span class="notranslate">loop</span> 。</p>
+  <p>イベントを追加すると、作成するイベントの種類に応じて、<span data-keyref="GML_Code">GMLコード</span>エディタまたは<span
+      data-keyref="GML_Visual">GMLビジュアルエディタが</span>起動します。このウィンドウで、ゲーム内でイベントが発生するたびに実行させたいコードやアクションを追加します。<span
+      class="notranslate">loop</span> 。</p>
   <p><img alt="Edit Image Icon" class="icon" src="../assets/Images/Icons/Icon_EditImage.png" /></p>
-  <p><span class="notranslate">GML</span> のイベントでの<span class="notranslate">object</span> の使い方については、以下の2つのページでご紹介しています。</p>
+  <p><span class="notranslate">GML</span> のイベントでの<span class="notranslate">object</span> の使い方については、以下の2つのページでご紹介しています。
+  </p>
   <ul class="colour">
     <li><a data-xref="{title}" href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GMLビジュアル</a></li>
     <li><a data-xref="{title}" href="../GameMaker_Language/GameMaker_Language_Index.htm">GMLコード</a></li>
   </ul>
   <p>また、<span class="notranslate">Object</span> Editorのさまざまな部分についての詳しい説明は、こちらでご覧いただけます。</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Objects.htm">編集部<span class="notranslate">Object</span> 編集部</a></li>
+    <li><a href="../The_Asset_Editors/Objects.htm">エディタ<span class="notranslate">Object</span> エディタ</a></li>
   </ul>
   <p>このガイドの次のパートでは、もう一つのリソースタイプである「<strong>シーケンス</strong>」について見ていきます...</p>
   <p> </p>
@@ -80,11 +155,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../Content.htm">インデックス</a></div>
-        <div style="float:right">次へ<a href="Sequences.htm">シーケンス</a></div>
+        <div style="float:left">前のページ：<a href="../Content.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a href="Sequences.htm">シーケンス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Objects And Instances
@@ -94,4 +170,5 @@ Quick Start: <span class="notranslate">Objects</span> and Instances
 qs_objects_instances
 -->
 </body>
+
 </html>

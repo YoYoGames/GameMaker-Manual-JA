@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ウブントゥ</title>
@@ -12,49 +13,83 @@
   <meta name="rh-index-keywords" content="Game Options - Ubuntu (Linux)" />
   <meta name="search-keywords" content="Ubuntu game Options" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Ubuntuのゲームオプション</h1>
-  <p>このセクションでは、<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) ゲームプロジェクトのコンパイル方法を制御するためのさまざまなオプションの概要を説明します。各セクションの内容は以下のとおりです。</p>
+  <p>このセクションでは、<span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>)
+    ゲームプロジェクトのコンパイル方法を制御するためのさまざまなオプションの概要を説明します。各セクションの内容は以下のとおりです。</p>
   <p> </p>
   <h2>一般</h2>
   <p><img>このタブでは、実行中に表示されるゲームの名前を設定します。また、連絡先のメールアドレスと説明（短いものと長いもの）、ゲームや開発者のホームページのURLを提供することができます。</p>
-  <p>ここでは、ゲーム内で<strong>Steam </strong>を有効にするためのオプションもあります。このオプションを有効にする場合、Steamworks SDK（<a href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">ここを</a>参照）をインストールし、ゲームの<a href="../Game_Options.htm">一般オプション</a>に<strong>SteamアプリIDを</strong>追加していることを確認します。</p>
-  <p>最後に、<strong>Disable file system sandboxという</strong>オプションがあります。これをチェックすると、ファイルのセーブとロードにおける<span data-keyref="GameMaker Name">GameMakerの</span>サンドボックスが無効になり、ゲームを実行しているシステム上のどこからでもファイルにアクセスできるようになります。このオプションはデフォルトではチェックされていません。すべてのシステムでファイルに対する<span data-keyref="GameMaker Name">GameMakerの</span>サンドボックスを維持することを推奨しており、チェックしてもOSレベルのパーミッションによっては一部のセーブ/ロード領域が使用できない場合があるからです。サンドボックスの詳細については、<span data-keyref="GameMaker Name">GameMakerの</span> <a href="../../Additional_Information/The_File_System.htm">ファイル</a>システムのページをご覧ください。</p>
+  <p>ここでは、ゲーム内で<strong>Steam </strong>を有効にするためのオプションもあります。このオプションを有効にする場合、Steamworks SDK（<a
+      href="../../Setting_Up_And_Version_Information/Platform_Preferences/Steam.htm">ここを</a>参照）をインストールし、ゲームの<a
+      href="../Game_Options.htm">一般オプション</a>に<strong>SteamアプリIDを</strong>追加していることを確認します。</p>
+  <p>最後に、<strong>Disable file system sandboxという</strong>オプションがあります。これをチェックすると、ファイルのセーブとロードにおける<span
+      data-keyref="GameMaker Name">GameMakerの</span>サンドボックスが無効になり、ゲームを実行しているシステム上のどこからでもファイルにアクセスできるようになります。このオプションはデフォルトではチェックされていません。すべてのシステムでファイルに対する<span
+      data-keyref="GameMaker Name">GameMakerの</span>サンドボックスを維持することを推奨しており、チェックしてもOSレベルのパーミッションによっては一部のセーブ/ロード領域が使用できない場合があるからです。サンドボックスの詳細については、<span
+      data-keyref="GameMaker Name">GameMakerの</span> <a
+      href="../../Additional_Information/The_File_System.htm">ファイル</a>システムのページをご覧ください。</p>
   <p> </p>
   <h2>グラフィック</h2>
-  <p><img>グラフィックスオプションは、ゲームがターゲットとする<span class="notranslate">Ubuntu</span> マシンのグラフィックスカードをどのように使用するかを設定するためのものです。以下のオプションが用意されています。</p>
+  <p><img>グラフィックスオプションは、ゲームがターゲットとする<span class="notranslate">Ubuntu</span>
+    マシンのグラフィックスカードをどのように使用するかを設定するためのものです。以下のオプションが用意されています。</p>
   <ul class="colour">
     <li><strong>フルスクリーンで起動</strong>する。チェックすると、フルスクリーンで起動し、チェックしないとウィンドウで起動します。デフォルトではオフになっています。</li>
-    <li><strong>Allow Fullscreen Switching</strong> <span class="notranslate">switch</span> <strong></strong>: これにチェックを入れると、ユーザは<span class="notranslate">Ubuntu</span> OS の標準ショートカットを使って、フルスクリーンからウィンドウズへ、そして再びウィンドウズへ戻ることができます。デフォルトではオフになっています。</li>
-    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん" href="#">線形補間を</a>オンにし、基本的にピクセルを「滑らかに」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。</li>
-    <li><strong>カーソルを表示</strong>するこのオプションを有効にすると、デフォルトのOSカーソルがゲームに表示されます。このオプションを無効にすると、マウスがゲームウィンドウ上にあるとき、ゲームプロジェクトの一部としてカーソルを作成しない限り、カーソルは表示されません（これはデフォルトでオンになっています）。</li>
-    <li><strong>テアリングを避けるために同期を使用</strong>します。<a class="glossterm" data-glossterm="ブイシンク" href="#">v-syncの</a>オン・オフを切り替えます。<span class="notranslate">room</span> の速度が120のゲームで、プレイヤーがリフレッシュレート60のモニターを持っている場合、このオプションをオンにすると、ゲームの速度も60に固定されることに注意してください。デフォルトではオフになっています。</li>
-    <li><strong>ウィンドウサイズを変更できるように</strong>する。これをチェックすると、ユーザーがゲームウィンドウのサイズを変更することができます（この機能を使用するには、Borderless Windowオプションがオフになっている必要があります）。このオプションはデフォルトでオフになっています。</li>
-    <li><strong>スケーリング</strong>ここでは、アスペクト比を維持する（つまり 4:3 の<span class="notranslate">room</span> が 16:9 で「レターボックス化」される）か、完全にスケーリングする（画像をフルスクリーンに合わせて引き伸ばす）かを選べます。<br />
+    <li><strong>Allow Fullscreen Switching</strong> <span class="notranslate">switch</span> <strong></strong>:
+      これにチェックを入れると、ユーザは<span class="notranslate">Ubuntu</span> OS
+      の標準ショートカットを使って、フルスクリーンからウィンドウズへ、そして再びウィンドウズへ戻ることができます。デフォルトではオフになっています。</li>
+    <li><strong>ピクセル間の色を補間する</strong>。<a class="glossterm" data-glossterm="せんけいほかん"
+        href="#">線形補間を</a>オンにし、基本的にピクセルを「滑らかに」します。鮮明なピクセルグラフィックのためにはオフにすべきですが、美しいアルファブレンドや滑らかなエッジのグラフィックのためには、オンのままにしておく方が良いでしょう。
+    </li>
+    <li>
+      <strong>カーソルを表示</strong>するこのオプションを有効にすると、デフォルトのOSカーソルがゲームに表示されます。このオプションを無効にすると、マウスがゲームウィンドウ上にあるとき、ゲームプロジェクトの一部としてカーソルを作成しない限り、カーソルは表示されません（これはデフォルトでオンになっています）。
+    </li>
+    <li><strong>テアリングを避けるために同期を使用</strong>します。<a class="glossterm" data-glossterm="ブイシンク"
+        href="#">v-syncの</a>オン・オフを切り替えます。<span class="notranslate">room</span>
+      の速度が120のゲームで、プレイヤーがリフレッシュレート60のモニターを持っている場合、このオプションをオンにすると、ゲームの速度も60に固定されることに注意してください。デフォルトではオフになっています。</li>
+    <li><strong>ウィンドウサイズを変更できるように</strong>する。これをチェックすると、ユーザーがゲームウィンドウのサイズを変更することができます（この機能を使用するには、Borderless
+      Windowオプションがオフになっている必要があります）。このオプションはデフォルトでオフになっています。</li>
+    <li><strong>スケーリング</strong>ここでは、アスペクト比を維持する（つまり 4:3 の<span class="notranslate">room</span> が 16:9
+      で「レターボックス化」される）か、完全にスケーリングする（画像をフルスクリーンに合わせて引き伸ばす）かを選べます。<br />
       <br />
-      <span style="font-size:16px;"><strong>警告!</strong> <em>アプリケーションサーフェスのスイッチを切ると、再びスイッチを入れるまで、<span class="notranslate">Windows</span> ゲームオプションで設定されたすべてのスケーリングオプションが無効になります。詳しくは、アプリケーションサーフェスを参照してください。</em></span>
+      <span style="font-size:16px;"><strong>警告!</strong> <em>アプリケーションサーフェスのスイッチを切ると、再びスイッチを入れるまで、<span
+            class="notranslate">Windows</span>
+          ゲームオプションで設定されたすべてのスケーリングオプションが無効になります。詳しくは、アプリケーションサーフェスを参照してください。</em></span>
     </li>
   </ul>
   <p> </p>
-  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ" href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。 <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span> ページを生成し、ウィンドウを開いてその見え方を確認できるようにするものです。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なることを防ぎたい場合に非常に便利です。<span class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。</p>
-  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span> のページサイズが大きくなると、スペックの低いPCではゲームの互換性が低くなりますので、ご注意ください。</p>
+  <p>最後に、<a class="glossterm" data-glossterm="テクスチャページ"
+      href="macOS.htm#">テクスチャページの</a>サイズを設定するオプションがあります。デフォルトは2048x2048ですが、256x256から8192x8192の間で選択できます。と書かれたボタンもあります。
+    <strong><strong>プレビュー </strong></strong>これは、このプラットフォーム用の<span class="notranslate">texture</span>
+    ページを生成し、ウィンドウを開いてその見え方を確認できるようにするものです。これは、<span class="notranslate">texture</span> ページがどのように構成されているかを確認し、<span
+      class="notranslate">texture</span> ページが必要以上に大きく（または小さく）なることを防ぎたい場合に非常に便利です。<span
+      class="notranslate">texture</span> ページの詳細については、<a href="../Texture_Information/Texture_Pages.htm">こちらを</a>ご覧ください。
+  </p>
+  <p class="note"><strong>注意</strong>：<span class="notranslate">texture</span>
+    のページサイズが大きくなると、スペックの低いPCではゲームの互換性が低くなりますので、ご注意ください。</p>
   <p> </p>
   <p> </p>
   <h2>画像</h2>
-  <p><img>ここでは、ゲームの<strong>スプラッシュスクリーンを</strong>追加し、使用される<strong>ゲームアイコンを </strong>設定することができます。アイコンは64x64ピクセルの画像で、 <span class="inline">.png</span> 形式でなければなりません。スプラッシュ画面は、少なくともゲームの最初の<span class="notranslate">room</span> （またはそのビューポート）と同じ大きさで、 <span class="inline">.png</span> 形式である必要があります。スプラッシュスクリーンはゲームのロード中に表示され、<strong>Use Splash Screen</strong>オプションをチェックすることで有効または無効にできます（デフォルトではオフになっています）。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができることは特筆すべきことです。このツールを使用する場合、作成されたイメージがあなたの要求するものであることを確認するために、修正する必要があります。</p>
+  <p><img>ここでは、ゲームの<strong>スプラッシュスクリーンを</strong>追加し、使用される<strong>ゲームアイコンを </strong>設定することができます。アイコンは64x64ピクセルの画像で、 <span
+      class="inline">.png</span> 形式でなければなりません。スプラッシュ画面は、少なくともゲームの最初の<span class="notranslate">room</span>
+    （またはそのビューポート）と同じ大きさで、 <span class="inline">.png</span> 形式である必要があります。スプラッシュスクリーンはゲームのロード中に表示され、<strong>Use Splash
+      Screen</strong>オプションをチェックすることで有効または無効にできます（デフォルトではオフになっています）。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span> <a
+      href="../../IDE_Tools/Project_Image_Generator.htm">プロジェクトイメージジェネレータという</a>ツールがあり、これを使うと、ゲームをコンパイルするさまざまなターゲットプラットフォームに必要なイメージをすべて自動的に作成することができることは特筆すべきことです。このツールを使用する場合、作成されたイメージがあなたの要求するものであることを確認するために、修正する必要があります。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Game_Options.htm">ゲームオプション</a></div>
-        <div style="float:right">次へ<a href="Windows_UWP.htm">Windows UWP</a></div>
+        <div style="float:left">前のページ：<a href="../Game_Options.htm">ゲームオプション</a></div>
+        <div style="float:right">次のページ：<a href="Windows_UWP.htm">Windows UWP</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Ubuntu Game Options
@@ -64,4 +99,5 @@ Linux Game Options
 ubuntu_options
 -->
 </body>
+
 </html>

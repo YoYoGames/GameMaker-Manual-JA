@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -13,13 +14,23 @@
   <meta name="rh-index-keywords" content="Compiler Batch Files Scripts" />
   <meta name="search-keywords" content="compiler, batch, files, shell, scripts, asset compiler, run, build" />
 </head>
+
 <body>
   <h1>コンパイラバッチファイル/スクリプト</h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>コンパイラでは、Batchファイル(<span class="notranslate">Windows</span>)やShell<span class="notranslate">scripts</span> (on<span class="notranslate">macOS</span> and<span class="notranslate">Linux</span>)をプロジェクトディレクトリと、プロジェクト内の各<span class="notranslate">extension</span> のディレクトリに配置することができます。</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>コンパイラでは、Batchファイル(<span
+      class="notranslate">Windows</span>)やShell<span class="notranslate">scripts</span> (on<span
+      class="notranslate">macOS</span> and<span class="notranslate">Linux</span>)をプロジェクトディレクトリと、プロジェクト内の各<span
+      class="notranslate">extension</span> のディレクトリに配置することができます。</p>
   <h2>配置</h2>
-  <p><span class="notranslate">script</span> ファイルは、プロジェクトのディレクトリのルートで、プロジェクトの<span class="inline2">.yyp</span>ファイルと一緒に配置することができます。</p>
-  <p><span class="notranslate">script</span> ファイルは、<span class="notranslate">extension</span> のディレクトリに配置することもできます。ディレクトリは次のようになります:<span class="inline2">&lt;project_directory&gt;/extensions/&lt;extension_folder&gt;/.</span></p>
-  <p><span class="notranslate">extension</span> ファイルの<span class="notranslate">script</span> バージョンが最初に実行され、そのルートバージョンは最後に実行されます。<span class="notranslate">extensions</span> の実行順序は制御できないので、<span class="notranslate">extension</span> の開発者は、ある拡張機能の<span class="notranslate">scripts</span> が別の拡張機能の<span class="notranslate">scripts</span> に依存しないようにしなければなりません。</p>
+  <p><span class="notranslate">script</span> ファイルは、プロジェクトのディレクトリのルートで、プロジェクトの<span
+      class="inline2">.yyp</span>ファイルと一緒に配置することができます。</p>
+  <p><span class="notranslate">script</span> ファイルは、<span class="notranslate">extension</span>
+    のディレクトリに配置することもできます。ディレクトリは次のようになります:<span
+      class="inline2">&lt;project_directory&gt;/extensions/&lt;extension_folder&gt;/.</span></p>
+  <p><span class="notranslate">extension</span> ファイルの<span class="notranslate">script</span>
+    バージョンが最初に実行され、そのルートバージョンは最後に実行されます。<span class="notranslate">extensions</span> の実行順序は制御できないので、<span
+      class="notranslate">extension</span> の開発者は、ある拡張機能の<span class="notranslate">scripts</span> が別の拡張機能の<span
+      class="notranslate">scripts</span> に依存しないようにしなければなりません。</p>
   <h2>実行</h2>
   <p>上記のいずれかのディレクトリに置かれた特定の名前のスクリプトファイルは、コンパイルプロセスのさまざまな時点で実行されます。</p>
   <table border="1" cellpadding="1" cellspacing="1">
@@ -32,7 +43,7 @@
       <tr>
         <th>Windows バッチファイル名</th>
         <th>macOS/Linux Shell<span class="notranslate">Script</span> 名前</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><strong>pre_run_step.bat</strong></td>
@@ -67,17 +78,22 @@
       <tr>
         <td><strong>post_textures.bat</strong></td>
         <td><strong>post_textures.sh</strong></td>
-        <td>これは、ゲーム用の<span class="notranslate">textures</span> が生成された後に実行されます。このステップを使用して、ゲーム<span class="notranslate">textures</span> を手動で最適化することができます。<br />
+        <td>これは、ゲーム用の<span class="notranslate">textures</span> が生成された後に実行されます。このステップを使用して、ゲーム<span
+            class="notranslate">textures</span> を手動で最適化することができます。<br />
           <br />
-          この<span class="notranslate">script</span> は<span class="inline2">TexturesDir</span> という環境変数を受け取り、生成された<span class="notranslate">path</span> に<span class="notranslate">textures</span> を格納します。
+          この<span class="notranslate">script</span> は<span class="inline2">TexturesDir</span> という環境変数を受け取り、生成された<span
+            class="notranslate">path</span> に<span class="notranslate">textures</span> を格納します。
         </td>
       </tr>
     </tbody>
   </table>
   <p>これらの<span class="notranslate">script</span> ファイルは、すべてのターゲット・プラットフォームでビルドする際にサポートされます。</p>
   <h2>Extensionの<span class="notranslate">Scripts</span> を無効にする</h2>
-  <p><span class="notranslate">extensions</span> を実行する複数の<span class="notranslate">scripts</span> 、たとえば Steamworks と GDK を使用している場合、GDK にエクスポートするときは Steamworks を無効にし、その逆もまた然りです。</p>
-  <p>それについては、以下をご覧ください。<a data-xref="{title}" href="../../The_Asset_Editors/Extension_Creation/Disabling_Extensions.htm"> <span class="notranslate">Extensions</span></a>を無効にする方法 ?</p>
+  <p><span class="notranslate">extensions</span> を実行する複数の<span class="notranslate">scripts</span> 、たとえば Steamworks と GDK
+    を使用している場合、GDK にエクスポートするときは Steamworks を無効にし、その逆もまた然りです。</p>
+  <p>それについては、以下をご覧ください。<a data-xref="{title}"
+      href="../../The_Asset_Editors/Extension_Creation/Disabling_Extensions.htm"> <span
+        class="notranslate">Extensions</span></a>を無効にする方法 ?</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -88,7 +104,9 @@
         <div>次へ<a data-xref="{title}" href="../Command_Line_Parameters.htm">コマンドラインパラメータ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_free_play_queue</title>
@@ -12,24 +13,36 @@
   <meta name="rh-index-keywords" content="audio_free_play_queue" />
   <meta name="search-keywords" content="audio_free_play_queue" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
-  <p>この関数は、与えられたオーディオ<span class="notranslate">queue</span> に関連するメモリーを解放するために使用される。<span class="notranslate">queue</span> インデックスは，この関数を使って<span class="notranslate">queue</span> を作成したときに返された値です。 <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>メモリリークを防ぐため、この関数は<span class="notranslate">queue</span> が不要になったときに呼び出す必要があります。<span class="notranslate">queue</span> を解放すると、再生中のサウンドはすべて停止します。また、サウンドがストリーミングされている<span class="notranslate">buffer</span> は、それが割り当てられている<span class="notranslate">queue</span> が解放されるまで削除することができません。この関数は、<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Event</a> をトリガーし、このイベントで特別な<a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>変数 <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>を、以下のキーと値のペアで作成する。</p>
+  <p>この関数は、与えられたオーディオ<span class="notranslate">queue</span> に関連するメモリーを解放するために使用される。<span
+      class="notranslate">queue</span> インデックスは，この関数を使って<span class="notranslate">queue</span> を作成したときに返された値です。 <a
+      href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>メモリリークを防ぐため、この関数は<span
+      class="notranslate">queue</span> が不要になったときに呼び出す必要があります。<span class="notranslate">queue</span>
+    を解放すると、再生中のサウンドはすべて停止します。また、サウンドがストリーミングされている<span class="notranslate">buffer</span> は、それが割り当てられている<span
+      class="notranslate">queue</span> が解放されるまで削除することができません。この関数は、<a
+      href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback
+      Asynchronous Event</a> をトリガーし、このイベントで特別な<a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>変数 <a
+      href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>を、以下のキーと値のペアで作成する。</p>
   <ul class="colour">
     <li>&quot;<strong>queue_id</strong>&quot; - データの再生が終了した<span class="notranslate">queue</span> </li>
     <li>&quot;<strong>buffer_id</strong>&quot; - 再生されなくなった<span class="notranslate">buffer</span> 。</li>
-    <li>&quot;<strong>queue_shutdown</strong>&quot; - 通常の再生時には0に、イベント受信時には1に設定されます。これは、この関数で<span class="notranslate">queue</span> を解放したためです。これが1にセットされているときは、<span class="notranslate">queue</span> 、それ以上データをアップしないようにします。</li>
+    <li>&quot;<strong>queue_shutdown</strong>&quot; - 通常の再生時には0に、イベント受信時には1に設定されます。これは、この関数で<span
+        class="notranslate">queue</span> を解放したためです。これが1にセットされているときは、<span class="notranslate">queue</span>
+      、それ以上データをアップしないようにします。</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">audio_free_play_queue</span>(queueIndex);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">queueIndex</span></td>
@@ -39,7 +52,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -49,18 +62,22 @@
         audio_free_play_queue(audio_queue);<br />
         buffer_delete(audio_buffer);<br />
     }</p>
-  <p>上記のコードは、非同期<a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">オーディオ再生</a>イベントに入り、再生が終了したオーディオが「audio_queue」のものであるかどうかをチェックし、もしそうなら<span class="notranslate">queue</span> とそれに関連する<span class="notranslate">buffer</span> を解放します。</p>
+  <p>上記のコードは、非同期<a
+      href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">オーディオ再生</a>イベントに入り、再生が終了したオーディオが「audio_queue」のものであるかどうかをチェックし、もしそうなら<span
+      class="notranslate">queue</span> とそれに関連する<span class="notranslate">buffer</span> を解放します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Audio.htm">オーディオバッファ</a></div>
-        <div style="float:right">次のページ <a href="audio_queue_sound.htm"><span class="notranslate">audio_queue_sound</span></a></div>
+        <div style="float:left">前のページ：<a href="../Audio.htm">オーディオバッファ</a></div>
+        <div style="float:right">次のページ：<a href="audio_queue_sound.htm"><span
+              class="notranslate">audio_queue_sound</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_free_play_queue
@@ -69,4 +86,5 @@ audio_free_play_queue
 audio_free_play_queue
 -->
 </body>
+
 </html>

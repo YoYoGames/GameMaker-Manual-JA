@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオ録音</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,38 +13,55 @@
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>オーディオ録音</h1>
-  <p><img>このイベントを発生させることができるのは <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_start_recording.htm"><span class="inline">audio_start_recording()</span></a>関数
-    に格納された<a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a>を返す。 <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>,
-    イベントをトリガーした関数からの<a class="glossterm" data-glossterm="コールバック" href="Dialog.htm#">コールバックに応じて</a>、異なるキーと値のペアを含んでいます。</p>
+  <p><img>このイベントを発生させることができるのは <a
+      href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_start_recording.htm"><span
+        class="inline">audio_start_recording()</span></a>関数
+    に格納された<a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a>を返す。 <a
+      href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>,
+    イベントをトリガーした関数からの<a class="glossterm" data-glossterm="コールバック" href="Dialog.htm#">コールバックに応じて</a>、異なるキーと値のペアを含んでいます。
+  </p>
   <p>ds_map では、以下のキーが利用可能になります。</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">buffer_id</span>&quot; - オーディオデータの取得に使用するテンポラリ<a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">バッファの</a>ID。</li>
-    <li class="dropspot">&quot;<span class="inline">channel_index</span>&quot; - このデータが来た呼び出し関数によって返された録画チャンネルインデックス</li>
+    <li class="dropspot">&quot;<span class="inline">buffer_id</span>&quot; - オーディオデータの取得に使用するテンポラリ<a
+        href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">バッファの</a>ID。</li>
+    <li class="dropspot">&quot;<span class="inline">channel_index</span>&quot; - このデータが来た呼び出し関数によって返された録画チャンネルインデックス
+    </li>
     <li class="dropspot">&quot;<span class="inline">data_len</span>&quot; - 受信したデータの長さ(バイト)</li>
   </ul>
-  <p class="note"><strong>注意</strong>：このページの冒頭で述べたように、変数<span class="inline" style="font-size: 14px">async_load </span>は非同期イベントでのみ有効であり、この変数が指す DS マップはイベントの開始時に作成されるからです。
-    を削除し、最後に再び削除する。ただし、すべてのオーディオがマップとともに保存されている一時的な<span class="notranslate">buffer</span> は、イベントの終了時に削除されるので、後で使用するためにそれを保持したい場合は、カスタム<span class="notranslate">buffer</span> にコピーしておく必要があることに注意してください。</p>
+  <p class="note"><strong>注意</strong>：このページの冒頭で述べたように、変数<span class="inline" style="font-size: 14px">async_load
+    </span>は非同期イベントでのみ有効であり、この変数が指す DS マップはイベントの開始時に作成されるからです。
+    を削除し、最後に再び削除する。ただし、すべてのオーディオがマップとともに保存されている一時的な<span class="notranslate">buffer</span>
+    は、イベントの終了時に削除されるので、後で使用するためにそれを保持したい場合は、カスタム<span class="notranslate">buffer</span> にコピーしておく必要があることに注意してください。</p>
   <p>以下の使用例では、録音したオーディオを保存するためにカスタム<span class="notranslate">buffer</span> を作成し、入力ソース0から録音するようにゲームを設定します。</p>
-  <p class="code">channel_index = audio_start_recording(0);<br/> audio_buffer = buffer_create(len, buffer_fast, 1);</p>
+  <p class="code">channel_index = audio_start_recording(0);<br /> audio_buffer = buffer_create(len, buffer_fast, 1);</p>
   <p>録音が検出されると、ゲームのステップごとに非同期オーディオ録音イベントが発生し、録音された入力を次のように処理することができます。</p>
-  <p class="code">var channel = async_load[? &quot;channel_index&quot;];<br/> if channel == channel_index<br/>    {<br/>    len = async_load[? &quot;data_len&quot;];<br/>    buffer_copy(async_load[? &quot;buffer_id&quot;], 0, len, audio_buffer, 0);<br/>    }</p>
-  <p>ここでは、単に &quot;channel_index&quot; キーをチェックして、それが録画開始時に返された値と一致することを確認します。一致する場合は、このイベントのために作成した一時的な<span class="notranslate">buffer</span> の内容を、カスタム<span class="notranslate">buffer</span> にコピーします。その後、あなたは
-    <span class="notranslate">buffer</span> <span class="notranslate">buffer</span> のオーディオ専用機能で再生したり、加工してネットワークに送ったり、ディスクに保存したり......。録音したオーディオが<span class="notranslate">buffer</span> にあれば、基本的に以下のことが可能です。
-    ということです。</p>
+  <p class="code">var channel = async_load[? &quot;channel_index&quot;];<br /> if channel == channel_index<br />  
+     {<br />    len = async_load[? &quot;data_len&quot;];<br />    buffer_copy(async_load[? &quot;buffer_id&quot;], 0,
+    len, audio_buffer, 0);<br />    }</p>
+  <p>ここでは、単に &quot;channel_index&quot; キーをチェックして、それが録画開始時に返された値と一致することを確認します。一致する場合は、このイベントのために作成した一時的な<span
+      class="notranslate">buffer</span> の内容を、カスタム<span class="notranslate">buffer</span> にコピーします。その後、あなたは
+    <span class="notranslate">buffer</span> <span class="notranslate">buffer</span>
+    のオーディオ専用機能で再生したり、加工してネットワークに送ったり、ディスクに保存したり......。録音したオーディオが<span class="notranslate">buffer</span>
+    にあれば、基本的に以下のことが可能です。
+    ということです。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Async_Events.htm">非同期イベント</a></div>
-        <div style="float:right">次へ<a href="Cloud.htm">クラウド</a></div>
+        <div style="float:left">前のページ：<a href="../Async_Events.htm">非同期イベント</a></div>
+        <div style="float:right">次のページ：<a href="Cloud.htm">クラウド</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Audio Recording Event
@@ -52,4 +71,6 @@ ev_audio_recording
 ev_audio_recording
 -->
 
-</body></html>
+</body>
+
+</html>

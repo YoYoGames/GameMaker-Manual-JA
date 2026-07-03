@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>粒子の種類</title>
+  <title>パーティクルの種類</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
@@ -12,11 +13,15 @@
   <meta name="rh-index-keywords" content="Particle Types, Particles" />
   <meta name="search-keywords" content="Particle Types" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>粒子の種類</h1>
-  <p>パーティクルとは、ゲーム内でパーティクルシステムを使用することによって生み出されるグラフィック効果のことです。通常、ゲーム開始時にすべてのパーティクルを定義し、そのインデックス値をグローバル変数に格納します。このグローバル変数を使って、ゲーム中いつでもパーティクルのバースト、エミット、生成を行うことができます。また、メモリの問題でパーティクルの作成、使用、破棄が必要な場合や、ゲーム中の特定のポイントにのみ多くの種類のパーティクルを使用したい場合にも対応できます。パーティクルは非常に汎用性の高いリソースです。</p>
-  <p>パーティクルを作成し、そのインデックスを変数に格納することで、以降のすべてのパーティクル ルーチンが正しくアクセスできるようにする必要があります。以下の関数はパーティクル タイプの作成、チェック、クリア、破壊に使用されます。</p>
+  <h1>パーティクルの種類</h1>
+  <p>
+    パーティクルとは、ゲーム内でパーティクルシステムを使用することによって生み出されるグラフィック効果のことです。通常、ゲーム開始時にすべてのパーティクルを定義し、そのインデックス値をグローバル変数に格納します。このグローバル変数を使って、ゲーム中いつでもパーティクルのバースト、エミット、生成を行うことができます。また、メモリの問題でパーティクルの作成、使用、破棄が必要な場合や、ゲーム中の特定のポイントにのみ多くの種類のパーティクルを使用したい場合にも対応できます。パーティクルは非常に汎用性の高いリソースです。
+  </p>
+  <p>パーティクルを作成し、そのインデックスを変数に格納することで、以降のすべてのパーティクル ルーチンが正しくアクセスできるようにする必要があります。以下の関数はパーティクル タイプの作成、チェック、クリア、破壊に使用されます。
+  </p>
   <ul class="colour">
     <li><a href="part_type_exists.htm"><span class="notranslate">part_type_exists</span></a></li>
     <li><a href="part_type_create.htm"><span class="notranslate">part_type_create</span></a></li>
@@ -24,20 +29,24 @@
     <li><a href="part_type_clear.htm"><span class="notranslate">part_type_clear</span></a></li>
   </ul>
   <p> </p>
-  <p>パーティクルの種類を作成したら、それに<i>形状を</i>与える必要があります。この形状は、64x64 ピクセル<span class="notranslate">sprites</span> でアルファブレンディングされた 14 個の組み込み形状のうちの 1 つにするか、または独自の<span class="notranslate">sprites</span> を使用することができ、アニメーション、静止、ランダムサブイメージを使用することができます。以下の関数は、各パーティクルの視覚的な基本形状を定義します。</p>
+  <p>パーティクルの種類を作成したら、それに<i>形状を</i>与える必要があります。この形状は、64x64 ピクセル<span class="notranslate">sprites</span> でアルファブレンディングされた 14
+    個の組み込み形状のうちの 1 つにするか、または独自の<span class="notranslate">sprites</span>
+    を使用することができ、アニメーション、静止、ランダムサブイメージを使用することができます。以下の関数は、各パーティクルの視覚的な基本形状を定義します。</p>
   <ul class="colour">
     <li><a href="part_type_shape.htm"><span class="notranslate">part_type_shape</span></a></li>
     <li><a href="part_type_sprite.htm"><span class="notranslate">part_type_sprite</span></a></li>
   </ul>
   <p> </p>
   <p>以下の画像は、内蔵された14種類のパーティクルから選択可能なものです。</p>
-  <p><img>パーティクルの種類（デフォルトの形状または独自の形状）を<span class="notranslate">sprite</span> で選択したら、そのサイズとスケールを指定することができます。サイズは範囲指定が可能で、すべてのパーティクルは指定された範囲内で選ばれたサイズで作成されます。scale は、サイズのバリエーションが追加される<i>前の</i>パーティクルの x 軸と y 軸のスケールの「基本」値で、これらの値を制御するために以下の関数が使用されます。</p>
+  <p><img>パーティクルの種類（デフォルトの形状または独自の形状）を<span class="notranslate">sprite</span>
+    で選択したら、そのサイズとスケールを指定することができます。サイズは範囲指定が可能で、すべてのパーティクルは指定された範囲内で選ばれたサイズで作成されます。scale
+    は、サイズのバリエーションが追加される<i>前の</i>パーティクルの x 軸と y 軸のスケールの「基本」値で、これらの値を制御するために以下の関数が使用されます。</p>
   <ul class="colour">
     <li><a href="part_type_size.htm"><span class="notranslate">part_type_size</span></a></li>
     <li><a href="part_type_scale.htm"><span class="notranslate">part_type_scale</span></a></li>
   </ul>
   <p> </p>
-  <p>また、粒子は向きや動きを持つことができます。多くのパーティクル関数と同様に、速度、方向、向きは与えられた範囲から選択されるランダムな値として解決され、以下の関数で設定することが可能です。</p>
+  <p>また、パーティクルは向きや動きを持つことができます。多くのパーティクル関数と同様に、速度、方向、向きは与えられた範囲から選択されるランダムな値として解決され、以下の関数で設定することが可能です。</p>
   <ul class="colour">
     <li><a href="part_type_speed.htm"><span class="notranslate">part_type_speed</span></a></li>
     <li><a href="part_type_direction.htm"><span class="notranslate">part_type_direction</span></a></li>
@@ -45,7 +54,9 @@
     <li><a href="part_type_orientation.htm"><span class="notranslate">part_type_orientation</span></a></li>
   </ul>
   <p> </p>
-  <p>パーティクルのスタイルと動きが決まったら、次に色とアルファ値を設定します。この2つの値は、パーティクルの寿命の間、絶対値として設定することも、1つの値から徐々に他の値に移行するスケールとして設定することもできます。また、パーティクルとその周囲の混合を設定する特別な機能があり、これは通常または加算のどちらでも可能で、いくつかの素晴らしい効果をもたらします。</p>
+  <p>
+    パーティクルのスタイルと動きが決まったら、次に色とアルファ値を設定します。この2つの値は、パーティクルの寿命の間、絶対値として設定することも、1つの値から徐々に他の値に移行するスケールとして設定することもできます。また、パーティクルとその周囲の混合を設定する特別な機能があり、これは通常または加算のどちらでも可能で、いくつかの素晴らしい効果をもたらします。
+  </p>
   <ul class="colour">
     <li><a href="part_type_colour_mix.htm"><span class="notranslate">part_type_colour_mix</span></a></li>
     <li><a href="part_type_colour_rgb.htm"><span class="notranslate">part_type_colour_rgb</span></a></li>
@@ -59,24 +70,30 @@
     <li><a href="part_type_blend.htm"><span class="notranslate">part_type_blend</span></a></li>
   </ul>
   <p> </p>
-  <p>パーティクルは画面上に限られた時間だけ存在し、これを「ライフタイム」と呼びます。粒子の寿命はステップで測定され、（これまでの関数と同様に）これは値の範囲として表現され、そこから特定の寿命が与えられます。また、パーティクルが<i>他の</i>パーティクルを生成するような面白い関数もいくつかあります。ステップごとや、パーティクルが &quot;死ぬ&quot;（つまり、スクリーンから消える）ときに生成されますが、これらの関数はすぐに何千ものパーティクルを生成してゲームをクラッシュさせることがあるので、十分注意してくださいライフタイムやステップ、デスなどを設定する関数は以下の通りです。</p>
+  <p>
+    パーティクルは画面上に限られた時間だけ存在し、これを「ライフタイム」と呼びます。パーティクルの寿命はステップで測定され、（これまでの関数と同様に）これは値の範囲として表現され、そこから特定の寿命が与えられます。また、パーティクルが<i>他の</i>パーティクルを生成するような面白い関数もいくつかあります。ステップごとや、パーティクルが
+    &quot;死ぬ&quot;（つまり、スクリーンから消える）ときに生成されますが、これらの関数はすぐに何千ものパーティクルを生成してゲームをクラッシュさせることがあるので、十分注意してくださいライフタイムやステップ、デスなどを設定する関数は以下の通りです。
+  </p>
   <ul class="colour">
     <li><a href="part_type_life.htm"><span class="notranslate">part_type_life</span></a></li>
     <li><a href="part_type_step.htm"><span class="notranslate">part_type_step</span></a></li>
     <li><a href="part_type_death.htm"><span class="notranslate">part_type_death</span></a></li>
   </ul>
   <p> </p>
-  <p>コードによるパーティクル作成は、変更・調整可能なパラメータが多いため、手間と時間のかかる作業となることが多いということは知っておいて損はありません。そのため、<b>パーティクルデザイナーを</b>利用することをお勧めします（自分で作ることもできます）。</p>
+  <p>
+    コードによるパーティクル作成は、変更・調整可能なパラメータが多いため、手間と時間のかかる作業となることが多いということは知っておいて損はありません。そのため、<b>パーティクルデザイナーを</b>利用することをお勧めします（自分で作ることもできます）。
+  </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Particles.htm">粒子</a></div>
-        <div style="float:right">次へ<a href="../Particle_Emitters/Particle_Emitters.htm">パーティクルエミッター</a></div>
+        <div style="float:left">前のページ：<a href="../Particles.htm">パーティクル</a></div>
+        <div style="float:right">次のページ：<a href="../Particle_Emitters/Particle_Emitters.htm">パーティクルエミッター</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Particle Types
@@ -85,4 +102,5 @@ Particle Types
 particle_type_functions
 -->
 </body>
+
 </html>

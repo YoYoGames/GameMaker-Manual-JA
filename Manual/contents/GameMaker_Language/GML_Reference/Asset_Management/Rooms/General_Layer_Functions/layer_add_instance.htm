@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_add_instance</title>
@@ -13,54 +14,68 @@
   <meta name="search-keywords" content="layer_add_instance" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_add_instance</span></h1>
-  <p>この関数は、あるインスタンスを現在いるレイヤーから別のレイヤーに移動させるために使用できます。レイヤー ID (レイヤーを作成するときに <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> として - これはパフォーマンスに影響します) と、レイヤー間を移動するインスタンスの ID を指定します。たとえば、プレーヤーが別のレイヤーより低い深さのレイヤーにあり、その2つのレイヤーの間にあるレイヤーの後ろに表示させたいとします。この関数を使用すると、<span class="notranslate">switch</span> 、プレーヤーを前景レイヤーから背景レイヤーに移動し、描画中の他のレイヤーの背後に表示させることができます。</p>
-  <p class="note"><b><span class="note">注意</span></b>この関数は、レイヤーに新しいインスタンスを追加するために使用することはできません。事前にインスタンスを作成し、そのIDを変数に保存しておく<b>必要が</b>あります。</p>
-  <p class="note"><strong>注</strong>：この機能は、現在の<span class="notranslate">room</span> の範囲内でのみ有効であり、機能<span class="inline"><a href="layer_set_target_room.htm" style="font-size: 14px">layer_set_target_room()</a></span> で範囲を変更した場合は使用できません。</p>
+  <p>この関数は、あるインスタンスを現在いるレイヤーから別のレイヤーに移動させるために使用できます。レイヤー ID (レイヤーを作成するときに <a href="layer_create.htm"><span
+        class="inline">layer_create()</span></a>) またはレイヤー名 (<span class="notranslate">string</span> として -
+    これはパフォーマンスに影響します) と、レイヤー間を移動するインスタンスの ID
+    を指定します。たとえば、プレーヤーが別のレイヤーより低い深さのレイヤーにあり、その2つのレイヤーの間にあるレイヤーの後ろに表示させたいとします。この関数を使用すると、<span
+      class="notranslate">switch</span> 、プレーヤーを前景レイヤーから背景レイヤーに移動し、描画中の他のレイヤーの背後に表示させることができます。</p>
+  <p class="note"><b><span
+        class="note">注意</span></b>この関数は、レイヤーに新しいインスタンスを追加するために使用することはできません。事前にインスタンスを作成し、そのIDを変数に保存しておく<b>必要が</b>あります。
+  </p>
+  <p class="note"><strong>注</strong>：この機能は、現在の<span class="notranslate">room</span> の範囲内でのみ有効であり、機能<span
+      class="inline"><a href="layer_set_target_room.htm" style="font-size: 14px">layer_set_target_room()</a></span>
+    で範囲を変更した場合は使用できません。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_add_instance</span>(layer_id, instance_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">layer_id</span></td>
         <td><span data-keyref="Type_String">文字列</span>または<span data-keyref="Type_ID_Layer">レイヤID</span></td>
-        <td><span class="notranslate">The unique ID value of the instance layer to target (or the layer name as a string)</span></td>
+        <td><span class="notranslate">The unique ID value of the instance layer to target (or the layer name as a
+            string)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">instance_id</span></td>
         <td><span data-keyref="Type_ID_Instance">インスタンスID</span></td>
-        <td><span class="notranslate">The unique instance ID value of the instance to move over to the target layer</span></td>
+        <td><span class="notranslate">The unique instance ID value of the instance to move over to the target
+            layer</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var near = instance_nearest(x, y, obj_Tree);<br />
     var layer_id = layer_get_id(&quot;Instances Front&quot;);<br />
     layer_add_instance(layer_id, near);</p>
-  <p>上記のコードでは、まず与えられたx/y位置に最も近いインスタンスのインデックスを取得し、ローカル変数に格納します。次に、&quot;Instances Front &quot;というレイヤーの一意のインスタンスレイヤーのIDを取得し、見つかったインスタンスをそのレイヤー上に移動させます。</p>
+  <p>上記のコードでは、まず与えられたx/y位置に最も近いインスタンスのインデックスを取得し、ローカル変数に格納します。次に、&quot;Instances Front
+    &quot;というレイヤーの一意のインスタンスレイヤーのIDを取得し、見つかったインスタンスをそのレイヤー上に移動させます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
-        <div style="float:right">次のページ <a href="layer_has_instance.htm"><span class="notranslate">layer_has_instance</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ：<a href="layer_has_instance.htm"><span
+              class="notranslate">layer_has_instance</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_add_instance
@@ -69,4 +84,5 @@ layer_add_instance
 layer_add_instance
 -->
 </body>
+
 </html>

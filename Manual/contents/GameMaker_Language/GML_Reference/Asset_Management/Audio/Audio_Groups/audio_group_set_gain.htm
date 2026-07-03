@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_group_set_gain</title>
@@ -12,25 +13,29 @@
   <meta name="rh-index-keywords" content="audio_group_set_gain" />
   <meta name="search-keywords" content="audio_group_set_gain" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_group_set_gain</span></h1>
   <p>グループ内の音を一定時間ごとにフェードイン／アウトさせたり、グループゲインを瞬時に設定したりする機能です。</p>
-  <p>時間はミリ秒単位で、この機能では、その時間が終了するまでにグループが到達すべき最終的なゲインレベルを入力する必要があります。このゲインは0（無音）から1（フルボリューム）の間で、スケールはリニアで、0.5の値はハーフボリュームとなります。プラットフォームによっては、1以上のゲインを設定できるものもありますが、1という値は「フルボリューム」とみなされ、それ以上になるとオーディオクリップが発生する可能性があることに注意してください。</p>
+  <p>
+    時間はミリ秒単位で、この機能では、その時間が終了するまでにグループが到達すべき最終的なゲインレベルを入力する必要があります。このゲインは0（無音）から1（フルボリューム）の間で、スケールはリニアで、0.5の値はハーフボリュームとなります。プラットフォームによっては、1以上のゲインを設定できるものもありますが、1という値は「フルボリューム」とみなされ、それ以上になるとオーディオクリップが発生する可能性があることに注意してください。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">audio_group_set_gain</span>(groupID, volume, time);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">groupID</span></td>
         <td><span data-keyref="Type_ID_Audio_Group">オーディオグループID</span></td>
-        <td><span class="notranslate">The index of the audio group to stop (as defined in the <a href="../../../../../Settings/Audio_Groups.htm">Audio Groups Window</a>)</span></td>
+        <td><span class="notranslate">The index of the audio group to stop (as defined in the <a
+              href="../../../../../Settings/Audio_Groups.htm">Audio Groups Window</a>)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">volume</span></td>
@@ -45,7 +50,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -60,11 +65,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Groups.htm">オーディオグループ</a></div>
-        <div style="float:right">次のページ <a href="audio_group_load.htm"><span class="notranslate">audio_group_load</span></a></div>
+        <div style="float:left">前のページ：<a href="Audio_Groups.htm">オーディオグループ</a></div>
+        <div style="float:right">次のページ：<a href="audio_group_load.htm"><span
+              class="notranslate">audio_group_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_group_set_gain
@@ -73,4 +80,5 @@ audio_group_set_gain
 audio_group_set_gain
 -->
 </body>
+
 </html>

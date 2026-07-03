@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>font_set_cache_size</title>
@@ -12,50 +13,62 @@
   <meta name="rh-index-keywords" content="font_set_cache_size" />
   <meta name="search-keywords" content="font_set_cache_size" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">font_set_cache_size</span></h1>
-  <p>画像のブレンドやカラーリングを行う場合、HTML5では実行ファイルと同じように動的に行うことができません。そのため、<span data-keyref="GameMaker Name">GameMakerは</span>ブレンドされた画像のコピーを一時的に保存し
-    必要なときに呼び出す。この関数は、与えられた<span class="notranslate">font</span> のブレンドコピーを、古いものが上書きされるまでにいくつキャッシュできるかを設定します。デフォルト値は 4 です。</p>
-  <p class="note"><b><span class="note">注意</span> </b><span class="notranslate">sprite</span> <span class="notranslate">fonts</span> の場合は、<span class="notranslate">sprites</span> と同等の関数を使用する必要があります。 <a href="../Sprites/Sprite_Manipulation/sprite_set_cache_size.htm"><span class="inline">sprite_set_cache_size()</span></a>.</p>
+  <p>画像のブレンドやカラーリングを行う場合、HTML5では実行ファイルと同じように動的に行うことができません。そのため、<span
+      data-keyref="GameMaker Name">GameMakerは</span>ブレンドされた画像のコピーを一時的に保存し
+    必要なときに呼び出す。この関数は、与えられた<span class="notranslate">font</span> のブレンドコピーを、古いものが上書きされるまでにいくつキャッシュできるかを設定します。デフォルト値は 4 です。
+  </p>
+  <p class="note"><b><span class="note">注意</span> </b><span class="notranslate">sprite</span> <span
+      class="notranslate">fonts</span> の場合は、<span class="notranslate">sprites</span> と同等の関数を使用する必要があります。 <a
+      href="../Sprites/Sprite_Manipulation/sprite_set_cache_size.htm"><span
+        class="inline">sprite_set_cache_size()</span></a>.</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">font_set_cache_size</span>(ind, max);</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Font"></span></td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Font"></span></td>
         <td><span class="notranslate">The index of the font to change the cache size of.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">max</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">max</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The maximum number of cached copies of the font that can be stored.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">font_set_cache_size(fnt_MainMenu, 2);</p>
-  <p>これにより、変数 &quot;fnt_MainMenu &quot;でインデックスされた<span class="notranslate">font</span> の<span class="notranslate">cache</span> <span class="notranslate">font</span> が2枚に設定されます。</p>
+  <p>これにより、変数 &quot;fnt_MainMenu &quot;でインデックスされた<span class="notranslate">font</span> の<span
+      class="notranslate">cache</span> <span class="notranslate">font</span> が2枚に設定されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Fonts.htm">フォント</a></div>
-        <div style="float:right">次のページ <a href="font_add_enable_aa.htm"><span class="notranslate">font_add_enable_aa</span></a></div>
+        <div style="float:left">前のページ：<a href="Fonts.htm">フォント</a></div>
+        <div style="float:right">次のページ：<a href="font_add_enable_aa.htm"><span
+              class="notranslate">font_add_enable_aa</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_set_cache_size
@@ -64,4 +77,5 @@ font_set_cache_size
 font_set_cache_size
 -->
 </body>
+
 </html>

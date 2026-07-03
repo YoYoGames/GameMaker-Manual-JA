@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instance_activate_region</title>
@@ -13,20 +14,26 @@
   <meta name="search-keywords" content="instance_activate_region" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">instance_activate_region</span></h1>
-  <p>この機能により、<span class="notranslate">room</span> 内に、以前に非アクティブにしたインスタンスをアクティブにするための領域を定義することができます。この領域は、次の画像のように、&quot;inside &quot;または &quot;outside &quot;としてフラグを立てることができます。</p>
-  <p><img>上の画像で、&quot;apple&quot; インスタンスが常にアクティブであることがわかります。これは、<span class="notranslate">sprite</span> 自体が領域と重なっていなくても、バウンディングボックスが重なっているからです。つまり、インスタンスは、その<i>バウンディングボックスが</i>領域と重なったときに指定された領域内にいるとみなされ、コリジョンマスクの状態（正確かどうか）は考慮されないのです。活性化は瞬間的なものではなく、この方法で活性化されたインスタンスは、この関数が呼び出されたイベントが終了するまで活性化されたとはみなされないことに注意してください。</p>
+  <p>この機能により、<span class="notranslate">room</span>
+    内に、以前に非アクティブにしたインスタンスをアクティブにするための領域を定義することができます。この領域は、次の画像のように、&quot;inside &quot;または &quot;outside
+    &quot;としてフラグを立てることができます。</p>
+  <p><img>上の画像で、&quot;apple&quot; インスタンスが常にアクティブであることがわかります。これは、<span class="notranslate">sprite</span>
+    自体が領域と重なっていなくても、バウンディングボックスが重なっているからです。つまり、インスタンスは、その<i>バウンディングボックスが</i>領域と重なったときに指定された領域内にいるとみなされ、コリジョンマスクの状態（正確かどうか）は考慮されないのです。活性化は瞬間的なものではなく、この方法で活性化されたインスタンスは、この関数が呼び出されたイベントが終了するまで活性化されたとはみなされないことに注意してください。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_activate_region</span>(left, top, width, height, inside);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">instance_activate_region</span>(left, top, width,
+    height, inside);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">left</span></td>
@@ -51,17 +58,20 @@
       <tr>
         <td><span class="notranslate">inside</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether to activate instances on the inside of the region (true) or the outside (false).</span></td>
+        <td><span class="notranslate">Whether to activate instances on the inside of the region (true) or the outside
+            (false).</span></td>
       </tr>
       <tr>
         <td>collision_space</td>
-        <td><span data-keyref="Type_Enum_ColSpace"><a href="instance_activate_all.htm" target="_blank">Collision Space</a></span></td>
-        <td><span data-conref="../../../../../assets/snippets/Tag_optional.hts"> </span> The collision space where instances will be activated</td>
+        <td><span data-keyref="Type_Enum_ColSpace"><a href="instance_activate_all.htm" target="_blank">Collision
+              Space</a></span></td>
+        <td><span data-conref="../../../../../assets/snippets/Tag_optional.hts"> </span> The collision space where
+          instances will be activated</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -78,11 +88,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Deactivating_Instances.htm">インスタンスの非活性化</a></div>
-        <div style="float:right">次のページ <a href="instance_activate_layer.htm"><span class="notranslate">instance_activate_layer</span></a></div>
+        <div style="float:left">前のページ：<a href="Deactivating_Instances.htm">インスタンスの非活性化</a></div>
+        <div style="float:right">次のページ：<a href="instance_activate_layer.htm"><span
+              class="notranslate">instance_activate_layer</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 instance_activate_region
@@ -91,4 +103,5 @@ instance_activate_region
 instance_activate_region
 -->
 </body>
+
 </html>

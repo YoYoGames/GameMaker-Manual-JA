@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>任意のオブジェクトが配置されている場合</title>
@@ -12,24 +13,34 @@
   <meta name="rh-index-keywords" content="GML Visual Action - If Any Object At Place" />
   <meta name="search-keywords" content="If Any Object At Place" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> If Any At Place<span class="notranslate">Object</span> </h1>
-  <p>このアクションは、呼び出したインスタンスのコリジョン マスクに基づく位置に、<i>任意の</i> <span class="notranslate">object</span> のインスタンスが配置されているかどうかを確認するために使用されます。位置は絶対位置でもインスタンスからの相対位置でもかまいません。
-    で、このアクションは衝突があれば <span class="inline">true</span> を、なければ <span class="inline">false</span> を返します。また、&quot;Not&quot;<span class="notranslate">flag</span> をチェックすると、指定した位置に衝突が<i>ないか</i>どうかを確認できます。アクションは、衝突がない場合は <span class="inline">true</span> を、そうでない場合は <span class="inline">false</span> を返します。衝突は、呼び出し元のインスタンスのコリジョン マスクが、その位置にある任意のインスタンスのコリジョン マスクと重なるかどうかに基づいて計算されます（あたかもその位置に「配置」されているように）。</p>
-  <p class="note"><b>重要!衝</b>突は、有効なコリジョン マスクを持つインスタンスにのみ登録されます。つまり、<span class="notranslate">sprite</span> が <span class="inline">sprite_index</span> に、または<span class="notranslate">sprite</span> が <span class="inline">mask_index</span> に割り当てられているインスタンスです。
+  <p>このアクションは、呼び出したインスタンスのコリジョン マスクに基づく位置に、<i>任意の</i> <span class="notranslate">object</span>
+    のインスタンスが配置されているかどうかを確認するために使用されます。位置は絶対位置でもインスタンスからの相対位置でもかまいません。
+    で、このアクションは衝突があれば <span class="inline">true</span> を、なければ <span class="inline">false</span>
+    を返します。また、&quot;Not&quot;<span class="notranslate">flag</span>
+    をチェックすると、指定した位置に衝突が<i>ないか</i>どうかを確認できます。アクションは、衝突がない場合は <span class="inline">true</span> を、そうでない場合は <span
+      class="inline">false</span> を返します。衝突は、呼び出し元のインスタンスのコリジョン マスクが、その位置にある任意のインスタンスのコリジョン
+    マスクと重なるかどうかに基づいて計算されます（あたかもその位置に「配置」されているように）。</p>
+  <p class="note"><b>重要!衝</b>突は、有効なコリジョン マスクを持つインスタンスにのみ登録されます。つまり、<span class="notranslate">sprite</span> が <span
+      class="inline">sprite_index</span> に、または<span class="notranslate">sprite</span> が <span
+      class="inline">mask_index</span> に割り当てられているインスタンスです。
     コリジョンマスクがない場合、そのインスタンスが何を描いているかに関係なく、コリジョンは検出されません。</p>
   <p>なお、「<span class="inline">if</span> 」ブロックにアクションを追加する場合は、下の画像のように、アクションの<i>横に</i>ドロップする必要があります。</p>
-  <p><img alt="If Any Object At Place Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Any.png" /></p>
+  <p><img alt="If Any Object At Place Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Any.png" /></p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="If Any Object At Place drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Any.png" /></p>
+  <p><img alt="If Any Object At Place drop actions" class="center"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Any.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x</span></td>
@@ -51,11 +62,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Collision_Actions.htm">コリジョンアクション</a></div>
-        <div style="float:right">次へ<a href="If_Object_At_Place.htm">If<span class="notranslate">Object</span> アットプレイス</a></div>
+        <div style="float:left">前のページ：<a href="Collision_Actions.htm">コリジョンアクション</a></div>
+        <div style="float:right">次のページ：<a href="If_Object_At_Place.htm">If<span class="notranslate">Object</span>
+            アットプレイス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Any <span class="notranslate">Object</span> At Place
@@ -64,4 +77,5 @@ Action - If Any <span class="notranslate">Object</span> At Place
 action_if_any_object_at_place
 -->
 </body>
+
 </html>

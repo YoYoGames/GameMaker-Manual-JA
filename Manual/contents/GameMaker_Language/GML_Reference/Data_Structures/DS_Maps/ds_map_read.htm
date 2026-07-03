@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_map_read</title>
@@ -12,20 +13,25 @@
   <meta name="rh-index-keywords" content="ds_map_read" />
   <meta name="search-keywords" content="ds_map_read" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_map_read</span></h1>
-  <p>この関数は、あらかじめ関数で作成された<span class="notranslate">string</span> を取得します。 <a href="ds_map_write.htm"><span class="inline">ds_map_write()</span></a>を作成し、それを以前に作成した DS マップに読み込む。<span class="notranslate">string</span> が読み込まれるマップにキー/値のペアが含まれている場合、保存されたマップが再構築される前に、まずそれらがクリアされます。</p>
-  <p>なお、指定されたDS<span class="notranslate">string</span> がGameMakerで書かれたものである場合。Studio 1.2.x<span class="notranslate">runtime</span> (またはそれ以前) の場合、その後<span class="notranslate">string</span> のフォーマットが変更されたため、オプション引数 &quot;legacy&quot; を指定して <span class="inline">true</span> に設定する必要があります。</p>
+  <p>この関数は、あらかじめ関数で作成された<span class="notranslate">string</span> を取得します。 <a href="ds_map_write.htm"><span
+        class="inline">ds_map_write()</span></a>を作成し、それを以前に作成した DS マップに読み込む。<span class="notranslate">string</span>
+    が読み込まれるマップにキー/値のペアが含まれている場合、保存されたマップが再構築される前に、まずそれらがクリアされます。</p>
+  <p>なお、指定されたDS<span class="notranslate">string</span> がGameMakerで書かれたものである場合。Studio 1.2.x<span
+      class="notranslate">runtime</span> (またはそれ以前) の場合、その後<span class="notranslate">string</span>
+    のフォーマットが変更されたため、オプション引数 &quot;legacy&quot; を指定して <span class="inline">true</span> に設定する必要があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_map_read</span>(id, str, [legacy]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">id</span></td>
@@ -40,12 +46,13 @@
       <tr>
         <td><span class="notranslate">legacy</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> <span class="inline">true</span> または のいずれか、または完全に省略することができます。 <span class="inline">false</span> </td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> <span class="inline">true</span> または
+            のいずれか、または完全に省略することができます。 <span class="inline">false</span> </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,18 +64,23 @@
         ds_map_read(inventory, t_string);<br />
     }<br />
     ini_close();</p>
-  <p>上記のコードでは、新しいDSマップを作成し、そのidインデックスを変数 &quot;inventory &quot;に格納している。次に、ini ファイルを開き、そのファイルから<span class="notranslate">string</span> を読み込んで一時変数 &quot;t_string&quot; に格納する。最後に、<span class="notranslate">string</span> が有効かどうか (ini のデフォルト値である &quot;&quot; ではないか) をチェックし、有効な場合は<span class="notranslate">string</span> を新しく作成した DS マップに読み込んでから ini を再び閉じます。</p>
+  <p>上記のコードでは、新しいDSマップを作成し、そのidインデックスを変数 &quot;inventory &quot;に格納している。次に、ini ファイルを開き、そのファイルから<span
+      class="notranslate">string</span> を読み込んで一時変数 &quot;t_string&quot; に格納する。最後に、<span
+      class="notranslate">string</span> が有効かどうか (ini のデフォルト値である &quot;&quot; ではないか) をチェックし、有効な場合は<span
+      class="notranslate">string</span> を新しく作成した DS マップに読み込んでから ini を再び閉じます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Maps.htm">DSマップ</a></div>
-        <div style="float:right">次のページ <a href="ds_map_write.htm"><span class="notranslate">ds_map_write</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Maps.htm">DSマップ</a></div>
+        <div style="float:right">次のページ：<a href="ds_map_write.htm"><span class="notranslate">ds_map_write</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_read
@@ -77,4 +89,5 @@ ds_map_read
 ds_map_read
 -->
 </body>
+
 </html>

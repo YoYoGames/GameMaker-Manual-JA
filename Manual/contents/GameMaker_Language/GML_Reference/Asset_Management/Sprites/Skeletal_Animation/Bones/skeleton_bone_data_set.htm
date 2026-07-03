@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_bone_data_set</title>
@@ -12,10 +13,15 @@
   <meta name="rh-index-keywords" content="skeleton_bone_data_set" />
   <meta name="search-keywords" content="skeleton_bone_data_set" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_bone_data_set</span></h1>
-  <p>骨格アニメーションはいくつかの &quot;ボーン&quot; で構成されています。アニメーションプログラムで定義し、名前をつけたボーンに、この関数を使用していつでも特定のデータを設定できます。このデータは、スケルトンの<b>デフォルト</b>ポーズを参照しており、描画されている現在のポーズ<i>ではない</i>ことに注意してください (そのためには、関数 <a href="skeleton_bone_state_set.htm"><span class="inline">skeleton_bone_state_set()</span></a>また、事前に作成した<a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップから</a>設定する必要があり、DS マップには以下のキーとそれに相当する値が必要である。</p>
+  <p>骨格アニメーションはいくつかの &quot;ボーン&quot;
+    で構成されています。アニメーションプログラムで定義し、名前をつけたボーンに、この関数を使用していつでも特定のデータを設定できます。このデータは、スケルトンの<b>デフォルト</b>ポーズを参照しており、描画されている現在のポーズ<i>ではない</i>ことに注意してください
+    (そのためには、関数 <a href="skeleton_bone_state_set.htm"><span
+        class="inline">skeleton_bone_state_set()</span></a>また、事前に作成した<a
+      href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS マップから</a>設定する必要があり、DS マップには以下のキーとそれに相当する値が必要である。</p>
   <ul class="colour">
     <li><b>&quot;x&quot;:</b>親ボーンに相対するボーンのローカル x 位置。</li>
     <li><b>&quot;y&quot;:</b>親ボーンに対するボーンのローカルy位置。</li>
@@ -25,14 +31,14 @@
     <li><b>&quot;parent&quot;（親）。</b>親骨の名前（<span class="notranslate">string</span> ）。</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_bone_data_set</span>(bone, map);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">bone</span></td>
@@ -47,7 +53,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -56,18 +62,21 @@
     ds_map_replace(bone_map, &quot;parent&quot;, &quot;body&quot;);<br />
     skeleton_bone_data_set(&quot;head&quot;, bone_map);<br />
     ds_map_destroy(bone_map);</p>
-  <p>上記のコードでは、DSマップを作成し、&quot;head &quot;という名前のボーンからデータを取り込んでいます。そして、マップ内の &quot;parent&quot; ボーンキーを新しい値で置き換え、 &quot;head&quot; ボーンを新しいデータセットで再び設定します。</p>
+  <p>上記のコードでは、DSマップを作成し、&quot;head &quot;という名前のボーンからデータを取り込んでいます。そして、マップ内の &quot;parent&quot; ボーンキーを新しい値で置き換え、
+    &quot;head&quot; ボーンを新しいデータセットで再び設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背面：<a href="Bones.htm">骨</a></div>
-        <div style="float:right">次のページ <a href="skeleton_bone_state_get.htm"><span class="notranslate">skeleton_bone_state_get</span></a></div>
+        <div style="float:left">前のページ：<a href="Bones.htm">骨</a></div>
+        <div style="float:right">次のページ：<a href="skeleton_bone_state_get.htm"><span
+              class="notranslate">skeleton_bone_state_get</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_bone_data_set
@@ -76,4 +85,5 @@ skeleton_bone_data_set
 skeleton_bone_data_set
 -->
 </body>
+
 </html>

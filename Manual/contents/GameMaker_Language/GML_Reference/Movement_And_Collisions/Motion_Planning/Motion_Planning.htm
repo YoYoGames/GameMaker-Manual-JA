@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>モーションプランニング</title>
@@ -12,13 +13,23 @@
   <meta name="rh-index-keywords" content="Motion Planning" />
   <meta name="search-keywords" content="Motion Planning,mp,mp funtions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>モーションプランニング</h1>
-  <p>多くのゲームでは、対戦相手、NPC、敵などがプレーヤーと対話し、動き回るときに一定の知性を示すことを望んでいます。つまり、障害物を避け、ルートを計画し、一般的に彼らの<span class="notranslate">path</span> のすべてにぶつからないことを望んでいますこれを支援するために、<span data-keyref="GameMaker Name">GameMaker</span>にはモーションプランニングを処理する一連の関数があります。これらは、ゲームの敵のようなもののために設計されていますが、テキストをスムーズに導入したり、トランジションを作成したりと、あらゆることに使用できることに注意してください...ただし、以下のリストのどれを使うにせよ、多くの場合、1つの関数セットでは完璧な解決策にはならず、ゲーム内の状況に応じて関数を「組み合わせて」使う必要があることに留意してください。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>モーションプランニングは、<b>mp_</b>関数で処理され、<b>mp_</b>関数自体は以下の3つのグループに分かれています。</p>
+  <p>多くのゲームでは、対戦相手、NPC、敵などがプレーヤーと対話し、動き回るときに一定の知性を示すことを望んでいます。つまり、障害物を避け、ルートを計画し、一般的に彼らの<span
+      class="notranslate">path</span> のすべてにぶつからないことを望んでいますこれを支援するために、<span
+      data-keyref="GameMaker Name">GameMaker</span>にはモーションプランニングを処理する一連の関数があります。これらは、ゲームの敵のようなもののために設計されていますが、テキストをスムーズに導入したり、トランジションを作成したりと、あらゆることに使用できることに注意してください...ただし、以下のリストのどれを使うにせよ、多くの場合、1つの関数セットでは完璧な解決策にはならず、ゲーム内の状況に応じて関数を「組み合わせて」使う必要があることに留意してください。
+  </p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerの</span>モーションプランニングは、<b>mp_</b>関数で処理され、<b>mp_</b>関数自体は以下の3つのグループに分かれています。
+  </p>
   <h2><label for="one">一次関数</label></h2>
-  <p>この種の関数は、インスタンスの無衝突<span class="notranslate">path</span> を計算しようとするものである。この<span class="notranslate">path</span> が計算されると、それをインスタンスに割り当てて、ゴールに向かって移動することができる。<span class="notranslate">path</span> の計算には時間がかかるが、その後の<span class="notranslate">path</span> の実行は高速になる。もちろん、これはその間に状況が変化していない場合にのみ有効である。例えば、障害物が変化した場合、<span class="notranslate">path</span> を再計算する必要があるかもしれない。 また、これらの関数が失敗し、インスタンスのための<span class="notranslate">path</span> が見つからないかもしれないことに注意。</p>
+  <p>この種の関数は、インスタンスの無衝突<span class="notranslate">path</span> を計算しようとするものである。この<span class="notranslate">path</span>
+    が計算されると、それをインスタンスに割り当てて、ゴールに向かって移動することができる。<span class="notranslate">path</span> の計算には時間がかかるが、その後の<span
+      class="notranslate">path</span> の実行は高速になる。もちろん、これはその間に状況が変化していない場合にのみ有効である。例えば、障害物が変化した場合、<span
+      class="notranslate">path</span> を再計算する必要があるかもしれない。 また、これらの関数が失敗し、インスタンスのための<span class="notranslate">path</span>
+    が見つからないかもしれないことに注意。</p>
   <ul class="colour">
     <li><a href="mp_linear_step.htm"><span class="notranslate">mp_linear_step</span></a></li>
     <li><a href="mp_linear_step_object.htm"><span class="notranslate">mp_linear_step_object</span></a></li>
@@ -27,7 +38,9 @@
   </ul>
   <p> </p>
   <h2><label for="three">潜在的な機能</label></h2>
-  <p>これらは基本的な回避機能であり、単純なAIに適しています。これらの関数は、インスタンスに特定のゴール位置に向かって一歩を踏み出させ、可能であれば直進しようとするが、必要であれば別の方向に進ませることで機能する。これらの関数は、インスタンスの<b>ステップ</b>イベントで使用する必要があります。</p>
+  <p>
+    これらは基本的な回避機能であり、単純なAIに適しています。これらの関数は、インスタンスに特定のゴール位置に向かって一歩を踏み出させ、可能であれば直進しようとするが、必要であれば別の方向に進ませることで機能する。これらの関数は、インスタンスの<b>ステップ</b>イベントで使用する必要があります。
+  </p>
   <ul class="colour">
     <li><a href="mp_potential_settings.htm"><span class="notranslate">mp_potential_settings</span></a></li>
     <li><a href="mp_potential_step.htm"><span class="notranslate">mp_potential_step</span></a></li>
@@ -37,10 +50,26 @@
   </ul>
   <p> </p>
   <h2><label for="two">グリッド機能</label></h2>
-  <p>最後のタイプの関数は、グリッドベースのアプローチ（A*アルゴリズムと呼ばれることもあります）に基づく、より複雑なメカニズムを使用します。これは、<span class="notranslate">paths</span> を見つけるのに、より成功し（それでも失敗するかもしれませんが）、可能な限り最短の<span class="notranslate">paths</span> を見つけることができますが、それを設定するためには、あなたの側でより多くの作業が必要になります。</p>
-  <p>グローバルな考え方は以下の通りです。まず、<span class="notranslate">room</span> （またはその関連部分）をカバーするグリッドを作成します。細かいグリッドを使うと遅くなりますが、粗いグリッドを使っても構いません。どちらも、経路探索ができるだけ正確になるように、<span class="notranslate">room</span> の解像度を基準にする必要があります。たとえば、400x200ピクセルの<span class="notranslate">room</span> があれば、グリッドの解像度は40でも20でも10でも構いません。すべては、<span class="notranslate">path</span> にどれだけの正確さが必要か、<span class="notranslate">GameMaker</span> にどれだけの処理をさせて生成させたいかによります。</p>
-  <p>次に、避けたい関連するすべての<span class="notranslate">objects</span> について、それらが重なるグリッドセルを決定し（バウンディングボックスまたはその正確な<span class="notranslate">sprite</span> に基づいて）、これらのセルを禁止としてマークする必要があります。したがって、障害物が部分的にしか重なっていない場合でも、セルは完全に禁止とマークされます。</p>
-  <p>最後に、開始位置と目標位置を指定します。どちらもフリーセル内に<i>なければ</i>なりません。この関数は、この2つの位置の間で可能な限り最短の<span class="notranslate">path</span> を計算します。<span class="notranslate">path</span> はすべてのフリーセルの中心の間を走るので、セルが十分に大きく、その中心に置かれたインスタンスが完全にその中に入るようであれば、成功である。この<span class="notranslate">path</span> は、次に続くインスタンスに <a href="../../Asset_Management/Paths/Paths.htm"><span class="inline">path_*</span></a>関数を使用します。セルの大きさは、移動する<span class="notranslate">object</span> がセルの中心を原点として、<i>完全に</i>セル内に収まるような大きさでなければならないからです。(<span class="notranslate">object</span> の原点の位置に注意してください。また、<span class="notranslate">path</span> の原点がその中心でない場合、<span class="notranslate">object</span> を移動させることができることに注意してください！)一方、セルが小さいほど、<span class="notranslate">paths</span> の可能性が多くなります。セルを大きくしすぎると、すべてのセルが障害物と交差するため、障害物と障害物の間の開口部が閉じてしまうことがあります。</p>
+  <p>最後のタイプの関数は、グリッドベースのアプローチ（A*アルゴリズムと呼ばれることもあります）に基づく、より複雑なメカニズムを使用します。これは、<span class="notranslate">paths</span>
+    を見つけるのに、より成功し（それでも失敗するかもしれませんが）、可能な限り最短の<span class="notranslate">paths</span>
+    を見つけることができますが、それを設定するためには、あなたの側でより多くの作業が必要になります。</p>
+  <p>グローバルな考え方は以下の通りです。まず、<span class="notranslate">room</span>
+    （またはその関連部分）をカバーするグリッドを作成します。細かいグリッドを使うと遅くなりますが、粗いグリッドを使っても構いません。どちらも、経路探索ができるだけ正確になるように、<span
+      class="notranslate">room</span> の解像度を基準にする必要があります。たとえば、400x200ピクセルの<span class="notranslate">room</span>
+    があれば、グリッドの解像度は40でも20でも10でも構いません。すべては、<span class="notranslate">path</span> にどれだけの正確さが必要か、<span
+      class="notranslate">GameMaker</span> にどれだけの処理をさせて生成させたいかによります。</p>
+  <p>次に、避けたい関連するすべての<span class="notranslate">objects</span> について、それらが重なるグリッドセルを決定し（バウンディングボックスまたはその正確な<span
+      class="notranslate">sprite</span> に基づいて）、これらのセルを禁止としてマークする必要があります。したがって、障害物が部分的にしか重なっていない場合でも、セルは完全に禁止とマークされます。
+  </p>
+  <p>最後に、開始位置と目標位置を指定します。どちらもフリーセル内に<i>なければ</i>なりません。この関数は、この2つの位置の間で可能な限り最短の<span class="notranslate">path</span>
+    を計算します。<span class="notranslate">path</span>
+    はすべてのフリーセルの中心の間を走るので、セルが十分に大きく、その中心に置かれたインスタンスが完全にその中に入るようであれば、成功である。この<span class="notranslate">path</span>
+    は、次に続くインスタンスに <a href="../../Asset_Management/Paths/Paths.htm"><span
+        class="inline">path_*</span></a>関数を使用します。セルの大きさは、移動する<span class="notranslate">object</span>
+    がセルの中心を原点として、<i>完全に</i>セル内に収まるような大きさでなければならないからです。(<span class="notranslate">object</span> の原点の位置に注意してください。また、<span
+      class="notranslate">path</span> の原点がその中心でない場合、<span class="notranslate">object</span>
+    を移動させることができることに注意してください！)一方、セルが小さいほど、<span class="notranslate">paths</span>
+    の可能性が多くなります。セルを大きくしすぎると、すべてのセルが障害物と交差するため、障害物と障害物の間の開口部が閉じてしまうことがあります。</p>
   <ul class="colour">
     <li><a href="mp_grid_create.htm"><span class="notranslate">mp_grid_create</span></a></li>
     <li><a href="mp_grid_destroy.htm"><span class="notranslate">mp_grid_destroy</span></a></li>
@@ -56,17 +85,21 @@
     <li><a href="mp_grid_draw.htm"><span class="notranslate">mp_grid_draw</span></a></li>
   </ul>
   <p> </p>
-  <p>グリッドベースのアプローチは非常に強力ですが（多くのプロフェッショナルゲームで使用されています）、ゲームを解くためにどの面積とセルの大きさが良いのかを判断しなければならないので、慎重に考えることが必要です。また、どの<span class="notranslate">objects</span> を避けなければならないか、正確なチェックが重要かどうかも判断しなければなりません。これらのパラメータはすべて、アプローチの効率に強く影響します。また、よりコストのかからない <span class="inline">mp_*</span> 関数で十分用が足せるかもしれないので、本当に必要なのかどうかも判断しなければなりません。</p>
+  <p>グリッドベースのアプローチは非常に強力ですが（多くのプロフェッショナルゲームで使用されています）、ゲームを解くためにどの面積とセルの大きさが良いのかを判断しなければならないので、慎重に考えることが必要です。また、どの<span
+      class="notranslate">objects</span>
+    を避けなければならないか、正確なチェックが重要かどうかも判断しなければなりません。これらのパラメータはすべて、アプローチの効率に強く影響します。また、よりコストのかからない <span
+      class="inline">mp_*</span> 関数で十分用が足せるかもしれないので、本当に必要なのかどうかも判断しなければなりません。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="../Movement_And_Collisions.htm">移動と衝突</a></div>
-        <div style="float:right">次へ<a href="../Collisions/Collisions.htm">衝突</a></div>
+        <div style="float:left">前のページ：<a href="../Movement_And_Collisions.htm">移動と衝突</a></div>
+        <div style="float:right">次のページ：<a href="../Collisions/Collisions.htm">衝突</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Motion Planning
@@ -77,4 +110,5 @@ Motion Planning Functions
 mp_functions
 -->
 </body>
+
 </html>

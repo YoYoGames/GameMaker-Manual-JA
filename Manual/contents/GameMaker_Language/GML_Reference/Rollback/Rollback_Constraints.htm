@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -12,14 +13,19 @@
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
 </head>
+
 <body>
   <h1>ロールバックコンストレイント</h1>
-  <p>ロールバックシステムには、注意しなければならない制約があります。これらの制約のいずれかを破ると、<a data-xref="{text}" href="Rollback_System.htm#h">Sync Test</a>は何が問題なのかを知らせるためにエラーを投げます。</p>
-  <h2>客室数</h2>
+  <p>ロールバックシステムには、注意しなければならない制約があります。これらの制約のいずれかを破ると、<a data-xref="{text}" href="Rollback_System.htm#h">Sync
+      Test</a>は何が問題なのかを知らせるためにエラーを投げます。</p>
+  <h2>Rooms</h2>
   <p>マルチプレイヤーゲームがアクティブでも、すべてのプレイヤーが接続されていれば、<span class="notranslate">rooms</span> を変更することができます。</p>
   <p><span class="notranslate">room</span> を変更すると、ゲームの同期処理が再度実行されます。</p>
-  <p>管理されている<span class="notranslate">objects</span> のデータは、<span class="notranslate">room</span> が変更されても自動的に引き継がれるわけ<strong>では </strong>ありません。グローバル変数、persistent<span class="notranslate">object</span> を使用するか、ローカル プレーヤーの情報をファイルに保存することで、手動で引き継ぐことができます。</p>
-  <p>これらのオプションを使用すると、<span class="notranslate">room</span> が終了する前にプレーヤーの情報を保存し、新しい<span class="notranslate">room</span> でプレーヤーインスタンスが作成されるときにそれを適用することができます。</p>
+  <p>管理されている<span class="notranslate">objects</span> のデータは、<span class="notranslate">room</span>
+    が変更されても自動的に引き継がれるわけ<strong>では </strong>ありません。グローバル変数、persistent<span class="notranslate">object</span> を使用するか、ローカル
+    プレーヤーの情報をファイルに保存することで、手動で引き継ぐことができます。</p>
+  <p>これらのオプションを使用すると、<span class="notranslate">room</span> が終了する前にプレーヤーの情報を保存し、新しい<span class="notranslate">room</span>
+    でプレーヤーインスタンスが作成されるときにそれを適用することができます。</p>
   <h2>イベントオーダー</h2>
   <p>マルチプレイヤーゲームが開始されると、以下のイベントが所定の順序で実行されます。</p>
   <ul class="colour">
@@ -44,41 +50,73 @@
     </li>
   </ul>
   <h2>デストロイイベント</h2>
-  <p>インスタンスの<strong>Destroy</strong>イベントは通常、インスタンスが破壊されるとすぐに実行されます。例えば、<span class="inline"><a href="../Asset_Management/Instances/instance_destroy.htm">instance_destroy()</a></span> が呼び出された後などです。しかし、マルチプレイヤーゲームでは、このイベントがすぐに実行されないことがあります。</p>
-  <p> <span class="inline">instance_destroy()</span> の呼び出しは、間違った予測によって簡単に実行されてしまいます。つまり、インスタンスの破壊は、責任あるプレイヤーからの正しいデータを受け取ると、すぐにロールバックされることになります。</p>
-  <p>このため、インスタンスの Destroy イベントは、そのインスタンスが破壊されることが確認されたときにのみ呼び出されます。そのため、プレイヤーの画面上でインスタンスが破壊され、そのDestroyイベントが呼ばれるまでに若干のタイムラグが発生することがあります。</p>
-  <p>インスタンスが破棄されるのと同じフレームでクライアントの画面に何かを起こしたい場合は、カスタム関数を作成して、 <span class="inline">instance_destroy()</span> と一緒に呼び出すことをお勧めします。</p>
+  <p>インスタンスの<strong>Destroy</strong>イベントは通常、インスタンスが破壊されるとすぐに実行されます。例えば、<span class="inline"><a
+        href="../Asset_Management/Instances/instance_destroy.htm">instance_destroy()</a></span>
+    が呼び出された後などです。しかし、マルチプレイヤーゲームでは、このイベントがすぐに実行されないことがあります。</p>
+  <p> <span class="inline">instance_destroy()</span>
+    の呼び出しは、間違った予測によって簡単に実行されてしまいます。つまり、インスタンスの破壊は、責任あるプレイヤーからの正しいデータを受け取ると、すぐにロールバックされることになります。</p>
+  <p>このため、インスタンスの Destroy
+    イベントは、そのインスタンスが破壊されることが確認されたときにのみ呼び出されます。そのため、プレイヤーの画面上でインスタンスが破壊され、そのDestroyイベントが呼ばれるまでに若干のタイムラグが発生することがあります。</p>
+  <p>インスタンスが破棄されるのと同じフレームでクライアントの画面に何かを起こしたい場合は、カスタム関数を作成して、 <span class="inline">instance_destroy()</span>
+    と一緒に呼び出すことをお勧めします。</p>
   <p>これは、破棄されるインスタンスで実行される<strong>Clean Up</strong>イベントにも適用されます。</p>
   <h2>国家経営</h2>
-  <p>Rollback Multiplayerは、クライアント間のゲームの「状態」を管理し、これには管理されたインスタンスとその変数が含まれます。ゲームのこのような管理された部分は、ロールバックシステムによって間違った予測の場合にロールバックされることができます。</p>
-  <p>マネージドインスタンスを作成または破棄したり、マネージドインスタンスのプロパティや変数を変更したりすると、ゲームの状態が更新されます。この状態は、すべてのクライアントで共有される<a href="Rollback_Functions/rollback_define_input.htm">入力のみ</a>で、他のプレイヤーに送信されることは<strong>ありません</strong>。</p>
+  <p>Rollback
+    Multiplayerは、クライアント間のゲームの「状態」を管理し、これには管理されたインスタンスとその変数が含まれます。ゲームのこのような管理された部分は、ロールバックシステムによって間違った予測の場合にロールバックされることができます。
+  </p>
+  <p>マネージドインスタンスを作成または破棄したり、マネージドインスタンスのプロパティや変数を変更したりすると、ゲームの状態が更新されます。この状態は、すべてのクライアントで共有される<a
+      href="Rollback_Functions/rollback_define_input.htm">入力のみ</a>で、他のプレイヤーに送信されることは<strong>ありません</strong>。</p>
   <p>プレイヤー間の同期を確実にするために、ゲームの状態管理にはいくつかの制約があります。</p>
   <h3 id="h1">ロールバック開始前の状態</h3>
-  <p>各プレイヤーが同じゲーム ステートで開始することを確認する必要があります。つまり、<a href="Rollback_Events.htm">Rollback Start</a>イベントが発生したとき、つまり実際にゲームが開始されたときに、ゲームとその管理インスタンスに関するすべてが、すべてのプレイヤーに対して同じである必要があります。</p>
-  <p>すべてのクライアントに対してまったく同じ方法で実行する限り、その時点より前にマネージドインスタンスの作成またはセットアップコードを実行することができます。ゲームが開始されたかどうかを知るには、<span class="inline"><a data-xref="{title}" href="Rollback_Variables/rollback_game_running.htm">rollback_game_running</a></span> を使用します。</p>
+  <p>各プレイヤーが同じゲーム ステートで開始することを確認する必要があります。つまり、<a href="Rollback_Events.htm">Rollback
+      Start</a>イベントが発生したとき、つまり実際にゲームが開始されたときに、ゲームとその管理インスタンスに関するすべてが、すべてのプレイヤーに対して同じである必要があります。</p>
+  <p>すべてのクライアントに対してまったく同じ方法で実行する限り、その時点より前にマネージドインスタンスの作成またはセットアップコードを実行することができます。ゲームが開始されたかどうかを知るには、<span
+      class="inline"><a data-xref="{title}"
+        href="Rollback_Variables/rollback_game_running.htm">rollback_game_running</a></span> を使用します。</p>
   <p>スタート/ジョインコールから<a href="Rollback_Events.htm">Rollback Start</a>イベントまでの時間を利用して、待機中のプレイヤーにローディング画面を表示することができます。</p>
-  <p><a href="Rollback_Functions/rollback_leave_game.htm">ゲームを終了</a>するとプレーヤーは同じ状態に戻ります。つまり、ゲームロジックはゲームが接続されている間だけ実行されるように、<span class="inline"><a data-xref="{title}" href="Rollback_Variables/rollback_game_running.htm">rollback_game_running</a></span> を使用する必要があります。</p>
+  <p><a
+      href="Rollback_Functions/rollback_leave_game.htm">ゲームを終了</a>するとプレーヤーは同じ状態に戻ります。つまり、ゲームロジックはゲームが接続されている間だけ実行されるように、<span
+      class="inline"><a data-xref="{title}"
+        href="Rollback_Variables/rollback_game_running.htm">rollback_game_running</a></span> を使用する必要があります。</p>
   <h3>グローバルステート</h3>
-  <p>グローバル変数はプレイヤー間で同期されないので、ゲームの状態に影響を与えることはできません。必要な変数はすべて、マネージド<span class="notranslate">objects</span> 内に置く必要があります。</p>
+  <p>グローバル変数はプレイヤー間で同期されないので、ゲームの状態に影響を与えることはできません。必要な変数はすべて、マネージド<span class="notranslate">objects</span> 内に置く必要があります。
+  </p>
   <h3>描画イベントの状態</h3>
-  <p>Drawイベントの状態を変更することはできず、その目的は以前のイベントで設定された状態に基づいてグラフィックを描画することだけにとどめておく必要があります。Drawイベント中は、すべてのマネージド<span class="notranslate">objects</span> が読み取り専用になるため、その中の変数を変更したり、マネージド<span class="notranslate">objects</span> のインスタンスを作成または破棄したりすることはできません。</p>
+  <p>Drawイベントの状態を変更することはできず、その目的は以前のイベントで設定された状態に基づいてグラフィックを描画することだけにとどめておく必要があります。Drawイベント中は、すべてのマネージド<span
+      class="notranslate">objects</span> が読み取り専用になるため、その中の変数を変更したり、マネージド<span class="notranslate">objects</span>
+    のインスタンスを作成または破棄したりすることはできません。</p>
   <h3 id="h">時間変数</h3>
-  <p> <span class="inline"><a href="../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span> や <span class="inline"><a href="../Maths_And_Numbers/Date_And_Time/get_timer.htm">get_timer()</a></span> のような変数/関数を使用して、ゲームロジックに影響を与えないようにしてください。代わりに<span class="inline"><a data-xref="{title}" href="Rollback_Variables/rollback_current_frame.htm">rollback_current_frame</a></span> というマネージド変数が提供されているので、これを使用することができます。これは、マルチプレイヤーゲームが始まってから経過したフレーム数を返します。</p>
-  <p><a href="../Asset_Management/Instances/Instance_Variables/alarm.htm">アラームイベントは</a>、マネージド<span class="notranslate">objects</span> で安全に使用できます。</p>
-  <p>また、<span class="inline"><a href="../Maths_And_Numbers/Date_And_Time/delta_time.htm">delta_time</a></span> 、ゲームを実行しているシステムに大きく依存し、プレーヤー間で同期することができないので、使用しないことを確認してください。</p>
+  <p> <span class="inline"><a href="../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span> や <span
+      class="inline"><a href="../Maths_And_Numbers/Date_And_Time/get_timer.htm">get_timer()</a></span>
+    のような変数/関数を使用して、ゲームロジックに影響を与えないようにしてください。代わりに<span class="inline"><a data-xref="{title}"
+        href="Rollback_Variables/rollback_current_frame.htm">rollback_current_frame</a></span>
+    というマネージド変数が提供されているので、これを使用することができます。これは、マルチプレイヤーゲームが始まってから経過したフレーム数を返します。</p>
+  <p><a href="../Asset_Management/Instances/Instance_Variables/alarm.htm">アラームイベントは</a>、マネージド<span
+      class="notranslate">objects</span> で安全に使用できます。</p>
+  <p>また、<span class="inline"><a href="../Maths_And_Numbers/Date_And_Time/delta_time.htm">delta_time</a></span>
+    、ゲームを実行しているシステムに大きく依存し、プレーヤー間で同期することができないので、使用しないことを確認してください。</p>
   <h3>インスタンスリファレンス</h3>
   <p>マネージドインスタンスに格納されるインスタンスIDは、マネージドインスタンスを指す必要があります。</p>
   <p>マネージドインスタンスが非マネージドインスタンスへの参照を持つ場合、その非マネージドインスタンスへの変更は管理およびロールバックできないため、クライアント状態間の不整合が発生する。</p>
-  <p>例えば、マネージド<span class="inline2">obj_workstation</span>インスタンスが<span class="inline2">obj_anvil</span>インスタンスへの参照を持つ場合、<span class="inline2">obj_anvil</span>はマネージド<span class="notranslate">object</span> である必要があります。</p>
+  <p>例えば、マネージド<span class="inline2">obj_workstation</span>インスタンスが<span
+      class="inline2">obj_anvil</span>インスタンスへの参照を持つ場合、<span class="inline2">obj_anvil</span>はマネージド<span
+      class="notranslate">object</span> である必要があります。</p>
   <h3>失われたインスタンスのリファレンス</h3>
   <p>他のマネージドインスタンスへの参照を含むマネージドインスタンス内の変数は、参照されたインスタンスが破壊されると<span class="inline2">未定義に</span>設定されます。</p>
-  <p>つまり、<strong>永続的な</strong>管理対象インスタンスの変数に<strong>非永続的な</strong>管理対象インスタンスへの参照が含まれている場合、<span class="notranslate">room</span> が変更されると、非永続的なインスタンスが存在しなくなるため、その変数は<span class="inline2">undefinedに</span>設定されることになるのです。</p>
+  <p>つまり、<strong>永続的な</strong>管理対象インスタンスの変数に<strong>非永続的な</strong>管理対象インスタンスへの参照が含まれている場合、<span
+      class="notranslate">room</span> が変更されると、非永続的なインスタンスが存在しなくなるため、その変数は<span
+      class="inline2">undefinedに</span>設定されることになるのです。</p>
   <h2>乱数</h2>
-  <p>乱数生成（RNG）の状態はプレイヤー間で管理されるので、ゲームロジックに乱数関数（例： <span class="inline">random()</span>, <span class="inline">choose()</span>, etc.）を使用しても全く問題ないです。ロールバックシステムにより、各プレイヤーはゲーム内の同じポイントで同じ乱数を取得することが保証されます。</p>
+  <p>乱数生成（RNG）の状態はプレイヤー間で管理されるので、ゲームロジックに乱数関数（例： <span class="inline">random()</span>, <span
+      class="inline">choose()</span>, etc.）を使用しても全く問題ないです。ロールバックシステムにより、各プレイヤーはゲーム内の同じポイントで同じ乱数を取得することが保証されます。</p>
   <p>抽選イベントは、独立したRNG状態を使用します。つまり、Drawイベントで呼び出されたランダム関数は、他のイベントの通常のRNG状態に影響を与えず、異なるプレイヤー間で同じにならない可能性があります。</p>
   <h3>種子</h3>
-  <p>ロールバックシステムで管理されているため、 <span class="inline"><a href="../Maths_And_Numbers/Number_Functions/randomise.htm">randomise()</a></span> または <a href="../Maths_And_Numbers/Number_Functions/random_set_seed.htm"><span class="inline">random_set_seed()</span></a>を使って RNG の種を変更することはできません。Rollback システムによって管理されているからです。</p>
-  <p>管理されたRNG状態は、<a data-xref="{text}" href="Rollback_Events.htm#h">Rollback Startが</a>呼び出されたとき、つまりマルチプレイヤーゲームが開始されたときにのみ開始されます。その時点より前にシードを変更することは可能ですが、開始時点を過ぎると何の影響もありません。</p>
+  <p>ロールバックシステムで管理されているため、 <span class="inline"><a
+        href="../Maths_And_Numbers/Number_Functions/randomise.htm">randomise()</a></span> または <a
+      href="../Maths_And_Numbers/Number_Functions/random_set_seed.htm"><span
+        class="inline">random_set_seed()</span></a>を使って RNG の種を変更することはできません。Rollback システムによって管理されているからです。</p>
+  <p>管理されたRNG状態は、<a data-xref="{text}" href="Rollback_Events.htm#h">Rollback
+      Startが</a>呼び出されたとき、つまりマルチプレイヤーゲームが開始されたときにのみ開始されます。その時点より前にシードを変更することは可能ですが、開始時点を過ぎると何の影響もありません。</p>
   <h2>参考文献</h2>
   <p>ロールバックシステムについて詳しくは、次のページをご覧ください。</p>
   <ul class="colour">
@@ -97,7 +135,9 @@
         <div>次へ<a data-xref="{title}" href="Rollback_Events.htm">ロールバックイベント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
 </body>
+
 </html>

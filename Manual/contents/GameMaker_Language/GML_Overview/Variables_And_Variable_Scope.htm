@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>変数と変数のスコープ</title>
@@ -12,10 +13,17 @@
   <meta name="rh-index-keywords" content="Variables And Variable Scope" />
   <meta name="search-keywords" content="variables,scope,local variables,instance variables,global variables" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>変数と変数のスコープ</h1>
-  <p>他のプログラミング言語と同様に、<b>GMLでも</b>ほとんどのプログラミング操作の基本単位として、<i>変数が</i>使用されます。変数はデバイスのメモリに情報を保存し、後で（あるいはすぐに）使用するために使われます。また、<span class="notranslate">runtime</span> や<span class="notranslate">script</span> 関数で参照できるように、変数には名前が付けられています。<b>GMLにおける</b>変数は、様々な情報を格納することができます。 <a href="Data_Types.htm"><strong>データ型</strong></a>実数（例：100, 2.456575, -56 など）、<span class="notranslate">string</span> （例：&quot;Hello world!&quot; ）、整数（例：1, 556, -7）、ブール値（<span class="inline">true</span> or <span class="inline">false</span> ）、その他いろいろです。</p>
+  <p>
+    他のプログラミング言語と同様に、<b>GMLでも</b>ほとんどのプログラミング操作の基本単位として、<i>変数が</i>使用されます。変数はデバイスのメモリに情報を保存し、後で（あるいはすぐに）使用するために使われます。また、<span
+      class="notranslate">runtime</span> や<span class="notranslate">script</span>
+    関数で参照できるように、変数には名前が付けられています。<b>GMLにおける</b>変数は、様々な情報を格納することができます。 <a
+      href="Data_Types.htm"><strong>データ型</strong></a>実数（例：100, 2.456575, -56 など）、<span class="notranslate">string</span>
+    （例：&quot;Hello world!&quot; ）、整数（例：1, 556, -7）、ブール値（<span class="inline">true</span> or <span
+      class="inline">false</span> ）、その他いろいろです。</p>
   <p class="code">var _num = 126.4545;<br />
     var _str = &quot;Hello World&quot;;<br />
     new_num = _num * 100;<br />
@@ -24,9 +32,18 @@
   <p class="code">var _id = instance_nearest(x, y, obj_Tree);<br />
     root = sqrt(1000);<br />
     global.str = string_upper(&quot;Hello World&quot;);</p>
-  <p>つまり、変数とは、名前を付けて値を保存し、後で1つまたは複数の操作で使用するために使用するものです。実世界」での変数の例としては、<b>π（パイ） </b>...誰もが知っている変数で、3.14159265という値を保持しています（etc...)。なぜ私たちはこの変数を使うのでしょうか？それは、「3点1点4点1点5点9点2点6点」よりも「π」と言う方がずっと簡単だからです。このように名前をつけると、生活がずっとシンプルになるし、変数の値が変わっても、変数<i>名が</i>同じなので、いたるところで数字を変える必要がない。</p>
-  <p><b>GMLで</b>変数を構成する場合、その名前は文字またはアンダースコア記号&quot;_&quot;で始まり、文字、数字、アンダースコア記号&quot;_&quot;のみを含み、最大64文字まででなければなりません。つまり、有効な変数とは <span class="inline">fish</span>, <span class="inline">foo_bar</span>, <span class="inline">num1</span>, <span class="inline">_str</span> のようなもので、無効な変数とは <span class="inline">6fish</span>, <span class="inline">foo bar</span>, <span class="inline">*num</span> のようなものになります。</p>
-  <p>さて、多くのプログラミング言語では、変数を使用する前に「代入」を行う必要があります。これは基本的に、変数に使いたい名前をコンピュータに伝え、初期値を代入することを意味します。そして、その変数に値を格納したり、演算を実行したりするためのメモリ上の場所を指定します。変数の代入は、次のような形で行われます。</p>
+  <p>つまり、変数とは、名前を付けて値を保存し、後で1つまたは複数の操作で使用するために使用するものです。実世界」での変数の例としては、<b>π（パイ）
+    </b>...誰もが知っている変数で、3.14159265という値を保持しています（etc...)。なぜ私たちはこの変数を使うのでしょうか？それは、「3点1点4点1点5点9点2点6点」よりも「π」と言う方がずっと簡単だからです。このように名前をつけると、生活がずっとシンプルになるし、変数の値が変わっても、変数<i>名が</i>同じなので、いたるところで数字を変える必要がない。
+  </p>
+  <p>
+    <b>GMLで</b>変数を構成する場合、その名前は文字またはアンダースコア記号&quot;_&quot;で始まり、文字、数字、アンダースコア記号&quot;_&quot;のみを含み、最大64文字まででなければなりません。つまり、有効な変数とは
+    <span class="inline">fish</span>, <span class="inline">foo_bar</span>, <span class="inline">num1</span>, <span
+      class="inline">_str</span> のようなもので、無効な変数とは <span class="inline">6fish</span>, <span class="inline">foo bar</span>,
+    <span class="inline">*num</span> のようなものになります。
+  </p>
+  <p>
+    さて、多くのプログラミング言語では、変数を使用する前に「代入」を行う必要があります。これは基本的に、変数に使いたい名前をコンピュータに伝え、初期値を代入することを意味します。そして、その変数に値を格納したり、演算を実行したりするためのメモリ上の場所を指定します。変数の代入は、次のような形で行われます。
+  </p>
   <p class="code">&lt;variable&gt; = &lt;expression&gt;;</p>
   <p>式は単純な値もあるが、もっと複雑なものもある。変数に値を代入するのではなく、例えば <span class="inline"><b>+=</b></span> を使って、変数の現在値に値を追加することもできる。</p>
   <p class="code">a = 100;   // Assigning a simple value<br />
@@ -34,35 +51,54 @@
     c = 300;<br />
     a += b;    // Assigning with operation<br />
     a = b + c; // Assigning with expression</p>
-  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span> は、一般的に最も一般的な方法ではないものの、&quot;<span class="inline">:=</span>&quot;を割り当てに受け入れることもできます。</p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span>
+    は、一般的に最も一般的な方法ではないものの、&quot;<span class="inline">:=</span>&quot;を割り当てに受け入れることもできます。</p>
   <p class="code">&lt;variable&gt; := &lt;expression&gt;;</p>
-  <p>同様に、 <span class="inline"><b>-=</b></span> で減算、 <span class="inline"><b>*=</b></span> で乗算、 <span class="inline"><b>/=</b></span> で除算、 <span class="inline"><b>|=</b></span> 、 <span class="inline"><b>&amp;=</b></span> 、 <span class="inline"><b>^=</b></span> でビット演算子を使用できます。また、 <span class="inline"><b>++</b></span> 、 <span class="inline"><b>--</b></span> で値から<i>1を</i>加算または減算することができます。詳細については、「<a href="Expressions_And_Operators.htm">式と演算</a>子」のセクションを参照してください。</p>
+  <p>同様に、 <span class="inline"><b>-=</b></span> で減算、 <span class="inline"><b>*=</b></span> で乗算、 <span
+      class="inline"><b>/=</b></span> で除算、 <span class="inline"><b>|=</b></span> 、 <span
+      class="inline"><b>&amp;=</b></span> 、 <span class="inline"><b>^=</b></span> でビット演算子を使用できます。また、 <span
+      class="inline"><b>++</b></span> 、 <span class="inline"><b>--</b></span> で値から<i>1を</i>加算または減算することができます。詳細については、「<a
+      href="Expressions_And_Operators.htm">式と演算</a>子」のセクションを参照してください。</p>
   <p>以下のようなことは<i>できませんので</i>、ご注意ください（バリエーションもあります）。</p>
   <p class="code">a = b = c = 4;</p>
   <p>そして、その代わりに次のようにすべきです。</p>
   <p class="code">a = 4;<br />
     b = 4;<br />
     c = 4;</p>
-  <p>上に示した変数の割り当てはすべて<strong>インスタンス </strong>変数ですが、実は<span data-keyref="GameMaker Name">GameMakerで</span>プログラミングする場合、他にも大きく分けて3つの変数があり、それぞれに<strong>スコープ </strong>（動作範囲とも言える）があります。それぞれの変数の種類とスコープについては、以下のページで解説しています。</p>
+  <p>上に示した変数の割り当てはすべて<strong>インスタンス </strong>変数ですが、実は<span
+      data-keyref="GameMaker Name">GameMakerで</span>プログラミングする場合、他にも大きく分けて3つの変数があり、それぞれに<strong>スコープ
+    </strong>（動作範囲とも言える）があります。それぞれの変数の種類とスコープについては、以下のページで解説しています。</p>
   <ul class="colour">
     <li><a href="Variables/Local_Variables.htm">ローカル変数</a></li>
     <li><a href="Variables/Instance_Variables.htm">インスタンス変数</a></li>
     <li><a href="Variables/Global_Variables.htm">グローバル変数</a></li>
     <li><a href="Variables/Constants.htm">定数</a></li>
   </ul>
-  <p>また、<span class="notranslate">GameMaker Language</span> には複数の異なる組み込み変数があり、上記のいずれかのスコープを持つことができます（<i>ローカルを</i>除く）。これらの変数は、ゲーム世界の<span class="notranslate">objects</span> と<span class="notranslate">rooms</span> の一部としてデフォルトで含まれているため、特別なものとなっています。組み込みのグローバル変数のいくつかは、上記のセクションに記載されています。また、マニュアルの<span class="notranslate">sprites</span> 、<span class="notranslate">rooms</span> 、<span class="notranslate">objects</span> などの異なる部分には、それぞれのケースで利用可能な組み込み変数の概要が記載されています。そのようなビルトインインスタンス変数の例としては、以下のようなものがあります。</p>
+  <p>また、<span class="notranslate">GameMaker Language</span>
+    には複数の異なる組み込み変数があり、上記のいずれかのスコープを持つことができます（<i>ローカルを</i>除く）。これらの変数は、ゲーム世界の<span class="notranslate">objects</span>
+    と<span class="notranslate">rooms</span>
+    の一部としてデフォルトで含まれているため、特別なものとなっています。組み込みのグローバル変数のいくつかは、上記のセクションに記載されています。また、マニュアルの<span
+      class="notranslate">sprites</span> 、<span class="notranslate">rooms</span> 、<span
+      class="notranslate">objects</span>
+    などの異なる部分には、それぞれのケースで利用可能な組み込み変数の概要が記載されています。そのようなビルトインインスタンス変数の例としては、以下のようなものがあります。</p>
   <ul class="colour">
-    <li><span class="inline"><a href="../GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm">sprite_index</a></span></li>
-    <li><a href="../GML_Reference/Asset_Management/Paths/Path_Variables/path_index.htm"><span class="inline">path_scale</span></a></li>
-    <li><a href="../GML_Reference/Asset_Management/Instances/Instance_Variables/speed.htm"><span class="inline">speed</span></a></li>
+    <li><span class="inline"><a
+          href="../GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm">sprite_index</a></span>
+    </li>
+    <li><a href="../GML_Reference/Asset_Management/Paths/Path_Variables/path_index.htm"><span
+          class="inline">path_scale</span></a></li>
+    <li><a href="../GML_Reference/Asset_Management/Instances/Instance_Variables/speed.htm"><span
+          class="inline">speed</span></a></li>
   </ul>
   <p>そして、組み込みのグローバル変数の例としては、以下のようなものがあります。</p>
   <ul class="colour">
-    <li><a href="../GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_xport.htm"><span class="inline">view_xport</span></a></li>
+    <li><a href="../GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_xport.htm"><span
+          class="inline">view_xport</span></a></li>
     <li><a href="../GML_Reference/OS_And_Compiler/GM_version.htm"><span class="inline">GM_version</span></a></li>
     <li><a href="../GML_Reference/Asset_Management/Rooms/room.htm"><span class="inline">room</span></a></li>
   </ul>
-  <p>ほとんどの組み込み変数は、他の変数と同様に変更・設定が可能で、中には<a href="Arrays.htm">配列に</a>できるものもあります。ただ、すでにデフォルト値で初期化されているため、通常の変数のように作成時に設定する必要はありません。</p>
+  <p>ほとんどの組み込み変数は、他の変数と同様に変更・設定が可能で、中には<a
+      href="Arrays.htm">配列に</a>できるものもあります。ただ、すでにデフォルト値で初期化されているため、通常の変数のように作成時に設定する必要はありません。</p>
   <p>最後に、何らかの方法で変数を設定、取得、チェックすることに特化した関数が多数あり、次のページから利用できます。</p>
   <ul class="colour">
     <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">変数関数</a></li>
@@ -73,11 +109,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Data_Types.htm">データ型</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Data_Types.htm">データ型</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variables
@@ -91,4 +128,5 @@ built-in variables
 variables
 -->
 </body>
+
 </html>

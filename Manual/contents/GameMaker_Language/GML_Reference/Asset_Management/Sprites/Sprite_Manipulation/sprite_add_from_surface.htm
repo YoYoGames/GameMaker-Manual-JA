@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_add_from_surface</title>
@@ -12,20 +13,30 @@
   <meta name="rh-index-keywords" content="sprite_add_from_surface" />
   <meta name="search-keywords" content="sprite_add_from_surface" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">sprite_add_from_surface</span></h1>
-  <p>と全く同じ働きをします。 <a href="sprite_create_from_surface.htm"><span class="inline">sprite_create_from_surface()</span></a>は、選択したインデックス付きサーフェスの領域から新しい<span class="notranslate">sprite</span> を作成する代わりに、サーフェスの定義された領域を新しいサブイメージとして、以前に作成した<span class="notranslate">sprite</span> に追加します（これは、リソースツリーの<span class="notranslate">sprite</span> に直接追加することはできず、サーフェスから以前に作成したものか、リソースから複製された<span class="notranslate">sprite</span> でしか追加できないことを意味します）。 <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>).</p>
-  <p>この方法で<span class="notranslate">sprite</span> を追加する場合、使用するメモリが予想以上に大きくなることに注意する必要があります。これは、<span data-keyref="GameMaker Name">GameMaker</span>が<span class="notranslate">sprite</span> を<span class="notranslate">texture</span> のページとして保存<i>し、</i>さらに GPU メモリにも保存するため、同じ<span class="notranslate">sprite</span> の画像ファイルよりも総メモリ量が大きくなるためです。</p>
+  <p>と全く同じ働きをします。 <a href="sprite_create_from_surface.htm"><span
+        class="inline">sprite_create_from_surface()</span></a>は、選択したインデックス付きサーフェスの領域から新しい<span
+      class="notranslate">sprite</span> を作成する代わりに、サーフェスの定義された領域を新しいサブイメージとして、以前に作成した<span
+      class="notranslate">sprite</span> に追加します（これは、リソースツリーの<span class="notranslate">sprite</span>
+    に直接追加することはできず、サーフェスから以前に作成したものか、リソースから複製された<span class="notranslate">sprite</span> でしか追加できないことを意味します）。 <a
+      href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>).</p>
+  <p>この方法で<span class="notranslate">sprite</span> を追加する場合、使用するメモリが予想以上に大きくなることに注意する必要があります。これは、<span
+      data-keyref="GameMaker Name">GameMaker</span>が<span class="notranslate">sprite</span> を<span
+      class="notranslate">texture</span> のページとして保存<i>し、</i>さらに GPU メモリにも保存するため、同じ<span class="notranslate">sprite</span>
+    の画像ファイルよりも総メモリ量が大きくなるためです。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">sprite_add_from_surface</span>(index, surface, x, y, w, h, removeback, smooth);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">sprite_add_from_surface</span>(index, surface, x, y, w,
+    h, removeback, smooth);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">index</span></td>
@@ -60,7 +71,8 @@
       <tr>
         <td><span class="notranslate">removeback</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</span></td>
+        <td><span class="notranslate">Indicates whether to make all pixels with the background colour (left-bottom
+            pixel) transparent.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">smooth</span></td>
@@ -70,7 +82,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -80,18 +92,22 @@
     {<br />
         sprite_add_from_surface(spr_custom, surf, i, 0, 32, 32, false, false);<br />
     }</p>
-  <p>上記のコードでは、変数 &quot;surf &quot;でインデックスされた表面から<span class="notranslate">sprite</span> を作成し、そのインデックスを変数 &quot;spr_Custom &quot;に割り当てます。次に <span class="inline">for</span> <span class="notranslate">loop</span> を使って表面上を移動し、さまざまな部分をキャプチャして、サブ画像として<span class="notranslate">sprite</span> に追加しています。</p>
+  <p>上記のコードでは、変数 &quot;surf &quot;でインデックスされた表面から<span class="notranslate">sprite</span> を作成し、そのインデックスを変数
+    &quot;spr_Custom &quot;に割り当てます。次に <span class="inline">for</span> <span class="notranslate">loop</span>
+    を使って表面上を移動し、さまざまな部分をキャプチャして、サブ画像として<span class="notranslate">sprite</span> に追加しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
-        <div style="float:right">次のページ <a href="sprite_collision_mask.htm"><span class="notranslate">sprite_collision_mask</span></a></div>
+        <div style="float:left">前のページ：<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次のページ：<a href="sprite_collision_mask.htm"><span
+              class="notranslate">sprite_collision_mask</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_add_from_surface
@@ -100,4 +116,5 @@ sprite_add_from_surface
 sprite_add_from_surface
 -->
 </body>
+
 </html>

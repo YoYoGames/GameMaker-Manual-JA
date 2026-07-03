@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ランナーエラー</title>
@@ -12,21 +13,30 @@
   <meta name="rh-index-keywords" content="Runtime Errors,Runner Errors" />
   <meta name="search-keywords" content="runner errors" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ランナーエラー</h1>
-  <p>コードエディターで構文チェックを行い、コンパイラーで<a href="Compiler_Errors.htm">コンパイラーエラーを</a>チェックした後でも、何か問題が発生する場合があります。ほとんどの場合、次のような<a class="glossterm" data-glossterm="仮想マシン(VM)" href="#">仮想マシン（VM）</a>ランナーエラー（<strong>実行時例外とも</strong>呼ばれる）が投げられます。</p>
-  <p><img>ランナーエラーは一般的にコンパイルエラーよりも深刻で、コードエディターやコンパイラーが検出できない何か深刻な問題がコードにあることを意味します。エラーが発生したら、ポップアップの<strong>コピー</strong>ボタンを使って、そのエラーをクリップボードにコピーし、テキストファイルなどに貼り付けて参照することができます。</p>
+  <p>コードエディタで構文チェックを行い、コンパイラーで<a href="Compiler_Errors.htm">コンパイラーエラーを</a>チェックした後でも、何か問題が発生する場合があります。ほとんどの場合、次のような<a
+      class="glossterm" data-glossterm="仮想マシン(VM)" href="#">仮想マシン（VM）</a>ランナーエラー（<strong>実行時例外とも</strong>呼ばれる）が投げられます。
+  </p>
+  <p>
+    <img>ランナーエラーは一般的にコンパイルエラーよりも深刻で、コードエディタやコンパイラーが検出できない何か深刻な問題がコードにあることを意味します。エラーが発生したら、ポップアップの<strong>コピー</strong>ボタンを使って、そのエラーをクリップボードにコピーし、テキストファイルなどに貼り付けて参照することができます。
+  </p>
   <p>このエラーの構造は以下の通りです。</p>
   <ul class="colour">
     <li><img><br />
       エラーが発生したイベントと、<span class="notranslate">Object</span> (該当する場合) が表示されます。</li>
     <li><img><br />
-      これは、実際のエラーを示しています。  つまり、エラーの<em>範囲と </em>エラーの種類を示しています。括弧内の最初の値は、コードを実行していたインスタンスのインスタンスIDになり、または下の表にある特別な値のうちの1つになります。上の画像の場合、変数 <span class="inline">_image</span> が<span class="notranslate">object</span> <span class="inline">obj_EA_DEMO_Control</span> に設定されていない（つまり、アクセスする前に存在しない）ことを意味しています。</li>
+      これは、実際のエラーを示しています。 つまり、エラーの<em>範囲と
+      </em>エラーの種類を示しています。括弧内の最初の値は、コードを実行していたインスタンスのインスタンスIDになり、または下の表にある特別な値のうちの1つになります。上の画像の場合、変数 <span
+        class="inline">_image</span> が<span class="notranslate">object</span> <span
+        class="inline">obj_EA_DEMO_Control</span> に設定されていない（つまり、アクセスする前に存在しない）ことを意味しています。</li>
     <li><img><br />
       これは、エラーが発生した行番号と、その位置を示すコードの断片を表示します。ゲームのコンパイル方法によって100％正確とは限りませんが、問題のある箇所を正確に見つけるには十分でしょう。</li>
   </ul>
-  <p>上記のように、ある種のエラーメッセージは、インスタンスIDの値ではなく、<em>負の </em>値によってスコープを識別します。これらの値は、エラーの正確な性質と、それが何を指しているかを特定するために、以下のような値が考えられます。</p>
+  <p>上記のように、ある種のエラーメッセージは、インスタンスIDの値ではなく、<em>負の
+    </em>値によってスコープを識別します。これらの値は、エラーの正確な性質と、それが何を指しているかを特定するために、以下のような値が考えられます。</p>
   <table>
     <tbody>
       <tr>
@@ -71,200 +81,323 @@
         <th>エラー</th>
         <th>メッセージ</th>
         <th>操作方法</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSet</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">無効な比較タイプ</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoSet</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          無効な比較タイプ</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">データの種類</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、ランナーが実数と<span class="notranslate">string</span> のような、互換性のない2つのデータ型を比較しようとしたことを表します。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、ランナーが実数と<span
+            class="notranslate">string</span> のような、互換性のない2つのデータ型を比較しようとしたことを表します。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoConv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoConv</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">データの種類</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、あるデータ型から別のデータ型への変換にエラーがあることを意味します。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、あるデータ型から別のデータ型への変換にエラーがあることを意味します。</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+        <td colspan="4"
+          style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
           <hr />
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAdd</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoAdd</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">加算式(<span class="inline">+</span>)を使用する際に何か問題が発生したようです。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">加算式(<span
+            class="inline">+</span>)を使用する際に何か問題が発生したようです。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMul</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoMul</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">乗算 (<span class="inline">*</span>) 式を使用する際に何か問題が発生しました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">乗算 (<span
+            class="inline">*</span>) 式を使用する際に何か問題が発生しました。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoSub</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">引き算(<span class="inline">-</span>)式の使用時に何か問題が発生したようです。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">引き算(<span
+            class="inline">-</span>)式の使用時に何か問題が発生したようです。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoSub</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoSub</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数を引き算しようとしている（例えば、実数から<span class="notranslate">string</span> を引き算する）。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          間違ったタイプの変数を引き算しようとしている（例えば、実数から<span class="notranslate">string</span> を引き算する）。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoDiv</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">除算（<span class="inline">/</span> または <span class="inline">div</span> ）式を使用すると、何か問題が発生します。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">除算（<span
+            class="inline">/</span> または <span class="inline">div</span> ）式を使用すると、何か問題が発生します。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoDiv</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数を除算しようとしている（例えば、<span class="notranslate">string</span> を実数で除算する）。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          間違ったタイプの変数を除算しようとしている（例えば、<span class="notranslate">string</span> を実数で除算する）。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ゼロで割る</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoDiv</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          ゼロで割る</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">0で割ろうとしている(これは整数の割り算のときだけ起こることに注意。(0でない)実数を0で割ると無限大、0で割るとNaNが答えになる)。これらの値は (<span class="inline">is_infinity</span>) と (<span class="inline">is_nan</span>) で確認することができます。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          0で割ろうとしている(これは整数の割り算のときだけ起こることに注意。(0でない)実数を0で割ると無限大、0で割るとNaNが答えになる)。これらの値は (<span
+            class="inline">is_infinity</span>) と (<span class="inline">is_nan</span>) で確認することができます。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoMod</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">modulo (<span class="inline">mod</span>) 式を使用する際に何か問題が発生したようです。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">modulo (<span
+            class="inline">mod</span>) 式を使用する際に何か問題が発生したようです。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoMod</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">算数・数学</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">modulo (<span class="inline">mod</span>) を間違ったタイプの変数に使おうとしています (例: <span class="inline">mod</span> a<span class="notranslate">string</span> by a real).</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">modulo (<span
+            class="inline">mod</span>) を間違ったタイプの変数に使おうとしています (例: <span class="inline">mod</span> a<span
+            class="notranslate">string</span> by a real).</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+        <td colspan="4"
+          style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
           <hr />
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoAnd</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の &quot;and&quot; (<span class="inline">&amp;</span>) 式を使用すると、何か問題が発生しました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の &quot;and&quot;
+          (<span class="inline">&amp;</span>) 式を使用すると、何か問題が発生しました。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoAnd</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoAnd</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の「と」(<span class="inline">&amp;</span>)を間違った型の変数に使おうとしています（例えば、<span class="notranslate">string</span> と実数を「と」しようとしています）。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の「と」(<span
+            class="inline">&amp;</span>)を間違った型の変数に使おうとしています（例えば、<span class="notranslate">string</span>
+          と実数を「と」しようとしています）。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoOr</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の &quot;or&quot; (<span class="inline">|</span>) 式を使用すると、何か問題が発生しました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の &quot;or&quot;
+          (<span class="inline">|</span>) 式を使用すると、何か問題が発生しました。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoOr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoOr</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数に &quot;or&quot; (<span class="inline">|</span>) を使おうとしています (例えば<span class="notranslate">string</span> を実数で &quot;or&quot; しようとしています)。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数に
+          &quot;or&quot; (<span class="inline">|</span>) を使おうとしています (例えば<span class="notranslate">string</span> を実数で
+          &quot;or&quot; しようとしています)。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoXor</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の「xor」(<span class="inline">^</span>) 式を使用すると、何か問題が発生しました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位の「xor」(<span
+            class="inline">^</span>) 式を使用すると、何か問題が発生しました。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoXor</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoXor</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">xor&quot; (<span class="inline">^</span>) を間違ったタイプの変数に使おうとしています (例えば<span class="notranslate">string</span> と実数を &quot;xor&quot; しようとしています)。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">xor&quot; (<span
+            class="inline">^</span>) を間違ったタイプの変数に使おうとしています (例えば<span class="notranslate">string</span> と実数を
+          &quot;xor&quot; しようとしています)。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoShl</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">値を左にビットシフト（<span class="inline">&lt;&lt;</span> ）する際に何か問題が発生した。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">値を左にビットシフト（<span
+            class="inline">&lt;&lt;</span> ）する際に何か問題が発生した。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShl</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoShl</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数を左ビットシフト (<span class="inline">&lt;&lt;</span>) しようとしています (例えば<span class="notranslate">string</span> をビットシフトしようとしています)。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数を左ビットシフト
+          (<span class="inline">&lt;&lt;</span>) しようとしています (例えば<span class="notranslate">string</span>
+          をビットシフトしようとしています)。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoShr</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">値を右ビットシフト（<span class="inline">&gt;&gt;</span> ）する際に何か問題が発生した。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">値を右ビットシフト（<span
+            class="inline">&gt;&gt;</span> ）する際に何か問題が発生した。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoShr</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoShr</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジン -<span class="notranslate">string</span> タイプで操作できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ビット単位</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数を右ビットシフト（<span class="inline">&gt;&gt;</span> ）しようとしている（例えば、<span class="notranslate">string</span> をビットシフトしようとしている）。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">間違ったタイプの変数を右ビットシフト（<span
+            class="inline">&gt;&gt;</span> ）しようとしている（例えば、<span class="notranslate">string</span> をビットシフトしようとしている）。</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+        <td colspan="4"
+          style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
           <hr />
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNeg</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoNeg</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ネゲート</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">この型がそのような操作を許可していないのに、変数の型を負に変えようとしている。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          この型がそのような操作を許可していないのに、変数の型を負に変えようとしている。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoNot</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoNot</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ネゲート</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">変数の型がそのような操作を許可していないのに、&quot;not &quot;としようとしている。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          変数の型がそのような操作を許可していないのに、&quot;not &quot;としようとしている。</td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+        <td colspan="4"
+          style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
           <hr />
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エラー - 変数インデックスが範囲外(var)</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">Push</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エラー - 変数インデックスが範囲外(var)</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">スタック</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">アクセスされる変数がランナーに設定された範囲から外れている。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          アクセスされる変数がランナーに設定された範囲から外れている。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Push</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">変数取得(var)</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">Push</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          変数取得(var)</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">スタック</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">与えられた変数が定義されていないか、不明である。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">与えられた変数が定義されていないか、不明である。
+        </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">変数インデックスが範囲外(var)</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">Pop</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          変数インデックスが範囲外(var)</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">スタック</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">アクセスされる変数がランナーに設定された範囲から外れている。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          アクセスされる変数がランナーに設定された範囲から外れている。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Pop</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">変数取得(var)</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">Pop</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          変数取得(var)</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">スタック</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">与えられた変数が定義されていないか、不明である。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">与えられた変数が定義されていないか、不明である。
+        </td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+        <td colspan="4"
+          style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
           <hr />
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">withステートメントでグローバルは使用できません。</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">With</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          withステートメントでグローバルは使用できません。</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">と</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">with</span>&quot; 文の中で &quot;<span class="inline">global</span>&quot; を変数として使おうとしていますね。<br />
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">with</span>&quot; 文の中で &quot;<span class="inline">global</span>&quot; を変数として使おうとしていますね。<br />
           <span class="inline">with (global)<br />
                {<br />
                //do something;<br />
@@ -272,10 +405,14 @@
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">withステートメントでローカルを使用できない</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">With</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          withステートメントでローカルを使用できない</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">と</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">with</span>&quot; 文の中で &quot;<span class="inline">local</span>&quot; を変数として使おうとしていますね。<br />
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">with</span>&quot; 文の中で &quot;<span class="inline">local</span>&quot; を変数として使おうとしていますね。<br />
           <span class="inline">with (local)<br />
                {<br />
                //do something;<br />
@@ -283,21 +420,33 @@
         </td>
       </tr>
       <tr>
-        <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+        <td colspan="4"
+          style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
           <hr />
         </td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoCall</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">実行エンジンのタイプエラー</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">DoCall</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          実行エンジンのタイプエラー</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">エンジン</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、Virtual Machine 内の<span class="notranslate">undefined</span> のエラーです。このような場合は、バグレポートを提出してください（バグレポートの作成方法については、ヘルプメニューを参照してください）。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、Virtual Machine
+          内の<span class="notranslate">undefined</span>
+          のエラーです。このような場合は、バグレポートを提出してください（バグレポートの作成方法については、ヘルプメニューを参照してください）。</td>
       </tr>
       <tr>
-        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">Stack Overflow</span></td>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">-</td>
+        <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span
+            class="inline">Stack Overflow</span></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          -</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">エンジン</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">スタックオーバーフローは、コールスタックで使用されるメモリが多すぎる場合に発生し、ゲームがコールスタックで使用可能な容量以上の領域を使用しようとした場合（つまり、コールスタックの境界を超えてメモリにアクセスしようとした場合、これは本質的に<span class="notranslate">buffer</span> オーバーフローです）、スタックはオーバーフローすると言われ、結果としてプログラムがクラッシュすることになります。コンピュータと<span data-keyref="GameMaker Name">GameMakerを</span>再起動し、エラーが続くようであれば、サポートに連絡するか、バグを報告してください（上記で説明したとおり）。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          スタックオーバーフローは、コールスタックで使用されるメモリが多すぎる場合に発生し、ゲームがコールスタックで使用可能な容量以上の領域を使用しようとした場合（つまり、コールスタックの境界を超えてメモリにアクセスしようとした場合、これは本質的に<span
+            class="notranslate">buffer</span> オーバーフローです）、スタックはオーバーフローすると言われ、結果としてプログラムがクラッシュすることになります。コンピュータと<span
+            data-keyref="GameMaker Name">GameMakerを</span>再起動し、エラーが続くようであれば、サポートに連絡するか、バグを報告してください（上記で説明したとおり）。</td>
       </tr>
       <tr>
         <td colspan="4" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> </td>
@@ -316,11 +465,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Error_Reporting.htm">エラー報告</a></div>
-        <div style="float:right">次へ<a href="Syntax_Errors.htm">構文エラー</a></div>
+        <div style="float:left">前のページ：<a href="../Error_Reporting.htm">エラー報告</a></div>
+        <div style="float:right">次のページ：<a href="Syntax_Errors.htm">構文エラー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Runner Errors
@@ -329,4 +479,5 @@ Runner Errors
 runner_errors
 -->
 </body>
+
 </html>

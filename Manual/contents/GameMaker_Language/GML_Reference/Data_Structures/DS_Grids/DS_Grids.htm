@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>DSグリッド</title>
@@ -12,17 +13,28 @@
   <meta name="rh-index-keywords" content="DS Grids, Data Structures" />
   <meta name="search-keywords" content="DS Grids" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>DSグリッド</h1>
-  <p>DSグリッドは、基本的に<span> 2次元の<a href="../../../GML_Overview/Arrays.htm">配列の</a></span>一種である。グリッドの幅と高さを整数で設定すると、グリッド内の「セル」の総数（幅と高さの掛け算）が設定され、これらのセルにはさまざまなデータ値（実数または<span class="notranslate">strings</span> ）が格納されます。</p>
-  <p><img>この種の構造体は、そのx、yインデックス（x、y軸とも0から始まり、幅-1、高さ-1まである）を与えることで、グリッド内のセルの値を設定、取得することができます。しかし、特定のグリッド領域の値を設定したり、単一の値を追加したり、与えられた領域にわたる合計、最大、最小、平均値を取得することもでき、このデータ構造は利用できるものの中で最も多目的なものとなっています。</p>
-  <p>DSグリッドデータ構造にアクセスする場合、セル位置には常に整数<b>値を</b>使うようにしなければならず、そうしないと非整数のインデックスはすべて<span data-keyref="GameMaker Name">GameMakerによって</span>フロアリングされてしまう。もし、そうでない場合は、チェックしたいインデックスを渡す前に丸め誤魔化しておく必要がある。</p>
-  <p class="note"><b><span class="note">注意事項</span> </b>すべての動的リソースと同様に、データ構造はメモリを消費するため、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>常に</b>破棄する必要があります。</p>
-  <p class="note"><b><span class="note">注意</span></b>データ構造が存在するかどうかをチェックする必要がある場合は <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span>関数を使用します。</p>
-  <p>以下に示す特定の関数を除いて、DS グリッドの内容を追加したり変更したりするには、すべて<a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">式</a>(<i>アクセサと</i>呼ばれる) を使用することができます。このアクセサは 2 次元配列に似ており、次のような構文になっています。</p>
+  <p>DSグリッドは、基本的に<span> 2次元の<a
+        href="../../../GML_Overview/Arrays.htm">配列の</a></span>一種である。グリッドの幅と高さを整数で設定すると、グリッド内の「セル」の総数（幅と高さの掛け算）が設定され、これらのセルにはさまざまなデータ値（実数または<span
+      class="notranslate">strings</span> ）が格納されます。</p>
+  <p>
+    <img>この種の構造体は、そのx、yインデックス（x、y軸とも0から始まり、幅-1、高さ-1まである）を与えることで、グリッド内のセルの値を設定、取得することができます。しかし、特定のグリッド領域の値を設定したり、単一の値を追加したり、与えられた領域にわたる合計、最大、最小、平均値を取得することもでき、このデータ構造は利用できるものの中で最も多目的なものとなっています。
+  </p>
+  <p>DSグリッドデータ構造にアクセスする場合、セル位置には常に整数<b>値を</b>使うようにしなければならず、そうしないと非整数のインデックスはすべて<span
+      data-keyref="GameMaker Name">GameMakerによって</span>フロアリングされてしまう。もし、そうでない場合は、チェックしたいインデックスを渡す前に丸め誤魔化しておく必要がある。</p>
+  <p class="note"><b><span class="note">注意事項</span>
+    </b>すべての動的リソースと同様に、データ構造はメモリを消費するため、メモリリークによるゲームのスローダウンやクラッシュを防ぐために、不要になったら<b>常に</b>破棄する必要があります。</p>
+  <p class="note"><b><span class="note">注意</span></b>データ構造が存在するかどうかをチェックする必要がある場合は <span style="font-size:1px;"><a
+        href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span>関数を使用します。</p>
+  <p>以下に示す特定の関数を除いて、DS グリッドの内容を追加したり変更したりするには、すべて<a class="tooltip"
+      title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">式</a>(<i>アクセサと</i>呼ばれる)
+    を使用することができます。このアクセサは 2 次元配列に似ており、次のような構文になっています。</p>
   <p class="code">grid_index[# xpos, ypos]</p>
-  <p><a href="../../../GML_Overview/Accessors.htm">Accessors</a> の<span class="notranslate">GML</span> Overview ページに詳細な情報とサンプルが掲載されています。</p>
+  <p><a href="../../../GML_Overview/Accessors.htm">Accessors</a> の<span class="notranslate">GML</span> Overview
+    ページに詳細な情報とサンプルが掲載されています。</p>
   <p>DSグリッドを扱う関数として、以下のものがある。</p>
   <ul class="colour">
     <li><a href="ds_grid_create.htm"><span class="notranslate">ds_grid_create</span></a></li>
@@ -53,7 +65,8 @@
     <li><a href="ds_grid_multiply.htm"><span class="notranslate">ds_grid_multiply</span></a></li>
     <li><a href="ds_grid_multiply_disk.htm"><span class="notranslate">ds_grid_multiply_disk</span></a></li>
     <li><a href="ds_grid_multiply_region.htm"><span class="notranslate">ds_grid_multiply_region</span></a></li>
-    <li><a href="ds_grid_multiply_grid_region.htm"><span class="notranslate">ds_grid_multiply_grid_region</span></a></li>
+    <li><a href="ds_grid_multiply_grid_region.htm"><span class="notranslate">ds_grid_multiply_grid_region</span></a>
+    </li>
     <li><a href="ds_grid_value_exists.htm"><span class="notranslate">ds_grid_value_exists</span></a></li>
     <li><a href="ds_grid_value_disk_exists.htm"><span class="notranslate">ds_grid_value_disk_exists</span></a></li>
     <li><a href="ds_grid_value_x.htm"><span class="notranslate">ds_grid_value_x</span></a></li>
@@ -70,11 +83,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Data_Structures.htm">データ構造</a></div>
-        <div style="float:right">次へ<a href="../DS_Lists/DS_Lists.htm">DSリスト</a></div>
+        <div style="float:left">前のページ：<a href="../Data_Structures.htm">データ構造</a></div>
+        <div style="float:right">次のページ：<a href="../DS_Lists/DS_Lists.htm">DSリスト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 DS Grids
@@ -83,4 +97,5 @@ DS Grids
 ds_grid_functions
 -->
 </body>
+
 </html>

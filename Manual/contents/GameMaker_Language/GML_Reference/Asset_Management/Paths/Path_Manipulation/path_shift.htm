@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>path_shift</title>
@@ -12,55 +13,73 @@
   <meta name="rh-index-keywords" content="path_shift" />
   <meta name="search-keywords" content="path_shift" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">path_shift</span></h1>
-  <p>この関数を使うと、<span class="notranslate">path</span> を水平軸と垂直軸に沿って移動させることができます。<span class="notranslate">path</span> に続くインスタンスが（絶対的ではなく）相対的にそれに従う場合、ゲーム内では目に見える効果はないことに注意してください。
-    の位置は無視されます。<strong>この関数は実際の<span class="notranslate">path</span> アセットを変更</strong>するので、この関数が使われた瞬間からゲーム終了まで、ゲーム内のすべてのインスタンスによる<span class="notranslate">path</span> の使用方法に永続的に影響を与えます。もし、これが
-   <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出す必要があります。
-    <span class="inline"><a href="path_delete.htm">パス_デリート()</a></span>が不要になったら、<span class="notranslate">asset</span> )。</p>
+  <p>この関数を使うと、<span class="notranslate">path</span> を水平軸と垂直軸に沿って移動させることができます。<span class="notranslate">path</span>
+    に続くインスタンスが（絶対的ではなく）相対的にそれに従う場合、ゲーム内では目に見える効果はないことに注意してください。
+    の位置は無視されます。<strong>この関数は実際の<span class="notranslate">path</span>
+      アセットを変更</strong>するので、この関数が使われた瞬間からゲーム終了まで、ゲーム内のすべてのインスタンスによる<span class="notranslate">path</span>
+    の使用方法に永続的に影響を与えます。もし、これが
+    <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span
+      class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出す必要があります。
+    <span class="inline"><a href="path_delete.htm">パス_デリート()</a></span>が不要になったら、<span class="notranslate">asset</span>
+    )。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">path_shift</span>(index, xshift, yshift);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The index of the path to change.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">xshift</span></td><td><span data-keyref="Type_Real"></span></td>
-        <td><span class="notranslate">The number of horizontal pixels to shift the path. Negative=left, positive=right.</span></td>
-     </tr>
+        <td><span class="notranslate">xshift</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The number of horizontal pixels to shift the path. Negative=left,
+            positive=right.</span></td>
+      </tr>
       <tr>
-        <td><span class="notranslate">yshift</span></td><td><span data-keyref="Type_Real"></span></td>
-        <td><span class="notranslate">The number of vertical pixels to shift the path. Negative=up, positive=down.</span></td>
-     </tr>
+        <td><span class="notranslate">yshift</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The number of vertical pixels to shift the path. Negative=up,
+            positive=down.</span></td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">my_path = path_duplicate(pth_AI);<br/> path_shift(my_path, 50, 50);<br/> path_start(my_path, 4, path_action_reverse, true);</p>
-  <p>上記のコードでは、<span class="notranslate">path</span> <span class="notranslate">asset</span> を複製し、その ID 値を変数に格納しています。次にこの変数を使って複製された<span class="notranslate">path</span> の位置を移動し、インスタンスは<span class="notranslate">path</span> を開始します。</p>
+  <p class="code">my_path = path_duplicate(pth_AI);<br /> path_shift(my_path, 50, 50);<br /> path_start(my_path, 4,
+    path_action_reverse, true);</p>
+  <p>上記のコードでは、<span class="notranslate">path</span> <span class="notranslate">asset</span> を複製し、その ID
+    値を変数に格納しています。次にこの変数を使って複製された<span class="notranslate">path</span> の位置を移動し、インスタンスは<span
+      class="notranslate">path</span> を開始します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
-        <div style="float:right">次のページ <a href="../Path_Variables/path_index.htm"><span class="notranslate">path_index</span></a></div>
-        
+        <div style="float:left">前のページ：<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ：<a href="../Path_Variables/path_index.htm"><span
+              class="notranslate">path_index</span></a></div>
+
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_shift
@@ -69,4 +88,5 @@ path_shift
 path_shift
 -->
 </body>
+
 </html>

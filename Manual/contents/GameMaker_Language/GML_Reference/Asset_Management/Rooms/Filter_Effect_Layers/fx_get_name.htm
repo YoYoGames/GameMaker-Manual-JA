@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>fx_get_name</title>
@@ -12,27 +13,35 @@
   <meta name="rh-index-keywords" content="fx_get_name" />
   <meta name="search-keywords" content="fx_get_name" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">fx_get_name</span></h1>
-  <p>この関数は、フィルタ/エフェクトの名前を<span class="notranslate">struct</span> から取得するために使用します。読み込むFX<span class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される) を指定すると、この関数はその名前を<span class="notranslate">string</span> として返します。 この名前を<span class="inline"><a href="fx_create.htm">fx_create()</a></span> に渡すと、同じフィルタ/エフェクト タイプを使用して新しいFX<span class="notranslate">struct</span> を作成することができます。</p>
+  <p>この関数は、フィルタ/エフェクトの名前を<span class="notranslate">struct</span> から取得するために使用します。読み込むFX<span
+      class="notranslate">struct</span> ( <span class="inline"><a href="fx_create.htm">fx_create()</a></span> または <span
+      class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> から返される) を指定すると、この関数はその名前を<span
+      class="notranslate">string</span> として返します。 この名前を<span class="inline"><a
+        href="fx_create.htm">fx_create()</a></span> に渡すと、同じフィルタ/エフェクト タイプを使用して新しいFX<span
+      class="notranslate">struct</span> を作成することができます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">fx_get_name</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td>
+        <td><span class="notranslate">filter_or_effect</span></td>
+        <td><span data-keyref="Type_Struct_FX"></span></td>
         <td><span class="notranslate">The FX struct to get the name of</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -49,18 +58,23 @@
             }<br />
         }<br />
     }</p>
-  <p>上記のコードでは <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a><span class="notranslate">room</span> に存在するすべてのレイヤーをループし、各レイヤーに FX<span class="notranslate">struct</span> があるかどうかをチェックします。もしレイヤーがFX<span class="notranslate">struct</span> を持っていれば、 <span class="inline">fx_get_name()</span> を呼び出して、そのフィルター／効果の名前をチェックします。もしそれが<span class="inline2">&quot;_filter_tintfilter&quot;</span>と等しければ、つまり &quot;Colour Tint&quot; フィルターであれば、その色合いの色を青に変更します。<br />
-     </p>
+  <p>上記のコードでは <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a><span
+      class="notranslate">room</span> に存在するすべてのレイヤーをループし、各レイヤーに FX<span class="notranslate">struct</span>
+    があるかどうかをチェックします。もしレイヤーがFX<span class="notranslate">struct</span> を持っていれば、 <span class="inline">fx_get_name()</span>
+    を呼び出して、そのフィルター／効果の名前をチェックします。もしそれが<span class="inline2">&quot;_filter_tintfilter&quot;</span>と等しければ、つまり &quot;Colour
+    Tint&quot; フィルターであれば、その色合いの色を青に変更します。<br />
+  </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
+        <div style="float:left">前のページ：<a href="Filter_Effect_Functions.htm">フィルター・エフェクト機能</a></div>
         <div style="float:right">次ページ：<a href="fx_get_parameter_names.htm">fx_get_parameter_names</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 fx_get_name
@@ -69,4 +83,5 @@ fx_get_name
 fx_get_name
 -->
 </body>
+
 </html>

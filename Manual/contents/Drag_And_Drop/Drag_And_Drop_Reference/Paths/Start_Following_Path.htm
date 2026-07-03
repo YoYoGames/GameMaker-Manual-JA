@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>スタートフォローパス</title>
@@ -12,34 +13,56 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Start Following Path" />
   <meta name="search-keywords" content="Start Following Path" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> スタートフォローパス</h1>
-  <p>このアクションは、<span class="notranslate">path</span> ブラウザで作成された<span class="notranslate">Asset</span> に沿って、インスタンスが追従を開始します。このアクションを使用して、どの<span class="notranslate">path</span> を追いかけるか、<span class="notranslate">path</span> を追いかける速度（ゲームフレームあたりのピクセル数で測定）、 どのように追いかけるかをインスタンスに指示することができます。
-    は、<span class="notranslate">path</span> の末尾に到達したときの動作、および<span class="notranslate">path</span> の絶対位置と相対位置のどちらに従うかについて説明します。速度を設定するとき、インスタンスが<span class="notranslate">path</span> を逆にたどることを示すために負の値を使用することができ、以下の点に注意する必要があります。
-   <span class="notranslate">path</span> ここで設定したスピードは、<span class="notranslate">path</span> エディタで各ポイントに設定したスピードモディファイアによって変更されます。したがって、<span class="notranslate">path</span> スピードを2に設定し、<span class="notranslate">path</span> でポイントの1つに200%のスピードモディファイアを設定すると、そのポイントでの実際のスピードは次のようになります。
-    1ゲームフレームあたり4ピクセル。</p>
-  <p><span class="notranslate">path</span> の初期速度を設定したら、インスタンスが<span class="notranslate">path</span> の終わりに到達したときの動作を次のオプションから設定できます（インスタンスが<span class="notranslate">path</span> の終わりに到達すると、<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other -<span class="notranslate">Path</span> Ended Event</a> もトリガーされることに注意してください）。</p>
+  <p>このアクションは、<span class="notranslate">path</span> ブラウザで作成された<span class="notranslate">Asset</span>
+    に沿って、インスタンスが追従を開始します。このアクションを使用して、どの<span class="notranslate">path</span> を追いかけるか、<span
+      class="notranslate">path</span> を追いかける速度（ゲームフレームあたりのピクセル数で測定）、 どのように追いかけるかをインスタンスに指示することができます。
+    は、<span class="notranslate">path</span> の末尾に到達したときの動作、および<span class="notranslate">path</span>
+    の絶対位置と相対位置のどちらに従うかについて説明します。速度を設定するとき、インスタンスが<span class="notranslate">path</span>
+    を逆にたどることを示すために負の値を使用することができ、以下の点に注意する必要があります。
+    <span class="notranslate">path</span> ここで設定したスピードは、<span class="notranslate">path</span>
+    エディタで各ポイントに設定したスピードモディファイアによって変更されます。したがって、<span class="notranslate">path</span> スピードを2に設定し、<span
+      class="notranslate">path</span> でポイントの1つに200%のスピードモディファイアを設定すると、そのポイントでの実際のスピードは次のようになります。
+    1ゲームフレームあたり4ピクセル。
+  </p>
+  <p><span class="notranslate">path</span> の初期速度を設定したら、インスタンスが<span class="notranslate">path</span>
+    の終わりに到達したときの動作を次のオプションから設定できます（インスタンスが<span class="notranslate">path</span> の終わりに到達すると、<a
+      href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other -<span class="notranslate">Path</span>
+      Ended Event</a> もトリガーされることに注意してください）。</p>
   <ul class="colour">
-    <li><b>Stop</b>:<span class="notranslate">path</span> を終了し、最後の<span class="notranslate">path</span> ポイントでインスタンスを停止します。</li>
-    <li><b>再スタート</b> <span class="notranslate">path</span> が<span class="notranslate">path</span> Editor で閉じたとマークされていない場合、<span class="notranslate">Path</span> を最初から続行し、再び開始位置にジャンプします。</li>
+    <li><b>Stop</b>:<span class="notranslate">path</span> を終了し、最後の<span class="notranslate">path</span>
+      ポイントでインスタンスを停止します。</li>
+    <li><b>再スタート</b> <span class="notranslate">path</span> が<span class="notranslate">path</span> Editor
+      で閉じたとマークされていない場合、<span class="notranslate">Path</span> を最初から続行し、再び開始位置にジャンプします。</li>
     <li><b>ループする</b>。現在の位置から続けて、<span class="notranslate">path</span> を再度実行します。</li>
-    <li><b>リバース</b> <span class="notranslate">path</span> に沿って再び逆進し (<span class="notranslate">path</span> のフォロー速度を逆にすることで実現)、<span class="notranslate">path</span> の始点に到達すると、再び逆進する、などなど。</li>
+    <li><b>リバース</b> <span class="notranslate">path</span> に沿って再び逆進し (<span class="notranslate">path</span>
+      のフォロー速度を逆にすることで実現)、<span class="notranslate">path</span> の始点に到達すると、再び逆進する、などなど。</li>
   </ul>
-  <p>最後に、<span class="notranslate">flag</span> <span class="notranslate">path</span> 、<i>Absolute（絶対）か </i>どうかを選択できます。デフォルトでは、インスタンスは現在の位置（相対位置）から<span class="notranslate">path</span> を追い始めますが、<span class="notranslate">flag</span> の Absolute チェックボックスをオンにすると、インスタンスは現在の位置から を追い始めます。
-    <span class="notranslate">path</span> <span class="notranslate">Path</span> Editorでデザインして配置したのと全く同じ位置（絶対位置）です。下の画像はこれを示しています。</p>
+  <p>最後に、<span class="notranslate">flag</span> <span class="notranslate">path</span> 、<i>Absolute（絶対）か
+    </i>どうかを選択できます。デフォルトでは、インスタンスは現在の位置（相対位置）から<span class="notranslate">path</span> を追い始めますが、<span
+      class="notranslate">flag</span> の Absolute チェックボックスをオンにすると、インスタンスは現在の位置から を追い始めます。
+    <span class="notranslate">path</span> <span class="notranslate">Path</span>
+    Editorでデザインして配置したのと全く同じ位置（絶対位置）です。下の画像はこれを示しています。
+  </p>
   <p><img>上の画像でわかるように、2つのインスタンスは<i>同じ</i> <span class="notranslate">path</span> で開始されたものを辿っています。
-    しかし、一方のインスタンスは<i>絶対的な</i> <span class="notranslate">path</span> を追い、もう一方のインスタンスは<i>相対的な</i> <span class="notranslate">path</span> を追いかけています。絶対<em>パスが </em>指定されている場合、インスタンスは絶対パスの開始点に「ジャンプ」します。
-    <span class="notranslate">path</span> は、<span class="notranslate">room</span> のどこに配置されていても同じです。</p>
+    しかし、一方のインスタンスは<i>絶対的な</i> <span class="notranslate">path</span> を追い、もう一方のインスタンスは<i>相対的な</i> <span
+      class="notranslate">path</span> を追いかけています。絶対<em>パスが </em>指定されている場合、インスタンスは絶対パスの開始点に「ジャンプ」します。
+    <span class="notranslate">path</span> は、<span class="notranslate">room</span> のどこに配置されていても同じです。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Start Following Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Start_Following_Path.png" width="32" /></p>
+  <p><img alt="Start Following Path Icon" class="icon" height="32"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Start_Following_Path.png"
+      width="32" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Path</span></td>
@@ -69,11 +92,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Path_Actions.htm">パスアクション</a></div>
-        <div style="float:right">次へ<a href="Stop_Following_Path.htm">道を踏み外さない</a></div>
+        <div style="float:left">前のページ：<a href="Path_Actions.htm">パスアクション</a></div>
+        <div style="float:right">次のページ：<a href="Stop_Following_Path.htm">道を踏み外さない</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Start Following Path
@@ -82,4 +106,5 @@ Action - Start Following Path
 action_start_path
 -->
 </body>
+
 </html>

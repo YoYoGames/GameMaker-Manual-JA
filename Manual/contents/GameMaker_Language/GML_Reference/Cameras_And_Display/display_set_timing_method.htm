@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>display_set_timing_method</title>
@@ -9,10 +10,13 @@
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for display_set_timing_method" />
-  <meta name="rh-index-keywords" content="display_set_timing_method,tm_sleep,tm_countvsyncs,tm_systemtiming,tm_countvsyncs_winalt" />
-  <meta name="search-keywords" content="display_set_timing_method,tm_sleep,tm_countvsyncs,tm_systemtiming,tm_countvsyncs_winalt" />
+  <meta name="rh-index-keywords"
+    content="display_set_timing_method,tm_sleep,tm_countvsyncs,tm_systemtiming,tm_countvsyncs_winalt" />
+  <meta name="search-keywords"
+    content="display_set_timing_method,tm_sleep,tm_countvsyncs,tm_systemtiming,tm_countvsyncs_winalt" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">display_set_timing_method</span></h1>
@@ -21,7 +25,7 @@
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">tm_sleep</span></td>
@@ -33,18 +37,25 @@
       </tr>
     </tbody>
   </table>
-  <p>vsync タイミングメソッドは、ターゲットプラットフォームの垂直同期サポートを使用して、ゲームのレンダリングタイミング計算のアンカーを提供します。一方、モードをスリープマージンに設定すると、待機またはスリープによって各フレームが正しい時間（1/30 または 1/60秒など）持続するように試みます。一般に、デフォルトの vsync タイミングが最も滑らかな結果をもたらしますが、vsync 方式を使用する場合、影響は小さくなるものの、スリープマージンの値はまだ関連しているので、この方式を使用する場合はデフォルト値のままにしておくことをお勧めします。</p>
-  <p>PS4、<span class="notranslate">Ubuntu</span> 、HTML5を<i>除く</i>すべてのプラットフォームでは、デフォルトで<span data-keyref="GameMaker Name">GameMakerは</span>vsyncタイミング方式を使用し、サポートされていないプラットフォームでは、スリープ余裕<i>タイミングのみ</i>使用することができます。</p>
-  <p>スリープマージンを設定したい場合は、以下の関数を使用して設定することができます。 <a href="display_set_sleep_margin.htm"><span class="inline">display_set_sleep_margin()</span></a>また、現在どのタイミングが使われているかは、関数 <a href="display_get_timing_method.htm"><span class="inline">display_get_timing_method()</span></a>.</p>
+  <p>vsync
+    タイミングメソッドは、ターゲットプラットフォームの垂直同期サポートを使用して、ゲームのレンダリングタイミング計算のアンカーを提供します。一方、モードをスリープマージンに設定すると、待機またはスリープによって各フレームが正しい時間（1/30
+    または 1/60秒など）持続するように試みます。一般に、デフォルトの vsync タイミングが最も滑らかな結果をもたらしますが、vsync
+    方式を使用する場合、影響は小さくなるものの、スリープマージンの値はまだ関連しているので、この方式を使用する場合はデフォルト値のままにしておくことをお勧めします。</p>
+  <p>PS4、<span class="notranslate">Ubuntu</span> 、HTML5を<i>除く</i>すべてのプラットフォームでは、デフォルトで<span
+      data-keyref="GameMaker Name">GameMakerは</span>vsyncタイミング方式を使用し、サポートされていないプラットフォームでは、スリープ余裕<i>タイミングのみ</i>使用することができます。
+  </p>
+  <p>スリープマージンを設定したい場合は、以下の関数を使用して設定することができます。 <a href="display_set_sleep_margin.htm"><span
+        class="inline">display_set_sleep_margin()</span></a>また、現在どのタイミングが使われているかは、関数 <a
+      href="display_get_timing_method.htm"><span class="inline">display_get_timing_method()</span></a>.</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">display_set_timing_method</span>(method);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">method</span></td>
@@ -54,7 +65,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -73,11 +84,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
-        <div style="float:right">次のページ <a href="display_set_sleep_margin.htm"><span class="notranslate">display_set_sleep_margin</span></a></div>
+        <div style="float:left">前のページ：<a href="Cameras_And_Display.htm">カメラとディスプレイ</a></div>
+        <div style="float:right">次のページ：<a href="display_set_sleep_margin.htm"><span
+              class="notranslate">display_set_sleep_margin</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 display_set_timing_method
@@ -90,4 +103,5 @@ tm_systemtiming
 display_set_timing_method
 -->
 </body>
+
 </html>

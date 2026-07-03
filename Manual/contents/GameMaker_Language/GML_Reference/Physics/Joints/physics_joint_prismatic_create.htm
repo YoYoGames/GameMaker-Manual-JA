@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_joint_prismatic_create</title>
@@ -13,22 +14,35 @@
   <meta name="search-keywords" content="physics_joint_prismatic_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_joint_prismatic_create</span></h1>
-  <p>レボリュートジョイントと同様に、プリズムジョイントも1つの自由度しかありませんが、このジョイントでは、回転ではなく軸に対する方向性であり、実際にはいかなる形の回転も防ぐことができます。この仕組みをイメージしやすくするために、以下の画像をご覧ください。</p>
-  <p><img>2つのインスタンスをアンカーポイントで結合し、2つのw_axisのx/y座標を物理世界の（0,0）座標に相対させたベクトルで移動軸を定義します（したがって、x成分が0、y成分が1（0,1）ならジョイントは垂直プリズムジョイントとなります）。このジョイントは、バネやピストンのように、この<i>軸に対してのみ</i>動くことができるようになります。0 の位置は w_anchor x/y で定義した正確な場所なので、次の図のように負の値は軸に沿ってその点の「左」に、正の値は「右」に移動します（「左」「右」は相対的な言葉だということに注意してください！）。</p>
-  <p><img>また、ジョイントにモーターがあるかないかを定義することができます。この方向はモーターの速度によって定義され、正の数は軸座標（&quot;right&quot;）に、負の数はアンカーポイント（&quot;left&quot;）に向かいます。max_motor_force&quot; 引数は、モーターの加速が止まらないように動作速度を制限するためのもので、衝突が動作に与える影響を制限するためのものです。このように、ジョイントモーターを使用して、ジョイントスピードをゼロに設定し、最大力を小さいが重要な値に設定することで、ジョイントの摩擦をシミュレートすることができます。モーターは関節が動くのを防ごうとしますが、大きな負荷がかかると降伏します。</p>
-  <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
+  <p>
+    レボリュートジョイントと同様に、プリズムジョイントも1つの自由度しかありませんが、このジョイントでは、回転ではなく軸に対する方向性であり、実際にはいかなる形の回転も防ぐことができます。この仕組みをイメージしやすくするために、以下の画像をご覧ください。
+  </p>
+  <p>
+    <img>2つのインスタンスをアンカーポイントで結合し、2つのw_axisのx/y座標を物理世界の（0,0）座標に相対させたベクトルで移動軸を定義します（したがって、x成分が0、y成分が1（0,1）ならジョイントは垂直プリズムジョイントとなります）。このジョイントは、バネやピストンのように、この<i>軸に対してのみ</i>動くことができるようになります。0
+    の位置は w_anchor x/y で定義した正確な場所なので、次の図のように負の値は軸に沿ってその点の「左」に、正の値は「右」に移動します（「左」「右」は相対的な言葉だということに注意してください！）。
+  </p>
+  <p>
+    <img>また、ジョイントにモーターがあるかないかを定義することができます。この方向はモーターの速度によって定義され、正の数は軸座標（&quot;right&quot;）に、負の数はアンカーポイント（&quot;left&quot;）に向かいます。max_motor_force&quot;
+    引数は、モーターの加速が止まらないように動作速度を制限するためのもので、衝突が動作に与える影響を制限するためのものです。このように、ジョイントモーターを使用して、ジョイントスピードをゼロに設定し、最大力を小さいが重要な値に設定することで、ジョイントの摩擦をシミュレートすることができます。モーターは関節が動くのを防ごうとしますが、大きな負荷がかかると降伏します。
+  </p>
+  <p>他のジョイントと同様に、「col」の値を <span class="inline">true</span>
+    に設定すると、2つのインスタンスは相互に作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span>
+    に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_joint_prismatic_create</span>(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_prismatic_create</span>(inst1, inst2,
+    w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force,
+    motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">inst1</span></td>
@@ -98,7 +112,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -110,18 +124,22 @@
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_prismatic_create(id, o_id, x, y, 0, 10, 0, 0, 0, 5, 0, 1, 1);<br />
     physics_fixture_delete(mainFixture);</p>
-  <p>上記のコードでは、新しいフィクスチャを作成して定義し、「obj_Piston」のインスタンスを作成して、作成したフィクスチャを2つの新しい<span class="notranslate">objects</span> にバインドしています。そして、アンカー位置が最初のインスタンスの同じx/y座標にあり、x/y位置のベクトルと軸x/y（この場合は0,10、つまり「下」）によって形成される軸を持つプリズムジョイントによって結合されます。この軸に沿った移動量に制限は設けられていませんが、関節の摩擦をシミュレートするために、速度0、最大力5のモーターを追加しています。</p>
+  <p>上記のコードでは、新しいフィクスチャを作成して定義し、「obj_Piston」のインスタンスを作成して、作成したフィクスチャを2つの新しい<span class="notranslate">objects</span>
+    にバインドしています。そして、アンカー位置が最初のインスタンスの同じx/y座標にあり、x/y位置のベクトルと軸x/y（この場合は0,10、つまり「下」）によって形成される軸を持つプリズムジョイントによって結合されます。この軸に沿った移動量に制限は設けられていませんが、関節の摩擦をシミュレートするために、速度0、最大力5のモーターを追加しています。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Joints.htm">関節</a></div>
-        <div style="float:right">次のページ <a href="physics_joint_pulley_create.htm"><span class="notranslate">physics_joint_pulley_create</span></a></div>
+        <div style="float:left">前のページ：<a href="Joints.htm">関節</a></div>
+        <div style="float:right">次のページ：<a href="physics_joint_pulley_create.htm"><span
+              class="notranslate">physics_joint_pulley_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_prismatic_create
@@ -130,4 +148,5 @@ physics_joint_prismatic_create
 physics_joint_prismatic_create
 -->
 </body>
+
 </html>

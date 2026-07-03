@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_grid_get_cell</title>
@@ -13,41 +14,47 @@
   <meta name="search-keywords" content="mp_grid_get_cell" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">mp_grid_get_cell</span></h1>
   <p>この関数では、mp_grid の任意のセルが占有されているかどうかを、(以前に作成した) mp_grid のインデックスとチェックするセルの x および y 座標を与えて確認することができます。</p>
   <p>占有されている場合、またはチェックする位置がグリッドの境界から外れている場合は-1、それ以外の場合は0を返す。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">mp_grid_get_cell</span>(id, x , y);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">id</span></td>
-        <td><span data-keyref="Type_ID_MP_Grid"><a href="../../../../../GameMaker_Language/GML_Reference/Movement_And_Collisions/Motion_Planning/mp_grid_create.htm" target="_blank">MP Grid ID</a></span></td>
+        <td><span data-keyref="Type_ID_MP_Grid"><a
+              href="../../../../../GameMaker_Language/GML_Reference/Movement_And_Collisions/Motion_Planning/mp_grid_create.htm"
+              target="_blank">MP Grid ID</a></span></td>
         <td><span class="notranslate">Index of the mp_grid that is to be used</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">x1</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The x coordinate of the grid to check.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">y1</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The y coordinate of the grid to check.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+        target="_blank">Real</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">if mp_grid_get_cell(grid, mouse_x div 16, mouse_y div 16) == -1<br />
@@ -65,11 +72,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
-        <div style="float:right">次のページ <a href="mp_grid_clear_all.htm"><span class="notranslate">mp_grid_clear_all</span></a></div>
+        <div style="float:left">前のページ：<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ：<a href="mp_grid_clear_all.htm"><span
+              class="notranslate">mp_grid_clear_all</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_grid_get_cell
@@ -78,4 +87,5 @@ mp_grid_get_cell
 mp_grid_get_cell
 -->
 </body>
+
 </html>

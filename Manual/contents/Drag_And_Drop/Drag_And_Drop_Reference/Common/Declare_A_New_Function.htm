@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>新しい関数を宣言する</title>
@@ -12,23 +13,35 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Declare A New Function" />
   <meta name="search-keywords" content="Declare A New Function" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 新しい関数を宣言する</h1>
-  <p>このアクションは、新しいユーザー定義関数を作成するために使用され、後でコード内の任意の時点で呼び出すことができます。ユーザー定義関数は、組み込みの<span class="notranslate">GML</span> Visual アクションや<span class="notranslate">GML</span> ランナー関数ではカバーできないタスクを実行するために定義する関数で、グローバル、インスタンス、ローカルスコープ（スコープの詳細については、<a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">ここを</a>参照）にすることができます。また、<a href="../../../GameMaker_Language/GML_Overview/Structs.htm">構造体を</a>作成するための<b>コンストラクターとして</b>使用することもできます。このアクションを使用してグローバル関数を作成する方法については、「<a href="../../Drag_And_Drop_Overview/Action_Block_Functions.htm">アクション関数の作成</a>」のセクションを参照してください。</p>
+  <p>このアクションは、新しいユーザー定義関数を作成するために使用され、後でコード内の任意の時点で呼び出すことができます。ユーザー定義関数は、組み込みの<span class="notranslate">GML</span>
+    Visual アクションや<span class="notranslate">GML</span>
+    ランナー関数ではカバーできないタスクを実行するために定義する関数で、グローバル、インスタンス、ローカルスコープ（スコープの詳細については、<a
+      href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">ここを</a>参照）にすることができます。また、<a
+      href="../../../GameMaker_Language/GML_Overview/Structs.htm">構造体を</a>作成するための<b>コンストラクターとして</b>使用することもできます。このアクションを使用してグローバル関数を作成する方法については、「<a
+      href="../../Drag_And_Drop_Overview/Action_Block_Functions.htm">アクション関数の作成</a>」のセクションを参照してください。</p>
   <p>このアクションを使用するには、イベントまたはスクリプトに追加して、新しい関数に名前を付けます。そして、関数が受け取る必須の引数やパラメータを指定し、オプションの引数にはデフォルト値を指定します。</p>
-  <p>この関数をコンストラクタ（<span class="notranslate">struct</span> を作成するために使用する）として使用する場合は、<strong>Constructor </strong>オプションをチェックし、後で<a href="New.htm">New</a>アクションを使用して関数から<span class="notranslate">struct</span> を作成する必要があります。また、<span class="notranslate">flag</span> 関数を<b>static</b> にすることもできます。これは、このアクションが何度実行されても、関数は一度しか定義されないという意味です。最後に、関数が同じイベント内でローカルにのみ使用され、他のどこにも使用されない場合は、<strong>Temp </strong>オプションを有効にすることができます。</p>
+  <p>この関数をコンストラクタ（<span class="notranslate">struct</span> を作成するために使用する）として使用する場合は、<strong>Constructor
+    </strong>オプションをチェックし、後で<a href="New.htm">New</a>アクションを使用して関数から<span class="notranslate">struct</span>
+    を作成する必要があります。また、<span class="notranslate">flag</span> 関数を<b>static</b>
+    にすることもできます。これは、このアクションが何度実行されても、関数は一度しか定義されないという意味です。最後に、関数が同じイベント内でローカルにのみ使用され、他のどこにも使用されない場合は、<strong>Temp
+    </strong>オプションを有効にすることができます。</p>
   <p>名前とパラメータを定義したら、下の画像のように、関数が呼び出されたときに実行させたいアクションを、コードの中でアクションの横にドロップすることでアタッチできます。</p>
   <p><img>このアクションを通常の関数とコンストラクタ関数の両方として使用する例は、後述の「拡張例」で紹介されています。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Declare A New Function Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Declare_Function.png" /></p>
+  <p><img alt="Declare A New Function Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Declare_Function.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Name</span></td>
@@ -55,24 +68,37 @@
   <p> </p>
   <h1>拡張例</h1>
   <h4>拡張例1</h4>
-  <p><img>上記のアクションブロックは、インスタンスまたは<span class="notranslate">script</span> の<b>Create Event</b>に入り、3つの引数を持つ<span class="inline">set_vec</span> という新しい関数を宣言しています。 <span class="inline">_x</span> <span class="inline">_y</span> と <span class="inline">spd</span> です。これらの引数は、関数が含むアクションで使用され、関数が呼び出されたときに、インスタンスの方向と速度を設定します。この関数が呼び出されたときに、インスタンスの方向と速度が設定されます。この関数は、その後のイベントで<a href="Function_Call.htm">関数呼び出し</a>アクションを使用して、次のように呼び出されます。</p>
+  <p><img>上記のアクションブロックは、インスタンスまたは<span class="notranslate">script</span> の<b>Create Event</b>に入り、3つの引数を持つ<span
+      class="inline">set_vec</span> という新しい関数を宣言しています。 <span class="inline">_x</span> <span class="inline">_y</span> と
+    <span class="inline">spd</span>
+    です。これらの引数は、関数が含むアクションで使用され、関数が呼び出されたときに、インスタンスの方向と速度を設定します。この関数が呼び出されたときに、インスタンスの方向と速度が設定されます。この関数は、その後のイベントで<a
+      href="Function_Call.htm">関数呼び出し</a>アクションを使用して、次のように呼び出されます。
+  </p>
   <p><img>上の画像では、 <span class="inline">set_vec</span> 関数を呼び出して、インスタンスの向きをマウスの X/Y 位置に向けるように変更し、速度を 5 に設定しています。</p>
   <p> </p>
   <h4 id="h">拡張例2</h4>
-  <p><img>上記のアクションブロックは、インスタンスまたは<span class="notranslate">script</span> の<b>Create Event</b>内に置かれ、4つの引数を持つ<span class="inline">init_char_struct</span> という新しい<strong>コンストラクタ</strong>関数を宣言しています。 <span class="inline">_name</span> <span class="inline">_location</span>, <span class="inline">_hp</span>, <span class="inline">_mana</span>, 最後の2つはオプションでデフォルト値は100です（これは、関数が呼び出されたときにこれらの引数が指定されていない場合、代わりにデフォルト値が使用されることを意味します）。これらの引数は、この関数が作成する<span class="notranslate">struct</span> 内で、いくつかの変数を作成するために使用されます。</p>
+  <p><img>上記のアクションブロックは、インスタンスまたは<span class="notranslate">script</span> の<b>Create Event</b>内に置かれ、4つの引数を持つ<span
+      class="inline">init_char_struct</span> という新しい<strong>コンストラクタ</strong>関数を宣言しています。 <span class="inline">_name</span>
+    <span class="inline">_location</span>, <span class="inline">_hp</span>, <span class="inline">_mana</span>,
+    最後の2つはオプションでデフォルト値は100です（これは、関数が呼び出されたときにこれらの引数が指定されていない場合、代わりにデフォルト値が使用されることを意味します）。これらの引数は、この関数が作成する<span
+      class="notranslate">struct</span> 内で、いくつかの変数を作成するために使用されます。
+  </p>
   <p>後で<a href="New.htm">New</a>アクションを使ってこの関数を呼び出すと、次のように<span class="notranslate">struct</span> が作成されます。</p>
-  <p><img>この関数を呼び出すと，配列 <span class="inline">char</span> に格納されている新しい<span class="notranslate">struct</span> が返され，<span class="notranslate">struct</span> には，関数呼び出し時に対応する引数に渡された値が設定された変数 <span class="inline">name</span>, <span class="inline">location</span>, <span class="inline">hp</span>,<span class="inline">mana</span> が格納されます．</p>
+  <p><img>この関数を呼び出すと，配列 <span class="inline">char</span> に格納されている新しい<span class="notranslate">struct</span> が返され，<span
+      class="notranslate">struct</span> には，関数呼び出し時に対応する引数に渡された値が設定された変数 <span class="inline">name</span>, <span
+      class="inline">location</span>, <span class="inline">hp</span>,<span class="inline">mana</span> が格納されます．</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Common_Actions_Library.htm">共通アクション</a></div>
-        <div style="float:right">次へ<a href="Assign_Variable.htm">変数の代入</a></div>
+        <div style="float:left">前のページ：<a href="Common_Actions_Library.htm">共通アクション</a></div>
+        <div style="float:right">次のページ：<a href="Assign_Variable.htm">変数の代入</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Declare A New Function
@@ -81,4 +107,5 @@ Action - Declare A New Function
 action_declare_function
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>string_last_pos</title>
@@ -13,31 +14,39 @@
   <meta name="search-keywords" content="string_last_pos" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">string_last_pos</span></h1>
-  <p>この関数は，<span class="notranslate">string</span> 内の部分文字列のインスタンスの文字位置を，<span class="notranslate">string</span> の末尾から先頭まで検索して返します（したがって <a href="string_pos.htm"><span class="inline">string_pos()</span></a>.この関数は、検索対象<span class="notranslate">string</span> が見つからなかった場合は 0 を返し、見つかった場合は検索対象<span class="notranslate">string</span> の最初の文字の位置を返します。レガシーサポートのため、<span class="notranslate">strings</span> は 1 からインデックスされるので、1 は<span class="notranslate">string</span> の最初の位置であり、期待されるような 0 ではないことに留意してください。</p>
+  <p>この関数は，<span class="notranslate">string</span> 内の部分文字列のインスタンスの文字位置を，<span class="notranslate">string</span>
+    の末尾から先頭まで検索して返します（したがって <a href="string_pos.htm"><span class="inline">string_pos()</span></a>.この関数は、検索対象<span
+      class="notranslate">string</span> が見つからなかった場合は 0 を返し、見つかった場合は検索対象<span class="notranslate">string</span>
+    の最初の文字の位置を返します。レガシーサポートのため、<span class="notranslate">strings</span> は 1 からインデックスされるので、1 は<span
+      class="notranslate">string</span> の最初の位置であり、期待されるような 0 ではないことに留意してください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">string_last_pos</span>(substr, str);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">substr</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">substr</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The substring to look for in the string.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">str</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">str</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The string.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -45,18 +54,21 @@
     {<br />
         string_insert(name, text, string_last_pos(&quot;,&quot;, text));<br />
     }</p>
-  <p><span class="notranslate">string</span>上のコードは、変数 &quot;text &quot;に格納されている<span class="notranslate">string</span> の末尾からカンマを検索しています。カンマが見つかれば、その位置に &quot;name &quot;という部分文字列を挿入しているのです。</p>
+  <p><span class="notranslate">string</span>上のコードは、変数 &quot;text &quot;に格納されている<span class="notranslate">string</span>
+    の末尾からカンマを検索しています。カンマが見つかれば、その位置に &quot;name &quot;という部分文字列を挿入しているのです。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Strings.htm">弦楽器</a></div>
-        <div style="float:right">次のページ <a href="string_last_pos_ext.htm"><span class="notranslate">string_last_pos_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="Strings.htm">弦楽器</a></div>
+        <div style="float:right">次のページ：<a href="string_last_pos_ext.htm"><span
+              class="notranslate">string_last_pos_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 string_last_pos
@@ -65,4 +77,5 @@ string_last_pos
 string_last_pos
 -->
 </body>
+
 </html>

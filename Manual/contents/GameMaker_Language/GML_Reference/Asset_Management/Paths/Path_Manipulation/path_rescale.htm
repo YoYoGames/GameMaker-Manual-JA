@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>path_rescale</title>
@@ -12,36 +13,48 @@
   <meta name="rh-index-keywords" content="path_rescale" />
   <meta name="search-keywords" content="path_rescale" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">path_rescale</span></h1>
-  <p>この関数は、与えられた<span class="notranslate">path</span> を縦軸と横軸の両方（または一方）に沿って再スケールするために使用できます。基本的に、<span class="notranslate">path</span> の各ポイントは、<span class="notranslate">path</span> の中心を中心にこのスケールに対応する新しい位置に移動します。<strong>この関数は、実際の<span class="notranslate">path</span> アセットを変更</strong>します。
-    そのため、この関数が使われた瞬間からゲームの終了まで、ゲーム内のすべてのインスタンスで<span class="notranslate">path</span> がどのように使われるかに永続的に影響します。これが必要でない場合は、 <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span> に対して呼び出すことを忘れないでください）。</p>
+  <p>この関数は、与えられた<span class="notranslate">path</span> を縦軸と横軸の両方（または一方）に沿って再スケールするために使用できます。基本的に、<span
+      class="notranslate">path</span> の各ポイントは、<span class="notranslate">path</span>
+    の中心を中心にこのスケールに対応する新しい位置に移動します。<strong>この関数は、実際の<span class="notranslate">path</span> アセットを変更</strong>します。
+    そのため、この関数が使われた瞬間からゲームの終了まで、ゲーム内のすべてのインスタンスで<span class="notranslate">path</span> がどのように使われるかに永続的に影響します。これが必要でない場合は、
+    <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> のような関数を使用して、まず<span
+      class="notranslate">path</span> のコピーを作成し、複製された<span class="notranslate">asset</span> に対してこの関数を呼び出します（必要なくなったら
+    <span class="inline"><a href="path_delete.htm">path_delete()</a></span> を<span class="notranslate">asset</span>
+    に対して呼び出すことを忘れないでください）。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">path_rescale</span>(index, xscale, yscale);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The index of the path to scale.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">xscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">xscale</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">What to multiply the current horizontal scale by. Default scale is 1.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">yscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">yscale</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">What to multiply the current vertical scale by. Default scale is 1.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,12 +66,14 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
-        <div style="float:right">次のページ <a href="path_set_closed.htm"><span class="notranslate">path_set_closed</span></a></div>
-        
+        <div style="float:left">前のページ：<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ：<a href="path_set_closed.htm"><span
+              class="notranslate">path_set_closed</span></a></div>
+
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_scale
@@ -67,4 +82,5 @@ path_scale
 path_scale
 -->
 </body>
+
 </html>

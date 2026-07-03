@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_attachment_create_colour</title>
@@ -13,20 +14,38 @@
   <meta name="search-keywords" content="skeleton_attachment_create_colour,skeleton_attachment_create_color" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_attachment_create_colour</span></h1>
-  <p>スケルトン・アニメーション（<span class="notranslate">sprite</span> ）を作成する際に、<i>アタッチメント・スロットと</i>そこに入れる<i>アタッチメントを</i>割り当てることができます。これらは単に画像 (<span class="notranslate">sprites</span>) で、アニメーションとは別物ですが、添付されると添付されたボーンと一緒に動きます。通常、これらのアタッチメントはアニメーションプログラム (<span class="notranslate">Spine</span>) で割り当てますが、この関数を使用すると、ゲームの<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を使用して、ランタイムに独自のアタッチメントを作成できます。この関数では、アタッチメントに名前を付けて (<span class="notranslate">string</span> のように ) <a href="../../Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>と <a href="../../Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a><span class="notranslate">sprite</span> <span class="notranslate">sprite</span> また、画像に適用したい変形や、画像にブレンドする色、アルファ（透明度）値も設定できます。添付ファイルが正常に作成された場合、この関数は <span class="inline">1</span> を返し、そうでない場合 (<span class="notranslate">sprite</span> のインデックスが無効であるか、ベース<span class="notranslate">sprite</span> が<span class="notranslate">Spine</span> <span class="notranslate">sprite</span> でない) は、 <span class="inline">-1</span> を返します。</p>
-  <p>注目すべきは、インスタンス<span class="notranslate">sprite</span> が、ブレンドカラーとアルファの設定(<a href="../../Sprite_Instance_Variables/image_blend.htm"><span class="inline">image_blend</span></a>と <a href="../../Sprite_Instance_Variables/image_alpha.htm"><span class="inline">image_alpha</span></a>)、アタッチメントスロットも同様です(関数 <a href="../Slots/skeleton_slot_colour_set.htm"><span class="inline">skeleton_slot_colour_set()</span></a>そのため、スロットに割り当てられたアタッチメント<span class="notranslate">sprite</span> が持つ最終的な色とアルファは、これらすべての値の合成となります。</p>
+  <p>スケルトン・アニメーション（<span class="notranslate">sprite</span>
+    ）を作成する際に、<i>アタッチメント・スロットと</i>そこに入れる<i>アタッチメントを</i>割り当てることができます。これらは単に画像 (<span class="notranslate">sprites</span>)
+    で、アニメーションとは別物ですが、添付されると添付されたボーンと一緒に動きます。通常、これらのアタッチメントはアニメーションプログラム (<span class="notranslate">Spine</span>)
+    で割り当てますが、この関数を使用すると、ゲームの<span class="notranslate">sprite</span> <span class="notranslate">asset</span>
+    を使用して、ランタイムに独自のアタッチメントを作成できます。この関数では、アタッチメントに名前を付けて (<span class="notranslate">string</span> のように ) <a
+      href="../../Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>と <a
+      href="../../Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a><span
+      class="notranslate">sprite</span> <span class="notranslate">sprite</span>
+    また、画像に適用したい変形や、画像にブレンドする色、アルファ（透明度）値も設定できます。添付ファイルが正常に作成された場合、この関数は <span class="inline">1</span> を返し、そうでない場合 (<span
+      class="notranslate">sprite</span> のインデックスが無効であるか、ベース<span class="notranslate">sprite</span> が<span
+      class="notranslate">Spine</span> <span class="notranslate">sprite</span> でない) は、 <span class="inline">-1</span>
+    を返します。</p>
+  <p>注目すべきは、インスタンス<span class="notranslate">sprite</span> が、ブレンドカラーとアルファの設定(<a
+      href="../../Sprite_Instance_Variables/image_blend.htm"><span class="inline">image_blend</span></a>と <a
+      href="../../Sprite_Instance_Variables/image_alpha.htm"><span
+        class="inline">image_alpha</span></a>)、アタッチメントスロットも同様です(関数 <a href="../Slots/skeleton_slot_colour_set.htm"><span
+        class="inline">skeleton_slot_colour_set()</span></a>そのため、スロットに割り当てられたアタッチメント<span
+      class="notranslate">sprite</span> が持つ最終的な色とアルファは、これらすべての値の合成となります。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">skeleton_attachment_create_colour</span>(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot, colour, alpha);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">skeleton_attachment_create_colour</span>(name, sprite,
+    ind, xorigin, yorigin, xscale, yscale, rot, colour, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">name</span></td>
@@ -56,17 +75,20 @@
       <tr>
         <td><span class="notranslate">xscale</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The horizontal scaling of the image, as a multiplier: 1 = normal scaling, 0.5 is half etc...</span></td>
+        <td><span class="notranslate">The horizontal scaling of the image, as a multiplier: 1 = normal scaling, 0.5 is
+            half etc...</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">yscale</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The vertical scaling of the image, as a multiplier: 1 = normal scaling, 0.5 is half etc...</span></td>
+        <td><span class="notranslate">The vertical scaling of the image, as a multiplier: 1 = normal scaling, 0.5 is
+            half etc...</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">rot</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The rotation of the image: 0 = normal, 90 = turned 90° counter-clockwise etc.</span></td>
+        <td><span class="notranslate">The rotation of the image: 0 = normal, 90 = turned 90° counter-clockwise
+            etc.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">Colour</span></td>
@@ -81,26 +103,30 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span> (1 if successful, -1 if not)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">skeleton_attachment_create_colour(&quot;sword&quot;, spr_Weapons, 0, 0, 80, 1, 1, 90, c_red, 1);<br />
     skeleton_attachment_create_colour(&quot;knife&quot;, spr_Weapons, 1, 0, 45, 1, 1, 90, c_yellow, 1);<br />
     skeleton_attachment_create_colour(&quot;crossbow&quot;, spr_Weapons, 0, 10, 30, 1, 1, 0, c_white, 0.5);<br />
-    skeleton_attachment_set(&quot;slot_leftHand&quot;, choose(&quot;sword&quot;, &quot;knife&quot;, &quot;crossbow&quot;));</p>
-  <p>上記のコードは、「slot_leftHand」という名前のスロットに対して現在割り当てられているアタッチメント名をチェックし、空の<span class="notranslate">string</span> が返された場合、新しい<span class="notranslate">sprite</span> をアタッチすることになります。</p>
+    skeleton_attachment_set(&quot;slot_leftHand&quot;, choose(&quot;sword&quot;, &quot;knife&quot;,
+    &quot;crossbow&quot;));</p>
+  <p>上記のコードは、「slot_leftHand」という名前のスロットに対して現在割り当てられているアタッチメント名をチェックし、空の<span class="notranslate">string</span>
+    が返された場合、新しい<span class="notranslate">sprite</span> をアタッチすることになります。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Attachments.htm">アタッチメント</a></div>
-        <div style="float:right">次のページ <a href="../Bones/skeleton_bone_data_get.htm"><span class="notranslate">skeleton_bone_data_get</span></a></div>
+        <div style="float:left">前のページ：<a href="Attachments.htm">アタッチメント</a></div>
+        <div style="float:right">次のページ：<a href="../Bones/skeleton_bone_data_get.htm"><span
+              class="notranslate">skeleton_bone_data_get</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_attachment_create_colour
@@ -110,4 +136,5 @@ skeleton_attachment_create_color
 skeleton_attachment_create_colour
 -->
 </body>
+
 </html>

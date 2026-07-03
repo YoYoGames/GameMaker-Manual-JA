@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオエミッター</title>
@@ -8,58 +9,114 @@
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Emitters" />
+  <meta name="topic-comment"
+    content="Page outlining the different functions and variables associated with Audio Emitters" />
   <meta name="rh-index-keywords" content="Audio Emitters" />
   <meta name="search-keywords" content="Audio Emitters" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">オーディオエミッター</span></h1>
-  <p><span class="notranslate">assets</span>オーディオエミッターは、<span data-keyref="GameMaker Name">GameMakerの</span>オーディオエンジンの柔軟性を高めるために提供されており、ピッチやドップラー効果などのリアルタイム効果をオーディオに追加したり、3Dオーディオ空間内でサウンドを配置したり、リアルなモーション効果を与えたりすることが可能です。これらの機能はすべて、オーディオ環境内の<i>リスナーの</i>位置に影響されるので、リスナーの位置、速度、方向を変更するために提供された機能を使用する必要があります（<a href="../Audio_Listeners/Audio_Listeners.htm">オーディオリスナーを</a>参照）。</p>
+  <p><span class="notranslate">assets</span>オーディオエミッターは、<span
+      data-keyref="GameMaker Name">GameMakerの</span>オーディオエンジンの柔軟性を高めるために提供されており、ピッチやドップラー効果などのリアルタイム効果をオーディオに追加したり、3Dオーディオ空間内でサウンドを配置したり、リアルなモーション効果を与えたりすることが可能です。これらの機能はすべて、オーディオ環境内の<i>リスナーの</i>位置に影響されるので、リスナーの位置、速度、方向を変更するために提供された機能を使用する必要があります（<a
+      href="../Audio_Listeners/Audio_Listeners.htm">オーディオリスナーを</a>参照）。</p>
   <h2>オーディオエミッターとリスナーの使用</h2>
-  <p>オーディオエミッターとリスナーを組み合わせることで、豊かで生き生きとした環境を作り出すことができます。この設定は少し複雑なので、このパートでは、エミッタとデフォルトのリスナーを含む完全なシステムを設定するために必要なことを見ていきます。</p>
+  <p>
+    オーディオエミッターとリスナーを組み合わせることで、豊かで生き生きとした環境を作り出すことができます。この設定は少し複雑なので、このパートでは、エミッタとデフォルトのリスナーを含む完全なシステムを設定するために必要なことを見ていきます。
+  </p>
   <h3>フォールオフモデルの設定</h3>
-  <p>オーディオエミッターを扱うときに最初にすることは、(そして、(0, 0) とは異なる位置で、(0, 0) を使って再生される音を扱うときに) <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>を使って<span data-keyref="Position_Origin">(0, 0, 0)</span> とは異なる位置で再生されるサウンド) を扱うときに最初にすることは、 <span class="inline"><a href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a></span> を使ってフォールオフモデルを設定することです。フォールオフモデルは、リスナーからエミッタまでの距離によって、再生されるサウンドの音量がどのように変化するかを決定します。</p>
-  <p>この設定は厳密には必須ではありませんが、この関数を呼び出さない場合、使用されるモデルはデフォルトの<span class="inline">audio_fa<span class="inline"></span>lloff_none になります。これはゲインが1に設定され、リスナーからエミッターまでの距離によって音の大きさが変化しないことを意味します。</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> 最大距離を超えると音が聞こえなくなるようにしたい場合は、 で終わるフォールオフモデルのいずれかを設定する必要があります。 <span class="inline">_scaled</span></p>
+  <p>オーディオエミッターを扱うときに最初にすることは、(そして、(0, 0) とは異なる位置で、(0, 0) を使って再生される音を扱うときに) <a href="../audio_play_sound_at.htm"><span
+        class="notranslate">audio_play_sound_at</span></a>を使って<span data-keyref="Position_Origin">(0, 0, 0)</span>
+    とは異なる位置で再生されるサウンド) を扱うときに最初にすることは、 <span class="inline"><a
+        href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a></span>
+    を使ってフォールオフモデルを設定することです。フォールオフモデルは、リスナーからエミッタまでの距離によって、再生されるサウンドの音量がどのように変化するかを決定します。</p>
+  <p>この設定は厳密には必須ではありませんが、この関数を呼び出さない場合、使用されるモデルはデフォルトの<span class="inline">audio_fa<span
+        class="inline"></span>lloff_none になります。これはゲインが1に設定され、リスナーからエミッターまでの距離によって音の大きさが変化しないことを意味します。</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> 最大距離を超えると音が聞こえなくなるようにしたい場合は、
+    で終わるフォールオフモデルのいずれかを設定する必要があります。 <span class="inline">_scaled</span></p>
   <h3>リスナーの更新</h3>
-  <p>デフォルトのオーディオリスナーは位置<span data-keyref="Position_Origin">(0, 0, 0</span>)に配置されます。 <a href="../audio_play_sound.htm"><span class="notranslate">audio_play_sound</span></a>は、リスナーの位置で音を再生します。したがって、この方法で再生された音は、デフォルトでは右と左の両方のスピーカーから聞こえます。</p>
+  <p>デフォルトのオーディオリスナーは位置<span data-keyref="Position_Origin">(0, 0, 0</span>)に配置されます。 <a
+      href="../audio_play_sound.htm"><span
+        class="notranslate">audio_play_sound</span></a>は、リスナーの位置で音を再生します。したがって、この方法で再生された音は、デフォルトでは右と左の両方のスピーカーから聞こえます。
+  </p>
   <p>リスナーとサウンドまたはエミッターの相対位置が変化した瞬間から（リスナーまたはエミッターの位置が変化した瞬間から）、この現象は起こらなくなります。</p>
-  <p><strong>位置だけ</strong>でなく、<strong>向きも</strong>あり、それを変えるには <a href="../Audio_Listeners/audio_listener_orientation.htm"><span class="notranslate">audio_listener_orientation</span></a>.しかし、デフォルトではその向きは上下逆になっています。しかし、<span data-keyref="GameMaker Name">GameMakerの</span>Y軸は下を向いているので、リスナーは<span class="notranslate">room</span> の中で逆さまに立っていることになります。</p>
-  <p>左のスピーカーから聞こえると思われるものはすべて、実際には右のスピーカーから聞こえ、その逆もまた然りです。 <a href="../Audio_Listeners/audio_listener_orientation.htm"><span class="notranslate">audio_listener_orientation</span></a>のページを参照してください）。したがって、エミッタとリスナーを移動し始めたら、リスナーの向きを次のように設定してください。 </p>
+  <p><strong>位置だけ</strong>でなく、<strong>向きも</strong>あり、それを変えるには <a
+      href="../Audio_Listeners/audio_listener_orientation.htm"><span
+        class="notranslate">audio_listener_orientation</span></a>.しかし、デフォルトではその向きは上下逆になっています。しかし、<span
+      data-keyref="GameMaker Name">GameMakerの</span>Y軸は下を向いているので、リスナーは<span class="notranslate">room</span>
+    の中で逆さまに立っていることになります。</p>
+  <p>左のスピーカーから聞こえると思われるものはすべて、実際には右のスピーカーから聞こえ、その逆もまた然りです。 <a
+      href="../Audio_Listeners/audio_listener_orientation.htm"><span
+        class="notranslate">audio_listener_orientation</span></a>のページを参照してください）。したがって、エミッタとリスナーを移動し始めたら、リスナーの向きを次のように設定してください。
+  </p>
   <p class="code">audio_listener_orientation(0, 0, 1, 0, -1, 0);</p>
-  <p>上記のコードでは、デフォルトのリスナーの向きを、<strong>画面を</strong> <strong>上向きに</strong>見るように設定しています。これは、リスナーがコンピュータの前に立っているか座っていて、画面を見ている状態に相当します。</p>
+  <p>上記のコードでは、デフォルトのリスナーの向きを、<strong>画面を</strong>
+    <strong>上向きに</strong>見るように設定しています。これは、リスナーがコンピュータの前に立っているか座っていて、画面を見ている状態に相当します。
+  </p>
   <p>トップダウンのゲームを作る場合、リスナーの向きをプレイヤー（または他の「リスナー」）の向いている方向に従わせると、より面白くなることがあります。これは、次のようなコードで実現できます。 </p>
   <p class="code">audio_listener_orientation(0, 0, 1, lengthdir_x(1, direction), lengthdir_y(1, direction), 0);</p>
-  <p>このコードでは、まったく変化しない（常にy = -1）上向きベクトルを持つ代わりに、プレイヤーの方向に応じて変化させます。これを実現する最も簡単な方法は <a href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm"><span class="notranslate">lengthdir_x</span></a>と <a href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm"><span class="notranslate">lengthdir_y</span></a>関数を使うことです。リスナーは画面を見続けているので、look atベクトルはそのままでいいのです。</p>
+  <p>このコードでは、まったく変化しない（常にy = -1）上向きベクトルを持つ代わりに、プレイヤーの方向に応じて変化させます。これを実現する最も簡単な方法は <a
+      href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm"><span
+        class="notranslate">lengthdir_x</span></a>と <a
+      href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm"><span
+        class="notranslate">lengthdir_y</span></a>関数を使うことです。リスナーは画面を見続けているので、look atベクトルはそのままでいいのです。</p>
   <h3>サウンドを再生する</h3>
-  <p>フォールオフモデルを設定し、リスナーの位置と向きが正しく更新されたことを確認したら、次のようにして3Dオーディオ空間でのサウンド再生を開始します。 <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>: </p>
+  <p>フォールオフモデルを設定し、リスナーの位置と向きが正しく更新されたことを確認したら、次のようにして3Dオーディオ空間でのサウンド再生を開始します。 <a
+      href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>: </p>
   <p class="code">sound_instance = audio_play_sound_at(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);</p>
-  <p>上記のコードでは、サウンド &quot;snd_Explosion &quot;を位置 (x, y, 0)<strong>で</strong>再生し、フォールオフ基準距離を100、フォールオフ最大距離を300、フォールオフ係数を1としています。</p>
-  <p>サウンドの特定のプロパティは、上記の<span class="inline2">sound_instance</span>変数を通してアクセスできるので、変更できることに注意してください。ただし、これらはあくまでサウンド自体のプロパティであり、ゲイン、オフセット、ピッチなどです。を使用して再生されるサウンドの位置やベロシティを変更する方法はありません。 <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>.</p>
-  <p>全体として <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>は、3Dオーディオ空間でシンプルなサウンドを再生する良い方法ですが、制限があります。サウンドが再生されると、位置、ベロシティ、フォールオフパラメータを変更することができません。位置とフォールオフの<i>パラメータは</i>関数に渡されますが、その後で変更することはできません。</p>
+  <p>上記のコードでは、サウンド &quot;snd_Explosion &quot;を位置 (x, y,
+    0)<strong>で</strong>再生し、フォールオフ基準距離を100、フォールオフ最大距離を300、フォールオフ係数を1としています。</p>
+  <p>サウンドの特定のプロパティは、上記の<span
+      class="inline2">sound_instance</span>変数を通してアクセスできるので、変更できることに注意してください。ただし、これらはあくまでサウンド自体のプロパティであり、ゲイン、オフセット、ピッチなどです。を使用して再生されるサウンドの位置やベロシティを変更する方法はありません。
+    <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>.
+  </p>
+  <p>全体として <a href="../audio_play_sound_at.htm"><span
+        class="notranslate">audio_play_sound_at</span></a>は、3Dオーディオ空間でシンプルなサウンドを再生する良い方法ですが、制限があります。サウンドが再生されると、位置、ベロシティ、フォールオフパラメータを変更することができません。位置とフォールオフの<i>パラメータは</i>関数に渡されますが、その後で変更することはできません。
+  </p>
   <p>サウンドの再生方法をより細かく制御したい場合は、オーディオエミッターを使用します。</p>
   <h3>エミッターの追加</h3>
-  <p>オーディオエミッタを追加するには <a href="audio_emitter_create.htm"><span class="notranslate">audio_emitter_create</span></a>.これらは<span data-keyref="Position_Origin">(0, 0, 0)</span> に配置され、ベロシティは 0、デフォルトのフォールオフ設定になっています。</p>
+  <p>オーディオエミッタを追加するには <a href="audio_emitter_create.htm"><span
+        class="notranslate">audio_emitter_create</span></a>.これらは<span data-keyref="Position_Origin">(0, 0, 0)</span>
+    に配置され、ベロシティは 0、デフォルトのフォールオフ設定になっています。</p>
   <p class="code">emitter = audio_emitter_create();</p>
   <h3>エミッタの更新</h3>
   <p>オーディオエミッターは、音を「発する」ものです。現実世界でのスピーカーに例えることができます。</p>
-  <p>と比較すると <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>を使うと、エミッタの位置、ベロシティ、リスナーマスク、フォールオフのパラメータを変更することができます。 <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a>.</p>
-  <p>エミッタの位置は，次のようにして更新することができます． <a href="audio_emitter_position.htm"><span class="notranslate">audio_emitter_position</span></a>.これはインスタンスの位置を設定することができます。 </p>
+  <p>と比較すると <a href="../audio_play_sound_at.htm"><span
+        class="notranslate">audio_play_sound_at</span></a>を使うと、エミッタの位置、ベロシティ、リスナーマスク、フォールオフのパラメータを変更することができます。 <a
+      href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a>.</p>
+  <p>エミッタの位置は，次のようにして更新することができます． <a href="audio_emitter_position.htm"><span
+        class="notranslate">audio_emitter_position</span></a>.これはインスタンスの位置を設定することができます。 </p>
   <p class="code">audio_emitter_position(emitter, x, y, 0);</p>
-  <p>エミッタの速度は、以下の方法で更新されます。 <a href="audio_emitter_velocity.htm"><span class="notranslate">audio_emitter_velocity</span></a>.最も簡単な方法は、速度を設定するために <a href="../../Instances/Instance_Variables/hspeed.htm"><span class="notranslate">hspeed</span></a>と <a href="../../Instances/Instance_Variables/vspeed.htm"><span class="notranslate">vspeed</span></a>に設定することです。 </p>
+  <p>エミッタの速度は、以下の方法で更新されます。 <a href="audio_emitter_velocity.htm"><span
+        class="notranslate">audio_emitter_velocity</span></a>.最も簡単な方法は、速度を設定するために <a
+      href="../../Instances/Instance_Variables/hspeed.htm"><span class="notranslate">hspeed</span></a>と <a
+      href="../../Instances/Instance_Variables/vspeed.htm"><span class="notranslate">vspeed</span></a>に設定することです。 </p>
   <p class="code">audio_emitter_velocity(emitter, hspeed, vspeed, 0);</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> オーディオエミッタの<i>速度は</i>、1<i>ステップあたりのピクセル</i>数で表現されます。<span><span></span></span></p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span>
+    オーディオエミッタの<i>速度は</i>、1<i>ステップあたりのピクセル</i>数で表現されます。<span><span></span></span></p>
   <h3><span data-keyref="GameMaker Name">GameMakerで</span>作成したオーディオエミッター</h3>
-  <p><span data-keyref="GameMaker Name">GameMakerは</span> <a href="../../Sequences/Sequences.htm">Sequenceを</a>扱う際、<span> <span class="notranslate">sequence</span></span>のオーディオトラック<span><span class="inline2">（seqtracktype_audio</span> </span>）ごとにオーディオエミッターを作成します。これらのエミッターのIDは、<a href="../../Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm">Sequence Instanceの</a> <span class="inline2">activeTracks[i].emitterIndex</span>プロパティを見れば分かります。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerは</span>、このようなエミッターの位置を自動的に更新します。オーディオトラックのエミッターのベロシティは更新されませんが、これはシークエンス・ステップ・イベントのいずれかで <a href="audio_emitter_velocity.htm"><span class="notranslate">audio_emitter_velocity</span></a>を呼び出すことで行えます。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerは</span> <a
+      href="../../Sequences/Sequences.htm">Sequenceを</a>扱う際、<span> <span
+        class="notranslate">sequence</span></span>のオーディオトラック<span><span class="inline2">（seqtracktype_audio</span>
+    </span>）ごとにオーディオエミッターを作成します。これらのエミッターのIDは、<a
+      href="../../Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm">Sequence Instanceの</a> <span
+      class="inline2">activeTracks[i].emitterIndex</span>プロパティを見れば分かります。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerは</span>、このようなエミッターの位置を自動的に更新します。オーディオトラックのエミッターのベロシティは更新されませんが、これはシークエンス・ステップ・イベントのいずれかで
+    <a href="audio_emitter_velocity.htm"><span class="notranslate">audio_emitter_velocity</span></a>を呼び出すことで行えます。
+  </p>
   <h3>エミッターで音を鳴らす</h3>
-  <p><strong>エミッターで</strong>音を鳴らすには <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a>: </p>
+  <p><strong>エミッターで</strong>音を鳴らすには <a href="audio_play_sound_on.htm"><span
+        class="notranslate">audio_play_sound_on</span></a>: </p>
   <p class="code">sound_instance = audio_play_sound_on(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);<br />
     <span></span>
   </p>
   <h3>再生中のサウンドインスタンスを記録する</h3>
-  <p>のいずれかを呼び出すたびに <a href="../audio_play_sound.htm"><span class="notranslate">audio_play_sound</span></a>, <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>または <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a>のいずれかを呼び出すたびに、新しいサウンド<strong>インスタンスが</strong>作成されます。</p>
+  <p>のいずれかを呼び出すたびに <a href="../audio_play_sound.htm"><span class="notranslate">audio_play_sound</span></a>, <a
+      href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>または <a
+      href="audio_play_sound_on.htm"><span
+        class="notranslate">audio_play_sound_on</span></a>のいずれかを呼び出すたびに、新しいサウンド<strong>インスタンスが</strong>作成されます。</p>
   <p>再生されている音のインスタンスは、その位置がリスナーから遠すぎるなど、さまざまな理由で聴こえないことがあります。しかし、それは常に存在する。</p>
   <p>サウンドインスタンスのプロパティを変更したい場合は、以下のように戻り値を変数に代入する必要があります。 </p>
   <p class="code">sound_instance = audio_play_sound_at(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);</p>
@@ -70,11 +127,16 @@
     array_push(bird_sounds, _new_sound_instance);</p>
   <p>上記のコードが実行されるたびに、新しく作成されたサウンドインスタンスのIDが<span class="inline2">bird_soundsの</span>配列に追加されます。</p>
   <p>こうすることで、再生中のすべてのサウンドインスタンス（上記の例では <span class="inline">snd_Bird</span> ）を追跡することができます。</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span> 音が「再生」されることは、必ずしもリスナーに聞こえることを意味するものではありません。再生が停止した音、リスナーから遠すぎる音、低すぎるゲイン設定（または低すぎるゲイン設定のエミッターで再生された音）は、聴き取ることができません。</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span>
+    音が「再生」されることは、必ずしもリスナーに聞こえることを意味するものではありません。再生が停止した音、リスナーから遠すぎる音、低すぎるゲイン設定（または低すぎるゲイン設定のエミッターで再生された音）は、聴き取ることができません。
+  </p>
   <h3>追加リスナー</h3>
-  <p>追加のリスナーを使用したい場合は、まずシステムが複数のリスナーをサポートしているかどうかを <a href="../Audio_Listeners/audio_get_listener_count.htm"><span class="notranslate">audio_get_listener_count</span></a>.</p>
-  <p>複数のリスナーがいる場合 <a href="../Audio_Listeners/audio_get_listener_info.htm"><span class="notranslate">audio_get_listener_info</span></a>を使用して、各リスナーの名前、リスナーマスク、インデックスを取得することができます。</p>
-  <p>リスナーのインデックスがわかっていれば、 <span class="inline">audio_listener_</span> の代わりに <span class="inline">audio_listener_set_</span> で始まる関数を使用して、リスナーの設定（位置、速度、方向）を変更することができます。</p>
+  <p>追加のリスナーを使用したい場合は、まずシステムが複数のリスナーをサポートしているかどうかを <a href="../Audio_Listeners/audio_get_listener_count.htm"><span
+        class="notranslate">audio_get_listener_count</span></a>.</p>
+  <p>複数のリスナーがいる場合 <a href="../Audio_Listeners/audio_get_listener_info.htm"><span
+        class="notranslate">audio_get_listener_info</span></a>を使用して、各リスナーの名前、リスナーマスク、インデックスを取得することができます。</p>
+  <p>リスナーのインデックスがわかっていれば、 <span class="inline">audio_listener_</span> の代わりに <span
+      class="inline">audio_listener_set_</span> で始まる関数を使用して、リスナーの設定（位置、速度、方向）を変更することができます。</p>
   <h2>機能</h2>
   <p>オーディオエミッタを扱うために、以下の関数が存在する。</p>
   <ul class="colour">
@@ -85,7 +147,8 @@
     <li><a href="audio_emitter_falloff.htm"><span class="notranslate">audio_emitter_falloff</span></a></li>
     <li><a href="audio_emitter_gain.htm"><span class="notranslate">audio_emitter_gain</span></a></li>
     <li><a href="audio_emitter_pitch.htm"><span class="notranslate">audio_emitter_pitch</span></a></li>
-    <li><a href="audio_emitter_set_listener_mask.htm"><span class="notranslate">audio_emitter_set_listener_mask</span></a></li>
+    <li><a href="audio_emitter_set_listener_mask.htm"><span
+          class="notranslate">audio_emitter_set_listener_mask</span></a></li>
     <li><a href="audio_emitter_free.htm"><span class="notranslate">audio_emitter_free</span></a></li>
     <li><a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a></li>
     <li><a href="audio_emitter_get_gain.htm"><span class="notranslate">audio_emitter_get_gain</span></a></li>
@@ -96,7 +159,8 @@
     <li><a href="audio_emitter_get_vx.htm"><span class="notranslate">audio_emitter_get_vx</span></a></li>
     <li><a href="audio_emitter_get_vy.htm"><span class="notranslate">audio_emitter_get_vy</span></a></li>
     <li><a href="audio_emitter_get_vz.htm"><span class="notranslate">audio_emitter_get_vz</span></a></li>
-    <li><a href="audio_emitter_get_listener_mask.htm"><span class="notranslate">audio_emitter_get_listener_mask</span></a></li>
+    <li><a href="audio_emitter_get_listener_mask.htm"><span
+          class="notranslate">audio_emitter_get_listener_mask</span></a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -104,11 +168,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Audio.htm">オーディオ</a></div>
-        <div style="float:right">次へ<a href="../Audio_Listeners/Audio_Listeners.htm">オーディオリスナー</a></div>
+        <div style="float:left">前のページ：<a href="../Audio.htm">オーディオ</a></div>
+        <div style="float:right">次のページ：<a href="../Audio_Listeners/Audio_Listeners.htm">オーディオリスナー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Emitters
@@ -117,4 +182,5 @@ Audio Emitters
 audio_emitter_functions
 -->
 </body>
+
 </html>

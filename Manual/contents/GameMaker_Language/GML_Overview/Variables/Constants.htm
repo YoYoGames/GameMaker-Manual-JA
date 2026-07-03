@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>定数</title>
@@ -9,27 +10,41 @@
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the different GML constants" />
-  <meta name="rh-index-keywords" content="Constants,macro,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
+  <meta name="rh-index-keywords"
+    content="Constants,macro,enum,pointer_invalid,pointer_null,undefined,NaN,infinity,true,false,pi" />
   <meta name="search-keywords" content="constants,macros,enums,macro,enum" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>定数</h1>
-  <p>定数とは、ゲーム開始時に一度だけ設定され、その後は決して変化しない変数の一種です。実際、定数値は<em>宣言された後</em>、変更することができません。このため、ゲーム中に特殊なデータを識別するための値を保持するのに適しています。</p>
-  <p><span class="notranslate">GameMaker Language</span> では、ユーザー定義定数には<strong>マクロと</strong> <strong>列挙型の</strong>2種類があり、それぞれについて以下に説明します。また、<a href="../Data_Types.htm">データ型に</a>関係なく常に同じ値を持つものは定数に分類されることに注意してください。例えば、<span class="notranslate">string</span> や数字の 3 のようなものです。</p>
-  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span> には、特定のものを識別するために使用する組み込みの定数値も多数あります。これらの定数値については、<a href="../../GML_Reference/GML_Reference.htm">GML Referenceの</a>中で、それらを必要とする<span class="notranslate">runtime</span> 関数の適切なページで概説しています。</p>
+  <p>
+    定数とは、ゲーム開始時に一度だけ設定され、その後は決して変化しない変数の一種です。実際、定数値は<em>宣言された後</em>、変更することができません。このため、ゲーム中に特殊なデータを識別するための値を保持するのに適しています。
+  </p>
+  <p><span class="notranslate">GameMaker Language</span> では、ユーザー定義定数には<strong>マクロと</strong>
+    <strong>列挙型の</strong>2種類があり、それぞれについて以下に説明します。また、<a
+      href="../Data_Types.htm">データ型に</a>関係なく常に同じ値を持つものは定数に分類されることに注意してください。例えば、<span class="notranslate">string</span>
+    や数字の 3 のようなものです。
+  </p>
+  <p class="note"><span class="note">注</span> <span class="notranslate">GameMaker Language</span>
+    には、特定のものを識別するために使用する組み込みの定数値も多数あります。これらの定数値については、<a href="../../GML_Reference/GML_Reference.htm">GML
+      Referenceの</a>中で、それらを必要とする<span class="notranslate">runtime</span> 関数の適切なページで概説しています。</p>
   <h2>マクロ</h2>
-  <p>マクロは正確には変数ではありませんが、使い方が似ています。つまり、<a class="glossterm" data-glossterm="ハードコード化" href="#">ハードコードされた</a>値を置き換えるために、コード全体で使用できる名前付きの値なのです。基本的に、マクロは式を保持する名前付き変数です。マクロは<a href="../Script_Functions.htm">スクリプトエディターで</a>定義し、通常の変数と同じようにコードやアクションで使用することができますが、ひとつだけ違うのは、<i>ゲーム内で</i>変更できないことです。</p>
+  <p>マクロは正確には変数ではありませんが、使い方が似ています。つまり、<a class="glossterm" data-glossterm="ハードコード化"
+      href="#">ハードコードされた</a>値を置き換えるために、コード全体で使用できる名前付きの値なのです。基本的に、マクロは式を保持する名前付き変数です。マクロは<a
+      href="../Script_Functions.htm">スクリプトエディタで</a>定義し、通常の変数と同じようにコードやアクションで使用することができますが、ひとつだけ違うのは、<i>ゲーム内で</i>変更できないことです。
+  </p>
   <p>マクロのシンタックス構造は以下の通りである。</p>
   <p class="code">#macro <i>&lt;variable&gt;</i> <i>&lt;expression&gt;</i></p>
   <p>例えば、次のようなマクロ &quot;<span class="inline">total_weapons</span>&quot; を定義したとします。</p>
   <p class="code">#macro total_weapons 10</p>
   <p class="note_heading">マクロ構文...</p>
-  <p class="note">マクロを定義するには、上に示した構文を正しく使用する必要があります。等号を使ったり（変数のように）、セミコロンを最後に置いたり（通常の文のように）することはできません。マクロの定義が無効になってしまいます。<br />
+  <p class="note">
+    マクロを定義するには、上に示した構文を正しく使用する必要があります。等号を使ったり（変数のように）、セミコロンを最後に置いたり（通常の文のように）することはできません。マクロの定義が無効になってしまいます。<br />
     <br />
     例えば、このようなマクロの定義方法は正しくありません。<br />
     <br />
-   <span class="inline2">#macro total_weapons = 10;</span><br />
+    <span class="inline2">#macro total_weapons = 10;</span><br />
     <br />
     等号とコロンを削除すると、有効なマクロ定義になります。
   </p>
@@ -43,21 +58,27 @@
   </p>
   <p>定数の値を変更することができないので、このようなコードを書くとゲームがクラッシュしてしまうことに注意してください。</p>
   <p class="code">total_weapons = 11;</p>
-  <p>マクロはコードやスクリプトのどこにでも定義でき、最初からあったかのように<i>プリコンパイル</i>されてゲームに含まれます。しかし、専用の<span class="notranslate">script</span> <span class="notranslate">asset</span> を作成し、そこにすべてのマクロを定義することをお勧めします。後で整理したり、デバッグしたりするのが楽になります。</p>
-  <p>マクロの値を実行時に変更する必要がある場合は、マクロを<a href="Global_Variables.htm">グローバル変数に</a>したほうがよいでしょう。<span> <a href="../Runtime_Functions.htm">ランタイム </a></span><a href="../Runtime_Functions.htm"><span class="notranslate">function</span></a>.関数に設定することで、マクロを使用するたびにこの関数が呼び出されることを意味します。例えば</p>
+  <p>マクロはコードやスクリプトのどこにでも定義でき、最初からあったかのように<i>プリコンパイル</i>されてゲームに含まれます。しかし、専用の<span class="notranslate">script</span> <span
+      class="notranslate">asset</span> を作成し、そこにすべてのマクロを定義することをお勧めします。後で整理したり、デバッグしたりするのが楽になります。</p>
+  <p>マクロの値を実行時に変更する必要がある場合は、マクロを<a href="Global_Variables.htm">グローバル変数に</a>したほうがよいでしょう。<span> <a
+        href="../Runtime_Functions.htm">ランタイム </a></span><a href="../Runtime_Functions.htm"><span
+        class="notranslate">function</span></a>.関数に設定することで、マクロを使用するたびにこの関数が呼び出されることを意味します。例えば</p>
   <p class="code">#macro col make_colour_hsv(irandom(255), 255, 255)</p>
   <p>そして、このマクロを次のように呼び出すことになる。</p>
   <p class="code">image_blend = col;</p>
-  <p>このコードを使用すると、マクロを使用するたびに画像が異なる色にブレンドされます。なお、マクロを複数行に分割する場合は、 <span class="inline"><span class="inline">\</span> 文字を使って改行位置を示すことができます。例としては、次のようなものです。</p>
+  <p>このコードを使用すると、マクロを使用するたびに画像が異なる色にブレンドされます。なお、マクロを複数行に分割する場合は、 <span class="inline"><span class="inline">\</span>
+      文字を使って改行位置を示すことができます。例としては、次のようなものです。</p>
   <p class="code">#macro hello show_debug_message(&quot;Hello&quot; + \<br />
     string(player_name) + \<br />
     &quot;, how are you today?&quot;);</p>
   <p>これは、マクロを分割しても最終的なマクロの結果に影響を与えないようにするためで、単にコード行数の多いマクロで複数行のテキストをサポートするためのものです。</p>
-  <p>つまり、同じマクロ名でも、現在選択されているコンフィグによって、異なる値を与えることができます。例えば、<span class="notranslate">Android</span> Ads と<span class="notranslate">iOS</span> Ads のコンフィギュレーションがある場合、必要なアプリ ID 値を保持するために 1 つのマクロを定義することができます。</p>
+  <p>つまり、同じマクロ名でも、現在選択されているコンフィグによって、異なる値を与えることができます。例えば、<span class="notranslate">Android</span> Ads と<span
+      class="notranslate">iOS</span> Ads のコンフィギュレーションがある場合、必要なアプリ ID 値を保持するために 1 つのマクロを定義することができます。</p>
   <p class="code">#macro ad_id &quot;&quot;;<br />
     #macro Android:ad_id &quot;com.yoyogames.googlegame&quot;<br />
     #macro iOS:ad_id &quot;com.yoyogames.appstoregame&quot;</p>
-  <p>ご覧のように、まず設定名を与え、次にコロン（ <span class="inline">:</span> ）を置き、次にマクロ名と値を与えています。なお、コロン <span class="inline">:</span> と設定名やマクロ名の間には空白を入れてはいけません。そうしないとエラーになります。</p>
+  <p>ご覧のように、まず設定名を与え、次にコロン（ <span class="inline">:</span> ）を置き、次にマクロ名と値を与えています。なお、コロン <span class="inline">:</span>
+    と設定名やマクロ名の間には空白を入れてはいけません。そうしないとエラーになります。</p>
   <h2 id="enumhead">エンムス</h2>
   <p>enumは「列挙子」であり、基本的に定数値のリストを持つ独自の限定的なデータ型を作ることができ、それらは次のような構造を持っています。</p>
   <p class="code">enum <i>&lt;variable&gt;</i><br />
@@ -78,7 +99,10 @@
         INDIGO,<br />
         VIOLET<br />
     }</p>
-  <p>enumの項目は<b>整数値か</b>、<b>以前のenumで整数値</b>として<b>評価される<span class="glossextra">式のみ</span></b>で、デフォルトでは0から順に番号が付けられます。したがって、上記の例では、 <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc.がデフォルトで使用されます。</p>
+  <p>enumの項目は<b>整数値か</b>、<b>以前のenumで整数値</b>として<b>評価される<span
+        class="glossextra">式のみ</span></b>で、デフォルトでは0から順に番号が付けられます。したがって、上記の例では、 <span class="inline">red = 0</span>,
+    <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc.がデフォルトで使用されます。
+  </p>
   <p>また、作成時にenum変数に値を代入することも可能である。</p>
   <p class="code">enum enum_test<br />
     {<br />
@@ -96,14 +120,18 @@
         VIOLET = 35 * ENUM_TEST.VAL<br />
     }
   </p>
-  <p>上の例では、別の列挙型を使用して &quot;violet &quot;を表す式を作成していることに注意してください。これは、参照する enum が式で使用する enum より<i>も前に</i>作成されている場合にのみ機能します。ただし、変数や関数に対しては機能しません。また、enumの値はすべて<b>整数</b>値で評価されることに注意してください。自分で作成する場合は、enumが動作するために<i>整数値のみが許可さ</i>れることに注意する必要があります。この値は浮動小数点倍精度の数値が表現できる任意の整数値で、負の値も含まれます。</p>
+  <p>上の例では、別の列挙型を使用して &quot;violet &quot;を表す式を作成していることに注意してください。これは、参照する enum が式で使用する enum
+    より<i>も前に</i>作成されている場合にのみ機能します。ただし、変数や関数に対しては機能しません。また、enumの値はすべて<b>整数</b>値で評価されることに注意してください。自分で作成する場合は、enumが動作するために<i>整数値のみが許可さ</i>れることに注意する必要があります。この値は浮動小数点倍精度の数値が表現できる任意の整数値で、負の値も含まれます。
+  </p>
   <p>与えられたenum型内の値に後からアクセスするには、次のようにポイント <span class="inline">&quot;.&quot;</span> 。</p>
   <p class="code">variable = &lt;enum_name&gt;.&lt;<em>enum_variable</em>&gt;;</p>
   <p>例として、上記のコードで作成した &quot;<span class="inline">rainbowcolours</span>&quot; 列挙型を使用してみましょう。</p>
   <p class="code">colour_value = rainbowcolours.green * rainbowcolours.red;</p>
   <p> <span class="inline">colour_value</span> 変数には、100 (20 * 5) という値が格納されることになる。</p>
   <p>enum定数を作成した後にその値を変更することは<em>できない </em>ことに注意してください。</p>
-  <p class="note"><strong>注</strong>：Enum 値は<span class="notranslate">int64s</span> として保存されるため、それらに対して <span class="inline"><a href="../../GML_Reference/Variable_Functions/is_real.htm">is_real()</a></span> を実行すると、 <span class="inline">false</span> が返されます。</p>
+  <p class="note"><strong>注</strong>：Enum 値は<span class="notranslate">int64s</span> として保存されるため、それらに対して <span
+      class="inline"><a href="../../GML_Reference/Variable_Functions/is_real.htm">is_real()</a></span> を実行すると、 <span
+      class="inline">false</span> が返されます。</p>
   <p> </p>
   <h2>内蔵定数</h2>
   <p>次の表は、プロジェクト内のいくつかの関数や操作で返される組み込み定数の一覧です。</p>
@@ -111,12 +139,14 @@
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">pointer_null</span></td>
-        <td>この定数は、ポインタが意味のあるものを指していないことを示します（C++の<span> </span><span class="inline">NULL</span> <span> </span> や C#の <span class="inline">null</span> と同じです）。<br />
-          この値は<a class="glossterm" data-glossterm="まがまがしい" href="../Data_Types.htm#">falsy</a>である。</td>
+        <td>この定数は、ポインタが意味のあるものを指していないことを示します（C++の<span> </span><span class="inline">NULL</span> <span> </span> や C#の
+          <span class="inline">null</span> と同じです）。<br />
+          この値は<a class="glossterm" data-glossterm="まがまがしい" href="../Data_Types.htm#">falsy</a>である。
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">pointer_invalid</span></td>
@@ -129,21 +159,24 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">NaN</span></td>
-        <td><span>この定数は、コンパイラが演算結果を数値として評価できない場合に返すことができるもので、例えば、0 / 0 は実数として定義できないので、次のように表される。 </span><span class="inline">NaN</span></td>
+        <td><span>この定数は、コンパイラが演算結果を数値として評価できない場合に返すことができるもので、例えば、0 / 0 は実数として定義できないので、次のように表される。 </span><span
+            class="inline">NaN</span></td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">infinity</span></td>
         <td><span class="inline"><span data-highlight-container="true"><span data-highlight="true">
                 <font face="open_sansregular"><span style="font-size: 18px; font-weight: 400;">This constant </span>
-              <span>は無限大とみなされる数で、例えば浮動小数点値をゼロで割ると1.0/0となるような数を指します。</span></td>
+                  <span>は無限大とみなされる数で、例えば浮動小数点値をゼロで割ると1.0/0となるような数を指します。</span></td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">true</span></td>
-        <td>この定数は値1を表し、<span data-keyref="GameMaker Name">GameMakerは</span>これをブール値「真」として評価する（なお、1以上の値は <span class="inline">true</span> として評価される）。</td>
+        <td>この定数は値1を表し、<span data-keyref="GameMaker Name">GameMakerは</span>これをブール値「真」として評価する（なお、1以上の値は <span
+            class="inline">true</span> として評価される）。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">false</span></td>
-        <td>この定数は値0を表し、<span data-keyref="GameMaker Name">GameMakerは</span>これをブール値「false」として評価する（0以下の値は <span class="inline">false</span>)ことに注意。</td>
+        <td>この定数は値0を表し、<span data-keyref="GameMaker Name">GameMakerは</span>これをブール値「false」として評価する（0以下の値は <span
+            class="inline">false</span>)ことに注意。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">pi</span></td>
@@ -151,17 +184,19 @@
       </tr>
     </tbody>
   </table>
-  <p>上記のいくつかの定数の等価比較については、「<a data-xref="{text}" href="../../../Additional_Information/Type_Tables.htm#h">等価表</a>」を参照してください。</p>
+  <p>上記のいくつかの定数の等価比較については、「<a data-xref="{text}"
+      href="../../../Additional_Information/Type_Tables.htm#h">等価表</a>」を参照してください。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Variables_And_Variable_Scope.htm">変数と変数のスコープ</a></div>
-        <div style="float:right">次へ<a href="Local_Variables.htm">ローカル変数</a></div>
+        <div style="float:left">前のページ：<a href="../Variables_And_Variable_Scope.htm">変数と変数のスコープ</a></div>
+        <div style="float:right">次のページ：<a href="Local_Variables.htm">ローカル変数</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 constants
@@ -178,4 +213,5 @@ macro
 enum
 -->
 </body>
+
 </html>

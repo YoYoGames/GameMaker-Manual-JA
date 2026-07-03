@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>粒子の向きを設定する</title>
+  <title>パーティクルの向きを設定する</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
@@ -12,29 +13,36 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Particle Orientation" />
   <meta name="search-keywords" content="Set Particle Orientation" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img> 粒子の向きを設定する</h1>
+  <h1><img> パーティクルの向きを設定する</h1>
   <p>このアクションは、パーティクルの向き（パーティクル画像が描画される角度）を設定するために使用します。サイズを設定するタイプのユニークなID値を指定します（as returned when
-    アクション<a href="Create_Particle_Type.htm">Create Particle Type</a>でタイプを作成した場合)、最初の開始方向の範囲を指定し、次に増加量、最後に &quot;wiggle &quot;を指定します。パーティクルが作成される方向
-    で、0が右、90が上、180が左、270が下と計算されるので、最小値0、最大値360に設定すると、各パーティクルは360°の周りにランダムな量で回転して放出されます（これはパーティクル方向には影響<b>しない</b>ことに注意しましょう）。</p>
+    アクション<a href="Create_Particle_Type.htm">Create Particle Type</a>でタイプを作成した場合)、最初の開始方向の範囲を指定し、次に増加量、最後に &quot;wiggle
+    &quot;を指定します。パーティクルが作成される方向
+    で、0が右、90が上、180が左、270が下と計算されるので、最小値0、最大値360に設定すると、各パーティクルは360°の周りにランダムな量で回転して放出されます（これはパーティクル方向には影響<b>しない</b>ことに注意しましょう）。
+  </p>
   <p>パーティクルの向きを増やすオプションでは、パーティクルが生きている間、ゲームフレームごとに基本的な向き角度に追加される値を入力することができます。例えば、この値を0.1に設定すると、各フレームの画像角度に0.1が追加されます。
     ゲームフレーム負の値を使用すると、パーティクルは反時計回りに回転し、負の値を使用すると時計回りに回転するようになります。最小の方向
     の<i>減少が</i>-0.01で、<i>増加の</i>最小値は0.01です。</p>
-  <p>また、粒子の向きに &quot;wiggle &quot;オプションを設定することができます。これは0から指定した値の間でランダムに生成され、パーティクルの寿命の各ステップでパーティクル画像の角度に加算または減算される値です。
+  <p>また、パーティクルの向きに &quot;wiggle
+    &quot;オプションを設定することができます。これは0から指定した値の間でランダムに生成され、パーティクルの寿命の各ステップでパーティクル画像の角度に加算または減算される値です。
     は、描画された画像の回転を変動させる。明らかに大きな値は小さな値よりも顕著であり、この値は最大範囲が-20から20でマイナスになることもある。</p>
-  <p>最後に、向きをパーティクル方向<i>に対して相対的に</i>するかしないかを選択することができます。つまり、パーティクルに方向（と速度）が設定されている間、パーティクル画像はそのベクトルに基づいて方向づけられるということです。注意点としては
+  <p>
+    最後に、向きをパーティクル方向<i>に対して相対的に</i>するかしないかを選択することができます。つまり、パーティクルに方向（と速度）が設定されている間、パーティクル画像はそのベクトルに基づいて方向づけられるということです。注意点としては
     パーティクルの速度を小さくする設定にしていて、パーティクルが生きている間に0になると、速度がないために方向がデフォルト値の0°になり、相対的な方向によってパーティクル画像が異なる方向に「ジャンプ」してしまいます。
     の方向角度を指定します。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Particle Orientation Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Orientation.png" /></p>
+  <p><img alt="Set Particle Orientation Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Orientation.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Type</span></td>
@@ -54,7 +62,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Wiggle</span></td>
-        <td>粒子の向きを1ステップごとにランダムに加減する最大値(+/-20)</td>
+        <td>パーティクルの向きを1ステップごとにランダムに加減する最大値(+/-20)</td>
       </tr>
       <tr>
         <td><span class="notranslate">Relative To Direction</span></td>
@@ -72,11 +80,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Particle_Actions.htm">パーティクルアクション</a></div>
-        <div style="float:right">次へ<a href="Set_Particle_Gravity.htm">パーティクルグラビティの設定</a></div>
+        <div style="float:left">前のページ：<a href="Particle_Actions.htm">パーティクルアクション</a></div>
+        <div style="float:right">次のページ：<a href="Set_Particle_Gravity.htm">パーティクルグラビティの設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Orientation
@@ -85,4 +94,5 @@ Action - Set Particle Orientation
 action_part_type_orientation
 -->
 </body>
+
 </html>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>リモートワーカー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,77 +13,114 @@
   <meta name="rh-index-keywords" content="Remote Workers" />
   <meta name="search-keywords" content="Remote Workers" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>リモートワーカー</h1>
-  <p>ゲームをコンパイルするときは、通常、<span data-keyref="GameMaker Name">GameMakerが</span>インストールされているコンピュータである「ローカル」ワーカーを使用します。しかし、状況によっては、他のコンピュータを使ってプロジェクトを構築する必要があります。例えば、以下のような場合です。
-    Mac で作業していて、<span class="notranslate">Windows</span> プロジェクトをビルドしたい場合、<strong>リモートワーカーを</strong>設定し、<span class="notranslate">Windows</span> PC にビルドをさせることになります。基本的に、リモートワーカーを使うと、<span data-keyref="GameMaker Name">GameMakerは</span>すべてのリモートワーカーを送信します。
+  <p>ゲームをコンパイルするときは、通常、<span
+      data-keyref="GameMaker Name">GameMakerが</span>インストールされているコンピュータである「ローカル」ワーカーを使用します。しかし、状況によっては、他のコンピュータを使ってプロジェクトを構築する必要があります。例えば、以下のような場合です。
+    Mac で作業していて、<span class="notranslate">Windows</span> プロジェクトをビルドしたい場合、<strong>リモートワーカーを</strong>設定し、<span
+      class="notranslate">Windows</span> PC にビルドをさせることになります。基本的に、リモートワーカーを使うと、<span
+      data-keyref="GameMaker Name">GameMakerは</span>すべてのリモートワーカーを送信します。
     必要なファイルを実行中の（ローカル）マシンからリモートワーカーマシンに送り、そのマシンを使ってプロジェクトの最終実行ファイルを構築します（リモートマシンに保存するか、その後ローカルマシンに戻すか）。
     ただし、この機能を使用する前に、ビルドマシンに特定のツールをインストールし、いくつかのセットアップを行う必要がありますので、ここで説明します。</p>
-  <p class="note"><strong>重要!ロ</strong>ーカルの<span class="notranslate">Windows</span> PC とリモートの<span class="notranslate">Windows</span> PC、またはローカルの Mac PC とリモートの<span class="notranslate">Windows</span> PC の間でリモートワーカーを設定できますが、現在ローカルの<span class="notranslate">Windows</span> (または Mac) PC とリモートの Mac PC を設定することはできません。
+  <p class="note"><strong>重要!ロ</strong>ーカルの<span class="notranslate">Windows</span> PC とリモートの<span
+      class="notranslate">Windows</span> PC、またはローカルの Mac PC とリモートの<span class="notranslate">Windows</span> PC
+    の間でリモートワーカーを設定できますが、現在ローカルの<span class="notranslate">Windows</span> (または Mac) PC とリモートの Mac PC を設定することはできません。
     Macのリモートワーカーを持つことができます。<span class="notranslate">Windows</span> 。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">初期設定</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">リモートワーカーを設定するためには、まず、使用するPCにリモートワーカー<strong>構築ツールアプリケーションを</strong>インストールする必要があります。このツールは、ローカルマシンの<span data-keyref="GameMaker Name">GameMakerの</span> <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">ビルドメニューから</a>、&quot;<strong>Show Remote Worker Installer</strong>&quot;を選択することで見つけることができます。</p>
+    <p class="dropspot">
+      リモートワーカーを設定するためには、まず、使用するPCにリモートワーカー<strong>構築ツールアプリケーションを</strong>インストールする必要があります。このツールは、ローカルマシンの<span
+        data-keyref="GameMaker Name">GameMakerの</span> <a
+        href="../IDE_Navigation/Menus/The_Build_Menu.htm">ビルドメニューから</a>、&quot;<strong>Show Remote Worker
+        Installer</strong>&quot;を選択することで見つけることができます。</p>
     <p class="dropspot"><img>または、<a href="../Introduction/Compiling.htm">ターゲットマネージャの</a>「目」アイコンをクリックし、ターゲットマネージャから
       リモートワーカーインストーラー</p>
     <p class="dropspot">
       <img> インストーラーは、&quot;<span class="inline">GameMakerStudio-Remote-Installer-X.X.X.XXX.exe</span>&quot;のような名前になります。
-      をリモートワーカーとして使用するPCにコピーしてください（リモートワーカーに<span data-keyref="GameMaker Name">GameMakerを</span>インストールする必要はなく、このプログラムのみです）。<br /></p>
-    <p class="dropspot">ビルドPCにコピーしたら、画面の指示に従ってインストールし、インストーラーが終了すると、OSからファイアウォールを通したネットワークへのアクセスを求められることがあります。アクセスを許可すると、インストーラーが次のような画面を表示します。
+      をリモートワーカーとして使用するPCにコピーしてください（リモートワーカーに<span
+        data-keyref="GameMaker Name">GameMakerを</span>インストールする必要はなく、このプログラムのみです）。<br />
+    </p>
+    <p class="dropspot">
+      ビルドPCにコピーしたら、画面の指示に従ってインストールし、インストーラーが終了すると、OSからファイアウォールを通したネットワークへのアクセスを求められることがあります。アクセスを許可すると、インストーラーが次のような画面を表示します。
       このページに表示される<strong>IPアドレスと</strong> <strong>ポート</strong>番号は、次のステップで必要になりますので、必ずメモしておいてください。<br /></p>
     <p class="dropspot"><img>ここで、<span data-keyref="GameMaker Name">GameMakerが</span>インストールされているマシンに戻って
       2 をインストールし、ターゲットマネージャーボタン（<img> ）をクリックして、ターゲットマネージャーウィンドウを開きます。
       で、Worker セクションに移動し、Add Worker ボタン（<img> ）をクリックします。すると、以下の画面が表示されます。
       をクリックすると、次のようなウィンドウが表示されます。<br /></p>
     <p class="dropspot"><img>ここで、リモートワーカーに名前を付ける必要があります。
-      ターゲットマネージャの<strong>ワーカーリストに</strong>表示されます）そして、<strong>ホスト名</strong>セクションに、ワーカーマシンのアドレスと、前に表示されメモしたポートを追加してください。</p>
-    <p class="dropspot">すべてが正しく行われた場合、リモートワーカーマシンに正常に接続できたというメッセージが表示されるはずです。リモートワーカーをインストールし、メインのコンピューター（<span class="notranslate">IDE</span> ）に接続したら、<strong>ローカル</strong>
+      ターゲットマネージャの<strong>ワーカーリストに</strong>表示されます）そして、<strong>ホスト名</strong>セクションに、ワーカーマシンのアドレスと、前に表示されメモしたポートを追加してください。
+    </p>
+    <p class="dropspot">すべてが正しく行われた場合、リモートワーカーマシンに正常に接続できたというメッセージが表示されるはずです。リモートワーカーをインストールし、メインのコンピューター（<span
+        class="notranslate">IDE</span> ）に接続したら、<strong>ローカル</strong>
       プロジェクトをコンパイルする前に、各プラットフォームの<strong>ビルド設定</strong>（詳細は以下のセクションを参照してください）を行います。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">リモート設定</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot"><strong>設定 </strong>ページには、リモートワーカーアプリケーションのさまざまな<span class="notranslate">paths</span> とビルドの設定が表示されます。設定の上部には、リモートワーカーアプリケーションで使用されるさまざまな<span class="notranslate">paths</span> 。
-      必要であれば、これらを修正し、代替の<span class="notranslate">paths</span> に設定する必要があります（一般的にはデフォルトの<span class="notranslate">paths</span> で問題ないでしょう）。リモートワーカー設定ページには、次のいずれかの方法でアクセスできます。<br /></p>
+    <p class="dropspot"><strong>設定 </strong>ページには、リモートワーカーアプリケーションのさまざまな<span class="notranslate">paths</span>
+      とビルドの設定が表示されます。設定の上部には、リモートワーカーアプリケーションで使用されるさまざまな<span class="notranslate">paths</span> 。
+      必要であれば、これらを修正し、代替の<span class="notranslate">paths</span> に設定する必要があります（一般的にはデフォルトの<span
+        class="notranslate">paths</span> で問題ないでしょう）。リモートワーカー設定ページには、次のいずれかの方法でアクセスできます。<br /></p>
     <ul class="dropspotlist">
       <li class="dropspot">リモートマシンのブラウザで開くリモートワーカーページの上部にある「設定」リンクをクリックします。<br /><img></li>
       <li class="dropspot">リモートワーカートレイアイコンのRMBを使用して、リモートマシンのブラウザで設定を開くことができます。<br /><img></li>
       <li class="dropspot">ローカルマシンでターゲットマネージャを開き、「歯車」のアイコンをクリックすると、ローカルマシンのウィンドウにワーカーの設定が表示されます。<img></li>
     </ul>
-    <p class="dropspot">このページでは、プロジェクト構築のための<span class="notranslate">paths</span> を設定するためのさまざまなオプションを確認（および設定）することができます。<br /></p>
-    <p class="dropspot"><img alt="Build Menu Remote Worker Installer" class="center" src="../assets/Images/IDE Tools/RemoteWorker_Menu.png"/><br /></p>
+    <p class="dropspot">このページでは、プロジェクト構築のための<span class="notranslate">paths</span>
+      を設定するためのさまざまなオプションを確認（および設定）することができます。<br /></p>
+    <p class="dropspot"><img alt="Build Menu Remote Worker Installer" class="center"
+        src="../assets/Images/IDE Tools/RemoteWorker_Menu.png" /><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">ローカルビルドの設定</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">使用するリモートワーカーアプリケーションの<span class="notranslate">paths</span> を確認した後、（必要に応じて）さまざまな<strong>ローカルビルド</strong>設定を行うことができます。プラットフォームが異なれば、ビルドPCにインストールするビルドツールも異なり、リモートワーカーも異なるビルドツールが必要になります。
-      ワーカーは、<strong>設定 </strong>ページを通じてゲームを構築するために、それらを使用できるようにする必要があります。ここで最初に設定するのは、<strong>一般 </strong>設定です。<br /></p>
+    <p class="dropspot">使用するリモートワーカーアプリケーションの<span class="notranslate">paths</span>
+      を確認した後、（必要に応じて）さまざまな<strong>ローカルビルド</strong>設定を行うことができます。プラットフォームが異なれば、ビルドPCにインストールするビルドツールも異なり、リモートワーカーも異なるビルドツールが必要になります。
+      ワーカーは、<strong>設定 </strong>ページを通じてゲームを構築するために、それらを使用できるようにする必要があります。ここで最初に設定するのは、<strong>一般 </strong>設定です。<br />
+    </p>
     <p class="dropspot"><img>ここで
-     <strong>ヘルプサーバーと</strong> <strong>デバッガーが </strong>使用するポートです。これらは、デバッグモジュールを使用する際に接続の問題が発生した場合に変更することができますが、一般的にはデフォルト値のままにしておくべきです。</p>
+      <strong>ヘルプサーバーと</strong> <strong>デバッガーが
+      </strong>使用するポートです。これらは、デバッグモジュールを使用する際に接続の問題が発生した場合に変更することができますが、一般的にはデフォルト値のままにしておくべきです。
+    </p>
     <p class="dropspot">次に、リモートワーカーが構築できるプラットフォームのさまざまなオプションを設定することができます。<br /></p>
     <p class="dropspot"><img> <span class="notranslate">Windows</span> ターゲットプラットフォームへのアクセスが可能な場合。
-     <a data-glossterm="仮想マシン(VM)" class="glossterm" href="#">Virtual Machine (VM</a>) オプションを使用すれば、 PC 上でリモートワーカーを使用してすぐにビルドすることができるはずです。ただし、<span class="notranslate">Windows</span> <a data-glossterm="ヨーヨーコンパイラ(YYC)" class="glossterm" href="#">YoYo Compiler (YYC)</a>を使用する場合は、ビルドPCで を に設定する必要があります。プロジェクトをコンパイルするために PC をセットアップする方法の詳細については、次のヘルプデスク記事を参照してください。<span class="notranslate">path</span> <span class="notranslate">Visual Studio</span> <span class="notranslate">Windows</span> </p>
+      <a data-glossterm="仮想マシン(VM)" class="glossterm" href="#">Virtual Machine (VM</a>) オプションを使用すれば、 PC
+      上でリモートワーカーを使用してすぐにビルドすることができるはずです。ただし、<span class="notranslate">Windows</span> <a data-glossterm="ヨーヨーコンパイラ(YYC)"
+        class="glossterm" href="#">YoYo Compiler (YYC)</a>を使用する場合は、ビルドPCで を に設定する必要があります。プロジェクトをコンパイルするために PC
+      をセットアップする方法の詳細については、次のヘルプデスク記事を参照してください。<span class="notranslate">path</span> <span class="notranslate">Visual
+        Studio</span> <span class="notranslate">Windows</span>
+    </p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="https://help.yoyogames.com/hc/en-us/articles/235186048-Setting-Up-For-Windows">Windowsのセットアップ</a></li>
+      <li class="dropspot"><a
+          href="https://help.yoyogames.com/hc/en-us/articles/235186048-Setting-Up-For-Windows">Windowsのセットアップ</a></li>
     </ul>
     <p class="dropspot"><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">コンパイル</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">リモートワーカーをセットアップし、ローカルビルドの設定（上記のセクションを参照）を完了したら、ゲームのコンパイルに使い始めることができます。この場合、Target Managerからリモートワーカーを選択するだけです。
+    <p class="dropspot">リモートワーカーをセットアップし、ローカルビルドの設定（上記のセクションを参照）を完了したら、ゲームのコンパイルに使い始めることができます。この場合、Target
+      Managerからリモートワーカーを選択するだけです。
       のリストで、テスト/コンパイルするプラットフォームと、その他のオプション（コンパイルの種類や設定など）を選択し、Play<img> または Create Executable<img> を押してください。</p>
-    <div class="dropspotnote"><strong>注</strong>：ターゲットマネージャで利用可能なプラットフォームは、リモートワーカーのコンピュータの機能によって変更され、すべてのターゲットが利用できるわけではありません。また、リモートワーカー用の「テスト」ターゲットは存在しないことに注意してください。</div>
-    <p class="dropspot">単にプロジェクトを再生するだけなら、リモートワーカーマシンがコンパイルして実行しますが、実行ファイルを作成する場合は、リモートワーカーでプロジェクトをコンパイルして、 <span class="inline">*.zip</span> ファイルを返します。
+    <div class="dropspotnote">
+      <strong>注</strong>：ターゲットマネージャで利用可能なプラットフォームは、リモートワーカーのコンピュータの機能によって変更され、すべてのターゲットが利用できるわけではありません。また、リモートワーカー用の「テスト」ターゲットは存在しないことに注意してください。
+    </div>
+    <p class="dropspot">単にプロジェクトを再生するだけなら、リモートワーカーマシンがコンパイルして実行しますが、実行ファイルを作成する場合は、リモートワーカーでプロジェクトをコンパイルして、 <span
+        class="inline">*.zip</span> ファイルを返します。
       ローカルマシンに保存する。</p>
-    <p class="dropspot">リモートワーカーを使用する場合、Debug ボタン<img> と Clean ボタン<img> のどちらも使用できないことに留意してください。また、現在一度に実行できるリモートビルドは1つだけであることに注意してください。</p>
+    <p class="dropspot">リモートワーカーを使用する場合、Debug ボタン<img> と Clean ボタン<img>
+      のどちらも使用できないことに留意してください。また、現在一度に実行できるリモートビルドは1つだけであることに注意してください。</p>
     <p class="dropspot"></p>
   </div>
   <p><br />リモートワーカーをリモートマシン上にインストールして実行すると、タスクバーにアイコンとして表示され、その上で右クリックすると、以下のオプションが表示されます。</p>
-  <p><img alt="Target Manager Remote Worker Installer" src="../assets/Images/IDE Tools/RemoteWorker_TargetEye.png" class="center"/></p>
+  <p><img alt="Target Manager Remote Worker Installer" src="../assets/Images/IDE Tools/RemoteWorker_TargetEye.png"
+      class="center" /></p>
   <ul class="colour">
     <li><strong>開く</strong>デフォルトのブラウザでリモートワーカーアプリケーションを開きます。</li>
     <li><strong>ログを表示</strong>する。リモートワーカーのログファイルをブラウザで開きます。</li>
-    <li><strong>ネットワーク設定</strong>。ここでは、リモートワーカーマシンにビルドを送信できるようにするマシンをフィルタリングすることができます。各フィルタには、<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR形式の</a>フィルタ、または許可するマシンのホスト名を指定できます。複数のマシンを1台のリモートワーカーに接続する場合、または接続の種類を混在させる場合（有線と無線LANなど）、ここでIPの許可範囲を編集する必要があることを認識しておいてください。</li>
+    <li><strong>ネットワーク設定</strong>。ここでは、リモートワーカーマシンにビルドを送信できるようにするマシンをフィルタリングすることができます。各フィルタには、<a
+        href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR形式の</a>フィルタ、または許可するマシンのホスト名を指定できます。複数のマシンを1台のリモートワーカーに接続する場合、または接続の種類を混在させる場合（有線と無線LANなど）、ここでIPの許可範囲を編集する必要があることを認識しておいてください。
+    </li>
     <li><strong>設定を編集する</strong>。リモートワーカー設定メニュー（上記「設定」セクションで説明）を開きます。</li>
     <li><strong>終了する</strong>。リモートワーカーアプリを終了します。リモートワーカーアプリを再起動するまで、ローカルマシンからアプリに接続できなくなります（コンパイルもできなくなります）。</li>
   </ul>
@@ -91,11 +130,14 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span> </a>その他のツール</div>
-        <div style="float:right">次へ<a href="Source_Control.htm">ソース管理</a></div>
+        <div style="float:left">前のページ：<a href="Additional_IDE_Tools.htm"> <span class="notranslate">IDE</span>
+          </a>その他のツール
+        </div>
+        <div style="float:right">次のページ：<a href="Source_Control.htm">ソース管理</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Remote Workers
@@ -104,4 +146,5 @@ Remote Workers
 remote_workers
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>サウンド</title>
@@ -12,59 +13,112 @@
   <meta name="rh-index-keywords" content="Sound Editor" />
   <meta name="search-keywords" content="Sounds,Sound Editor,wav,ogg,mp3,compressed,streamed" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>サウンドエディター</h1>
-  <p><img><strong>Sound Editorでは</strong>、新しいオーディオリソースにサウンドをロードしたり、そのプロパティを設定することができます。サウンドをロードするには、サウンド名の右側にある<strong>Load Sound</strong>ボタンを押します。ファイル選択ダイアログがポップアップ表示され、サウンドファイルを選択することができます。これは、 <span class="inline">WAV</span> 、 <span class="inline">MP3 </span>ファイル、または <span class="inline">OGG</span> ファイルのいずれかになります。一般的に、 <span class="inline">*.wav</span> は短い効果音に使用されます。一般的に大きなファイルですが、再生にデコードを必要としないため、瞬時に再生されます。 <span class="inline">*.mp3</span> または <span class="inline">*.ogg</span> 形式のファイルは、BGM または長いサイズや大きな効果音に使用されるべきものです。これらのファイルは、waveファイルよりもはるかに小さいですが、再生前にデコードする必要があるため、CPUのオーバーヘッドが少々あります。</p>
-  <p>ファイルを読み込んだら、再生ボタンを使って音をプレビューすることができます。再生ボタンは、<span class="notranslate">loop</span> 連続で再生します。これは、ウィンドウの下部にあるスライダーで音量を変更し、それが音に与える影響を聞くことができるという意味で、非常に便利です。停止ボタンもありますので、いつでもプレビューを停止することができます。</p>
-  <p class="note"><span class="tip">ヒント</span> <a href="../IDE_Tools/The_Inspector.htm">インスペクタを</a>使うと、選択した音の波形を見ることができます。</p>
+  <h1>サウンドエディタ</h1>
+  <p><img><strong>Sound
+      Editorでは</strong>、新しいオーディオリソースにサウンドをロードしたり、そのプロパティを設定することができます。サウンドをロードするには、サウンド名の右側にある<strong>Load
+      Sound</strong>ボタンを押します。ファイル選択ダイアログがポップアップ表示され、サウンドファイルを選択することができます。これは、 <span class="inline">WAV</span> 、 <span
+      class="inline">MP3 </span>ファイル、または <span class="inline">OGG</span> ファイルのいずれかになります。一般的に、 <span
+      class="inline">*.wav</span> は短い効果音に使用されます。一般的に大きなファイルですが、再生にデコードを必要としないため、瞬時に再生されます。 <span
+      class="inline">*.mp3</span> または <span class="inline">*.ogg</span> 形式のファイルは、BGM
+    または長いサイズや大きな効果音に使用されるべきものです。これらのファイルは、waveファイルよりもはるかに小さいですが、再生前にデコードする必要があるため、CPUのオーバーヘッドが少々あります。</p>
+  <p>ファイルを読み込んだら、再生ボタンを使って音をプレビューすることができます。再生ボタンは、<span class="notranslate">loop</span>
+    連続で再生します。これは、ウィンドウの下部にあるスライダーで音量を変更し、それが音に与える影響を聞くことができるという意味で、非常に便利です。停止ボタンもありますので、いつでもプレビューを停止することができます。</p>
+  <p class="note"><span class="tip">ヒント</span> <a
+      href="../IDE_Tools/The_Inspector.htm">インスペクタを</a>使うと、選択した音の波形を見ることができます。</p>
   <p>サウンドウィンドウには他にもオプションがあり、以下に説明します。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">名前とファイル</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">ここでは、「<em>開く」</em>ボタンをクリックしてファイルエクスプローラを開き、読み込むオーディオファイルを選択することができます。また、左側の &quot;Name &quot;フィールドから、新しいリソースの名前を設定することができます。名前は英数字のみで、アンダーバー"_"記号のみを使用することができます。
+    <p class="dropspot">ここでは、「<em>開く」</em>ボタンをクリックしてファイルエクスプローラを開き、読み込むオーディオファイルを選択することができます。また、左側の &quot;Name
+      &quot;フィールドから、新しいリソースの名前を設定することができます。名前は英数字のみで、アンダーバー"_"記号のみを使用することができます。
       のみ使用でき、数字で始めることはできません。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">ボリューム＆プレイバック</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">ここで、指定したサウンドの再生音量を設定することができます。この値は単純に<em>デフォルト</em>値で、例えばスライダーが中央にある場合、ゲーム内でそのサウンドを使用する際のボリュームは0.5となります。ただし、この値はスライダーでゲインを変更すると上書きされます。
+    <p class="dropspot">
+      ここで、指定したサウンドの再生音量を設定することができます。この値は単純に<em>デフォルト</em>値で、例えばスライダーが中央にある場合、ゲーム内でそのサウンドを使用する際のボリュームは0.5となります。ただし、この値はスライダーでゲインを変更すると上書きされます。
       ただし、プロジェクトでオーディオ関数を使いゲインを変更すると、この値は上書きされます。<br /></p>
-    <p class="dropspot">ボリュームコントロールの他に、再生コントロールがあり、サウンドをプレビューしたり、<span class="notranslate">loop</span> や巻き戻しに設定したりすることができます。また、<img> アイコンをクリックすると、サウンド<a href="../IDE_Tools/Sound_Mixer.htm">ミキサーで</a>サウンドを開くことができます。<br /></p>
+    <p class="dropspot">ボリュームコントロールの他に、再生コントロールがあり、サウンドをプレビューしたり、<span class="notranslate">loop</span>
+      や巻き戻しに設定したりすることができます。また、<img> アイコンをクリックすると、サウンド<a
+        href="../IDE_Tools/Sound_Mixer.htm">ミキサーで</a>サウンドを開くことができます。<br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">OGG変換</a></p>
   <div class="droptext" data-targetname="drop-down9">
     <p class="dropspot">このオプションは、 <span class="inline">OGG</span> フォーマットのサウンドにのみ有効で、この2つのオプションのいずれかを選択することができます。</p>
-    <p class="dropspot"><img><strong>Automatic &quot;</strong>オプションでは、<span class="inline">OGG</span> のサウンドファイルは<span class="notranslate">asset</span> コンパイラによって変換されず、そのままゲーム実行ファイルにコピーされます。ソースファイルとサウンド<span class="notranslate">asset</span> の属性が不一致の場合、例えばソースのオーディオファイルがモノラル（1チャンネルしかない）なのに、アセットの属性では2チャンネルあると指定されている場合、問題が発生する可能性があります。</p>
-    <p class="dropspot"><strong>Required &quot;</strong>オプションを使用すると、このような問題を回避し、ソースオーディオファイルが常に<span class="notranslate">asset</span> コンパイラによって、サウンドエディタで指定された属性を使用して新しい OGG ファイルに変換されるようにすることができます。</p>
+    <p class="dropspot"><img><strong>Automatic &quot;</strong>オプションでは、<span class="inline">OGG</span> のサウンドファイルは<span
+        class="notranslate">asset</span> コンパイラによって変換されず、そのままゲーム実行ファイルにコピーされます。ソースファイルとサウンド<span
+        class="notranslate">asset</span>
+      の属性が不一致の場合、例えばソースのオーディオファイルがモノラル（1チャンネルしかない）なのに、アセットの属性では2チャンネルあると指定されている場合、問題が発生する可能性があります。</p>
+    <p class="dropspot"><strong>Required &quot;</strong>オプションを使用すると、このような問題を回避し、ソースオーディオファイルが常に<span
+        class="notranslate">asset</span> コンパイラによって、サウンドエディタで指定された属性を使用して新しい OGG ファイルに変換されるようにすることができます。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">属性</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">このセクションでは、サウンドの属性を設定します。この属性はゲームのエクスポート時に設定され、<span class="notranslate">runtime</span> で再生されるサウンドに影響します。サウンドエフェクト（<span class="inline">WAV </span>フォーマット）の場合、デコー ディングを必要とせず、素早く再生できるように<em>非圧縮に </em>することを推奨します。このオプションを使用すると、コンパイル時にオーディオが <span class="inline">WAV</span> フォーマットに変換されることに注意してください（ただし、サウンドエディタで設定した属性がソース<span class="inline">WAV</span> ファイルの属性と一致していれば、単にコピーされるだけです）。 <span class="inline">OGG</span> と <span class="inline">MP3</span> の場合、一般的には他の3つのオプションのうち1つを使用します。</p>
-    <p class="dropspot"><em>Compressed </em>audioは、すべてのサウンドファイル（ <span class="inline">WAV</span> か <span class="inline">MP3</span> かに関係なく）を、<em>すべての </em>プラットフォーム用のOgg Vorbis <span class="inline">OGG</span> 形式ファイルに圧縮します（ただし、ソースオーディオがすでに <span class="inline">OGG</span> の場合は、<strong>変換</strong>オプションが<strong>自動に</strong>設定されていれば、再圧縮せずに単にコピーされるだけです）。これらのサウンドはディスク上でより小さくなりますが、再生前に圧縮を解除してメモリにロードする必要があるため、若干のCPUオーバーヘッドが発生します。したがって、すでにCPU負荷の高いゲームで<a class="glossterm" data-glossterm="圧縮" href="#">圧縮を</a>使用する場合は、この点に注意する必要があります。</p>
+    <p class="dropspot">このセクションでは、サウンドの属性を設定します。この属性はゲームのエクスポート時に設定され、<span class="notranslate">runtime</span>
+      で再生されるサウンドに影響します。サウンドエフェクト（<span class="inline">WAV </span>フォーマット）の場合、デコー ディングを必要とせず、素早く再生できるように<em>非圧縮に
+      </em>することを推奨します。このオプションを使用すると、コンパイル時にオーディオが <span class="inline">WAV</span>
+      フォーマットに変換されることに注意してください（ただし、サウンドエディタで設定した属性がソース<span class="inline">WAV</span> ファイルの属性と一致していれば、単にコピーされるだけです）。
+      <span class="inline">OGG</span> と <span class="inline">MP3</span> の場合、一般的には他の3つのオプションのうち1つを使用します。
+    </p>
+    <p class="dropspot"><em>Compressed </em>audioは、すべてのサウンドファイル（ <span class="inline">WAV</span> か <span
+        class="inline">MP3</span> かに関係なく）を、<em>すべての </em>プラットフォーム用のOgg Vorbis <span class="inline">OGG</span>
+      形式ファイルに圧縮します（ただし、ソースオーディオがすでに <span class="inline">OGG</span>
+      の場合は、<strong>変換</strong>オプションが<strong>自動に</strong>設定されていれば、再圧縮せずに単にコピーされるだけです）。これらのサウンドはディスク上でより小さくなりますが、再生前に圧縮を解除してメモリにロードする必要があるため、若干のCPUオーバーヘッドが発生します。したがって、すでにCPU負荷の高いゲームで<a
+        class="glossterm" data-glossterm="圧縮" href="#">圧縮を</a>使用する場合は、この点に注意する必要があります。</p>
     <p class="dropspot">このCPUオーバーヘッドを軽減するために、<em>ロード時に解凍</em>することを選択すると、すべてのサウンドがデバイスのメモリに配置され、より高速に再生することができます。</p>
-    <p class="dropspot">圧縮オーディオを選択した場合、<em>ディスクからの</em>ストリームサウンドを選択することもできます。ストリーミングサウンドは、非圧縮でリアルタイムに再生され、メモリに読み込むのではなく、ディスクからストリーミングされるものです。ストリーミングは、ファイル全体を解凍する一回限りのオーバーヘッド（ゲームの一時停止の原因になる）を減らすことができるので、音楽には理想的ですが、CPUへの負荷が少ないシンプルなサウンドエフェクトにはお勧めできません。ストリーミングサウンドは他のサウンドと同じようにパッケージ化されておらず、ロード、再生、アンロードのタイミングをコードで完全にコントロールできるため、ストリームオーディオを選択した場合、サウンドを<a href="../Settings/Audio_Groups.htm">Audio Groupに</a>アサイン<em>できず</em>、このオプションも無効化されます。</p>
-    <p class="dropspot">HTML5プラットフォームをターゲットとする場合、再生要求がユーザーインタラクション（タッチイベントなど）に直接由来しない場合、ストリームオーディオは再生されないことに注意することが重要である。しかし、<span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">queues</span> 、クリックイベントを次のフレームで処理するだけなので、ブラウザにブロックされることなくストリームオーディオを再生することは不可能です。これを回避するために、どんなHTML5ゲームランでも、ストリームされたオーディオがプリロードされないという例外を除いて、エンジン内ではすべてのストリームされたオーディオを非ストリームとして扱います。</p>
-    <p class="dropspot">これは、例えば、ブラウザ上でゲームを実行していて、10曲の音楽トラックをすべてストリーム形式（ <span class="inline">mp3 </span>）に設定した場合、10曲すべてが非ストリーミングオーディオと同様に初期化されますが、ロード画面の段階ですぐにプリロード/デコードされる通常のストリームオーディオとは異なり、ゲームのロード前にすぐにデコードされないことを意味します。</p>
-    <p class="dropspot">これは問題を回避し、初期ロード時間の大幅な増加を防ぎますが、ゲームがロードされても、特定のストリーミングサウンドがまだダウンロードまたはデコードされていない状態になる可能性があることを意味します。この問題を解決するには、<span class="notranslate">GML</span> 関数を使用します。 <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_sound_is_playable.htm"><span class="inline">audio_sound_is_playable()</span></a>この関数は、指定されたサウンドが実際に再生可能かどうかをチェックします。HTML5では、サウンドがまだ完全にロードまたはデコードされていない場合は <span class="inline">false </span>を、ロードされて再生できる場合は <span class="inline">true </span>を返します（他のプラットフォームでは常に真を返します）。</p>
+    <p class="dropspot">
+      圧縮オーディオを選択した場合、<em>ディスクからの</em>ストリームサウンドを選択することもできます。ストリーミングサウンドは、非圧縮でリアルタイムに再生され、メモリに読み込むのではなく、ディスクからストリーミングされるものです。ストリーミングは、ファイル全体を解凍する一回限りのオーバーヘッド（ゲームの一時停止の原因になる）を減らすことができるので、音楽には理想的ですが、CPUへの負荷が少ないシンプルなサウンドエフェクトにはお勧めできません。ストリーミングサウンドは他のサウンドと同じようにパッケージ化されておらず、ロード、再生、アンロードのタイミングをコードで完全にコントロールできるため、ストリームオーディオを選択した場合、サウンドを<a
+        href="../Settings/Audio_Groups.htm">Audio Groupに</a>アサイン<em>できず</em>、このオプションも無効化されます。</p>
+    <p class="dropspot">
+      HTML5プラットフォームをターゲットとする場合、再生要求がユーザーインタラクション（タッチイベントなど）に直接由来しない場合、ストリームオーディオは再生されないことに注意することが重要である。しかし、<span
+        data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">queues</span>
+      、クリックイベントを次のフレームで処理するだけなので、ブラウザにブロックされることなくストリームオーディオを再生することは不可能です。これを回避するために、どんなHTML5ゲームランでも、ストリームされたオーディオがプリロードされないという例外を除いて、エンジン内ではすべてのストリームされたオーディオを非ストリームとして扱います。
+    </p>
+    <p class="dropspot">これは、例えば、ブラウザ上でゲームを実行していて、10曲の音楽トラックをすべてストリーム形式（ <span class="inline">mp3
+      </span>）に設定した場合、10曲すべてが非ストリーミングオーディオと同様に初期化されますが、ロード画面の段階ですぐにプリロード/デコードされる通常のストリームオーディオとは異なり、ゲームのロード前にすぐにデコードされないことを意味します。
+    </p>
+    <p class="dropspot">
+      これは問題を回避し、初期ロード時間の大幅な増加を防ぎますが、ゲームがロードされても、特定のストリーミングサウンドがまだダウンロードまたはデコードされていない状態になる可能性があることを意味します。この問題を解決するには、<span
+        class="notranslate">GML</span> 関数を使用します。 <a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_sound_is_playable.htm"><span
+          class="inline">audio_sound_is_playable()</span></a>この関数は、指定されたサウンドが実際に再生可能かどうかをチェックします。HTML5では、サウンドがまだ完全にロードまたはデコードされていない場合は
+      <span class="inline">false </span>を、ロードされて再生できる場合は <span class="inline">true </span>を返します（他のプラットフォームでは常に真を返します）。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">対象オプション</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Target Options（ターゲットオプション）パネルで、ゲームのコンバージョンレートを 設定します。この設定は、ターゲットプラットフォーム用にエクスポートされるサウンドに影響し、<span data-keyref="GameMaker Name">GameMakerが</span>自動的にサウンドファイルを変換します。一般的には、デフォルト設定の16ビット品質（または<a class="glossterm" data-glossterm="ビット深度" href="#">ビット深度</a>）、44100kHz<a class="glossterm" data-glossterm="サンプルレート" href="#">サンプルレート</a>、128kbps<a class="glossterm" data-glossterm="ビットレート" href="#">ビット</a>レートで十分ですが、例えば効果音の品質を低く、音楽の品質を高くしたい場合は、これらの設定を変更することが可能です。</p>
-    <p class="dropspot">また、<strong>モノラル</strong>、<strong>ステレオ</strong>、<strong>3D</strong> のいずれに変換するかを選択することができます。<a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">オーディオエミッター機能</a>を使って3Dサウンドエフェクトを作るつもりなら、<span> ステレオではなくモノラルか3Dを選ぶべきです。そうしないと、ゲーム内のサウンドが期待したスピーカーから </span>出力されないかもしれません。<i data-stringify-type="italic">3D "と "モノラル "には違いがないことに注意してください。"3D "は単に、オーディオの初心者が、位置のあるオーディオが欲しいときにステレオを選ばないようにするために使われる<span class="notranslate">IDE</span> ラベル</i>なのです。3D出力を選択した場合、モノラル音声としてエクスポートされます。</p>
+    <p class="dropspot">Target Options（ターゲットオプション）パネルで、ゲームのコンバージョンレートを
+      設定します。この設定は、ターゲットプラットフォーム用にエクスポートされるサウンドに影響し、<span
+        data-keyref="GameMaker Name">GameMakerが</span>自動的にサウンドファイルを変換します。一般的には、デフォルト設定の16ビット品質（または<a class="glossterm"
+        data-glossterm="ビット深度" href="#">ビット深度</a>）、44100kHz<a class="glossterm" data-glossterm="サンプルレート"
+        href="#">サンプルレート</a>、128kbps<a class="glossterm" data-glossterm="ビットレート"
+        href="#">ビット</a>レートで十分ですが、例えば効果音の品質を低く、音楽の品質を高くしたい場合は、これらの設定を変更することが可能です。</p>
+    <p class="dropspot">また、<strong>モノラル</strong>、<strong>ステレオ</strong>、<strong>3D</strong> のいずれに変換するかを選択することができます。<a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">オーディオエミッター機能</a>を使って3Dサウンドエフェクトを作るつもりなら、<span>
+        ステレオではなくモノラルか3Dを選ぶべきです。そうしないと、ゲーム内のサウンドが期待したスピーカーから </span>出力されないかもしれません。<i data-stringify-type="italic">3D "と
+        "モノラル "には違いがないことに注意してください。"3D "は単に、オーディオの初心者が、位置のあるオーディオが欲しいときにステレオを選ばないようにするために使われる<span
+          class="notranslate">IDE</span> ラベル</i>なのです。3D出力を選択した場合、モノラル音声としてエクスポートされます。</p>
     <p class="note"><span class="note">NOTE</span>音質が高いほどファイルサイズが大きくなるので、それを考慮してビットレートとサンプルレートを決める必要があります。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">オーディオグループ</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">オーディオファイルは、特定の<strong>オーディオ</strong>グループに割り当てることができます。オーディオグループは、<a href="../Settings/Audio_Groups.htm">オーディオグループウィンドウから</a>作成され、オーディオ<span class="notranslate">assets</span> をグループ化して、メモリ管理や音量調節を容易にするために使用されます。
+    <p class="dropspot">オーディオファイルは、特定の<strong>オーディオ</strong>グループに割り当てることができます。オーディオグループは、<a
+        href="../Settings/Audio_Groups.htm">オーディオグループウィンドウから</a>作成され、オーディオ<span class="notranslate">assets</span>
+      をグループ化して、メモリ管理や音量調節を容易にするために使用されます。
       グループ化します。
     </p>
-    <p class="dropspot">オーディオファイルをグループに割り当てると、特定のオーディオグループ機能を使ってファイルを変更したり、メモリからロード/アンロードしたりすることができます。詳細は、「<a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">オーディオ機能</a>」の項を参照してください。
+    <p class="dropspot">オーディオファイルをグループに割り当てると、特定のオーディオグループ機能を使ってファイルを変更したり、メモリからロード/アンロードしたりすることができます。詳細は、「<a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">オーディオ機能</a>」の項を参照してください。
       をご覧ください。</p>
     <p class="dropspot">ストリーム<em>・ </em>オーディオを選択した場合、このオプションは<strong>無効に</strong>なります。
       メディアから直接ストリーミングされます。
     </p>
-    <p class="dropspot">オーディオの他のプロパティは構成に依存しますが、オーディオグループの設定は<em>そうではなく </em>、サウンドは使用する<em>すべての構成で</em>同じグループに所属することに注意してください。</p>
+    <p class="dropspot">オーディオの他のプロパティは構成に依存しますが、オーディオグループの設定は<em>そうではなく
+      </em>、サウンドは使用する<em>すべての構成で</em>同じグループに所属することに注意してください。</p>
     <p> </p>
   </div>
   <p> </p>
@@ -73,11 +127,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Sprites.htm">スプライト</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Sprites.htm">スプライト</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Sound Editor
@@ -92,4 +147,5 @@ mp3
 sound_editor
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_get_stats_for_user</title>
@@ -12,31 +13,42 @@
   <meta name="rh-index-keywords" content="xboxlive_get_stats_for_user" />
   <meta name="search-keywords" content="xboxlive_get_stats_for_user" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_get_stats_for_user</h1>
-  <p>この関数は、Xbox Live<span class="notranslate">servers</span> から特定の統計情報についてのデータを取得するために使用することができます。この関数が返すユーザー ID を入力します。 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>次に、ゲームのサービス構成ID（XDPコンソールに表示されているもの）、最後に必要な統計情報です。最大14個の統計情報をリクエストできますが、リクエストの合計長さには制限があるため、最大統計情報数は統計情報名自体の長さに依存するため、14個の統計情報の結果が得られることを保証するものではありません。</p>
-  <p>この関数は、stat リクエストが送信された場合は 0 を、エラーがあった場合は -1 を返し、コールバックは<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">システム非同期イベントを</a>トリガーします。このイベントは特別な DS マップ <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>を解析して、次のキーを探します。</p>
+  <p>この関数は、Xbox Live<span class="notranslate">servers</span> から特定の統計情報についてのデータを取得するために使用することができます。この関数が返すユーザー ID を入力します。
+    <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span
+        class="inline">xboxlive_get_user()</span></a>次に、ゲームのサービス構成ID（XDPコンソールに表示されているもの）、最後に必要な統計情報です。最大14個の統計情報をリクエストできますが、リクエストの合計長さには制限があるため、最大統計情報数は統計情報名自体の長さに依存するため、14個の統計情報の結果が得られることを保証するものではありません。
+  </p>
+  <p>この関数は、stat リクエストが送信された場合は 0 を、エラーがあった場合は -1 を返し、コールバックは<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">システム非同期イベントを</a>トリガーします。このイベントは特別な
+    DS マップ <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a>を解析して、次のキーを探します。</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - この関数によってイベントが発生した場合、<span class="notranslate">string</span> &quot;<b>stat_result</b>&quot; を保持する必要があります。</li>
+    <li>&quot;<b>event_type</b>&quot; - この関数によってイベントが発生した場合、<span class="notranslate">string</span>
+      &quot;<b>stat_result</b>&quot; を保持する必要があります。</li>
   </ul>
   <p>イベントタイプがこの機能に関連する場合、以下の追加キーも存在する。</p>
   <ul class="colour">
     <li>&quot;<b>user</b>&quot; - 要求された統計情報のユーザーIDを保持します。</li>
   </ul>
-  <p>キーは要求されたstat名で、値は<span class="notranslate">server</span> 上のそのstatの値である。 このユーザに対してstatが一度も作成されていない場合(設定するイベントを実行していないため)、そのstatに対する値が返されないことがあることに注意する。<a href="../../Data_Structures/DS_Maps/ds_map_exists.htm"><span class="inline">ds_map_exists()</span></a>は、 <span class="inline">async_load</span> マップ内の統計情報を確認するために使用することができます)。</p>
+  <p>キーは要求されたstat名で、値は<span class="notranslate">server</span> 上のそのstatの値である。
+    このユーザに対してstatが一度も作成されていない場合(設定するイベントを実行していないため)、そのstatに対する値が返されないことがあることに注意する。<a
+      href="../../Data_Structures/DS_Maps/ds_map_exists.htm"><span class="inline">ds_map_exists()</span></a>は、 <span
+      class="inline">async_load</span> マップ内の統計情報を確認するために使用することができます)。</p>
   <p>リクエストの長さが大きすぎるためにリクエストが失敗した場合、コンソール出力にエラーコードを記載したメッセージが表示されるはずです。</p>
   <p class="code">xboxlive_get_stats_for_user - exception occurred getting results - 0x80190190</p>
   <p>この場合、非同期イベント DS マップには、値が &quot;0&quot; の &quot;succeeded&quot; キーがあるはずで、この場合は、一度の呼び出しでより少ない統計情報を取得しようとするはずです。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_get_stats_for_user(user_id, serviceconfig_id, statname1, …);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">user_id</span></td>
@@ -56,7 +68,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -70,11 +82,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_read_player_leaderboard.htm"><span class="notranslate">xboxlive_read_player_leaderboard</span></a></div>
+        <div style="float:left">前のページ：<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_read_player_leaderboard.htm"><span
+              class="notranslate">xboxlive_read_player_leaderboard</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_get_stats_for_user
@@ -83,4 +97,5 @@ xboxlive_get_stats_for_user
 xboxlive_get_stats_for_user
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>game_end</title>
@@ -12,24 +13,29 @@
   <meta name="rh-index-keywords" content="game_end" />
   <meta name="search-keywords" content="game_end" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">game_end</span></h1>
-  <p>この関数で、ゲームを終了させることができます（<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">ゲーム終了イベントが</a>発生します）。これは瞬時に起こるのではなく、現在のステップの終了時に起こるので、どのコードも
+  <p>この関数で、ゲームを終了させることができます（<a
+      href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">ゲーム終了イベントが</a>発生します）。これは瞬時に起こるのではなく、現在のステップの終了時に起こるので、どのコードも
     この関数が呼ばれた後も、同じステップにあるものは実行されます。なお、この関数には以下の制約があります。</p>
   <ul class="colour">
-    <li><span class="notranslate">Android</span> 端末では、 <span class="inline">game_end()</span> を呼び出すとアプリがバックグラウンドにプッシュされますが、アプリは終了<i>しません</i>。これはユーザーによって行われる必要があります。</li>
+    <li><span class="notranslate">Android</span> 端末では、 <span class="inline">game_end()</span>
+      を呼び出すとアプリがバックグラウンドにプッシュされますが、アプリは終了<i>しません</i>。これはユーザーによって行われる必要があります。</li>
     <li><span class="notranslate">iOS</span> では、何もせず黙って失敗します。</li>
     <li>すべてのコンソール（Xboxで実行する場合はUWPを含む）では、ゲームがクラッシュするか、せいぜいサイレントで失敗し、サブミッションフェイルになる可能性もあるので、この<i>関数は使っては</i>いけません。</li>
     <li>HTML5では、ゲームは終了しますが、ユーザーはウェブページ上の空白のドローキャンバスを見つめることになりますから、そのターゲットプラットフォームでの使用は推奨されません。</li>
-    <li><span class="notranslate">Windows</span> (PC 上の UWP を含む)、<span class="notranslate">Linux</span> 、<span class="notranslate">macOS</span> では、この関数は単にゲームを終了してゲーム ウィンドウを閉じます (<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>もトリガーされます)。</li>
+    <li><span class="notranslate">Windows</span> (PC 上の UWP を含む)、<span class="notranslate">Linux</span> 、<span
+        class="notranslate">macOS</span> では、この関数は単にゲームを終了してゲーム ウィンドウを閉じます (<a
+        href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>もトリガーされます)。</li>
     <br />
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">game_end</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -41,11 +47,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
-        <div style="float:right">次のページ <a href="game_restart.htm"><span class="notranslate">game_restart</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
+        <div style="float:right">次のページ：<a href="game_restart.htm"><span class="notranslate">game_restart</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_end
@@ -54,4 +62,5 @@ game_end
 game_end
 -->
 </body>
+
 </html>

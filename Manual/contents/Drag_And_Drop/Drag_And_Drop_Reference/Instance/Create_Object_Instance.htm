@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オブジェクトインスタンスの作成</title>
@@ -12,22 +13,28 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Create Object Instance" />
   <meta name="search-keywords" content="Create Object Instance" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> <span class="notranslate">Object</span> インスタンスの作成</h1>
-  <p>このアクションを使うと、<span class="notranslate">object</span> ブラウザから任意の<span class="notranslate">Asset</span> のインスタンスを作成することができます。<span class="notranslate">object</span> の名前と、作成する<span class="notranslate">room</span> 内の x/y 位置、インスタンスを作成するレイヤーの名前（必ず
-   <b>Instance Layer</b>)を選択します。relative&quot;<span class="notranslate">flags</span> にチェックを入れると、アクションコードブロックを実行しているインスタンスから相対的にインスタンスを配置することができます。ゲーム内でインスタンスを作成すると、そのインスタンスに一意のID値が与えられます。
+  <p>このアクションを使うと、<span class="notranslate">object</span> ブラウザから任意の<span class="notranslate">Asset</span>
+    のインスタンスを作成することができます。<span class="notranslate">object</span> の名前と、作成する<span class="notranslate">room</span> 内の x/y
+    位置、インスタンスを作成するレイヤーの名前（必ず
+    <b>Instance Layer</b>)を選択します。relative&quot;<span class="notranslate">flags</span>
+    にチェックを入れると、アクションコードブロックを実行しているインスタンスから相対的にインスタンスを配置することができます。ゲーム内でインスタンスを作成すると、そのインスタンスに一意のID値が与えられます。
     そのため、このアクションでは、このID値を保持する「ターゲット」変数を定義することができます（以下の例に示すとおりです）。ターゲットは一時的な（ローカル）変数としてフラグを立てることができることに注意してください。
-    このアクションのために作成され、その後のすべてのアクションで使用することができます。</p>
+    このアクションのために作成され、その後のすべてのアクションで使用することができます。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Create Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Create.png" /></p>
+  <p><img alt="Create Object INstance Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Create.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Object</span></td>
@@ -54,18 +61,22 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、新しいインスタンスを作成し、その一意のID値を
-    一時的な変数です。この変数は、次に<a href="../Common/Apply_To...htm">Applies To</a>... アクションで、作成されたインスタンスのいくつかのプロパティを設定するために使用されます。</p>
+    一時的な変数です。この変数は、次に<a href="../Common/Apply_To...htm">Applies To</a>... アクションで、作成されたインスタンスのいくつかのプロパティを設定するために使用されます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
-        <div style="float:right">次へ<a href="Destroy_Object_Instance.htm">Destroy<span class="notranslate">Object</span> インスタンス</a></div>
+        <div style="float:left">前のページ：<a href="Instance_Actions_Library.htm">インスタンスアクション</a></div>
+        <div style="float:right">次のページ：<a href="Destroy_Object_Instance.htm">Destroy<span
+              class="notranslate">Object</span>
+            インスタンス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create <span class="notranslate">Object</span> Instance
@@ -74,4 +85,5 @@ Action - Create <span class="notranslate">Object</span> Instance
 action_create_instance
 -->
 </body>
+
 </html>

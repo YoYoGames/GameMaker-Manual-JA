@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_texfilter</title>
@@ -12,29 +13,40 @@
   <meta name="rh-index-keywords" content="gpu_set_texfilter, gpu_set_tex_filter" />
   <meta name="search-keywords" content="gpu_set_texfilter, gpu_set_tex_filter" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_texfilter</span></h1>
-  <p>この関数は、ゲーム画面に描画されるすべての画像の<span class="notranslate">texture</span> フィルタリング（線形補間）を設定するために使用することができます。この機能を有効にすると (<span class="inline">true</span>)<span class="notranslate">textures</span> はすべて描画時に平滑化されます (<span class="notranslate">sprites</span> も<span class="notranslate">textures</span> とみなされるため)。つまり、拡大縮小や移動時にピクセル比率が 1:1 でない場合、さまざまなピクセルで「にじみ」が発生し、使用するアートスタイルによって画像がぼやけて見えることがあります。この設定を無効にすると (<span class="inline">false</span>) 、拡大縮小や移動の際に、最も近いピクセルに基づいて画像が描画されるため、「ブロック状」の画像になることがあります。デフォルト値は <span class="inline">false</span> で、これは<b>グローバルゲームオプションで</b>個々のターゲットプラットフォーム用に変更することもできます。</p>
-  <p class="note"><b>注</b> <span class="notranslate">texture</span> <b></b>：この設定は、<span class="notranslate">shaders</span> のステージ補間の設定を上書きします。 <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
+  <p>この関数は、ゲーム画面に描画されるすべての画像の<span class="notranslate">texture</span> フィルタリング（線形補間）を設定するために使用することができます。この機能を有効にすると
+    (<span class="inline">true</span>)<span class="notranslate">textures</span> はすべて描画時に平滑化されます (<span
+      class="notranslate">sprites</span> も<span class="notranslate">textures</span> とみなされるため)。つまり、拡大縮小や移動時にピクセル比率が 1:1
+    でない場合、さまざまなピクセルで「にじみ」が発生し、使用するアートスタイルによって画像がぼやけて見えることがあります。この設定を無効にすると (<span class="inline">false</span>)
+    、拡大縮小や移動の際に、最も近いピクセルに基づいて画像が描画されるため、「ブロック状」の画像になることがあります。デフォルト値は <span class="inline">false</span>
+    で、これは<b>グローバルゲームオプションで</b>個々のターゲットプラットフォーム用に変更することもできます。</p>
+  <p class="note"><b>注</b> <span class="notranslate">texture</span> <b></b>：この設定は、<span
+      class="notranslate">shaders</span> のステージ補間の設定を上書きします。 <a href="gpu_set_texfilter_ext.htm"><span
+        class="inline">gpu_set_texfilter_ext()</span></a>.</p>
   <p class="note"><b>注</b>：HTML5ターゲットでは、この機能はWebGLが有効な場合のみ動作します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_texfilter</span>(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / ) <span class="inline">false</span></td>
-     </tr>
+        <td><span class="notranslate">enable</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / ) <span
+              class="inline">false</span></td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -53,11 +65,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_texfilter_ext.htm"><span class="notranslate">gpu_set_texfilter_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_texfilter_ext.htm"><span
+              class="notranslate">gpu_set_texfilter_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texfilter
@@ -67,4 +81,5 @@ gpu_set_tex_filter
 gpu_set_texfilter
 -->
 </body>
+
 </html>

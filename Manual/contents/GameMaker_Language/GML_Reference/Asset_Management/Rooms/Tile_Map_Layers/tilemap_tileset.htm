@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>tilemap_tileset</title>
@@ -12,34 +13,45 @@
   <meta name="rh-index-keywords" content="tilemap_tileset" />
   <meta name="search-keywords" content="tilemap_tileset" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">tilemap_tileset</span></h1>
-  <p>この機能を使用すると、レイヤー上の特定の<span class="notranslate">tile set</span> マップエレメントに割り当てられた<span class="notranslate">asset</span> <span class="notranslate">tile</span> を変更することができます。<span class="notranslate">tile</span> マップエレメント ID (<span class="notranslate">tile</span> マップエレメントを作成するときに <a href="layer_tilemap_create.htm"><span class="inline">layer_tilemap_create()</span></a>を使って作成したときや、関数 <a href="layer_tilemap_get_id.htm"><span class="inline">layer_tilemap_get_id()</span></a>を指定し、<span class="notranslate">tile set</span> のインデックスを指定すると、<span class="notranslate">tile</span> のマップに新しい<span class="notranslate">sprite</span> が割り当てられます。</p>
+  <p>この機能を使用すると、レイヤー上の特定の<span class="notranslate">tile set</span> マップエレメントに割り当てられた<span
+      class="notranslate">asset</span> <span class="notranslate">tile</span> を変更することができます。<span
+      class="notranslate">tile</span> マップエレメント ID (<span class="notranslate">tile</span> マップエレメントを作成するときに <a
+      href="layer_tilemap_create.htm"><span class="inline">layer_tilemap_create()</span></a>を使って作成したときや、関数 <a
+      href="layer_tilemap_get_id.htm"><span class="inline">layer_tilemap_get_id()</span></a>を指定し、<span
+      class="notranslate">tile set</span> のインデックスを指定すると、<span class="notranslate">tile</span> のマップに新しい<span
+      class="notranslate">sprite</span> が割り当てられます。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">tilemap_tileset</span>(tilemap_element_id, tileset_index)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">tilemap_tileset</span>(tilemap_element_id,
+    tileset_index)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">tilemap_element_id</span></td>
-        <td><span data-keyref="Type_ID_Element_Tilemap"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm">タイルマップ要素ID</a></span></td>
+        <td><span data-keyref="Type_ID_Element_Tilemap"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm">タイルマップ要素ID</a></span>
+        </td>
         <td><span class="notranslate">The unique ID value of the tile map element to change</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">tileset_index</span></td>
-        <td><span data-keyref="Type_Asset_Tile_Set"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Tile_Sets.htm">タイルセットアセット</a></span></td>
+        <td><span data-keyref="Type_Asset_Tile_Set"><a data-rhwidget="HyperlinkPopover"
+              href="../../../../../../The_Asset_Editors/Tile_Sets.htm">タイルセットアセット</a></span></td>
         <td><span class="notranslate">The new tile set index to use</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -49,18 +61,22 @@
     {<br />
         tilemap_tileset(tile_id, ts_Nighttime);<br />
     }</p>
-  <p>上記のコードは、レイヤー &quot;Tiles_trees&quot; の<span class="notranslate">tile set</span> マップに割り当てられた現在の<span class="notranslate">tile</span> をチェックし、それが &quot;ts_Nighttime&quot; でない場合、その<span class="notranslate">tile set</span> は<span class="notranslate">tile</span> マップに割り当てられます。</p>
+  <p>上記のコードは、レイヤー &quot;Tiles_trees&quot; の<span class="notranslate">tile set</span> マップに割り当てられた現在の<span
+      class="notranslate">tile</span> をチェックし、それが &quot;ts_Nighttime&quot; でない場合、その<span class="notranslate">tile
+      set</span> は<span class="notranslate">tile</span> マップに割り当てられます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
-        <div style="float:right">次のページ <a href="tilemap_clear.htm"><span class="notranslate">tilemap_clear</span></a></div>
+        <div style="float:left">前のページ：<a href="Tile_Map_Layers.htm">地図レイヤーをタイル状に表示</a></div>
+        <div style="float:right">次のページ：<a href="tilemap_clear.htm"><span class="notranslate">tilemap_clear</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_tileset
@@ -69,4 +85,5 @@ tilemap_tileset
 tilemap_tileset
 -->
 </body>
+
 </html>

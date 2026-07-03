@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シーケンスイベント、モーメント、ブロードキャストメッセージ</title>
@@ -8,30 +9,57 @@
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Sequence Events, Moments and Broadcast Messages" />
+  <meta name="topic-comment"
+    content="Page outlining the different functions and variables associated with Sequence Events, Moments and Broadcast Messages" />
   <meta name="rh-index-keywords" content="Sequence Events, Moments, Broadcast Messages" />
-  <meta name="search-keywords" content="Sequence Events,Sequence Momements,Sequence Messages,broadcast messages,event_create,event_destroy,event_clean_up,event_step,event_step_begin,event_step_end,event_async_system,event_broadcast_message" />
+  <meta name="search-keywords"
+    content="Sequence Events,Sequence Momements,Sequence Messages,broadcast messages,event_create,event_destroy,event_clean_up,event_step,event_step_begin,event_step_end,event_async_system,event_broadcast_message" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>イベント、モーメント、ブロードキャストメッセージ</h1>
-  <p><a href="Sequences.htm">ここに</a> <span class="notranslate">sequence</span> <span class="notranslate">struct</span> <a href="Sequences.htm"></a>挙げた<span class="notranslate">sequence</span> <span class="notranslate">sequence</span> のすべてのプロパティとは別に、<span class="notranslate">object</span> に特別な「アクション」プロパティを追加することができます。それぞれについて、以下のセクションで詳しく説明します。</p>
+  <p><a href="Sequences.htm">ここに</a> <span class="notranslate">sequence</span> <span class="notranslate">struct</span>
+    <a href="Sequences.htm"></a>挙げた<span class="notranslate">sequence</span> <span class="notranslate">sequence</span>
+    のすべてのプロパティとは別に、<span class="notranslate">object</span> に特別な「アクション」プロパティを追加することができます。それぞれについて、以下のセクションで詳しく説明します。
+  </p>
   <h2>シーケンスイベント</h2>
-  <p>Sequence<span class="notranslate">objects</span> には<b>イベントを</b>追加することができ、これらのイベントは<span class="notranslate">object</span> <span class="notranslate">assets</span> で使用されるイベントに類似しています。<span class="notranslate">sequence</span> <span class="notranslate">object</span> に割り当てたイベントは、<span class="notranslate">sequence</span> のライフサイクルの定義された瞬間に一度だけ、または<span class="notranslate">sequence</span> が実行されているフレームごとに、特定の順序で発生することになります。このセクションでは、これらのイベントをコードで処理する方法を説明しますが、<a href="../../../../The_Asset_Editors/Sequences.htm">シーケンス・エディタを</a>使用して追加することもできます。なお、ここに記載したイベントの順番は、<a class="glossterm" data-glossterm="プレイヘッド" href="#">プレイヘッドの</a>方向には影響されません。<span class="notranslate">sequence</span> が逆向きに再生されている場合でも、イベントは以下に示す順番で実行されます。</p>
+  <p>Sequence<span class="notranslate">objects</span> には<b>イベントを</b>追加することができ、これらのイベントは<span
+      class="notranslate">object</span> <span class="notranslate">assets</span> で使用されるイベントに類似しています。<span
+      class="notranslate">sequence</span> <span class="notranslate">object</span> に割り当てたイベントは、<span
+      class="notranslate">sequence</span> のライフサイクルの定義された瞬間に一度だけ、または<span class="notranslate">sequence</span>
+    が実行されているフレームごとに、特定の順序で発生することになります。このセクションでは、これらのイベントをコードで処理する方法を説明しますが、<a
+      href="../../../../The_Asset_Editors/Sequences.htm">シーケンス・エディタを</a>使用して追加することもできます。なお、ここに記載したイベントの順番は、<a
+      class="glossterm" data-glossterm="プレイヘッド" href="#">プレイヘッドの</a>方向には影響されません。<span
+      class="notranslate">sequence</span> が逆向きに再生されている場合でも、イベントは以下に示す順番で実行されます。</p>
   <p>利用可能なイベントは以下の通りです。<b></b></p>
   <ul class="colour">
     <li><b>作成</b>：レイヤーに<span class="notranslate">sequence</span> のインスタンスが作成されたときに発生します。</li>
     <li><b>Destroy</b>: レイヤー上の<span class="notranslate">sequence</span> のインスタンスが破壊されたときに発生します。</li>
     <li><b>クリーンアップ</b>：<span class="notranslate">sequence</span> のインスタンスがガベージコレクションされるときに発生する。</li>
-    <li><b>Step</b>：通常の<span class="notranslate">object</span> ステップイベントの直前にトリガーされます。<b>重要!</b> <span class="notranslate">sequence</span> が一時停止している場合、このイベントは<span class="notranslate">sequence</span> が再び再生を開始した次のステップまでトリガーされません。</li>
-    <li><b>Begin Step</b>:<span class="notranslate">object</span> begin-step イベントの直前にトリガーされます。<b>重要!</b> <span class="notranslate">sequence</span> が一時停止している場合、このイベントは<span class="notranslate">sequence</span> が再び再生を開始した次のステップまでトリガーされません。</li>
-    <li><b>End Step</b>：<span class="notranslate">object</span> のエンドステップイベントの直前にトリガーされます。<b>重要!</b> <span class="notranslate">sequence</span> が一時停止している場合、このイベントは<span class="notranslate">sequence</span> が再び再生を開始した次のステップまでトリガーされません。</li>
-    <li><b>Async System</b>:<span class="notranslate">object</span> <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">Asynchronous System Event</a>handlersと同じようにトリガーされます。<em><b>重要!</b> <span class="notranslate">sequence</span> </em>が一時停止している場合、このイベントはトリガーされません。</li>
-    <li><b>ブロードキャストメッセージ</b>：<span class="notranslate">sequence</span> の更新中にブロードキャストメッセージ<span class="notranslate">keyframe</span> が発生したため、トリガーされました。</li>
+    <li><b>Step</b>：通常の<span class="notranslate">object</span> ステップイベントの直前にトリガーされます。<b>重要!</b> <span
+        class="notranslate">sequence</span> が一時停止している場合、このイベントは<span class="notranslate">sequence</span>
+      が再び再生を開始した次のステップまでトリガーされません。</li>
+    <li><b>Begin Step</b>:<span class="notranslate">object</span> begin-step イベントの直前にトリガーされます。<b>重要!</b> <span
+        class="notranslate">sequence</span> が一時停止している場合、このイベントは<span class="notranslate">sequence</span>
+      が再び再生を開始した次のステップまでトリガーされません。</li>
+    <li><b>End Step</b>：<span class="notranslate">object</span> のエンドステップイベントの直前にトリガーされます。<b>重要!</b> <span
+        class="notranslate">sequence</span> が一時停止している場合、このイベントは<span class="notranslate">sequence</span>
+      が再び再生を開始した次のステップまでトリガーされません。</li>
+    <li><b>Async System</b>:<span class="notranslate">object</span> <a
+        href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">Asynchronous System
+        Event</a>handlersと同じようにトリガーされます。<em><b>重要!</b> <span class="notranslate">sequence</span>
+      </em>が一時停止している場合、このイベントはトリガーされません。</li>
+    <li><b>ブロードキャストメッセージ</b>：<span class="notranslate">sequence</span> の更新中にブロードキャストメッセージ<span
+        class="notranslate">keyframe</span> が発生したため、トリガーされました。</li>
   </ul>
-  <p>すべてのイベントは、<span class="notranslate">script</span> で定義されている関数と関連付ける必要があります。したがって、イベントをセットアップするには、<a href="../../../GML_Overview/Method_Variables.htm">メソッド変数を</a>正しい名前のプロパティに割り当て、どのイベントが関数を呼び出すべきかを<span class="notranslate">sequence</span> に伝えなければなりません。このための構文は次のとおりです。</p>
-  <p class="code">&lt;sequence_struct&gt;.&lt;event_property&gt; = method(&lt;sequence_struct&gt;, &lt;function_name&gt;);</p>
-  <p>各イベントの<span class="notranslate">sequence</span> <span class="notranslate">struct</span> プロパティは以下の通りです。<span class="inline"></span></p>
+  <p>すべてのイベントは、<span class="notranslate">script</span> で定義されている関数と関連付ける必要があります。したがって、イベントをセットアップするには、<a
+      href="../../../GML_Overview/Method_Variables.htm">メソッド変数を</a>正しい名前のプロパティに割り当て、どのイベントが関数を呼び出すべきかを<span
+      class="notranslate">sequence</span> に伝えなければなりません。このための構文は次のとおりです。</p>
+  <p class="code">&lt;sequence_struct&gt;.&lt;event_property&gt; = method(&lt;sequence_struct&gt;,
+    &lt;function_name&gt;);</p>
+  <p>各イベントの<span class="notranslate">sequence</span> <span class="notranslate">struct</span> プロパティは以下の通りです。<span
+      class="inline"></span></p>
   <ul class="colour">
     <li><span class="inline">event_create</span><span class="inline"></span></li>
     <li><span class="inline">event_destroy</span><span class="inline"></span></li>
@@ -42,7 +70,8 @@
     <li><span class="inline">event_async_system</span><span class="inline"></span></li>
     <li><span class="inline">event_broadcast_message</span></li>
   </ul>
-  <p>使用例を挙げると、マウスの左ボタンのクリックを検出したときに、<span class="notranslate">sequence</span> の向きを反転させたいとします。まず、呼び出したい関数で<span class="notranslate">script</span> を作成する必要があります。</p>
+  <p>使用例を挙げると、マウスの左ボタンのクリックを検出したときに、<span class="notranslate">sequence</span> の向きを反転させたいとします。まず、呼び出したい関数で<span
+      class="notranslate">script</span> を作成する必要があります。</p>
   <p class="code">/// @function seq_reverse();<br />
     <br />
     function seq_reverse()<br />
@@ -57,14 +86,24 @@
         }<br />
     }
   </p>
-  <p>この関数でやっていることは、マウスが押されたことを聞き、そのメソッドがバインドされている<span class="notranslate">sequence</span> の再生方向を反転させることだけです。現在、これらのプロパティにリンクしている関数にパラメータを渡すことができないことにお気づきでしょう。 <a href="../../../GML_Overview/Instance_Keywords.htm"><span class="inline">self</span></a>という変数が、関数のスコープ内で、<span class="notranslate">sequence</span> のインスタンスとして代入されます。</p>
-  <p class="note"><b>注</b>：上記の<span class="notranslate">script</span> では、 <span class="inline">self</span> 識別子は省略可能で、この例で使用されているメソッド変数のスコープを明示的に示すためにのみ使用されていることは注目に値します。</p>
+  <p>この関数でやっていることは、マウスが押されたことを聞き、そのメソッドがバインドされている<span class="notranslate">sequence</span>
+    の再生方向を反転させることだけです。現在、これらのプロパティにリンクしている関数にパラメータを渡すことができないことにお気づきでしょう。 <a
+      href="../../../GML_Overview/Instance_Keywords.htm"><span class="inline">self</span></a>という変数が、関数のスコープ内で、<span
+      class="notranslate">sequence</span> のインスタンスとして代入されます。</p>
+  <p class="note"><b>注</b>：上記の<span class="notranslate">script</span> では、 <span class="inline">self</span>
+    識別子は省略可能で、この例で使用されているメソッド変数のスコープを明示的に示すためにのみ使用されていることは注目に値します。</p>
   <p>これを<span class="notranslate">sequence</span> に割り当てるには、次のようにします。</p>
   <p class="code">var _seq = sequence_get(Sequence1);<br />
     _seq.event_step = method(_seq, seq_reverse);</p>
-  <p>ここで、<span class="notranslate">sequence</span> <i>オブジェクトに</i>ステップイベントを割り当て、マウスが押されたことを検出し、<span class="notranslate">sequence</span> で作成した後、<span class="notranslate">room</span> <i>インスタンスの</i>再生ヘッド方向を変更する関数を設定しました。</p>
+  <p>ここで、<span class="notranslate">sequence</span> <i>オブジェクトに</i>ステップイベントを割り当て、マウスが押されたことを検出し、<span
+      class="notranslate">sequence</span> で作成した後、<span class="notranslate">room</span>
+    <i>インスタンスの</i>再生ヘッド方向を変更する関数を設定しました。
+  </p>
   <h2><label for="2">モーメント</label></h2>
-  <p><span class="notranslate">sequence</span> <b>瞬間は</b>、<span class="notranslate">sequence</span> の再生中に、1 つ以上の指定されたフレームで発生する固有のコードアクションです。このコード・モーメントは、イベント（上記で説明）と同様に、指定されたフレームでトリガーされる定義済みの<a href="../../../GML_Overview/Method_Variables.htm">メソッド変数に</a>過ぎません。たとえば、<span class="notranslate">sequence</span> で、アニメーションの特定のフレームに「弾丸」のインスタンスを作成したいとします。まず、このアクションに使用する関数を、次のように作成する必要があります。</p>
+  <p><span class="notranslate">sequence</span> <b>瞬間は</b>、<span class="notranslate">sequence</span> の再生中に、1
+    つ以上の指定されたフレームで発生する固有のコードアクションです。このコード・モーメントは、イベント（上記で説明）と同様に、指定されたフレームでトリガーされる定義済みの<a
+      href="../../../GML_Overview/Method_Variables.htm">メソッド変数に</a>過ぎません。たとえば、<span class="notranslate">sequence</span>
+    で、アニメーションの特定のフレームに「弾丸」のインスタンスを作成したいとします。まず、このアクションに使用する関数を、次のように作成する必要があります。</p>
   <p class="code">/// @function seq_shoot();<br />
     <br />
     seq_shoot = function()<br />
@@ -72,7 +111,13 @@
         instance_create_layer(sequence.xorigin, sequence.yorigin, &quot;Instances&quot;, obj_Bullet);<br />
     }
   </p>
-  <p>そして、これを<span class="notranslate">sequence</span> <span class="notranslate">struct</span> の <span class="inline">momentKeyframes</span> プロパティのフレームに追加します。これは基本的にこの目的のためだけに使われる「特別な」トラックなので、<span class="notranslate">keyframe</span> に持たせたいモーメントアクションに関連する<span class="notranslate">sequence</span> データだけを取ることができます。このトラックは、他のトラックを作成するのと同じように、<span class="notranslate">keyframe</span> <span class="notranslate">structs</span> を作成し、<span class="notranslate">keyframe</span> データで埋めることによって作成します。チャンネル 0 は使用できる唯一のチャンネルで、トラックタイプは <span class="inline">seqtracktype_moment</span> です。以下は、上で定義した関数を使って、与えられた瞬間（フレーム）に発火するように作成した例です。</p>
+  <p>そして、これを<span class="notranslate">sequence</span> <span class="notranslate">struct</span> の <span
+      class="inline">momentKeyframes</span> プロパティのフレームに追加します。これは基本的にこの目的のためだけに使われる「特別な」トラックなので、<span
+      class="notranslate">keyframe</span> に持たせたいモーメントアクションに関連する<span class="notranslate">sequence</span>
+    データだけを取ることができます。このトラックは、他のトラックを作成するのと同じように、<span class="notranslate">keyframe</span> <span
+      class="notranslate">structs</span> を作成し、<span class="notranslate">keyframe</span> データで埋めることによって作成します。チャンネル 0
+    は使用できる唯一のチャンネルで、トラックタイプは <span class="inline">seqtracktype_moment</span>
+    です。以下は、上で定義した関数を使って、与えられた瞬間（フレーム）に発火するように作成した例です。</p>
   <p class="code">var _seq = sequence_get(my_Seq);<br />
     var _k = array_create(3);<br />
     _k[0] = sequence_keyframe_new(seqtracktype_moment);<br />
@@ -89,10 +134,24 @@
     _k[1].channels = _d;<br />
     _k[2].channels = _d;<br />
     _seq.momentKeyframes = _k;</p>
-  <p>上記のコードでは、「moment」トラックのフレーム60、120、180を設定して、メソッド <span class="inline">seq_shoot</span> を呼び出すだけです。現在、各モーメントに使用される関数にパラメータを渡すことはできず、すべてのケースで関数のスコープ内の変数 <span class="inline">self</span> は<span class="notranslate">sequence</span> のインスタンスとして代入されていることに気づくでしょう（一般的には <span class="inline">self</span> を使う必要はありませんが、特殊なケースでは役に立つことがあります）。</p>
+  <p>上記のコードでは、「moment」トラックのフレーム60、120、180を設定して、メソッド <span class="inline">seq_shoot</span>
+    を呼び出すだけです。現在、各モーメントに使用される関数にパラメータを渡すことはできず、すべてのケースで関数のスコープ内の変数 <span class="inline">self</span> は<span
+      class="notranslate">sequence</span> のインスタンスとして代入されていることに気づくでしょう（一般的には <span class="inline">self</span>
+    を使う必要はありませんが、特殊なケースでは役に立つことがあります）。</p>
   <h2><label for="3">ブロードキャストメッセージ</label></h2>
-  <p><span class="notranslate">strings</span>シークエンスは<b>ブロードキャストメッセージを</b>生成することができます。これは、アニメーションに沿った特定のフレームに追加されるシンプルな<span class="notranslate">timeline</span> で、<span class="notranslate">timeline</span> のそのポイントに達すると、<span class="notranslate">string</span> 、それをリッスンするすべての<span class="notranslate">object</span> インスタンスにブロードキャストされます。これらのメッセージは、<a href="../../../../The_Asset_Editors/Sequences.htm">Sequence Editorを使って</a> <span class="notranslate">IDE</span> に追加できますが、コードを使って作成・編集することもできます。</p>
-  <p><span class="notranslate">sequence</span> を使って<span class="notranslate">GML</span> に放送メッセージを作成するには、それらを<span class="notranslate">sequence</span> <span class="notranslate">struct</span> の <span class="inline">messageEventKeyframes</span> プロパティのフレームに追加する必要があります。 これは本質的にこの目的のためだけに使われる「特別な」トラックなので、<span class="notranslate">keyframe</span> に持たせたい放送メッセージに関連する<span class="notranslate">sequence</span> データだけを取ることができます。このトラックは他のトラックを作成するのとほぼ同じ方法で作成します。<span class="notranslate">keyframe</span> <span class="notranslate">structs</span> を作成し、<span class="notranslate">keyframe</span> データで埋めることで、チャンネル 0 は使用できる唯一のチャンネルで、トラックタイプは <span class="inline">seqtracktype_message</span> となります。以下は、このトラックを作成する方法の例です。</p>
+  <p><span
+      class="notranslate">strings</span>シークエンスは<b>ブロードキャストメッセージを</b>生成することができます。これは、アニメーションに沿った特定のフレームに追加されるシンプルな<span
+      class="notranslate">timeline</span> で、<span class="notranslate">timeline</span> のそのポイントに達すると、<span
+      class="notranslate">string</span> 、それをリッスンするすべての<span class="notranslate">object</span>
+    インスタンスにブロードキャストされます。これらのメッセージは、<a href="../../../../The_Asset_Editors/Sequences.htm">Sequence Editorを使って</a> <span
+      class="notranslate">IDE</span> に追加できますが、コードを使って作成・編集することもできます。</p>
+  <p><span class="notranslate">sequence</span> を使って<span class="notranslate">GML</span> に放送メッセージを作成するには、それらを<span
+      class="notranslate">sequence</span> <span class="notranslate">struct</span> の <span
+      class="inline">messageEventKeyframes</span> プロパティのフレームに追加する必要があります。 これは本質的にこの目的のためだけに使われる「特別な」トラックなので、<span
+      class="notranslate">keyframe</span> に持たせたい放送メッセージに関連する<span class="notranslate">sequence</span>
+    データだけを取ることができます。このトラックは他のトラックを作成するのとほぼ同じ方法で作成します。<span class="notranslate">keyframe</span> <span
+      class="notranslate">structs</span> を作成し、<span class="notranslate">keyframe</span> データで埋めることで、チャンネル 0
+    は使用できる唯一のチャンネルで、トラックタイプは <span class="inline">seqtracktype_message</span> となります。以下は、このトラックを作成する方法の例です。</p>
   <p class="code">var _seq = sequence_get(my_Seq);<br />
     var _k = array_create(2);<br />
     _k[0] = sequence_keyframe_new(seqtracktype_message);<br />
@@ -115,18 +174,23 @@
     _k[0].channels = _d1;<br />
     _k[1].channels = _d2;<br />
     _seq.messageEventKeyframes = _k;</p>
-  <p>メッセージテキストが配列として<span class="notranslate">keyframe</span> データチャネルに渡されることにお気づきでしょう。これは、同じフレームで複数のメッセージをブロードキャストし、異なる<span class="notranslate">object</span> インスタンスにそれらをリッスンさせ、実際に期待しているメッセージに応じて異なる反応をさせることができるためです。</p>
-  <p><span class="notranslate">sequence</span> からブロードキャストメッセージが発せられたら、<span class="notranslate">object</span> インスタンスの<i>Other</i>&gt;<i>Broadcast Message</i>イベントを使って解析することができます。詳しくは、<a href="../../../../The_Asset_Editors/Sequence_Properties/Broadcast_Messages.htm">こちらで</a>解説しています。</p>
+  <p>メッセージテキストが配列として<span class="notranslate">keyframe</span>
+    データチャネルに渡されることにお気づきでしょう。これは、同じフレームで複数のメッセージをブロードキャストし、異なる<span class="notranslate">object</span>
+    インスタンスにそれらをリッスンさせ、実際に期待しているメッセージに応じて異なる反応をさせることができるためです。</p>
+  <p><span class="notranslate">sequence</span> からブロードキャストメッセージが発せられたら、<span class="notranslate">object</span>
+    インスタンスの<i>Other</i>&gt;<i>Broadcast Message</i>イベントを使って解析することができます。詳しくは、<a
+      href="../../../../The_Asset_Editors/Sequence_Properties/Broadcast_Messages.htm">こちらで</a>解説しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sequences.htm">シークエンス</a></div>
+        <div style="float:left">前のページ：<a href="Sequences.htm">シークエンス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequence Events
@@ -146,4 +210,5 @@ event_broadcast_message
 sequence_events_moments_broadcasts
 -->
 </body>
+
 </html>

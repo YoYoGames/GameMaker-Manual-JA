@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>file_find_close</title>
@@ -12,12 +13,16 @@
   <meta name="rh-index-keywords" content="file_find_close" />
   <meta name="search-keywords" content="file_find_close" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">file_find_close</span></h1>
-  <p>を使用して開いたファイルを処理した後に、この関数を呼び出す必要があります。 <a href="file_find_first.htm"><span class="inline">file_find_first()</span></a>と <a href="file_find_next.htm"><span class="inline">file_find_next()</span></a>関数でメモリを解放します。ファイル検索関数は、ファイルディレクトリにハンドルを開き、最小限のメモリを使用しますが、（時間が経つと）その量は増えていきます。したがって、この関数は、必要なファイルが見つかった後に必ず呼び出して、これらのハンドルを「クローズ」する必要があります。</p>
+  <p>を使用して開いたファイルを処理した後に、この関数を呼び出す必要があります。 <a href="file_find_first.htm"><span
+        class="inline">file_find_first()</span></a>と <a href="file_find_next.htm"><span
+        class="inline">file_find_next()</span></a>関数でメモリを解放します。ファイル検索関数は、ファイルディレクトリにハンドルを開き、最小限のメモリを使用しますが、（時間が経つと）その量は増えていきます。したがって、この関数は、必要なファイルが見つかった後に必ず呼び出して、これらのハンドルを「クローズ」する必要があります。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">file_find_close</span>();</p>
   <p> </p>
   <h4>リターンズ</h4>
@@ -31,8 +36,10 @@
         fileC = file_find_next();<br />
         file_find_close();<br />
     }</p>
-  <p>このコードは、指定されたディレクトリが存在するかどうかをチェックし、存在する場合はそこに行き、最初に見つかった「読み取り専用」 <span class="inline">.doc</span> ファイルを返します。その後、さらに2つのファイルを探し、ファイルファインダーを閉じます。</p>
-  <p>を使用すると、任意の数のファイルを検索することができます。 <a href="../../../GML_Overview/Language_Features/while.htm"><span class="notranslate">while</span></a>をループさせる。</p>
+  <p>このコードは、指定されたディレクトリが存在するかどうかをチェックし、存在する場合はそこに行き、最初に見つかった「読み取り専用」 <span class="inline">.doc</span>
+    ファイルを返します。その後、さらに2つのファイルを探し、ファイルファインダーを閉じます。</p>
+  <p>を使用すると、任意の数のファイルを検索することができます。 <a href="../../../GML_Overview/Language_Features/while.htm"><span
+        class="notranslate">while</span></a>をループさせる。</p>
   <p class="code">var files = [];<br />
     var file_name = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
     <br />
@@ -45,18 +52,23 @@
     <br />
     file_find_close();
   </p>
-  <p>上記のコードでは、見つかったすべてのファイル名を格納する空の配列を作成し、読み取り専用のファイル（ <span class="inline">.doc</span> ）の検索を開始します。そのファイル名が空の<span class="notranslate">string</span> でない場合、それを <span class="inline">files</span> 配列にプッシュし、次のファイルを探そうとします。<span class="notranslate">loop</span> は、空の<span class="notranslate">string</span> が見つかる（一致するファイルがもうないことを意味する） まで繰り返され、その時点で<span class="notranslate">loop</span> が終了し、最後にファイルファインダーが閉じられる。</p>
+  <p>上記のコードでは、見つかったすべてのファイル名を格納する空の配列を作成し、読み取り専用のファイル（ <span class="inline">.doc</span> ）の検索を開始します。そのファイル名が空の<span
+      class="notranslate">string</span> でない場合、それを <span class="inline">files</span> 配列にプッシュし、次のファイルを探そうとします。<span
+      class="notranslate">loop</span> は、空の<span class="notranslate">string</span> が見つかる（一致するファイルがもうないことを意味する）
+    まで繰り返され、その時点で<span class="notranslate">loop</span> が終了し、最後にファイルファインダーが閉じられる。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="File_System.htm">ファイルシステム</a></div>
-        <div style="float:right">次のページ <a href="file_attributes.htm"><span class="notranslate">file_attributes</span></a></div>
+        <div style="float:left">前のページ：<a href="File_System.htm">ファイルシステム</a></div>
+        <div style="float:right">次のページ：<a href="file_attributes.htm"><span
+              class="notranslate">file_attributes</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_find_close
@@ -65,4 +77,5 @@ file_find_close
 file_find_close
 -->
 </body>
+
 </html>

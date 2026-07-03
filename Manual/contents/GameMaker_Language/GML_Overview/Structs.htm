@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>構造体・コンストラクタ</title>
@@ -12,12 +13,19 @@
   <meta name="rh-index-keywords" content="Structs" />
   <meta name="search-keywords" content="structs,new,delete,struct" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>構造体・コンストラクタ</h1>
-  <p><strong>構造体とは </strong>、他の変数のコレクションを保持する変数のことです。<span class="notranslate">struct</span> が保持する変数は、先に述べたどの<a href="Data_Types.htm">データ型でも</a>よく、これらの変数は最初の<span class="notranslate">struct</span> の宣言後に読み書きが可能です。また、宣言後の<span class="notranslate">struct</span> にさらに変数を追加することもできます。</p>
-  <p><span class="notranslate">struct</span> で使用する変数は、通常の変数命名法に従う必要があります。つまり、数字で始めることはできず、英数字とアンダースコア &quot;_&quot; 文字のみで構成されます。また、<span class="notranslate">struct</span> の内容は、<em>それを作成したインスタンスや関数とは無関係</em>であり、希望すれば<span class="inline">image_index</span> や <span class="inline">x</span>, <span class="inline">y</span> などの組み込み変数名を使用できることに注意してください。</p>
-  <p>最初に作成した後、<span class="notranslate">structs</span> は、メモリ上のスペースを占有<i>するものの</i>、存在する間は処理のオーバーヘッドがありません。<span class="notranslate">struct</span> の構文は以下の通りです。</p>
+  <p><strong>構造体とは </strong>、他の変数のコレクションを保持する変数のことです。<span class="notranslate">struct</span> が保持する変数は、先に述べたどの<a
+      href="Data_Types.htm">データ型でも</a>よく、これらの変数は最初の<span class="notranslate">struct</span> の宣言後に読み書きが可能です。また、宣言後の<span
+      class="notranslate">struct</span> にさらに変数を追加することもできます。</p>
+  <p><span class="notranslate">struct</span> で使用する変数は、通常の変数命名法に従う必要があります。つまり、数字で始めることはできず、英数字とアンダースコア &quot;_&quot;
+    文字のみで構成されます。また、<span class="notranslate">struct</span> の内容は、<em>それを作成したインスタンスや関数とは無関係</em>であり、希望すれば<span
+      class="inline">image_index</span> や <span class="inline">x</span>, <span class="inline">y</span>
+    などの組み込み変数名を使用できることに注意してください。</p>
+  <p>最初に作成した後、<span class="notranslate">structs</span> は、メモリ上のスペースを占有<i>するものの</i>、存在する間は処理のオーバーヘッドがありません。<span
+      class="notranslate">struct</span> の構文は以下の通りです。</p>
   <p class="code"><i>&lt;variable&gt;</i> =<br />
     {<br />
     <i>    &lt;variable&gt;</i> : <i>&lt;value&gt;</i>,<br />
@@ -31,9 +39,13 @@
         a : 20,<br />
         b : &quot;Hello World&quot;<br />
     };</p>
-  <p>上記のコードでは、変数 <span class="inline">mystruct</span> にインスタンススコープ<span class="notranslate">struct</span> を作成し、いくつかの値を代入しています (<span class="notranslate">structs</span> は他の変数と同様に、ローカル、インスタンス、グローバルスコープで作成できます - 詳しくは<a href="Variables_And_Variable_Scope.htm">変数と変数スコープの</a>セクションを参照してください)。<span class="notranslate">struct</span> を最初に作成するときに中身を入れる必要はなく、これを行うだけで空の<span class="notranslate">struct</span> を作成することができることに注意してください。</p>
+  <p>上記のコードでは、変数 <span class="inline">mystruct</span> にインスタンススコープ<span class="notranslate">struct</span>
+    を作成し、いくつかの値を代入しています (<span class="notranslate">structs</span> は他の変数と同様に、ローカル、インスタンス、グローバルスコープで作成できます - 詳しくは<a
+      href="Variables_And_Variable_Scope.htm">変数と変数スコープの</a>セクションを参照してください)。<span class="notranslate">struct</span>
+    を最初に作成するときに中身を入れる必要はなく、これを行うだけで空の<span class="notranslate">struct</span> を作成することができることに注意してください。</p>
   <p class="code">mystruct = {};</p>
-  <p>ゲームコードの後の段階で、この<span class="notranslate">struct</span> に変数を追加することができます。後から追加するには、ドット演算子を使います（「<a href="Addressing_Variables_In_Other_Instances.htm">他のインスタンスの変数のアドレス</a>指定」と同じ方法です）。 </p>
+  <p>ゲームコードの後の段階で、この<span class="notranslate">struct</span> に変数を追加することができます。後から追加するには、ドット演算子を使います（「<a
+      href="Addressing_Variables_In_Other_Instances.htm">他のインスタンスの変数のアドレス</a>指定」と同じ方法です）。 </p>
   <p class="code">mystruct.newItem = &quot;Some Text&quot;;</p>
   <p>これは、このように<span class="notranslate">struct</span> を初期化するのと同じ結果になります。 </p>
   <p class="code">mystruct =<br />
@@ -55,24 +67,39 @@
         f : [ 10, 20, 30, 40, 50 ],<br />
         g : image_index<br />
     };</p>
-  <p>上記のコードでは、<span class="notranslate">runtime</span> でメソッドを定義して<span class="notranslate">structs</span> 関数を使うこともできますし、<span class="notranslate">struct</span> の宣言内でローカル変数やインスタンス変数を使うこともできることに気づかれることでしょう。</p>
+  <p>上記のコードでは、<span class="notranslate">runtime</span> でメソッドを定義して<span class="notranslate">structs</span>
+    関数を使うこともできますし、<span class="notranslate">struct</span> の宣言内でローカル変数やインスタンス変数を使うこともできることに気づかれることでしょう。</p>
   <h3 id="inst_in_struct"><span class="notranslate">Struct</span> 宣言のインスタンス変数？</h3>
-  <p>例えば、上記の例では、<span class="notranslate">struct</span> の変数「g」にインスタンス変数である「 <span class="inline">image_index</span> 」が設定されていることに気がつくと思います。この場合、インスタンス変数を取得するために<a href="Instance_Keywords.htm">キーワード</a> <span class="inline">other</span> を使用する必要があると思うかもしれませんが、その必要はありません。構造体を定義すると、<strong>コロン「:」の左側にあるすべてのメンバ変数が<em>構造体</em></strong>変数となり、右側にある値や変数は構造体を定義しているもの（この場合はインスタンス<strong>）のスコープを使用</strong>するのが基本的な考え方です。</p>
-  <p>これを説明するために、簡単な例を見てみよう。変数 &quot;x&quot; と &quot;y&quot; で<span class="notranslate">struct</span> を定義し、それらを<span class="notranslate">struct</span> を定義するインスタンスの &quot;x&quot; と &quot;y&quot; に設定したいとします。 実際には、このようなコードになります。</p>
+  <p>例えば、上記の例では、<span class="notranslate">struct</span> の変数「g」にインスタンス変数である「 <span class="inline">image_index</span>
+    」が設定されていることに気がつくと思います。この場合、インスタンス変数を取得するために<a href="Instance_Keywords.htm">キーワード</a> <span
+      class="inline">other</span>
+    を使用する必要があると思うかもしれませんが、その必要はありません。構造体を定義すると、<strong>コロン「:」の左側にあるすべてのメンバ変数が<em>構造体</em></strong>変数となり、右側にある値や変数は構造体を定義しているもの（この場合はインスタンス<strong>）のスコープを使用</strong>するのが基本的な考え方です。
+  </p>
+  <p>これを説明するために、簡単な例を見てみよう。変数 &quot;x&quot; と &quot;y&quot; で<span class="notranslate">struct</span> を定義し、それらを<span
+      class="notranslate">struct</span> を定義するインスタンスの &quot;x&quot; と &quot;y&quot; に設定したいとします。 実際には、このようなコードになります。</p>
   <p class="code">mystruct =<br />
     {<br />
         x : x,<br />
         y : y<br />
     };</p>
-  <p>上記のコードでは、<span class="notranslate">struct</span> のメンバ変数 <span class="inline">x</span> と <span class="inline">y</span> にインスタンス変数 <span class="inline">x</span> と <span class="inline">y</span> の値が設定されています。コロン &quot;:&quot; の右側は<span class="notranslate">struct</span> を定義しているインスタンスを参照しているからです。このことは、<span class="notranslate">struct</span> の宣言内で後続の変数の定義にメンバ変数<span class="notranslate">struct</span> を使用<em>できない</em>ことを意味していることに注意してください。たとえば、次のようにするとエラーになります。</p>
+  <p>上記のコードでは、<span class="notranslate">struct</span> のメンバ変数 <span class="inline">x</span> と <span
+      class="inline">y</span> にインスタンス変数 <span class="inline">x</span> と <span class="inline">y</span> の値が設定されています。コロン
+    &quot;:&quot; の右側は<span class="notranslate">struct</span> を定義しているインスタンスを参照しているからです。このことは、<span
+      class="notranslate">struct</span> の宣言内で後続の変数の定義にメンバ変数<span class="notranslate">struct</span>
+    を使用<em>できない</em>ことを意味していることに注意してください。たとえば、次のようにするとエラーになります。</p>
   <p class="code">mystruct =<br />
     {<br />
         a : 10,<br />
         b : 10,<br />
         c : a + b<br />
     }</p>
-  <p>このエラーは、変数 <span class="inline">a</span> と <span class="inline">b</span> が、<span class="notranslate">struct</span> を定義しているもの（コロン &quot;:&quot; の右側）のスコープで実際に評価されており、<span class="notranslate">struct</span> 自身で定義されているもの<em>ではない</em>ために発生するものだそうです。<strong></strong></p>
-  <h3 style="padding-left: 20px"><em><strong style="margin-left: 0px">重要!</strong></em>  スコープ変数をメンバー名として使用することは<strong>できません </strong>。 <em><strong>グローバル </strong></em>スコープ変数を<span class="notranslate">struct</span> のメンバー名として使用することはできません。 例: <span class="inline">game_id</span> または <span class="inline">fps</span> 。これらのグローバル変数の完全なリストは、次のページにあります。</h3>
+  <p>このエラーは、変数 <span class="inline">a</span> と <span class="inline">b</span> が、<span class="notranslate">struct</span>
+    を定義しているもの（コロン &quot;:&quot; の右側）のスコープで実際に評価されており、<span class="notranslate">struct</span>
+    自身で定義されているもの<em>ではない</em>ために発生するものだそうです。<strong></strong></p>
+  <h3 style="padding-left: 20px"><em><strong style="margin-left: 0px">重要!</strong></em>
+    スコープ変数をメンバー名として使用することは<strong>できません </strong>。 <em><strong>グローバル </strong></em>スコープ変数を<span
+      class="notranslate">struct</span> のメンバー名として使用することはできません。 例: <span class="inline">game_id</span> または <span
+      class="inline">fps</span> 。これらのグローバル変数の完全なリストは、次のページにあります。</h3>
   <ul class="colour">
     <li><a href="Struct_Forbidden_Variables.htm">構造体禁制の変数</a></li>
   </ul>
@@ -89,7 +116,8 @@
   <p class="code">mystruct.a += 1;<br />
     mystruct.b = mystruct.a + 20;<br />
     mydir = point_direction(mouse_x, mouse_y, mystruct.xx, mystruct.yy);</p>
-  <p>最後に、<span class="notranslate">structs</span> は、次のように、その中に他の<span class="notranslate">structs</span> を入れ子にすることができます。</p>
+  <p>最後に、<span class="notranslate">structs</span> は、次のように、その中に他の<span class="notranslate">structs</span> を入れ子にすることができます。
+  </p>
   <p class="code">mystruct =<br />
     {<br />
         a :<br />
@@ -104,13 +132,24 @@
   <p>このようなネストされた<span class="notranslate">structs</span> にアクセスするには、やはり次のようなポイント記法を使うことになる。</p>
   <p class="code">var _str = mystuct.a.aa + &quot; &quot; + mystruct.b.bb;<br />
     show_debug_message(_str);</p>
-  <p><span class="notranslate">struct</span> のデータにアクセスする別の方法として <a href="Language_Features/with.htm"><span class="inline">with()</span></a>関数を使うことです。つまり、例えばこんなことができる。</p>
+  <p><span class="notranslate">struct</span> のデータにアクセスする別の方法として <a href="Language_Features/with.htm"><span
+        class="inline">with()</span></a>関数を使うことです。つまり、例えばこんなことができる。</p>
   <p class="code">with(mystruct)<br />
     {<br />
         a += other.x;<br />
     }</p>
-  <p> <span class="inline">with()</span> を使用すると、コードのスコープが指定した<span class="notranslate">struct</span> に変更され、構造体スコープでメンバ変数を操作できるようになります。この例では、<a href="Instance_Keywords.htm"><span class="inline">other</span> </a> キーワードも使用していることに注意してください。これは、 <span class="inline">with()</span> を使用したときのインスタンスと同じように動作し、実際にコードブロックを実行しているインスタンス（または<span class="notranslate">struct</span> ）を参照することになります。</p>
-  <p><span class="notranslate">struct</span> が不要になった場合、 を使ってメモリから削除することができます。 <a href="Language_Features/delete.htm"><span class="inline">delete</span></a>演算子を使ってメモリから削除することができます。この演算子は<span class="notranslate">flags</span> <span class="notranslate">struct</span> をガベージコレクションできるようにします。これは厳密には必須ではありません。<a class="glossterm" data-glossterm="せいそういん" href="#">ガベージコレクタは</a>、<span class="notranslate">struct</span> がコード内で参照されなくなると自動的にこれを行うからです。しかし、そうすることは良い習慣なので、私たちはそれを推奨します（たとえば、インスタンスの<a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">クリーンアップ</a>イベントで <span class="inline">delete</span> を呼び出し、インスタンススコープ<span class="notranslate">struct</span> が削除されることをガベージコレクタに明示的に知らせます）。以下はその例です。</p>
+  <p> <span class="inline">with()</span> を使用すると、コードのスコープが指定した<span class="notranslate">struct</span>
+    に変更され、構造体スコープでメンバ変数を操作できるようになります。この例では、<a href="Instance_Keywords.htm"><span class="inline">other</span> </a>
+    キーワードも使用していることに注意してください。これは、 <span class="inline">with()</span>
+    を使用したときのインスタンスと同じように動作し、実際にコードブロックを実行しているインスタンス（または<span class="notranslate">struct</span> ）を参照することになります。</p>
+  <p><span class="notranslate">struct</span> が不要になった場合、 を使ってメモリから削除することができます。 <a
+      href="Language_Features/delete.htm"><span class="inline">delete</span></a>演算子を使ってメモリから削除することができます。この演算子は<span
+      class="notranslate">flags</span> <span class="notranslate">struct</span> をガベージコレクションできるようにします。これは厳密には必須ではありません。<a
+      class="glossterm" data-glossterm="せいそういん" href="#">ガベージコレクタは</a>、<span class="notranslate">struct</span>
+    がコード内で参照されなくなると自動的にこれを行うからです。しかし、そうすることは良い習慣なので、私たちはそれを推奨します（たとえば、インスタンスの<a
+      href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">クリーンアップ</a>イベントで <span
+      class="inline">delete</span> を呼び出し、インスタンススコープ<span class="notranslate">struct</span>
+    が削除されることをガベージコレクタに明示的に知らせます）。以下はその例です。</p>
   <p class="code">// Create event<br />
     mystruct =<br />
     {<br />
@@ -123,7 +162,10 @@
     delete mystruct;
   </p>
   <h2 id="constr">コンストラクタ関数</h2>
-  <p>また、<a href="Script_Functions.htm">スクリプト関数や</a> <a href="Method_Variables.htm">メソッドを</a>使用して、新しい<span class="notranslate">structs</span> を生成するために使用できる関数を作成することもできます。この場合、関数に対して <span class="inline">constructor</span> キーワードを使用する必要があり、そのような関数から を作成する場合は、演算子を使用する必要があります。 <a href="Language_Features/new.htm"><span class="inline">new</span></a><span class="notranslate">struct</span> 演算子を使用する必要があります。次の関数を参照してください。</p>
+  <p>また、<a href="Script_Functions.htm">スクリプト関数や</a> <a href="Method_Variables.htm">メソッドを</a>使用して、新しい<span
+      class="notranslate">structs</span> を生成するために使用できる関数を作成することもできます。この場合、関数に対して <span class="inline">constructor</span>
+    キーワードを使用する必要があり、そのような関数から を作成する場合は、演算子を使用する必要があります。 <a href="Language_Features/new.htm"><span
+        class="inline">new</span></a><span class="notranslate">struct</span> 演算子を使用する必要があります。次の関数を参照してください。</p>
   <p class="code">function Vector2(_x, _y) <strong>constructor</strong><br />
     {<br />
         x = _x;<br />
@@ -149,22 +191,34 @@
         }<br />
     }
   </p>
-  <p>ここでは、<span class="inline">Vector2</span> という関数を作成し、その定義の後に <span class="inline">constructor</span> キーワードを追加して、これが構造体を作成するための関数であることを<span data-keyref="GameMaker Name">GameMaker</span>に伝えています。そして、このコンストラクタ関数を次のように呼び出すことができます。</p>
+  <p>ここでは、<span class="inline">Vector2</span> という関数を作成し、その定義の後に <span class="inline">constructor</span>
+    キーワードを追加して、これが構造体を作成するための関数であることを<span
+      data-keyref="GameMaker Name">GameMaker</span>に伝えています。そして、このコンストラクタ関数を次のように呼び出すことができます。</p>
   <p class="code">v2 = new Vector2(10, 10);</p>
-  <p>変数 <span class="inline">v2</span> には、変数<span class="notranslate">struct</span> と変数 <span class="inline">x</span> と <span class="inline">y</span> と <a href="Functions/Static_Variables.htm"><span class="notranslate">static</span></a><a href="Method_Variables.htm">メソッド変数</a> <span class="inline">Add</span> を含むようになります。</p>
+  <p>変数 <span class="inline">v2</span> には、変数<span class="notranslate">struct</span> と変数 <span class="inline">x</span> と
+    <span class="inline">y</span> と <a href="Functions/Static_Variables.htm"><span
+        class="notranslate">static</span></a><a href="Method_Variables.htm">メソッド変数</a> <span class="inline">Add</span>
+    を含むようになります。
+  </p>
   <p>また、コンストラクタ関数でオプションの引数を利用することもできます。</p>
   <p class="code">function Vector2(<strong>_x = 0, _y = 0</strong>) constructor<br />
     {<br />
         x = _x;<br />
         y = _y;<br />
     }</p>
-  <p>このコンストラクタは、関数が呼び出されたときに <span class="inline">_x</span> と <span class="inline">_y</span> の引数が指定されていない場合、 <span class="inline">0</span> を使用するようになりました。つまり、引数を指定しなくても、新しい <span class="inline">Vector2</span> <span class="notranslate">struct</span> を作成することができます。</p>
+  <p>このコンストラクタは、関数が呼び出されたときに <span class="inline">_x</span> と <span class="inline">_y</span> の引数が指定されていない場合、 <span
+      class="inline">0</span> を使用するようになりました。つまり、引数を指定しなくても、新しい <span class="inline">Vector2</span> <span
+      class="notranslate">struct</span> を作成することができます。</p>
   <p class="code">empty_vector = new Vector2();</p>
   <h2>継承</h2>
-  <p><span class="notranslate">inherits</span> この方法で作成された関数は、単一<b>継承も</b>サポートします。つまり、別のコンストラクタ関数からデータを取得するコンストラクタ関数を作成することができます。</p>
-  <p class="note"><strong>注</strong>：継承を扱う場合、コンストラクタ関数の定義にメソッド変数を使用することはできず、<span class="notranslate">script</span> 関数のみ使用できます。</p>
-  <p>例えば、上記で<span class="inline">Vector2</span> というコンストラクタ関数を作成しましたので、これを「親」として別のコンストラクタ関数（<span class="inline">Vector3</span> と呼ぶことにします）を作成します。</p>
-  <p class="code">function <strong>Vector3(_x, _y, _z) </strong><strong>:</strong><strong> Vector2(_x, _y) </strong>constructor<br />
+  <p><span class="notranslate">inherits</span>
+    この方法で作成された関数は、単一<b>継承も</b>サポートします。つまり、別のコンストラクタ関数からデータを取得するコンストラクタ関数を作成することができます。</p>
+  <p class="note"><strong>注</strong>：継承を扱う場合、コンストラクタ関数の定義にメソッド変数を使用することはできず、<span class="notranslate">script</span>
+    関数のみ使用できます。</p>
+  <p>例えば、上記で<span class="inline">Vector2</span> というコンストラクタ関数を作成しましたので、これを「親」として別のコンストラクタ関数（<span
+      class="inline">Vector3</span> と呼ぶことにします）を作成します。</p>
+  <p class="code">function <strong>Vector3(_x, _y, _z) </strong><strong>:</strong><strong> Vector2(_x, _y)
+    </strong>constructor<br />
     {<br />
         z = _z;<br />
     <br />
@@ -176,7 +230,11 @@
         }<br />
     }
   </p>
-  <p>ご覧のように、関数を定義するときにコロン &quot;<span class="inline">:</span>&quot; を使って、新しいコンストラクタと継承する親コンストラクタを分けています。子コンストラクタ (<span class="inline">Vector3</span>) は <span class="inline">_x</span> と <span class="inline">_y</span> の引数を親 (<span class="inline">Vector2</span>) のコンストラクタに渡し、それを使って親のコンストラクタを先に実行し、その後に子のコンストラクタを実行するのです。このようにして、子コンストラクタは親の変数 (<span class="inline">x</span> と <span class="inline">y</span>) を取得し、さらに自分自身の変数 (<span class="inline">z</span>) も定義できるようになります。</p>
+  <p>ご覧のように、関数を定義するときにコロン &quot;<span class="inline">:</span>&quot; を使って、新しいコンストラクタと継承する親コンストラクタを分けています。子コンストラクタ (<span
+      class="inline">Vector3</span>) は <span class="inline">_x</span> と <span class="inline">_y</span> の引数を親 (<span
+      class="inline">Vector2</span>) のコンストラクタに渡し、それを使って親のコンストラクタを先に実行し、その後に子のコンストラクタを実行するのです。このようにして、子コンストラクタは親の変数
+    (<span class="inline">x</span> と <span class="inline">y</span>) を取得し、さらに自分自身の変数 (<span class="inline">z</span>)
+    も定義できるようになります。</p>
   <p>また、親コンストラクタに定数値を渡して、特定の子コンストラクタが常に同じ値を親コンストラクタに提供できるようにすることも可能です。</p>
   <p class="code">function Item(damage) constructor<br />
     {<br />
@@ -203,14 +261,20 @@
     <br />
     var _child = new Child();
   </p>
-  <p>これらのコンストラクタはどちらも出力ログに <span class="inline">20</span> と表示します。これは、子コンストラクタで設定された引数のデフォルト値がこの値であり、同じ値が親コンストラクタに渡されたからです。</p>
+  <p>これらのコンストラクタはどちらも出力ログに <span class="inline">20</span>
+    と表示します。これは、子コンストラクタで設定された引数のデフォルト値がこの値であり、同じ値が親コンストラクタに渡されたからです。</p>
   <p> <span class="inline">new</span> および <span class="inline">delete</span> オペレータの詳細については、以下のページをご覧ください。</p>
   <ul class="colour">
     <li><a href="Language_Features/new.htm"><span class="inline">new</span></a></li>
     <li><span class="inline"><a href="Language_Features/delete.htm"><span class="inline">delete</span> </li>
   </ul>
   <h2>文字列出力</h2>
-  <p><span class="notranslate">structs</span> について最後に述べておくと、それらからコンソールに出力される内容を<span class="notranslate">debugging</span> で変更することができます。デフォルトでは、関数 <a href="../GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_message()</span></a><span class="notranslate">struct</span> を呼び出すと、<span class="notranslate">struct</span> の内容が出力されます (上図のように)。しかし、<span class="notranslate">struct</span> に <span class="inline">toString</span> という特別な名前のメソッドを追加することで、このメッセージをカスタマイズすることが可能です。</p>
+  <p><span class="notranslate">structs</span> について最後に述べておくと、それらからコンソールに出力される内容を<span
+      class="notranslate">debugging</span> で変更することができます。デフォルトでは、関数 <a
+      href="../GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_message()</span></a><span
+      class="notranslate">struct</span> を呼び出すと、<span class="notranslate">struct</span> の内容が出力されます (上図のように)。しかし、<span
+      class="notranslate">struct</span> に <span class="inline">toString</span>
+    という特別な名前のメソッドを追加することで、このメッセージをカスタマイズすることが可能です。</p>
   <p class="code">mystruct =<br />
     {<br />
         a : 20,<br />
@@ -223,12 +287,16 @@
     }<br />
     show_debug_message(mystruct);
   </p>
-  <p>これで、 <span class="inline">show_debug_message()</span> 関数が呼ばれると、 <span class="inline">toString</span> メソッドが出力に使われ、- 上の例では - となります。</p>
+  <p>これで、 <span class="inline">show_debug_message()</span> 関数が呼ばれると、 <span class="inline">toString</span> メソッドが出力に使われ、-
+    上の例では - となります。</p>
   <p class="code">This struct says Hello World, 20 times!</p>
-  <p>を呼び出すこともできることに注意してください。 <a href="../GML_Reference/Strings/Strings.htm"><span class="inline">string()</span></a><span class="notranslate">struct</span> 関数を呼び出すこともでき、それを使って、例えば、 <span class="inline">toString</span> メソッドの内容を画面に表示したり、ファイルに保存したりすることができます。</p>
+  <p>を呼び出すこともできることに注意してください。 <a href="../GML_Reference/Strings/Strings.htm"><span
+        class="inline">string()</span></a><span class="notranslate">struct</span> 関数を呼び出すこともでき、それを使って、例えば、 <span
+      class="inline">toString</span> メソッドの内容を画面に表示したり、ファイルに保存したりすることができます。</p>
   <p class="code">var _str = string(mystruct);<br />
     draw_text(32, 32, _str);</p>
-  <p>最後に、<span class="notranslate">structs</span> で使用できる実行時関数がいくつかあり、それらが含む変数を取得したり、他のいくつかのことを行うことができます。それらは次のセクションで見ることができます。</p>
+  <p>最後に、<span class="notranslate">structs</span>
+    で使用できる実行時関数がいくつかあり、それらが含む変数を取得したり、他のいくつかのことを行うことができます。それらは次のセクションで見ることができます。</p>
   <ul class="colour">
     <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">変数関数</a></li>
   </ul>
@@ -238,11 +306,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Commenting_Code.htm">コードのコメント</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Commenting_Code.htm">コードのコメント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Structs
@@ -253,4 +322,5 @@ constructor
 structs
 -->
 </body>
+
 </html>

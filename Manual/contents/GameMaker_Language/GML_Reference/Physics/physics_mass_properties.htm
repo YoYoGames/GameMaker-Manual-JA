@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_mass_properties</title>
@@ -12,50 +13,68 @@
   <meta name="rh-index-keywords" content="physics_mass_properties" />
   <meta name="search-keywords" content="physics_mass_properties" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_mass_properties</span></h1>
-  <p>この関数を使用すると、物理を有効にしたインスタンスの質量と回転慣性の値をカスタムで設定することができます。通常、インスタンスの質量、重心、回転慣性は、バインドされたフィクスチャの表面積とその密度の組み合わせを使って計算されます。しかし、非常に特別な場合、重心をオフセットしたり、イナーシャを変更したりする必要があるかもしれません。</p>
+  <p>
+    この関数を使用すると、物理を有効にしたインスタンスの質量と回転慣性の値をカスタムで設定することができます。通常、インスタンスの質量、重心、回転慣性は、バインドされたフィクスチャの表面積とその密度の組み合わせを使って計算されます。しかし、非常に特別な場合、重心をオフセットしたり、イナーシャを変更したりする必要があるかもしれません。
+  </p>
   <h3>質量</h3>
-  <p>質量は現実世界の重さ（つまりキログラム）で計算されるので、常にモデル化するものに対して現実的な値を保つようにする必要があります。ですから、もしあなたの物理学<span class="notranslate">object</span> が人を表すものであるなら、その質量は2kgのようなものではなく、例えば70kgになる可能性があります。</p>
+  <p>質量は現実世界の重さ（つまりキログラム）で計算されるので、常にモデル化するものに対して現実的な値を保つようにする必要があります。ですから、もしあなたの物理学<span
+      class="notranslate">object</span> が人を表すものであるなら、その質量は2kgのようなものではなく、例えば70kgになる可能性があります。</p>
   <p>質量がマイナスになることはありません。</p>
   <h3>質量中心</h3>
-  <p>重心は、定義されたフィクスチャーの形状に基づいて、自動的に計算されます。これがどこになるかの一般的なアイデアを得るために、作成したいフィクスチャーと同じ形状の<span class="notranslate">sprite</span> 、&quot;center origin &quot;オプションを選択すると、重心がどこになるかが大体わかります。</p>
-  <p>しかし、これは正しくないかもしれませんし、物理学から特定の効果を求めているかもしれません。<span class="notranslate">object</span> その場合、この関数は重心のxとy座標を変更するために使用することも可能です。これらは<b>ローカル/相対的な</b>値で、<span class="inline2">0,0は</span>フィクスチャがインスタンスにバインドされている点です（インスタンスの原点）。したがって、質量中心を<span class="inline2">-4,0と</span>すると、質量中心は原点から4ピクセル左にシフトします。</p>
+  <p>重心は、定義されたフィクスチャーの形状に基づいて、自動的に計算されます。これがどこになるかの一般的なアイデアを得るために、作成したいフィクスチャーと同じ形状の<span
+      class="notranslate">sprite</span> 、&quot;center origin &quot;オプションを選択すると、重心がどこになるかが大体わかります。</p>
+  <p>しかし、これは正しくないかもしれませんし、物理学から特定の効果を求めているかもしれません。<span class="notranslate">object</span>
+    その場合、この関数は重心のxとy座標を変更するために使用することも可能です。これらは<b>ローカル/相対的な</b>値で、<span
+      class="inline2">0,0は</span>フィクスチャがインスタンスにバインドされている点です（インスタンスの原点）。したがって、質量中心を<span
+      class="inline2">-4,0と</span>すると、質量中心は原点から4ピクセル左にシフトします。</p>
   <h3>回転イナーシャ</h3>
   <p><span>イナーシャの値は、このインスタンスが回転速度の変化に対してどの程度抵抗力があるかを定義する。イナーシャが大きいと抵抗力が強くなり、小さいと抵抗力が弱くなる。</span></p>
   <p>回転慣性を負にすることはできません。</p>
-  <p class="note"><span class="note">NOTE</span>この関数は、個々のフィクスチャーに対して質量とイナーシャを設定するのではなく、いくつのフィクスチャーがバインドされていても、物理的に有効なインスタンス全体に対して設定します。</p>
-  <p class="note"><span class="note">注意</span>：物理シミュレーションはフィクスチャーの密度とサイズに基づいて最適な質量とイナーシャになるように設計されているので、この機能は必要な場合にのみ使用してください。これらの値を変更すると、予期しない結果をもたらす可能性があります。</p>
+  <p class="note"><span
+      class="note">NOTE</span>この関数は、個々のフィクスチャーに対して質量とイナーシャを設定するのではなく、いくつのフィクスチャーがバインドされていても、物理的に有効なインスタンス全体に対して設定します。
+  </p>
+  <p class="note"><span
+      class="note">注意</span>：物理シミュレーションはフィクスチャーの密度とサイズに基づいて最適な質量とイナーシャになるように設計されているので、この機能は必要な場合にのみ使用してください。これらの値を変更すると、予期しない結果をもたらす可能性があります。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_mass_properties</span>(mass, local_center_x, local_center_y, inertia)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_mass_properties</span>(mass, local_center_x,
+    local_center_y, inertia)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">mass</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">mass</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The new mass that you want the fixture to have.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">local_center_x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">local_center_x</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The local x coordinate of the new center of mass.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">local_center_y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">local_center_y</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The local y coordinate of the new center of mass.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">inertia</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">inertia</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The rotational inertia for the fixture.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -67,11 +86,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Physics.htm">物理学</a></div>
-        <div style="float:right">次のページ <a href="physics_test_overlap.htm"><span class="notranslate">physics_test_overlap</span></a></div>
+        <div style="float:left">前のページ：<a href="Physics.htm">物理学</a></div>
+        <div style="float:right">次のページ：<a href="physics_test_overlap.htm"><span
+              class="notranslate">physics_test_overlap</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_mass_properties
@@ -80,4 +101,5 @@ physics_mass_properties
 physics_mass_properties
 -->
 </body>
+
 </html>

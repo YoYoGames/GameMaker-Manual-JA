@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_sequence_headpos</title>
@@ -12,25 +13,37 @@
   <meta name="rh-index-keywords" content="layer_sequence_headpos" />
   <meta name="search-keywords" content="layer_sequence_headpos" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_sequence_headpos</span></h1>
-  <p>この関数を使用すると、<span class="notranslate">sequence</span> 要素の<a class="glossterm" data-glossterm="プレイヘッド" href="#">再生ヘッド</a>位置を特定のフレームに設定することができます。で返される<span class="notranslate">sequence</span> 要素 ID を指定します。 <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>または<a href="../General_Layer_Functions/General_Layer_Functions.htm">レイヤー要素関数の</a>1つによって設定された新しい位置と一緒に。位置は<i>フレーム</i>単位であり、総フレーム数より大きい値 (または 0 より小さい値) を設定すると、実際の最終的な再生ヘッド位置は、以下の規則に従って選択された<span class="notranslate">sequence</span> 再生のタイプに依存することに注意してください。</p>
+  <p>この関数を使用すると、<span class="notranslate">sequence</span> 要素の<a class="glossterm" data-glossterm="プレイヘッド"
+      href="#">再生ヘッド</a>位置を特定のフレームに設定することができます。で返される<span class="notranslate">sequence</span> 要素 ID を指定します。 <a
+      href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>または<a
+      href="../General_Layer_Functions/General_Layer_Functions.htm">レイヤー要素関数の</a>1つによって設定された新しい位置と一緒に。位置は<i>フレーム</i>単位であり、総フレーム数より大きい値
+    (または 0 より小さい値) を設定すると、実際の最終的な再生ヘッド位置は、以下の規則に従って選択された<span class="notranslate">sequence</span>
+    再生のタイプに依存することに注意してください。</p>
   <ul class="colour">
     <li><strong>ループしない</strong>。再生ヘッドは、<span class="notranslate">loop</span> の終わり（指定された値が負の場合は、始まり）にクランプします。</li>
-    <li><strong>ループする</strong>。再生ヘッドは、<span class="notranslate">sequence</span> の始まりに余分なフレームを加えて巻き戻ります。例えば、30 フレームの<span class="notranslate">sequence</span> で再生ヘッドを 45 フレームに設定した場合、実際の再生ヘッド位置は 15 になります。負の値を指定すると、<span class="notranslate">sequence</span> の再生ヘッドが逆方向にラップされます。</li>
-    <li><strong>ピンポン・ルーピング</strong>再生ヘッドが最後まで進み、全フレーム長を超えるフレーム数だけ戻り、再生方向が反転します。例えば、<span class="notranslate">sequence</span> が 30 フレームで、プレイヘッドを 40 に設定した場合、最後のプレイヘッド位置は 20 になり、方向は逆になります（0 に下がる）。なお、<span class="notranslate">sequence</span> のピンポン再生に負の値を与えては<i>いけません</i>。<span class="notranslate">undefined</span> のような結果になることがあります。</li>
+    <li><strong>ループする</strong>。再生ヘッドは、<span class="notranslate">sequence</span> の始まりに余分なフレームを加えて巻き戻ります。例えば、30 フレームの<span
+        class="notranslate">sequence</span> で再生ヘッドを 45 フレームに設定した場合、実際の再生ヘッド位置は 15 になります。負の値を指定すると、<span
+        class="notranslate">sequence</span> の再生ヘッドが逆方向にラップされます。</li>
+    <li><strong>ピンポン・ルーピング</strong>再生ヘッドが最後まで進み、全フレーム長を超えるフレーム数だけ戻り、再生方向が反転します。例えば、<span
+        class="notranslate">sequence</span> が 30 フレームで、プレイヘッドを 40 に設定した場合、最後のプレイヘッド位置は 20 になり、方向は逆になります（0 に下がる）。なお、<span
+        class="notranslate">sequence</span> のピンポン再生に負の値を与えては<i>いけません</i>。<span class="notranslate">undefined</span>
+      のような結果になることがあります。</li>
   </ul>
   <p>このようにヘッド位置を設定しても再生は停止せず、<span class="notranslate">sequence</span> 、一時停止しない限り新しいプレイヘッド位置から再生が継続されるだけです。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_sequence_headpos</span>(sequence_element_id, position)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_headpos</span>(sequence_element_id,
+    position)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">sequence_element_id</span></td>
@@ -40,12 +53,13 @@
       <tr>
         <td><span class="notranslate">position</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The position within the sequence (in frames) to set the playhead position to (can be a decimal value)</span></td>
+        <td><span class="notranslate">The position within the sequence (in frames) to set the playhead position to (can
+            be a decimal value)</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,18 +71,22 @@
             layer_sequence_headpos(a[i], 0)<br />
         }<br />
     }</p>
-  <p>上記のコードは、このコードを実行しているインスタンスのレイヤーに割り当てられているすべてのエレメントのIDを取得します。このコードでは、返された要素のいずれかが<span class="notranslate">sequence</span> <span class="notranslate">assets</span> であるかどうかを確認し、その場合は再生ヘッド位置が 0 に設定されます。</p>
+  <p>上記のコードは、このコードを実行しているインスタンスのレイヤーに割り当てられているすべてのエレメントのIDを取得します。このコードでは、返された要素のいずれかが<span
+      class="notranslate">sequence</span> <span class="notranslate">assets</span> であるかどうかを確認し、その場合は再生ヘッド位置が 0 に設定されます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sequence_Layers.htm">シークエンスレイヤー</a></div>
-        <div style="float:right">次のページ <a href="layer_sequence_headdir.htm"><span class="notranslate">layer_sequence_headdir</span></a></div>
+        <div style="float:left">前のページ：<a href="Sequence_Layers.htm">シークエンスレイヤー</a></div>
+        <div style="float:right">次のページ：<a href="layer_sequence_headdir.htm"><span
+              class="notranslate">layer_sequence_headdir</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_headpos
@@ -77,4 +95,5 @@ layer_sequence_headpos
 layer_sequence_headpos
 -->
 </body>
+
 </html>

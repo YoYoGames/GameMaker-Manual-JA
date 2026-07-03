@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>file_copy</title>
@@ -12,31 +13,42 @@
   <meta name="rh-index-keywords" content="file_copy" />
   <meta name="search-keywords" content="file_copy" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">file_copy</span></h1>
   <p>この関数は、指定されたファイルをコピーし、指定された新しい名前を付けます。</p>
-  <p><span class="notranslate">Android</span> で<b>インクルードファイル</b>領域（APK 内）からファイルをコピーする場合、まずメモリにコピーされます。したがって、APK から非常に大きなファイルをコピーすると、デバイスのメモリ不足を引き起こす可能性がありますので、注意してください。HTML5 ターゲットでは、クライアントサイドの保存に HTML5<b>Local Storage API</b>を使用しており、この関数はバイナリファイル操作をサポートしていないため、テキストファイルをコピーすることを想定しています。</p>
+  <p><span class="notranslate">Android</span> で<b>インクルードファイル</b>領域（APK 内）からファイルをコピーする場合、まずメモリにコピーされます。したがって、APK
+    から非常に大きなファイルをコピーすると、デバイスのメモリ不足を引き起こす可能性がありますので、注意してください。HTML5 ターゲットでは、クライアントサイドの保存に HTML5<b>Local Storage
+      API</b>を使用しており、この関数はバイナリファイル操作をサポートしていないため、テキストファイルをコピーすることを想定しています。</p>
   <p><span class="inline2">newname</span>ファイルがすでに存在する場合、この関数は失敗します。</p>
-  <p class="note"><b>警告!</b> <span data-keyref="GameMaker Name">GameMakerは</span>サンドボックス化されているため、この機能は期待通りに動作しない可能性があります!詳しくは「<a href="../../../../Additional_Information/The_File_System.htm">ファイルシステムの制限</a>」の項をご覧ください。</p>
+  <p class="note"><b>警告!</b> <span
+      data-keyref="GameMaker Name">GameMakerは</span>サンドボックス化されているため、この機能は期待通りに動作しない可能性があります!詳しくは「<a
+      href="../../../../Additional_Information/The_File_System.htm">ファイルシステムの制限</a>」の項をご覧ください。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">file_copy</span>(fname, newname);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td>        <td><span class="notranslate">The name of the file to copy.</span></td>
-     </tr>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the file to copy.</span></td>
+      </tr>
       <tr>
-        <td><span class="notranslate">newname</span></td><td><span data-keyref="Type_String"></span></td>        <td><span class="notranslate">The name of the new, copied file.</span></td>
-     </tr>
+        <td><span class="notranslate">newname</span></td>
+        <td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the new, copied file.</span></td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -51,11 +63,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="File_System.htm">ファイルシステム</a></div>
-        <div style="float:right">次のページ <a href="file_find_first.htm"><span class="notranslate">file_find_first</span></a></div>
+        <div style="float:left">前のページ：<a href="File_System.htm">ファイルシステム</a></div>
+        <div style="float:right">次のページ：<a href="file_find_first.htm"><span
+              class="notranslate">file_find_first</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 file_copy
@@ -64,4 +78,5 @@ file_copy
 file_copy
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>object_get_sprite</title>
@@ -13,27 +14,36 @@
   <meta name="search-keywords" content="object_get_sprite" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">object_get_sprite</span></h1>
-  <p>この関数は、チェックしている<span class="notranslate">object</span> が<span class="notranslate">sprite</span> を持つかどうかを調べ、持つ場合はその<span class="notranslate">sprite</span> のインデックスを返し、持たない場合は -1 を返します。これはインスタンス関数ではないことに注意してください!<span class="notranslate">object</span> を持たない<span class="notranslate">sprite</span> があっても、同じ<span class="notranslate">object</span> のインスタンスには があり、その逆もあり得ます。また、異なる<span class="notranslate">sprites</span> を持つことさえあり得ます。個々のインスタンスに<span class="notranslate">sprite</span> を設定するには <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a>インスタンス変数です。</p>
+  <p>この関数は、チェックしている<span class="notranslate">object</span> が<span class="notranslate">sprite</span>
+    を持つかどうかを調べ、持つ場合はその<span class="notranslate">sprite</span> のインデックスを返し、持たない場合は -1
+    を返します。これはインスタンス関数ではないことに注意してください!<span class="notranslate">object</span> を持たない<span
+      class="notranslate">sprite</span> があっても、同じ<span class="notranslate">object</span> のインスタンスには
+    があり、その逆もあり得ます。また、異なる<span class="notranslate">sprites</span> を持つことさえあり得ます。個々のインスタンスに<span
+      class="notranslate">sprite</span> を設定するには <a href="../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span
+        class="inline">sprite_index</span></a>インスタンス変数です。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">object_get_sprite</span>(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object"></span></td>
         <td><span class="notranslate">The index of the object to check</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p>
   <p> </p>
   <h4>例</h4>
@@ -42,18 +52,22 @@
     {<br />
         sprite_index = _spr;<br />
     }</p>
-  <p>上記の例では、インスタンスの <span class="inline">sprite_index</span> を、インスタンスの <span class="inline">object_index</span> の<span class="notranslate">sprite</span> と照合します。もしそれらが同じでなければ、<span class="notranslate">sprite</span> インデックスのものと同じ<span class="notranslate">object</span> をインスタンスに割り当てます。</p>
+  <p>上記の例では、インスタンスの <span class="inline">sprite_index</span> を、インスタンスの <span class="inline">object_index</span> の<span
+      class="notranslate">sprite</span> と照合します。もしそれらが同じでなければ、<span class="notranslate">sprite</span> インデックスのものと同じ<span
+      class="notranslate">object</span> をインスタンスに割り当てます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Objects.htm">オブジェクト</a></div>
-        <div style="float:right">次のページ <a href="object_get_visible.htm"><span class="notranslate">object_get_visible</span></a></div>
+        <div style="float:left">前のページ：<a href="Objects.htm">オブジェクト</a></div>
+        <div style="float:right">次のページ：<a href="object_get_visible.htm"><span
+              class="notranslate">object_get_visible</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_sprite
@@ -62,4 +76,5 @@ object_get_sprite
 object_get_sprite
 -->
 </body>
+
 </html>

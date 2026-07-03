@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>surface_copy</title>
@@ -12,20 +13,24 @@
   <meta name="rh-index-keywords" content="surface_copy" />
   <meta name="search-keywords" content="surface_copy" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">surface_copy</span></h1>
-  <p>この関数は、あるサーフェスから画像を取り出し、そのサーフェス内の指定された局所位置（ここで (0,0) 位置はコピー先サーフェスの左上隅です）にある別のサーフェスにコピーするだけです。コピー先のサーフェスがすでに情報を持っている場合、これはコピーによって上書きされます。</p>
-  <p class="note"><b></b><b>注</b>：サーフェスを使用する場合、<span class="notranslate">texture</span> のメモリーに保存されているため、サーフェスがいつでも存在しなくなる可能性があります。を使用して、サーフェスが存在するかどうかを<b>常に</b>確認する必要があります。 <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>直接参照する前に</p>
+  <p>この関数は、あるサーフェスから画像を取り出し、そのサーフェス内の指定された局所位置（ここで (0,0)
+    位置はコピー先サーフェスの左上隅です）にある別のサーフェスにコピーするだけです。コピー先のサーフェスがすでに情報を持っている場合、これはコピーによって上書きされます。</p>
+  <p class="note"><b></b><b>注</b>：サーフェスを使用する場合、<span class="notranslate">texture</span>
+    のメモリーに保存されているため、サーフェスがいつでも存在しなくなる可能性があります。を使用して、サーフェスが存在するかどうかを<b>常に</b>確認する必要があります。 <span style="font-size:1px;"><a
+        href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>直接参照する前に</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">surface_copy</span>(destination, x, y, source);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">destination</span></td>
@@ -50,7 +55,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -62,18 +67,22 @@
     {<br />
         draw_surface(surf, 0, 0);<br />
     }</p>
-  <p>上記のコードは、現在描画されているビューをチェックし、それがview[0]であれば、変数temp_surfでインデックスされたサーフェイスを変数surfでインデックスされたサーフェイスにコピーします。もし現在のビューがview[0]以外の場合は、サーフェス &quot;surf &quot;が画面に描画されます。</p>
+  <p>
+    上記のコードは、現在描画されているビューをチェックし、それがview[0]であれば、変数temp_surfでインデックスされたサーフェイスを変数surfでインデックスされたサーフェイスにコピーします。もし現在のビューがview[0]以外の場合は、サーフェス
+    &quot;surf &quot;が画面に描画されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
-        <div style="float:right">次のページ <a href="surface_copy_part.htm"><span class="notranslate">surface_copy_part</span></a></div>
+        <div style="float:left">前のページ：<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ：<a href="surface_copy_part.htm"><span
+              class="notranslate">surface_copy_part</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 surface_copy
@@ -82,4 +91,5 @@ surface_copy
 surface_copy
 -->
 </body>
+
 </html>

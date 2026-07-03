@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_list_mark_as_list</title>
@@ -12,32 +13,45 @@
   <meta name="rh-index-keywords" content="ds_list_mark_as_list" />
   <meta name="search-keywords" content="ds_list_mark_as_list" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_list_mark_as_list</span></h1>
-  <p>この関数は、以前に作成した DS リスト内の指定した位置に、 別の DS リストを保持していることを &quot;マーク&quot; (あるいは &quot;フラグ&quot;) するものである。この機能は、JSON<span class="notranslate">strings</span> をエンコードする際に必要となる (これは <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>このようにマークされた項目は、親となる DS リストが破棄されるときに自動的にガベージコレクションされる (破棄される) ため、データ構造をネストするときにも便利です。つまり、&quot;親&quot; リストを破棄する前に、手動でリストの内容を調べ、マークされたデータ構造を個別に破棄する必要がないのです。しかし、リストの位置を個別に削除した場合、そこに含まれていた DS リストはガベージコレクションさ<i>れないので</i>、親リストの位置から項目を削除する前に 適切な DS リスト破棄関数を呼び出さなければなりません。また、この関数 <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a>の場合、リストとしてフラグが立っている項目は、リストがクリアされるときに、同様に破棄されます。</p>
-  <p>また、マークされた位置がリスト内で変化した場合、「マーク」も一緒に移動します。例えば、リスト内の位置3をマークした後、その下にさらに2つのアイテムを挿入して位置5まで<i>移動しても</i>、リストとしてのマークは残ります。</p>
+  <p>この関数は、以前に作成した DS リスト内の指定した位置に、 別の DS リストを保持していることを &quot;マーク&quot; (あるいは &quot;フラグ&quot;) するものである。この機能は、JSON<span
+      class="notranslate">strings</span> をエンコードする際に必要となる (これは <a
+      href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span
+        class="inline">json_encode()</span></a>このようにマークされた項目は、親となる DS リストが破棄されるときに自動的にガベージコレクションされる (破棄される)
+    ため、データ構造をネストするときにも便利です。つまり、&quot;親&quot;
+    リストを破棄する前に、手動でリストの内容を調べ、マークされたデータ構造を個別に破棄する必要がないのです。しかし、リストの位置を個別に削除した場合、そこに含まれていた DS
+    リストはガベージコレクションさ<i>れないので</i>、親リストの位置から項目を削除する前に 適切な DS リスト破棄関数を呼び出さなければなりません。また、この関数 <a
+      href="ds_list_clear.htm"><span
+        class="inline">ds_list_clear()</span></a>の場合、リストとしてフラグが立っている項目は、リストがクリアされるときに、同様に破棄されます。</p>
+  <p>また、マークされた位置がリスト内で変化した場合、「マーク」も一緒に移動します。例えば、リスト内の位置3をマークした後、その下にさらに2つのアイテムを挿入して位置5まで<i>移動しても</i>、リストとしてのマークは残ります。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_list_mark_as_list</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_DS_List"></span></td>
         <td><span class="notranslate">The id of the list to mark.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">pos</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">pos</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The position within the list to mark.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span> or -1 (if it fails)</p>
   <p> </p>
   <h4>例</h4>
@@ -55,16 +69,20 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Lists.htm">DS一覧</a></div>
-        <div style="float:right">次のページ <a href="ds_list_mark_as_map.htm"><span class="notranslate">ds_list_mark_as_map</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Lists.htm">DS一覧</a></div>
+        <div style="float:right">次のページ：<a href="ds_list_mark_as_map.htm"><span
+              class="notranslate">ds_list_mark_as_map</span></a></div>
       </div>
       <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_mark_as_list
 --><!-- TAGS
 ds_list_mark_as_list
---></body>
+-->
+</body>
+
 </html>

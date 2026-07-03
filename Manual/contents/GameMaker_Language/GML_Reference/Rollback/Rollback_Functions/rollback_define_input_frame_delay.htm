@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -28,14 +29,17 @@
   <meta name="search-keywords" content="rollback_define_input_frame_delay" />
   <meta name="condition-tags" content="Export:Beta" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_define_input_frame_delay</span></h1>
   <p>この関数は、ローカルプレーヤー入力の固定フレーム遅延を定義する。</p>
-  <p>デフォルトでは、プレイヤー間の遅延に基づく適応型入力遅延が使用されます。これはほとんどすべてのゲームで機能しますが、特定のタイプのゲーム（例：格闘ゲーム）では、いつでも変更可能な適応型遅延ではなく、固定入力遅延を使用することを好む場合があります。</p>
+  <p>
+    デフォルトでは、プレイヤー間の遅延に基づく適応型入力遅延が使用されます。これはほとんどすべてのゲームで機能しますが、特定のタイプのゲーム（例：格闘ゲーム）では、いつでも変更可能な適応型遅延ではなく、固定入力遅延を使用することを好む場合があります。
+  </p>
   <p>何をやっているのかよく分かっていない限り、これを変更することはお勧めしません。この関数は、マルチプレイヤーゲームの前と最中にいつでも呼び出すことができます。</p>
   <p>遅延の値はフレーム数で指定する必要があります。<span class="inline2">1を</span>指定すると、適応的な遅延に戻ります。設定可能な最大遅延は<strong>10フレーム</strong>です。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_define_input_frame_delay</span>(frames);</p>
   <table>
     <colgroup>
@@ -45,19 +49,21 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">frames</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
-        <td><span class="notranslate">The number of frames to set as the fixed input delay, or <span class="inline2">-1</span> をクリックすると、デフォルトにリセットされます。</td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
+        <td><span class="notranslate">The number of frames to set as the fixed input delay, or <span
+              class="inline2">-1</span> をクリックすると、デフォルトにリセットされます。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -73,7 +79,8 @@
         rollback_start_game(2, false);<br />
     }
   </p>
-  <p>フレーム遅延値をグローバル変数として定義し、ロールバックゲームが始まる前に<span class="inline2">rollback_define_input_frame_delay()</span>を呼び出すときにそれを使用することができます。</p>
+  <p>フレーム遅延値をグローバル変数として定義し、ロールバックゲームが始まる前に<span
+      class="inline2">rollback_define_input_frame_delay()</span>を呼び出すときにそれを使用することができます。</p>
   <p> </p>
   <p> </p>
   <div class="footer">
@@ -83,7 +90,8 @@
         <div>次:<a data-xref="{title}" href="rollback_define_mock_input.htm">rollback_define_mock_input</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_define_input_frame_delay
@@ -92,4 +100,5 @@ rollback_define_input_frame_delay
 rollback_define_input_frame_delay
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_fill</title>
@@ -9,64 +10,82 @@
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_fill" />
-  <meta name="rh-index-keywords" content="buffer_fill,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
+  <meta name="rh-index-keywords"
+    content="buffer_fill,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
   <meta name="search-keywords" content="buffer_fill" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_fill</span></h1>
-  <p>この関数は、あらかじめ作成された<span class="notranslate">buffer</span> に、指定されたデータ型と値を入力するために使用することができます。<span class="notranslate">buffer</span> を埋めるデータは、この関数の引数 &quot;type &quot;と一致していなければならない。
-    <span class="notranslate">string</span> で、例えば符号なし16bit整数型を使用します。この型定数は，この関数で使われる <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a>と <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>関数を使用します。には、&quot;サイズ&quot;
-    は埋めたい<span class="notranslate">buffer</span> のサイズ（バイト単位）、offset は埋め合わせを開始する<span class="notranslate">buffer</span> の先頭からのオフセット値（これもバイト単位）である。</p>
+  <p>この関数は、あらかじめ作成された<span class="notranslate">buffer</span> に、指定されたデータ型と値を入力するために使用することができます。<span
+      class="notranslate">buffer</span> を埋めるデータは、この関数の引数 &quot;type &quot;と一致していなければならない。
+    <span class="notranslate">string</span> で、例えば符号なし16bit整数型を使用します。この型定数は，この関数で使われる <a href="buffer_read.htm"><span
+        class="inline">buffer_read()</span></a>と <a href="buffer_write.htm"><span
+        class="inline">buffer_write()</span></a>関数を使用します。には、&quot;サイズ&quot;
+    は埋めたい<span class="notranslate">buffer</span> のサイズ（バイト単位）、offset は埋め合わせを開始する<span class="notranslate">buffer</span>
+    の先頭からのオフセット値（これもバイト単位）である。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">buffer_fill</span>(buffer, offset, type, value, size);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">buffer_fill</span>(buffer, offset, type, value, size);
+  </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The index of the buffer to fill.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">offset</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The data offset value (in bytes).</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">type</span></td><td><span data-keyref="Type_Real"></span></td>
-        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</span></td>
-     </tr>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a
+              href="buffer_write.htm">here</a>).</span></td>
+      </tr>
       <tr>
-        <td><span class="notranslate">value</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The data to write.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The size of the buffer (in bytes) that you wish to fill.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0);<br/> buffer_fill(map_buffer, 0, buffer_u16, 0, 16384);</p>
-  <p>上記のコードは、変数 &quot;buff &quot;に格納されたidを持つ<span class="notranslate">buffer</span> の開始点を見つけ、そこに一連の符号付き16ビット整数値を書き込んでいます。</p>
+  <p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0);<br /> buffer_fill(map_buffer, 0, buffer_u16, 0,
+    16384);</p>
+  <p>上記のコードは、変数 &quot;buff &quot;に格納されたidを持つ<span class="notranslate">buffer</span>
+    の開始点を見つけ、そこに一連の符号付き16ビット整数値を書き込んでいます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_seek.htm"><span class="notranslate">buffer_seek</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_seek.htm"><span class="notranslate">buffer_seek</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_fill
@@ -75,4 +94,5 @@ buffer_fill
 buffer_fill
 -->
 </body>
+
 </html>

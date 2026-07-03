@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>一方</title>
@@ -12,25 +13,36 @@
   <meta name="rh-index-keywords" content="GML Visual Action - While" />
   <meta name="search-keywords" content="While" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> 一方</h1>
-  <p><b>While</b>アクションは、特定の条件が返ってきたときにのみ終了する<span class="notranslate">loops</span> を実行するために使用します。 <span class="inline">true</span> 。例えば、ある変数を使って <span class="inline">false</span> に設定し、While<span class="notranslate">loop</span> を実行し、この変数をチェックさせることができます。
-    <span class="notranslate">loop</span> のある時点で変数を <span class="inline">true</span> に設定すると、<span class="notranslate">loop</span> が終了します。while<span class="notranslate">loop</span> 内のどこで条件を設定しても、<span class="notranslate">loop</span> 内の<i>すべての</i>アクションは、スクリプトの残りの部分が実行される前に最後まで実行されることに注意してください。
-    やイベントを継続する場合、条件を変更しても<span class="notranslate">loop</span> から即座に抜け出せるわけではありません。</p>
-  <p>コードにWhileアクションを追加する場合、チェックする変数、実行するチェックの種類（以下、以上、等しい、など）、変数をチェックする値を指定する必要があります（<span class="notranslate">flag</span> Whileアクションを実行さ<i>せない</i>ことも可能です）。
-    <span class="notranslate">loop</span> をチェックし、条件が真で<i>ない</i>ことを確認します)。そして、While<span class="notranslate">loop</span> の中に実行するアクションを追加します。これは、「if」にアクションを追加するのと同じで、つまり、アクションの下ではなく、横にドロップします。</p>
+  <p><b>While</b>アクションは、特定の条件が返ってきたときにのみ終了する<span class="notranslate">loops</span> を実行するために使用します。 <span
+      class="inline">true</span> 。例えば、ある変数を使って <span class="inline">false</span> に設定し、While<span
+      class="notranslate">loop</span> を実行し、この変数をチェックさせることができます。
+    <span class="notranslate">loop</span> のある時点で変数を <span class="inline">true</span> に設定すると、<span
+      class="notranslate">loop</span> が終了します。while<span class="notranslate">loop</span> 内のどこで条件を設定しても、<span
+      class="notranslate">loop</span> 内の<i>すべての</i>アクションは、スクリプトの残りの部分が実行される前に最後まで実行されることに注意してください。
+    やイベントを継続する場合、条件を変更しても<span class="notranslate">loop</span> から即座に抜け出せるわけではありません。
+  </p>
+  <p>コードにWhileアクションを追加する場合、チェックする変数、実行するチェックの種類（以下、以上、等しい、など）、変数をチェックする値を指定する必要があります（<span
+      class="notranslate">flag</span> Whileアクションを実行さ<i>せない</i>ことも可能です）。
+    <span class="notranslate">loop</span> をチェックし、条件が真で<i>ない</i>ことを確認します)。そして、While<span class="notranslate">loop</span>
+    の中に実行するアクションを追加します。これは、「if」にアクションを追加するのと同じで、つまり、アクションの下ではなく、横にドロップします。
+  </p>
   <p><img>サイドに追加されたすべてのアクションはWhileに含まれ、イベントやスクリプトが実行される前に実行されます。
-    は、その下に追加されたアクションを継続します（下の例のように）。なお、<a href="Break.htm">Break</a>アクションを呼び出すと、<span class="notranslate">loop</span> を早期に終了させることができます。</p>
+    は、その下に追加されたアクションを継続します（下の例のように）。なお、<a href="Break.htm">Break</a>アクションを呼び出すと、<span class="notranslate">loop</span>
+    を早期に終了させることができます。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /></p>
+  <p><img alt="While Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Variable</span></td>
@@ -49,19 +61,24 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードでは、一時的なローカル変数を作成し、それを <span class="inline">false</span> に設定しています。
-    を実行し、While<span class="notranslate">loop</span> アクションでチェックし、false を返す間に<span class="notranslate">loop</span> が実行されます。<span class="notranslate">loop</span> では、<span class="notranslate">room</span> のランダムな x/y 位置に対して2つの一時的なローカル変数を取得し、その位置が衝突していないかどうかをチェックします。もし衝突が見つからなければ、初期値
-    <span class="inline">true</span> <span class="notranslate">loop</span> <span class="notranslate">loop</span> が終了すると、衝突がないことを確認したランダムな位置に新しいインスタンスが作成されます。</p>
+    を実行し、While<span class="notranslate">loop</span> アクションでチェックし、false を返す間に<span class="notranslate">loop</span>
+    が実行されます。<span class="notranslate">loop</span> では、<span class="notranslate">room</span> のランダムな x/y
+    位置に対して2つの一時的なローカル変数を取得し、その位置が衝突していないかどうかをチェックします。もし衝突が見つからなければ、初期値
+    <span class="inline">true</span> <span class="notranslate">loop</span> <span class="notranslate">loop</span>
+    が終了すると、衝突がないことを確認したランダムな位置に新しいインスタンスが作成されます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Loop_Actions.htm">ループアクション</a></div>
-        <div style="float:right">次へ<a href="For.htm">について</a></div>
+        <div style="float:left">前のページ：<a href="Loop_Actions.htm">ループアクション</a></div>
+        <div style="float:right">次のページ：<a href="For.htm">について</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - While
@@ -70,4 +87,5 @@ Action - While
 action_while_loop
 -->
 </body>
+
 </html>

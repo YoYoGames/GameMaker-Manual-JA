@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>collision_line</title>
@@ -13,21 +14,33 @@
   <meta name="search-keywords" content="collision_line" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">collision_line</span></h1>
-  <p><span class="inline">Collision_line</span> は、点 x1,y1 から点 x2,y2 までの直線に沿って、引数 &quot;obj&quot; で指定された の<span class="notranslate">object</span> <b>任意の</b>インスタンスとの衝突をチェックします。このチェックは正確でもそうでなくてもかまいませんが、正確な衝突を有効にするには、チェックする またはインスタンスがその に対して正確な衝突も有効になって<span class="notranslate">object</span> <span class="notranslate">sprite</span><i>いなければ</i>なりません。そうでない場合は、デフォルトのチェックがバウンディングボックスに基づきます。次の画像は、この動作を示しています。</p>
-  <p><img>精密衝突を考慮するためには、<span class="notranslate">object</span> <span class="notranslate">sprite</span> と collision 関数の<i>両方に</i>、on としてマークされている必要があることに注意してください。また、関数の戻り値には、線上で衝突したとみなされるインスタンスのうち、<i>任意の1つの</i>IDを指定することができるため、3つのインスタンスが定義された線に重なった場合、それらのIDのうちどれかが関数の戻り値となる可能性があることにも注意が必要です。</p>
-  <p><span class="notranslate">object</span> インデックスの代わりにインスタンスを指定することができます。 <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a>で特定のインスタンスをチェックするか、<a href="../../../GML_Overview/Instance_Keywords.htm">インスタンスキーワード</a> <span class="inline">all</span>, または <span class="inline">other</span> (イベントと現在のコードスコープによる) をチェックします。</p>
+  <p><span class="inline">Collision_line</span> は、点 x1,y1 から点 x2,y2 までの直線に沿って、引数 &quot;obj&quot; で指定された の<span
+      class="notranslate">object</span> <b>任意の</b>インスタンスとの衝突をチェックします。このチェックは正確でもそうでなくてもかまいませんが、正確な衝突を有効にするには、チェックする
+    またはインスタンスがその に対して正確な衝突も有効になって<span class="notranslate">object</span> <span
+      class="notranslate">sprite</span><i>いなければ</i>なりません。そうでない場合は、デフォルトのチェックがバウンディングボックスに基づきます。次の画像は、この動作を示しています。</p>
+  <p><img>精密衝突を考慮するためには、<span class="notranslate">object</span> <span class="notranslate">sprite</span> と collision
+    関数の<i>両方に</i>、on
+    としてマークされている必要があることに注意してください。また、関数の戻り値には、線上で衝突したとみなされるインスタンスのうち、<i>任意の1つの</i>IDを指定することができるため、3つのインスタンスが定義された線に重なった場合、それらのIDのうちどれかが関数の戻り値となる可能性があることにも注意が必要です。
+  </p>
+  <p><span class="notranslate">object</span> インデックスの代わりにインスタンスを指定することができます。 <a
+      href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span
+        class="inline">id</span></a>で特定のインスタンスをチェックするか、<a
+      href="../../../GML_Overview/Instance_Keywords.htm">インスタンスキーワード</a> <span class="inline">all</span>, または <span
+      class="inline">other</span> (イベントと現在のコードスコープによる) をチェックします。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">collision_line</span>(x1, y1, x2, y2, obj, prec, notme);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">collision_line</span>(x1, y1, x2, y2, obj, prec,
+    notme);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x1</span></td>
@@ -51,24 +64,28 @@
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
-        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span
+            data-keyref="Type_ID_Instance">インスタンスID</span></td>
         <td><span class="notranslate">The object to check for instance collisions.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">prec</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the check is based on precise collisions (<span class="inline">true</span>より遅い）、またはそのバウンディングボックス全般（<span class="inline">false</span> 、より速い）。</td>
+        <td><span class="notranslate">Whether the check is based on precise collisions (<span
+              class="inline">true</span>より遅い）、またはそのバウンディングボックス全般（<span class="inline">false</span> 、より速い）。</td>
       </tr>
       <tr>
         <td><span class="notranslate">notme</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
+        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span
+              class="inline">true</span>) か、そうでないか (<span class="inline">false</span>) です。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span
+      data-keyref="Type_ID_noone">noone</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">with (obj_Enemy)<br />
@@ -82,11 +99,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Collisions.htm">衝突</a></div>
-        <div style="float:right">次のページ <a href="collision_line_list.htm"><span class="notranslate">collision_line_list</span></a></div>
+        <div style="float:left">前のページ：<a href="Collisions.htm">衝突</a></div>
+        <div style="float:right">次のページ：<a href="collision_line_list.htm"><span
+              class="notranslate">collision_line_list</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 collision_line
@@ -95,4 +114,5 @@ collision_line
 collision_line
 -->
 </body>
+
 </html>

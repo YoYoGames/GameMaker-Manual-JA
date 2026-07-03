@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>サーフェス</title>
@@ -12,20 +13,45 @@
   <meta name="rh-index-keywords" content="Surfaces" />
   <meta name="search-keywords" content="Surfaces,application_surface,application surface,app surface" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>サーフェス</h1>
-  <p>通常の描画イベントでは、<span data-keyref="GameMaker Name">GameMaker</span>は実際には画面に直接描画せず、<i>アプリケーションサーフェスと</i>呼ばれる<b>表面に</b>描画します。このサーフェイスは基本的に白紙の「キャンバス」で、必要なときに画面に描画する前に後で操作することができます。ほとんどの場合、<span data-keyref="GameMaker Name">GameMakerが</span>これを処理します（ただし、コード内で<span class="notranslate">shaders</span> やスケーリングなど、自分で操作することもできます - 詳細は以下で説明します）。</p>
-  <p>しかし、このアプリケーションサーフェスとは別に、独自のサーフェスを作成し、それを使ってゲーム内で見事な、あるいは微妙な特殊効果を作り出すことができます。たとえば、サーフェスを使用してインスタンスを「キャッチ」し、破棄することができます。このようにして、インスタンスの<span class="notranslate">sprite</span> がサーフェスに表示され、まるでそれがまだ存在しているかのようなデカール効果を作成することができます。サーフェスでできるもう一つのことは、サーフェスを<span class="notranslate">textures</span> として使用し、操作したり、<span class="notranslate">sprites</span> を「オンザフライ」で作成したり、複雑なオーバーレイを作成したりすることです。</p>
+  <p>通常の描画イベントでは、<span
+      data-keyref="GameMaker Name">GameMaker</span>は実際には画面に直接描画せず、<i>アプリケーションサーフェスと</i>呼ばれる<b>表面に</b>描画します。このサーフェイスは基本的に白紙の「キャンバス」で、必要なときに画面に描画する前に後で操作することができます。ほとんどの場合、<span
+      data-keyref="GameMaker Name">GameMakerが</span>これを処理します（ただし、コード内で<span class="notranslate">shaders</span>
+    やスケーリングなど、自分で操作することもできます - 詳細は以下で説明します）。</p>
+  <p>
+    しかし、このアプリケーションサーフェスとは別に、独自のサーフェスを作成し、それを使ってゲーム内で見事な、あるいは微妙な特殊効果を作り出すことができます。たとえば、サーフェスを使用してインスタンスを「キャッチ」し、破棄することができます。このようにして、インスタンスの<span
+      class="notranslate">sprite</span> がサーフェスに表示され、まるでそれがまだ存在しているかのようなデカール効果を作成することができます。サーフェスでできるもう一つのことは、サーフェスを<span
+      class="notranslate">textures</span> として使用し、操作したり、<span class="notranslate">sprites</span>
+    を「オンザフライ」で作成したり、複雑なオーバーレイを作成したりすることです。</p>
   <p>ノーマルサーフェスの使い方はいたって簡単ですが、使用する際にはいくつかの基本的なルールがあります。</p>
   <ul class="colour">
-    <li>まず、サーフェス<i>（</i>アプリケーションサーフェスを<i>除く</i>）は「揮発性」であることを認識する必要があります。つまり、デバイスやウィンドウがフォーカスを失ったり、最小化されたりすると（WindowsでALT +Tabで別のウィンドウに移動してまた戻るときや、<span class="notranslate">Android</span> デバイスでアプリケーションが呼び出しによってフォーカスを失ったときが良い例です）、サーフェスが<strong>破壊されることがあります</strong>。これは、サーフェスが<span class="notranslate">texture</span> メモリ<a class="glossterm" data-glossterm="ブイラム" href="#">(VRAM</a>)<em>にのみ</em>保存され、ターゲットプラットフォームがそのメモリを他の用途に使用するときに上書きされる可能性があるためです。 <i><b>いつも</b></i>ということは、何らかのフェイルセーフコードを用意する必要があります。 <a href="surface_exists.htm"><span class="inline">surface_exists()</span></a>関数を使用します。</li>
+    <li>まず、サーフェス<i>（</i>アプリケーションサーフェスを<i>除く</i>）は「揮発性」であることを認識する必要があります。つまり、デバイスやウィンドウがフォーカスを失ったり、最小化されたりすると（WindowsでALT
+      +Tabで別のウィンドウに移動してまた戻るときや、<span class="notranslate">Android</span>
+      デバイスでアプリケーションが呼び出しによってフォーカスを失ったときが良い例です）、サーフェスが<strong>破壊されることがあります</strong>。これは、サーフェスが<span
+        class="notranslate">texture</span> メモリ<a class="glossterm" data-glossterm="ブイラム"
+        href="#">(VRAM</a>)<em>にのみ</em>保存され、ターゲットプラットフォームがそのメモリを他の用途に使用するときに上書きされる可能性があるためです。
+      <i><b>いつも</b></i>ということは、何らかのフェイルセーフコードを用意する必要があります。 <a href="surface_exists.htm"><span
+          class="inline">surface_exists()</span></a>関数を使用します。
+    </li>
   </ul>
-  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span class="note">注</span><strong> </strong>これは<span class="notranslate">sprites</span> や他のビジュアル<span class="notranslate">assets</span> では起きないように見えますが（実際は起きています！）、これらは通常のメモリ（RAM）にも保存されており、<span class="notranslate">texture</span> メモリ（VRAM）から削除されると、ゲームのフォーカスが回復したときにすぐに通常のメモリから復元されるからです。</p>
+  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span
+      class="note">注</span><strong> </strong>これは<span class="notranslate">sprites</span> や他のビジュアル<span
+      class="notranslate">assets</span> では起きないように見えますが（実際は起きています！）、これらは通常のメモリ（RAM）にも保存されており、<span
+      class="notranslate">texture</span> メモリ（VRAM）から削除されると、ゲームのフォーカスが回復したときにすぐに通常のメモリから復元されるからです。</p>
   <ul class="colour">
     <li>第二に、サーフェイスは大量のVRAMを必要とすることがあるので、できるだけ小さくするように心がける必要があります。通常は、ビューまたはディスプレイウィンドウのサイズより大きくならないようにします。</li>
-    <li>第三に、<b>サーフェスは draw イベントでのみ作成</b>する必要があります。インスタンスのCreateイベントでサーフェイスを作成すると、 <span class="inline">application_surface</span> と<i>同じ</i>インデックスを取得する可能性があります。 これは、自分自身のサーフェイスを使用しているつもりでも、実際には現在のレンダーターゲットを使用しているため、多くの問題や混乱を引き起こす可能性があります。<span data-keyref="GameMaker Name">GameMaker</span>がスクリーンに描画する方法を最適化しているため、すべての<i>描画</i>関数を<i>draw イベントの中で</i>行うことをお勧めします - これには、最初にサーフェスを作成したときにクリアすることなども含まれます。draw イベントの外でサーフェイスに描画することは可能で、ある種の効果には必要かもしれませんが、そう<em>するべきでは</em>ありません。</li>
-    <li>第四に、手動でサーフェスに描画する場合、サーフェスの位置は<i>常に</i>(0,0)になります。つまり、サーフェスの<em>絶対</em>座標を<em>相対</em>座標に変換する必要がある場合があります。例えば、カメラサイズのサーフェスがあり、現在カメラで見えているものをそのサーフェスに描画したい場合、実際のXとY座標からカメラビューのXとY座標を引き、サーフェスの(0,0)の位置に対する相対位置を得る必要があります。つまり、コードは以下のようなものになります。</li>
+    <li>第三に、<b>サーフェスは draw イベントでのみ作成</b>する必要があります。インスタンスのCreateイベントでサーフェイスを作成すると、 <span
+        class="inline">application_surface</span> と<i>同じ</i>インデックスを取得する可能性があります。
+      これは、自分自身のサーフェイスを使用しているつもりでも、実際には現在のレンダーターゲットを使用しているため、多くの問題や混乱を引き起こす可能性があります。<span
+        data-keyref="GameMaker Name">GameMaker</span>がスクリーンに描画する方法を最適化しているため、すべての<i>描画</i>関数を<i>draw
+        イベントの中で</i>行うことをお勧めします - これには、最初にサーフェスを作成したときにクリアすることなども含まれます。draw
+      イベントの外でサーフェイスに描画することは可能で、ある種の効果には必要かもしれませんが、そう<em>するべきでは</em>ありません。</li>
+    <li>
+      第四に、手動でサーフェスに描画する場合、サーフェスの位置は<i>常に</i>(0,0)になります。つまり、サーフェスの<em>絶対</em>座標を<em>相対</em>座標に変換する必要がある場合があります。例えば、カメラサイズのサーフェスがあり、現在カメラで見えているものをそのサーフェスに描画したい場合、実際のXとY座標からカメラビューのXとY座標を引き、サーフェスの(0,0)の位置に対する相対位置を得る必要があります。つまり、コードは以下のようなものになります。
+    </li>
   </ul>
   <p class="code">if (view_current == 0)<br />
     {<br />
@@ -43,9 +69,13 @@
         draw_surface(surf, 0, 0);<br />
     }</p>
   <ul class="colour">
-    <li>最後に、表面への描画は、各ピクセルの<em>色と</em>アルファ成分を、表面自身と描画されるものの両方から考慮することに注意してください。このため、直感的でない結果になることがあります (たとえば、アルファ値 0 の表面にアルファ値 0.5 の<span class="notranslate">sprite</span> を描画すると、最終的なアルファ値は 0.25 となります)。この理由は次のページで説明されています。サーフェスを操作する前に、このページを読むことをお勧めします。<a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">ブレンドモード使用ガイド</a></li>
+    <li>最後に、表面への描画は、各ピクセルの<em>色と</em>アルファ成分を、表面自身と描画されるものの両方から考慮することに注意してください。このため、直感的でない結果になることがあります (たとえば、アルファ値 0
+      の表面にアルファ値 0.5 の<span class="notranslate">sprite</span> を描画すると、最終的なアルファ値は 0.25
+      となります)。この理由は次のページで説明されています。サーフェスを操作する前に、このページを読むことをお勧めします。<a
+        href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">ブレンドモード使用ガイド</a></li>
   </ul>
-  <p class="note"><span class="note">注</span>）<a href="application_surface.htm">アプリケーションサーフェスには</a>当てはまらず、ユーザーが作成したサーフェスのみ当てはまります。</p>
+  <p class="note"><span class="note">注</span>）<a
+      href="application_surface.htm">アプリケーションサーフェスには</a>当てはまらず、ユーザーが作成したサーフェスのみ当てはまります。</p>
   <p>サーフェスの基本的な使い方は、次のようになる。</p>
   <ul class="colour">
     <li>まず、サーフェスを作成し、そのインデックスを変数に代入します。</li>
@@ -54,7 +84,10 @@
     <li>描画が終了したら、描画対象をリセットして、再び画面に描画するようにします。</li>
     <li>最後に、サーフェスを描画します（または、<span class="notranslate">shader</span> 、または必要なものに使用します）。</li>
   </ul>
-  <p>ディスプレイ全体をサーフェスに描画する必要がある場合（<span class="notranslate">tiles</span> や背景などを含む）、単純にアプリケーションサーフェス自体にアクセスするか（詳細は後述）、または変数 <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0..7]</span></a>を使用してビューポートにサーフェスを割り当てることもできます。この場合、そのビューポートに表示されているすべてのものが、対応するサーフェスに描画されます。</p>
+  <p>ディスプレイ全体をサーフェスに描画する必要がある場合（<span class="notranslate">tiles</span> や背景などを含む）、単純にアプリケーションサーフェス自体にアクセスするか（詳細は後述）、または変数
+    <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span
+        class="inline">view_surface_id[0..7]</span></a>を使用してビューポートにサーフェスを割り当てることもできます。この場合、そのビューポートに表示されているすべてのものが、対応するサーフェスに描画されます。
+  </p>
   <p>サーフェスを扱うために以下の関数があります（これらの関数はサーフェスの作成と操作に特化していますが、実際にサーフェスを画面に描画するには、以下に示す特定の描画関数を使用する必要があります）。</p>
   <ul class="colour">
     <li><a href="surface_exists.htm"><span class="notranslate">surface_exists</span></a></li>
@@ -81,7 +114,10 @@
   </ul>
   <p> </p>
   <p>サーフェス描画には、以下の機能があります。</p>
-  <p class="note"><b><span class="note">注意</span> </b>サーフェスで作業する場合、<span class="notranslate">texture</span> のメモリーに保存されているため、いつでもサーフェスが存在しなくなる可能性があります。サーフェスを直接参照する前に、サーフェスが存在するかどうかを<b>常に</b><span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>を使用して、サーフェスが存在するかどうかを必ず確認してください。</p>
+  <p class="note"><b><span class="note">注意</span> </b>サーフェスで作業する場合、<span class="notranslate">texture</span>
+    のメモリーに保存されているため、いつでもサーフェスが存在しなくなる可能性があります。サーフェスを直接参照する前に、サーフェスが存在するかどうかを<b>常に</b><span style="font-size:1px;"><a
+        href="surface_exists.htm"><span
+          class="inline">surface_exists()</span></a></span>を使用して、サーフェスが存在するかどうかを必ず確認してください。</p>
   <ul class="colour">
     <li><a href="draw_surface.htm"><span class="notranslate">draw_surface</span></a></li>
     <li><a href="draw_surface_ext.htm"><span class="notranslate">draw_surface_ext</span></a></li>
@@ -100,28 +136,42 @@
     <li><a href="../../Buffers/buffer_set_surface.htm"><span class="notranslate">buffer_set_surface</span></a></li>
   </ul>
   <p> </p>
-  <p>前述の通り、<span data-keyref="GameMaker Name">GameMaker</span>はほとんどのものを直接スクリーンにレンダリングせず、<b>アプリケーションサーフェスに</b>レンダリングします。これは、サーフェス関数を使って自分で作ったサーフェスと同じように、操作したり、描画したり、<span class="notranslate">shaders</span> に送ったりすることができます。基本的に、作成したサーフェスで通常行うことはすべて、アプリケーションサーフェスに適用することもできます。</p>
-  <p class="note"><b>注</b>：アプリケーションサーフェスで唯一<b>できない</b>ことは、それをフリーにすることです。アプリケーションサーフェスは常に存在しますが、アクセスするためのインデックス値は変更される可能性があります。</p>
-  <p>ゲームを実行すると、このサーフェイスは、新しい<span class="notranslate">room</span> に入るたびに<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw イベントが</a>最初に呼び出されたときに作成されます。つまり、その時点までは何も描画されません。しかし、アプリケーションサーフェスの位置を取得し、<b>Create Eventや</b>その他のイベントでエラーを出さずにサイズを変更することは可能で、使用される値はサーフェスが作成されたときに関連するものになります。実際のアプリケーションサーフェスの作成と描画のためのイベント（<span class="notranslate">sequence</span> ）は以下の通りです。</p>
+  <p>前述の通り、<span
+      data-keyref="GameMaker Name">GameMaker</span>はほとんどのものを直接スクリーンにレンダリングせず、<b>アプリケーションサーフェスに</b>レンダリングします。これは、サーフェス関数を使って自分で作ったサーフェスと同じように、操作したり、描画したり、<span
+      class="notranslate">shaders</span> に送ったりすることができます。基本的に、作成したサーフェスで通常行うことはすべて、アプリケーションサーフェスに適用することもできます。</p>
+  <p class="note">
+    <b>注</b>：アプリケーションサーフェスで唯一<b>できない</b>ことは、それをフリーにすることです。アプリケーションサーフェスは常に存在しますが、アクセスするためのインデックス値は変更される可能性があります。
+  </p>
+  <p>ゲームを実行すると、このサーフェイスは、新しい<span class="notranslate">room</span> に入るたびに<a
+      href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw
+      イベントが</a>最初に呼び出されたときに作成されます。つまり、その時点までは何も描画されません。しかし、アプリケーションサーフェスの位置を取得し、<b>Create
+      Eventや</b>その他のイベントでエラーを出さずにサイズを変更することは可能で、使用される値はサーフェスが作成されたときに関連するものになります。実際のアプリケーションサーフェスの作成と描画のためのイベント（<span
+      class="notranslate">sequence</span> ）は以下の通りです。</p>
   <ul class="colour">
     <li>抽選会前イベント<br />
-              <b>--- アプリケーションサーフェスが作成され、レンダリングターゲットが設定</b>される。</li>
+      <b>--- アプリケーションサーフェスが作成され、レンダリングターゲットが設定</b>される。
+    </li>
     <li><b></b>表示されているビューポートごとに、または、ビューポートがアクティブでない場合は、一度だけ
       <ul class="colour">
         <li>描画開始イベント</li>
         <li>描画イベント</li>
         <li>描画終了イベント<br />
-                 <b>--- アプリケーションサーフェスレンダリングターゲットは、ここでリセット</b>されます。</li>
+          <b>--- アプリケーションサーフェスレンダリングターゲットは、ここでリセット</b>されます。
+        </li>
       </ul>
     </li>
     <li><b></b>ポストドローイベント<br />
-             <b>--- アプリケーションの表面は、デフォルトで<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> </b>描画されます。<b><br />
-                        </b> <span class="notranslate">switch</span> (ただし、<span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span> を使って、これをオフにすることができます)</li>
+      <b>--- アプリケーションの表面は、デフォルトで<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a>
+      </b>描画されます。<b><br />
+      </b> <span class="notranslate">switch</span> (ただし、<span class="inline"><a
+          href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span> を使って、これをオフにすることができます)
+    </li>
     <li><b></b>描画GUI開始イベント</li>
     <li>GUIイベントを描画する</li>
     <li>ドローGUI終了イベント</li>
   </ul>
-  <p>このサーフェスを使用すると、<span class="notranslate">shaders</span> を使用して信じられないようなトランジションを簡単に作成したり、画面を3Dフォームに巻き付けたり、低解像度のゲームを任意の解像度の画面に単純に拡大したりすることができます。可能性は無限大です。</p>
+  <p>このサーフェスを使用すると、<span class="notranslate">shaders</span>
+    を使用して信じられないようなトランジションを簡単に作成したり、画面を3Dフォームに巻き付けたり、低解像度のゲームを任意の解像度の画面に単純に拡大したりすることができます。可能性は無限大です。</p>
   <p>このサーフェイスにアクセスするには、次のページで説明する組み込みのグローバル変数 <span class="inline">application_surface</span> を使用する必要があります。</p>
   <ul class="colour">
     <li><a href="application_surface.htm"><span class="notranslate">application_surface</span></a></li>
@@ -130,9 +180,11 @@
   <p>また、アプリケーションサーフェスでの<em>使用のみを </em>想定した専門的な機能もいくつかありますね。</p>
   <ul class="colour">
     <li><a href="application_surface_enable.htm"><span class="notranslate">application_surface_enable</span></a></li>
-    <li><a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a></li>
+    <li><a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a>
+    </li>
     <li><a href="application_get_position.htm"><span class="notranslate">application_get_position</span></a></li>
-    <li><a href="application_surface_draw_enable.htm"><span class="notranslate">application_surface_draw_enable</span></a></li>
+    <li><a href="application_surface_draw_enable.htm"><span
+          class="notranslate">application_surface_draw_enable</span></a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -140,11 +192,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Drawing.htm">ドローイング</a></div>
-        <div style="float:right">次へ<a href="../Lighting/Lighting.htm">照明</a></div>
+        <div style="float:left">前のページ：<a href="../Drawing.htm">ドローイング</a></div>
+        <div style="float:right">次のページ：<a href="../Lighting/Lighting.htm">照明</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Surfaces
@@ -155,4 +208,5 @@ application surface
 surfaces_functions
 -->
 </body>
+
 </html>

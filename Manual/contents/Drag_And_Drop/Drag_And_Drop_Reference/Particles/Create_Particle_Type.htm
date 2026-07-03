@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>パーティクルタイプの作成</title>
@@ -12,29 +13,39 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Create Particle Type" />
   <meta name="search-keywords" content="Create Particle Type" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> パーティクルタイプの作成</h1>
-  <p>プロジェクトでは、複数の異なるパーティクル<i>タイプを</i>使用でき、それぞれに方向や色などのプロパティを設定できます。このアクションは、パーティクルの詳細を保持するために少量のメモリを確保し、将来いつでもパーティクルを使用できるようにします。パーティクルタイプのユニークなID値を変数に設定します。
-    このパーティクルに関する今後のすべてのアクションは、この変数を呼び出すことができます。この変数を一時的なローカル変数として<span class="notranslate">flag</span> にすることもできますが、その場合、アクション<span class="notranslate">script</span> やイベントの終了時に破棄されることを意味し、そのパーティクル
+  <p>
+    プロジェクトでは、複数の異なるパーティクル<i>タイプを</i>使用でき、それぞれに方向や色などのプロパティを設定できます。このアクションは、パーティクルの詳細を保持するために少量のメモリを確保し、将来いつでもパーティクルを使用できるようにします。パーティクルタイプのユニークなID値を変数に設定します。
+    このパーティクルに関する今後のすべてのアクションは、この変数を呼び出すことができます。この変数を一時的なローカル変数として<span class="notranslate">flag</span>
+    にすることもできますが、その場合、アクション<span class="notranslate">script</span> やイベントの終了時に破棄されることを意味し、そのパーティクル
     一般的にパーティクルの種類を一時的なローカル変数に格納する必要はありませんが、パーティクルをサーフェスに描画する場合など、特定の用途では、この方法を使用する必要があります。
     が必要な場合があります)。</p>
-  <p class="note"><b>注意</b>: 一度作成されたパーティクル タイプは、ゲームの間、システム メモリに常駐するため、再作成する必要がある場合（たとえば、<a href="../Game/Restart_Game.htm">Restart Game</a>アクションを呼び出す場合）には、再作成する必要があります。
-    の場合、<b>現在のパーティクルの種類を破棄</b>しなければならず、そうしないとメモリリークが発生します。これはリソースがメモリに追加された後、&quot;de-referenced &quot;されたときに起こる現象で、<span data-keyref="GameMaker Name">GameMakerが</span>そのリソースとやりとりする方法がなくなってしまうことを意味します。
-    となります。これは、アクセスできないリソースによってメモリが詰まり、ひいてはゲームに問題を引き起こすことになります。不要になったパーティクルタイプを破棄するには、<a href="Destroy_Particle_Type.htm">Destroy Particle Type</a>アクションを使用します。</p>
-  <p>また、パーティクルに使用する<b>ブレンドモードを</b>設定することができます。デフォルトでは &quot;normal &quot;ブレンドモードで描画され、パーティクルの下に描かれたものによって色が変更されることはありませんが、 &quot;Blend&quot; オプションを選択すると
+  <p class="note"><b>注意</b>: 一度作成されたパーティクル タイプは、ゲームの間、システム メモリに常駐するため、再作成する必要がある場合（たとえば、<a
+      href="../Game/Restart_Game.htm">Restart Game</a>アクションを呼び出す場合）には、再作成する必要があります。
+    の場合、<b>現在のパーティクルの種類を破棄</b>しなければならず、そうしないとメモリリークが発生します。これはリソースがメモリに追加された後、&quot;de-referenced
+    &quot;されたときに起こる現象で、<span data-keyref="GameMaker Name">GameMakerが</span>そのリソースとやりとりする方法がなくなってしまうことを意味します。
+    となります。これは、アクセスできないリソースによってメモリが詰まり、ひいてはゲームに問題を引き起こすことになります。不要になったパーティクルタイプを破棄するには、<a
+      href="Destroy_Particle_Type.htm">Destroy Particle Type</a>アクションを使用します。</p>
+  <p>また、パーティクルに使用する<b>ブレンドモードを</b>設定することができます。デフォルトでは &quot;normal
+    &quot;ブレンドモードで描画され、パーティクルの下に描かれたものによって色が変更されることはありませんが、 &quot;Blend&quot; オプションを選択すると
     つまり、パーティクルの下に描かれたものに基づいて色を変えて描画されます。加算ブレンドは、非常に明るく「光る」エフェクトを提供します。
     爆発、レーザー、火などに最適で、雨、煙、破片などのエフェクトには通常のブレンディングが適しています。下の画像は、加算ブレンドをオフ（左）とオン（右）で同じ効果を示しています。</p>
-  <p><img alt="Create Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" /></p>
+  <p><img alt="Create Particle Type Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" />
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Particle_Blending.gif" /></p>
+  <p><img class="center"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Particle_Blending.gif" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Target</span></td>
@@ -42,7 +53,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Blend</span></td>
-        <td>粒子タイプで添加剤配合を使用するかどうか</td>
+        <td>パーティクルタイプで添加剤配合を使用するかどうか</td>
       </tr>
     </tbody>
   </table>
@@ -56,11 +67,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Particle_Actions.htm">パーティクルアクション</a></div>
-        <div style="float:right">次へ<a href="Destroy_Particle_Type.htm">パーティクルタイプを破壊する</a></div>
+        <div style="float:left">前のページ：<a href="Particle_Actions.htm">パーティクルアクション</a></div>
+        <div style="float:right">次のページ：<a href="Destroy_Particle_Type.htm">パーティクルタイプを破壊する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Particle Type
@@ -69,4 +81,5 @@ Action - Create Particle Type
 action_part_type_create
 -->
 </body>
+
 </html>

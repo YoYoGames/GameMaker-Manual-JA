@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>application_surface_draw_enable</title>
@@ -12,32 +13,42 @@
   <meta name="rh-index-keywords" content="application_surface_draw_enable" />
   <meta name="search-keywords" content="application_surface_draw_enable" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">application_surface_draw_enable</span></h1>
-  <p>アプリケーションサーフェイスの自動描画の有効／無効を設定することができます。デフォルトでは、これは有効になっていますが、多くの場合、サーフェスがいつ、どのように描画されるかを引き継ぎたいと思うでしょう（たとえば、<span class="notranslate">shaders</span> を使用する場合）、そのような場合
-    この関数を使用して false に設定し、必要なときに必要な方法で自分で描画できるようにします。<span class="notranslate">switch</span> 自動描画をオフにして、アプリケーションの表面を自分で描画する場合、次のような問題が発生する可能性があることに注意してください。
-   <span class="notranslate">sprites</span> のアルファコンポーネントとサーフェス自体に影響を与えます。これは、自動描画がオンの場合、<span data-keyref="GameMaker Name">GameMakerが</span> <i>アルファブレンディングを行わずに</i>アプリケーションサーフェスを描画するためです。もし、<span class="notranslate">switch</span> 自動描画をオフにした場合は、次のことが必要である。
-    は、以下のコード（例）を使って、自分で処理する必要があります。</p>
-  <p class="code">gpu_set_blendenable(false);<br/> draw_surface_ext(application_surface, 0, 0, 1, 1, 0, c_white, 1);<br/> gpu_set_blendenable(true);
+  <p>アプリケーションサーフェイスの自動描画の有効／無効を設定することができます。デフォルトでは、これは有効になっていますが、多くの場合、サーフェスがいつ、どのように描画されるかを引き継ぎたいと思うでしょう（たとえば、<span
+      class="notranslate">shaders</span> を使用する場合）、そのような場合
+    この関数を使用して false に設定し、必要なときに必要な方法で自分で描画できるようにします。<span class="notranslate">switch</span>
+    自動描画をオフにして、アプリケーションの表面を自分で描画する場合、次のような問題が発生する可能性があることに注意してください。
+    <span class="notranslate">sprites</span> のアルファコンポーネントとサーフェス自体に影響を与えます。これは、自動描画がオンの場合、<span
+      data-keyref="GameMaker Name">GameMakerが</span> <i>アルファブレンディングを行わずに</i>アプリケーションサーフェスを描画するためです。もし、<span
+      class="notranslate">switch</span> 自動描画をオフにした場合は、次のことが必要である。
+    は、以下のコード（例）を使って、自分で処理する必要があります。
+  </p>
+  <p class="code">gpu_set_blendenable(false);<br /> draw_surface_ext(application_surface, 0, 0, 1, 1, 0, c_white,
+    1);<br /> gpu_set_blendenable(true);
   </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">application_surface_draw_enable</span>(flag);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">The flag will be either <span class="inline">true</span> (有効、デフォルト値)または (無効)。 <span class="inline">false</span> </td>
-     </tr>
+        <td><span class="notranslate">flag</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">The flag will be either <span class="inline">true</span> (有効、デフォルト値)または (無効)。
+            <span class="inline">false</span> </td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -49,11 +60,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Surfaces.htm">サーフェス</a></div>
-        <div style="float:right">次のページ <a href="surface_exists.htm"><span class="notranslate">surface_exists</span></a></div>
+        <div style="float:left">前のページ：<a href="Surfaces.htm">サーフェス</a></div>
+        <div style="float:right">次のページ：<a href="surface_exists.htm"><span class="notranslate">surface_exists</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 application_surface_draw_enable
@@ -62,4 +75,5 @@ application_surface_draw_enable
 application_surface_draw_enable
 -->
 </body>
+
 </html>

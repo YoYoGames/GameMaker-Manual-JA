@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>プリミティブとバーテックスフォーマット</title>
@@ -12,15 +13,23 @@
   <meta name="rh-index-keywords" content="Primitives, Vertex Formats" />
   <meta name="search-keywords" content="Primitives And Vertex Formats,Primitives,Vertex Buffers,Vertex Formats" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>プリミティブと<span class="notranslate">Vertex</span> フォーマット</h1>
-  <p>プリミティブとは、画面に表示されるものを定義するために、点を使って行われる描画の一種です。これらは、1つの点、線、または三角形で構成され、色付け、アルファブレンディング、さらに<span class="notranslate">texture</span> 、2Dゲームで非常にエキサイティングな効果を作り出すために使用できることを意味します！プリミティブを使用することで、2Dゲームでは、いくつかの非常にエキサイティングな効果を作り出すことができます。<span class="notranslate">texture</span> 例えば、複数の三角形プリミティブを使用して長方形を作成し、<span class="notranslate">flag</span> <span class="notranslate">sprite</span> 、インスタンスの描画イベントで、その<span class="notranslate">flag</span> が風に「波」、プリミティブを形成するポイントを変更するだけで、使用した<span class="notranslate">sprite</span> を歪ませることができます。</p>
-  <p class="note"><b>警告!こ </b>れらの機能は、<a href="../../../../Settings/Game_Options/HTML5.htm">ゲームオプション</a>でOpenGLを有効にしていない限り、HTML5モジュールでは動作しません。</p>
+  <p>プリミティブとは、画面に表示されるものを定義するために、点を使って行われる描画の一種です。これらは、1つの点、線、または三角形で構成され、色付け、アルファブレンディング、さらに<span
+      class="notranslate">texture</span>
+    、2Dゲームで非常にエキサイティングな効果を作り出すために使用できることを意味します！プリミティブを使用することで、2Dゲームでは、いくつかの非常にエキサイティングな効果を作り出すことができます。<span
+      class="notranslate">texture</span> 例えば、複数の三角形プリミティブを使用して長方形を作成し、<span class="notranslate">flag</span> <span
+      class="notranslate">sprite</span> 、インスタンスの描画イベントで、その<span class="notranslate">flag</span>
+    が風に「波」、プリミティブを形成するポイントを変更するだけで、使用した<span class="notranslate">sprite</span> を歪ませることができます。</p>
+  <p class="note"><b>警告!こ </b>れらの機能は、<a
+      href="../../../../Settings/Game_Options/HTML5.htm">ゲームオプション</a>でOpenGLを有効にしていない限り、HTML5モジュールでは動作しません。</p>
   <p>描画プリミティブの情報は、以下のページでご覧いただけます。</p>
   <ul class="colour">
     <li><a href="draw_primitive_begin.htm"><span class="notranslate">draw_primitive_begin</span></a></li>
-    <li><a href="draw_primitive_begin_texture.htm"><span class="notranslate">draw_primitive_begin_texture</span></a></li>
+    <li><a href="draw_primitive_begin_texture.htm"><span class="notranslate">draw_primitive_begin_texture</span></a>
+    </li>
     <li><a href="draw_primitive_end.htm"><span class="notranslate">draw_primitive_end</span></a></li>
     <li><a href="draw_vertex.htm"><span class="notranslate">draw_vertex</span></a></li>
     <li><a href="draw_vertex_colour.htm"><span class="notranslate">draw_vertex_colour</span></a></li>
@@ -28,12 +37,15 @@
     <li><a href="draw_vertex_texture_colour.htm"><span class="notranslate">draw_vertex_texture_colour</span></a></li>
   </ul>
   <p> </p>
-  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、独自の<strong>頂点フォーマットを</strong>定義することができ、そこから独自のプリミティブを作成することができます。これにより、<span class="notranslate">shader</span> 操作が大幅に高速化されたり、機能を拡張して驚くような効果を生み出すことができます。これに関する情報は、以下のセクションにあります。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerでは</span>、独自の<strong>頂点フォーマットを</strong>定義することができ、そこから独自のプリミティブを作成することができます。これにより、<span
+      class="notranslate">shader</span> 操作が大幅に高速化されたり、機能を拡張して驚くような効果を生み出すことができます。これに関する情報は、以下のセクションにあります。</p>
   <ul class="colour">
     <li><a href="vertex_format_begin.htm"><span class="notranslate">vertex_format_begin</span></a></li>
     <li><a href="vertex_format_add_colour.htm"><span class="notranslate">vertex_format_add_colour</span></a></li>
     <li><a href="vertex_format_add_position.htm"><span class="notranslate">vertex_format_add_position</span></a></li>
-    <li><a href="vertex_format_add_position_3d.htm"><span class="notranslate">vertex_format_add_position_3d</span></a></li>
+    <li><a href="vertex_format_add_position_3d.htm"><span class="notranslate">vertex_format_add_position_3d</span></a>
+    </li>
     <li><a href="vertex_format_add_texcoord.htm"><span class="notranslate">vertex_format_add_texcoord</span></a></li>
     <li><a href="vertex_format_add_normal.htm"><span class="notranslate">vertex_format_add_normal</span></a></li>
     <li><a href="vertex_format_add_custom.htm"><span class="notranslate">vertex_format_add_custom</span></a></li>
@@ -41,12 +53,15 @@
     <li><a href="vertex_format_delete.htm"><span class="notranslate">vertex_format_delete</span></a></li>
   </ul>
   <p> </p>
-  <p><span class="notranslate">vertex</span> フォーマットを作成したら（上記のセクションを参照）、それを使って、以下の veretx<span class="notranslate">buffer</span> 関数を使って、描きたいプリミティブを構築することができます。</p>
+  <p><span class="notranslate">vertex</span> フォーマットを作成したら（上記のセクションを参照）、それを使って、以下の veretx<span
+      class="notranslate">buffer</span> 関数を使って、描きたいプリミティブを構築することができます。</p>
   <ul class="colour">
     <li><a href="vertex_create_buffer.htm"><span class="notranslate">vertex_create_buffer</span></a></li>
     <li><a href="vertex_create_buffer_ext.htm"><span class="notranslate">vertex_create_buffer_ext</span></a></li>
-    <li><a href="vertex_create_buffer_from_buffer.htm"><span class="notranslate">vertex_create_buffer_from_buffer</span></a></li>
-    <li><a href="vertex_create_buffer_from_buffer_ext.htm"><span class="notranslate">vertex_create_buffer_from_buffer_ext</span></a></li>
+    <li><a href="vertex_create_buffer_from_buffer.htm"><span
+          class="notranslate">vertex_create_buffer_from_buffer</span></a></li>
+    <li><a href="vertex_create_buffer_from_buffer_ext.htm"><span
+          class="notranslate">vertex_create_buffer_from_buffer_ext</span></a></li>
     <li><a href="vertex_get_buffer_size.htm"><span class="notranslate">vertex_get_buffer_size</span></a></li>
     <li><a href="vertex_get_number.htm"><span class="notranslate">vertex_get_number</span></a></li>
     <li><a href="vertex_delete_buffer.htm"><span class="notranslate">vertex_delete_buffer</span></a></li>
@@ -66,21 +81,27 @@
     <li><a href="vertex_freeze.htm"><span class="notranslate">vertex_freeze</span></a></li>
     <li><a href="vertex_submit.htm"><span class="notranslate">vertex_submit</span></a></li>
   </ul>
-  <p class="note"><b>重要!構</b>築するプリミティブは、<span class="notranslate">Vertex</span> Format 関数で設定したフォーマットに従う必要があります。したがって、<span class="notranslate">vertex</span> フォーマットで位置データのみを定義した場合、カラーデータでプリミティブを構築しても意味がありません。構築するプリミティブにプロパティを追加する順序は、<span class="notranslate">vertex</span> フォーマットを作成するときに追加した順序で定義されることに注意してください。したがって、位置、色、<span class="notranslate">texture</span> 座標という順序でベクトルフォーマットを定義した場合、構築中のプリミティブにも同じ順序でこれらのプロパティを追加<i>しなければ</i>ならず、そうしないとエラーになります。</p>
+  <p class="note"><b>重要!構</b>築するプリミティブは、<span class="notranslate">Vertex</span> Format
+    関数で設定したフォーマットに従う必要があります。したがって、<span class="notranslate">vertex</span>
+    フォーマットで位置データのみを定義した場合、カラーデータでプリミティブを構築しても意味がありません。構築するプリミティブにプロパティを追加する順序は、<span class="notranslate">vertex</span>
+    フォーマットを作成するときに追加した順序で定義されることに注意してください。したがって、位置、色、<span class="notranslate">texture</span>
+    座標という順序でベクトルフォーマットを定義した場合、構築中のプリミティブにも同じ順序でこれらのプロパティを追加<i>しなければ</i>ならず、そうしないとエラーになります。</p>
   <p><span class="notranslate">vertex</span> 関数を使ったプリミティブの構築方法の概要については、こちらをご覧ください。</p>
   <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">Guide To Primitives And<span class="notranslate">Vertex</span> Building</a></li>
+    <li><a href="../../../../Additional_Information/Guide_To_Primitives_And_Vertex_Building.htm">Guide To Primitives
+        And<span class="notranslate">Vertex</span> Building</a></li>
   </ul>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Drawing.htm">ドローイング</a></div>
-        <div style="float:right">次へ<a href="../Surfaces/Surfaces.htm">サーフェス</a></div>
+        <div style="float:left">前のページ：<a href="../Drawing.htm">ドローイング</a></div>
+        <div style="float:right">次のページ：<a href="../Surfaces/Surfaces.htm">サーフェス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Primitives And <span class="notranslate">Vertex</span> Formats
@@ -89,4 +110,5 @@ Primitives And <span class="notranslate">Vertex</span> Formats
 primitive_vertex_functions
 -->
 </body>
+
 </html>

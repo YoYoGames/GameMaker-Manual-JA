@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_tex_mip_filter_ext</title>
@@ -12,41 +13,49 @@
   <meta name="rh-index-keywords" content="gpu_set_tex_mip_filter_ext,tf_point,tf_linear,tf_anisotropic" />
   <meta name="search-keywords" content="gpu_set_tex_mip_filter_ext,tf_point,tf_linear,tf_anisotropic" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_tex_mip_filter_ext</span></h1>
-  <p>この関数を使うと、指定された<span class="notranslate">shader</span> サンプラーのミップフィルタモードを設定することができます。<span class="notranslate">shader</span> のサンプラーのインデックスを指定します（関数 <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>と、以下に示すモード値定数のいずれかを指定する。</p>
+  <p>この関数を使うと、指定された<span class="notranslate">shader</span> サンプラーのミップフィルタモードを設定することができます。<span
+      class="notranslate">shader</span> のサンプラーのインデックスを指定します（関数 <a
+      href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span
+        class="inline">shader_get_sampler_index()</span></a>と、以下に示すモード値定数のいずれかを指定する。</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">tf_point</span></td>
-        <td>これはミップマップレベル間のブレンドが無効であることを意味し、目に見える<span class="notranslate">texture</span> の遷移が発生することがありますが、最高のパフォーマンスを得ることができます。</td>
+        <td>これはミップマップレベル間のブレンドが無効であることを意味し、目に見える<span class="notranslate">texture</span>
+          の遷移が発生することがありますが、最高のパフォーマンスを得ることができます。</td>
       </tr>
       <tr>
         <td><span class="notranslate">tf_linear</span></td>
-        <td>これはミップマップレベル間のブレンドが有効であることを意味し（これは<i>トリリニアフィルタリングとしても</i>知られています）、<span class="notranslate">texture</span> の遷移を滑らかにしますが、性能に若干の打撃を与えます。</td>
+        <td>これはミップマップレベル間のブレンドが有効であることを意味し（これは<i>トリリニアフィルタリングとしても</i>知られています）、<span class="notranslate">texture</span>
+          の遷移を滑らかにしますが、性能に若干の打撃を与えます。</td>
       </tr>
       <tr>
         <td><span class="notranslate">tf_anisotropic</span></td>
-        <td>これは、異方性フィルタリングが有効であることを意味し、<span class="notranslate">texture</span> の遷移品質を大幅に向上させ、他のフィルタリングモードで見えるぼやけを減らすことができますが、パフォーマンスへの打撃は最も大きいです。</td>
+        <td>これは、異方性フィルタリングが有効であることを意味し、<span class="notranslate">texture</span>
+          の遷移品質を大幅に向上させ、他のフィルタリングモードで見えるぼやけを減らすことができますが、パフォーマンスへの打撃は最も大きいです。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">gpu_set_tex_mip_filter_ext</span>(sampler_index, filter);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_tex_mip_filter_ext</span>(sampler_index,
+    filter);</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">sampler_index</span></td>
@@ -56,12 +65,13 @@
       <tr>
         <td><span class="notranslate">filter</span></td>
         <td><span data-keyref="Type_Constant_Mipmapping_Filter">ミップマッピングフィルタ定数</span></td>
-        <td><span class="notranslate">The mip filter mode to use (a constant, default: <span class="inline">tf_point</span>).</td>
+        <td><span class="notranslate">The mip filter mode to use (a constant, default: <span
+              class="inline">tf_point</span>).</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -74,18 +84,22 @@
     }<br />
     texture_set_stage(_sampleIndex, _spriteTex);<br />
     shader_reset();</p>
-  <p>上記のコードでは、与えられた<span class="notranslate">shader</span> <span class="notranslate">texture</span> サンプラーのミップフィルタモードを <span class="inline">tf_point</span> (ミップマッピングを無効にする) に設定しています。</p>
+  <p>上記のコードでは、与えられた<span class="notranslate">shader</span> <span class="notranslate">texture</span> サンプラーのミップフィルタモードを
+    <span class="inline">tf_point</span> (ミップマッピングを無効にする) に設定しています。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Mipmapping.htm">ミップマッピング</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_tex_mip_bias.htm"><span class="notranslate">gpu_set_tex_mip_bias</span></a></div>
+        <div style="float:left">前のページ：<a href="Mipmapping.htm">ミップマッピング</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_tex_mip_bias.htm"><span
+              class="notranslate">gpu_set_tex_mip_bias</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_tex_mip_filter_ext
@@ -97,4 +111,5 @@ tf_anisotropic
 gpu_set_tex_mip_filter_ext
 -->
 </body>
+
 </html>

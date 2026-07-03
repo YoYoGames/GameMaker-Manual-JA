@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_grid_add_instances</title>
@@ -13,20 +14,29 @@
   <meta name="search-keywords" content="mp_grid_add_instances" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">mp_grid_add_instances</span></h1>
-  <p>この関数は、インスタンスのコリジョンマスク（<span class="notranslate">sprite</span> プロパティまたは呼び出したインスタンスのマスクインデックスで決定）を使用して、MP グリッド内のセルを禁止または禁止でないとマークします。禁止セルは、どの経路探索関数でも横切ることができないようになっています。この関数では、精密な衝突を考慮するかどうかを指定することができ、この設定に応じてマークされる禁止セルが変化します。この画像は、この挙動を説明するものです。</p>
-  <p><img>上の2つのインスタンスは、 <span class="inline">mp_grid_add_instances()</span> 機能を使用して、precise を true に設定して MP グリッドに追加されています。ご覧のように、緑のインスタンスは、<span class="notranslate">sprite</span> のマスクが precise に設定されているため、「触れる」グリッドのマス目のみを禁じ手としてマークしています。しかし、2番目のインスタンスは他のマスもマークしていますが、そのマスは触れていない<i>ように</i>見えます。これは、<span class="notranslate">sprite</span> のマスクが precise に設定されて<b>いない</b>ためです。つまり、関数で precise 設定を使用していても、<span class="notranslate">sprite</span> の bounding box しか考慮されないということです。これは、関数の precise 引数を false に設定した場合にも起こることです。precise<span class="notranslate">sprite</span> マスクを持つインスタンスでさえ、そのバウンディングボックスを基にグリッドに追加されることになります。</p>
+  <p>この関数は、インスタンスのコリジョンマスク（<span class="notranslate">sprite</span> プロパティまたは呼び出したインスタンスのマスクインデックスで決定）を使用して、MP
+    グリッド内のセルを禁止または禁止でないとマークします。禁止セルは、どの経路探索関数でも横切ることができないようになっています。この関数では、精密な衝突を考慮するかどうかを指定することができ、この設定に応じてマークされる禁止セルが変化します。この画像は、この挙動を説明するものです。
+  </p>
+  <p><img>上の2つのインスタンスは、 <span class="inline">mp_grid_add_instances()</span> 機能を使用して、precise を true に設定して MP
+    グリッドに追加されています。ご覧のように、緑のインスタンスは、<span class="notranslate">sprite</span> のマスクが precise
+    に設定されているため、「触れる」グリッドのマス目のみを禁じ手としてマークしています。しかし、2番目のインスタンスは他のマスもマークしていますが、そのマスは触れていない<i>ように</i>見えます。これは、<span
+      class="notranslate">sprite</span> のマスクが precise に設定されて<b>いない</b>ためです。つまり、関数で precise 設定を使用していても、<span
+      class="notranslate">sprite</span> の bounding box しか考慮されないということです。これは、関数の precise 引数を false
+    に設定した場合にも起こることです。precise<span class="notranslate">sprite</span> マスクを持つインスタンスでさえ、そのバウンディングボックスを基にグリッドに追加されることになります。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">mp_grid_add_instances</span>(id, obj, prec);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">id</span></td>
@@ -35,34 +45,40 @@
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
-        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span data-keyref="Type_ID_Instance">インスタンスID</span></td>
-        <td><span class="notranslate">Object index, or instance id, of the instances to be added into the mp_grid</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span
+            data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">Object index, or instance id, of the instances to be added into the mp_grid</span>
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">prec</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</span></td>
+        <td><span class="notranslate">Whether the check is based on pixel-perfect collisions (true = slow) or its
+            bounding box in general (false = fast).</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">mp_grid_add_instances(grid, obj_Wall, true);</p>
-  <p>上記のコードは、&quot;obj_Wall&quot; のすべてのインスタンスを、バウンディングボックスではなく、正確なコリジョンマスクを使用して、変数 &quot;grid&quot; でインデックスされた mp_grid に追加します。</p>
+  <p>上記のコードは、&quot;obj_Wall&quot; のすべてのインスタンスを、バウンディングボックスではなく、正確なコリジョンマスクを使用して、変数 &quot;grid&quot; でインデックスされた mp_grid
+    に追加します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
-        <div style="float:right">次のページ <a href="mp_grid_add_rectangle.htm"><span class="notranslate">mp_grid_add_rectangle</span></a></div>
+        <div style="float:left">前のページ：<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ：<a href="mp_grid_add_rectangle.htm"><span
+              class="notranslate">mp_grid_add_rectangle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_grid_add_instances
@@ -71,4 +87,5 @@ mp_grid_add_instances
 mp_grid_add_instances
 -->
 </body>
+
 </html>

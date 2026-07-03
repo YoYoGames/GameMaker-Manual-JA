@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>matrix_set</title>
@@ -12,15 +13,20 @@
   <meta name="rh-index-keywords" content="matrix_set,matrix_view,matrix_projection,matrix_world" />
   <meta name="search-keywords" content="matrix_set,matrix_view,matrix_projection,matrix_world" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">matrix_set</span></h1>
-  <p>この関数は、与えられた4x4行列の型に対応する16個の値の<a href="../../../GML_Overview/Arrays.htm">配列を</a>受け取り、要素 [0 - 3] は行1、要素 [4 - 7] は行2、...となります。(<a href="Matrix_Functions.htm">メイン</a>ページの画像を参照)。このような行列を作成するには <a href="matrix_build.htm"><span class="inline">matrix_build()</span></a>または <a href="matrix_get.htm"><span class="inline">matrix_get()</span></a>関数に渡すか、あるいは自分で配列を作成し、それを関数に渡します。使用できる行列の種類は<i>view</i>,<i>projection</i>,<i>world</i> で、これには以下の定数のいずれかを使用します。</p>
+  <p>この関数は、与えられた4x4行列の型に対応する16個の値の<a href="../../../GML_Overview/Arrays.htm">配列を</a>受け取り、要素 [0 - 3] は行1、要素 [4 - 7]
+    は行2、...となります。(<a href="Matrix_Functions.htm">メイン</a>ページの画像を参照)。このような行列を作成するには <a href="matrix_build.htm"><span
+        class="inline">matrix_build()</span></a>または <a href="matrix_get.htm"><span
+        class="inline">matrix_get()</span></a>関数に渡すか、あるいは自分で配列を作成し、それを関数に渡します。使用できる行列の種類は<i>view</i>,<i>projection</i>,<i>world</i>
+    で、これには以下の定数のいずれかを使用します。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">matrix_view</span></td>
@@ -37,19 +43,20 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">matrix_set</span>(type, matrix);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">type</span></td>
         <td><span data-keyref="Type_Constant_Matrix_Type">マトリクス型定数</span></td>
-        <td><span class="notranslate">The type of matrix to get the values of (see the <i>constants</i> listed above)</span></td>
+        <td><span class="notranslate">The type of matrix to get the values of (see the <i>constants</i> listed
+            above)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">matrix</span></td>
@@ -59,7 +66,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -71,11 +78,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Matrix_Functions.htm">マトリクス機能</a></div>
-        <div style="float:right">次のページ <a href="matrix_build.htm"><span class="notranslate">matrix_build</span></a></div>
+        <div style="float:left">前のページ：<a href="Matrix_Functions.htm">マトリクス機能</a></div>
+        <div style="float:right">次のページ：<a href="matrix_build.htm"><span class="notranslate">matrix_build</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_set
@@ -87,4 +96,5 @@ matrix_world
 matrix_set
 -->
 </body>
+
 </html>

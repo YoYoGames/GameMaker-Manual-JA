@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シーケンス</title>
@@ -12,61 +13,117 @@
   <meta name="rh-index-keywords" content="Sequences Editor" />
   <meta name="search-keywords" content="sequences,dope sheet,sequences editor,parameter tracks,asset tracks,playhead" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span class="notranslate">Sequence</span> 編集部</h1>
-  <p><img alt="The Sequence Editor" class="center" height="972" src="../assets/Images/Asset_Editors/Editor_Sequences.png" width="1689" /></p>
-  <p><strong>Sequenceは </strong>基本的に、時間の経過とともにダイナミックなアニメーションを実行する<span class="notranslate">assets</span> のコレクションです。<span class="notranslate">sprites</span> 、インスタンス、サウンド、その他のものを含むことができ、これらのそれぞれは、<span class="notranslate">sequence</span> 自身で時間の経過とともに動いたり、色を変えたり、アニメーションを開始/停止するように設定することができます。追加した<span class="notranslate">assets</span> は、<span class="notranslate">sequence</span> 内の特定の<strong>トラックに </strong>割り当てられ、これらのトラックには、<strong>キーフレームと</strong>呼ばれる異なる属性を適用することができ、静的または時間と共に変化します。<span class="notranslate">sequence</span> の編集はすべて<strong>シーケンスエディタで</strong>行い、基本的に3つのエリアで構成されています。</p>
+  <h1><span class="notranslate">Sequence</span> エディタ</h1>
+  <p><img alt="The Sequence Editor" class="center" height="972"
+      src="../assets/Images/Asset_Editors/Editor_Sequences.png" width="1689" /></p>
+  <p><strong>Sequenceは </strong>基本的に、時間の経過とともにダイナミックなアニメーションを実行する<span class="notranslate">assets</span> のコレクションです。<span
+      class="notranslate">sprites</span> 、インスタンス、サウンド、その他のものを含むことができ、これらのそれぞれは、<span class="notranslate">sequence</span>
+    自身で時間の経過とともに動いたり、色を変えたり、アニメーションを開始/停止するように設定することができます。追加した<span class="notranslate">assets</span> は、<span
+      class="notranslate">sequence</span> 内の特定の<strong>トラックに
+    </strong>割り当てられ、これらのトラックには、<strong>キーフレームと</strong>呼ばれる異なる属性を適用することができ、静的または時間と共に変化します。<span
+      class="notranslate">sequence</span> の編集はすべて<strong>シーケンスエディタで</strong>行い、基本的に3つのエリアで構成されています。</p>
   <ul class="colour">
     <li><strong>キャンバス - </strong> シーケンスを構成する<span class="notranslate">assets</span> を配置する場所です。</li>
     <li><strong>トラックパネル - </strong> <strong>アセットトラックと</strong> <strong>パラメータ</strong>トラックをシーケンスに追加/削除します。</li>
     <li><strong>ドープシート</strong>- トラックの<strong>キーフレームを</strong>追加/削除/編集し、時間経過による動作を制御します。</li>
   </ul>
-  <p>また、<span class="notranslate">sequences</span> の中に<span class="notranslate">sequences</span> を入れて、複雑なアニメーションやエフェクトを作ることもできます。<span class="notranslate">sequences</span> はコードでアクセスして変更できるので、ゲームでの表示や使い方をできる限りコントロールすることができます。<span class="notranslate">sequences</span> のコード化された側面についての詳細は、「<a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequences.htm">シーケンス機能</a>」のセクションを参照してください。</p>
-  <p>エディターの詳細を説明し続ける前に、<span class="notranslate">sequence</span> の作成方法と、説明で使用されるいくつかのキーワードを説明し、<span class="notranslate">Sequences</span> エディターの動作をより深く理解していただきます。<span class="notranslate">sequence</span> を作成するための一般的なワークフローは次のとおりです。</p>
+  <p>また、<span class="notranslate">sequences</span> の中に<span class="notranslate">sequences</span>
+    を入れて、複雑なアニメーションやエフェクトを作ることもできます。<span class="notranslate">sequences</span>
+    はコードでアクセスして変更できるので、ゲームでの表示や使い方をできる限りコントロールすることができます。<span class="notranslate">sequences</span>
+    のコード化された側面についての詳細は、「<a
+      href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequences.htm">シーケンス機能</a>」のセクションを参照してください。
+  </p>
+  <p>エディタの詳細を説明し続ける前に、<span class="notranslate">sequence</span> の作成方法と、説明で使用されるいくつかのキーワードを説明し、<span
+      class="notranslate">Sequences</span> エディタの動作をより深く理解していただきます。<span class="notranslate">sequence</span>
+    を作成するための一般的なワークフローは次のとおりです。</p>
   <ul class="colour">
-    <li>まず、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザから</a> <span class="notranslate">sequence</span> を作成し、<span class="notranslate">Sequences</span> エディタを開きます。</li>
-    <li>次に、<span class="notranslate">asset</span> (<span class="notranslate">sprite</span>,<span class="notranslate">object</span>, sound or<span class="notranslate">sequence</span>) をエディタキャンバスにドラッグします。</li>
-    <li>これによって、<strong>トラックパネルに</strong> <a class="glossterm" data-glossterm="アセットトラック" href="#">アセットトラックが</a>作成され、<a class="glossterm" data-glossterm="ドープシート" href="#">ドープシートに</a> <a class="glossterm" data-glossterm="アセットキー" href="#">アセットキーが</a>追加されます。<span class="notranslate">asset</span> トラックは、単に<span class="notranslate">asset</span> を含むトラックの名前です。一方<span class="notranslate">asset</span> キーは、<span class="notranslate">asset</span> が<span class="notranslate">sequence</span> でアニメートされるフレーム数を象徴するために描かれるバーです。</li>
-    <li>この時点で、通常、キャンバス内の<span class="notranslate">asset</span> を<span class="notranslate">sequence</span> の開始時の位置に配置し、スケールや回転などの初期トランスフォームを追加することになります。</li>
-    <li>初期設定に満足したら、<strong>パラメータキー</strong>（または<a class="glossterm" data-glossterm="キーフレーム" href="#">キーフレーム</a>）を記録します。これは、特定の<span class="notranslate">asset</span> キーが<span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span> の任意の時点で持つスケール、回転、位置の値に付けられた単純な名前です。</li>
-    <li>次に<a class="glossterm" data-glossterm="プレイヘッド" href="#">プレイヘッドの</a>位置（<span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span> の現在の再生位置）を変更し、<span class="notranslate">asset</span> のトランスフォームを移動または変更し、別のパラメータキーを記録することになります。</li>
-    <li>すべてのパラメータキーは、トラックパネルのメイントラック<span class="notranslate">asset</span> の下にあるトラックのサブセットである追加<a class="glossterm" data-glossterm="パラメタトラック" href="#">パラメータ</a>トラックに格納され、トラックエディタで各パラメータのキーデータを編集することができま す。</li>
-    <li>あとは、上記の作業を<span class="notranslate">sequence</span> の長さ分繰り返し、必要に応じて<span class="notranslate">asset</span> を移動、回転、拡大縮小し、必要な分だけ<span class="notranslate">assets</span> を追加していくことになります。</li>
+    <li>まず、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザから</a> <span class="notranslate">sequence</span>
+      を作成し、<span class="notranslate">Sequences</span> エディタを開きます。</li>
+    <li>次に、<span class="notranslate">asset</span> (<span class="notranslate">sprite</span>,<span
+        class="notranslate">object</span>, sound or<span class="notranslate">sequence</span>) をエディタキャンバスにドラッグします。</li>
+    <li>これによって、<strong>トラックパネルに</strong> <a class="glossterm" data-glossterm="アセットトラック" href="#">アセットトラックが</a>作成され、<a
+        class="glossterm" data-glossterm="ドープシート" href="#">ドープシートに</a> <a class="glossterm" data-glossterm="アセットキー"
+        href="#">アセットキーが</a>追加されます。<span class="notranslate">asset</span> トラックは、単に<span class="notranslate">asset</span>
+      を含むトラックの名前です。一方<span class="notranslate">asset</span> キーは、<span class="notranslate">asset</span> が<span
+        class="notranslate">sequence</span> でアニメートされるフレーム数を象徴するために描かれるバーです。</li>
+    <li>この時点で、通常、キャンバス内の<span class="notranslate">asset</span> を<span class="notranslate">sequence</span>
+      の開始時の位置に配置し、スケールや回転などの初期トランスフォームを追加することになります。</li>
+    <li>初期設定に満足したら、<strong>パラメータキー</strong>（または<a class="glossterm" data-glossterm="キーフレーム"
+        href="#">キーフレーム</a>）を記録します。これは、特定の<span class="notranslate">asset</span> キーが<span class="notranslate">dope
+        sheet</span> <span class="notranslate">timeline</span> の任意の時点で持つスケール、回転、位置の値に付けられた単純な名前です。</li>
+    <li>次に<a class="glossterm" data-glossterm="プレイヘッド" href="#">プレイヘッドの</a>位置（<span class="notranslate">dope
+        sheet</span> <span class="notranslate">timeline</span> の現在の再生位置）を変更し、<span class="notranslate">asset</span>
+      のトランスフォームを移動または変更し、別のパラメータキーを記録することになります。</li>
+    <li>すべてのパラメータキーは、トラックパネルのメイントラック<span class="notranslate">asset</span> の下にあるトラックのサブセットである追加<a class="glossterm"
+        data-glossterm="パラメタトラック" href="#">パラメータ</a>トラックに格納され、トラックエディタで各パラメータのキーデータを編集することができま す。</li>
+    <li>あとは、上記の作業を<span class="notranslate">sequence</span> の長さ分繰り返し、必要に応じて<span class="notranslate">asset</span>
+      を移動、回転、拡大縮小し、必要な分だけ<span class="notranslate">assets</span> を追加していくことになります。</li>
   </ul>
-  <p>以下、<span class="notranslate">sequence</span> エディターの各機能の概要を説明します。このページの下部には、上記の3つの主要機能をより詳しく説明するページへのリンクがあります。</p>
+  <p>以下、<span class="notranslate">sequence</span> エディタの各機能の概要を説明します。このページの下部には、上記の3つの主要機能をより詳しく説明するページへのリンクがあります。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">定規・ガイド</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">キャンバスの縁に沿ったルーラは、その中に配置されたものの位置を示し、キャンバスの中心であり、<span class="notranslate">sequence</span> のデフォルトの原点である (0, 0) からマークされています。 ルーラをクリックしてドラッグすると、水平または垂直のガイドを に引き込むことができます。
-     <span class="notranslate">sequence</span> <span class="notranslate">assets</span> このガイドを使って、使用中のさまざまな<span class="notranslate">asset</span> を正確に配置することができます。位置決め中
-      <span class="notranslate">assets</span> <span class="notranslate">sequence</span> 、<strong>スマートガイドが</strong>一時的に表示され、<span class="notranslate">assets</span> 間の距離と、<span class="notranslate">sequence</span> 境界点または中心点からの距離が示されます。</p>
-    <p class="dropspot"><img> <span class="notranslate">sequence</span> の境界線と の中心点マーカー線もガイドとみなされ、ルーラーから追加されたガイドと同じように動作します。
+    <p class="dropspot">キャンバスの縁に沿ったルーラは、その中に配置されたものの位置を示し、キャンバスの中心であり、<span class="notranslate">sequence</span>
+      のデフォルトの原点である (0, 0) からマークされています。 ルーラをクリックしてドラッグすると、水平または垂直のガイドを に引き込むことができます。
+      <span class="notranslate">sequence</span> <span class="notranslate">assets</span> このガイドを使って、使用中のさまざまな<span
+        class="notranslate">asset</span> を正確に配置することができます。位置決め中
+      <span class="notranslate">assets</span> <span class="notranslate">sequence</span>
+      、<strong>スマートガイドが</strong>一時的に表示され、<span class="notranslate">assets</span> 間の距離と、<span
+        class="notranslate">sequence</span> 境界点または中心点からの距離が示されます。
+    </p>
+    <p class="dropspot"><img> <span class="notranslate">sequence</span> の境界線と
+      の中心点マーカー線もガイドとみなされ、ルーラーから追加されたガイドと同じように動作します。
       ガイドとみなされ、ルーラーから追加されたガイドと同じように動作しますが、編集はできません。<span class="notranslate">sequence</span> </p>
-    <p class="dropspot"><span class="notranslate">assets</span> がガイドに「スナップ」する距離や、その他のプロパティは、「<a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">シーケンス」環境</a>設定で設定できます。</p>
+    <p class="dropspot"><span class="notranslate">assets</span> がガイドに「スナップ」する距離や、その他のプロパティは、「<a
+        href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">シーケンス」環境</a>設定で設定できます。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">キャンバスビュー</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">キャンバスビューでは、<span class="notranslate">sequence</span> キャンバスのプレビューを見ることができ、<span class="notranslate">assets</span> を構成するさまざまな<span class="notranslate">sequence</span> を編集したり配置したりすることができます。<span class="notranslate">asset</span> に<span class="notranslate">sequence</span> を追加するには、<span class="notranslate">asset</span> ブラウザからドラッグして、キャンバスにドロップするだけです。これにより、トラックパネルに新しいトラックが作成され、現在の<span class="notranslate">asset</span> プレイヘッド位置にある<span class="notranslate">asset</span> の<span class="notranslate">timeline</span> キーも追加されます。この方法で、次の<span class="notranslate">assets</span> をキャンバスにドロップすることができます。</p>
+    <p class="dropspot">キャンバスビューでは、<span class="notranslate">sequence</span> キャンバスのプレビューを見ることができ、<span
+        class="notranslate">assets</span> を構成するさまざまな<span class="notranslate">sequence</span> を編集したり配置したりすることができます。<span
+        class="notranslate">asset</span> に<span class="notranslate">sequence</span> を追加するには、<span
+        class="notranslate">asset</span> ブラウザからドラッグして、キャンバスにドロップするだけです。これにより、トラックパネルに新しいトラックが作成され、現在の<span
+        class="notranslate">asset</span> プレイヘッド位置にある<span class="notranslate">asset</span> の<span
+        class="notranslate">timeline</span> キーも追加されます。この方法で、次の<span class="notranslate">assets</span>
+      をキャンバスにドロップすることができます。</p>
     <ul class="dropspotlist">
       <li><a data-xref="{title}" href="Sprites.htm">スプライト</a></li>
-      <li><a data-xref="{title}" href="Objects.htm">対象物</a></li>
+      <li><a data-xref="{title}" href="Objects.htm">オブジェクト</a></li>
       <li><a data-xref="{title}" href="Sounds.htm">サウンド</a></li>
       <li><a data-xref="{title}" href="Sequences.htm">シーケンス</a></li>
     </ul>
-    <p class="dropspot">ツールボックスの<img> <strong>Text</strong>ツールを使って、テキストトラックを作成することもできます。詳しくは、<a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">Text in Sequencesを</a>お読みください。</p>
-    <p class="dropspot"><span class="notranslate">asset</span> キャンバスに追加された各<span class="notranslate">asset</span> には、<strong>バウンディング ボックスと</strong>トランス<strong>フォーム<a class="glossterm" data-glossterm="ギズモ" href="#">ギズモ</a></strong>、<strong>バウンディング ボックス コントロールが</strong>あるため、操作方法に応じて回転、変形、移動などの複数の方法で操作することが可能です。これらすべてについては、<a href="Sequence_Properties/The_Sequence_Canvas.htm">シーケンスエディタのキャンバスについての</a>ページで詳しく説明しています。</p>
-    <p class="note"><span class="note">NOTE</span>サウンド<span class="notranslate">assets</span> を<span class="notranslate">sequence</span> に追加すると、基本的に与えられたサウンド<span class="notranslate">asset</span> のみを再生する<a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">サウンドエミッタ</a><strong> </strong>になります。</p>
-    <p class="dropspot">キャンバスビューを移動するには、一般的な<span class="notranslate">Workspaces</span> と同じ基本的なコントロールを使用できます。つまり、マウスの中ボタン<img> とドラッグでキャンバスをパンし（あるいは<img> +<img> の組み合わせを使用）、マウスホイール<img> で水平方向にスクロールし、<img> /<img> キーとマウスホイール<img> でズームインとアウトを行うことができます。また、<img> /<img> + &quot;<span class="inline">X</span>&quot;,<img> /<img> + &quot;<span class="inline">C</span>&quot;,<img> /<img> + &quot;<span class="inline">V</span>&quot; のキーの組み合わせで、<span class="notranslate">assets</span> をカット、コピー、ペーストすることができます。</p>
+    <p class="dropspot">ツールボックスの<img> <strong>Text</strong>ツールを使って、テキストトラックを作成することもできます。詳しくは、<a data-xref="{title}"
+        href="Sequence_Properties/Text_in_Sequences.htm">Text in Sequencesを</a>お読みください。</p>
+    <p class="dropspot"><span class="notranslate">asset</span> キャンバスに追加された各<span class="notranslate">asset</span>
+      には、<strong>バウンディング ボックスと</strong>トランス<strong>フォーム<a class="glossterm" data-glossterm="ギズモ"
+          href="#">ギズモ</a></strong>、<strong>バウンディング ボックス
+        コントロールが</strong>あるため、操作方法に応じて回転、変形、移動などの複数の方法で操作することが可能です。これらすべてについては、<a
+        href="Sequence_Properties/The_Sequence_Canvas.htm">シーケンスエディタのキャンバスについての</a>ページで詳しく説明しています。</p>
+    <p class="note"><span class="note">NOTE</span>サウンド<span class="notranslate">assets</span> を<span
+        class="notranslate">sequence</span> に追加すると、基本的に与えられたサウンド<span class="notranslate">asset</span> のみを再生する<a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">サウンドエミッタ</a><strong>
+      </strong>になります。</p>
+    <p class="dropspot">キャンバスビューを移動するには、一般的な<span class="notranslate">Workspaces</span>
+      と同じ基本的なコントロールを使用できます。つまり、マウスの中ボタン<img> とドラッグでキャンバスをパンし（あるいは<img> +<img> の組み合わせを使用）、マウスホイール<img> で水平方向にスクロールし、<img>
+      /<img> キーとマウスホイール<img> でズームインとアウトを行うことができます。また、<img> /<img> + &quot;<span class="inline">X</span>&quot;,<img>
+      /<img> + &quot;<span class="inline">C</span>&quot;,<img> /<img> + &quot;<span class="inline">V</span>&quot;
+      のキーの組み合わせで、<span class="notranslate">assets</span> をカット、コピー、ペーストすることができます。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">キーフレーム・コントロール</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><span class="notranslate">keyframe</span> コントロールボタンは、<span class="notranslate">dope sheet</span> の特定のキーを追加、削除、編集する方法の一つです。 ボタンは次のとおりです。</p>
+    <p class="dropspot"><span class="notranslate">keyframe</span> コントロールボタンは、<span class="notranslate">dope sheet</span>
+      の特定のキーを追加、削除、編集する方法の一つです。 ボタンは次のとおりです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img> - これは「Split selected keys」（選択したキーを分割する）ボタンです。 で1つまたは複数のパラメータキーを選択した場合、このボタンをクリックすると、それらのキーがプレイヘッドの位置で2つの別々のキーに分割されます。
-         の再生ヘッド位置で、2つの別々のキーに分割されます（ただし、キーは最初に複数のフレームを占めるようにストレッチされている必要があります）。<span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span> <br />
+      <li class="dropspot"><img> - これは「Split selected keys」（選択したキーを分割する）ボタンです。
+        で1つまたは複数のパラメータキーを選択した場合、このボタンをクリックすると、それらのキーがプレイヘッドの位置で2つの別々のキーに分割されます。
+        の再生ヘッド位置で、2つの別々のキーに分割されます（ただし、キーは最初に複数のフレームを占めるようにストレッチされている必要があります）。<span class="notranslate">dope sheet</span>
+        <span class="notranslate">timeline</span> <br />
         <img>
       </li>
       <li class="dropspot"><img> - これは「選択キーの削除」ボタンです。 で1つまたは複数のパラメーターキーを選択した場合、このボタンをクリッ クすると、それらのキーが削除されます。
@@ -74,46 +131,85 @@
         <img>
       </li>
       <li class="dropspot"><img> - これは、「新しいキーを記録する」ボタンです。 で のキーを選択してこのボタンを押すと、新しいパラメータキーがパラメータトラックとしてアセット
-        にパラメータトラックとして追加され、パラメータキーは の再生ヘッド位置のポイントとして追加されます。<span class="notranslate">asset</span> <span class="notranslate">dope sheet</span> <span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span> <br />
+        にパラメータトラックとして追加され、パラメータキーは の再生ヘッド位置のポイントとして追加されます。<span class="notranslate">asset</span> <span
+          class="notranslate">dope sheet</span> <span class="notranslate">dope sheet</span> <span
+          class="notranslate">timeline</span> <br />
         <img>
       </li>
-      <li class="dropspot"><img> - これは、「変更を自動的に記録する」ボタンです。これを有効にすると、キャンバス内で に加えられた変更は、自動的に記録され、 の再生ヘッド位置に適切なパラメータトラックとパラメータキーが追加されます。
-        のプレイヘッドの位置に、適切なパラメータトラックとパラメータキーが追加されます。 例えば、プレイヘッドをフレーム0からフレーム10に移動し、キャンバス内で を右に100ピクセル移動すると、パラメータトラックは位置に追加され、パラメータキーはフレーム0（最初の位置）に追加されます。
-        は位置に対して追加され、パラメータキーはフレーム0（初期位置）とフレーム10（再生ヘッド位置）に追加され、 の「再生」を押すと、 は10フレームで右に100px移動します。<span class="notranslate">asset</span> <span class="notranslate">dope sheet</span> <span class="notranslate">asset</span> <span class="notranslate">sequence</span> <span class="notranslate">asset</span> <br />
+      <li class="dropspot"><img> - これは、「変更を自動的に記録する」ボタンです。これを有効にすると、キャンバス内で に加えられた変更は、自動的に記録され、
+        の再生ヘッド位置に適切なパラメータトラックとパラメータキーが追加されます。
+        のプレイヘッドの位置に、適切なパラメータトラックとパラメータキーが追加されます。 例えば、プレイヘッドをフレーム0からフレーム10に移動し、キャンバス内で
+        を右に100ピクセル移動すると、パラメータトラックは位置に追加され、パラメータキーはフレーム0（最初の位置）に追加されます。
+        は位置に対して追加され、パラメータキーはフレーム0（初期位置）とフレーム10（再生ヘッド位置）に追加され、 の「再生」を押すと、 は10フレームで右に100px移動します。<span
+          class="notranslate">asset</span> <span class="notranslate">dope sheet</span> <span
+          class="notranslate">asset</span> <span class="notranslate">sequence</span> <span
+          class="notranslate">asset</span> <br />
         <img>
       </li>
     </ul>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">シーケンスイベント</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">通常の<span class="notranslate">objects</span> と同様に、<span class="notranslate">sequences</span> はイベントを持ち、そのイベントに割り当てられたコードを実行することができます。コードは<a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト化された関数の</a>形で割り当てられ、引数を取らないことができ、イベントがトリガーされたときに呼び出されます。
+    <p class="dropspot">通常の<span class="notranslate">objects</span> と同様に、<span class="notranslate">sequences</span>
+      はイベントを持ち、そのイベントに割り当てられたコードを実行することができます。コードは<a
+        href="../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト化された関数の</a>形で割り当てられ、引数を取らないことができ、イベントがトリガーされたときに呼び出されます。
       この関数は引数を取らず、イベントが発生したときに呼び出されます。</p>
     <p class="dropspot">イベントの追加は、「<strong>Add Event</strong>」ボタン（<img> ）をクリックすると、次のようなウィンドウが表示されます。</p>
-    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" /></p>
+    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center"
+        src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" /></p>
     <p class="dropspot">ここに掲載されているイベントは、以下の通りです。</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>作成 - </strong> このイベントは、<span class="notranslate">sequence</span> のインスタンスが最初に作成されたときに発生します。また、<span class="notranslate">sequence</span> から<span class="notranslate">room</span> のエディタを通して<span class="notranslate">room</span> に入力されたときに、その<span class="notranslate">room</span> 内で発生する一番最初の出来事です。</li>
-      <li class="dropspot"><strong>Destroy - </strong> このイベントは、<span class="notranslate">sequence</span> のインスタンスが破棄されるときに実行され、Clean Up イベント（下記参照）の前に実行されます。</li>
-      <li class="dropspot"><strong>Clean Up</strong>- このイベントは<span class="notranslate">sequence</span> から<span class="notranslate">room</span> のインスタンスを削除するイベントの後に呼び出されます。つまり、<span class="notranslate">sequence</span> が破壊された場合、<span class="notranslate">room</span> が終了した場合、またはゲームが終了した場合にトリガーされます。
-        <span class="notranslate">sequence</span> のインスタンスが何らかの理由でゲームから削除されたときに、一度だけ実行する必要があるタスクを実行するように設計されています。<span class="notranslate">sequence</span> のインスタンスを layer_sequence_destroy() などで破壊した場合、 このイベントは Destroy イベントの後に呼び出されます。
-        イベント (上記参照) の後に呼び出されます。</li>
-      <li class="dropspot"><strong>Begin Step</strong>/<strong>Step / </strong> <strong>End Step</strong>- ステップイベントは、<span class="notranslate">sequence</span> インスタンスが存在する間、ゲームの1ステップ（フレーム）ごとにチェックされるイベントで、begin, step, end の3つのパートに分かれる。
+      <li class="dropspot"><strong>作成 - </strong> このイベントは、<span class="notranslate">sequence</span>
+        のインスタンスが最初に作成されたときに発生します。また、<span class="notranslate">sequence</span> から<span class="notranslate">room</span>
+        のエディタを通して<span class="notranslate">room</span> に入力されたときに、その<span class="notranslate">room</span>
+        内で発生する一番最初の出来事です。</li>
+      <li class="dropspot"><strong>Destroy - </strong> このイベントは、<span class="notranslate">sequence</span>
+        のインスタンスが破棄されるときに実行され、Clean Up イベント（下記参照）の前に実行されます。</li>
+      <li class="dropspot"><strong>Clean Up</strong>- このイベントは<span class="notranslate">sequence</span> から<span
+          class="notranslate">room</span> のインスタンスを削除するイベントの後に呼び出されます。つまり、<span class="notranslate">sequence</span>
+        が破壊された場合、<span class="notranslate">room</span> が終了した場合、またはゲームが終了した場合にトリガーされます。
+        <span class="notranslate">sequence</span> のインスタンスが何らかの理由でゲームから削除されたときに、一度だけ実行する必要があるタスクを実行するように設計されています。<span
+          class="notranslate">sequence</span> のインスタンスを layer_sequence_destroy() などで破壊した場合、 このイベントは Destroy
+        イベントの後に呼び出されます。
+        イベント (上記参照) の後に呼び出されます。
+      </li>
+      <li class="dropspot"><strong>Begin Step</strong>/<strong>Step / </strong> <strong>End Step</strong>-
+        ステップイベントは、<span class="notranslate">sequence</span> インスタンスが存在する間、ゲームの1ステップ（フレーム）ごとにチェックされるイベントで、begin, step, end
+        の3つのパートに分かれる。
         終了の3つの部分に分かれます。ほとんどの場合、標準のステップ イベントを使用しても問題ありませんが、どのコードをどのタイミングで実行するか、もう少しコントロールしたい場合もあります。
-        これらのイベントは、ゲームの各ステップ（フレーム）ごとに、常に同じ順序でトリガーされます。<strong>重要!</strong> <span class="notranslate">sequence</span> が一時停止している場合、これらのイベントはトリガーさ<em>れません </em>。再生が再開されると、<em> <span class="notranslate">sequence</span> </em> が再び再生を開始した次のフレームでトリガーされます。
-        また、イベントの順番はプレイヘッドの方向には影響されません。<span class="notranslate">sequence</span> が逆向きに再生されている場合でも、イベントは Begin、Step、End の順番で実行されることに注意してください。</li>
-      <li class="dropspot"><strong>Async Event（非同期イベント</strong>）。これは<span class="notranslate">object</span> <a href="Object_Properties/Async_Events.htm">Asynchronous System Event</a> に相当するものです。<strong>重要!</strong> <span class="notranslate">sequence</span> が一時停止している場合、このイベントはトリガーさ<em>れません </em>。</li>
+        これらのイベントは、ゲームの各ステップ（フレーム）ごとに、常に同じ順序でトリガーされます。<strong>重要!</strong> <span class="notranslate">sequence</span>
+        が一時停止している場合、これらのイベントはトリガーさ<em>れません </em>。再生が再開されると、<em> <span class="notranslate">sequence</span> </em>
+        が再び再生を開始した次のフレームでトリガーされます。
+        また、イベントの順番はプレイヘッドの方向には影響されません。<span class="notranslate">sequence</span> が逆向きに再生されている場合でも、イベントは Begin、Step、End
+        の順番で実行されることに注意してください。</li>
+      <li class="dropspot"><strong>Async Event（非同期イベント</strong>）。これは<span class="notranslate">object</span> <a
+          href="Object_Properties/Async_Events.htm">Asynchronous System Event</a> に相当するものです。<strong>重要!</strong> <span
+          class="notranslate">sequence</span> が一時停止している場合、このイベントはトリガーさ<em>れません </em>。</li>
     </ul>
-    <p class="dropspot">各イベントには、イベントがトリガーされたときに呼び出される関数を1つ割り当てることができます。イベントの入力ボックスを使って関数を割り当て、矢印ボタンをクリックすると、関数を編集するためのエディタ（<span class="notranslate">script</span> ）が表示されます。
-      また、下部にある「新規作成」ボタンをクリックすると、「定型」関数がすでに定義され、すぐに入力できる状態で新しい<span class="notranslate">script</span> リソースを作成することができます。関数名は自由に変更でき、定義済みの名前を使う必要はありません。
+    <p class="dropspot">
+      各イベントには、イベントがトリガーされたときに呼び出される関数を1つ割り当てることができます。イベントの入力ボックスを使って関数を割り当て、矢印ボタンをクリックすると、関数を編集するためのエディタ（<span
+        class="notranslate">script</span> ）が表示されます。
+      また、下部にある「新規作成」ボタンをクリックすると、「定型」関数がすでに定義され、すぐに入力できる状態で新しい<span class="notranslate">script</span>
+      リソースを作成することができます。関数名は自由に変更でき、定義済みの名前を使う必要はありません。
       また、不要な関数の定義を削除することもできます。<span class="notranslate">sequence</span> イベントで使用される関数は、引数を取ることができないことに注意してください。</p>
-    <p class="dropspot">シーケンスイベントは、コードを使用して追加・編集することも可能です。詳しくは<a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">こちらを</a>ご覧ください。</p>
+    <p class="dropspot">シーケンスイベントは、コードを使用して追加・編集することも可能です。詳しくは<a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">こちらを</a>ご覧ください。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">トラックパネル</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><strong>トラックパネルには</strong> <img> <img> <img> <strong></strong> <span class="notranslate">assets</span> の<span class="notranslate">sequence</span> がそれぞれトラックとして表示され、各トラックには<span class="notranslate">asset</span> で変更されるパラメータのサブトラックがあります。<img> をクリックして<span class="notranslate">asset</span> トラックをドラッグすると、他のトラックの上下に位置を変更できます（割り当てられたパラメータ トラックも一緒に移動します）。</p>
-    <p class="dropspot"><span class="notranslate">asset</span> ブラウザから<span class="notranslate">Asset</span> （<span class="notranslate">sprite</span> 、<span class="notranslate">object</span> 、サウンド、<span class="notranslate">sequence</span> のいずれか）を<span class="notranslate">sequence</span> キャンバスにドラッグしてトラックを作成するか、下部にある<img> アイコンをクリックして新しいトラックを追加し、開いた<span class="notranslate">asset</span> Explorer ウィンドウから使用する<span class="notranslate">Asset</span> を選択することができ ます。新しいトラックが作成され、<span class="notranslate">asset</span> タイムライン内の現在の再生ヘッド位置に<span class="notranslate">dope sheet</span> が追加されます。</p>
-    <p class="dropspot"><img>トラックエディターには他にも多くの機能がありますが、詳しくは次のページで説明します。</p>
+    <p class="dropspot"><strong>トラックパネルには</strong> <img> <img> <img> <strong></strong> <span
+        class="notranslate">assets</span> の<span class="notranslate">sequence</span> がそれぞれトラックとして表示され、各トラックには<span
+        class="notranslate">asset</span> で変更されるパラメータのサブトラックがあります。<img> をクリックして<span class="notranslate">asset</span>
+      トラックをドラッグすると、他のトラックの上下に位置を変更できます（割り当てられたパラメータ トラックも一緒に移動します）。</p>
+    <p class="dropspot"><span class="notranslate">asset</span> ブラウザから<span class="notranslate">Asset</span> （<span
+        class="notranslate">sprite</span> 、<span class="notranslate">object</span> 、サウンド、<span
+        class="notranslate">sequence</span> のいずれか）を<span class="notranslate">sequence</span>
+      キャンバスにドラッグしてトラックを作成するか、下部にある<img> アイコンをクリックして新しいトラックを追加し、開いた<span class="notranslate">asset</span> Explorer
+      ウィンドウから使用する<span class="notranslate">Asset</span> を選択することができ ます。新しいトラックが作成され、<span
+        class="notranslate">asset</span> タイムライン内の現在の再生ヘッド位置に<span class="notranslate">dope sheet</span> が追加されます。</p>
+    <p class="dropspot"><img>トラックエディタには他にも多くの機能がありますが、詳しくは次のページで説明します。</p>
     <ul class="dropspotlist">
       <li class="dropspot"><a href="Sequence_Properties/The_Track_Panel.htm">トラックパネル</a></li>
     </ul>
@@ -121,23 +217,49 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">キャンバスツールボックス</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot"><span class="notranslate">Sequence</span> Editor ツールボックスには、編集中の<span class="notranslate">sequence</span> のさまざまな可視化および設定オプションが含まれています。</p>
+    <p class="dropspot"><span class="notranslate">Sequence</span> Editor ツールボックスには、編集中の<span
+        class="notranslate">sequence</span> のさまざまな可視化および設定オプションが含まれています。</p>
     <p class="dropspot"><img class="icon" height="24" src="../assets/Images/Icons/Icon_TextButton.png" width="24" /></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Add a Text Track</strong> <img>: これにより、<span class="notranslate">Sequence</span> Canvas にテキストトラックを追加することができます。このオプションを選択した後、<img> キャンバスの任意の場所をクリック（オプションでドラッグ）して、新しいテキストトラックを作成できます。<br />
+      <li class="dropspot"><strong>Add a Text Track</strong> <img>: これにより、<span class="notranslate">Sequence</span>
+        Canvas にテキストトラックを追加することができます。このオプションを選択した後、<img> キャンバスの任意の場所をクリック（オプションでドラッグ）して、新しいテキストトラックを作成できます。<br />
         <br />
-        テキストトラックに関する詳しい情報は、以下をご覧ください。<a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">テキストをシーケンスで</a>表示する」を参照してください。
+        テキストトラックに関する詳しい情報は、以下をご覧ください。<a data-xref="{title}"
+          href="Sequence_Properties/Text_in_Sequences.htm">テキストをシーケンスで</a>表示する」を参照してください。
       </li>
-      <li class="dropspot"><strong>Toggle Canvas Grid</strong> <img>:<span class="notranslate">Sequence</span> EditorのキャンバスグリッドのON/OFFを切り替えます。これは<span data-keyref="GameMaker Name">GameMakerが</span>プレビュー用キャンバスを分割するために描くグリッドで、デフォルトでは32x32pxのサイズに設定されています。Grid Menuアイコン<img> をクリックすると、グリッドオプションが表示されます。<br />
-        <img>これらのオプションでは、グリッドの色とアルファ、および X 軸と Y 軸に沿ったグリッドのセル値を設定することができます。また、グリッドのスナップを有効または無効にするオプションもあります（デフォルトでは無効になっています）。キーボードショートカットの &quot;G&quot; と<img> + &quot;G&quot; で、グリッドの表示とグリッドのスナップをそれぞれ切り替えることができます。
+      <li class="dropspot"><strong>Toggle Canvas Grid</strong> <img>:<span class="notranslate">Sequence</span>
+        EditorのキャンバスグリッドのON/OFFを切り替えます。これは<span
+          data-keyref="GameMaker Name">GameMakerが</span>プレビュー用キャンバスを分割するために描くグリッドで、デフォルトでは32x32pxのサイズに設定されています。Grid
+        Menuアイコン<img> をクリックすると、グリッドオプションが表示されます。<br />
+        <img>これらのオプションでは、グリッドの色とアルファ、および X 軸と Y
+        軸に沿ったグリッドのセル値を設定することができます。また、グリッドのスナップを有効または無効にするオプションもあります（デフォルトでは無効になっています）。キーボードショートカットの &quot;G&quot; と<img>
+        + &quot;G&quot; で、グリッドの表示とグリッドのスナップをそれぞれ切り替えることができます。
       </li>
-      <li class="dropspot"><strong>Canvas Zoom Controls</strong> <img>: これらのボタンは現在のキャンバスのズームレベルをコントロールします。ズームイン、ズームアウトが可能で、<img> ボタンをクリックすると、キャンバスが編集中の<span class="notranslate">sequence</span> と 1:1 になるようにリセットされます。また、Window Fitボタン<img> をクリックすると、<span class="notranslate">sequence</span> キャンバス全体が現在のエディタ<span class="notranslate">workspace</span> に収まるようになります（収まるように適宜ズームイン/アウトされます）。<img> /<img> とマウスホイール<img> を使ってもズームイン、ズームアウトできます。<img> /<img> +<img> を押すと、キャンバスがディスプレイと1:1になるように設定されますので、ご注意ください。</li>
-      <li class="dropspot"><strong>Toggle Gizmos</strong> <img>:これをクリックすると、キャンバスに表示されるさまざまな<a class="glossterm" data-glossterm="ギズモ" href="#">ギズモを</a>有効または無効にします。有効にすると、<span class="notranslate">assets</span> とキャンバスに関連するすべてのギズモが表示されます。無効にすると、これらは表示されず、<span class="notranslate">sequence</span> がどのように見えるかが明確に表示されます。これはデフォルトで有効になっており、オプションボタン<img> から利用可能なメニューがあり、異なるウィジェットをすべて一緒に無効にすることなく、表示されるものをフィルタリングすることができることに注意してください。これらのフィルタオプションの完全なリストとその機能の説明は、<a href="Sequence_Properties/The_Sequence_Canvas.htm">ここで</a>見ることができます。</li>
-      <li class="dropspot"><strong>Toggle Transform Gizmo Mode</strong> <img>:<span class="notranslate">asset</span> に追加された各<span class="notranslate">sequence</span> には、その原点にトランスフォームギズモがあります。<br />
-        <img>このギズモは、<span class="notranslate">asset</span> の拡大縮小や回転を制御したり、その位置や<span class="notranslate">asset</span> の原点の位置を制御することができますが、一度に表示されるのはこれらのオプションのうち1つだけです。このボタンをクリックすると、異なるウィジェットタイプの間で<span class="notranslate">switch</span> 、オプションメニュー<img> をクリックすると、トランスフォームギズモに実行させたい制御動作のタイプを直接選択することができます。
+      <li class="dropspot"><strong>Canvas Zoom Controls</strong> <img>:
+        これらのボタンは現在のキャンバスのズームレベルをコントロールします。ズームイン、ズームアウトが可能で、<img> ボタンをクリックすると、キャンバスが編集中の<span
+          class="notranslate">sequence</span> と 1:1 になるようにリセットされます。また、Window Fitボタン<img> をクリックすると、<span
+          class="notranslate">sequence</span> キャンバス全体が現在のエディタ<span class="notranslate">workspace</span>
+        に収まるようになります（収まるように適宜ズームイン/アウトされます）。<img> /<img> とマウスホイール<img> を使ってもズームイン、ズームアウトできます。<img> /<img> +<img>
+        を押すと、キャンバスがディスプレイと1:1になるように設定されますので、ご注意ください。</li>
+      <li class="dropspot"><strong>Toggle Gizmos</strong> <img>:これをクリックすると、キャンバスに表示されるさまざまな<a class="glossterm"
+          data-glossterm="ギズモ" href="#">ギズモを</a>有効または無効にします。有効にすると、<span class="notranslate">assets</span>
+        とキャンバスに関連するすべてのギズモが表示されます。無効にすると、これらは表示されず、<span class="notranslate">sequence</span>
+        がどのように見えるかが明確に表示されます。これはデフォルトで有効になっており、オプションボタン<img>
+        から利用可能なメニューがあり、異なるウィジェットをすべて一緒に無効にすることなく、表示されるものをフィルタリングすることができることに注意してください。これらのフィルタオプションの完全なリストとその機能の説明は、<a
+          href="Sequence_Properties/The_Sequence_Canvas.htm">ここで</a>見ることができます。</li>
+      <li class="dropspot"><strong>Toggle Transform Gizmo Mode</strong> <img>:<span class="notranslate">asset</span>
+        に追加された各<span class="notranslate">sequence</span> には、その原点にトランスフォームギズモがあります。<br />
+        <img>このギズモは、<span class="notranslate">asset</span> の拡大縮小や回転を制御したり、その位置や<span class="notranslate">asset</span>
+        の原点の位置を制御することができますが、一度に表示されるのはこれらのオプションのうち1つだけです。このボタンをクリックすると、異なるウィジェットタイプの間で<span
+          class="notranslate">switch</span> 、オプションメニュー<img> をクリックすると、トランスフォームギズモに実行させたい制御動作のタイプを直接選択することができます。
       </li>
-      <li class="dropspot"><strong>Toggle Canvas Frame</strong> <img>: このボタンを使って、キャンバスフレームのオン／オフを切り替えることができます（デフォルトではオンになっています）。キャンバスフレームは、<span class="notranslate">sequence</span> キャンバス内の要素の配置を判断するための単なるガイドであり、フレームの外側にある要素はレンダリングされません。このボタンには、以下のオプションメニューもあります。<img>:<br />
-        <img>ここでは、キャンバス枠のトグルと、キャンバスの大きさを設定できます。また、<strong>参照画像を</strong>設定することもできます。参照画像とは、コンピュータから選択した画像（プロジェクトにはインポートされません）で、<span class="notranslate">sequence</span> の背景参照として使用します。この画像は<span class="notranslate">Sequence</span> Editor 自体にのみ表示され、プロジェクトで<span class="notranslate">sequence</span> が使用されているときはレンダリングされません。参照画像を追加すると、描画の不透明度を設定したり、キャンバスフレーム内の位置をオフセットしたりすることもできます。
+      <li class="dropspot"><strong>Toggle Canvas Frame</strong> <img>:
+        このボタンを使って、キャンバスフレームのオン／オフを切り替えることができます（デフォルトではオンになっています）。キャンバスフレームは、<span class="notranslate">sequence</span>
+        キャンバス内の要素の配置を判断するための単なるガイドであり、フレームの外側にある要素はレンダリングされません。このボタンには、以下のオプションメニューもあります。<img>:<br />
+        <img>ここでは、キャンバス枠のトグルと、キャンバスの大きさを設定できます。また、<strong>参照画像を</strong>設定することもできます。参照画像とは、コンピュータから選択した画像（プロジェクトにはインポートされません）で、<span
+          class="notranslate">sequence</span> の背景参照として使用します。この画像は<span class="notranslate">Sequence</span> Editor
+        自体にのみ表示され、プロジェクトで<span class="notranslate">sequence</span>
+        が使用されているときはレンダリングされません。参照画像を追加すると、描画の不透明度を設定したり、キャンバスフレーム内の位置をオフセットしたりすることもできます。
       </li>
     </ul>
     <p class="dropspot"> </p>
@@ -147,32 +269,63 @@
     <p class="dropspot">このバーには、<span class="notranslate">sequence</span> の各種再生コントロールがあります。</p>
     <p class="dropspot"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>再生速度</strong>：<span class="notranslate">sequence</span> の再生速度を1秒あたりのフレーム数（ステップ数）で表示します。</li>
+      <li class="dropspot"><strong>再生速度</strong>：<span class="notranslate">sequence</span>
+        の再生速度を1秒あたりのフレーム数（ステップ数）で表示します。</li>
       <li class="dropspot"><strong>再生位置</strong>：現在の再生位置で、時間（h:m:s）またはフレーム（f）で表示することができます。</li>
-      <li class="dropspot"><strong>時刻表示オプション</strong>：ここでは、<span class="notranslate">sequence</span> の時刻を時、分、秒（h:m:s）またはフレーム（f）のいずれかで表示するかどうかを設定します。</li>
-      <li class="dropspot"><strong>ブロードキャストメッセージ</strong>。これをクリックすると、現在の再生ヘッド位置に<strong>ブロードキャスト</strong>メッセージを追加することができます（詳しくは<a href="Sequence_Properties/Broadcast_Messages.htm">こちら</a>）。</li>
-      <li class="dropspot"><strong>モーメントを追加</strong>します。これをクリックすると、現在の再生ヘッド位置に<span class="notranslate">sequence</span> の<strong>モーメントを</strong>追加することができます（詳細は後ほど説明します）。</li>
-      <li class="dropspot"><strong>Open Curve Editor（カーブエディタを開く</strong>）。このボタンは、現在選択されているトラックを<strong>カーブビューと</strong> <strong>キーフレームビューの</strong>間で切り替えます。このオプションは<em>パラメータ</em>トラックにのみ適用され、有効にすると、パラメータトラックが  とアニメーションカーブのどちらを使用しているかによって、さらにオプションが利用できます。
-        を有効にすると、パラメータトラックが<span class="notranslate">keyframes</span> と<a href="Animation_Curves.htm">アニメーションカーブの</a>どちらを使用しているかによって、さらにオプションが利用できるようになります。詳しくは、<a href="Sequence_Properties/Using_Animation_Curves.htm">アニメーションカーブの使い方の</a>セクションを参照してください。</li>
-      <li class="dropspot"><strong>再生コントロール</strong>：これらのボタンで、<span class="notranslate">sequence</span> プレビューの開始と停止、および再生ヘッドを開始または終了に移動することができます。また、<span class="notranslate">sequence</span> が<span class="notranslate">loop</span> になるかどうか、そしてシーケンスがループするときに「ピンポン」するかどうかを設定するボタンもあります。
-        を「ピンポン」させるか、ループさせるかを設定するボタンもあります。この設定は、プロジェクトがコンパイルされ実行されるときに、<span class="notranslate">sequence</span> の再生方法に影響<em>する</em>ことに注意してください。</li>
-      <li class="dropspot"><strong>Sequence Length</strong>：これは<span class="notranslate">sequence</span> の可能な長さの合計をフレーム (f) または時間 (m:h:s) 単位で表示します。クリップ領域を小さく設定した場合、<span class="notranslate">sequence</span> はこの長さまで実行されないことがありますのでご注意ください。</li>
+      <li class="dropspot"><strong>時刻表示オプション</strong>：ここでは、<span class="notranslate">sequence</span>
+        の時刻を時、分、秒（h:m:s）またはフレーム（f）のいずれかで表示するかどうかを設定します。</li>
+      <li class="dropspot">
+        <strong>ブロードキャストメッセージ</strong>。これをクリックすると、現在の再生ヘッド位置に<strong>ブロードキャスト</strong>メッセージを追加することができます（詳しくは<a
+          href="Sequence_Properties/Broadcast_Messages.htm">こちら</a>）。
+      </li>
+      <li class="dropspot"><strong>モーメントを追加</strong>します。これをクリックすると、現在の再生ヘッド位置に<span class="notranslate">sequence</span>
+        の<strong>モーメントを</strong>追加することができます（詳細は後ほど説明します）。</li>
+      <li class="dropspot"><strong>Open Curve Editor（カーブエディタを開く</strong>）。このボタンは、現在選択されているトラックを<strong>カーブビューと</strong>
+        <strong>キーフレームビューの</strong>間で切り替えます。このオプションは<em>パラメータ</em>トラックにのみ適用され、有効にすると、パラメータトラックが
+        とアニメーションカーブのどちらを使用しているかによって、さらにオプションが利用できます。
+        を有効にすると、パラメータトラックが<span class="notranslate">keyframes</span> と<a
+          href="Animation_Curves.htm">アニメーションカーブの</a>どちらを使用しているかによって、さらにオプションが利用できるようになります。詳しくは、<a
+          href="Sequence_Properties/Using_Animation_Curves.htm">アニメーションカーブの使い方の</a>セクションを参照してください。
+      </li>
+      <li class="dropspot"><strong>再生コントロール</strong>：これらのボタンで、<span class="notranslate">sequence</span>
+        プレビューの開始と停止、および再生ヘッドを開始または終了に移動することができます。また、<span class="notranslate">sequence</span> が<span
+          class="notranslate">loop</span> になるかどうか、そしてシーケンスがループするときに「ピンポン」するかどうかを設定するボタンもあります。
+        を「ピンポン」させるか、ループさせるかを設定するボタンもあります。この設定は、プロジェクトがコンパイルされ実行されるときに、<span class="notranslate">sequence</span>
+        の再生方法に影響<em>する</em>ことに注意してください。</li>
+      <li class="dropspot"><strong>Sequence Length</strong>：これは<span class="notranslate">sequence</span> の可能な長さの合計をフレーム
+        (f) または時間 (m:h:s) 単位で表示します。クリップ領域を小さく設定した場合、<span class="notranslate">sequence</span>
+        はこの長さまで実行されないことがありますのでご注意ください。</li>
     </ul>
-    <p class="dropspot">前述したように、<strong>モーメントを</strong> <span class="notranslate">sequence</span> に追加することができます。<span class="notranslate">sequence</span> の<strong>モーメントは </strong>、<span class="notranslate">timeline</span> 上の位置で、<span class="notranslate">sequence</span> が<strong>関数を</strong>呼び出すことができるものです。これは、<a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト化された関数で</a>
-      <span class="notranslate">timeline</span> 上のモーメント（フレーム）に到達すると、この関数が呼び出されます。モーメントを設定するには、再生ヘッドを必要な位置に移動して、<strong>Add Moment</strong>ボタンをクリックするだけです。
-      ダイアログが表示されるので、呼び出す関数名を指定します。</p>
-    <p class="dropspot"><img>モーメント機能を追加する場合、<img> ボタンをクリックすると、指定した機能を持つ<span class="notranslate">script</span> に移動します。また、<img> ボタンをクリックすると、空の機能を持つ<span class="notranslate">script</span> リソースを新規に作成します。
+    <p class="dropspot">前述したように、<strong>モーメントを</strong> <span class="notranslate">sequence</span> に追加することができます。<span
+        class="notranslate">sequence</span> の<strong>モーメントは </strong>、<span class="notranslate">timeline</span>
+      上の位置で、<span class="notranslate">sequence</span> が<strong>関数を</strong>呼び出すことができるものです。これは、<a
+        href="../GameMaker_Language/GML_Overview/Script_Functions.htm">スクリプト化された関数で</a>
+      <span class="notranslate">timeline</span>
+      上のモーメント（フレーム）に到達すると、この関数が呼び出されます。モーメントを設定するには、再生ヘッドを必要な位置に移動して、<strong>Add Moment</strong>ボタンをクリックするだけです。
+      ダイアログが表示されるので、呼び出す関数名を指定します。
+    </p>
+    <p class="dropspot"><img>モーメント機能を追加する場合、<img> ボタンをクリックすると、指定した機能を持つ<span class="notranslate">script</span>
+      に移動します。また、<img> ボタンをクリックすると、空の機能を持つ<span class="notranslate">script</span> リソースを新規に作成します。
       を作成し、編集できるようにします。また、<img> ボタンをクリックすると、moment とそれに含まれる関数呼び出しを削除することができます。</p>
-    <p class="dropspot">シーケンスモーメントは、コードを用いて追加・編集することも可能です。詳しくは<a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">こちらを</a>ご覧ください。</p>
+    <p class="dropspot">シーケンスモーメントは、コードを用いて追加・編集することも可能です。詳しくは<a
+        href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">こちらを</a>ご覧ください。
+    </p>
     <ul class="dropspotlist">
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">ドープシート</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><strong>ドープシートには</strong>、各トラックの<a class="glossterm" data-glossterm="アセットキー" href="#">アセットキーと</a> <a class="glossterm" data-glossterm="パラメーターキー" href="#">パラメーター</a><span class="glossextra">キーが</span>すべて表示されます。
-      が表示されます。<img> をクリックし、キーを左右にドラッグして<span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span> 内に配置したり、<img> の右端をクリックして<span class="notranslate">asset</span> キーの長さを変更したりすることができます。<span class="notranslate">sprites</span> と<span class="notranslate">objects</span> の場合、長さをアニメーションより長く設定すると、アニメーショ
-      は、余分なフレームを<span class="notranslate">loop</span> に追加します。<span class="notranslate">dope sheet</span> には、<span class="notranslate">sequence</span> のクリップ領域の開始と終了を設定するコントロールもあり、<img> の任意の場所をクリックして再生ヘッドをその位置に設定することができます。<span class="notranslate">dope sheet</span> の使用方法については、次のページを参照してください。</p>
+    <p class="dropspot"><strong>ドープシートには</strong>、各トラックの<a class="glossterm" data-glossterm="アセットキー"
+        href="#">アセットキーと</a> <a class="glossterm" data-glossterm="パラメーターキー" href="#">パラメーター</a><span
+        class="glossextra">キーが</span>すべて表示されます。
+      が表示されます。<img> をクリックし、キーを左右にドラッグして<span class="notranslate">dope sheet</span> <span
+        class="notranslate">timeline</span> 内に配置したり、<img> の右端をクリックして<span class="notranslate">asset</span>
+      キーの長さを変更したりすることができます。<span class="notranslate">sprites</span> と<span class="notranslate">objects</span>
+      の場合、長さをアニメーションより長く設定すると、アニメーショ
+      は、余分なフレームを<span class="notranslate">loop</span> に追加します。<span class="notranslate">dope sheet</span> には、<span
+        class="notranslate">sequence</span> のクリップ領域の開始と終了を設定するコントロールもあり、<img> の任意の場所をクリックして再生ヘッドをその位置に設定することができます。<span
+        class="notranslate">dope sheet</span> の使用方法については、次のページを参照してください。</p>
     <ul class="dropspotlist">
       <li class="dropspot"><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">ドープシートを使用する</a></li>
     </ul>
@@ -181,16 +334,20 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">チェンジオリエンテーション</a></p>
   <div class="droptext" data-targetname="drop-down10">
     <p class="dropspot">Change Orientation ボタン<img> は、Sequence Editor の各セクションの表示方法を変更するために使用します。
-      エディターが異なるセクションを表示する方法を変更することができます。デフォルトでは Cnavas View が上部に、Track Editor と<span class="notranslate">Dopesheet</span> が下部に表示されますが、このボタンをクリックして異なるレイアウトを循環させるか、Options ボタンをクリックし て変更することができます。
+      エディタが異なるセクションを表示する方法を変更することができます。デフォルトでは Cnavas View が上部に、Track Editor と<span class="notranslate">Dopesheet</span>
+      が下部に表示されますが、このボタンをクリックして異なるレイアウトを循環させるか、Options ボタンをクリックし て変更することができます。
       オプションボタン<img> をクリックするとメニューが表示され、好きなレイアウトを選択することができます。
       をクリックするとメニューが表示され、好きなレイアウトを選択できます。以下のレイアウトが利用可能です。</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /></td>
+          <td class="icons"><img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png"
+              width="55" /></td>
           <td class="icons"><strong>スプリットウィンドウ</strong></td>
           <td class="text">
-            <p>このオプションでは、<span class="notranslate">Sequence</span> Editorが2つの別々のウィンドウに分割されます。メインの<span class="notranslate">IDE</span> ウィンドウはフルデスクトップのキャンバスビューを表示し、新しいウィンドウは<span class="notranslate">Dope Sheet</span> とTrack Editorを表示します。このボタンをもう一度クリックすると
+            <p>このオプションでは、<span class="notranslate">Sequence</span> Editorが2つの別々のウィンドウに分割されます。メインの<span
+                class="notranslate">IDE</span> ウィンドウはフルデスクトップのキャンバスビューを表示し、新しいウィンドウは<span class="notranslate">Dope
+                Sheet</span> とTrack Editorを表示します。このボタンをもう一度クリックすると
               はレイアウトを再び変更し、余分なウィンドウを削除します。<br /></p>
           </td>
         </tr>
@@ -198,36 +355,44 @@
           <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></td>
           <td class="icons"><b>スナップトップ</b></td>
           <td class="text">
-            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span> の一番上にスナップさせます。<br /></p>
+            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span>
+              の一番上にスナップさせます。<br /></p>
           </td>
         </tr>
         <tr>
           <td class="icons"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /></td>
           <td class="icons"><strong>スナップライト</strong></td>
           <td class="text">
-            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span> の右側にスナップさせます。<br /></p>
+            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span>
+              の右側にスナップさせます。<br /></p>
           </td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png"
+              width="55" /></td>
           <td class="icons"><strong>スナップボトム</strong></td>
           <td class="text">
-            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span> の下にスナップさせます（これがデフォルトの表示です）。<br /></p>
+            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span>
+              の下にスナップさせます（これがデフォルトの表示です）。<br /></p>
           </td>
         </tr>
         <tr>
-          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png"
+              width="55" /></td>
           <td class="icons"><strong>スナップレフト</strong></td>
           <td class="text">
-            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span> の左側にスナップさせます。<br /></p>
+            <p>このオプションは、Track Editor と<span class="notranslate">Dopesheet</span> を<span class="notranslate">IDE</span>
+              の左側にスナップさせます。<br /></p>
           </td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">また、Resetオプション（<img> ）をクリックすると、いつでも<span class="notranslate">Sequence</span> Editorのレイアウトをリセットすることができます。これにより、エディタがデフォルトの状態に戻り、閉じていたセクションが再び開かれます。</p>
+    <p class="dropspot">また、Resetオプション（<img> ）をクリックすると、いつでも<span class="notranslate">Sequence</span>
+      Editorのレイアウトをリセットすることができます。これにより、エディタがデフォルトの状態に戻り、閉じていたセクションが再び開かれます。</p>
   </div>
   <p> </p>
-  <p><span class="notranslate">Sequence</span> Editorは当初複雑な機能を持つため、ここでは簡単な概要しか説明していませんが、その機能や使い方について、より深く掘り下げたページを以下に追加しています。</p>
+  <p><span class="notranslate">Sequence</span>
+    Editorは当初複雑な機能を持つため、ここでは簡単な概要しか説明していませんが、その機能や使い方について、より深く掘り下げたページを以下に追加しています。</p>
   <ul class="colour">
     <li><a href="Sequence_Properties/The_Sequence_Canvas.htm"><span class="notranslate">Sequence</span> キャンバス</a></li>
     <li><a href="Sequence_Properties/The_Track_Panel.htm">トラックパネル</a></li>
@@ -243,11 +408,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Shaders.htm">シェーダー</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Shaders.htm">シェーダー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The <span class="notranslate">Sequences</span> Editor
@@ -260,4 +426,5 @@ Dope Sheet
 sequences_editor
 -->
 </body>
+
 </html>

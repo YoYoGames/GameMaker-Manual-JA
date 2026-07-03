@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_button_value</title>
@@ -13,36 +14,45 @@
   <meta name="search-keywords" content="gamepad_button_value" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gamepad_button_value</span></h1>
-  <p>この関数では、アナログボタンの現在値を0から1までの値で取得することができます。チェックするゲームパッドスロットのインデックスと、ボタン定数（<a href="Gamepad_Input.htm">ここに</a>リストアップ）、または0から<span class="inline2"><a href="gamepad_button_count.htm"><span class="inline">gamepad_button_count()</span></a> </span>- 1の間の整数値を指定します。</p>
-  <p>これはボタンの<em>生の</em>値を返すので、閾値の設定は考慮さ<em>れない</em>ことに注意してください (閾値の詳細については、<a href="gamepad_set_button_threshold.htm">ここを</a>参照してください)。</p>
+  <p>この関数では、アナログボタンの現在値を0から1までの値で取得することができます。チェックするゲームパッドスロットのインデックスと、ボタン定数（<a
+      href="Gamepad_Input.htm">ここに</a>リストアップ）、または0から<span class="inline2"><a href="gamepad_button_count.htm"><span
+          class="inline">gamepad_button_count()</span></a> </span>- 1の間の整数値を指定します。</p>
+  <p>これはボタンの<em>生の</em>値を返すので、閾値の設定は考慮さ<em>れない</em>ことに注意してください (閾値の詳細については、<a
+      href="gamepad_set_button_threshold.htm">ここを</a>参照してください)。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gamepad_button_value</span>(device, button);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">device</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">button</span></td>
-        <td><span data-keyref="Type_Constant_Gamepad_Button"><a href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm" target="_blank">ゲームパッドボタン定数</a></span></td>
-        <td><span class="notranslate">Which gamepad button <a href="Gamepad_Input.htm">constant</a> to check for.</span></td>
+        <td><span data-keyref="Type_Constant_Gamepad_Button"><a
+              href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm"
+              target="_blank">ゲームパッドボタン定数</a></span></td>
+        <td><span class="notranslate">Which gamepad button <a href="Gamepad_Input.htm">constant</a> to check for.</span>
+        </td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+        target="_blank">Real</a></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">speed = gamepad_button_value(0, gp_shoulderrb) * 4;</p>
@@ -53,11 +63,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
-        <div style="float:right">次のページ <a href="gamepad_hat_count.htm"><span class="notranslate">gamepad_hat_count</span></a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:right">次のページ：<a href="gamepad_hat_count.htm"><span
+              class="notranslate">gamepad_hat_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_button_value
@@ -66,4 +78,5 @@ gamepad_button_value
 gamepad_button_value
 -->
 </body>
+
 </html>

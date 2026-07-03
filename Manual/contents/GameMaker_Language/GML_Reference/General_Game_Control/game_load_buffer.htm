@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>game_load_buffer</title>
@@ -12,27 +13,32 @@
   <meta name="rh-index-keywords" content="game_load_buffer" />
   <meta name="search-keywords" content="game_load_buffer" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">game_load_buffer</span></h1>
-  <p>この関数を使用すると、以前に保存されたゲーム状態を読み込むことができます。ゲームはあらかじめ作成された &quot;grow&quot;<span class="notranslate">buffer</span> (<a href="../Buffers/Buffers.htm">バッファを</a>参照)からロードされ、<span class="notranslate">buffer</span> にはゲーム状態が <a href="game_save_buffer.htm"><span class="inline">game_save_buffer()</span></a>関数を使用します。</p>
+  <p>この関数を使用すると、以前に保存されたゲーム状態を読み込むことができます。ゲームはあらかじめ作成された &quot;grow&quot;<span class="notranslate">buffer</span> (<a
+      href="../Buffers/Buffers.htm">バッファを</a>参照)からロードされ、<span class="notranslate">buffer</span> にはゲーム状態が <a
+      href="game_save_buffer.htm"><span class="inline">game_save_buffer()</span></a>関数を使用します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">game_load_buffer</span>(buffer);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The buffer id to load from.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -40,18 +46,20 @@
     {<br />
         if (global.Checkpoint) game_load_buffer(save_buff);<br />
     }</p>
-  <p>上記のコードは、プレイヤーが「L」キーを押したときに、グローバル変数が <span class="inline">true</span> である場合に限り、変数「save_buff」にインデックスが付けられた<span class="notranslate">buffer</span> から、以前に保存したゲーム状態をロードします。</p>
+  <p>上記のコードは、プレイヤーが「L」キーを押したときに、グローバル変数が <span class="inline">true</span> である場合に限り、変数「save_buff」にインデックスが付けられた<span
+      class="notranslate">buffer</span> から、以前に保存したゲーム状態をロードします。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
-        <div style="float:right">次のページ <a href="game_save.htm"><span class="notranslate">game_save</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Game_Control.htm">ゲームコントロール全般</a></div>
+        <div style="float:right">次のページ：<a href="game_save.htm"><span class="notranslate">game_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_load_buffer
@@ -60,4 +68,5 @@ game_load_buffer
 game_load_buffer
 -->
 </body>
+
 </html>

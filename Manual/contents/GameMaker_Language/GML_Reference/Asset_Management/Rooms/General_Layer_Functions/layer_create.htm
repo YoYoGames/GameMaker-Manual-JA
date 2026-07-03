@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_create</title>
@@ -13,22 +14,32 @@
   <meta name="search-keywords" content="layer_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_create</span></h1>
-  <p>この関数は、現在の<span class="notranslate">room</span> 内に新しいレイヤーを作成するために使用されます。新しいレイヤーが占める深さを指定すると、この関数は一意なレイヤー ID 値を返し、この値を用いて以降の関数でそのレイヤーにアクセスすることができます。また、オプションの「name」引数を与えることで、レイヤーに特定の名前を付けることができます（<span class="notranslate">string</span> ）。レイヤーにアクセスするためにレイヤーIDを使う代わりに、この名前<span class="notranslate">string</span> 。ただし、名前<span class="notranslate">strings</span> を使うと、ID値だけを使うよりも性能への影響が大きいことに注意しなければいけません。レイヤーの名前を指定しない場合、作成されたレイヤーには &quot;<span class="inline">_layer_XXX</span>&quot; という形式の名前が割り当てられます。&quot;XXX&quot; はレイヤーにユニークな名前を付けるために使用する16進数値です。</p>
-  <p>深度値を指定する場合、カメラから「遠い」レイヤーほど高く、「近い」レイヤーほど低くなります。深度 -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100 の順番で描画され、「トップ」レイヤー（つまりカメラビューに最も近く、他のすべてに重ねて描画）は、深度 -100 のレイヤーになります。</p>
+  <p>この関数は、現在の<span class="notranslate">room</span> 内に新しいレイヤーを作成するために使用されます。新しいレイヤーが占める深さを指定すると、この関数は一意なレイヤー ID
+    値を返し、この値を用いて以降の関数でそのレイヤーにアクセスすることができます。また、オプションの「name」引数を与えることで、レイヤーに特定の名前を付けることができます（<span
+      class="notranslate">string</span> ）。レイヤーにアクセスするためにレイヤーIDを使う代わりに、この名前<span class="notranslate">string</span>
+    。ただし、名前<span class="notranslate">strings</span>
+    を使うと、ID値だけを使うよりも性能への影響が大きいことに注意しなければいけません。レイヤーの名前を指定しない場合、作成されたレイヤーには &quot;<span
+      class="inline">_layer_XXX</span>&quot; という形式の名前が割り当てられます。&quot;XXX&quot; はレイヤーにユニークな名前を付けるために使用する16進数値です。</p>
+  <p>深度値を指定する場合、カメラから「遠い」レイヤーほど高く、「近い」レイヤーほど低くなります。深度 -100, 0, 100 の 3 つのレイヤーがある場合、レイヤーは 100, 0, -100
+    の順番で描画され、「トップ」レイヤー（つまりカメラビューに最も近く、他のすべてに重ねて描画）は、深度 -100 のレイヤーになります。</p>
   <p>次の画像は、レイヤーの深さがどのように機能するかを示す概略図です。</p>
-  <p><img>なお、1つの深度に複数のレイヤーを割り当てる<i>ことは</i>できますが、<i>同じ深度のレイヤーがどのような順番で描画</i>されるかは保証できませんので、任意の深度に1つのレイヤーだけを割り当てるのがベストです。また、レイヤーの最小および最大深度は-16000から16000であり、これらの深度以外のものは<b>レンダリングさ</b>れないことに注意してください。この範囲外の深さが必要な場合は、関数 <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
+  <p>
+    <img>なお、1つの深度に複数のレイヤーを割り当てる<i>ことは</i>できますが、<i>同じ深度のレイヤーがどのような順番で描画</i>されるかは保証できませんので、任意の深度に1つのレイヤーだけを割り当てるのがベストです。また、レイヤーの最小および最大深度は-16000から16000であり、これらの深度以外のものは<b>レンダリングさ</b>れないことに注意してください。この範囲外の深さが必要な場合は、関数
+    <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_create</span>(depth, [name])</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">depth</span></td>
@@ -38,12 +49,13 @@
       <tr>
         <td><span class="notranslate">name</span></td>
         <td><span data-keyref="Type_String">文字列</span></td>
-        <td><span class="notranslate"><span class="optional">OPTIONAL</span> レイヤーに付ける名前（ ）。<span class="notranslate">string</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> レイヤーに付ける名前（ ）。<span
+              class="notranslate">string</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Layer">Layer ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -55,11 +67,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
-        <div style="float:right">次のページ <a href="layer_destroy.htm"><span class="notranslate">layer_destroy</span></a></div>
+        <div style="float:left">前のページ：<a href="General_Layer_Functions.htm">一般的なレイヤーの機能</a></div>
+        <div style="float:right">次のページ：<a href="layer_destroy.htm"><span class="notranslate">layer_destroy</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_create
@@ -68,4 +82,5 @@ layer_create
 layer_create
 -->
 </body>
+
 </html>

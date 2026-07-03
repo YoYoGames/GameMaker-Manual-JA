@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>part_type_step</title>
@@ -12,24 +13,26 @@
   <meta name="rh-index-keywords" content="part_type_step" />
   <meta name="search-keywords" content="part_type_step" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">part_type_step</span></h1>
   <p>この関数は、パーティクルタイプが寿命を終えるまで、ステップごとに別のタイプをストリームさせるために使うことができます。ステップ番号に負の値を設定すると、それに基づいたランダムな間隔でパーティクルが放出されるようになります。</p>
-  <p class="note"><b>注意</b>：同じパーティクルの種類を使用しないでください。<span class="notranslate">loop</span> が無限になり、数秒でゲームがクラッシュする可能性があります。また、一度に画面に表示されるパーティクルの数が非常に多くなり、ゲームの速度が著しく低下する可能性がありますので、使用には十分な注意が必要です。</p>
+  <p class="note"><b>注意</b>：同じパーティクルの種類を使用しないでください。<span class="notranslate">loop</span>
+    が無限になり、数秒でゲームがクラッシュする可能性があります。また、一度に画面に表示されるパーティクルの数が非常に多くなり、ゲームの速度が著しく低下する可能性がありますので、使用には十分な注意が必要です。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">part_type_step</span>(ind, step_number, step_type);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">ind</span></td>
-        <td><span data-keyref="Type_ID_PartType">粒子タイプID</span></td>
+        <td><span data-keyref="Type_ID_PartType">パーティクルタイプID</span></td>
         <td><span class="notranslate">The index of the particle type to change.</span></td>
       </tr>
       <tr>
@@ -39,13 +42,13 @@
       </tr>
       <tr>
         <td><span class="notranslate">step_type</span></td>
-        <td><span data-keyref="Type_ID_PartType">粒子タイプID</span></td>
+        <td><span data-keyref="Type_ID_PartType">パーティクルタイプID</span></td>
         <td><span class="notranslate">The index of the particle type to create per step.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -74,18 +77,21 @@
     part_type_blend(particle3, 1);<br />
     part_type_life(particle3, 40, 80);<br />
     part_type_step(particle2, 2, particle3);</p>
-  <p>上記のコードでは、2つのパーティクルを作成・定義し、変数 &quot;particle2 &quot;にインデックスを設定することで、パーティクルのライフタイムごとに &quot;particle3 &quot;のパーティクルを2つ作成します。</p>
+  <p>上記のコードでは、2つのパーティクルを作成・定義し、変数 &quot;particle2 &quot;にインデックスを設定することで、パーティクルのライフタイムごとに &quot;particle3
+    &quot;のパーティクルを2つ作成します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Particle_Types.htm">パーティクルの種類</a></div>
-        <div style="float:right">次のページ <a href="part_type_death.htm"><span class="notranslate">part_type_death</span></a></div>
+        <div style="float:left">前のページ：<a href="Particle_Types.htm">パーティクルの種類</a></div>
+        <div style="float:right">次のページ：<a href="part_type_death.htm"><span
+              class="notranslate">part_type_death</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_step
@@ -94,4 +100,5 @@ part_type_step
 part_type_step
 -->
 </body>
+
 </html>

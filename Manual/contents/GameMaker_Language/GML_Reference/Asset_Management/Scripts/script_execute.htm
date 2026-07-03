@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>script_execute</title>
@@ -12,56 +13,83 @@
   <meta name="rh-index-keywords" content="script_execute" />
   <meta name="search-keywords" content="script_execute" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">script_execute</span></h1>
-  <p>この機能は本来、<span class="notranslate">script</span> <i>アセットを</i>動的に呼び出すために設計されたものですが、ユーザー定義関数の導入により、2通りの使い方ができるようになりました。</p>
+  <p>この機能は本来、<span class="notranslate">script</span>
+    <i>アセットを</i>動的に呼び出すために設計されたものですが、ユーザー定義関数の導入により、2通りの使い方ができるようになりました。
+  </p>
   <ul class="colour">
-    <li>最初の方法は、<b>レガシーな</b> <span class="notranslate">scripts</span> をサポートすることです。ここでは、各<span class="notranslate">script</span> が1つの関数で、<span class="notranslate">script</span> のタイトルが関数の名前でもありました。この方法で使用すると、以前と同様に、ユーザーが作成した<span class="notranslate">script</span> <span class="notranslate">asset</span> を実行し、与えられた引数をそこに渡します。この場合、実際に<i>スクリプトを呼び出して</i>いるのではなく、<span class="notranslate">script</span> 内の同名の<i>スクリプト関数を呼び出して</i>いることに注意してください。<span style="text-align: justify;"></span></li>
-    <li><span style="text-align: justify;">2つ目の方法は、複数の関数を含む<span class="notranslate">script</span> <span class="notranslate">asset</span> から関数を呼び出す方法です。この場合、<span class="notranslate">script</span> <span class="notranslate">asset</span> の名前ではなく、関数名とその関数が必要とする引数を指定します。<span class="notranslate">script</span> <span class="notranslate">script</span> この方法は<a href="../../../GML_Overview/Script_Functions.htm">スクリプトの関数にのみ</a>有効で、<a href="../../../GML_Overview/Method_Variables.htm">メソッドには</a>有効でないことに注意してください。</span></li>
+    <li>最初の方法は、<b>古い</b> <span class="notranslate">scripts</span> をサポートすることです。ここでは、各<span
+        class="notranslate">script</span> が1つの関数で、<span class="notranslate">script</span>
+      のタイトルが関数の名前でもありました。この方法で使用すると、以前と同様に、ユーザーが作成した<span class="notranslate">script</span> <span
+        class="notranslate">asset</span> を実行し、与えられた引数をそこに渡します。この場合、実際に<i>スクリプトを呼び出して</i>いるのではなく、<span
+        class="notranslate">script</span> 内の同名の<i>スクリプト関数を呼び出して</i>いることに注意してください。<span
+        style="text-align: justify;"></span></li>
+    <li><span style="text-align: justify;">2つ目の方法は、複数の関数を含む<span class="notranslate">script</span> <span
+          class="notranslate">asset</span> から関数を呼び出す方法です。この場合、<span class="notranslate">script</span> <span
+          class="notranslate">asset</span> の名前ではなく、関数名とその関数が必要とする引数を指定します。<span class="notranslate">script</span> <span
+          class="notranslate">script</span> この方法は<a
+          href="../../../GML_Overview/Script_Functions.htm">スクリプトの関数にのみ</a>有効で、<a
+          href="../../../GML_Overview/Method_Variables.htm">メソッドには</a>有効でないことに注意してください。</span></li>
   </ul>
-  <p><span style="text-align: justify;"></span>この関数は主にレガシーサポートのために設計されましたが、ネットワークやリモートプロシージャコールの場面ではまだ使えるので、非推奨ではありません。また、この関数は低速であり、多用するとパフォーマンスに悪影響を及ぼす可能性があることも知っておく必要があります。</p>
+  <p><span
+      style="text-align: justify;"></span>この関数は主にレガシーサポートのために設計されましたが、ネットワークやリモートプロシージャコールの場面ではまだ使えるので、非推奨ではありません。また、この関数は低速であり、多用するとパフォーマンスに悪影響を及ぼす可能性があることも知っておく必要があります。
+  </p>
   <p class="note"><span class="note">NOTE</span>内蔵の機能とは併用できません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">script_execute</span>(scr, arg0, arg1, arg2..., etc...);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">script_execute</span>(scr, arg0, arg1, arg2...,
+    etc...);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">scr</span></td>
-        <td><span data-keyref="Type_Asset_Script"><a href="../../../../../The_Asset_Editors/Scripts.htm" target="_blank">スクリプトアセット</a></span>または <span data-keyref="Type_Function_Script"><a href="../../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">スクリプト機能</a></span></td>
+        <td><span data-keyref="Type_Asset_Script"><a href="../../../../../The_Asset_Editors/Scripts.htm"
+              target="_blank">スクリプトアセット</a></span>または <span data-keyref="Type_Function_Script"><a
+              href="../../../../../GameMaker_Language/GML_Overview/Script_Functions.htm"
+              target="_blank">スクリプト機能</a></span></td>
         <td><span class="notranslate">The function/script that you want to call</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">arg0, arg1, arg2..., etc...</span></td>
-        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">バリアブル</a></span></td>
-        <td><span class="notranslate">The different arguments that you want to pass through to the function/script</span></td>
+        <td><span data-keyref="Type_Any"><a
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable"
+              target="_blank">バリアブル</a></span></td>
+        <td><span class="notranslate">The different arguments that you want to pass through to the
+            function/script</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Variable</a></span> (Will depend on the return value from the script/function being called)</p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Any"><a
+        href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable"
+        target="_blank">Variable</a></span> (Will depend on the return value from the script/function being called)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">script_execute(choose(move_up, move_down, move_left, move_right), irandom(5));</p>
-  <p>上記のサンプルコードでは、 <span class="inline">script_execute</span> 、4つのユーザー定義関数（この場合は移動に関するもの）の中から1つを選び、その第1引数としてランダムな整数を渡しています。</p>
+  <p>上記のサンプルコードでは、 <span class="inline">script_execute</span>
+    、4つのユーザー定義関数（この場合は移動に関するもの）の中から1つを選び、その第1引数としてランダムな整数を渡しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Scripts.htm">スクリプト</a></div>
-        <div style="float:right">次のページ <a href="script_execute_ext.htm"><span class="notranslate">script_execute_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="Scripts.htm">スクリプト</a></div>
+        <div style="float:right">次のページ：<a href="script_execute_ext.htm"><span
+              class="notranslate">script_execute_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 script_execute
@@ -70,4 +98,5 @@ script_execute
 script_execute
 -->
 </body>
+
 </html>

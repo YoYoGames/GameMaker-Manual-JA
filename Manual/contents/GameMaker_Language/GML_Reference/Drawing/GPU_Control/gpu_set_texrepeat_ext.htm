@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_texrepeat_ext</title>
@@ -12,32 +13,44 @@
   <meta name="rh-index-keywords" content="gpu_set_texrepeat_ext, gpu_set_tex_repeat_ext" />
   <meta name="search-keywords" content="gpu_set_texrepeat_ext, gpu_set_tex_repeat_ext" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_texrepeat_ext</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span>で<a href="../../Asset_Management/Shaders/Shaders.htm">Shaders を</a>使用する際に、1つのサンプラー「スロット」が与えられた<span class="notranslate">texture</span> を繰り返すかどうかを設定することができます。 <span class="inline">true</span> に設定すると、uv座標が0-1の範囲外であれば、<span class="notranslate">texture</span> を繰り返します。 <span class="inline">false</span> に設定すると、繰り返さないという意味になります。これらの関数の使用例としては、3Dで<span class="notranslate">texture</span> を繰り返すことが考えられますが、<span class="notranslate">texture</span> ページの他の部分から画像を引っ張ってこないようにするためには、使用する<span class="notranslate">sprite</span> を<span class="notranslate">Texture</span> Editor で &quot;Separate<span class="notranslate">Sprite</span> Page&quot; としてマークしておく必要があります。</p>
-  <p class="note"><b><span class="note">注意</span> </b>この設定は、関数を呼び出す際に設定した値によって上書きされます。 <span style="font-size:1px;"><a href="gpu_set_texrepeat.htm"><span class="inline">gpu_set_texrepeat()</span></a></span>.</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span>で<a href="../../Asset_Management/Shaders/Shaders.htm">Shaders
+      を</a>使用する際に、1つのサンプラー「スロット」が与えられた<span class="notranslate">texture</span> を繰り返すかどうかを設定することができます。 <span
+      class="inline">true</span> に設定すると、uv座標が0-1の範囲外であれば、<span class="notranslate">texture</span> を繰り返します。 <span
+      class="inline">false</span> に設定すると、繰り返さないという意味になります。これらの関数の使用例としては、3Dで<span class="notranslate">texture</span>
+    を繰り返すことが考えられますが、<span class="notranslate">texture</span> ページの他の部分から画像を引っ張ってこないようにするためには、使用する<span
+      class="notranslate">sprite</span> を<span class="notranslate">Texture</span> Editor で &quot;Separate<span
+      class="notranslate">Sprite</span> Page&quot; としてマークしておく必要があります。</p>
+  <p class="note"><b><span class="note">注意</span> </b>この設定は、関数を呼び出す際に設定した値によって上書きされます。 <span style="font-size:1px;"><a
+        href="gpu_set_texrepeat.htm"><span class="inline">gpu_set_texrepeat()</span></a></span>.</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_texrepeat_ext</span>(sampler_id, enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">sampler_id</span></td><td><span data-keyref="Type_Handle_Shader_Sampler"></span></td>
+        <td><span class="notranslate">sampler_id</span></td>
+        <td><span data-keyref="Type_Handle_Shader_Sampler"></span></td>
         <td><span class="notranslate">The sampler id from the shader.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
-        <td><span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / ) <span class="inline">false</span></td>
-     </tr>
+        <td><span class="notranslate">enable</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / ) <span
+              class="inline">false</span></td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -57,11 +70,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_push_state.htm"><span class="notranslate">gpu_push_state</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_push_state.htm"><span class="notranslate">gpu_push_state</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texrepeat_ext
@@ -71,4 +86,5 @@ gpu_set_tex_repeat_ext
 gpu_set_texrepeat_ext
 -->
 </body>
+
 </html>

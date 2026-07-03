@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_duplicate</title>
@@ -12,24 +13,36 @@
   <meta name="rh-index-keywords" content="sprite_duplicate" />
   <meta name="search-keywords" content="sprite_duplicate" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">sprite_duplicate</span></h1>
-  <p>この関数は、引数 &quot;index &quot;として入力されたものの複製（コピー）である、新しく作成された<span class="notranslate">sprite</span> のインデックスを返す。失敗した場合は、-1が返される。この関数は、元の<span class="notranslate">sprites</span> から任意の<span class="notranslate">assets</span> をコピーするために、それらに何らかの変形を施す前に使用<i>しなければならない</i>。たとえば、ある<span class="notranslate">sprite</span> のバウンディングボックスを変更したり、別の<span class="notranslate">sprite</span> からそのアルファ値を設定したりする場合は、まずそれを複製し、複製した<span class="notranslate">sprite</span> に対して操作を行い、それを使用しなければなりません。複製された<span class="notranslate">sprite</span> は、作成時に独自の<span class="notranslate">texture</span> ページに配置されます。つまり、複数の<span class="notranslate">sprites</span> を複製すると、複数の<span class="notranslate">texture</span> ページが作成され、パフォーマンスに影響があるため、必要な場合のみこの機能を使用します。</p>
-  <p class="note"><b>注意</b>：<span data-keyref="GameMaker Name">GameMakerで</span> <span class="notranslate">sprite</span> を複製した場合、忘れずに再度削除する必要があります（ を使用）。 <span style="font-size:1px;"><a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a></span>さもないと、メモリーリークが起こり、ゲームのスピードが落ち、最終的にはクラッシュしてしまいます。</p>
+  <p>この関数は、引数 &quot;index &quot;として入力されたものの複製（コピー）である、新しく作成された<span class="notranslate">sprite</span>
+    のインデックスを返す。失敗した場合は、-1が返される。この関数は、元の<span class="notranslate">sprites</span> から任意の<span
+      class="notranslate">assets</span> をコピーするために、それらに何らかの変形を施す前に使用<i>しなければならない</i>。たとえば、ある<span
+      class="notranslate">sprite</span> のバウンディングボックスを変更したり、別の<span class="notranslate">sprite</span>
+    からそのアルファ値を設定したりする場合は、まずそれを複製し、複製した<span class="notranslate">sprite</span> に対して操作を行い、それを使用しなければなりません。複製された<span
+      class="notranslate">sprite</span> は、作成時に独自の<span class="notranslate">texture</span> ページに配置されます。つまり、複数の<span
+      class="notranslate">sprites</span> を複製すると、複数の<span class="notranslate">texture</span>
+    ページが作成され、パフォーマンスに影響があるため、必要な場合のみこの機能を使用します。</p>
+  <p class="note"><b>注意</b>：<span data-keyref="GameMaker Name">GameMakerで</span> <span class="notranslate">sprite</span>
+    を複製した場合、忘れずに再度削除する必要があります（ を使用）。 <span style="font-size:1px;"><a href="sprite_delete.htm"><span
+          class="inline">sprite_delete()</span></a></span>さもないと、メモリーリークが起こり、ゲームのスピードが落ち、最終的にはクラッシュしてしまいます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">sprite_duplicate</span>(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Sprite"></span></td>
         <td><span class="notranslate">The index of the sprite to duplicate.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -38,18 +51,21 @@
   <p> </p>
   <h4>例</h4>
   <p class="code">new_spr = sprite_duplicate(sprite_index)</p>
-  <p>上記のコードは、現在インスタンスの<span class="notranslate">sprite</span> のインデックスとして使用されている<span class="notranslate">sprite</span> を複製し、この新しい<span class="notranslate">sprite</span> のインデックスを変数 &quot;new_spr&quot; に格納します。</p>
+  <p>上記のコードは、現在インスタンスの<span class="notranslate">sprite</span> のインデックスとして使用されている<span class="notranslate">sprite</span>
+    を複製し、この新しい<span class="notranslate">sprite</span> のインデックスを変数 &quot;new_spr&quot; に格納します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
-        <div style="float:right">次のページ <a href="sprite_assign.htm"><span class="notranslate">sprite_assign</span></a></div>
+        <div style="float:left">前のページ：<a href="Sprite_Manipulation.htm">スプライトの操作</a></div>
+        <div style="float:right">次のページ：<a href="sprite_assign.htm"><span class="notranslate">sprite_assign</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_duplicate
@@ -58,4 +74,5 @@ sprite_duplicate
 sprite_duplicate
 -->
 </body>
+
 </html>

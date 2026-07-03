@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_sprite_change</title>
@@ -12,19 +13,30 @@
   <meta name="rh-index-keywords" content="layer_sprite_change" />
   <meta name="search-keywords" content="layer_sprite_change" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_sprite_change</span></h1>
-  <p>この機能を使うと、レイヤー上の任意の<span class="notranslate">sprite</span> 要素に割り当てられた<span class="notranslate">sprite</span> リソースを変更することができます。<span class="notranslate">sprite</span> 要素の ID (これは、<span class="notranslate">sprite</span> 要素を <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a>を使用した場合、または関数 <a href="layer_sprite_get_id.htm"><span class="inline">layer_sprite_get_id()</span></a>) を指定し、<span class="notranslate">sprite</span> インデックス要素<span class="notranslate">asset</span> を指定すると、変更されます。<span class="notranslate">sprite</span> にサブ画像がある場合、それもアニメーションすることに注意してください (この制御には <a href="layer_sprite_index.htm"><span class="inline">layer_sprite_index()</span></a>と <a href="layer_sprite_speed.htm"><span class="inline">layer_sprite_speed()</span></a>関数を使用します)。なお、新しい<span class="notranslate">sprite</span> のインデックスに -1 を指定すると、<span class="notranslate">sprite</span> は表示されませんが、要素はまだ存在し、後で再び変更することが可能です。</p>
+  <p>この機能を使うと、レイヤー上の任意の<span class="notranslate">sprite</span> 要素に割り当てられた<span class="notranslate">sprite</span>
+    リソースを変更することができます。<span class="notranslate">sprite</span> 要素の ID (これは、<span class="notranslate">sprite</span> 要素を <a
+      href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a>を使用した場合、または関数 <a
+      href="layer_sprite_get_id.htm"><span class="inline">layer_sprite_get_id()</span></a>) を指定し、<span
+      class="notranslate">sprite</span> インデックス要素<span class="notranslate">asset</span> を指定すると、変更されます。<span
+      class="notranslate">sprite</span> にサブ画像がある場合、それもアニメーションすることに注意してください (この制御には <a
+      href="layer_sprite_index.htm"><span class="inline">layer_sprite_index()</span></a>と <a
+      href="layer_sprite_speed.htm"><span class="inline">layer_sprite_speed()</span></a>関数を使用します)。なお、新しい<span
+      class="notranslate">sprite</span> のインデックスに -1 を指定すると、<span class="notranslate">sprite</span>
+    は表示されませんが、要素はまだ存在し、後で再び変更することが可能です。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_sprite_change</span>(sprite_element_id, sprite_index)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">layer_sprite_change</span>(sprite_element_id,
+    sprite_index)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">sprite_element_id</span></td>
@@ -39,7 +51,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -48,18 +60,22 @@
     {<br />
         layer_sprite_change(s, spr_nighttime);<br />
     }</p>
-  <p>上記のコードでは、グローバル変数 <span class="inline">global.Asset_sprite</span> に格納されているIDで要素の<span class="notranslate">sprite</span> インデックスをチェックし、それが「spr_Nighttime」でない場合は、その<span class="notranslate">sprite</span> が要素に割り当てられます。</p>
+  <p>上記のコードでは、グローバル変数 <span class="inline">global.Asset_sprite</span> に格納されているIDで要素の<span
+      class="notranslate">sprite</span> インデックスをチェックし、それが「spr_Nighttime」でない場合は、その<span class="notranslate">sprite</span>
+    が要素に割り当てられます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sprite_Layers.htm">スプライトレイヤー</a></div>
-        <div style="float:right">次のページ <a href="layer_sprite_index.htm"><span class="notranslate">layer_sprite_index</span></a></div>
+        <div style="float:left">前のページ：<a href="Sprite_Layers.htm">スプライトレイヤー</a></div>
+        <div style="float:right">次のページ：<a href="layer_sprite_index.htm"><span
+              class="notranslate">layer_sprite_index</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_change
@@ -68,4 +84,5 @@ layer_sprite_change
 layer_sprite_change
 -->
 </body>
+
 </html>

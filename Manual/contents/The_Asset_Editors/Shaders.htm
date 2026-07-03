@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シェーダー</title>
@@ -12,27 +13,46 @@
   <meta name="rh-index-keywords" content="Shader Editor" />
   <meta name="search-keywords" content="shaders,shader,open GL,open GL ES" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span class="notranslate">Shader</span> 編集部</h1>
-  <p><img>シェーダーは、ゲームが画面にレンダリングするグラフィックを操作するために使用できる非常に強力なツールで、例えば、<span class="notranslate">sprite</span> に微妙な色合いを追加することから、画面全体を歪める効果まで、信じられないほどの高速効果を可能にします。しかし、<span class="notranslate">shader</span> とは何でしょうか？</p>
-  <p><span class="notranslate">shader</span> は基本的に 2 つの部分からなるプログラムで、グラフィック カード自体で直接実行されます。GPU がすべての作業を行うため非常に高速で、CPU サイクルをゲーム コード用に解放します。完全な<span class="notranslate">shader</span> は<span class="notranslate">vertex</span> <span class="notranslate">shader</span> プログラムとフラグメント<span class="notranslate">shader</span> プログラム（ピクセル<span class="notranslate">shader</span> とも呼ばれる）で構成されています。これらの小さなプログラムは、グラフィックスカードが画面にレンダリングするものを操作するために一緒に動作します。これにより、<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a>実際に<a class="glossterm" data-glossterm="レンダリング" href="#">レンダリングさ</a>れる位置、色、アルファ値をリアルタイムで操作することができます。</p>
+  <h1><span class="notranslate">Shader</span> エディタ</h1>
+  <p><img>シェーダーは、ゲームが画面にレンダリングするグラフィックを操作するために使用できる非常に強力なツールで、例えば、<span class="notranslate">sprite</span>
+    に微妙な色合いを追加することから、画面全体を歪める効果まで、信じられないほどの高速効果を可能にします。しかし、<span class="notranslate">shader</span> とは何でしょうか？</p>
+  <p><span class="notranslate">shader</span> は基本的に 2 つの部分からなるプログラムで、グラフィック カード自体で直接実行されます。GPU がすべての作業を行うため非常に高速で、CPU
+    サイクルをゲーム コード用に解放します。完全な<span class="notranslate">shader</span> は<span class="notranslate">vertex</span> <span
+      class="notranslate">shader</span> プログラムとフラグメント<span class="notranslate">shader</span> プログラム（ピクセル<span
+      class="notranslate">shader</span> とも呼ばれる）で構成されています。これらの小さなプログラムは、グラフィックスカードが画面にレンダリングするものを操作するために一緒に動作します。これにより、<a
+      class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a>実際に<a class="glossterm"
+      data-glossterm="レンダリング" href="#">レンダリングさ</a>れる位置、色、アルファ値をリアルタイムで操作することができます。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">バーテックスシェーダ</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><span class="notranslate">Vertex</span> <span class="notranslate">Shader</span> は、個々の頂点（あらゆる画像のレンダリングに使用される三角形の点）の処理を行うレンダリングパイプラインのプログラマブルな<span class="notranslate">shader</span> ステージです。ジオメトリをレンダリングする場合、例えば<span class="notranslate">sprite</span> やサーフェイスのように
-      -<span data-keyref="GameMaker Name">GameMakerは</span>、これらの三角形のジオメトリを定義する、<strong>Vertex Bufferと </strong>呼ばれる頂点のストリームを作成します。例えば、<span class="notranslate">sprite</span> は、2つの三角形（通常<em>ポリゴンと</em>呼ばれる）のジオメトリがレンダリングされます。
-      を組み合わせて &quot;クワッド &quot;を形成しています。<span class="notranslate">vertex</span> <span class="notranslate">Vertex</span> からのこの<span class="notranslate">Buffer</span> ストリームは<span class="notranslate">Vertex</span> <span class="notranslate">Shader</span> への入力として供給され、プログラム可能な方法で頂点データを処理することができます。<span class="notranslate">Vertex</span> <span class="notranslate">Shader</span> の出力は、GPU が三角形を組み立てるために使用します。
+    <p class="dropspot"><span class="notranslate">Vertex</span> <span class="notranslate">Shader</span>
+      は、個々の頂点（あらゆる画像のレンダリングに使用される三角形の点）の処理を行うレンダリングパイプラインのプログラマブルな<span class="notranslate">shader</span>
+      ステージです。ジオメトリをレンダリングする場合、例えば<span class="notranslate">sprite</span> やサーフェイスのように
+      -<span data-keyref="GameMaker Name">GameMakerは</span>、これらの三角形のジオメトリを定義する、<strong>Vertex Bufferと
+      </strong>呼ばれる頂点のストリームを作成します。例えば、<span class="notranslate">sprite</span>
+      は、2つの三角形（通常<em>ポリゴンと</em>呼ばれる）のジオメトリがレンダリングされます。
+      を組み合わせて &quot;クワッド &quot;を形成しています。<span class="notranslate">vertex</span> <span class="notranslate">Vertex</span>
+      からのこの<span class="notranslate">Buffer</span> ストリームは<span class="notranslate">Vertex</span> <span
+        class="notranslate">Shader</span> への入力として供給され、プログラム可能な方法で頂点データを処理することができます。<span
+        class="notranslate">Vertex</span> <span class="notranslate">Shader</span> の出力は、GPU が三角形を組み立てるために使用します。
       その後、GPU のラスタライザブロックに送られ、<strong>フラグメントと</strong>呼ばれるもので 構成される新しい出力ストリームが生成されます。これは小さなデータです。
       構造体であり、それぞれが画面に表示される1つの画素に相対しています。</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">フラグメントシェーダ</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Fragment<span class="notranslate">Shader</span> は、レンダリングパイプラインのプログラム可能な<span class="notranslate">shader</span> ステージで、「フラグメント」（任意のポリゴンを<span class="notranslate">texture</span> に使用する補間ピクセル）を処理し、各ポリゴンの最終ピクセルカラーを出力する役割を担っています。
-      レンダリングされた三角形の画素。基本的には次のように動作します。フラグメント<span class="notranslate">Shader</span> は、<span class="notranslate">Vertex</span> <span class="notranslate">Shader</span> によってパイプラインに沿って渡されたすべてのフラグメント（レンダリングされる三角形の個々のピクセル）を入力として受け取ります。
+    <p class="dropspot">Fragment<span class="notranslate">Shader</span> は、レンダリングパイプラインのプログラム可能な<span
+        class="notranslate">shader</span> ステージで、「フラグメント」（任意のポリゴンを<span class="notranslate">texture</span>
+      に使用する補間ピクセル）を処理し、各ポリゴンの最終ピクセルカラーを出力する役割を担っています。
+      レンダリングされた三角形の画素。基本的には次のように動作します。フラグメント<span class="notranslate">Shader</span> は、<span
+        class="notranslate">Vertex</span> <span class="notranslate">Shader</span>
+      によってパイプラインに沿って渡されたすべてのフラグメント（レンダリングされる三角形の個々のピクセル）を入力として受け取ります。
       これらのフラグメントを処理して、画面に描画される最終目的ピクセルの色とアルファ値を変更します。</p>
   </div>
   <p> </p>
-  <p><span class="notranslate">shaders</span> が実際にどのように機能し、グラフィックスパイプラインの中でどのような位置を占めているかについての完全な概要は、本書の範囲外ですが、ここに簡単なガイドが掲載されています。</p>
+  <p><span class="notranslate">shaders</span>
+    が実際にどのように機能し、グラフィックスパイプラインの中でどのような位置を占めているかについての完全な概要は、本書の範囲外ですが、ここに簡単なガイドが掲載されています。</p>
   <ul class="colour">
     <li><a href="../Additional_Information/Guide_To_Using_Shaders.htm">シェーダー使用ガイド</a></li>
   </ul>
@@ -63,19 +83,43 @@
       </tr>
     </tbody>
   </table>
-  <p>GLSL ES<span class="notranslate">shaders</span> を記述する場合、ターゲット・プラットフォームによっては、他のプラットフォームよりも厳しい場合があるため（例えば、HTML5 や Opera GX ターゲットは、言語制限に関して<span class="notranslate">Windows</span>,<span class="notranslate">macOS</span> などの他のプラットフォームよりも厳しい場合があります）、エラーを避けるために、できるだけ<a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf" title="GLSL ES 1.0 Specification">公式言語仕様に</a>忠実に従うことが推奨されます。</p>
+  <p>GLSL ES<span class="notranslate">shaders</span> を記述する場合、ターゲット・プラットフォームによっては、他のプラットフォームよりも厳しい場合があるため（例えば、HTML5 や
+    Opera GX ターゲットは、言語制限に関して<span class="notranslate">Windows</span>,<span class="notranslate">macOS</span>
+    などの他のプラットフォームよりも厳しい場合があります）、エラーを避けるために、できるだけ<a
+      href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf"
+      title="GLSL ES 1.0 Specification">公式言語仕様に</a>忠実に従うことが推奨されます。</p>
   <p> </p>
   <h2>シェーダーの作成</h2>
-  <p><span class="notranslate">shader</span> リソースを作成するには、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザ</a>内で<img> を右クリックし、「<em>作成」→「シェーダ</em>」を選択するだけです。ベースとなる<span class="notranslate">shader</span> を作成したら、コードの編集を続ける前に、新しいリソースの右マウス<img> メニューを使用して、<span class="notranslate">shader</span> タイプを選択することができます。</p>
-  <p><img>コードエディタ自体は、新しい<span class="notranslate">Vertex</span> を作成すると、<span class="notranslate">shader</span> と Fragment という2つの「プログラム」に分割され、それぞれエディタの上部にあるタブから利用できるようになっています。両方のパーツがないと、<em> <span class="notranslate">shader</span> </em> を作成できないので、両方が一度に作成されます。フラグメント<span class="notranslate">shader</span> のみを使用したい場合でも、まず「パススルー」<span class="notranslate">vertex</span> <span class="notranslate">shader</span> を作成する必要があります。そのため、デフォルトでは、新しい<span class="notranslate">shader</span> を作成すると、<span class="notranslate">vertex</span> とフラグメントパススルー<span class="notranslate">shader</span> がすでにコーディングされています（ページ上部のスクリーンショットでは、コードエディタのペインビューを使って、2つを並べて表示しています...<span class="notranslate">shader</span> プログラムの両方を同時に作業する場合に便利です)。</p>
-  <p>GLSL ES<span class="notranslate">shaders</span> は<em>すべての </em>ターゲットプラットフォームで使用できますが、<strong>HTML5 </strong>ターゲットプラットフォームで動作させるには、<a href="../Settings/Game_Options/HTML5.htm">HTML5ゲームオプションで</a>WebGLを有効にする必要があり、そうしないと動作しないことは注目に値します。</p>
-  <p><span class="notranslate">shader</span> 関数の詳細と<span data-keyref="GameMaker Name">GameMaker</span>での使用方法については、以下のページを参照してください。</p>
+  <p><span class="notranslate">shader</span> リソースを作成するには、<a
+      href="../Introduction/The_Asset_Browser.htm">アセットブラウザ</a>内で<img> を右クリックし、「<em>作成」→「シェーダ</em>」を選択するだけです。ベースとなる<span
+      class="notranslate">shader</span> を作成したら、コードの編集を続ける前に、新しいリソースの右マウス<img> メニューを使用して、<span
+      class="notranslate">shader</span> タイプを選択することができます。</p>
+  <p><img>コードエディタ自体は、新しい<span class="notranslate">Vertex</span> を作成すると、<span class="notranslate">shader</span> と
+    Fragment という2つの「プログラム」に分割され、それぞれエディタの上部にあるタブから利用できるようになっています。両方のパーツがないと、<em> <span class="notranslate">shader</span>
+    </em> を作成できないので、両方が一度に作成されます。フラグメント<span class="notranslate">shader</span> のみを使用したい場合でも、まず「パススルー」<span
+      class="notranslate">vertex</span> <span class="notranslate">shader</span> を作成する必要があります。そのため、デフォルトでは、新しい<span
+      class="notranslate">shader</span> を作成すると、<span class="notranslate">vertex</span> とフラグメントパススルー<span
+      class="notranslate">shader</span> がすでにコーディングされています（ページ上部のスクリーンショットでは、コードエディタのペインビューを使って、2つを並べて表示しています...<span
+      class="notranslate">shader</span> プログラムの両方を同時に作業する場合に便利です)。</p>
+  <p>GLSL ES<span class="notranslate">shaders</span> は<em>すべての </em>ターゲットプラットフォームで使用できますが、<strong>HTML5
+    </strong>ターゲットプラットフォームで動作させるには、<a
+      href="../Settings/Game_Options/HTML5.htm">HTML5ゲームオプションで</a>WebGLを有効にする必要があり、そうしないと動作しないことは注目に値します。</p>
+  <p><span class="notranslate">shader</span> 関数の詳細と<span
+      data-keyref="GameMaker Name">GameMaker</span>での使用方法については、以下のページを参照してください。</p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/Shaders.htm">Shader Functions</a>-<span class="notranslate">GML</span> のリファレンスセクション<span class="notranslate">shaders</span> 。</li>
-    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/Shader_Constants.htm">シェーダー定数</a>-<span data-keyref="GameMaker Name">GameMakerに</span>組み込まれている定数で、<span class="notranslate">shaders</span> を書くときに使用することができます。</li>
-    <li><a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf">GLSL ES 1.0 Specifications</a>-<span data-keyref="GameMaker Name">GameMakerが</span>使用するOpenGL ES 1.0<span class="notranslate">Shader</span> LanguageのPDFファイルです。</li>
-    <li><a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-reference">HLSL Language Reference</a>- HLSLを使用するためのマイクロソフトのリファレンスページです。</li>
-    <li><a href="http://twvideo01.ubm-us.net/o1/vault/gdceurope2013/Presentations/825424RichardStenson.pdf">PSSL言語プレゼンテーション</a>- プレゼンテーション形式のPSSL言語の概要。</li>
+    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/Shaders.htm">Shader Functions</a>-<span
+        class="notranslate">GML</span> のリファレンスセクション<span class="notranslate">shaders</span> 。</li>
+    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Shaders/Shader_Constants.htm">シェーダー定数</a>-<span
+        data-keyref="GameMaker Name">GameMakerに</span>組み込まれている定数で、<span class="notranslate">shaders</span>
+      を書くときに使用することができます。</li>
+    <li><a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/GLSL_ES_Specification_1.00.pdf">GLSL ES 1.0
+        Specifications</a>-<span data-keyref="GameMaker Name">GameMakerが</span>使用するOpenGL ES 1.0<span
+        class="notranslate">Shader</span> LanguageのPDFファイルです。</li>
+    <li><a href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-reference">HLSL Language
+        Reference</a>- HLSLを使用するためのマイクロソフトのリファレンスページです。</li>
+    <li><a
+        href="http://twvideo01.ubm-us.net/o1/vault/gdceurope2013/Presentations/825424RichardStenson.pdf">PSSL言語プレゼンテーション</a>-
+      プレゼンテーション形式のPSSL言語の概要。</li>
   </ul>
   <p> </p>
   <p> </p>
@@ -83,11 +127,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Sounds.htm">音</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Sounds.htm">音</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The <span class="notranslate">Shader</span> Editor
@@ -100,4 +145,5 @@ PSSL
 shader_editor
 -->
 </body>
+
 </html>

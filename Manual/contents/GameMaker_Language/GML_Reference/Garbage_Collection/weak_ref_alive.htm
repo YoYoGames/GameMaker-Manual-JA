@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>weak_ref_alive</title>
@@ -13,19 +14,25 @@
   <meta name="search-keywords" content="weak_ref_alive" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">weak_ref_alive</span></h1>
-  <p>この関数を使うと、<span class="notranslate">struct</span> への<a class="glossterm" data-glossterm="弱参照" href="#">弱い</a>参照がまだ「生きて」いるかどうかをチェックすることができます。チェックする弱参照を指定します (関数 <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>) で、この関数は<span class="notranslate">struct</span> がまだどこかで参照されている場合は <span class="inline">true</span> を、そうでなくガベージコレクションされた場合は <span class="inline">false</span> を返します。弱参照でない値を指定した場合，この関数は <span class="inline">undefined</span> を返すことに注意してください．</p>
+  <p>この関数を使うと、<span class="notranslate">struct</span> への<a class="glossterm" data-glossterm="弱参照"
+      href="#">弱い</a>参照がまだ「生きて」いるかどうかをチェックすることができます。チェックする弱参照を指定します (関数 <a href="weak_ref_create.htm"><span
+        class="inline">weak_ref_create()</span></a>) で、この関数は<span class="notranslate">struct</span> がまだどこかで参照されている場合は
+    <span class="inline">true</span> を、そうでなくガベージコレクションされた場合は <span class="inline">false</span>
+    を返します。弱参照でない値を指定した場合，この関数は <span class="inline">undefined</span> を返すことに注意してください．
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">weak_ref_alive</span>(weak_ref);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">weak_ref</span></td>
@@ -35,7 +42,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span> (or undefined)</p>
   <p> </p>
   <h4>例</h4>
@@ -43,18 +50,21 @@
     {<br />
         inventory = -1;<br />
     }</p>
-  <p>上記のコードは<span class="notranslate">struct</span> への弱い参照をチェックし、それがまだ生きていれば、それを参照している変数を -1 に設定し、<span class="notranslate">struct</span> の参照を解除し、ガベージコレクションを可能にするものです。</p>
+  <p>上記のコードは<span class="notranslate">struct</span> への弱い参照をチェックし、それがまだ生きていれば、それを参照している変数を -1 に設定し、<span
+      class="notranslate">struct</span> の参照を解除し、ガベージコレクションを可能にするものです。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Garbage_Collection.htm">ガベージコレクション</a></div>
-        <div style="float:right">次のページ <a href="weak_ref_any_alive.htm"><span class="notranslate">weak_ref_any_alive</span></a></div>
+        <div style="float:left">前のページ：<a href="Garbage_Collection.htm">ガベージコレクション</a></div>
+        <div style="float:right">次のページ：<a href="weak_ref_any_alive.htm"><span
+              class="notranslate">weak_ref_any_alive</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 weak_ref_alive
@@ -63,4 +73,5 @@ weak_ref_alive
 weak_ref_alive
 -->
 </body>
+
 </html>

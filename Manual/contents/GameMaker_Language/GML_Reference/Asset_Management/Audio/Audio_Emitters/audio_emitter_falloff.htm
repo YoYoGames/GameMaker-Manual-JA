@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_emitter_falloff</title>
@@ -12,21 +13,26 @@
   <meta name="rh-index-keywords" content="audio_emitter_falloff" />
   <meta name="search-keywords" content="audio_emitter_falloff" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_emitter_falloff</span></h1>
   <p>エミッタのフォールオフ距離を設定することができる機能です。デフォルト値は100ですが、1より小さい値を設定すると、このエミッタで再生された音は<i>リスナーには</i>聞こえなくなるので注意が必要です。</p>
-  <p>音の聞こえ方は、フォールオフ基準（音源の音量が通常半分になる距離）とロールオフファクター（フォールオフ基準距離を過ぎた音にのみ影響する）に依存します。デフォルトのファクターは通常1ですが、異なるフォールオフ値の効果は、選択したモデルによって異なります。</p>
-  <p>さまざまなフォールオフモデルとこれらの値の使用方法に関する完全なガイドについては、関数を参照してください。 <span class="inline"><a href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a>.</span></p>
+  <p>
+    音の聞こえ方は、フォールオフ基準（音源の音量が通常半分になる距離）とロールオフファクター（フォールオフ基準距離を過ぎた音にのみ影響する）に依存します。デフォルトのファクターは通常1ですが、異なるフォールオフ値の効果は、選択したモデルによって異なります。
+  </p>
+  <p>さまざまなフォールオフモデルとこれらの値の使用方法に関する完全なガイドについては、関数を参照してください。 <span class="inline"><a
+        href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a>.</span></p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_emitter_falloff</span>(emitter, falloff_ref, falloff_max, falloff_factor);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">audio_emitter_falloff</span>(emitter, falloff_ref,
+    falloff_max, falloff_factor);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">emitter</span></td>
@@ -51,25 +57,29 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">s_emit = audio_emitter_create();<br />
     audio_emitter_position(s_emit, x, y, 0);<br />
     audio_emitter_falloff(s_emit, 100, 300, 1);</p>
-  <p>上記のコードでは、オーディオエミッターを作成し、そのインデックスを変数 &quot;s_emit &quot;に代入しています。このエミッターは、インスタンスの作成位置に配置され、フォールオフ距離として300が与えられます。つまり、エミッターが<i>リスナーの</i>位置から300ピクセル以上離れると、無音になります。フォールオフファクターはデフォルトの1、フォールオフリファレンスは100で、リスナーから100ピクセル離れた位置でフォールオフが開始されます。</p>
+  <p>上記のコードでは、オーディオエミッターを作成し、そのインデックスを変数 &quot;s_emit
+    &quot;に代入しています。このエミッターは、インスタンスの作成位置に配置され、フォールオフ距離として300が与えられます。つまり、エミッターが<i>リスナーの</i>位置から300ピクセル以上離れると、無音になります。フォールオフファクターはデフォルトの1、フォールオフリファレンスは100で、リスナーから100ピクセル離れた位置でフォールオフが開始されます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Emitters.htm">オーディオエミッター</a></div>
-        <div style="float:right">次のページ <a href="audio_emitter_gain.htm"><span class="notranslate">audio_emitter_gain</span></a></div>
+        <div style="float:left">前のページ：<a href="Audio_Emitters.htm">オーディオエミッター</a></div>
+        <div style="float:right">次のページ：<a href="audio_emitter_gain.htm"><span
+              class="notranslate">audio_emitter_gain</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_falloff
@@ -78,4 +88,5 @@ audio_emitter_falloff
 audio_emitter_falloff
 -->
 </body>
+
 </html>

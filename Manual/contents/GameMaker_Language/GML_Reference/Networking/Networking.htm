@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ネットワーキング</title>
@@ -12,14 +13,38 @@
   <meta name="rh-index-keywords" content="Networking" />
   <meta name="search-keywords" content="Networking" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ネットワーキング</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>ネットワーク機能は、すべてのプラットフォームで業界標準となっている<i>ソケットを</i>ベースにしています。ソケットを使えば、簡単な<span class="notranslate">servers</span> 、クライアントと<span class="notranslate">GML</span> の両方を作成することができ、クライアント/サーバーモデルを使って一人用のゲームも作ることができます（後で簡単にマルチプレイを追加できるようにするためのものです）。</p>
-  <p>基本的に、ソケットは、ネットワーク上の<i>ポートを</i>送受信、接続、リスンすることができる<span class="notranslate">object</span> 。これらの機能は、インターネットが基づいているTCP/IP接続だけを扱います（より正確にはIPv4）。要するに、あるIPアドレス（例えば192.168.1.10）を使ったソケットを、別のIPアドレス（例えば192.168.1.11）を使ったソケットに接続することができるのです。いったん接続されると、これらの2つのソケットは、 <span class="inline">network_send_*</span> 関数 (たとえば <a href="network_send_packet.htm"><span class="inline">network_send_packet()</span></a>のような）関数と、それによって引き起こされる専用の非同期イベントを使ってデータを送り返すことができます。この非同期イベントは、受信したデータとその他の詳細を含む<a href="../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>生成します。完全な詳細については、<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">ネットワーク非同期</a>イベントのセクションを参照してください。</p>
-  <p>IPアドレスは、プログラムがマシンに入ってくるネットワークトラフィックをすべて読み込んで処理しなければならない代わりに、0から65535までの番号が振られたポートも処理する。これにより、各プログラムは、すべてのプログラムから送信されたデータではなく、興味のあるデータのパケットのみを取得することができる。これはまた、データ処理を真剣に削減するため、かなりのCPU時間を節約することができますので、<span data-keyref="GameMaker Name">GameMakerでは</span>、ポートを「リッスン」することも可能です。つまり、<span class="notranslate">server</span> 、ソケットを作成し、それを特定のポートにバインドしてリッスンする。そして、そのソケットからの接続、切断、データ転送の通知を受けることができる。</p>
-  <p>データ「パケット」自体は、<span class="notranslate">buffer</span> から取り出したバイナリデータで構成されている。 この<span class="notranslate">buffer</span> は、<span data-keyref="GameMaker Name">GameMaker の</span> <a href="../Buffers/Buffers.htm">Buffer 関数を使って</a>作成、操作することができる。</p>
-  <p>HTML5 をターゲットにしたプロジェクトを作成する場合、ブラウザの制限により<span class="notranslate">server</span> の作成関数を使用できず、<strong>Electron </strong>や<strong>NodeJS</strong> などを使ってこのプラットフォーム用に独自の<span class="notranslate">server</span> を作成する必要があることに注意してください。また、ゲームがクロスプラットフォームで、モバイルまたはデスクトップデバイスで動作する<span class="notranslate">server</span> からゲームの HTML5 インスタンスに接続することを想定している場合、<span class="notranslate">server</span> は Web Socket プロトコルを使用してのみ HTML5 インスタンスと通信できます（これは定数 <span class="inline">network_socket_ws</span> または<span class="inline">network_socket_wss</span> を使用して行われます - 詳細については、 を参照してください）。 <a href="network_create_server.htm"><span class="inline">network_create_server()</span></a>を参照してください）。つまり、<span class="notranslate">server</span> は、HTML5 以外のターゲット (<span class="notranslate">Android</span>,<span class="notranslate">Windows</span> など) に接続するソケットと HTML5 ターゲットに接続するソケットの 2 つを異なるポートで作成しなければならない場合があります。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerの</span>ネットワーク機能は、すべてのプラットフォームで業界標準となっている<i>ソケットを</i>ベースにしています。ソケットを使えば、簡単な<span
+      class="notranslate">servers</span> 、クライアントと<span class="notranslate">GML</span>
+    の両方を作成することができ、クライアント/サーバーモデルを使って一人用のゲームも作ることができます（後で簡単にマルチプレイを追加できるようにするためのものです）。</p>
+  <p>基本的に、ソケットは、ネットワーク上の<i>ポートを</i>送受信、接続、リスンすることができる<span class="notranslate">object</span>
+    。これらの機能は、インターネットが基づいているTCP/IP接続だけを扱います（より正確にはIPv4）。要するに、あるIPアドレス（例えば192.168.1.10）を使ったソケットを、別のIPアドレス（例えば192.168.1.11）を使ったソケットに接続することができるのです。いったん接続されると、これらの2つのソケットは、
+    <span class="inline">network_send_*</span> 関数 (たとえば <a href="network_send_packet.htm"><span
+        class="inline">network_send_packet()</span></a>のような）関数と、それによって引き起こされる専用の非同期イベントを使ってデータを送り返すことができます。この非同期イベントは、受信したデータとその他の詳細を含む<a
+      href="../Data_Structures/DS_Maps/DS_Maps.htm">DS マップを</a>生成します。完全な詳細については、<a
+      href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">ネットワーク非同期</a>イベントのセクションを参照してください。
+  </p>
+  <p>
+    IPアドレスは、プログラムがマシンに入ってくるネットワークトラフィックをすべて読み込んで処理しなければならない代わりに、0から65535までの番号が振られたポートも処理する。これにより、各プログラムは、すべてのプログラムから送信されたデータではなく、興味のあるデータのパケットのみを取得することができる。これはまた、データ処理を真剣に削減するため、かなりのCPU時間を節約することができますので、<span
+      data-keyref="GameMaker Name">GameMakerでは</span>、ポートを「リッスン」することも可能です。つまり、<span class="notranslate">server</span>
+    、ソケットを作成し、それを特定のポートにバインドしてリッスンする。そして、そのソケットからの接続、切断、データ転送の通知を受けることができる。</p>
+  <p>データ「パケット」自体は、<span class="notranslate">buffer</span> から取り出したバイナリデータで構成されている。 この<span
+      class="notranslate">buffer</span> は、<span data-keyref="GameMaker Name">GameMaker の</span> <a
+      href="../Buffers/Buffers.htm">Buffer 関数を使って</a>作成、操作することができる。</p>
+  <p>HTML5 をターゲットにしたプロジェクトを作成する場合、ブラウザの制限により<span class="notranslate">server</span> の作成関数を使用できず、<strong>Electron
+    </strong>や<strong>NodeJS</strong> などを使ってこのプラットフォーム用に独自の<span class="notranslate">server</span>
+    を作成する必要があることに注意してください。また、ゲームがクロスプラットフォームで、モバイルまたはデスクトップデバイスで動作する<span class="notranslate">server</span> からゲームの HTML5
+    インスタンスに接続することを想定している場合、<span class="notranslate">server</span> は Web Socket プロトコルを使用してのみ HTML5 インスタンスと通信できます（これは定数
+    <span class="inline">network_socket_ws</span> または<span class="inline">network_socket_wss</span> を使用して行われます -
+    詳細については、 を参照してください）。 <a href="network_create_server.htm"><span
+        class="inline">network_create_server()</span></a>を参照してください）。つまり、<span class="notranslate">server</span> は、HTML5
+    以外のターゲット (<span class="notranslate">Android</span>,<span class="notranslate">Windows</span> など) に接続するソケットと HTML5
+    ターゲットに接続するソケットの 2 つを異なるポートで作成しなければならない場合があります。
+  </p>
   <p>ネットワークに使用するために、以下の機能が存在します。</p>
   <ul class="colour">
     <li><a href="network_create_server.htm"><span class="notranslate">network_create_server</span></a></li>
@@ -46,11 +71,14 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../GML_Reference.htm">GMLリファレンス</a></div>
-        <div style="float:right">次へ<a data-condition="Export:StableOnly" data-xref="{title}" href="../Web_And_HTML5/Web_And_HTML5.htm">WebとHTML5の</a> <a data-condition="Export:Beta" data-xref="{title}" href="../Rollback/Rollback_Multiplayer.htm">ロールバックマルチプレイ</a></div>
+        <div style="float:left">前のページ：<a href="../GML_Reference.htm">GMLリファレンス</a></div>
+        <div style="float:right">次のページ：<a data-condition="Export:StableOnly" data-xref="{title}"
+            href="../Web_And_HTML5/Web_And_HTML5.htm">WebとHTML5の</a> <a data-condition="Export:Beta" data-xref="{title}"
+            href="../Rollback/Rollback_Multiplayer.htm">ロールバックマルチプレイ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Networking
@@ -59,4 +87,5 @@ Networking
 networking_functions
 -->
 </body>
+
 </html>

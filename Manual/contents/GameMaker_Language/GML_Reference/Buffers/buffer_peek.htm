@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_peek</title>
@@ -9,25 +10,31 @@
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_peek" />
-  <meta name="rh-index-keywords" content="buffer_peek,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
+  <meta name="rh-index-keywords"
+    content="buffer_peek,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
   <meta name="search-keywords" content="buffer_peek" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">buffer_peek</span></h1>
-  <p>を使えば <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a>関数を使うと、与えられた<span class="notranslate">buffer</span> から現在の「シーク」位置でデータを読むことができ、各データは読み書きのバイト数だけこの位置を進めて読まれます。しかし、あるデータを読むときに、現在のシーク位置を変更したくない場合があります。この関数に、<span class="notranslate">buffer</span> の ID と、その<span class="notranslate">buffer</span> 内の読み出しオフセット位置 (<span class="notranslate">buffer</span> の先頭から) と、読み出したいデータ型を指定するだけです。</p>
+  <p>を使えば <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a>関数を使うと、与えられた<span
+      class="notranslate">buffer</span>
+    から現在の「シーク」位置でデータを読むことができ、各データは読み書きのバイト数だけこの位置を進めて読まれます。しかし、あるデータを読むときに、現在のシーク位置を変更したくない場合があります。この関数に、<span
+      class="notranslate">buffer</span> の ID と、その<span class="notranslate">buffer</span> 内の読み出しオフセット位置 (<span
+      class="notranslate">buffer</span> の先頭から) と、読み出したいデータ型を指定するだけです。</p>
   <p class="note"><b>注意</b>：読み込むデータに対して誤ったデータ型を使用すると、誤った値が表示されます。</p>
   <p>関数が成功すれば，データ型に応じた値（Real,<span class="notranslate">string</span>, boolean, etc...）が返され，失敗すれば単に0が返されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">buffer_peek</span>(buffer, offset, type);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td>
@@ -37,36 +44,41 @@
       <tr>
         <td><span class="notranslate">offset</span></td>
         <td><span data-keyref="Type_Real">リアル</span></td>
-        <td><span class="notranslate">The offset position (in bytes) within the buffer to read the given data from.</span></td>
+        <td><span class="notranslate">The offset position (in bytes) within the buffer to read the given data
+            from.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">type</span></td>
         <td><span data-keyref="Type_Constant_Buffer_Data_Type">バッファデータ型定数</span></td>
-        <td><span class="notranslate">The type of data that is to be read from the buffer (see the list of constants <a href="buffer_read.htm">here</a>).</span></td>
+        <td><span class="notranslate">The type of data that is to be read from the buffer (see the list of constants <a
+              href="buffer_read.htm">here</a>).</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Real">Real</span>, <span data-keyref="Type_Bool">Boolean</span>, <span data-keyref="Type_String">String</span> or 0 (if it fails)</p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Real">Real</span>, <span data-keyref="Type_Bool">Boolean</span>, <span
+      data-keyref="Type_String">String</span> or 0 (if it fails)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">var red = buffer_peek(buff, 1, buffer_u8);<br />
     var green = buffer_peek(buff, 2, buffer_u8);<br />
     var blue = buffer_peek(buff, 3, buffer_u8);<br />
     image_blend = make_colour_rgb(red, green, blue);</p>
-  <p>上記のコードは、変数 &quot;buff &quot;にインデックスされた<span class="notranslate">buffer</span> 内の3つの異なる位置から3つの値を取得し、それらの値を使ってインスタンスの画像ブレンドを設定します。</p>
+  <p>上記のコードは、変数 &quot;buff &quot;にインデックスされた<span class="notranslate">buffer</span>
+    内の3つの異なる位置から3つの値を取得し、それらの値を使ってインスタンスの画像ブレンドを設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Buffers.htm">バッファー</a></div>
-        <div style="float:right">次のページ <a href="buffer_poke.htm"><span class="notranslate">buffer_poke</span></a></div>
+        <div style="float:left">前のページ：<a href="Buffers.htm">バッファー</a></div>
+        <div style="float:right">次のページ：<a href="buffer_poke.htm"><span class="notranslate">buffer_poke</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_peek
@@ -75,4 +87,5 @@ buffer_peek
 buffer_peek
 -->
 </body>
+
 </html>

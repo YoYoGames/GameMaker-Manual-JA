@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>network_send_packet</title>
@@ -12,52 +13,65 @@
   <meta name="rh-index-keywords" content="network_send_packet" />
   <meta name="search-keywords" content="network_send_packet" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">network_send_packet</span></h1>
-  <p>この関数を使うと、ネットワークを通じてデータの「パケット」を送信することができます。この関数は接続する<i>ソケット ID</i>を受け取り、次に送信するデータを格納する<i>バッファ ID</i>(<span class="notranslate">buffers</span> に関するより詳しい情報は<a href="../Buffers/Buffers.htm">Reference - Buffers</a> を参照)、最後にデータパケットのサイズ (バイト単位) を指定する必要があります。この関数で送信されたパケットは、データを受け取る<span data-keyref="GameMaker Name">GameMakerの</span>ゲームがパケットを正しく「分割」できるようにフォーマットされ、送信したデータのバイト数、または送信に失敗した場合は0未満の数値が返される。この関数が返す送信データの最終サイズには、さらに12バイトの<span class="notranslate">GameMaker</span> ヘッダー情報が含まれることに注意する必要がある。</p>
+  <p>この関数を使うと、ネットワークを通じてデータの「パケット」を送信することができます。この関数は接続する<i>ソケット ID</i>を受け取り、次に送信するデータを格納する<i>バッファ ID</i>(<span
+      class="notranslate">buffers</span> に関するより詳しい情報は<a href="../Buffers/Buffers.htm">Reference - Buffers</a>
+    を参照)、最後にデータパケットのサイズ (バイト単位) を指定する必要があります。この関数で送信されたパケットは、データを受け取る<span
+      data-keyref="GameMaker Name">GameMakerの</span>ゲームがパケットを正しく「分割」できるようにフォーマットされ、送信したデータのバイト数、または送信に失敗した場合は0未満の数値が返される。この関数が返す送信データの最終サイズには、さらに12バイトの<span
+      class="notranslate">GameMaker</span> ヘッダー情報が含まれることに注意する必要がある。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">network_send_packet</span>(socket, bufferid, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">socket</span></td><td><span data-keyref="Type_ID_Network_Socket"></span></td>
+        <td><span class="notranslate">socket</span></td>
+        <td><span data-keyref="Type_ID_Network_Socket"></span></td>
         <td><span class="notranslate">The id of the socket to use.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">bufferid</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">bufferid</span></td>
+        <td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The id of the buffer to get the data from.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The size (in bytes) of the data.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">buff = buffer_load(&quot;player_save.dat&quot;);<br />
     network_send_packet(sock, buff, buffer_get_size(buff));</p>
-  <p>上記の内容は、あらかじめ保存しておいた<span class="notranslate">buffer</span> のデータをメモリにロードし、変数 &quot;buff&quot; に格納する<span class="notranslate">buffer</span> id を返します。この完全な<span class="notranslate">buffer</span> は、変数 &quot;sock &quot;で識別されるソケットを使用してネットワーク上でパケットとして送信されます。</p>
+  <p>上記の内容は、あらかじめ保存しておいた<span class="notranslate">buffer</span> のデータをメモリにロードし、変数 &quot;buff&quot; に格納する<span
+      class="notranslate">buffer</span> id を返します。この完全な<span class="notranslate">buffer</span> は、変数 &quot;sock
+    &quot;で識別されるソケットを使用してネットワーク上でパケットとして送信されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Networking.htm">ネットワーク</a></div>
-        <div style="float:right">次のページ <a href="network_send_raw.htm"><span class="notranslate">network_send_raw</span></a></div>
+        <div style="float:left">前のページ：<a href="Networking.htm">ネットワーク</a></div>
+        <div style="float:right">次のページ：<a href="network_send_raw.htm"><span
+              class="notranslate">network_send_raw</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_send_packet
@@ -66,4 +80,5 @@ network_send_packet
 network_send_packet
 -->
 </body>
+
 </html>

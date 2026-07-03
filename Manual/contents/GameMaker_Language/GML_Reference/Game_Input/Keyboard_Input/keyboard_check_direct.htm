@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>keyboard_check_direct</title>
@@ -13,24 +14,33 @@
   <meta name="search-keywords" content="keyboard_check_direct" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">keyboard_check_direct</span></h1>
-  <p>この関数は、ハードウェアを直接チェックすることにより、特定のキーコードのキーが押されていれば <span class="inline">true</span> を、そうでなければ <span class="inline">false</span> を返します。特に、キーコード<b>vk_lshift</b>,<b>vk_lcontrol</b>,<b>vk_lalt</b>,<b>vk_rshift</b>,<b>vk_rcontrol</b>,<b>vk_ralt</b>を使って、左または右シフト、コントロール、オルトキーが押されているかどうかをチェックすることが可能です。この関数は，キーコードの値として，関数 <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>(A-Zの<i>大文字</i>、0-9の数字のみ）、または<a href="Keyboard_Input.htm">キーボード入力の</a>メインページにある <span class="inline">vk_*</span> の定数のいずれかを指定します。</p>
-  <p class="note"><b><span class="note">注意事項</span> </b>この機能は、標準の<span class="notranslate">Windows</span> ターゲットでのみ使用可能で、どのアプリケーションにフォーカスがあっても結果は同じです。</p>
+  <p>この関数は、ハードウェアを直接チェックすることにより、特定のキーコードのキーが押されていれば <span class="inline">true</span> を、そうでなければ <span
+      class="inline">false</span>
+    を返します。特に、キーコード<b>vk_lshift</b>,<b>vk_lcontrol</b>,<b>vk_lalt</b>,<b>vk_rshift</b>,<b>vk_rcontrol</b>,<b>vk_ralt</b>を使って、左または右シフト、コントロール、オルトキーが押されているかどうかをチェックすることが可能です。この関数は，キーコードの値として，関数
+    <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a>(A-Zの<i>大文字</i>、0-9の数字のみ）、または<a
+      href="Keyboard_Input.htm">キーボード入力の</a>メインページにある <span class="inline">vk_*</span> の定数のいずれかを指定します。
+  </p>
+  <p class="note"><b><span class="note">注意事項</span> </b>この機能は、標準の<span class="notranslate">Windows</span>
+    ターゲットでのみ使用可能で、どのアプリケーションにフォーカスがあっても結果は同じです。</p>
   <p> </p>
   <h4><b>構文です。</b></h4>
   <p class="code">keyboard_check_direct(key);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">key</span></td><td><span data-keyref="Type_Constant_VK"></span></td>
+        <td><span class="notranslate">key</span></td>
+        <td><span data-keyref="Type_Constant_VK"></span></td>
         <td><span class="notranslate">The key to check the down state of.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -49,11 +59,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Keyboard_Input.htm">キーボード入力</a></div>
-        <div style="float:right">次のページ <a href="keyboard_clear.htm"><span class="notranslate">keyboard_clear</span></a></div>
+        <div style="float:left">前のページ：<a href="Keyboard_Input.htm">キーボード入力</a></div>
+        <div style="float:right">次のページ：<a href="keyboard_clear.htm"><span class="notranslate">keyboard_clear</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_check_direct
@@ -62,4 +74,5 @@ keyboard_check_direct
 keyboard_check_direct
 -->
 </body>
+
 </html>

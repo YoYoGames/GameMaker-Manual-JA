@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>マスターボリュームの設定</title>
@@ -12,21 +13,26 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Master Volume" />
   <meta name="search-keywords" content="Set Master Volume" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> マスターボリュームの設定</h1>
   <p>サウンドシステム全体の音量を設定するアクションです。設定できる音量は0（無音）から1（フル音量）の間で、スケールは直線的で、0.5の値は半分の音量となります。このアクションは、すべての
-    <span class="notranslate">room</span> で現在再生されているすべてのサウンドのインスタンスに影響し、今後再生されるすべてのサウンドのインスタンスに影響します。また、このアクションは個々のサウンドのボリューム設定に依存しないので、あるサウンドを0.5ボリュームで再生するように設定している場合
-    で、マスターボリュームを0.5に設定すると、その音は0.25の音量で再生されます。</p>
+    <span class="notranslate">room</span>
+    で現在再生されているすべてのサウンドのインスタンスに影響し、今後再生されるすべてのサウンドのインスタンスに影響します。また、このアクションは個々のサウンドのボリューム設定に依存しないので、あるサウンドを0.5ボリュームで再生するように設定している場合
+    で、マスターボリュームを0.5に設定すると、その音は0.25の音量で再生されます。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Master Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Master_Volume.png" /></p>
+  <p><img alt="Set Master Volume Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Master_Volume.png" />
+  </p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Volume</span></td>
@@ -37,7 +43,8 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、グローバル変数が <span class="inline">true</span> かどうかをチェックします。
-    false となります。 <span class="inline">true</span> であれば、サウンドシステムのマスターボリュームが取得され、一時的なローカル変数に格納されます。そして、その値が0.5でないかどうかをチェックし、0.5でなければ、サウンドシステムのマスターボリューム
+    false となります。 <span class="inline">true</span>
+    であれば、サウンドシステムのマスターボリュームが取得され、一時的なローカル変数に格納されます。そして、その値が0.5でないかどうかをチェックし、0.5でなければ、サウンドシステムのマスターボリューム
     が0.5に設定される。グローバル変数の評価値が <span class="inline">false</span> であれば、マスターボリュームは 1 に設定される。</p>
   <p> </p>
   <p> </p>
@@ -45,11 +52,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Actions.htm">オーディオアクション</a></div>
-        <div style="float:right">次へ<a href="Get_Master_Volume.htm">マスターボリュームを取得する</a></div>
+        <div style="float:left">前のページ：<a href="Audio_Actions.htm">オーディオアクション</a></div>
+        <div style="float:right">次のページ：<a href="Get_Master_Volume.htm">マスターボリュームを取得する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Master Volume
@@ -58,4 +66,5 @@ Action - Set Master Volume
 action_audio_set_master_volume
 -->
 </body>
+
 </html>

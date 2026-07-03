@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gml_release_mode</title>
@@ -12,33 +13,40 @@
   <meta name="rh-index-keywords" content="gml_release_mode" />
   <meta name="search-keywords" content="gml_release_mode" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gml_release_mode</span></h1>
-  <p>ゲームがコンパイルされる際、実行中にエラーチェックを行うための内部関数も含まれています。これらの内部チェックは、範囲、パラメータ、内部<span class="notranslate">GML</span> コンパイラの一般的な側面など、ゲームコードの多くの側面をカバーしており、以下のようなものです。
-    多くの場合、最終的なエラーメッセージを生成するものです。しかし、この関数を使うと、<span class="notranslate">switch</span> これらの内部チェックをオフにする（つまり、コンパイルされたゲームから完全に取り除く）ことができ、最終プロジェクトにスピードアップを与えることができます。</p>
-  <p>このため、ゲームコードの中で何か間違ったことをすると、コンパイルされたゲームが<i>単にクラッシュ</i>したり、<i>非常に予期しない動作が</i>発生する可能性があることに注意してください。たとえば、 <span class="inline">DS Grid</span> にアクセスした場合。
+  <p>ゲームがコンパイルされる際、実行中にエラーチェックを行うための内部関数も含まれています。これらの内部チェックは、範囲、パラメータ、内部<span class="notranslate">GML</span>
+    コンパイラの一般的な側面など、ゲームコードの多くの側面をカバーしており、以下のようなものです。
+    多くの場合、最終的なエラーメッセージを生成するものです。しかし、この関数を使うと、<span class="notranslate">switch</span>
+    これらの内部チェックをオフにする（つまり、コンパイルされたゲームから完全に取り除く）ことができ、最終プロジェクトにスピードアップを与えることができます。</p>
+  <p>このため、ゲームコードの中で何か間違ったことをすると、コンパイルされたゲームが<i>単にクラッシュ</i>したり、<i>非常に予期しない動作が</i>発生する可能性があることに注意してください。たとえば、 <span
+      class="inline">DS Grid</span> にアクセスした場合。
     の座標が定義されたサイズから外れている場合、開発者モードではコンパイラーウィンドウのエラーメッセージが表示されますが、チェックが行われているため、ゲームの実行を継続することができます。しかし、リリースモードではこのようなチェックは行われないので、コードは次のようになります。
     はNULLポインタか不正なポインタを返し、そのポインタはランダムなメモリーを指すことになります。そのため、最悪の場合、間違ったデータが返されたり、メモリ内のデータ、グラフィック、コードそのものを上書きしてしまう可能性があります。他の例として
-    もし、色、位置、<span class="notranslate">texture</span> などのデータを、<span class="notranslate">vertex</span> フォーマットの作成時に定義した順序と異なる順序で供給すると、リリースモード時にゲームがクラッシュしたり、予期しない結果をもたらす可能性があります。
+    もし、色、位置、<span class="notranslate">texture</span> などのデータを、<span class="notranslate">vertex</span>
+    フォーマットの作成時に定義した順序と異なる順序で供給すると、リリースモード時にゲームがクラッシュしたり、予期しない結果をもたらす可能性があります。
     がオンになっている。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gml_release_mode</span>(flag);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">flag</span></td>
+        <td><span data-keyref="Type_Bool"></span></td>
         <td><span class="notranslate">Either <span class="inline">true</span> でリリースモードを、false で一般的な開発モードを設定します。</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -50,11 +58,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
-        <div style="float:right">次のページ <a href="gml_pragma.htm"><span class="notranslate">gml_pragma</span></a></div>
+        <div style="float:left">前のページ：<a href="OS_And_Compiler.htm">OSとコンパイラ</a></div>
+        <div style="float:right">次のページ：<a href="gml_pragma.htm"><span class="notranslate">gml_pragma</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gml_release_mode
@@ -63,4 +72,5 @@ gml_release_mode
 gml_release_mode
 -->
 </body>
+
 </html>

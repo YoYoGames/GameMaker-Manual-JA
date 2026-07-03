@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオ</title>
@@ -12,12 +13,21 @@
   <meta name="rh-index-keywords" content="Audio" />
   <meta name="search-keywords" content="Audio" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>オーディオ</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerには</span>、 <span class="inline">*.ogg</span>, <span class="inline">*.mp3</span>, <span class="inline">*.wav</span> の各サウンドフォーマットをベースとした完全なオーディオエンジンがあります。<span class="notranslate">IDE</span> に追加されたこれらのタイプのサウンドは、以下に示す基本的なオー ディオ機能を使ってゲーム内で使用することができます。基本的なサウンドエフェクトや1つの音楽の再生よりも複雑な場合は、サウンドの再生方法を変更できるアドバンスドオーディオ関数を参照できます。また、オーディオのストリーミング、オーディオの位置調整（3Dサウンドの実現）、オーディオのグループ化など、より専門的な関数も用意されています。</p>
-  <p class="note"><b>重要!H</b>TML5ターゲットでオーディオを使用する場合、すべてのブラウザがWeb Audioをサポートしているわけではないので、プロジェクトの実行時に音が再生されない可能性があることを認識しておく必要があります。Web Audioのサポートについては、以下のリンクから一般的な情報を得ることができます。Web Audioを<a href="https://caniuse.com/#search=WebAudio" target="_blank">使用できますか？</a></p>
-  <p>以下の関数は、オーディオを最も簡単かつシンプルに扱うためのものです。エミッタの使用を避け、ユーザーが簡単にサウンドを生成して音楽を演奏できるようにします。これらのサウンドは常に<i>リスナーの</i>位置で生成されるので（<i>リスナーの</i>詳細については、以下のリンクを参照してください）、一般に<i>リスナーが</i>変更されても影響を受けることはありません。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerには</span>、 <span class="inline">*.ogg</span>, <span
+      class="inline">*.mp3</span>, <span class="inline">*.wav</span> の各サウンドフォーマットをベースとした完全なオーディオエンジンがあります。<span
+      class="notranslate">IDE</span> に追加されたこれらのタイプのサウンドは、以下に示す基本的なオー
+    ディオ機能を使ってゲーム内で使用することができます。基本的なサウンドエフェクトや1つの音楽の再生よりも複雑な場合は、サウンドの再生方法を変更できるアドバンスドオーディオ関数を参照できます。また、オーディオのストリーミング、オーディオの位置調整（3Dサウンドの実現）、オーディオのグループ化など、より専門的な関数も用意されています。
+  </p>
+  <p class="note"><b>重要!H</b>TML5ターゲットでオーディオを使用する場合、すべてのブラウザがWeb
+    Audioをサポートしているわけではないので、プロジェクトの実行時に音が再生されない可能性があることを認識しておく必要があります。Web Audioのサポートについては、以下のリンクから一般的な情報を得ることができます。Web
+    Audioを<a href="https://caniuse.com/#search=WebAudio" target="_blank">使用できますか？</a></p>
+  <p>
+    以下の関数は、オーディオを最も簡単かつシンプルに扱うためのものです。エミッタの使用を避け、ユーザーが簡単にサウンドを生成して音楽を演奏できるようにします。これらのサウンドは常に<i>リスナーの</i>位置で生成されるので（<i>リスナーの</i>詳細については、以下のリンクを参照してください）、一般に<i>リスナーが</i>変更されても影響を受けることはありません。
+  </p>
   <ul class="colour">
     <li><a href="audio_exists.htm"><span class="notranslate">audio_exists</span></a></li>
     <li><a href="audio_get_name.htm"><span class="notranslate">audio_get_name</span></a></li>
@@ -36,12 +46,17 @@
     <li><a href="audio_destroy_stream.htm"><span class="notranslate">audio_destroy_stream</span></a></li>
   </ul>
   <p> </p>
-  <p>以下の関数は、オーディオエンジンの動作と、それを通して再生されるサウンドがリスナーにどのように &quot;聞こえる &quot;かを、より詳細にコントロールできるように設計されています。そのため、以下の機能を使う前に、<span data-keyref="GameMaker Name">GameMakerの</span>他のオーディオエンジンの動作について十分に理解しておくことが推奨されます。</p>
+  <p>以下の関数は、オーディオエンジンの動作と、それを通して再生されるサウンドがリスナーにどのように &quot;聞こえる &quot;かを、より詳細にコントロールできるように設計されています。そのため、以下の機能を使う前に、<span
+      data-keyref="GameMaker Name">GameMakerの</span>他のオーディオエンジンの動作について十分に理解しておくことが推奨されます。</p>
   <ul class="colour">
-    <li><a href="audio_sound_set_track_position.htm"><span class="notranslate">audio_sound_set_track_position</span></a></li>
-    <li><a href="audio_sound_get_track_position.htm"><span class="notranslate">audio_sound_get_track_position</span></a></li>
-    <li><a href="audio_sound_set_listener_mask.htm"><span class="notranslate">audio_sound_set_listener_mask</span></a></li>
-    <li><a href="audio_sound_get_listener_mask.htm"><span class="notranslate">audio_sound_get_listener_mask</span></a></li>
+    <li><a href="audio_sound_set_track_position.htm"><span class="notranslate">audio_sound_set_track_position</span></a>
+    </li>
+    <li><a href="audio_sound_get_track_position.htm"><span class="notranslate">audio_sound_get_track_position</span></a>
+    </li>
+    <li><a href="audio_sound_set_listener_mask.htm"><span class="notranslate">audio_sound_set_listener_mask</span></a>
+    </li>
+    <li><a href="audio_sound_get_listener_mask.htm"><span class="notranslate">audio_sound_get_listener_mask</span></a>
+    </li>
     <li><a href="audio_sound_length.htm"><span class="notranslate">audio_sound_length</span></a></li>
     <li><a href="audio_sound_pitch.htm"><span class="notranslate">audio_sound_pitch</span></a></li>
     <li><a href="audio_sound_get_pitch.htm"><span class="notranslate">audio_sound_get_pitch</span></a></li>
@@ -66,13 +81,23 @@
   </ul>
   <p> </p>
   <h2>ウェブオーディオ</h2>
-  <p>HTML5ターゲットプラットフォーム向けにゲームを作成する場合、オーディオエンジンは<b>Web Audioを</b>サポートする必要があります。これは、ゲームの再生中にWeb Audioのコンテキストが実行されていなかったり、停止してしまったりすることが原因です。この原因はブラウザによって大きく異なり、また同じブラウザでもバージョンによって異なるため、Web Audio コンテキストの状態がいつ変化するかを検出することが非常に重要です。例えば、コンテキストが変化したときに、BGM などのオーディオを一時停止したりループさせたりすることができます。</p>
-  <p>この問題を解決するために、<span data-keyref="GameMaker Name">GameMakerでは</span>Web Audioのコンテキストの状態変化を検出する方法を2つに分け、以下の関数を使用しています。</p>
+  <p>HTML5ターゲットプラットフォーム向けにゲームを作成する場合、オーディオエンジンは<b>Web Audioを</b>サポートする必要があります。これは、ゲームの再生中にWeb
+    Audioのコンテキストが実行されていなかったり、停止してしまったりすることが原因です。この原因はブラウザによって大きく異なり、また同じブラウザでもバージョンによって異なるため、Web Audio
+    コンテキストの状態がいつ変化するかを検出することが非常に重要です。例えば、コンテキストが変化したときに、BGM などのオーディオを一時停止したりループさせたりすることができます。</p>
+  <p>この問題を解決するために、<span data-keyref="GameMaker Name">GameMakerでは</span>Web Audioのコンテキストの状態変化を検出する方法を2つに分け、以下の関数を使用しています。
+  </p>
   <ul class="colour">
     <li><a href="audio_system_is_available.htm"><span class="notranslate">audio_system_is_available</span></a></li>
   </ul>
   <p> </p>
-  <p>また、Web Audioのステータスが変更されるたびにトリガーされる<b>非同期システムイベントも</b>使用できます。このイベントには、内蔵の <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a><span> DS マップに</span>&quot;<span class="inline">event_type</span>&quot; というキーが設定され、オーディオイベントの場合は<span class="notranslate">string</span> &quot;<span class="inline">audio_system_status</span>&quot; というキーが設定されます。このキーが存在する場合、さらに&quot;<span class="inline">status</span>&quot;キーが存在し、&quot;<span class="inline">available</span>&quot;か&quot;<span class="inline">unavailable</span>&quot;のいずれかとなります。このイベントは<i>全ての</i>プラットフォームで発生しますが、HTML5以外のプラットフォームでは、オーディオエンジンが最初に初期化されるゲームスタート時に一度だけ発生することに注意してください。詳しくは、セクションを参照してください。</p>
+  <p>また、Web Audioのステータスが変更されるたびにトリガーされる<b>非同期システムイベントも</b>使用できます。このイベントには、内蔵の <a
+      href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span
+        class="inline">async_load</span></a><span> DS マップに</span>&quot;<span class="inline">event_type</span>&quot;
+    というキーが設定され、オーディオイベントの場合は<span class="notranslate">string</span> &quot;<span
+      class="inline">audio_system_status</span>&quot; というキーが設定されます。このキーが存在する場合、さらに&quot;<span
+      class="inline">status</span>&quot;キーが存在し、&quot;<span class="inline">available</span>&quot;か&quot;<span
+      class="inline">unavailable</span>&quot;のいずれかとなります。このイベントは<i>全ての</i>プラットフォームで発生しますが、HTML5以外のプラットフォームでは、オーディオエンジンが最初に初期化されるゲームスタート時に一度だけ発生することに注意してください。詳しくは、セクションを参照してください。
+  </p>
   <ul class="colour">
     <li><a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">非同期システムイベント</a></li>
   </ul>
@@ -82,11 +107,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Asset_Management.htm">アセットマネジメント</a></div>
-        <div style="float:right">次へ<a href="../Paths/Paths.htm">パス</a></div>
+        <div style="float:left">前のページ：<a href="../Asset_Management.htm">アセットマネジメント</a></div>
+        <div style="float:right">次のページ：<a href="../Paths/Paths.htm">パス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio
@@ -95,4 +121,5 @@ Audio
 audio_functions
 -->
 </body>
+
 </html>

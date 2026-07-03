@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_cullmode</title>
@@ -12,16 +13,20 @@
   <meta name="rh-index-keywords" content="gpu_set_cullmode,cull_noculling,cull_clockwise,cull_counterclockwise" />
   <meta name="search-keywords" content="gpu_set_cullmode,cull_noculling,cull_clockwise,cull_counterclockwise" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_cullmode</span></h1>
-  <p>この関数は、バックフェイスカリングモードを設定するために使用することができます。ポリゴン（プリミティブ）には、<i>表側と</i> <i>裏側が</i>ある。表側とは、<b>反時計回りの</b>順に頂点が定義されている側と言われています。通常は両面を描きますが、ピラミッドのような閉じた図形を作ると、三角形の裏側が見えなくなるので、処理能力の無駄遣いになります。このような場合、<span class="notranslate">switch</span> バックフェイスカリングを使用すると、描画時間を約半分に短縮できます。ただし、問題を防ぐために、ポリゴンを正しい方法で定義する作業が必要になります。</p>
+  <p>この関数は、バックフェイスカリングモードを設定するために使用することができます。ポリゴン（プリミティブ）には、<i>表側と</i>
+    <i>裏側が</i>ある。表側とは、<b>反時計回りの</b>順に頂点が定義されている側と言われています。通常は両面を描きますが、ピラミッドのような閉じた図形を作ると、三角形の裏側が見えなくなるので、処理能力の無駄遣いになります。このような場合、<span
+      class="notranslate">switch</span> バックフェイスカリングを使用すると、描画時間を約半分に短縮できます。ただし、問題を防ぐために、ポリゴンを正しい方法で定義する作業が必要になります。
+  </p>
   <p>使用するカリングモード値は、以下の定数のいずれかである必要があります（デフォルト値は <span class="inline">cull_noculling</span> ）。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">cull_noculling</span></td>
@@ -38,14 +43,14 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_cullmode</span>(cullmode);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">cullmode</span></td>
@@ -55,7 +60,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -70,11 +75,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_blendmode.htm"><span class="notranslate">gpu_set_blendmode</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_blendmode.htm"><span
+              class="notranslate">gpu_set_blendmode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_cullmode
@@ -86,4 +93,5 @@ cull_counterclockwise
 gpu_set_cullmode
 -->
 </body>
+
 </html>

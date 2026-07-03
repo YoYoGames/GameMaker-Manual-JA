@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>shader_set_uniform_f</title>
@@ -12,11 +13,20 @@
   <meta name="rh-index-keywords" content="shader_set_uniform_f" />
   <meta name="search-keywords" content="shader_set_uniform_f" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">shader_set_uniform_f</span></h1>
-  <p>この関数を使うと、<span class="notranslate">shader</span> の定数の値（複数可）を設定することができます。この定数の「ハンドル」は、事前に関数 <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>そして、正しい数の浮動小数点値を渡すために、それがどのような定数であるかを知っておく必要があります。例えば、 <span class="inline">vec2</span> の場合、関数に2つの値を渡す必要があります。</p>
-  <p>ただし、32bitの色値を扱う場合は例外である。<span class="notranslate">shader</span> に最大 8 個の 32bit 色値を渡すと、それらは自動的に 0 - 1 の vec4 値に変換されます。ただし、この場合、単一の色には<span class="notranslate">shader</span> 定数名 <span class="inline">in_Colour</span> を、複数の入力値には <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, etc... <span class="inline">in_Colour7</span> までの定数を使用する<i>必要が</i>あります。次の例は、<span class="notranslate">shader</span> 自身がどのように見えるかを示しています。</p>
+  <p>この関数を使うと、<span class="notranslate">shader</span> の定数の値（複数可）を設定することができます。この定数の「ハンドル」は、事前に関数 <a
+      href="shader_get_uniform.htm"><span
+        class="inline">shader_get_uniform()</span></a>そして、正しい数の浮動小数点値を渡すために、それがどのような定数であるかを知っておく必要があります。例えば、 <span
+      class="inline">vec2</span> の場合、関数に2つの値を渡す必要があります。</p>
+  <p>ただし、32bitの色値を扱う場合は例外である。<span class="notranslate">shader</span> に最大 8 個の 32bit 色値を渡すと、それらは自動的に 0 - 1 の vec4
+    値に変換されます。ただし、この場合、単一の色には<span class="notranslate">shader</span> 定数名 <span class="inline">in_Colour</span> を、複数の入力値には
+    <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, etc... <span
+      class="inline">in_Colour7</span> までの定数を使用する<i>必要が</i>あります。次の例は、<span class="notranslate">shader</span>
+    自身がどのように見えるかを示しています。
+  </p>
   <p class="code">    //Single colour<br />
         attribute vec2 in_Position;<br />
         attribute vec4 in_Colour;<br />
@@ -29,16 +39,19 @@
         attribute vec2 in_TextureCoord;
   </p>
   <p>もし、4バイトのカラーフォーマットを使って圧縮法線などを行いたい場合は、上記と同じ「in_Colour」フォーマットを使用する必要があることにも注意してください。</p>
-  <p class="note"><b></b><b>注意</b>：すべてのユニフォームは<b>、</b>関数 <span style="font-size:1px;"><a href="shader_set.htm"><span class="inline">shader_set()</span></a></span>を呼び出す前、そして <span style="font-size:1px;"><a href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
+  <p class="note"><b></b><b>注意</b>：すべてのユニフォームは<b>、</b>関数 <span style="font-size:1px;"><a href="shader_set.htm"><span
+          class="inline">shader_set()</span></a></span>を呼び出す前、そして <span style="font-size:1px;"><a
+        href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">shader_set_uniform_f</span>(handle, value1 [, value2, value3, value4]);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">shader_set_uniform_f</span>(handle, value1 [, value2,
+    value3, value4]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">handle</span></td>
@@ -53,7 +66,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -62,18 +75,21 @@
     shader_set_uniform_f(shader_params, 0.1, 0.8, 0.25);<br />
     draw_self();<br />
     shader_reset();</p>
-  <p>上記のコードは、<span class="notranslate">shader</span> 定数 &quot;u_vParams&quot; ( a <span class="inline">vec3</span>) のハンドルを取得し、その定数に与えられた値を設定します。</p>
+  <p>上記のコードは、<span class="notranslate">shader</span> 定数 &quot;u_vParams&quot; ( a <span class="inline">vec3</span>)
+    のハンドルを取得し、その定数に与えられた値を設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Shaders.htm">シェーダー</a></div>
-        <div style="float:right">次のページ <a href="shader_set_uniform_f_array.htm"><span class="notranslate">shader_set_uniform_f_array</span></a></div>
+        <div style="float:left">前のページ：<a href="Shaders.htm">シェーダー</a></div>
+        <div style="float:right">次のページ：<a href="shader_set_uniform_f_array.htm"><span
+              class="notranslate">shader_set_uniform_f_array</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 shader_set_uniform_f
@@ -82,4 +98,5 @@ shader_set_uniform_f
 shader_set_uniform_f
 -->
 </body>
+
 </html>

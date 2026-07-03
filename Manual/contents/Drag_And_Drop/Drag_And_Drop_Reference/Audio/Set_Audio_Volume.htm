@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオの音量を設定する</title>
@@ -12,20 +13,25 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Set Audio Volume" />
   <meta name="search-keywords" content="Set Audio Volume" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> オーディオの音量を設定する</h1>
-  <p>このアクションでは、指定されたサウンドの音量を設定することができます。<span class="notranslate">asset</span> Explorerからサウンドを選択し、音量値を設定します。ボリュームは0（無音）から1（フルボリューム）の間で設定でき、スケールはリニアで、0.5なら半分のボリュームになります。この操作は、<span class="notranslate">room</span> で現在再生されているサウンドのすべてのインスタンスに影響し、今後再生されるサウンドのすべてのインスタンスに影響することに注意してください。</p>
+  <p>このアクションでは、指定されたサウンドの音量を設定することができます。<span class="notranslate">asset</span>
+    Explorerからサウンドを選択し、音量値を設定します。ボリュームは0（無音）から1（フルボリューム）の間で設定でき、スケールはリニアで、0.5なら半分のボリュームになります。この操作は、<span
+      class="notranslate">room</span> で現在再生されているサウンドのすべてのインスタンスに影響し、今後再生されるサウンドのすべてのインスタンスに影響することに注意してください。</p>
   <p>Time &quot;フィールドは、音量の変更が有効になるまでの時間を制御します。値が0の場合は即座に変化し、値が大きい場合は指定されたミリ秒の間に徐々に音量が変化します。</p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Set Audio Volume Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Volume.png" style="cursor: nesw-resize;" width="32" /></p>
+  <p><img alt="Set Audio Volume Icon" class="icon" height="32"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Volume.png"
+      style="cursor: nesw-resize;" width="32" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Sound</span></td>
@@ -43,18 +49,23 @@
   </table>
   <p> </p>
   <h4>例</h4>
-  <p><span><img></span>上記のアクションブロックのコードは、グローバル変数が <span class="inline">true</span> か false かをチェックする。 <span class="inline">true</span> であれば、指定されたサウンドの音量を取得し、一時的なローカル変数に格納する。そして、その値が0.5でないかどうかをチェックし、0.5でなければ、1000ミリ秒（1秒）後に音のボリュームが0.5になるように設定される。グローバル変数の評価値が <span class="inline">false</span> であれば、サウンドの音量は1に設定されます。ここではtimeの値が0になっているので、音量の変化はすぐに起こります。</p>
+  <p><span><img></span>上記のアクションブロックのコードは、グローバル変数が <span class="inline">true</span> か false かをチェックする。 <span
+      class="inline">true</span>
+    であれば、指定されたサウンドの音量を取得し、一時的なローカル変数に格納する。そして、その値が0.5でないかどうかをチェックし、0.5でなければ、1000ミリ秒（1秒）後に音のボリュームが0.5になるように設定される。グローバル変数の評価値が
+    <span class="inline">false</span> であれば、サウンドの音量は1に設定されます。ここではtimeの値が0になっているので、音量の変化はすぐに起こります。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Audio_Actions.htm">オーディオアクション</a></div>
-        <div style="float:right">次へ<a href="Get_Audio_Volume.htm">オーディオボリュームを取得する</a></div>
+        <div style="float:left">前のページ：<a href="Audio_Actions.htm">オーディオアクション</a></div>
+        <div style="float:right">次のページ：<a href="Get_Audio_Volume.htm">オーディオボリュームを取得する</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Audio Volume
@@ -63,4 +74,5 @@ Action - Set Audio Volume
 action_audio_set_volume
 -->
 </body>
+
 </html>

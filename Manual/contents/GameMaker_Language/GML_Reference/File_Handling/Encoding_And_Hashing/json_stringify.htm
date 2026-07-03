@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>json_stringify</title>
@@ -13,49 +14,69 @@
   <meta name="search-keywords" content="json_stringify" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">json_stringify</span></h1>
-  <p>この関数を使用すると、単一またはネストした<span class="notranslate">structs</span> と配列を有効な JSON<span class="notranslate">string</span> に変換できます。使用する初期値（配列のインデックスまたは<span class="notranslate">struct</span> の参照）を指定すると、この関数はそれを「文字列化」して JSON 文字列に変換します（<span class="notranslate">GameMaker</span> 配列を JSON 配列に、<span class="notranslate">GameMaker</span> <span class="notranslate">structs</span> を JSON<span class="notranslate">objects</span> に変換することができます）。</p>
+  <p>この関数を使用すると、単一またはネストした<span class="notranslate">structs</span> と配列を有効な JSON<span class="notranslate">string</span>
+    に変換できます。使用する初期値（配列のインデックスまたは<span class="notranslate">struct</span> の参照）を指定すると、この関数はそれを「文字列化」して JSON 文字列に変換します（<span
+      class="notranslate">GameMaker</span> 配列を JSON 配列に、<span class="notranslate">GameMaker</span> <span
+      class="notranslate">structs</span> を JSON<span class="notranslate">objects</span> に変換することができます）。</p>
   <p>この機能を使用する場合、いくつかの注意点があります。</p>
   <ul class="colour">
-    <li>この関数は、DSマップやリストなどのデータ構造をJSONに変換<em>せず </em>、単に構造体の内部インデックス値（ゲームの実行ごとにインデックスが変化するため、ほとんど意味がない）を格納するだけである。 <a href="json_encode.htm"><span class="inline">json_encode()</span></a>).</li>
-    <li>この関数は、ほぼすべての値を「有効な」JSON<span class="notranslate">string</span> に変換しますが、JSON標準の動作方法のため、<span class="notranslate">string</span> に含まれる実際の値は、期待したものとは異なる場合があります。<br />
+    <li>この関数は、DSマップやリストなどのデータ構造をJSONに変換<em>せず </em>、単に構造体の内部インデックス値（ゲームの実行ごとにインデックスが変化するため、ほとんど意味がない）を格納するだけである。 <a
+        href="json_encode.htm"><span class="inline">json_encode()</span></a>).</li>
+    <li>この関数は、ほぼすべての値を「有効な」JSON<span class="notranslate">string</span> に変換しますが、JSON標準の動作方法のため、<span
+        class="notranslate">string</span> に含まれる実際の値は、期待したものとは異なる場合があります。<br />
       <br />
-      「JSONは数字にとらわれない。どのようなプログラミング言語でも、様々な容量と補数を持つ、固定または浮動、2進または10進の数値型が存在する可能性があります。そのため、異なるプログラミング言語間での互換性が難しくなることがあります。代わりにJSONは、人間が使う数字の表現だけを提供します。<span class="notranslate">sequence</span> 、数字が並んでいます。すべてのプログラミング言語は、内部表現に相違があっても、数字<span class="notranslate">sequences</span> を理解する方法を知っています。&quot;<br />
+      「JSONは数字にとらわれない。どのようなプログラミング言語でも、様々な容量と補数を持つ、固定または浮動、2進または10進の数値型が存在する可能性があります。そのため、異なるプログラミング言語間での互換性が難しくなることがあります。代わりにJSONは、人間が使う数字の表現だけを提供します。<span
+        class="notranslate">sequence</span> 、数字が並んでいます。すべてのプログラミング言語は、内部表現に相違があっても、数字<span
+        class="notranslate">sequences</span> を理解する方法を知っています。&quot;<br />
       <br />
       詳しくは<a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">ECMA JSON Standardを</a>ご覧ください。
     </li>
-    <li>JSONに変換する値の中にint64が含まれている場合、int32の有効範囲内であれば<i>intとして</i>、精度を落とさずに<i>ダブルとして</i>、または（そのどちらでもない場合）前に&quot;<span class="inline">@i64@</span>&quot;、後に&quot;<span class="inline">$i64$</span>&quot;という識別子を持つ<i>文字列として</i>書き出されます。JSONを再びパースするとき、<span data-keyref="GameMaker Name">GameMakerは</span>これらの識別子を拾って、値をint64に再変換します。このため、JSONが<span class="notranslate">server</span> などのGameMaker以外のターゲット向けである場合、これらの値は適切ではないため、避ける必要があります。</li>
-    <li>JSONに変換する値に <span class="inline">infinity</span>, <span class="inline">-infinity</span>, <span class="inline">NaN</span> を含めると、これらの値はJSONの標準に含まれていないため、<span class="notranslate">strings</span> としてエンコードされ、結果のJSONをパースする際に<span class="notranslate">runtime</span> の値に変換さ<strong>れず </strong>、<span class="notranslate">strings</span> として残ります。なお、 <span class="inline">NaN</span> は文字列化する際に「nan」(小文字)に変換されます。</li>
-    <li> <span class="inline">ini</span> 仕様では、引用符やエスケープ文字を使用すると問題が発生する可能性があるため、返された JSON 文字列を <span class="inline">ini</span> ファイルに書き込む場合は注意が必要です。関数 <a href="../Ini_Files/ini_write_string.htm"><span class="inline">ini_write_string()</span></a>をご覧ください。</li>
+    <li>JSONに変換する値の中にint64が含まれている場合、int32の有効範囲内であれば<i>intとして</i>、精度を落とさずに<i>ダブルとして</i>、または（そのどちらでもない場合）前に&quot;<span
+        class="inline">@i64@</span>&quot;、後に&quot;<span
+        class="inline">$i64$</span>&quot;という識別子を持つ<i>文字列として</i>書き出されます。JSONを再びパースするとき、<span
+        data-keyref="GameMaker Name">GameMakerは</span>これらの識別子を拾って、値をint64に再変換します。このため、JSONが<span
+        class="notranslate">server</span> などのGameMaker以外のターゲット向けである場合、これらの値は適切ではないため、避ける必要があります。</li>
+    <li>JSONに変換する値に <span class="inline">infinity</span>, <span class="inline">-infinity</span>, <span
+        class="inline">NaN</span> を含めると、これらの値はJSONの標準に含まれていないため、<span class="notranslate">strings</span>
+      としてエンコードされ、結果のJSONをパースする際に<span class="notranslate">runtime</span> の値に変換さ<strong>れず </strong>、<span
+        class="notranslate">strings</span> として残ります。なお、 <span class="inline">NaN</span> は文字列化する際に「nan」(小文字)に変換されます。</li>
+    <li> <span class="inline">ini</span> 仕様では、引用符やエスケープ文字を使用すると問題が発生する可能性があるため、返された JSON 文字列を <span
+        class="inline">ini</span> ファイルに書き込む場合は注意が必要です。関数 <a href="../Ini_Files/ini_write_string.htm"><span
+          class="inline">ini_write_string()</span></a>をご覧ください。</li>
   </ul>
   <p> </p>
   <p> </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">json_stringify</span>(val)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">val</span></td>
         <td><span data-keyref="Type_Struct">構造体</span>または<span data-keyref="Type_Array">配列</span></td>
-        <td><span class="notranslate">The reference value for a struct or array to convert into a JSON string</span></td>
+        <td><span class="notranslate">The reference value for a struct or array to convert into a JSON string</span>
+        </td>
       </tr>
       <tr>
         <td>filter_func</td>
-        <td><span data-keyref="Type_Function"><a href="../../../GML_Overview/Script_Functions.htm" target="_blank">Function</a></span></td>
-        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"> </span> Filter function that processes each item. Syntax: <span class="inline2">function(key, value) -&gt; new_value</span></td>
+        <td><span data-keyref="Type_Function"><a href="../../../GML_Overview/Script_Functions.htm"
+              target="_blank">Function</a></span></td>
+        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"> </span> Filter function that processes
+          each item. Syntax: <span class="inline2">function(key, value) -&gt; new_value</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String">String</span></p>
   <p> </p>
   <h4>例</h4>
@@ -78,19 +99,23 @@
     <br />
     var _json_string = json_stringify(_contents);
   </p>
-  <p>上記のコードでは、<span class="inline2">_contents</span> <span class="notranslate">struct</span> を JSON<span class="notranslate">string</span> に変換し、<span class="notranslate">string</span> を変数に格納します。返された<span class="notranslate">string</span> は、次のようになります。</p>
-  <p class="code">{ &quot;data&quot;: { &quot;items&quot;: [ 0.0, 1.0, 2.0 ], &quot;coins&quot;: 4.0, &quot;mana&quot;: 15.0, &quot;playername&quot;: &quot;Gurpreet&quot; }, &quot;version&quot;: &quot;1.0.0&quot; }</p>
+  <p>上記のコードでは、<span class="inline2">_contents</span> <span class="notranslate">struct</span> を JSON<span
+      class="notranslate">string</span> に変換し、<span class="notranslate">string</span> を変数に格納します。返された<span
+      class="notranslate">string</span> は、次のようになります。</p>
+  <p class="code">{ &quot;data&quot;: { &quot;items&quot;: [ 0.0, 1.0, 2.0 ], &quot;coins&quot;: 4.0, &quot;mana&quot;:
+    15.0, &quot;playername&quot;: &quot;Gurpreet&quot; }, &quot;version&quot;: &quot;1.0.0&quot; }</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Encoding_And_Hashing.htm">ファイルエンコード</a></div>
-        <div style="float:right">次のページ <a href="json_parse.htm"><span class="notranslate">json_parse</span></a></div>
+        <div style="float:left">前のページ：<a href="Encoding_And_Hashing.htm">ファイルエンコード</a></div>
+        <div style="float:right">次のページ：<a href="json_parse.htm"><span class="notranslate">json_parse</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 json_stringify
@@ -99,4 +124,5 @@ json_stringify
 json_stringify
 -->
 </body>
+
 </html>

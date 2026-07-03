@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>パーティクルアクション</title>
@@ -12,16 +13,32 @@
   <meta name="rh-index-keywords" content="GML Visual Overview - Particle Actions Library" />
   <meta name="search-keywords" content="Particle Actions" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>パーティクルアクションライブラリ</h1>
-  <p><img><span data-keyref="GameMaker Name">GameMakerで</span>複雑なことをする場合、通常は<i>オブジェクトを</i>用意し、その<i>インスタンス</i>（<span class="notranslate">object</span> ）を<i>部屋の</i>中に作成します。しかし、グラフィックエフェクトの場合、インスタンスに含まれる変数や様々なイベントに含まれるコードによって、インスタンスごとに処理に「コスト」がかかるため、このコストが高くなることがあります。このコストを削減するには、グラフィックの描画に<span class="notranslate">tiles</span> を使用するか、<span class="notranslate">room</span> エディタの<i>アセットレイヤーを</i>使用することもできますが、いずれも一般的には、時間が経過しても同じ位置を維持し、特殊効果の少ない単純なグラフィックを描画する場合にのみ使用されます。しかし、ゲーム内で高速かつ多彩なグラフィック効果を描くには、パーティクルを使うという選択肢もあります。</p>
-  <p>パーティクルは、<b>パーティクルシステム</b>内で定義された特定のプロパティを持つグラフィックリソースです。これらのプロパティは、個々のパーティクルに対して直接操作することはできませんが、システム内の個々の<b>パーティクル タイプを</b>定義するために使用されるアクションを通じて変更されます。パーティクルは、爆発、デカール、雨、雪、星空、破片などの美しく派手な効果を、インスタンスや<span class="notranslate">tiles</span> や<span class="notranslate">assets</span> のような CPU や GPU のオーバーヘッドなしにゲーム内に作り出すのに非常に便利です。</p>
+  <p><img><span data-keyref="GameMaker Name">GameMakerで</span>複雑なことをする場合、通常は<i>オブジェクトを</i>用意し、その<i>インスタンス</i>（<span
+      class="notranslate">object</span>
+    ）を<i>部屋の</i>中に作成します。しかし、グラフィックエフェクトの場合、インスタンスに含まれる変数や様々なイベントに含まれるコードによって、インスタンスごとに処理に「コスト」がかかるため、このコストが高くなることがあります。このコストを削減するには、グラフィックの描画に<span
+      class="notranslate">tiles</span> を使用するか、<span class="notranslate">room</span>
+    エディタの<i>アセットレイヤーを</i>使用することもできますが、いずれも一般的には、時間が経過しても同じ位置を維持し、特殊効果の少ない単純なグラフィックを描画する場合にのみ使用されます。しかし、ゲーム内で高速かつ多彩なグラフィック効果を描くには、パーティクルを使うという選択肢もあります。
+  </p>
+  <p>パーティクルは、<b>パーティクルシステム</b>内で定義された特定のプロパティを持つグラフィックリソースです。これらのプロパティは、個々のパーティクルに対して直接操作することはできませんが、システム内の個々の<b>パーティクル
+      タイプを</b>定義するために使用されるアクションを通じて変更されます。パーティクルは、爆発、デカール、雨、雪、星空、破片などの美しく派手な効果を、インスタンスや<span
+      class="notranslate">tiles</span> や<span class="notranslate">assets</span> のような CPU や GPU
+    のオーバーヘッドなしにゲーム内に作り出すのに非常に便利です。</p>
   <p>パーティクルシステムの基本的なセットアップは、次の3つのステップで行われる。</p>
   <ul class="colour">
-    <li><b>パーティクルシステムを作成</b>します。パーティクルシステムは、パーティクルエミッタを格納するためのコンテナのようなものです。アクションを使用してパーティクルの一連の視覚的な側面と動作を定義し、「コンテナ」（パーティクルシステム）に配置されたエミッタからパーティクルを使用することで、パーティクルを見えるようにします。</li>
-    <li><b>パーティクルタイプを作成</b>する。パーティクルの「タイプ」は、グラフィック効果そのものの定義です。色、アルファベット、サイズ、動きなど、さまざまなタイプのパーティクルを作成できますが、<i>個々のパーティクルをコントロールする</i>ことはできないので注意が必要です。一連のパラメータを定義すると、その中からランダムに動作が選ばれたパーティクルが作成されます。</li>
-    <li><b>パーティクルエミッターを作成</b>します。エミッターは、非常に明確に定義された範囲内でパーティクルをバーストまたはストリームするために使用され、特定のパーティクル効果を作成する<i>方法を</i>正確に定義するための特別なパラメータを与えることができます。エミッターはオプションです。アクション「<a href="Burst_Particles.htm">バーストパーティクル</a>」を使ってエミッターの効果の多くをエミュレートでき、エミッターの後始末を気にする必要がないという利点もあります。エミッターはパーティクルとは異なり、作成されたパーティクルが見えるようにシステムに属していなければならないことに注意してください。</li>
+    <li>
+      <b>パーティクルシステムを作成</b>します。パーティクルシステムは、パーティクルエミッタを格納するためのコンテナのようなものです。アクションを使用してパーティクルの一連の視覚的な側面と動作を定義し、「コンテナ」（パーティクルシステム）に配置されたエミッタからパーティクルを使用することで、パーティクルを見えるようにします。
+    </li>
+    <li>
+      <b>パーティクルタイプを作成</b>する。パーティクルの「タイプ」は、グラフィック効果そのものの定義です。色、アルファベット、サイズ、動きなど、さまざまなタイプのパーティクルを作成できますが、<i>個々のパーティクルをコントロールする</i>ことはできないので注意が必要です。一連のパラメータを定義すると、その中からランダムに動作が選ばれたパーティクルが作成されます。
+    </li>
+    <li>
+      <b>パーティクルエミッターを作成</b>します。エミッターは、非常に明確に定義された範囲内でパーティクルをバーストまたはストリームするために使用され、特定のパーティクル効果を作成する<i>方法を</i>正確に定義するための特別なパラメータを与えることができます。エミッターはオプションです。アクション「<a
+        href="Burst_Particles.htm">バーストパーティクル</a>」を使ってエミッターの効果の多くをエミュレートでき、エミッターの後始末を気にする必要がないという利点もあります。エミッターはパーティクルとは異なり、作成されたパーティクルが見えるようにシステムに属していなければならないことに注意してください。
+    </li>
   </ul>
   <p>パーティクルの設定や使い方については、マニュアルの以下のページでより詳しく解説しています。</p>
   <ul class="colour">
@@ -30,12 +47,16 @@
   <p>パーティクルはエフェクトを作成するための優れたツールですが、ゲームに問題を起こしたくない場合は、一定の制約やルールに従わなければなりません。</p>
   <ul class="colour">
     <li>パーティクルシステム、パーティクルタイプ、パーティクルエミッターはすべて<i>メモリを</i>消費するので、使い方に注意が必要です。</li>
-    <li>パーティクルは高速でCPUやGPUの負担が軽いかもしれませんが、それでもある程度の処理が必要なので、一度に4万個のパーティクルを画面全体にばらまくべきではありません。特定の効果を得るために必要なものに限定し、それ以上は使わないようにしましょう。</li>
-    <li><span class="notranslate">sprite</span> 同梱の 14 個のパーティクル<span class="notranslate">sprites</span> を使用する代わりに、独自のパーティクルを定義する場合は、必要な効果を得るために、できる限りパーティクルを小さくする必要があります。</li>
+    <li>
+      パーティクルは高速でCPUやGPUの負担が軽いかもしれませんが、それでもある程度の処理が必要なので、一度に4万個のパーティクルを画面全体にばらまくべきではありません。特定の効果を得るために必要なものに限定し、それ以上は使わないようにしましょう。
+    </li>
+    <li><span class="notranslate">sprite</span> 同梱の 14 個のパーティクル<span class="notranslate">sprites</span>
+      を使用する代わりに、独自のパーティクルを定義する場合は、必要な効果を得るために、できる限りパーティクルを小さくする必要があります。</li>
     <li>パーティクルは、何とも相互作用<i>しません</i>。ユーザーやゲーム内の他のインスタンスと何らかの相互作用が必要な場合、パーティクルは純粋にグラフィックなので、代わりにインスタンスを使用することを検討すべきです。</li>
     <li>1つのゲームで作成できるエミッターやパーティクルの数に技術的な制限はありませんが、メモリの使用量をできるだけ少なくするために、すべてを最小限の数に制限するようにしてください。</li>
     <li>モバイル端末では、パーティクルが画面の広い範囲を占めると描画が遅くなることがあるので注意が必要です（モバイル端末での過剰描画は速度低下の主な原因の1つです）。</li>
-    <li>HTML5 プラットフォームをターゲットとする場合、WebGL を有効にしない限り、カラー ブレンディングもできないことに注意してください（WebGL 非対応の canvas では、パーティクル カラーの最初の 1 つだけが使用されます）。</li>
+    <li>HTML5 プラットフォームをターゲットとする場合、WebGL を有効にしない限り、カラー ブレンディングもできないことに注意してください（WebGL 非対応の canvas では、パーティクル カラーの最初の 1
+      つだけが使用されます）。</li>
   </ul>
   <p>以下のセクションでは、独自のパーティクルシステムを作成するためのすべてのアクションをカバーしています。</p>
   <table class="dnd" style="text-align: left;margin-left:">
@@ -49,99 +70,151 @@
         <td class="dnd"> </td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Particle Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Lib_Particles.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Particle Action Library" class="center"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Lib_Particles.png" /></td>
         <td class="dnd"><a href="Create_Particle_System.htm">パーティクルシステムの作成</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Create Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_System.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Create Particle System Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_System.png" />
+        </td>
         <td class="dnd"><a href="Destroy_Particle_System.htm">デストロイ・パーティクル・システム</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Destroy Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_System.png" width="32" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Destroy Particle System Icon" class="icon"
+            height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_System.png"
+            width="32" /></td>
         <td class="dnd"><a href="Clear_Particle_System.htm">クリアパーティクルシステム</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Clear Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Clear_Particle_System.png" width="32" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Clear Particle System Icon" class="icon" height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Clear_Particle_System.png"
+            width="32" /></td>
         <td class="dnd"><a href="Pause_Particle_System.htm">ポーズパーティクルシステム</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Pause Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Pause_Particle_System.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Pause Particle System Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Pause_Particle_System.png" />
+        </td>
         <td class="dnd"><a href="Update_Particle_System.htm">パーティクルシステムのアップデート</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Update Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Update_Particle_System.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Update Particle System Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Update_Particle_System.png" />
+        </td>
         <td class="dnd"><a href="Create_Particle_Type.htm">パーティクルタイプの作成</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Create Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Create Particle Type Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" />
+        </td>
         <td class="dnd" style=""><a href="Destroy_Particle_Type.htm">デストロイ・パーティクル・タイプ</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Destroy Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Type.png" /></td>
-        <td class="dnd"><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;"> </span> <a href="Set_Particle_Size.htm">設定された粒子径</a><span style="display: none;"> </span></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Destroy Particle Type Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Type.png" />
+        </td>
+        <td class="dnd"><span style="display: none;"> </span><span style="display: none;"> </span><span
+            style="display: none;"> </span><span style="display: none;"> </span><span style="display: none;">
+          </span><span style="display: none;"> </span><span style="display: none;"> </span> <a
+            href="Set_Particle_Size.htm">設定されたパーティクル径</a><span style="display: none;"> </span></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Size Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Size.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Size Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Size.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Sprite.htm">パーティクルスプライトの設定</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Sprite Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Sprite.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Sprite Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Sprite.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Shape.htm">パーティクル形状を設定する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Shape Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Shape.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Shape Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Shape.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Colour.htm">パーティクルカラーを設定する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Colour Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Colour.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Colour Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Colour.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Alpha.htm">パーティクルアルファの設定</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Alpha Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Alpha.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Alpha Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Alpha.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Life.htm">パーティクルライフを設定する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Life Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Life.png" width="32" /></td>
-        <td class="dnd"><a href="Set_Particle_Speed.htm">粒子速度の設定</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Life Icon" class="icon" height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Life.png"
+            width="32" /></td>
+        <td class="dnd"><a href="Set_Particle_Speed.htm">パーティクル速度の設定</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Speed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Speed.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Speed Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Speed.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Direction.htm">パーティクルの方向を設定する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Direction Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Direction.png" /></td>
-        <td class="dnd"><a href="Set_Particle_Orientation.htm">粒子の向きを設定する</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Direction Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Direction.png" />
+        </td>
+        <td class="dnd"><a href="Set_Particle_Orientation.htm">パーティクルの向きを設定する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Orientation Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Orientation.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Orientation Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Orientation.png" />
+        </td>
         <td class="dnd"><a href="Set_Particle_Gravity.htm">パーティクルグラビティの設定</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Gravity Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Gravity.png" /></td>
-        <td class="dnd"><a href="Set_Secondary_Particles.htm">二次粒子を設定する</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Particle Gravity Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Gravity.png" />
+        </td>
+        <td class="dnd"><a href="Set_Secondary_Particles.htm">二次パーティクルを設定する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Secondary Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Secondary_Particles.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Secondary Particles Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Secondary_Particles.png" />
+        </td>
         <td class="dnd"><a href="Burst_Particles.htm">バーストパーティクル</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Burst Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Burst_Particles.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Burst Particles Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Burst_Particles.png" />
+        </td>
         <td class="dnd"><a href="Create_Particle_Emitter.htm">パーティクルエミッターの作成</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Create Particle Emitter Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Emitter.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Create Particle Emitter Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Emitter.png" />
+        </td>
         <td class="dnd"><a href="Destroy_Particle_Emitter.htm">デストロイ・パーティクル・エミッター</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Destroy Particle Emitter Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Emitter.png" width="32" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Destroy Particle Emitter Icon" class="icon"
+            height="32"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Emitter.png"
+            width="32" /></td>
         <td class="dnd"><a href="Emit_Particles.htm">パーティクルを放出する</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Emit Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Emit_Particles.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Emit Particles Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Emit_Particles.png" />
+        </td>
         <td class="dnd"><a href="Set_Emitter_Region.htm">エミッタ領域の設定</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Emitter Region Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Emitter_Region.png" /></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Emitter Region Icon" class="icon"
+            src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Emitter_Region.png" />
+        </td>
         <td class="dnd"><a href="Do_Effect.htm">Do効果</a></td>
       </tr>
     </tbody>
@@ -185,11 +258,14 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../DnD_Reference.htm">インデックス</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="../Time_Sources/Time_Sources_(GML_Visual).htm">タイムソース (<span class="notranslate">GML</span> Visual)</a></div>
+        <div style="float:left">前のページ：<a href="../DnD_Reference.htm">インデックス</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}"
+            href="../Time_Sources/Time_Sources_(GML_Visual).htm">タイムソース
+            (<span class="notranslate">GML</span> Visual)</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Miscellaneous Actions
@@ -199,4 +275,5 @@ Miscellaneous Actions
 dnd_miscellaneous
 -->
 </body>
+
 </html>

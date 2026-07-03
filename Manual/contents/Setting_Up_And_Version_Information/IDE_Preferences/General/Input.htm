@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>入力</title>
@@ -12,23 +13,47 @@
   <meta name="rh-index-keywords" content="Prefs - General - Input" />
   <meta name="search-keywords" content="Input Preferences" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>入力環境設定</h1>
-  <p><img alt="Input Window Prefs" class="center" src="../../../assets/Images/Setup_And_Version/Preferences/General_Input_Prefs.png" /></p>
-  <p><a href="../../../IDE_Navigation/IDE_Input.htm"><strong>入力 </strong></a>環境設定は、<span class="notranslate">IDE</span> におけるマウスとキーボード入力の特定の側面を制御します。 利用可能なオプションは次のとおりです。</p>
+  <p><img alt="Input Window Prefs" class="center"
+      src="../../../assets/Images/Setup_And_Version/Preferences/General_Input_Prefs.png" /></p>
+  <p><a href="../../../IDE_Navigation/IDE_Input.htm"><strong>入力 </strong></a>環境設定は、<span class="notranslate">IDE</span>
+    におけるマウスとキーボード入力の特定の側面を制御します。 利用可能なオプションは次のとおりです。</p>
   <ul class="colour">
-    <li><strong>ダブルクリックの時間が遅い(ms</strong>)。<span class="notranslate">IDE</span> の一部の領域では、リソースの名前を変更するときなど、正しく動作するために遅いダブルクリックが必要です（速いダブルクリックでリソースエディタを開き、遅いダブルクリックで名前を変更することができます）。このオプションでは検出速度を設定でき、デフォルト値は500msです。</li>
-    <li><strong>スクロールロック時間(ms)</strong>。このオプションは、<span data-keyref="GameMaker Name">GameMakerが</span>オーバーラップしているスクロールウィンドウの間で待つべき時間を扱います。基本的には、ウィンドウ &quot;A&quot; でスクロールしているときに、カーソルがウィンドウ &quot;B&quot; の別のスクロール可能な領域に重なることがあります。この環境設定は、&quot;A&quot; のスクロールを停止してから &quot;B&quot; をスクロールするまでの待ち時間を定義し、誤って別のパネルをスクロールし始めることがないようにするものです。デフォルト値は 500ms です。</li>
-    <li><strong>パンニング時にカーソルを画面に回り込ま</strong>せる。有効にすると、パンするときにカーソルを画面の境界線に巻き付けます<span class="notranslate">workspaces</span> 。デフォルトは有効です。</li>
+    <li><strong>ダブルクリックの時間が遅い(ms</strong>)。<span class="notranslate">IDE</span>
+      の一部の領域では、リソースの名前を変更するときなど、正しく動作するために遅いダブルクリックが必要です（速いダブルクリックでリソースエディタを開き、遅いダブルクリックで名前を変更することができます）。このオプションでは検出速度を設定でき、デフォルト値は500msです。
+    </li>
+    <li><strong>スクロールロック時間(ms)</strong>。このオプションは、<span
+        data-keyref="GameMaker Name">GameMakerが</span>オーバーラップしているスクロールウィンドウの間で待つべき時間を扱います。基本的には、ウィンドウ &quot;A&quot;
+      でスクロールしているときに、カーソルがウィンドウ &quot;B&quot; の別のスクロール可能な領域に重なることがあります。この環境設定は、&quot;A&quot; のスクロールを停止してから &quot;B&quot;
+      をスクロールするまでの待ち時間を定義し、誤って別のパネルをスクロールし始めることがないようにするものです。デフォルト値は 500ms です。</li>
+    <li><strong>パンニング時にカーソルを画面に回り込ま</strong>せる。有効にすると、パンするときにカーソルを画面の境界線に巻き付けます<span
+        class="notranslate">workspaces</span> 。デフォルトは有効です。</li>
     <li><strong>スクロール速度</strong>：異なる<span class="notranslate">workspaces</span> 内のスクロール速度を制御します。デフォルト値は1です。</li>
-    <li><strong>デスクトップの最大化を解除するためのタブドラッグ距離(px</strong>)。<span class="notranslate">workspace</span> タブを<span class="notranslate">IDE</span> 内のデフォルト位置からドラッグしたとき、その時点でアクティブな<span class="notranslate">workspace</span> が 1 つしかなければ<span data-keyref="GameMaker Name">GameMaker</span>ウィンドウは最大化されず、マウスで移動します (<span class="notranslate">workspace</span> が複数ある場合は<span class="notranslate">IDE</span> の新しいインスタンスが作成されて<span class="notranslate">workspace</span> が保持されます)。この設定は、<span class="notranslate">workspace</span> がタブを認識するまでにドラッグしなければならない距離を制御します。デフォルト値は 50px です。</li>
-    <li><strong>ウィンドウの内容を操作するための最小ズームレベル (%</strong>)。このオプションは、マウスで<span class="notranslate">workspace</span> ウィンドウを操作できなくなるズーム・カットオフ・ポイントをコントロールします（例：ノードの追加、ウィンドウのドラッグ、など）。デフォルト値は40です。</li>
-    <li><strong>マウスホイールズームにはCtrlキーが必要</strong>です。これをチェックすると、すべてのエディタ（およびメイン<span class="notranslate">workspace</span> ）で、<img> /<img> + マウスホイール<img> によるズームが有効になり、チェックを外すと、マウスホイール MMB Icon のみによるズームが有効になります。</li>
-    <li><strong>Ctrl + MMB で、マニュアルではなく、継承されたイベントを</strong>開くことができます。これをチェックすると、<span class="notranslate">object</span> の中で<img> /<img> + マウスの中ボタン<img> を押すと、マニュアルではなく<span class="notranslate">objects</span> の継承イベントを開きます（継承イベントがある場合）。</li>
-    <li><strong>テキスト選択にバイアスをかけ、行飛びを</strong>防止します。この機能をオンにすると、任意のテキストウィンドウで1行を選択する際に、考えられた行の高さがパッドされ、垂直方向の不正確さが発生しにくくなります。デフォルトで有効になっています。</li>
-    <li><strong>すべてのデバイスでラップトップモードを有効に</strong>する。これをチェックすると、<span class="notranslate">IDE</span> に<a href="../../../IDE_Navigation/IDE_Input.htm">ラップトップモードボタンが</a>表示され、<span data-keyref="GameMaker Name">GameMakerを</span>起動しているデバイスがラップトップかどうかに関わらず、必要に応じて<span class="notranslate">switch</span> のオン/オフが可能になります。デフォルトではチェックされていません。</li>
-    <li><strong>Laptopモードを強制</strong>する。この設定は、Laptop Modeを使用可能かどうかを変更するもので、デフォルトで有効になっています。これを無効にすると、ラップトップで<span class="notranslate">IDE</span> を起動したときにラップトップモードが自動的に有効にならないようにすることができます。</li>
+    <li><strong>デスクトップの最大化を解除するためのタブドラッグ距離(px</strong>)。<span class="notranslate">workspace</span> タブを<span
+        class="notranslate">IDE</span> 内のデフォルト位置からドラッグしたとき、その時点でアクティブな<span class="notranslate">workspace</span> が 1
+      つしかなければ<span data-keyref="GameMaker Name">GameMaker</span>ウィンドウは最大化されず、マウスで移動します (<span
+        class="notranslate">workspace</span> が複数ある場合は<span class="notranslate">IDE</span> の新しいインスタンスが作成されて<span
+        class="notranslate">workspace</span> が保持されます)。この設定は、<span class="notranslate">workspace</span>
+      がタブを認識するまでにドラッグしなければならない距離を制御します。デフォルト値は 50px です。</li>
+    <li><strong>ウィンドウの内容を操作するための最小ズームレベル (%</strong>)。このオプションは、マウスで<span class="notranslate">workspace</span>
+      ウィンドウを操作できなくなるズーム・カットオフ・ポイントをコントロールします（例：ノードの追加、ウィンドウのドラッグ、など）。デフォルト値は40です。</li>
+    <li><strong>マウスホイールズームにはCtrlキーが必要</strong>です。これをチェックすると、すべてのエディタ（およびメイン<span class="notranslate">workspace</span>
+      ）で、<img> /<img> + マウスホイール<img> によるズームが有効になり、チェックを外すと、マウスホイール MMB Icon のみによるズームが有効になります。</li>
+    <li><strong>Ctrl + MMB で、マニュアルではなく、継承されたイベントを</strong>開くことができます。これをチェックすると、<span class="notranslate">object</span>
+      の中で<img> /<img> + マウスの中ボタン<img> を押すと、マニュアルではなく<span class="notranslate">objects</span> の継承イベントを開きます（継承イベントがある場合）。
+    </li>
+    <li>
+      <strong>テキスト選択にバイアスをかけ、行飛びを</strong>防止します。この機能をオンにすると、任意のテキストウィンドウで1行を選択する際に、考えられた行の高さがパッドされ、垂直方向の不正確さが発生しにくくなります。デフォルトで有効になっています。
+    </li>
+    <li><strong>すべてのデバイスでラップトップモードを有効に</strong>する。これをチェックすると、<span class="notranslate">IDE</span> に<a
+        href="../../../IDE_Navigation/IDE_Input.htm">ラップトップモードボタンが</a>表示され、<span
+        data-keyref="GameMaker Name">GameMakerを</span>起動しているデバイスがラップトップかどうかに関わらず、必要に応じて<span
+        class="notranslate">switch</span> のオン/オフが可能になります。デフォルトではチェックされていません。</li>
+    <li><strong>Laptopモードを強制</strong>する。この設定は、Laptop Modeを使用可能かどうかを変更するもので、デフォルトで有効になっています。これを無効にすると、ラップトップで<span
+        class="notranslate">IDE</span> を起動したときにラップトップモードが自動的に有効にならないようにすることができます。</li>
   </ul>
   <p> </p>
   <p> </p>
@@ -36,11 +61,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../General_Preferences.htm">一般的な環境設定</a></div>
-        <div style="float:right">次へ<a href="Output_Windows.htm">出力ウィンドウの環境設定</a></div>
+        <div style="float:left">前のページ：<a href="../General_Preferences.htm">一般的な環境設定</a></div>
+        <div style="float:right">次のページ：<a href="Output_Windows.htm">出力ウィンドウの環境設定</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - General, Input
@@ -49,4 +75,5 @@ Preferences - General, Input
 prefs_input
 -->
 </body>
+
 </html>

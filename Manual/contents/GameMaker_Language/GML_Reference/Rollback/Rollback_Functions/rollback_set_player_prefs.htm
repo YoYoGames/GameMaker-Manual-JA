@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -15,15 +16,19 @@
   <meta name="rh-index-keywords" content="rollback_set_player_prefs" />
   <meta name="search-keywords" content="rollback_set_player_prefs" />
 </head>
+
 <body>
   <h1><span data-field="title" data-format="default">rollback_set_player_prefs</span></h1>
-  <p><a href="rollback_set_player_prefs.htm">プリファレンスを有効に</a>した後、この関数はローカル プレーヤーのプリファレンスを設定するために使用されます。つまり、この関数は<a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">ローカルの入力</a>に依存し、<a href="rollback_get_input.htm">Rollbackの入力には</a>依存しない必要があります。</p>
+  <p><a href="rollback_set_player_prefs.htm">プリファレンスを有効に</a>した後、この関数はローカル プレーヤーのプリファレンスを設定するために使用されます。つまり、この関数は<a
+      href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">ローカルの入力</a>に依存し、<a
+      href="rollback_get_input.htm">Rollbackの入力には</a>依存しない必要があります。</p>
   <p>プリファレンスはどのようなタイプでもかまいません。デフォルトのプリファレンスが設定されている場合は、同じデータ型と構造を使用することを確認してください。</p>
   <p>いずれかのプレイヤーが環境設定を行うと、ゲーム内の全員が<a data-xref="{text}" href="../Rollback_Events.htm#h1">ロールバックイベントを</a>受け取ります。</p>
   <p>使用する場合、この関数は<a href="rollback_join_game.htm">join/create</a>関数の前に実行する必要があります。</p>
-  <p>必ずお読みください。<a data-xref="{title}" href="../Rollback_Preferences.htm">プレイヤーの環境設定</a><a data-xref="{text}" href="../Rollback_System.htm#h3"> </a></p>
+  <p>必ずお読みください。<a data-xref="{title}" href="../Rollback_Preferences.htm">プレイヤーの環境設定</a><a data-xref="{text}"
+      href="../Rollback_System.htm#h3"> </a></p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">rollback_set_player_prefs</span>(preferences);</p>
   <table>
     <colgroup>
@@ -33,25 +38,27 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">preferences</span></td>
-        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">任意の</a></span></td>
+        <td><span data-keyref="Type_Any"><a
+              href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable"
+              target="_blank">任意の</a></span></td>
         <td><span class="notranslate">The preferences to set for the local player.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code" id="p">rollback_set_player_prefs({)<br />
-        character: obj_customizer.character_selected,<br />
-        カラー: obj_customizer.color_selected<br />
+    character: obj_customizer.character_selected,<br />
+    カラー: obj_customizer.color_selected<br />
     });</p>
   <p>上記のコードは、プレーヤーのプリファレンスを設定し、アンマネージド（ローカル）である「カスタマイザー」<span class="notranslate">object</span> から値を読み取ります。</p>
   <p> </p>
@@ -63,7 +70,8 @@
         <div>次ページ：<a data-xref="{title}" href="rollback_get_player_prefs.htm">rollback_get_player_prefs</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_set_player_prefs
@@ -72,4 +80,5 @@ rollback_set_player_prefs
 rollback_set_player_prefs
 -->
 </body>
+
 </html>

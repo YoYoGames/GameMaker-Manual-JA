@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_get_num_bounds</title>
@@ -13,16 +14,20 @@
   <meta name="search-keywords" content="skeleton_get_num_bounds" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_get_num_bounds</span></h1>
-  <p>この関数は、コードを実行しているインスタンスに割り当てられているスケルトン・アニメーション<span class="notranslate">sprite</span> に関連するバウンディング・ボックスの数を返します。この関数は <a href="skeleton_get_bounds.htm"><span class="inline">skeleton_get_bounds()</span></a>を使用して、各バウンディングボックスに関するデータを取得することができます。</p>
+  <p>この関数は、コードを実行しているインスタンスに割り当てられているスケルトン・アニメーション<span class="notranslate">sprite</span> に関連するバウンディング・ボックスの数を返します。この関数は
+    <a href="skeleton_get_bounds.htm"><span
+        class="inline">skeleton_get_bounds()</span></a>を使用して、各バウンディングボックスに関するデータを取得することができます。
+  </p>
   <div data-conref="../../../../../../assets/snippets/Spine_bounding_box_note.hts"> </div>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_get_num_bounds</span>();</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -36,24 +41,28 @@
             var data = b_info[1] + &quot;:&quot;;<br />
             for(var j = 0; j &lt; b_info[0]; j++)<br />
             {<br />
-                data += &quot; (&quot; + string(b_info[(j * 2) + 2]) + &quot;, &quot; + string(b_info[(j * 2) + 2 + 1]) + &quot;)&quot;;<br />
+                data += &quot; (&quot; + string(b_info[(j * 2) + 2]) + &quot;, &quot; + string(b_info[(j * 2) + 2 + 1])
+    + &quot;)&quot;;<br />
             }<br />
             draw_text(20, yy, data);<br />
             yy += 20;<br />
         }<br />
     }</p>
-  <p>上記のコードは、現在割り当てられている<span class="notranslate">loop</span> に関連する各バウンディングボックスを<span class="notranslate">sprite</span> 通過し、そのデータを<span class="notranslate">string</span> として画面に描画します。</p>
+  <p>上記のコードは、現在割り当てられている<span class="notranslate">loop</span> に関連する各バウンディングボックスを<span class="notranslate">sprite</span>
+    通過し、そのデータを<span class="notranslate">string</span> として画面に描画します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Drawing_And_Miscellaneous.htm">図面・雑記</a></div>
-        <div style="float:right">次のページ <a href="skeleton_get_bounds.htm"><span class="notranslate">skeleton_get_bounds</span></a></div>
+        <div style="float:left">前のページ：<a href="Drawing_And_Miscellaneous.htm">描画・雑記</a></div>
+        <div style="float:right">次のページ：<a href="skeleton_get_bounds.htm"><span
+              class="notranslate">skeleton_get_bounds</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_get_num_bounds
@@ -62,4 +71,5 @@ skeleton_get_num_bounds
 skeleton_get_num_bounds
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_joint_weld_create</title>
@@ -13,22 +14,31 @@
   <meta name="search-keywords" content="physics_joint_weld_create" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_joint_weld_create</span></h1>
-  <p>ウェルドジョイントは、2つの冶具を強固に、かつ柔軟に結合させるために設計されています。ウェルド・ジョイントは、接合された2つのフィクスチャー間のフレックスを許容しますが、例えばディスタンス・ジョイントのような伸縮はなく、ストレスや負荷がかかると常に基準角度に「スプリング」バックしようとします。下の図に示すように、<span class="notranslate">room</span> でジョイントを作成する箇所と、ジョイントが常に維持しようとする角度を定義します。</p>
-  <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span> に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span> エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span> のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。ですから、インスタンスの原点以外の場所に溶接ジョイントを作成しても、それはまだ有効で、作成された位置から相対的に2つのインスタンスを拘束することになります。</p>
+  <p>
+    ウェルドジョイントは、2つの冶具を強固に、かつ柔軟に結合させるために設計されています。ウェルド・ジョイントは、接合された2つのフィクスチャー間のフレックスを許容しますが、例えばディスタンス・ジョイントのような伸縮はなく、ストレスや負荷がかかると常に基準角度に「スプリング」バックしようとします。下の図に示すように、<span
+      class="notranslate">room</span> でジョイントを作成する箇所と、ジョイントが常に維持しようとする角度を定義します。</p>
+  <p><img> <span class="notranslate">room</span> 特に、インスタンスを<span class="notranslate">room</span>
+    に配置するのではなく、ジョイントと同時に<span class="notranslate">room</span>
+    エディタで作成する場合は、アンカーポイントを定義する際に注意する必要があります。また、ジョイントはインスタンスの<span class="notranslate">sprite</span>
+    のサイズや、インスタンスが接続しているフィクスチャとは無関係に作成されることも知っておく必要があります。ですから、インスタンスの原点以外の場所に溶接ジョイントを作成しても、それはまだ有効で、作成された位置から相対的に2つのインスタンスを拘束することになります。
+  </p>
   <p>溶接ジョイントは柔軟性があり、何らかのストレスがかかると曲がったり屈曲したりするので、ジョイントの振動周波数（Hz）とダンピング比を設定して、さまざまな効果を得ることができます。</p>
-  <p>col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
+  <p>col」の値を <span class="inline">true</span> に設定すると、2つのインスタンスは相互作用して衝突することができますが、衝突イベントがある<i>場合のみ</i>です。しかし、 <span
+      class="inline">false</span> に設定すると、何があっても衝突することはありません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_joint_weld_create</span>(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_weld_create</span>(inst1, inst2,
+    anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">inst1</span></td>
@@ -73,7 +83,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
   <p> </p>
   <h4>例</h4>
@@ -93,18 +103,21 @@
         _p_id = _o_id;<br />
     }<br />
     physics-fixture_delete(fix);</p>
-  <p>上記のコードでは、フィクスチャを作成し、<span class="notranslate">loop</span> を使っていくつかのインスタンスを作成し、フィクスチャをそれぞれの新しいインスタンスにバインドし、溶接ジョイントを使ってそれらをすべて結合しています。最後に、フィクスチャはメモリから削除されます。</p>
+  <p>上記のコードでは、フィクスチャを作成し、<span class="notranslate">loop</span>
+    を使っていくつかのインスタンスを作成し、フィクスチャをそれぞれの新しいインスタンスにバインドし、溶接ジョイントを使ってそれらをすべて結合しています。最後に、フィクスチャはメモリから削除されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Joints.htm">関節</a></div>
-        <div style="float:right">次のページ <a href="physics_joint_friction_create.htm"><span class="notranslate">physics_joint_friction_create</span></a></div>
+        <div style="float:left">前のページ：<a href="Joints.htm">関節</a></div>
+        <div style="float:right">次のページ：<a href="physics_joint_friction_create.htm"><span
+              class="notranslate">physics_joint_friction_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_weld_create
@@ -113,4 +126,5 @@ physics_joint_weld_create
 physics_joint_weld_create
 -->
 </body>
+
 </html>

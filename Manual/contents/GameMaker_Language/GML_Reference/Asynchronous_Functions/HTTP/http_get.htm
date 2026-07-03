@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>http_get</title>
@@ -12,68 +13,95 @@
   <meta name="rh-index-keywords" content="http_get" />
   <meta name="search-keywords" content="http_get" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">http_get</span></h1>
-  <p>この関数では、指定されたURLに接続し、情報を取得する。これは非同期関数であるため、<span data-keyref="GameMaker Name">GameMakerは</span>応答を待つ間ブロックせず、コールバック情報を取得しない限り実行しつづける。この情報は<span class="notranslate">string</span> の形式で、<span class="notranslate">object</span> プロパティに定義されているインスタンスで<b>非同期イベントを</b>トリガーすることになる。また、HTTPリクエスト・パラメータ（Webページでフォームを送信するときにURLの末尾に「付加」されるビット）は、例えばこの関数を使用するときに完全に受け入れられることに注意する必要があります。</p>
+  <p>この関数では、指定されたURLに接続し、情報を取得する。これは非同期関数であるため、<span
+      data-keyref="GameMaker Name">GameMakerは</span>応答を待つ間ブロックせず、コールバック情報を取得しない限り実行しつづける。この情報は<span
+      class="notranslate">string</span> の形式で、<span class="notranslate">object</span>
+    プロパティに定義されているインスタンスで<b>非同期イベントを</b>トリガーすることになる。また、HTTPリクエスト・パラメータ（Webページでフォームを送信するときにURLの末尾に「付加」されるビット）は、例えばこの関数を使用するときに完全に受け入れられることに注意する必要があります。
+  </p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
-  <p>は、変数 &quot;name &quot;に格納されている<span class="notranslate">string</span> を<span class="notranslate">server</span> に渡すと同時に、そのURLからデータを取得する。したがって、基本的には、単純で短いデータをクライアントから<span class="notranslate">server</span> に渡す必要がある場合は、この関数を使用するのが妥当でしょう。</p>
-  <p class="note"><b>注</b>：ブラウザのXSS保護機能により、クロスドメインからのリソースへのリクエストや読み込みの試みはブロックされ、空白の結果が返されるように見えることがありますので、ご注意ください。詳しくは、「<a href="HTTP.htm">クロスドメインの問題</a>」のセクションを参照してください。</p>
-  <p>この関数は、任意の<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTPイベントによって</a>ピックアップされる複数の &quot;コールバック &quot;を生成します。これらは、このイベント専用の <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a>(より一般的には &quot;辞書 &quot;として知られている)を生成し、このイベント専用の特別な変数 <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>非同期ロード</b></a>.このDSマップは、返されるデータがあるかどうかによって異なる値を含むことになります。たとえば、ファイルを要求した場合、データの各パケットを受信すると、イベントが複数回トリガーされるので、たとえばプログレスバーを表示することができます。DSマップの一般的な構造は、以下のようになります。</p>
+  <p>は、変数 &quot;name &quot;に格納されている<span class="notranslate">string</span> を<span class="notranslate">server</span>
+    に渡すと同時に、そのURLからデータを取得する。したがって、基本的には、単純で短いデータをクライアントから<span class="notranslate">server</span>
+    に渡す必要がある場合は、この関数を使用するのが妥当でしょう。</p>
+  <p class="note">
+    <b>注</b>：ブラウザのXSS保護機能により、クロスドメインからのリソースへのリクエストや読み込みの試みはブロックされ、空白の結果が返されるように見えることがありますので、ご注意ください。詳しくは、「<a
+      href="HTTP.htm">クロスドメインの問題</a>」のセクションを参照してください。
+  </p>
+  <p>この関数は、任意の<a
+      href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTPイベントによって</a>ピックアップされる複数の
+    &quot;コールバック &quot;を生成します。これらは、このイベント専用の <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS
+        Map</span></a>(より一般的には &quot;辞書 &quot;として知られている)を生成し、このイベント専用の特別な変数 <a
+      href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>非同期ロード</b></a>.このDSマップは、返されるデータがあるかどうかによって異なる値を含むことになります。たとえば、ファイルを要求した場合、データの各パケットを受信すると、イベントが複数回トリガーされるので、たとえばプログレスバーを表示することができます。DSマップの一般的な構造は、以下のようになります。
+  </p>
   <ul class="colour">
-    <li><b>id。 </b>コマンドから返されたID。もし <span class="inline">http_</span> のリクエストを連続して発行した場合、どのリクエストに対する返答なのかを知る必要があります。そのため、この値を使って、最初にリクエストを送ったときに保存した値と比較し、正しいものを探します。</li>
+    <li><b>id。 </b>コマンドから返されたID。もし <span class="inline">http_</span>
+      のリクエストを連続して発行した場合、どのリクエストに対する返答なのかを知る必要があります。そのため、この値を使って、最初にリクエストを送ったときに保存した値と比較し、正しいものを探します。</li>
     <li><b>のステータスを返します。 </b>エラーなら0未満、完了なら0、パケット受信なら1の値を返す（詳細は後述）。</li>
     <li><b>の結果です。 </b>受信したデータ（<span class="notranslate">string</span> のみ）。</li>
     <li><b>url。 </b>要求された完全なURL。</li>
-    <li><b>http_status。 </b>生の http ステータスコード (利用可能な場合)。例えば 304 は &quot;Not Modified&quot;、204 は &quot;No Content&quot; などです。</li>
+    <li><b>http_status。 </b>生の http ステータスコード (利用可能な場合)。例えば 304 は &quot;Not Modified&quot;、204 は &quot;No Content&quot;
+      などです。</li>
   </ul>
   <p>ゲームに返されるパケットが複数ある場合、コールバックの「status」キーは1を返し、その場合、DSマップは以下の追加キーを持つことになります。</p>
   <ul class="colour">
-    <li><b>&quot;contentLength&quot;。 </b>これは、ウェブ<span class="notranslate">server</span> が受信を期待すべきと言ったファイルのサイズです (<span class="notranslate">server</span> がこのデータを返さない場合は -1 になることがあります)。</li>
+    <li><b>&quot;contentLength&quot;。 </b>これは、ウェブ<span class="notranslate">server</span> が受信を期待すべきと言ったファイルのサイズです (<span
+        class="notranslate">server</span> がこのデータを返さない場合は -1 になることがあります)。</li>
     <li><b>&quot;sizeDownloaded &quot;の略。 </b>既にダウンロードしたデータのサイズ。</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">http_get</span>(url);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">url</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">文字列</a></span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">文字列</a></span></td>
         <td><span class="notranslate">The web address of the server that you wish to get information from</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_ID_Async_Event"><a
+        href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm"
+        target="_blank">Async Request ID</a></span></p>
   <p> </p>
   <h4>拡張された例。</h4>
-  <p> <span class="inline">http_get()</span> 関数は任意のイベントから呼び出すことができます。非同期なので、コールバックはほとんど即座に行われることもあれば、数秒かかることもあります。この関数を呼び出すのは簡単で、次のようになります。</p>
+  <p> <span class="inline">http_get()</span>
+    関数は任意のイベントから呼び出すことができます。非同期なので、コールバックはほとんど即座に行われることもあれば、数秒かかることもあります。この関数を呼び出すのは簡単で、次のようになります。</p>
   <p class="code">get = http_get(&quot;http://www.MacSweeneyGames.com/logon?username=&quot; + name);</p>
-  <p>上記のコードは、変数 &quot;name&quot; に保持された<span class="notranslate">string</span> を与えられた<span class="notranslate">server</span> に渡すと同時に、その URL からデータを取得し、async_load DS マップを含む Async Event をトリガーします（async_load マップのインデックスは変数 &quot;get&quot; に格納されるので、正しいコールバックを確認することができます）。トリガーされる非同期イベントは<b>HTTP</b>サブイベントとなり、そのイベントには以下のようなものがあります。</p>
+  <p>上記のコードは、変数 &quot;name&quot; に保持された<span class="notranslate">string</span> を与えられた<span
+      class="notranslate">server</span> に渡すと同時に、その URL からデータを取得し、async_load DS マップを含む Async Event をトリガーします（async_load
+    マップのインデックスは変数 &quot;get&quot;
+    に格納されるので、正しいコールバックを確認することができます）。トリガーされる非同期イベントは<b>HTTP</b>サブイベントとなり、そのイベントには以下のようなものがあります。</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == get<br />
     {<br />
         var _status = async_load[? &quot;status&quot;];<br />
         var _r_str = (_status == 0) ? async_load[? &quot;result&quot;] : &quot;null&quot;;<br />
     }</p>
-  <p>上記のコードでは、まず作成されたDSマップのidをチェックし、次にコールバックの「状態」をチェックする。値が0（成功を意味する）の場合は、コールバックの結果が変数に格納され、それ以外の場合は変数にデフォルト値（この場合は &quot;null&quot;）がセットされる。</p>
+  <p>上記のコードでは、まず作成されたDSマップのidをチェックし、次にコールバックの「状態」をチェックする。値が0（成功を意味する）の場合は、コールバックの結果が変数に格納され、それ以外の場合は変数にデフォルト値（この場合は
+    &quot;null&quot;）がセットされる。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">次のページ <a href="http_get.htm"><span class="notranslate">http_get_file</span></a></div>
+        <div style="float:left">前のページ：<a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">次のページ：<a href="http_get.htm"><span class="notranslate">http_get_file</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 http_get
@@ -82,4 +110,5 @@ http_get
 http_get
 -->
 </body>
+
 </html>

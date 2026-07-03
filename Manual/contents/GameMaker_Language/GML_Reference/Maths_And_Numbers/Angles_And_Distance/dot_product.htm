@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>dot_product</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
@@ -12,20 +14,26 @@
   <meta name="search-keywords" content="dot_product" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">dot_product</span></h1>
   <p>内積とは、2つのベクトルの角度関係を表す値で、2つのベクトルを取り、掛け合わせ、足し合わせることで求められる。ドットプロダクトという名称は、中央のドット&quot;-&quot;に由来する。
     スカラー積はベクトルではなくスカラーであることを強調した名称である）。</p>
   <p>実際の数式はこのように書くことができる。</p>
-  <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p>
-  <p>つまり、2Dではベクトル <span class="inline">a[x1,y1]</span> と <span class="inline">b[x2,2]</span> の内積は <span class="inline">x1x2 + y1y2</span> 、<span data-keyref="GameMaker Name">GameMakerでの</span>dot_productは次のように計算されます。</p>
+  <p><img alt="Dot Product formula" class="center"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png" /></p>
+  <p>つまり、2Dではベクトル <span class="inline">a[x1,y1]</span> と <span class="inline">b[x2,2]</span> の内積は <span
+      class="inline">x1x2 + y1y2</span> 、<span data-keyref="GameMaker Name">GameMakerでの</span>dot_productは次のように計算されます。
+  </p>
   <p class="code">a · b = (x1*x2)+(y1*y2);</p>
   <p>内積の不思議なところは、入力ベクトルが作る角度と関係があり、次のように表現できることだ。</p>
   <p class="code">a · b = (length of a) * (length of b) * cos(angle)</p>
   <p>つまり、2つのベクトルの内積は、それらのベクトル間の角度の余弦に、それぞれのベクトルの長さを掛けたものになるのです。以下は、その説明のための画像です。</p>
-  <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p>
-  <p class="note"><strong>注</strong>：ベクターの詳細については、<a href="../../../../Additional_Information/Vectors.htm">こちらを</a>ご覧ください。</p>
+  <p><img alt="Dot Product ilustration" class="center" height="143"
+      src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406" /></p>
+  <p class="note"><strong>注</strong>：ベクターの詳細については、<a
+      href="../../../../Additional_Information/Vectors.htm">こちらを</a>ご覧ください。</p>
   <p>任意の2つのベクトルから、その内積の結果との関係で述べられることがいくつかある。</p>
   <ul class="colour">
     <li>aとbが垂直（互いに90度）であれば、 <span class="inline">cos(ang)</span> が0になるため、内積の結果は0になります。</li>
@@ -43,34 +51,42 @@
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the first vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the first vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the second vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of the second vector.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">var x1, y1, x2, y2;<br/> x1 = lengthdir_x(1, image_angle);<br/> y1 = lengthdir_y(1, image_angle);<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> if dot_product(x1, y1, x2, y2) &gt; 0 seen=true else seen=false;</p>
-  <p>上記のコードでは、インスタンスの画像の角度を用いてベクトルを作成し、プレーヤー<span class="notranslate">object</span> &quot;o_Player&quot; のベクトルを自分自身に取得します。最後に、この2つのベクトルの内積を計算し、それが0より大きい場合は変数
+  <p class="code">var x1, y1, x2, y2;<br /> x1 = lengthdir_x(1, image_angle);<br /> y1 = lengthdir_y(1,
+    image_angle);<br /> x2 = o_Player.x - x;<br /> y2 = o_Player.y - y;<br /> if dot_product(x1, y1, x2, y2) &gt; 0
+    seen=true else seen=false;</p>
+  <p>上記のコードでは、インスタンスの画像の角度を用いてベクトルを作成し、プレーヤー<span class="notranslate">object</span> &quot;o_Player&quot;
+    のベクトルを自分自身に取得します。最後に、この2つのベクトルの内積を計算し、それが0より大きい場合は変数
     &quot;seen&quot; を true に、0 以下なら &quot;false&quot; に設定する。</p>
   <p> </p>
   <p> </p>
@@ -78,11 +94,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Angles_And_Distance.htm">角度と距離</a></div>
-        <div style="float:right">次のページ <a href="dot_product_3d.htm"><span class="notranslate">dot_product_3d</span></a></div>
+        <div style="float:left">前のページ：<a href="Angles_And_Distance.htm">角度と距離</a></div>
+        <div style="float:right">次のページ：<a href="dot_product_3d.htm"><span class="notranslate">dot_product_3d</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 dot_product
@@ -91,4 +109,5 @@ dot_product
 dot_product
 -->
 </body>
+
 </html>

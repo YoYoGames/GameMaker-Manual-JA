@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ジェスチャーイベント</title>
@@ -12,31 +13,52 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <script src="../../assets/scripts/main_script.js" type="module"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ジェスチャーイベント</h1>
-  <p><img alt="The Gesture Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Gesture.png" /></p>
-  <p>Gesture Eventカテゴリのイベントは、<span data-keyref="GameMaker Name">GameMakerが</span>マウスの「ジェスチャー」またはタッチスクリーンイベントを検出するとトリガーされます（これらのジェスチャーイベントはモバイル用に特化して設計されていますが、他のターゲットでもマウスを検出することができます。この場合、マルチタッチは検出できませんが）。ジェスチャーシステムの目的は、マウスやタッチの直接読み取り機能よりも高いレベルで入力を認識しようとすることであり、タッチベースのデバイスでよく使われる入力の実装を簡素化するために設計されています。</p>
-  <p class="note"><span class="note">注</span>：これらのイベントは、HTML5プラットフォームでは、これらのイベントを使用したマルチタッチがサポートされていないため、トリガーされません。もし、そのターゲットでジェスチャーを探しているのであれば、<a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/Device_Input.htm">デバイスの機能を</a>使用する必要があります。</p>
-  <p><strong>インスタンス </strong>ジェスチャと<strong>グローバル </strong>ジェスチャのどちらを検出するかを選択できます。インスタンス ジェスチャ イベントは、<span class="notranslate">room</span> 内のインスタンスに最初にタッチ/クリックしたときにのみトリガされます。このイベントがトリガされるには、そのインスタンスに有効なコリジョン マスク（詳細は、<a href="../Sprites.htm"> <span class="notranslate">Sprite</span> </a>Editor - Collision Mask と<a href="../Objects.htm">The<span class="notranslate">Object</span> Editor - Collision Mask</a>を参照）が必要です。しかし、グローバルイベントは、ゲーム内の任意の場所（<span class="notranslate">room</span> ）でタッチ/クリックすると、そのイベントを持つすべてのインスタンスに対してトリガーされます。</p>
-  <p>ジェスチャーが認識されると、1つまたは複数の利用可能なイベントがトリガーされます。トリガーされるイベントは、検出されたジェスチャーの種類によって異なります。ただし、どの場合も<a href="../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a>が生成され、組み込み変数 <span class="inline">event_data</span> に格納されます。利用可能なキーは、どの種類のイベントによって作成されたかによって異なり、以下の各サブセクションに表示されます。</p>
-  <p class="note"><strong>注</strong>：変数 <span class="inline">event_data</span> は、これらのイベントでのみ有効です。この変数が指すDSマップは、イベントの開始時に自動的に作成され、終了時に再び破棄されるため、その他の時間ではこの変数は値 -1 にリセットされています。</p>
-  <p>タッチされている位置の下に複数のインスタンスがあり、それらすべてがジェスチャー イベントを持っている場合、「最上位」のインスタンスだけでなく、それら<em>すべてが </em>トリガーされることに注意してください。また、複数のカメラ ビューを使用してインスタンスをドラッグする場合、最初にタッチ/クリックを受け取ったときにいたビューに基づいて値が返されることに注意してください - これは、そのインスタンスのジェスチャーの後続イベントすべてに当てはまります。つまり、あるビューでインスタンスをタッチしてドラッグし、別のビューでタッチを解除すると、ジェスチャが最初に検出されたビューを基準にした値が返されます。</p>
+  <p><img alt="The Gesture Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Gesture.png" />
+  </p>
+  <p>Gesture Eventカテゴリのイベントは、<span
+      data-keyref="GameMaker Name">GameMakerが</span>マウスの「ジェスチャー」またはタッチスクリーンイベントを検出するとトリガーされます（これらのジェスチャーイベントはモバイル用に特化して設計されていますが、他のターゲットでもマウスを検出することができます。この場合、マルチタッチは検出できませんが）。ジェスチャーシステムの目的は、マウスやタッチの直接読み取り機能よりも高いレベルで入力を認識しようとすることであり、タッチベースのデバイスでよく使われる入力の実装を簡素化するために設計されています。
+  </p>
+  <p class="note"><span
+      class="note">注</span>：これらのイベントは、HTML5プラットフォームでは、これらのイベントを使用したマルチタッチがサポートされていないため、トリガーされません。もし、そのターゲットでジェスチャーを探しているのであれば、<a
+      href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/Device_Input.htm">デバイスの機能を</a>使用する必要があります。
+  </p>
+  <p><strong>インスタンス </strong>ジェスチャと<strong>グローバル </strong>ジェスチャのどちらを検出するかを選択できます。インスタンス ジェスチャ イベントは、<span
+      class="notranslate">room</span> 内のインスタンスに最初にタッチ/クリックしたときにのみトリガされます。このイベントがトリガされるには、そのインスタンスに有効なコリジョン マスク（詳細は、<a
+      href="../Sprites.htm"> <span class="notranslate">Sprite</span> </a>Editor - Collision Mask と<a
+      href="../Objects.htm">The<span class="notranslate">Object</span> Editor - Collision
+      Mask</a>を参照）が必要です。しかし、グローバルイベントは、ゲーム内の任意の場所（<span class="notranslate">room</span>
+    ）でタッチ/クリックすると、そのイベントを持つすべてのインスタンスに対してトリガーされます。</p>
+  <p>ジェスチャーが認識されると、1つまたは複数の利用可能なイベントがトリガーされます。トリガーされるイベントは、検出されたジェスチャーの種類によって異なります。ただし、どの場合も<a
+      href="../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a>が生成され、組み込み変数 <span
+      class="inline">event_data</span> に格納されます。利用可能なキーは、どの種類のイベントによって作成されたかによって異なり、以下の各サブセクションに表示されます。</p>
+  <p class="note"><strong>注</strong>：変数 <span class="inline">event_data</span>
+    は、これらのイベントでのみ有効です。この変数が指すDSマップは、イベントの開始時に自動的に作成され、終了時に再び破棄されるため、その他の時間ではこの変数は値 -1 にリセットされています。</p>
+  <p>タッチされている位置の下に複数のインスタンスがあり、それらすべてがジェスチャー イベントを持っている場合、「最上位」のインスタンスだけでなく、それら<em>すべてが
+    </em>トリガーされることに注意してください。また、複数のカメラ ビューを使用してインスタンスをドラッグする場合、最初にタッチ/クリックを受け取ったときにいたビューに基づいて値が返されることに注意してください -
+    これは、そのインスタンスのジェスチャーの後続イベントすべてに当てはまります。つまり、あるビューでインスタンスをタッチしてドラッグし、別のビューでタッチを解除すると、ジェスチャが最初に検出されたビューを基準にした値が返されます。
+  </p>
   <p> </p>
-  <p><img>  <img>  <img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">タップ、ドラッグ、フリックイベント</a></p>
+  <p><img> <img> <img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down"
+      href="#">タップ、ドラッグ、フリックイベント</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Tap&quot;、&quot;Drag&quot;、&quot;Flick &quot;イベントは、画面上のシングルタッチまたはマウスクリックに基づき、 <span class="inline">event_data</span> DS Mapには、以下のキーが含まれることになります。</p>
+    <p class="dropspot">Tap&quot;、&quot;Drag&quot;、&quot;Flick &quot;イベントは、画面上のシングルタッチまたはマウスクリックに基づき、 <span
+        class="inline">event_data</span> DS Mapには、以下のキーが含まれることになります。</p>
     <ul class="dropspotlist">
     </ul>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th>キー</th>
-          <th>商品説明</th>
+          <th>説明</th>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">gesture</span>&quot;</td>
-          <td><br />これは、実行中のジェスチャーに<i>固有の</i>ID値です。これにより、マルチパートジェスチャーの異なる部分（ドラッグ開始、ドラッグ中、ドラッグ終了など）を互いにリンクさせることができます。</td>
+          <td><br />これは、実行中のジェスチャーに<i>固有の</i>ID値です。これにより、マルチパートジェスチャーの異なる部分（ドラッグ開始、ドラッグ中、ドラッグ終了など）を互いにリンクさせることができます。
+          </td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">touch</span>&quot;</td>
@@ -53,19 +75,27 @@
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">rawposX</span>&quot;</td>
-          <td><br />これはタッチのウィンドウ空間Xの位置<i>です</i>(マウス位置の取得に相当します) <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline"><span class="inline">device_mouse_raw_x()</span></a>).</td>
+          <td><br />これはタッチのウィンドウ空間Xの位置<i>です</i>(マウス位置の取得に相当します) <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span
+                class="inline"><span class="inline">device_mouse_raw_x()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">rawposY</span>&quot;</td>
-          <td><br />これは、タッチのウィンドウ空間でのY位置です<i>。</i><a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline"><span class="inline">device_mouse_raw_y()</span></a>).</td>
+          <td><br />これは、タッチのウィンドウ空間でのY位置です<i>。</i><a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span
+                class="inline"><span class="inline">device_mouse_raw_y()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">guiposX</span>&quot;</td>
-          <td><br />タッチのgui-space X位置です（マウス位置の取得に相当します）。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
+          <td><br />タッチのgui-space X位置です（マウス位置の取得に相当します）。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span
+                class="inline"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">guiposY</span>&quot;</td>
-          <td><br />タッチのgui-spaceのY位置です（マウス位置の取得に相当します）。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
+          <td><br />タッチのgui-spaceのY位置です（マウス位置の取得に相当します）。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span
+                class="inline"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">diffX</span>&quot;</td>
@@ -118,97 +148,133 @@
         <tr>
           <td><span class="notranslate">&quot;<span class="inline">isflick</span>&quot;</td>
           <td><b><br />
-</b>
-             <b>Drag Endイベントでのみ有効</b>です。ドラッグの終了がフリックとして検出された場合、これは 1 に設定されます。つまり、どのみちドラッグを処理するのであれば、<b>フリックイベントを</b>別途用意する必要はありません。</td>
+            </b>
+            <b>Drag Endイベントでのみ有効</b>です。ドラッグの終了がフリックとして検出された場合、これは 1
+            に設定されます。つまり、どのみちドラッグを処理するのであれば、<b>フリックイベントを</b>別途用意する必要はありません。
+          </td>
         </tr>
       </tbody>
     </table>
     <p> </p>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">タップ</a></p>
     <div class="droptext" data-targetname="drop-down11">
-      <p class="dropspot">Tapイベントは、インスタンスがタッチまたはクリックされたとき、またはグローバルイベントの場合は、ゲームが<span class="notranslate">room</span> のタッチまたはクリックを記録したときにトリガーされます。タップは素早くタッチして離すと見なされ、タッチが長引くと、そのインスタンスはタッチされません。
-        ドラッグとみなされ、タップイベントの代わりにドラッグジェスチャーイベントがトリガーされます）。このイベントは、 <span class="inline">event_data</span> DS マップを生成し、イベントに関する情報を取得するために使用できます。たとえば、次のようになります。</p>
+      <p class="dropspot">Tapイベントは、インスタンスがタッチまたはクリックされたとき、またはグローバルイベントの場合は、ゲームが<span class="notranslate">room</span>
+        のタッチまたはクリックを記録したときにトリガーされます。タップは素早くタッチして離すと見なされ、タッチが長引くと、そのインスタンスはタッチされません。
+        ドラッグとみなされ、タップイベントの代わりにドラッグジェスチャーイベントがトリガーされます）。このイベントは、 <span class="inline">event_data</span> DS
+        マップを生成し、イベントに関する情報を取得するために使用できます。たとえば、次のようになります。</p>
       <h4>イベント作成</h4>
       <p class="code">x_goto = x;<br /> y_goto = y;</p>
       <h4>タップイベント</h4>
       <p class="code">x_goto = event_data[? &quot;posX&quot;];<br /> y_goto = event_data[? &quot;posY&quot;];</p>
       <h4>ステップイベント</h4>
-      <p class="code">var _pd = point_distance(x, y, x_goto, y_goto);<br /> move_towards_point(x_goto, y_goto, clamp(_pd, 0, 5);</p>
-      <p class="dropspot">上記のコードは、画面上のタップを検出し、タップの位置を取得して、その位置にインスタンスを移動させます。なお、タップ検出の時間を長くしたり短くしたりしたい場合は、関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_drag_time.htm"><span class="inline">gesture_drag_time()</span></a>.
+      <p class="code">var _pd = point_distance(x, y, x_goto, y_goto);<br /> move_towards_point(x_goto, y_goto,
+        clamp(_pd, 0, 5);</p>
+      <p class="dropspot">上記のコードは、画面上のタップを検出し、タップの位置を取得して、その位置にインスタンスを移動させます。なお、タップ検出の時間を長くしたり短くしたりしたい場合は、関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_drag_time.htm"><span
+            class="inline">gesture_drag_time()</span></a>.
         これは、最初の検出からタップがドラッグになるまでの時間を設定するもので、タップ検出を長くするには高い値を、短くするには低い値を設定します（値は秒単位で、デフォルトは 0.16 です）。</p>
       <p class="dropspot"> </p>
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">ダブルタップ</a></p>
     <div class="droptext" data-targetname="drop-down6">
-      <p class="dropspot">ダブルタップイベントは、インスタンスが2回連続してタッチまたはクリックされたとき（または、グローバルイベントの場合は、ゲームが<span class="notranslate">room</span> のどこかで2回素早くタッチまたはクリックを記録したとき）、トリガーされます。ダブルタップは、2回とみなされます。
-        しかし、いずれかのタッチが長く続くと、ドラッグとみなされます（そして、ダブルタップイベントの代わりにドラッグジェスチャイベントがトリガされます）。このイベントにより、 <span class="inline">event_data</span> DS
+      <p class="dropspot">ダブルタップイベントは、インスタンスが2回連続してタッチまたはクリックされたとき（または、グローバルイベントの場合は、ゲームが<span
+          class="notranslate">room</span> のどこかで2回素早くタッチまたはクリックを記録したとき）、トリガーされます。ダブルタップは、2回とみなされます。
+        しかし、いずれかのタッチが長く続くと、ドラッグとみなされます（そして、ダブルタップイベントの代わりにドラッグジェスチャイベントがトリガされます）。このイベントにより、 <span
+          class="inline">event_data</span> DS
         マップを使用すると、イベントに関する情報を得ることができます。例えば、以下のようになります。</p>
       <h4>イベント作成</h4>
       <p class="code">x_goto = x;<br /> y_goto = y;</p>
       <h4>ダブルタップイベント</h4>
       <p class="code">instance_destroy();</p>
-      <p class="dropspot">上記のコードでは、単にダブルタップを検出してインスタンスを破棄しています。なお、ダブルタップのトリガーとなるタップ間の時間は、関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>(これは
-        のデフォルト値は 0.16 秒）、タップ間の検出距離も関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_double_tap_distance.htm"><span class="inline">gesture_double_tap_distance()</span></a>(もし
+      <p class="dropspot">上記のコードでは、単にダブルタップを検出してインスタンスを破棄しています。なお、ダブルタップのトリガーとなるタップ間の時間は、関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_double_tap_time.htm"><span
+            class="inline">gesture_double_tap_time()</span></a>(これは
+        のデフォルト値は 0.16 秒）、タップ間の検出距離も関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_double_tap_distance.htm"><span
+            class="inline">gesture_double_tap_distance()</span></a>(もし
         この距離の外では、通常のタップイベントとみなされます。）</p>
       <p class="dropspot"> </p>
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">ドラッグスタート</a></p>
     <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot">Drag Startイベントは、ユーザーがタッチまたはクリックを離さずに維持したときにトリガーされます。このイベントは、最初のタッチから設定された時間が経過したときに一度だけトリガーされ、デフォルトでは0.16秒です（ただし、これを任意の
-        という関数を使って、他の値を秒単位で指定します。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_drag_time.htm"><span class="inline">gesture_drag_time()</span></a>).このイベントがトリガーされた後、次の期間中は
-        ユーザがタッチ/クリックを押したままだと、タッチ/クリックを離すまでドラッグイベントが毎ステップ発生する。このイベントは <span class="inline">event_data</span> DS マップを生成し、これを使用して情報を取得できます。
+      <p class="dropspot">Drag
+        Startイベントは、ユーザーがタッチまたはクリックを離さずに維持したときにトリガーされます。このイベントは、最初のタッチから設定された時間が経過したときに一度だけトリガーされ、デフォルトでは0.16秒です（ただし、これを任意の
+        という関数を使って、他の値を秒単位で指定します。 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_drag_time.htm"><span
+            class="inline">gesture_drag_time()</span></a>).このイベントがトリガーされた後、次の期間中は
+        ユーザがタッチ/クリックを押したままだと、タッチ/クリックを離すまでドラッグイベントが毎ステップ発生する。このイベントは <span class="inline">event_data</span> DS
+        マップを生成し、これを使用して情報を取得できます。
         のイベントに関する情報を提供します。例えば</p>
       <h4>イベント作成</h4>
       <p class="code">drag_offsetX = 0;<br /> drag_offsetY = 0;</p>
       <h4>ドラッグスタートイベント</h4>
-      <p class="code">drag_offsetX = x - event_data[?&quot;posX&quot;];<br /> drag_offsetY = y - event_data[?&quot;posY&quot;];</p>
-      <p class="dropspot">上記のコードでは、Drag Startイベントを使用してタッチ/クリックの位置を取得し、それを使用してX軸とY軸のオフセット値を設定しています。このオフセット値は、インスタンスをドラッグするときに使用され、インスタンスが元の位置に「ジャンプ」しないようにします。
+      <p class="code">drag_offsetX = x - event_data[?&quot;posX&quot;];<br /> drag_offsetY = y -
+        event_data[?&quot;posY&quot;];</p>
+      <p class="dropspot">上記のコードでは、Drag
+        Startイベントを使用してタッチ/クリックの位置を取得し、それを使用してX軸とY軸のオフセット値を設定しています。このオフセット値は、インスタンスをドラッグするときに使用され、インスタンスが元の位置に「ジャンプ」しないようにします。
         この例の続きは、以下のドラッグイベントを参照してください。</p>
       <p class="dropspot"> </p>
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">ドラッグ</a></p>
     <div class="droptext" data-targetname="drop-down8">
-      <p class="dropspot">ドラッグイベントはドラッグ開始イベントの後に発生し、ユーザーがインスタンス（グローバルイベントの場合は画面）へのタッチ/クリックを維持し、定義されたドラッグのしきい値を超えて移動するステップごとに発生します。
-        この距離は、デフォルトでは 0.1 インチですが、関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_drag_distance.htm"><span class="inline">gesture_drag_distance()</span></a>.がない場合
-        移動が定義されたしきい値以下である場合、イベントはトリガされません。このイベントは、 <span class="inline">event_data</span> DSマップを生成し、イベントに関する情報を取得するために使用することができます。例えば</p>
+      <p class="dropspot">
+        ドラッグイベントはドラッグ開始イベントの後に発生し、ユーザーがインスタンス（グローバルイベントの場合は画面）へのタッチ/クリックを維持し、定義されたドラッグのしきい値を超えて移動するステップごとに発生します。
+        この距離は、デフォルトでは 0.1 インチですが、関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_drag_distance.htm"><span
+            class="inline">gesture_drag_distance()</span></a>.がない場合
+        移動が定義されたしきい値以下である場合、イベントはトリガされません。このイベントは、 <span class="inline">event_data</span>
+        DSマップを生成し、イベントに関する情報を取得するために使用することができます。例えば</p>
       <h4>イベント作成</h4>
       <p class="code">drag_offsetX = 0;<br /> drag_offsetY = 0;</p>
       <h4>ドラッグスタートイベント</h4>
-      <p class="code">drag_offsetX = x - event_data[?&quot;posX&quot;];<br /> drag_offsetY = y - event_data[?&quot;posY&quot;];</p>
+      <p class="code">drag_offsetX = x - event_data[?&quot;posX&quot;];<br /> drag_offsetY = y -
+        event_data[?&quot;posY&quot;];</p>
       <h4>ドラッグイベント</h4>
-      <p class="code">x = event_data[?&quot;posX&quot;] + drag_offsetX;<br /> y = event_data[?&quot;posY&quot;] + drag_offsetY;</p>
+      <p class="code">x = event_data[?&quot;posX&quot;] + drag_offsetX;<br /> y = event_data[?&quot;posY&quot;] +
+        drag_offsetY;</p>
       <p class="dropspot">上記のサンプルコードでは、Drag Start イベントで設定したオフセット変数を使用して、Drag イベントがトリガーされたときにインスタンスを移動させています。</p>
       <p class="dropspot"> </p>
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">ドラッグ・エンド</a></p>
     <div class="droptext" data-targetname="drop-down9">
-      <p class="dropspot">Drag Endイベントは、ユーザーがインスタンス（グローバルイベントの場合は画面）のタッチ/クリックを離したときに発生します。このイベントは、 <span class="inline">event_data</span> DS マップを生成します。
-        しかし、このイベントでは、マップに &quot;<span class="inline">isflick</span>&quot; という追加のキーがあります。フリックとは、1秒間にドラッグした距離のことで、&quot;<span class="inline">isflick</span>&quot; の値は、1秒間にドラッグした距離です。
-        キーは、定義された秒間距離の値より大きければ真になり、そうでなければ偽になる。なお、デフォルトは1秒間に2インチですが、関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_flick_speed.htm"><span class="inline">gesture_flick_speed()</span></a>.
+      <p class="dropspot">Drag Endイベントは、ユーザーがインスタンス（グローバルイベントの場合は画面）のタッチ/クリックを離したときに発生します。このイベントは、 <span
+          class="inline">event_data</span> DS マップを生成します。
+        しかし、このイベントでは、マップに &quot;<span class="inline">isflick</span>&quot;
+        という追加のキーがあります。フリックとは、1秒間にドラッグした距離のことで、&quot;<span class="inline">isflick</span>&quot; の値は、1秒間にドラッグした距離です。
+        キーは、定義された秒間距離の値より大きければ真になり、そうでなければ偽になる。なお、デフォルトは1秒間に2インチですが、関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_flick_speed.htm"><span
+            class="inline">gesture_flick_speed()</span></a>.
         また、専用のFlickイベントがあり、これも変数 &quot;isflick &quot;が真であればトリガーされることに注意しましょう。使用例としては、以下のようなものがあります。</p>
       <h4>イベント作成</h4>
       <p class="code">flickVelX = 0.0;<br /> flickVelY = 0.0;</p>
       <h4>ドラッグ終了イベント</h4>
-      <p class="code">isFlick = event_data[?&quot;isflick&quot;];<br /> if (isFlick)<br />     {<br />     flickVelX = event_data[?&quot;diffX&quot;];<br />     flickVelY = event_data[?&quot;diffY&quot;];<br />     }<br /> else
+      <p class="code">isFlick = event_data[?&quot;isflick&quot;];<br /> if (isFlick)<br />     {<br />     flickVelX =
+        event_data[?&quot;diffX&quot;];<br />     flickVelY = event_data[?&quot;diffY&quot;];<br />     }<br /> else
         <br />     {<br />     flickVelX = 0;<br />     flickVelY = 0;<br />     }
       </p>
       <h4>ステップイベント</h4>
       <p class="code">x += flickVelX;<br /> y += flickVelY;<br /> flickVelX *= 0.7;<br /> flickVelY *= 0.7;</p>
-      <p class="dropspot">上記のコードは、前回のドラッグイベントと今回のドラッグエンドイベントの x, y 位置の差を取得し、フリックの閾値より大きい移動があった場合、インスタンスの移動に使用するいくつかの変数を設定します。
+      <p class="dropspot">上記のコードは、前回のドラッグイベントと今回のドラッグエンドイベントの x, y
+        位置の差を取得し、フリックの閾値より大きい移動があった場合、インスタンスの移動に使用するいくつかの変数を設定します。
         をstepイベントで実行します。</p>
       <p class="dropspot"> </p>
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">フリック</a></p>
     <div class="droptext" data-targetname="drop-down10">
-      <p class="dropspot">Flickイベントは、タッチ/クリックを保持し、ドラッグしてから離し、最後にドラッグした位置から離した位置までの距離が1秒間に2インチ以上ある場合にのみ発生します（これはデフォルト設定です。
-        を使用して変更することができます。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_flick_speed.htm"><span class="inline">gesture_flick_speed()</span></a>).このイベントは、 <span class="inline">event_data</span> DSマップを生成し、イベントに関する情報を得るために使用することができます。例えば</p>
+      <p class="dropspot">
+        Flickイベントは、タッチ/クリックを保持し、ドラッグしてから離し、最後にドラッグした位置から離した位置までの距離が1秒間に2インチ以上ある場合にのみ発生します（これはデフォルト設定です。
+        を使用して変更することができます。 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_flick_speed.htm"><span
+            class="inline">gesture_flick_speed()</span></a>).このイベントは、 <span class="inline">event_data</span>
+        DSマップを生成し、イベントに関する情報を得るために使用することができます。例えば</p>
       <h4>イベント作成</h4>
       <p class="code">flickVelX = 0.0;<br /> flickVelY = 0.0;</p>
       <h4>フリックイベント</h4>
       <p class="code">flickVelX = event_data[?&quot;diffX&quot;];<br /> flickVelY = event_data[?&quot;diffY&quot;];</p>
       <h4>ステップイベント</h4>
       <p class="code">x += flickVelX;<br /> y += flickVelY;<br /> flickVelX *= 0.7;<br /> flickVelY *= 0.7;</p>
-      <p class="dropspot">上記のコードでは、最後のドラッグイベントと現在のフリックイベントの x と y の位置の差を取得し、フリックの閾値より大きい移動があった場合、いくつかの変数を設定して、その変数を使ってインスタンスを
+      <p class="dropspot">上記のコードでは、最後のドラッグイベントと現在のフリックイベントの x と y
+        の位置の差を取得し、フリックの閾値より大きい移動があった場合、いくつかの変数を設定して、その変数を使ってインスタンスを
         ステップイベント</p>
     </div>
     <p> </p>
@@ -218,27 +284,34 @@
     <p class="dropspot">ピンチ &quot;イベントは、一度に2つのタッチが認識され、一方（または両方）が一定の距離以上移動した場合に発生します。タッチの角度とそれぞれのタッチの動きで、以下のように判断します。
       は、ピンチイベントまたはローテートイベントの検出を決定します（ピンチイベントタイプの場合）。</p>
     <ul class="dropspotlist">
-      <li class="dropspot">片方のタッチが動いていない場合、もう片方のタッチが閾値の範囲内で向かってくるか、離れていく必要があります（閾値は関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_towards.htm"><span class="inline">gesture_pinch_angle_towards()</span></a>と
-        - <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_away.htm"><span class="inline">gesture_pinch_angle_away()</span></a>).</li>
+      <li class="dropspot">片方のタッチが動いていない場合、もう片方のタッチが閾値の範囲内で向かってくるか、離れていく必要があります（閾値は関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_towards.htm"><span
+            class="inline">gesture_pinch_angle_towards()</span></a>と
+        - <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_away.htm"><span
+            class="inline">gesture_pinch_angle_away()</span></a>).</li>
       <li class="dropspot">両方のタッチが動いている場合、その速度はほぼ反対方向でなければなりません。また、タッチがほぼ一直線に動いていることを確認するために、同じように角度の閾値チェックも行われます。</li>
     </ul>
-    <p class="dropspot">上記の条件で2回のタッチと動きが検出されると、ピンチイベントが発生し、それぞれのイベントで <span class="inline">event_data</span> DS Map に以下のキーが入力されます。</p>
+    <p class="dropspot">上記の条件で2回のタッチと動きが検出されると、ピンチイベントが発生し、それぞれのイベントで <span class="inline">event_data</span> DS Map
+      に以下のキーが入力されます。</p>
     <ul class="dropspotlist">
     </ul>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th>キー</th>
-          <th>商品説明</th>
+          <th>説明</th>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;gesture&quot;</span></td>
-          <td><br />これは、実行中のジェスチャーに<i>固有の</i>ID値です。これにより、マルチパートジェスチャーの異なる部分（ドラッグ開始、ドラッグ中、ドラッグ終了など）を互いにリンクさせることができます。</td>
+          <td><br />これは、実行中のジェスチャーに<i>固有の</i>ID値です。これにより、マルチパートジェスチャーの異なる部分（ドラッグ開始、ドラッグ中、ドラッグ終了など）を互いにリンクさせることができます。
+          </td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;touch1&quot;</span></td>
-          <td><br />これは、ピンチジェスチャーの一部として使用されている最初のタッチのインデックスです。一般的には0になりますが、他のタッチでこのイベントがトリガーされたときに、ユーザーが他の場所でスクリーンをタッチしていた場合は、この値は
-            0 よりも大きい。</td>
+          <td>
+            <br />これは、ピンチジェスチャーの一部として使用されている最初のタッチのインデックスです。一般的には0になりますが、他のタッチでこのイベントがトリガーされたときに、ユーザーが他の場所でスクリーンをタッチしていた場合は、この値は
+            0 よりも大きい。
+          </td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;touch2&quot;</span></td>
@@ -254,19 +327,27 @@
         </tr>
         <tr>
           <td><span class="notranslate">&quot;rawposX1&quot;</span></td>
-          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間X位置です(マウス位置の取得に相当します)。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline"><span class="inline">device_mouse_raw_x()</span></a>).</td>
+          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間X位置です(マウス位置の取得に相当します)。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span
+                class="inline"><span class="inline">device_mouse_raw_x()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;rawposY1&quot;</span></td>
-          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間Y位置です（←を使用してマウス位置を取得するのと同等です）。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline"><span class="inline">device_mouse_raw_y()</span></a>).</td>
+          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間Y位置です（←を使用してマウス位置を取得するのと同等です）。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span
+                class="inline"><span class="inline">device_mouse_raw_y()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;guiposX1&quot;</span></td>
-          <td><br />これは、最初のタッチのgui-space X位置です。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
+          <td><br />これは、最初のタッチのgui-space X位置です。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span
+                class="inline"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;guiposY1&quot;</span></td>
-          <td><br />2回目のタッチのgui-spaceのY位置です（マウス位置の取得に相当します）。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
+          <td><br />2回目のタッチのgui-spaceのY位置です（マウス位置の取得に相当します）。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span
+                class="inline"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;posX2&quot;</span></td>
@@ -318,7 +399,9 @@
         </tr>
         <tr>
           <td><span class="notranslate">&quot;relativescale&quot;</span></td>
-          <td><br />このジェスチャーの最後のイベントと比較したときのスケールの差です（つまり、<b>ピンチインイベントの</b>場合は常に1.0より小さくなり、<b>ピンチアウトイベントの</b>場合は常に1.0より大きくなります）。</td>
+          <td>
+            <br />このジェスチャーの最後のイベントと比較したときのスケールの差です（つまり、<b>ピンチインイベントの</b>場合は常に1.0より小さくなり、<b>ピンチアウトイベントの</b>場合は常に1.0より大きくなります）。
+          </td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;absolutescale&quot;</span></td>
@@ -329,22 +412,34 @@
     <p class="dropspot"> </p>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#">ピンチスタート</a></p>
     <div class="droptext" data-targetname="drop-down12">
-      <p class="dropspot">Pinch Startイベントは、インスタンス（グローバルイベントの場合はスクリーン）が2本の「指」でタッチされ（タッチが維持され）、その後「指」の一方または両方が動かされたときにトリガーされます。タッチが移動した場合
-        は、最小チェック距離（デフォルトでは0.1インチですが、これは関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_distance.htm"><span class="inline">gesture_pinch_distance()</span></a>),
-        と、その間の角度が定義された値以内であること（デフォルトは45°ですが <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_towards.htm"><span class="inline">gesture_pinch_angle_towards()</span></a>と
-        <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_away.htm"><span class="inline">gesture_pinch_angle_away()</span></a>)すると、ピンチ・スタート・イベントが発生します。このイベントでは、変数を設定したり、将来使用するために位置の日付を保存することができます。例えば
+      <p class="dropspot">Pinch
+        Startイベントは、インスタンス（グローバルイベントの場合はスクリーン）が2本の「指」でタッチされ（タッチが維持され）、その後「指」の一方または両方が動かされたときにトリガーされます。タッチが移動した場合
+        は、最小チェック距離（デフォルトでは0.1インチですが、これは関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_distance.htm"><span
+            class="inline">gesture_pinch_distance()</span></a>),
+        と、その間の角度が定義された値以内であること（デフォルトは45°ですが <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_towards.htm"><span
+            class="inline">gesture_pinch_angle_towards()</span></a>と
+        <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_pinch_angle_away.htm"><span
+            class="inline">gesture_pinch_angle_away()</span></a>)すると、ピンチ・スタート・イベントが発生します。このイベントでは、変数を設定したり、将来使用するために位置の日付を保存することができます。例えば
       </p>
       <h4>ピンチスタートイベント</h4>
-      <p class="code">pinching = true;<br /> pinch_x = event_data[? &quot;midpointX&quot;]; pinch_y = event_data[? &quot;midpointY&quot;];</p>
+      <p class="code">pinching = true;<br /> pinch_x = event_data[? &quot;midpointX&quot;]; pinch_y = event_data[?
+        &quot;midpointY&quot;];</p>
       <p class="dropspot">上記のコードでは、ピンチを検出し、そのピンチの中点位置を記憶します。</p>
       <p class="dropspot"> </p>
     </div>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">ピンチイン／ピンチアウト</a></p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">ピンチイン／ピンチアウト</a>
+    </p>
     <div class="droptext" data-targetname="drop-down13">
-      <p class="dropspot">ピンチインとピンチアウトのイベントは、ピンチを構成する2つのタッチ間の距離が最小しきい値（デフォルトでは±0.1インチに設定されていますが、関数gesture_pinch_distanceを使用して変更できます）以上変化するたびにトリガが発生します。
-        ピンチのタッチに動きがない場合、これらのイベントはトリガーされません。これらのイベントは、 <span class="inline">event_data</span> DS マップを生成し、イベントに関する情報を取得するために使用することができます。たとえば、次のようになります。</p>
+      <p class="dropspot">
+        ピンチインとピンチアウトのイベントは、ピンチを構成する2つのタッチ間の距離が最小しきい値（デフォルトでは±0.1インチに設定されていますが、関数gesture_pinch_distanceを使用して変更できます）以上変化するたびにトリガが発生します。
+        ピンチのタッチに動きがない場合、これらのイベントはトリガーされません。これらのイベントは、 <span class="inline">event_data</span> DS
+        マップを生成し、イベントに関する情報を取得するために使用することができます。たとえば、次のようになります。</p>
       <h4>グローバルピンチイン/ピンチアウトイベント</h4>
-      <p class="code">var _scale = event_data[? &quot;relativescale&quot;];<br /> var _w = camera_get_view_width(view_camera[0]);<br /> var _h = camera_get_view_height(view_camera[0]);<br /> var _x = camera_get_view_x(view_camera[0]) + (_w / 2);<br /> var _y = camera_get_view_y(view_camera[0])
+      <p class="code">var _scale = event_data[? &quot;relativescale&quot;];<br /> var _w =
+        camera_get_view_width(view_camera[0]);<br /> var _h = camera_get_view_height(view_camera[0]);<br /> var _x =
+        camera_get_view_x(view_camera[0]) + (_w / 2);<br /> var _y = camera_get_view_y(view_camera[0])
         + (_h / 2);<br />
         <br /> _w *= _scale;<br /> _h = _w * (room_height / room_width);<br /> _x -= _w / 2;<br /> _y -= _h / 2;<br />
         <br /> camera_set_view_pos(view_camera[0], _x, _y);<br /> camera_set_view_size(view_camera[0], _w, _h);
@@ -352,12 +447,17 @@
       <p class="dropspot">上記のコードでは、ピンチタッチの相対的なスケールに基づいてビューが拡大縮小されます。</p>
       <p class="dropspot"> </p>
     </div>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">ピンチエンド</a><strong></strong></p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14"
+        href="#">ピンチエンド</a><strong></strong></p>
     <div class="droptext" data-targetname="drop-down14">
-      <p class="dropspot">Pinch Endイベントは、ユーザーがデバイスから片方（または両方）のタッチを離したときにトリガーされます。このイベントは、 <span class="inline">event_data</span> DS マップを生成し、イベントに関する情報を取得するために使用することができます。例えば
+      <p class="dropspot">Pinch Endイベントは、ユーザーがデバイスから片方（または両方）のタッチを離したときにトリガーされます。このイベントは、 <span
+          class="inline">event_data</span> DS マップを生成し、イベントに関する情報を取得するために使用することができます。例えば
         の例です。</p>
       <h4>ピンチエンドイベント</h4>
-      <p class="code">var _pinchx = event_data[? &quot;midpointX&quot;];<br /> var _pinchy = event_data[? &quot;midpointY&quot;];<br /> var _w = camera_get_view_width(view_camera[0]);<br /> var _h = camera_get_view_height(view_camera[0]);<br /> var _x = _pinchx - (_w / 2);<br /> var _y = _pinchy - (_h / 2);<br />
+      <p class="code">var _pinchx = event_data[? &quot;midpointX&quot;];<br /> var _pinchy = event_data[?
+        &quot;midpointY&quot;];<br /> var _w = camera_get_view_width(view_camera[0]);<br /> var _h =
+        camera_get_view_height(view_camera[0]);<br /> var _x = _pinchx - (_w / 2);<br /> var _y = _pinchy - (_h /
+        2);<br />
         <br /> camera_set_view_pos(view_camera[0], _x, _y);
       </p>
       <p class="dropspot">上記のコードでは、タッチを離したときに、ピンチを構成していた2つのタッチの中点が中心になるようにビュー位置を設定します。</p>
@@ -367,30 +467,39 @@
   </div>
   <p><img><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">ローテートイベント</a></p>
   <div class="droptext" data-targetname="drop-down15">
-    <p class="dropspot">Rotate &quot;イベントは、デバイスの画面への2つのタッチが一度に認識され、一定時間内に2つのタッチの間に一定の角度の回転があった場合に発生します。タッチの移動角度と、タッチの回転角度は
+    <p class="dropspot">Rotate
+      &quot;イベントは、デバイスの画面への2つのタッチが一度に認識され、一定時間内に2つのタッチの間に一定の角度の回転があった場合に発生します。タッチの移動角度と、タッチの回転角度は
       それぞれのタッチの動きによって、ピンチイベントまたはローテートイベントの検出が決定されます。</p>
     <ul class="dropspotlist">
-      <li class="dropspot">2つのタッチを指定された最小時間押し続ける必要があります（デフォルトの時間は0.16秒ですが、機能を使って変更することができます <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_time.htm"><span class="inline">gesture_rotate_time()</span></a>).</li>
+      <li class="dropspot">2つのタッチを指定された最小時間押し続ける必要があります（デフォルトの時間は0.16秒ですが、機能を使って変更することができます <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_time.htm"><span
+            class="inline">gesture_rotate_time()</span></a>).</li>
       <li class="dropspot">この最短時間内に、一定の方向に回転しなければならない（その時間内に回転方向が変わった場合は回転を開始しない）。</li>
-      <li class="dropspot">回転量は、最小しきい値角度（デフォルトでは5°に設定されていますが、これは、関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"><span class="inline">gesture_rotate_angle()</span></a>).</li>
+      <li class="dropspot">回転量は、最小しきい値角度（デフォルトでは5°に設定されていますが、これは、関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"><span
+            class="inline">gesture_rotate_angle()</span></a>).</li>
     </ul>
-    <p class="dropspot">上記の条件で2つのタッチと動きが検出されると、Rotate Eventが発生し、それぞれのイベントにおいて、 <span class="inline">event_data</span> DS Mapに以下のキーが入力されます。</p>
+    <p class="dropspot">上記の条件で2つのタッチと動きが検出されると、Rotate Eventが発生し、それぞれのイベントにおいて、 <span class="inline">event_data</span> DS
+      Mapに以下のキーが入力されます。</p>
     <ul class="dropspotlist">
     </ul>
     <table class=" cke_show_border">
       <tbody>
         <tr>
           <th>キー</th>
-          <th>商品説明</th>
+          <th>説明</th>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;gesture&quot;</span></td>
-          <td><br />これは、実行中のジェスチャーに<i>固有の</i>ID値です。これにより、マルチパートジェスチャーの異なる部分（ドラッグ開始、ドラッグ中、ドラッグ終了など）を互いにリンクさせることができます。</td>
+          <td><br />これは、実行中のジェスチャーに<i>固有の</i>ID値です。これにより、マルチパートジェスチャーの異なる部分（ドラッグ開始、ドラッグ中、ドラッグ終了など）を互いにリンクさせることができます。
+          </td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;touch1&quot;</span></td>
-          <td><br />これは、ピンチジェスチャーの一部として使用されている最初のタッチのインデックスです。一般的には0になりますが、他のタッチでこのイベントがトリガーされたときに、ユーザーが他の場所でスクリーンをタッチしていた場合は、この値は
-            0 よりも大きい。</td>
+          <td>
+            <br />これは、ピンチジェスチャーの一部として使用されている最初のタッチのインデックスです。一般的には0になりますが、他のタッチでこのイベントがトリガーされたときに、ユーザーが他の場所でスクリーンをタッチしていた場合は、この値は
+            0 よりも大きい。
+          </td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;touch2&quot;</span></td>
@@ -406,19 +515,27 @@
         </tr>
         <tr>
           <td><span class="notranslate">&quot;rawposX1&quot;</span></td>
-          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間X位置です(マウス位置の取得に相当します)。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline"><span class="inline">device_mouse_raw_x()</span></a>).</td>
+          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間X位置です(マウス位置の取得に相当します)。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span
+                class="inline"><span class="inline">device_mouse_raw_x()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;rawposY1&quot;</span></td>
-          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間Y位置です（←を使用してマウス位置を取得するのと同等です）。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline"><span class="inline">device_mouse_raw_y()</span></a>).</td>
+          <td><br />これは、最初のタッチの<i>生の</i>ウィンドウ空間Y位置です（←を使用してマウス位置を取得するのと同等です）。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span
+                class="inline"><span class="inline">device_mouse_raw_y()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;guiposX1&quot;</span></td>
-          <td><br />これは、最初のタッチのgui-space X位置です。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
+          <td><br />これは、最初のタッチのgui-space X位置です。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span
+                class="inline"><span class="inline">device_mouse_x_to_gui()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;guiposY1&quot;</span></td>
-          <td><br />2回目のタッチのgui-spaceのY位置です（マウス位置の取得に相当します）。 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
+          <td><br />2回目のタッチのgui-spaceのY位置です（マウス位置の取得に相当します）。 <a
+              href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span
+                class="inline"><span class="inline">device_mouse_y_to_gui()</span></a>).</td>
         </tr>
         <tr>
           <td><span class="notranslate">&quot;posX2&quot;</span></td>
@@ -482,9 +599,14 @@
     <p> </p>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">回転開始</a></p>
     <div class="droptext" data-targetname="drop-down16">
-      <p class="dropspot">Rotate Startイベントは、インスタンス（グローバルイベントの場合はスクリーン）が2本の指でタッチされ（タッチが維持され）、その後、1本または両方の指がそのスタート地点から回転したときにトリガーされます。
-        の位置に移動します。タッチの回転は、短時間（デフォルトでは0.16秒、ただし、関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_time.htm"><span class="inline">gesture_rotate_time()</span></a>)
-        で、最小角度閾値（デフォルトでは5°、ただし、これは関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"><span class="inline">gesture_rotate_angle()</span></a>).
+      <p class="dropspot">Rotate
+        Startイベントは、インスタンス（グローバルイベントの場合はスクリーン）が2本の指でタッチされ（タッチが維持され）、その後、1本または両方の指がそのスタート地点から回転したときにトリガーされます。
+        の位置に移動します。タッチの回転は、短時間（デフォルトでは0.16秒、ただし、関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_time.htm"><span
+            class="inline">gesture_rotate_time()</span></a>)
+        で、最小角度閾値（デフォルトでは5°、ただし、これは関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"><span
+            class="inline">gesture_rotate_angle()</span></a>).
         これらのチェックが真であれば、Rotate Startイベントがトリガーされ、残りのrotateイベントで使用する値の保存や変数の設定に使用することができます。例えば</p>
       <h4>イベント作成</h4>
       <p class="code">rotating = false;<br /> view_a = camera_get_view_angle(view_camera[0]);</p>
@@ -495,21 +617,30 @@
     </div>
     <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down17" href="#">回転式</a></p>
     <div class="droptext" data-targetname="drop-down17">
-      <p class="dropspot">Rotatingイベントは、画面上のタッチが互いに回転するたびに、最小角度閾値（デフォルトでは5°ですが、これは関数 <a href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"><span class="inline">gesture_rotate_angle()</span></a>).
+      <p class="dropspot">Rotatingイベントは、画面上のタッチが互いに回転するたびに、最小角度閾値（デフォルトでは5°ですが、これは関数 <a
+          href="../../GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"><span
+            class="inline">gesture_rotate_angle()</span></a>).
         このイベントは、変数の設定やインスタンスの操作などに利用することができます。</p>
       <h4>回転イベント</h4>
-      <p class="code">var _relangle = event_data[?&quot;relativeangle&quot;];<br /> var _a = camera_get_view_angle(view_camera[0]);<br /> _a += _relangle;<br /> camera_set_view_angle(view_camera[0], _a);</p>
+      <p class="code">var _relangle = event_data[?&quot;relativeangle&quot;];<br /> var _a =
+        camera_get_view_angle(view_camera[0]);<br /> _a += _relangle;<br /> camera_set_view_angle(view_camera[0], _a);
+      </p>
       <p class="dropspot">上記のコードは、イベント内のタッチの回転動作に応じて、カメラビューを回転させるものです。</p>
       <p class="dropspot"> <strong></strong></p>
     </div>
-    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#">ローテートエンド</a><strong></strong></p>
+    <p class="dropspot"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18"
+        href="#">ローテートエンド</a><strong></strong></p>
     <div class="droptext" data-targetname="drop-down18">
-      <p class="dropspot">Rotate Endイベントは、ジェスチャーを構成する片方（または両方）のタッチがデバイスのスクリーンから離されたときに発生するイベントです。このイベントは、変数の設定やインスタンスの操作などに利用することができます。</p>
+      <p class="dropspot">Rotate
+        Endイベントは、ジェスチャーを構成する片方（または両方）のタッチがデバイスのスクリーンから離されたときに発生するイベントです。このイベントは、変数の設定やインスタンスの操作などに利用することができます。</p>
       <h4>回転終了イベント</h4>
       <p class="code">rotating = false;</p>
       <h4>ステップイベント</h4>
-      <p class="code">if !rotating<br />     {<br />     var _a = camera_get_view_angle(view_camera[0]);<br />     var _adif = angle_difference(view_a, _a);<br />     _a += median(-5, _adif, 5);<br />     camera_set_view_angle(view_camera[0], _a);<br />     }</p>
-      <p class="dropspot">上記のコードでは、ユーザーがジェスチャーを止めたことを Rotate End イベントで検出し、変数をセットしています。この変数は、stepイベントで、ビューカメラを回転させて元の位置に戻すために使われます。</p>
+      <p class="code">if !rotating<br />     {<br />     var _a = camera_get_view_angle(view_camera[0]);<br />     var
+        _adif = angle_difference(view_a, _a);<br />     _a += median(-5, _adif, 5);<br />    
+        camera_set_view_angle(view_camera[0], _a);<br />     }</p>
+      <p class="dropspot">上記のコードでは、ユーザーがジェスチャーを止めたことを Rotate End
+        イベントで検出し、変数をセットしています。この変数は、stepイベントで、ビューカメラを回転させて元の位置に戻すために使われます。</p>
       <p class="dropspot"> </p>
     </div>
     <p class="dropspot"> </p>
@@ -520,11 +651,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Object_Events.htm">オブジェクトのイベント</a></div>
-        <div style="float:right">次へ<a href="Event_Order.htm">イベントの順番</a></div>
+        <div style="float:left">前のページ：<a href="Object_Events.htm">オブジェクトのイベント</a></div>
+        <div style="float:right">次のページ：<a href="Event_Order.htm">イベントの順番</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Gesture Events
@@ -538,4 +670,5 @@ Gestures
 gesture_events
 -->
 </body>
+
 </html>

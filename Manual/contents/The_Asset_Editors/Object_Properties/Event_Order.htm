@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>イベントオーダー</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,23 +13,35 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <script src="../../assets/scripts/main_script.js" type="module"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>イベントオーダー</h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>イベントを考えるとき、<strong>各ステップで発生するすべてのイベントの正確な順番は</strong>、<span data-keyref="GameMaker Name">GameMakerの</span>内部動作に依存し、ソフトウェアの開発によって変更される可能性があるため、<strong>明言</strong>できないことに注意する必要があります。ただし、<em>必ず </em>同じ順序で実行されるイベントがあります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>イベントを考えるとき、<strong>各ステップで発生するすべてのイベントの正確な順番は</strong>、<span
+      data-keyref="GameMaker Name">GameMakerの</span>内部動作に依存し、ソフトウェアの開発によって変更される可能性があるため、<strong>明言</strong>できないことに注意する必要があります。ただし、<em>必ず
+    </em>同じ順序で実行されるイベントがあります。</p>
   <p>常に同じように発生する最初のイベントセットは、<span class="notranslate">room</span> が最初に入力されたときに発生するイベントです。異なるイベントが発生する順序は次のとおりです。</p>
   <ul class="colour">
-    <li><strong>オブジェクト変数/インスタンス変数が初期化</strong>されます（<a href="../Objects.htm">オブジェクトエディターや</a> <a href="../Rooms.htm">ルームエディターの</a> <a class="glossterm" data-glossterm="アイディーイー" href="#">IDEで</a>定義できる変数です）。
-     <span class="notranslate">object</span> 変数が添付された<span class="notranslate">object</span> がある場合、それらは他の何よりも先に作成され、変数が添付されたインスタンスは後に定義されます。
-      エディタを使用します。</li>
-    <li><em>各インスタンスが </em>作成されると、最初に<strong><strong>Create</strong> </strong><strong><strong></strong> </strong>イベントが実行され、次にInstance<strong> Creation </strong>Codeが実行されます。
+    <li><strong>オブジェクト変数/インスタンス変数が初期化</strong>されます（<a href="../Objects.htm">オブジェクトエディタや</a> <a
+        href="../Rooms.htm">ルームエディタの</a> <a class="glossterm" data-glossterm="アイディーイー" href="#">IDEで</a>定義できる変数です）。
+      <span class="notranslate">object</span> 変数が添付された<span class="notranslate">object</span>
+      がある場合、それらは他の何よりも先に作成され、変数が添付されたインスタンスは後に定義されます。
+      エディタを使用します。
+    </li>
+    <li><em>各インスタンスが </em>作成されると、最初に<strong><strong>Create</strong> </strong><strong><strong></strong>
+      </strong>イベントが実行され、次にInstance<strong> Creation </strong>Codeが実行されます。
       次のインスタンスの作成に移る前に</li>
-    <li><strong>Game Start Event</strong>- このイベントは、<span class="notranslate">room</span> エディタから<span class="notranslate">room</span> に配置されたすべてのインスタンスについて、ゲームの一番最初の<span class="notranslate">room</span> で一度だけトリガーされます (game_restart() を呼ぶとこのイベントが再びトリガーされることに注意してください)。</li>
-    <li><strong>ルーム作成コード</strong>-<span class="notranslate">Room</span> が最初に入力されたときに、<span class="notranslate">room</span> Editor に書き込まれる一回限りのコードです。</li>
+    <li><strong>Game Start Event</strong>- このイベントは、<span class="notranslate">room</span> エディタから<span
+        class="notranslate">room</span> に配置されたすべてのインスタンスについて、ゲームの一番最初の<span class="notranslate">room</span>
+      で一度だけトリガーされます (game_restart() を呼ぶとこのイベントが再びトリガーされることに注意してください)。</li>
+    <li><strong>ルーム作成コード</strong>-<span class="notranslate">Room</span> が最初に入力されたときに、<span
+        class="notranslate">room</span> Editor に書き込まれる一回限りのコードです。</li>
     <li><strong>すべてのインスタンスのルーム開始イベント</strong>- 「その他」カテゴリのイベントの1つで、永続的かどうかにかかわらず、すべてのインスタンスに対して発生します。</li>
   </ul>
-  <p>また、<a href="../Room_Properties/Layer_Properties.htm">インスタンス・レイヤー・プロパティ・ウィンドウの</a>リストを上下に移動することで、<span class="notranslate">room</span> エディタ自体で特定のインスタンスを作成する順番を設定できることも特筆すべき点です。</p>
-  <p>これらの特定のイベント以外で、何があっても同じように発生する唯一の既知の順序は、3つの<strong>ステップ </strong>イベントと異なる<strong>ドローイベントに </strong>属します。これらは常に一貫しているので、もし
+  <p>また、<a href="../Room_Properties/Layer_Properties.htm">インスタンス・レイヤー・プロパティ・ウィンドウの</a>リストを上下に移動することで、<span
+      class="notranslate">room</span> エディタ自体で特定のインスタンスを作成する順番を設定できることも特筆すべき点です。</p>
+  <p>これらの特定のイベント以外で、何があっても同じように発生する唯一の既知の順序は、3つの<strong>ステップ </strong>イベントと異なる<strong>ドローイベントに
+    </strong>属します。これらは常に一貫しているので、もし
     ゲームの各ステップで特定のタイミングに依存するコードがある場合、これを使用する必要があります。</p>
   <ul class="colour">
     <li><strong>ステップイベント開始</strong></li>
@@ -51,11 +65,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Object_Events.htm">オブジェクトのイベント</a></div>
-        <div style="float:right">次へ<a href="Other_Events.htm">その他のイベント</a></div>
+        <div style="float:left">前のページ：<a href="Object_Events.htm">オブジェクトのイベント</a></div>
+        <div style="float:right">次のページ：<a href="Other_Events.htm">その他のイベント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Event Order
@@ -64,4 +79,6 @@ Event Order
 object_event_order
 -->
 
-</body></html>
+</body>
+
+</html>

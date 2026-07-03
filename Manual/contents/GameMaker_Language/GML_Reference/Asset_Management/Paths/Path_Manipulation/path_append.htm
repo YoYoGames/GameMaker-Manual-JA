@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>path_append</title>
@@ -12,49 +13,61 @@
   <meta name="rh-index-keywords" content="path_append" />
   <meta name="search-keywords" content="path_append" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">path_append</span></h1>
-  <p>このコードを使用すると、1つの<span class="notranslate">path</span> を別のものに追加して、効果的に結合することができます。これが機能するためには、両方の<span class="notranslate">paths</span> が以前に存在する必要があります。一般に、この関数は <span class="inline"><a href="path_add.htm">path_add()</a></span> を使って作成した<span class="notranslate">paths</span> に対して使いたいものです。なぜなら、この関数を<span class="notranslate">path</span> <span class="notranslate">asset</span> に対して使うと、その関数を使った瞬間からゲームの終わりまで、<strong>ゲーム内のインスタンスの<span class="notranslate">path</span> に永久に</strong>影響を与えるからです。</p>
-  <p class="note"><span class="note">注意</span>この操作では、ゲームに追加された<span class="notranslate">path</span> は削除されません。これはまだ存在しますが、ポイントを持っていないだけです。 <span style="font-size:1px;"><a href="path_delete.htm"><span class="inline">path_delete()</span></a></span>.</p>
+  <p>このコードを使用すると、1つの<span class="notranslate">path</span> を別のものに追加して、効果的に結合することができます。これが機能するためには、両方の<span
+      class="notranslate">paths</span> が以前に存在する必要があります。一般に、この関数は <span class="inline"><a
+        href="path_add.htm">path_add()</a></span> を使って作成した<span class="notranslate">paths</span>
+    に対して使いたいものです。なぜなら、この関数を<span class="notranslate">path</span> <span class="notranslate">asset</span>
+    に対して使うと、その関数を使った瞬間からゲームの終わりまで、<strong>ゲーム内のインスタンスの<span class="notranslate">path</span> に永久に</strong>影響を与えるからです。</p>
+  <p class="note"><span class="note">注意</span>この操作では、ゲームに追加された<span class="notranslate">path</span>
+    は削除されません。これはまだ存在しますが、ポイントを持っていないだけです。 <span style="font-size:1px;"><a href="path_delete.htm"><span
+          class="inline">path_delete()</span></a></span>.</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">path_append</span>(index, path);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The new index of the path.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">path</span></td>
+        <td><span data-keyref="Type_Asset_Path"></span></td>
         <td><span class="notranslate">The index of the path that will be appended to &#39;index&#39;.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">path_append(mypath, mppath);<br />
     path_delete(mppath);</p>
-  <p>上記のコードは、変数「mppath」にインデックスされた<span class="notranslate">path</span> のデータを、変数「mypath」にインデックスされた<span class="notranslate">path</span> に追加し、「mppath」をメモリから削除しています。</p>
+  <p>上記のコードは、変数「mppath」にインデックスされた<span class="notranslate">path</span> のデータを、変数「mypath」にインデックスされた<span
+      class="notranslate">path</span> に追加し、「mppath」をメモリから削除しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
-        <div style="float:right">次のページ <a href="path_assign.htm"><span class="notranslate">path_assign</span></a></div>
+        <div style="float:left">前のページ：<a href="Path_Manipulation.htm">パスマニピュレーション</a></div>
+        <div style="float:right">次のページ：<a href="path_assign.htm"><span class="notranslate">path_assign</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 path_append
@@ -63,4 +76,5 @@ path_append
 path_append
 -->
 </body>
+
 </html>

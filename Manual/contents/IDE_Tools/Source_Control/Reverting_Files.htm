@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ファイルを元に戻す</title>
@@ -12,13 +13,20 @@
   <meta name="rh-index-keywords" content="Source Control - Reverting Files" />
   <meta name="search-keywords" content="revert files" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ファイルを元に戻す</h1>
-  <p>これまでのセクションで、<a href="Repository_Options.htm">リポジトリを作成</a>し、<a href="Standard_Workflow.htm">そこにコミット</a>する方法を見てきました。しかし、間違いを犯し、以前のコミットに「ロールバック」したい場合はどうしたらいいのでしょうか？意図的なミスを犯し、それにどう対処するかを見ていきましょう...</p>
-  <p>まず、新しいリソースを作成します。この例では、<span class="notranslate">Script</span> リソースを作成します。最初は、<span class="notranslate">source control</span> に関する限り、まだ存在しないので、ステータスアイコンが表示されないでしょう。<span class="notranslate">script</span> リソースの中に、次のような簡単なコードを追加してください。</p>
+  <p>これまでのセクションで、<a href="Repository_Options.htm">リポジトリを作成</a>し、<a
+      href="Standard_Workflow.htm">そこにコミット</a>する方法を見てきました。しかし、間違いを犯し、以前のコミットに「ロールバック」したい場合はどうしたらいいのでしょうか？意図的なミスを犯し、それにどう対処するかを見ていきましょう...
+  </p>
+  <p>まず、新しいリソースを作成します。この例では、<span class="notranslate">Script</span> リソースを作成します。最初は、<span class="notranslate">source
+      control</span> に関する限り、まだ存在しないので、ステータスアイコンが表示されないでしょう。<span class="notranslate">script</span>
+    リソースの中に、次のような簡単なコードを追加してください。</p>
   <p class="code">show_debug_message(&quot;Hello World&quot;);</p>
-  <p>ここでコードエディターを閉じると、<span class="notranslate">script</span> が保存され、<a href="../../Introduction/The_Asset_Browser.htm">アセットブラウザーの</a>横に変更されたファイルのアイコン<img> が表示されます。さて、<strong>コミット </strong>ウィンドウを開くと、新しいリソースが自動的に追加され、4段階の変更があることがわかります。</p>
+  <p>ここでコードエディタを閉じると、<span class="notranslate">script</span> が保存され、<a
+      href="../../Introduction/The_Asset_Browser.htm">アセットブラウザーの</a>横に変更されたファイルのアイコン<img> が表示されます。さて、<strong>コミット
+    </strong>ウィンドウを開くと、新しいリソースが自動的に追加され、4段階の変更があることがわかります。</p>
   <p><img>ステージングされた変化は、次のとおりです。</p>
   <ul class="colour">
     <li> <span class="inline">.yyp</span> プロジェクトファイル</li>
@@ -26,19 +34,29 @@
     <li>The<span class="notranslate">GML</span> <span class="notranslate">script</span> itself</li>
     <li>それを参照する <span class="inline">.yy</span> ファイル</li>
   </ul>
-  <p>前回説明したように、コミットメッセージを入力し、<strong>コミット </strong>ボタンをクリックする必要があります。さて、<span class="notranslate">script</span> に戻り、コードの行を (例) に変更します。</p>
+  <p>前回説明したように、コミットメッセージを入力し、<strong>コミット </strong>ボタンをクリックする必要があります。さて、<span class="notranslate">script</span>
+    に戻り、コードの行を (例) に変更します。</p>
   <p class="code">show_debug_message(&quot;Hello World, how are you?&quot;);</p>
-  <p>コードエディタを閉じると、再び赤いアイコン<img> が<span class="notranslate">script</span> の横に表示されますが、コードに間違いがあることに気づいたので、以前のバージョンにロールバックして修正したいと思います（この例はとてもシンプルなので、<span class="notranslate">script</span> を開いて簡単に修正することもできますが、大きなプロジェクトでは通常実現不可能な方法です）。そのために必要なことは、変更点を<strong>元に戻す </strong>ことです。</p>
-  <p>変更を戻すには、まずコミットウィンドウをもう一度開く必要があるので、<strong>ソースコントロール</strong>&gt;<strong>変更のコミット</strong>をもう一度開きます。変更したファイルが再びステージングされ、コミットできる状態になりますが、これは私たちが望むものではありませんので、ボタン<strong>Unstage All</strong>をクリックしてステージングエリアから削除します。</p>
+  <p>コードエディタを閉じると、再び赤いアイコン<img> が<span class="notranslate">script</span>
+    の横に表示されますが、コードに間違いがあることに気づいたので、以前のバージョンにロールバックして修正したいと思います（この例はとてもシンプルなので、<span class="notranslate">script</span>
+    を開いて簡単に修正することもできますが、大きなプロジェクトでは通常実現不可能な方法です）。そのために必要なことは、変更点を<strong>元に戻す </strong>ことです。</p>
+  <p>
+    変更を戻すには、まずコミットウィンドウをもう一度開く必要があるので、<strong>ソースコントロール</strong>&gt;<strong>変更のコミット</strong>をもう一度開きます。変更したファイルが再びステージングされ、コミットできる状態になりますが、これは私たちが望むものではありませんので、ボタン<strong>Unstage
+      All</strong>をクリックしてステージングエリアから削除します。</p>
   <p>ここで、右クリック <strong><img></strong>をクリックすると、コンテキストメニューが表示され、「<strong>パスを元に戻す</strong>」オプションが表示されます。</p>
   <p><img>このオプションを選択すると、ファイルは以前の状態に戻されます。</p>
   <p class="note"><strong>重要!フ</strong>ァイルチェッカーがディスク上の変更を検出したため、復帰の際に現在のプロジェクトを再読み込みするか保存するかを尋ねるメッセージが表示されます。<br />
     <img>保存は、戻されたファイルを再読み込みするのではなく、メモリにあるものを保存するので、保存ではなく、再読み込みを押す必要があります。
   </p>
-  <p>しかし、1つ以上の変更をコミットした後で、<em>以前の </em>コミットにロールバックしたい場合はどうでしょうか？では、もう一度<span class="notranslate">script</span> を編集して次のようにしましょう。</p>
+  <p>しかし、1つ以上の変更をコミットした後で、<em>以前の </em>コミットにロールバックしたい場合はどうでしょうか？では、もう一度<span class="notranslate">script</span>
+    を編集して次のようにしましょう。</p>
   <p class="code">show_debug_message(&quot;This is a bad idea&quot;);</p>
-  <p>ここで、前回と同じようにコミットして、<span class="notranslate">source control</span> の下に配置します。そこで、これは悪い考えだったので、ロールバックしたいと思います。つまり、まず最初に<strong>ソースコントロール</strong>&gt;<strong>履歴の表示</strong>ウィンドウを開く必要があります。このウィンドウには、最初のコミットから始まり、<span class="notranslate">script</span> のコミット、そして「悪い考え」として編集した<span class="notranslate">script</span> のコミットまで、過去のすべてのコミットが表示されます。</p>
-  <p><img>これで2つの選択肢ができました。リビジョン全体をリバートする - 変更されたすべてのファイルを選択したコミットのものにリバートする - あるいは<span class="notranslate">path</span> をリバートする - 単純に1つのファイルをリバートする。まずは最初の選択肢を実行してみましょう。</p>
+  <p>ここで、前回と同じようにコミットして、<span class="notranslate">source control</span>
+    の下に配置します。そこで、これは悪い考えだったので、ロールバックしたいと思います。つまり、まず最初に<strong>ソースコントロール</strong>&gt;<strong>履歴の表示</strong>ウィンドウを開く必要があります。このウィンドウには、最初のコミットから始まり、<span
+      class="notranslate">script</span> のコミット、そして「悪い考え」として編集した<span class="notranslate">script</span>
+    のコミットまで、過去のすべてのコミットが表示されます。</p>
+  <p><img>これで2つの選択肢ができました。リビジョン全体をリバートする - 変更されたすべてのファイルを選択したコミットのものにリバートする - あるいは<span class="notranslate">path</span>
+    をリバートする - 単純に1つのファイルをリバートする。まずは最初の選択肢を実行してみましょう。</p>
   <ul class="colour">
     <li>右クリック <strong><img></strong>のコミット<strong>履歴</strong>ペインにある 2 番目のコミット (「Hello World」コミット) です。</li>
     <li><strong>このリビジョンに</strong>戻す]を選択し、警告メッセージの[<strong>再読み込み</strong>]を選択します。</li>
@@ -50,11 +68,13 @@
     <li>Hello World」のコードが入った<span class="notranslate">script</span> をアンステージします。</li>
     <li>右クリック <strong><img></strong>をクリックし、<strong>パスを元に</strong>戻します。</li>
   </ul>
-  <p>これでまた、プロジェクト内に誤ったファイルがある状態に戻りましたね。この機会に、すべてを以前のリビジョンに戻すのではなく、そのファイル（<span class="notranslate">path</span> ）だけを元に戻すことができます。そのためには、次のようにします。</p>
+  <p>これでまた、プロジェクト内に誤ったファイルがある状態に戻りましたね。この機会に、すべてを以前のリビジョンに戻すのではなく、そのファイル（<span class="notranslate">path</span>
+    ）だけを元に戻すことができます。そのためには、次のようにします。</p>
   <ul class="colour">
     <li><strong>履歴の表示</strong>]ウィンドウを開きます。</li>
     <li>2番目のコミット（&quot;Hello World &quot;のコミット）をクリックします。</li>
-    <li>右クリック <strong><img></strong><span class="notranslate">script</span> <span class="notranslate">GML</span> をクリックし、[<strong>パスの復帰</strong>]を選択します。</li>
+    <li>右クリック <strong><img></strong><span class="notranslate">script</span> <span class="notranslate">GML</span>
+      をクリックし、[<strong>パスの復帰</strong>]を選択します。</li>
   </ul>
   <p>Hello World&quot; のコードに戻り、新しいコミットをして修正したファイルで<span class="notranslate">source control</span> を再び更新することができるはずです。</p>
   <p> </p>
@@ -62,11 +82,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Source_Control.htm">ソースコントロール</a></div>
-        <div style="float:right">次へ<a href="Cloning_A_Repository.htm">リポジトリのクローン</a></div>
+        <div style="float:left">前のページ：<a href="../Source_Control.htm">ソースコントロール</a></div>
+        <div style="float:right">次のページ：<a href="Cloning_A_Repository.htm">リポジトリのクローン</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Reverting Files
@@ -76,4 +97,5 @@ reverting files
 source_control_revert
 -->
 </body>
+
 </html>

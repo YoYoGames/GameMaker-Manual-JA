@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_apply_impulse</title>
@@ -12,41 +13,55 @@
   <meta name="rh-index-keywords" content="physics_apply_impulse" />
   <meta name="search-keywords" content="physics_apply_impulse" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_apply_impulse</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>物理演算では、<span class="notranslate">object</span> に力と重力を加えることができるだけでなく、衝動を加えることもできます。これは力とは少し違って、衝撃を加えると<i>すぐに </i>速度に影響し、特に衝撃を加えるために選んだ点が質量中心（注：質量中心は<i>必ずしも</i>原点と同じでは<i>ありません</i>！）と一致していない場合は、<span class="notranslate">object</span> のトルク（または「スピン」）に影響を与える可能性があります。以下はその例です。</p>
-  <p><img>このように、プレイヤーがボールをクリックすることで、ボールが回転しながら右上に移動するインパルスが発生します。正確な衝動は、xpos/ypos座標に対するximpulse/yimpulseの成分から得られるベクトルで定義されます。つまり、衝動はxpos/yposからximpulse/yimpulseまでの距離をニュートンで計算し、方向はxpos/yposからximpulse/yimpulseまでの角度とする、という単純なことです。</p>
-  <p class="note"><b>注</b>：物理の世界では、すべての計算にメートルを使用します。1メートルあたりのピクセルの比率は、<span class="notranslate">room</span> エディタで定義するか、または <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
+  <p><span data-keyref="GameMaker Name">GameMakerの</span>物理演算では、<span class="notranslate">object</span>
+    に力と重力を加えることができるだけでなく、衝動を加えることもできます。これは力とは少し違って、衝撃を加えると<i>すぐに
+    </i>速度に影響し、特に衝撃を加えるために選んだ点が質量中心（注：質量中心は<i>必ずしも</i>原点と同じでは<i>ありません</i>！）と一致していない場合は、<span
+      class="notranslate">object</span> のトルク（または「スピン」）に影響を与える可能性があります。以下はその例です。</p>
+  <p>
+    <img>このように、プレイヤーがボールをクリックすることで、ボールが回転しながら右上に移動するインパルスが発生します。正確な衝動は、xpos/ypos座標に対するximpulse/yimpulseの成分から得られるベクトルで定義されます。つまり、衝動はxpos/yposからximpulse/yimpulseまでの距離をニュートンで計算し、方向はxpos/yposからximpulse/yimpulseまでの角度とする、という単純なことです。
+  </p>
+  <p class="note"><b>注</b>：物理の世界では、すべての計算にメートルを使用します。1メートルあたりのピクセルの比率は、<span class="notranslate">room</span>
+    エディタで定義するか、または <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span
+          class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">physics_apply_impulse</span>(xpos, ypos, ximpulse, yimpulse)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_impulse</span>(xpos, ypos, ximpulse,
+    yimpulse)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">xpos</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">xpos</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate <i>in the room</i> where the impulse will be applied</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">ypos</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">ypos</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate <i>in the room</i> where the impulse will be applied</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">ximpulse</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">ximpulse</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">the x component of the impulse vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">yimpulse</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">yimpulse</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">the y component of the impulse vector</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -64,11 +79,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Forces.htm">フォース</a></div>
-        <div style="float:right">次のページ <a href="physics_apply_local_force.htm"><span class="notranslate">physics_apply_local_force</span></a></div>
+        <div style="float:left">前のページ：<a href="Forces.htm">フォース</a></div>
+        <div style="float:right">次のページ：<a href="physics_apply_local_force.htm"><span
+              class="notranslate">physics_apply_local_force</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_apply_impulse
@@ -77,4 +94,5 @@ physics_apply_impulse
 physics_apply_impulse
 -->
 </body>
+
 </html>

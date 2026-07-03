@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_animation_get_position</title>
@@ -13,37 +14,44 @@
   <meta name="search-keywords" content="skeleton_animation_get_position" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_animation_get_position</span></h1>
-  <p>この関数は、指定されたアニメーショントラック上のアニメーションの位置を 0 から 1 までの値で返します。 この方法では、トラックの位置を、値 0 が 0%、値 1 が 100% に対応するパーセントとして取得することができます。</p>
+  <p>この関数は、指定されたアニメーショントラック上のアニメーションの位置を 0 から 1 までの値で返します。 この方法では、トラックの位置を、値 0 が 0%、値 1 が 100% に対応するパーセントとして取得することができます。
+  </p>
   <p>指定されたトラックにアニメーションが割り当てられていない場合や、インスタンスに<span class="notranslate">sprite</span> が設定されていない場合は、-1 を返します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_animation_get_position</span>(track);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">track</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The animation track to get the position of.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <h4>リターン</h4>
+  <p class="code"><span data-keyref="Type_Real"><a
+        href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">var _position = <span data-field="title" data-format="default">skeleton_animation_get_position</span>(0);<br />
+  <p class="code">var _position = <span data-field="title"
+      data-format="default">skeleton_animation_get_position</span>(0);<br />
     var _position_percent = _position * 100;<br />
-    show_debug_message(&quot;The skeleton animation position on track 0 is at &quot; + string(_position_percent) + &quot;%.&quot;);</p>
-  <p>上記のコードでは、トラック 0 に割り当てられたスケルトン・アニメーションの現在の位置をチェックし、一時変数<span class="inline2">_position</span> に格納しています。次に、その値を 100 倍してパーセンテージに変換し、その結果を別の一時変数<span class="inline2">_position_percent</span> に格納しています。<br />
+    show_debug_message(&quot;The skeleton animation position on track 0 is at &quot; + string(_position_percent) +
+    &quot;%.&quot;);</p>
+  <p>上記のコードでは、トラック 0 に割り当てられたスケルトン・アニメーションの現在の位置をチェックし、一時変数<span class="inline2">_position</span> に格納しています。次に、その値を 100
+    倍してパーセンテージに変換し、その結果を別の一時変数<span class="inline2">_position_percent</span> に格納しています。<br />
     最後に、パーセントの値を表示するデバッグ・メッセージを表示します。</p>
   <p> </p>
   <p> </p>
@@ -51,11 +59,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Animation.htm">アニメーション</a></div>
+        <div style="float:left">前のページ：<a href="Animation.htm">アニメーション</a></div>
         <div style="float:right">Next:<a href="skeleton_animation_set_position.htm">スケルトン_アニメーション_セット_ポジション</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_get_position
@@ -64,4 +73,5 @@ skeleton_animation_get_position
 skeleton_animation_get_position
 -->
 </body>
+
 </html>

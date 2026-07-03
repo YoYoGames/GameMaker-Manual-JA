@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_background_vtiled</title>
@@ -13,19 +14,25 @@
   <meta name="search-keywords" content="layer_background_vtiled" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_background_vtiled</span></h1>
-  <p>この関数は、あるレイヤーの背景要素を縦に並べるかどうかを変更することができます。背景要素の ID (背景要素の作成時に <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a>または関数 <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>) を設定し、タイリングの値を設定します。 <span class="inline">true</span> に設定すると、その要素は<span class="notranslate">room</span> の下に垂直にタイル状に表示され、 <span class="inline">false</span> に設定すると、その要素はタイル状に表示されません。この機能は2Dプロジェクト専用で、3Dカメラ投影の場合は正しく動作しません。</p>
+  <p>この関数は、あるレイヤーの背景要素を縦に並べるかどうかを変更することができます。背景要素の ID (背景要素の作成時に <a href="layer_background_create.htm"><span
+        class="inline">layer_background_create()</span></a>または関数 <a href="layer_background_get_id.htm"><span
+        class="inline">layer_background_get_id()</span></a>) を設定し、タイリングの値を設定します。 <span class="inline">true</span>
+    に設定すると、その要素は<span class="notranslate">room</span> の下に垂直にタイル状に表示され、 <span class="inline">false</span>
+    に設定すると、その要素はタイル状に表示されません。この機能は2Dプロジェクト専用で、3Dカメラ投影の場合は正しく動作しません。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_background_vtiled</span>(background_element_id, tiled);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">layer_background_vtiled</span>(background_element_id,
+    tiled);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">background_element_id</span></td>
@@ -35,12 +42,13 @@
       <tr>
         <td><span class="notranslate">tiled</span></td>
         <td><span data-keyref="Type_Bool">ブーリアン</span></td>
-        <td><span class="notranslate">The vertical tiling toggle, which can be <span class="inline">true</span> または <span class="inline">false</span></td>
+        <td><span class="notranslate">The vertical tiling toggle, which can be <span class="inline">true</span> または
+            <span class="inline">false</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -50,18 +58,21 @@
         layer_background_htiled(back, true);<br />
         layer_background_vtiled(back, true);<br />
     }</p>
-  <p>上記のコードは、コードを実行しているインスタンスのレイヤーに割り当てられている背景要素をチェックし、それがどちらの方向にもタイル状になっていない場合、それを垂直方向と水平方向に<span class="notranslate">tile</span> に設定します。</p>
+  <p>上記のコードは、コードを実行しているインスタンスのレイヤーに割り当てられている背景要素をチェックし、それがどちらの方向にもタイル状になっていない場合、それを垂直方向と水平方向に<span
+      class="notranslate">tile</span> に設定します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="Background_Layers.htm">背景レイヤー</a></div>
-        <div style="float:right">次のページ <a href="layer_background_stretch.htm"><span class="notranslate">layer_background_stretch</span></a></div>
+        <div style="float:left">前のページ：<a href="Background_Layers.htm">背景レイヤー</a></div>
+        <div style="float:right">次のページ：<a href="layer_background_stretch.htm"><span
+              class="notranslate">layer_background_stretch</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_vtiled
@@ -70,4 +81,5 @@ layer_background_vtiled
 layer_background_vtiled
 -->
 </body>
+
 </html>

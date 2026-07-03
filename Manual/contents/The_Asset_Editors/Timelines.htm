@@ -1,78 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>タイムライン</title>
-    <meta name="generator" content="Adobe RoboHelp 2020" />
-    <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-    <script src="../assets/scripts/main_script.js" type="module"></script>
-    <meta name="rh-authors" content="Mark Alexander" />
-    <meta name="topic-comment" content="Page detailing how the timeline editor works" />
-    <meta name="rh-index-keywords" content="Timeline Editor" />
-    <meta name="search-keywords" content="timelines,timeline,timeline editor" />
-  </head>
-  <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1><span class="notranslate">Timeline</span> 編集部</h1>
-    <p><img>多くのゲームでは、ある事柄を正確なタイミングで発生させたいものです。アラームイベントを使用することで、これを実現することができますが、物事が複雑になりすぎると、これ以上うまくいきません。そのため、<strong>タイムラインアセットが </strong>用意されています。<span class="notranslate">timeline</span> では、ゲーム時間内の特定の瞬間に起こるべきアクションを指定します。<span class="notranslate">object</span> のさまざまなイベントやコードで利用できるすべてのアクションを使用して、これを定義することができます。タイムラインを作成したら、それを<span class="notranslate">object</span> に割り当てます。その<span class="notranslate">object</span> のインスタンスは、<span class="notranslate">room</span> 内に配置または作成されると、指定された時間の瞬間にアクションを実行します。</p>
-    <p>例えば、ガードを作りたいとして、このガードは左へ20タイムステップ、次に上へ10タイムステップ、次に右へ20タイムステップ、次に下へ10タイムステップ移動して、最後に止まるとします。これを実現するには、<span class="notranslate">timeline</span> 、まず左への動きを設定する。20秒後に上方向の動き、30秒後に右方向の動き、50秒後に下方向の動き、そして60秒後に停止します。これができたら、この<span class="notranslate">timeline</span> を警備員<span class="notranslate">object</span> に割り当てると、警備員のインスタンスが<span class="notranslate">room</span> に配置されたときに計画通りに動作します。時間軸にアラームを設定して、一定時間後に繰り返されるようにすれば、警備員が地域を巡回することも可能です。また、タイムラインを使って、よりグローバルにゲームをコントロールすることもできます。例えば、目に見えないコントローラ<span class="notranslate">object</span> を作り、特定の瞬間に敵を作り出すタイムラインを作り、それをコントローラ<span class="notranslate">object</span> に割り当て、インスタンスを<span class="notranslate">room</span> に配置します。これは、宇宙船ゲームなどで、敵を時間差でスポーンさせる簡単な方法です。</p>
-    <p class="note">新しいモーメントを追加する際に、<span data-keyref="GML_Visual">GML Visualと</span> <span data-keyref="GML_Code">GML Codeの</span>どちらかを選択するよう求められる場合があります。詳しくは<a data-xref="{title}" href="../GameMaker_Language.htm">GameMaker Languageを</a>ご覧ください。</p>
-    <p>時間軸を作成するには、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザ</a>上で<img> を右クリックし、「タイムライン作成」を選択します。すると、このページの上部にある写真のようなウィンドウが開き、以下のセクションが表示されます。</p>
-    <p> </p>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">名称</a></p>
-    <div class="droptext" data-targetname="drop-down">
-      <p class="dropspot">ここでは、<span class="notranslate">timeline</span> のリソースに<strong>名前を</strong>付けます。この名前は、コードを通して<span class="notranslate">timeline</span> を参照するために使用されるため、英数字またはアンダーバー「_」のみを含む必要があり、数字で始めることはできません。この名前は、<span class="notranslate">timeline</span> Visual アクションやコード関数で<span class="notranslate">GML</span> を識別するために使用できる、一意の<span class="notranslate">timeline</span> ID にもなります。</p>
-      <p class="dropspot">
-        <br />
-      </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">モーメント</a></p>
-    <div class="droptext" data-targetname="drop-down1">
-      <p class="dropspot">ここでは、<strong>モーメント </strong>値を設定することができます。モーメント値は、<span class="notranslate">timeline</span> が始まってからのゲームステップ数として計算されます。つまり、0と60の位置にモーメントを持つ<span class="notranslate">timeline</span> がある場合、モーメント0は<span class="notranslate">timeline</span> が<em>開始 </em>されたときに発生し、モーメント60は<em>その</em>60ステップ<em>後に</em>発生します。<span class="notranslate">room</span> の速度も 60 に設定されている場合、モーメント 60 は<span class="notranslate">timeline</span> が開始された 1 秒後に発生します。モーメント値をダブルクリック<img> するか、右ボタン<img> メニューから「<em>変更</em>」（下のボタンメニューの項を参照）を選択して変更することができます。新しいモーメントを追加するには、エディタの下にある<strong>Add </strong>ボタンをクリックするだけです。新しいモーメントを追加すると、<a href="Scripts.htm">コードエディタ</a>（またはアクションエディタ）が開き、そのモーメントで呼び出したい関数または<span class="notranslate">GML</span> Visual を追加することができます。 </p>
-      <p class="dropspot">
-        <br />
-      </p>
-    </div>
-    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">モーメント名</a></p>
-    <div class="droptext" data-targetname="drop-down2">
-      <p class="dropspot"><span class="notranslate">timeline</span> が何をしているのかを理解しやすくするために、モーメントに名前をつけて識別することが許されています。これは単に<span class="notranslate">string</span> であり、ゲームコードや他のどこにも使われません。純粋に<span class="notranslate">timeline</span> の動作を整理し、理解するためのものだからです。モーメントに名前と説明をつけるには、コードブロックの最初の行で <span class="inline">/// @description</span> の形式を使う必要があります。
-        <br />
-      </p>
-      <p class="code">/// @description Hello World</p>
-      <p class="dropspot">というと、こんな感じになります。</p>
-      <p class="dropspot"> <img alt="The Timeline Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines.png"/> </p>
-    </div>
-    <p> </p>
-    <p><span class="notranslate">timeline</span> エディターでは、<img> +<img> を使って、最初のクリック<img> と 2 番目のクリック<img> の間のすべてのモーメントを選択するか、<img> /<img> +<img> を使って、単独のモーメントをクリックして選択できます。<span class="notranslate">Timeline</span> モーメントは、選択した要素の 1 つで、右クリック<img> メニューを使って編集することができま す。</p>
-    <p><img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/></p>
-    <ul class="colour">
-      <li><strong>追加</strong>します。このオプションで、新しいモーメントを<span class="notranslate">timeline</span> に追加することができます。 最後のモーメントの直後に追加されるので、<span class="notranslate">timeline</span> の最後のモーメントが 120 であれば、次に追加するのは 121 になります。モーメントの位置を変更するには、エディターでモーメントの値をダブルクリック（<img> ）するか、右クリック（<img> ）で「<em>Change</em>」を選びます。</li>
-      <li><strong>Edit</strong>：現在の<span class="notranslate">timeline</span> モーメントを編集用に開きます。</li>
-      <li><strong>モーメントを変更</strong>する。選択した<span class="notranslate">timeline</span> のモーメントの値を変更します。これは、エディタウィンドウの<span class="notranslate">timeline</span> の値をゆっくりダブルクリック（<img> ）するのと同じです。</li>
-      <li><strong>説明文を変更</strong>する。選択された<span class="notranslate">timeline</span> 瞬間の説明的な名前を変更します。これは、エディタウィンドウの<span class="notranslate">timeline</span> の説明文の上で<img> をゆっくりダブルクリックするのと同じです。</li>
-      <li><strong>複製</strong>します。これは、選択したすべての<span class="notranslate">timeline</span> の瞬間を複製し、現在の<span class="notranslate">timeline</span> の末尾に連続して追加します。</li>
-      <li><strong>マージ</strong>する。<span class="notranslate">timeline</span> から2つ以上のモーメントを選択した場合、それらをマージすることを選択することができます。これにより、最初に選択したモーメントの位置に、すべてのコードとアクションが同時に含まれた1つのモーメント（<span class="notranslate">timeline</span> ）が作成されます。</li>
-      <li><strong>削除</strong>します。これは、選択したモーメント（または複数のモーメント）を<span class="notranslate">timeline</span> から削除します。</li>
-      <li><strong>カット／ </strong> <strong>コピー／ </strong> <strong>ペースト</strong>。これらのオプションにより、1つまたは複数の<span class="notranslate">timeline</span> の瞬間をカット、コピー、ペーストすることができます。ここでも標準的なキーボードショートカットが使用できます。 <img> /<img> + &quot;<span class="inline">X</span>&quot;,<img> /<img> + &quot;<span class="inline">C</span>&quot;, and<img> /<img> + &quot;<span class="inline">V</span>&quot;.</li>
-      <li><strong>すべて選択</strong>このオプションで、<span class="notranslate">timeline</span> のすべてのモーメントを選択できます。 選択したモーメントは、削除、結合、複製、カット、コピーすることができます。</li>
-      <li><strong> <span class="notranslate">GML</span> </strong> Visual / Codeに変換します。タイムラインモーメントはプロジェクト作成時に選択した方法、つまりコードを使うか<span class="notranslate">GML</span> Visual アクションを使うかによって作成されます。このオプションを使えば、プロジェクトの種類に関係なく、一方から他方へ変換することができます。</li>
-    </ul>
-    <p> </p>
-    <p> </p>
-    <p> </p>
-    <div class="footer">
-      <div class="buttons">
-        <div class="clear">
-          <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-          <div style="float:right">次へ<a href="Image_Editor.htm">画像編集ソフト</a></div>
-        </div>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>タイムライン</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page detailing how the timeline editor works" />
+  <meta name="rh-index-keywords" content="Timeline Editor" />
+  <meta name="search-keywords" content="timelines,timeline,timeline editor" />
+</head>
+
+<body><!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span class="notranslate">Timeline</span> エディタ</h1>
+  <p><img>多くのゲームでは、ある事柄を正確なタイミングで発生させたいものです。アラームイベントを使用することで、これを実現することができますが、物事が複雑になりすぎると、これ以上うまくいきません。そのため、<strong>タイムラインアセットが
+    </strong>用意されています。<span class="notranslate">timeline</span> では、ゲーム時間内の特定の瞬間に起こるべきアクションを指定します。<span
+      class="notranslate">object</span> のさまざまなイベントやコードで利用できるすべてのアクションを使用して、これを定義することができます。タイムラインを作成したら、それを<span
+      class="notranslate">object</span> に割り当てます。その<span class="notranslate">object</span> のインスタンスは、<span
+      class="notranslate">room</span> 内に配置または作成されると、指定された時間の瞬間にアクションを実行します。</p>
+  <p>例えば、ガードを作りたいとして、このガードは左へ20タイムステップ、次に上へ10タイムステップ、次に右へ20タイムステップ、次に下へ10タイムステップ移動して、最後に止まるとします。これを実現するには、<span
+      class="notranslate">timeline</span>
+    、まず左への動きを設定する。20秒後に上方向の動き、30秒後に右方向の動き、50秒後に下方向の動き、そして60秒後に停止します。これができたら、この<span class="notranslate">timeline</span>
+    を警備員<span class="notranslate">object</span> に割り当てると、警備員のインスタンスが<span class="notranslate">room</span>
+    に配置されたときに計画通りに動作します。時間軸にアラームを設定して、一定時間後に繰り返されるようにすれば、警備員が地域を巡回することも可能です。また、タイムラインを使って、よりグローバルにゲームをコントロールすることもできます。例えば、目に見えないコントローラ<span
+      class="notranslate">object</span> を作り、特定の瞬間に敵を作り出すタイムラインを作り、それをコントローラ<span class="notranslate">object</span>
+    に割り当て、インスタンスを<span class="notranslate">room</span> に配置します。これは、宇宙船ゲームなどで、敵を時間差でスポーンさせる簡単な方法です。</p>
+  <p class="note">新しいモーメントを追加する際に、<span data-keyref="GML_Visual">GML Visualと</span> <span data-keyref="GML_Code">GML
+      Codeの</span>どちらかを選択するよう求められる場合があります。詳しくは<a data-xref="{title}" href="../GameMaker_Language.htm">GameMaker
+      Languageを</a>ご覧ください。</p>
+  <p>時間軸を作成するには、<a href="../Introduction/The_Asset_Browser.htm">アセットブラウザ</a>上で<img>
+    を右クリックし、「タイムライン作成」を選択します。すると、このページの上部にある写真のようなウィンドウが開き、以下のセクションが表示されます。</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">名称</a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot">ここでは、<span class="notranslate">timeline</span> のリソースに<strong>名前を</strong>付けます。この名前は、コードを通して<span
+        class="notranslate">timeline</span> を参照するために使用されるため、英数字またはアンダーバー「_」のみを含む必要があり、数字で始めることはできません。この名前は、<span
+        class="notranslate">timeline</span> Visual アクションやコード関数で<span class="notranslate">GML</span>
+      を識別するために使用できる、一意の<span class="notranslate">timeline</span> ID にもなります。</p>
+    <p class="dropspot">
+      <br />
+    </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">モーメント</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">ここでは、<strong>モーメント </strong>値を設定することができます。モーメント値は、<span class="notranslate">timeline</span>
+      が始まってからのゲームステップ数として計算されます。つまり、0と60の位置にモーメントを持つ<span class="notranslate">timeline</span> がある場合、モーメント0は<span
+        class="notranslate">timeline</span> が<em>開始 </em>されたときに発生し、モーメント60は<em>その</em>60ステップ<em>後に</em>発生します。<span
+        class="notranslate">room</span> の速度も 60 に設定されている場合、モーメント 60 は<span class="notranslate">timeline</span> が開始された 1
+      秒後に発生します。モーメント値をダブルクリック<img> するか、右ボタン<img>
+      メニューから「<em>変更</em>」（下のボタンメニューの項を参照）を選択して変更することができます。新しいモーメントを追加するには、エディタの下にある<strong>Add
+      </strong>ボタンをクリックするだけです。新しいモーメントを追加すると、<a href="Scripts.htm">コードエディタ</a>（またはアクションエディタ）が開き、そのモーメントで呼び出したい関数または<span
+        class="notranslate">GML</span> Visual を追加することができます。 </p>
+    <p class="dropspot">
+      <br />
+    </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">モーメント名</a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p class="dropspot"><span class="notranslate">timeline</span>
+      が何をしているのかを理解しやすくするために、モーメントに名前をつけて識別することが許されています。これは単に<span class="notranslate">string</span>
+      であり、ゲームコードや他のどこにも使われません。純粋に<span class="notranslate">timeline</span>
+      の動作を整理し、理解するためのものだからです。モーメントに名前と説明をつけるには、コードブロックの最初の行で <span class="inline">/// @description</span> の形式を使う必要があります。
+      <br />
+    </p>
+    <p class="code">/// @description Hello World</p>
+    <p class="dropspot">というと、こんな感じになります。</p>
+    <p class="dropspot"> <img alt="The Timeline Editor" class="center"
+        src="../assets/Images/Asset_Editors/Editor_Timelines.png" /> </p>
+  </div>
+  <p> </p>
+  <p><span class="notranslate">timeline</span> エディターでは、<img> +<img> を使って、最初のクリック<img> と 2 番目のクリック<img>
+    の間のすべてのモーメントを選択するか、<img> /<img> +<img> を使って、単独のモーメントをクリックして選択できます。<span class="notranslate">Timeline</span>
+    モーメントは、選択した要素の 1 つで、右クリック<img> メニューを使って編集することができま す。</p>
+  <p><img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
+  <ul class="colour">
+    <li><strong>追加</strong>します。このオプションで、新しいモーメントを<span class="notranslate">timeline</span> に追加することができます。
+      最後のモーメントの直後に追加されるので、<span class="notranslate">timeline</span> の最後のモーメントが 120 であれば、次に追加するのは 121
+      になります。モーメントの位置を変更するには、エディターでモーメントの値をダブルクリック（<img> ）するか、右クリック（<img> ）で「<em>Change</em>」を選びます。</li>
+    <li><strong>Edit</strong>：現在の<span class="notranslate">timeline</span> モーメントを編集用に開きます。</li>
+    <li><strong>モーメントを変更</strong>する。選択した<span class="notranslate">timeline</span> のモーメントの値を変更します。これは、エディタウィンドウの<span
+        class="notranslate">timeline</span> の値をゆっくりダブルクリック（<img> ）するのと同じです。</li>
+    <li><strong>説明文を変更</strong>する。選択された<span class="notranslate">timeline</span> 瞬間の説明的な名前を変更します。これは、エディタウィンドウの<span
+        class="notranslate">timeline</span> の説明文の上で<img> をゆっくりダブルクリックするのと同じです。</li>
+    <li><strong>複製</strong>します。これは、選択したすべての<span class="notranslate">timeline</span> の瞬間を複製し、現在の<span
+        class="notranslate">timeline</span> の末尾に連続して追加します。</li>
+    <li><strong>マージ</strong>する。<span class="notranslate">timeline</span>
+      から2つ以上のモーメントを選択した場合、それらをマージすることを選択することができます。これにより、最初に選択したモーメントの位置に、すべてのコードとアクションが同時に含まれた1つのモーメント（<span
+        class="notranslate">timeline</span> ）が作成されます。</li>
+    <li><strong>削除</strong>します。これは、選択したモーメント（または複数のモーメント）を<span class="notranslate">timeline</span> から削除します。</li>
+    <li><strong>カット／ </strong> <strong>コピー／ </strong> <strong>ペースト</strong>。これらのオプションにより、1つまたは複数の<span
+        class="notranslate">timeline</span> の瞬間をカット、コピー、ペーストすることができます。ここでも標準的なキーボードショートカットが使用できます。 <img> /<img> +
+      &quot;<span class="inline">X</span>&quot;,<img> /<img> + &quot;<span class="inline">C</span>&quot;, and<img>
+      /<img> + &quot;<span class="inline">V</span>&quot;.</li>
+    <li><strong>すべて選択</strong>このオプションで、<span class="notranslate">timeline</span> のすべてのモーメントを選択できます。
+      選択したモーメントは、削除、結合、複製、カット、コピーすることができます。</li>
+    <li><strong> <span class="notranslate">GML</span> </strong> Visual /
+      Codeに変換します。タイムラインモーメントはプロジェクト作成時に選択した方法、つまりコードを使うか<span class="notranslate">GML</span> Visual
+      アクションを使うかによって作成されます。このオプションを使えば、プロジェクトの種類に関係なく、一方から他方へ変換することができます。</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセットエディタ</a></div>
+        <div style="float:right">次のページ：<a href="Image_Editor.htm">画像エディタ</a></div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
     </div>
-    <!-- KEYWORDS
+  </div>
+  <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+      Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
 The <span class="notranslate">Timeline</span> Editor
 Timeline Editor
 --><!-- TAGS
 timeline_editor
---></body>
+-->
+</body>
+
 </html>

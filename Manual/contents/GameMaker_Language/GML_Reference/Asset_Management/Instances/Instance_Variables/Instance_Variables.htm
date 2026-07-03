@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>インスタンス変数</title>
@@ -12,12 +13,26 @@
   <meta name="rh-index-keywords" content="Instance Variables,Built-in Variables" />
   <meta name="search-keywords" content="Built-in Instance Variables" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>インスタンス変数</h1>
-  <p>新しい<span class="notranslate">object</span> を作成すると、特定の変数がデフォルト値で初期化された状態で提供されます。これらの変数は<b>インスタンス変数と</b>呼ばれ、ゲーム<span class="notranslate">object</span> に<span class="notranslate">rooms</span> を配置するたびに作成され、一度インスタンスが作成されると、これらの変数の値はそのインスタンスに固有のものとなり、その<i>インスタンスだけに</i>なります。これらの変数の中には、 <span class="inline">x</span> や <span class="inline">y</span> のようにたくさん使うものもあれば、やりたいことによってはあまり必要ないものもありますが、一般的にこれらは非常に便利なので、可能であれば独自のカスタム変数を作成するよりも、これらの変数を使用したほうがよいでしょう。</p>
-  <p>インスタンス変数のほとんどは、読み込むだけでなく設定することもでき、特定の変数の値を調整するだけでインスタンスのプロパティや動作を変更することができます。たとえば、組み込み変数 <span class="inline">visible</span> を <span class="inline">false</span> に設定するだけで、インスタンスの描画を阻止できます。以下では、ゲーム内のすべてのインスタンス<span class="notranslate">objects</span> に対して初期化されるさまざまな変数について説明します。</p>
-  <p class="note"><span class="optional">重要</span>インスタンスが <a href="../../../../../The_Asset_Editors/Sequences.htm"><span class="notranslate">sequence</span></a>という場合、<span class="inline"><span style="font-size:14px;">image_xscale</span> /<span class="inline"><span style="font-size:14px;">image_yscale</span> / <span class="inline"><span style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span> /<span class="inline"><span style="font-size:14px;">y</span> のように、これらの変数のいくつかは、<span class="notranslate">sequence</span> が再生開始後の各ステップを更新する際に上書きされます。</p>
+  <p>新しい<span class="notranslate">object</span> を作成すると、特定の変数がデフォルト値で初期化された状態で提供されます。これらの変数は<b>インスタンス変数と</b>呼ばれ、ゲーム<span
+      class="notranslate">object</span> に<span class="notranslate">rooms</span>
+    を配置するたびに作成され、一度インスタンスが作成されると、これらの変数の値はそのインスタンスに固有のものとなり、その<i>インスタンスだけに</i>なります。これらの変数の中には、 <span
+      class="inline">x</span> や <span class="inline">y</span>
+    のようにたくさん使うものもあれば、やりたいことによってはあまり必要ないものもありますが、一般的にこれらは非常に便利なので、可能であれば独自のカスタム変数を作成するよりも、これらの変数を使用したほうがよいでしょう。</p>
+  <p>インスタンス変数のほとんどは、読み込むだけでなく設定することもでき、特定の変数の値を調整するだけでインスタンスのプロパティや動作を変更することができます。たとえば、組み込み変数 <span
+      class="inline">visible</span> を <span class="inline">false</span>
+    に設定するだけで、インスタンスの描画を阻止できます。以下では、ゲーム内のすべてのインスタンス<span class="notranslate">objects</span> に対して初期化されるさまざまな変数について説明します。
+  </p>
+  <p class="note"><span class="optional">重要</span>インスタンスが <a href="../../../../../The_Asset_Editors/Sequences.htm"><span
+        class="notranslate">sequence</span></a>という場合、<span class="inline"><span
+        style="font-size:14px;">image_xscale</span> /<span class="inline"><span
+          style="font-size:14px;">image_yscale</span> / <span class="inline"><span
+            style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span>
+            /<span class="inline"><span style="font-size:14px;">y</span> のように、これらの変数のいくつかは、<span
+                class="notranslate">sequence</span> が再生開始後の各ステップを更新する際に上書きされます。</p>
   <p> </p>
   <h2><label for="one">一般変数</label></h2>
   <p>これらの変数は、一般的なインスタンスプロパティを扱う。</p>
@@ -58,29 +73,47 @@
   <h2><label for="two">スプライトプロパティ</label></h2>
   <p>これらの変数はすべてインスタンスに割り当てられた<span class="notranslate">sprite</span> に関連しており、何をどのように描くかを変更するために使用することができます。</p>
   <ul class="colour">
-    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="notranslate">sprite_index</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_width.htm"><span class="notranslate">sprite_width</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_height.htm"><span class="notranslate">sprite_height</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_xoffset.htm"><span class="notranslate">sprite_xoffset</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_yoffset.htm"><span class="notranslate">sprite_yoffset</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_alpha.htm"><span class="notranslate">image_alpha</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_angle.htm"><span class="notranslate">image_angle</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_blend.htm"><span class="notranslate">image_blend</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_index.htm"><span class="notranslate">image_index</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_number.htm"><span class="notranslate">image_number</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_speed.htm"><span class="notranslate">image_speed</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_xscale.htm"><span class="notranslate">image_xscale</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/image_yscale.htm"><span class="notranslate">image_yscale</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_index.htm"><span
+          class="notranslate">sprite_index</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_width.htm"><span
+          class="notranslate">sprite_width</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_height.htm"><span
+          class="notranslate">sprite_height</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_xoffset.htm"><span
+          class="notranslate">sprite_xoffset</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/sprite_yoffset.htm"><span
+          class="notranslate">sprite_yoffset</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_alpha.htm"><span
+          class="notranslate">image_alpha</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_angle.htm"><span
+          class="notranslate">image_angle</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_blend.htm"><span
+          class="notranslate">image_blend</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_index.htm"><span
+          class="notranslate">image_index</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_number.htm"><span
+          class="notranslate">image_number</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_speed.htm"><span
+          class="notranslate">image_speed</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_xscale.htm"><span
+          class="notranslate">image_xscale</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/image_yscale.htm"><span
+          class="notranslate">image_yscale</span></a></li>
   </ul>
   <p> </p>
   <h2><label for="three">マスクとバウンディングボックス</label></h2>
   <p>これらの変数は、コリジョンマスクを扱います。</p>
   <ul class="colour">
-    <li><a href="../../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="notranslate">mask_index</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_bottom.htm"><span class="notranslate">bbox_bottom</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_left.htm"><span class="notranslate">bbox_left</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_right.htm"><span class="notranslate">bbox_right</span></a></li>
-    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_top.htm"><span class="notranslate">bbox_top</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="notranslate">mask_index</span></a>
+    </li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_bottom.htm"><span
+          class="notranslate">bbox_bottom</span></a></li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_left.htm"><span class="notranslate">bbox_left</span></a>
+    </li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_right.htm"><span class="notranslate">bbox_right</span></a>
+    </li>
+    <li><a href="../../Sprites/Sprite_Instance_Variables/bbox_top.htm"><span class="notranslate">bbox_top</span></a>
+    </li>
   </ul>
   <p> </p>
   <h2><label for="five">パス</label></h2>
@@ -88,10 +121,12 @@
   <ul class="colour">
     <li><a href="../../Paths/Path_Variables/path_index.htm"><span class="notranslate">path_index</span></a></li>
     <li><a href="../../Paths/Path_Variables/path_position.htm"><span class="notranslate">path_position</span></a></li>
-    <li><a href="../../Paths/Path_Variables/path_positionprevious.htm"><span class="notranslate">path_positionprevious</span></a></li>
+    <li><a href="../../Paths/Path_Variables/path_positionprevious.htm"><span
+          class="notranslate">path_positionprevious</span></a></li>
     <li><a href="../../Paths/Path_Variables/path_speed.htm"><span class="notranslate">path_speed</span></a></li>
     <li><a href="../../Paths/Path_Variables/path_scale.htm"><span class="notranslate">path_scale</span></a></li>
-    <li><a href="../../Paths/Path_Variables/path_orientation.htm"><span class="notranslate">path_orientation</span></a></li>
+    <li><a href="../../Paths/Path_Variables/path_orientation.htm"><span class="notranslate">path_orientation</span></a>
+    </li>
     <li><a href="../../Paths/Path_Variables/path_endaction.htm"><span class="notranslate">path_endaction</span></a></li>
   </ul>
   <p> </p>
@@ -113,7 +148,9 @@
   </ul>
   <p> </p>
   <h2><label for="seven">物理学</label></h2>
-  <p><span data-keyref="GameMaker Name">GameMakerの</span>物理機能で使用するための組み込み変数が非常に多いので、わかりやすくするために、マニュアルの物理シミュレーションに関するすべての項目を網羅するセクションで紹介しています。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerの</span>物理機能で使用するための組み込み変数が非常に多いので、わかりやすくするために、マニュアルの物理シミュレーションに関するすべての項目を網羅するセクションで紹介しています。
+  </p>
   <ul class="colour">
     <li><a href="../../../Physics/Physics.htm">物理学</a></li>
   </ul>
@@ -123,11 +160,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る：<a href="../Instances.htm">インスタンス</a></div>
-        <div style="float:right">次へ<a href="../Deactivating_Instances/Deactivating_Instances.htm">インスタンスの非活性化</a></div>
+        <div style="float:left">前のページ：<a href="../Instances.htm">インスタンス</a></div>
+        <div style="float:right">次のページ：<a href="../Deactivating_Instances/Deactivating_Instances.htm">インスタンスの非活性化</a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Instance Variables
@@ -136,4 +175,5 @@ Instance Variables
 instance_variables
 -->
 </body>
+
 </html>

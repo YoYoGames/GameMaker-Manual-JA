@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>出典例</title>
@@ -12,10 +13,13 @@
   <meta name="rh-index-keywords" content="Source Extension Examples" />
   <meta name="search-keywords" content="source android ios extensions native" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>出典例</h1>
-  <p>このページには、<span class="notranslate">extension</span> のソースコードの例と情報が含まれています。<span class="notranslate">Android</span> と<span class="notranslate">iOS</span> 、これらのプラットフォーム用に独自のネイティブ<span class="notranslate">extensions</span> を作成するのに役立ちます。</p>
+  <p>このページには、<span class="notranslate">extension</span> のソースコードの例と情報が含まれています。<span class="notranslate">Android</span>
+    と<span class="notranslate">iOS</span> 、これらのプラットフォーム用に独自のネイティブ<span class="notranslate">extensions</span>
+    を作成するのに役立ちます。</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Android（基本例）</a></p>
   <div class="droptext" data-targetname="drop-down">
     <p><span class="notranslate">extension</span> のサンプル<span class="notranslate">Android</span> には、以下のような関数が含まれます。</p>
@@ -23,31 +27,42 @@
       <li>2つの数値を足したものを返す</li>
       <li>入力<span class="notranslate">string</span> と値からなる<span class="notranslate">string</span> を返す。</li>
       <li>2つの入力文字列からなる<span class="notranslate">string</span> を返す。</li>
-      <li><a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a>イベントをトリガーし、その <span class="inline">async_load</span> マップに値を入力する。</li>
+      <li><a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a>イベントをトリガーし、その <span
+          class="inline">async_load</span> マップに値を入力する。</li>
     </ul>
-    <p>この<span class="notranslate">extension</span> は、以下に示す内容の <span class="inline">.java</span> ファイルを利用します（クリックすると開きます）。</p>
-    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest.htm">GenericTest.java</a></p>
-    <p>このようなファイルを<span class="notranslate">extension</span> に追加するには、その<a href="Android_Extensions.htm">Androidプロパティで</a>、まずクラス名（この例では「GenericTest」）を入力し、「ソースの追加」をクリックし、 <span class="inline">.java</span> ファイルを選択する必要があります。これで、選択したファイルがプロジェクトのディレクトリに追加されます。<span class="notranslate">extension</span> を右クリックして、&quot;Open in Explorer&quot; を選択すると、そこにあるソースファイルを見ることができます。</p>
+    <p>この<span class="notranslate">extension</span> は、以下に示す内容の <span class="inline">.java</span>
+      ファイルを利用します（クリックすると開きます）。</p>
+    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000"
+        href="Source_Files/GenericTest.htm">GenericTest.java</a></p>
+    <p>このようなファイルを<span class="notranslate">extension</span> に追加するには、その<a
+        href="Android_Extensions.htm">Androidプロパティで</a>、まずクラス名（この例では「GenericTest」）を入力し、「ソースの追加」をクリックし、 <span
+        class="inline">.java</span> ファイルを選択する必要があります。これで、選択したファイルがプロジェクトのディレクトリに追加されます。<span
+        class="notranslate">extension</span> を右クリックして、&quot;Open in Explorer&quot; を選択すると、そこにあるソースファイルを見ることができます。</p>
     <p>これで、<span class="notranslate">extension</span> に新しいプレースホルダーファイルを追加し、その中に以下のプロパティを持つ関数を作成することができます。</p>
     <ul class="dropspotlist">
       <li><em>関数 / 外部名。</em><span><span> </span></span><span class="inline">AddTwoNumbers</span><br />
         <em>help:</em><span><span> </span></span><span class="inline">AddTwoNumbers(value1, value2)</span><br />
-        <em>引数</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double</span><br />
+        <em>引数</em><span><span> </span></span><span class="inline">double, </span><span
+          class="inline">double</span><br />
         <em>戻り値のタイプ</em><span><span> </span></span><span class="inline">double</span>
       </li>
       <li><em>関数 / 外部名。</em><span> </span><span class="inline">HowManyObjects</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">HowManyObjects(value1, value2, string)</span><br />
-        <em>引数</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double, </span><span class="inline">string</span><br />
+        <em>help:</em><span><span> </span></span><span class="inline">HowManyObjects(value1, value2,
+          string)</span><br />
+        <em>引数</em><span><span> </span></span><span class="inline">double, </span><span
+          class="inline">double, </span><span class="inline">string</span><br />
         <em>戻り値のタイプ</em><span><span> </span></span><span class="inline">string</span>
       </li>
       <li><em>関数 / 外部名。</em><span><span> </span></span><span class="inline">BuildAString</span><br />
         <em>help:</em><span><span> </span></span><span class="inline">BuildAString(string1, string2)</span><br />
-        <em>引数</em><span><span> </span></span><span class="inline">string, </span><span class="inline">string</span><br />
+        <em>引数</em><span><span> </span></span><span class="inline">string, </span><span
+          class="inline">string</span><br />
         <em>戻り値のタイプ</em><span><span> </span></span><span class="inline">string</span>
       </li>
       <li><em>関数 / 外部名。</em><span><span> </span></span><span class="inline">ReturnAsync</span><br />
         <em>help:</em><span><span> </span></span><span class="inline">ReturnAsync(value1, value2)</span><br />
-        <em>引数</em><span><span> </span></span><span class="inline">double,</span><span> </span><span class="inline">double</span><br />
+        <em>引数</em><span><span> </span></span><span class="inline">double,</span><span> </span><span
+          class="inline">double</span><br />
         <em>戻り値のタイプ</em><span><span> </span></span><span class="inline">double</span>
       </li>
     </ul>
@@ -57,7 +72,9 @@
       var result2 = BuildAString(&quot;Hello&quot;, &quot;World&quot;);<br />
       var result3 = HowManyObjects(irandom(1000), irandom(1000), &quot;Targets&quot;);<br />
       ReturnAsync(irandom(1000), irandom(1000));</p>
-    <p> <span class="inline">ReturnAsync()</span> 関数は<a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a>イベントをトリガーするので、そのイベントを<span class="notranslate">object</span> に追加し、その <span class="inline">async_load</span> マップ（上にあげた拡張機能のソースコードで埋まっています）からデータを読み取る必要があります。</p>
+    <p> <span class="inline">ReturnAsync()</span> 関数は<a href="../Object_Properties/Async_Events/Social.htm">Async -
+        Social</a>イベントをトリガーするので、そのイベントを<span class="notranslate">object</span> に追加し、その <span
+        class="inline">async_load</span> マップ（上にあげた拡張機能のソースコードで埋まっています）からデータを読み取る必要があります。</p>
     <p class="code">var type = async_load[? &quot;type&quot;];<br />
       <br />
       if (type == &quot;finished&quot;)<br />
@@ -70,17 +87,32 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">iOS（基本例）</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p><span class="notranslate">iOS</span> で提供されている例は、上で紹介した<span class="notranslate">Android</span> の例と同じです。ソースファイルだけが異なるので、このセクションで説明します。</p>
-    <p>iOS<span class="notranslate">extensions</span> は、 <span class="inline">.h</span> と <span class="inline">.mm</span> というファイルを使用し、両者の内容は以下の通りです（クリックで開きます）。</p>
-    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest-iOS.htm">GenericTest<span class="notranslate">iOS</span> ソースファイル</a></p>
-    <p>これらのファイルを<span class="notranslate">extension</span> に追加するには、まず<a href="iOS_Extensions.htm">iOS プロパティで</a>クラス名（この例では &quot;GenericTest&quot; ）を入力する必要があります。次に、&quot;Enter framework path&quot; オプション（ビルドに使用する<span class="notranslate">macOS</span> マシンにファイルがある場合）または &quot;Add Source&quot; オプション（開発マシンにある場合）を使用できます。どちらのオプションを使用する場合でも、 <span class="inline">.h</span> と <span class="inline">.mm</span> ファイルを含むディレクトリにファイルを指定する必要があります。</p>
-    <p>これらのソース・ファイルを、前のセクションで<span class="notranslate">extension</span> 用にセットアップしたのと同じ<span class="notranslate">Android</span> に追加すれば、<span class="notranslate">extension</span> ですでに定義されているすべての関数が<span class="notranslate">iOS</span> でも動作するようになります（<span class="notranslate">Android</span> と<span class="notranslate">iOS</span> のすべての関数の<em>External Name</em>が同じであることが前提です）。新しい<span class="notranslate">extension</span> を作成する場合は、先に説明したのと同じ方法で関数を作成すればよいのです。</p>
+    <p><span class="notranslate">iOS</span> で提供されている例は、上で紹介した<span class="notranslate">Android</span>
+      の例と同じです。ソースファイルだけが異なるので、このセクションで説明します。</p>
+    <p>iOS<span class="notranslate">extensions</span> は、 <span class="inline">.h</span> と <span
+        class="inline">.mm</span> というファイルを使用し、両者の内容は以下の通りです（クリックで開きます）。</p>
+    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000"
+        href="Source_Files/GenericTest-iOS.htm">GenericTest<span class="notranslate">iOS</span> ソースファイル</a></p>
+    <p>これらのファイルを<span class="notranslate">extension</span> に追加するには、まず<a href="iOS_Extensions.htm">iOS
+        プロパティで</a>クラス名（この例では &quot;GenericTest&quot; ）を入力する必要があります。次に、&quot;Enter framework path&quot;
+      オプション（ビルドに使用する<span class="notranslate">macOS</span> マシンにファイルがある場合）または &quot;Add Source&quot;
+      オプション（開発マシンにある場合）を使用できます。どちらのオプションを使用する場合でも、 <span class="inline">.h</span> と <span class="inline">.mm</span>
+      ファイルを含むディレクトリにファイルを指定する必要があります。</p>
+    <p>これらのソース・ファイルを、前のセクションで<span class="notranslate">extension</span> 用にセットアップしたのと同じ<span
+        class="notranslate">Android</span> に追加すれば、<span class="notranslate">extension</span> ですでに定義されているすべての関数が<span
+        class="notranslate">iOS</span> でも動作するようになります（<span class="notranslate">Android</span> と<span
+        class="notranslate">iOS</span> のすべての関数の<em>External Name</em>が同じであることが前提です）。新しい<span
+        class="notranslate">extension</span> を作成する場合は、先に説明したのと同じ方法で関数を作成すればよいのです。</p>
     <p> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Android（コールバック）</a></p>
   <div class="droptext" data-targetname="drop-down5">
     <p> <span class="inline">.java</span> <span class="notranslate">extension</span> ファイルでは、以下のコールバック関数を使用することができます。</p>
-    <p class="code">public void onStart()<br />public void onRestart()<br />public void onStop()<br />public void onDestroy()<br />public void onPause()<br />public void onResume()<br />public void onActivityResult(int requestCode, int resultCode, Intent data)<br />public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)<br />public void onNewIntent(android.content.Intent newIntent)<br />public void onWindowFocusChanged(boolean hasFocus)<br />public void onConfigurationChanged(Configuration newConfig)<br /></p>
+    <p class="code">public void onStart()<br />public void onRestart()<br />public void onStop()<br />public void
+      onDestroy()<br />public void onPause()<br />public void onResume()<br />public void onActivityResult(int
+      requestCode, int resultCode, Intent data)<br />public void onRequestPermissionsResult(int requestCode, String
+      permissions[], int[] grantResults)<br />public void onNewIntent(android.content.Intent newIntent)<br />public void
+      onWindowFocusChanged(boolean hasFocus)<br />public void onConfigurationChanged(Configuration newConfig)<br /></p>
     <p><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">iOS（コールバック）</a></p>
@@ -100,22 +132,27 @@
       -(void) application:(UIApplication *)application willEncodeRestorableStateWithCoder:(NSCoder *)coder<br />
       -(void) application:(UIApplication *)application didDecodeRestorableStateWithCoder:(NSCoder *)coder<br />
       -(void) application:(UIApplication *)application didUpdateUserActivity:(NSUserActivity *)userActivity<br />
-      -(void) application:(UIApplication *)application didFailToContinueUserActivityWithType:(NSString *)userActivityType error:(NSError *)error<br />
-      -(void) application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *replyInfo))reply<br />
+      -(void) application:(UIApplication *)application didFailToContinueUserActivityWithType:(NSString
+      *)userActivityType error:(NSError *)error<br />
+      -(void) application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo
+      reply:(void (^)(NSDictionary *replyInfo))reply<br />
       -(void) applicationShouldRequestHealthAuthorization:(UIApplication *)application<br />
       -(void) openURL:(NSURL *)url sourceApplication:(NSString *) sourceApplication annotation:(id)annotation<br />
-      -(void) application:(UIApplication *)application userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata *)cloudKitShareMetadata</p>
+      -(void) application:(UIApplication *)application userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata
+      *)cloudKitShareMetadata</p>
     <p> </p>
   </div>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Extensions.htm"> <span class="notranslate">Extension</span> 編集部</a></div>
-        <div style="float:right">次へ<a href="Creating_An_Extension.htm">エクステンションの作成</a></div>
+        <div style="float:left">前のページ：<a href="../Extensions.htm"> <span class="notranslate">Extension</span> エディタ</a>
+        </div>
+        <div style="float:right">次のページ：<a href="Creating_An_Extension.htm">エクステンションの作成</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Android Extensions
@@ -130,4 +167,5 @@ h
 source_extensions
 -->
 </body>
+
 </html>

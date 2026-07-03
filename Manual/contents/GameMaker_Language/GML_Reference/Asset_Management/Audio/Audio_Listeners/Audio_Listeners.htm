@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>オーディオリスナー</title>
@@ -8,17 +9,21 @@
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Listeners" />
+  <meta name="topic-comment"
+    content="Page outlining the different functions and variables associated with Audio Listeners" />
   <meta name="rh-index-keywords" content="Audio Listeners" />
   <meta name="search-keywords" content="Audio Listeners" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>オーディオリスナー</h1>
-  <p>複雑なオーディオ状況を扱う場合、リスナーがオーディオ環境のどこに位置するかを定義することが有効な場合があります。シンプルなオーディオ機能を使う場合、リスナーを変更する必要はありませんが、エミッタを使って3Dオーディオ空間内にリアルなオーディオを生成する場合、リスナーを正しく変更・移動することが重要です。</p>
+  <p>
+    複雑なオーディオ状況を扱う場合、リスナーがオーディオ環境のどこに位置するかを定義することが有効な場合があります。シンプルなオーディオ機能を使う場合、リスナーを変更する必要はありませんが、エミッタを使って3Dオーディオ空間内にリアルなオーディオを生成する場合、リスナーを正しく変更・移動することが重要です。
+  </p>
   <p>デフォルトでは、ゲーム内で自動的に作成されるリスナーは1つで、ID<span class="inline2">0を</span>使用します（リスナー関数での参照用）。<br />
     <br />
-   <span data-keyref="GameMaker Name">GameMakerは</span>以下のリスナー関数を提供する。
+    <span data-keyref="GameMaker Name">GameMakerは</span>以下のリスナー関数を提供する。
   </p>
   <ul class="colour">
     <li><a href="audio_listener_position.htm"><span class="notranslate">audio_listener_position</span></a></li>
@@ -27,10 +32,12 @@
     <li><a href="audio_listener_get_data.htm"><span class="notranslate">audio_listener_get_data</span></a></li>
     <li><a href="audio_listener_set_position.htm"><span class="notranslate">audio_listener_set_position</span></a></li>
     <li><a href="audio_listener_set_velocity.htm"><span class="notranslate">audio_listener_set_velocity</span></a></li>
-    <li><a href="audio_listener_set_orientation.htm"><span class="notranslate">audio_listener_set_orientation</span></a></li>
+    <li><a href="audio_listener_set_orientation.htm"><span class="notranslate">audio_listener_set_orientation</span></a>
+    </li>
   </ul>
   <p> </p>
-  <p>ターゲットプラットフォームによっては、複数のリスナーを許可し、それぞれが異なる出力デバイスに対応することができます。そのため<span data-keyref="GameMaker Name">GameMakerでは</span>、利用可能なリスナーを探したり、再生中のサウンドに設定したりするための機能を追加しています。</p>
+  <p>ターゲットプラットフォームによっては、複数のリスナーを許可し、それぞれが異なる出力デバイスに対応することができます。そのため<span
+      data-keyref="GameMaker Name">GameMakerでは</span>、利用可能なリスナーを探したり、再生中のサウンドに設定したりするための機能を追加しています。</p>
   <ul class="colour">
     <li><a href="audio_get_listener_count.htm"><span class="notranslate">audio_get_listener_count</span></a></li>
     <li><a href="audio_get_listener_info.htm"><span class="notranslate">audio_get_listener_info</span></a></li>
@@ -40,14 +47,18 @@
   <p> </p>
   <p>また、個々の音のマスクデータを取得・設定する機能もあります。</p>
   <ul class="colour">
-    <li><a href="../audio_sound_get_listener_mask.htm"><span class="notranslate">audio_sound_get_listener_mask</span></a></li>
-    <li><a href="../audio_sound_set_listener_mask.htm"><span class="notranslate">audio_sound_set_listener_mask</span></a></li>
+    <li><a href="../audio_sound_get_listener_mask.htm"><span
+          class="notranslate">audio_sound_get_listener_mask</span></a></li>
+    <li><a href="../audio_sound_set_listener_mask.htm"><span
+          class="notranslate">audio_sound_set_listener_mask</span></a></li>
   </ul>
   <p> </p>
   <p>また、エミッタのマスクデータの取得や設定にも使用します。</p>
   <ul class="colour">
-    <li><a href="../Audio_Emitters/audio_emitter_get_listener_mask.htm"><span class="notranslate">audio_emitter_get_listener_mask</span></a></li>
-    <li><a href="../Audio_Emitters/audio_emitter_set_listener_mask.htm"><span class="notranslate">audio_emitter_set_listener_mask</span></a></li>
+    <li><a href="../Audio_Emitters/audio_emitter_get_listener_mask.htm"><span
+          class="notranslate">audio_emitter_get_listener_mask</span></a></li>
+    <li><a href="../Audio_Emitters/audio_emitter_set_listener_mask.htm"><span
+          class="notranslate">audio_emitter_set_listener_mask</span></a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -55,11 +66,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Audio.htm">オーディオ</a></div>
-        <div style="float:right">次へ<a href="../Audio_Groups/Audio_Groups.htm">オーディオグループ</a></div>
+        <div style="float:left">前のページ：<a href="../Audio.htm">オーディオ</a></div>
+        <div style="float:right">次のページ：<a href="../Audio_Groups/Audio_Groups.htm">オーディオグループ</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Listeners
@@ -68,4 +80,5 @@ Audio Listeners
 audio_listener_functions
 -->
 </body>
+
 </html>

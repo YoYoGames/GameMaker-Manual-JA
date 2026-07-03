@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_map_replace_list</title>
@@ -12,19 +13,23 @@
   <meta name="rh-index-keywords" content="ds_map_replace_list" />
   <meta name="search-keywords" content="ds_map_replace_list" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">ds_map_replace_list</span></h1>
-  <p>この関数を使うと、与えられた &quot;key&quot; に格納されている<a href="../DS_Lists/DS_Lists.htm">DS リストを</a>、以前に作成した別のリストと置き換えることができます。この関数は、JSON 互換のマップを作成するために設計されており、それを <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>という機能があり、その機能との組み合わせでのみ使用されるべきです。</p>
+  <p>この関数を使うと、与えられた &quot;key&quot; に格納されている<a href="../DS_Lists/DS_Lists.htm">DS
+      リストを</a>、以前に作成した別のリストと置き換えることができます。この関数は、JSON 互換のマップを作成するために設計されており、それを <a
+      href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span
+        class="inline">json_encode()</span></a>という機能があり、その機能との組み合わせでのみ使用されるべきです。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">ds_map_replace_list</span>(id, key, value)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">id</span></td>
@@ -39,12 +44,13 @@
       <tr>
         <td><span class="notranslate">value</span></td>
         <td><span data-keyref="Type_ID_DS_List">DSリストID</span></td>
-        <td><span class="notranslate">The id of the ds_list to use to replace the one previously stored in the given key.</span></td>
+        <td><span class="notranslate">The id of the ds_list to use to replace the one previously stored in the given
+            key.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -55,23 +61,28 @@
     ds_map_replace_list(j_map, &quot;list&quot;, j_list);<br />
     var j = json_encode(j_map);<br />
     ds_list_destroy(j_list);</p>
-  <p>上記のコードでは、 <span class="inline">DS List</span> を作成し、さまざまなグローバル変数の値を入力してから、 <span class="inline">DS Map</span> &quot;j_map&quot; に以前格納されていたリストを置き換えます。</p>
+  <p>上記のコードでは、 <span class="inline">DS List</span> を作成し、さまざまなグローバル変数の値を入力してから、 <span class="inline">DS Map</span>
+    &quot;j_map&quot; に以前格納されていたリストを置き換えます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="DS_Maps.htm">DSマップ</a></div>
-        <div style="float:right">次のページ <a href="ds_map_replace_map.htm"><span class="notranslate">ds_map_replace_map</span></a></div>
+        <div style="float:left">前のページ：<a href="DS_Maps.htm">DSマップ</a></div>
+        <div style="float:right">次のページ：<a href="ds_map_replace_map.htm"><span
+              class="notranslate">ds_map_replace_map</span></a></div>
       </div>
       <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_replace_list
 --><!-- TAGS
 ds_map_replace_list
---></body>
+-->
+</body>
+
 </html>

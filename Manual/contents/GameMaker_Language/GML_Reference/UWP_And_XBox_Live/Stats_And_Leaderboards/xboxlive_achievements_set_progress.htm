@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>xboxlive_achievements_set_progress</title>
@@ -12,44 +13,53 @@
   <meta name="rh-index-keywords" content="xboxlive_achievements_set_progress" />
   <meta name="search-keywords" content="xboxlive_achievements_set_progress" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_achievements_set_progress</h1>
-  <p>この関数は、アチーブメントの進捗状況を更新するために使用することができます。ユーザ ID は、例えばこの関数で返されたものです。 <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>という文字列、そして達成度
-    (これはXDP/Windows Dev Centerで作成されたときに割り当てられた達成IDである)。最後に、進捗状況を0から100までの値で設定します。アチーブメントシステムは、現在の進捗状況より低い更新を拒否することに注意してください。
+  <p>この関数は、アチーブメントの進捗状況を更新するために使用することができます。ユーザ ID は、例えばこの関数で返されたものです。 <a
+      href="../Users_And_Accounts/xboxlive_get_user.htm"><span
+        class="inline">xboxlive_get_user()</span></a>という文字列、そして達成度
+    (これはXDP/Windows Dev
+    Centerで作成されたときに割り当てられた達成IDである)。最後に、進捗状況を0から100までの値で設定します。アチーブメントシステムは、現在の進捗状況より低い更新を拒否することに注意してください。
     の値を設定します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code">xboxlive_achievements_set_progress(user_id, achievement, progress);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"></span></td>
         <td><span class="notranslate">The user ID of the user to set the achievement for</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">achievement</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">achievement</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The achievement to set (a string)</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">progress</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">progress</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The progress value to set (from 0 to 100)</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>拡張された例。</h4>
   <p>以下に、この関数の使用方法の拡張例を示します。まず始めに、<b>Room Start</b>や<b>Create</b> などのイベントでこの関数を呼び出します。</p>
   <p class="code">xboxlive_stats_get_social_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, false);</p>
   <p>上記のコードは、ゲームのグローバルリーダーボードポジションのリストを取得するために呼び出され、ソーシャル非同期イベントのコールバックを生成し、次のように処理します。</p>
-  <p class="code">var _progress = (global.Level / global.LevelMax) * 100;<br/> xboxlive_achievements_set_progress(user_id, &quot;Game_Completed&quot;, _progress);</p>
+  <p class="code">var _progress = (global.Level / global.LevelMax) * 100;<br />
+    xboxlive_achievements_set_progress(user_id, &quot;Game_Completed&quot;, _progress);</p>
   <p>上記のコードでは、いくつかのグローバル変数に基づいてパーセント値を作成し、それを使って「Game_Completed」達成の進捗を設定しています。</p>
   <p> </p>
   <p> </p>
@@ -57,11 +67,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
-        <div style="float:right">次のページ <a href="xboxlive_get_stats_for_user.htm"><span class="notranslate">xboxlive_get_stats_for_user</span></a></div>
+        <div style="float:left">前のページ：<a href="Stats_And_Leaderboards.htm">統計情報とリーダーボード</a></div>
+        <div style="float:right">次のページ：<a href="xboxlive_get_stats_for_user.htm"><span
+              class="notranslate">xboxlive_get_stats_for_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_achievements_set_progress
@@ -70,4 +82,5 @@ xboxlive_achievements_set_progress
 xboxlive_achievements_set_progress
 -->
 </body>
+
 </html>

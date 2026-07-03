@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>animcurve_get_channel_index</title>
@@ -13,19 +14,26 @@
   <meta name="search-keywords" content="animcurve_get_channel_index" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">animcurve_get_channel_index</span></h1>
-  <p>この関数は、任意の与えられた<span class="notranslate">animation curve</span> チャンネルのインデックス値を返します。<span class="notranslate">animation curve</span> ID または<span class="notranslate">struct</span> 、カーブ ID は<span class="notranslate">animation curve</span> Browser で定義された<span class="notranslate">Asset</span> の名前、または関数 <span class="inline"><a href="animcurve_create.htm">animcurve_create()</a></span> で返された<span class="notranslate">struct</span> ポインタを指定します。次に、チャンネルの名前を<span class="notranslate">string</span> として指定すると、関数はそのチャンネルに関連するインデックス値を返します。なお，曲線やチャンネルが存在しない場合は，エラーになります．</p>
+  <p>この関数は、任意の与えられた<span class="notranslate">animation curve</span> チャンネルのインデックス値を返します。<span
+      class="notranslate">animation curve</span> ID または<span class="notranslate">struct</span> 、カーブ ID は<span
+      class="notranslate">animation curve</span> Browser で定義された<span class="notranslate">Asset</span> の名前、または関数 <span
+      class="inline"><a href="animcurve_create.htm">animcurve_create()</a></span> で返された<span
+      class="notranslate">struct</span> ポインタを指定します。次に、チャンネルの名前を<span class="notranslate">string</span>
+    として指定すると、関数はそのチャンネルに関連するインデックス値を返します。なお，曲線やチャンネルが存在しない場合は，エラーになります．</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">animcurve_get_channel_index</span>(curve_struct_or_id, channel_name);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">animcurve_get_channel_index</span>(curve_struct_or_id,
+    channel_name);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">curve_struct_or_id</span></td>
@@ -40,7 +48,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
   <p> </p>
   <h4>例</h4>
@@ -51,18 +59,22 @@
     {<br />
         _points[i].value += 1;<br />
     }</p>
-  <p>上記のコードは、カーブ<span class="notranslate">struct</span> &quot;ac_ButtonTween&quot; の &quot;x_pos&quot; という名前のチャンネル<span class="notranslate">asset</span> を取得し、チャンネルカーブのポイントを<span class="notranslate">loops</span> 通して、その値に 1 を加算しています。</p>
+  <p>上記のコードは、カーブ<span class="notranslate">struct</span> &quot;ac_ButtonTween&quot; の &quot;x_pos&quot; という名前のチャンネル<span
+      class="notranslate">asset</span> を取得し、チャンネルカーブのポイントを<span class="notranslate">loops</span> 通して、その値に 1 を加算しています。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Animation_Curves.htm">アニメーション・カーブ</a></div>
-        <div style="float:right">次のページ <a href="animcurve_channel_evaluate.htm"><span class="notranslate">animcurve_channel_evaluate</span></a></div>
+        <div style="float:left">前のページ：<a href="Animation_Curves.htm">アニメーション・カーブ</a></div>
+        <div style="float:right">次のページ：<a href="animcurve_channel_evaluate.htm"><span
+              class="notranslate">animcurve_channel_evaluate</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 animcurve_get_channel_index
@@ -71,4 +83,5 @@ animcurve_get_channel_index
 animcurve_get_channel_index
 -->
 </body>
+
 </html>

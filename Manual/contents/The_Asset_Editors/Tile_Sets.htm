@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>タイルセット</title>
@@ -12,60 +13,147 @@
   <meta name="rh-index-keywords" content="Tile Set Editor" />
   <meta name="search-keywords" content="tiles,tile sets,tile set editor" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span class="notranslate">Tile Set</span> 編集部</h1>
-  <p><img><strong>タイル</strong>セットは、ゲームのレベルやその他の静的コンポーネントを描画するためのグラフィックリソースです。<span class="notranslate">tile set</span> は1つのイメージで構成され、それが異なる「セル」(<span class="notranslate">tiles</span>)に分割され、各<span class="notranslate">tile</span> を<span class="notranslate">room</span> エディタに配置することで完全なイメージを作成することができます。以下は、タイルセットとして使用できる2つの例です（<span class="notranslate">sprites</span> ）。</p>
+  <h1><span class="notranslate">Tile Set</span> エディタ</h1>
+  <p><img><strong>タイル</strong>セットは、ゲームのレベルやその他の静的コンポーネントを描画するためのグラフィックリソースです。<span class="notranslate">tile set</span>
+    は1つのイメージで構成され、それが異なる「セル」(<span class="notranslate">tiles</span>)に分割され、各<span class="notranslate">tile</span> を<span
+      class="notranslate">room</span> エディタに配置することで完全なイメージを作成することができます。以下は、タイルセットとして使用できる2つの例です（<span
+      class="notranslate">sprites</span> ）。</p>
   <p><img alt="Tile Set Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets.png" /></p>
-  <p style="text-align:center;padding-top:0.5em;padding-right:1em;padding-bottom:1.5em;padding-left:1em"><span style="font-size:14px;font-style:italic">画像：<a href="http://www.lostgarden.com/2006/07/more-free-game-graphics.html">ロストガーデン</a></span></p>
-  <p>これらは、<span class="notranslate">tile sets</span> を作成する際に最も一般的な方法です。すべて の画像を詰め込んで作成することも、少しスペースを空けて作成することもできますが、<span data-keyref="GameMaker Name">GameMaker</span>はどちらのタイプも扱うことができます。基本的に、すべての<span class="notranslate">tile sets</span> は、明確に定義されたグリッド内に収まる画像で構成され、グリッドの各セルは<em>まったく同じサイズ</em>でなければなりません（上記の画像はすべて正方形の<span class="notranslate">tiles</span> で構成されていますが、<span class="notranslate">tile set</span> は長方形の<span class="notranslate">tiles</span> からも作ることができることに注意してください）。</p>
-  <p><span class="notranslate">tile sets</span> <span class="notranslate">tile</span> を作成するときは、<strong>左上のグリッドセルは<em>常に </em></strong>空でなければならないことに注意してください。これは<span data-keyref="GameMaker Name">GameMaker</span>が 内の「空」 と既存の を消去するために使用するものです（その部分にピクセルがあったとしても、無視されます）。<span class="notranslate">tiles</span> <span class="notranslate">room</span> <span class="notranslate">tiles</span> </p>
-  <p><span class="notranslate">tile set</span> リソースを初めて作成すると、<span class="notranslate">Tile Set</span> Editor ウィンドウが開き、以下のオプションが表示されます。</p>
+  <p style="text-align:center;padding-top:0.5em;padding-right:1em;padding-bottom:1.5em;padding-left:1em"><span
+      style="font-size:14px;font-style:italic">画像：<a
+        href="http://www.lostgarden.com/2006/07/more-free-game-graphics.html">ロストガーデン</a></span></p>
+  <p>これらは、<span class="notranslate">tile sets</span> を作成する際に最も一般的な方法です。すべて の画像を詰め込んで作成することも、少しスペースを空けて作成することもできますが、<span
+      data-keyref="GameMaker Name">GameMaker</span>はどちらのタイプも扱うことができます。基本的に、すべての<span class="notranslate">tile
+      sets</span> は、明確に定義されたグリッド内に収まる画像で構成され、グリッドの各セルは<em>まったく同じサイズ</em>でなければなりません（上記の画像はすべて正方形の<span
+      class="notranslate">tiles</span> で構成されていますが、<span class="notranslate">tile set</span> は長方形の<span
+      class="notranslate">tiles</span> からも作ることができることに注意してください）。</p>
+  <p><span class="notranslate">tile sets</span> <span class="notranslate">tile</span> を作成するときは、<strong>左上のグリッドセルは<em>常に
+      </em></strong>空でなければならないことに注意してください。これは<span data-keyref="GameMaker Name">GameMaker</span>が 内の「空」 と既存の
+    を消去するために使用するものです（その部分にピクセルがあったとしても、無視されます）。<span class="notranslate">tiles</span> <span
+      class="notranslate">room</span> <span class="notranslate">tiles</span> </p>
+  <p><span class="notranslate">tile set</span> リソースを初めて作成すると、<span class="notranslate">Tile Set</span> Editor
+    ウィンドウが開き、以下のオプションが表示されます。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">名称</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">ここで、あなたの<span class="notranslate">tile set</span> に名前を付けることができます。名前は英数字のみで、アンダーバー&quot;_&quot;記号のみ使用でき、数字で始めることはできません。</p>
+    <p class="dropspot">ここで、あなたの<span class="notranslate">tile set</span>
+      に名前を付けることができます。名前は英数字のみで、アンダーバー&quot;_&quot;記号のみ使用でき、数字で始めることはできません。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">スプライト</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">ここで<span class="notranslate">asset</span> を作成する<a href="../Quick_Start_Guide/Creating_Sprites.htm">スプライト</a> <span class="notranslate">tile set</span> を選択することができます。メインボタンをクリックすると、<span class="notranslate">Asset</span> エクスプローラが開き、タイルセットに使用する<span class="notranslate">sprite</span> を選択することができます。</p>
-    <p class="dropspot"><img>また、<strong>New Sprite</strong>ボタン<img> ボタンをクリックして、新しい<span class="notranslate">sprite</span> <span class="notranslate">asset</span> を作成したり（編集用の<span class="notranslate">asset</span> の中に新しい<span class="notranslate">workspace</span> の<a href="Sprites.htm">スプライトエディタを</a>開きます）、<strong>Edit Sprite</strong>ボタン<img> を使って現在選択中の<span class="notranslate">sprite</span> を編集したり、<img> ボタンを押して<a href="Image_Editor.htm">イメージエディタで</a> <span class="notranslate">sprite</span> 画像自体を編集することを選択することも可能です。</p>
-    <p class="dropspot">デフォルトでは、<span class="notranslate">tile set</span> を開くと、「<strong>タイルセットのプロパティ</strong>」ウィンドウも表示されます（下図）が、それを閉じてしまった場合は、ここのボタンをクリックして再び開くことができます。</p>
+    <p class="dropspot">ここで<span class="notranslate">asset</span> を作成する<a
+        href="../Quick_Start_Guide/Creating_Sprites.htm">スプライト</a> <span class="notranslate">tile set</span>
+      を選択することができます。メインボタンをクリックすると、<span class="notranslate">Asset</span> エクスプローラが開き、タイルセットに使用する<span
+        class="notranslate">sprite</span> を選択することができます。</p>
+    <p class="dropspot"><img>また、<strong>New Sprite</strong>ボタン<img> ボタンをクリックして、新しい<span
+        class="notranslate">sprite</span> <span class="notranslate">asset</span> を作成したり（編集用の<span
+        class="notranslate">asset</span> の中に新しい<span class="notranslate">workspace</span> の<a
+        href="Sprites.htm">スプライトエディタを</a>開きます）、<strong>Edit Sprite</strong>ボタン<img> を使って現在選択中の<span
+        class="notranslate">sprite</span> を編集したり、<img> ボタンを押して<a href="Image_Editor.htm">イメージエディタで</a> <span
+        class="notranslate">sprite</span> 画像自体を編集することを選択することも可能です。</p>
+    <p class="dropspot">デフォルトでは、<span class="notranslate">tile set</span>
+      を開くと、「<strong>タイルセットのプロパティ</strong>」ウィンドウも表示されます（下図）が、それを閉じてしまった場合は、ここのボタンをクリックして再び開くことができます。</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">物件紹介</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">プロパティ</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><strong></strong><strong>タイルセットのプロパティ</strong>] ウィンドウでは、ベースとなる<span class="notranslate">tile</span> のサイズ（デフォルトは 16px の正方形）、オフセット量、および<span class="notranslate">tiles</span> 間の間隔を指定します（最後の 2 つのオプションは、このページのさらに上の画像例で示された<span class="notranslate">sprites</span> のように、<span class="notranslate">tiles</span> の個々のパーツ間に隙間がある場合に使用されます）。また、<span class="notranslate">tile set</span> 画像の「<strong>出力境界</strong>」の値を設定することで、画像がディスクに保存される方法を制御し、必要に応じて各<span class="notranslate">tile</span> の周囲に余分なピクセルを追加することができます。</p>
-    <p class="dropspot"><span class="notranslate">tiles</span> のレンダリング方法のため、エッジを「汚す」ために、それぞれの周囲にボーダーを付けて事前に準備する必要があります。下図は、<span class="notranslate">tiles</span> がデバイスグラフィックドライバによってどのようにマッピングされるかを示しています。<span class="notranslate">tile</span> の周囲の赤い線は U,V 座標がマッピングされる場所を示しています（2D<span class="notranslate">texture</span> のメッシュを表現するために &quot;U&quot; と &quot;V&quot; という文字が使われています。<span class="notranslate">room</span> と<span class="notranslate">object</span> 空間座標を表現するのに &quot;X&quot;, &quot;Y&quot; および &quot;Z&quot; はすでに使われているからです）。</p>
-    <p class="dropspot"><img> <span class="notranslate">room</span> に画像を描画するときに、直接マッピングする<a class="glossterm" data-glossterm="テクセル" href="#">テクセルの</a>中心を選んでいるのがわかります。 さて、1:1 のスケールでは、これはすべて順調ですが、この を縮小するとどうなるのでしょう？縮小するときの問題は、画像を縮小すると、UVも縮小して、より圧縮された空間に収まろうとすることです。しかし、これは明らかに起こりえないので、グラフィックスドライバは利用可能なピクセル中心に基づいて、どのテクセルを描くかを選択します。<span class="notranslate">tile</span> </p>
-    <p class="dropspot">つまり、新しい画面ピクセルに移動するだけなら、グラフィックスドライバはピクセルの中心を使用して描画対象を決定するので、<span class="notranslate">tile</span> を囲むテキサルを選ぶことになり、<span class="notranslate">tile</span> 自体のテキサルを選ぶことにはならないのです。</p>
-    <p class="dropspot"><img alt="Tile Set Example" class="center" src="../assets/Images/Asset_Editors/Editor_Tilesets_Example.png" style="margin-top: -10px; margin-bottom: -20px;" /></p>
-    <p class="dropspot">上の図は、<span class="notranslate">tile</span> を 6 スクリーンピクセルに縮小して描画しています。これは、次のスクリーンピクセルに少し重なると、グラフィックドライバはそのテキスルを削除するか、有効なテキス ルで埋めようとするかを選択しなければならないことを示しています。この場合、オーバーラップしたテクセルをスクリーンピクセルに描画することに決めたとしましょう。現在、それは明らかに<span class="notranslate">tile</span> の外側なので、次の<span class="notranslate">tile</span> 、または<span class="notranslate">tiles</span> の周りに提供したわずかなスペースからこのピクセルを取得します。つまり、縮小すると、<span class="notranslate">tiles</span> 間の亀裂や描画方法のグリッチが生じ、これが多くの混乱を引き起こすことになります...。このような場合、「liquids.com」は、「liquids.com」内の「liquids.com」内の「liquids.com」と「liquids.com」内の「liquids.com」の間にある「liquids.com」をクリックします。</p>
-    <p class="dropspot">ハイエンドゲームでは、単一の<span class="notranslate">texture</span> (<span class="notranslate">texture</span> ページや<span class="notranslate">texture</span> アトラスではありません) から描画する場合、<strong>クランプと </strong>呼ばれる<span class="notranslate">texture</span> モードを使用するオプションがあります。これは、最後の行のテクスルを無限に遠方に繰り返し、何があってもハードウェアに最後の行のピクセルが得られるよう強制するので、問題なくスケーリングできます。これは、<strong>出力ボーダーの </strong>設定で行うことができます。</p>
-    <p class="dropspot"><img> <span class="notranslate">tile</span> <span class="notranslate">sprite</span> <span class="notranslate">tile</span> つまり、ハードウェアがオーバーランしたときに、スペースや<span class="notranslate">tile</span> の 1 つではなく、常に<span class="notranslate">tile</span> の最後のテクセルを選択するようになりました。したがって、<span class="notranslate">tile set</span> を作成するときは、ゲーム ビューを拡大または縮小する場合、または<span class="notranslate">tiles</span> を拡大縮小してレンダリングする場合、デフォルト値の 2 よりも高い Output Border width または height が必要な場合があることに留意してください。</p>
-    <p class="dropspot">次に、タイルセットリソースを所属させたい<strong>テクスチャ</strong>グループを選択します。基本的に、<span class="notranslate">texture</span> グループ（<a href="../Settings/Texture_Groups.htm">Texture Group Manager</a> で定義済み）は、特定の<span class="notranslate">assets</span> またはゲームのレベルに必要なすべてのイメージ<span class="notranslate">rooms</span> を一緒に保存できるように設定するものです。<span class="notranslate">texture</span> <span data-keyref="GameMaker Name">GameMaker は</span>、これらのグループ化されたアセットをすべて同じ<a class="glossterm" data-glossterm="テクスチャページ" href="#">テクスチャ</a>ページに配置し、選択した ターゲットプラットフォームでゲームを実行中に<span class="notranslate">texture</span> ページスワップを削減しようとします。</p>
-    <div class="dropspotnote"><strong>注</strong>：この方法は必ずしも必要ではないかもしれませんし、この方法による性能向上は、ターゲットデバイスがCPUバウンドかGPUバウンドかによって異なります。</div>
-    <p class="dropspot"><span class="notranslate">tile set</span> プロパティの最後のオプションは、「<strong>Disable Source<span class="notranslate">Sprite</span> Export」（ソースのエクスポートを無効に</strong>する）です。<span class="notranslate">flags</span> これはデフォルトでチェックされており、プロジェクトの<span class="notranslate">sprite</span> ページが生成されるときに、ソース<span class="notranslate">asset</span> <span class="notranslate">texture</span> が省略されるようにします。これは、<span class="notranslate">sprite</span> が<span class="notranslate">tile set</span> として使用されている場合、他の用途には使用されないので、一度だけエクスポートする必要があるという前提で動作します。しかし、ベースとなる<span class="notranslate">sprite</span> リソースを<span class="notranslate">tiles</span> 以外に使用している場合は、このチェックを外して、コンパイル時にベースとなる<span class="notranslate">sprite</span> <em>と </em> <span class="notranslate">tile set</span> の両方が<span class="notranslate">texture</span> ページに追加されるようにしたいものです。</p>
+    <p class="dropspot"><strong></strong><strong>タイルセットのプロパティ</strong>] ウィンドウでは、ベースとなる<span
+        class="notranslate">tile</span> のサイズ（デフォルトは 16px の正方形）、オフセット量、および<span class="notranslate">tiles</span>
+      間の間隔を指定します（最後の 2 つのオプションは、このページのさらに上の画像例で示された<span class="notranslate">sprites</span> のように、<span
+        class="notranslate">tiles</span> の個々のパーツ間に隙間がある場合に使用されます）。また、<span class="notranslate">tile set</span>
+      画像の「<strong>出力境界</strong>」の値を設定することで、画像がディスクに保存される方法を制御し、必要に応じて各<span class="notranslate">tile</span>
+      の周囲に余分なピクセルを追加することができます。</p>
+    <p class="dropspot"><span class="notranslate">tiles</span>
+      のレンダリング方法のため、エッジを「汚す」ために、それぞれの周囲にボーダーを付けて事前に準備する必要があります。下図は、<span class="notranslate">tiles</span>
+      がデバイスグラフィックドライバによってどのようにマッピングされるかを示しています。<span class="notranslate">tile</span> の周囲の赤い線は U,V
+      座標がマッピングされる場所を示しています（2D<span class="notranslate">texture</span> のメッシュを表現するために &quot;U&quot; と &quot;V&quot;
+      という文字が使われています。<span class="notranslate">room</span> と<span class="notranslate">object</span> 空間座標を表現するのに
+      &quot;X&quot;, &quot;Y&quot; および &quot;Z&quot; はすでに使われているからです）。</p>
+    <p class="dropspot"><img> <span class="notranslate">room</span> に画像を描画するときに、直接マッピングする<a class="glossterm"
+        data-glossterm="テクセル" href="#">テクセルの</a>中心を選んでいるのがわかります。 さて、1:1 のスケールでは、これはすべて順調ですが、この
+      を縮小するとどうなるのでしょう？縮小するときの問題は、画像を縮小すると、UVも縮小して、より圧縮された空間に収まろうとすることです。しかし、これは明らかに起こりえないので、グラフィックスドライバは利用可能なピクセル中心に基づいて、どのテクセルを描くかを選択します。<span
+        class="notranslate">tile</span> </p>
+    <p class="dropspot">つまり、新しい画面ピクセルに移動するだけなら、グラフィックスドライバはピクセルの中心を使用して描画対象を決定するので、<span class="notranslate">tile</span>
+      を囲むテキサルを選ぶことになり、<span class="notranslate">tile</span> 自体のテキサルを選ぶことにはならないのです。</p>
+    <p class="dropspot"><img alt="Tile Set Example" class="center"
+        src="../assets/Images/Asset_Editors/Editor_Tilesets_Example.png"
+        style="margin-top: -10px; margin-bottom: -20px;" /></p>
+    <p class="dropspot">上の図は、<span class="notranslate">tile</span> を 6
+      スクリーンピクセルに縮小して描画しています。これは、次のスクリーンピクセルに少し重なると、グラフィックドライバはそのテキスルを削除するか、有効なテキス
+      ルで埋めようとするかを選択しなければならないことを示しています。この場合、オーバーラップしたテクセルをスクリーンピクセルに描画することに決めたとしましょう。現在、それは明らかに<span
+        class="notranslate">tile</span> の外側なので、次の<span class="notranslate">tile</span> 、または<span
+        class="notranslate">tiles</span> の周りに提供したわずかなスペースからこのピクセルを取得します。つまり、縮小すると、<span class="notranslate">tiles</span>
+      間の亀裂や描画方法のグリッチが生じ、これが多くの混乱を引き起こすことになります...。このような場合、「liquids.com」は、「liquids.com」内の「liquids.com」内の「liquids.com」と「liquids.com」内の「liquids.com」の間にある「liquids.com」をクリックします。
+    </p>
+    <p class="dropspot">ハイエンドゲームでは、単一の<span class="notranslate">texture</span> (<span class="notranslate">texture</span>
+      ページや<span class="notranslate">texture</span> アトラスではありません) から描画する場合、<strong>クランプと </strong>呼ばれる<span
+        class="notranslate">texture</span>
+      モードを使用するオプションがあります。これは、最後の行のテクスルを無限に遠方に繰り返し、何があってもハードウェアに最後の行のピクセルが得られるよう強制するので、問題なくスケーリングできます。これは、<strong>出力ボーダーの
+      </strong>設定で行うことができます。</p>
+    <p class="dropspot"><img> <span class="notranslate">tile</span> <span class="notranslate">sprite</span> <span
+        class="notranslate">tile</span> つまり、ハードウェアがオーバーランしたときに、スペースや<span class="notranslate">tile</span> の 1
+      つではなく、常に<span class="notranslate">tile</span> の最後のテクセルを選択するようになりました。したがって、<span class="notranslate">tile
+        set</span> を作成するときは、ゲーム ビューを拡大または縮小する場合、または<span class="notranslate">tiles</span> を拡大縮小してレンダリングする場合、デフォルト値の 2
+      よりも高い Output Border width または height が必要な場合があることに留意してください。</p>
+    <p class="dropspot">次に、タイルセットリソースを所属させたい<strong>テクスチャ</strong>グループを選択します。基本的に、<span
+        class="notranslate">texture</span> グループ（<a href="../Settings/Texture_Groups.htm">Texture Group Manager</a>
+      で定義済み）は、特定の<span class="notranslate">assets</span> またはゲームのレベルに必要なすべてのイメージ<span class="notranslate">rooms</span>
+      を一緒に保存できるように設定するものです。<span class="notranslate">texture</span> <span data-keyref="GameMaker Name">GameMaker
+        は</span>、これらのグループ化されたアセットをすべて同じ<a class="glossterm" data-glossterm="テクスチャページ" href="#">テクスチャ</a>ページに配置し、選択した
+      ターゲットプラットフォームでゲームを実行中に<span class="notranslate">texture</span> ページスワップを削減しようとします。</p>
+    <div class="dropspotnote">
+      <strong>注</strong>：この方法は必ずしも必要ではないかもしれませんし、この方法による性能向上は、ターゲットデバイスがCPUバウンドかGPUバウンドかによって異なります。
+    </div>
+    <p class="dropspot"><span class="notranslate">tile set</span> プロパティの最後のオプションは、「<strong>Disable Source<span
+          class="notranslate">Sprite</span> Export」（ソースのエクスポートを無効に</strong>する）です。<span class="notranslate">flags</span>
+      これはデフォルトでチェックされており、プロジェクトの<span class="notranslate">sprite</span> ページが生成されるときに、ソース<span
+        class="notranslate">asset</span> <span class="notranslate">texture</span> が省略されるようにします。これは、<span
+        class="notranslate">sprite</span> が<span class="notranslate">tile set</span>
+      として使用されている場合、他の用途には使用されないので、一度だけエクスポートする必要があるという前提で動作します。しかし、ベースとなる<span class="notranslate">sprite</span>
+      リソースを<span class="notranslate">tiles</span> 以外に使用している場合は、このチェックを外して、コンパイル時にベースとなる<span
+        class="notranslate">sprite</span> <em>と </em> <span class="notranslate">tile set</span> の両方が<span
+        class="notranslate">texture</span> ページに追加されるようにしたいものです。</p>
     <p class="dropspot"><strong></strong></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">編集部</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">エディタ</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><strong>エディタ] </strong>セクションの各ボタンは、特定の<span class="notranslate">tile set</span> 機能のための異なるエディタを開きま す。複数の<span class="notranslate">tile set</span> を合わせたものをベースにした<span class="notranslate">tiles</span> <em>ブラシ </em>、異なる<span class="notranslate">tiles</span> を個別のフレームとして使用した<em>アニメーションタイルを</em>作成できます。また、周囲にある<span class="notranslate">tiles</span> をベースに「結合」する<em>オートタイルを</em>作成することも可能です。これらの各エディタについては、このページの最後にあるリンク先のセクションで詳しく説明されています。</p>
+    <p class="dropspot"><strong>エディタ] </strong>セクションの各ボタンは、特定の<span class="notranslate">tile set</span>
+      機能のための異なるエディタを開きま す。複数の<span class="notranslate">tile set</span> を合わせたものをベースにした<span
+        class="notranslate">tiles</span> <em>ブラシ </em>、異なる<span class="notranslate">tiles</span>
+      を個別のフレームとして使用した<em>アニメーションタイルを</em>作成できます。また、周囲にある<span class="notranslate">tiles</span>
+      をベースに「結合」する<em>オートタイルを</em>作成することも可能です。これらの各エディタについては、このページの最後にあるリンク先のセクションで詳しく説明されています。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">プレビューツールボックス</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">これらは、<span class="notranslate">sprite</span> で選択した<span class="notranslate">tile set</span> をプレビューするために使用できるツールです。これらのボタンは現在のプレビューのズームレベルを制御し、ズームインまたはズームアウトに使用できます。<img> ボタンをクリックすると、プレビューが編集中の<span class="notranslate">tile set</span> <span class="notranslate">sprite</span> と 1:1 になるようにリセットされます。また、「<strong>ウィンドウに合わせる</strong>」ボタン<img> をクリックすると、<span class="notranslate">tile set</span> 全体で現在のプレビューウィンドウに収まるようにできます（収まるように適宜ズームイン/アウトします）。<img> /<img> とマウスホイール<img> を使ってもズームイン・ズームアウトできます。また、<img> /<img> +<img> を押すと、キャンバスと<span class="notranslate">tile set</span> <span class="notranslate">sprite</span> が 1:1 になるように設定されます。</p>
-    <p class="dropspot"><span class="notranslate">switch</span> もう一つの特徴は、<img> ボタンをクリックすることで、グリッド表示のオン・オフができ、また、使用するグリッドの色も設定できます（<img> ボタンをクリックします）。グリッドが有効な場合、グリッド内の<span class="notranslate">tiles</span> それぞれに色のついたアウトラインが表示され、分離などの設定も反映されます。</p>
+    <p class="dropspot">これらは、<span class="notranslate">sprite</span> で選択した<span class="notranslate">tile set</span>
+      をプレビューするために使用できるツールです。これらのボタンは現在のプレビューのズームレベルを制御し、ズームインまたはズームアウトに使用できます。<img> ボタンをクリックすると、プレビューが編集中の<span
+        class="notranslate">tile set</span> <span class="notranslate">sprite</span> と 1:1
+      になるようにリセットされます。また、「<strong>ウィンドウに合わせる</strong>」ボタン<img> をクリックすると、<span class="notranslate">tile set</span>
+      全体で現在のプレビューウィンドウに収まるようにできます（収まるように適宜ズームイン/アウトします）。<img> /<img> とマウスホイール<img> を使ってもズームイン・ズームアウトできます。また、<img> /<img>
+      +<img> を押すと、キャンバスと<span class="notranslate">tile set</span> <span class="notranslate">sprite</span> が 1:1
+      になるように設定されます。</p>
+    <p class="dropspot"><span class="notranslate">switch</span> もう一つの特徴は、<img>
+      ボタンをクリックすることで、グリッド表示のオン・オフができ、また、使用するグリッドの色も設定できます（<img> ボタンをクリックします）。グリッドが有効な場合、グリッド内の<span
+        class="notranslate">tiles</span> それぞれに色のついたアウトラインが表示され、分離などの設定も反映されます。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">プレビュー</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">このセクションは、<span class="notranslate">tile set</span> プレビューウィンドウです。プレビューを移動するには、一般的な<span class="notranslate">Workspaces</span> と同じ基本的な操作が可能です。マウスの中ボタン<img> とドラッグでプレビューをパンし（あるいは<img> +<img> の組み合わせを使用）、マウスホイール<img> で水平方向にスクロールし、<img> /<img> キーとマウスホイール<img> でズームインとアウトを行うことができます。また、<strong>プレビューツールボックスの</strong>さまざまなボタンを使って、ズームの変更やグリッドセルオーバーレイの有効・無効を切り替えることができます。</p>
+    <p class="dropspot">このセクションは、<span class="notranslate">tile set</span> プレビューウィンドウです。プレビューを移動するには、一般的な<span
+        class="notranslate">Workspaces</span> と同じ基本的な操作が可能です。マウスの中ボタン<img> とドラッグでプレビューをパンし（あるいは<img> +<img>
+      の組み合わせを使用）、マウスホイール<img> で水平方向にスクロールし、<img> /<img> キーとマウスホイール<img>
+      でズームインとアウトを行うことができます。また、<strong>プレビューツールボックスの</strong>さまざまなボタンを使って、ズームの変更やグリッドセルオーバーレイの有効・無効を切り替えることができます。</p>
   </div>
   <p> </p>
-  <p>上記の<strong>エディタの</strong>セクションで述べたように、<span class="notranslate">tile sets</span> を編集し、特別な<em>ブラシ </em>(<span class="notranslate">tiles</span> の組み合わせで<span class="notranslate">room</span> にペイントできる)、<em>アニメーション </em>タイル、<em>自動タイル</em>タイル (<span class="notranslate">tiles</span> に配置すると自動的に接続される特別な<span class="notranslate">room</span> ) を生成するツールがさらに用意されています。これらの各エディタについては、次のページで詳しく説明します。</p>
+  <p>上記の<strong>エディタの</strong>セクションで述べたように、<span class="notranslate">tile sets</span> を編集し、特別な<em>ブラシ </em>(<span
+      class="notranslate">tiles</span> の組み合わせで<span class="notranslate">room</span> にペイントできる)、<em>アニメーション
+    </em>タイル、<em>自動タイル</em>タイル (<span class="notranslate">tiles</span> に配置すると自動的に接続される特別な<span
+      class="notranslate">room</span> ) を生成するツールがさらに用意されています。これらの各エディタについては、次のページで詳しく説明します。</p>
   <ul class="colour">
     <li><a href="Tile_Set_Editors/Brush_Builder.htm">ブラシビルダー</a></li>
     <li><a href="Tile_Set_Editors/Animated_Tiles.htm">アニメーテッドタイル</a></li>
@@ -77,11 +165,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="The_Asset_Editors.htm">アセット・エディターズ</a></div>
-        <div style="float:right">次へ<a href="Timelines.htm">タイムライン</a></div>
+        <div style="float:left">前のページ：<a href="The_Asset_Editors.htm">アセット・エディタズ</a></div>
+        <div style="float:right">次のページ：<a href="Timelines.htm">タイムライン</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The <span class="notranslate">Tile Set</span> Editor
@@ -92,4 +181,5 @@ Tile Sets
 tile_set_editor
 -->
 </body>
+
 </html>

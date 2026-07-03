@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_fog</title>
@@ -12,53 +13,65 @@
   <meta name="rh-index-keywords" content="gpu_set_fog" />
   <meta name="search-keywords" content="gpu_set_fog" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_fog</span></h1>
-  <p>この機能により、フォグの描画を有効または無効にすることができます。3Dゲームでは、霧を利用して遠くのインスタンスを薄く見せたり、見えないようにしたりすることができ、雰囲気を出したり、遠くのインスタンスを描画していないことを隠したりすることができます。</p>
-  <p>有効 (<span class="inline">true</span>) か無効 (<span class="inline">false</span>) か、フォグのブレンドに使用する色、および描画の開始と終了の距離を設定します。距離の値は、基本的にピクセル単位の深度値であり、カメラの位置からの相対的なものです。</p>
-  <p>例えば、位置0はカメラに最も近く、増加するごとに遠ざかります。デフォルトでは、ビューのカメラは深度-16000に配置されているので、フォグを深度0から始めて深度1000で終了させたい場合は、開始距離を16000に、終了距離を17000に設定することになります。</p>
+  <p>
+    この機能により、フォグの描画を有効または無効にすることができます。3Dゲームでは、霧を利用して遠くのインスタンスを薄く見せたり、見えないようにしたりすることができ、雰囲気を出したり、遠くのインスタンスを描画していないことを隠したりすることができます。
+  </p>
+  <p>有効 (<span class="inline">true</span>) か無効 (<span class="inline">false</span>)
+    か、フォグのブレンドに使用する色、および描画の開始と終了の距離を設定します。距離の値は、基本的にピクセル単位の深度値であり、カメラの位置からの相対的なものです。</p>
+  <p>
+    例えば、位置0はカメラに最も近く、増加するごとに遠ざかります。デフォルトでは、ビューのカメラは深度-16000に配置されているので、フォグを深度0から始めて深度1000で終了させたい場合は、開始距離を16000に、終了距離を17000に設定することになります。
+  </p>
   <p>この関数は、4つの個別引数（上にあげたもの）、または以下の構造を持つ1つの配列を取ることができます（下のコード例ではこの方法を示しています）。</p>
   <ul class="colour">
-    <li>[0] = 有効トグル (ブール値、 <span class="inline">true</span> または <span class="inline">false</span>)、デフォルト。 <span class="inline">false</span></li>
+    <li>[0] = 有効トグル (ブール値、 <span class="inline">true</span> または <span class="inline">false</span>)、デフォルト。 <span
+        class="inline">false</span></li>
     <li>[1] = 色（実数）、デフォルト <span class="inline">c_black</span></li>
     <li>[2] = 開始距離（実数）、デフォルト0</li>
     <li>[3] = 終了距離（実数）、デフォルト1</li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_fog</span>(enable, colour, start, end);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">enable</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">ブーリアン</a></span></td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">ブーリアン</a></span></td>
         <td><span class="notranslate">Enable or disable fog</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">colour</span></td>
-        <td><span data-keyref="Type_Constant_Colour"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">カラー</a></span></td>
+        <td><span data-keyref="Type_Constant_Colour"><a
+              href="../../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm"
+              target="_blank">カラー</a></span></td>
         <td><span class="notranslate">The fog colour</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">start</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The distance to start applying fog from (relative to the camera)</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">end</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">リアル</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm"
+              target="_blank">リアル</a></span></td>
         <td><span class="notranslate">The distance to end the fog (relative to the camera)</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -72,11 +85,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_cullmode.htm"><span class="notranslate">gpu_set_cullmode</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_cullmode.htm"><span
+              class="notranslate">gpu_set_cullmode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_fog
@@ -85,4 +100,5 @@ gpu_set_fog
 gpu_set_fog
 -->
 </body>
+
 </html>

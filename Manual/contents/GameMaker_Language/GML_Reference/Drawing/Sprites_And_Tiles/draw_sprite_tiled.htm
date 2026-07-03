@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_sprite_tiled</title>
@@ -13,57 +14,70 @@
   <meta name="search-keywords" content="draw_sprite_tiled" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">draw_sprite_tiled</span></h1>
-  <p>この関数は<span class="notranslate">sprite</span> を受け取り、関数内で与えた座標を起点に、ビュー全体（ビューが定義されていない場合は<span class="notranslate">tile</span> ）にわたって<span class="notranslate">room</span> を繰り返し実行します。タイリングは、<span class="notranslate">sprite</span> の幅と高さを基準にして行われます。
-    を実行するインスタンスの<a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">スプライト変数</a>です。この関数は2D（正投影）専用で、3Dの場合は正しく動作しません。
+  <p>この関数は<span class="notranslate">sprite</span> を受け取り、関数内で与えた座標を起点に、ビュー全体（ビューが定義されていない場合は<span
+      class="notranslate">tile</span> ）にわたって<span class="notranslate">room</span> を繰り返し実行します。タイリングは、<span
+      class="notranslate">sprite</span> の幅と高さを基準にして行われます。
+    を実行するインスタンスの<a
+      href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">スプライト変数</a>です。この関数は2D（正投影）専用で、3Dの場合は正しく動作しません。
     カメラ投影が使用されます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">draw_sprite_tiled</span>(sprite, subimg, x, y);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">sprite</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">sprite</span></td>
+        <td><span data-keyref="Type_Asset_Sprite"></span></td>
         <td><span class="notranslate">The index of the sprite to draw.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">subimg</span></td><td><span data-keyref="Type_Real"></span></td>
-        <td><span class="notranslate">The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</span></td>
-     </tr>
+        <td><span class="notranslate">subimg</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The subimg (frame) of the sprite to draw (image_index or -1 correlate to the
+            current frame of animation in the object).</span></td>
+      </tr>
       <tr>
-        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of where to draw the sprite.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The y coordinate of where to draw the sprite.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
   <p class="code">draw_sprite_tiled(sprite_index, image_index, x, y);</p>
-  <p>これは、インスタンスに割り当てられた<span class="notranslate">sprite</span> (sprite_index) とそのアニメーションの現在のフレーム (image_index) を、インスタンス自身の x と y の位置に、ビューを横切って水平方向と垂直方向にタイル状に描画します。</p>
+  <p>これは、インスタンスに割り当てられた<span class="notranslate">sprite</span> (sprite_index) とそのアニメーションの現在のフレーム (image_index)
+    を、インスタンス自身の x と y の位置に、ビューを横切って水平方向と垂直方向にタイル状に描画します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sprites_And_Tiles.htm">スプライトとタイル</a></div>
-        <div style="float:right">次のページ <a href="draw_sprite_tiled_ext.htm"><span class="notranslate">draw_sprite_tiled_ext</span></a></div>
+        <div style="float:left">前のページ：<a href="Sprites_And_Tiles.htm">スプライトとタイル</a></div>
+        <div style="float:right">次のページ：<a href="draw_sprite_tiled_ext.htm"><span
+              class="notranslate">draw_sprite_tiled_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_tiled
@@ -72,4 +86,5 @@ draw_sprite_tiled
 draw_sprite_tiled
 -->
 </body>
+
 </html>

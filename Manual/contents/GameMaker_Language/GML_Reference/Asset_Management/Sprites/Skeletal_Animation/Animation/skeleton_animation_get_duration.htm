@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>skeleton_animation_get_duration</title>
@@ -13,35 +14,43 @@
   <meta name="search-keywords" content="skeleton_animation_get_duration" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">skeleton_animation_get_duration</span></h1>
   <p>この関数は、与えられたアニメーションセットが実行され、最初にループバックするまでに必要な時間を返します。戻り値は秒単位です。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">skeleton_animation_get_duration</span>(animname);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">animname</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">animname</span></td>
+        <td><span data-keyref="Type_String"></span></td>
         <td><span class="notranslate">The name (a string) of the animation set to use.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例1．</h4>
-  <p class="code">time += delta_time / 1000000;<br/> var duration = skeleton_animation_get_duration(skeleton_animation_get());<br/> var frame = floor((image_number * (mTime / duration)) + 0.5) % image_number;<br/> image_index = frame;<br/> draw_self();
+  <p class="code">time += delta_time / 1000000;<br /> var duration =
+    skeleton_animation_get_duration(skeleton_animation_get());<br /> var frame = floor((image_number * (mTime /
+    duration)) + 0.5) % image_number;<br /> image_index = frame;<br /> draw_self();
   </p>
-  <p>上記のコードでは、現在割り当てられているスケルトン・アニメーション<span class="notranslate">sprite</span> に対して、 <span class="inline">image_index</span> を正しい値に設定します。</p>
+  <p>上記のコードでは、現在割り当てられているスケルトン・アニメーション<span class="notranslate">sprite</span> に対して、 <span
+      class="inline">image_index</span> を正しい値に設定します。</p>
   <h4>例2:</h4>
-  <p class="code">time += delta_time / 1000000;<br/> var d = skeleton_animation_get_duration(&quot;walk&quot;);<br/> if time &gt; d time -= d;<br/> draw_skeleton_time(sprite_index, &quot;walk&quot;, &quot;skin1&quot;, time, x, y, image_xscale, image_yscale, image_angle,
+  <p class="code">time += delta_time / 1000000;<br /> var d = skeleton_animation_get_duration(&quot;walk&quot;);<br />
+    if time &gt; d time -= d;<br /> draw_skeleton_time(sprite_index, &quot;walk&quot;, &quot;skin1&quot;, time, x, y,
+    image_xscale, image_yscale, image_angle,
     c_white);</p>
   <p>上記のコードは、与えられたスケルトン・アニメーション<span class="notranslate">sprite</span> を、描画されるフレームを設定するために delta-time を使って描画します。</p>
   <p> </p>
@@ -50,11 +59,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Animation.htm">アニメーション</a></div>
-        <div style="float:right">次のページ <a href="skeleton_animation_mix.htm"><span class="notranslate">skeleton_animation_mix</span></a></div>
+        <div style="float:left">前のページ：<a href="Animation.htm">アニメーション</a></div>
+        <div style="float:right">次のページ：<a href="skeleton_animation_mix.htm"><span
+              class="notranslate">skeleton_animation_mix</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_get_duration
@@ -63,4 +74,5 @@ skeleton_animation_get_duration
 skeleton_animation_get_duration
 -->
 </body>
+
 </html>

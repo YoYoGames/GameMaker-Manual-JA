@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>asset_get_tags</title>
@@ -9,19 +10,29 @@
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function asset_get_tags" />
-  <meta name="rh-index-keywords" content="asset_get_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
-  <meta name="search-keywords" content="asset_get_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="rh-index-keywords"
+    content="asset_get_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="search-keywords"
+    content="asset_get_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">asset_get_tags</span></h1>
-  <p>この関数を使うと、<span class="notranslate">asset</span> に割り当てられたすべてのタグを<span class="notranslate">Asset</span> Browser から取得することができます。<span class="notranslate">asset</span> の名前 (<span class="notranslate">string</span>) または<span class="notranslate">asset</span> のインデックスを指定すると、この関数はその<span class="notranslate">asset</span> に対応するタグの<a href="../../../GML_Overview/Arrays.htm">配列を</a>返します。タグが見つからないか、エラーが発生した場合（たとえば、指定された名前<span class="notranslate">string</span> が存在しない場合）、返される配列は空になります。<span class="notranslate">asset</span> インデックス値を指定する場合、オプションで<span class="notranslate">asset</span> タイプ引数 (定数) を指定する必要があります。これは、異なるタイプの<span class="notranslate">assets</span> が、同じ名前を持つことはできなくても、同じインデックスを持つことができるからです。利用可能な<span class="notranslate">asset</span> のタイプは、以下の表のとおりです。</p>
+  <p>この関数を使うと、<span class="notranslate">asset</span> に割り当てられたすべてのタグを<span class="notranslate">Asset</span> Browser
+    から取得することができます。<span class="notranslate">asset</span> の名前 (<span class="notranslate">string</span>) または<span
+      class="notranslate">asset</span> のインデックスを指定すると、この関数はその<span class="notranslate">asset</span> に対応するタグの<a
+      href="../../../GML_Overview/Arrays.htm">配列を</a>返します。タグが見つからないか、エラーが発生した場合（たとえば、指定された名前<span
+      class="notranslate">string</span> が存在しない場合）、返される配列は空になります。<span class="notranslate">asset</span>
+    インデックス値を指定する場合、オプションで<span class="notranslate">asset</span> タイプ引数 (定数) を指定する必要があります。これは、異なるタイプの<span
+      class="notranslate">assets</span> が、同じ名前を持つことはできなくても、同じインデックスを持つことができるからです。利用可能な<span
+      class="notranslate">asset</span> のタイプは、以下の表のとおりです。</p>
   <table>
     <tbody>
       <tr>
         <th>定数</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">asset_object</span></td>
@@ -49,7 +60,8 @@
       </tr>
       <tr>
         <td><span class="notranslate">asset_script</span></td>
-        <td>与えられた名前から <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.</td>
+        <td>与えられた名前から <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate">asset_font</span></td>
@@ -74,14 +86,14 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">asset_get_tags</span>(name_or_index, [asset_type]);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">name_or_index</span></td>
@@ -91,12 +103,13 @@
       <tr>
         <td><span class="notranslate">[asset_type]</span></td>
         <td><span data-keyref="Type_Constant_Asset_Type">アセットタイプ 定数</span></td>
-        <td><span class="notranslate">OPTIONAL! The type of asset to get the tags for, only used when supplying an index for the first argument.</span></td>
+        <td><span class="notranslate">OPTIONAL! The type of asset to get the tags for, only used when supplying an index
+            for the first argument.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Array">Array</span></p>
   <p> </p>
   <h4>例</h4>
@@ -108,11 +121,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Assets_And_Tags.htm">資産とタグ</a></div>
-        <div style="float:right">次のページ <a href="asset_add_tags.htm"><span class="notranslate">asset_add_tags</span></a></div>
+        <div style="float:left">前のページ：<a href="Assets_And_Tags.htm">資産とタグ</a></div>
+        <div style="float:right">次のページ：<a href="asset_add_tags.htm"><span class="notranslate">asset_add_tags</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 asset_get_tags
@@ -133,4 +148,5 @@ asset_sequence
 asset_get_tags
 -->
 </body>
+
 </html>

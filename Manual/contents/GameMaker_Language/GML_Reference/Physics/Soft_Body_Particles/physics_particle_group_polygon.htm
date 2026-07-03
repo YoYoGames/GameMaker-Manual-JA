@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_particle_group_polygon</title>
@@ -12,36 +13,50 @@
   <meta name="rh-index-keywords" content="physics_particle_group_polygon" />
   <meta name="search-keywords" content="physics_particle_group_polygon" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_particle_group_polygon</span></h1>
-  <p>この関数は、作成中のパーティクルグループの形状を設定します。まず最初に関数 <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>で、その後に
+  <p>この関数は、作成中のパーティクルグループの形状を設定します。まず最初に関数 <a href="physics_particle_group_begin.htm"><span
+        class="inline">physics_particle_group_begin()</span></a>で、その後に
     この関数は、ポリゴン形状を定義するためのおおよそのポイントを追加することを<span data-keyref="GameMaker Name">GameMakerに</span>伝えるために使用します。
-    は <a href="physics_particle_set_radius.htm"><span class="inline">physics_particle_set_radius()</span></a>物理シミュレーションは、定義された形状にできるだけ多くのパーティクルを「はめ込もう」とするからです。</p>
-  <p>次に、ポリゴンの点を定義するために、関数 <a href="physics_particle_group_add_point.htm"><span class="inline">physics_particle_group_add_point()</span></a><span class="notranslate">room</span> での x/y 位置を設定します（最小 3、最大 8。
-    は凹形状として定義できるが、形状の内側の点は無視される)。最後に <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>でパーティクルグループを作成し、<span class="notranslate">room</span> 。</p>
+    は <a href="physics_particle_set_radius.htm"><span
+        class="inline">physics_particle_set_radius()</span></a>物理シミュレーションは、定義された形状にできるだけ多くのパーティクルを「はめ込もう」とするからです。</p>
+  <p>次に、ポリゴンの点を定義するために、関数 <a href="physics_particle_group_add_point.htm"><span
+        class="inline">physics_particle_group_add_point()</span></a><span class="notranslate">room</span> での x/y
+    位置を設定します（最小 3、最大 8。
+    は凹形状として定義できるが、形状の内側の点は無視される)。最後に <a href="physics_particle_group_end.htm"><span
+        class="inline">physics_particle_group_end()</span></a>でパーティクルグループを作成し、<span class="notranslate">room</span> 。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">physics_particle_group_polygon</span>()</p>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br/> var groupflags = phy_particle_group_flag_solid;<br/> physics_particle_group_begin(flags, groupflags, mouse_x, mouse_y, 0, 0, 0, 0, c_white, 1, 1, 2);<br/>    physics_particle_group_polygon();
-    <br/> physics_particle_group_add_point(200, 200);<br/> physics_particle_group_add_point(300, 300);<br/> physics_particle_group_add_point(100, 300);<br/> mLastGroup = physics_particle_group_end();</p>
-  <p>上記のコードでは、パーティクルの種類とパーティクルグループのプロパティ（<span class="notranslate">flags</span> ）を変数に格納し、それを使ってマウス位置の3辺を持つポリゴンパーティクルグループを作成しています。</p>
+  <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br /> var
+    groupflags = phy_particle_group_flag_solid;<br /> physics_particle_group_begin(flags, groupflags, mouse_x, mouse_y,
+    0, 0, 0, 0, c_white, 1, 1, 2);<br /> physics_particle_group_polygon();
+    <br /> physics_particle_group_add_point(200, 200);<br /> physics_particle_group_add_point(300, 300);<br />
+    physics_particle_group_add_point(100, 300);<br /> mLastGroup = physics_particle_group_end();
+  </p>
+  <p>上記のコードでは、パーティクルの種類とパーティクルグループのプロパティ（<span class="notranslate">flags</span>
+    ）を変数に格納し、それを使ってマウス位置の3辺を持つポリゴンパーティクルグループを作成しています。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">背中<a href="Soft_Body_Particles.htm">ソフトボディーの粒子</a></div>
-        <div style="float:right">次のページ <a href="physics_particle_group_add_point.htm"><span class="notranslate">physics_particle_group_add_point</span></a></div>
+        <div style="float:left">前のページ：<a href="Soft_Body_Particles.htm">ソフトボディーのパーティクル</a></div>
+        <div style="float:right">次のページ：<a href="physics_particle_group_add_point.htm"><span
+              class="notranslate">physics_particle_group_add_point</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_group_polygon
@@ -50,4 +65,5 @@ physics_particle_group_polygon
 physics_particle_group_polygon
 -->
 </body>
+
 </html>

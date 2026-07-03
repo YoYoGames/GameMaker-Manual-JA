@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>クリッピングマスク</title>
@@ -12,24 +13,36 @@
   <meta name="rh-index-keywords" content="Sequences - Clipping Masks" />
   <meta name="search-keywords" content="masks,clip masks,clipping,clipping masks" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>クリッピングマスク</h1>
-  <p><a href="The_Track_Panel.htm">トラックパネルの</a>ページで紹介したように、トラックエディタには<strong>クリッピングマスクグループと </strong>呼ばれるものを作成するアクションがあります。これはトラックパネルの下部にある<img> ボタンをクリックすることでアクセスできます。</p>
+  <p><a href="The_Track_Panel.htm">トラックパネルの</a>ページで紹介したように、トラックエディタには<strong>クリッピングマスクグループと
+    </strong>呼ばれるものを作成するアクションがあります。これはトラックパネルの下部にある<img> ボタンをクリックすることでアクセスできます。</p>
   <p><img>これをクリックすると、<span class="notranslate">assets</span> の2つのサブセットで構成されるクリッピングマスクグループが作成され、どちらにも使用することができます。
-    を、<strong>被写体 </strong>または<strong>マスクとして </strong>使用します。基本的に、被写体はマスクされる<span class="notranslate">asset</span> 、マスクはマスキングされる<span class="notranslate">asset</span> 。</p>
-  <p><img>クリッピングマスクを使用する考え方は、被写体<span class="notranslate">sprite</span> を追加し、次にマスク<span class="notranslate">sprite</span> を追加すると、マスク<span class="notranslate">sprite</span> が「隠れる」ようになることです。
-    (マスク)します。その後、マスク<span class="notranslate">sprite</span> のアニメーションを使ったり、マスク<span class="notranslate">sprite</span> を移動または拡大縮小して、被写体（または被写体の一部）の可視性を変更することができます。各グループ（マスクとサブジェクト）には複数の<span class="notranslate">assets</span> を含めることができ、それぞれの<span class="notranslate">assets</span> には、次のような機能があります。
+    を、<strong>被写体 </strong>または<strong>マスクとして </strong>使用します。基本的に、被写体はマスクされる<span class="notranslate">asset</span>
+    、マスクはマスキングされる<span class="notranslate">asset</span> 。</p>
+  <p><img>クリッピングマスクを使用する考え方は、被写体<span class="notranslate">sprite</span> を追加し、次にマスク<span
+      class="notranslate">sprite</span> を追加すると、マスク<span class="notranslate">sprite</span> が「隠れる」ようになることです。
+    (マスク)します。その後、マスク<span class="notranslate">sprite</span> のアニメーションを使ったり、マスク<span class="notranslate">sprite</span>
+    を移動または拡大縮小して、被写体（または被写体の一部）の可視性を変更することができます。各グループ（マスクとサブジェクト）には複数の<span class="notranslate">assets</span>
+    を含めることができ、それぞれの<span class="notranslate">assets</span> には、次のような機能があります。
     は、複数のパラメータトラックを持ちます。</p>
-  <p>被写体とマスクを追加するには、<span class="notranslate">sprite</span> ブラウザから<span class="notranslate">object</span>,<span class="notranslate">sequence</span>,<span class="notranslate">Asset</span> を追加したいフォルダの上にドラッグするだけです。</p>
-  <p><img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png"
-    /></p>
-  <p>マスク<span class="notranslate">sprite</span> <em>アルファは </em>、その下にある被写体が何であれ「隠す」ために使われます。100%のアルファ値（不透明）は完全にマスクし、0%のアルファ値（透明）はそれを表示します。例えば、この<span class="notranslate">sprite</span> をマスク用にしています。</p>
+  <p>被写体とマスクを追加するには、<span class="notranslate">sprite</span> ブラウザから<span class="notranslate">object</span>,<span
+      class="notranslate">sequence</span>,<span class="notranslate">Asset</span> を追加したいフォルダの上にドラッグするだけです。</p>
+  <p><img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png" /></p>
+  <p>マスク<span class="notranslate">sprite</span> <em>アルファは
+    </em>、その下にある被写体が何であれ「隠す」ために使われます。100%のアルファ値（不透明）は完全にマスクし、0%のアルファ値（透明）はそれを表示します。例えば、この<span
+      class="notranslate">sprite</span> をマスク用にしています。</p>
   <p><img>これをアイコンにクリッピングマスクとして適用すると、次のような「クールダウン」効果が得られます。</p>
-  <p><img>上記の例では、&quot;<span class="inline">Sprite_2</span>&quot;は単にベースアイコンである静的な<span class="notranslate">sprite</span> <span class="notranslate">asset</span> 。
-    そしてその上に、<span class="notranslate">sprite</span> のグレイスケール版とマスク（上記の例<span class="notranslate">sprite</span> を使用）を持つクリッピングマスクグループを作成しました。結合して<span class="notranslate">sequence</span> を再生すると、クリッピングマスクグループによって、ベーススプライト
-    の下には、クールダウンの効果があります。</p>
-  <p>なお、クリッピングマスクグループは、トラックリストや<span class="notranslate">dope sheet</span> 、1つのアイテムとして扱うことができ、グループ<em>全体として</em>回転や位置のパラメータトラックを追加することが可能です。また、クリッピングマスクグループをアセットのグループフォルダに適用することもできます。
+  <p><img>上記の例では、&quot;<span class="inline">Sprite_2</span>&quot;は単にベースアイコンである静的な<span class="notranslate">sprite</span>
+    <span class="notranslate">asset</span> 。
+    そしてその上に、<span class="notranslate">sprite</span> のグレイスケール版とマスク（上記の例<span class="notranslate">sprite</span>
+    を使用）を持つクリッピングマスクグループを作成しました。結合して<span class="notranslate">sequence</span> を再生すると、クリッピングマスクグループによって、ベーススプライト
+    の下には、クールダウンの効果があります。
+  </p>
+  <p>なお、クリッピングマスクグループは、トラックリストや<span class="notranslate">dope sheet</span>
+    、1つのアイテムとして扱うことができ、グループ<em>全体として</em>回転や位置のパラメータトラックを追加することが可能です。また、クリッピングマスクグループをアセットのグループフォルダに適用することもできます。
     また、<em>他の</em>クリッピングマスクグループとの組み合わせも可能で、非常に強力なツールとなっています。</p>
   <p> </p>
   <p> </p>
@@ -37,11 +50,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Sequences.htm">シークエンス</a></div>
-        <div style="float:right">次へ<a href="Using_The_Dope_Sheet.htm">ドープシートの活用</a></div>
+        <div style="float:left">前のページ：<a href="../Sequences.htm">シークエンス</a></div>
+        <div style="float:right">次のページ：<a href="Using_The_Dope_Sheet.htm">ドープシートの活用</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Clipping Masks
@@ -53,4 +67,5 @@ Clip Masks
 track_panel_clip_mask
 -->
 </body>
+
 </html>

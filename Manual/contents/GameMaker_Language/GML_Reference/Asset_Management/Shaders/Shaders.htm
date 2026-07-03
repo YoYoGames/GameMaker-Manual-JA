@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シェーダー</title>
@@ -12,20 +13,40 @@
   <meta name="rh-index-keywords" content="Shaders" />
   <meta name="search-keywords" content="Shaders,_YY_GLSLES_,_YY_GLSL_,_YY_HLSL11_,_YY_PSSL_" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>シェーダー</h1>
-  <p>シェーダーは、グラフィックスカードによって画面に<a class="glossterm" data-glossterm="レンダリング" href="#">描画</a>されるものを、どのように操作するかという、非常に強力なツールです。これらの小さなプログラムは、実際にはグラフィックカード自体で実行されるため、処理速度が非常に速く、貴重なCPUサイクルをより多くのゲームロジックに解放することができることを意味します。</p>
-  <p><span class="notranslate">shader</span> を作成するには、<a href="../../../../The_Asset_Editors/Shaders.htm">シェーダエディタを</a>使用して、<b>バーテックスシェーダと</b> <b>フラグメントシェーダ</b>（<b>ピクセルシェーダとも</b>呼ばれる）の両方を記述する必要があります。たとえ（たとえば）描画中のインスタンスの<span class="notranslate">vertex</span> 位置だけを変更したい場合や、ピクセルの色値だけを変更したい場合でも、完全な<span class="notranslate">shader</span> を動作させるには、<b>両方の</b>プログラムが必要です。</p>
+  <p>シェーダーは、グラフィックスカードによって画面に<a class="glossterm" data-glossterm="レンダリング"
+      href="#">描画</a>されるものを、どのように操作するかという、非常に強力なツールです。これらの小さなプログラムは、実際にはグラフィックカード自体で実行されるため、処理速度が非常に速く、貴重なCPUサイクルをより多くのゲームロジックに解放することができることを意味します。
+  </p>
+  <p><span class="notranslate">shader</span> を作成するには、<a
+      href="../../../../The_Asset_Editors/Shaders.htm">シェーダエディタを</a>使用して、<b>バーテックスシェーダと</b>
+    <b>フラグメントシェーダ</b>（<b>ピクセルシェーダとも</b>呼ばれる）の両方を記述する必要があります。たとえ（たとえば）描画中のインスタンスの<span class="notranslate">vertex</span>
+    位置だけを変更したい場合や、ピクセルの色値だけを変更したい場合でも、完全な<span class="notranslate">shader</span> を動作させるには、<b>両方の</b>プログラムが必要です。
+  </p>
   <p class="note"><span class="note">注</span>シェーダーは、変数に渡した値を変更することが<b>できない</b>ため、<b>シェーダー定数と</b>呼ばれます。</p>
-  <p><span class="notranslate">shaders</span> 自体をプログラムするために利用可能な GLSL ES 関数と変数の完全な概要については、<a href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/es_cm_spec_2.0.pdf" target="_blank">OpenGL ES シェーディング言語 (GLSL ES) のリファレンスページを</a>参照してください。また、以下のリンクにはOpenGL ES APIのクイック・リファレンス・カードがいくつか含まれているので便利です（ただし、最後の2枚だけが<span data-keyref="GameMaker Name">GameMakerに</span>適用されます）。<a href="https://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf">OpenGL ESのリファレンスカード</a>。</p>
+  <p><span class="notranslate">shaders</span> 自体をプログラムするために利用可能な GLSL ES 関数と変数の完全な概要については、<a
+      href="https://www.khronos.org/registry/OpenGL/specs/es/2.0/es_cm_spec_2.0.pdf" target="_blank">OpenGL ES シェーディング言語
+      (GLSL ES) のリファレンスページを</a>参照してください。また、以下のリンクにはOpenGL ES APIのクイック・リファレンス・カードがいくつか含まれているので便利です（ただし、最後の2枚だけが<span
+      data-keyref="GameMaker Name">GameMakerに</span>適用されます）。<a
+      href="https://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf">OpenGL
+      ESのリファレンスカード</a>。</p>
   <p><span class="notranslate">shader</span> をプロジェクトで使用するのは非常に簡単で、数行のコードを書くだけで、最も基本的な使い方ができるようになります。</p>
   <p class="code">shader_set(myShader);<br />
     draw_self();<br />
     shader_reset();</p>
-  <p>ご覧のように、ブレンドモードやサーフェスと同じように、まず<span class="notranslate">shader</span> を選択（設定）し、それを使って必要なものを描き、その後再び描画対象をリセットするという方法で使用されます。単一の<span class="notranslate">shader</span> や背景だけでなく、<span class="notranslate">sprite</span> を通して全画面をレンダリングしたい場合は、現在のビューをキャッチするサーフェイスを設定し、それを<span class="notranslate">shader</span> に渡す必要があります（詳細は<a href="../../Drawing/Surfaces/Surfaces.htm">サーフェイスを</a>参照）。</p>
-  <p class="note"><b>注意</b>：<span class="notranslate">Shaders</span> は、描画に関連するものと同様に、<b>draw イベントでのみ使用</b>可能です。また、<span class="notranslate">shader</span> で色値を使おうとして、<span class="notranslate">object</span> に<span class="notranslate">texture</span> がない場合、結果は黒になることも知っておくとよいでしょう。</p>
-  <p>使用している<span class="notranslate">shader</span> に入力値がある場合、これらは<i>ユニフォーム</i>関数を使用して設定されます。まず、ユニフォーム<i>ハンドル</i>（本質的には設定されるユニフォームのID値）を関数 <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>を使用したインスタンスの<b>Create Eventの</b>中で、<span class="notranslate">shader</span> 、これらのハンドルを変数に格納する、というようなものです。</p>
+  <p>ご覧のように、ブレンドモードやサーフェスと同じように、まず<span class="notranslate">shader</span>
+    を選択（設定）し、それを使って必要なものを描き、その後再び描画対象をリセットするという方法で使用されます。単一の<span class="notranslate">shader</span> や背景だけでなく、<span
+      class="notranslate">sprite</span> を通して全画面をレンダリングしたい場合は、現在のビューをキャッチするサーフェイスを設定し、それを<span
+      class="notranslate">shader</span> に渡す必要があります（詳細は<a href="../../Drawing/Surfaces/Surfaces.htm">サーフェイスを</a>参照）。</p>
+  <p class="note"><b>注意</b>：<span class="notranslate">Shaders</span> は、描画に関連するものと同様に、<b>draw イベントでのみ使用</b>可能です。また、<span
+      class="notranslate">shader</span> で色値を使おうとして、<span class="notranslate">object</span> に<span
+      class="notranslate">texture</span> がない場合、結果は黒になることも知っておくとよいでしょう。</p>
+  <p>使用している<span class="notranslate">shader</span>
+    に入力値がある場合、これらは<i>ユニフォーム</i>関数を使用して設定されます。まず、ユニフォーム<i>ハンドル</i>（本質的には設定されるユニフォームのID値）を関数 <a
+      href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>を使用したインスタンスの<b>Create
+      Eventの</b>中で、<span class="notranslate">shader</span> 、これらのハンドルを変数に格納する、というようなものです。</p>
   <p class="code">colour_to_find = shader_get_uniform(sShaderDemo5, &quot;f_Colour1&quot;);<br />
     colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
   <p>均一なハンドルがあれば、それを<span class="notranslate">shader</span> の<b>Draw Event</b>のコードに次のように設定できます。</p>
@@ -34,7 +55,10 @@
     shader_set_uniform_f(colour_to_set, 1, 0, 0);<br />
     draw_sprite(sprite_index, image_index, x + 24, y);<br />
     shader_reset();</p>
-  <p>最後に、<span class="notranslate">shaders</span> はすべてのプラットフォームで受け入れられますが、デバイスに依存するため、デバイスのハードウェアまたはソフトウェアが<span class="notranslate">shaders</span> を使用できない場合、エラーが発生することに注意してください。したがって、ユニフォームを設定したり、<span class="notranslate">shader</span> 自体を使用する前に、<span class="notranslate">shader</span> がコンパイルされているかどうか、このように確認することをお勧めします。</p>
+  <p>最後に、<span class="notranslate">shaders</span> はすべてのプラットフォームで受け入れられますが、デバイスに依存するため、デバイスのハードウェアまたはソフトウェアが<span
+      class="notranslate">shaders</span> を使用できない場合、エラーが発生することに注意してください。したがって、ユニフォームを設定したり、<span
+      class="notranslate">shader</span> 自体を使用する前に、<span class="notranslate">shader</span>
+    がコンパイルされているかどうか、このように確認することをお勧めします。</p>
   <p class="code">if (shader_is_compiled(myShader))<br />
     {<br />
         shader_set(myShader);<br />
@@ -42,8 +66,12 @@
         shader_reset();<br />
     }<br />
     else show_debug_message(&quot;Shader failed&quot;);</p>
-  <p>また、追加チェックとして、この関数を呼び出すこともできます。 <a href="shaders_are_supported.htm"><span class="inline">shaders_are_supported()</span></a>を使用して、ハードウェアが<span class="notranslate">shaders</span> をサポートしているかどうかさえも確認することができます。一般的には、ゲーム開始時にこれらのチェックを行い、結果を<a href="../../../GML_Overview/Variables/Global_Variables.htm">グローバル変数として</a>保存し、後で確認することになります。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerは</span>、GLSL ES<span class="notranslate">shaders</span> で使用できる条件付きコンパイル<b>マクロを</b>いくつかサポートしており、特定のサポートプラットフォームで代替コードを実行できることに留意することが重要です。そのマクロと生成されるプラットフォームは下表のとおりです。</p>
+  <p>また、追加チェックとして、この関数を呼び出すこともできます。 <a href="shaders_are_supported.htm"><span
+        class="inline">shaders_are_supported()</span></a>を使用して、ハードウェアが<span class="notranslate">shaders</span>
+    をサポートしているかどうかさえも確認することができます。一般的には、ゲーム開始時にこれらのチェックを行い、結果を<a
+      href="../../../GML_Overview/Variables/Global_Variables.htm">グローバル変数として</a>保存し、後で確認することになります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerは</span>、GLSL ES<span class="notranslate">shaders</span>
+    で使用できる条件付きコンパイル<b>マクロを</b>いくつかサポートしており、特定のサポートプラットフォームで代替コードを実行できることに留意することが重要です。そのマクロと生成されるプラットフォームは下表のとおりです。</p>
   <p> </p>
   <table>
     <tbody>
@@ -75,13 +103,16 @@
     </tbody>
   </table>
   <p> </p>
-  <p>GLSL ES フォーマットの<span class="notranslate">shader</span> を使って、上記のプラットフォームで<span data-keyref="GameMaker Name">GameMaker</span>プロジェクトをコンパイルすると、上記のマクロの<i>いずれかが</i>生成され、<span class="notranslate">shader</span> のコードで以下のようにチェックしながら使うことができます。</p>
+  <p>GLSL ES フォーマットの<span class="notranslate">shader</span> を使って、上記のプラットフォームで<span
+      data-keyref="GameMaker Name">GameMaker</span>プロジェクトをコンパイルすると、上記のマクロの<i>いずれかが</i>生成され、<span
+      class="notranslate">shader</span> のコードで以下のようにチェックしながら使うことができます。</p>
   <p class="code">#ifdef _YY_HLSL11_<br />
     // HLSL shader code here<br />
     #else<br />
     // GLSL shader code here<br />
     #endif</p>
-  <p><span class="notranslate">shaders</span> を初めて使う方や、<span data-keyref="GameMaker Name">GameMaker</span> を使って作成・使用する方法をより詳しく知りたい方は、マニュアルの以下のページをご覧ください。</p>
+  <p><span class="notranslate">shaders</span> を初めて使う方や、<span data-keyref="GameMaker Name">GameMaker</span>
+    を使って作成・使用する方法をより詳しく知りたい方は、マニュアルの以下のページをご覧ください。</p>
   <ul class="colour">
     <li><a href="../../../../Additional_Information/Guide_To_Using_Shaders.htm">シェーダー使用ガイド</a></li>
   </ul>
@@ -98,7 +129,8 @@
     <li><a href="shader_set_uniform_i.htm"><span class="notranslate">shader_set_uniform_i</span></a></li>
     <li><a href="shader_set_uniform_i_array.htm"><span class="notranslate">shader_set_uniform_i_array</span></a></li>
     <li><a href="shader_set_uniform_matrix.htm"><span class="notranslate">shader_set_uniform_matrix</span></a></li>
-    <li><a href="shader_set_uniform_matrix_array.htm"><span class="notranslate">shader_set_uniform_matrix_array</span></a></li>
+    <li><a href="shader_set_uniform_matrix_array.htm"><span
+          class="notranslate">shader_set_uniform_matrix_array</span></a></li>
     <li><a href="shader_reset.htm"><span class="notranslate">shader_reset</span></a></li>
     <li><a href="shader_is_compiled.htm"><span class="notranslate">shader_is_compiled</span></a></li>
     <li><a href="shaders_are_supported.htm"><span class="notranslate">shaders_are_supported</span></a></li>
@@ -110,30 +142,46 @@
     <li><a href="shader_enable_corner_id.htm"><span class="notranslate">shader_enable_corner_id</span></a></li>
   </ul>
   <p> </p>
-  <p><span class="notranslate">texture</span> のサンプラーを<span class="notranslate">shaders</span> で操作する場合、使用されている<span class="notranslate">texture</span> の情報が必要です。その場合、以下の機能を使用します。</p>
+  <p><span class="notranslate">texture</span> のサンプラーを<span class="notranslate">shaders</span> で操作する場合、使用されている<span
+      class="notranslate">texture</span> の情報が必要です。その場合、以下の機能を使用します。</p>
   <p> </p>
   <ul class="colour">
-    <li><a href="../Sprites/Sprite_Information/sprite_get_texture.htm"><span class="notranslate">sprite_get_texture</span></a></li>
-    <li><a href="../Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="notranslate">sprite_get_uvs</span></a></li>
+    <li><a href="../Sprites/Sprite_Information/sprite_get_texture.htm"><span
+          class="notranslate">sprite_get_texture</span></a></li>
+    <li><a href="../Sprites/Sprite_Information/sprite_get_uvs.htm"><span class="notranslate">sprite_get_uvs</span></a>
+    </li>
     <li><a href="../Fonts/font_get_texture.htm"><span class="notranslate">font_get_texture</span></a></li>
     <li><a href="../Fonts/font_get_uvs.htm"><span class="notranslate">font_get_uvs</span></a></li>
-    <li><a href="../../Drawing/Textures/texture_get_width.htm"><span class="notranslate">texture_get_width</span></a></li>
-    <li><a href="../../Drawing/Textures/texture_get_height.htm"><span class="notranslate">texture_get_height</span></a></li>
-    <li><a href="../../Drawing/Textures/texture_get_texel_width.htm"><span class="notranslate">texture_get_texel_width</span></a></li>
-    <li><a href="../../Drawing/Textures/texture_get_texel_height.htm"><span class="notranslate">texture_get_texel_height</span></a></li>
-    <li><a href="../../Drawing/Textures/texture_set_stage.htm"><span class="notranslate">texture_set_stage</span></a></li>
-    <li><a href="../../Drawing/GPU_Control/gpu_set_texfilter_ext.htm"><span class="notranslate">gpu_set_texfilter_ext</span></a></li>
-    <li><a href="../../Drawing/GPU_Control/gpu_set_texrepeat.htm"><span class="notranslate">gpu_set_texrepeat</span></a></li>
+    <li><a href="../../Drawing/Textures/texture_get_width.htm"><span class="notranslate">texture_get_width</span></a>
+    </li>
+    <li><a href="../../Drawing/Textures/texture_get_height.htm"><span class="notranslate">texture_get_height</span></a>
+    </li>
+    <li><a href="../../Drawing/Textures/texture_get_texel_width.htm"><span
+          class="notranslate">texture_get_texel_width</span></a></li>
+    <li><a href="../../Drawing/Textures/texture_get_texel_height.htm"><span
+          class="notranslate">texture_get_texel_height</span></a></li>
+    <li><a href="../../Drawing/Textures/texture_set_stage.htm"><span class="notranslate">texture_set_stage</span></a>
+    </li>
+    <li><a href="../../Drawing/GPU_Control/gpu_set_texfilter_ext.htm"><span
+          class="notranslate">gpu_set_texfilter_ext</span></a></li>
+    <li><a href="../../Drawing/GPU_Control/gpu_set_texrepeat.htm"><span class="notranslate">gpu_set_texrepeat</span></a>
+    </li>
   </ul>
   <p> </p>
-  <p>このマニュアルでは、Open GL<span class="notranslate">shader</span> の関数や変数については一切<b>触れませんが</b>、<span data-keyref="GameMaker Name">GameMaker</span> 独自のものについてはリストアップしています。これらの定数は<span class="notranslate">shaders</span> の Open GL 仕様には含まれておらず、あなたのプロジェクト内での<span class="notranslate">shaders</span> の統合を簡略化するために提供されているものです。</p>
+  <p>このマニュアルでは、Open GL<span class="notranslate">shader</span> の関数や変数については一切<b>触れませんが</b>、<span
+      data-keyref="GameMaker Name">GameMaker</span> 独自のものについてはリストアップしています。これらの定数は<span
+      class="notranslate">shaders</span> の Open GL 仕様には含まれておらず、あなたのプロジェクト内での<span class="notranslate">shaders</span>
+    の統合を簡略化するために提供されているものです。</p>
   <ul class="colour">
     <li><a href="Shader_Constants.htm">シェーダー定数</a></li>
   </ul>
   <p> </p>
-  <p>最後に、<span data-keyref="GameMaker Name">GameMakerでは</span>、独自の<b>頂点フォーマットを</b>定義することができ、そこから独自のプリミティブを作成することができます。これにより、<span class="notranslate">shader</span> の操作を大幅に高速化したり、その機能を拡張して驚くような効果を生み出すことができます。これに関する情報は、以下のセクションで見ることができます。</p>
+  <p>最後に、<span
+      data-keyref="GameMaker Name">GameMakerでは</span>、独自の<b>頂点フォーマットを</b>定義することができ、そこから独自のプリミティブを作成することができます。これにより、<span
+      class="notranslate">shader</span> の操作を大幅に高速化したり、その機能を拡張して驚くような効果を生み出すことができます。これに関する情報は、以下のセクションで見ることができます。</p>
   <ul class="colour">
-    <li><a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></li>
+    <li><a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">プリミティブと<span
+          class="notranslate">Vertex</span> フォーマット</a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -141,11 +189,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Asset_Management.htm">アセットマネジメント</a></div>
-        <div style="float:right">次へ<a href="../Sequences/Sequences.htm">シーケンス</a></div>
+        <div style="float:left">前のページ：<a href="../Asset_Management.htm">アセットマネジメント</a></div>
+        <div style="float:right">次のページ：<a href="../Sequences/Sequences.htm">シーケンス</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Shaders
@@ -158,4 +207,5 @@ _YY_PSSL_
 shader_functions
 -->
 </body>
+
 </html>

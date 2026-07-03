@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ロードバッファー</title>
@@ -12,21 +13,28 @@
   <meta name="rh-index-keywords" content="GML Visual Action - Load Buffer" />
   <meta name="search-keywords" content="Load Buffer" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><img> ロードバッファー</h1>
-  <p>このアクションでは、<a href="Save_Buffer.htm">Save Buffer</a>アクションで保存した<span class="notranslate">buffer</span> を読み込むことができます。このアクションは、新しい<span class="notranslate">buffer</span> を作成し、そこにデータファイルをロードし、<span class="notranslate">buffer</span> を識別するためのユニークな ID 値を返します。
-    変数に格納されます。ロードするファイルの名前（<span class="notranslate">string</span> ）と、返された<span class="notranslate">buffer</span> ID を格納する変数を指定します。<span class="notranslate">flag</span> を一時的なローカル変数として使用する場合は、この関数が作成する<span class="notranslate">buffer</span> を必ず事前に削除する必要があることに注意してください。
-   <span class="notranslate">script</span> さもないと、その変数への参照を失い、その変数が破棄されたときにメモリリークが発生します。</p>
+  <p>このアクションでは、<a href="Save_Buffer.htm">Save Buffer</a>アクションで保存した<span class="notranslate">buffer</span>
+    を読み込むことができます。このアクションは、新しい<span class="notranslate">buffer</span> を作成し、そこにデータファイルをロードし、<span
+      class="notranslate">buffer</span> を識別するためのユニークな ID 値を返します。
+    変数に格納されます。ロードするファイルの名前（<span class="notranslate">string</span> ）と、返された<span class="notranslate">buffer</span> ID
+    を格納する変数を指定します。<span class="notranslate">flag</span> を一時的なローカル変数として使用する場合は、この関数が作成する<span
+      class="notranslate">buffer</span> を必ず事前に削除する必要があることに注意してください。
+    <span class="notranslate">script</span> さもないと、その変数への参照を失い、その変数が破棄されたときにメモリリークが発生します。
+  </p>
   <p> </p>
   <h4>アクションのシンタックス。</h4>
-  <p><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /></p>
+  <p><img alt="Load Buffer Icon" class="icon"
+      src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /></p>
   <h4>論拠となる。</h4>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">Filename</span></td>
@@ -41,18 +49,21 @@
   <p> </p>
   <h4>例</h4>
   <p><img>上記のアクションブロックのコードは、<span class="notranslate">buffer</span> データを格納する変数を作成し、次に
-    <span class="notranslate">buffer</span> 保存ファイルが以前に作成されている。ファイルが存在すれば、作成した変数<span class="notranslate">buffer</span> に読み込まれますが、存在しなければ、作成、書き込みを行い、次回の読み込みに備えてセーブアウトされます。</p>
+    <span class="notranslate">buffer</span> 保存ファイルが以前に作成されている。ファイルが存在すれば、作成した変数<span class="notranslate">buffer</span>
+    に読み込まれますが、存在しなければ、作成、書き込みを行い、次回の読み込みに備えてセーブアウトされます。
+  </p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="File_Actions.htm">ファイル操作</a></div>
-        <div style="float:right">次へ<a href="Save_Buffer.htm">バッファの保存</a></div>
+        <div style="float:left">前のページ：<a href="File_Actions.htm">ファイル操作</a></div>
+        <div style="float:right">次のページ：<a href="Save_Buffer.htm">バッファの保存</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Load Buffer
@@ -61,4 +72,5 @@ Action - Load Buffer
 action_buffer_load
 -->
 </body>
+
 </html>

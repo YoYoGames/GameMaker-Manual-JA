@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_get_mapping</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
@@ -12,52 +14,65 @@
   <meta name="search-keywords" content="gamepad_get_mapping" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gamepad_get_mapping</span></h1>
-  <p>この関数は、ゲームパッドのマッピング<span class="notranslate">string</span> を取得するために使用することができます。この<span class="notranslate">string</span> は、以下のいずれかになります。</p>
+  <p>この関数は、ゲームパッドのマッピング<span class="notranslate">string</span> を取得するために使用することができます。この<span
+      class="notranslate">string</span> は、以下のいずれかになります。</p>
   <ul class="colour">
     <li>ゲームパッドの現在のマップ<span class="notranslate">string</span> などです。
-     <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;</p>
+      <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless
+        Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;
+      </p>
     </li>
-    <li>マッピングが設定されていない場合は &quot;no mapping &quot;と表示される<span class="notranslate">string</span> (マッピングがない場合とは<i>異なります</i>)</li>
-    <li>スロットインデックスが有効なゲームパッドインデックスでない場合、&quot;device index out of range &quot;と表示される<span class="notranslate">string</span> </li>
+    <li>マッピングが設定されていない場合は &quot;no mapping &quot;と表示される<span class="notranslate">string</span>
+      (マッピングがない場合とは<i>異なります</i>)</li>
+    <li>スロットインデックスが有効なゲームパッドインデックスでない場合、&quot;device index out of range &quot;と表示される<span
+        class="notranslate">string</span> </li>
     <li>接続されているゲームパッドにマッピングがない場合は、空の<span class="notranslate">string</span> &quot;&quot;。</li>
   </ul>
-  <p>返された地図のフォーマットに関する詳細については、<span class="notranslate">string</span> 、関数を参照してください。 <a href="gamepad_test_mapping.htm"><span class="inline">gamepad_test_mapping()</span></a>.</p>
+  <p>返された地図のフォーマットに関する詳細については、<span class="notranslate">string</span> 、関数を参照してください。 <a
+      href="gamepad_test_mapping.htm"><span class="inline">gamepad_test_mapping()</span></a>.</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gamepad_get_mapping</span>(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">Which gamepad index &quot;slot&quot; to get the mapping from.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
   <p> </p>
   <h4>例</h4>
-  <p class="code">var _gpMap = gamepad_get_mapping(global.PadIndex);<br/> show_debug_message(&quot;Gamepad Mapping = &quot; + _gpMap);</p>
-  <p>上記のコードは、指定されたゲームパッドスロットのマップ<span class="notranslate">string</span> を取得し、コンソールに出力して<span class="notranslate">debugging</span> を表示します。</p>
+  <p class="code">var _gpMap = gamepad_get_mapping(global.PadIndex);<br /> show_debug_message(&quot;Gamepad Mapping =
+    &quot; + _gpMap);</p>
+  <p>上記のコードは、指定されたゲームパッドスロットのマップ<span class="notranslate">string</span> を取得し、コンソールに出力して<span
+      class="notranslate">debugging</span> を表示します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
-        <div style="float:right">次のページ <a href="gamepad_test_mapping.htm"><span class="notranslate">gamepad_test_mapping</span></a></div>
+        <div style="float:left">前のページ：<a href="Gamepad_Input.htm">ゲームパッド入力</a></div>
+        <div style="float:right">次のページ：<a href="gamepad_test_mapping.htm"><span
+              class="notranslate">gamepad_test_mapping</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_mapping
@@ -66,4 +81,5 @@ gamepad_get_mapping
 gamepad_get_mapping
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_blendmode_ext</title>
@@ -9,14 +10,21 @@
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_blendmode_ext" />
-  <meta name="rh-index-keywords" content="gpu_set_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
-  <meta name="search-keywords" content="gpu_set_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
+  <meta name="rh-index-keywords"
+    content="gpu_set_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
+  <meta name="search-keywords"
+    content="gpu_set_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">gpu_set_blendmode_ext</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMakerが</span>ピクセルを描画しようとするとき、ソースカラー（描画しようとするピクセルの色）とデスティネーションカラー（描画先のピクセルにすでにある色）があり、ピクセルの新しい色を決定するとき、選択したブレンドモードに従って、ソースカラーとデスティネーションカラーが計算されます。色の各要素は0から1の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に他の係数を掛け、その結果を要素ごとに加算することによって計算されます。</p>
-  <p>この機能により、カスタムブレンドモードを作成するために考慮すべきさまざまな構成要素を設定することができます。ソースとデスティネーションはともに赤、緑、青、アルファの各成分を持ち、下図ではソースのRGBAを（Rs、Gs、Bs、As）、デスティネーションのそれを（Rd、Gd、Bd、Ad）と見なします。使用可能な11個の定数は、この関数で使用する場合、ソースとデスティネーションのどちらか（または両方）にすることができます。</p>
+  <p><span
+      data-keyref="GameMaker Name">GameMakerが</span>ピクセルを描画しようとするとき、ソースカラー（描画しようとするピクセルの色）とデスティネーションカラー（描画先のピクセルにすでにある色）があり、ピクセルの新しい色を決定するとき、選択したブレンドモードに従って、ソースカラーとデスティネーションカラーが計算されます。色の各要素は0から1の間の浮動小数点値として保存され、新しい色は、ソースカラーの各要素に何らかの係数を掛け、デスティネーションカラーの各要素に他の係数を掛け、その結果を要素ごとに加算することによって計算されます。
+  </p>
+  <p>
+    この機能により、カスタムブレンドモードを作成するために考慮すべきさまざまな構成要素を設定することができます。ソースとデスティネーションはともに赤、緑、青、アルファの各成分を持ち、下図ではソースのRGBAを（Rs、Gs、Bs、As）、デスティネーションのそれを（Rd、Gd、Bd、Ad）と見なします。使用可能な11個の定数は、この関数で使用する場合、ソースとデスティネーションのどちらか（または両方）にすることができます。
+  </p>
   <table>
     <tbody>
       <tr>
@@ -78,7 +86,8 @@
     <li><span class="inline">bm_src_alpha_sat</span></li>
   </ul>
   <p> </p>
-  <p>この関数には、2 つの個別の引数を指定することも、引数の配列を指定することもできます (これは、関数 <a href="gpu_get_blendmode_ext.htm"><span class="inline">gpu_get_blendmode_ext()</span></a>のように）。配列で指定する場合は、次の2つの要素を持つ必要があります。</p>
+  <p>この関数には、2 つの個別の引数を指定することも、引数の配列を指定することもできます (これは、関数 <a href="gpu_get_blendmode_ext.htm"><span
+        class="inline">gpu_get_blendmode_ext()</span></a>のように）。配列で指定する場合は、次の2つの要素を持つ必要があります。</p>
   <ul class="colour">
     <li>[0] = ソースブレンドモード (デフォルトは <span class="inline">bm_src_alpha</span>)</li>
     <li>[1] = デスティネーションブレンドモード (デフォルトは <span class="inline">bm_inv_src_alpha</span>)</li>
@@ -88,14 +97,14 @@
     <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Blendmodesの使い方ガイド</a></li>
   </ul>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode_ext</span>(src, dest);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">src</span></td>
@@ -110,7 +119,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -124,11 +133,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GPU_Control.htm">GPU制御</a></div>
-        <div style="float:right">次のページ <a href="gpu_set_blendmode_ext_sepalpha.htm"><span class="notranslate">gpu_set_blendmode_ext_sepalpha</span></a></div>
+        <div style="float:left">前のページ：<a href="GPU_Control.htm">GPU制御</a></div>
+        <div style="float:right">次のページ：<a href="gpu_set_blendmode_ext_sepalpha.htm"><span
+              class="notranslate">gpu_set_blendmode_ext_sepalpha</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode_ext
@@ -148,4 +159,5 @@ bm_src_alpha_sat
 gpu_set_blendmode_ext
 -->
 </body>
+
 </html>

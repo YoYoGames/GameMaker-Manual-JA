@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>他のインスタンスでの変数のアドレス指定</title>
@@ -12,16 +13,34 @@
   <meta name="rh-index-keywords" content="Addressing Variables In Other Instances" />
   <meta name="search-keywords" content="" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>他のインスタンスでの変数のアドレス指定</h1>
-  <p><a href="Variables_And_Variable_Scope.htm">変数の</a>セクションでは、単一のインスタンスやグローバルスコープで変数を作成し使用する方法を説明しましたが、あるインスタンスが別のインスタンスの変数にアクセスする場合はどうなるのでしょうか？例えば、弾丸と衝突したとき<span class="notranslate">object</span> 、弾丸の変数にアクセスして弾丸のダメージを調べたり、パズルですべてのボールの動きを止めたり、メインキャラクターを特定の位置に移動させたり、ゲームでは様々な場面でこのようなことが必要になります。ありがたいことに、<span class="notranslate">GameMaker Language</span> には、これを実現するためのメカニズムが搭載されています。</p>
-  <p><em>他の </em>インスタンスの変数にアクセスしたり変更したりする最も一般的な方法のひとつは、その<span class="notranslate">object</span> 名を識別子として使用し、ポイント &quot;<span class="inline">.</span>&quot; を使って、参照する変数がその特定のオブジェクトのインスタンス内で代入または変更されるべきことを<span data-keyref="GameMaker Name">GameMaker</span>に伝える方法です。これは「ドット記法」と呼ばれるもので、その構文は以下の通りです。</p>
+  <p><a
+      href="Variables_And_Variable_Scope.htm">変数の</a>セクションでは、単一のインスタンスやグローバルスコープで変数を作成し使用する方法を説明しましたが、あるインスタンスが別のインスタンスの変数にアクセスする場合はどうなるのでしょうか？例えば、弾丸と衝突したとき<span
+      class="notranslate">object</span>
+    、弾丸の変数にアクセスして弾丸のダメージを調べたり、パズルですべてのボールの動きを止めたり、メインキャラクターを特定の位置に移動させたり、ゲームでは様々な場面でこのようなことが必要になります。ありがたいことに、<span
+      class="notranslate">GameMaker Language</span> には、これを実現するためのメカニズムが搭載されています。</p>
+  <p><em>他の </em>インスタンスの変数にアクセスしたり変更したりする最も一般的な方法のひとつは、その<span class="notranslate">object</span> 名を識別子として使用し、ポイント
+    &quot;<span class="inline">.</span>&quot; を使って、参照する変数がその特定のオブジェクトのインスタンス内で代入または変更されるべきことを<span
+      data-keyref="GameMaker Name">GameMaker</span>に伝える方法です。これは「ドット記法」と呼ばれるもので、その構文は以下の通りです。</p>
   <p class="code">&lt;object_id&gt;.&lt;<em>variable</em>&gt; = &lt;value&gt;; </p>
   <p>実際にはこのような形になります。</p>
   <p class="code">obj_ball.speed = 0;</p>
-  <p>上記のコードでは、&quot;<span class="inline">obj_ball</span>&quot;のインスタンスの速度を設定しています。しかし、<span class="notranslate">object</span> に指定された<span class="notranslate">room</span> のインスタンスが複数ある場合、<em>それらのすべてに等しく適用さ</em>れます。<b>HTML5</b> を使用している場合を除き、その場合は<em>1 つだけに</em>影響しますが、どれに影響するかを知る方法はありません。したがって、<span class="notranslate">object</span> のインスタンスすべてにアクセスする必要がある場合、次のコードを使用する必要があります。 <a href="Language_Features/with.htm"><span class="inline">with()</span></a>これは100%クロスプラットフォーム互換です。一般的に、このフォーマットは<span class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span> の中に1つだけある場合、または (次のパートで説明するように) 特定の<i>インスタンス<b>ID</b></i> を持っている場合にのみ使用する必要があります。</p>
-  <p>また、<span class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span> の中に複数ある場合、一意の<b>インスタンス名を使って</b>、どのインスタンスにアクセスしたいかを<span data-keyref="GameMaker Name">GameMaker</span>に正確に伝えることができる。<b>インスタンス名定数は</b>、ゲーム内の<span class="notranslate">room</span> に追加された各インスタンスに付与される一意の識別定数です。この定数は、<a href="../../The_Asset_Editors/Rooms.htm">ルームエディターで</a>インスタンスをダブルクリックすることで見つけることができます。</p>
+  <p>上記のコードでは、&quot;<span class="inline">obj_ball</span>&quot;のインスタンスの速度を設定しています。しかし、<span
+      class="notranslate">object</span> に指定された<span class="notranslate">room</span>
+    のインスタンスが複数ある場合、<em>それらのすべてに等しく適用さ</em>れます。<b>HTML5</b> を使用している場合を除き、その場合は<em>1
+      つだけに</em>影響しますが、どれに影響するかを知る方法はありません。したがって、<span class="notranslate">object</span>
+    のインスタンスすべてにアクセスする必要がある場合、次のコードを使用する必要があります。 <a href="Language_Features/with.htm"><span
+        class="inline">with()</span></a>これは100%クロスプラットフォーム互換です。一般的に、このフォーマットは<span class="notranslate">object</span>
+    のインスタンスが<span class="notranslate">room</span> の中に1つだけある場合、または (次のパートで説明するように) 特定の<i>インスタンス<b>ID</b></i>
+    を持っている場合にのみ使用する必要があります。</p>
+  <p>また、<span class="notranslate">object</span> のインスタンスが<span class="notranslate">room</span>
+    の中に複数ある場合、一意の<b>インスタンス名を使って</b>、どのインスタンスにアクセスしたいかを<span
+      data-keyref="GameMaker Name">GameMaker</span>に正確に伝えることができる。<b>インスタンス名定数は</b>、ゲーム内の<span
+      class="notranslate">room</span> に追加された各インスタンスに付与される一意の識別定数です。この定数は、<a
+      href="../../The_Asset_Editors/Rooms.htm">ルームエディタで</a>インスタンスをダブルクリックすることで見つけることができます。</p>
   <p><img>なお、この名前は編集してよりわかりやすい名前をつけることができます-ただし、ゲーム全体でユニークな名前である<em>必要が</em>あります-そして、ポイントの左側として使用することができます。</p>
   <p class="code">inst_4DB70D2.speed = 0;</p>
   <p>しかし、最も一般的かつ実用的な方法は、ポイントの左側にある<i>変数を</i>使用することです。ただし、当該変数に<i> 有効な<b>インスタンスIDが</b></i>格納されている場合に限ります。次の例で説明する。</p>
@@ -37,8 +56,16 @@
     _inst.direction = point_direction(_inst.x, _inst.y, x, y);<br />
     _inst.target = id;
   </p>
-  <p>上記の例1のコードにおいて <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a>の呼び出しは、コードブロックの中にあります。これは、pointメソッドを使って他のインスタンスの値にアクセスしたり変更したりすると、そのインスタンスが存在しない場合にエラーが発生してゲームがクラッシュするためで、この例ではその可能性があります。しかし、例2と3では、例2ではインスタンスを作成し、例3では衝突イベントで他のインスタンスと衝突しているので、インスタンスが存在する<i>ことが分かって</i>いるので、このチェックは必要ではありません。しかし、このメソッドを使用している間に、インスタンスが破壊されたり、無効化されたり、あるいは<span class="notranslate">room</span> から削除される可能性が<i>ある</i>場合は、<i>必ず</i>事前に <span class="inline">instance_exists()</span> 関数または <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>関数を使用します。</p>
-  <p>このメソッドでは、すべてのインスタンスを対象とする特別な<a href="Instance_Keywords.htm">キーワード</a>&quot;<span class="inline">all</span>&quot; を使用できないことに注意してください (例: <span class="inline">all.val = 10</span> はエラーになります)。しかし、キーワード &quot;<span class="inline">other</span>&quot; と &quot;<span class="inline">self</span>&quot; は問題なく使用<i>できます</i>。例えば、<a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">衝突</a>イベントで <span class="inline">other</span> を使用する場合。</p>
+  <p>上記の例1のコードにおいて <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span
+        class="inline">instance_exists()</span></a>の呼び出しは、コードブロックの中にあります。これは、pointメソッドを使って他のインスタンスの値にアクセスしたり変更したりすると、そのインスタンスが存在しない場合にエラーが発生してゲームがクラッシュするためで、この例ではその可能性があります。しかし、例2と3では、例2ではインスタンスを作成し、例3では衝突イベントで他のインスタンスと衝突しているので、インスタンスが存在する<i>ことが分かって</i>いるので、このチェックは必要ではありません。しかし、このメソッドを使用している間に、インスタンスが破壊されたり、無効化されたり、あるいは<span
+      class="notranslate">room</span> から削除される可能性が<i>ある</i>場合は、<i>必ず</i>事前に <span class="inline">instance_exists()</span>
+    関数または <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span
+        class="inline">instance_number()</span></a>関数を使用します。</p>
+  <p>このメソッドでは、すべてのインスタンスを対象とする特別な<a href="Instance_Keywords.htm">キーワード</a>&quot;<span class="inline">all</span>&quot;
+    を使用できないことに注意してください (例: <span class="inline">all.val = 10</span> はエラーになります)。しかし、キーワード &quot;<span
+      class="inline">other</span>&quot; と &quot;<span class="inline">self</span>&quot; は問題なく使用<i>できます</i>。例えば、<a
+      href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">衝突</a>イベントで <span class="inline">other</span>
+    を使用する場合。</p>
   <p class="code">// Example 3 other.hp -= 10;<br />
     if (other.hp &lt;= 0)<br />
     {<br />
@@ -46,7 +73,8 @@
     }</p>
   <p>また、どのような関数もそれ自体を代入の左辺として使用することはできないことにも注意が必要です。例えば、次のようなコードはエラーになります。</p>
   <p class="code">instance_nearest(x, y, obj).speed = 0;</p>
-  <p>そのコード例の式の戻り値は整数値（最も近いインスタンスのユニークなID値）であるため、この方法で使用し、必要なインスタンスを適切にアドレス指定するには、 <span class="inline">()</span> で囲む必要があります。上記のコードは、正しく次のように記述されます。</p>
+  <p>そのコード例の式の戻り値は整数値（最も近いインスタンスのユニークなID値）であるため、この方法で使用し、必要なインスタンスを適切にアドレス指定するには、 <span class="inline">()</span>
+    で囲む必要があります。上記のコードは、正しく次のように記述されます。</p>
   <p class="code">(instance_nearest(x, y, obj)).speed = 0;<br />
     <br />
     //or<br />
@@ -54,8 +82,12 @@
     var _inst = instance_nearest(x, y, obj);<br />
     _inst.speed = 0;
   </p>
-  <p>これらはすべて、他のインスタンスの変数を読み、変更し、設定するための完全に有効な方法であり、ポイントが実際には<i>演算子</i>であるために機能します。これは、左<a class="glossterm" data-glossterm="オペランド" href="#">オペランドに</a>値、右オペランドに変数を取り、指定された<span class="notranslate">object</span> またはインスタンス内のこの特定の変数のアドレスを返します。<span class="notranslate">object</span> の名前、定数、ID などはすべて単に値を表すもので、これらは他の値と同様に扱うことができます。</p>
-  <p>他のインスタンスの変数を参照する方法としては、<span class="notranslate">GameMaker Language</span> 関数 <span class="inline">with()</span> を使用する方法がありますが、これについては<a href="Language_Features/with.htm">こちらで</a>詳しく説明します。</p>
+  <p>これらはすべて、他のインスタンスの変数を読み、変更し、設定するための完全に有効な方法であり、ポイントが実際には<i>演算子</i>であるために機能します。これは、左<a class="glossterm"
+      data-glossterm="オペランド" href="#">オペランドに</a>値、右オペランドに変数を取り、指定された<span class="notranslate">object</span>
+    またはインスタンス内のこの特定の変数のアドレスを返します。<span class="notranslate">object</span> の名前、定数、ID などはすべて単に値を表すもので、これらは他の値と同様に扱うことができます。
+  </p>
+  <p>他のインスタンスの変数を参照する方法としては、<span class="notranslate">GameMaker Language</span> 関数 <span class="inline">with()</span>
+    を使用する方法がありますが、これについては<a href="Language_Features/with.htm">こちらで</a>詳しく説明します。</p>
   <p class="code">// This will affect all instances of the object &quot;obj_Enemy&quot;<br />
     with (obj_Enemy)<br />
     {<br />
@@ -79,11 +111,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="GML_Overview.htm">GMLの概要</a></div>
-        <div style="float:right">次へ<a data-xref="{title}" href="Expressions_And_Operators.htm">式と演算子</a></div>
+        <div style="float:left">前のページ：<a href="GML_Overview.htm">GMLの概要</a></div>
+        <div style="float:right">次のページ：<a data-xref="{title}" href="Expressions_And_Operators.htm">式と演算子</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variables - addressing
@@ -93,4 +126,5 @@ addressing variables
 addressing_variables
 -->
 </body>
+
 </html>

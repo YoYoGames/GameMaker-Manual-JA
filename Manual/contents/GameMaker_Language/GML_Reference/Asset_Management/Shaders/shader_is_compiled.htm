@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>shader_is_compiled</title>
@@ -13,28 +14,38 @@
   <meta name="search-keywords" content="shader_is_compiled" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">shader_is_compiled</span></h1>
-  <p>この関数は、実行時に<span class="notranslate">shader</span> が正常にコンパイルされたかどうかを確認します。コンパイルに成功した場合、この関数は <span class="inline">true</span> を返し、失敗した場合、 <span class="inline">false</span> を返します。この関数はゲーム開始時に使用し、ゲームを実行しているプラットフォームで<span class="notranslate">shaders</span> が正常にコンパイルされていることを確認する必要があります（特に<span class="notranslate">Windows</span> では、DX9 で<span class="notranslate">Shader</span> Level 2.0 を使用し、<span class="notranslate">shader</span> Level 3.0 を使用する新しいバージョンではないコンピュータもあるかもしれません）。</p>
-  <p>もし、<span class="notranslate">shader</span> がコンパイルされて<i>いない</i>状態で <a href="shader_set.htm"><span class="inline">shader_set()</span></a>はゲームがクラッシュするので、単純な GLSL ES<span class="notranslate">shaders</span> 以外を使用する場合は、常に何らかのチェックをする価値があります。</p>
+  <p>この関数は、実行時に<span class="notranslate">shader</span> が正常にコンパイルされたかどうかを確認します。コンパイルに成功した場合、この関数は <span
+      class="inline">true</span> を返し、失敗した場合、 <span class="inline">false</span>
+    を返します。この関数はゲーム開始時に使用し、ゲームを実行しているプラットフォームで<span class="notranslate">shaders</span>
+    が正常にコンパイルされていることを確認する必要があります（特に<span class="notranslate">Windows</span> では、DX9 で<span
+      class="notranslate">Shader</span> Level 2.0 を使用し、<span class="notranslate">shader</span> Level 3.0
+    を使用する新しいバージョンではないコンピュータもあるかもしれません）。</p>
+  <p>もし、<span class="notranslate">shader</span> がコンパイルされて<i>いない</i>状態で <a href="shader_set.htm"><span
+        class="inline">shader_set()</span></a>はゲームがクラッシュするので、単純な GLSL ES<span class="notranslate">shaders</span>
+    以外を使用する場合は、常に何らかのチェックをする価値があります。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">shader_is_compiled</span>(shader);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">shader</span></td><td><span data-keyref="Type_Asset_Shader"></span></td>
+        <td><span class="notranslate">shader</span></td>
+        <td><span data-keyref="Type_Asset_Shader"></span></td>
         <td><span class="notranslate">The shader to check.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
   <p> </p>
   <h4>例</h4>
@@ -43,18 +54,21 @@
     {<br />
         global.GFX = true;<br />
     }</p>
-  <p>上記のコードでは、グローバル変数に <span class="inline">false</span> を設定し、チェック対象の<span class="notranslate">shaders</span> の両方が正しくコンパイルされていれば、 <span class="inline">true</span> に設定されます。</p>
+  <p>上記のコードでは、グローバル変数に <span class="inline">false</span> を設定し、チェック対象の<span class="notranslate">shaders</span>
+    の両方が正しくコンパイルされていれば、 <span class="inline">true</span> に設定されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Shaders.htm">シェーダー</a></div>
-        <div style="float:right">次のページ <a href="shaders_are_supported.htm"><span class="notranslate">shaders_are_supported</span></a></div>
+        <div style="float:left">前のページ：<a href="Shaders.htm">シェーダー</a></div>
+        <div style="float:right">次のページ：<a href="shaders_are_supported.htm"><span
+              class="notranslate">shaders_are_supported</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 shader_is_compiled
@@ -63,4 +77,5 @@ shader_is_compiled
 shader_is_compiled
 -->
 </body>
+
 </html>

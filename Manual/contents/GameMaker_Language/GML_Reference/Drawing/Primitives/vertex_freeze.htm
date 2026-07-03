@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>vertex_freeze</title>
@@ -12,20 +13,26 @@
   <meta name="rh-index-keywords" content="vertex_freeze" />
   <meta name="search-keywords" content="vertex_freeze" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">vertex_freeze</span></h1>
-  <p>この関数は<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を「フリーズ」させることができます。この<span class="notranslate">buffer</span> は<b>読み取り専用に</b>なるため、変更が必要な場合は<span class="notranslate">buffer</span> をすべて削除し、再作成する必要があります。フリーズした<span class="notranslate">buffer</span> は、通常のダイナミックな<span class="notranslate">shader</span> よりも速く<span class="notranslate">buffer</span> に送信でき、レベルまたはゲームの期間中、不変のカスタムプリミティブを必要とするエフェクトに推奨されます。</p>
-  <p>指定された<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> のフリーズに成功した場合は 0 を返し，何らかの理由で失敗した場合は -1 を返します．</p>
+  <p>この関数は<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> を「フリーズ」させることができます。この<span
+      class="notranslate">buffer</span> は<b>読み取り専用に</b>なるため、変更が必要な場合は<span class="notranslate">buffer</span>
+    をすべて削除し、再作成する必要があります。フリーズした<span class="notranslate">buffer</span> は、通常のダイナミックな<span
+      class="notranslate">shader</span> よりも速く<span class="notranslate">buffer</span>
+    に送信でき、レベルまたはゲームの期間中、不変のカスタムプリミティブを必要とするエフェクトに推奨されます。</p>
+  <p>指定された<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> のフリーズに成功した場合は 0
+    を返し，何らかの理由で失敗した場合は -1 を返します．</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">vertex_freeze</span>(buffer);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td>
@@ -35,24 +42,28 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span> (0 for success, -1 for failure)</p>
   <p> </p>
   <h4>例</h4>
   <p class="code">// Create event<br />
     vertex_freeze(vbuff);</p>
-  <p>上記のコードは、Createイベントで指定された<span class="notranslate">vertex</span> <span class="notranslate">buffer</span> をフリーズさせるので、他のイベントで「静的」<span class="notranslate">buffer</span> として使用すると、より速くアクセスできるようになります。</p>
+  <p>上記のコードは、Createイベントで指定された<span class="notranslate">vertex</span> <span class="notranslate">buffer</span>
+    をフリーズさせるので、他のイベントで「静的」<span class="notranslate">buffer</span> として使用すると、より速くアクセスできるようになります。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span class="notranslate">Vertex</span> フォーマット</a></div>
-        <div style="float:right">次のページ <a href="vertex_freeze.htm"><span class="notranslate">vertex_submit</span></a></div>
+        <div style="float:left">前のページ：<a href="Primitives_And_Vertex_Formats.htm">プリミティブと<span
+              class="notranslate">Vertex</span> フォーマット</a></div>
+        <div style="float:right">次のページ：<a href="vertex_freeze.htm"><span class="notranslate">vertex_submit</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_freeze
@@ -61,4 +72,5 @@ vertex_freeze
 vertex_freeze
 -->
 </body>
+
 </html>

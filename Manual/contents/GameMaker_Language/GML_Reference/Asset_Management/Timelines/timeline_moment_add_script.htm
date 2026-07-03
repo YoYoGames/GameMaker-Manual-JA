@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>timeline_moment_add_script</title>
@@ -12,19 +13,27 @@
   <meta name="rh-index-keywords" content="timeline_moment_add_script" />
   <meta name="search-keywords" content="timeline_moment_add_script" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">timeline_moment_add_script</span></h1>
-  <p>この関数を使うと、時間軸上の任意の「瞬間」に<a href="../../../GML_Overview/Script_Functions.htm">スクリプト関数を</a>動的に追加して、<span class="notranslate">Timelines</span> 。「瞬間」は1ゲームティック（またはステップ）に相当します。この方法で、新しい時間軸を作ることができます。 <a href="timeline_add.htm"><span class="inline">timeline_add()</span></a>関数を使って、任意の時点で異なるビヘイビアを追加したり、以前に作成した時間軸リソースを新しいビヘイビアで単純に変更したりすることができます。また、この関数を使用して<span class="notranslate">Timeline</span> Browser に存在する<span class="notranslate">asset</span> <span class="notranslate">Asset</span> を変更すると、この<span class="notranslate">timeline</span> を使用しているすべてのインスタンスが影響を受け、その変更はゲーム終了まで続きます（ <span class="inline">game_restart()</span> を呼んでも、変更はリセットされません）。</p>
+  <p>この関数を使うと、時間軸上の任意の「瞬間」に<a href="../../../GML_Overview/Script_Functions.htm">スクリプト関数を</a>動的に追加して、<span
+      class="notranslate">Timelines</span> 。「瞬間」は1ゲームティック（またはステップ）に相当します。この方法で、新しい時間軸を作ることができます。 <a
+      href="timeline_add.htm"><span
+        class="inline">timeline_add()</span></a>関数を使って、任意の時点で異なるビヘイビアを追加したり、以前に作成した時間軸リソースを新しいビヘイビアで単純に変更したりすることができます。また、この関数を使用して<span
+      class="notranslate">Timeline</span> Browser に存在する<span class="notranslate">asset</span> <span
+      class="notranslate">Asset</span> を変更すると、この<span class="notranslate">timeline</span>
+    を使用しているすべてのインスタンスが影響を受け、その変更はゲーム終了まで続きます（ <span class="inline">game_restart()</span> を呼んでも、変更はリセットされません）。</p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">timeline_moment_add_script</span>(ind, step, script);</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">timeline_moment_add_script</span>(ind, step, script);
+  </p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">ind</span></td>
@@ -44,7 +53,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -55,18 +64,21 @@
         timeline_moment_add_script(global.tl, i, choose(Attack_1, Attack_2, Attack_3);<br />
         i += room_speed * 60;<br />
     }</p>
-  <p>上記のコードでは、新しい時間軸を作成し、そのインデックスを変数「global.tl」に格納します。そして、1分間隔でランダムに選ばれた3つの<span class="notranslate">scripts</span> を時間軸に追加する。</p>
+  <p>上記のコードでは、新しい時間軸を作成し、そのインデックスを変数「global.tl」に格納します。そして、1分間隔でランダムに選ばれた3つの<span class="notranslate">scripts</span>
+    を時間軸に追加する。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Timelines.htm">タイムライン</a></div>
-        <div style="float:right">次のページ <a href="timeline_moment_clear.htm"><span class="notranslate">timeline_moment_clear</span></a></div>
+        <div style="float:left">前のページ：<a href="Timelines.htm">タイムライン</a></div>
+        <div style="float:right">次のページ：<a href="timeline_moment_clear.htm"><span
+              class="notranslate">timeline_moment_clear</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 timeline_moment_add_script
@@ -75,4 +87,5 @@ timeline_moment_add_script
 timeline_moment_add_script
 -->
 </body>
+
 </html>

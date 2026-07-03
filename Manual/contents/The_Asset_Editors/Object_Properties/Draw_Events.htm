@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>抽選イベント</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -11,87 +13,139 @@
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <script src="../../assets/scripts/main_script.js" type="module"></script>
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>抽選会イベント</h1>
   <p><img>描画イベントカテゴリは、ゲームを実行したときに画面に表示されるものを支配するすべてのイベントを持つものです。このイベントは、様々な
     下図は、各イベントが実行される順番を示したものです。</p>
   <p><img>通常のDrawイベントは3つのサブタイプに分類される。<strong>Draw Begin</strong>、標準の<strong>Draw</strong>、そして
-   <strong>Draw End</strong>イベント。一般的には、標準的なDrawイベントのみを使用する必要があります。また、<span class="notranslate">room</span> のすべてのインスタンスは、ゲームの各ステップでこのイベントがトリガーされるため、このイベントが常に呼び出されることに注意してください。
-    インスタンスの<strong>visible </strong>フラグがtrueに設定されている場合。<span class="notranslate">object</span> のプロパティでこのサブイベントを何も定義していなくても（つまり、コードもアクションもない）、<em> <span class="notranslate">object</span> に<span class="notranslate">sprite</span> が割り当てられていれば、描画イベントがトリガーさ</em>れることを理解することが重要です。
-    これは、<span data-keyref="GameMaker Name">GameMakerが</span>Drawイベントで描画する方法を2つ持っているからです。</p>
+    <strong>Draw End</strong>イベント。一般的には、標準的なDrawイベントのみを使用する必要があります。また、<span class="notranslate">room</span>
+    のすべてのインスタンスは、ゲームの各ステップでこのイベントがトリガーされるため、このイベントが常に呼び出されることに注意してください。
+    インスタンスの<strong>visible </strong>フラグがtrueに設定されている場合。<span class="notranslate">object</span>
+    のプロパティでこのサブイベントを何も定義していなくても（つまり、コードもアクションもない）、<em> <span class="notranslate">object</span> に<span
+        class="notranslate">sprite</span> が割り当てられていれば、描画イベントがトリガーさ</em>れることを理解することが重要です。
+    これは、<span data-keyref="GameMaker Name">GameMakerが</span>Drawイベントで描画する方法を2つ持っているからです。
+  </p>
   <ul class="colour">
-    <li><strong>デフォルトの描画</strong>。これは、<span class="notranslate">sprite</span> のプロパティで<span class="notranslate">object</span> を定義し、通常の Draw イベントには何もアクションやコードを配置しない場合であり、この場合<span data-keyref="GameMaker Name">GameMaker</span>は割り当てられた<span class="notranslate">sprite</span> を自動的に描画する。この場合、GameMakerは自動的に指定された を描画します。
+    <li><strong>デフォルトの描画</strong>。これは、<span class="notranslate">sprite</span> のプロパティで<span
+        class="notranslate">object</span> を定義し、通常の Draw イベントには何もアクションやコードを配置しない場合であり、この場合<span
+        data-keyref="GameMaker Name">GameMaker</span>は割り当てられた<span class="notranslate">sprite</span>
+      を自動的に描画する。この場合、GameMakerは自動的に指定された を描画します。
       他のイベントで画像のスケール、インデックス、ブレンディングなどを変更した場合も、drawイベントが空である限り、反映されます。</li>
-    <li><strong>カスタム描画は</strong>、描画イベント内にコードやアクションを配置する場合です。これは<span data-keyref="GameMaker Name">GameMakerに</span>「<em>このオブジェクトのインスタンスに対する描画を制御</em>したい」と伝えるもので、デフォルトの描画を完全にオーバーライドする。
-      を描画します。つまり、例えば、<span class="notranslate">object</span> に<span class="notranslate">sprite</span> を割り当て、 draw イベントを text の描画に設定すると、テキストは画面に描画されるが、<span class="notranslate">sprite</span> は<span data-keyref="GameMaker Name">GameMaker</span>に指示していないため、描画さ<em>れないという </em>ことだ。
+    <li><strong>カスタム描画は</strong>、描画イベント内にコードやアクションを配置する場合です。これは<span
+        data-keyref="GameMaker Name">GameMakerに</span>「<em>このオブジェクトのインスタンスに対する描画を制御</em>したい」と伝えるもので、デフォルトの描画を完全にオーバーライドする。
+      を描画します。つまり、例えば、<span class="notranslate">object</span> に<span class="notranslate">sprite</span> を割り当て、 draw イベントを
+      text の描画に設定すると、テキストは画面に描画されるが、<span class="notranslate">sprite</span> は<span
+        data-keyref="GameMaker Name">GameMaker</span>に指示していないため、描画さ<em>れないという </em>ことだ。
       をテキストと一緒に描画します。</li>
   </ul>
   <p>それ以外の抽選イベントについては、以下の項目で説明します。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">描画開始と描画終了</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">メインのDrawイベントとは別に、<strong> Draw Beginと</strong> <strong>Draw Endという</strong>イベントもあります。これらは標準的なDrawイベントと全く同じように動作します（つまり、ゲームのすべてのステップで、あなたが入れたものが描画されます）。
+    <p class="dropspot">メインのDrawイベントとは別に、<strong> Draw Beginと</strong> <strong>Draw
+        Endという</strong>イベントもあります。これらは標準的なDrawイベントと全く同じように動作します（つまり、ゲームのすべてのステップで、あなたが入れたものが描画されます）。
       しかし、これらは、<span class="notranslate">object</span> に明示的に追加されていない場合は、「デフォルトで描画」されません。そのため、ゲームの実行中は<em>常に</em>
       すべてのインスタンスの Draw Begin イベント、次にすべてのインスタンスの Draw イベント、最後にすべてのインスタンスの Draw End イベント。</p>
-    <p class="dropspot">この方法で、1つのインスタンスのDraw Beginステップで物を描いたり、描画プロパティを設定することができ、標準のDrawイベントやDraw Endイベントを持つすべてのインスタンスがこれらのプロパティを使用したり、最初のインスタンスが描いたものの上に描画することを確実にすることができるのです。基本的には
+    <p class="dropspot">この方法で、1つのインスタンスのDraw Beginステップで物を描いたり、描画プロパティを設定することができ、標準のDrawイベントやDraw
+      Endイベントを持つすべてのインスタンスがこれらのプロパティを使用したり、最初のインスタンスが描いたものの上に描画することを確実にすることができるのです。基本的には
       これは、<strong>Begin Step</strong>と<strong>End Step </strong>イベントと同じように、特定のものが特定の時間に描画されることを保証する確実な方法です。</p>
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>物を描くとき、それが<span class="notranslate">sprite</span> であれ、<span class="notranslate">shader</span> 、3Dバッファであれ、注意しなければならないことがいくつかあります。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerで</span>物を描くとき、それが<span
+        class="notranslate">sprite</span> であれ、<span class="notranslate">shader</span> 、3Dバッファであれ、注意しなければならないことがいくつかあります。
+    </p>
     <ul class="colour">
-      <li class="dropspot">draw イベントは、最も時間とリソースを消費するイベントのひとつという意味で、非常に集中的なイベントです。そのため、draw イベントで描画以外のことを行うのは決して良いアイデアではありません。ですから、大きなコードや複雑なアクションは
+      <li class="dropspot">draw イベントは、最も時間とリソースを消費するイベントのひとつという意味で、非常に集中的なイベントです。そのため、draw
+        イベントで描画以外のことを行うのは決して良いアイデアではありません。ですから、大きなコードや複雑なアクションは
         StepイベントやAlarmsなど、他のイベントは適当ですが、Drawイベントは描画のために空けておくとよいでしょう。</li>
-      <li class="dropspot"><span class="notranslate">object</span> の visible パラメータが<em>off </em> に設定されている場合（<span class="notranslate">object</span> のインスタンスが描画されないように）、<strong>すべての描画イベントがスキップ </strong>されます（<strong>Resize </strong>イベントを除く）。つまり、インスタンス
+      <li class="dropspot"><span class="notranslate">object</span> の visible パラメータが<em>off </em> に設定されている場合（<span
+          class="notranslate">object</span> のインスタンスが描画されないように）、<strong>すべての描画イベントがスキップ </strong>されます（<strong>Resize
+        </strong>イベントを除く）。つまり、インスタンス
         invisible にすると、これらのイベントに配置されたすべてのコードが実行されなくなるので、visible にしないのであれば、draw イベントには重要なコードを配置しないでください。</li>
-      <li class="dropspot">描画する内容は、選択した衝突エンジン（従来型または物理）とは関係なく、<span class="notranslate">object</span> のプロパティと、<span class="notranslate">sprite</span> に与えられた<span class="notranslate">object</span> （またはマスク）によって定義されるからです。</li>
+      <li class="dropspot">描画する内容は、選択した衝突エンジン（従来型または物理）とは関係なく、<span class="notranslate">object</span> のプロパティと、<span
+          class="notranslate">sprite</span> に与えられた<span class="notranslate">object</span> （またはマスク）によって定義されるからです。</li>
     </ul>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">ドローGUI</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">GUI描画イベントタイプは、描画イベントカテゴリに属し、特にビューカメラのスケールや回転に影響されない<a class="glossterm" data-glossterm="GUI" href="#">GUI</a>要素を描画するために設計されています。つまり
-     <span class="notranslate">room</span> インスタンスに<a class="glossterm" data-glossterm="ヒューディ" href="#">HUDや</a>ユーザーインターフェイスのすべての要素を描画させることができます。
-      を、現在のカメラビューの</p>
-    <p class="dropspot">これらのイベントで描画する場合、カメラビューがアクティブな場合でも描画座標は変化せず、(0,0)は<em>常に </em>アプリケーションサーフェスまたはディスプレイの左上隅であることを理解することが重要です（[...]を参照）。
+    <p class="dropspot">GUI描画イベントタイプは、描画イベントカテゴリに属し、特にビューカメラのスケールや回転に影響されない<a class="glossterm" data-glossterm="GUI"
+        href="#">GUI</a>要素を描画するために設計されています。つまり
+      <span class="notranslate">room</span> インスタンスに<a class="glossterm" data-glossterm="ヒューディ"
+        href="#">HUDや</a>ユーザーインターフェイスのすべての要素を描画させることができます。
+      を、現在のカメラビューの
+    </p>
+    <p class="dropspot">これらのイベントで描画する場合、カメラビューがアクティブな場合でも描画座標は変化せず、(0,0)は<em>常に
+      </em>アプリケーションサーフェスまたはディスプレイの左上隅であることを理解することが重要です（[...]を参照）。
       また、デフォルトの幅と高さは、アプリケーションサーフェスと1:1です。深さの順序は、異なるレイヤー上の異なるインスタンス間で維持されます（したがって、高いレイヤー上のインスタンスは、アプリケーションサーフェスの下に描画されます）。
-     <strong>ドローGUI Begin</strong>イベントが最初にすべてのインスタンスに対して描画し、次に標準の<strong>ドローGUIが</strong>それ以上のすべてのインスタンスに対して描画し、最後に<strong>ドローGUI End </strong>イベントが発生します。
-      が発生します。</p>
-    <p class="dropspot">この方法では、1つのインスタンスの Draw GUI Begin で描画したり、描画プロパティを設定したりすることができ、標準の Draw GUI または Draw GUI End イベントを持つすべてのインスタンスがこれらのプロパティを使用するか、最初のインスタンスが描画したものの上に描画することを確実にします。基本的に
+      <strong>ドローGUI
+        Begin</strong>イベントが最初にすべてのインスタンスに対して描画し、次に標準の<strong>ドローGUIが</strong>それ以上のすべてのインスタンスに対して描画し、最後に<strong>ドローGUI
+        End </strong>イベントが発生します。
+      が発生します。
+    </p>
+    <p class="dropspot">この方法では、1つのインスタンスの Draw GUI Begin で描画したり、描画プロパティを設定したりすることができ、標準の Draw GUI または Draw GUI End
+      イベントを持つすべてのインスタンスがこれらのプロパティを使用するか、最初のインスタンスが描画したものの上に描画することを確実にします。基本的に
       これは、<strong>Begin Step</strong>と<strong>End Step</strong>イベントと同じように、特定のものが特定の時間に描画されることを保証する確実な方法です。</p>
-    <p class="dropspot">これらのイベントは、通常のDrawイベント（カメラビューの位置、スケール、回転の影響を通常通り受ける）と組み合わせて使用することもできます。もし、Drawイベントがなく、Draw GUIイベントがある場合、<span data-keyref="GameMaker Name">GameMakerは</span>引き続き
+    <p class="dropspot">これらのイベントは、通常のDrawイベント（カメラビューの位置、スケール、回転の影響を通常通り受ける）と組み合わせて使用することもできます。もし、Drawイベントがなく、Draw
+      GUIイベントがある場合、<span data-keyref="GameMaker Name">GameMakerは</span>引き続き
       インスタンスに<span class="notranslate">sprite</span> がある場合、通常通りデフォルトで描画します。</p>
-    <p class="dropspot">他の描画イベントとの関係では、Draw GUIイベントは、通常の描画イベントで描画されたものの上に常に描画されます。つまり、下のレイヤーにあるインスタンスがDraw GUIイベントで描画されると、上のレイヤーにあるインスタンスの上に描画されます。
+    <p class="dropspot">他の描画イベントとの関係では、Draw GUIイベントは、通常の描画イベントで描画されたものの上に常に描画されます。つまり、下のレイヤーにあるインスタンスがDraw
+      GUIイベントで描画されると、上のレイヤーにあるインスタンスの上に描画されます。
       を通常のドローイベントで使用します。両方のインスタンスがDraw GUIイベントを持つ場合、レイヤーの順序が尊重されます。</p>
-    <p class="note"><strong>注</strong>：このイベントは、デフォルトで、アプリケーションサーフェスサイズ（通常は<span class="notranslate">room</span> またはビューポートのサイズ）と 1:1 で描画されます。つまり、ゲームオプションで<strong>アスペクト比補正を</strong>オンにしている場合、このイベントは、アプリケーションの表面サイズと1対1で描画します。
-      GUIがゲームのレターボックスである黒いバーの上に描画されることはありません。この動作をオフにするには <a href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_maximise.htm"><span style="font-size:14px;"> <span class="inline" style="font-size: 14px">display_set_gui_maximise()</span></span></a>という関数があります。
-      また、GUIイベントを特定のサイズに固定し、ディスプレイやアプリケーションのサイズに合わせて自動的に拡大縮小することもできます。 <a href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_size.htm"><span class="inline" style="font-size: 14px">ディスプレイサイズ()</span></a>.</p>
+    <p class="note"><strong>注</strong>：このイベントは、デフォルトで、アプリケーションサーフェスサイズ（通常は<span class="notranslate">room</span>
+      またはビューポートのサイズ）と 1:1 で描画されます。つまり、ゲームオプションで<strong>アスペクト比補正を</strong>オンにしている場合、このイベントは、アプリケーションの表面サイズと1対1で描画します。
+      GUIがゲームのレターボックスである黒いバーの上に描画されることはありません。この動作をオフにするには <a
+        href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_maximise.htm"><span
+          style="font-size:14px;"> <span class="inline"
+            style="font-size: 14px">display_set_gui_maximise()</span></span></a>という関数があります。
+      また、GUIイベントを特定のサイズに固定し、ディスプレイやアプリケーションのサイズに合わせて自動的に拡大縮小することもできます。 <a
+        href="../../GameMaker_Language/GML_Reference/Cameras_And_Display/display_set_gui_size.htm"><span class="inline"
+          style="font-size: 14px">ディスプレイサイズ()</span></a>.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">抽選前と抽選後</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Pre Draw と Post Draw イベントは、Draw Event のカテゴリに属します。ただし、他の Draw イベントとは異なり、これらは<a class="glossterm" data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> <em>直接 </em>描画されます。
+    <p class="dropspot">Pre Draw と Post Draw イベントは、Draw Event のカテゴリに属します。ただし、他の Draw イベントとは異なり、これらは<a class="glossterm"
+        data-glossterm="ディスプレイバッファ" href="#">ディスプレイバッファに</a> <em>直接 </em>描画されます。
       現在表示されているすべてのビューポートの合計画面サイズ、<em>または </em>1つのビューポートのみを使用するか、まったく使用しない場合はウィンドウサイズ。以下の画像は、これを示しています。</p>
-    <p class="dropspot"><img>したがって、Pre または Post draw イベントを使用する場合、フルスクリーンレンダリングターゲット (display<span class="notranslate">buffer</span>) に描画することになる。
+    <p class="dropspot"><img>したがって、Pre または Post draw イベントを使用する場合、フルスクリーンレンダリングターゲット (display<span
+        class="notranslate">buffer</span>) に描画することになる。
       すべてのビューポートがフィットするように作られるウィンドウと同じサイズ。ビューポートがアクティブでない場合、これはウィンドウ自体のサイズに設定されます。</p>
-    <p class="dropspot">Pre Drawイベントは他のどのDrawイベントよりも前に起動され、その中でビューポートやGUIレイヤーのサイズを気にすることなく、値の設定、描画プロパティの設定、さらには描画を行うことができます（GUIレイヤーサイズはスクリーンと同じかもしれません）。
-     <span class="notranslate">buffer</span> しかし、GUIの解像度をコードで設定することができるので、そうでない場合もあります)。</p>
-    <p class="dropspot"><span class="notranslate">buffer</span> このイベントは、通常の描画のためにディスプレイ<span class="notranslate">switch</span> がクリアされる<em>前に </em>発生することに注意してください。つまり、<span class="notranslate">room</span> エディタでビュークリアをオフにしない場合は、Pre Draw イベントで描画されたものは何も表示されません。
+    <p class="dropspot">Pre
+      Drawイベントは他のどのDrawイベントよりも前に起動され、その中でビューポートやGUIレイヤーのサイズを気にすることなく、値の設定、描画プロパティの設定、さらには描画を行うことができます（GUIレイヤーサイズはスクリーンと同じかもしれません）。
+      <span class="notranslate">buffer</span> しかし、GUIの解像度をコードで設定することができるので、そうでない場合もあります)。
+    </p>
+    <p class="dropspot"><span class="notranslate">buffer</span> このイベントは、通常の描画のためにディスプレイ<span
+        class="notranslate">switch</span> がクリアされる<em>前に </em>発生することに注意してください。つまり、<span class="notranslate">room</span>
+      エディタでビュークリアをオフにしない場合は、Pre Draw イベントで描画されたものは何も表示されません。
       最初のビューポート描画でクリアされます。ビューポートを透かして見たい場合、あるいはビューポートを使わない場合は <strong><a href="../Rooms.htm">ルームエディタ</a></strong>.</p>
-    <p class="note"><strong>注意</strong>：<span class="notranslate">switch</span> これらのオプションをオフにすると、ゲームのテスト時に画面に不要なアーティファクトが描かれることがあります（インスタンスからの「軌跡」のようなもの）。これは、前のフレームの上に直接描画しているためです。
-      をクリアすることなく、ディスプレイの<span class="notranslate">buffer</span> 。しかし <span class="inline" style="font-size: 14px"><a href="../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/draw_clear_alpha.htm">draw_clear_alpha()</a> </span>を使用すると、これを行うことができます。
+    <p class="note"><strong>注意</strong>：<span class="notranslate">switch</span>
+      これらのオプションをオフにすると、ゲームのテスト時に画面に不要なアーティファクトが描かれることがあります（インスタンスからの「軌跡」のようなもの）。これは、前のフレームの上に直接描画しているためです。
+      をクリアすることなく、ディスプレイの<span class="notranslate">buffer</span> 。しかし <span class="inline" style="font-size: 14px"><a
+          href="../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/draw_clear_alpha.htm">draw_clear_alpha()</a>
+      </span>を使用すると、これを行うことができます。
       を自分で作成します。</p>
-    <p class="dropspot">ポストドローイベントは標準的なドローイベントのすべて<em>後 </em>、ドローGUIイベントの<em>前に </em>トリガーされます。Pre Draw イベントと同様に、ディスプレイのサイズ（<span class="notranslate">buffer</span> ）に基づいており、Draw GUI イベントの前に配置されることで、次のことが可能になります。
-     <a class="glossterm" data-glossterm="ヒューディ" href="#">HUD/</a> <a class="glossterm" data-glossterm="GUI" href="#">GUI</a>要素に干渉することなく、シンプルかつ簡単にフルスクリーンベースでポストプロセッシングエフェクトなどを実行することができます。
-      を使用することができます。</p>
+    <p class="dropspot">ポストドローイベントは標準的なドローイベントのすべて<em>後 </em>、ドローGUIイベントの<em>前に </em>トリガーされます。Pre Draw
+      イベントと同様に、ディスプレイのサイズ（<span class="notranslate">buffer</span> ）に基づいており、Draw GUI イベントの前に配置されることで、次のことが可能になります。
+      <a class="glossterm" data-glossterm="ヒューディ" href="#">HUD/</a> <a class="glossterm" data-glossterm="GUI"
+        href="#">GUI</a>要素に干渉することなく、シンプルかつ簡単にフルスクリーンベースでポストプロセッシングエフェクトなどを実行することができます。
+      を使用することができます。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">ウィンドウのリサイズ</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">このイベントタイプは Draw Event カテゴリに属し、実際には何も描画しませんが、ディスプレイ<span class="notranslate">buffer</span> の変更に反応します。特に、UWP ディスプレイ<span class="notranslate">buffer</span> のサイズが変更されたときに反応するように設計されています。
+    <p class="dropspot">このイベントタイプは Draw Event カテゴリに属し、実際には何も描画しませんが、ディスプレイ<span class="notranslate">buffer</span>
+      の変更に反応します。特に、UWP ディスプレイ<span class="notranslate">buffer</span> のサイズが変更されたときに反応するように設計されています。
       ゲーム・ウィンドウが &quot;スナップ &quot;される。</p>
-    <p class="dropspot">UWPターゲットプラットフォームでは、ゲームウィンドウの「スナップ」（ユーザーがウィンドウをディスプレイの横にドラッグしたときなど）によるディスプレイのサイズ変更（<span class="notranslate">buffer</span> ）をキャッチすることが重要です。このイベントは、まさにこれを行うもので
-      はウィンドウが変更されるたびにトリガされるので、必要に応じてビューのサイズを変更したり、<a class="glossterm" data-glossterm="ヒューディ" href="#">HUD</a>要素の位置を変更したりするカスタムコードをここに追加することができます。この関数は、便利な機能として提供されています。
+    <p class="dropspot">UWPターゲットプラットフォームでは、ゲームウィンドウの「スナップ」（ユーザーがウィンドウをディスプレイの横にドラッグしたときなど）によるディスプレイのサイズ変更（<span
+        class="notranslate">buffer</span> ）をキャッチすることが重要です。このイベントは、まさにこれを行うもので
+      はウィンドウが変更されるたびにトリガされるので、必要に応じてビューのサイズを変更したり、<a class="glossterm" data-glossterm="ヒューディ"
+        href="#">HUD</a>要素の位置を変更したりするカスタムコードをここに追加することができます。この関数は、便利な機能として提供されています。
       を常にチェックするようなステップイベントコードを持つ必要がないようにする方法です。</p>
-    <p class="note"><strong>注意</strong>: このイベントで描画することはできません!このイベントはウィンドウのサイズを変更したときに起動され、この変更をキャッチするためだけのものです...描画を行う場合は、他の draw イベントのいずれかを使用する必要があります。</p>
+    <p class="note"><strong>注意</strong>:
+      このイベントで描画することはできません!このイベントはウィンドウのサイズを変更したときに起動され、この変更をキャッチするためだけのものです...描画を行う場合は、他の draw イベントのいずれかを使用する必要があります。
+    </p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
@@ -100,11 +154,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Object_Events.htm">オブジェクトのイベント</a></div>
-        <div style="float:right">次へ<a href="Async_Events.htm">非同期イベント</a></div>
+        <div style="float:left">前のページ：<a href="Object_Events.htm">オブジェクトのイベント</a></div>
+        <div style="float:right">次のページ：<a href="Async_Events.htm">非同期イベント</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Draw Events
@@ -123,4 +178,6 @@ Window Resize Event
 draw_events
 -->
 
-</body></html>
+</body>
+
+</html>

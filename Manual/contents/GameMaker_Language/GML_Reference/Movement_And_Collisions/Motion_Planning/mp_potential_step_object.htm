@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_potential_step_object</title>
@@ -13,19 +14,24 @@
   <meta name="search-keywords" content="mp_potential_step_object" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">mp_potential_step_object</span></h1>
-  <p>この関数は、xgoal/ygoal で定義された特定の位置に向かって、障害物を避けながら一歩を踏み出すインスタンスである。インスタンスは、引数 &quot;obj&quot; で指定された<span class="notranslate">object</span> のインスタンスにぶつかると、そのインスタンスを避けて移動するように移動方向を変更します。この方法は必ずうまくいくわけではないが、たいていの場合、インスタンスをゴールに向かって効果的に移動させることができる。この関数は、ゴールに到達したかどうかを返す。</p>
+  <p>この関数は、xgoal/ygoal で定義された特定の位置に向かって、障害物を避けながら一歩を踏み出すインスタンスである。インスタンスは、引数 &quot;obj&quot; で指定された<span
+      class="notranslate">object</span>
+    のインスタンスにぶつかると、そのインスタンスを避けて移動するように移動方向を変更します。この方法は必ずうまくいくわけではないが、たいていの場合、インスタンスをゴールに向かって効果的に移動させることができる。この関数は、ゴールに到達したかどうかを返す。
+  </p>
   <p> </p>
-  <h4>構文です。</h4>
-  <p class="code"><span data-field="title" data-format="default">mp_potential_step_object</span>(xgoal, ygoal, stepsize, obj)</p>
+  <h4>構文</h4>
+  <p class="code"><span data-field="title" data-format="default">mp_potential_step_object</span>(xgoal, ygoal, stepsize,
+    obj)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">xgoal</span></td>
@@ -44,13 +50,15 @@
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
-        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span data-keyref="Type_ID_Instance">インスタンスID</span></td>
-        <td><span class="notranslate">The object that is to block the path of the instance running the function. Can be an object index, an instance id or the special keyword ,<b>all</b>.</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span
+            data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The object that is to block the path of the instance running the function. Can be
+            an object index, an instance id or the special keyword ,<b>all</b>.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
   <p> </p>
   <h4>例</h4>
@@ -60,18 +68,23 @@
         inst = instance_nearest(x, y, obj_Enemy);<br />
         mp_potential_step_object(inst.x, inst.y, 5, obj_Wall);<br />
     }</p>
-  <p>上記のコードは、まず<span class="notranslate">room</span> に「obj_Enemy」のインスタンスがあるかどうかをチェックします。 もしあれば、最も近いものを見つけてその ID を変数に格納します。この変数を使って、 <span class="inline">mp_potential_step_object</span> に、見つかった<span class="notranslate">object</span> の x/y 位置に向かって、<span class="notranslate">object</span> の &quot;obj_Wall&quot; インスタンスだけを避けながら、1ステップあたり5ピクセルの速度でインスタンスを移動させるように指示します。</p>
+  <p>上記のコードは、まず<span class="notranslate">room</span> に「obj_Enemy」のインスタンスがあるかどうかをチェックします。 もしあれば、最も近いものを見つけてその ID
+    を変数に格納します。この変数を使って、 <span class="inline">mp_potential_step_object</span> に、見つかった<span
+      class="notranslate">object</span> の x/y 位置に向かって、<span class="notranslate">object</span> の &quot;obj_Wall&quot;
+    インスタンスだけを避けながら、1ステップあたり5ピクセルの速度でインスタンスを移動させるように指示します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Motion_Planning.htm">モーションプランニング</a></div>
-        <div style="float:right">次のページ <a href="mp_potential_path.htm"><span class="notranslate">mp_potential_path</span></a></div>
+        <div style="float:left">前のページ：<a href="Motion_Planning.htm">モーションプランニング</a></div>
+        <div style="float:right">次のページ：<a href="mp_potential_path.htm"><span
+              class="notranslate">mp_potential_path</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 mp_potential_step_object
@@ -80,4 +93,5 @@ mp_potential_step_object
 mp_potential_step_object
 -->
 </body>
+
 </html>

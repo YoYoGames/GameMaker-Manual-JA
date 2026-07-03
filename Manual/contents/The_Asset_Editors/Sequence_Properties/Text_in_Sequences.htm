@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -13,9 +14,11 @@
   <meta name="rh-index-keywords" content="Text, Sequences" />
   <meta name="search-keywords" content="Text in Sequences, animate text" />
 </head>
+
 <body>
   <h1>テキスト・イン・シークエンス</h1>
-  <p>テキストトラックは、エディターを通して<span class="notranslate">Sequence</span> に追加することができます。これは、Canvas Toolboxから<img> <strong>Add a Text Track</strong>ボタンを選択し、キャンバス内でクリック（オプションでドラッグ）してテキストトラックを作成することで行われます。</p>
+  <p>テキストトラックは、エディタを通して<span class="notranslate">Sequence</span> に追加することができます。これは、Canvas Toolboxから<img> <strong>Add a
+      Text Track</strong>ボタンを選択し、キャンバス内でクリック（オプションでドラッグ）してテキストトラックを作成することで行われます。</p>
   <p><img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /></p>
   <p>このページでは、以下の項目について説明します。</p>
   <ol class="Decimal">
@@ -28,25 +31,42 @@
   <h2 id="s1">テキストの作成</h2>
   <p>テキストトラックを作成するには、2つの方法があります。ツールボックスから<img> <strong>Text</strong>ツールを選択した後、次のようにします。</p>
   <ul class="colour">
-    <li><strong>キャンバス内で1回クリック</strong>します。これは「アンラップ」されたテキストトラックを作成します。つまり、テキストは好きなだけ長くすることができ、1行に収まります。ラッピングは、後で<a href="../../IDE_Tools/The_Inspector.htm">インスペクタから</a>簡単に有効にできます。<br />
-      <video class="center" src="../../assets/Videos/AssetEditors/SeqTextUnwrapped.mp4" width="700" height="330" controls=""></video>
+    <li><strong>キャンバス内で1回クリック</strong>します。これは「アンラップ」されたテキストトラックを作成します。つまり、テキストは好きなだけ長くすることができ、1行に収まります。ラッピングは、後で<a
+        href="../../IDE_Tools/The_Inspector.htm">インスペクタから</a>簡単に有効にできます。<br />
+      <video class="center" src="../../assets/Videos/AssetEditors/SeqTextUnwrapped.mp4" width="700" height="330"
+        controls=""></video>
     </li>
-    <li><strong>キャンバス内をクリック＆ドラッグ</strong>します。これは「ラップ」テキストトラックを作成します。つまり、テキストはフレーム内にのみ表示されます。このフレームのサイズは、テキストトラックの作成中にドラッグして設定します。このサイズは、後でパラメータトラックやインスペクタを使って変更することもできます。 <video class="center" src="../../assets/Videos/AssetEditors/SeqTextWrapped.mp4" width="700" height="330" controls=""></video> ラップされたテキストトラックを使用すると、テキストの位置合わせが非常に簡単になり、アニメート中に一貫した結果を得ることができるため、使用することをお勧めします。</li>
+    <li>
+      <strong>キャンバス内をクリック＆ドラッグ</strong>します。これは「ラップ」テキストトラックを作成します。つまり、テキストはフレーム内にのみ表示されます。このフレームのサイズは、テキストトラックの作成中にドラッグして設定します。このサイズは、後でパラメータトラックやインスペクタを使って変更することもできます。
+      <video class="center" src="../../assets/Videos/AssetEditors/SeqTextWrapped.mp4" width="700" height="330"
+        controls=""></video> ラップされたテキストトラックを使用すると、テキストの位置合わせが非常に簡単になり、アニメート中に一貫した結果を得ることができるため、使用することをお勧めします。</li>
   </ul>
   <h2 id="s2">テキストの修正</h2>
-  <p>新しいテキストトラックを作成すると、<span class="notranslate">GameMaker</span> は<a href="../../IDE_Tools/The_Inspector.htm">インスペクタを</a>開き、自動的に<strong>テキスト</strong>フィールドを選択し、テキストを書き始めることができます。</p>
+  <p>新しいテキストトラックを作成すると、<span class="notranslate">GameMaker</span> は<a
+      href="../../IDE_Tools/The_Inspector.htm">インスペクタを</a>開き、自動的に<strong>テキスト</strong>フィールドを選択し、テキストを書き始めることができます。</p>
   <p><img>トラックのテキストをいつでも編集するには、そのトラックを選択し、インスペクタに移動して<strong>テキスト</strong>フィールドを再度修正するだけです。</p>
   <p class="note_heading">リサイズビヘイビア</p>
-  <p class="note">キャンバスのテキストトラックのサイズ変更は、テキストトラックが<strong>ラップ</strong>されているか、<strong>アンラップされて</strong>いるかによって動作が異なります。<br />
+  <p class="note">
+    キャンバスのテキストトラックのサイズ変更は、テキストトラックが<strong>ラップ</strong>されているか、<strong>アンラップされて</strong>いるかによって動作が異なります。<br />
     <br />
-    ラップされていない場合、テキスト トラックは、<span class="notranslate">sprites</span> や<span class="notranslate">objects</span> をスケールする方法と同様にスケールされます。ただし、<strong>ラップされた</strong>テキスト トラックのサイズ変更は、そのスケール値を変更するのではなく、<strong>フレーム サイズを</strong>変更します。<br />
-    <img>ラップされたテキスト トラックを拡大縮小するには、代わりに<a data-height="650" data-rhwidget="HyperlinkPopover" data-width="360" href="The_Sequence_Canvas.htm#gizmos">Gizmos</a>を使用するか、Scale パラメータ トラックの値を手動で編集してください。
+    ラップされていない場合、テキスト トラックは、<span class="notranslate">sprites</span> や<span class="notranslate">objects</span>
+    をスケールする方法と同様にスケールされます。ただし、<strong>ラップされた</strong>テキスト トラックのサイズ変更は、そのスケール値を変更するのではなく、<strong>フレーム
+      サイズを</strong>変更します。<br />
+    <img>ラップされたテキスト トラックを拡大縮小するには、代わりに<a data-height="650" data-rhwidget="HyperlinkPopover" data-width="360"
+      href="The_Sequence_Canvas.htm#gizmos">Gizmos</a>を使用するか、Scale パラメータ トラックの値を手動で編集してください。
   </p>
   <h2 id="s3">フォント資産</h2>
-  <p>テキストトラックは<a href="../Fonts.htm">Fontアセットに</a>紐付いています。新しいテキストトラックを作成すると、プロジェクト内で<span class="notranslate">font</span> <span class="notranslate">asset</span> が検索され、最後に追加されたものが使用されます。プロジェクトに<span class="notranslate">fonts</span> がない場合、自動的に新しい<span class="notranslate">font</span> <span class="notranslate">asset</span> が作成されます。</p>
-  <p><span class="notranslate">font</span> を削除すると、その<span class="notranslate">font</span> を使用しているすべてのテキストトラックも削除されるため、誤って<span class="notranslate">font</span> で使用されている<span class="notranslate">assets</span> <span class="notranslate">Sequences</span> を削除しないように注意してください。</p>
+  <p>テキストトラックは<a href="../Fonts.htm">Fontアセットに</a>紐付いています。新しいテキストトラックを作成すると、プロジェクト内で<span
+      class="notranslate">font</span> <span class="notranslate">asset</span> が検索され、最後に追加されたものが使用されます。プロジェクトに<span
+      class="notranslate">fonts</span> がない場合、自動的に新しい<span class="notranslate">font</span> <span
+      class="notranslate">asset</span> が作成されます。</p>
+  <p><span class="notranslate">font</span> を削除すると、その<span class="notranslate">font</span>
+    を使用しているすべてのテキストトラックも削除されるため、誤って<span class="notranslate">font</span> で使用されている<span class="notranslate">assets</span>
+    <span class="notranslate">Sequences</span> を削除しないように注意してください。</p>
   <h2 id="s4">パラメータ</h2>
-  <p><span class="notranslate">sprite</span> トラックに用意されている位置、回転、スケール、オリジン、カラーマルチプライなどの通常のパラメータをすべて変更し、アニメートすることができます。これらのパラメータを使って、テキストを移動したり回転させたり、大きくしたり小さくしたり、色やアルファを変更することができます。</p>
+  <p><span class="notranslate">sprite</span>
+    トラックに用意されている位置、回転、スケール、オリジン、カラーマルチプライなどの通常のパラメータをすべて変更し、アニメートすることができます。これらのパラメータを使って、テキストを移動したり回転させたり、大きくしたり小さくしたり、色やアルファを変更することができます。
+  </p>
   <p>また、テキスト固有のパラメータも用意されており、これもアニメーション化することができる。<img></p>
   <ul class="colour">
     <li><strong>文字間隔</strong>。各文字の間隔（ピクセル）です。<br />
@@ -55,23 +75,35 @@
     <li><strong>行間</strong>。テキストの各行の間隔です（単位：ピクセル）。<br />
       <img>
     </li>
-    <li><strong>パラグラフ・スケーリング（Paragraph Scaling</strong>）。テキストの各段落間のスペースです（単位：ピクセル）。新しい段落は、<img> を押して手動で改行を追加したときに開始されます。<br />
+    <li><strong>パラグラフ・スケーリング（Paragraph Scaling</strong>）。テキストの各段落間のスペースです（単位：ピクセル）。新しい段落は、<img>
+      を押して手動で改行を追加したときに開始されます。<br />
       <img>
     </li>
-    <li><strong>フレームサイズ</strong>。これはテキストの枠のサイズで、インスペクタで<strong>「折り返し</strong>」が有効になっている場合のみ使用されます（詳しくは以下のセクションを参照してください）。</li>
+    <li>
+      <strong>フレームサイズ</strong>。これはテキストの枠のサイズで、インスペクタで<strong>「折り返し</strong>」が有効になっている場合のみ使用されます（詳しくは以下のセクションを参照してください）。
+    </li>
   </ul>
   <p> </p>
   <h2 id="s5">インスペクター</h2>
   <p>インスペクタからしか変更できないプロパティがあります。このようなプロパティは、パラメータトラックではなく、トラック全体に適用される単純なオプションであるため、アニメーション化することはできません。</p>
   <p>テキストトラックを選択すると、インスペクタに以下のプロパティが表示されます。</p>
-  <p class="note"><span class="note">注</span>：インスペクタは、テキストトラックを作成または選択したときに自動的に開くはずですが、インスペクタが閉じている場合は、上部にある<a href="../../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows</a>メニューから手動で開くことができます。</p>
+  <p class="note"><span class="note">注</span>：インスペクタは、テキストトラックを作成または選択したときに自動的に開くはずですが、インスペクタが閉じている場合は、上部にある<a
+      href="../../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows</a>メニューから手動で開くことができます。</p>
   <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextOverview.png" /></p>
-  <p>パラメータトラックの一部（<strong>色</strong>、<strong>文字間隔</strong>、<strong>行間など</strong>）はここに含まれ、これらを変更すると、<img> <strong>Automatically record changes</strong>が有効な場合は再生ヘッドに<span class="notranslate">keyframe</span> が作成され、選択した<span class="notranslate">keyframe</span> が変更されます。その他のオプションは「静的」（アニメートできないため）であり、以下の通りです。</p>
+  <p>パラメータトラックの一部（<strong>色</strong>、<strong>文字間隔</strong>、<strong>行間など</strong>）はここに含まれ、これらを変更すると、<img>
+    <strong>Automatically record changes</strong>が有効な場合は再生ヘッドに<span class="notranslate">keyframe</span> が作成され、選択した<span
+      class="notranslate">keyframe</span> が変更されます。その他のオプションは「静的」（アニメートできないため）であり、以下の通りです。</p>
   <ul class="colour">
-    <li>上部には、選択されている<span class="notranslate">font</span> <span class="notranslate">asset</span> が表示されます。このオプションを使って、既存の<span class="notranslate">font</span> <span class="notranslate">asset</span> を選択するか、または新しいものを作成して、選択されたテキストトラックに割り当てることができます。</li>
+    <li>上部には、選択されている<span class="notranslate">font</span> <span class="notranslate">asset</span>
+      が表示されます。このオプションを使って、既存の<span class="notranslate">font</span> <span class="notranslate">asset</span>
+      を選択するか、または新しいものを作成して、選択されたテキストトラックに割り当てることができます。</li>
     <li><strong>テキスト</strong>です。テキストトラックに表示されるテキストです。ここに複数行入力できますが、空白行は表示されません。</li>
-    <li><strong>整列</strong>。ここでは、フレーム内でのテキストの水平方向（左、中央、右、両端揃え）および垂直方向（下、上、中央）の配置を変更できます。これは、「<strong>折り返し」</strong>オプションが有効な場合にのみ適用されます。</li>
-    <li><strong>折り返し</strong>。定義されたフレーム内でテキストを自動的に折り返すかどうかを制御します。これが有効な場合、テキストはフレームの端に達すると自動的に次の行に移動し、テキストがフレームの高さより長い場合は常に切断されます。この機能を無効にすると、すべてのテキストは1行で表示され、フレームはキャンバス内に表示されなくなります。</li>
+    <li>
+      <strong>整列</strong>。ここでは、フレーム内でのテキストの水平方向（左、中央、右、両端揃え）および垂直方向（下、上、中央）の配置を変更できます。これは、「<strong>折り返し」</strong>オプションが有効な場合にのみ適用されます。
+    </li>
+    <li>
+      <strong>折り返し</strong>。定義されたフレーム内でテキストを自動的に折り返すかどうかを制御します。これが有効な場合、テキストはフレームの端に達すると自動的に次の行に移動し、テキストがフレームの高さより長い場合は常に切断されます。この機能を無効にすると、すべてのテキストは1行で表示され、フレームはキャンバス内に表示されなくなります。
+    </li>
   </ul>
   <p> </p>
   <p> </p>
@@ -83,7 +115,9 @@
         <div>次へ<a data-xref="{title}" href="Clipping_Masks.htm">クリッピングマスク</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>にとって</title>
@@ -12,17 +13,21 @@
   <meta name="rh-index-keywords" content="for" />
   <meta name="search-keywords" content="for" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>にとって</h1>
-  <p>ある<a class="glossterm" data-glossterm="声明" href="#">文</a>（または複数の文）を何度も反復処理するために最もよく使われる方法の1つは、 <span class="inline">for</span> <span class="notranslate">loop</span> 、この形式を使用することです。</p>
+  <p>ある<a class="glossterm" data-glossterm="声明" href="#">文</a>（または複数の文）を何度も反復処理するために最もよく使われる方法の1つは、 <span
+      class="inline">for</span> <span class="notranslate">loop</span> 、この形式を使用することです。</p>
   <p class="code">for (&lt;assignment&gt;; &lt;expression&gt;; &lt;operation&gt;;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p>これは次のように動作します。まず、変数に値を代入する代入が実行され、次に<a class="glossterm" data-glossterm="顔" href="#">式が</a>評価され、<span class="inline">true</span> 、中括弧{}の中の文が実行されます。次に代入された変数に対して演算が実行され、その後再び式が評価されます。この<span class="notranslate">loop</span> は式が<span class="inline">false</span> であることがわかるまで続けられます。</p>
+  <p>これは次のように動作します。まず、変数に値を代入する代入が実行され、次に<a class="glossterm" data-glossterm="顔" href="#">式が</a>評価され、<span
+      class="inline">true</span> 、中括弧{}の中の文が実行されます。次に代入された変数に対して演算が実行され、その後再び式が評価されます。この<span
+      class="notranslate">loop</span> は式が<span class="inline">false</span> であることがわかるまで続けられます。</p>
   <p>さて、このように書くとややこしく聞こえるかもしれませんが、次のように解釈してください。</p>
   <ol>
     <li>最初の代入は、for-loopを初期化します。</li>
@@ -31,15 +36,31 @@
     <li>操作が行われる</li>
     <li>ステップ2に戻り、もう一度式を実行し、ループを継続または終了する</li>
   </ol>
-  <p>これは、他の方法では何行ものコードが必要となるような反復作業を行う場合に非常に便利で、一般的には、配列の評価、物の描画、増分値の設定などのカウンタとして使用されます。次のコード例は、このタイプの文の典型的な使用法を示しています。</p>
+  <p>これは、他の方法では何行ものコードが必要となるような反復作業を行う場合に非常に便利で、一般的には、配列の評価、物の描画、増分値の設定などのカウンタとして使用されます。次のコード例は、このタイプの文の典型的な使用法を示しています。
+  </p>
   <p class="code">for (var i = 0; i &lt; 10; i += 1)<br />
     {<br />
         draw_text(32, 32 + (i * 32), string(i) + &quot;. &quot;+ string(scr[i]));<br />
     }</p>
-  <p><span class="notranslate">loop</span> 上記のコードでは、 <span class="inline">for</span> <span class="notranslate">loop</span> を初期化し、0から始まって9まで（を含む）カウントし、 <span class="inline">i</span> の値を使って、配列に格納された値を画面下に描画しています。 <span class="inline">for</span> <span class="notranslate">loop</span> 変数 <span class="inline">i</span> を使って、<span class="notranslate">loop</span> 配列を走査するだけでなく、数値を描画し、さらに<span class="notranslate">room</span> のどこに数値を描画するかを<span data-keyref="GameMaker Name">GameMaker</span>に指示していることに注目してください。 この柔軟性が、プログラミングにおいて <span class="inline">for</span> <span class="notranslate">loops</span> が重要である主な理由の一つとなっているのです。</p>
-  <p><strong>いつ <span class="inline">for</span> <span class="notranslate">loop</span> を使うべきか？</strong>現在実行されている<a class="glossterm" data-glossterm="くりかえし" href="#">反復を</a>追跡し、その反復の値を使用しながら、1つまたは複数の文に対して固定回数の反復を実行する必要があるときはいつでもです。</p>
-  <p class="note"><b>注</b>：他の人と一緒に作業していると、変数 &quot;<span class="inline">i</span>&quot; と &quot;<span class="inline">j</span>&quot; がカウンタ変数<span class="notranslate">loop</span> のために使われている例を複数見ることができます。これらは強制的な変数<b>名ではないので</b>、&quot;<span class="inline">a</span>&quot; や &quot;<span class="inline">foo</span>&quot; など、何でも使うことができます。<span class="inline">i</span>&quot; と &quot;<span class="inline">j</span>&quot; の使用は、単にプログラミングの標準的な慣習に過ぎません。</p>
-  <p>特筆すべきは、 <span class="inline">for</span> <span class="notranslate">loop</span> の中でも <span class="inline"><a href="break.htm">break</a></span> と <span class="inline"><a href="continue.htm">continue</a></span> という特殊な文が使えるということです。 <span class="inline">break</span> を使用すると、<span class="notranslate">loop</span> を直ちに終了し、<span class="notranslate">loop</span> が終了した後にイベントや関数内にあるコードに移動します。</p>
+  <p><span class="notranslate">loop</span> 上記のコードでは、 <span class="inline">for</span> <span
+      class="notranslate">loop</span> を初期化し、0から始まって9まで（を含む）カウントし、 <span class="inline">i</span>
+    の値を使って、配列に格納された値を画面下に描画しています。 <span class="inline">for</span> <span class="notranslate">loop</span> 変数 <span
+      class="inline">i</span> を使って、<span class="notranslate">loop</span> 配列を走査するだけでなく、数値を描画し、さらに<span
+      class="notranslate">room</span> のどこに数値を描画するかを<span
+      data-keyref="GameMaker Name">GameMaker</span>に指示していることに注目してください。 この柔軟性が、プログラミングにおいて <span
+      class="inline">for</span> <span class="notranslate">loops</span> が重要である主な理由の一つとなっているのです。</p>
+  <p><strong>いつ <span class="inline">for</span> <span class="notranslate">loop</span> を使うべきか？</strong>現在実行されている<a
+      class="glossterm" data-glossterm="くりかえし"
+      href="#">反復を</a>追跡し、その反復の値を使用しながら、1つまたは複数の文に対して固定回数の反復を実行する必要があるときはいつでもです。</p>
+  <p class="note"><b>注</b>：他の人と一緒に作業していると、変数 &quot;<span class="inline">i</span>&quot; と &quot;<span
+      class="inline">j</span>&quot; がカウンタ変数<span class="notranslate">loop</span>
+    のために使われている例を複数見ることができます。これらは強制的な変数<b>名ではないので</b>、&quot;<span class="inline">a</span>&quot; や &quot;<span
+      class="inline">foo</span>&quot; など、何でも使うことができます。<span class="inline">i</span>&quot; と &quot;<span
+      class="inline">j</span>&quot; の使用は、単にプログラミングの標準的な慣習に過ぎません。</p>
+  <p>特筆すべきは、 <span class="inline">for</span> <span class="notranslate">loop</span> の中でも <span class="inline"><a
+        href="break.htm">break</a></span> と <span class="inline"><a href="continue.htm">continue</a></span>
+    という特殊な文が使えるということです。 <span class="inline">break</span> を使用すると、<span class="notranslate">loop</span> を直ちに終了し、<span
+      class="notranslate">loop</span> が終了した後にイベントや関数内にあるコードに移動します。</p>
   <p class="code">var _inst = noone;<br />
     for (var i = 0; i &lt; 10; i += 1)<br />
     {<br />
@@ -53,8 +74,13 @@
         }<br />
     }<br />
     target = _inst;</p>
-  <p>上記のコードは、与えられた「親」<span class="notranslate">loops</span> の直近の 10 個のインスタンスを<span class="notranslate">object</span> 調べ、インスタンスが見つかったら、インスタンス<span class="notranslate">object</span> の ID をチェックし、それが <span class="inline">obj_Enemy_Melee</span> のインスタンスなら<span class="notranslate">loop</span> を <span class="inline">break</span> を使って終了し、ID 値を変数に割り当てます（インスタンスが見つからない場合は、キーワード <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span> が変数に追加されます）。</p>
-  <p> <span class="inline">continue</span> を <span class="inline">for</span> <span class="notranslate">loop</span> で使用する例としては、次のようになります。</p>
+  <p>上記のコードは、与えられた「親」<span class="notranslate">loops</span> の直近の 10 個のインスタンスを<span class="notranslate">object</span>
+    調べ、インスタンスが見つかったら、インスタンス<span class="notranslate">object</span> の ID をチェックし、それが <span
+      class="inline">obj_Enemy_Melee</span> のインスタンスなら<span class="notranslate">loop</span> を <span
+      class="inline">break</span> を使って終了し、ID 値を変数に割り当てます（インスタンスが見つからない場合は、キーワード <span class="inline"><a
+        href="../Instance_Keywords.htm">noone</a></span> が変数に追加されます）。</p>
+  <p> <span class="inline">continue</span> を <span class="inline">for</span> <span class="notranslate">loop</span>
+    で使用する例としては、次のようになります。</p>
   <p class="code">var _val = 0;<br />
     for (var i = 0; i &lt; 10; i += 1)<br />
     {<br />
@@ -65,19 +91,25 @@
         _val += val_array[i];<br />
     }<br />
     draw_text(32, 32, &quot;Positive Values Total = &quot; + string(_val));</p>
-  <p>このコードは、10個の長さの1次元<a href="../Arrays.htm">配列の</a>各配列位置に格納されている値をチェックし、0以下のものがあれば、 <span class="inline">continue</span> <span class="notranslate">loop</span> 、現在の反復処理を終了し、 <span class="inline">i</span> 、インクリメントして、次の<span class="notranslate">loop</span> 反復処理を開始することを意味します。もし値が0より大きければ、ローカル変数 <span class="inline">_val</span> に加えられ、<span class="notranslate">loop</span> が終了した後、その合計値が画面に描画されます。</p>
-  <p><span class="notranslate">loop</span> キーワードの詳細な例については、以下のセクションを参照してください。 <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>と <a href="do___until.htm"><span class="inline">do / until</span></a>.</p>
+  <p>このコードは、10個の長さの1次元<a href="../Arrays.htm">配列の</a>各配列位置に格納されている値をチェックし、0以下のものがあれば、 <span
+      class="inline">continue</span> <span class="notranslate">loop</span> 、現在の反復処理を終了し、 <span class="inline">i</span>
+    、インクリメントして、次の<span class="notranslate">loop</span> 反復処理を開始することを意味します。もし値が0より大きければ、ローカル変数 <span
+      class="inline">_val</span> に加えられ、<span class="notranslate">loop</span> が終了した後、その合計値が画面に描画されます。</p>
+  <p><span class="notranslate">loop</span> キーワードの詳細な例については、以下のセクションを参照してください。 <a href="repeat.htm"><span
+        class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>と <a
+      href="do___until.htm"><span class="inline">do / until</span></a>.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Language_Features.htm">言語機能</a></div>
-        <div style="float:right">次のページ <a href="switch.htm"><span class="notranslate">switch</span></a></div>
+        <div style="float:left">前のページ：<a href="../Language_Features.htm">言語機能</a></div>
+        <div style="float:right">次のページ：<a href="switch.htm"><span class="notranslate">switch</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 for
@@ -86,4 +118,5 @@ for
 for
 -->
 </body>
+
 </html>

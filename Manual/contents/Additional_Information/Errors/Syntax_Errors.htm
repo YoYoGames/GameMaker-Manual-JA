@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>シンタックスエラー(フェザーメッセージ)</title>
@@ -12,25 +13,41 @@
   <meta name="rh-index-keywords" content="Syntax Errors" />
   <meta name="search-keywords" content="syntax errors" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">シンタックスエラー(フェザーメッセージ)</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMakerで</span>ゲームをプログラミングする際のエラー報告の第一レベルは、コードまたは<span class="notranslate">GML</span> Visualエディタにある、<a class="glossterm" data-glossterm="シンタックス" href="#">シンタックス</a>チェッカー（<a class="glossterm" data-glossterm="シンタックス" href="#">Syntax</a>Checker）です。コードを書いたり、アクションを追加すると、<span data-keyref="GameMaker Name">GameMakerは</span>その言語で確立されたシンタックスに従っているかどうかをチェックし、問題があれば<span class="notranslate">flag</span> 、ゲームの実行や実行ファイルのコンパイルに入る前に修正することができます。</p>
-  <p>シンタックスエラーのチェックは、<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather Settingsで</a> <a href="../../The_Asset_Editors/Code_Editor_Properties/Feather_Features.htm">Featherを</a>有効にしているかどうかで、動作が異なります。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerで</span>ゲームをプログラミングする際のエラー報告の第一レベルは、コードまたは<span
+      class="notranslate">GML</span> Visualエディタにある、<a class="glossterm" data-glossterm="シンタックス"
+      href="#">シンタックス</a>チェッカー（<a class="glossterm" data-glossterm="シンタックス"
+      href="#">Syntax</a>Checker）です。コードを書いたり、アクションを追加すると、<span
+      data-keyref="GameMaker Name">GameMakerは</span>その言語で確立されたシンタックスに従っているかどうかをチェックし、問題があれば<span
+      class="notranslate">flag</span> 、ゲームの実行や実行ファイルのコンパイルに入る前に修正することができます。</p>
+  <p>シンタックスエラーのチェックは、<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather
+      Settingsで</a> <a
+      href="../../The_Asset_Editors/Code_Editor_Properties/Feather_Features.htm">Featherを</a>有効にしているかどうかで、動作が異なります。</p>
   <h2>シンタックスエラー（フェザー無効）</h2>
-  <p><img alt="Syntax Errors Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Syntax_Example.png" /></p>
+  <p><img alt="Syntax Errors Example" class="center"
+      src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Syntax_Example.png" /></p>
   <p>これらのエラーは大きく2つに分類されます。</p>
   <ul class="colour">
-    <li><img> <strong>警告</strong>。エラーになりそうでならないもので、ゲームのコンパイルを止めることはないでしょうが、 のエラーを引き起こす可能性があるものに対して表示されます。これらの警告の最も一般的な原因は、式の中で変数が使われていて、それがまだ他の場所で定義されていない場合、または変数が定義されているが使用されていない場合です。<span class="notranslate">runtime</span> </li>
-    <li><img> <strong>エラー</strong>です。これらは、ゲームのコンパイルはもちろん、実行も許可されない問題です。これらのエラーは、コードを書き直す前に修正する必要があります。以下の表は、これらの最も一般的な原因を示しています。</li>
+    <li><img> <strong>警告</strong>。エラーになりそうでならないもので、ゲームのコンパイルを止めることはないでしょうが、
+      のエラーを引き起こす可能性があるものに対して表示されます。これらの警告の最も一般的な原因は、式の中で変数が使われていて、それがまだ他の場所で定義されていない場合、または変数が定義されているが使用されていない場合です。<span
+        class="notranslate">runtime</span> </li>
+    <li><img>
+      <strong>エラー</strong>です。これらは、ゲームのコンパイルはもちろん、実行も許可されない問題です。これらのエラーは、コードを書き直す前に修正する必要があります。以下の表は、これらの最も一般的な原因を示しています。
+    </li>
   </ul>
   <p>構文エラーは、コードを書くと更新され（未完成のコードに対してエラーが報告されるのを防ぐため、何かをタイプしてからこのウィンドウにエラーが表示されるまでに短い間があります）、その形式に従って表示されます。</p>
   <p class="code">[object] - [event] - [Line Number] - [Position In Line]: [error string]</p>
   <p>あるいは、エラーが<span class="notranslate">script</span> にある場合、そうなります。</p>
   <p class="code">[script] - [Line Number] - [Position in line]: [error string]</p>
-  <p><img> 出力コンソールに表示されたエラーのいずれかをダブルクリックすると、<span class="notranslate">object</span> イベントまたは<span class="notranslate">script</span> のエラーのある行に移動し、その行を編集することができます。</p>
+  <p><img> 出力コンソールに表示されたエラーのいずれかをダブルクリックすると、<span class="notranslate">object</span> イベントまたは<span
+      class="notranslate">script</span> のエラーのある行に移動し、その行を編集することができます。</p>
   <p>これらのエラーの中には、コードの特定の場所に表示されるものもありますが、実際のエラーは他の場所に原因があったり、1つの問題で複数のエラーメッセージが発生する場合もありますので、注意が必要です。</p>
-  <p><img>上の画像では、3つの<img> エラーはすべて、関数 <span class="inline">variable_instance_exists()</span> の220行目で、カンマ &quot;<span class="inline">,</span>&quot; の代わりにセミコロン &quot;<span class="inline">;</span>&quot; を使ってしまったという、たった一つのミスによって引き起こされているのです。</p>
+  <p><img>上の画像では、3つの<img> エラーはすべて、関数 <span class="inline">variable_instance_exists()</span> の220行目で、カンマ &quot;<span
+      class="inline">,</span>&quot; の代わりにセミコロン &quot;<span class="inline">;</span>&quot;
+    を使ってしまったという、たった一つのミスによって引き起こされているのです。</p>
   <h3>シンタックスエラーリスト</h3>
   <p>以下の表は、さまざまなシンタックスエラーとその主な原因を示しています。</p>
   <p> </p>
@@ -39,215 +56,451 @@
       <tr>
         <th>エラー</th>
         <th>タイプ </th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">不正なリファレンス[val]。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          不正なリファレンス[val]。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Warning Icon"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png" /></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation
+          Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a
+            href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">不正な16進文字エスケープシーケンス </td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、<span class="notranslate">string</span> でエスケープ文字に16進数の値を使用し、これが間違ったフォーマットを持っている場合に発生する可能性があります。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          不正な16進文字エスケープシーケンス </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、<span
+            class="notranslate">string</span> でエスケープ文字に16進数の値を使用し、これが間違ったフォーマットを持っている場合に発生する可能性があります。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">予期しないノード[val]が発生した</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          予期しないノード[val]が発生した</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation
+          Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a
+            href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">val]のパース時に例外が発生</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Multiple Syntax Errors" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Error_MultipleSyntaxErrors.png" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          val]のパース時に例外が発生</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Multiple Syntax Errors" class="center"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/Error_MultipleSyntaxErrors.png" /></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation
+          Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a
+            href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">不正なid参照[val]。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          不正なid参照[val]。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"> </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">ステートメントとして使用される不要な式[val]です。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、構文チェッカーが、文を期待していた式（[val]で示される）を検出したときに発生します。例えば、次のコードは、三項演算子 ? を期待していたのに、32 を検出したため、このエラーを投げます。<br />
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          ステートメントとして使用される不要な式[val]です。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、構文チェッカーが、文を期待していた式（[val]で示される）を検出したときに発生します。例えば、次のコードは、三項演算子 ? を期待していたのに、32 を検出したため、このエラーを投げます。<br />
           <span class="inline">temp_x = x &lt; (room_width / 2)  32: room_width - 32;</span>
         </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">配列参照[val]が不正</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、間違った方法で配列を参照しようとしたことを意味し、[val]はその参照を表示します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          配列参照[val]が不正</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、間違った方法で配列を参照しようとしたことを意味し、[val]はその参照を表示します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">予期しない二項演算子[val]が発生</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、ビット演算子を使うべきでない場所で、[val]がその場所を示しているときに発生します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          予期しない二項演算子[val]が発生</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、ビット演算子を使うべきでない場所で、[val]がその場所を示しているときに発生します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">終端しない<span class="notranslate">string</span> リテラル</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、 <span class="inline">@“</span> または <span class="inline">“</span> を使用して<span class="notranslate">string</span> を開いたが、コードの終了前に閉じていない場合に発生します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          終端しない<span class="notranslate">string</span> リテラル</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、 <span
+            class="inline">@“</span> または <span class="inline">“</span> を使用して<span class="notranslate">string</span>
+          を開いたが、コードの終了前に閉じていない場合に発生します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">文字列にシングルクォートを使用できないようになりました</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、<span class="notranslate">strings</span> をダブルクォートではなくシングルクォートで囲んで使用しようとした場合（例：'Hello World'）に発生します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          文字列にシングルクォートを使用できないようになりました</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、<span
+            class="notranslate">strings</span> をダブルクォートではなくシングルクォートで囲んで使用しようとした場合（例：'Hello World'）に発生します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">予期せぬ構文エラー</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、パーサーがより具体的に特定することができない構文エラーを示します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          予期せぬ構文エラー</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、パーサーがより具体的に特定することができない構文エラーを示します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">val1]を取得、[val2]を期待。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、シンタックスチェッカーがある値や記号を期待していたのに、別の値を得たときに起こります。[val1]は現在の記号や値、[val2]は期待された記号や値です。例えば<br />
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          val1]を取得、[val2]を期待。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、シンタックスチェッカーがある値や記号を期待していたのに、別の値を得たときに起こります。[val1]は現在の記号や値、[val2]は期待された記号や値です。例えば<br />
           <span class="inline">Got &quot;{&quot;, expected &quot;(&quot;</span>
         </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">val1]を取得、&quot;[val2]&quot;または&quot;[val3]&quot;を期待。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">上記と同様であるが、想定される記号が複数ある場合について。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          val1]を取得、&quot;[val2]&quot;または&quot;[val3]&quot;を期待。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          上記と同様であるが、想定される記号が複数ある場合について。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">期待される表現</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、構文チェッカーが式を期待しているにもかかわらず、式が与えられていない場合に発生します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          期待される表現</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、構文チェッカーが式を期待しているにもかかわらず、式が与えられていない場合に発生します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">空の[val]ステートメント</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、ステートメントを終了して空白にしたときに起こります。例えば、次のようなコードではエラーが発生します（終了するセミコロンに注意）。<br />
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          空の[val]ステートメント</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、ステートメントを終了して空白にしたときに起こります。例えば、次のようなコードではエラーが発生します（終了するセミコロンに注意）。<br />
           <span class="inline">if (x &lt; 0);</span>
         </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">関数のネスト呼び出しは不可</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、関数呼び出しを文の中で入れ子にしているときに起こる可能性があります。<br />
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          関数のネスト呼び出しは不可</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、関数呼び出しを文の中で入れ子にしているときに起こる可能性があります。<br />
           <span class="inline">ds_list_find_value(list, 0)).sprite_index</span>
         </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">関数[val1]の引数の数 [val2]の期待値 val[3]の取得</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは，[val1]で示された関数に正しい数の引数を与えていないことを告げるもので，[val2]で示された数を期待したが，[val3]で示された数を得た．</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          関数[val1]の引数の数 [val2]の期待値 val[3]の取得</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは，[val1]で示された関数に正しい数の引数を与えていないことを告げるもので，[val2]で示された数を期待したが，[val3]で示された数を得た．</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">関数[val1]の引数の数 期待値[val2] - [val3]得た[val4]。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          関数[val1]の引数の数 期待値[val2] - [val3]得た[val4]。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">引数の範囲のみ上記と同様。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">重複する enum エントリが見つかりました。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、enum 変数のエントリ名が重複していることを示すものです。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          重複する enum エントリが見つかりました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、enum
+          変数のエントリ名が重複していることを示すものです。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">重複する enum が見つかりました。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、同じ名前の列挙型を2つ以上定義してしまったことを告げるものです。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          重複する enum が見つかりました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、同じ名前の列挙型を2つ以上定義してしまったことを告げるものです。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">globalvarに変数名がない</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、 <span class="inline">globalvar</span> の宣言を使用したが、変数名の指定を省略したことを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          globalvarに変数名がない</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、 <span
+            class="inline">globalvar</span> の宣言を使用したが、変数名の指定を省略したことを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">var に変数名がない</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、 <span class="inline">var</span> の宣言を使用したが、変数名の指定を省略したことを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          var に変数名がない</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、 <span
+            class="inline">var</span> の宣言を使用したが、変数名の指定を省略したことを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">endregionに一致する#regionは見つかりませんでした。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、コード内で開始領域を定義せずに終了領域を宣言したことを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          endregionに一致する#regionは見つかりませんでした。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、コード内で開始領域を定義せずに終了領域を宣言したことを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">スクリプトの末尾に閉じない#領域が見つかった</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、コードのどこかで領域を宣言しているが、その領域の終了領域がどこにも定義されていないことを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          スクリプトの末尾に閉じない#領域が見つかった</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、コードのどこかで領域を宣言しているが、その領域の終了領域がどこにも定義されていないことを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">予期しない端末演算子[val]が発生</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          予期しない端末演算子[val]が発生</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation
+          Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a
+            href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">予期せぬ単項演算子[val]</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、単項演算子（+, -, =, など）がコード内で予想外の場所で見つかったときに起こるもので、[val]はその演算子を表示します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          予期せぬ単項演算子[val]</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、単項演算子（+, -, =,
+          など）がコード内で予想外の場所で見つかったときに起こるもので、[val]はその演算子を表示します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">予期しない三項演算子[val]が発生</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、コードのどこかで三項演算子の部分の使い方が間違っていることを意味し、[val]はエラーになっている部分を示しています。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          予期しない三項演算子[val]が発生</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、コードのどこかで三項演算子の部分の使い方が間違っていることを意味し、[val]はエラーになっている部分を示しています。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Try には catch 節または finally 節が必要です。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、 <span class="inline">try</span> 関数を呼び出したが、 <span class="inline">catch</span> または <span class="inline">finally</span> 節を入れなかったことを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          Try には catch 節または finally 節が必要です。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、 <span
+            class="inline">try</span> 関数を呼び出したが、 <span class="inline">catch</span> または <span
+            class="inline">finally</span> 節を入れなかったことを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">マクロ [val] は既に存在します。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">既に定義されているマクロと同じ名前のマクロ[val]を定義しようとすると、このエラーが発生することがあります。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          マクロ [val] は既に存在します。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          既に定義されているマクロと同じ名前のマクロ[val]を定義しようとすると、このエラーが発生することがあります。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">変数の参照に誤りがあり、[val]を取得しました。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          変数の参照に誤りがあり、[val]を取得しました。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、内部でAST Validation
+          Errorが発生していることを意味します（このエラーは発生しないはずですが、発生した場合は、<a
+            href="../../IDE_Navigation/Menus/The_Help_Menu.htm">ヘルプメニューから</a>バグレポートを提出することを検討してください）。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">多重関係等式への代入 -<span class="notranslate">GML</span> は、式中の多重代入をサポートしていません。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、<span class="notranslate">GameMaker Language</span> でサポートされていない複数演算子による代入 (複合代入とも呼ばれます) に問題があることを示しています。 これには &quot;<span class="inline">*=</span>&quot; や &quot;<span class="inline">/=</span>&quot; などのようなものが該当します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          多重関係等式への代入 -<span class="notranslate">GML</span> は、式中の多重代入をサポートしていません。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、<span
+            class="notranslate">GameMaker Language</span> でサポートされていない複数演算子による代入 (複合代入とも呼ばれます) に問題があることを示しています。 これには
+          &quot;<span class="inline">*=</span>&quot; や &quot;<span class="inline">/=</span>&quot; などのようなものが該当します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">マクロ[val]は未使用</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、マクロ[val]がコードのどこかで使われていない場合に起こります。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          マクロ[val]は未使用</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、マクロ[val]がコードのどこかで使われていない場合に起こります。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">変数[val]は一度だけ参照される</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、与えられた変数[val]がコード内で一度だけ参照されることを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          変数[val]は一度だけ参照される</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、与えられた変数[val]がコード内で一度だけ参照されることを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">未割り当ての変数[val]を参照した</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、変数[val]がコード内で参照されているが、以前はどこにも値が割り当てられていなかったことを意味します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          未割り当ての変数[val]を参照した</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          これは、変数[val]がコード内で参照されているが、以前はどこにも値が割り当てられていなかったことを意味します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">コンストラクタとして宣言された関数だけが、継承を使用することができます。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、コンストラクタとして宣言されていない関数に対して継承を使用しようとしたことを示します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          コンストラクタとして宣言された関数だけが、継承を使用することができます。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、コンストラクタとして宣言されていない関数に対して継承を使用しようとしたことを示します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">不明な関数属性[val]。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、インカイン関数を宣言する際に、無効または未確認の関数修飾子（[val]）を使用しようとしたことを意味します（関数修飾子は、 <span class="inline">constructor</span> キーワードのようなもので、サポートされています）。 </td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          不明な関数属性[val]。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Error Icon" height="12"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" />
+        </td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、インカイン関数を宣言する際に、無効または未確認の関数修飾子（[val]）を使用しようとしたことを意味します（関数修飾子は、 <span class="inline">constructor</span>
+          キーワードのようなもので、サポートされています）。 </td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">継承された引数&quot;[val]&quot;が関数引数にありません。</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">このエラーは、親関数定義で宣言されていない継承関数の引数を参照しようとしたときに発生します。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          継承された引数&quot;[val]&quot;が関数引数にありません。</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Warning Icon"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png" /></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          このエラーは、親関数定義で宣言されていない継承関数の引数を参照しようとしたときに発生します。</td>
       </tr>
       <tr>
-        <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">[val] 作成コード</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Warning Icon" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、<span class="notranslate">room</span> の作成コードのどこかに、エラー[val]がある場合に起こります。</td>
+        <td
+          style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          [val] 作成コード</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img
+            alt="Syntax Warning Icon"
+            src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxWarning.png" /></td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">これは、<span
+            class="notranslate">room</span> の作成コードのどこかに、エラー[val]がある場合に起こります。</td>
       </tr>
     </tbody>
   </table>
   <h2 id="h">フェザーメッセージ（フェザー使用可）</h2>
   <p>Featherを有効にすると、Syntax ErrorsウィンドウはFeather Messagesウィンドウに置き換わります。 </p>
-  <p><img>Feather Messages ウィンドウには、Feather がコード内で遭遇したエラーと警告、および特定のコードパターンを発見したときに表示されるサジェストが一覧表示されます。どのような種類のエラーが表示されるかは、<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather Settings</a>の Message Severity で定義したプロファイルに依存します。</p>
-  <p>このウィンドウでは、メッセージのリストをメッセージコード、メッセージテキスト（アルファベット順）、リソース（リソース名のアルファベット順）で昇順または降順にソートすることができます。また、ウィンドウの右上にある検索ボックスを使って検索することもできます。</p>
+  <p><img>Feather Messages ウィンドウには、Feather
+    がコード内で遭遇したエラーと警告、および特定のコードパターンを発見したときに表示されるサジェストが一覧表示されます。どのような種類のエラーが表示されるかは、<a
+      href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather Settings</a>の Message
+    Severity で定義したプロファイルに依存します。</p>
+  <p>
+    このウィンドウでは、メッセージのリストをメッセージコード、メッセージテキスト（アルファベット順）、リソース（リソース名のアルファベット順）で昇順または降順にソートすることができます。また、ウィンドウの右上にある検索ボックスを使って検索することもできます。
+  </p>
   <p>フェザーメッセージは、3つのカテゴリーに分類されます。</p>
   <ul class="colour">
-    <li><img> <strong>警告</strong>ほとんどの場合、ゲームのコンパイルは中止されませんが、 エラーが発生する可能性がある場合に表示されます。これらの警告の最も一般的な原因は、式の中で変数が使われていて、それがまだ他の場所で定義されていない場合、または変数が定義されているが使用されていない場合です。<span class="notranslate">runtime</span> </li>
+    <li><img> <strong>警告</strong>ほとんどの場合、ゲームのコンパイルは中止されませんが、
+      エラーが発生する可能性がある場合に表示されます。これらの警告の最も一般的な原因は、式の中で変数が使われていて、それがまだ他の場所で定義されていない場合、または変数が定義されているが使用されていない場合です。<span
+        class="notranslate">runtime</span> </li>
     <li><img> <strong>エラー</strong>です。これらは、ゲームのコンパイルはもちろん、実行も許可されない問題です。これらはコードを書き進める前に修正する必要があります。</li>
     <li><img> <strong>提案</strong>これらは、さまざまなことに関連する、コードの改善可能な提案です。</li>
   </ul>
@@ -256,11 +509,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="../Error_Reporting.htm">エラー報告</a></div>
-        <div style="float:right">次へ<a href="Compiler_Errors.htm">コンパイラーエラー</a></div>
+        <div style="float:left">前のページ：<a href="../Error_Reporting.htm">エラー報告</a></div>
+        <div style="float:right">次のページ：<a href="Compiler_Errors.htm">コンパイラーエラー</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Syntax Errors
@@ -269,4 +523,5 @@ Syntax Errors
 syntax_errors
 -->
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>irandom</title>
@@ -12,28 +13,36 @@
   <meta name="rh-index-keywords" content="irandom" />
   <meta name="search-keywords" content="irandom" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">irandom</span></h1>
-  <p>この非常に便利な関数は、整数（全数）のみを返します。したがって、たとえば 0 から 9 までの乱数を得るには、 <span class="inline">irandom(9)</span> を使えば、0 から 9<i>までの</i>数値を返します。浮動小数点も使えますが、ポイントより上の値は除外されるので、 <span class="inline">irandom(9.7)</span> は 0 から 9 までの値だけを返すことに注意してください。この関数の上限は$7fffffffffffffffLLなので、非常に大きな数値を使用する場合は注意が必要です。</p>
-  <p class="note"><b><span class="note">注意</span></b>これは、<span data-keyref="GameMaker Name">GameMakerが</span>毎回同じ初期ランダムシードを生成し、<span class="notranslate">debugging</span> のコードをより簡単に作成するためである。この挙動を避けるには <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span>をゲーム開始時に指定します。</p>
+  <p>この非常に便利な関数は、整数（全数）のみを返します。したがって、たとえば 0 から 9 までの乱数を得るには、 <span class="inline">irandom(9)</span> を使えば、0 から
+    9<i>までの</i>数値を返します。浮動小数点も使えますが、ポイントより上の値は除外されるので、 <span class="inline">irandom(9.7)</span> は 0 から 9
+    までの値だけを返すことに注意してください。この関数の上限は$7fffffffffffffffLLなので、非常に大きな数値を使用する場合は注意が必要です。</p>
+  <p class="note"><b><span class="note">注意</span></b>これは、<span
+      data-keyref="GameMaker Name">GameMakerが</span>毎回同じ初期ランダムシードを生成し、<span class="notranslate">debugging</span>
+    のコードをより簡単に作成するためである。この挙動を避けるには <span style="font-size:1px;"><a href="randomise.htm"><span
+          class="inline">randomise()</span></a></span>をゲーム開始時に指定します。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">irandom</span>(n);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th><th>タイプ</th>
-        <th>商品説明</th>
-     </tr>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
+      </tr>
       <tr>
-        <td><span class="notranslate">n</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">n</span></td>
+        <td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The upper range from which the random number will be selected.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
   <p> </p>
   <h4>例</h4>
@@ -48,11 +57,13 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Number_Functions.htm">ナンバーファンクション</a></div>
-        <div style="float:right">次のページ <a href="irandom_range.htm"><span class="notranslate">irandom_range</span></a></div>
+        <div style="float:left">前のページ：<a href="Number_Functions.htm">ナンバーファンクション</a></div>
+        <div style="float:right">次のページ：<a href="irandom_range.htm"><span class="notranslate">irandom_range</span></a>
+        </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 irandom
@@ -61,4 +72,5 @@ irandom
 irandom
 -->
 </body>
+
 </html>

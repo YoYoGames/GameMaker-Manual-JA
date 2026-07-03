@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>バッファの使い方ガイド</title>
@@ -12,13 +13,29 @@
   <meta name="rh-index-keywords" content="Guide To Using Buffers" />
   <meta name="search-keywords" content="Using Buffers,buffers" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>バッファの使い方ガイド</h1>
-  <p><span class="notranslate">buffer</span> (プログラミングの場合) は基本的にシステムメモリ内のスペースで、あらゆるもののための小さなデータパケットを保存するために使用されます (たとえば、データ転送、衝突、カラーデータなど)。システムメモリ内にあるため、アクセスが非常に速く、<span class="notranslate">buffer</span> は一般的に、処理前のネットワーク情報の受信や、ゲームのチェックポイントの保存など、非常に短期間の保存に使用されます（これについては、このページの下の例で説明しています）。</p>
-  <p><img>バッファは、システムメモリに<a class="glossterm" data-glossterm="バイト" href="#">バイト</a> <span class="glossextra">数で</span>計算されたスペースを割り当てることで作成され、ゲームが実行されている限り、または適切な関数を使用して<span class="notranslate">buffer</span> を削除するまで、ゲームのために確保されます（<a href="../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">ここに</a>すべての<span class="notranslate">GML</span> <span class="notranslate">buffer</span> 関数がリストされています）。つまり、ゲームにフォーカスが当たっていないときでも（たとえば、モバイルデバイスで電話をかけると、ゲームはバックグラウンドになります）、<span class="notranslate">buffer</span> は存在しますが、ゲームを閉じたり再スタートすると、<span class="notranslate">buffer</span> は失われてしまうのです。</p>
-  <p class="note"><strong>注意</strong>：ゲームを再起動しても、<span class="notranslate">buffer</span> はクリアされず、削除されません !しかし、IDハンドルが失われ、メモリリークを引き起こし、最終的にゲームをクラッシュさせるため、以前に作成された<span class="notranslate">buffer</span> にそれ以上アクセスすることができなくなります。したがって、ゲームを再スタートするときは、まず<span class="notranslate">buffers</span> を削除することを忘れないようにしてください。</p>
-  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、4種類の<span class="notranslate">buffer</span> を作成することができます。その理由は、<span class="notranslate">buffers</span> は高度に最適化された一時記憶媒体として設計されているため、保存したいデータの種類に適した<span class="notranslate">buffer</span> を作成する必要があり、そうしないとエラーが発生したり、コードのボトルネックになる可能性があるためです。このことをさらに説明する前に、利用可能な4つの<span class="notranslate">buffer</span> 型（<span class="notranslate">GML</span> で<strong>定数として </strong>定義されています）について見てみましょう。</p>
+  <p><span class="notranslate">buffer</span> (プログラミングの場合) は基本的にシステムメモリ内のスペースで、あらゆるもののための小さなデータパケットを保存するために使用されます
+    (たとえば、データ転送、衝突、カラーデータなど)。システムメモリ内にあるため、アクセスが非常に速く、<span class="notranslate">buffer</span>
+    は一般的に、処理前のネットワーク情報の受信や、ゲームのチェックポイントの保存など、非常に短期間の保存に使用されます（これについては、このページの下の例で説明しています）。</p>
+  <p><img>バッファは、システムメモリに<a class="glossterm" data-glossterm="バイト" href="#">バイト</a> <span
+      class="glossextra">数で</span>計算されたスペースを割り当てることで作成され、ゲームが実行されている限り、または適切な関数を使用して<span
+      class="notranslate">buffer</span> を削除するまで、ゲームのために確保されます（<a
+      href="../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">ここに</a>すべての<span class="notranslate">GML</span>
+    <span class="notranslate">buffer</span>
+    関数がリストされています）。つまり、ゲームにフォーカスが当たっていないときでも（たとえば、モバイルデバイスで電話をかけると、ゲームはバックグラウンドになります）、<span
+      class="notranslate">buffer</span> は存在しますが、ゲームを閉じたり再スタートすると、<span class="notranslate">buffer</span> は失われてしまうのです。
+  </p>
+  <p class="note"><strong>注意</strong>：ゲームを再起動しても、<span class="notranslate">buffer</span> はクリアされず、削除されません
+    !しかし、IDハンドルが失われ、メモリリークを引き起こし、最終的にゲームをクラッシュさせるため、以前に作成された<span class="notranslate">buffer</span>
+    にそれ以上アクセスすることができなくなります。したがって、ゲームを再スタートするときは、まず<span class="notranslate">buffers</span> を削除することを忘れないようにしてください。</p>
+  <p><span data-keyref="GameMaker Name">GameMakerでは</span>、4種類の<span class="notranslate">buffer</span>
+    を作成することができます。その理由は、<span class="notranslate">buffers</span> は高度に最適化された一時記憶媒体として設計されているため、保存したいデータの種類に適した<span
+      class="notranslate">buffer</span> を作成する必要があり、そうしないとエラーが発生したり、コードのボトルネックになる可能性があるためです。このことをさらに説明する前に、利用可能な4つの<span
+      class="notranslate">buffer</span> 型（<span class="notranslate">GML</span> で<strong>定数として
+    </strong>定義されています）について見てみましょう。</p>
   <p> </p>
   <table>
     <tbody>
@@ -29,41 +46,58 @@
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
         <td><br />
-          バイト単位で固定されたサイズの<span class="notranslate">buffer</span> 。このサイズは<span class="notranslate">buffer</span> の作成時に設定され、以後変更することはできません。</td>
+          バイト単位で固定されたサイズの<span class="notranslate">buffer</span> 。このサイズは<span class="notranslate">buffer</span>
+          の作成時に設定され、以後変更することはできません。</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
         <td><br />
-          <span class="notranslate">buffer</span> データが追加されると動的に<i>成長</i>する。初期サイズ (格納されるデータのサイズの近似値) で作成し、この初期サイズを超えるデータを受け入れるために拡張します。</td>
+          <span class="notranslate">buffer</span> データが追加されると動的に<i>成長</i>する。初期サイズ (格納されるデータのサイズの近似値)
+          で作成し、この初期サイズを超えるデータを受け入れるために拡張します。
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
         <td><br />
-          <span class="notranslate">buffer</span> データが<i>折り返さ</i>れる場所です。追加されるデータが<span class="notranslate">buffer</span> サイズの限界に達すると、上書きは<span class="notranslate">buffer</span> の先頭に戻され、その時点からさらに書き込みが続けられる。</td>
+          <span class="notranslate">buffer</span> データが<i>折り返さ</i>れる場所です。追加されるデータが<span class="notranslate">buffer</span>
+          サイズの限界に達すると、上書きは<span class="notranslate">buffer</span> の先頭に戻され、その時点からさらに書き込みが続けられる。
+        </td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
         <td><br />
-          これは特別な &quot;stripped down&quot;<span class="notranslate">buffer</span> で、読み書きが非常に高速になります。ただし、 <span class="inline"><span class="inline">buffer_u8</span> のデータ型でのみ使用でき、1 バイトアライメントでなければなりません。(<b>データ型と</b> <b>バイトアライメントに関する</b>情報は、このページのさらに下にあります)。</td>
+          これは特別な &quot;stripped down&quot;<span class="notranslate">buffer</span> で、読み書きが非常に高速になります。ただし、 <span
+            class="inline"><span class="inline">buffer_u8</span> のデータ型でのみ使用でき、1 バイトアライメントでなければなりません。(<b>データ型と</b>
+            <b>バイトアライメントに関する</b>情報は、このページのさらに下にあります)。</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <p>以上が<span data-keyref="GameMaker Name">GameMakerを</span>使用する際に選択できる<span class="notranslate">buffer</span> の種類ですが、どれを選ぶかは、使用したい用途によって大きく異なります。例えば、grow<span class="notranslate">buffer</span> は、実際に入るデータ量が分からないので、セーブゲームを作るためにデータの「スナップショット」を保存するのに使いますし、fast<span class="notranslate">buffer</span> は、例えば画像の<a class="glossterm" data-glossterm="アールジービー" href="#">ARGB</a>データを処理するときに、扱う値がすべて0〜255または-128〜127であることが分かっている場合に使います。</p>
-  <p><img> <span class="notranslate">buffer</span> を作成する場合、常にその型に適したサイズで作成するようにします。一般的なルールとしては、保存するデータの最大サイズに対応するように作成し、疑わしい場合は、上書きエラーを防止するために grow を使用するようにします。<span class="notranslate">buffer</span> </p>
+  <p>以上が<span data-keyref="GameMaker Name">GameMakerを</span>使用する際に選択できる<span class="notranslate">buffer</span>
+    の種類ですが、どれを選ぶかは、使用したい用途によって大きく異なります。例えば、grow<span class="notranslate">buffer</span>
+    は、実際に入るデータ量が分からないので、セーブゲームを作るためにデータの「スナップショット」を保存するのに使いますし、fast<span class="notranslate">buffer</span> は、例えば画像の<a
+      class="glossterm" data-glossterm="アールジービー"
+      href="#">ARGB</a>データを処理するときに、扱う値がすべて0〜255または-128〜127であることが分かっている場合に使います。</p>
+  <p><img> <span class="notranslate">buffer</span>
+    を作成する場合、常にその型に適したサイズで作成するようにします。一般的なルールとしては、保存するデータの最大サイズに対応するように作成し、疑わしい場合は、上書きエラーを防止するために grow を使用するようにします。<span
+      class="notranslate">buffer</span> </p>
   <p>実際に<span class="notranslate">buffer</span> を作成するコードは以下のようになります。</p>
   <p class="code">player_buffer = buffer_create(16384, buffer_fixed, 2);</p>
   <p><br />
-    この場合、16384バイトでバイトアラインメントが2の固定<span class="notranslate">buffer</span> 。この関数は、後でこの<span class="notranslate">buffer</span> を参照するために変数に格納されるユニークなID値を返します。</p>
-  <p><span class="notranslate">buffer</span> にデータを読み書きするときは、その「データ型」で定義されたデータの「チャンク」単位で行います。データ型」は、書き込まれる値に対して<span class="notranslate">buffer</span> 内で割り当てられるバイト数を設定するもので、これを正しく設定しないと、コードに非常に奇妙な結果（あるいはエラー）が発生することになります。</p>
-  <p>バッファへの書き込み（および読み込み）は<strong>順次</strong>行われます。つまり、1つのデータが次々と書き込まれ、各データは決められた型になります。つまり、<span class="notranslate">buffer</span> に書き込むデータが何であるかを常に意識しておくことが理想的です。これらのデータ型は、<span class="notranslate">GML</span> 、以下の定数で定義されています。</p>
+    この場合、16384バイトでバイトアラインメントが2の固定<span class="notranslate">buffer</span> 。この関数は、後でこの<span
+      class="notranslate">buffer</span> を参照するために変数に格納されるユニークなID値を返します。</p>
+  <p><span class="notranslate">buffer</span> にデータを読み書きするときは、その「データ型」で定義されたデータの「チャンク」単位で行います。データ型」は、書き込まれる値に対して<span
+      class="notranslate">buffer</span> 内で割り当てられるバイト数を設定するもので、これを正しく設定しないと、コードに非常に奇妙な結果（あるいはエラー）が発生することになります。</p>
+  <p>バッファへの書き込み（および読み込み）は<strong>順次</strong>行われます。つまり、1つのデータが次々と書き込まれ、各データは決められた型になります。つまり、<span
+      class="notranslate">buffer</span> に書き込むデータが何であるかを常に意識しておくことが理想的です。これらのデータ型は、<span class="notranslate">GML</span>
+    、以下の定数で定義されています。</p>
   <p> </p>
   <table>
     <tbody>
       <tr>
         <th>データ型定数</th>
         <th>バイト</th>
-        <th>商品説明</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="inline">buffer_u8</span></td>
@@ -135,7 +169,9 @@
         <td><span class="inline">buffer_string</span></td>
         <td>N/A</td>
         <td><br />
-          これは UTF-8 のヌル終端 (0x00) である<span class="notranslate">string</span> 。基本的には<span class="notranslate">GameMaker</span> <span class="notranslate">string</span> が<span class="notranslate">buffer</span> にダンプされ、末尾に 0 が付きます。</td>
+          これは UTF-8 のヌル終端 (0x00) である<span class="notranslate">string</span> 。基本的には<span
+            class="notranslate">GameMaker</span> <span class="notranslate">string</span> が<span
+            class="notranslate">buffer</span> にダンプされ、末尾に 0 が付きます。</td>
       </tr>
     </tbody>
   </table>
@@ -146,67 +182,128 @@
     buffer_write(buff, buffer_s16, obj_Player.x);<br />
     buffer_write(buff, buffer_s16, obj_Player.y);<br />
     buffer_write(buff, buffer_string, global.Player_Name);</p>
-  <p>上記の例を見ると、<span class="notranslate">buffer</span> に異なるタイプのデータを同時に書き込むことができ（<em>高速 </em>バッファータイプを使用する場合は、特定のデータタイプにのみ制限されます）、このデータは<span class="notranslate">buffer</span> に順次追加されます（ただし<span class="notranslate">buffer</span> における実際の位置は、以下で説明するバイトアライメントによって決まります）。これは、<span class="notranslate">buffer</span> から情報を読み出す場合も同様で、上記の例の場合、<span class="notranslate">buffer</span> からデータを書き込んだのと同じ順序で、同じデータ型かどうかをチェックしながら読み出すことになります。</p>
+  <p>上記の例を見ると、<span class="notranslate">buffer</span> に異なるタイプのデータを同時に書き込むことができ（<em>高速
+    </em>バッファータイプを使用する場合は、特定のデータタイプにのみ制限されます）、このデータは<span class="notranslate">buffer</span> に順次追加されます（ただし<span
+      class="notranslate">buffer</span> における実際の位置は、以下で説明するバイトアライメントによって決まります）。これは、<span
+      class="notranslate">buffer</span> から情報を読み出す場合も同様で、上記の例の場合、<span class="notranslate">buffer</span>
+    からデータを書き込んだのと同じ順序で、同じデータ型かどうかをチェックしながら読み出すことになります。</p>
   <p class="code">global.Sound = buffer_read(buff, buffer_bool);<br />
     global.Music = buffer_read(buff, buffer_bool);<br />
     obj_Player.x = buffer_read(buff, buffer_s16);<br />
     obj_Player.y = buffer_read(buff, buffer_s16);<br />
     global.Player_Name = buffer_read(buff, buffer_string);</p>
-  <p>このように、<span class="notranslate">buffer</span> に読み込んだのと同じ順序で情報を読み出します。<span class="notranslate">buffer</span> のデータの追加と削除の方法については、以下の例を参照してください。</p>
-  <p>このページをご覧になっている方は、<span class="notranslate">buffer</span> の<strong>バイトアライメントについて </strong>言及されているのをご覧になったことがあると思います。これは基本的に、与えられた<span class="notranslate">buffer</span> の中で新しいデータが格納される位置のことを指します。これはどのように機能するのでしょうか？シングルバイトアライメント<span class="notranslate">buffer</span> の場合、各データは<span class="notranslate">buffer</span> に順次書き込まれ、新しいデータは前のデータの直後に追加されます。しかし、2バイトアラインの<span class="notranslate">buffer</span> は、各データを2バイト間隔で書き込むので、最初の書き込みが1バイトのデータであっても、次の書き込みは2バイトに揃うように移動されることになります。</p>
-  <p><img>つまり、バイトアライメントを例えば4バイトに設定し、1バイトのデータを書き込んでから<span class="notranslate">buffer</span> <strong>Tell </strong>（Tellは現在の読み書きの位置を<span class="notranslate">buffer</span> ）すると、1バイトの<strong>オフセット </strong>（この場合のオフセットは、<span class="notranslate">buffer</span> の先頭から現在の読み書きの位置までのバイト数です）が得られます。</p>
-  <p>しかし、1バイトのデータを<em>書き込んでから </em>、<span class="notranslate">buffer</span> を実行すると、（2バイトのデータしか書いていないのに）5バイトのオフセットが発生します。これは、4バイトの<span class="notranslate">buffer</span> アライメントに合わせるため、データをパディングしているためです。</p>
-  <p>基本的には、アライメントが影響を与えるのは書き込む<em>場所だけ </em>なので、何かを書き込んだ後に<span class="notranslate">buffer</span> を実行すると、前に書き込んだデータのすぐ後にある現在の書き込み位置が返されます。しかし、その後に別のデータを書き込むと、<span class="notranslate">buffer</span> は実際にデータを書き込む前に、書き込み位置をアライメントサイズの次の倍数に移動させることに注意してください。</p>
+  <p>このように、<span class="notranslate">buffer</span> に読み込んだのと同じ順序で情報を読み出します。<span class="notranslate">buffer</span>
+    のデータの追加と削除の方法については、以下の例を参照してください。</p>
+  <p>このページをご覧になっている方は、<span class="notranslate">buffer</span> の<strong>バイトアライメントについて
+    </strong>言及されているのをご覧になったことがあると思います。これは基本的に、与えられた<span class="notranslate">buffer</span>
+    の中で新しいデータが格納される位置のことを指します。これはどのように機能するのでしょうか？シングルバイトアライメント<span class="notranslate">buffer</span> の場合、各データは<span
+      class="notranslate">buffer</span> に順次書き込まれ、新しいデータは前のデータの直後に追加されます。しかし、2バイトアラインの<span
+      class="notranslate">buffer</span> は、各データを2バイト間隔で書き込むので、最初の書き込みが1バイトのデータであっても、次の書き込みは2バイトに揃うように移動されることになります。</p>
+  <p><img>つまり、バイトアライメントを例えば4バイトに設定し、1バイトのデータを書き込んでから<span class="notranslate">buffer</span> <strong>Tell
+    </strong>（Tellは現在の読み書きの位置を<span class="notranslate">buffer</span> ）すると、1バイトの<strong>オフセット
+    </strong>（この場合のオフセットは、<span class="notranslate">buffer</span> の先頭から現在の読み書きの位置までのバイト数です）が得られます。</p>
+  <p>しかし、1バイトのデータを<em>書き込んでから </em>、<span class="notranslate">buffer</span>
+    を実行すると、（2バイトのデータしか書いていないのに）5バイトのオフセットが発生します。これは、4バイトの<span class="notranslate">buffer</span>
+    アライメントに合わせるため、データをパディングしているためです。</p>
+  <p>基本的には、アライメントが影響を与えるのは書き込む<em>場所だけ </em>なので、何かを書き込んだ後に<span class="notranslate">buffer</span>
+    を実行すると、前に書き込んだデータのすぐ後にある現在の書き込み位置が返されます。しかし、その後に別のデータを書き込むと、<span class="notranslate">buffer</span>
+    は実際にデータを書き込む前に、書き込み位置をアライメントサイズの次の倍数に移動させることに注意してください。</p>
   <p>以下では、<span class="notranslate">buffers</span> をプロジェクトで使用する場合の例をいくつか紹介します。</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">バッファーチェックポイント</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">どのプラットフォームの<span data-keyref="GameMaker Name">GameMaker</span>ゲームでも使える簡単な例として、<span class="notranslate">buffer</span> という関数があります。 <a href="../GameMaker_Language/GML_Reference/General_Game_Control/game_save_buffer.htm"><span class="inline">game_save_buffer()</span></a>.この関数は、現在のゲーム状態の「スナップショット」を取り、あらかじめ定義された<span class="notranslate">buffer</span> に保存し、それを読み込んで再びその時点のゲームをロードすることができます。</p>
-    <p class="note"><strong>注意</strong>：この機能は非常に限定的で、初心者がチェックポイントシステムを素早く立ち上げるために設計されています。上級者は、データ構造、サーフェス、追加した<span class="notranslate">sprites</span> など、ランタイムに作成できる動的なリソースを保存しないため、ファイル機能を使用して独自のシステムをコーディングすることを好むかもしれません。</p>
-    <p class="dropspot">まず、保存と読み込みを制御するために、<span class="notranslate">object</span> を新規に作成し、<strong>Create Event</strong> を与えることになります。このイベントには、次のようなコードを配置します。</p>
+    <p class="dropspot">どのプラットフォームの<span data-keyref="GameMaker Name">GameMaker</span>ゲームでも使える簡単な例として、<span
+        class="notranslate">buffer</span> という関数があります。 <a
+        href="../GameMaker_Language/GML_Reference/General_Game_Control/game_save_buffer.htm"><span
+          class="inline">game_save_buffer()</span></a>.この関数は、現在のゲーム状態の「スナップショット」を取り、あらかじめ定義された<span
+        class="notranslate">buffer</span> に保存し、それを読み込んで再びその時点のゲームをロードすることができます。</p>
+    <p class="note"><strong>注意</strong>：この関数は非常に限定的で、初心者がチェックポイントシステムを素早く立ち上げるために設計されています。上級者は、データ構造、サーフェス、追加した<span
+        class="notranslate">sprites</span> など、ランタイムに作成できる動的なリソースを保存しないため、ファイル関数を使用して独自のシステムをコーディングすることを好むかもしれません。</p>
+    <p class="dropspot">まず、保存と読み込みを制御するために、<span class="notranslate">object</span> を新規に作成し、<strong>Create Event</strong>
+      を与えることになります。このイベントには、次のようなコードを配置します。</p>
     <p class="code">SaveBuffer = buffer_create(1024, buffer_grow, 1);<br />
       StateSaved = false;</p>
-    <p class="dropspot">最初の行では、1024バイトで1バイトにアラインしたgrow<span class="notranslate">buffer</span> (セーブデータの最終サイズが分からないので)を作成しています。そして、ゲームがセーブされているかどうかをチェックするための変数が作成されます（これはロード時に使用されます）。</p>
+    <p class="dropspot">最初の行では、1024バイトで1バイトにアラインしたgrow<span class="notranslate">buffer</span>
+      (セーブデータの最終サイズが分からないので)を作成しています。そして、ゲームがセーブされているかどうかをチェックするための変数が作成されます（これはロード時に使用されます）。</p>
     <p class="dropspot">次に、<strong>キープレス・イベント</strong>（例）を追加して、現在のゲーム・ステートを作成したバッファに保存します。</p>
     <p class="code">StateSaved = true;<br />
       buffer_seek(SaveBuffer, buffer_seek_start, 0);<br />
       game_save_buffer(SaveBuffer);</p>
-    <p class="dropspot">上記は、まずコントロール変数を <span class="inline">true </span> に設定し（ゲームを<span class="notranslate">buffer</span> に保存するときに、これが保存されるように）、現在の保存状態を書き込む前に<span class="notranslate">buffer</span> の開始点にシークします。なぜ <a href="../GameMaker_Language/GML_Reference/Buffers/buffer_seek.htm"><span class="inline">buffer_seek()</span></a>?さて、このページですでに述べたように、<span class="notranslate">buffer</span> への読み書きは、最後にデータが追加された位置から行います。つまり、<span class="notranslate">buffer</span> を最初に戻さないと、保存するときに、現在の<span class="notranslate">buffer</span> の読み書きの位置にある<span class="notranslate">buffer</span> にデータを追加することになるのです。そこで、関数 <span class="inline">buffer_seek()</span> を使って、tell を<span class="notranslate">buffer</span> の先頭に移動させます。</p>
-    <p class="dropspot">これで、現在のゲームの状態が<span class="notranslate">buffer</span> に保存されました。 次のステップでは、おそらく別の<strong>キープレス・</strong>イベントで、それをロードする方法をコーディングします。</p>
+    <p class="dropspot">上記は、まずコントロール変数を <span class="inline">true </span> に設定し（ゲームを<span
+        class="notranslate">buffer</span> に保存するときに、これが保存されるように）、現在の保存状態を書き込む前に<span class="notranslate">buffer</span>
+      の開始点にシークします。なぜ <a href="../GameMaker_Language/GML_Reference/Buffers/buffer_seek.htm"><span
+          class="inline">buffer_seek()</span></a>?さて、このページですでに述べたように、<span class="notranslate">buffer</span>
+      への読み書きは、最後にデータが追加された位置から行います。つまり、<span class="notranslate">buffer</span> を最初に戻さないと、保存するときに、現在の<span
+        class="notranslate">buffer</span> の読み書きの位置にある<span class="notranslate">buffer</span> にデータを追加することになるのです。そこで、関数
+      <span class="inline">buffer_seek()</span> を使って、tell を<span class="notranslate">buffer</span> の先頭に移動させます。
+    </p>
+    <p class="dropspot">これで、現在のゲームの状態が<span class="notranslate">buffer</span> に保存されました。
+      次のステップでは、おそらく別の<strong>キープレス・</strong>イベントで、それをロードする方法をコーディングします。</p>
     <p class="code">if StateSaved<br />
       {<br />
           buffer_seek(SaveBuffer, buffer_seek_start, 0);<br />
           game_load_buffer(SaveBuffer);<br />
       }</p>
     <p class="dropspot">そして、上記のコードを配置したイベントの終了時にゲームがロードされます。</p>
-    <p class="note"><strong>注意</strong>：これは同じ<span class="notranslate">room</span> でのみ使用され、ゲームを閉じたり再起動した後の完全なセーブゲームを生成するものではありません。</p>
-    <p class="dropspot"><span class="notranslate">object</span> <span class="notranslate">Buffers</span> はメモリに保存されるため、終了時にクリーンアップしないと、メモリリークが発生し、最終的にゲームがラグやクラッシュする可能性があります。そこで、<strong>Room End Event</strong>(<strong>Other</strong>event category) を追加することになるでしょう。</p>
+    <p class="note"><strong>注意</strong>：これは同じ<span class="notranslate">room</span>
+      でのみ使用され、ゲームを閉じたり再起動した後の完全なセーブゲームを生成するものではありません。</p>
+    <p class="dropspot"><span class="notranslate">object</span> <span class="notranslate">Buffers</span>
+      はメモリに保存されるため、終了時にクリーンアップしないと、メモリリークが発生し、最終的にゲームがラグやクラッシュする可能性があります。そこで、<strong>Room End
+        Event</strong>(<strong>Other</strong>event category) を追加することになるでしょう。</p>
     <p class="code">buffer_delete(SaveBuffer);</p>
-    <p class="dropspot">この<span class="notranslate">object</span> を<span class="notranslate">room</span> に入れ、キーを押すと<span class="notranslate">room</span> の状態を保存し、<span class="notranslate">buffer</span> から読み込むことができます。</p>
+    <p class="dropspot">この<span class="notranslate">object</span> を<span class="notranslate">room</span> に入れ、キーを押すと<span
+        class="notranslate">room</span> の状態を保存し、<span class="notranslate">buffer</span> から読み込むことができます。</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">ネットワークバッファ</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerの</span> <a href="../GameMaker_Language/GML_Reference/Networking/Networking.htm">ネットワーク機能を</a>使う場合、<span class="notranslate">buffers</span> 、ネットワーク接続で送信されるデータパケットを作成する必要があります。この例では、この方法を紹介するつもりですが、ネットワークの可能性の範囲から、<span class="notranslate">buffers</span> 自体の使い方を紹介するだけで、ネットワーク・システム全体を紹介するものではありません。</p>
-    <p class="dropspot">最初に紹介するのは、ネットワーク接続のクライアント側のための<span class="notranslate">buffer</span> の作成と使用です。この<span class="notranslate">buffer</span> は小さなデータパケットを作成するために使用され、その後<span class="notranslate">server</span> に送信されます。したがって、インスタンスの<strong>作成</strong>イベントでは、このように<span class="notranslate">buffer</span> を割り当てることになります。</p>
+    <p class="dropspot"><span data-keyref="GameMaker Name">GameMakerの</span> <a
+        href="../GameMaker_Language/GML_Reference/Networking/Networking.htm">ネットワーク機能を</a>使う場合、<span
+        class="notranslate">buffers</span>
+      、ネットワーク接続で送信されるデータパケットを作成する必要があります。この例では、この方法を紹介するつもりですが、ネットワークの可能性の範囲から、<span class="notranslate">buffers</span>
+      自体の使い方を紹介するだけで、ネットワーク・システム全体を紹介するものではありません。</p>
+    <p class="dropspot">最初に紹介するのは、ネットワーク接続のクライアント側のための<span class="notranslate">buffer</span> の作成と使用です。この<span
+        class="notranslate">buffer</span> は小さなデータパケットを作成するために使用され、その後<span class="notranslate">server</span>
+      に送信されます。したがって、インスタンスの<strong>作成</strong>イベントでは、このように<span class="notranslate">buffer</span> を割り当てることになります。</p>
     <p class="code">send_buff = buffer_create(256, buffer_grow, 1);</p>
-    <p class="dropspot">大量のデータを保持することを目的としていないため、<span class="notranslate">buffer</span> を小さく（256バイト）し、さらに送信するデータをいつでも追加する必要がある場合にエラーが発生しないように<span class="notranslate">buffer</span> を大きくし、アライメントは便宜上1つに設定しています。</p>
-    <p class="dropspot"><span class="notranslate">server</span> <span class="notranslate">buffer</span> この例では、プレイヤーが<em>左矢印を押して </em>ゲーム内を移動するときのような<strong>Key Press Eventを</strong>送信することにします。これを行うには、まず必要なデータを<span class="notranslate">buffer</span> に書き込み、それを送信します。</p>
+    <p class="dropspot">大量のデータを保持することを目的としていないため、<span class="notranslate">buffer</span>
+      を小さく（256バイト）し、さらに送信するデータをいつでも追加する必要がある場合にエラーが発生しないように<span class="notranslate">buffer</span>
+      を大きくし、アライメントは便宜上1つに設定しています。</p>
+    <p class="dropspot"><span class="notranslate">server</span> <span class="notranslate">buffer</span>
+      この例では、プレイヤーが<em>左矢印を押して </em>ゲーム内を移動するときのような<strong>Key Press Eventを</strong>送信することにします。これを行うには、まず必要なデータを<span
+        class="notranslate">buffer</span> に書き込み、それを送信します。</p>
     <p class="code">buffer_seek(buff, buffer_seek_start, 0);<br />
       buffer_write(buff, buffer_u8, 1);<br />
       buffer_write(buff, buffer_s16, vk_left);<br />
       buffer_write(buff, buffer_bool, true);<br />
       network_send_packet(client, buff, buffer_tell(buff));</p>
-    <p class="dropspot"><span class="notranslate">buffer</span> に書き込む前に、ネットワークでは常に<span class="notranslate">buffer</span> の先頭からデータを取得するため、tell を<span class="notranslate">buffer</span> の先頭に設定しました。次にチェック値（これは<span class="notranslate">server</span> で処理するイベントの種類を決定するために使用されます）、使用するキー、キーの状態（この場合、押されていれば真）を書き込んでいます。この<span class="notranslate">buffer</span> は、ネットワーク機能によってデータパケットとして送信されます。このとき、<span class="notranslate">buffer</span> の全体を送信するのではないことに注意してください !buffer_tell 関数を使用して<span class="notranslate">buffer</span> の現在の読み取り/書き込み位置を返し、書き込まれたデータのみを送信します (<span class="notranslate">buffer</span> に書き込むと、書き込まれたデータの最後に &quot;tell&quot; が移動することを思い出してください)。これは単に、必要以上のバイトを送らないようにするためです。</p>
-    <p class="dropspot"><span class="notranslate">server</span>受信したデータパケットは、<span class="notranslate">buffer</span> の<span class="notranslate">server</span> に書き込まれ、ゲームの更新に使用される必要があります。そのためには、以下の簡略化したコードのように、<span class="notranslate">object</span> のネットワーク・コントローラ<span class="notranslate">server</span> の<a href="../The_Asset_Editors/Object_Properties/Async_Events.htm">Networking Asynchronous Event</a>を使用することになります。</p>
+    <p class="dropspot"><span class="notranslate">buffer</span> に書き込む前に、ネットワークでは常に<span
+        class="notranslate">buffer</span> の先頭からデータを取得するため、tell を<span class="notranslate">buffer</span>
+      の先頭に設定しました。次にチェック値（これは<span class="notranslate">server</span>
+      で処理するイベントの種類を決定するために使用されます）、使用するキー、キーの状態（この場合、押されていれば真）を書き込んでいます。この<span class="notranslate">buffer</span>
+      は、ネットワーク機能によってデータパケットとして送信されます。このとき、<span class="notranslate">buffer</span> の全体を送信するのではないことに注意してください !buffer_tell
+      関数を使用して<span class="notranslate">buffer</span> の現在の読み取り/書き込み位置を返し、書き込まれたデータのみを送信します (<span
+        class="notranslate">buffer</span> に書き込むと、書き込まれたデータの最後に &quot;tell&quot;
+      が移動することを思い出してください)。これは単に、必要以上のバイトを送らないようにするためです。</p>
+    <p class="dropspot"><span class="notranslate">server</span>受信したデータパケットは、<span class="notranslate">buffer</span>
+      の<span class="notranslate">server</span> に書き込まれ、ゲームの更新に使用される必要があります。そのためには、以下の簡略化したコードのように、<span
+        class="notranslate">object</span> のネットワーク・コントローラ<span class="notranslate">server</span> の<a
+        href="../The_Asset_Editors/Object_Properties/Async_Events.htm">Networking Asynchronous Event</a>を使用することになります。
+    </p>
     <p class="code">var buff = ds_map_find_value(async_load, &quot;buffer&quot;);<br />
       if (cmd == buffer_read(buff, buffer_u8)) <br />
       {<br />
           key = buffer_read(buff, buffer_s16);<br />
           key_state = buffer_read(buff, buffer_bool);<br />
       }</p>
-    <p class="dropspot">非同期イベントには、特別な一時的DSマップ <span class="inline">async_load</span> （イベントの終了時に自動的にメモリから削除されます）、ネットワークから受信するデータの種類に応じて異なる情報が含まれます。この場合、マップがチェックされ、クライアントから送信された<span class="notranslate">buffer</span> データパケットであることが判明したと仮定している。<span class="notranslate">buffer</span> この場合、値「1」はキーイベントを表します。しかし、このようなものをコーディングする場合、物事を単純化するためにこれらの値を保持する定数を定義するべきです。そして、押されているキーとその状態（<span class="inline">true</span> = 押されている、 <span class="inline">false</span> = 離されている）を保存します。この情報は、送信側のクライアント・プレーヤーの新しいステータスですべてのクライアントを更新するために使用されます。</p>
-    <p class="note"><strong>注</strong>：DS マップから作成される<span class="notranslate">buffer</span> は、Network Asynchronous Event の終了時に自動的に削除されるため、ここで<span class="inline" style="font-size: 14px">buffer_delete()</span>を使用する必要はない。</p>
+    <p class="dropspot">非同期イベントには、特別な一時的DSマップ <span class="inline">async_load</span>
+      （イベントの終了時に自動的にメモリから削除されます）、ネットワークから受信するデータの種類に応じて異なる情報が含まれます。この場合、マップがチェックされ、クライアントから送信された<span
+        class="notranslate">buffer</span> データパケットであることが判明したと仮定している。<span class="notranslate">buffer</span>
+      この場合、値「1」はキーイベントを表します。しかし、このようなものをコーディングする場合、物事を単純化するためにこれらの値を保持する定数を定義するべきです。そして、押されているキーとその状態（<span
+        class="inline">true</span> = 押されている、 <span class="inline">false</span> =
+      離されている）を保存します。この情報は、送信側のクライアント・プレーヤーの新しいステータスですべてのクライアントを更新するために使用されます。</p>
+    <p class="note"><strong>注</strong>：DS マップから作成される<span class="notranslate">buffer</span> は、Network Asynchronous Event
+      の終了時に自動的に削除されるため、ここで<span class="inline" style="font-size: 14px">buffer_delete()</span>を使用する必要はない。</p>
     <p class="dropspot"> </p>
   </div>
   <p> </p>
@@ -215,11 +312,12 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Additional_Information.htm">追加情報</a></div>
-        <div style="float:right">次へ<a href="Bitwise_Operators.htm">ビット演算子</a></div>
+        <div style="float:left">前のページ：<a href="Additional_Information.htm">追加情報</a></div>
+        <div style="float:right">次のページ：<a href="Bitwise_Operators.htm">ビット演算子</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2021 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Buffers
@@ -229,4 +327,5 @@ Using Buffers
 using_buffers
 -->
 </body>
+
 </html>

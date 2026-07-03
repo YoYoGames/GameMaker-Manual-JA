@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_sequence_play</title>
@@ -12,20 +13,30 @@
   <meta name="rh-index-keywords" content="layer_sequence_play" />
   <meta name="search-keywords" content="layer_sequence_play" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">layer_sequence_play</span></h1>
-  <p>この関数は、与えられた<span class="notranslate">sequence</span> の再生を開始することができます。で返された<span class="notranslate">sequence</span> の要素 ID を指定します。 <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>または<a href="../General_Layer_Functions/General_Layer_Functions.htm">レイヤー要素関数の</a>1つによって再生されます。この関数は<span class="notranslate">sequence</span> を再生し，必要ならば関数 <a href="layer_sequence_pause.htm"><span class="inline">layer_sequence_pause()</span></a>.</p>
-  <p class="note"><strong>重要!</strong> <span class="notranslate">sequence</span> にインスタンスがある場合、これらのインスタンスは<span class="inline"><span style="font-size:14px;">image_xscale</span> /<span class="inline"><span style="font-size:14px;">image_yscale</span> / <span class="inline"><span style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span> /<span class="inline"><span style="font-size:14px;">y</span> の変数を変更してはいけません。再生開始後に<span class="notranslate">sequence</span> が各ステップを更新するときに上書きされてしまうからです。</p>
+  <p>この関数は、与えられた<span class="notranslate">sequence</span> の再生を開始することができます。で返された<span class="notranslate">sequence</span>
+    の要素 ID を指定します。 <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a>または<a
+      href="../General_Layer_Functions/General_Layer_Functions.htm">レイヤー要素関数の</a>1つによって再生されます。この関数は<span
+      class="notranslate">sequence</span> を再生し，必要ならば関数 <a href="layer_sequence_pause.htm"><span
+        class="inline">layer_sequence_pause()</span></a>.</p>
+  <p class="note"><strong>重要!</strong> <span class="notranslate">sequence</span> にインスタンスがある場合、これらのインスタンスは<span
+      class="inline"><span style="font-size:14px;">image_xscale</span> /<span class="inline"><span
+          style="font-size:14px;">image_yscale</span> / <span class="inline"><span
+            style="font-size:14px;">image_angle</span> /<span class="inline"><span style="font-size:14px;">x</span>
+            /<span class="inline"><span style="font-size:14px;">y</span> の変数を変更してはいけません。再生開始後に<span
+                class="notranslate">sequence</span> が各ステップを更新するときに上書きされてしまうからです。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">layer_sequence_play</span>(sequence_element_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">sequence_element_id</span></td>
@@ -35,7 +46,7 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>例</h4>
@@ -58,18 +69,22 @@
             }<br />
         }<br />
     }</p>
-  <p>上記のコードでは、キーが押されたときに、ゲームが一時停止しているかどうかをチェックしています。ゲームが一時停止している場合は、現在のレイヤー（呼び出し元のインスタンスのレイヤー）上のすべての<span class="notranslate">loops</span> 要素を<span class="notranslate">sequence</span> して再生を一時停止し、ゲームが一時停止していない場合は、<span class="notranslate">loop</span> の再生を再開します。</p>
+  <p>上記のコードでは、キーが押されたときに、ゲームが一時停止しているかどうかをチェックしています。ゲームが一時停止している場合は、現在のレイヤー（呼び出し元のインスタンスのレイヤー）上のすべての<span
+      class="notranslate">loops</span> 要素を<span class="notranslate">sequence</span> して再生を一時停止し、ゲームが一時停止していない場合は、<span
+      class="notranslate">loop</span> の再生を再開します。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Sequence_Layers.htm">シークエンスレイヤー</a></div>
-        <div style="float:right">次のページ <a href="layer_sequence_speedscale.htm"><span class="notranslate">layer_sequence_speedscale</span></a></div>
+        <div style="float:left">前のページ：<a href="Sequence_Layers.htm">シークエンスレイヤー</a></div>
+        <div style="float:right">次のページ：<a href="layer_sequence_speedscale.htm"><span
+              class="notranslate">layer_sequence_speedscale</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_play
@@ -78,4 +93,5 @@ layer_sequence_play
 layer_sequence_play
 -->
 </body>
+
 </html>

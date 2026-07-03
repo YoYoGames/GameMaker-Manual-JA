@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>position_meeting</title>
@@ -13,19 +14,27 @@
   <meta name="search-keywords" content="position_meeting" />
   <meta name="is_pure" content="true" />
 </head>
+
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">position_meeting</span></h1>
-  <p>この関数を使うと、ある位置が他のインスタンスまたは<span class="notranslate">object</span> のすべてのインスタンスと衝突していないかチェックすることができます。 これを使うと、インスタンスまたは<span class="notranslate">room</span> の<span class="notranslate">object</span> の1点をチェックします。 このチェックは、インスタンスのバウンディングボックスに対して、またはそのインスタンスが精密衝突をチェックしている場合はインスタンスのマスクに対して実行されます。一意のインスタンスを取得する必要がある場合 <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><b>イド</b></a><span class="notranslate">object</span> を使用する必要があります。 <a href="../../Asset_Management/Instances/instance_position.htm"><span class="inline">instance_position()</span></a>.この関数は、特殊な<a href="../../../GML_Overview/Instance_Keywords.htm">キーワードである</a> <b>all</b>と<b>other</b> も受け付けます。</p>
+  <p>この関数を使うと、ある位置が他のインスタンスまたは<span class="notranslate">object</span> のすべてのインスタンスと衝突していないかチェックすることができます。
+    これを使うと、インスタンスまたは<span class="notranslate">room</span> の<span class="notranslate">object</span> の1点をチェックします。
+    このチェックは、インスタンスのバウンディングボックスに対して、またはそのインスタンスが精密衝突をチェックしている場合はインスタンスのマスクに対して実行されます。一意のインスタンスを取得する必要がある場合 <a
+      href="../../Asset_Management/Instances/Instance_Variables/id.htm"><b>イド</b></a><span
+      class="notranslate">object</span> を使用する必要があります。 <a
+      href="../../Asset_Management/Instances/instance_position.htm"><span
+        class="inline">instance_position()</span></a>.この関数は、特殊な<a
+      href="../../../GML_Overview/Instance_Keywords.htm">キーワードである</a> <b>all</b>と<b>other</b> も受け付けます。</p>
   <p> </p>
-  <h4>構文です。</h4>
+  <h4>構文</h4>
   <p class="code"><span data-field="title" data-format="default">position_meeting</span>(x, y, obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>論証</th>
-        <th>タイプ</th>
-        <th>商品説明</th>
+        <th>引数</th>
+        <th>型</th>
+        <th>説明</th>
       </tr>
       <tr>
         <td><span class="notranslate">x</span></td>
@@ -39,13 +48,15 @@
       </tr>
       <tr>
         <td><span class="notranslate">obj</span></td>
-        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span data-keyref="Type_ID_Instance">インスタンスID</span></td>
-        <td><span class="notranslate">The object (or instance id, or the keywords &quot;all&quot; or &quot;other&quot;) to check for a collision with.</span></td>
+        <td><span data-keyref="Type_Asset_Object">オブジェクトのアセット</span>または<span
+            data-keyref="Type_ID_Instance">インスタンスID</span></td>
+        <td><span class="notranslate">The object (or instance id, or the keywords &quot;all&quot; or &quot;other&quot;)
+            to check for a collision with.</span></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
-  <h4>リターンです。</h4>
+  <h4>リターン</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
   <p> </p>
   <h4>例</h4>
@@ -56,18 +67,21 @@
             instance_create_layer(mouse_x, mouse_y, &quot;Walls&quot;, obj_wall);<br />
         }<br />
     }</p>
-  <p>上記のコードでは、マウスの左ボタンをチェックし、押されていれば、マウスのx/yの位置がいずれかのインスタンスと衝突していないかどうかをチェックします。もし何もなければ、&quot;obj_Wall &quot;のインスタンスが作成されます。</p>
+  <p>上記のコードでは、マウスの左ボタンをチェックし、押されていれば、マウスのx/yの位置がいずれかのインスタンスと衝突していないかどうかをチェックします。もし何もなければ、&quot;obj_Wall
+    &quot;のインスタンスが作成されます。</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">戻る<a href="Collisions.htm">衝突</a></div>
-        <div style="float:right">次のページ <a href="position_change.htm"><span class="notranslate">position_change</span></a></div>
+        <div style="float:left">前のページ：<a href="Collisions.htm">衝突</a></div>
+        <div style="float:right">次のページ：<a href="position_change.htm"><span
+              class="notranslate">position_change</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright<span class="notranslate">YoYo Games Ltd.</span> 2022 All Rights
+        Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 position_meeting
@@ -76,4 +90,5 @@ position_meeting
 position_meeting
 -->
 </body>
+
 </html>
